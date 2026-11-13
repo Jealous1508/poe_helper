@@ -1,0 +1,255 @@
+number: 9
+title: "Sa mạc, cơn bão và The Depraved Trinity"
+town: Highgate
+levelIn: 61
+levelOut: 64
+skillPoints: 2
+skillPointsNote: "Act duy nhất trong đoạn này chỉ có hai. Cộng thêm 2 respec point từ Fastis Fortuna."
+boss: The Depraved Trinity
+keyRewards:
+  - "2 passive point: Queen of the Sands, The Ruler of Highgate"
+  - "2 respec point từ Fastis Fortuna, thứ phần lớn lộ trình quên mất"
+  - "The Storm Blade: phần thưởng gear ngon nhất của đoạn này"
+  - "Trial Merciless thứ hai, ở The Tunnel"
+intro: >-
+  Act 9 ngắn và chỉ cho hai passive point, nhưng một trong các phần thưởng
+  của nó là món gear ngon nhất cả campaign tặng bạn. Act này cũng chứa
+  The Blood Aqueduct, zone bạn sẽ quay lại farm sau Act 10.
+
+nodes:
+  - id: blood-aqueduct
+    name: The Blood Aqueduct
+    kind: zone
+    tag: travel
+    level: 61
+    waypoint: true
+    summary: >-
+      Zone đầu tiên của act, đi vào từ Act 8. Lối ra sang Highgate nằm ở cuối
+      làn bên trái.
+    tips: >-
+      Lấy cái waypoint này và nhớ kỹ nó. Sau Act 10, đây là chỗ tiêu chuẩn để
+      cày lên 68, và nó rơi divination card Humility: đủ chín lá đổi được một
+      Tabula Rasa, tức là một bộ sáu link miễn phí.
+
+  - id: highgate-9
+    name: Highgate
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong act này. Irasha bán trang bị, Petarus và Vanja bán
+      wand, trang sức và flask, Tasuni lo quest reward, còn Sin ở đây phụ
+      trách Pantheon.
+
+  - id: the-descent
+    name: The Descent
+    kind: zone
+    tag: travel
+    level: 61
+    summary: >-
+      Ba tầng, mỗi tầng có một Supply Hoist ở góc. Đi thang xuống; tầng thứ
+      ba dẫn ra The Vastiri Desert.
+
+  - id: vastiri-desert
+    name: The Vastiri Desert
+    kind: zone
+    tag: must
+    level: 61
+    image: quest-storm-blade
+    summary: >-
+      Một zone rộng và trống. Mở Storm-Weathered Chest là nó gọi ra từng đợt
+      xác ướp, rồi mới rơi The Storm Blade.
+    quest: The Storm Blade
+    reward: "Từ Petarus và Vanja: một vũ khí, khiên, quiver hoặc giáp thân. Phần thưởng gear ngon nhất đoạn này."
+    tips: >-
+      Hãy bám theo một bức tường thay vì lang thang cắt ngang giữa sa mạc.
+      Bạn gặp Jun lần đầu ở đây. Cửa vào The Oasis bị bão cát chôn kín và cần
+      Bottled Storm, thứ bạn có được bằng cách trả Storm Blade, nói chuyện
+      với Sin, rồi quay lại chỗ Petarus và Vanja.
+    newbie: >-
+      Bottled Storm **không** cần Basilisk Acid. Vài guide lộ trình hạ
+      Basilisk trước nên đọc vào cứ tưởng phải có acid; thật ra họ chỉ gộp
+      chuyến đi cho tiện. Trong 3.30, zone này có thể mọc ra một Mirage.
+
+  - id: the-oasis
+    name: The Oasis
+    kind: side
+    tag: worth
+    branchFrom: vastiri-desert
+    level: 61
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Cầm Bottled Storm trong tay là bão cát tan. Bám một bức tường đi tới
+      Sand Pit, nơi Shakari, Queen of the Sands đang chờ.
+    quest: Queen of the Sands
+    reward: "Book of Skill từ Irasha: +1 passive point, và Soul of Shakari."
+    why: "Một passive point vĩnh viễn và một Pantheon soul cho một đoạn rẽ ngắn."
+    tips: >-
+      Shakari chui xuống đất rồi trồi lên quanh mốc 60% life. Đứng sau lưng
+      ả, tránh đòn đánh phía trước, và đừng giẫm lên mấy vòng xoáy dưới đất.
+      Trong 3.30, zone này có thể mọc ra một Mirage.
+
+  - id: the-foothills
+    name: The Foothills
+    kind: zone
+    tag: must
+    level: 62
+    image: quest-calendar
+    badge: "+2 respec point"
+    summary: >-
+      Từ waypoint, đi lên và sang phải cho tới khi thấy vách đá, rồi lên và
+      sang trái. Boulderback đi lang thang quanh đây và rơi The Calendar of
+      Fortune.
+    quest: Fastis Fortuna
+    reward: "Book of Regrets từ Petarus và Vanja: 2 respec point."
+    tips: >-
+      Boulderback là một con unique tùy chọn, và vài lộ trình phổ biến chẳng
+      hề nhắc tới hắn, nên đây là phần thưởng bị bỏ sót nhiều nhất của act.
+      Lối ra: lên trái sang The Tunnel, bám tường bên phải sang The Boiling
+      Lake.
+
+  - id: boiling-lake
+    name: The Boiling Lake
+    kind: boss
+    tag: must
+    level: 62
+    summary: >-
+      Men theo mặt nước. Basilisk nằm ở một góc, gần một cụm lính đã hóa đá,
+      đó chính là mốc nhận biết.
+    reward: "Basilisk Acid, một trong hai món Sin cần."
+    tips: >-
+      Mọi đòn của Basilisk đều né được bằng cách đứng sau lưng nó. Hạ nó thì
+      đám lính hết hóa đá, và họ vô hại. Ở đây có một crafting recipe spell
+      damage.
+
+  - id: the-tunnel
+    name: The Tunnel
+    kind: zone
+    tag: must
+    level: 62
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 2 trong 3 của Merciless
+    summary: >-
+      Trial Merciless thứ hai, với lưỡi dao tuần tra. Nó nằm trên một lối rẽ
+      mà bạn gặp trước cả waypoint, nên tiện đường vào thì làm luôn.
+    tips: >-
+      Có một cần gạt giấu ở khoảng giữa đường tới tấm bia, nằm ở góc đối diện
+      cửa vào, mở ra một kho transfigured gem. Ở đây cũng có một crafting
+      recipe về all attributes.
+
+  - id: the-quarry
+    name: The Quarry
+    kind: zone
+    tag: travel
+    level: 63
+    waypoint: true
+    summary: >-
+      Waypoint nằm ở giữa. Hai điểm đến mọc ra ở các góc ngẫu nhiên:
+      The Refinery và Shrine of the Winds. Sin đứng ở đây và sẽ mở
+      The Belly of the Beast khi bạn mang đủ cả hai món cho hắn.
+    tips: "Ở đây cũng có một crafting recipe physical damage."
+
+  - id: shrine-of-the-winds
+    name: Shrine of the Winds
+    kind: side
+    tag: worth
+    branchFrom: the-quarry
+    level: 63
+    image: quest-feather
+    badge: "+1 passive point"
+    summary: >-
+      Garukhan, Queen of the Winds, trong một đấu trường dựa vào một bên
+      tường. Ả rơi Sekhema Feather.
+    quest: The Ruler of Highgate
+    reward: "Book of Skill từ Irasha: +1 passive point, và Soul of Garukhan."
+    why: "Passive point thứ hai và cũng là cuối cùng của act."
+    tips: "Mấy cơn lốc chạy lang thang khắp đấu trường. Dụ ả về một góc trống rồi đánh ở đó."
+
+  - id: the-refinery
+    name: The Refinery
+    kind: side
+    tag: must
+    branchFrom: the-quarry
+    level: 63
+    image: quest-trarthan
+    summary: >-
+      Theo đường ray xe goòng đi lên và sang phải là tới General Adus. Phía
+      sau phòng hắn, cỗ máy Theurgic Precipitate cho bạn Trarthan Powder.
+    reward: "Trarthan Powder, món thứ hai Sin cần."
+    tips: >-
+      General Adus báo trước mấy đòn diện rộng nặng ký; cả trận chỉ xoay
+      quanh việc đừng đứng trong đó. Một cái nắp cống lệch khỏi đường ray dẫn
+      xuống Refinery Tunnels và một crafting recipe kích hoạt spell trong
+      socket khi bạn dùng skill. Cái đó thì đáng rẽ qua.
+
+  - id: belly-of-the-beast-9
+    name: The Belly of the Beast
+    kind: zone
+    tag: travel
+    level: 63
+    summary: >-
+      Sin mở chỗ này khi hắn có đủ acid và powder. Một zone chỉ để đi xuyên
+      qua.
+    tips: "Droolmaw không bắt buộc. Bỏ."
+
+  - id: rotting-core
+    name: "The Rotting Core and The Black Core"
+    kind: zone
+    tag: must
+    level: 64
+    summary: >-
+      The Rotting Core dẫn tới The Black Core, nơi Sin mở ba cái portal tới
+      đám thuộc hạ cũ của Malachai. Thứ tự nào cũng được.
+    tips: |
+      Ba con là **Doedre, Darksoul**, **Maligaro, The Broken** và **Shavronne, Unbound**.
+
+      Doedre dùng ba cái totem rải phiên bản nhẹ hơn của mấy debuff Effluent. **Đừng phá totem** — chỉ cần đứng xa chúng là số stack sẽ thấp.
+    newbie: >-
+      Cắm một town portal trong The Black Core trước khi bắt đầu. Chết là bạn
+      về town, mà đường đi bộ ngược lại thì dài.
+
+  - id: depraved-trinity
+    name: The Depraved Trinity
+    kind: boss
+    tag: must
+    level: 64
+    summary: >-
+      Nói chuyện với Sin lần nữa để mở The Black Heart. Đứng gần thì Trinity
+      chém và giáng; đứng xa thì nó thả mấy quả cầu đỏ.
+    reward: "Sin cứu bạn ra, rồi Lilly Roth chở bạn tới Oriath."
+    tips: |
+      Mỗi quả cầu đỏ tồn tại chừng ba mươi giây và gây damage rất nặng, nên càng về sau đấu trường càng chật. **Cứ mất 25% life là nó gọi ra sáu con quái.**
+
+      Vậy nên: dọn adds thật nhanh, đừng để mấy quả cầu dồn bạn vào góc, và đừng cố đánh nó từ khoảng cách xa nhất.
+
+sections:
+  - title: Chuỗi The Storm Blade, theo đúng thứ tự
+    body: >-
+      Đây là đoạn làm nhiều người rối. Mở Storm-Weathered Chest ở
+      The Vastiri Desert để lấy The Storm Blade. Đưa nó cho Petarus và Vanja
+      rồi chọn phần thưởng. Nói chuyện với Sin. Quay lại chỗ Petarus và Vanja
+      để lấy Bottled Storm. Thế là bão cát trên The Oasis tan. Basilisk không
+      nằm trong chuỗi này.
+  - title: Đừng bỏ lỡ Fastis Fortuna
+    body: >-
+      Boulderback ở The Foothills là một con unique tùy chọn, và bộ dữ liệu
+      lộ trình phổ biến nhất chẳng hề nhắc tới hắn. Hắn rơi The Calendar of
+      Fortune, Petarus và Vanja đổi nó lấy hai respec point. Nếu bạn đang đi
+      theo một lộ trình speedrun thì đây chính là thứ nó bỏ qua.
+  - title: Những gì nên bỏ qua
+    body: >-
+      Droolmaw, Colossus Crusher, Knitted Horror và mấy con unique tùy chọn
+      khác. Forbidden Vault trong The Oasis chỉ đáng làm nếu bạn đang chơi
+      chuỗi quest Betrayal của Jun.
+
+patchNotes:
+  - "The Vastiri Desert và The Oasis có thể mọc ra một Mirage."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 9 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-9" }
+  - { title: "PoEDB Act 9", url: "https://poedb.tw/us/Act_9" }

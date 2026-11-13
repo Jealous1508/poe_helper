@@ -1,0 +1,249 @@
+number: 10
+title: "Oriath, Merciless Labyrinth và Kitava"
+town: Oriath Docks
+levelIn: 64
+levelOut: 67
+skillPoints: 3
+skillPointsNote: "An End to Hunger cho hai trong số đó. Cộng thêm 2 respec point từ No Love for Old Ghosts."
+boss: "Kitava, the Insatiable"
+keyRewards:
+  - "3 passive point: Vilenta's Vengeance (1), An End to Hunger (2)"
+  - "Trial Merciless cuối cùng, rồi Merciless Labyrinth: ascendancy thứ ba của bạn"
+  - "Một bộ giáp thân bốn link từ Death and Rebirth"
+  - "Atlas và Map Device của riêng bạn, từ Kirac"
+intro: >-
+  Act cuối, và cũng là act khó nhất. Hãy chạy Merciless Labyrinth trước khi
+  đánh Kitava, vì hạ hắn là bạn mất thêm 30% resistance nữa, mà Labyrinth là
+  zone area level 68. Gần như mọi thứ giết người mới ở đây đều quy về đúng
+  con số đó.
+
+nodes:
+  - id: cathedral-rooftop
+    name: The Cathedral Rooftop
+    kind: zone
+    tag: must
+    level: 64
+    summary: >-
+      Cathedral Apex nằm ngay cạnh cửa vào. Hạ đám cultist, mấy con gargoyle
+      và Plaguewing để giải cứu Bannon, rồi quay ngược lại và rẽ phải vào
+      The Ravaged Square.
+    quest: Safe Passage
+    reward: "Một flask do bạn chọn từ Lani, có cả Divine Life và Divine Mana Flask."
+
+  - id: ravaged-square
+    name: The Ravaged Square
+    kind: zone
+    tag: must
+    level: 64
+    waypoint: true
+    summary: >-
+      Trục của cả act, dọn làm hai nửa, và bạn sẽ quay lại đây nhiều lần.
+    tips: >-
+      Vừa tới là cắm ngay một town portal giữa quảng trường. Cả lộ trình xây
+      quanh việc quay về chỗ này, mà portal scroll dùng về sau thì sẽ tốn
+      mất một cái.
+    newbie: >-
+      Bạn cũng phải nói chuyện với Innocence ở đây, không phải trong town,
+      thì sau đó The Canals mới mở. Đây là chỗ người ta hay bị kẹt nhất
+      trong act này.
+
+  - id: control-blocks
+    name: The Control Blocks
+    kind: side
+    tag: worth
+    branchFrom: ravaged-square
+    level: 66
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Đi về phía nam từ The Ravaged Square. Lấy waypoint, rồi tìm Vilenta
+      trong đấu trường phía nam.
+    quest: Vilenta's Vengeance
+    reward: "Book of Skill từ Lani: +1 passive point."
+    why: "Một passive point vĩnh viễn, chỉ cách cái trục vài bước chân."
+
+  - id: the-ossuary
+    name: The Ossuary
+    kind: side
+    tag: worth
+    branchFrom: ravaged-square
+    level: 67
+    image: quest-labyrinth
+    badge: Trial Merciless cuối cùng
+    summary: >-
+      Qua cánh cửa cạnh waypoint The Ravaged Square. Trial Merciless cuối
+      cùng, với trap phóng tiêu, cùng Elixir of Allure nằm gần waypoint.
+    quest: No Love for Old Ghosts
+    reward: "Book of Regrets từ Weylam Roth: 2 respec point, cộng với cái trial."
+    why: >-
+      Xong trial này là Merciless Labyrinth mở, nên hãy coi nó là bắt buộc.
+      Hai respec point thì coi như quà kèm.
+    tips: >-
+      Bám tường mà đi thì tìm được mọi thứ. Một cái cần gạt ngay trước mấy
+      bức tường zíc zắc mở phía bên kia để lấy một Facetor's Lens. Ở đây có
+      một crafting recipe chaos damage.
+
+  - id: merciless-lab
+    name: The Merciless Labyrinth
+    kind: side
+    tag: must
+    branchFrom: the-ossuary
+    level: 68
+    image: quest-labyrinth
+    badge: Ascendancy thứ ba
+    summary: >-
+      Chạy nó từ waypoint Aspirants' Plaza, trước khi đánh Kitava. Thêm hai
+      ascendancy point.
+    why: >-
+      Hạ Kitava là bạn mất thêm 30% resistance, mà đây là zone area level 68.
+      Để sau thì khó hơn hẳn mà chẳng được gì.
+    tips: >-
+      Một số guide bảo chạy ngay bây giờ; số khác bảo đợi qua
+      The Desecrated Chambers để bạn đã có sẵn bộ giáp thân miễn phí. Cả hai
+      đều là trước Kitava, và đó mới là phần quan trọng.
+
+  - id: the-reliquary
+    name: The Reliquary
+    kind: side
+    tag: skip
+    branchFrom: ravaged-square
+    level: 67
+    waypoint: true
+    image: quest-teardrop
+    summary: >-
+      Teardrop in a Pearl Case hoàn tất quest Map to Tsoatha, và Lilly Roth
+      tặng bạn một chiếc belt rare.
+    why: >-
+      Không có passive point. Các guide không thống nhất: có nơi bỏ, nơi
+      khác thích kinh nghiệm và cái belt. Belt của bạn đang tệ thì làm,
+      không thì cứ đi tiếp.
+
+  - id: torched-courts
+    name: The Torched Courts
+    kind: zone
+    tag: travel
+    level: 65
+    summary: >-
+      Nửa sau của The Ravaged Square: đi lên bắc qua con phố đầu tiên, rồi
+      con phố thứ hai hướng bắc, theo nó tới waypoint, rồi rẽ phải.
+
+  - id: desecrated-chambers
+    name: The Desecrated Chambers
+    kind: boss
+    tag: must
+    level: 65
+    waypoint: true
+    summary: >-
+      Lấy waypoint ngay lập tức, rồi đi vòng tới Sanctum of Innocence để gặp
+      Avarius, Reassembled.
+    quest: Death and Rebirth
+    reward: "The Staff of Purity. Đưa nó cho Bannon, hắn hóa thành Innocence, và Lani tặng bạn một bộ giáp thân bốn link."
+    tips: >-
+      Avarius đánh physical rất nặng và bắn ra mấy luồng physical damage over
+      time. Tránh các luồng đó. Có armour, endurance charge hay một granite
+      flask là trận này nhẹ hẳn. Zone này dày quái và cho kinh nghiệm tốt,
+      lại có một crafting recipe về accuracy.
+
+  - id: the-canals
+    name: The Canals
+    kind: zone
+    tag: travel
+    level: 66
+    summary: >-
+      Nói chuyện với Innocence ở The Ravaged Square để mở đường, rồi cứ chạy
+      thẳng.
+
+  - id: feeding-trough
+    name: The Feeding Trough
+    kind: zone
+    tag: travel
+    level: 67
+    summary: >-
+      Nói chuyện với Sin ở cuối zone, rồi bước vào Altar of Hunger.
+    tips: "Zone này có một crafting recipe về life và mana."
+
+  - id: kitava-10
+    name: "Kitava, the Insatiable"
+    kind: boss
+    tag: must
+    level: 67
+    summary: >-
+      Trận khó nhất campaign. Cứ mỗi 20% life là một phase mới bắt đầu, và
+      phase nào cũng đổ thêm quái vào đấu trường.
+    reward: "+2 passive point từ An End to Hunger, và kết thúc campaign."
+    tips: |
+      **Kitava's Heart chỉ nhắm vào được sau phase thứ nhất, thứ ba và phase cuối.** Phá nó sau phase cuối chính là thứ giết hắn.
+
+      Đòn của hắn gồm các luồng laser quét, rune phát nổ, một quả cầu bắn laser và lửa lan khắp sàn, chủ yếu là damage physical và fire. **Ở phase cuối, cái góc xa nhất so với chỗ bạn bước vào là chỗ đứng an toàn nhất.**
+    newbie: |
+      Có bốn thứ giết người mới ở đây, xếp theo thứ tự:
+
+      1. **Resistance.** Bạn đã ở mức −30% từ Act 5 và phần lớn người chơi không để ý. Hãy đẩy elemental resistance vượt cap 30% trước trận này.
+      2. **Đứng yên.** Sàn đấu phủ đầy lửa và rune, còn các phase của quả Heart để lại bóng đổ báo trước đòn đánh.
+      3. **Không có movement skill hay Quicksilver Flask.**
+      4. **Chưa có ascendancy.** Chạy Merciless Labyrinth trước đã.
+
+  - id: karui-shores
+    name: "Oriath Docks and Karui Shores"
+    kind: town
+    tag: must
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+2 passive point"
+    summary: >-
+      Sin mở portal đưa bạn ra Docks. Nói chuyện với Lilly Roth rồi nhổ neo
+      đi Karui Shores, town của endgame.
+    quest: "An End to Hunger, Toward the Future"
+    reward: "Book of Skill từ Lani: +2 passive point. Rồi Kirac đưa bạn tấm map đầu tiên."
+    tips: >-
+      Chọn một hideout từ Helena, dùng cái recipe altar gần đó, rồi chạy map
+      của Kirac và quay lại gặp hắn. Thế là Atlas và Map Device của riêng bạn
+      được mở.
+    newbie: >-
+      Gõ `/passives` trong khung chat để kiểm tra xem bạn đã gom đủ chưa. Bạn
+      nên có 23 hoặc 24 điểm từ quest, tùy bạn đã xử đám bandit ở Act 2 thế
+      nào. Thiếu cái nào thì giờ vẫn đi lấy được.
+
+sections:
+  - title: Trước khi bạn đánh Kitava
+    body: |
+      - **Đẩy elemental resistance vượt cap 30%.** Sau trận này bạn mất thêm 30% nữa, nên đây là thứ giá trị nhất trong cả trang này.
+      - **Chạy xong Merciless Labyrinth trước đã.**
+      - Khoảng 3.000 life ở mốc level này với build theo life, coi như mục tiêu tham khảo chứ không phải yêu cầu bắt buộc.
+      - Một Quicksilver Flask, một movement skill, và một life flask hồi tức thì.
+      - Armour hoặc một lớp chống physical khác, và đặc biệt là fire resistance.
+      - Một bộ bốn link mà gem nào cũng được lên level thật sự còn hơn một bộ năm link toàn gem bỏ bê.
+  - title: Hình phạt resistance thực sự nghĩa là gì
+    body: >-
+      Hai trận Kitava lấy mỗi trận 30%, nên bạn kết thúc campaign ở mức −60%.
+      Để bảng hiện 75% ở mỗi nguyên tố, bạn cần 135 điểm resistance trên
+      gear. Đó là lý do những nhân vật thấy ổn ở Act 9 lại rã rời ngay ở
+      những tấm map đầu tiên. Các nguồn hơi khác nhau về chuyện cú phạt thứ
+      hai có chạm tới chaos resistance hay không, nên với chaos cứ coi là
+      "giữ nó trên 0" thay vì cố cap.
+  - title: Sau khi xong campaign
+    body: >-
+      The Blood Aqueduct ở Act 9 là chỗ tiêu chuẩn để cày nốt level. Nó
+      thẳng, dày quái, và rơi divination card Humility: đủ chín lá đổi được
+      một Tabula Rasa, tức bộ giáp thân sáu link miễn phí. Hãy ở đó tới khi
+      resistance cap đủ và zone thấy nhẹ nhàng, tầm level 68 tới 70, và
+      tranh thủ làm crafting bench với mua đồ ở vendor ngay trong lúc đó chứ
+      đừng để sau.
+  - title: Những gì nên bỏ qua
+    body: >-
+      Mọi con unique tùy chọn: The Rotten Matriarch, Kiln Mother, Kitava's
+      Heralds, đám Heretical Adjudicator và Guardian, cùng Bone Husk với
+      Awoken Giant trong The Ossuary. The Reliquary là cái duy nhất thật sự
+      còn đáng bàn.
+
+patchNotes:
+  - "Mấy cái rương ở cuối Labyrinth vốn rơi đồ đã identify sẵn nay đã bị bỏ."
+  - "Từ Act 6 trở đi, đồ Magic và Rare có thể rơi kèm Item Tier, nhờ vậy gear giai đoạn cuối campaign dễ đánh giá hơn."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 10 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-10" }
+  - { title: "PoEDB Act 10", url: "https://poedb.tw/us/Act_10" }

@@ -1,0 +1,268 @@
+number: 7
+title: "Maligaro, đám Firefly và Arakaali"
+town: The Bridge Encampment
+levelIn: 50
+levelOut: 55
+skillPoints: 3
+skillPointsNote: "Cộng thêm 2 respec point từ Kishara's Star."
+boss: "Arakaali, Spinner of Shadows"
+keyRewards:
+  - "3 passive point: The Master of a Million Faces, Queen of Despair, Kishara's Star"
+  - "Cruel Labyrinth: ascendancy thứ hai của bạn"
+  - "Boots bốn link từ Essence of the Artist"
+  - "Ba Pantheon soul: Ralakesh, Gruthkul, Arakaali"
+intro: >-
+  Act 7 đưa bạn về lại khu rừng của Act 2, giờ đã mục ruỗng. Act này có ba
+  passive point, trả hết trong một lần về town, và là chỗ phần lớn guide đặt
+  Cruel Labyrinth. Phần duy nhất hay làm người ta vấp là Maligaro's Sanctum,
+  chỗ cho bạn sáu portal và không có lần thứ hai.
+
+nodes:
+  - id: broken-bridge-7
+    name: The Broken Bridge
+    kind: zone
+    tag: travel
+    level: 50
+    summary: >-
+      Đường thẳng. Theo đường cái về hướng The Crossroads. Có một Silver
+      Locket nằm trong khu phế tích vuông gần một cái waypoint hỏng: nó là
+      Dirty Lockbox, và Weylam Roth đổi nó lấy một utility flask.
+    tips: "Nhân vật mới thì nửa phút bỏ ra để có flask miễn phí là đáng."
+
+  - id: crossroads-7
+    name: The Crossroads
+    kind: zone
+    tag: travel
+    level: 51
+    waypoint: true
+    summary: >-
+      Trục của act, bạn ghé hai lần. Đường sang The Old Fields bị chắn. Một
+      nhánh dẫn tới The Fellshrine Ruins, nhánh kia tới The Chamber of Sins.
+      Làm Fellshrine trước.
+
+  - id: fellshrine-7
+    name: The Fellshrine Ruins
+    kind: zone
+    tag: travel
+    level: 51
+    summary: >-
+      Theo lối đi tới nhà thờ đổ nát ở góc bản đồ; cửa xuống Crypt nằm ở đó.
+    tips: "Bundle of Woe và Bringer of Souls đều không bắt buộc và chẳng cho gì. Đi qua thôi."
+
+  - id: crypt-7
+    name: The Crypt
+    kind: zone
+    tag: must
+    level: 51
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial trong 3 của Cruel
+    summary: >-
+      Làm Trial of Ascendancy ở đây, rồi tìm cái Sarcophagus trong một phòng
+      nhỏ sát rìa zone. Nó thả bạn xuống tầng dưới, nơi Container of Sins
+      chứa Maligaro's Map.
+    quest: "Web of Secrets, and a Trial of Ascendancy (spinning blades)"
+    tips: >-
+      Cái container thường nằm ở góc đối diện chỗ bạn rơi xuống. Ở đây cũng có
+      một crafting recipe về damage over time.
+
+  - id: chamber-of-sins-7
+    name: The Chamber of Sins Level 1
+    kind: zone
+    tag: must
+    level: 52
+    waypoint: true
+    summary: >-
+      Đi tới căn phòng tròn ở giữa để lấy waypoint và gặp Silk. Đặt
+      Maligaro's Map vào map device ở đây để mở Sanctum.
+    tips: "Một crafting recipe lightning damage nằm ngay trong căn phòng đó."
+
+  - id: maligaros-sanctum
+    name: Maligaro's Sanctum
+    kind: boss
+    tag: must
+    level: 52
+    summary: >-
+      Một map instance với **đúng sáu portal, không hơn**. Ba hòn đảo nối
+      nhau bằng những cây cầu hẹp. Maligaro's Workshop ở hòn đảo xa nhất.
+    quest: Web of Secrets
+    reward: "Black Venom, Silk biến nó thành Obsidian Key, còn Helena biến nó thành boots bốn link."
+    tips: |
+      Maligaro gọi Black Death ở mốc 75% life và Fidelitas ở mốc 50%. Cả ba phải chết thì Black Venom mới rơi. Hãy hạ từng con khi nó vừa ra, đừng để phải đánh cả ba cùng lúc.
+    newbie: >-
+      Đây là chỗ đầu tiên trong campaign mà chết thật sự mất giá: mỗi lần chết
+      hay thoát game là đốt một trong sáu portal. Hết portal là bạn phải quay
+      về The Crypt kiếm map khác. Hãy bám theo rìa zone và băng qua ở các góc,
+      cầu thường nằm ở đó.
+
+  - id: chamber-of-sins-2-7
+    name: The Chamber of Sins Level 2
+    kind: side
+    tag: worth
+    branchFrom: chamber-of-sins-7
+    level: 52
+    image: quest-labyrinth
+    badge: Trial Cruel cuối cùng
+    summary: >-
+      Cái cuối trong ba trial của Cruel Labyrinth, với lưỡi cưa. Obsidian Key
+      lấy từ Silk sẽ mở đường vào.
+    why: >-
+      Cộng với trial ở Prison của Act 6 và trial ở The Crypt, cái này khép lại
+      bộ Cruel. Xong nó là bạn ascend được lần thứ hai.
+    tips: >-
+      Có một cần gạt giấu sau tấm bia trial, mở ra một kho gem quality. Lối ra
+      là một hành lang dài và hẹp, rồi một lối đi bí mật sau hàng rào dẫn vào
+      The Den.
+
+  - id: the-den-7
+    name: The Den
+    kind: zone
+    tag: travel
+    level: 53
+    waypoint: true
+    summary: "Bám sát bức tường ngoài cùng bên trái là ra nhanh nhất."
+    tips: "The Bone Sculptor và The Great White Bones không bắt buộc. Bỏ cả hai."
+
+  - id: ashen-fields
+    name: The Ashen Fields
+    kind: zone
+    tag: must
+    level: 53
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Đi xuống rồi rẽ trái tới đấu trường Forest Encampment, nơi Greust, Lord
+      of the Forest đang chờ. Lối ra đi tiếp sang The Northern Forest.
+    quest: The Master of a Million Faces
+    reward: "Book of Skill từ Eramir: +1 passive point, và Soul of Ralakesh."
+
+  - id: northern-forest-7
+    name: The Northern Forest
+    kind: zone
+    tag: travel
+    level: 53
+    waypoint: true
+    summary: >-
+      Bạn ghé hai lần: zone này có cả lối sang The Causeway lẫn lối sang
+      The Dread Thicket.
+    tips: >-
+      Tùy chọn: lấy Greust's Necklace từ Helena, đặt nó lên Azmeri Shrine ở
+      đây, và cô ta tặng bạn một chiếc amulet. Amulet của bạn đang tệ thì một
+      chuyến về town nữa cũng đáng. Trong 3.30, zone này có thể mọc ra
+      Viridian Wildwood.
+
+  - id: causeway
+    name: The Causeway
+    kind: zone
+    tag: must
+    level: 54
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Kishara's Lockbox chứa Kishara's Star, và nằm trên đúng cái nền có lối
+      ra sang The Vaal City.
+    quest: Kishara's Star
+    reward: "Book of Skill từ Weylam Roth: +1 passive point và 2 respec point."
+    tips: >-
+      Chỗ này rất dễ lạc. Hãy bám một bức tường thay vì cắt ngang qua giữa.
+      Trên đường có một crafting recipe cold damage.
+
+  - id: vaal-city
+    name: The Vaal City
+    kind: zone
+    tag: travel
+    level: 54
+    waypoint: true
+    summary: >-
+      Một mê cung toàn ngõ cụt. Waypoint và Yeena ở khu trung tâm, thường nấp
+      sau một bức tường dài. Lấy waypoint rồi đi: xong vụ firefly bạn sẽ quay
+      lại.
+
+  - id: dread-thicket-7
+    name: The Dread Thicket
+    kind: zone
+    tag: must
+    level: 53
+    image: quest-firefly
+    summary: >-
+      Gom bảy con firefly rải rác khắp zone, rồi tìm Den of Despair để gặp
+      Gruthkul, Mother of Despair.
+    quest: "Lighting the Way, Queen of Despair"
+    reward: "Book of Skill từ Eramir cho phần Gruthkul: +1 passive point, và Soul of Gruthkul."
+    tips: >-
+      Thường có một con firefly nằm ngay cạnh đấu trường boss. Gruthkul đánh
+      physical rất nặng; thứ giết người chơi là đứng yên trong lúc ả channel,
+      vì đòn đó bắn projectile chạy dọc mặt đất. Hãy di chuyển liên tục và
+      đừng đứng cận chiến với ả trong lúc đó. Trong 3.30, zone này có thể mọc
+      ra Viridian Wildwood.
+    newbie: >-
+      Trả cả ba quest passive point trong cùng một chuyến về town: Greust và
+      Gruthkul cho Eramir, Kishara's Star cho Weylam Roth. Đây cũng là chỗ
+      phần lớn guide chạy Cruel Labyrinth.
+
+  - id: temple-of-decay-1
+    name: The Temple of Decay Level 1
+    kind: zone
+    tag: travel
+    level: 54
+    summary: >-
+      Yeena mở chỗ này khi bạn mang firefly về. Một căn phòng có hố ở giữa và
+      các cây cầu đá bắc qua.
+    tips: "Một khu phụ rẽ ra từ cái hố có một con unique corrupted, nếu bạn thích."
+
+  - id: temple-of-decay-2
+    name: The Temple of Decay Level 2
+    kind: zone
+    tag: travel
+    level: 55
+    summary: >-
+      Bố cục y như tầng trên. Một đoạn chạy thẳng tới Arakaali's Web.
+    tips: "Một crafting recipe chaos damage nằm trên cái bệ ở giữa."
+
+  - id: arakaali
+    name: "Arakaali, Spinner of Shadows"
+    kind: boss
+    tag: must
+    level: 55
+    summary: >-
+      Boss của act, hai phase. Ả chiếm một góc rồi luân phiên đổi góc, bắn
+      laser và ném trứng nhện mỗi khi bạn đứng xa.
+    reward: "Soul of Arakaali từ Sin, và đường sang Act 8."
+    tips: |
+      **Tới 50% life ả nuốt Silk và hồi máu lại lên 66%.** Đó không phải lỗi game; trận này vốn thiết kế để chạy hai vòng.
+
+      Phase hai thêm mortar và một loạt laser. Cách chơi hiệu quả: dụ laser về một bên của ả, rồi dời sang bên kia. Đứng ngoài tầm cận chiến, di chuyển liên tục, và dọn trứng trước khi chúng nở.
+    newbie: >-
+      Chaos resistance giúp ích ở đây, và một life flask hồi tức thì sẽ cứu
+      bạn đúng lúc hai quả mortar chồng lên nhau. Soul of Arakaali, phần
+      thưởng khi hạ ả, giảm damage over time — một lựa chọn hợp cho Labyrinth.
+
+sections:
+  - title: Cruel Labyrinth
+    body: >-
+      Trial ở The Chamber of Sins khép lại bộ ba. Các guide không thống nhất
+      nên chạy lúc nào: có nơi nói giữa Act 7, ngay sau khi trả quest ở
+      The Dread Thicket, nơi khác nói đầu Act 8 khi bạn đã có thêm một act
+      gear. Cả hai đều vượt xa mốc yêu cầu level 40, và khác nhau chỉ vài
+      level. Chạy ở đây thì bạn có ascendancy để đánh Arakaali.
+  - title: Hai bộ bốn link miễn phí
+    body: >-
+      Đôi boots từ Essence of the Artist, trả cho Helena sau trận Maligaro,
+      có sẵn bốn link. Bộ giáp thân ở Act 10 cũng vậy. Tính ra campaign cho
+      bạn hai bộ bốn link miễn phí, và chừng đó thường là đủ để vào map.
+  - title: Những gì nên bỏ qua
+    body: >-
+      Mấy con boss tùy chọn ở Fellshrine, hai con boss trong The Den,
+      Tunnelworm, và The Dreadstone. Không con nào cho điểm hay phần thưởng
+      vĩnh viễn.
+
+patchNotes:
+  - "The Northern Forest và The Dread Thicket có thể mọc ra Viridian Wildwood."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 7 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-7" }
+  - { title: "PoEDB Act 7", url: "https://poedb.tw/us/Act_7" }
