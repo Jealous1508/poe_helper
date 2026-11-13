@@ -1,0 +1,13 @@
+# Text is stored with LF, whatever the machine writing it uses. The site is
+# authored on Windows and built on a Linux runner, and YAML content that
+# changes line endings between the two produces diffs nobody made.
+* text=auto eol=lf
+
+# Binary: never touch these, and do not try to diff them.
+*.webp binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
