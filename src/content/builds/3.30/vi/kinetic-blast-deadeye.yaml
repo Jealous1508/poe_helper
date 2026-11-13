@@ -1,0 +1,785 @@
+name: Kinetic Blast Deadeye
+tagline: >-
+  Build wand mà mỗi phát bắn nổ bung thành thêm mấy cú nổ nữa và dọn sạch màn
+  hình từ xa. Rất nhanh, không cần unique nào, và chết vì bất cứ thứ gì nó không
+  kịp giết trước.
+class: Ranger
+ascendancy: Deadeye
+role: starter
+budget: low
+budgetNote: >-
+  **Guide không đưa ra con số currency nào cho bất cứ thứ gì.** Những gì nó có
+  nói: build "doesn't require any Unique items to function", và nó được đánh dấu
+  là chơi được cho một khởi đầu solo self-found từ con số không. Chúng tôi vẫn
+  xếp nó ở Low chứ không phải Starter, vì hai lý do. Damage chính là cây wand
+  của bạn, nên build tốt ngang với cây wand bạn nhặt được, gamble được hoặc
+  craft được. Và dòng tít của guide — Act 10 trong ba tiếng, bốn Voidstone
+  trong khoảng mười tiếng — là tốc độ của tác giả, người đang giữ các kỷ lục
+  speedrun campaign. Danh sách nhược điểm của chính nó kết thúc bằng "Need
+  Investment for T17s".
+mainSkill: Kinetic Blast
+image: kinetic-blast
+hero: art-deadeye
+tags: [Wand, Projectile, Elemental, Crit]
+ratings: { clear: 5, bossing: 3, survivability: 2, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **Ghi ngày tháng tử tế hơn phần lớn guide tuần này, và mỏng ở vài chỗ cụ
+  thể.** Đây là guide Maxroll của havoc616, cập nhật ngày 12/11/2026. Khác với
+  vài guide chỉ đổi mỗi cái banner, planner của nó thật sự là đồ 3.30: nó được
+  đặt tên cho 3.30, lưu ngày 12/11, và đóng dấu phiên bản dữ liệu 3.30. Bản
+  export Path of Building của nó gắn nhãn "3.29 for 3.30", một cách trung thực.
+  Một widget ascendancy nhỏ trên trang là đồ sót lại từ một planner cũ hơn; bốn
+  notable nó hiện thì không đổi. Những gì guide **không** có: bất kỳ giá nào,
+  bất kỳ bảng điểm nào, bất kỳ con số damage hay độ sống sót nào được đo (chỉ
+  có các mục tiêu để nhắm tới), và phần leveling của riêng nó — nó đẩy bạn sang
+  ba guide campaign riêng, mà chúng tôi không đọc hết. Các con số của gem là từ
+  PoEDB. Nhân vật 3.30 độc lập duy nhất chúng tôi tìm được, của Kassadus, là
+  một bản [[Headhunter]] level 92, và mọi con số đo được trên trang này đều đến
+  từ đó. Tiêu đề của nó đặt chữ "starter" trong ngoặc kép, và bạn nên nhớ
+  chuyện đó. Bốn điểm rating là của chúng tôi.
+modes:
+  ssf: >-
+    Guide nói được: "SSF Fresh Start League Start Viable", và không món nào
+    trong lộ trình của nó là unique. Kế hoạch gear dựa vào chuyện gamble ra
+    wand, vào Essence, và vào Abyss để lấy một cây [[Stygian Vise]] — mà 3.30
+    làm hai trong ba thứ đó khó hơn (xem phần patch note bên dưới). Hãy chuẩn
+    bị tinh thần là cây wand sẽ là bức tường.
+  hardcore: >-
+    Không nguồn nào khuyên chơi, và nhược điểm đầu tiên của guide là "Don't Get
+    Hit Playstyle". Nhân vật 3.30 độc lập có 3,779 life, 27,689 effective hit
+    point và chịu được 7,300 physical damage trong một hit. Đó là một nhân vật
+    softcore.
+
+idea: |
+  [[Kinetic Blast]] là một attack bằng wand. Mỗi projectile trúng thứ gì đó sẽ nổ bung thành bốn cú nổ nữa quanh điểm chạm. Bắn vài projectile vào một pack là mấy cú nổ chồng lên nhau khắp màn hình.
+
+  [[Deadeye]] là ascendancy dành cho nó vì một notable, [[Endless Munitions]]: thêm hai projectile cho mọi skill. Nhiều projectile hơn là nhiều điểm chạm hơn, và mỗi điểm chạm là thêm bốn cú nổ. Guide không cho bạn dùng skill này chút nào cho tới khi có notable đó.
+
+  Nên đây là hai build nối nhau. Bạn lên level bằng một skill khác — một attack ném flask tên [[Explosive Concoction]] — rồi đổi sang wand sau Labyrinth thứ ba.
+
+  Damage của nó tăng theo một kiểu khác thường. Kinetic Blast có một thuộc tính tên Arcane Might: mấy khoản increased *spell* damage cũng nâng *attack* damage của nó, ở mức gấp rưỡi giá trị. Nên món off-hand tốt nhất là shield của caster.
+
+  Phòng thủ là đừng để bị đánh trúng. Bạn giết từ xa và đi xuyên qua pack; evasion, spell suppression và một chút energy shield là để lo những gì lọt qua.
+
+chain:
+  - label: Bắn
+    text: "[[Kinetic Blast]] bắn projectile từ wand. [[Endless Munitions]] thêm hai cái nữa vào mỗi phát bắn."
+  - label: Nổ bung
+    text: "Mỗi projectile trúng đích tạo thêm 4 cú nổ. Chúng gây 40% less area damage, và có rất nhiều cú như vậy."
+  - label: Wisp nhập cuộc
+    text: "[[Sacred Wisps Support]] triệu hai con wisp, mỗi con có 25% cơ hội bắn skill cùng bạn — 50% khi có kẻ địch Rare hoặc Unique ở gần."
+  - label: Spell damage cũng tính
+    text: "150% Arcane Might: increased spell damage trên wand và shield của bạn áp vào attack này ở mức gấp rưỡi giá trị."
+  - label: Boss có bộ đồ nghề thứ hai
+    text: "Totem ballista [[Kinetic Bolt]] và một cái [[Tornado]] để bạn bắn vào. Gặp pinnacle boss thì bạn đổi luôn main skill."
+
+chainDetails:
+  - title: Vì sao bạn không bắt đầu bằng nó được
+    body: |
+      [[Kinetic Blast]] cần nhân vật level 28 và một cây wand. Quan trọng hơn, kế hoạch của guide là "swap to Kinetic Blast after acquiring Endless Munitions from the Merciless Lab", tức Labyrinth *thứ ba*, gần cuối campaign.
+
+      Tới trước đó build có quá ít projectile để mấy cú nổ chồng lên nhau, và không có cây wand nào đáng dùng. Nên bạn lên level như một thứ hoàn toàn khác và coi cú đổi là một sự kiện.
+
+      Ranger cũng không được chào viên gem này. PoEDB liệt nó là quest reward của Witch ở Act 3, được Clarissa bán cho Scion, Shadow, Templar và Witch. Với Ranger thì chỉ còn [[Siosa]] ở Library, Act 3, người bán gem cho mọi class, hoặc Lilly Roth từ Act 6.
+  - title: Arcane Might, và vì sao bạn cầm shield của caster
+    body: |
+      Dòng của PoEDB cho gem: "150% Arcane Might". Các khoản increase và reduction của spell damage cũng áp vào attack damage của skill, ở mức 150% giá trị. Vì vậy một cái shield có 60% increased spell damage đáng 90% increased damage cho attack này.
+
+      Đó là lý do của danh sách gear. Guide muốn "a high % spell damage shield" là một trong hai món mua đầu tiên, về sau craft một cây Harmonic Spirit Shield cho nó, và cây wand của nó mang spell damage dưới dạng implicit lẫn craft bench.
+
+      [[Kinetic Bolt]], skill single-target, có **200%** Arcane Might và damage effectiveness cao hơn nhiều — 220% ở gem level 20 so với 155% của Kinetic Blast. Khoảng cách đó là lý do guide đổi skill khi đánh pinnacle boss.
+
+      Cái này bị nerf cách đây một league. Trong 3.29 Kinetic Blast đi từ 200% Arcane Might xuống 150%, và từ 35% less area damage thành 40%. Trong 3.30 không gì đổi nó.
+  - title: Cây wand để làm gì
+    body: |
+      Skill gây 140% weapon damage ở gem level 1 và 155% ở level 20, và attack ở 115% base speed. Mọi thứ bắt đầu từ damage của chính cây wand.
+
+      Guide đòi "a high elemental DPS wand": flat fire, cold và lightning damage. Cây wand hoàn chỉnh của nó có cả ba làm prefix. [[Wrath]] cộng thêm flat lightning lên trên, và một setup [[Spellslinger]] cast [[Flame Wall]] thay bạn để, theo chữ của guide, attack của bạn nhặt thêm "additional flat fire damage".
+
+      **Cách đọc của chúng tôi, không phải của guide:** đây cũng là lý do [[Trinity Support]] nằm trong link. Nó thưởng cho việc gây nhiều hơn một nguyên tố, và một cây wand có ba loại flat damage cộng bức tường với aura thì làm đúng chuyện đó.
+  - title: Sacred Wisps, bằng con số
+    body: |
+      Từ PoEDB. [[Sacred Wisps Support]] chỉ chạy với wand. Đánh trúng bằng skill được support sẽ triệu 2 con wisp trong 10 giây. Mỗi khi bạn bắn, mỗi con wisp có 25% cơ hội dùng skill đó theo, và con số đó tăng thêm 25% nữa khi có kẻ địch Rare hoặc Unique trong presence của bạn.
+
+      Bản của wisp gây 60% less damage ở gem level 1 và 51% less ở level 20, và support này có cost multiplier 140%. Nó cần level 18, và Ranger mua nó từ Yeena ở Act 2 sau quest Sharp and Cruel.
+
+      Nên support này mạnh nhất đúng ở chỗ skill yếu nhất: đứng gần một thứ nguy hiểm.
+  - title: Bộ đồ nghề single-target
+    body: |
+      Mấy cú nổ của Kinetic Blast được làm ra cho pack. Với bất cứ thứ gì có thanh máu, guide thêm hai thứ.
+
+      - **[[Kinetic Bolt]] trên [[Ballista Totem Support]].** Mặc định ba totem, đặt trước khi boss thức dậy, bắn ra một tia đi zig-zag và fork.
+      - **[[Tornado]].** PoEDB: trong 1.5 giây đầu, projectile của bạn đánh trúng được cái tornado, tối đa 20 lần, và nó chuyển damage sang kẻ địch bên trong; rồi nó đuổi theo kẻ địch thêm 4 giây nữa. Mô tả của guide là nó "deals massive single target damage based on the damage of the first 20 projectiles you fire into it". [[More Duration Support]] được link với nó.
+
+      Gặp pinnacle boss, guide đi thêm một bước và đổi hai viên gem trong main link: [[Kinetic Blast]] lấy [[Kinetic Bolt]], và [[Returning Projectiles Support]] lấy [[Barrage Support]]. Nó lặp lại chỉ dẫn này bốn lần trên một trang, đủ gợi ra người ta hay quên chuyện đó tới mức nào.
+  - title: Những gì chúng tôi không tìm được
+    body: |
+      - **Giá.** Không có, cho bất cứ thứ gì.
+      - **Con số đo được từ guide.** Nó đưa mục tiêu — một triệu damage mỗi giây cho hai Voidstone đầu, hai tới ba triệu cho cả bốn — và không có con số nào từ nhân vật của chính nó.
+      - **Một phần leveling.** Guide chỉ sang các guide campaign Explosive Concoction, Rain of Arrows và Lightning Arrow. Các bước gem bên dưới là đọc từ planner bên trong guide này; cây campaign thì không được mô tả bằng chữ.
+      - **Keystone nào.** Planner có năm cây. Phần văn xuôi nêu [[Ghost Dance]], notable [[Entrench]] và một mastery suppression, ngoài ra không gì khác.
+      - **Xếp hạng từ bên thứ ba.** Chúng tôi không tìm được tier list 3.30 nào xếp build này. Nó thì phổ biến: mấy bản Deadeye dùng wand đứng đầu danh sách build projectile 3.30 được xem nhiều nhất của một site.
+
+mandatory:
+  - term: Kinetic Blast
+    why: >-
+      Bản thân skill. Level 28, chỉ dùng với wand. Thêm 4 cú nổ mỗi điểm chạm,
+      40% less area damage, 150% Arcane Might.
+    detail: >-
+      Quality của gem thêm tối đa một cú nổ nữa. Ranger không nhận gem này làm
+      reward: mua nó từ [[Siosa]] ở Library, Act 3 hoặc từ Lilly Roth ở Act 6.
+  - term: Endless Munitions
+    why: >-
+      "Skills fire 2 additional Projectiles." Điều kiện của guide để dùng
+      Kinetic Blast, dù chỉ một chút. Labyrinth thứ ba.
+  - term: Sacred Wisps Support
+    why: >-
+      Hai con wisp thỉnh thoảng chép lại attack của bạn, và chép một nửa số lần
+      khi có kẻ địch Rare hoặc Unique ở gần. Có trong main link ở mọi stage.
+  - term: Returning Projectiles Support
+    why: >-
+      Projectile quay ngược lại xuyên qua pack. Nằm trong link clear cho tới
+      tier cao nhất, nơi cây ring [[Nimis]] cung cấp đúng thứ đó và giải phóng
+      ô socket.
+  - term: Trinity Support
+    why: >-
+      More elemental damage cho một skill gây nhiều nguyên tố. Có trong link từ
+      setup Kinetic Blast đầu tiên tới six-link.
+  - term: Elemental Damage with Attacks Support
+    why: >-
+      More elemental damage với attack. Mang sang từ link leveling và giữ tới
+      bản aspirational.
+  - term: Kinetic Bolt
+    why: >-
+      Trên totem ballista cho boss map, và làm luôn main skill khi đánh
+      pinnacle boss. Ranger mua nó từ Nessa ở Act 1.
+  - term: Tornado
+    why: >-
+      Bắn vào nó. Damage của nó đến từ 20 projectile đầu tiên trúng nó. Là một
+      phần của rotation đánh boss ở mọi stage.
+  - term: Wrath
+    why: >-
+      Flat lightning damage cho attack. Aura duy nhất guide giữ trong mọi setup
+      chạy map.
+  - term: Spell Suppression
+    why: >-
+      100% là mục tiêu được nêu cho hai Voidstone cuối. Nhược điểm thứ hai của
+      guide là "Must Finetune your Defence (Ex: Cap Suppression)".
+  - term: Ghost Dance
+    why: >-
+      Hồi energy shield khi bạn bị hit, đó là câu trả lời của build cho burst
+      damage. Nó cần chút energy shield để có cái mà làm việc.
+    detail: >-
+      Con số của guide: "ensure you have 100 to 300+ total energy shield to
+      effectively use Ghost Dance". Đó là lý do body armour và helmet là hybrid
+      evasion với energy shield.
+  - term: Assassin's Mark
+    why: >-
+      Được [[Mark On Hit Support]] áp. Có quality thì nó sinh power charge
+      trong các trận dài, và nó giúp chạm cap crit.
+    detail: >-
+      Guide chỉ đổi nó lấy [[Sniper's Mark]] khi pinnacle boss đã xong, crit đã
+      gần cap mà không cần nó, và boss map chết trong dưới mười giây.
+  - term: Gathering Winds
+    level: recommended
+    why: >-
+      Labyrinth thứ nhất. Tailwind cho bạn và đồng minh ở gần, mạnh hơn theo
+      mỗi skill bạn dùng. Guide gọi nó là "the de-facto choice" cho tốc độ và
+      damage cùng lúc.
+  - term: Focal Point
+    level: recommended
+    why: >-
+      Labyrinth thứ tư. 75% increased effect cho mark của bạn, và 25% less
+      damage taken từ các kẻ địch khác ở gần con bị mark.
+  - term: Grace
+    level: recommended
+    why: >-
+      Evasion. Thay [[Haste]] ở ô aura khi bạn nhắm tới hai Voidstone cuối.
+  - term: Diamond Flask
+    level: recommended
+    why: >-
+      Cùng một cây [[Silver Flask]], cả hai roll "chance to gain a Flask Charge
+      when you deal a Critical Strike". Guide nói chuyện này nâng single-target
+      damage "greatly" trong các trận boss dài.
+  - term: Quartz Flask
+    level: recommended
+    why: >-
+      Phasing. Chỉ dẫn clear của guide là attack vào từng pack "and run through
+      them with a Quartz Flask or any other source of Phasing".
+  - term: The Taming
+    level: recommended
+    why: >-
+      Hai cây trong bộ endgame, với 20% quality từ Turbulent Catalyst. Trước đó
+      thì không cần.
+  - term: Replica Hyrri's Ire
+    level: recommended
+    why: >-
+      Body armour endgame. Được guide nêu là một trong bốn unique mà build
+      "benefits from"; nó không nói món này đóng góp gì, và chúng tôi không
+      kiểm.
+
+labs:
+  - lab: Normal
+    node: Gathering Winds
+    why: "Action speed qua Tailwind: cơ động, clear và single target cùng lúc."
+  - lab: Cruel
+    node: Ricochet
+    why: "Skill chain thêm một lần, và nó nằm trên đường tới Endless Munitions. Far Shot được đưa ra làm phương án thay thế cho lối chơi tầm xa, kèm lời cảnh báo rằng khi đó bạn cần một cơ chế projectile từ chỗ khác."
+  - lab: Merciless
+    node: Endless Munitions
+    why: "Thêm hai projectile. Guide: đây là thứ cho phép đổi sang Kinetic Blast."
+  - lab: Eternal
+    node: Focal Point
+    why: "Mark mạnh hơn, cho single-target damage."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: poisonous-concoction
+    title: Act 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Caustic Arrow]] với một cây bow tới level 12, rồi
+      [[Poisonous Concoction]], thứ không dùng vũ khí nào cả, cho tới 28.
+    changes: >-
+      Ở 12 bạn đặt cây bow xuống. [[Blood Rage]] và [[Herald of Ash]] vào ở 16,
+      [[Haste]] ở 24. Bạn chưa chơi build wand, và suốt cả campaign cũng sẽ
+      chưa.
+    links:
+      - name: Level 1–12
+        gems: [Caustic Arrow, Volley Support, Mirage Archer Support]
+      - name: Level 1–12, attack thứ hai
+        gems: [Burning Arrow, Momentum Support]
+      - name: Level 12–28
+        gems: [Poisonous Concoction, Volley Support, Momentum Support]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: Utility tới level 24
+        gems: [Sniper's Mark, Blood Rage, Frostblink, Withering Step, Herald of Ash, Haste]
+    moveOn: "bạn level 28 và cắm được Explosive Concoction."
+    details:
+      - title: Mấy bước này đến từ đâu
+        body: |
+          Phần chữ của chính guide chỉ nói "during the campaign, you level with Explosive Concoction, Rain of Arrows or Lightning Arrow", và link một guide riêng cho từng cái. Các bước gem ở đây là những bước được lưu trong planner bên trong guide Kinetic Blast, cái đi theo lộ trình Explosive Concoction.
+
+          **Chúng tôi không đọc hết guide leveling riêng đó.** Về passive tree, guide nói hãy "click through the campaign embed"; cây campaign chỉ tồn tại ở đó, không có bằng chữ.
+      - title: Nhặt gì
+        body: |
+          Bốn mục tiêu gear campaign của guide, theo thứ tự của nó: "Any Shield that improves your DPS", boots có 25% tới 30% movement speed, gear life với resistance, và flat damage trên ring, amulet hoặc gloves.
+
+          Concoction được ném với tay chính để trống, đó là lý do shield có trong danh sách đó ngay từ đầu. Guide Poisonous Concoction Pathfinder của site này giải thích bản thân skill.
+      - title: Bandit và Pantheon
+        body: |
+          Planner chọn **Alira**, và nhân vật 3.30 độc lập cũng vậy. Pantheon trên planner: Soul of the Brine King và Soul of Ryslatha. Phần Pantheon của guide là một link tới một trang chung và không đưa lý do nào.
+  - id: acts-4-10
+    phase: early
+    image: gathering-winds
+    title: Act 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Explosive Concoction]] trong một four-link. [[Haste]] và, từ 38,
+      [[Flesh and Stone]]. [[Sniper's Mark]] được [[Mark On Hit Support]] áp.
+    changes: >-
+      Ba Labyrinth: [[Gathering Winds]], [[Ricochet]], rồi
+      [[Endless Munitions]]. Cái thứ ba mới là cái quan trọng. Nhân vật là
+      non-crit suốt chặng và giữ nguyên vậy cho tới map.
+    links:
+      - name: Level 28–38
+        gems: [Explosive Concoction, Volley Support, Lesser Multiple Projectiles Support, Elemental Damage with Attacks Support]
+      - name: Level 38+
+        gems: [Explosive Concoction, Greater Volley Support, Elemental Damage with Attacks Support, Fire Penetration Support]
+      - name: Mark
+        gems: [Sniper's Mark, Mark On Hit Support, Blood Rage]
+      - name: Aura
+        gems: [Haste, Flesh and Stone]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Frostblink]
+    moveOn: "bạn đã có Endless Munitions, Act 10 đã xong, và resistance của bạn đã cap."
+    details:
+      - title: Bắt đầu gom đồ cho cú đổi
+        body: |
+          Bạn mang mấy skill wand trong socket thừa được từ rất lâu trước khi dùng chúng. [[Kinetic Bolt]] được Nessa bán cho Ranger ở Act 1. [[Sacred Wisps Support]] đến từ Yeena ở Act 2. Bản thân [[Kinetic Blast]] thì từ [[Siosa]] ở Act 3 hoặc Lilly Roth ở Act 6.
+
+          Lên level cho chúng sớm là gợi ý của chúng tôi; guide không nhắc tới.
+      - title: Sau boss Act 10
+        body: |
+          Guide: "Upon defeating Act 10 Kitava, use the Gambling Vendor to upgrade any weaker item drops from earlier acts, primarily focusing on basic resistance capping. The life resistance gear you equip here is viable for defeating Eater and Exarch."
+
+          Lưu ý cho 3.30: gamble ở level cao giờ tốn hơn và cho đồ tệ hơn so với lúc câu đó được viết.
+  - id: early-maps
+    phase: early
+    image: kinetic-blast
+    title: "Map đầu: cú đổi"
+    levels: Map trắng và map vàng
+    uses: >-
+      [[Kinetic Blast]] trong một five-link, một cây wand có elemental damage,
+      một cái shield có spell damage, và bộ đồ nghề đánh boss: totem
+      [[Kinetic Bolt]], [[Tornado]] và một [[Flame Wall]] được trigger.
+    changes: >-
+      Mọi thứ. Bạn đổi loại vũ khí, main skill và phần lớn socket trong cùng
+      một ngày, và đâu đó trong khúc này bạn còn chuyển cây từ non-crit sang
+      crit.
+    links:
+      - name: Main skill (five-link)
+        gems: [Kinetic Blast, Returning Projectiles Support, Elemental Damage with Attacks Support, Trinity Support, Sacred Wisps Support]
+      - name: Totem đánh boss
+        gems: [Kinetic Bolt, Ballista Totem Support, Barrage Support, Focused Ballista Support]
+      - name: Tường lửa
+        gems: [Spellslinger, Flame Wall]
+      - name: Tornado
+        gems: [Tornado, More Duration Support, Precision]
+      - name: Mark và di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Mark On Hit Support, Assassin's Mark]
+      - name: Aura và guard
+        gems: [Haste, Wrath, Cast when Damage Taken Support, Immortal Call]
+      - name: Skill di chuyển thứ hai
+        gems: [Flame Dash]
+    moveOn: "cây đã là crit, wand và shield là đồ thật, và bạn clear map vàng mà không phải nghĩ."
+    details:
+      - title: Khi nào chuyển sang crit
+        body: |
+          Guide đưa ba lựa chọn và chọn một:
+
+          1. Ép chuyển ở level 60 tới 70 hoặc muộn hơn, bất kể wand và cây của bạn trông ra sao.
+          2. Chờ tới khi bạn tìm được một cây wand flat elemental và một cái shield spell damage thuộc loại "a very well rolled". **Đây là khuyến nghị của tác giả**, và tác giả nói lý tưởng là chuyện đó xảy ra sớm trong tiến trình map.
+          3. Chờ có five-link rồi cắm [[Increased Critical Strikes Support]].
+
+          Lý do tác giả không chờ lâu hơn: "Non-Crit runs out of efficient scaling options at T16s and is surpassed by Crit at that point." Tác giả muốn bạn chuyển xong hẳn trước phần Tier 16.
+
+          Trong lúc bạn còn non-crit, viên [[Precision]] level thấp giúp giữ [[Precise Technique]] hoạt động.
+      - title: Aura
+        body: |
+          [[Wrath]] cho flat lightning và, ở stage này, [[Haste]]. [[Precision]] ở level 1 cap cơ hội đánh trúng của bạn và thêm chút crit chance.
+
+          Guide liệt kê các phương án thay thế mà không xếp hạng: [[Haste]] thay cho Grace hoặc Wrath để cơ động, và [[Anger]] thay cho Grace hoặc Wrath để thêm flat damage.
+      - title: Mana
+        body: |
+          Guide liệt kê ba cách chữa tùy chọn và không chọn giữa chúng: notable [[Thrill of Battle]]; một Life Mastery khiến skill tốn life thay cho 15% mana cost của chúng; và flat mana trên gear.
+      - title: Mod map cần tránh
+        body: |
+          Danh sách đầy đủ của guide:
+
+          - Monsters cannot be Leeched from
+          - Monsters reflect Elemental Damage
+          - Monsters reflect Physical Damage
+          - Players have −9% to −12% to all maximum Resistances
+  - id: red-maps
+    phase: endgame
+    image: tornado
+    title: Map đỏ và hai Voidstone đầu
+    levels: Map Tier 11–16, Eater of Worlds và Searing Exarch
+    uses: >-
+      Vẫn mấy viên gem của cú đổi, trên đồ tốt hơn: một cây wand bạn gamble
+      hoặc craft ra, một cái shield spell damage, và hai flask được roll để nạp
+      lại khi critical strike.
+    changes: >-
+      Crit hoàn tất trước Tier 16. Trước hai con boss, bạn lấy [[Entrench]] và
+      cái mastery làm cơ hội suppress spell damage của bạn thành lucky. Mục
+      tiêu của guide cho stage này: **3,000 trở lên life cộng energy shield, và
+      một triệu damage mỗi giây.**
+    links:
+      - name: Main skill, chạy map
+        gems: [Kinetic Blast, Returning Projectiles Support, Elemental Damage with Attacks Support, Trinity Support, Sacred Wisps Support]
+      - name: Main skill, pinnacle boss
+        gems: [Kinetic Bolt, Barrage Support, Elemental Damage with Attacks Support, Trinity Support, Sacred Wisps Support]
+      - name: Totem đánh boss
+        gems: [Kinetic Bolt, Ballista Totem Support, Barrage Support, Focused Ballista Support]
+      - name: Tornado và tường lửa
+        gems: [Tornado, More Duration Support, Spellslinger, Flame Wall]
+      - name: Aura và guard
+        gems: [Haste, Wrath, Cast when Damage Taken Support, Immortal Call]
+    moveOn: "Eater of Worlds và Searing Exarch đã chết và bạn có hai Voidstone."
+    details:
+      - title: Kiếm cây wand
+        body: |
+          Kế hoạch của guide: "Around T11 Maps, gamble the gold you've acquired on Wands, aiming for a Wand with High Elemental DPS. Alternatively, use Wrath Essences on the new Wand Bases with 'Cannot Roll Caster Modifiers'."
+
+          Cả hai đường đều bị 3.30 đụng tới. Gamble ở level cao thì "đắt hơn mà đồ lại tệ hơn", theo chữ changelog của site này. Essence là đường an toàn hơn lúc này: ở map đỏ, mọi Essence bạn giải phóng đều là tier Screaming trở lên.
+
+          **Chưa ai thử lại bước gamble kể từ patch.** Nếu nó làm bạn thất vọng thì craft.
+      - title: Flask
+        body: |
+          "Ensure your [[Diamond Flask]] and [[Silver Flask]] are rolled with the % chance to gain a Flask Charge when you deal a Critical Strike modifier, to greatly increase your single target DPS during extended boss fights."
+
+          Modifier đó không làm gì cho tới khi bạn là crit, thêm một lý do nữa để cú chuyển sang crit được xếp trước stage này.
+      - title: Gear trông tầm thường là có chủ ý
+        body: |
+          Mọi ô trong bộ gear của planner cho stage này đều là đồ rare. Các ưu tiên gắn với từng ô thì ngắn: attack speed và life trên gloves; spell damage, flat cold và lightning damage với local crit chance trên wand; modifier nhận flask charge khi crit trên các utility flask.
+
+          Guide thêm một bước hoàn thiện, và chỉ như bước cuối: implicit Eater hoặc Exarch bằng Lesser Eldritch Ember hoặc Ichor.
+  - id: four-stones
+    phase: endgame
+    image: ghost-dance
+    title: Cả bốn Voidstone
+    levels: Maven và Uber Elder, level 90+
+    uses: >-
+      100% spell suppression, một cái body armour evasion với energy shield
+      five-link, [[Grace]] thay cho [[Haste]], và một cây [[Stygian Vise]] có
+      jewel Searching Eye.
+    changes: >-
+      Stage này là chuyện đừng chết. Guide: suppression đã cap "significantly
+      improves your survivability versus the final 2 Pinnacle Bosses". Mục tiêu
+      của nó: **3,600 tới 4,000 trở lên life cộng energy shield, và hai tới ba
+      triệu damage mỗi giây.**
+    links:
+      - name: Main skill, chạy map
+        gems: [Kinetic Blast, Returning Projectiles Support, Elemental Damage with Attacks Support, Trinity Support, Sacred Wisps Support]
+      - name: Totem đánh boss
+        gems: [Kinetic Bolt, Ballista Totem Support, Barrage Support, Focused Ballista Support]
+      - name: Mark và di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Mark On Hit Support, Assassin's Mark]
+      - name: Aura và guard
+        gems: [Wrath, Grace, Cast when Damage Taken Support, Immortal Call]
+    moveOn: "bạn có bốn Voidstone. Từ đây các nâng cấp là lựa chọn."
+    details:
+      - title: Craft, theo cách guide bày ra
+        body: |
+          - **Ring, amulet, gloves:** Screaming Essence of Torment, Anguish và Suffering.
+          - **Wand:** Shrieking Essence of Wrath, Shrieking Essence of Anger hoặc Screaming Essence of Hatred.
+          - **Shield:** một cây Harmonic Spirit Shield; roll một modifier increased spell damage cao bằng [[Orb of Alteration]] và [[Orb of Augmentation]]; nếu bạn không cần suffix life hay resistance thì craft attack speed.
+          - **Body armour:** gamble ra một cái hybrid five-link. Khi craft đồ hybrid, một Essence of Woe bảo đảm flat energy shield.
+          - **Belt và jewel:** "use the trade site or run Abyss in search of a Stygian Vise and a Searching Eye Jewel".
+
+          Trong 3.30, dòng cuối cần một Abyss Thread, và cây belt cần Item Tier 5 mới rơi.
+      - title: Một craft veiled đáng biết
+        body: |
+          Nếu một món rare không cần suffix life hay resistance, guide gợi ý modifier veiled "Regenerate 150 Energy shield per second while a Rare or Unique Enemy is Nearby" để cải thiện hồi energy shield. Nó nuôi [[Ghost Dance]] đúng trong những trận bạn cần.
+      - title: Một nhân vật độc lập trông thế nào
+        body: |
+          File 3.30 đo được duy nhất chúng tôi tìm thấy là của Kassadus, level 92, và nó đi *trước* stage này: nó đeo một cây [[Headhunter]], một [[Esh's Mirror]], [[The Fledgling]] và một [[Death Rush]].
+
+          Các con số của nó: tổng **2.4 triệu** damage mỗi giây (1.6 triệu từ hit), 7.26 attack mỗi giây. 3,779 life và 1,157 energy shield. 12,253 evasion cho 68% cơ hội evade, 96% spell suppression, 24% block. Resistance 75/76/75 và **−25% chaos**. Effective hit point 27,689. Maximum hit taken: 7,300 physical, khoảng 24,000 mỗi nguyên tố, 3,000 chaos.
+
+          Đặt cái đó cạnh mục tiêu của guide thì chúng khớp nhau: build này xong Atlas với khoảng bốn tới năm nghìn tổng bể máu và hai tới ba triệu damage. Nó làm được vậy bằng cách giết trước.
+  - id: endgame
+    phase: endgame
+    image: the-taming
+    title: Endgame và xa hơn
+    levels: Map Tier 17 và Uber boss
+    uses: >-
+      Một six-link có [[Volatility Support]], một cây wand có cả ba prefix flat
+      elemental, một cái shield hoàn chỉnh, và bốn unique:
+      [[Replica Hyrri's Ire]], hai cây [[The Taming]], [[Yoke of Suffering]] và
+      [[Dying Sun]].
+    changes: >-
+      [[Sniper's Mark]] thay Assassin's Mark. Cây bắt đầu bỏ các node
+      suppression và accuracy khi gear nhận lấy mấy việc đó. Phía trên nữa là
+      một bản "aspirational" dựng quanh [[Headhunter]].
+    links:
+      - name: Main skill (six-link)
+        gems: [Kinetic Blast, Returning Projectiles Support, Elemental Damage with Attacks Support, Trinity Support, Sacred Wisps Support, Volatility Support]
+      - name: Mark và di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Sniper's Mark, Mark On Hit Support]
+      - name: Aura và guard
+        gems: [Wrath, Grace, Cast when Damage Taken Support, Immortal Call]
+      - name: "Main skill aspirational (có Nimis)"
+        gems: [Kinetic Blast, Sacred Wisps Support, Increased Critical Damage Support, Volatility Support, Greater Fork Support, Invert the Rules Support]
+      - name: Aura aspirational
+        gems: [Wrath, Herald of Ash, Summon Skitterbots, Enlighten Support]
+    moveOn: "không còn stage nào nữa."
+    details:
+      - title: Cây wand và cái shield hoàn chỉnh
+        body: |
+          **Wand.** Dùng Shrieking Essence of Wrath, Hatred hoặc Anger cho tới khi bạn trúng một modifier flat elemental thứ hai ở tier 3 trở lên. Làm y vậy trên một cây wand thứ hai, sao cho hai cây cộng lại có đủ cả ba nguyên tố. Recombine chúng cho tới khi một cây có cả ba làm prefix. Guide: "Only use Shrieking Essences", và tốt nhất là trước đó cả hai cây đều không có prefix nào khác.
+
+          **Shield.** Recombine các cây Harmonic Spirit Shield màu xanh để lấy increased spell damage và life; lấp đầy suffix; một Redeemer's Exalted Orb để lấy increased elemental damage with attack skills; rồi "Prefixes Cannot Be Changed" và một [[Veiled Chaos Orb]], hy vọng ra chance to deal double damage; attack speed để kết thúc.
+
+          **Hai cảnh báo 3.30, cả hai đều không có trong guide.** Recombinator giờ trả lại ít modifier hơn khi hai món đầu vào có ít modifier cộng lại, mà đó chính là trường hợp "hai prefix trên mỗi cây wand" mô tả ở trên. Và bảo vệ prefix trên một món weapon tốn 4 Divine cộng một [[Sacred Orb]]. Trên giấy thì cách làm vẫn chạy. Nó tốn bao nhiêu thì chưa biết.
+      - title: Bản aspirational
+        body: |
+          Chữ của guide: "There are many viable high investment build options for an endgame Wander. The example provided is a Map Blaster that uses a [[Headhunter]] to steal Damage as Extra modifiers with a High Physical Damage wand."
+
+          Nó thêm [[Esh's Mirror]] cho flat lightning damage dựa trên số quái bị shock giết gần đây, [[Nimis]] cho returning projectile, "massively improving clear speed and damage by freeing a support gem", và một cái body armour craft làm quái phát nổ. [[Progenesis]] nằm trong hàng flask.
+
+          Để ý cây wand đổi loại ở đây: *physical* damage cao, không phải elemental. Đó là dựng lại, không phải nâng cấp cây wand trước.
+      - title: Build vẫn làm dở chuyện gì
+        body: |
+          - Nó gần như không có biên an toàn. Khoảng bốn tới năm nghìn tổng bể máu, và chaos resistance thì guide coi là tùy chọn.
+          - Pinnacle boss cần một cú đổi gem mà bạn phải nhớ trước trận.
+          - Ba loại map nằm ngoài cuộc chơi: cả hai reflect và no-leech.
+          - Nhược điểm thứ ba của chính guide: "Need Investment for T17s". Nó không nói bao nhiêu.
+
+powerCurve: |
+  Build này không hẳn có một đường cong sức mạnh, đúng hơn là một cái vách đá với một cái cầu thang phía sau.
+
+  **Ở level 30 nó chưa phải build này.** Bạn đang ném [[Explosive Concoction]] không cần vũ khí, và không thứ gì bạn có còn quan trọng sau cú đổi ngoài life, resistance và movement speed. Đó là lý do campaign nhanh, và cũng là lý do nó không dạy bạn gì về cảm giác của nhân vật sau này.
+
+  **Quanh level 70 mọi thứ tới trong một buổi chiều.** Có ba thứ nhân clear của Kinetic Blast lên, và cú đổi cho bạn cả ba cùng lúc: số projectile ([[Endless Munitions]] thêm hai), bốn cú nổ mỗi cái tạo ra, và [[Returning Projectiles Support]] gửi chúng ngược lại qua pack. Cái tích đó là lý do clear speed xuất sắc ngay từ map đầu tiên trên một five-link. Single-target damage thì không có hệ số nào trong số đó — một mục tiêu không thể bị trúng nhiều cú nổ hơn số rơi lên nó — nên nó khởi đầu yếu và được vá bằng totem với [[Tornado]].
+
+  **Từ đó trở đi damage là cây wand của bạn, mỗi lần một nâng cấp.** Flat elemental damage trên wand, nhân attack speed, nhân spell damage tính ở mức gấp rưỡi qua Arcane Might, nhân crit khi bạn đã chuyển. Mỗi cái là một bước gear bình thường, đó là lý do guide đưa được mục tiêu theo stage: một triệu ở hai Voidstone, hai tới ba triệu ở bốn. *Cách đọc của chúng tôi:* crit là cú nhảy thật sự duy nhất trên cái cầu thang đó, và tác giả cũng nói gần như vậy khi viết rằng non-crit "runs out of efficient scaling options at T16s".
+
+  **Phòng thủ gần như không leo lên chút nào.** Mục tiêu bể máu của guide đi từ 3,000 lên khoảng 4,000 giữa Voidstone đầu và Voidstone cuối. Thứ cải thiện là khả năng né: suppression lên 100%, [[Grace]], [[Ghost Dance]]. Nên nhân vật ở level 95 clear nhanh gấp nhiều lần so với ở 75 mà chịu một cú hit trực diện chỉ khá hơn chút ít. Cái khoảng cách đó, chứ không phải damage, mới quyết định bạn có thích nó hay không.
+upgrades:
+  - step: Boots có movement speed và resistance đã cap
+    why: >-
+      Danh sách campaign của guide, và đứng đầu vì phòng thủ của build là
+      khoảng cách với tốc độ. Không thứ gì phía sau giúp được một nhân vật
+      không tránh ra kịp.
+  - step: Một cây wand elemental damage cao
+    why: >-
+      Kinetic Blast gây 140–155% weapon damage, nên cây wand là cái nền mà mọi
+      thứ khác nhân lên. Nó đi trước shield vì spell damage qua Arcane Might
+      nhân damage của wand lên, và một hệ số nhân trên một cây wand tệ thì vẫn
+      là một con số tệ.
+  - step: Một cái shield có roll increased spell damage cao
+    why: >-
+      Được tính ở mức 150% cho skill này. Guide ghép nó với cây wand thành hai
+      thứ phải có ngay sau cú đổi. Roll nó trên một cây Harmonic Spirit Shield
+      bằng currency cơ bản thì rẻ, đó là lý do nó nằm cao thế này.
+  - step: Cú chuyển sang crit, cùng flask nạp lại khi critical strike
+    why: >-
+      Bước lớn nhất về damage, và miễn phí về currency: nó là một lần respec.
+      Nó đi sau wand và shield vì lời khuyên của chính tác giả là chờ roll tốt
+      trên cả hai rồi mới chuyển.
+  - step: Body armour hybrid, chút energy shield, và 100% spell suppression
+    why: >-
+      [[Ghost Dance]] cần 100 tới 300 energy shield mới đáng có, và
+      suppression đã cap là yêu cầu guide nêu rõ cho Maven và Uber Elder. Nằm
+      dưới các bước damage chỉ vì hai Voidstone đầu không đòi nó. Nếu bạn đang
+      chết thì dời nó lên.
+  - step: Stygian Vise và một viên jewel Searching Eye
+    why: >-
+      Thêm flat damage trên một ô trước đó không có. Sau suppression vì nó
+      cộng vào một con số vốn đã đủ dùng, còn suppression thì chữa một con số
+      chưa đủ.
+  - step: Cây wand ba nguyên tố và cái shield hoàn chỉnh
+    why: >-
+      Vẫn hai món của bước hai và bước ba, làm cho tử tế. Nó muộn thế này vì
+      nó đồng nghĩa với Shrieking Essence, một cái recombinator và một craft
+      được bảo vệ, mà mỗi thứ đó đều đắt lên hoặc kém chắc ăn đi trong 3.30.
+  - step: "Replica Hyrri's Ire, hai cây The Taming, Yoke of Suffering và Dying Sun"
+    why: >-
+      Các unique endgame của guide. Đứng cuối trong các nâng cấp bình thường
+      vì build "doesn't require any Unique items to function": mấy món này
+      trau chuốt một nhân vật đã chạy được và không món nào chữa một vấn đề.
+play:
+  mapping: |
+    Giữ [[Kinetic Blast]] và nhắm vào giữa pack. Bạn không cần nhắm từng con quái: mấy cú nổ xảy ra quanh bất cứ thứ gì projectile trúng, và [[Returning Projectiles Support]] đem chúng quay ngược lại.
+
+    Rồi đi *xuyên qua* pack, đừng đi vòng. Chỉ dẫn của guide là "attack into each pack and run through them with a [[Quartz Flask]] or any other source of Phasing". [[Shield Charge]] là cách di chuyển chính, có [[Flame Dash]] cho mấy cái khe. Nếu bạn thích [[Frostblink]] hơn, guide ghi chú là nó dùng được ở cuối một cú Shield Charge.
+
+    [[Spellslinger]] thả [[Flame Wall]] trong lúc bạn attack; bạn không bấm nó. [[Mark On Hit Support]] áp mark của bạn. [[Immortal Call]] tự nổ khi bạn ăn damage.
+
+    Với boss map: đặt ba totem [[Kinetic Bolt]] "before the boss becomes active", cast [[Tornado]], rồi giữ Kinetic Blast. Đặt lại totem và tornado khi trận đánh kéo dài.
+
+    Thế giằng co: build nhanh nhất khi bạn chạy vào pack và an toàn nhất khi bạn tránh xa chúng. Phasing cho bạn làm cái thứ nhất. Không gì cho bạn sống sót khi làm chuyện đó một cách cẩu thả.
+  bossing: |
+    **Trước** một trận pinnacle, đổi hai viên gem trong body armour: [[Kinetic Blast]] ra, [[Kinetic Bolt]] vào; [[Returning Projectiles Support]] ra, [[Barrage Support]] vào. Mang theo mấy viên dự phòng. Lời cảnh báo của guide cũng chạy theo chiều ngược lại: "Do not use Barrage when clearing Maps."
+
+    Rotation có cùng dáng với đánh boss map. Ba totem đặt xuống trước khi boss hoạt động. [[Tornado]]. Rồi giữ Kinetic Bolt vào boss, và bắn xuyên qua cái tornado khi được, vì damage của nó đến từ 20 projectile đầu tiên trúng nó.
+
+    Giữ flask chạy. Có modifier nạp lại khi crit thì [[Diamond Flask]] và [[Silver Flask]] trụ suốt một trận dài, và guide trông vào chuyện đó.
+
+    Thứ đổi nhiều nhất là bạn không giết được boss trước khi nó ra tay. Trong map, câu trả lời cho nguy hiểm là nó đã chết rồi. Ở đây bạn có bể máu bốn nghìn, 100% suppression, evasion và đôi chân. Ngừng bắn để né; totem và tornado giữ cho một phần damage tiếp tục trong lúc bạn di chuyển.
+deaths:
+  - situation: Một cái map reflect
+    cause: >-
+      Guide liệt cả "Monsters reflect Elemental Damage" lẫn "Monsters reflect
+      Physical Damage" là modifier cần tránh. Bạn bắn nhiều projectile, mỗi cái
+      tạo vài cú nổ, và mỗi cú trúng đích gửi damage ngược về một nhân vật có
+      bể máu nhỏ.
+    fix: >-
+      Reroll map. Trong setup được công bố không có gì trả lời được reflect.
+  - situation: Một cú hit physical từ thứ bạn không thấy
+    cause: >-
+      Evasion là một cơ hội, không phải một khoản giảm. Nhân vật 3.30 độc lập
+      evade 68% attack và chịu được 7,300 physical damage từ cú lọt qua.
+    fix: >-
+      [[Immortal Call]] trên [[Cast when Damage Taken Support]] và
+      [[Ghost Dance]] là câu trả lời của guide cho burst, và cả hai chỉ chạy
+      sau cú hit đầu tiên. Cách vá thật là cái guide đặt đầu tiên trong danh
+      sách nhược điểm: đừng để bị đánh trúng. Giết từ mép màn hình.
+  - situation: Spell damage trong hai trận pinnacle cuối
+    cause: >-
+      Spell suppression dưới 100% để vài spell lọt qua nguyên damage. Vì lý do
+      đó guide coi mức cap là "primary passive tree goal" cho Maven và Uber
+      Elder.
+    fix: >-
+      Cap nó trước khi thử. Lấy cái mastery làm cơ hội suppress của bạn thành
+      lucky sớm hơn, cho hai con boss đầu.
+  - situation: Chaos damage và degeneration
+    cause: >-
+      Guide coi chaos resistance là tùy chọn ("if you value it"), với lập luận
+      rằng một build wand giết quái từ ngoài màn hình mà không bị đánh trúng.
+      Nhân vật độc lập nằm ở −25% chaos resistance với maximum hit chaos là
+      3,000.
+    fix: >-
+      **Lời khuyên của chúng tôi, không phải của guide:** nếu bạn chết vì chaos
+      damage hơn một lần thì hãy coi trọng nó. Một cái base fractured chaos
+      resistance là đường chính guide có nhắc.
+  - situation: Một cái map mà quái không bị leech được
+    cause: >-
+      Nó nằm trong danh sách cần tránh của guide. Nhân vật độc lập hồi 922 life
+      mỗi giây từ leech và 92 từ regeneration; lấy cái đầu đi thì gần như không
+      còn gì.
+    fix: >-
+      Reroll.
+troubleshooting:
+  - symptom: Damage của tôi trên boss thấp hơn hẳn trong map
+    cause: >-
+      Damage của Kinetic Blast là mấy cú nổ chồng lên nhau khắp một pack. Trên
+      một mục tiêu thì hệ số nhân đó mất, và gem còn chịu thêm 40% less area
+      damage.
+    fix: >-
+      Dùng bộ đồ nghề: ba totem [[Kinetic Bolt]], [[Tornado]], và cả hai flask.
+      Với pinnacle boss, đổi main skill sang Kinetic Bolt với
+      [[Barrage Support]] — Kinetic Bolt có 220% damage effectiveness và 200%
+      Arcane Might so với 155% và 150% của Kinetic Blast.
+  - symptom: Tôi hết mana
+    cause: >-
+      Một attack nhanh với cost multiplier 140% từ [[Sacred Wisps Support]],
+      trên một nhân vật reserve hai aura.
+    fix: >-
+      Ba lựa chọn của guide: notable [[Thrill of Battle]]; một Life Mastery
+      biến một phần mana cost thành life cost; flat mana trên gear.
+  - symptom: Mọi thứ vẫn ổn cho tới map đỏ
+    cause: >-
+      Thường là bạn vẫn còn non-crit. Tác giả: non-crit "runs out of efficient
+      scaling options at T16s". Hoặc bạn chuyển sang crit trên wand với shield
+      tệ và mất damage vì chuyện đó.
+    fix: >-
+      Kiếm wand và shield trước, rồi mới respec. Roll modifier nạp-lại-khi-crit
+      lên [[Diamond Flask]] và [[Silver Flask]] trong cùng ngày.
+  - symptom: Tôi đổi sang Kinetic Blast và thấy nó tệ hơn concoction
+    cause: >-
+      Hoặc bạn đổi trước khi có [[Endless Munitions]], nên quá ít projectile
+      tạo ra quá ít cú nổ, hoặc cây wand của bạn là wand leveling. Concoction
+      không dùng vũ khí; còn skill này thì không là gì ngoài vũ khí của nó.
+    fix: >-
+      Xong Labyrinth thứ ba trước đã. Rồi đừng đánh giá build cho tới khi bạn
+      có một cây wand có flat elemental damage thật sự.
+  - symptom: Tôi đánh trượt nhiều
+    cause: >-
+      Accuracy. Guide chạy một viên [[Precision]] level 1 chính là "to cap your
+      hit chance", và lấy accuracy trên cây cho tới khi gear lo được. Nhân vật
+      độc lập ở 92.9%.
+    fix: >-
+      Giữ Precision bật, và đừng bỏ mấy node accuracy trên cây cho tới khi gear
+      thay được chúng.
+
+patch:
+  - entry: mercenary-nerfs
+    note: >-
+      **Không có cú nerf Kinetic Blast mới nào trong 3.30 — hãy kiểm lại nếu
+      bạn đọc thấy điều khác.** Dòng trong patch note, "Adjusted Kinetic Blast
+      on Hired Mercenaries to have 150% Arcane Might", nằm dưới Mercenary
+      Changes và đưa mercenary về ngang với người chơi. Gem của người chơi đã
+      nhận thay đổi đó cách đây một league: 3.29 đưa nó từ 200% Arcane Might
+      xuống 150% và từ 35% less area damage thành 40%. PoEDB không hiện mục
+      3.30 nào cho nó.
+  - note: >-
+      **Deadeye không bị đổi.** Không cái nào trong [[Gathering Winds]],
+      [[Ricochet]], [[Endless Munitions]] hay [[Focal Point]] xuất hiện trong
+      patch note 3.30, và Deadeye cũng không nằm trong số các class ở phần
+      riêng của Ruthless. [[Kinetic Bolt]], [[Tornado]], [[Spellslinger]] và
+      [[Sacred Wisps Support]] cũng không xuất hiện.
+  - entry: crafting-service-tweaks
+    note: >-
+      **Chuyện này trúng kế hoạch gear của guide ở hai chỗ.** Gamble ở level
+      cao tốn hơn và cho đồ tệ hơn, mà guide thì gamble ra cây wand Tier 11 và
+      cái body armour five-link của nó. Recombinator cho ít modifier hơn khi
+      đầu vào có ít, mà cây wand hoàn chỉnh được làm bằng cách recombine hai
+      cây wand mỗi cây hai prefix. Guide được cập nhật ngày 12/11 và không
+      nhắc tới chuyện nào trong hai.
+  - entry: essence-changes
+    note: >-
+      **Tốt cho cây wand.** Ở map đỏ mọi Essence giờ là tier Screaming trở
+      lên, và craft wand thì cần Shrieking Essence of Wrath, Anger và Hatred.
+  - entry: no-random-league-mechanics
+    note: >-
+      **"Run Abyss" giờ nghĩa là "chạy một Abyss Thread".** Guide đẩy bạn sang
+      Abyss để lấy một cây [[Stygian Vise]] và một viên jewel Searching Eye.
+      Abyss không còn xuất hiện trong map nếu không có Thread.
+  - entry: item-tiers
+    note: >-
+      **Lẫn lộn.** Một cây Stygian Vise cần Item Tier 5 mới rơi. Mặt khác, đồ
+      rare có tier từ Act 6 làm gear life với resistance của campaign dễ nhận
+      ra hơn, mà campaign chỉ đòi có vậy.
+  - entry: meta-crafting-costs
+    note: >-
+      **Cái shield hoàn chỉnh tốn một khoản khác.** Công thức của nó dùng
+      "Prefixes Cannot Be Changed", giờ là 4 Divine cộng một loại currency thứ
+      hai. Chưa có tổng mới nào được công bố.
+  - entry: league-fates
+    note: >-
+      **Một lời dè chừng, và nó là của chúng tôi.** Cơ chế của league này cố
+      tình làm boss khu vực khó hơn. Một build sống sót bằng cách giết trước
+      là sai dáng cho một con boss mà chính bạn chọn làm mạnh lên. Hãy gọi ít
+      Fate hơn so với trên một nhân vật trâu hơn, cho tới khi bạn biết damage
+      của mình.
+
+strengths:
+  - "Clear speed xuất sắc ngay từ map đầu tiên, trên một five-link."
+  - "Không có unique bắt buộc nào, ở bất cứ stage nào cho tới bốn Voidstone."
+  - "Một guide có planner thật sự được lưu cho 3.30, với gem cho từng khoảng level."
+  - "Cơ động: Tailwind, Shield Charge và phasing."
+  - "Trần rất cao cho ai tìm được một cây Headhunter."
+weaknesses:
+  - "Bạn chưa chơi build này cho tới sau Labyrinth thứ ba."
+  - "Khoảng bốn nghìn tổng life cộng energy shield. Một cú hit trúng đích là có thể kết thúc."
+  - "Single-target damage cần totem, một cái tornado và, với pinnacle boss, một cú đổi gem."
+  - "Cây wand chính là build, mà 3.30 làm hai cách kiếm wand của guide tệ đi."
+  - "Ba mod map đơn giản là nằm ngoài cuộc chơi."
+  - "Không có giá và không có con số đo được nào ở bất cứ đâu trong guide."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn đứng giữa trận đánh, hoặc nếu chết vì một cú hit
+  bạn không thấy làm bạn bỏ chơi. Bỏ qua nếu bạn muốn một skill từ level 1:
+  build này là một nhân vật khác suốt cả campaign. Và bỏ qua nếu bạn cần một
+  con giết boss: guide cần một cú đổi gem và hai skill phụ trợ thì mới đánh
+  được pinnacle boss, và nhân vật 3.30 độc lập duy nhất có 27,689 effective hit
+  point. Nếu thứ bạn muốn là clear map thật nhanh trên đồ rare, đây là cách
+  được ghi chép kỹ nhất để làm chuyện đó league này.
+
+sources:
+  - title: "Maxroll: Kinetic Blast Deadeye League Starter (havoc616)"
+    url: https://maxroll.gg/poe/build-guides/kinetic-blast-deadeye-league-starter
+    kind: guide
+    note: "Cập nhật ngày 12/11/2026 cho 3.30. Nguồn của kế hoạch, các bước gear và craft, thứ tự ascendancy, rotation, FAQ và mọi câu trích. Không có giá, không có bảng điểm, không có con số đo được."
+  - title: "Maxroll planner của guide này"
+    url: https://maxroll.gg/poe/planner/duaxz0q3
+    kind: pob
+    note: "Mang tên \"3.30 Kinetic Blast Deadeye League Starter Build Guide\", lưu ngày 12/11/2026, phiên bản dữ liệu 3.30. Nguồn của mọi setup gem ở đây, bốn bộ gear, Alira, và Brine King với Ryslatha."
+  - title: "Maxroll: bản export Path of Building"
+    url: https://maxroll.gg/poe/pob/du1ff20g
+    kind: pob
+    note: "Gắn nhãn \"3.29 for 3.30\" trên guide. Trang không hiện nội dung của nó cho chúng tôi; liệt kê để bạn import được."
+  - title: "Maxroll: Explosive Concoction Deadeye Leveling Build Guide (havoc)"
+    url: https://maxroll.gg/poe/build-guides/explosive-concoction-deadeye-leveling-build-guide
+    kind: guide
+    note: "Nơi guide Kinetic Blast đẩy bạn sang cho campaign. Đề ngày 13/11/2026. Không đọc hết."
+  - title: "poebuilds.cc: PoE 3.30 Kinetic Blast Deadeye League \"starter\" build (Kassadus)"
+    url: https://www.poebuilds.cc/poe1/build/JGaX28nNhWE
+    kind: video
+    note: "Phần đối chiếu độc lập, gắn tag 3.30. Level 92 với Headhunter và Esh's Mirror: 2.4M DPS, 3,779 life, 27,689 eHP, 96% suppression, −25% chaos resistance. Nguồn của mọi con số đo được trên trang này. Chúng tôi đọc phần liệt kê trên trang, không xem video."
+  - title: "Path of Building: Kassadus"
+    url: https://pobb.in/hlasMvXnooQc
+    kind: pob
+  - title: "poebuilds.cc: các build projectile"
+    url: https://www.poebuilds.cc/poe1/projectile
+    kind: data
+    note: "Chỉ dùng để xem độ phổ biến: các mục Kinetic Blast cho Deadeye và Necromancer nằm trong mười build projectile 3.30 được xem nhiều nhất."
+  - title: "PoEDB: Kinetic Blast"
+    url: https://poedb.tw/us/Kinetic_Blast
+    kind: data
+    note: "Level 28, wand, 140–155% damage, thêm 4 cú nổ, 40% less area damage, 150% Arcane Might, ai được chào viên gem, và cú nerf 3.29.0. Không có mục 3.30."
+  - title: "PoEDB: Kinetic Bolt"
+    url: https://poedb.tw/us/Kinetic_Bolt
+    kind: data
+    note: "160–220% damage, 200% Arcane Might, được Nessa bán cho Ranger."
+  - title: "PoEDB: Sacred Wisps Support"
+    url: https://poedb.tw/us/Sacred_Wisps_Support
+    kind: data
+  - title: "PoEDB: Tornado"
+    url: https://poedb.tw/us/Tornado
+    kind: data
+    note: "Projectile đánh trúng nó được tối đa 20 lần trong 1.5 giây đầu."
+  - title: "PoEDB: Deadeye"
+    url: https://poedb.tw/us/Deadeye
+    kind: data
+    note: "Nguyên văn của Gathering Winds, Ricochet, Endless Munitions, Focal Point và Far Shot."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Dòng về Kinetic Blast nằm dưới Mercenary Changes. Không có kết quả nào cho Deadeye hay các notable của nó."

@@ -1,0 +1,933 @@
+name: Absolution Guardian
+tagline: >-
+  Bạn cast một spell lightning; quái chết vì nó đứng dậy thành ba con Sentinel,
+  và chính chúng mới gây damage thật. Khởi đầu không tốn gì, và một cái body
+  armour ở level 96 đổi luôn bản chất của cả nhân vật.
+class: Templar
+ascendancy: Guardian
+role: starter
+budget: starter
+budgetNote: >-
+  Campaign và mấy map đầu không tốn gì: gem là quest reward ở Act 1 và các stage
+  đầu trên planner toàn đồ rare. **Guide đã công bố không đưa ra con số currency
+  nào cho bất cứ thứ gì.** Những con số duy nhất chúng tôi có là ba mức từ một
+  bản codex 3.29 do độc giả gửi tới, không ghi tên tác giả: dưới 50 Chaos để vào
+  map, 2–15 Divine để farm Tier 16 thoải mái, và 40 Divine trở lên cho bản
+  [[Doryani's Prototype]]. Đó là **số liệu 3.29 từ một nguồn không kiểm chứng
+  được**, và nền kinh tế 3.30 thì chưa tồn tại. Hãy đọc chúng như một cỡ độ lớn,
+  không hơn.
+mainSkill: Absolution
+image: absolution
+hero: art-guardian
+tags: [Minion, Lightning, Spell, Block]
+ratings: { clear: 4, bossing: 3, survivability: 4, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **Ba lớp, và chúng không chắc như nhau.** (1) Phần cơ chế được kiểm từng dòng
+  với PoEDB và PoE Wiki: gem [[Absolution]], cả bốn notable của Guardian, từng
+  dòng của [[Doryani's Prototype]], [[Divine Flesh]], [[Dawnbreaker]] và mấy
+  aura của Elemental Relic. Mấy thứ đó không có gì phải nghi ngờ. (2) Bản thân
+  build là của một tác giả, Ronarray: một guide trên Mobalytics có setup cho
+  từng khoảng level từ 10 tới 100. **Nó mang tiêu đề 3.29, các file Path of
+  Building của nó gắn nhãn 3.28, và dù trang được chạm tới ngày 11/11/2026, nó
+  không nói gì về 3.30.** Một guide 3.28 không liên quan trên forum xác nhận ba
+  lựa chọn ascendancy đầu tiên và vòng lặp cốt lõi, ngoài ra không xác nhận gì
+  khác. (3) Nguồn của chính chủ site cho bài này là một bản "Master Codex" 3.29
+  dài, viết bằng tiếng Việt, không ghi tên tác giả, và nó nói nó được dựng từ
+  guide của Ronarray. Chúng tôi dùng nó làm đầu mối và kiểm lại nó. **Nó đúng về
+  Doryani's Prototype, và sai hoặc đã lỗi thời ở chín điểm**, liệt kê ở mục
+  "Những chỗ codex sai" bên dưới — trong đó có cả phần bổ sung nổi bật nhất của
+  nó, [[Triad Grip]], thứ build không cần. Những phần chỉ dựa vào riêng codex,
+  và được đánh dấu ở chỗ chúng xuất hiện: ba mức budget, thứ tự của Labyrinth
+  thứ ba và thứ tư, danh sách gear cho Animate Guardian, các notable trên large
+  cluster và thứ tự an toàn cho cú đổi. Bốn điểm rating là của chúng tôi. Chưa
+  có dữ liệu ladder hay dữ liệu giá nào cho 3.30.
+modes:
+  ssf: >-
+    Ổn cho tới map Tier 16: trước cú đổi không có unique nào là bắt buộc, và có
+    một lần chạy thử 3.30 đúng kiểu này (P4RL3Y, solo self-found, level 53) đã
+    được đăng. Bản level 96 thì là chuyện khác. [[Doryani's Prototype]] rơi
+    được ở bất cứ đâu, nhưng [[Dawnbreaker]] là đồ rơi từ Searing Exarch,
+    [[Watcher's Eye]] cần đúng một modifier cụ thể, và [[Glorious Vanity]] phải
+    là loại Xibaqua. **Không nguồn nào bàn tới cú đổi trong solo self-found**;
+    hãy tính chuyện ở lại bản trước cú đổi một thời gian dài.
+  hardcore: >-
+    Không nguồn nào khuyên chơi. Trước cú đổi thì dáng build hợp lý: 75% block
+    cả attack lẫn spell, một con minion nhận một phần năm mỗi cú hit, và hồi
+    đầy máu mỗi bốn giây. Sau cú đổi, bạn đứng trong vòng sáu mét với mọi thứ,
+    với khoảng 4,800 life, không có energy shield và maximum physical hit là
+    19,000 trong chính file của tác giả. Cách đọc của chúng tôi: chỉ chơi bản
+    trước cú đổi.
+
+idea: |
+  [[Absolution]] là một spell đánh dấu những gì nó đánh trúng. Nếu một con quái normal, magic hoặc rare chết trong lúc bị đánh dấu, xác của nó bị nuốt và một con **Sentinel of Absolution** đứng dậy thế chỗ. Bạn có được ba con. Mỗi con sống 15 giây, và mỗi cú giết có dấu tiếp theo làm mới một con trong số đó.
+
+  Mấy con Sentinel chính là build. Chúng tự cast spell lightning của riêng chúng, và qua mấy act đầu rồi thì phần lớn việc giết là của chúng. Việc của bạn là cast liên tục để pack luôn bị đánh dấu và ba con Sentinel không bao giờ hết giờ.
+
+  [[Guardian]] thêm ba thứ mà không ascendancy nào khác cho rẻ như vậy: một con minion vệ sĩ vĩnh viễn nhận 20% mỗi cú hit nhắm vào bạn, mấy aura miễn phí buff bạn và Sentinel cùng lúc, và một lần hồi đầy máu mỗi bốn giây.
+
+  Rồi, ở khoảng level 96, build đổi dáng. [[Doryani's Prototype]] khiến mọi kẻ địch trong vòng sáu mét có lightning resistance bằng với của bạn — nên bạn đẩy lightning resistance của chính mình xuống −200% và mọi thứ gần bạn ăn gấp ba lightning damage. Cái giá là toàn bộ phòng thủ của bạn phải dựng lại trong một lần ngồi, và từ đó trở đi bạn phải đứng gần.
+
+chain:
+  - label: Cast
+    text: "[[Absolution]] đánh một vùng và để lại một debuff trên mọi kẻ địch trong 3 giây."
+  - label: Giết lúc còn dấu
+    text: "Một kẻ địch không phải unique chết khi đang dính debuff sẽ thành một con Sentinel of Absolution. Tối đa ba con, mỗi con 15 giây; giết thêm thì làm mới một con."
+  - label: Sentinel cast
+    text: "Mỗi con Sentinel có hai spell lightning của riêng nó. Mọi support trong link Absolution của bạn mà áp được lên spell của minion thì cũng áp lên spell của chúng."
+  - label: Guardian nuôi chúng
+    text: "[[Unwavering Crusade]] triệu Elemental Relic mang aura Anger, Hatred và Wrath. Aura tới được đồng minh, nên Sentinel cũng nhận."
+  - label: Sống sót
+    text: "75% block attack lẫn spell, 20% mỗi cú hit được chuyển sang Sentinel of Radiance, armour, và [[Time of Need]] hồi đầy máu cho bạn mỗi 4 giây."
+
+chainDetails:
+  - title: Vòng lặp có một lỗ hổng, và đó là phòng boss
+    body: |
+      Mọi thứ ở trên đều dựa vào chuyện có thứ gì đó không phải unique chết trong lúc bị đánh dấu. Trong map thì chuyện đó xảy ra liên tục: giết thì ra Sentinel, Sentinel thì giết tiếp. Đó là một vòng lặp tự nuôi mình, và là lý do clear thấy mạnh hơn nhiều so với con số gợi ra.
+
+      Một con boss đứng một mình trong phòng thì phá vòng đó. Không gì chết, nên không có xác nào bị nuốt. Gem che chỗ này bằng một dòng: **25% cơ hội triệu một con Sentinel khi đánh trúng một kẻ địch Rare hoặc Unique.** Đó là cách duy nhất để dựng hoặc làm mới Sentinel trên một con boss lẻ, và nó chỉ roll khi *bạn* đánh trúng. Nên đánh boss thì bạn không bao giờ ngừng cast.
+
+      Công cụ thứ hai là [[Vaal Absolution]]. Nó "ascend" một con Sentinel bạn đang có: 300% more damage, 70% less damage taken, 20 giây, và không tính vào giới hạn ba con. Nó tốn 40 soul và khóa việc nhận soul trong 30 giây sau đó.
+
+      Cái thứ ba thì còn tranh cãi — xem [[The Writhing Jar]] ở mục "Nếu thấy có gì đó sai sai".
+  - title: "Support của bạn cũng support luôn cho Sentinel"
+    body: |
+      Đây là cái luật quyết định cả link gem, và bản codex do độc giả gửi tới nói ngược lại.
+
+      Câu chữ của PoE Wiki: bất kỳ support gem nào áp được cho cả spell lẫn minion skill thì áp cho **cả hai**, cú cast của bạn và spell của Sentinel. Ví dụ của chính Wiki là [[Spell Echo Support]], thứ khiến Sentinel lặp lại cú cast của chúng cũng như bạn.
+
+      Hai hệ quả:
+
+      - [[Physical to Lightning Support]] chuyển đổi damage của Sentinel, không chỉ của bạn. Gem vốn đã chuyển 50% physical damage thành lightning cho "this Spell and Minions"; support chuyển nốt phần còn lại. Wiki nói thẳng ra rằng như vậy là chuyển đổi hoàn toàn **mà không cần [[Triad Grip]]**.
+      - [[Minion Damage Support]] là support duy nhất chỉ giúp Sentinel. Mọi thứ khác trong link được công bố — Spell Echo, [[Concentrated Effect Support]], [[Increased Critical Damage Support]] — đều chạy ở cả hai phía.
+
+      Sentinel có cast time gốc 1.33 giây và 6% critical strike chance gốc. Spell thứ hai của chúng, Empowered Lightning Blast, có cooldown 6 giây và có hai vùng cùng đánh trúng được một mục tiêu. Cái cooldown đó là lý do bonus quality của gem lẫn Minion Offence Mastery đều cho minion cooldown recovery.
+  - title: Guardian thật sự cho gì, bằng con số
+    body: |
+      Đọc từ PoEDB và PoE Wiki, không phải từ một guide.
+
+      - **[[Radiant Crusade]].** Cấp một con Sentinel of Radiance level 20, và "20% of Damage from Hits is taken from your Sentinel of Radiance's Life before you". Con Sentinel này là vĩnh viễn từ 3.28, level của nó đi theo level của bạn tới 85, nó taunt, và nó đốt kẻ địch trong vòng 4 mét với 20% maximum life của chính nó mỗi giây. Để ý chữ "from Hits": nó không làm gì trước damage over time.
+      - **[[Unwavering Crusade]].** 25% cơ hội trigger một Elemental Relic level 20 khi bạn hoặc một đồng minh ở gần giết một kẻ địch, hoặc đánh trúng một con Rare hay Unique. Mỗi nguyên tố một relic, mỗi cái 5 giây, được lần trigger kế làm mới. Ở nhân vật level 85, các relic cho: Anger, 182–259 added fire damage cho attack và spell; Hatred, 43% physical damage as extra cold; Wrath, 26–415 added lightning cho attack và **23% more spell lightning damage**. Tức là mỗi cái xấp xỉ một aura level 27, không tốn reservation.
+      - **[[Time of Need]].** Mỗi 4 giây: gỡ curse và ailment, và regenerate 100% life trong một giây. Từ 3.28 nó gỡ mọi ailment, không chỉ elemental ailment.
+      - **[[Bastion of Hope]].** +25% chance to block attack nếu bạn vừa attack gần đây, +25% block spell nếu bạn vừa cast spell gần đây, cho bạn và đồng minh ở gần. "Recently" nghĩa là bốn giây vừa qua.
+
+      Không cái nào trong bốn tự nó là một hệ số nhân damage. Guardian là hạ tầng, và build này là thứ dùng hết chỗ hạ tầng đó.
+  - title: "Doryani's Prototype, từng dòng một"
+    body: |
+      Một cây Saint's Hauberk, level 67. Bốn dòng đặc biệt của nó, nguyên văn từ PoEDB, và mỗi dòng bắt bạn trả giá gì:
+
+      - **"Nearby Enemies have Lightning Resistance equal to yours."** Kẻ địch trong vòng 6 mét lấy giá trị trên character sheet của bạn. Resistance không xuống dưới −200% được, nên −200% là mục tiêu. Vì giá trị này được *đặt*, curse và exposure không đẩy nó thấp hơn được; penetration thì vẫn chạy, dù Wiki ghi chú rằng ở mức giới hạn đó nó thường là một lựa chọn yếu.
+      - **"Lightning Resistance does not affect Lightning Damage taken."** Bạn ăn lightning damage như thể có 0% resistance — không phải −200%. Vậy vẫn là gấp bốn lần mức một nhân vật đã cap phải ăn.
+      - **"Armour also applies to Lightning Damage taken from Hits."** Câu trả lời của chính món đồ cho dòng ở trên. Chỉ với hit, không với lightning damage over time.
+      - **"Deal no Non-Lightning Damage."** Một cái luật về *bạn*. Absolution của bạn phải được chuyển đổi hoàn toàn, nên [[Physical to Lightning Support]] không phải thứ tùy chọn.
+
+      Một cái bẫy từ Wiki mà không guide nào nhắc: **ở đúng 0% lightning resistance thì dòng đầu tiên không làm gì cả**, do một con bug. Mặc cái armour vào trước khi có ring resistance âm không cho bạn "một bản nhỏ hơn" của bonus. Nó có thể chẳng cho bạn gì.
+  - title: Cú đổi thật sự lớn cỡ nào
+    body: |
+      Con số nổi bật nhất của codex là damage tăng gấp năm: một con quái map ở 40% lightning resistance ăn 0.6 damage của bạn, và ở −200% thì nó ăn 3.0.
+
+      Phép tính đó đúng, còn phép so sánh thì không. Trước cú đổi bạn vốn đã curse bằng [[Elemental Weakness]] và [[Conductivity]], nên con quái không ở mức 40% lúc bạn bắt đầu. **Cách đọc của chúng tôi:** bước nhảy thật thì nhỏ hơn gấp năm trên quái thường, thứ mà curse của bạn vốn đã với tới, và gần con số đó hơn trên boss, thứ gạt đi phần lớn hiệu lực của curse mà không gạt được cái armour.
+
+      Các file của chính tác giả là phép đo trước-và-sau duy nhất, và chúng là 3.28: một nhân vật ngày đầu level 94 ở **2.42 triệu** damage mỗi giây và 108,685 effective hit point, và nhân vật Doryani level 97 ở **25.2 triệu** và 238,456. Khoảng cách đó là cú đổi *cộng với* ba level, một cây amulet +3, cluster jewel và spectre. Planner tính 15% shock, "Nearby Allies' Damage with Hits is Lucky" và Wrath của một con spectre không tốn reservation, và không chọn boss nào.
+  - title: Vì sao Eldritch Battery, và vì sao armour hybrid
+    body: |
+      [[Eldritch Battery]] khiến energy shield bảo vệ mana thay vì life, và tiêu nó trước mana cho skill cost. Câu của guide là khi đó bạn "need only 1 mana to play", và đó là thứ cho phép bạn reserve gần như mọi thứ cho aura.
+
+      Sau cú đổi, nó không còn là một tiện nghi nữa. [[Divine Flesh]] ghi "All Damage taken bypasses Energy Shield", nên energy shield vô giá trị với tư cách một bể máu, và công dụng duy nhất còn lại của nó là làm nhiên liệu. Đó là lý do mọi món giáp trong các set được công bố đều là hybrid armour với energy shield: armour bảo vệ bạn, energy shield trả tiền cho việc cast.
+  - title: Những chỗ codex sai
+    body: |
+      Tài liệu nguồn của chủ site được làm cẩn thận và tự công khai liệt kê năm điều mà một bản nháp trước của chính nó đã sai. Đối chiếu nó với PoEDB, PoE Wiki và cái guide mà nó nói nó dựa vào thì tìm ra thêm. **Nếu bạn đã đọc codex, đây là các điểm đính chính:**
+
+      1. **Thời lượng.** Nó ghi debuff là 1 giây và Sentinel là 10 giây. Đó là các giá trị từ trước 3.28. Debuff là 3 giây và Sentinel sống 15 giây.
+      2. **[[Triad Grip]].** Nó gọi đôi gloves này là "điểm bổ sung quan trọng nhất" và nói thiếu nó thì một nửa damage của Sentinel vẫn là physical. Wiki nói Physical to Lightning Support vốn đã cho chuyển đổi hoàn toàn, và setup level 96 của guide đeo Paladin Gloves rare. Triad Grip không có trong bất kỳ file nào của tác giả.
+      3. **Support nào tới được Sentinel.** Nó nói Spell Echo, Concentrated Effect và các support added damage "không chạm vào" Sentinel. Chúng có áp lên Sentinel.
+      4. **Elemental Relic.** Nó đọc [[Unwavering Crusade]] là chắc chắn ra relic khi giết và 25% khi hit. Cả hai đều là 25%.
+      5. **Time of Need.** Nó ghi elemental ailment. Từ 3.28 là mọi ailment.
+      6. **Base item.** Nó nêu Saintly Chainmail. Doryani's Prototype là một cây Saint's Hauberk.
+      7. **Không có ring thì "vẫn lợi, nhưng chỉ ~1.7× thay vì 5×".** Ở đúng 0% resistance, con bug nói trên nghĩa là bạn có thể không được gì.
+      8. **Lightning Penetration sau cú đổi.** Về cơ chế thì nó chạy; Wiki gọi nó là một lựa chọn thường yếu ở mức giới hạn, và tác giả không dùng nó.
+      9. **"Skill DPS tham chiếu" khoảng 390,000 ở level 96.** Chúng tôi không lần ra được nguồn của con số này. Planner của tác giả hiện tổng cộng 25.2 triệu.
+
+      Những gì nó nói đúng, mà phần lớn guide không nói rõ ra: bốn dòng của Doryani's Prototype và hệ quả của chúng, logic của Divine Flesh với Eldritch Battery, chuyện resistance được đặt chứ không phải bị giảm, bán kính sáu mét, và mọi dòng patch note 3.29 mà nó trích.
+
+mandatory:
+  - term: Absolution
+    why: >-
+      Bản thân skill. Quest reward của Templar cho The Siren's Cadence ở Act 1,
+      dùng được từ level 12. Gem level là thứ lớn nhất bạn kiểm soát được: life
+      và damage gốc của Sentinel tăng theo nó.
+    detail: >-
+      Từ 3.29 cast time là 0.65 giây, giảm từ 0.75. Từ 3.28 debuff kéo dài 3
+      giây và Sentinel sống 15 giây. Cả gem lẫn bản Vaal của nó đều không được
+      nhắc tới trong patch note 3.30.
+  - term: Physical to Lightning Support
+    why: >-
+      Chuyển nửa damage còn lại thành lightning, cho bạn và cho Sentinel. Có
+      trong link từ level 22 trên planner của tác giả, và là bắt buộc một khi
+      [[Doryani's Prototype]] chặn bạn gây bất cứ thứ gì không phải lightning.
+  - term: Minion Damage Support
+    why: >-
+      More minion damage. Support duy nhất trong link chỉ chạy cho Sentinel, mà
+      damage thì nằm ở đó.
+  - term: Spell Echo Support
+    why: >-
+      Lặp lại cú cast của bạn và cú cast của Sentinel. Có trong link được công
+      bố từ level 40 trở đi, và ở tier cao nhất thì là
+      [[Greater Spell Echo Support]].
+    detail: >-
+      Nó không support được Vaal skill, chuyện làm những ai thấy nó link với
+      [[Vaal Absolution]] phải lo. Một Vaal gem cũng cấp luôn skill thường, và
+      Spell Echo support cái đó cùng với Sentinel.
+  - term: Radiant Crusade
+    why: >-
+      Một vệ sĩ vĩnh viễn nhận 20% mỗi cú hit trước bạn, và gánh campaign bằng
+      aura đốt của nó.
+  - term: Unwavering Crusade
+    why: >-
+      Aura Anger, Hatred và Wrath miễn phí từ Elemental Relic, cho bạn và mọi
+      minion. Riêng relic Wrath đã là 23% more spell lightning damage.
+  - term: Time of Need
+    why: >-
+      Hồi đầy máu trong một giây, mỗi bốn giây, và mỗi lần như vậy nó gỡ luôn
+      curse với ailment. Đây chính là phần hồi phục; build không có leech và
+      không có động cơ flask nào.
+  - term: Bastion of Hope
+    why: >-
+      +25% attack block khi bạn vừa attack gần đây và +25% spell block khi bạn
+      vừa cast gần đây. Mảnh cuối cùng của 75% và 75%.
+    detail: >-
+      Đó là lý do [[Shield Charge]] có mặt trong mọi setup từ level 22: ghi chú
+      trên planner của tác giả nói dùng nó cho điều kiện "attacked recently".
+      Ngừng di chuyển và ngừng cast bốn giây là block biến mất.
+  - term: Eldritch Battery
+    why: >-
+      Energy shield trả tiền cho spell của bạn, nên mana reserve được cho aura.
+      Lấy trước level 70 trên planner. Bắt buộc một khi [[Divine Flesh]] khiến
+      energy shield vô dụng với mọi việc khác.
+  - term: Convocation
+    why: >-
+      Kéo mọi minion về chỗ bạn. Sentinel hay lang thang đi kết thúc mấy trận
+      đánh cũ; đây là cách bạn đem damage tới pack kế, và tới vòng sáu mét
+      quanh bạn sau cú đổi.
+  - term: Shield Charge
+    why: >-
+      Di chuyển, và là cú attack giữ cho phần attack block của
+      [[Bastion of Hope]] luôn bật.
+  - term: Vaal Absolution
+    level: recommended
+    why: >-
+      Ascend một con Sentinel đang có: 300% more damage trong 20 giây, nằm
+      ngoài giới hạn ba con. Có trong main link của mọi setup từ level 70.
+    detail: >-
+      Là gem corrupted, nên level và quality của nó không đổi được sau khi bạn
+      có nó. 3.30 bỏ Vaal side area khỏi map, vốn là chỗ Vaal gem hay rơi nhất.
+      Corrupt một viên Absolution bằng [[Vaal Orb]] là cách làm ra nó có từ
+      lâu; chúng tôi không xác nhận được nguồn phổ biến hiện giờ là gì.
+  - term: Enduring Composure
+    level: recommended
+    why: >-
+      Một notable trên small cluster jewel, cho endurance charge khi bạn bị
+      hit. Guide nói lấy nó "ASAP", trong khoảng level 70 tới 90.
+  - term: Elemental Weakness
+    level: recommended
+    why: >-
+      Cùng với [[Conductivity]], đây là double curse trước cú đổi, qua anoint
+      [[Whispers of Doom]]. Ghi chú trên planner gọi double curse là "a strong
+      DPS boost". Cả hai đều bị bỏ ở cú đổi.
+  - term: Spirit Offering
+    level: recommended
+    why: >-
+      Được kích bằng craft "Trigger a Socketed Spell when you Use a Skill" trên
+      wand, cùng [[Desecrate]] để tạo xác. Tác giả dùng nó ở mọi stage từ
+      level 70.
+  - term: Raise Spectre
+    level: recommended
+    why: >-
+      Không phải để lấy damage. Link với [[Feeding Frenzy Support]] để buff tới
+      được mọi minion của bạn. Guide nói con spectre phòng thủ nào cũng được,
+      và nếu bạn chưa quen spectre thì dùng một con [[Summon Stone Golem]] thay
+      vào.
+  - term: Doryani's Prototype
+    level: recommended
+    why: >-
+      Bản level 96. Đặt lightning resistance của mọi thứ trong vòng sáu mét
+      bằng với của bạn. Không phải món của tuần đầu và cũng không phải món bắt
+      buộc: build tới được map Tier 16 mà không cần nó.
+  - term: Divine Flesh
+    level: recommended
+    why: >-
+      Một nửa mọi elemental damage nhận vào thành chaos, +5% maximum chaos
+      resistance. Đến từ một viên [[Glorious Vanity]] Xibaqua. Bắt buộc khi mặc
+      cái armour, vô dụng nếu chaos resistance chưa cap.
+  - term: Dawnbreaker
+    level: recommended
+    why: >-
+      10–20% cold, lightning và physical damage nhận vào thành fire. Guide muốn
+      roll lightning và cold ở mức 18–20%. Một phần của cú đổi.
+    detail: >-
+      PoEDB còn liệt kê một dòng mà cả guide lẫn codex đều bỏ qua: nó mất 1%
+      attack block cho mỗi 200 fire damage nhận từ hit trong bốn giây vừa qua.
+      Một cái shield có nhiệm vụ biến damage thành fire damage lại tự làm yếu
+      block của chính nó trong lúc làm việc đó.
+
+labs:
+  - lab: Normal
+    node: Radiant Crusade
+    why: "Quanh level 33 trên planner của tác giả. Sentinel of Radiance tới và lo phần lớn việc giết trong mấy act kế tiếp. Được xác nhận bởi file của tác giả và bởi một guide 3.28 không liên quan."
+  - lab: Cruel
+    node: Unwavering Crusade
+    why: "Elemental Relic bắt đầu xuất hiện khi giết quái: ba hiệu ứng aura không tốn reservation. Cùng hai nguồn đó."
+  - lab: Merciless
+    node: Time of Need
+    why: "Hồi đầy máu mỗi bốn giây. Guide không liên quan kia cũng xếp nó thứ ba. Chuyện nó đi trước Bastion of Hope trong thứ tự của chính tác giả thì dựa vào codex."
+  - lab: Eternal
+    node: Bastion of Hope
+    why: "Hoàn tất 75% block ở cả hai phía. Ghi chú trên planner của tác giả về Shield Charge và \"attacked recently\" cho thấy tác giả có lấy nó; còn thời điểm là của codex."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: rolling-magma
+    title: Act 1–3
+    levels: Level 1–33
+    uses: >-
+      [[Rolling Magma]] tới level 12–14, rồi [[Absolution]] cho hết phần còn
+      lại của game. [[Holy Flame Totem]] và [[Flame Wall]] ở lại trên thanh
+      skill làm damage phụ suốt Act 1.
+    changes: >-
+      Ở 12–14 bạn đổi main skill. Tới cuối Act 2, link là Absolution với
+      [[Physical to Lightning Support]], và [[Shield Charge]] với
+      [[Herald of Purity]] đã vào. Normal Labyrinth, quanh level 33, cho bạn
+      Sentinel of Radiance.
+    links:
+      - name: Level 10, Brutus
+        gems: [Rolling Magma, Added Lightning Damage Support, Combustion Support]
+      - name: Level 14, Merveil
+        gems: [Absolution, Added Lightning Damage Support, Added Fire Damage Support]
+      - name: Level 22, cuối Act 2
+        gems: [Absolution, Physical to Lightning Support, Added Lightning Damage Support]
+      - name: Level 33, four-link
+        gems: [Absolution, Added Lightning Damage Support, Physical to Lightning Support, Added Fire Damage Support]
+      - name: Damage phụ ở Act 1
+        gems: [Holy Flame Totem, Flame Wall, Elemental Proliferation Support]
+      - name: Utility
+        gems: [Shield Charge, Frostblink, Herald of Purity, Vitality, Clarity]
+    moveOn: "Absolution đã nằm trong four-link, bạn đã có Radiant Crusade, và Act 3 đã xong."
+    details:
+      - title: Mười hai level đầu
+        body: |
+          Chữ của guide: mở đầu bằng [[Rolling Magma]], với [[Elemental Proliferation Support]] trước, rồi đổi sang [[Combustion Support]] và [[Added Lightning Damage Support]] "ASAP". Thêm [[Vitality]] và [[Clarity]] "to make leveling more comfortable".
+
+          "Once you reach level 12-14 you can swap to Absolution. It will be your main skill from now on." Giữ cái totem với bức tường thêm một lúc; chúng vẫn cộng damage.
+
+          Ở khúc này bạn là người giết. Sentinel còn yếu và chuyện có đủ ba con chưa phải mặc nhiên. Vậy là bình thường, và đó là lý do khúc này chưa cho thấy build là gì.
+      - title: Passive point lúc lên level
+        body: |
+          Guide đăng một cây cho từng khoảng level, nhưng chỉ có các lựa chọn mastery là hiện ra dưới dạng chữ. Minion Offence Mastery đầu tiên là "Minions have 25% chance to gain Unholy Might for 4 seconds on Kill" ở level 14, tới level 22 thì đổi sang "Minions have 30% increased Area of Effect". Một Life Mastery cho +30 maximum life được lấy trước level 45.
+
+          **Một chỗ trống mà chính độc giả của guide chỉ ra:** không có cây nào giữa level 45 và level 70. Một người bình luận hỏi xin và không được trả lời. Còn lộ trình cụ thể thì hãy import file Path of Building của tác giả, có link ở mục Nguồn — nó mang mười hai cây.
+      - title: Bandit
+        body: |
+          Guide: "Get rid of all, or Alira early and swap later." +15% tất cả resistance của Alira là lý do để giúp bà ấy khi gear của bạn còn tệ. Nhân vật hoàn chỉnh thì đã giết cả ba.
+      - title: Chuỗi tìm kiếm cho vendor
+        body: |
+          Tác giả đăng một chuỗi tìm kiếm cho cửa sổ vendor, nó làm nổi mấy socket đã link có màu dùng được và boots có movement speed. Nó dài, nên hãy copy từ guide của tác giả chứ đừng copy từ đây.
+  - id: acts-4-10
+    phase: early
+    image: zealotry
+    title: Act 4–10
+    levels: Level 33–70
+    uses: >-
+      [[Absolution]] trong một four-link, có [[Spell Echo Support]] từ level
+      40. [[Zealotry]] là aura thật sự đầu tiên, [[Elemental Weakness]] là
+      curse đầu tiên, và một con [[Summon Stone Golem]] với
+      [[Feeding Frenzy Support]] vào ở 45.
+    changes: >-
+      Cruel Labyrinth cho Elemental Relic. Từ đây Sentinel và Sentinel of
+      Radiance lo phần lớn công việc, còn bạn đi theo chúng. Resistance tụt 30%
+      sau Act 5 và tụt lần nữa sau Act 10.
+    links:
+      - name: Level 40, Malachai
+        gems: [Absolution, Spell Echo Support, Physical to Lightning Support, Added Lightning Damage Support]
+      - name: Level 45, Kitava
+        gems: [Absolution, Physical to Lightning Support, Spell Echo Support, Added Fire Damage Support]
+      - name: Buff cho minion
+        gems: [Summon Stone Golem, Feeding Frenzy Support]
+      - name: Aura và curse
+        gems: [Zealotry, Herald of Purity, Clarity, Elemental Weakness]
+      - name: Di chuyển
+        gems: [Shield Charge, Frostblink]
+    moveOn: "Act 10 đã xong, elemental resistance của bạn về lại 75%, và bạn đã có Time of Need hoặc chỉ còn cách nó một Labyrinth."
+    details:
+      - title: Vì sao Zealotry chứ không phải một aura damage thứ hai
+        body: |
+          [[Zealotry]] cho more spell damage cho bạn **và đồng minh ở gần**. Sentinel cast spell, nên chúng nhận trọn. Cùng logic đó là lý do Elemental Relic quan trọng tới vậy ở đây: một cái aura trên build minion thì trả tiền một lần và mọi thứ bạn có đều nhận.
+      - title: Đi theo minion, và gọi chúng về
+        body: |
+          Sentinel of Radiance taunt và đốt; Sentinel of Absolution cast từ xa. Bạn cast vào từng pack để đánh dấu nó rồi cứ đi tiếp.
+
+          Minion tụt lại phía sau và kẹt lại để kết thúc mấy trận đánh cũ. [[Convocation]] đem chúng về chỗ bạn. Ghi chú trên planner của tác giả chỉ đơn giản là nó "pulls minions to you for faster clearing". Đặt nó vào một phím bạn thật sự sẽ bấm.
+      - title: Trước boss Act 10
+        body: |
+          Cap resistance cho cú phạt 30% thứ hai trước khi vào map, và bắt đầu thay các món armour thuần bằng hybrid armour với energy shield. Bạn sắp lấy [[Eldritch Battery]] và nó cần energy shield.
+
+          Đây là lời khuyên campaign chung cộng với luật gear của guide ("at least a few of those also should have hybrid ES"); checklist level 70 của codex thêm mức tối thiểu 3,000 life, đó là con số của riêng nó.
+  - id: early-maps
+    phase: early
+    image: eldritch-battery
+    title: Map đầu
+    levels: Map trắng và map vàng, level 70+
+    uses: >-
+      [[Vaal Absolution]] trong một five-link, [[Eldritch Battery]], ba aura
+      trong helmet, một nhóm spectre với [[Feeding Frenzy Support]], và
+      offering với curse được một craft trên wand kích.
+    changes: >-
+      Link quay sang crit với [[Increased Critical Damage Support]].
+      [[Determination]] và [[Flesh and Stone]] vào cùng [[Zealotry]]. Block bắt
+      đầu có ý nghĩa: Shield mastery và Block mastery được lấy ở đây.
+    links:
+      - name: Main skill (five-link)
+        gems: [Vaal Absolution, Minion Damage Support, Physical to Lightning Support, Spell Echo Support, Increased Critical Damage Support]
+      - name: Spectre và golem
+        gems: [Raise Spectre, Feeding Frenzy Support, Minion Life Support, Summon Stone Golem]
+      - name: Aura
+        gems: [Determination, Zealotry, Flesh and Stone]
+      - name: Wand, được trigger
+        gems: [Elemental Weakness, Desecrate, Spirit Offering]
+      - name: Tự động
+        gems: [Convocation, Molten Shell, Automation]
+      - name: Di chuyển
+        gems: [Frostblink, Shield Charge, Vitality]
+    moveOn: "ba aura chạy mà không bỏ đói mấy cú cast của bạn, block của bạn gần 75% ở cả hai phía, và bạn clear map vàng mà không chết vì mấy cú hit thường."
+    details:
+      - title: Chỉ số duy nhất quan trọng trên gear
+        body: |
+          Trích nguyên, vì guide lặp lại nó ở ba stage: "The stat that will give you the most damage is + Level to minion skills. Make sure to have it on Wand, Shield and Helmet."
+
+          Cho tới khi bạn mua nổi mấy món đó, guide gợi ý [[Leer Cast]] như "a cheap damage bonus for your minions" ở ô helmet, để rồi thay bằng một cái rare có minion gem level "as soon as you can afford it".
+
+          Trên wand, tìm thêm +1 cho mọi spell, lightning hoặc physical skill gem, rồi tới minion damage, trong đó crit và speed được xếp cao nhất. **Chừa trống một suffix** cho craft bench "Trigger a Socketed Spell when you Use a Skill".
+      - title: Phần phòng thủ bạn đang dựng
+        body: |
+          Guide gọi block là "a key defensive layer" và bảo bạn đầu tư vào hai notable Sanctuary và Safeguard khi có thể. Hai mastery lo phần lớn chỗ còn lại: "+1% Chance to Block Attack Damage per 5% Chance to Block on Equipped Shield" và "+1% Chance to Block Spell Damage per 5% Chance to Block Attack Damage".
+
+          [[Flesh and Stone]] thì để ở **Sand Stance**. Guide nói "always".
+
+          Endurance charge đến từ một cây small cluster jewel [[Enduring Composure]], thứ guide muốn có trong khoảng level 70 tới 90.
+      - title: Nếu hết mana
+        body: |
+          Từ guide: có [[Eldritch Battery]] thì "you will need only 1 mana to play". Nếu vẫn thiếu, "dropping [[Tempest Shield]] or [[Flesh and Stone]] is a valid option".
+
+          Trên thực tế, cách chữa là thêm energy shield trên gear, và đó là lý do mấy cái base hybrid quan trọng.
+      - title: Kiếm currency trong 3.30
+        body: |
+          Lời khuyên farm của codex là Abyss, để lấy jewel và base belt mà build này muốn. Trong 3.29 Abyss trở thành nguồn duy nhất của Abyssal Jewel và Stygian Vise, và chuyện đó vẫn đúng.
+
+          Cái đã đổi là đường vào. Trong 3.30 Abyss không còn tình cờ xuất hiện trong map: nó cần một Thread, và mấy cái miễn phí đến từ map bên trong một Abyss Shaped Region. Một cây [[Stygian Vise]] giờ cũng cần Item Tier 5 thì mới rơi.
+  - id: red-maps
+    phase: endgame
+    image: determination
+    title: Map đỏ, trước cú đổi
+    levels: Map Tier 11–16, level 90+
+    uses: >-
+      Bản hoàn chỉnh đầu tiên. [[Vaal Absolution]] trong một six-link với hai
+      support crit, bốn aura, double curse [[Elemental Weakness]] và
+      [[Conductivity]], và gear rare có minion gem level trên wand, shield và
+      helmet.
+    changes: >-
+      [[Increased Critical Strikes Support]] là viên gem thứ sáu.
+      [[Tempest Shield]] thành aura thứ tư để lấy block. Curse thứ hai đến từ
+      anoint [[Whispers of Doom]], và Minion Offence Mastery "Minions Penetrate
+      8% of Cursed Enemies' Elemental Resistances" được lấy để đi cùng nó.
+      **Đây là bản để ở lại cho tới khi bạn mua nổi trọn cú đổi.**
+    links:
+      - name: Main skill (six-link)
+        gems: [Vaal Absolution, Minion Damage Support, Physical to Lightning Support, Spell Echo Support, Increased Critical Damage Support, Increased Critical Strikes Support]
+      - name: Spectre và golem
+        gems: [Raise Spectre, Feeding Frenzy Support, Minion Life Support, Summon Stone Golem]
+      - name: Aura
+        gems: [Determination, Zealotry, Flesh and Stone, Tempest Shield]
+      - name: Wand, được trigger
+        gems: [Elemental Weakness, Desecrate, Spirit Offering]
+      - name: Tự động
+        gems: [Convocation, Molten Shell, Automation, Shield Charge]
+      - name: Curse thứ hai và di chuyển
+        gems: [Conductivity, Frostblink]
+    moveOn: "bạn farm map Tier 16 mà không chết, và từng món của cú đổi đã nằm sẵn trong stash."
+    details:
+      - title: Bản này tốn gì và làm được gì
+        body: |
+          File đo đạc duy nhất gần stage này là nhân vật ngày đầu level 94 của tác giả, từ 3.28: **2.42 triệu** damage mỗi giây với giả định 15% shock, 4,732 life, 28,382 armour, 108,685 effective hit point, resistance 79/80/79 và 39% chaos. Toàn gear rare, một cái spirit shield, không có Doryani's Prototype.
+
+          Codex đặt stage này ở mức 2–15 Divine. **Đó là con số 3.29 từ một nguồn chúng tôi không kiểm được.** Chữ của tác giả cho cả build là "not very expensive to setup".
+
+          Chỉ dẫn của chính tác giả trên trang endgame là "go for the 90+ T16 version before you can afford most stuff in this one".
+      - title: Spectre và Animate Guardian
+        body: |
+          Quan điểm của guide: socket trên gloves chứa "a supportive setup with additional minions. It can be Spectres, Golem or Animated Guardian if you have a budget for it." Spectre nào, và con guardian mặc gì, thì nằm trong một video riêng mà chúng tôi không xem. Có một dòng còn lại dưới dạng chữ: "Always buy Tiger LAST because it is expensive."
+
+          Codex lấp chỗ trống này bằng một bộ đồ đầy đủ cho [[Animate Guardian]] — Kingmaker, Garb of the Ephemeral, Leer Cast, Southbound hoặc Meginord's Vise, Victario's Flight — và cái luật quan trọng với bất kỳ bộ nào: **khi con guardian chết, mọi thứ nó mặc mất hết.** Bộ đồ đó là của codex, không phải của tác giả, và chúng tôi chưa đối chiếu nó với video của tác giả. Còn cái luật thì đơn giản là cách gem hoạt động.
+
+          Hai chuyện độc giả của guide báo lại, chưa được trả lời: con Stone Golem "is always dead" trong map juice nặng, và spectre cũng chết ở đó. [[Minion Life Support]] đã nằm sẵn trong link.
+      - title: Cluster jewel
+        body: |
+          Nhân vật được công bố mang hai large cluster jewel, ba viên [[Grand Spectrum]], một [[Thread of Hope]] và một cây belt [[Darkness Enthroned]] có abyss jewel bên trong. **Notable của chúng không hiện ra trên trang nào chúng tôi đọc được.**
+
+          Codex nêu Vicious Bite, Call to the Slaughter và Renewal cho mấy cây large cluster, với Vicious Bite là nguồn crit cho minion. Hợp lý, và chưa được kiểm chứng với file của tác giả.
+  - id: doryani-swap
+    phase: endgame
+    image: glorious-vanity
+    title: Cú đổi
+    levels: Level 96+
+    uses: >-
+      [[Doryani's Prototype]], một viên [[Glorious Vanity]] Xibaqua để lấy
+      [[Divine Flesh]], [[Dawnbreaker]], một viên [[Watcher's Eye]] có modifier
+      chuyển đổi của [[Purity of Fire]], hai ring có lightning resistance âm,
+      và chaos resistance ở mức cap.
+    changes: >-
+      Mọi thứ về phòng thủ. Lightning resistance thôi không bảo vệ bạn nữa, nên
+      lightning damage được chuyển hướng: một nửa sang chaos qua Divine Flesh,
+      thêm một phần sang fire qua shield và jewel, và phần còn lại gặp armour
+      của bạn. Curse trở thành [[Assassin's Mark]] và [[Punishment]].
+      [[Concentrated Effect Support]] thay support crit thứ hai, và
+      [[Animate Guardian]] vào nhóm minion.
+    links:
+      - name: Main skill, trong body armour
+        gems: [Vaal Absolution, Physical to Lightning Support, Spell Echo Support, Minion Damage Support, Concentrated Effect Support, Increased Critical Damage Support]
+      - name: Minion
+        gems: [Animate Guardian, Feeding Frenzy Support, Raise Spectre, Summon Stone Golem]
+      - name: Aura
+        gems: [Zealotry, Determination, Haste, Enlighten Support]
+      - name: Thêm aura và di chuyển
+        gems: [Purity of Fire, Tempest Shield, Shield Charge, Frostblink]
+      - name: Wand, được trigger
+        gems: [Spirit Offering, Desecrate, Assassin's Mark]
+      - name: Tự động
+        gems: [Automation, Molten Shell, Convocation]
+    moveOn: "không còn stage nào bạn cần nữa. Phần tiếp theo là bản đắt tiền."
+    details:
+      - title: Các mảnh, theo guide
+        body: |
+          Danh sách của tác giả, theo thứ tự của tác giả:
+
+          1. **[[Glorious Vanity]], loại Xibaqua**, đặt "in the top socket so it will replace [[Hex Master]]". Keystone trong bán kính của nó thành [[Divine Flesh]]. Nếu viên jewel còn biến các passive nhỏ thành chaos resistance, "it will be even better". Tác giả có link một video về cách tìm một viên.
+          2. **[[Dawnbreaker]]** "with at least 18-20% of Lightning as Fire and 18-20% of Cold as Fire".
+          3. **Một viên [[Watcher's Eye]]** có cold và lightning damage taken as fire khi đang chịu ảnh hưởng của [[Purity of Fire]] — và chính cái aura đó, đã bật.
+
+          Rồi: "get rid of Lightning resistance from all items and get Rings with -Lightning resistance from trade", nhắm tới −200%. Và cap chaos resistance: "roll chaos res on most of the items and use [[The Light of Meaning]]".
+
+          Nhượng bộ duy nhất của tác giả: "If you have Glorious Vanity + Shield but don't have Watcher's you can still swap but try to get Watcher's ASAP."
+      - title: Vì sao nó là tất cả hoặc không gì cả
+        body: |
+          Mỗi mảnh che một lỗ mà mảnh khác mở ra.
+
+          Cái armour gỡ bỏ lightning resistance của bạn với tư cách một lớp phòng thủ. [[Divine Flesh]] dời một nửa chỗ lightning damage đó — và một nửa mọi fire với cold — sang chaos resistance, nên chaos resistance phải được cap *trước*, không thì keystone làm bạn yếu đi. Divine Flesh cũng tắt luôn energy shield với tư cách một bể máu. [[Dawnbreaker]] và [[Watcher's Eye]] dời thêm lightning sang fire, nên fire resistance phải cao hết mức bạn với tới được; nhân vật được công bố nằm ở 87%. Và modifier của Watcher's Eye chỉ tồn tại khi [[Purity of Fire]] đang bật.
+
+          Bỏ ra một cái thì mấy cái còn lại không xuống cấp từ từ. Đây là phần được lập luận tốt nhất của codex, và cơ chế kiểm lại thì khớp từng dòng.
+      - title: Một thứ tự an toàn để làm
+        body: |
+          **Chỉ từ riêng codex** — guide đưa danh sách ở trên mà không đưa trình tự. Nó hợp lý, nên nó ở đây, được đánh dấu đúng như bản chất của nó:
+
+          1. Gom đủ từng món trước. Chưa mặc gì cả.
+          2. Kiểm chaos resistance và fire resistance của bộ hoàn chỉnh trong Path of Building trước khi tiêu passive point.
+          3. Respec cây: bỏ mấy node elemental resistance, cắm [[Glorious Vanity]], xác nhận [[Divine Flesh]] đã sáng.
+          4. Đeo shield và jewel, bật [[Purity of Fire]].
+          5. Mặc body armour. Xác nhận [[Determination]] đang chạy.
+          6. Ring sau cùng. Nhớ con bug: ở đúng 0% lightning resistance, dòng chính của cái armour có thể không làm gì.
+          7. Đổi curse và thử ở một cái map thấp trước khi vào Tier 16.
+
+          Lời khuyên còn lại của nó là bắt đầu săn viên timeless jewel từ quanh level 90, vì tìm được một viên có mấy passive bị đổi hợp với cây của bạn là thứ mất thời gian nhất.
+      - title: Nhân vật hoàn chỉnh trông thế nào
+        body: |
+          Từ Path of Building của tác giả, **gắn nhãn 3.28**, level 97: 4,761 life, 919 energy shield (giờ không bảo vệ gì), 37,327 armour, 90% physical damage reduction, 75% block và 78% spell block. Resistance 87% fire, 76% cold, **−200% lightning**, 82% chaos.
+
+          Maximum hit taken: 19,173 physical, 54,058 fire, 51,049 cold, 50,518 lightning, 47,187 chaos. Effective hit point 238,456. Tổng damage mỗi giây 25,214,806.
+
+          Đọc con số lightning hai lần. Khi resistance không đóng góp gì, mấy lớp chuyển đổi và armour kéo một cú hit lightning về ngang với một cú hit cold. Đó là cú đổi đang chạy đúng.
+
+          Các giả định đằng sau con số damage: 15% shock, "Nearby Allies' Damage with Hits is Lucky", minion nhận 20% physical damage as extra lightning, một con spectre cấp Wrath không tốn reservation, Animate Guardian không được tính, và không chọn boss nào.
+  - id: uber
+    phase: endgame
+    image: bone-helmet
+    title: Các bản đắt tiền
+    levels: Level 98–100
+    uses: >-
+      Một cái helmet mang main skill với support gắn sẵn trong nó, để sáu
+      socket của body armour dành cho nhóm minion.
+      [[Replica Dragonfangs' Flight]] với +3 cho Absolution.
+      [[Greater Spell Echo Support]] thay cho Spell Echo.
+    changes: >-
+      Chữ của tác giả cho tier này là "expensive (mostly the helmet)". File
+      level 100 còn đi xa hơn: một cây [[Bone Helmet]], [[Svalinn]] làm shield,
+      [[Empower Support]] trên nhóm minion và [[Arctic Armour]].
+    links:
+      - name: Main skill, trong helmet
+        gems: [Vaal Absolution, Greater Spell Echo Support, Physical to Lightning Support, Increased Critical Damage Support]
+      - name: Minion, trong body armour
+        gems: [Raise Spectre, Feeding Frenzy Support, Minion Life Support, Animate Guardian, Congregation Support, Summon Stone Golem]
+      - name: Reserve
+        gems: [Determination, Purity of Fire, Summon Skitterbots, Enlighten Support]
+      - name: Wand, được trigger
+        gems: [Spirit Offering, Desecrate, Assassin's Mark]
+      - name: Tự động
+        gems: [Automation, Molten Shell, Convocation]
+      - name: Di chuyển và stance
+        gems: [Tempest Shield, Frostblink, Flesh and Stone, Shield Charge]
+    moveOn: "sau đây không còn gì ngoài một cây [[Mageblood]], thứ tác giả giữ thành một file level 99 riêng."
+    details:
+      - title: Những gì chúng tôi nói được và không nói được ở đây
+        body: |
+          Cách xếp gem ở trên là đọc từ trang level 98 của guide. Thứ chúng tôi không đọc được là chính cái helmet: support nào được craft trên nó, và bằng cách nào. Tác giả có một video craft "7-link helmet" riêng. Codex mô tả một cây [[Bone Helmet]] với hai modifier "socketed gems are supported by" và nói hãy kiểm pool craft trước khi tiêu bất cứ thứ gì. Chúng tôi xin lặp lại lời cảnh báo đó chứ không lặp lại công thức.
+
+          Ở bản này [[Zealotry]], [[Wrath]] và [[Haste]] được liệt là "Spectre Auras": chúng đến từ spectre, không phải từ reservation của chính bạn.
+      - title: Bloodline, nói ngắn
+        body: |
+          Guide nhắc tới việc dùng "Corruption Embrace chaos ascendancy to have almost 100% uptime of additional Vaal Absolution minion", và cây của tác giả có hiện một notable Chaos Bloodline.
+
+          Mục của PoEDB cho Corruption's Embrace ghi Vaal skill không phải aura cần ít hơn 80% soul, với bonus thêm khi mặc bốn, sáu và tám món corrupted; bloodline này mở khóa bằng cách đánh bại Trialmaster. Một guide 3.28 không liên quan cảnh báo đừng đi tới sáu món corrupted. **Guide không đưa chỉ dẫn nào cho lớp này**, nên chúng tôi nhắc tới rồi dừng.
+      - title: Build vẫn làm dở chuyện gì
+        body: |
+          - Một con boss lẻ không cho vòng lặp thứ gì để ăn. Bạn phụ thuộc vào một cú roll 25% mỗi hit và vào Vaal Absolution.
+          - Sau cú đổi bạn phải ở trong vòng sáu mét với thứ bạn đang giết.
+          - Bể life dưới 5,000 và energy shield không còn được tính. Block và một lần hồi máu mỗi bốn giây không chặn được một cú hit lớn.
+          - Guide 3.28 không liên quan liệt "not made for Uber bosses" vào các điểm yếu của nó. Tác giả thì nói bản của mình làm được, ở tier đắt tiền.
+
+powerCurve: |
+  Có năm thứ nhân damage của build này lên, và chúng không tới cùng lúc. Đó là lý do nó thấy bình thường trong một thời gian dài rồi thôi bình thường, hai lần.
+
+  **Có bao nhiêu Sentinel đang đứng, và chúng ở gem level nào.** Cả hai có từ level 12, cả hai đều yếu. Ở level 30 bạn có một three-link, cast chậm và Sentinel hết giờ giữa các pack; bạn tự gây phần lớn damage và build thấy như một caster trơn. **Aura miễn phí** là cú nhảy đầu tiên: Sentinel of Radiance ở khoảng 33, rồi Elemental Relic ở Labyrinth thứ hai, thứ đáng xấp xỉ ba aura level 27 lúc bạn level 85 mà không tốn gì. Đó là khoảnh khắc minion tiếp quản, và nó không tốn currency — đó là toàn bộ lý lẽ để coi đây là một league starter.
+
+  Tới level 70 các mảnh đầu game còn lại đã vào: [[Eldritch Battery]] để reserve được aura, [[Zealotry]], một five-link, [[Vaal Absolution]]. Từ 70 tới giữa khoảng 90, phần lợi là **gem level trên gear, link thứ sáu, và crit** — có thật, nhưng mỗi cái là một lát, còn độ khó của map thì lên nhanh hơn damage của bạn. Khúc này là chỗ codex nói người ta bỏ build, và chúng tôi nghĩ đó là cách đọc đúng: ở đây bạn đang dựng block, armour và mana, không phải sức mạnh.
+
+  Hệ số nhân thứ năm là **lightning resistance của kẻ địch**, và nó không nhúc nhích chút nào cho tới cú đổi. Rồi nó đi hết quãng đường, trong một lần. Hai file của tác giả kẹp nó ở hai đầu: 2.4 triệu ở level 94 không có cái armour, 25.2 triệu ở level 97 có nó và có mọi thứ khác tốt hơn. *Phần chia giữa "cái armour" và "mọi thứ khác" là suy luận của chúng tôi; chưa ai công bố nó.*
+
+  Phòng thủ đi theo đường cong ngược lại. Nó mạnh từ sớm và miễn phí — một phần năm mỗi cú hit được chuyển hướng từ level 33, hồi đầy máu mỗi bốn giây từ Labyrinth thứ ba, 75% block từ cái thứ tư — rồi cú đổi lấy đi một lớp và bắt bạn đứng gần hơn. Trên hai file của tác giả, nhân vật đã đổi đánh mạnh hơn khoảng mười lần so với nhân vật ngày đầu và, ở những mặt quan trọng trong một trận boss, mỏng manh hơn.
+upgrades:
+  - step: "+1 level cho minion skill gem trên wand, shield và helmet"
+    why: >-
+      Luật của tác giả, lặp lại ở ba stage: đây là "the stat that will give
+      you the most damage". Life và damage gốc của Sentinel tăng theo gem
+      level, nên nó nhân lên mọi thứ khác bạn sẽ mua. Nó đứng đầu vì nó nằm
+      trên đồ rare, vốn rẻ, và vì nó không cần thứ gì khác có sẵn.
+    cost: "Nằm trong mức đầu tiên của codex, dưới 50 Chaos cho cả nhân vật. 3.29, chỉ từ codex, chưa kiểm chứng."
+  - step: Một cây wand còn trống suffix, rồi craft trigger
+    why: >-
+      Tự động hóa [[Desecrate]], [[Spirit Offering]] và curse của bạn. Nó
+      không phải một con số damage; nó là ba cái nút bạn không còn phải bấm,
+      trên một build có điểm yếu là quá nhiều nút. Nó đi trước link vì nó đổi
+      cách build chơi mà gần như không tốn gì.
+  - step: Six-link, và một viên Vaal Absolution level 20 có quality
+    why: >-
+      Viên gem thứ sáu là [[Increased Critical Strikes Support]], một hệ số
+      nhân trực tiếp cho bạn và Sentinel. Nằm dưới mấy món gem level vì thêm
+      một support là khoản lợi nhỏ hơn vài gem level, và six-link thì đắt hơn.
+  - step: Small cluster Enduring Composure, và block lên 75% ở cả hai phía
+    why: >-
+      Guide nói "ASAP" cho cây cluster. Đây là khoản mua phòng thủ đầu tiên vì
+      không thứ gì về sau chạy được nếu bạn không đứng nổi trong map đỏ, và
+      block là lớp đi qua cú đổi mà không thay đổi gì.
+  - step: Double curse qua anoint Whispers of Doom
+    why: >-
+      [[Elemental Weakness]] cộng [[Conductivity]] là cách rẻ nhất để dời
+      resistance của quái trước cú đổi; ghi chú trên planner gọi nó là "a
+      strong DPS boost". Nó nằm thấp thế này vì bạn vứt nó đi ở level 96 — cái
+      armour đặt resistance, mà curse không hạ được một giá trị đã được đặt —
+      nên đừng tiêu quá tay vào nó.
+  - step: Trọn cú đổi, mua cùng lúc
+    why: >-
+      [[Doryani's Prototype]], [[Glorious Vanity]] Xibaqua, [[Dawnbreaker]],
+      [[Watcher's Eye]], ring resistance âm và chaos resistance đã cap. Hệ số
+      nhân đơn lẻ lớn nhất của build, và được đặt thứ sáu có chủ ý: nó nhân
+      lên những gì năm bước đầu đã dựng, và bất kỳ mảnh nào đứng một mình cũng
+      không đáng gì, hoặc còn tệ hơn không có.
+    cost: "Mức thứ ba của codex: 40 Divine trở lên. 3.29, chỉ từ codex, chưa kiểm chứng. Guide không đưa con số nào."
+  - step: "Replica Dragonfangs' Flight với +3 cho Absolution"
+    why: >-
+      Thêm ba gem level cho cái chỉ số ở bước một. Guide gọi nó là "a great
+      choice if you have the budget". Sau cú đổi, vì cú đổi là hệ số nhân lớn
+      hơn trên mỗi đồng bỏ ra và cây amulet này chưa bao giờ rẻ.
+  - step: Cái helmet seven-link
+    why: >-
+      Dời main skill vào helmet để sáu socket của body armour mang được nhóm
+      minion. Mô tả của chính tác giả về bản level 98 là "expensive (mostly
+      the helmet)". Đứng cuối vì nó tốn nhiều currency nhất cho khoản lợi nhỏ
+      nhất còn lại. 3.30 nâng implicit của [[Bone Helmet]] lên 20–30%
+      increased minion damage, giúp được file level 100 một chút.
+play:
+  mapping: |
+    [[Shield Charge]] vào pack. Đó là cách bạn di chuyển, và nó tính là một cú attack, thứ giữ cho nửa attack của [[Bastion of Hope]] luôn bật.
+
+    Cast [[Absolution]] một hai lần để cả pack bị đánh dấu. Debuff kéo dài 3 giây, nên bạn không phải tự giết thứ gì: cái gì chết trong khoảng đó đều nuôi Sentinel. Rồi charge tiếp. Mỗi cú cast cũng kích trigger của cây wand, thứ chạy [[Desecrate]], [[Spirit Offering]] và curse của bạn mà bạn không phải đụng tới, còn [[Molten Shell]] thì tự lên qua [[Automation]].
+
+    Bấm [[Convocation]] khi bạn sang một màn hình mới, vì Sentinel sẽ ở lại để kết thúc cái chúng đã bắt đầu. Bấm [[Vaal Absolution]] khi nó sẵn sàng và có thứ đáng để dùng; sau mỗi lần dùng nó không nhận soul trong 30 giây, nên nó không phải cái nút để giữ.
+
+    Thế giằng co có sẵn: **đứng yên là tắt phòng thủ của bạn.** Ngừng attack và cast bốn giây là bạn mất 25% block ở mỗi phía. Sau cú đổi còn cái thứ hai: vòng tròn sáu mét. Sentinel bay lên trước và đánh ở ngoài vòng đó là đang đánh kẻ địch ở mức resistance bình thường của chúng.
+  bossing: |
+    Quyết định trước khi vào xem [[Animate Guardian]] có đi cùng không. Nếu nó chết, gear của nó mất, và phòng boss là chỗ nó chết.
+
+    Mở màn bằng cách cast, để trigger đưa offering và curse của bạn lên trước khi cú hit đầu tiên tới.
+
+    Rồi cứ cast vào boss suốt cả trận. Mỗi cú hit có 25% cơ hội dựng hoặc làm mới một con Sentinel, và cú roll đó là thứ duy nhất giữ ba con Sentinel trong một căn phòng không có quái nào khác. Có [[Spell Echo Support]] thì mỗi cú cast là hai hit. Một con Sentinel sống 15 giây, nên một pha né kéo dài có thể làm bạn mất cả ba.
+
+    Dùng [[Vaal Absolution]] khi boss đang đứng yên cho bạn: nó cần một con Sentinel đang có để ascend. Nếu trận đánh có quái nhỏ, hãy giết chúng lúc chúng bị đánh dấu.
+
+    Sau cú đổi, ở trong vòng sáu mét. Đi ra xa cho an toàn là bỏ toàn bộ lợi ích của cái armour. Và né bằng tay: block là một cơ hội còn [[Time of Need]] là một cái đồng hồ, và không cái nào trả lời được một cú hit lớn đơn lẻ. File của chính tác giả chịu được 19,173 physical damage trong một hit và không hơn.
+deaths:
+  - situation: Bạn dừng lại chờ một chiêu của boss qua đi rồi chết vì cú hit thường kế tiếp
+    cause: >-
+      [[Bastion of Hope]] chỉ cho block khi bạn đã attack và cast trong bốn
+      giây vừa qua. Đứng yên là mất 25% ở mỗi phía, trên một nhân vật có dưới
+      5,000 life.
+    fix: >-
+      Cứ hành động trong lúc di chuyển. [[Shield Charge]] sang ngang tính là
+      một cú attack; một cú cast [[Absolution]] vào khoảng không tính là một
+      cú cast.
+  - situation: Bạn mặc cái armour vào rồi chết ngay ở map đầu tiên
+    cause: >-
+      [[Doryani's Prototype]] khiến lightning resistance thôi không bảo vệ
+      bạn. Thiếu mấy lớp chuyển hướng — [[Divine Flesh]], [[Dawnbreaker]],
+      [[Watcher's Eye]] với [[Purity of Fire]] thật sự đang bật — bạn ăn hit
+      lightning ở mức gấp bốn lần một nhân vật đã cap.
+    fix: >-
+      Đừng mặc nó cho tới khi từng món đã nằm trong stash. Kiểm xem Purity of
+      Fire có đang bật không: modifier của viên jewel không làm gì nếu thiếu
+      nó. Tránh map có extra lightning damage cho tới khi đủ bộ.
+  - situation: Sau cú đổi, chaos damage và degeneration giết bạn rất nhanh
+    cause: >-
+      [[Divine Flesh]] biến một nửa mọi elemental damage bạn nhận thành chaos
+      damage. Nếu chaos resistance chưa cap, bạn đã làm mọi cú hit elemental
+      tệ hơn chứ không phải tốt hơn. File ngày đầu của tác giả nằm ở 39% chaos
+      resistance; file sau cú đổi của tác giả ở 82%.
+    fix: >-
+      Cap chaos resistance trước khi cắm [[Glorious Vanity]]. Roll nó trên
+      phần lớn các món và dùng [[The Light of Meaning]], như guide nói.
+  - situation: Một cú hit lớn, khi mọi thứ đã dựng đúng
+    cause: >-
+      Bể máu nhỏ là do thiết kế, và sau cú đổi energy shield không còn được
+      tính. Block là một cơ hội còn [[Time of Need]] là một cái đồng hồ bốn
+      giây. Trước nhiều cú hit nhỏ thì chúng trung bình ra được. Trước một cú
+      hit lớn thì không.
+    fix: >-
+      Ở mức budget này không có cách vá bằng gear. Giữ [[Molten Shell]] trên
+      [[Automation]], giữ endurance charge qua [[Enduring Composure]], và học
+      xem đòn nào của boss thì phải bước ra.
+  - situation: Bạn đột nhiên ăn nhiều damage hơn giữa trận
+    cause: >-
+      [[Radiant Crusade]] gửi 20% mỗi cú hit sang life của Sentinel of
+      Radiance. Nếu nó chết, lớp đó mất cho tới khi nó quay lại. Nó cũng không
+      làm gì trước damage over time.
+    fix: >-
+      Triệu lại nó. Nó là một skill bình thường, cast mất 0.75 giây. Codex gợi
+      ý một mastery cho minion life regeneration vì lý do này; tác giả thì lấy
+      "Minions Leech 1% of Damage as Life" thay vào.
+troubleshooting:
+  - symptom: Damage của tôi trên boss thấp hơn hẳn trong map
+    cause: >-
+      Dáng của build là vậy. Sentinel được tạo từ quái không phải unique chết
+      lúc bị đánh dấu, mà phòng boss thì không có con nào. Thứ bạn còn lại là
+      25% cơ hội mỗi hit trên một kẻ địch Rare hoặc Unique.
+    fix: >-
+      Cast không nghỉ; đừng để Sentinel hết giờ trong lúc né; để dành
+      [[Vaal Absolution]] cho lúc boss đứng yên. **Về [[The Writhing Jar]]:**
+      codex nói mấy con sâu của nó chết lúc bị đánh dấu và nuôi Sentinel, và
+      cây flask này đúng là có nằm trong các ô flask ở vài stage trên planner
+      của tác giả. Phần chữ của tác giả không hề giải thích nó, còn món đồ thì
+      ghi mấy con sâu "destroyed when Hit", nên chúng tôi không xác nhận được
+      là chúng để lại cái xác mà skill nuốt được. Điều chắc chắn, từ dòng chữ
+      của notable, là mỗi con sâu bạn giết là một cú roll 25% ra một Elemental
+      Relic.
+  - symptom: Tôi không bao giờ có đủ ba Sentinel trong map
+    cause: >-
+      Quái đang chết lúc không có dấu, hoặc ở ngoài vùng bạn đánh trúng.
+      Debuff kéo dài 3 giây và chỉ cái chết của quái không phải unique mới
+      tính.
+    fix: >-
+      Cast vào pack trước khi minion tới nơi, không phải sau. Lấy Minion
+      Offence Mastery cho 30% minion area, thứ tác giả có từ level 22. Nếu bạn
+      đang đọc lời khuyên cũ nói debuff kéo dài một giây, thì nó có từ trước
+      3.28.
+  - symptom: Tôi hết mana
+    cause: >-
+      Aura đã reserve hết bể mana và có quá ít energy shield nuôi
+      [[Eldritch Battery]].
+    fix: >-
+      Thêm energy shield trên gear: dùng base armour với energy shield. Phương
+      án lùi của guide là bỏ [[Tempest Shield]] hoặc [[Flesh and Stone]]. Tác
+      giả lấy Mana Mastery cho 12% reservation efficiency.
+  - symptom: Tôi mặc cái armour vào mà damage gần như không nhúc nhích
+    cause: >-
+      Một trong bốn chuyện. Lightning resistance của bạn chưa âm. Nó ở đúng
+      0%, mức mà một con bug coi như không có hiệu lực. Bạn với Sentinel đang
+      đánh cách nhau hơn sáu mét. Hoặc bạn vẫn đang chạy [[Conductivity]], thứ
+      không còn hạ được một resistance mà cái armour đặt.
+    fix: >-
+      Gỡ lightning resistance khỏi mọi món và mua ring âm; nhắm tới −200%.
+      Dùng [[Convocation]] để giữ trận đánh ngay trên người bạn. Đổi curse
+      sang [[Assassin's Mark]] và [[Punishment]].
+  - symptom: Mọi thứ vẫn ổn cho tới map đỏ
+    cause: >-
+      Từ level 70 tới cú đổi, build tăng theo từng lát chứ không theo bội số,
+      trong khi map khó lên rất nhiều. Thứ còn thiếu thường là phòng thủ:
+      block dưới 75%, không có endurance charge, resistance mỏng đi sau khi
+      đổi gear.
+    fix: >-
+      Hoàn tất mấy block mastery và hai notable Sanctuary với Safeguard, lấy
+      cây cluster [[Enduring Composure]], và đặt minion gem level lên wand,
+      shield và helmet trước bất cứ thứ gì lạ. Đừng với tới cái armour sớm để
+      chữa chuyện này. Nó làm vấn đề này tệ hơn.
+  - symptom: Tooltip nói Spell Echo không làm gì cho Vaal Absolution
+    cause: >-
+      Đúng, và vô hại. Spell Echo không support được Vaal skill. Vaal gem cũng
+      cho bạn [[Absolution]] thường, thứ nó có support, và các cú cast của
+      chính Sentinel, thứ nó cũng support.
+    fix: >-
+      Không cần làm gì. Một độc giả của guide đã bỏ một nhân vật vì chuyện
+      này; link đúng như được công bố.
+
+patch:
+  - entry: ruthless-changes
+    note: >-
+      **Dòng duy nhất về Guardian trong patch note 3.30 chỉ thuộc Ruthless.**
+      Chuyện Elemental Relic từ [[Unwavering Crusade]] có level tối đa 80 thay
+      vì 85 nằm trong phần riêng của Ruthless. PoE Wiki liệt đúng câu đó dưới
+      3.23.0, cũng đánh dấu Ruthless, và PoEDB vẫn hiện mức trần 85 cho game
+      thường. Nếu bạn đọc thấy aura của Guardian bị nerf league này, đó chính
+      là chỗ đọc sai.
+  - note: >-
+      **[[Absolution]] không được nhắc tới trong patch note 3.30.** Thay đổi
+      gần nhất của nó là cast time ở 3.29.0. [[Vaal Absolution]],
+      [[Doryani's Prototype]], [[Dawnbreaker]], [[Divine Flesh]] và
+      [[Glorious Vanity]] cũng không. Hãy đọc đó là "không tìm thấy trong
+      patch note", từ các lượt dò từ khóa trên một thread 128,000 ký tự, không
+      phải một lời bảo đảm.
+  - entry: doryani-and-doedre
+    note: >-
+      **Không phải món này.** 3.30 làm lại [[Doryani's Invitation]], một cây
+      belt. [[Doryani's Prototype]], cái body armour build này mặc, không có
+      mục nào trong lịch sử phiên bản của nó sau 3.16.0, lúc mức sàn −200%
+      resistance được đưa vào.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Abyss giờ cần một Thread.** Từ 3.29 Abyss là nguồn duy nhất của
+      Abyssal Jewel và Stygian Vise, và nhân vật được công bố đeo một cây
+      [[Darkness Enthroned]] đầy mấy thứ đó. Lời khuyên 3.29 là "farm Abyss"
+      vẫn chỉ đúng cơ chế; chỉ là nó không còn tự xuất hiện trong map.
+  - entry: item-tiers
+    note: >-
+      **Lẫn lộn.** Đồ rare có tier rơi dưới đất làm việc săn base armour với
+      energy shield lúc đầu dễ hơn. Nhưng patch note chính thức lại lấy đúng
+      base belt của build này làm ví dụ cho một base bị hạn chế: một cây
+      [[Stygian Vise]] cần Item Tier 5 thì mới rơi.
+  - entry: incursion-atziri-rework
+    note: >-
+      **[[Vaal Absolution]] có thể khó kiếm hơn lúc đầu.** Vaal side area
+      không còn xuất hiện trong map. Main link dùng Vaal gem từ level 70 trên
+      planner của tác giả. Gem thường chạy được trong cùng link đó cho tới khi
+      bạn có một viên.
+  - entry: special-base-implicits
+    note: >-
+      **Buff nhỏ ở tận trên đỉnh.** [[Bone Helmet]] giờ có 20–30% increased
+      minion damage, tăng từ 15–20%. Chỉ file level 100 của tác giả là đội một
+      cây.
+  - entry: meta-crafting-costs
+    note: >-
+      **Cây wand và cái helmet craft có thể tốn một khoản khác.** Hai video
+      craft của tác giả là từ 3.28 và 3.29. Bảo vệ prefix hoặc suffix trên một
+      món weapon giờ tốn 4 Divine cộng một [[Sacred Orb]]; mấy craft mới rẻ
+      hơn thì bảo vệ một modifier được chọn ngẫu nhiên.
+  - entry: golem-buff-nerfs
+    note: >-
+      **Vặt vãnh.** [[Summon Stone Golem]] cho 16% increased defences ở chỗ
+      trước đây nó cho 20%.
+
+strengths:
+  - "Chơi được từ level 12 trên một viên gem quest reward, không có unique bắt buộc nào trước level 96."
+  - "Aura miễn phí của Guardian buff bạn và mọi minion cùng lúc, không tốn reservation."
+  - "Phòng thủ mạnh mà không tốn currency: 75% block ở cả hai phía, một phần năm mỗi cú hit được chuyển hướng, hồi đầy máu mỗi bốn giây."
+  - "Minion đánh xa: bạn đánh dấu pack rồi cứ đi tiếp."
+  - "Curse và ailment bị gỡ mỗi bốn giây, nên ít mod map phải reroll."
+  - "Trần rất cao. File level 97 của tác giả hiện 25.2 triệu damage mỗi giây (3.28, giả định rộng rãi)."
+weaknesses:
+  - "Một tác giả. Guide của tác giả mang tiêu đề 3.29 và các file planner gắn nhãn 3.28."
+  - "Single-target damage phụ thuộc vào một cú roll 25% mỗi hit khi không còn gì khác để giết."
+  - "Nhiều nút trước khi có trigger trên wand, và danh sách điểm yếu của chính tác giả nói minion \"can feel strange\"."
+  - "Cú đổi là tất cả hoặc không gì cả và cần vài món cụ thể cùng một lúc."
+  - "Sau cú đổi bạn phải đánh trong vòng sáu mét, với dưới 5,000 life và không có energy shield."
+  - "Một khúc dài bằng phẳng từ level 70 tới giữa khoảng 90, nơi map vượt lên trước damage của bạn."
+  - "Guide không định giá thứ gì. Mọi con số budget ở đây đều từ một tài liệu 3.29 không ghi tên tác giả."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn tự tay giết quái chứ không phải qua minion, hoặc
+  nếu bạn muốn một build không thay đổi. Đây là hai nhân vật: một summoner trâu,
+  rẻ cho tới Tier 16, và một chuyên gia tầm gần sau một cú đổi đắt tiền và lắm
+  công. Bỏ qua nếu mục tiêu của bạn là boss với budget nhỏ — cái vòng lặp làm
+  map dễ chính là thứ một phòng boss lấy đi. Và bỏ qua bản level 96 ở hardcore.
+
+sources:
+  - title: "Mobalytics: Holy Absolution Guardian, step by step from league starter to Ubers (Ronarray)"
+    url: https://mobalytics.gg/poe/builds/ronarray-holy-absolution-guardian
+    kind: guide
+    note: "Bản thân build. Mang tiêu đề 3.29, trang đề ngày 11/11/2026, không có chữ nào về 3.30. Nguồn của mọi setup gem theo level, các luật gear, danh sách cho cú đổi, các curse và mọi câu trích. Nó không đưa con số currency nào. Bản codex 3.29 do độc giả gửi tới, thứ bài này được đối chiếu với, nêu guide này là nguồn của chính nó; codex không có tác giả và không có URL, nên nó không được liệt kê riêng."
+  - title: "Path of Building: file guide của Ronarray, mười hai cây"
+    url: https://pobb.in/ivQj4_8aKaDQ
+    kind: pob
+    note: "Gắn nhãn 3.28. Level 97: 25,214,806 DPS, 238,456 eHP, 4,761 life, 37,327 armour, −200% lightning resistance. Config: 15% shock, hit của đồng minh là lucky, Wrath từ spectre, không chọn boss nào."
+  - title: "Path of Building: nhân vật ngày đầu của Ronarray"
+    url: https://pobb.in/pK1ae8LS-HDt
+    kind: pob
+    note: "Gắn nhãn 3.28. Level 94, không có Doryani's Prototype: 2,419,446 DPS, 108,685 eHP, 39% chaos resistance. File đo đạc duy nhất trước cú đổi."
+  - title: "Path of Building: file cú đổi Doryani của Ronarray"
+    url: https://pobb.in/lUcuTI0waHLG
+    kind: pob
+    note: "Gắn nhãn 3.28. Cùng nhân vật với file guide."
+  - title: "poebuilds.cc: Even STRONGER Now! Holy Absolution Guardian, 3.29 (Ronarray)"
+    url: https://www.poebuilds.cc/poe1/build/k6xZ3LckqtM
+    kind: video
+    note: "95,000 lượt xem, gắn tag 3.29. Chúng tôi đọc phần liệt kê gear và chỉ số trên trang, không xem video. Trang của tác giả không hiện mục 3.30 nào."
+  - title: "Forum chính thức: [3.28] A Basic Absolution Guardian Guide (devon752)"
+    url: https://www.pathofexile.com/forum/view-thread/3929320
+    kind: thread
+    note: "Phần đối chiếu độc lập. Một build khác, đơn giản hơn, không có Doryani's Prototype. Xác nhận vòng lặp cốt lõi và Radiant Crusade, Unwavering Crusade với Time of Need là ba lựa chọn đầu tiên, và liệt \"not made for Uber bosses\" là một điểm yếu."
+  - title: "poebuilds.cc: [3.30] Guardian Looks Promising, SSF Absolution test run (P4RL3Y)"
+    url: https://www.poebuilds.cc/poe1/build/VuK_5RzW6zE
+    kind: video
+    note: "Bản Absolution Guardian duy nhất gắn tag 3.30 mà chúng tôi tìm được: một nhân vật tập dượt solo self-found level 53. Bằng chứng là có người đang khởi đầu bằng nó league này, và không hơn."
+  - title: "PoE Wiki: Absolution"
+    url: https://www.poewiki.net/wiki/Absolution
+    kind: data
+    note: "Phần chữ của gem, cái luật rằng support áp lên cả spell của người chơi lẫn spell của Sentinel, hai spell và cooldown của Sentinel, và câu nói rằng Physical to Lightning Support cho chuyển đổi hoàn toàn mà không cần Triad Grip. Lịch sử phiên bản dừng ở 3.29.0."
+  - title: "PoE Wiki: Doryani's Prototype"
+    url: https://www.poewiki.net/wiki/Doryani%27s_Prototype
+    kind: data
+    note: "Bốn dòng, bán kính 6 mét, đặt-chứ-không-giảm, penetration vẫn chạy, con bug ở 0% resistance, và danh sách các cách chuyển hướng lightning damage nhận vào."
+  - title: "PoEDB: Guardian"
+    url: https://poedb.tw/us/Guardian
+    kind: data
+    note: "Nguyên văn của Radiant Crusade, Unwavering Crusade, Time of Need và Bastion of Hope."
+  - title: "PoE Wiki: Summon Elemental Relic"
+    url: https://www.poewiki.net/wiki/Summon_Elemental_Relic
+    kind: data
+    note: "25% cơ hội trigger, mỗi nguyên tố một relic, 5 giây, các giá trị aura ở level 85, và mức trần level 80 chỉ của Ruthless được liệt dưới 3.23.0."
+  - title: "PoEDB: Dawnbreaker"
+    url: https://poedb.tw/us/Dawnbreaker
+    kind: data
+    note: "10–20% cold, lightning và physical damage nhận vào thành fire, khoản phạt block cho mỗi 200 fire damage nhận vào, và nguồn rơi là Searing Exarch."
+  - title: "PoEDB: Divine Flesh"
+    url: https://poedb.tw/us/Divine_Flesh
+    kind: data
+  - title: "PoEDB: Vaal Absolution"
+    url: https://poedb.tw/us/Vaal_Absolution
+    kind: data
+    note: "40 soul, 300% more damage và 70% less damage taken cho con Ascended Sentinel, 20 giây, 30 giây chặn nhận soul."
+  - title: "PoEDB: Triad Grip"
+    url: https://poedb.tw/us/Triad_Grip
+    kind: data
+    note: "Thay đổi của 3.29 từ màu socket sang màu của gem được cắm. Được liệt kê vì codex dựa vào nó; build không dùng món này."
+  - title: "PoEDB: patch note phiên bản 3.29.0"
+    url: https://poedb.tw/us/Version_3.29.0
+    kind: data
+    note: "Cast time của Absolution 0.65 giây, \"All Non-Spectre Minions no longer pause while attacking\", Abyss là nguồn độc quyền của Abyssal Jewel và Stygian Vise."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Đã tìm Absolution, Guardian, từng notable và từng món đồ. Kết quả duy nhất cho Guardian là dòng Elemental Relic, nằm dưới Ruthless-specific Changes."
