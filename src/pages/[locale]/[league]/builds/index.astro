@@ -4,6 +4,7 @@ import BuildCard from '../../../../components/builds/BuildCard.astro';
 import { getLeague } from '../../../../config/leagues';
 import { isLocale, t } from '../../../../i18n';
 import { budgets, getBuilds } from '../../../../lib/builds';
+import { imageUrl } from '../../../../lib/images';
 import { leaguePaths } from '../../../../lib/paths';
 
 export const getStaticPaths = leaguePaths;
@@ -45,6 +46,15 @@ const classes = classOrder
       </button>
       {classes.map((entry) => (
         <button type="button" class="chip" data-class-filter={entry.name} aria-pressed="false">
+          <img
+            class="chip__face"
+            src={imageUrl(`class-${entry.name.toLowerCase()}`, 'builds/index')}
+            alt=""
+            width="22"
+            height="22"
+            loading="lazy"
+            decoding="async"
+          />
           {entry.name}<span class="chip__n">{entry.count}</span>
         </button>
       ))}
@@ -139,7 +149,7 @@ const classes = classOrder
     font: inherit;
     font-size: 0.8rem;
     font-weight: 500;
-    padding: 0.22rem 0.7rem;
+    padding: 0.22rem 0.7rem 0.22rem 0.3rem;
     border: 1px solid var(--border-strong);
     border-radius: 999px;
     background: transparent;
@@ -154,6 +164,9 @@ const classes = classOrder
     border-color: var(--accent);
     color: var(--on-accent);
   }
+  /* The portrait the game shows on its own class select, so the chip is
+     recognisable before the word is read. */
+  .chip__face { flex: none; border-radius: 50%; object-fit: cover; }
   .chip__n {
     font-size: 0.72rem;
     font-variant-numeric: tabular-nums;
