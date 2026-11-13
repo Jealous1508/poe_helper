@@ -2,6 +2,7 @@
 // The act's route as a flow chart: the main path is a vertical spine, side
 // areas branch off to the right. Selecting a node shows its panel.
 // Without JavaScript every panel is simply listed under the chart.
+import ActMap from './ActMap.astro';
 import Rich from '../Rich.astro';
 import Tag from '../Tag.astro';
 import GameImage from '../GameImage.astro';
@@ -18,6 +19,12 @@ const { act, league, locale } = Astro.props;
 const first = act.nodes[0].id;
 ---
 <div class="route" data-route>
+  {/* Inside [data-route] so a pin on the map selects a zone through the same
+      handler as the chart, and falls back to the same anchor without JS. */}
+  <div class="route__map">
+    <ActMap act={act} locale={locale} />
+  </div>
+
   <ol class="flow" aria-label={t(locale, 'leveling.route')}>
     {act.nodes.map((node) => (
       <li class:list={['flow__item', `flow__item--${node.kind}`]}>
@@ -158,6 +165,7 @@ const first = act.nodes[0].id;
 
 <style>
   .route { display: grid; grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+  .route__map { grid-column: 1 / -1; }
 
   /* ---------- the flow chart ---------- */
   .flow { list-style: none; margin: 0; padding: 0; position: relative; }

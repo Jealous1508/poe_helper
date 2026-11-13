@@ -1,0 +1,242 @@
+---
+// A schematic map of one act: every zone in travel order, side areas hanging
+// off the zone they branch from, and a numbered pin on each zone where a
+// quest happens.
+//
+// It is a schematic and not a picture of the ground on purpose. Path of
+// Exile builds the inside of a campaign zone fresh for every instance, so a
+// drawing of The Ledge would be wrong for everybody. What does not change is
+// which zone leads to which, where the waypoints are, and which zone a quest
+// belongs to — which is also the part a new player is actually asking about.
+//
+// Lives inside the route's `[data-route]` element so that selecting a zone
+// here runs the same handler as selecting it in the flow chart below, and
+// falls back to the `#zone-…` anchor when there is no JavaScript.
+import { t, type Locale } from '../../i18n';
+import { imageUrl } from '../../lib/images';
+import type { Act, RouteNode } from '../../lib/leveling';
+
+interface Props {
+  act: Act;
+  locale: Locale;
+}
+const { act, locale } = Astro.props;
+
+/** Quests get their number from the order you meet them walking the act. */
+const questNumbers = new Map<string, number>();
+for (const node of act.nodes) {
+  if (node.quest) questNumbers.set(node.id, questNumbers.size + 1);
+}
+
+/** Each stop on the main line, with the side areas that branch off it. */
+interface Stop {
+  node: RouteNode;
+  branches: RouteNode[];
+}
+const stops: Stop[] = [];
+for (const node of act.nodes) {
+  if (node.kind === 'side' && node.branchFrom) {
+    const parent = stops.find((stop) => stop.node.id === node.branchFrom);
+    if (parent) {
+      parent.branches.push(node);
+      continue;
+    }
+  }
+  stops.push({ node, branches: [] });
+}
+
+const quests = act.nodes.filter((node) => node.quest);
+---
+<section class="map" aria-labelledby={`map-${act.slug}`}>
+  <div class="map__head">
+    <h2 id={`map-${act.slug}`}>{t(locale, 'leveling.map')}</h2>
+    <p class="muted">{t(locale, 'leveling.map.note')}</p>
+  </div>
+
+  <ol class="map__line">
+    {stops.map((stop, index) => (
+      <li class:list={['map__stop', `map__stop--${stop.node.kind}`]}>
+        {index > 0 && (
+          <span class="map__join" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l6 5-6 5" /></svg>
+          </span>
+        )}
+        <div class="map__group">
+          <a
+            href={`#zone-${stop.node.id}`}
+            class:list={['pin', `pin--${stop.node.tag}`, `pin--kind-${stop.node.kind}`]}
+            data-node={stop.node.id}
+          >
+            {questNumbers.has(stop.node.id) && (
+              <span class="pin__quest">{questNumbers.get(stop.node.id)}</span>
+            )}
+            <span class="pin__name">{stop.node.name}</span>
+            <span class="pin__meta">
+              {/* "Lv 4", not a bare 4: a bare number beside a numbered
+                  quest pin reads as a second pin. */}
+              {stop.node.level && <span>{t(locale, 'leveling.areaLevelShort', { level: stop.node.level })}</span>}
+              {stop.node.waypoint && (
+                <img class="pin__wp" src={imageUrl('icon-waypoint', act.where)} alt={t(locale, 'leveling.waypoint')} width="12" height="12" loading="lazy" decoding="async" />
+              )}
+            </span>
+          </a>
+
+          {stop.branches.length > 0 && (
+            <ul class="map__branches">
+              {stop.branches.map((branch) => (
+                <li>
+                  <a
+                    href={`#zone-${branch.id}`}
+                    class:list={['pin', 'pin--side', `pin--${branch.tag}`]}
+                    data-node={branch.id}
+                  >
+                    {questNumbers.has(branch.id) && <span class="pin__quest">{questNumbers.get(branch.id)}</span>}
+                    <span class="pin__name">{branch.name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  {quests.length > 0 && (
+    <div class="map__key">
+      <h3>{t(locale, 'leveling.map.quests')}</h3>
+      <ol class="map__quests">
+        {quests.map((node) => (
+          <li>
+            <a href={`#zone-${node.id}`} data-node={node.id}>
+              <span class="pin__quest">{questNumbers.get(node.id)}</span>
+              <span class="map__quest-name">{node.quest}</span>
+              <span class="map__quest-zone">{node.name}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )}
+</section>
+
+<style>
+  .map { margin: 0 0 2.5rem; }
+  .map__head { margin-bottom: 1rem; }
+  .map__head h2 { font-size: 1.15rem; }
+  .map__head p { max-width: var(--measure); margin-top: 0.25rem; font-size: 0.9rem; }
+
+  /*
+    The line wraps like text. The arrow sits before each stop rather than
+    after it, so where a row breaks the new row opens with "continued from
+    above" instead of an arrow pointing off the edge into nothing.
+  */
+  .map__line {
+    list-style: none;
+    margin: 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.4rem 0.1rem;
+  }
+  .map__stop { margin: 0; display: flex; align-items: flex-start; }
+  .map__join { display: flex; align-items: center; height: 1.95rem; padding: 0 0.15rem; color: var(--border-strong); }
+  .map__group { display: flex; flex-direction: column; gap: 0.25rem; }
+  .map__branches { list-style: none; margin: 0; padding: 0 0 0 0.9rem; display: flex; flex-direction: column; gap: 0.25rem; position: relative; }
+  /* the elbow that ties a side area to the zone it branches off */
+  .map__branches::before {
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    top: -0.25rem;
+    bottom: 0.9rem;
+    width: 1.5px;
+    background: var(--border-strong);
+  }
+
+  .pin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--tag, var(--border-strong));
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease);
+  }
+  .pin:hover { background: var(--surface-2); color: var(--text); }
+  .pin.is-active { border-color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); }
+
+  /* The four labels the route already uses, so the colours mean the same
+     thing on the map as they do in the chart below. */
+  .pin--must { --tag: var(--accent); }
+  .pin--worth { --tag: var(--buff); }
+  .pin--skip { --tag: var(--removed); }
+  .pin--travel { --tag: var(--border-strong); }
+  .pin--kind-town { border-style: dashed; }
+  .pin--kind-boss { font-weight: 600; }
+  .pin--side { font-size: 0.78rem; color: var(--text-muted); }
+  .pin--side .pin__name { font-weight: 400; }
+
+  .pin__name { white-space: nowrap; }
+  .pin__meta { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--text-muted); font-size: 0.74rem; }
+  .pin__wp { display: block; }
+  .pin__quest {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .map__key { margin-top: 1.1rem; }
+  .map__key h3 {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .map__quests { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0.3rem 1.25rem; }
+  .map__quests li { margin: 0; }
+  .map__quests a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: var(--radius);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.88rem;
+  }
+  .map__quests a:hover { background: var(--surface-2); }
+  .map__quests a.is-active { background: var(--accent-soft); }
+  .map__quests .pin__quest { align-self: center; }
+  .map__quest-name { font-weight: 600; }
+  .map__quest-zone { color: var(--text-muted); font-size: 0.82rem; margin-left: auto; text-align: right; }
+
+  @media (max-width: 560px) {
+    .map__line { padding: 0.7rem 0.6rem; }
+    .pin__name { white-space: normal; }
+    .map__quest-zone { margin-left: 0; }
+    .map__quests a { flex-wrap: wrap; }
+  }
+</style>
