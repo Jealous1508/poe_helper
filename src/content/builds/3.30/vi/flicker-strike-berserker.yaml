@@ -46,8 +46,9 @@ modes:
     tới câu hỏi nào trong hai câu này — đây là nhận định của chúng tôi.
   hardcore: >-
     Đừng. [[Aspect of Carnage]] thêm thẳng 10% increased damage taken,
-    [[Rite of Ruin]] rút máu liên tục, bạn dịch chuyển vào giữa mấy pack quái mà
-    bạn không thấy, và lớp phòng thủ duy nhất của bạn thì sập cùng một lúc. Hai
+    [[Rite of Ruin]] rút máu liên tục một khi bạn đã lấy nó, bạn dịch chuyển vào
+    giữa mấy pack quái mà bạn không thấy, và lớp phòng thủ duy nhất của bạn thì
+    sập cùng một lúc. Hai
     nguồn độc lập cảnh báo rằng bạn chết trước khi build thành hình. Lại là nhận
     định của chúng tôi; không nguồn nào cho điểm.
 
@@ -68,7 +69,7 @@ chain:
   - label: Máu thành damage
     text: "[[Foulborn Ghostwrithe]] biến life thành energy shield, [[Energy Blade]] biến energy shield thành lightning damage trên vũ khí, và [[Voice of the Storm]] roll cái damage đó hai lần rồi giữ kết quả tốt hơn."
   - label: Overleech
-    text: "[[Immortal Ambition]] giữ leech chạy cả khi máu bạn đã đầy. Đúng cái lưu lượng đó là thứ giữ bạn sống, và là thứ không cho [[Rite of Ruin]] giết bạn."
+    text: "[[Immortal Ambition]] giữ leech chạy cả khi máu bạn đã đầy. Đúng cái lưu lượng đó là thứ giữ bạn sống, và là thứ không cho [[Rite of Ruin]] giết bạn một khi bạn đã lấy nó."
 
 chainDetails:
   - title: Vì sao Berserker chứ không phải Slayer
@@ -243,13 +244,13 @@ labs:
     why: "Cái nào trong hai cái bạn chưa lấy ở lần thứ hai. Nạp rage và phần attack speed đi kèm."
   - lab: Eternal
     node: Gore Dancer
-    why: "**Cách đọc của chúng tôi, không phải của guide.** Nó cho 30% life leech thành instant leech, mà instant leech là thứ làm dòng rút máu của [[Rite of Ruin]] với phần damage thêm của Aspect of Carnage còn sống nổi lúc league start. Đổi sang [[Rite of Ruin]] về sau, khi bể máu và leech của bạn đã lớn."
+    why: "Guide đưa hai lựa chọn cho notable cuối này, [[Rite of Ruin]] hoặc Gore Dancer, và nghiêng về Rite of Ruin. **Bắt đầu bằng Gore Dancer là cách đọc của chúng tôi, không phải của guide.** Nó biến 30% life leech thành instant, thứ làm phần damage thêm của Aspect of Carnage còn sống nổi lúc league start, và nó cho bạn khỏi chịu dòng rút máu của Rite of Ruin tới khi bạn trả nổi. Respec Gore Dancer sang Rite of Ruin về sau, khi bể máu và leech của bạn đã lớn."
 
 stages:
   - id: acts-1-3
     image: blood-rage
-    title: Act 1–3
-    levels: Level 1–38
+    title: Act 1–5
+    levels: Level 1–45
     uses: >-
       [[Ground Slam]] từ Tarkleigh sau Hillock, rồi [[Static Strike]] từ level
       12. [[Intimidating Cry]] để có double damage trên mấy cú attack được exert.
@@ -283,22 +284,23 @@ stages:
           - Một Lapis Amulet, hoặc [[Versatility]] trên cây, cho phần Dexterity mà [[Frostblink]] cần.
   - id: acts-4-10
     image: flesh-and-stone
-    title: Act 4–10
-    levels: Level 38–68
+    title: Act 6–10
+    levels: Level 45–68
     uses: >-
       **Cú đổi xảy ra ở đây, trong Act 6.** [[Flicker Strike]] với
       [[Multistrike Support]] và [[Melee Splash Support]], cộng
       [[Poacher's Mark]].
     changes: >-
-      Lấy [[Resolute Technique]] ở Act 4 hoặc 5 để chữa accuracy vĩnh viễn. Link
-      [[Intimidating Cry]] với [[Autoexertion Support]] để tự động hóa warcry.
-      Thêm [[Herald of Ash]] và [[Blood Rage]]. Cap resistance ở 75% trước khi vào
-      map.
+      Tới lúc này [[Resolute Technique]] đã nằm trên cây từ Act 4 hoặc 5 và chữa
+      accuracy vĩnh viễn, [[Intimidating Cry]] đã link với [[Autoexertion]] nên
+      warcry tự bật, còn [[Herald of Ash]] với [[Blood Rage]] thì đang chạy.
+      Guide thêm tất cả mấy thứ đó trước cú đổi. Cap resistance ở 75% trước khi
+      vào map.
     links:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
       - name: Warcry, tự động
-        gems: [Intimidating Cry, Autoexertion Support]
+        gems: [Intimidating Cry, Autoexertion]
       - name: Buff và aura
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
       - name: Di chuyển
@@ -340,7 +342,7 @@ stages:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
       - name: Warcry và berserk
-        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+        gems: [Intimidating Cry, Autoexertion, Berserk]
       - name: Buff và aura
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
       - name: Guard
@@ -376,9 +378,9 @@ stages:
       [[Immortal Ambition]].
     changes: >-
       Overleech bật lên và build đổi hẳn tính cách. Giờ energy shield gánh damage
-      của bạn. Dòng rút máu của [[Rite of Ruin]] và phần damage thêm của
-      [[Aspect of Carnage]] đều trở nên sống nổi, vì leech cuối cùng cũng làm
-      việc của nó.
+      của bạn. Phần damage thêm của [[Aspect of Carnage]] trở nên sống nổi vì
+      leech cuối cùng cũng làm việc của nó, và đây là lúc dòng rút máu của
+      [[Rite of Ruin]] trở nên trả nổi, nên nó có thể thế chỗ Gore Dancer.
     links:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
@@ -387,7 +389,7 @@ stages:
       - name: Energy shield
         gems: [Energy Blade]
       - name: Warcry và berserk
-        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+        gems: [Intimidating Cry, Autoexertion, Berserk]
       - name: Buff và aura
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
     moveOn: "overleech đã vĩnh viễn, bể energy shield của bạn đã lớn, và bạn thôi chết vô cớ."
@@ -408,7 +410,7 @@ stages:
           Tác giả khẳng định rằng với đủ đầu tư vào setup Ghostwrithe thì bạn làm hết uber một cách thoải mái. Đó là một nguồn duy nhất khẳng định về chính build của mình, trên dữ liệu 3.29. Nghe hợp lý, chưa kiểm trong 3.30.
       - title: Làm gì khi bị đói charge
         body: |
-          Khi charge cạn, ba chuyện tệ xảy ra cùng lúc: bạn ngừng di chuyển, bạn mất 10% attack speed cho mỗi charge còn thiếu, và [[Rite of Ruin]] thì vẫn rút máu bạn.
+          Khi charge cạn, ba chuyện tệ xảy ra cùng lúc: bạn ngừng di chuyển, bạn mất 10% attack speed cho mỗi charge còn thiếu, và [[Rite of Ruin]], nếu bạn đã đổi sang nó, thì vẫn rút máu bạn.
 
           Cách chữa, theo thứ tự: quality trên viên [[Flicker Strike]], quality trên [[Poacher's Mark]], Sword mastery cho quái unique, và [[Melee Splash Support]] hoặc [[Tribal Fury]] để mỗi cú vung chạm được nhiều mục tiêu hơn.
 

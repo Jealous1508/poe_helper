@@ -266,10 +266,10 @@ stages:
       playstyle, much more expensive. The Shrapnel guide itself only says
       "transition from another Templar build".
     links:
-      - name: Main skill (starter)
-        gems: [Explosive Arrow, Void Manipulation Support, Lifetap Support, Increased Critical Strikes Support]
+      - name: Main skill (starter, as the Explosive Arrow guide prints it)
+        gems: [Explosive Arrow, Ballista Totem Support, Elemental Damage with Attacks Support, Lifetap Support, Combustion Support, Cruelty Support]
       - name: Auras
-        gems: [Purity of Elements, Grace, Precision, Arrogance Support]
+        gems: [Purity of Elements, Grace]
       - name: Utility
         gems: [Dash, Second Wind Support, Steelskin, Automation]
     moveOn: "you are level 94+, you have roughly 150 Divine to spend, and you have decided you want a boss killer rather than a mapper."
@@ -305,10 +305,14 @@ stages:
         gems: [Shrapnel Ballista, Void Manipulation Support, Withering Touch Support, Volatility Support, Increased Critical Strikes Support, Lifetap Support]
       - name: Bow
         gems: [Automation, Lifetap Support, Steelskin, Blood Rage, Convocation, Despair]
-      - name: Helm
-        gems: [Purity of Elements, Grace, Lifetap Support, Frenzy]
-      - name: Gloves
-        gems: [Arrogance Support, Precision, Raise Spectre]
+      - name: Helm, aura pair
+        gems: [Purity of Elements, Grace]
+      - name: Helm, second pair
+        gems: [Frenzy, Lifetap Support]
+      - name: Gloves, aura pair
+        gems: [Precision, Arrogance Support]
+      - name: Gloves, spectre pair
+        gems: [Raise Spectre, Companionship Support]
       - name: Boots
         gems: [Dash, Second Wind Support, Lifetap Support]
     moveOn: "you are past 2,000 Strength, the Beast Spectre is a Guardian Turtle, and you can clear Simulacrum."
@@ -325,7 +329,11 @@ stages:
           The budget substitutions the gear page gives, in order: a rare Strength, life and resistance jewel or Emperor's Might before [[Emperor's Mastery]]; a plain Guardian Turtle before the Perfect one; Enhance before the cooldown recovery support.
       - title: Avoid four-links in the gloves and helm
         body: |
-          The guide warns against them specifically. The aura and spectre setup wants the sockets, and a four-link forces you to drop something that is carrying either your reservation or your Beast Spectre.
+          The guide warns against them in both items, in the same words: "For the gems to work, you don't want a 4-link setup". It gives no reason beyond pointing at a picture.
+
+          What it prints for each item is two separate pairs. The helmet holds the two auras and, apart from them, Frenzy with Lifetap. The gloves hold Precision with Arrogance and, apart from them, the spectre with Companionship Support — Minion Life Support on a budget.
+
+          Our reading of the reason, which the guide does not state: a support applies to everything linked to it. Link all four and Lifetap is on your auras and Arrogance is on your spectre.
   - id: mageblood
     image: mageblood
     title: Mid budget
@@ -344,17 +352,21 @@ stages:
         gems: [Shrapnel Ballista, Void Manipulation Support, Withering Touch Support, Volatility Support, Increased Critical Strikes Support, Lifetap Support]
       - name: Bow
         gems: [Automation, Lifetap Support, Steelskin, Blood Rage, Convocation, Despair]
-      - name: Helm
-        gems: [Purity of Elements, Grace, Lifetap Support, Frenzy]
-      - name: Gloves
-        gems: [Arrogance Support, Precision, Raise Spectre]
+      - name: Helm, aura pair
+        gems: [Purity of Elements, Grace]
+      - name: Helm, second pair
+        gems: [Frenzy, Lifetap Support]
+      - name: Gloves, aura pair
+        gems: [Precision, Arrogance Support]
+      - name: Gloves, spectre pair
+        gems: [Raise Spectre, Companionship Support]
     moveOn: "resistances are overcapped by 40–50% and you are farming ubers rather than learning them."
     details:
       - title: Mageblood is the defensive purchase
         body: |
           This is the one genuinely interesting trade in the build, and the author is straight about it: switching to Mageblood costs you a totem, and it is still correct.
 
-          So buy it when your problem is dying, not when your problem is damage. If you are killing bosses and surviving, [[Simplex Amulet]] and more Strength is the better 200 Divine.
+          So buy it when your problem is dying, not when your problem is damage. If you are killing bosses and surviving, [[Simplex Amulet]] and more Strength is the better place for the same currency. The guide prints no price for Mageblood, and neither do we.
       - title: Mageblood flasks
         body: |
           [[Life Flask]] (Divine), then Topaz, Sapphire, Quicksilver and Ruby. Each wants the 70% increased effect enchantment, suffixes covering armour, crit, evasion or additional elemental resistance during effect, and a prefix of 25% increased effect.
@@ -365,9 +377,10 @@ stages:
     title: Min-max
     levels: 3,351 Strength
     uses: >-
-      [[Simplex Amulet]] in place of [[Astramentis]], [[Kalandra's Touch]],
-      [[Bound by Destiny]], and corruptions on gloves, helmet, boots and
-      chest.
+      [[Simplex Amulet]] in place of [[Astramentis]], [[Bound by Destiny]],
+      and corruptions on gloves, helmet, boots and chest.
+      [[Kalandra's Touch]] is not new at this tier: it is already in the
+      Mageblood file.
     changes: >-
       Strength goes from about 2,665 to 3,351, which is three more totems and
       a great deal more chaos damage. The published file reports
@@ -443,14 +456,17 @@ upgrades:
       surviving, this is the better use of the same money than Mageblood. It
       replaces Astramentis and is part of how the min-max file reaches 3,351
       Strength.
-  - step: "[[Kalandra's Touch]], [[Bound by Destiny]], and corruptions on the gloves, helmet and boots"
+  - step: "[[Bound by Destiny]], corruptions on the gloves, helmet and boots, and [[Kalandra's Touch]] once one ring is worth copying"
     why: >-
-      The last stretch of Strength. Bound by Destiny is +15% Strength while you wear
-      two Warlord-influenced items. Together with the amulet this is three
-      more totems in the published file. It is last because it is the most
-      currency per totem on the list — our judgement, since no source prices
-      any of it. A corrupted Alberon's must still read at least 1 to 80 chaos
-      per 80 Strength.
+      The last stretch of Strength. Bound by Destiny is +15% Strength while
+      you wear two Warlord-influenced items. Together with the amulet this is
+      three more totems in the published file. The gear page's use for
+      Kalandra's Touch is to mirror an expensive ring into your other ring
+      slot; it is already in the published Mageblood file, so it is not a
+      min-max-only piece. These are last because they are the most currency
+      per totem on the list — our judgement, since no source prices any of
+      it. A corrupted Alberon's must still read at least 1 to 80 chaos per 80
+      Strength.
 
 play:
   mapping: |
@@ -459,14 +475,15 @@ play:
     3. Move with [[Dash]].
     4. Leave the rest alone. [[Steelskin]] and [[Blood Rage]] sit on [[Automation]] in the bow, and the utility flasks use themselves when full.
 
-    Two gaps we will not paper over. [[Despair]] and [[Frenzy]] are in the links, and the article does not record how either is fired. And Tier 17 and Tier 16.5 maps need a modifier filter that the guide does not supply.
+    [[Despair]] and [[Frenzy]] are in the links but are not for maps: the guide's gem page says you do not need the curse for general mapping and do not need to spam Frenzy there. One gap we will not paper over: Tier 17 and Tier 16.5 maps need a modifier filter that the guide does not supply.
   bossing: |
-    The buttons are the same. What changes is that keeping totems on the field becomes the whole job.
+    Two buttons you ignored in maps come into use, and keeping totems on the field becomes the whole job.
 
     1. Check the Beast Spectre is alive before you go in. [[Fertile Will]] gives nothing without it.
-    2. Place the totems, and place them again before they expire rather than after. The guide lists totems dying in some fights as a real weakness.
-    3. Treat the totem count as your life bar as well as your damage. Each totem is 1% life regeneration from [[Ritual of Awakening]], so a fight that clears your totems also cuts your recovery. That link is our reading of the node, not something the guide says about bossing.
-    4. Stay out of what you can see coming. Block, evasion and suppression are chances.
+    2. Cast Despair on the boss by hand. The guide's words are "Manually cast Despair on hard bosses", and it calls Frenzy "useful for bossing".
+    3. Place the totems, and place them again before they expire rather than after. The guide lists totems dying in some fights as a real weakness.
+    4. Treat the totem count as your life bar as well as your damage. Each totem is 1% life regeneration from [[Ritual of Awakening]], so a fight that clears your totems also cuts your recovery. That link is our reading of the node, not something the guide says about bossing.
+    5. Stay out of what you can see coming. Block, evasion and suppression are chances.
 
     The published damage assumes 15 Wither stacks. [[Withering Touch Support]] is in the main link, so we read the opening seconds of a fight as weaker than the number; no source says how long the stacks take.
 

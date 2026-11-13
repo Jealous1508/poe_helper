@@ -129,9 +129,10 @@ chainDetails:
 
       - **No leveling tree and no gem progression.** The only planner is the finished level-98 character.
       - **No Labyrinth order.** We do not know which Guardian notable he takes first, so this page has no Labyrinth table.
-      - **No support gem list for the Guardian version.** The page shows [[Static Strike]] and the staff's granted skill, and does not show what is linked to what.
-      - **Which notable the Forbidden pair allocates.** The character wears a corrupted [[Forbidden Flame]] and [[Forbidden Flesh]], and the page does not say what is written on them. A Forbidden pair that names two different notables does nothing, so this is not a small gap.
+      - **No link groups for the Guardian version.** The build page lists its gems item by item — the body armour holds [[Static Strike]], Shockwave, Elemental Damage with Attacks, Melee Physical Damage, Fortify and Ruthless — but does not show what is linked to what.
       - **Any price at all.**
+
+      One thing *is* published that an earlier version of this page said was not. The character wears a corrupted [[Forbidden Flame]] and [[Forbidden Flesh]], and on the build page both read "Allocates [[Righteous Providence]]" — the Inquisitor notable, which PoEDB gives as 1% increased critical strike chance per point of Strength or Intelligence, whichever is lower, and +50 to both. A Forbidden pair that names two different notables does nothing, so the name matters.
 
 mandatory:
   - term: Static Strike
@@ -177,44 +178,49 @@ mandatory:
       Granted free by the staff, and it is the whole difference between the
       planner's 10.6 million for Static Strike and 11.6 million in total. You
       do not spend a socket on it.
-  - term: Trinity Support
+  - term: Shockwave Support
     level: recommended
     why: >-
-      More elemental damage when you deal all three elemental damage types.
-      **From the author's 3.29 Static Strike Slayer file, not the Guardian
-      one** — his Guardian page does not publish a link.
+      Triggers a Shockwave on melee hit: an area attack with 336%
+      effectiveness of added damage at gem level 20, usable only with maces,
+      sceptres and staves. It sits beside Static Strike in the body armour
+      on the Guardian's build page. The author's 3.29 Slayer file had
+      [[Trinity Support]] in that socket; the Guardian does not list it.
   - term: Melee Physical Damage Support
     level: recommended
     why: >-
-      More melee physical damage, half of which converts to lightning. Also
-      from the 3.29 Slayer file.
+      More melee physical damage, half of which converts to lightning. In
+      the Guardian's body armour, and in the 3.29 Slayer file.
   - term: Ruthless Support
     level: recommended
     why: >-
-      Every third hit does much more damage. From the 3.29 Slayer file. On a
-      1.83-attacks-per-second character the pattern is easy to keep.
+      Every third hit does much more damage. In the Guardian's body armour,
+      and in the 3.29 Slayer file. On a 1.83-attacks-per-second character
+      the pattern is easy to keep.
   - term: Fortify Support
     level: recommended
     why: >-
       Less damage taken from hits, and it suits a melee character that is
-      hitting constantly. From the 3.29 Slayer file.
+      hitting constantly. In the Guardian's body armour, and in the 3.29
+      Slayer file.
   - term: Elemental Damage with Attacks Support
     level: recommended
     why: >-
       More elemental damage with attacks, which is where half of Static
-      Strike's damage lands after conversion. From the 3.29 Slayer file.
+      Strike's damage lands after conversion. In the Guardian's body armour,
+      and in the 3.29 Slayer file.
   - term: Elemental Weakness
     level: recommended
     why: >-
       Lowers all three elemental resistances. The published Guardian carries
       it. It is also the curse you would need if you chase the
       [[Doedre's Tongue]] ailment route.
-  - term: Shield Charge
+  - term: Leap Slam
     level: recommended
     why: >-
-      Movement. The published character has it, which is slightly odd on a
-      staff build and may be a leftover — **we flag it rather than explain
-      it.**
+      Movement. The Guardian's build page lists it in the helmet with Faster
+      Attacks. An earlier version of this page had Shield Charge here; no
+      such gem is on the character, which carries a staff and no shield.
 
 stages:
   - id: acts-1-10
@@ -264,15 +270,17 @@ stages:
       and resistances everywhere else, and [[Divine Shield]] once your armour
       is large enough for it to pay.
     changes: >-
-      This is where the Guardian half starts to be the point. Block and
-      armour come from the tree and the ascendancy, so they arrive on
-      schedule whatever your gear looks like.
+      This is where the Guardian half starts to be the point. Most of the
+      block and armour comes from the tree and the ascendancy, not from rare
+      gear — but the staff itself brings +25% spell block and +5% attack
+      block, and with no levelling tree published, nothing says when the
+      rest arrives.
     links:
-      - name: "Main link (shape from the 3.29 Slayer file)"
-        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support, Fortify Support, Trinity Support, Elemental Damage with Attacks Support]
+      - name: "Main link (the six gems in the Guardian's body armour; the page marks no links)"
+        gems: [Static Strike, Shockwave Support, Elemental Damage with Attacks Support, Melee Physical Damage Support, Fortify Support, Ruthless Support]
       - name: Curse and movement
-        gems: [Elemental Weakness, Shield Charge, Faster Attacks Support]
-      - name: Defence
+        gems: [Elemental Weakness, Leap Slam, Faster Attacks Support]
+      - name: "Defence (our suggestion; not on the Guardian's page)"
         gems: [Vaal Molten Shell, Cast when Damage Taken Support]
     moveOn: "your block is high, your resistances are capped, and the staff is equipped."
     details:
@@ -284,11 +292,11 @@ stages:
           2. **The vendor recipe.** [[The Enmity Divine]] plus a [[Haemocombustion Scroll]].
 
           **Neither route has a published cost or drop rate.** If you are trading, this is one item to price-check rather than budget for.
-      - title: Trinity needs all three elements
+      - title: Trinity belongs to the Slayer file, not to the Guardian
         body: |
-          [[Trinity Support]] only pays out if you are dealing fire, cold *and* lightning damage. Static Strike gives you lightning by conversion. The other two have to come from your gear or from an aura such as [[Hatred]] for cold.
+          [[Trinity Support]] only pays out if you are dealing fire, cold *and* lightning damage. Static Strike gives you lightning by conversion. The author's 3.29 Slayer file gets the other two from [[Hatred]] and [[Herald of Ash]].
 
-          The author's 3.29 Slayer file runs [[Hatred]] and [[Herald of Ash]], which covers cold and fire. **His Guardian page does not publish its aura set**, so we cannot tell you whether the Guardian keeps that arrangement.
+          The Guardian's build page lists none of the three. Its body armour has Shockwave where the Slayer had Trinity, and the only herald and aura in its gem list are [[Herald of Purity]] and [[Precision]]. So do not carry the Slayer's Trinity setup across: on the Guardian as published there is no cold or fire to feed it. That is the same gap [[The Taming]] has, seen from the other side.
       - title: Earning currency in 3.30
         body: |
           Worth repeating on every starter page this league: Abyss, Bestiary, Betrayal, Blight, Breach, Expedition, Incursion, Legion, Ritual and Ultimatum no longer spawn in maps at random. They appear only where a Thread puts them.
@@ -307,10 +315,12 @@ stages:
       lands at 10.6 million for Static Strike on a 3.29 planner with a 15%
       shock assumption and no boss selected.
     links:
-      - name: "Main link (shape from the 3.29 Slayer file)"
-        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support, Fortify Support, Trinity Support, Elemental Damage with Attacks Support]
-      - name: "Auras (from the 3.29 Slayer file, not the Guardian one)"
-        gems: [Hatred, Herald of Ash, Precision, Arrogance Support, Enlighten Support]
+      - name: "Body armour, as listed on the Guardian's page (links not shown)"
+        gems: [Static Strike, Shockwave Support, Elemental Damage with Attacks Support, Melee Physical Damage Support, Fortify Support, Ruthless Support]
+      - name: "Helmet, as listed"
+        gems: [Autoexertion, Intimidating Cry, Leap Slam, Faster Attacks Support]
+      - name: "Boots, as listed"
+        gems: [Automation, Herald of Purity, Convocation]
       - name: Granted by the staff
         gems: [Summon Greater Harbinger of Brutality]
     moveOn: >-
@@ -321,7 +331,9 @@ stages:
         body: |
           [[The Yielding Mortality]] in the weapon slot. Then rares in every other slot: a Magistrate Crown helmet, a Paladin's Hauberk body armour, Mesh Gloves, Legion Boots, an amulet, one rare ring, and a belt. [[The Taming]] is the second ring.
 
-          Jewels include a corrupted [[Forbidden Flame]] and [[Forbidden Flesh]] pair. **The notable they allocate is not shown on the page**, and that is the single most load-bearing unknown in the whole setup.
+          Jewels include a corrupted [[Forbidden Flame]] and [[Forbidden Flesh]] pair, and both read "Allocates Righteous Providence". On a character with 223 Strength and 187 Intelligence that notable is worth 187% increased critical strike chance by its own text — our arithmetic, not the page's — which is a large part of how a staff build reaches 92.7%. It also makes the pair the most load-bearing purchase in the setup, and nothing prices it.
+
+          The staff's own sockets hold utility: Blood Rage, [[Elemental Weakness]], Rallying Cry, Mana-Infused Staff, Hydrosphere and Frostblink, as the page lists them.
 
           Note what is *absent*: no [[Mageblood]], no [[Progenesis]], no [[Headhunter]], no [[Watcher's Eye]], no cluster jewels. For a character with eleven and a half million damage per second and 219,000 effective hit points, that is a cheap-looking list — which is part of why the author calls it a league starter.
       - title: Reading the 219,015 figure honestly
@@ -351,14 +363,14 @@ play:
     1. Hit one enemy with [[Static Strike]]. The hit grants static energy for a base 4 seconds; it stacks up to 3 times.
     2. Keep moving. While static energy is up, beams fire from you on their own — every 0.32 seconds at gem level 20, at up to 6 targets, with one extra chain. They do the clearing.
     3. Hit something again before the 4 seconds run out. Skill effect duration stretches that window.
-    4. [[Vaal Molten Shell]] sits on [[Cast when Damage Taken Support]] and needs nothing from you.
+    4. The Guardian's page lists [[Autoexertion]] with [[Intimidating Cry]], so the warcry fires itself, and [[Leap Slam]] with Faster Attacks for getting about.
 
     The published character carries [[Elemental Weakness]], and the page does not show how it is applied.
   bossing: |
     The beams deal 30% less damage than the attack, so on a boss the attack is the tool and the beams are a bonus. You stand in melee range and keep swinging, which is the opposite of how you clear.
 
     1. Curse the boss with [[Elemental Weakness]].
-    2. Keep the swings coming. If you run the link shape from the author's 3.29 Slayer file, [[Ruthless Support]] makes every third hit much larger; at the published 1.83 attacks per second that pattern is easy to keep.
+    2. Keep the swings coming. [[Ruthless Support]] is in the Guardian's body armour and makes every third hit much larger; at the published 1.83 attacks per second that pattern is easy to keep.
     3. Step out of anything large and elemental. Block and armour are what hold this character up, and the article flags unavoidable elemental hits and heavy chaos damage as the place that shape should fail. No source has tested that; it follows from the numbers.
 
     Do not expect the published 10.6 million on a pinnacle boss. That figure has no boss selected.
@@ -382,17 +394,17 @@ troubleshooting:
       Static Strike gives you lightning by conversion and nothing else.
     fix: >-
       Cold and fire have to come from gear or auras. The author's 3.29
-      Slayer file uses [[Hatred]] and [[Herald of Ash]]; his Guardian page
-      does not publish an aura set, so we cannot say the Guardian keeps
-      them.
+      Slayer file uses [[Hatred]] and [[Herald of Ash]] for them. The
+      Guardian's own gem list has neither, and no Trinity: it runs
+      [[Shockwave Support]] in that socket. On the Guardian, follow its page
+      and take Trinity out.
   - symptom: "The Forbidden jewel pair does nothing"
     cause: >-
       [[Forbidden Flame]] and [[Forbidden Flesh]] only work as a pair that
       names the same notable. Two different notables do nothing.
     fix: >-
-      Match the notable on both before you buy. Which notable the published
-      character uses is not shown on the page, so we cannot tell you which
-      one to match — do not buy a pair on that character's say-so.
+      Match the notable on both before you buy. On the published character
+      both jewels read "Allocates Righteous Providence".
   - symptom: "[[Divine Shield]] is not regenerating anything"
     cause: >-
       It pays 3% of the physical damage prevented from hits recently, so it
@@ -486,7 +498,7 @@ weaknesses:
   - "Single author. No guide site has covered it for 3.30."
   - "No leveling plan, no gem progression, no Labyrinth order, no prices are published anywhere."
   - "The planner is labelled 3.29, is a finished level-98 character, and has no boss selected."
-  - "The Forbidden jewel pair's notable is not published, and a mismatched pair does nothing."
+  - "The published character's crit leans on a corrupted Forbidden jewel pair for Righteous Providence, and no source prices one."
   - "[[The Taming]] wants three elemental ailment types and the skill supplies one. Nobody explains the gap."
   - "The staff is a forged unique with no published price and a Harvest-dependent drop."
   - "Block-and-armour defence is weakest exactly where it is weakest: unavoidable elemental hits and 46% chaos resistance."
@@ -503,11 +515,11 @@ sources:
   - title: "poebuilds.cc: The Strongest Leaguestarter I Ever Played | Static Strike Guardian | 3.30 (Alohaa)"
     url: https://www.poebuilds.cc/poe1/build/MI3e0Gz6R6s
     kind: guide
-    note: "Posted 11 November 2026, 154k views by launch day, tagged 3.30 Covens. Source of every gear, stat and damage figure on this page. It has no written guide text, no leveling section and no prices."
+    note: "Posted 11 November 2026, 154k views by launch day, tagged 3.30 Covens. Source of every gear, stat and damage figure on this page. It lists the character's gems item by item, without link groups, and shows both Forbidden jewels. It has no written guide text, no leveling section and no prices."
   - title: "Path of Building: Level 98 Hybrid Crit Static Strike Guardian (Alohaa)"
     url: https://pobb.in/Wpo4TuYfRXFT
     kind: pob
-    note: "Labelled 3.29. Total DPS 11,630,874, eHP 219,014, level 98, bandits killed. The configuration line reads only \"15% Shock, Power\" — no boss selected and no enemy level shown."
+    note: "Labelled 3.29. Total DPS 11,630,874, level 98, bandits killed. It shows eHP 219,014 where the build page above shows 219,015 — one file rendered twice, one digit apart; this article quotes the build page. The configuration line reads only \"15% Shock, Power\" — no boss selected and no enemy level shown."
   - title: "poebuilds.cc: Alohaa's author page"
     url: https://www.poebuilds.cc/poe1/author/alohaa
     kind: guide
@@ -515,7 +527,7 @@ sources:
   - title: "poebuilds.cc: Static Strike Slayer Leaguestarter Guide, 3.29 (Alohaa)"
     url: https://www.poebuilds.cc/poe1/build/jQy7qtUnQHM
     kind: guide
-    note: "89.6k views. The only published support-gem list and aura set for this author's Static Strike: Melee Physical Damage, Ruthless, Fortify, Trinity, Elemental Damage with Attacks, with Hatred and Herald of Ash. It is a Slayer, not a Guardian. Its video advertises a full leveling Path of Building that is not linked on the page."
+    note: "89.6k views. The support-gem list and aura set of the author's Slayer version: Melee Physical Damage, Ruthless, Fortify, Trinity, Elemental Damage with Attacks, with Hatred and Herald of Ash. It is a Slayer, not a Guardian, and the Guardian's own page lists Shockwave in place of Trinity and neither of those two auras. Its video advertises a full leveling Path of Building that is not linked on the page."
   - title: "Path of Building: Static Strike Slayer, 3.29 (Alohaa)"
     url: https://pobb.in/767t-xufLl6G
     kind: pob

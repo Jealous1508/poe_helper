@@ -256,10 +256,10 @@ stages:
       hãy chuyển sang Shrapnel Ballista. Mạnh hơn, lối chơi tương tự, đắt hơn rất
       nhiều. Còn guide Shrapnel thì chỉ nói "chuyển từ một build Templar khác".
     links:
-      - name: Main skill (starter)
-        gems: [Explosive Arrow, Void Manipulation Support, Lifetap Support, Increased Critical Strikes Support]
+      - name: Main skill (starter, đúng như guide Explosive Arrow in ra)
+        gems: [Explosive Arrow, Ballista Totem Support, Elemental Damage with Attacks Support, Lifetap Support, Combustion Support, Cruelty Support]
       - name: Aura
-        gems: [Purity of Elements, Grace, Precision, Arrogance Support]
+        gems: [Purity of Elements, Grace]
       - name: Utility
         gems: [Dash, Second Wind Support, Steelskin, Automation]
     moveOn: "bạn đã level 94+, có khoảng 150 Divine để tiêu, và đã quyết là mình muốn một con giết boss chứ không phải một con chạy map."
@@ -295,10 +295,14 @@ stages:
         gems: [Shrapnel Ballista, Void Manipulation Support, Withering Touch Support, Volatility Support, Increased Critical Strikes Support, Lifetap Support]
       - name: Bow
         gems: [Automation, Lifetap Support, Steelskin, Blood Rage, Convocation, Despair]
-      - name: Helm
-        gems: [Purity of Elements, Grace, Lifetap Support, Frenzy]
-      - name: Gloves
-        gems: [Arrogance Support, Precision, Raise Spectre]
+      - name: Helm, cặp aura
+        gems: [Purity of Elements, Grace]
+      - name: Helm, cặp thứ hai
+        gems: [Frenzy, Lifetap Support]
+      - name: Gloves, cặp aura
+        gems: [Precision, Arrogance Support]
+      - name: Gloves, cặp spectre
+        gems: [Raise Spectre, Companionship Support]
       - name: Boots
         gems: [Dash, Second Wind Support, Lifetap Support]
     moveOn: "bạn đã qua 2,000 Strength, Beast Spectre là một con Guardian Turtle, và bạn clear được Simulacrum."
@@ -315,7 +319,11 @@ stages:
           Các phương án tiết kiệm mà trang gear đưa ra, theo thứ tự: một viên rare có Strength, life và resistance hoặc Emperor's Might trước khi lên [[Emperor's Mastery]]; Guardian Turtle thường trước bản Perfect; Enhance trước cái support cooldown recovery.
       - title: Tránh four-link ở gloves và helm
         body: |
-          Guide cảnh báo riêng về chuyện này. Setup aura với spectre cần đủ socket, và một cây four-link buộc bạn bỏ đi một thứ đang gánh reservation hoặc đang gánh Beast Spectre.
+          Guide cảnh báo chuyện này ở cả hai món, bằng cùng một câu: "For the gems to work, you don't want a 4-link setup". Nó không đưa lý do nào ngoài việc chỉ vào một tấm hình.
+
+          Thứ nó in ra cho mỗi món là hai cặp tách rời. Cái helmet chứa hai aura và, tách khỏi chúng, Frenzy với Lifetap. Đôi gloves chứa Precision với Arrogance và, tách khỏi chúng, con spectre với Companionship Support — Minion Life Support khi còn ít tiền.
+
+          Cách chúng tôi đọc lý do, thứ guide không nêu: một support áp lên mọi thứ link với nó. Link cả bốn lại thì Lifetap nằm trên aura của bạn còn Arrogance nằm trên con spectre.
   - id: mageblood
     image: mageblood
     title: Budget trung bình
@@ -334,17 +342,21 @@ stages:
         gems: [Shrapnel Ballista, Void Manipulation Support, Withering Touch Support, Volatility Support, Increased Critical Strikes Support, Lifetap Support]
       - name: Bow
         gems: [Automation, Lifetap Support, Steelskin, Blood Rage, Convocation, Despair]
-      - name: Helm
-        gems: [Purity of Elements, Grace, Lifetap Support, Frenzy]
-      - name: Gloves
-        gems: [Arrogance Support, Precision, Raise Spectre]
+      - name: Helm, cặp aura
+        gems: [Purity of Elements, Grace]
+      - name: Helm, cặp thứ hai
+        gems: [Frenzy, Lifetap Support]
+      - name: Gloves, cặp aura
+        gems: [Precision, Arrogance Support]
+      - name: Gloves, cặp spectre
+        gems: [Raise Spectre, Companionship Support]
     moveOn: "resistance đã overcap 40–50% và bạn đang farm uber chứ không còn đang học chúng."
     details:
       - title: Mageblood là món mua để phòng thủ
         body: |
           Đây là cái trade-off thật sự thú vị duy nhất trong build, và tác giả nói rất thẳng: đổi sang Mageblood khiến bạn mất một totem, và vẫn là lựa chọn đúng.
 
-          Nên hãy mua nó khi vấn đề của bạn là chết, không phải khi vấn đề của bạn là damage. Nếu bạn đang giết boss và sống tốt, thì [[Simplex Amulet]] cùng thêm Strength là chỗ tiêu 200 Divine tốt hơn.
+          Nên hãy mua nó khi vấn đề của bạn là chết, không phải khi vấn đề của bạn là damage. Nếu bạn đang giết boss và sống tốt, thì [[Simplex Amulet]] cùng thêm Strength là chỗ tiêu cùng số currency đó tốt hơn. Guide không in giá nào cho Mageblood, và chúng tôi cũng không.
       - title: Flask cho Mageblood
         body: |
           [[Life Flask]] (Divine), rồi Topaz, Sapphire, Quicksilver và Ruby. Mỗi cây muốn enchantment 70% increased effect, suffix lo armour, crit, evasion hoặc additional elemental resistance during effect, và prefix 25% increased effect.
@@ -355,8 +367,9 @@ stages:
     title: Min-max
     levels: 3,351 Strength
     uses: >-
-      [[Simplex Amulet]] thay cho [[Astramentis]], [[Kalandra's Touch]],
-      [[Bound by Destiny]], và corruption trên gloves, helmet, boots cùng chest.
+      [[Simplex Amulet]] thay cho [[Astramentis]], [[Bound by Destiny]], và
+      corruption trên gloves, helmet, boots cùng chest. [[Kalandra's Touch]]
+      không phải món mới ở mức này: nó đã có sẵn trong file Mageblood.
     changes: >-
       Strength đi từ khoảng 2,665 lên 3,351, tức thêm ba totem và rất nhiều chaos
       damage nữa. File công bố báo **71,803,952 damage mỗi giây và 118,421
@@ -431,14 +444,17 @@ upgrades:
       Bài viết nói thẳng về lựa chọn này: nếu bạn đang giết boss và sống tốt,
       thì đây là chỗ tiêu cùng số tiền đó tốt hơn Mageblood. Nó thay
       Astramentis và là một phần lý do file min-max đạt 3,351 Strength.
-  - step: "[[Kalandra's Touch]], [[Bound by Destiny]], và corruption trên gloves, helmet với boots"
+  - step: "[[Bound by Destiny]], corruption trên gloves, helmet với boots, và [[Kalandra's Touch]] khi đã có một cây ring đáng để sao lại"
     why: >-
       Chặng Strength cuối cùng. Bound by Destiny là +15% Strength khi bạn đang
       mang hai món có influence Warlord. Cùng với cây amulet, chỗ này là thêm
-      ba totem trong file công bố. Nó nằm cuối vì đây là chỗ tốn nhiều
-      currency nhất cho mỗi totem trong danh sách — nhận định của chúng tôi,
-      vì không nguồn nào định giá món nào trong đó. Một cây Alberon's đã
-      corrupt vẫn phải đọc được ít nhất 1 tới 80 chaos mỗi 80 Strength.
+      ba totem trong file công bố. Trang gear dùng Kalandra's Touch để sao một
+      cây ring đắt sang ô ring còn lại; nó đã có sẵn trong file Mageblood được
+      công bố, nên nó không phải món chỉ dành cho min-max. Mấy món này nằm cuối
+      vì đây là chỗ tốn nhiều currency nhất cho mỗi totem trong danh sách —
+      nhận định của chúng tôi, vì không nguồn nào định giá món nào trong đó.
+      Một cây Alberon's đã corrupt vẫn phải đọc được ít nhất 1 tới 80 chaos mỗi
+      80 Strength.
 
 play:
   mapping: |
@@ -447,14 +463,15 @@ play:
     3. Di chuyển bằng [[Dash]].
     4. Phần còn lại cứ để yên. [[Steelskin]] với [[Blood Rage]] nằm trên [[Automation]] trong cây bow, và mấy cây utility flask tự dùng khi đầy.
 
-    Hai lỗ hổng chúng tôi không che. [[Despair]] và [[Frenzy]] có trong các link, mà bài viết không ghi cái nào được kích bằng cách nào. Và map Tier 17 với Tier 16.5 cần một bộ filter mod mà guide không cung cấp.
+    [[Despair]] và [[Frenzy]] có trong các link nhưng không phải để chạy map: trang gem của guide nói bạn không cần cái curse cho việc chạy map thông thường và không cần spam Frenzy ở đó. Một lỗ hổng chúng tôi không che: map Tier 17 với Tier 16.5 cần một bộ filter mod mà guide không cung cấp.
   bossing: |
-    Nút bấm thì vẫn vậy. Thứ đổi là chuyện giữ totem trên sân trở thành toàn bộ công việc.
+    Hai cái nút bạn bỏ qua khi chạy map giờ được dùng tới, và chuyện giữ totem trên sân trở thành toàn bộ công việc.
 
     1. Kiểm Beast Spectre còn sống trước khi vào. [[Fertile Will]] không cho gì nếu thiếu nó.
-    2. Đặt totem, rồi đặt lại trước khi chúng hết giờ chứ không phải sau. Guide ghi việc totem chết trong một số trận là nhược điểm thật.
-    3. Coi số totem là thanh máu của bạn chứ không chỉ là damage. Mỗi totem là 1% life regeneration từ [[Ritual of Awakening]], nên một trận dọn sạch totem của bạn cũng cắt luôn phần hồi phục. Mối liên hệ đó là cách chúng tôi đọc cái node, không phải điều guide nói về chuyện đánh boss.
-    4. Tránh những gì bạn thấy trước được. Block, evasion và suppression đều là xác suất.
+    2. Tự tay cast Despair lên boss. Nguyên văn guide là "Manually cast Despair on hard bosses", và nó gọi Frenzy là "useful for bossing".
+    3. Đặt totem, rồi đặt lại trước khi chúng hết giờ chứ không phải sau. Guide ghi việc totem chết trong một số trận là nhược điểm thật.
+    4. Coi số totem là thanh máu của bạn chứ không chỉ là damage. Mỗi totem là 1% life regeneration từ [[Ritual of Awakening]], nên một trận dọn sạch totem của bạn cũng cắt luôn phần hồi phục. Mối liên hệ đó là cách chúng tôi đọc cái node, không phải điều guide nói về chuyện đánh boss.
+    5. Tránh những gì bạn thấy trước được. Block, evasion và suppression đều là xác suất.
 
     Damage được công bố giả định 15 stack Wither. [[Withering Touch Support]] nằm trong main link, nên chúng tôi hiểu là mấy giây mở đầu trận yếu hơn con số đó; không nguồn nào nói các stack mất bao lâu để đầy.
 

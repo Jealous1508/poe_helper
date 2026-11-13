@@ -61,7 +61,7 @@ chain:
   - label: Hit yourself
     text: "Every [[Boneshatter of Complex Trauma]] hit deals you physical damage and grants one Trauma."
   - label: Stack
-    text: "Each Trauma is 8% more damage at gem 20, capped at +200%. All stacks are lost at ten, which is also the safety valve."
+    text: "Each Trauma is 8% more damage at gem 20. All stacks are lost on reaching ten, which is also the safety valve — and which keeps you far below the 200% ceiling the gem prints."
   - label: Bleed
     text: "100% chance to bleed, and [[Bloodletting]] makes the target count as moving: three times the bleed damage."
   - label: Charge up
@@ -83,12 +83,14 @@ chainDetails:
 
       That cap is the point. Complex Trauma cannot run away from you, because the stacks wipe. Base Boneshatter has no listed cap and is the version that classically kills players by escalation.
 
+      Two lines on the gem look as if they disagree, and do not. PoEDB prints "(8–15)% more Damage per Trauma, up to 200%" and, beside it, "Lose all Trauma on reaching 10 Trauma". Nine stacks at 8% is 72% more — that sum is ours — so at gem level 20 the wipe stops you long before the 200% ceiling. The ceiling is text; the ten-stack wipe is the limit you play against.
+
       Maxroll lists "requires a transfigured gem" as a con, and it is a real one. You get it from the Labyrinth's Divine Font, and Boneshatter has only two variants, so expect one or two attempts. You can also just buy it.
-  - title: Why you cap your attack speed
+  - title: Why you stop buying attack speed at about 16%
     body: |
       This is the counter-intuitive part. **Bleed damage does not scale with attack speed.** Only Trauma accumulation does.
 
-      So the guide specifies about 16% attack speed as a minimum on the endgame axe and tells you to buy average damage with everything beyond that. Too much attack speed is actively bad: you blow through the ten-stack reset faster than you benefit from the stacks.
+      So the guide specifies about 16% attack speed as a minimum on the endgame axe and tells you to buy average damage with everything beyond that. Too much attack speed is actively bad: you blow through the ten-stack reset faster than you benefit from the stacks. Maxroll's own tell is that if you keep dropping back to one stack, you have too much. So 16% is both the floor and, near enough, the place to stop.
 
       Everything else is average physical damage on the weapon, bleed chance until it reads 100% on the character sheet, then bleed multipliers, then Strength.
   - title: What actually kills you
@@ -261,8 +263,9 @@ stages:
     title: Acts 4–10
     levels: Level 28–68
     uses: >-
-      Still [[Sunder]]. At level 24 you add [[Autoexertion]] and stop
-      pressing warcries by hand. [[Blood and Sand]] stays in blood stance —
+      Still [[Sunder]]. [[Autoexertion]] has been firing your warcries since
+      level 24, before this stage began, so you no longer press them by
+      hand. [[Blood and Sand]] stays in blood stance —
       the guide's view is that swapping stances is not worth the button.
     changes: >-
       Ascend twice. Re-roll the axe recipe whenever your damage sags. Buy
@@ -271,8 +274,10 @@ stages:
     links:
       - name: Main skill
         gems: [Sunder, Melee Physical Damage Support, Brutality Support, Ruthless Support]
-      - name: Warcries
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcries, automated
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, by hand
+        gems: [Enduring Cry]
       - name: Movement
         gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
       - name: Aura and curse
@@ -310,8 +315,10 @@ stages:
         gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
       - name: Guard
         gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
-      - name: Warcries
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcries, automated
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, by hand
+        gems: [Enduring Cry]
       - name: Aura, curse and utility
         gems: [Pride, Vulnerability, Blood Rage]
     moveOn: "your character sheet reads 100% chance to bleed and you hold seven or more endurance charges in a fight."
@@ -323,6 +330,8 @@ stages:
           The six-link above is reverse-engineered from the author's Path of Building, which does not mark link boundaries either. It is a sound reading, but it is inference.
 
           **Four- and five-link intermediate setups are published by nobody for 3.30.** The nearest reference is a 3.28 page that is explicitly marked out of date, uses five auras and a different six-link, and is built for *base* Boneshatter. Do not port it. Drop Volatility first, then Ruthless, if you have fewer sockets.
+
+          One grouping here is deliberate. In the author's file [[Enduring Cry]] is listed at the very end, beside Forbidden Rite and Frostblink and well away from Autoexertion, so we show it as a warcry you press yourself rather than one that fires on its own. The file marks no boundaries, so this too is a reading — but it is the one that agrees with what the gem is for.
       - title: Keep the trigger setup low level
         body: |
           [[Cast when Damage Taken Support]] at level 1 with [[Vaal Molten Shell]] at level 7. Both deliberately low, so the trigger fires constantly instead of waiting for a large hit.
@@ -348,8 +357,10 @@ stages:
     links:
       - name: Main skill (six-link)
         gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
-      - name: Warcries
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcries, automated
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, by hand
+        gems: [Enduring Cry]
       - name: Guard
         gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
       - name: Boss preparation
@@ -395,9 +406,9 @@ stages:
           **The author disclaims this himself.** His words are that the crafting tips were written before playing 3.30, which has significant crafting changes. Treat the recipe as a direction, check current bench costs yourself, and compare against simply buying a finished axe.
       - title: Upgrade order
         body: |
-          Maxroll's own order: [[Blood Sap Tincture]], then [[Ryslatha's Coil]], then a corrupted +1 or +2 endurance charge [[Kaom's Sign]], then [[The Light of Meaning]], then [[Corrupted Soul]] through [[Glorious Vanity]], then the multimodded axe, then [[Watcher's Eye]].
+          Maxroll prints no numbered list, so this order is assembled. Its gearing section runs: [[Blood Sap Tincture]], then [[Ryslatha's Coil]] — "your number 1 priority unique" — then energy shield moved onto the amulet or rings, then a corrupted +1 or +2 endurance charge [[Kaom's Sign]], then the multimodded axe. [[The Light of Meaning]] and [[Watcher's Eye]] appear only in its passive tree section, and [[Corrupted Soul]] only as a tree option that needs a Doryani [[Glorious Vanity]]. Where those three fall among the rest is our placement, not Maxroll's.
 
-          The 30%, 40% and 21% figures attached to these items are on the 3.30-updated page but were **not re-benchmarked for 3.30**.
+          The 30% and 40% figures attached to the tincture and the Coil are on the 3.30-updated page but were **not re-benchmarked for 3.30**. The page's 21% is not an item at all: it is Fortification's less damage taken.
       - title: What the finished character looks like
         body: |
           From the author's Path of Building: 9.6 million total damage per second, of which 8.7 million is bleed and 964,000 is the hit. 5,890 life, 33,724 armour, 71,294 effective hit points, 1,146 life regenerated and 1,069 leeched per second, ten endurance charges, 90% physical damage reduction.
@@ -416,13 +427,15 @@ powerCurve: |
 upgrades:
   - step: "\"Non-Vaal strike skills target one or two additional enemies\", from the Attack Mastery or an eldritch glove implicit"
     why: >-
-      Not on Maxroll's upgrade list. We put it first because the article says
+      Maxroll gives it as a separate tip, outside its gearing section. We put
+      it first because the article says
       to take it as soon as you can, and the mastery version costs a passive
       point rather than currency. It is the one fix for the build's weakest
       axis: the difference between hitting one monster and hitting three.
   - step: "[[Blood Sap Tincture]]"
     why: >-
-      First in Maxroll's own order. About 30% more damage, which Maxroll
+      First in the run of Maxroll's gearing section. About 30% more damage,
+      which Maxroll
       compares to an extra support gem, and it is cheap. Nothing else on this
       list gives that much for that little.
   - step: "[[Ryslatha's Coil]]"
@@ -435,20 +448,21 @@ upgrades:
     why: >-
       Everything defensive rests on endurance charges, and this is one more
       of them. A Tainted Mythic Orb on a +1 Coral Ring is the route to a
-      second. Maxroll puts the two damage multipliers ahead of it without
-      saying why; our reading is that survivability is already the build's
+      second. Maxroll's gearing section reaches it after the two damage
+      multipliers without saying why; our reading is that survivability is already the build's
       strong side, so damage is what it is short of.
   - step: "[[The Light of Meaning]] with a physical damage roll"
     why: >-
-      Straightforward damage, in a jewel socket near a good cluster. Fourth
-      in Maxroll's order, which gives no reason for the position; we have
-      none to add.
+      Straightforward damage, in a jewel socket near a good cluster. Maxroll
+      names it only in its passive tree section and gives it no rank, so its
+      place on this list is ours, and a loose one.
   - step: "[[Corrupted Soul]] through a [[Glorious Vanity]] with the Doryani seed"
     why: >-
       Gives you energy shield for [[Divine Shield]] without spending a gear
-      slot on it. Fifth in Maxroll's order. Our reading of why it is this
-      low: energy shield on the amulet or rings already does the same job,
-      and this only frees the slots. A long-shot target in SSF.
+      slot on it. Maxroll offers it as a tree option and gives it no rank.
+      We put it this low because energy shield on the amulet or rings
+      already does the same job, and this only frees the slots. A long-shot
+      target in SSF.
   - step: "A multimodded Sundering Axe: the highest average physical damage you can buy, with at least 16% attack speed"
     cost: "3.29: about 2 Divine of bench costs to multimod — the author disclaims his own crafting advice for 3.30"
     why: >-
@@ -459,9 +473,9 @@ upgrades:
       against simply buying a finished axe.
   - step: "[[Watcher's Eye]] with the [[Pride]] physical damage modifier"
     why: >-
-      Last in Maxroll's order. Only the one Pride-conditional modifier
-      matters; ignore the rest of the jewel. Maxroll gives no reason for the
-      position and we will not supply one.
+      Only the one Pride-conditional modifier matters; ignore the rest of the
+      jewel. Maxroll names it only in its passive tree section, with no
+      rank. Putting it last is our placement, not Maxroll's.
 
 play:
   mapping: |
@@ -479,7 +493,7 @@ play:
     3. Stand on the boss and keep attacking. Trauma climbs to ten and resets; the bleed does the killing, and [[Bloodletting]] makes the boss count as moving whether it moves or not.
     4. Watch the charge counter harder than the boss's life bar.
 
-    What changes is that nothing in the room will recharge you except your own attack. This part is our reasoning: Unflinching gives charges when you are hit, including by yourself, so the dangerous moments are the ones where you cannot swing — a phase change, a long dodge. [[Enduring Cry]] refills charges and recovers life; in the published links it sits with Autoexertion, so check that it is firing.
+    What changes is that nothing in the room will recharge you except your own attack. This part is our reasoning: Unflinching gives charges when you are hit, including by yourself, so the dangerous moments are the ones where you cannot swing — a phase change, a long dodge. [[Enduring Cry]] refills charges and recovers life, and it is the one warcry you press yourself: keep it on a key you can reach.
 
 deaths:
   - situation: "You take an Eater altar and your next few swings kill you"
@@ -613,7 +627,7 @@ strengths:
   - "The best hardcore pick on this site, endorsed by three sources."
   - "The ten-stack cap means the self-damage cannot escalate out of control."
 weaknesses:
-  - "Average clear speed, and every source says so."
+  - "Clear is the weak axis. \"Average clear speed\" is Maxroll's own con, and no source rates it higher."
   - "It needs a transfigured gem, which gates the real build behind the Labyrinth or trade."
   - "You play Sunder for the whole campaign. The actual build starts at maps."
   - "Ryslatha's Coil is the biggest upgrade and is hard to obtain."

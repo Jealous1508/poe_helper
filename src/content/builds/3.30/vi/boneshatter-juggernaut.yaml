@@ -62,7 +62,7 @@ chain:
   - label: Tự đánh mình
     text: "Mỗi cú [[Boneshatter of Complex Trauma]] gây physical damage cho bạn và cho một stack Trauma."
   - label: Chồng stack
-    text: "Mỗi Trauma là 8% more damage ở gem 20, cap ở +200%. Tới mười thì mất hết stack, và đó cũng là cái van an toàn."
+    text: "Mỗi Trauma là 8% more damage ở gem 20. Chạm mười thì mất hết stack, và đó cũng là cái van an toàn — đồng thời giữ bạn ở rất xa dưới cái trần 200% mà gem in ra."
   - label: Bleed
     text: "100% chance to bleed, và [[Bloodletting]] khiến mục tiêu bị tính là đang di chuyển: gấp ba damage bleed."
   - label: Nạp charge
@@ -84,12 +84,14 @@ chainDetails:
 
       Cái cap đó chính là điểm chính. Complex Trauma không thể vượt khỏi tay bạn, vì stack bị xóa sạch. Boneshatter bản gốc không có cap nào được ghi, và đó là bản kinh điển giết người chơi bằng cách leo thang.
 
+      Có hai dòng trên gem trông như mâu thuẫn nhau, mà thật ra không. PoEDB in "(8–15)% more Damage per Trauma, up to 200%" và, ngay cạnh, "Lose all Trauma on reaching 10 Trauma". Chín stack ở 8% là 72% more — phép cộng đó là của chúng tôi — nên ở gem level 20, cú xóa stack chặn bạn lại từ rất lâu trước cái trần 200%. Cái trần là chữ trên gem; cú xóa ở mười stack mới là giới hạn bạn thật sự chơi cùng.
+
       Maxroll liệt "cần gem transfigured" là một nhược điểm, và đó là nhược điểm thật. Bạn lấy nó từ Divine Font trong Labyrinth, và Boneshatter chỉ có hai biến thể, nên tính một hoặc hai lần thử. Cũng có thể mua luôn.
-  - title: Vì sao bạn phải chặn attack speed lại
+  - title: Vì sao bạn thôi mua attack speed ở khoảng 16%
     body: |
       Đây là phần phản trực giác. **Damage bleed không scale theo attack speed.** Chỉ việc tích Trauma mới scale.
 
-      Nên guide chốt khoảng 16% attack speed là mức tối thiểu trên cây axe endgame và bảo bạn mua average damage cho mọi thứ vượt quá mức đó. Quá nhiều attack speed là có hại thật: bạn đốt qua cái reset mười stack nhanh hơn tốc độ bạn hưởng lợi từ stack.
+      Nên guide chốt khoảng 16% attack speed là mức tối thiểu trên cây axe endgame và bảo bạn mua average damage cho mọi thứ vượt quá mức đó. Quá nhiều attack speed là có hại thật: bạn đốt qua cái reset mười stack nhanh hơn tốc độ bạn hưởng lợi từ stack. Dấu hiệu của chính Maxroll là nếu bạn cứ rơi về một stack hoài thì bạn đang thừa. Nên 16% vừa là mức sàn vừa, gần như vậy, là chỗ nên dừng.
 
       Mọi thứ còn lại là average physical damage trên vũ khí, bleed chance cho tới khi character sheet đọc ra 100%, rồi tới bleed multiplier, rồi Strength.
   - title: Thứ thật sự giết bạn
@@ -261,9 +263,10 @@ stages:
     title: Act 4–10
     levels: Level 28–68
     uses: >-
-      Vẫn [[Sunder]]. Ở level 24 bạn thêm [[Autoexertion]] và thôi bấm warcry
-      bằng tay. [[Blood and Sand]] để nguyên ở blood stance — guide cho rằng đổi
-      stance không đáng một cái nút.
+      Vẫn [[Sunder]]. [[Autoexertion]] đã tự bật warcry cho bạn từ level 24,
+      trước khi stage này bắt đầu, nên bạn không còn bấm chúng bằng tay.
+      [[Blood and Sand]] để nguyên ở blood stance — guide cho rằng đổi stance
+      không đáng một cái nút.
     changes: >-
       Ascend hai lần. Chạy lại recipe axe mỗi khi damage tụt. Mua viên
       [[Boneshatter of Complex Trauma]] khi thấy cái nào rẻ, và cho nó lên level
@@ -271,8 +274,10 @@ stages:
     links:
       - name: Main skill
         gems: [Sunder, Melee Physical Damage Support, Brutality Support, Ruthless Support]
-      - name: Warcry
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcry, tự động
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, bấm tay
+        gems: [Enduring Cry]
       - name: Di chuyển
         gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
       - name: Aura và curse
@@ -309,8 +314,10 @@ stages:
         gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
       - name: Guard
         gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
-      - name: Warcry
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcry, tự động
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, bấm tay
+        gems: [Enduring Cry]
       - name: Aura, curse và utility
         gems: [Pride, Vulnerability, Blood Rage]
     moveOn: "character sheet của bạn đọc ra 100% chance to bleed và bạn giữ được bảy endurance charge trở lên trong một trận."
@@ -322,6 +329,8 @@ stages:
           Cây six-link ở trên được dựng ngược từ Path of Building của tác giả, mà file đó cũng không đánh dấu ranh giới link. Đó là một cách đọc hợp lý, nhưng vẫn là suy luận.
 
           **Setup four- và five-link trung gian thì chẳng ai công bố cho 3.30.** Thứ gần nhất là một trang 3.28 được ghi rõ là đã lỗi thời, dùng năm aura với một six-link khác, và được dựng cho Boneshatter *bản gốc*. Đừng port nó. Bỏ Volatility trước, rồi Ruthless, nếu bạn ít socket hơn.
+
+          Có một cách chia nhóm ở đây là cố ý. Trong file của tác giả, [[Enduring Cry]] được liệt ở tận cuối, cạnh Forbidden Rite với Frostblink và cách xa Autoexertion, nên chúng tôi ghi nó là một warcry bạn tự bấm chứ không phải cái tự bật. File không đánh dấu ranh giới nào, nên đây cũng là một cách đọc — nhưng là cách đọc khớp với công dụng của viên gem.
       - title: Giữ setup trigger ở level thấp
         body: |
           [[Cast when Damage Taken Support]] ở level 1 với [[Vaal Molten Shell]] ở level 7. Cả hai đều cố ý để thấp, để trigger nổ liên tục thay vì chờ một cú đánh lớn.
@@ -347,8 +356,10 @@ stages:
     links:
       - name: Main skill (six-link)
         gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
-      - name: Warcry
-        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Warcry, tự động
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry]
+      - name: Warcry, bấm tay
+        gems: [Enduring Cry]
       - name: Guard
         gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
       - name: Chuẩn bị đánh boss
@@ -394,9 +405,9 @@ stages:
           **Chính tác giả tự phủ nhận nó.** Nguyên văn anh ta là mấy mẹo craft được viết trước khi chơi 3.30, bản có thay đổi crafting đáng kể. Hãy coi recipe là một hướng đi, tự kiểm phí bench hiện tại, và so với chuyện đơn giản là mua một cây axe làm sẵn.
       - title: Thứ tự nâng cấp
         body: |
-          Thứ tự của chính maxroll: [[Blood Sap Tincture]], rồi [[Ryslatha's Coil]], rồi một cây [[Kaom's Sign]] corrupt +1 hoặc +2 endurance charge, rồi [[The Light of Meaning]], rồi [[Corrupted Soul]] qua [[Glorious Vanity]], rồi cây axe multimod, rồi [[Watcher's Eye]].
+          Maxroll không in danh sách đánh số nào, nên thứ tự này là ghép lại. Mục gear của nó chạy theo thứ tự: [[Blood Sap Tincture]], rồi [[Ryslatha's Coil]] — "your number 1 priority unique" — rồi dời energy shield sang amulet hoặc ring, rồi một cây [[Kaom's Sign]] corrupt +1 hoặc +2 endurance charge, rồi cây axe multimod. [[The Light of Meaning]] với [[Watcher's Eye]] chỉ xuất hiện trong mục passive tree của nó, còn [[Corrupted Soul]] chỉ là một lựa chọn trên cây cần một viên [[Glorious Vanity]] seed Doryani. Ba món đó rơi vào đâu giữa các món còn lại là cách xếp của chúng tôi, không phải của Maxroll.
 
-          Mấy con số 30%, 40% và 21% gắn với các món này thì nằm trên trang đã cập nhật 3.30 nhưng **không được đo lại cho 3.30**.
+          Mấy con số 30% và 40% gắn với cây tincture và cây Coil thì nằm trên trang đã cập nhật 3.30 nhưng **không được đo lại cho 3.30**. Còn con 21% trên trang thì hoàn toàn không phải của món đồ nào: đó là less damage taken của Fortification.
       - title: Nhân vật hoàn chỉnh trông thế nào
         body: |
           Theo Path of Building của tác giả: 9.6 triệu tổng damage mỗi giây, trong đó 8.7 triệu là bleed và 964,000 là cú hit. 5,890 life, 33,724 armour, 71,294 effective hit point, 1,146 life hồi và 1,069 leech mỗi giây, mười endurance charge, 90% physical damage reduction.
@@ -415,13 +426,13 @@ powerCurve: |
 upgrades:
   - step: "\"Non-Vaal strike skills target one or two additional enemies\", từ Attack Mastery hoặc một implicit eldritch trên gloves"
     why: >-
-      Không nằm trong danh sách nâng cấp của Maxroll. Chúng tôi đặt nó lên đầu
-      vì bài viết bảo lấy nó sớm nhất có thể, và bản từ mastery tốn một passive
+      Maxroll đưa nó ra như một mẹo riêng, nằm ngoài mục gear. Chúng tôi đặt nó
+      lên đầu vì bài viết bảo lấy nó sớm nhất có thể, và bản từ mastery tốn một passive
       point chứ không tốn currency. Nó là cách chữa duy nhất cho trục yếu nhất
       của build: khác biệt giữa đánh một con quái và đánh ba con.
   - step: "[[Blood Sap Tincture]]"
     why: >-
-      Đứng đầu trong thứ tự của chính Maxroll. Khoảng 30% more damage, thứ
+      Đứng đầu trong mạch của mục gear bên Maxroll. Khoảng 30% more damage, thứ
       Maxroll so với một viên support gem thêm, và nó rẻ. Không món nào khác
       trong danh sách này cho nhiều như vậy với giá ít như vậy.
   - step: "[[Ryslatha's Coil]]"
@@ -434,20 +445,21 @@ upgrades:
     why: >-
       Mọi thứ về phòng thủ đứng trên endurance charge, và đây là thêm một cái
       nữa. Một viên Tainted Mythic Orb lên một cây Coral Ring +1 là con đường
-      tới cái thứ hai. Maxroll xếp hai hệ số nhân damage trước nó mà không nói
-      vì sao; cách chúng tôi đọc là survivability vốn đã là mặt mạnh của build,
+      tới cái thứ hai. Mục gear của Maxroll nhắc tới nó sau hai hệ số nhân
+      damage mà không nói vì sao; cách chúng tôi đọc là survivability vốn đã là mặt mạnh của build,
       nên thứ nó thiếu là damage.
   - step: "[[The Light of Meaning]] với một roll physical damage"
     why: >-
-      Damage đơn giản, đặt vào jewel socket gần một cụm tốt. Thứ tư trong thứ
-      tự của Maxroll, mà nó không nêu lý do cho vị trí này; chúng tôi cũng
-      không có gì để thêm.
+      Damage đơn giản, đặt vào jewel socket gần một cụm tốt. Maxroll chỉ nêu
+      tên nó trong mục passive tree và không xếp hạng nó, nên chỗ của nó trong
+      danh sách này là của chúng tôi, và là một chỗ xếp lỏng.
   - step: "[[Corrupted Soul]] qua một viên [[Glorious Vanity]] seed Doryani"
     why: >-
       Cho bạn energy shield để [[Divine Shield]] chạy mà không phải tiêu một
-      slot gear cho nó. Thứ năm trong thứ tự của Maxroll. Cách chúng tôi đọc vì
-      sao nó thấp thế này: energy shield trên amulet hoặc ring đã làm đúng việc
-      đó rồi, còn cái này chỉ giải phóng slot. Trong SSF là mục tiêu rất khó.
+      slot gear cho nó. Maxroll đưa nó ra như một lựa chọn trên cây và không
+      xếp hạng nó. Chúng tôi đặt nó thấp thế này vì energy shield trên amulet
+      hoặc ring đã làm đúng việc đó rồi, còn cái này chỉ giải phóng slot. Trong
+      SSF là mục tiêu rất khó.
   - step: "Một cây Sundering Axe multimod: average physical damage cao nhất bạn mua được, với ít nhất 16% attack speed"
     cost: "3.29: khoảng 2 Divine phí bench để multimod — tác giả tự phủ nhận lời khuyên craft của mình cho 3.30"
     why: >-
@@ -458,9 +470,9 @@ upgrades:
       axe làm sẵn.
   - step: "[[Watcher's Eye]] với mod physical damage của [[Pride]]"
     why: >-
-      Cuối cùng trong thứ tự của Maxroll. Chỉ đúng một mod có điều kiện Pride
-      là đáng; bỏ qua phần còn lại của viên jewel. Maxroll không nêu lý do cho
-      vị trí này và chúng tôi không tự đưa ra.
+      Chỉ đúng một mod có điều kiện Pride là đáng; bỏ qua phần còn lại của viên
+      jewel. Maxroll chỉ nêu tên nó trong mục passive tree, không xếp hạng.
+      Đặt nó cuối cùng là cách xếp của chúng tôi, không phải của Maxroll.
 
 play:
   mapping: |
@@ -478,7 +490,7 @@ play:
     3. Đứng lên người boss và cứ attack. Trauma leo tới mười rồi reset; bleed lo việc giết, và [[Bloodletting]] khiến boss bị tính là đang di chuyển dù nó có di chuyển hay không.
     4. Nhìn cái đếm charge kỹ hơn nhìn thanh máu của boss.
 
-    Thứ thay đổi là trong phòng không còn gì nạp lại cho bạn ngoài cú attack của chính bạn. Phần này là suy luận của chúng tôi: Unflinching cho charge khi bạn bị đánh, kể cả bị chính bạn đánh, nên những lúc nguy hiểm là lúc bạn không vung được — một lần chuyển phase, một pha né dài. [[Enduring Cry]] nạp lại charge và hồi máu; trong bộ link được công bố nó nằm chung với Autoexertion, nên kiểm xem nó có đang tự bật không.
+    Thứ thay đổi là trong phòng không còn gì nạp lại cho bạn ngoài cú attack của chính bạn. Phần này là suy luận của chúng tôi: Unflinching cho charge khi bạn bị đánh, kể cả bị chính bạn đánh, nên những lúc nguy hiểm là lúc bạn không vung được — một lần chuyển phase, một pha né dài. [[Enduring Cry]] nạp lại charge và hồi máu, và nó là cái warcry duy nhất bạn tự bấm: để nó ở một phím bạn với tới được.
 
 deaths:
   - situation: "Bạn lấy một altar Eater và vài cú vung kế tiếp giết bạn"
@@ -613,7 +625,7 @@ strengths:
   - "Lựa chọn hardcore tốt nhất trên trang này, được ba nguồn xác nhận."
   - "Cap mười stack nghĩa là lượng tự gây damage không thể leo thang mất kiểm soát."
 weaknesses:
-  - "Tốc độ dọn quái trung bình, và mọi nguồn đều nói vậy."
+  - "Clear là trục yếu. \"Average clear speed\" là nhược điểm do chính Maxroll ghi, và không nguồn nào chấm nó cao hơn."
   - "Nó cần một gem transfigured, thứ chặn build thật sau Labyrinth hoặc sau trade."
   - "Bạn chơi Sunder suốt cả campaign. Build thật chỉ bắt đầu khi vào map."
   - "Ryslatha's Coil là nâng cấp lớn nhất mà lại khó lấy."

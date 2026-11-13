@@ -46,8 +46,8 @@ modes:
     judgement.
   hardcore: >-
     Do not. [[Aspect of Carnage]] adds a flat 10% increased damage taken,
-    [[Rite of Ruin]] drains life continuously, you teleport into packs you
-    cannot see, and your one defensive layer fails all at once. Two independent
+    [[Rite of Ruin]] drains life continuously once you take it, you teleport
+    into packs you cannot see, and your one defensive layer fails all at once. Two independent
     sources warn that you die before the build comes online. Again, our
     judgement; no source rates it.
 
@@ -68,7 +68,7 @@ chain:
   - label: Life into damage
     text: "[[Foulborn Ghostwrithe]] turns life into energy shield, [[Energy Blade]] turns energy shield into weapon lightning damage, and [[Voice of the Storm]] rolls that damage twice and keeps the better result."
   - label: Overleech
-    text: "[[Immortal Ambition]] keeps leech running when your life is full. That throughput is what keeps you alive, and what keeps [[Rite of Ruin]] from killing you."
+    text: "[[Immortal Ambition]] keeps leech running when your life is full. That throughput is what keeps you alive, and what keeps [[Rite of Ruin]] from killing you once you take it."
 
 chainDetails:
   - title: Why Berserker and not Slayer
@@ -243,13 +243,13 @@ labs:
     why: "Whichever of the two you did not take second. Rage generation and the attack speed that comes with it."
   - lab: Eternal
     node: Gore Dancer
-    why: "**Our reading, not the guide's.** It gives 30% of life leech as instant leech, and instant leech is what keeps [[Rite of Ruin]]'s drain and Aspect of Carnage's extra damage taken survivable on a league start. Swap to [[Rite of Ruin]] later, once your life pool and leech are large."
+    why: "The guide gives two options for this last notable, [[Rite of Ruin]] or Gore Dancer, and leans to Rite of Ruin. **Starting on Gore Dancer is our reading, not the guide's.** It makes 30% of life leech instant, which is what keeps Aspect of Carnage's extra damage taken survivable on a league start, and it spares you Rite of Ruin's drain until you can pay for it. Respec Gore Dancer into Rite of Ruin later, once your life pool and leech are large."
 
 stages:
   - id: acts-1-3
     image: blood-rage
-    title: Acts 1–3
-    levels: Level 1–38
+    title: Acts 1–5
+    levels: Level 1–45
     uses: >-
       [[Ground Slam]] from Tarkleigh after Hillock, then [[Static Strike]] from
       level 12. [[Intimidating Cry]] for double damage on exerted attacks.
@@ -283,22 +283,23 @@ stages:
           - A Lapis Amulet, or [[Versatility]] on the tree, for the Dexterity that [[Frostblink]] needs.
   - id: acts-4-10
     image: flesh-and-stone
-    title: Acts 4–10
-    levels: Level 38–68
+    title: Acts 6–10
+    levels: Level 45–68
     uses: >-
       **The swap happens here, in Act 6.** [[Flicker Strike]] with
       [[Multistrike Support]] and [[Melee Splash Support]], plus
       [[Poacher's Mark]].
     changes: >-
-      Take [[Resolute Technique]] in Acts 4 or 5 to permanently fix accuracy.
-      Link [[Intimidating Cry]] to [[Autoexertion Support]] to automate the
-      warcry. Add [[Herald of Ash]] and [[Blood Rage]]. Cap resistances at 75%
-      before you map.
+      By now [[Resolute Technique]] is on the tree from Acts 4 or 5 and has
+      fixed accuracy for good, [[Intimidating Cry]] is linked to
+      [[Autoexertion]] so the warcry fires itself, and [[Herald of Ash]] and
+      [[Blood Rage]] are running. The guide adds all of those before the
+      swap. Cap resistances at 75% before you map.
     links:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
       - name: Warcry, automated
-        gems: [Intimidating Cry, Autoexertion Support]
+        gems: [Intimidating Cry, Autoexertion]
       - name: Buffs and auras
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
       - name: Movement
@@ -340,7 +341,7 @@ stages:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
       - name: Warcry and berserk
-        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+        gems: [Intimidating Cry, Autoexertion, Berserk]
       - name: Buffs and auras
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
       - name: Guard
@@ -376,9 +377,10 @@ stages:
       [[Immortal Ambition]].
     changes: >-
       Overleech turns on and the build changes character completely. Energy
-      shield now carries your damage. [[Rite of Ruin]]'s drain and
-      [[Aspect of Carnage]]'s extra damage taken both become survivable,
-      because leech is finally doing its job.
+      shield now carries your damage. [[Aspect of Carnage]]'s extra damage
+      taken becomes survivable because leech is finally doing its job, and
+      this is the point at which [[Rite of Ruin]]'s drain becomes payable, so
+      it can take Gore Dancer's place.
     links:
       - name: Main skill
         gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
@@ -387,7 +389,7 @@ stages:
       - name: Energy shield
         gems: [Energy Blade]
       - name: Warcry and berserk
-        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+        gems: [Intimidating Cry, Autoexertion, Berserk]
       - name: Buffs and auras
         gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
     moveOn: "overleech is permanent, your energy shield pool is large, and you stop dying for no reason."
@@ -408,7 +410,7 @@ stages:
           The author claims that with sufficient investment in the Ghostwrithe setup you can comfortably do all ubers. That is a single source making a claim about his own build, on 3.29 data. Plausible, untested in 3.30.
       - title: What to do about charge starvation
         body: |
-          When charges dry up, three bad things happen at once: you stop moving, you lose 10% attack speed per missing charge, and [[Rite of Ruin]] keeps draining you.
+          When charges dry up, three bad things happen at once: you stop moving, you lose 10% attack speed per missing charge, and [[Rite of Ruin]], if you have swapped it in, keeps draining you.
 
           The fixes, in order: quality on your [[Flicker Strike]] gem, quality on [[Poacher's Mark]], the Sword mastery for unique enemies, and [[Melee Splash Support]] or [[Tribal Fury]] so each swing touches more targets.
 
