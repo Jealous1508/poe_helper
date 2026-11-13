@@ -1,0 +1,481 @@
+name: Penance Brand Ignite Elementalist
+tagline: >-
+  Bạn Shield Charge xuyên qua pack và chúng nổ thành chuỗi ignite phía sau bạn.
+  Con nào sống sót thì được cắm hai cái brand lên người.
+class: Witch
+ascendancy: Elementalist
+role: starter
+budget: starter
+budgetNote: >-
+  **Không nguồn nào công bố budget cho build này, ở bất cứ mức nào.** Researcher
+  bên chúng tôi đã rà cả trang guide tìm giá và không thấy gì; mấy tier list
+  cũng không có. Tín hiệu duy nhất về mức dễ mua mà tác giả đưa ra là độ khó gear
+  2 trên 5, thấp hơn là dễ hơn. Bộ đồ khởi đầu thì rẻ thật —
+  [[Obliteration]], [[Lost Unity]], [[Cinderswallow Urn]],
+  [[Nycta's Lantern]] và Replica Prismweave đều là unique đầu league giá bèo.
+  Phần đắt ([[Archdemon Crown]], [[Melding of the Flesh]], Elegant Hubris) thì
+  chưa có giá 3.30, mà ngày đầu thì chẳng thứ gì có giá.
+mainSkill: Penance Brand
+image: asc-icon-elementalist
+hero: art-elementalist
+tags: [Brand, Ignite, Autobomber, Tanky]
+ratings: { clear: 5, bossing: 3, survivability: 4, ease: 3 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **Trang maxroll khoác nhãn 3.30 lên phần chữ 3.29.** Planner nhúng trong đó
+  đóng dấu `version: 3290`, lưu ngày 3 tháng 8 2026. Tác giả thực sự có ra một
+  bản sửa 3.30 thật ở ngoài trang vào ngày 12 tháng 11 — nó xóa lộ trình level
+  Storm Brand cũ, thêm hai cây level theo wand attack, thêm một stage map đỏ và
+  thêm hai gem — nên file Path of Building là mới, còn phần chữ thì là text 3.29
+  đúng khoảng 95%. Chúng tôi dùng Path of Building 3.30 làm chuẩn xuyên suốt. Các
+  điểm số là phán đoán ngày đầu của researcher bên chúng tôi, làm tròn xuống từ
+  số lẻ nửa điểm (bossing 3.5 khi làm starter, lên tầm 4.5 khi đủ gear; ease
+  3.5).
+modes:
+  ssf: >-
+    Chơi được nhưng guide không bàn tới. Mấy cây unique rẻ gánh giai đoạn đầu đều
+    là drop phổ biến, nhưng [[Archdemon Crown]] cần base Elder và Elegant Hubris
+    cần một seed cụ thể. Chuẩn bị tinh thần ngồi ở mức sức mạnh giữa game khá
+    lâu.
+  hardcore: >-
+    Không nguồn nào đánh giá. Lớp vỏ phòng thủ — block đã cap, maximum resistance
+    cao, 90% physical damage reduction — trên giấy thì vững, nhưng nó tới muộn và
+    chưa ai thử trong league này.
+
+idea: |
+  [[Penance Brand]] gắn vào một con quái. Mỗi một phần mười giây nó cộng một energy và lớn lên. Ở 20 energy nó phát nổ thành một cú hit lớn rồi biến mất.
+
+  Cú hit đó là physical và lightning. Không có chút fire nào trên nó cả. Fire đến từ ascendancy: [[Shaper of Flames]] nói mọi damage của bạn đều có thể ignite, nên cú physical hit to đùng đó làm quái bốc cháy, và cái lửa mới là thứ giết thật.
+
+  Vì ignite scale theo độ lớn của cú hit, bạn đi tìm flat added damage, gem level và multiplier "more" thay vì critical strike. Build cố ý chạy gần như không crit chút nào.
+
+  Để dọn quái, bạn Shield Charge vào một pack, [[Obliteration]] cho con đầu tiên bạn giết nổ ra, mỗi cú nổ lại ignite, và gloves có implicit lan ignite nối cái lửa đó đi khắp màn hình. Bạn gần như không cast.
+
+chain:
+  - label: Gắn
+    text: "[[Penance Brand]] dính vào con quái trong tầm khoảng 3 mét rồi bắt đầu nạp."
+  - label: Phát nổ
+    text: "Ở 20 energy nó nổ thành một cú physical và lightning lớn. [[Runebinder]] cho bạn chồng hai brand lên cùng một mục tiêu."
+  - label: Ignite
+    text: "[[Shaper of Flames]] khiến mọi cú hit đều ignite và chuyển 40% physical damage thành fire khi đánh quái đang cháy."
+  - label: Lan
+    text: "[[Obliteration]] cho xác nổ, gloves Searing Exarch lan mỗi cú ignite 1.2 mét, và cả pack bốc cháy cùng nhau."
+  - label: Sống sót
+    text: "[[Melding of the Flesh]] và [[Aegis Aurora]] đẩy mọi maximum resistance lên, thay vì stack life."
+
+chainDetails:
+  - title: Lửa thật ra đến từ đâu
+    body: |
+      Đây là phần người ta hay hiểu sai. Bản thân brand không có fire damage. Ba lớp tạo ra nó, và chúng xếp theo thứ tự:
+
+      1. **[[Shaper of Flames]]** — hit luôn ignite, *mọi damage đều có thể ignite*, và quái bạn đã ignite ăn 40% physical damage của bạn dưới dạng fire. Dòng giữa là dòng gánh cả build: không có nó thì một cú physical và lightning không ignite được chút nào.
+      2. **"Gain % of Physical Damage as Extra Fire" trên gear.** [[Obliteration]], Grace of the Goddess và [[The Balance of Terror]] đều làm việc này.
+      3. **[[Herald of Ash]]**, nhân lên theo số herald bạn chạy.
+
+      Nên cái ignite là một phần trăm của tổng cú hit từ brand. Mọi thứ làm cú hit lớn hơn đều làm ngọn lửa lớn hơn.
+  - title: Vì sao ở đây không có critical strike
+    body: |
+      Critical strike chance của build là 9.78%. Đó không phải sơ suất.
+
+      Nó dùng [[Elemental Overload]] thay thế: 40% more elemental damage phẳng chỉ cần crit được thỉnh thoảng, đổi lại crit của bạn không gây thêm damage. Với một build mà damage là hiệu ứng damage over time scale theo độ lớn cú hit, cái đổi chác đó là miễn phí.
+
+      Thứ tự scale mà tác giả đưa ra là: gem level, rồi flat added damage to spell, rồi phần trăm physical chuyển thành extra element, rồi các multiplier "more" như [[Cruelty Support]] và [[Archdemon Crown]], rồi fire damage-over-time multiplier, rồi herald buff effect, rồi cast speed, rồi area.
+  - title: Trâu mà không cần Mageblood
+    body: |
+      Phòng thủ ở đây là maximum resistance, không phải life. [[Melding of the Flesh]] đặt mọi cap resistance bằng maximum resistance *cao nhất* của bạn. [[Aegis Aurora]] cộng 5% maximum cold resistance và hồi energy shield bằng 2% armour mỗi khi bạn block. [[Purity of Ice]] đẩy cap cold cao hơn nữa, rồi Melding copy nó đi khắp nơi.
+
+      Kết quả là khoảng 86% maximum resistance hiệu dụng, trên nền 75% block và 71% spell block, [[Tempest Shield]], Vaal Molten Shell trên trigger, 90% physical damage reduction, và [[Mind Over Matter]] ở giai đoạn muộn.
+
+      Nguyên văn tác giả là đây là một setup cực trâu mà không cần [[Mageblood]]. Với một league starter thì chuyện đó hiếm, và đáng để đi mua theo danh sách.
+  - title: Không phải Penance Brand of Dissipation
+    body: |
+      Bản transfigured bị nerf nặng: thời gian kích hoạt từ 0.75 lên 1 giây và multiplier "more" mỗi energy từ 30% xuống 20%.
+
+      Ghi chú của chính tác giả là hãy chơi [[Penance Brand]] bản thường với ignite thay vì bản đó. Changelog của PoEDB xác nhận mấy con số. Nếu một guide bảo bạn dùng Dissipation, guide đó đã lỗi thời.
+  - title: Vấn đề mana
+    body: |
+      Mỗi lần cast tốn 47 mana, và cast liên tục là khoảng 107 mana mỗi giây. File Path of Building showcase còn 78 mana trống.
+
+      Đó là lý do [[Inspiration Support]] nằm trong main link và lý do Brand Mastery giảm cost không phải tùy chọn. Bỏ một trong hai thứ đó là bạn đứng đó không cast được, và nó sẽ trông như một cái bug.
+
+mandatory:
+  - term: Penance Brand
+    why: >-
+      Bản thân skill. Level 28, và Witch không lấy được nó bằng quest reward.
+    detail: >-
+      PoEDB ghi rõ reward "Sever the Right Hand" ở Act 3 thuộc về Templar, và
+      Clarissa chỉ bán cho Scion với Templar — Witch bị gỡ khỏi danh sách từ
+      3.15.0. Đường thường đi là Siosa trong The Library sau A Fixture of Fate,
+      ông này bán gem bất kể class, hoặc đơn giản là mua. **Hãy tính trước là
+      mua hoặc trade nó ở level 28.** Chúng tôi không xác nhận được đường Siosa
+      trong lần nghiên cứu này; thứ đã xác nhận là Witch không có quest và không
+      có quyền mua từ Clarissa.
+  - term: Shaper of Flames
+    why: >-
+      Hit luôn ignite, mọi damage đều có thể ignite, và quái đang cháy ăn 40%
+      physical của bạn dưới dạng fire. Một cái brand physical không ignite được
+      nếu không có nó. Lấy ngay từ lab đầu tiên.
+  - term: Runebinder
+    why: >-
+      Cho bạn gắn brand thứ hai lên cùng một con quái. Đó là gần như nhân đôi
+      damage single target.
+  - term: Elemental Overload
+    why: >-
+      Multiplier damage cho một build cố ý không crit.
+  - term: Cruelty Support
+    why: >-
+      Multiplier "more" lớn nhất trong link.
+  - term: Ignite Proliferation Support
+    why: >-
+      Không có hiệu ứng lan ignite thì bạn chỉ có single target và không có
+      clear. Gem này làm việc đó ở giai đoạn đầu; gloves Searing Exarch làm tốt
+      hơn ở giai đoạn sau.
+  - term: Shield Charge
+    why: >-
+      Hệ thống giao hàng. Build này là một autobomber: bạn charge vào pack, giết
+      một con, và mấy cú nổ lo phần còn lại.
+  - term: Obliteration
+    why: >-
+      Một cây wand unique rẻ với 20% cơ hội cho quái bạn giết nổ ra. Bước nhảy
+      clear speed lớn nhất với số tiền ít nhất.
+  - term: Bringer of Ruin
+    why: >-
+      66% increased herald buff effect và 66% herald reservation efficiency. Đây
+      là thứ cho phép nhét năm herald hoặc hơn vào cùng lúc.
+  - term: Mastermind of Discord
+    level: recommended
+    why: >-
+      Hiệu ứng exposure của bạn áp thêm −25% resistance. Giai đoạn muộn đổi được
+      sang Lycia's Farewell to Flesh khi herald buff effect đã cao.
+  - term: Liege of the Primordial
+    level: recommended
+    why: >-
+      Hai golem thêm, golem miễn elemental damage, và tự gọi lại. Build chạy bốn
+      golem.
+  - term: Cinderswallow Urn
+    level: recommended
+    why: >-
+      Nguyên văn tác giả: thêm cả tấn damage. Rẻ. Lấy sớm.
+  - term: Lost Unity
+    level: recommended
+    why: >-
+      Một herald miễn phí, 20% tất cả resistance và 37% chaos resistance, gói
+      trong một cây unique rẻ.
+  - term: Nycta's Lantern
+    level: recommended
+    why: >-
+      Cho Battlemage, nên added fire damage của vũ khí nuôi luôn cái spell. Cái
+      này lo đoạn từ level 28 tới khi vào map.
+  - term: Melding of the Flesh
+    level: recommended
+    why: >-
+      Cap mọi resistance bằng maximum resistance cao nhất của bạn. Một trong ba
+      mảnh làm build trâu mà không cần [[Mageblood]].
+  - term: Aegis Aurora
+    level: recommended
+    why: >-
+      +5% maximum cold resistance và hồi energy shield bằng 2% armour khi block.
+      Với 75% block thì đó là hồi phục liên tục.
+  - term: Purity of Ice
+    level: recommended
+    why: >-
+      Nâng maximum cold resistance, rồi [[Melding of the Flesh]] copy nó sang mọi
+      resistance khác.
+  - term: Archdemon Crown
+    level: recommended
+    why: >-
+      Món damage lớn nhất: +2 và +2 gem level, Burning Damage miễn phí, và 30%
+      more elemental damage. Cần base Elder.
+  - term: The Balance of Terror
+    level: recommended
+    why: >-
+      Fire Exposure cộng một phần trăm physical thành extra fire. Một viên jewel,
+      hai lớp scale của build.
+  - term: Whispers of Doom
+    level: recommended
+    why: >-
+      Anoint lên amulet, để bạn curse được [[Flammability]] và Elemental Weakness
+      cùng lúc.
+
+labs:
+  - lab: Normal
+    node: Shaper of Flames
+    why: "Guide chốt rõ cái này. Chưa có nó thì brand của bạn không ignite được và build không tồn tại."
+  - lab: Cruel
+    node: Liege of the Primordial
+    why: "Hai golem thêm, miễn elemental và tự gọi lại. Bốn con golem của bạn thôi chết."
+  - lab: Merciless
+    node: Bringer of Ruin
+    why: "Herald effect và reservation efficiency. Đây là lúc dàn herald trở thành damage."
+  - lab: Uber
+    node: Mastermind of Discord
+    why: "Thêm −25% resistance từ exposure. Muộn hơn, bạn có thể đổi sang Lycia's Farewell to Flesh; hai cái sát nhau."
+
+stages:
+  - id: acts-1-12
+    image: asc-icon-elementalist
+    title: Act 1–3, level 1–28
+    levels: Level 1–28
+    uses: >-
+      [[Rolling Magma]] suốt cả đoạn, với [[Holy Flame Totem]] và
+      [[Flame Wall]] cho boss. [[Shield Charge]] ngay từ đầu, vì lối chơi
+      endgame cũng đúng cái thói quen di chuyển đó.
+    changes: >-
+      Ở level 12, thêm [[Herald of Ice]] và [[Herald of Thunder]], và lấy
+      [[Runebinder]] với [[Elemental Overload]] trên cây. Đổi
+      [[Frostblink]] sang [[Flame Dash]].
+    links:
+      - name: Main skill
+        gems: [Rolling Magma, Elemental Proliferation Support, Combustion Support]
+      - name: Boss
+        gems: [Holy Flame Totem, Flame Wall]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: Từ level 12
+        gems: [Herald of Ice, Herald of Thunder]
+    moveOn: "bạn đã level 28 và có một viên gem Penance Brand trong tay."
+    details:
+      - title: Gear cần để mắt
+        body: |
+          Ashcaller, Honourhome, Wanderlust, Berek's Grip và Replica Prismweave. Tất cả đều là unique đầu league giá rẻ và tất cả đều gánh bạn tới map.
+
+          Honourhome quan trọng nhất: nó cho +2 level cho gem cắm trong đó, và đó là nơi bước nhảy damage thật đầu tiên của bạn đến từ.
+      - title: Hướng wand attack của 3.30
+        body: |
+          Bản sửa 3.30 thêm một lộ trình level thứ hai: Kinetic Bolt rồi lên setup ballista Kinetic Fusillade, kèm hai cây riêng.
+
+          Cái này mới và không có trong planner cũ, nên cộng đồng chưa có kinh nghiệm gì với nó. [[Rolling Magma]] là đường đã được kiểm chứng. Chỉ dùng đường wand nếu bạn đã biết chắc là mình thích nó.
+      - title: Đừng tính tới Storm Brand
+        body: |
+          Phần chữ guide 3.29 đưa Storm Brand ra như một lựa chọn để level. **Path of Building 3.30 xóa hẳn cây đó.**
+
+          Cứ ở Rolling Magma tới 28. Nếu bạn đọc phần chữ cũ và nó nói khác, thì planner là thứ mới hơn.
+  - id: acts-4-10
+    image: tempest-shield
+    title: Act 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Penance Brand]] trong một four- hoặc five-link nằm trong cây Honourhome
+      +2, với [[Nycta's Lantern]] làm vũ khí để added fire damage của sceptre
+      nuôi cái spell.
+    changes: >-
+      Dàn golem vào từ đây: bốn golem, được [[Liege of the Primordial]] giữ sống.
+      Thêm [[Wave of Conviction]] cho exposure và [[Flammability]] khi đánh boss.
+    links:
+      - name: Main skill
+        gems: [Penance Brand, Elemental Proliferation Support, Cruelty Support, Swiftbrand Support]
+      - name: Exposure
+        gems: [Wave of Conviction, Added Fire Damage Support]
+      - name: Herald
+        gems: [Tempest Shield, Herald of Ash, Herald of Purity]
+      - name: Golem
+        gems: [Summon Lightning Golem, Summon Flame Golem, Summon Stone Golem, Summon Chaos Golem]
+      - name: Di chuyển và curse
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash, Flammability]
+    moveOn: "Penance Brand đã nằm trong five-link, resistance đã cap sau Act 10, và bạn đã ascend hai lần."
+    details:
+      - title: Bandit và Pantheon
+        body: |
+          **Giết cả ba bandit** để lấy passive point.
+
+          Pantheon: Soul of the Brine King và Soul of Garukhan. Cả hai file Path of Building đều đồng ý. Ô planner của maxroll lại ghi Brine King và Abberath — hãy tin Path of Building, vì nó là file mới hơn.
+      - title: Gần như không có aura nào
+        body: |
+          Đây là build reserve bằng herald, không phải build aura. Bạn chạy Herald of Ash, Thunder, Ice và Purity, Herald of the Hive từ [[Lost Unity]], [[Tempest Shield]], và sau đó là [[Purity of Ice]], [[Flesh and Stone]] với [[Enlighten Support]].
+
+          Đó là lý do [[Bringer of Ruin]] là ascendancy thứ ba chứ không phải thứ nghĩ sau. Reservation efficiency là thứ khiến cả bộ nhét vừa.
+      - title: Thứ tự ascendancy được suy ra thế nào
+        body: |
+          Guide chỉ nêu tên notable đầu tiên trong phần chữ. Rồi nó cho bốn bước hai điểm riêng biệt, ánh xạ một-một vào bốn cái labyrinth.
+
+          Đọc chúng như thứ tự lab là cách hiểu duy nhất hợp lý, nhưng đó là **suy luận của chúng tôi, không phải lời tác giả**. Nếu bạn muốn làm khác, [[Shaper of Flames]] trước là phần duy nhất chắc chắn.
+  - id: early-maps
+    image: herald-of-purity
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      Một cây body armour six-link cắm brand, [[Obliteration]] làm vũ khí, và
+      gloves có implicit Searing Exarch "ignites spread".
+    changes: >-
+      Đây là lúc build thành autobomber. Nhặt [[Cinderswallow Urn]] và Kaom's
+      Binding, dồn dàn herald vào một nhóm bốn socket, và ascend lấy
+      [[Bringer of Ruin]].
+    links:
+      - name: Main skill (six-link)
+        gems: [Penance Brand, Swiftbrand Support, Ignite Proliferation Support, Cruelty Support, Spellblade Support, Inspiration Support]
+      - name: Herald
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Tempest Shield]
+      - name: Golem
+        gems: [Summon Lightning Golem, Summon Flame Golem, Summon Stone Golem, Summon Chaos Golem]
+      - name: Di chuyển và curse
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash, Flammability]
+    moveOn: "pack chết chỉ sau một lần charge xuyên qua, và bạn có cả nguồn lan ignite lẫn nguồn nổ xác."
+    details:
+      - title: Hai món rẻ đổi cả cuộc chơi
+        body: |
+          [[Obliteration]] và gloves lan ignite. Mua theo thứ tự đó.
+
+          Obliteration cho quái bạn giết 20% cơ hội nổ. Vì [[Shaper of Flames]] làm từng cú nổ đó ignite, và gloves lan mỗi cú ignite 1.2 mét, một con chết ở rìa pack là cả pack đi theo.
+
+          Thiếu một trong hai món, bạn có một cái brand single target tử tế và không có clear speed gì cả.
+      - title: Con số thật trông như thế nào
+        body: |
+          Path of Building 3.30, ở level 92 với gear thực tế: **2.5 triệu damage mỗi giây**, trong đó 1.9 triệu là ignite. Effective hit point 281,003. Life 5,285 và energy shield 2,742. Resistance 76/78/76/68.
+
+          Planner 3.29 cũ hơn thì hiện 14.7 triệu damage và 719,376 effective hit point ở level 99 với maximum resistance đầy mọi chỗ. **Đó là nhân vật showcase, không phải một khởi đầu league.** Nếu bạn thấy mấy con số đó được trích cho build này, thì người ta đang đọc sai file.
+      - title: Một khẳng định chúng tôi không xác nhận được
+        body: |
+          Guide có một ghi chú rằng Pyre Support chỉ chạy khi đang cầm sceptre. Pyre Support là thật, nhưng không nguồn nào xác nhận nó có giới hạn vũ khí, và nó không xuất hiện trong cả hai file Path of Building.
+
+          Một nguồn duy nhất và chưa xác nhận. Chúng tôi nêu ra chỉ để bạn nhận ra nó nếu đọc guide.
+  - id: red-maps
+    image: whispers-of-doom
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      Cây 125 điểm cho map đỏ lấy từ Path of Building 3.30, với
+      [[Mastermind of Discord]] và phần nền móng cho
+      [[Melding of the Flesh]].
+    changes: >-
+      Main link đổi hình: [[Burning Damage Support]] và
+      [[Unbound Ailments Support]] vào. Cây amulet dual-curse với
+      [[Whispers of Doom]] lên người, và chuyện stack resistance bắt đầu.
+    links:
+      - name: Main skill (six-link)
+        gems: [Penance Brand, Cruelty Support, Ignite Proliferation Support, Inspiration Support, Burning Damage Support, Unbound Ailments Support]
+      - name: Herald và phòng thủ
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Purity of Ice, Tempest Shield, Enlighten Support]
+      - name: Curse
+        gems: [Flammability, Elemental Weakness]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash]
+    moveOn: "bạn đã có Melding of the Flesh, Aegis Aurora và Purity of Ice chạy cùng nhau."
+    details:
+      - title: Chồng resistance reduction
+        body: |
+          Khác với con Chieftain trên trang này, build này *muốn* resistance reduction và chồng nó thật nặng.
+
+          Hai curse qua [[Whispers of Doom]]. Fire Exposure từ [[The Balance of Terror]]. Death Mitts với implicit Eater cho −13% fire resistance. [[Mastermind of Discord]] cho thêm −25% lên cái exposure. Hai Fire Mastery, mỗi cái −5%.
+
+          Mỗi lớp nhân lên với damage bạn đã có, và đó là lý do giữa game cảm giác như bỗng dưng gấp đôi.
+      - title: Chuyển đổi phòng thủ
+        body: |
+          [[Melding of the Flesh]], [[Aegis Aurora]] và [[Purity of Ice]] chỉ chạy khi đủ bộ. Melding cap mọi resistance bằng maximum resistance cao nhất của bạn, Aegis nâng cap cold và hồi energy shield khi block, còn Purity of Ice nâng cap cold thêm lần nữa.
+
+          Mua cả ba trong cùng một buổi nếu được. Mặc Melding mà thiếu hai món kia là hạ resistance của chính bạn.
+  - id: endgame
+    image: archdemon-crown
+    title: Endgame
+    levels: Pinnacle boss và map juice
+    uses: >-
+      [[Penance Brand]] chuyển vào [[Archdemon Crown]] dưới dạng four-link, vì
+      riêng cái helmet đã cấp Burning Damage, 30% more elemental damage và bốn
+      gem level hiệu dụng.
+    changes: >-
+      Nhờ vậy cây body armour six-link rảnh hẳn cho herald. Thêm Elegant Hubris
+      với keystone Supreme Ostentation, 18 tattoo Arohongui, Grace of the
+      Goddess, [[Mind Over Matter]] và cặp
+      [[Forbidden Flame]] với [[Forbidden Flesh]].
+    links:
+      - name: Main skill (trong helmet)
+        gems: [Penance Brand, Cruelty Support, Ignite Proliferation Support, Inspiration Support]
+      - name: Body armour
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Purity of Ice, Enlighten Support, Tempest Shield]
+      - name: Curse
+        gems: [Flammability, Elemental Weakness]
+    moveOn: "không còn stage nào nữa. Nâng cấp còn lại là seed Elegant Hubris và roll Watcher's Eye."
+    details:
+      - title: Chồng herald, làm cho đúng
+        body: |
+          Động cơ damage endgame là Bringer of Ruin cộng 18 bản Tattoo of the Arohongui Shaman, mà mấy cái đó cần Supreme Ostentation từ một viên Elegant Hubris với seed Caspiro để bỏ yêu cầu attribute trên các node đi đường.
+
+          Đó là một danh sách mua cụ thể với một thứ tự cụ thể, và không mảnh nào là đồ đầu league. Hãy coi nó là hướng đi, không phải kế hoạch cho tuần đầu.
+      - title: Nó bị chặn ở đâu
+        body: |
+          [[Archdemon Crown]] cần base Elder. Elegant Hubris cần đúng seed. Grace of the Goddess thì rất muộn.
+
+          Không món nào có giá 3.30. Tác giả đã ra build này qua 3.27, 3.28, 3.29 và 3.30, nên lộ trình là thật; chi phí thì chưa biết.
+
+patch:
+  - note: >-
+      **Penance Brand, ignite và ascendancy Elementalist không bị đổi trong game
+      thường.** Các dòng Elementalist trong patch note nằm ở phần **chỉ dành cho
+      Ruthless** và không áp dụng ở đây.
+  - entry: golem-buff-nerfs
+    note: >-
+      **Một cú nerf nhỏ nhưng thật.** Build chạy bốn golem để lấy buff, nên nó ăn
+      đủ phần bị giảm: Flame Golem 15–24% increased damage thay vì 20–29%,
+      Lightning Golem 8% attack và cast speed thay vì 10%, Stone Golem 16%
+      increased defences thay vì 20%. Vài phần trăm, không phải một bản làm lại.
+  - entry: league-fates
+    note: >-
+      **Brand vẫn chạy trong lúc bạn né.** Đó là lợi thế thật trước một cơ chế
+      league lấy boss làm trung tâm: bạn gắn, bạn chạy, damage vẫn tiếp. Điểm yếu
+      là mặt còn lại của đúng chuyện đó — single target giai đoạn đầu chỉ ở mức
+      trung bình, và ignite thì có độ trễ.
+  - entry: mercenary-nerfs
+    note: >-
+      **Một cú buff tương đối.** Resistance của mercenary bị cắt nặng trong map,
+      nên các build gánh mercenary đi xuống. Con này chưa bao giờ dùng.
+  - entry: loot-rarity-rework
+    note: >-
+      **Trung tính tới hơi tốt.** Farm theo mật độ pack mất mod item quantity,
+      thứ làm đau mấy build chạy map thuần, nhưng build này giết quái rare nhanh
+      ngang giết quái trắng.
+  - entry: ruthless-changes
+    note: >-
+      **Hãy kiểm lại bất cứ bài nào nói Elementalist bị nerf.** Elementalist là
+      một trong mười ascendancy bị đổi ở phần chỉ dành cho Ruthless. Game thường
+      chỉ đổi Reliquarian/Luminary, Pathfinder, Warden và Trickster.
+
+strengths:
+  - "Chạy map cực tốt. Charge vào, một con chết là cả pack đi theo."
+  - "Rất trâu mà không cần Mageblood, nhờ maximum resistance và block."
+  - "Tác giả cho độ phức tạp 2 trên 5 và độ khó gear 2 trên 5."
+  - "Mấy cây unique rẻ gánh toàn bộ giai đoạn đầu."
+  - "Brand vẫn gây damage trong lúc bạn di chuyển, rất hợp đánh boss."
+  - "Được cùng một tác giả duy trì qua bốn patch."
+weaknesses:
+  - "Single target giai đoạn đầu chỉ trung bình, và damage ignite thì trễ với nhão."
+  - "Tầm gắn brand khoảng 3 mét và đoạn nạp energy là thật."
+  - "Căng mana: 47 mỗi lần cast, 107 mỗi giây khi cast liên tục."
+  - "Phần đỉnh bị chặn nặng bởi gear: base Elder, seed jewel cụ thể."
+  - "Bốn con golem, mà 3.30 nerf nhẹ."
+  - "Witch không lấy được gem từ quest. Bạn phải mua ở level 28."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn những con số to đùng hiện trên màn hình thay vì
+  một hiệu ứng damage over time kết liễu mọi thứ một giây sau. Chọn build khác
+  nếu bạn không chịu di chuyển liên tục — clear phụ thuộc vào việc charge xuyên
+  qua pack — hoặc nếu bạn cần single target mạnh ngay ngày đầu cho boss của
+  league.
+
+sources:
+  - title: "Maxroll: Penance Brand Ignite Elementalist (goratha)"
+    url: https://maxroll.gg/poe/build-guides/penance-brand-ignite-elementalist
+    kind: guide
+    note: "Phần chữ. Gắn nhãn 3.30; planner nhúng trong đó là version 3290, lưu ngày 3 tháng 8 2026. Để ý slug không có -league-starter: cái URL được share rộng rãi thì 404."
+  - title: "Path of Building: the 3.30 revision"
+    url: https://maxroll.gg/poe/pob/co1gcw0g
+    kind: pob
+    note: "Đăng 12 tháng 11 2026. Xóa cây level Storm Brand, thêm đường wand và một stage map đỏ. Đây là chuẩn cho gem link và các con số trong bài."
+  - title: "PoEDB: Penance Brand"
+    url: https://poedb.tw/us/Penance_Brand
+    kind: data
+    note: "Tốc độ kích hoạt, cap energy và damage effectiveness."
+  - title: "PoEDB: Penance Brand of Dissipation"
+    url: https://poedb.tw/us/Penance_Brand_of_Dissipation
+    kind: data
+    note: "Xác nhận cú nerf khiến bản transfigured là lựa chọn sai."
+  - title: "PoEDB: Elementalist"
+    url: https://poedb.tw/us/Elementalist
+    kind: data
+    note: "Giá trị ascendancy đang chạy, dùng để kiểm Shaper of Flames và Mastermind of Discord."
+  - title: "insanebuild 3.30 tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Xếp nó hạng S. Bằng chứng yếu: mấy thẻ build của trang này phần lớn lấy lại từ maxroll, nên không phải xác nhận độc lập."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Dùng để xác nhận các thay đổi Elementalist nằm ở phần chỉ dành cho Ruthless."

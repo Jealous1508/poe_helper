@@ -1,0 +1,505 @@
+name: Boneshatter Juggernaut
+tagline: >-
+  Bạn tự đánh mình, có chủ đích. Mỗi cú tự đánh chồng một stack Trauma, Trauma
+  làm cú slam to khủng khiếp, và cái bleed của cú slam lo chín phần mười việc
+  giết.
+class: Marauder
+ascendancy: Juggernaut
+role: starter
+budget: starter
+budgetNote: >-
+  **Không nguồn nào công bố tổng số currency, và bạn nên nghi ngờ bất cứ ai công
+  bố.** Maxroll gọi build này rẻ và nói thẳng là không cần unique nào. Hai con số
+  cứng duy nhất trên cả trang guide là một [[Orb of Transmutation]] cho một lần
+  craft resistance ở bench và khoảng 2 [[Divine Orb]] để multimod cây axe
+  endgame — và lưu ý của chính tác giả là mua một cây axe làm sẵn trong trade
+  league có thể còn rẻ hơn. **Tất cả đều là giá thời 3.29**, mà tác giả còn tự
+  phủ nhận phần craft của mình: mấy mẹo đó được viết trước khi anh ta chơi 3.30,
+  bản đổi crafting khá nhiều. Lộ trình corrupt ring thì ghi ngày theo một mục
+  changelog tháng 7 2026.
+mainSkill: Boneshatter of Complex Trauma
+image: asc-icon-juggernaut
+hero: art-juggernaut
+tags: [Melee, Bleed, Tanky, Hardcore, Boss killer]
+ratings: { clear: 2, bossing: 4, survivability: 5, ease: 3 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  Guide này **đúng là 3.30 thật** — changelog nói vậy và build không bị patch
+  đụng tới — nhưng còn hai lỗ hổng lớn. Tác giả tự phủ nhận phần craft của mình
+  là viết trước 3.30, và **maxroll không công bố gem link nào cả**: mọi nhóm link
+  dưới đây đều được dựng ngược từ Path of Building của tác giả, mà file đó không
+  đánh dấu ranh giới link. Setup four- và five-link trung gian thì chẳng ai công
+  bố. Chuyện hạng tổng thể là bất đồng lớn nhất chưa giải được trong phần nghiên
+  cứu của chúng tôi: insanebuild cho hạng C, mmoexp cho A, aoeah cho 4 trên 5. Cả
+  ba đều mô tả đúng những phẩm chất giống nhau và chỉ khác nhau ở phán quyết.
+  Survivability và bossing ở đây là con số của chính các nguồn; clear và ease là
+  của researcher bên chúng tôi, làm tròn xuống từ 2.5.
+modes:
+  ssf: >-
+    Không nguồn 3.30 nào đánh giá. Phán đoán của chúng tôi: phần lõi thì thân
+    thiện — không bắt buộc unique, một cây axe từ vendor recipe, và gem
+    transfigured chỉ có hai biến thể để roll ở font trong Labyrinth. Nhưng
+    [[Ryslatha's Coil]] và một viên [[Glorious Vanity]] seed Doryani là mục tiêu
+    rất khó khi chơi một mình, nên chuẩn bị ngồi ở mức sức mạnh trước-Coil khá
+    lâu.
+  hardcore: >-
+    Một trong những lựa chọn mạnh nhất trên trang này. Maxroll gọi nó
+    hardcore-viable và tác giả thì chơi hardcore; thẻ của chính insanebuild nói
+    nó tốt nhất cho khởi đầu league, nhất là hardcore. Phương án đổi sang "That
+    didn't happen!" chính là lựa chọn hardcore được nêu rõ.
+
+idea: |
+  [[Boneshatter of Complex Trauma]] gây damage cho bạn mỗi lần nó hit. Mỗi cú tự đánh cho bạn một stack Trauma, và mỗi Trauma làm cú attack gây nhiều damage hơn. Mười stack là cap; tới mười thì tất cả biến mất và bạn làm lại từ đầu.
+
+  Bản thân cú slam không phải thứ giết quái. **Bleed** mới là. Với 100% chance to bleed và passive [[Bloodletting]] — thứ khiến quái bị tính là đang di chuyển, nhân ba lượng bleed chúng ăn — khoảng 90% damage của bạn là bleed, không phải cú hit.
+
+  Bạn sống qua cú đánh của chính mình nhờ chín hoặc mười endurance charge, 90% physical damage reduction, và [[Untiring]], thứ hồi máu cho bạn nhanh hơn tốc độ bạn tự làm mình đau.
+
+  Bạn không chơi skill này trong campaign. Bạn chơi [[Sunder]] suốt mười act rồi đổi khi vào map.
+
+chain:
+  - label: Tự đánh mình
+    text: "Mỗi cú [[Boneshatter of Complex Trauma]] gây physical damage cho bạn và cho một stack Trauma."
+  - label: Chồng stack
+    text: "Mỗi Trauma là 8% more damage ở gem 20, cap ở +200%. Tới mười thì mất hết stack, và đó cũng là cái van an toàn."
+  - label: Bleed
+    text: "100% chance to bleed, và [[Bloodletting]] khiến mục tiêu bị tính là đang di chuyển: gấp ba damage bleed."
+  - label: Nạp charge
+    text: "[[Unflinching]] biến cú tự đánh thành endurance charge. Chín hoặc mười cái, ở mức 90% physical damage reduction."
+  - label: Hồi nhanh hơn
+    text: "[[Untiring]] hồi nhiều hơn phần cú tự đánh lấy đi sau giảm trừ. Vòng lặp ổn định miễn là charge của bạn còn giữ."
+
+chainDetails:
+  - title: Nói thật về lượng tự gây damage
+    body: |
+      PoEDB ghi self-damage của gem transfigured là 18 ở gem level 1, 582 ở gem 20 và 5,066 ở gem 40. Boneshatter bản gốc thì nhẹ hơn nhiều: 6 và 194.
+
+      Con số đó là **trên mỗi Trauma**, nên cú hit lớn dần theo số stack đang có. Ở chín stack với gem level 20 thì khoảng 5,200 physical damage thô vào chính bạn mỗi cú attack, trước giảm trừ. Phép nhân đó là cách chúng tôi đọc câu chữ, không phải một công thức được nêu — FAQ của maxroll chỉ nói là ăn damage nặng trong lúc attack là chuyện bình thường và bạn nên kiểm xem endurance charge có đủ bảy cái chưa. **Hãy coi con số chính xác là chưa được kiểm chứng.**
+
+      Thứ quan trọng là hình dạng của nó: 90% physical damage reduction cộng [[Untiring]] biến nó thành một khoản phí bạn trả rồi lấy lại, không phải một cái đồng hồ đếm ngược.
+  - title: Vì sao dùng gem transfigured chứ không phải bản gốc
+    body: |
+      Gem transfigured đổi khoảng gấp ba lượng tự gây hại để lấy khoảng 2.7 lần damage trên mỗi Trauma — 8% thay vì 3–6% — **cộng một cap cứng ở mười stack**.
+
+      Cái cap đó chính là điểm chính. Complex Trauma không thể vượt khỏi tay bạn, vì stack bị xóa sạch. Boneshatter bản gốc không có cap nào được ghi, và đó là bản kinh điển giết người chơi bằng cách leo thang.
+
+      Maxroll liệt "cần gem transfigured" là một nhược điểm, và đó là nhược điểm thật. Bạn lấy nó từ Divine Font trong Labyrinth, và Boneshatter chỉ có hai biến thể, nên tính một hoặc hai lần thử. Cũng có thể mua luôn.
+  - title: Vì sao bạn phải chặn attack speed lại
+    body: |
+      Đây là phần phản trực giác. **Damage bleed không scale theo attack speed.** Chỉ việc tích Trauma mới scale.
+
+      Nên guide chốt khoảng 16% attack speed là mức tối thiểu trên cây axe endgame và bảo bạn mua average damage cho mọi thứ vượt quá mức đó. Quá nhiều attack speed là có hại thật: bạn đốt qua cái reset mười stack nhanh hơn tốc độ bạn hưởng lợi từ stack.
+
+      Mọi thứ còn lại là average physical damage trên vũ khí, bleed chance cho tới khi character sheet đọc ra 100%, rồi tới bleed multiplier, rồi Strength.
+  - title: Thứ thật sự giết bạn
+    body: |
+      Bốn thứ, theo thứ tự tần suất:
+
+      - Một cái altar Eater có **reduced physical damage reduction**. Maxroll cảnh báo đúng cái này theo tên.
+      - **Mất endurance charge.** Mọi thứ đứng trên chúng.
+      - **"Monsters cannot be stunned"**, thứ vô hiệu hóa Endurance Charge on Melee Stun.
+      - **"50% chance to avoid bleeding"**, thứ lấy đi 90% damage của bạn chứ không giết bạn.
+  - title: Divine Shield cần có energy shield, dù chỉ một chút
+    body: |
+      [[Divine Shield]] không làm gì nếu energy shield của bạn bằng không. Nó không cần nhiều — nó cần tồn tại.
+
+      Giai đoạn đầu nghĩa là một cây Crystal Belt hoặc một đôi Apothecary's Gloves. Giai đoạn sau nghĩa là [[Corrupted Soul]] từ một viên [[Glorious Vanity]] seed Doryani, thứ giải phóng slot belt cho [[Ryslatha's Coil]].
+
+mandatory:
+  - term: Boneshatter of Complex Trauma
+    why: >-
+      Gem transfigured, không phải Boneshatter bản gốc. Tám phần trăm more damage
+      mỗi Trauma thay vì ba tới sáu, cộng một cap cứng ở mười stack chặn việc
+      self-damage leo thang.
+    detail: >-
+      Boneshatter bản gốc cần nhân vật level 28 và là reward Act 3 của Sever the
+      Right Hand. **Marauder có lấy được hay không thì vẫn chưa rõ:** bảng quest
+      và vendor của PoEDB chỉ ghi Duelist, Scion và Templar, còn đoạn trích patch
+      note 3.15.0 cũng trên PoEDB lại nói Marauder được chào nó. Nếu Clarissa
+      không bán cho bạn, hãy mua từ trade. Dù sao đi nữa, bản transfigured đến từ
+      Divine Font trong Labyrinth.
+  - term: Bloodletting
+    why: >-
+      Khiến quái bị tính là đang di chuyển, thứ nhân ba lượng bleed chúng ăn. Bỏ
+      nó ra là bạn mất khoảng hai phần ba damage.
+  - term: Unflinching
+    why: >-
+      Endurance charge từ việc bị đánh, kể cả bị chính bạn đánh, cộng +1 cho mức
+      tối đa. Động cơ bắt đầu chạy ngay khi bạn lấy nó.
+  - term: Untiring
+    why: >-
+      Nguồn hồi phục trả giá cho phần tự gây damage. Với khoảng 90% giảm trừ
+      physical, nó hồi nhiều hơn phần cú tự đánh gây ra.
+  - term: Resolute Technique
+    why: >-
+      Hit của bạn không bao giờ miss và không bao giờ crit. Accuracy thôi là một
+      chỉ số bạn phải nghĩ tới. Lấy sớm trong campaign.
+  - term: Pride
+    why: >-
+      Aura duy nhất của build. Quái gần bạn ăn thêm physical damage.
+  - term: Divine Shield
+    why: >-
+      Cần có energy shield, bao nhiêu cũng được, mới hoạt động. Energy shield
+      bằng không nghĩa là node vô dụng, nên nhét một chút lên belt hoặc gloves.
+  - term: Blood Sap Tincture
+    level: recommended
+    why: >-
+      Khoảng 30% more damage. Maxroll so sánh là nó đáng cỡ một viên support gem
+      thêm. Rẻ, và là thứ đầu tiên cần lấy khi vào map.
+  - term: Ryslatha's Coil
+    level: recommended
+    why: >-
+      Khoảng 40% more damage và là unique được maxroll xếp ưu tiên số một. Cũng
+      được liệt luôn vào nhược điểm, vì nó khó lấy.
+  - term: Kaom's Sign
+    level: recommended
+    why: >-
+      Corrupt nó để lấy +1 maximum endurance charge. Một viên Tainted Mythic Orb
+      lên một cây Coral Ring +1 là con đường tới cái thứ hai.
+  - term: Corrupted Soul
+    level: recommended
+    why: >-
+      Lấy qua một viên [[Glorious Vanity]] seed Doryani. Nó cho bạn energy shield
+      để [[Divine Shield]] chạy mà không phải tiêu slot belt.
+  - term: Autoexertion
+    level: recommended
+    why: >-
+      Warcry của bạn tự bật từ level 24. Đây là thứ khiến build không phải là một
+      nhân vật melee bốn nút.
+  - term: Enduring Cry
+    level: recommended
+    why: >-
+      Nạp lại endurance charge và hồi máu. Nút cứu mạng của bạn, và cũng là một
+      phần sức bền.
+  - term: Endurance Charge on Melee Stun Support
+    level: recommended
+    why: >-
+      Nguồn tạo charge thứ hai. Nó cũng là lý do "monsters cannot be stunned" là
+      một trong những mod map bị cấm.
+  - term: The Light of Meaning
+    level: recommended
+    why: >-
+      Với một roll physical damage, đặt vào jewel socket gần một cụm tốt. Damage
+      đơn giản, không màu mè.
+  - term: Watcher's Eye
+    level: recommended
+    why: >-
+      Chỉ cái mod physical damage có điều kiện [[Pride]] là đáng. Bỏ qua phần
+      còn lại.
+  - term: Forbidden Rite
+    level: recommended
+    why: >-
+      Giữ ở level 1 và dùng có chủ đích để tự làm mình đau trước một con boss
+      trong phòng riêng như Maven, nơi không có quái nào để nạp endurance charge.
+
+labs:
+  - lab: Normal
+    node: Unstoppable
+    why: "Miễn slow và miễn stun, cộng 10% movement speed. Một con Juggernaut bị stun là một con Juggernaut đã chết."
+  - lab: Cruel
+    node: Unflinching
+    why: "Endurance charge từ cú tự đánh của bạn, cộng +1 tối đa. Đây là lúc build bắt đầu chạy."
+  - lab: Merciless
+    node: Untiring
+    why: "Nguồn hồi phục trả giá cho phần tự gây damage."
+  - lab: Uber
+    node: Unrelenting
+    why: >-
+      Thêm giảm trừ khi đang có charge. Đổi nó sang "That didn't happen!" từ cây
+      bloodline Delirious nếu bạn chơi hardcore hoặc chưa có jewel tốt. Lưu ý là
+      maxroll liệt thứ tự mà không nêu tên lab, nên cách ánh xạ ở trên là suy
+      luận của chúng tôi.
+
+stages:
+  - id: acts-1-3
+    image: asc-icon-juggernaut
+    title: Act 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Ground Slam]] tới level 4, rồi [[Spectral Throw]] tới 12, rồi
+      [[Sunder]]. **Bạn không chơi Boneshatter ở đây.** Giữ quái ở vừa trong tầm
+      xa nhất của Spectral Throw, chỗ nó hit ba lần.
+    changes: >-
+      Mua ngay hai cây Iron Ring và một cây Rustic Sash: physical damage phẳng
+      chạy được cả trên đồ normal. Craft thêm resistance ở bench bằng một
+      [[Orb of Transmutation]], cái này cũng chạy trên đồ normal.
+    links:
+      - name: Level 1–4
+        gems: [Ground Slam, Ruthless Support]
+      - name: Level 4–12
+        gems: [Spectral Throw, Volley Support, Faster Attacks Support]
+      - name: Từ level 12
+        gems: [Sunder, Ruthless Support, Melee Physical Damage Support]
+      - name: Boss
+        gems: [Intimidating Cry, Blood and Sand]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support]
+    moveOn: "bạn có Sunder trong một four-link và một cây axe hai tay rare từ vendor recipe."
+    details:
+      - title: Vendor recipe cho axe
+        body: |
+          Bán một cây Rustic Sash **rare**, một viên Blacksmith's Whetstone và một cây axe hai tay bất kỳ cùng lúc. Bạn nhận lại một cây axe có 50–64% increased physical damage.
+
+          Dùng một viên essence rẻ để biến cây Sash thành rare. Chạy lại recipe mỗi lần damage bắt đầu tụt — đó là nâng cấp rẻ nhất trong campaign và bạn sẽ làm nó ba bốn lần.
+
+          Nhặt một cây Woodsplitter ở level 13 làm base nếu chưa có gì tốt hơn. Sang Act 3 thì đổi Iron Ring sang Two-Stone Ring.
+      - title: Đổi gem khi đánh boss
+        body: |
+          Với Spectral Throw, đổi [[Volley Support]] sang [[Faster Attacks Support]] khi đánh boss: mấy mũi projectile thêm là công cụ dọn quái, không phải công cụ damage.
+
+          [[Intimidating Cry]] gần như nhân đôi damage single target của bạn cho hai cú attack. Bấm nó khi mở trận và bấm lại mỗi lần nó hồi xong.
+
+          Nếu bạn không muốn dính tới Spectral Throw chút nào, maxroll nói ở lại [[Ground Slam]] tới 12 chỉ tốn thêm vài phút.
+      - title: Ưu tiên trên cây
+        body: |
+          Slaughter, Wrecking Ball, [[Resolute Technique]] sớm, Steadfast, và cái Melee mastery cho Fortify khi melee hit — thứ cho bạn bỏ hẳn một viên support gem Fortify.
+
+          **Đừng lấy node bleed lúc này.** Bạn là một nhân vật Sunder thuần dựa trên hit cho tới khi vào map, và cụm bleed chẳng làm gì cho bạn trước đó.
+  - id: acts-4-10
+    image: orb-of-transmutation
+    title: Act 4–10
+    levels: Level 28–68
+    uses: >-
+      Vẫn [[Sunder]]. Ở level 24 bạn thêm [[Autoexertion]] và thôi bấm warcry
+      bằng tay. [[Blood and Sand]] để nguyên ở blood stance — guide cho rằng đổi
+      stance không đáng một cái nút.
+    changes: >-
+      Ascend hai lần. Chạy lại recipe axe mỗi khi damage tụt. Mua viên
+      [[Boneshatter of Complex Trauma]] khi thấy cái nào rẻ, và cho nó lên level
+      trong weapon swap.
+    links:
+      - name: Main skill
+        gems: [Sunder, Melee Physical Damage Support, Brutality Support, Ruthless Support]
+      - name: Warcry
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
+      - name: Aura và curse
+        gems: [Pride, Vulnerability]
+    moveOn: "bạn đã xong Act 10, resistance đã cap, và viên gem transfigured đã nằm trong túi."
+    details:
+      - title: Boneshatter thật sự online lúc nào
+        body: |
+          Thực tế mà nói, **level 68 hoặc muộn hơn — lúc bắt đầu vào map.**
+
+          Chính cấu trúc của maxroll xác nhận điều đó: Boneshatter chỉ xuất hiện ở mục gem cho map, không bao giờ ở mục gem campaign. Mọi nguồn khác xử lý chuyện thời điểm một cách lỏng lẻo, và đó là lý do người chơi tưởng nó sớm hơn rồi thất vọng.
+
+          Boneshatter bản gốc cần level 28. Bản transfigured cần một lần chạy Labyrinth tới Divine Font. Một bài 3.29 nói cụ thể là Merciless lab; các nguồn chung thì nói cái font xuất hiện ở cuối mỗi lần chạy lab. Cứ cho là Merciless để an toàn.
+      - title: Bandit và Pantheon
+        body: |
+          Mục này của maxroll là một cái con trỏ trống — nó không nêu tên thần nào, bandit nào. Mấy thứ đó đến từ Path of Building của tác giả: **giết cả ba bandit**, và lấy Soul of Lunaris cùng Soul of Garukhan.
+
+          Một bài 3.29 lại nói Brine King với Garukhan. Path of Building là hiện vật 3.30, nên chúng tôi theo nó.
+  - id: early-maps
+    image: tincture
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      Giờ bạn đổi. [[Boneshatter of Complex Trauma]] vào link tốt nhất của bạn,
+      lấy node bleed, và kiểm character sheet cho ra **100% chance to bleed**.
+    changes: >-
+      Lấy Spirit of War sớm để có mana leech. Mua một cây
+      [[Blood Sap Tincture]]. Nhét energy shield, bao nhiêu cũng được, lên belt
+      hoặc gloves để [[Divine Shield]] chạy. Bắt đầu corrupt [[Kaom's Sign]].
+    links:
+      - name: Main skill (six-link)
+        gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
+      - name: Warcry
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Aura, curse và utility
+        gems: [Pride, Vulnerability, Blood Rage]
+    moveOn: "character sheet của bạn đọc ra 100% chance to bleed và bạn giữ được bảy endurance charge trở lên trong một trận."
+    details:
+      - title: Một lỗ hổng chúng tôi không che
+        body: |
+          **Maxroll không cho gem link nào và không cho số link nào, ở bất cứ đâu trên trang.** Nó chỉ nói là hãy ưu tiên link trên đồ của bạn.
+
+          Cây six-link ở trên được dựng ngược từ Path of Building của tác giả, mà file đó cũng không đánh dấu ranh giới link. Đó là một cách đọc hợp lý, nhưng vẫn là suy luận.
+
+          **Setup four- và five-link trung gian thì chẳng ai công bố cho 3.30.** Thứ gần nhất là một trang 3.28 được ghi rõ là đã lỗi thời, dùng năm aura với một six-link khác, và được dựng cho Boneshatter *bản gốc*. Đừng port nó. Bỏ Volatility trước, rồi Ruthless, nếu bạn ít socket hơn.
+      - title: Giữ setup trigger ở level thấp
+        body: |
+          [[Cast when Damage Taken Support]] ở level 1 với [[Vaal Molten Shell]] ở level 7. Cả hai đều cố ý để thấp, để trigger nổ liên tục thay vì chờ một cú đánh lớn.
+
+          Đây là setup chuẩn, và trên một build ăn damage mỗi cú attack thì nó nổ đáng tin hơn bất cứ build nào khác.
+      - title: Tốc độ dọn quái, và một mẹo duy nhất cho nó
+        body: |
+          Clear là trục yếu nhất của build này và không nguồn nào phản đối. Cách chữa duy nhất có sẵn là mod "non-Vaal strike skills target one or two additional enemies", từ một implicit eldritch trên gloves hoặc từ Attack Mastery.
+
+          Lấy nó sớm nhất có thể. Nó là khác biệt giữa đánh một con quái và đánh ba con.
+  - id: red-maps
+    image: corrupted-soul
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      Vẫn cây six-link đó với [[Ryslatha's Coil]] trên belt, nghĩa là bạn phải
+      dời nguồn energy shield sang amulet và ring, hoặc lấy
+      [[Corrupted Soul]] từ một viên [[Glorious Vanity]].
+    changes: >-
+      Thêm [[Forbidden Rite]] ở level 1 để nạp trước khi vào boss trong phòng
+      riêng. Cấm bốn mod map. Bắt đầu nhắm tới một cây Sundering Axe
+      recombinate.
+    links:
+      - name: Main skill (six-link)
+        gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
+      - name: Warcry
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
+      - name: Chuẩn bị đánh boss
+        gems: [Forbidden Rite, Blood Rage]
+    moveOn: "bạn giữ chín hoặc mười endurance charge, 90% physical damage reduction, và boss Tier 16 chết mà bạn không mất portal nào."
+    details:
+      - title: Mẹo Forbidden Rite
+        body: |
+          Trong một đấu trường boss riêng thì không có quái nào để đánh, nên bạn bước vào với không Trauma và không endurance charge.
+
+          Một viên [[Forbidden Rite]] level 1 giải quyết chuyện đó: nó gây damage cho bạn, việc đó tạo charge qua [[Unflinching]], nên bạn bước vào trận đã nạp sẵn.
+
+          Đó là việc dùng có chủ đích một skill tự gây damage trên một build vốn đã được dựng để ăn damage từ chính mình. Giữ nó ở level 1 và đừng bao giờ nâng.
+      - title: Mod map cần reroll
+        body: |
+          - **Reduced physical damage reduction** trên altar Eater. Cái tệ nhất.
+          - **Monsters cannot be stunned.** Mất Endurance Charge on Melee Stun.
+          - **Monsters have a chance to avoid bleeding.** Lấy đi gần hết damage của bạn.
+          - Bất cứ thứ gì lấy mất endurance charge.
+      - title: '"That didn''t happen!"'
+        body: |
+          Guide khẳng định cái notable bloodline Delirious này cho khoảng 40% less damage taken from hits, đổi lại là mất mọi jewel socket trên cây của bạn.
+
+          Nó đáng trong hardcore, hoặc trước khi bạn có jewel tốt, và ngoài hai trường hợp đó thì không. **Cơ chế này ra sau mốc nghiên cứu của chúng tôi và được thuật lại đúng như guide nói, không phải đã xác nhận.**
+  - id: endgame
+    image: watchers-eye
+    title: Endgame
+    levels: Uber boss
+    uses: >-
+      Một cây Sundering Axe multimod với average physical damage cao nhất bạn mua
+      được và ít nhất 16% attack speed, cộng [[Watcher's Eye]] và
+      [[The Light of Meaning]].
+    changes: >-
+      Lối chơi không đổi gì cả. Đây thuần là một đường cong gear, và nó kết thúc ở
+      chỗ build giết được Uber boss, đúng cái mà các nguồn đồng ý là nó giỏi
+      nhất.
+    moveOn: "không còn stage nào nữa. Cây axe là khoản mua lớn cuối cùng."
+    details:
+      - title: Cây axe, và một cảnh báo về lời khuyên craft
+        body: |
+          Lộ trình được công bố là recombine hai cây Sundering Axe rồi multimod kết quả, tốn khoảng 2 Divine phí bench.
+
+          **Chính tác giả tự phủ nhận nó.** Nguyên văn anh ta là mấy mẹo craft được viết trước khi chơi 3.30, bản có thay đổi crafting đáng kể. Hãy coi recipe là một hướng đi, tự kiểm phí bench hiện tại, và so với chuyện đơn giản là mua một cây axe làm sẵn.
+      - title: Thứ tự nâng cấp
+        body: |
+          Thứ tự của chính maxroll: [[Blood Sap Tincture]], rồi [[Ryslatha's Coil]], rồi một cây [[Kaom's Sign]] corrupt +1 hoặc +2 endurance charge, rồi [[The Light of Meaning]], rồi [[Corrupted Soul]] qua [[Glorious Vanity]], rồi cây axe multimod, rồi [[Watcher's Eye]].
+
+          Mấy con số 30%, 40% và 21% gắn với các món này thì nằm trên trang đã cập nhật 3.30 nhưng **không được đo lại cho 3.30**.
+      - title: Nhân vật hoàn chỉnh trông thế nào
+        body: |
+          Theo Path of Building của tác giả: 9.6 triệu tổng damage mỗi giây, trong đó 8.7 triệu là bleed và 964,000 là cú hit. 5,890 life, 33,724 armour, 71,294 effective hit point, 1,146 life hồi và 1,069 leech mỗi giây, mười endurance charge, 90% physical damage reduction.
+
+          Để ý cái tỷ lệ chia đó. **Nếu bleed của bạn không áp được, bạn mất 90% damage** và nhân vật sẽ có cảm giác hỏng hơn là yếu.
+
+patch:
+  - note: >-
+      **Không có gì liên quan bị đổi.** Juggernaut không xuất hiện ở đâu trong
+      phần game thường của patch note. Boneshatter, Trauma và mọi support gem
+      build này dùng đều nguyên vẹn.
+  - entry: support-gem-changes
+    note: >-
+      **Không áp dụng.** Hai support duy nhất được làm lại là Transfusion và Vaal
+      Sacrifice, mà build này không dùng cái nào.
+  - entry: loot-rarity-rework
+    note: >-
+      **Hơi có lợi.** Độ rare của chính con quái giờ quyết định bể drop của nó, và
+      cái penalty currency cũ trên quái rare với unique đã bị bỏ. Một build mà
+      90% là bleed single target và vốn đã giết được Uber boss thì đang chỉ đúng
+      hướng.
+  - entry: quantity-to-atlas-drops
+    note: >-
+      **Tương đối thuận lợi.** Item quantity bị gỡ khỏi mod quái và altar
+      quantity thì không còn, đó là một cú nerf chung cho kiểu farm theo mật độ
+      pack. Chuyện đó làm đau mấy con clear nhanh nhiều hơn là làm đau một con
+      chậm, trâu, đánh boss.
+  - entry: meta-crafting-costs
+    note: >-
+      **Điểm âm thật duy nhất.** Crafting đổi đủ nhiều để tác giả của guide tự
+      phủ nhận phần gear của mình. Kế hoạch recombine-rồi-multimod cho cây axe có
+      thể không chạy như đã viết, và con số 2 Divine cho multimod là của 3.29.
+  - entry: league-fates
+    note: >-
+      **Rất khớp.** Cơ chế league dựng quanh boss được tăng cường. Các nguồn của
+      chính build này cho nó 4.5 tới 5 về bossing và 5 về survivability, đúng cái
+      profile mà 3.30 trả thưởng.
+  - entry: mercenary-nerfs
+    note: >-
+      **Bối cảnh cạnh tranh.** Mercenary bị cắt nặng, thứ đó gỡ bỏ một nguồn sức
+      mạnh đối thủ mà không giúp gì trực tiếp cho build này.
+  - entry: special-base-implicits
+    note: >-
+      **Nhỏ.** Stygian Vise giờ chỉ rơi ở map tier cao, khiến một socket abyss
+      jewel hơi bất tiện hơn ở giai đoạn đầu.
+
+strengths:
+  - "Một trong những starter trâu nhất hiện có: 90% physical damage reduction, mười endurance charge, 71k effective hit point."
+  - "Đánh được Uber boss, chuyện hiếm với một starter giá rẻ."
+  - "Không cần unique nào để hoạt động."
+  - "Nhanh tới bốn cái Voidstone đầu."
+  - "Lựa chọn hardcore tốt nhất trên trang này, được ba nguồn xác nhận."
+  - "Cap mười stack nghĩa là lượng tự gây damage không thể leo thang mất kiểm soát."
+weaknesses:
+  - "Tốc độ dọn quái trung bình, và mọi nguồn đều nói vậy."
+  - "Nó cần một gem transfigured, thứ chặn build thật sau Labyrinth hoặc sau trade."
+  - "Bạn chơi Sunder suốt cả campaign. Build thật chỉ bắt đầu khi vào map."
+  - "Ryslatha's Coil là nâng cấp lớn nhất mà lại khó lấy."
+  - "Ngồi nhìn thanh máu của chính mình giật nảy mỗi cú attack không dành cho mọi người."
+  - "Khả năng scale damage cuối game hạn chế so với các build crit."
+avoidIf: >-
+  Đừng chọn cái này nếu bạn muốn clear nhanh hay muốn tốc độ farm map juice. Đừng
+  chọn nếu bạn không chịu duy trì một cây tincture và nhìn cái đếm endurance
+  charge, hoặc nếu bạn đang nhắm một cái trần damage rất cao về sau trong league.
+  Và đừng chọn nếu bạn không lấy được gem transfigured trong vài ngày đầu — không
+  có nó thì bạn đang chơi một bản tệ hơn của build.
+
+sources:
+  - title: "Maxroll: Boneshatter Juggernaut league starter (Zizaran)"
+    url: https://maxroll.gg/poe/build-guides/boneshatter-juggernaut-league-starter
+    kind: guide
+    note: "Changelog cập nhật 12 tháng 11 2026 cho 3.30. Đúng là mới thật, nhưng tác giả tự phủ nhận phần craft của mình và không công bố gem link nào."
+  - title: "Path of Building: Zizaran's endgame character"
+    url: https://pobb.in/qRFk_VlQJyRx
+    kind: pob
+    note: "Nguồn của mọi con số và mọi nhóm link ở đây. pobb.in gắn nhãn 3.29 — có lẽ là chuỗi phiên bản của app, nhưng hãy kiểm lại khi import."
+  - title: "Maxroll planner"
+    url: https://maxroll.gg/poe/pob/co1gcw0g
+    kind: pob
+  - title: "Low-budget Maven variant (Aleshxile)"
+    url: https://pobb.in/jXNziRbq4Uxo
+    kind: pob
+    note: "Một cách làm rẻ hơn trên cùng bộ khung."
+  - title: "PoEDB: Boneshatter of Complex Trauma"
+    url: https://poedb.tw/us/Boneshatter_of_Complex_Trauma
+    kind: data
+    note: "Cách scale Trauma, cái cap +200%, và bảng self-damage."
+  - title: "PoEDB: Boneshatter"
+    url: https://poedb.tw/us/Boneshatter
+    kind: data
+    note: "Dùng để so với gem bản gốc và cho chuyện quyền quest của Marauder vẫn chưa rõ."
+  - title: "Build guide video (Zizaran)"
+    url: https://www.youtube.com/watch?v=vV8Z7MELGno
+    kind: video
+    note: "Chúng tôi dùng link Path of Building đính kèm, không dùng nội dung video."
+  - title: "insanebuild 3.30 tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Cho hạng C, trong khi thẻ của chính nó nói build không đổi và tốt nhất cho khởi đầu league hardcore. Chúng tôi coi cái C là sản phẩm của độ phổ biến."
+  - title: "aoeah 3.30 build tier list"
+    url: https://www.aoeah.com/news/4886--poe-330-best-builds-for-league-starter--endgame-trade--ssf--poe-330-tier-list
+    kind: guide
+    note: "Cho 4 trên 5 tổng thể với endgame 5 trên 5. Viết ngày 9 tháng 11, trước khi patch note tồn tại."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
