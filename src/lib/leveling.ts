@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Locale } from '../i18n';
-import { loadYamlDir, resolveLocale, type YamlFile } from './content';
+import { loadYamlDir, resolveFiles, type YamlFile } from './content';
 
 export const nodeTags = ['travel', 'must', 'worth', 'skip'] as const;
 export type NodeTag = (typeof nodeTags)[number];
@@ -58,7 +58,7 @@ const actSchema = z
   })
   .strict();
 
-export type Act = z.infer<typeof actSchema> & { slug: string; where: string };
+export type Act = z.infer<typeof actSchema> & { slug: string; where: string; isFallback?: boolean };
 
 const overviewSchema = z
   .object({
@@ -111,17 +111,16 @@ export function parseAct(slug: string, file: YamlFile, _league: string): Act {
 }
 
 function actFiles(league: string, locale: Locale) {
-  const { data, isFallback } = resolveLocale(loadYamlDir('leveling', league), locale);
-  return { data, isFallback };
+  return resolveFiles(loadYamlDir('leveling', league), locale);
 }
 
 export function getActs(league: string, locale: Locale): { acts: Act[]; isFallback: boolean } {
-  const { data, isFallback } = actFiles(league, locale);
-  const acts = Object.entries(data)
+  const { files, fellBack } = actFiles(league, locale);
+  const acts = Object.entries(files)
     .filter(([stem]) => /^act-\d+$/.test(stem))
-    .map(([stem, file]) => parseAct(stem, file, league))
+    .map(([stem, file]) => ({ ...parseAct(stem, file, league), isFallback: fellBack.has(stem) }))
     .sort((a, b) => a.number - b.number);
-  return { acts, isFallback };
+  return { acts, isFallback: acts.some((a) => a.isFallback) };
 }
 
 const labsSchema = z
@@ -152,15 +151,15 @@ export type Labs = z.infer<typeof labsSchema> & { where: string };
 
 /** The Labyrinth page, or undefined if it has not been written for this league. */
 export function getLabs(league: string, locale: Locale): { labs: Labs; isFallback: boolean } | undefined {
-  const { data, isFallback } = actFiles(league, locale);
-  const file = data.labs;
+  const { files, fellBack } = actFiles(league, locale);
+  const file = files.labs;
   if (!file) return undefined;
   const parsed = labsSchema.safeParse(file.data);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
     throw new Error(`${file.where}: field "${issue.path.join('.')}": ${issue.message}`);
   }
-  return { labs: { ...parsed.data, where: file.where }, isFallback };
+  return { labs: { ...parsed.data, where: file.where }, isFallback: fellBack.has('labs') };
 }
 
 export function hasLabs(league: string): boolean {
@@ -168,15 +167,15 @@ export function hasLabs(league: string): boolean {
 }
 
 export function getOverview(league: string, locale: Locale): { overview: Overview; isFallback: boolean } {
-  const { data, isFallback } = actFiles(league, locale);
-  const file = data.overview;
+  const { files, fellBack } = actFiles(league, locale);
+  const file = files.overview;
   if (!file) throw new Error(`leveling/${league}: missing overview.yaml`);
   const parsed = overviewSchema.safeParse(file.data);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
     throw new Error(`${file.where}: field "${issue.path.join('.')}": ${issue.message}`);
   }
-  const written = new Set(Object.keys(data));
+  const written = new Set(Object.keys(files));
   const stops = parsed.data.stops.map((stop) => ({ ...stop, available: written.has(stop.slug) }));
-  return { overview: { ...parsed.data, stops, where: file.where }, isFallback };
+  return { overview: { ...parsed.data, stops, where: file.where }, isFallback: fellBack.has('overview') };
 }

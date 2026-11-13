@@ -19,7 +19,7 @@ const { locale: rawLocale, league: leagueId, act: actSlug } = Astro.params;
 if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
 const locale = rawLocale;
 const league = getLeague(leagueId);
-const { acts, isFallback } = getActs(league.id, locale);
+const { acts } = getActs(league.id, locale);
 const act = acts.find((a) => a.slug === actSlug);
 if (!act) throw new Error(`No act ${actSlug}`);
 const { overview } = getOverview(league.id, locale);
@@ -32,7 +32,7 @@ const counts = {
   skip: act.nodes.filter((n) => n.tag === 'skip').length,
 };
 ---
-<Base locale={locale} league={league} title={`${t(locale, 'leveling.act', { number: act.number })}: ${act.title}`} description={act.intro} section="leveling" isFallback={isFallback}>
+<Base locale={locale} league={league} title={`${t(locale, 'leveling.act', { number: act.number })}: ${act.title}`} description={act.intro} section="leveling" isFallback={act.isFallback === true}>
   <div class="container page-head">
     <div class="eyebrow">{t(locale, 'leveling.eyebrow')} · {t(locale, 'leveling.act', { number: act.number })}</div>
     <h1>{act.title}</h1>

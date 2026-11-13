@@ -40,9 +40,11 @@ describe('parseChangelog', () => {
 });
 
 describe('getChangelog', () => {
-  it('falls back to English for Vietnamese until it is translated', () => {
-    expect(getChangelog('3.30', 'vi').isFallback).toBe(true);
-    expect(getChangelog('3.30', 'en').isFallback).toBe(false);
+  it('serves the same entries in Vietnamese, translated or fallen back', () => {
+    const en = getChangelog('3.30', 'en');
+    const vi = getChangelog('3.30', 'vi');
+    expect(vi.entries.map((e) => e.id)).toEqual(en.entries.map((e) => e.id));
+    expect(en.isFallback).toBe(false);
   });
 
   it('has entries in all three sections, each with a downloaded image', () => {

@@ -7,6 +7,39 @@ export interface Resolved<T> {
   isFallback: boolean;
 }
 
+export interface ResolvedFiles {
+  /** One entry per English file, each in the best language available. */
+  files: Record<string, YamlFile>;
+  /** Stems that had to fall back to English. */
+  fellBack: Set<string>;
+}
+
+/**
+ * Resolve a content directory one file at a time.
+ *
+ * A translation arrives file by file, so a locale usually has some of the
+ * pages and not others. Choosing a language for the whole directory would
+ * make the untranslated pages disappear; this picks per file instead, and
+ * English decides which pages exist.
+ */
+export function resolveFiles(
+  byLocale: Partial<Record<Locale, Record<string, YamlFile>>>,
+  wanted: Locale,
+): ResolvedFiles {
+  const english = byLocale.en;
+  if (english === undefined) throw new Error('No content found for this page in any language');
+  const translated = wanted === 'en' ? undefined : byLocale[wanted];
+  const files: Record<string, YamlFile> = {};
+  const fellBack = new Set<string>();
+  for (const [stem, file] of Object.entries(english)) {
+    const own = translated?.[stem];
+    files[stem] = own ?? file;
+    if (!own) fellBack.add(stem);
+  }
+  if (wanted === 'en') fellBack.clear();
+  return { files, fellBack };
+}
+
 /** Pick content for a locale, falling back to English. */
 export function resolveLocale<T>(byLocale: Partial<Record<Locale, T>>, wanted: Locale): Resolved<T> {
   const own = byLocale[wanted];

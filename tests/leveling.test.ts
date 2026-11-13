@@ -63,7 +63,14 @@ describe('leveling content', () => {
     const written = new Set(getActs('3.30', 'en').acts.map((a) => a.slug));
     for (const stop of overview.stops) expect(stop.available).toBe(written.has(stop.slug));
   });
-  it('falls back to English for Vietnamese', () => {
-    expect(getActs('3.30', 'vi').isFallback).toBe(true);
+  it('serves every act in Vietnamese too, translated or fallen back', () => {
+    // A partly translated locale must never lose a page.
+    const en = getActs('3.30', 'en').acts.map((a) => a.slug);
+    const vi = getActs('3.30', 'vi').acts.map((a) => a.slug);
+    expect(vi).toEqual(en);
+  });
+  it('never marks English pages as a fallback', () => {
+    expect(getActs('3.30', 'en').acts.every((a) => a.isFallback === false)).toBe(true);
+    expect(getOverview('3.30', 'en').isFallback).toBe(false);
   });
 });

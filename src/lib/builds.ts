@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import type { Locale } from '../i18n';
 import { getChangelogIds } from './changelog';
-import { loadYamlDir, resolveLocale, type YamlFile } from './content';
+import { loadYamlDir, resolveFiles, type YamlFile } from './content';
 import { getTerms } from './terms';
 
 export const budgets = ['starter', 'low', 'medium', 'high', 'extreme'] as const;
@@ -78,7 +78,7 @@ const schema = z
   })
   .strict();
 
-export type Build = z.infer<typeof schema> & { slug: string; where: string };
+export type Build = z.infer<typeof schema> & { slug: string; where: string; isFallback?: boolean };
 
 export interface BuildContext {
   league: string;
@@ -111,16 +111,20 @@ export function parseBuild(slug: string, file: YamlFile, ctx: BuildContext): Bui
 export function getBuilds(league: string, locale: Locale): { builds: Build[]; isFallback: boolean } {
   const byLocale = loadYamlDir('builds', league);
   if (!byLocale.en) return { builds: [], isFallback: locale !== 'en' };
-  const { data, isFallback } = resolveLocale(byLocale, locale);
+  const { files, fellBack } = resolveFiles(byLocale, locale);
   const ctx = { league, changelogIds: getChangelogIds(league) };
-  const builds = Object.entries(data).map(([slug, file]) => parseBuild(slug, file, ctx));
+  const builds = Object.entries(files).map(([slug, file]) => ({
+    ...parseBuild(slug, file, ctx),
+    isFallback: fellBack.has(slug),
+  }));
   builds.sort((a, b) => a.name.localeCompare(b.name));
-  return { builds, isFallback };
+  return { builds, isFallback: builds.some((b) => b.isFallback) };
 }
 
 export function getBuild(league: string, locale: Locale, slug: string): { build: Build; isFallback: boolean } {
-  const { builds, isFallback } = getBuilds(league, locale);
+  const { builds } = getBuilds(league, locale);
   const build = builds.find((b) => b.slug === slug);
   if (!build) throw new Error(`builds/${league}: no build "${slug}"`);
-  return { build, isFallback };
+  // Only this build's own language matters on its own page.
+  return { build, isFallback: build.isFallback === true };
 }

@@ -58,7 +58,9 @@ describe('getBuilds', () => {
     const { builds } = getBuilds('3.30', 'en');
     expect(builds.some((b) => b.role === 'starter')).toBe(true);
   });
-  it('falls back to English for Vietnamese', () => {
-    expect(getBuilds('3.30', 'vi').isFallback).toBe(true);
+  it('serves every build in Vietnamese too, translated or fallen back', () => {
+    const en = getBuilds('3.30', 'en').builds.map((x) => x.slug);
+    const vi = getBuilds('3.30', 'vi').builds.map((x) => x.slug);
+    expect(vi).toEqual(en);
   });
 });

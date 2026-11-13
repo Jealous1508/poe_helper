@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Locale } from '../i18n';
-import { loadYamlDir, resolveLocale } from './content';
+import { loadYamlDir, resolveFiles } from './content';
 
 const schema = z
   .object({
@@ -18,10 +18,10 @@ const schema = z
 export type Home = z.infer<typeof schema>;
 
 export function getHome(league: string, locale: Locale): { home: Home; where: string; isFallback: boolean } {
-  const { data, isFallback } = resolveLocale(loadYamlDir('home', league), locale);
-  const file = data.home;
+  const { files, fellBack } = resolveFiles(loadYamlDir('home', league), locale);
+  const file = files.home;
   if (!file) throw new Error(`home/${league}: missing home.yaml`);
   const parsed = schema.safeParse(file.data);
   if (!parsed.success) throw new Error(`${file.where}: ${parsed.error.message}`);
-  return { home: parsed.data, where: file.where, isFallback };
+  return { home: parsed.data, where: file.where, isFallback: fellBack.has('home') };
 }

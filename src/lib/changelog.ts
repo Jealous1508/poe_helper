@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Locale } from '../i18n';
-import { loadYamlDir, resolveLocale, type YamlFile } from './content';
+import { loadYamlDir, resolveFiles, type YamlFile } from './content';
 
 export const sections = ['big', 'small', 'new'] as const;
 export type Section = (typeof sections)[number];
@@ -82,12 +82,15 @@ export function getChangelog(
   league: string,
   locale: Locale,
 ): { entries: ChangelogEntry[]; meta: ChangelogMeta & { where: string }; isFallback: boolean } {
-  const { data, isFallback } = resolveLocale(loadYamlDir('changelog', league), locale);
-  const metaFile = data.meta;
+  const { files, fellBack } = resolveFiles(loadYamlDir('changelog', league), locale);
+  const metaFile = files.meta;
   if (!metaFile) throw new Error(`changelog/${league}: missing meta.yaml`);
   const meta = metaSchema.safeParse(metaFile.data);
   if (!meta.success) throw new Error(`${metaFile.where}: ${meta.error.message}`);
-  return { entries: parseChangelog(data), meta: { ...meta.data, where: metaFile.where }, isFallback };
+  // Sections are translated one file at a time, so the page is a fallback
+  // only if some part of what it shows is still English.
+  const isFallback = ['meta', ...sections].some((stem) => fellBack.has(stem));
+  return { entries: parseChangelog(files), meta: { ...meta.data, where: metaFile.where }, isFallback };
 }
 
 /** Ids of every changelog entry in a league, for cross-links from other content. */
