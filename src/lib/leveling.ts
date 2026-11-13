@@ -124,6 +124,49 @@ export function getActs(league: string, locale: Locale): { acts: Act[]; isFallba
   return { acts, isFallback };
 }
 
+const labsSchema = z
+  .object({
+    intro: z.string().min(1),
+    /** The three Labyrinths, in order. */
+    labs: z.array(
+      z.object({
+        id: z.string().regex(/^[a-z0-9-]+$/),
+        name: z.string().min(1),
+        areaLevel: z.number().int().positive(),
+        requires: z.string().min(1),
+        when: z.string().min(1),
+        ready: z.string().min(1),
+        reward: z.string().min(1),
+        trials: z.array(z.object({ zone: z.string().min(1), act: z.number().int(), trap: z.string().min(1) }).strict()),
+        notes: z.array(z.string().min(1)).default([]),
+      }).strict(),
+    ).min(1),
+    /** How the place works: Izaro, Darkshrines, traps, the one-death rule. */
+    rules: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()),
+    traps: z.array(z.object({ name: z.string().min(1), body: z.string().min(1) }).strict()).default([]),
+    sources: z.array(z.object({ title: z.string().min(1), url: z.string().regex(/^https?:\/\//) }).strict()).default([]),
+  })
+  .strict();
+
+export type Labs = z.infer<typeof labsSchema> & { where: string };
+
+/** The Labyrinth page, or undefined if it has not been written for this league. */
+export function getLabs(league: string, locale: Locale): { labs: Labs; isFallback: boolean } | undefined {
+  const { data, isFallback } = actFiles(league, locale);
+  const file = data.labs;
+  if (!file) return undefined;
+  const parsed = labsSchema.safeParse(file.data);
+  if (!parsed.success) {
+    const issue = parsed.error.issues[0];
+    throw new Error(`${file.where}: field "${issue.path.join('.')}": ${issue.message}`);
+  }
+  return { labs: { ...parsed.data, where: file.where }, isFallback };
+}
+
+export function hasLabs(league: string): boolean {
+  return Boolean(loadYamlDir('leveling', league).en?.labs);
+}
+
 export function getOverview(league: string, locale: Locale): { overview: Overview; isFallback: boolean } {
   const { data, isFallback } = actFiles(league, locale);
   const file = data.overview;

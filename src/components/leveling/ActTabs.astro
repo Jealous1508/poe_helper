@@ -1,6 +1,7 @@
 ---
 import { pagePath, t, type Locale } from '../../i18n';
 import type { Overview } from '../../lib/leveling';
+import { hasLabs } from '../../lib/leveling';
 
 interface Props {
   stops: Overview['stops'];
@@ -10,6 +11,7 @@ interface Props {
   locale: Locale;
 }
 const { stops, current, league, locale } = Astro.props;
+const labsReady = hasLabs(league);
 ---
 <nav class="act-tabs" aria-label={t(locale, 'leveling.tabs')}>
   <div class="container act-tabs__inner">
@@ -25,7 +27,13 @@ const { stops, current, league, locale } = Astro.props;
         <span class="tab is-disabled" title={t(locale, 'common.coming')}>{stop.label}</span>
       ),
     )}
-    <span class="tab is-disabled" title={t(locale, 'common.coming')}>{t(locale, 'leveling.labs')}</span>
+    {labsReady ? (
+      <a href={pagePath(locale, league, 'leveling', 'labs')} class:list={['tab', { 'is-current': current === 'labs' }]} aria-current={current === 'labs' ? 'page' : undefined}>
+        {t(locale, 'leveling.labs')}
+      </a>
+    ) : (
+      <span class="tab is-disabled" title={t(locale, 'common.coming')}>{t(locale, 'leveling.labs')}</span>
+    )}
   </div>
 </nav>
 
