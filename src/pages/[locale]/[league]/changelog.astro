@@ -1,0 +1,67 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Entry from '../../../components/changelog/Entry.astro';
+import SectionBar from '../../../components/changelog/SectionBar.astro';
+import Tag from '../../../components/Tag.astro';
+import { getLeague } from '../../../config/leagues';
+import { isLocale, t } from '../../../i18n';
+import { categories, getChangelog, sections, verdicts, type Section } from '../../../lib/changelog';
+import { leaguePaths } from '../../../lib/paths';
+
+export const getStaticPaths = leaguePaths;
+
+const { locale: rawLocale, league: leagueId } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const { entries, meta, isFallback } = getChangelog(league.id, locale);
+
+const bySection = Object.fromEntries(sections.map((s) => [s, entries.filter((e) => e.section === s)])) as Record<Section, typeof entries>;
+const counts = Object.fromEntries(sections.map((s) => [s, bySection[s].length])) as Record<Section, number>;
+const usedCategories = categories.filter((c) => entries.some((e) => e.category === c));
+const order: Section[] = ['big', 'small', 'new'];
+---
+<Base locale={locale} league={league} title={t(locale, 'nav.changelog')} description={meta.intro} section="changelog" isFallback={isFallback}>
+  <div class="container page-head">
+    <div class="eyebrow">{t(locale, 'changelog.eyebrow', { version: league.id })} · {t(locale, 'common.verified')} {meta.updated}</div>
+    <h1>{t(locale, 'changelog.title', { league: league.name })}</h1>
+    <p class="lede">{meta.intro}</p>
+    <p class="how">{t(locale, 'changelog.how')}</p>
+    <ul class="legend" aria-label={t(locale, 'changelog.legend')}>
+      {verdicts.map((verdict) => (
+        <li><Tag kind={verdict} label={t(locale, `verdict.${verdict}`)} /><span>{t(locale, `verdict.${verdict}.desc`)}</span></li>
+      ))}
+    </ul>
+  </div>
+
+  <SectionBar locale={locale} counts={counts} categories={usedCategories} />
+
+  <div class="container">
+    {order.map((section) => (
+      <section class="cl-section" id={`section-${section}`} data-section={section}>
+        <header class="cl-section__head">
+          <h2>{t(locale, `changelog.section.${section}`)}</h2>
+          <p class="muted">{t(locale, `changelog.section.${section}.desc`)}</p>
+        </header>
+        {bySection[section].map((entry) => <Entry entry={entry} league={league.id} locale={locale} />)}
+        <p class="muted cl-empty" data-empty hidden>{t(locale, 'changelog.empty')}</p>
+      </section>
+    ))}
+    <p class="source muted">
+      {t(locale, 'changelog.source')}
+      <a href={league.patchNotesUrl} rel="noopener" target="_blank">{t(locale, 'footer.patchNotes', { version: league.id })}</a>
+    </p>
+  </div>
+</Base>
+
+<style>
+  .how { margin-top: 1rem; font-size: 0.95rem; max-width: var(--measure); }
+  .legend { list-style: none; padding: 0; margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-size: 0.84rem; color: var(--text-muted); }
+  .legend li { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0; }
+  .cl-section { padding-top: 3rem; }
+  .cl-section__head { padding-bottom: 1.2rem; }
+  .cl-section__head h2 { margin-bottom: 0.3rem; }
+  .cl-section__head p { max-width: var(--measure); }
+  .cl-empty { padding: 1.2rem 0; border-top: 1px solid var(--border); }
+  .source { margin-top: 3rem; font-size: 0.88rem; }
+</style>

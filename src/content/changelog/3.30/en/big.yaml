@@ -1,0 +1,735 @@
+# Big changes: things that alter how you play, farm or gear.
+# "official" lines are shortened from the official patch notes.
+
+- id: scarabs-to-threads
+  category: endgame
+  verdict: rework
+  title: "Scarabs are gone. Threads replace them."
+  image: abyss-thread
+  gallery: [legion-thread, blight-thread, abyss-scarab, legion-scarab, titanic-scarab]
+  summary: >-
+    Every Scarab is removed from the game. In their place are ten
+    [[Threads]], one per league mechanic. You put Threads in the Map Device
+    to add that mechanic to the map. Each extra Thread, up to eight, raises
+    the chance of powerful random effects for it.
+  points:
+    - "The ten types: Abyss, Bestiary, Betrayal, Blight, Breach, Expedition, Incursion, Legion, Ritual, Ultimatum."
+    - "A [[Frayed Thread]] turns into a random Thread."
+    - "Threads also raise the rarity and difficulty of monsters in the map."
+    - "Old Scarabs in Standard convert to the matching Thread, or to a Frayed Thread."
+    - "Most things that dropped Scarabs now drop Threads: Eldritch Altars, strongboxes (2–5 Threads), Tormented Heretics, Betrayal, Heist."
+  impact:
+    meaning: >-
+      Scarabs were more than a hundred different items, each with one fixed
+      effect, and a farming strategy was a recipe of four or five of them.
+      Threads are ten items. The first Thread of a type switches the
+      mechanic on. More Threads of the same type do not buy a specific
+      effect: they raise the odds of strong random ones.
+
+
+      Many effects that used to sit on Scarabs are now nodes on the new
+      Atlas tree, where you can guarantee them. So the choice of *what* a
+      map contains moved to Threads, and the choice of *how* it behaves
+      moved to the tree.
+    winners: >-
+      New and casual players: there are ten items to learn instead of a
+      hundred, and one Thread is enough to play a mechanic. Players who
+      disliked buying a full Scarab set for every map.
+    losers: >-
+      Strategies built on one precise Scarab effect, and Scarabs with no
+      Thread equivalent, such as Divination, Cartography, Harbinger, Titanic
+      and Ambush Scarabs. Whether their effects survive depends on the Atlas
+      tree.
+    todo: >-
+      At league start, put in whatever Threads you find: even one adds a
+      full league mechanic to an otherwise empty map. Later, pick one or two
+      mechanics, take their Atlas clusters, and stack Threads of those
+      types. Eight of one type gives the best odds of the strong effects.
+    confidence: confirmed
+  official:
+    - "Scarabs have been removed from the game. A new item type, Threads, have been added in their place."
+    - "Threads can be used when entering an Atlas area through the Map Device to apply the associated League mechanic to the area. For each Thread expended, up to a maximum of eight, there are increasingly higher chances to apply powerful randomised transformative effects related to that League mechanic."
+    - "Added a new Currency Item, Frayed Thread, which can be used to grant a random Thread, or vendored for a random Thread."
+    - "Existing Scarabs will be converted to either a Thread related to that specific Scarab content, or a Frayed Thread."
+    - "The majority of Scarab sources throughout the game instead now grant a number of Threads."
+
+- id: no-random-league-mechanics
+  category: endgame
+  verdict: removed
+  title: "Ten league mechanics no longer appear in maps on their own"
+  image: atlas-breach
+  gallery: [atlas-legion, atlas-ritual, atlas-expedition, atlas-abyss, atlas-blight, atlas-bestiary, atlas-ultimatum, icon-betrayal, icon-incursion]
+  summary: >-
+    Abyss, Bestiary, Betrayal, Blight, Breach, Expedition, Incursion,
+    Legion, Ritual and Ultimatum no longer have a random chance to spawn in
+    a map. They appear only when a Thread puts them there.
+  points:
+    - "**Primary** mechanics (the ten above): Threads only."
+    - "**Secondary** mechanics still spawn randomly and have Atlas clusters: Essence, Harvest, Mercenaries, Ore Deposits, Rogue Exiles, Shrines, Strongboxes, Torment."
+    - "**Tertiary** mechanics spawn randomly, and the tree only raises their chance: Beyond, Buried Sentinels, Delirium Mirrors, Mirage, the Viridian Wildwood."
+    - "Memory Altar modifiers that enabled primary mechanics are disabled."
+  impact:
+    meaning: >-
+      This is the largest change to how a map feels. Until now a map with
+      nothing invested still rolled a Breach here and an Expedition there.
+      Now a map with no Threads has only secondary and tertiary content.
+      What you fight is what you chose.
+
+
+      It also means Atlas points in a primary mechanic do nothing by
+      themselves. A Legion cluster without a Legion Thread, or a Legion
+      Shaped Region, is wasted.
+    winners: >-
+      Players who want to run one mechanic every map: it is now guaranteed
+      with one Thread, with no reliance on spawn chance.
+    losers: >-
+      Players who enjoyed the variety of random encounters, and early-league
+      characters that have not found Threads yet.
+    todo: >-
+      In your first maps, lean on Shaped Regions (they give free Threads,
+      see below) and put early Atlas points into secondary mechanics and
+      generic nodes, which work in every map without any Threads.
+    confidence: confirmed
+  official:
+    - "The following league mechanics no longer have a random chance to spawn in Map areas: Abyss, Bestiary, Betrayal, Breach, Blight, Expedition, Incursion, Legion, Ritual, and Ultimatum."
+    - "Memory Altar modifiers that enabled Primary League Mechanics such as Abyss, Breach or Legion have been disabled."
+    - "Tertiary League mechanics, such as Beyond, Buried Sentinels, Delirium Mirrors, Mirage, and the Viridian Wildwood now only have Atlas Passive clusters that increase the chance for that mechanic to randomly appear in Maps."
+
+- id: atlas-tree-rework
+  category: atlas
+  verdict: rework
+  title: "The Atlas passive tree is completely rebuilt"
+  image: voidstone
+  figure:
+    image: league-atlas
+    caption: "The new Atlas tree. You start in the centre and build outwards. Image: Grinding Gear Games."
+  summary: >-
+    The Atlas tree has a new layout that starts in the centre. Every
+    mechanic's cluster is redesigned, Scarab clusters are now Thread
+    clusters, and Delve and Heist clusters are removed. The total is 150
+    points, up from 138.
+  points:
+    - "Maven, Searing Exarch, Eater of Worlds and each of Maven's six Invitations give **2 points** each (was 1). Uber Elder gives **4** (was 1)."
+    - "New generic clusters: Magic, Rare and Unique monsters, Divination Cards, Gold, Maps."
+    - "New keystone **Phantom Anomalies**: Atlas Anomalies appear when you complete Shaped Regions, from any quadrant."
+    - "**Unwavering Vision** reworked: only one Thread type on your maps, 75% of Threads found become Gold, and maps with Threads get 2 extra Threads that can exceed the cap of 8."
+    - "Removed keystones: Crop Rotation, Endless Tide, Lucid Dreams, Meticulous Appraiser, Refiner's Bargain, Synthesised Stability."
+    - "Speaker of the Dead: touch up to 50 monsters while Possessed (was 40), for 30 seconds (was 20)."
+  impact:
+    meaning: >-
+      Every Atlas tree you saved or bookmarked is obsolete. Nothing carries
+      over, so plan to learn the tree again.
+
+
+      The 12 extra points all come from bosses. Those ten boss quests used
+      to give 10 points in total and now give 22. Without the bosses you
+      have the same 128 points as before, so killing Maven, the Eldritch
+      bosses and Uber Elder matters more than it did.
+
+
+      Unwavering Vision is the keystone for single-mechanic farmers: ten
+      Threads of one type per map, at the price of most Thread drops.
+    winners: >-
+      Boss killers, who gain the most points. Players who farm one
+      mechanic. Anyone whose favourite Scarab effect is now a guaranteed
+      tree node.
+    losers: >-
+      Dedicated Delve and Heist players, who lose their clusters.
+      Characters that cannot kill the pinnacle bosses fall 22 points behind.
+    todo: >-
+      Early on, take generic nodes (Maps, Rare monsters) and one secondary
+      mechanic that works without Threads. Add a primary mechanic when you
+      have a steady supply of its Thread.
+    confidence: confirmed
+  official:
+    - "The Atlas Passive Tree has been completely reworked. You now begin at the centre of the tree, and head outwards."
+    - "The total number of Atlas Passive Skill Points you can earn has been increased to 150 (previously 138)."
+    - "The quest reward for defeating the Maven, Searing Exarch, Eater of Worlds and for each of Maven's six special Invitations is now 2 Atlas Skill points. The quest reward for defeating the Uber Elder is now 4."
+    - "Atlas Passive clusters related to Delve and Heist have been removed."
+    - "All Scarab related Atlas Passive clusters have been replaced with Thread related clusters."
+    - "The Unwavering Vision Keystone has been reworked."
+
+- id: shaped-regions-rework
+  category: atlas
+  verdict: rework
+  title: "Shaped Regions now hand out free Threads"
+  image: chaotic-astrolabe
+  figure:
+    image: league-threads
+    caption: "A map inside an Abyss Shaped Region gets a free Abyss Thread. Image: Grinding Gear Games."
+  summary: >-
+    Your Atlas starts with ten Shaped Regions, one per Thread type. Maps
+    inside a region get free Threads of that type. Each time you complete
+    the region's objective in one map, every other map in that region gets
+    one more free Thread.
+  points:
+    - "Completing objectives no longer adds bonus modifiers to the other maps."
+    - "If you have fewer than ten regions, a button in the centre of the Atlas regenerates them all."
+    - "Astrolabes now place a region of their type on a map you choose, with a higher starting number of free Threads. The old region of that type is removed."
+    - "Templar, Fruiting and Deceptive Astrolabes are removed and become a Cryptic Astrolabe."
+    - "Templar Vaults are now Atlas Anomalies that can appear after killing a pinnacle Eldritch boss."
+  impact:
+    meaning: >-
+      This is the engine for the early endgame. You do not need to find or
+      buy Threads to play league mechanics: run the maps inside a Shaped
+      Region, complete its objective, and the neighbouring maps fill up
+      with free Threads.
+
+
+      Astrolabes become a targeting tool. Put the region you care about on
+      top of the maps you like to run.
+    todo: >-
+      When you reach maps, look at which Shaped Region each map sits in
+      before choosing what to run. Clearing a whole region one map at a time
+      makes every later map in it richer.
+    confidence: confirmed
+  official:
+    - "The Shaped Region system has been completely reworked. There are 10 types of Shaped Region, each associated with a specific type of Thread."
+    - "Shaped Regions grant affected Maps free Threads of that type. Successfully completing the Shaped Region objective in each Map increases the free Thread count by 1 in all other Maps affected by that Shaped Region."
+    - "Astrolabes have been changed to add a Shaped Region of the specified type to a specific Map on the Atlas, removing existing Shaped Regions of that type."
+    - "Templar Vaults are now Atlas Anomalies which have a chance to spawn on killing Pinnacle Eldritch Bosses."
+
+- id: loot-rarity-rework
+  category: loot
+  verdict: rework
+  title: "Loot rework: Rarity now decides how good the currency is"
+  image: divine-orb
+  gallery: [scroll-of-wisdom, orb-of-alteration, chaos-orb, exalted-orb, mirror-of-kalandra]
+  summary: >-
+    A monster's Item Rarity now controls which kinds of items it can drop.
+    High Rarity removes Scrolls and cheap currency from the pool and leaves
+    the valuable currency. In exchange, Rare and Unique monsters lose their
+    old penalty to dropping currency.
+  points:
+    - "Scrolls of Wisdom and Portal Scrolls only drop on a \"Normal\" roll."
+    - "**Magic currency** (Transmutation, Alteration, Jeweller's) only drops on a \"Magic\" roll."
+    - "**Rare currency** (Alchemy, Chaos, Divine, Mirror) only drops on a \"Rare\" roll."
+    - "Removed: Magic monsters had 50% less chance, and Rare and Unique monsters 80% less chance, to drop currency and gems."
+    - "High Rarity also gives rarer Divination Cards and, at high level, rarer Uniques."
+    - "Your own Item Rarity is less effective at finding Magic, Rare and Unique items. It now helps find Tiered items."
+  impact:
+    meaning: >-
+      Before this patch, Rarity only changed the colour of equipment, and
+      big monsters were actually bad at dropping currency. Most currency
+      came from killing huge numbers of normal monsters.
+
+
+      Now it is the opposite. A Rare or Unique monster, with its naturally
+      high Rarity, skips the junk and rolls into the Chaos-and-Divine pool.
+      Most valuable currency will come from Rares, Uniques and bosses.
+    winners: >-
+      Builds with strong single-target damage, boss farmers, and content
+      that spawns many Rare monsters. Map modifiers and Atlas nodes that add
+      Rarity or Rare monsters gain value.
+    losers: >-
+      Pure "pack size" strategies that farmed thousands of normal monsters,
+      and characters that wear Item Rarity gear, which does less than
+      before.
+    todo: >-
+      Stop skipping Rare monsters and map bosses. In your filter, Scrolls
+      and low currency will thin out naturally in hard content, so you can
+      hide them later than usual.
+    confidence: confirmed
+  official:
+    - "Fundamentally changed how Items are generated in Path of Exile."
+    - "Item Rarity on monsters and chests has changed to now affect which Drop Pools can be selected."
+    - "Currency item Drop Pools have been split into a Magic Currency and Rare Currency. Magic Currency can only generate if the selected Rarity was Magic, and Rare Currency can only generate if the selected Rarity was Rare."
+    - "We have removed 50% less chance to drop items that can't have rarity from Magic Monsters, and 80% less from Rare and Unique monsters."
+    - "Decreased the efficacy of player Item Rarity on finding Magic, Rare and Unique Rarity items."
+
+- id: quantity-to-atlas-drops
+  category: loot
+  verdict: rework
+  title: "Item Quantity is removed. Maps have Atlas Drops instead."
+  image: cartographers-chisel
+  gallery: [map-tier-16, fragment-of-knowledge, mavens-chisel]
+  summary: >-
+    Almost every source of increased Item Quantity on monsters is removed
+    and replaced with Rarity. On map items, Item Quantity becomes **Atlas
+    Drops** at the same value, which increases maps, Threads and
+    mechanic-specific rewards, not general loot.
+  points:
+    - "1% Atlas Drops = 1% more Maps and Threads found in the area."
+    - "It also raises special drops (Legion Splinters, Conqueror's Exalted Orbs) and league resources (Lifeforce, Hiveblood)."
+    - "Quantity removed from: Rare and Magic monster modifiers, Delirium fog, Sentinels, Opulent Rituals, Tempests, Covetous Shrines, Heist trinkets."
+    - "Shaper, Elder and Conqueror Fragments no longer add Quantity to a map, and are no longer consumed."
+    - "Eldritch and Memory Altar Quantity options are removed; their Rarity options are lower."
+    - "Unidentified maps give +30% Atlas Drops."
+  impact:
+    meaning: >-
+      "Quantity" used to be the master stat: more of everything. It no
+      longer exists in that form. Rolling a hard map still pays, but what it
+      pays in is map sustain, Threads and the rewards of the mechanic you
+      put in. Currency comes from Rarity and from Rare monsters, as the
+      loot entry above explains.
+
+
+      The old habit of filling spare Map Device slots with Fragments for
+      extra Quantity is dead.
+    affected: >-
+      Any farming guide from 3.29 that says "stack quantity" needs to be
+      re-read. Item Quantity on your gear is not mentioned in the notes, so
+      treat old magic-find setups as untested.
+    todo: >-
+      Keep rolling maps for high modifier counts if you farm a league
+      mechanic, because its rewards scale with Atlas Drops. Running maps
+      unidentified is a free 30%.
+    confidence: confirmed
+  official:
+    - "Rare and Magic Monster modifiers no longer add Quantity of Items Dropped to Monsters. The amount of Rarity granted has been increased."
+    - "Replaced Item Quantity on Map Modifiers with Atlas Drops at the same values."
+    - "Each percentage of increased Atlas Drops increases the quantity of Maps and Threads found in the area by 1%."
+    - "Shaper, Elder and Conqueror Fragments no longer grant increased Item Quantity to Maps, and will no longer be consumed when used along with a Map."
+    - "The Eldritch and Memory Trace Altars that granted increased Quantity of Items found have been removed."
+
+- id: fractured-items-rarer
+  category: crafting
+  verdict: nerf
+  title: "Fractured items come from far fewer places"
+  image: fracturing-orb
+  summary: >-
+    Legion, Ritual, Heist, Blight, Delirium, Delve and Incursion no longer
+    drop fractured items, and several other sources are removed. The new
+    main source is Tier 5 items, which have a chance to drop as fractured
+    Magic items.
+  impact:
+    meaning: >-
+      A fractured item has one modifier locked in place, which makes it the
+      starting point of many crafts. They used to pour out of league
+      mechanics. Now they are tied to the new Item Tier system, which
+      depends on monster Rarity.
+    losers: >-
+      SSF players and budget crafters, who picked fractured bases off the
+      ground for Essence or Harvest crafting.
+    affected: >-
+      Expect fractured bases with a wanted modifier, and
+      [[Fracturing Orb]], to be more expensive than last league. This is a
+      prediction: early prices are not settled.
+    todo: >-
+      Show Tier 5 Magic and Rare items in your loot filter and check them
+      for a useful fractured modifier.
+    confidence: prediction
+  official:
+    - "Tier 5 items have a chance to drop as Fractured Magic items."
+    - "Removed many sources of Fractured Items dropping, primarily from League Mechanics such as Legion, Ritual, Heist, Blight, Delirium, Delve and Incursion."
+    - "Removed the random Rare monster modifier conversion for all Items dropping as Fractured."
+    - "The Forgotten and The Feared Maven Invitations no longer drop bonus Fractured rare items."
+
+- id: incursion-atziri-rework
+  category: mechanics
+  verdict: rework
+  title: "Incursion: Atziri moves into the Temple"
+  image: icon-incursion
+  gallery: [royal-visage, soul-core-of-might, vial-of-fate, mortal-hope, sacrifice-at-midnight]
+  summary: >-
+    Atziri replaces the Vaal Omnitect as the boss of the Temple of Atzoatl.
+    Sacrifice and Mortal Fragments, the Alluring Abyss and all Vials are
+    removed. Double corruption in the Temple now works as a second
+    corruption on an already corrupted item.
+  points:
+    - "A Temple with the **Cradle of Creation** room (the old Throne of Atziri) is area level 84 and contains Uber Atziri."
+    - "Uniques that needed Vials now drop inside Temples that have a Cradle of Creation."
+    - "**Altar of Corruption and Lapidary Lens** corrupt an item or gem a second time (\"Twice Corrupted\"). Both can now destroy the item."
+    - "Atziri fight: no pausing, no immunity phases, healing adds after each split. The mirror clone reflects 15% of damage (was 100%)."
+    - "Mortal Fragments convert to [[Royal Visage]]. Sacrifice Fragments stay but do nothing."
+    - "Vaal side areas no longer appear in maps. The Vaal Orb recipe is now 5 Vaal skill gems."
+  impact:
+    meaning: >-
+      The reflect clone was the famous one-shot of the Atziri fight. At 15%
+      it is a mistake you survive, so the fight is much friendlier to new
+      players and to high-damage builds.
+
+
+      Double corruption gains a step of control. You can corrupt an item
+      with a Vaal Orb first, look at the result, and bring it to the Temple
+      for the second corruption only if the first one was good. The price is
+      that the second step can destroy the item.
+
+
+      Farming Sacrifice Fragments and running Atziri from the Map Device,
+      a classic early-league income, no longer exists.
+    winners: >-
+      Players who build Temples on purpose: the Cradle of Creation raises
+      the whole Temple to level 84 with stronger rewards.
+    losers: >-
+      Anyone who sold Sacrifice Fragment sets or Vials for early currency.
+    confidence: confirmed
+  official:
+    - "Atziri has taken up residence in the Temple of Atzoatl, evicting the Vaal Omnitect."
+    - "While the Temple of Atzoatl contains the Cradle of Creation room, it will be area level 84 and contain Uber Atziri."
+    - "The Altar of Corruption and Lapidary Lens have been changed to instead Corrupt an Equipment Item or Gem a second time."
+    - "The mirror clone now passively reflects 15% of Physical and Elemental Damage taken to the attacker (previously 100%)."
+    - "Sacrifice and Mortal Fragments have been removed. The Alluring Abyss is no longer on the Atlas."
+    - "Vaal Side Areas can no longer be found in Maps."
+
+- id: harvest-rework
+  category: mechanics
+  verdict: rework
+  title: "Harvest happens in the map, with no Sacred Grove"
+  image: atlas-harvest
+  gallery: [wild-lifeforce, vivid-lifeforce, primal-lifeforce]
+  summary: >-
+    The Sacred Grove portal is gone. Sacred Flora now grow in the map
+    itself. Click one, kill the monsters that come out of its roots for
+    Lifeforce, and the plant releases Wildwood Wisps of its colour into the
+    rest of the map.
+  points:
+    - "Each Flora is Wild, Primal or Vivid."
+    - "In high-tier maps a Flora can be a Sacred Specimen, which spawns a Harvest boss."
+    - "Lifeforce drops in bigger stacks. Total Lifeforce is meant to be about the same."
+    - "Changing a resistance modifier costs 300 Lifeforce of **two** types (was 500 of one)."
+    - "The Divination Card gamble costs 1,000 of each of the three types (was 1,500 Vivid)."
+  impact:
+    meaning: >-
+      Harvest is faster: no loading screen, no choosing between two plots.
+      The wisps are a new bonus. They empower monsters in the rest of the
+      map, so the order you clear in now matters.
+
+
+      Crafts now cost two colours of Lifeforce, so you cannot farm a single
+      colour and convert it into every craft.
+    todo: >-
+      Open Sacred Flora early in the map, before you clear the rest, so the
+      released wisps land on monsters that are still alive.
+    confidence: confirmed
+  official:
+    - "Harvest encounters have been reworked to no longer be within a specific subarea. Instead, a number of Sacred Flora can spawn within a Map."
+    - "Once the majority of the Sacred Fauna have been slain, the Sacred Flora will discharge Wildwood Wisps matching the colour of the Flora into the rest of the area."
+    - "Harvest Monsters now drop Lifeforce in higher stack sizes. The intention is that the amount of Lifeforce you gain is similar to before."
+    - "Horticrafting crafts that change one type of Resistance into another now cost 300 Lifeforce of two different types (previously 500 of one type)."
+
+- id: mirage-goes-core
+  category: mechanics
+  verdict: mixed
+  title: "Mirage is now a permanent part of the game"
+  image: icon-mirage
+  gallery: [black-barya, refracting-fog, afarud-crystal, heroic-tragedy]
+  summary: >-
+    Last league's mechanic stays. Mirages can appear in any map, or come
+    from a new map modifier. A Mirage now covers the whole map. Saresh is
+    "significantly more difficult", and the Djinn Coins are removed.
+  points:
+    - "[[The Black Barya]] appears on the Atlas in all leagues, at area level 84."
+    - "[[Refracting Fog]] can drop from Delirium bosses in Tier 14+ maps."
+    - "Sigils on Djinn wishes have new effects, for example 100% more Astral Anomalies."
+    - "The [[Heroic Tragedy]] jewel now drops from Olroth, and three of its passives are weaker."
+    - "Djinn-Touched Vaal Orbs make an item Twice Corrupted."
+    - "New Afarud Enshrouding Crystal for unique quivers."
+  impact:
+    meaning: >-
+      A Mirage covering the whole map means you effectively clear the map a
+      second time, so it rewards builds with fast clear.
+
+
+      The Heroic Tragedy nerfs hit Ward builds: less Ward restored on flask
+      use, and Celestial Mathematics gives 15% of Ward as added cold damage,
+      down from 25%.
+    losers: >-
+      Ward-stacking builds that used Heroic Tragedy last league.
+    confidence: confirmed
+  official:
+    - "Mirages can now be found in Map Areas. The Black Barya can now appear on the Atlas in all Leagues."
+    - "The Saresh, of the Weeping Black fight has been made significantly more difficult."
+    - "Coins of Restoration and Desecration are no longer obtainable, and existing items will be deleted upon logging in."
+    - "The Celestial Mathematics Keystone Passive now gains Added Cold Damage equal to 15% of Ward (previously 25%)."
+    - "The Forgotten Afarud Commander no longer drops the Heroic Tragedy. It instead has a chance to drop from Olroth, Origin of the Fall."
+
+- id: delirium-orb-rework
+  category: mechanics
+  verdict: rework
+  title: "Delirium Orbs roll a random strength"
+  image: delirium-orb
+  gallery: [atlas-delirium, simulacrum-splinter]
+  summary: >-
+    A [[Delirium Orb]] no longer adds a fixed 20% layer as an enchantment.
+    It now reforges a Rare map with a Delirious modifier of 5% to 50%. More
+    orbs of the same type add up, to a maximum of 100%.
+  points:
+    - "One reward of the orb's type, plus one more per 20% Delirious."
+    - "Using a different reward type resets the percentage."
+    - "Delirium Mirrors in maps: fog spreads faster and lasts longer, with more Orbs, Cluster Jewels and Splinters, and a chance of 1–3 bonus rewards."
+    - "Skittering Delirium Orb is renamed Threaded Delirium Orb and gives Threads."
+  impact:
+    meaning: >-
+      A fully delirious map used to cost exactly five orbs. Now it can take
+      two lucky orbs or many unlucky ones.
+
+
+      The notes say the orb "reforges" the map. The safe reading is that
+      applying one rerolls the map's other modifiers too, so you cannot
+      roll a perfect map first and add Delirium afterwards. Test this on a
+      cheap map before you commit.
+    todo: >-
+      Apply Delirium Orbs first, then judge the map modifiers you ended up
+      with.
+    confidence: prediction
+  official:
+    - "Delirium Orbs no longer apply enchantments to Maps. Instead they reforge rare Map items with an explicit modifier making players in the area Delirious."
+    - "Each Delirium Orb applies between 5 to 50% Delirious percentage. Applying multiple Delirium Orbs of the same type will add to the current Delirious percentage, up to 100%."
+    - "Delirium Orbed Maps have one reward of the specified type and an additional reward of that type for every 20% Delirious Percentage."
+
+- id: beyond-rework
+  category: mechanics
+  verdict: buff
+  title: "Beyond: Demonic Evocators and demon realms"
+  image: atlas-beyond
+  gallery: [tainted-chaos-orb]
+  summary: >-
+    Maps can now start with a Demonic Evocator. Click it and monsters in the
+    map can open Beyond portals when they die. Killing a Beyond boss can
+    reveal an entrance to that demon's realm.
+  points:
+    - "Portals keep spawning after the Beyond boss dies."
+    - "Unique monsters can spawn several portals."
+    - "Beyond monsters drop more Tainted currency."
+    - "Killing a Beyond boss gives you Demonic Power for 60 seconds."
+    - "Three map modifiers can add an Evocator of Beidat, K'Tash or Ghorr."
+  impact:
+    meaning: >-
+      Beyond used to stop paying out once its boss appeared. Now it keeps
+      going for the whole map, and it is opt-in: you choose to touch the
+      Evocator. It adds a lot of monsters, so only do it when your
+      character handles the map comfortably.
+    confidence: confirmed
+  official:
+    - "Map areas now have a chance to spawn a Demonic Evocator at the start of the area. Interacting with a Demonic Evocator causes monsters in the area to be able to spawn Beyond portals on death."
+    - "Slaying Beyond Bosses in Maps now has a chance to reveal an entrance to a Demonic realm associated with that slain Beyond Boss."
+    - "Beyond Portals no longer stop spawning when slaying enemies after a Beyond Boss has been defeated in an area."
+
+- id: betrayal-rewards
+  category: mechanics
+  verdict: rework
+  title: "Betrayal safehouse rewards replaced"
+  image: icon-betrayal
+  gallery: [allflame-kulemak, veiled-chaos-orb, ancient-orb]
+  summary: >-
+    Syndicate members that gave Scarab chests now give Allflame Embers,
+    Threads or Unique items. Catarina always drops one of three Allflame
+    Embers.
+  points:
+    - "Intervention: trapped stashes of one class of Unique item (for example Unique Axes)."
+    - "Other safehouses that gave Scarabs: chests with a specific Allflame Ember."
+    - "Rin: Threads in both Research and Fortification."
+    - "Riker in Fortification: Ancient Orbs."
+    - "Vorici in Research: quality skill gems with a Soul Core applied."
+    - "Veiled items no longer come from content outside Betrayal."
+  impact:
+    meaning: >-
+      "Scarab Intervention" was one of the most reliable currency farms in
+      the game. It is gone, and its replacement is random Unique items,
+      which are worth far less on average. Rin becomes the member to place
+      if you want Threads.
+    losers: >-
+      Betrayal farmers who ran Intervention boards for Scarabs.
+    todo: >-
+      If you play Betrayal, rebuild your board plan: Rin for Threads, Riker
+      in Fortification for Ancient Orbs, and the Allflame Ember members you
+      can sell.
+    confidence: confirmed
+  official:
+    - "All Immortal Syndicate members within an Intervention Safehouse will now reward a trapped stash containing a specific class of Unique items, instead of chests containing Scarabs."
+    - "Syndicate Rewards in non-Intervention Safehouses that previously gave chests containing Scarabs, instead now grant chests containing a specific Allflame Ember."
+    - "Rin's Research reward is now a trapped stash containing different Threads."
+    - "Catarina now always drops either an Allflame Ember of Propagation, of Kulemak or of the Ethereal."
+    - "Veiled Items have been removed as reward outcomes from non-Betrayal content."
+
+- id: bestiary-yellow-beasts
+  category: mechanics
+  verdict: rework
+  title: "Bestiary: yellow beasts are no longer captured"
+  image: atlas-bestiary
+  summary: >-
+    Einhar only captures red beasts and bosses now. Yellow beasts still
+    spawn and must be killed, but they are not stored and no recipe needs
+    them. Flask crafts cost any red beast.
+  impact:
+    meaning: >-
+      Your Menagerie stops filling with beasts you never use, which is a
+      clear quality-of-life gain. The trade-off is flask crafting: adding a
+      modifier to a flask used cheap yellow beasts, and now uses a red
+      beast, which is rarer.
+    todo: >-
+      Early in the league, craft flask modifiers with the crafting bench or
+      Orbs of Alteration, and save red beasts for the valuable recipes.
+    confidence: confirmed
+  official:
+    - "Yellow beasts in your Maps are no longer captured by Einhar."
+    - "As Yellow Beasts are no longer captured, they are no longer a requirement for any Beastcrafting Recipes."
+    - "Beastcrafting options to add Modifiers to Flasks now require any Red Beast to use."
+    - "Existing Yellow Beasts in your Menagerie will be deleted upon logging in."
+
+- id: gwennen-take-a-chance
+  category: mechanics
+  verdict: rework
+  title: "Gwennen no longer sells gambles"
+  image: astragali
+  gallery: [atlas-expedition]
+  summary: >-
+    You can no longer gamble for items with Gwennen. For one [[Astragali]]
+    she now offers to "take a chance" on one of your Rare items: three
+    pairs of crafting options, you pick a pair, and a coin flip decides
+    which of the two is applied.
+  impact:
+    meaning: >-
+      Gambling specific base types with Gwennen was how players chased
+      top-end Uniques such as Mageblood and Headhunter without finding
+      them. That route is closed.
+
+
+      The new service is a crafting gamble on gear you already own. Each
+      pair also costs Broken Circle Artifacts.
+    affected: >-
+      With Gwennen gone, the improved Orb of Chance (below) becomes the way
+      to target a specific Unique.
+    confidence: confirmed
+  official:
+    - "You can no longer Gamble for items with Gwennen. She instead now offers a new service inviting you to 'take a chance' on one of your Rare equipment items, at the cost of one Astragali."
+    - "You'll be presented with three sets of two crafting options. Selecting a set causes Gwennen to flip her coin, randomly applying one of the crafting options to your item."
+
+- id: orb-of-chance-rework
+  category: crafting
+  verdict: rework
+  title: "Orb of Chance is rare, and actually works"
+  image: orb-of-chance
+  summary: >-
+    An [[Orb of Chance]] now has a "significantly increased" chance of
+    producing a Unique item. To balance that, the orbs are much rarer,
+    vendors no longer sell them, and they no longer drop in large stacks.
+  points:
+    - "Bench crafts that cost Orbs of Chance now cost Orbs of Alteration."
+    - "The four-rarity vendor recipe gives 1 Orb of Chance (was 5)."
+    - "Higher Gold fee on the Currency Exchange."
+  impact:
+    meaning: >-
+      For years the Orb of Chance was a lottery ticket you spent without
+      thinking. It is now a real crafting currency: use it on a specific
+      base type when you want that base's Unique.
+    todo: >-
+      Do not use Orbs of Chance on random items or sell them cheaply in the
+      first days. Save them for a base whose Unique your build wants.
+    confidence: confirmed
+  official:
+    - "Significantly increased the chances to get a Unique Item from an Orb of Chance."
+    - "Orbs of Chance are now much rarer, and are no longer offered by Vendors."
+    - "Orbs of Chance no longer drop at higher stack sizes in higher level areas."
+    - "Crafting Bench Options that cost Orbs of Chance now cost an equivalent amount of Orbs of Alteration."
+
+- id: meta-crafting-costs
+  category: crafting
+  verdict: mixed
+  title: "Meta-crafting: cheaper to protect one modifier, dearer to protect all"
+  image: sacred-orb
+  gallery: [divine-orb, blessed-orb, exalted-orb]
+  summary: >-
+    Four new bench crafts protect only one or two prefixes or suffixes, for
+    1 or 2 Divine Orbs. The full "Prefixes cannot be changed" and "Suffixes
+    cannot be changed" crafts now cost 4 Divine Orbs plus a second currency
+    that depends on the item.
+  points:
+    - "Weapons: 4 Divine + 1 [[Sacred Orb]]."
+    - "Armour and quivers: 4 Divine + 4 Blessed Orbs."
+    - "Jewellery: 4 Divine + 8 Exalted Orbs."
+    - "Meta-modifier recipes are now found in Nightmare Maps. Unique Maps no longer hold crafting recipes."
+    - "Sacred Orbs are more common."
+  impact:
+    meaning: >-
+      Protecting a whole side of an item roughly doubles in price. The new
+      single-modifier crafts open cheaper, more precise steps: lock the one
+      modifier you care about for a single Divine and reroll the rest.
+    affected: >-
+      Every crafting guide that prices a step at "2 Divine for prefixes
+      cannot be changed" is out of date.
+    confidence: confirmed
+  official:
+    - "Added four new Meta-Crafting Bench options: 1 or 2 Prefix or Suffix Modifiers cannot be changed, for a cost of 1 or 2 Divine Orbs."
+    - "Prefixes/Suffixes cannot be changed on Weapons now has a cost of 4 Divine Orbs and 1 Sacred Orb; on Armour and Quivers 4 Divine Orbs and 4 Blessed Orbs; on Jewellery 4 Divine Orbs and 8 Exalted Orbs."
+    - "Crafting Recipes are no longer found in Unique Maps. Crafting Recipes for all Meta-Modifiers have been moved to Nightmare Maps."
+
+- id: mercenary-nerfs
+  category: mercenaries
+  verdict: nerf
+  title: "Mercenaries lose damage and need resistances"
+  image: icon-mercenary
+  gallery: [atlas-mercenaries, kalandras-touch]
+  summary: >-
+    Hired Mercenaries deal up to 20% less attack damage at level 83, and
+    now have resistance penalties: -30% to all resistances in level 46–67
+    areas, and -60% in level 68+ areas.
+  points:
+    - "More life, less damage reduction at high level."
+    - "Mercenaries cannot use Kalandra's Touch."
+    - "Untouched Soul and Screams of the Desiccated no longer work on Mercenaries."
+    - "Several Mercenary support gems adjusted, some up and some down."
+  impact:
+    meaning: >-
+      Mercenaries now follow the same resistance rules as players, so one
+      with no resistances on its gear will die in maps. They are tuned to
+      be helpers again, not the main source of your damage.
+    losers: >-
+      "Mercenary carry" builds, where the player buffed a Mercenary that
+      did the killing.
+    todo: >-
+      When you gear a Mercenary for maps, cap its elemental resistances
+      first, the same way you would for your own character.
+    confidence: confirmed
+  official:
+    - "Hired Mercenaries now have lower Attack Damage scaling at high levels, dealing up to 20% less Attack Damage at level 83."
+    - "They receive -30% to all Resistances in level 46-67 Areas, and -60% to all Resistances in level 68+ Areas and Hideouts."
+    - "Mercenaries can no longer equip or spawn with the Kalandra's Touch Unique Ring."
+
+- id: heist-delve-access
+  category: mechanics
+  verdict: rework
+  title: "Heist and Delve: no random spawns, new ways in"
+  image: atlas-heist
+  gallery: [rogues-marker, atlas-delve]
+  summary: >-
+    Smuggler's Caches and Sulphite Veins no longer appear at random.
+    Certain maps always have them. Rogue's Markers, Contracts and
+    Blueprints stop dropping from normal monsters, and Whakano sells
+    Contracts for Gold from level 68.
+  points:
+    - "Sulphite Veins give up to 50% more Sulphite and are always guarded."
+    - "Caches give more Blueprints and Markers. Blueprints from these maps can have special implicit modifiers."
+    - "Heist targets sell to Faustus for up to twice as many Markers."
+    - "Level 68+ Contracts can award a free Blueprint reveal."
+    - "The Delve and Heist Atlas clusters are removed."
+  impact:
+    meaning: >-
+      You no longer pile up Sulphite and Contracts by accident. If you want
+      to Delve or Heist, you run the maps that feed it, or buy Contracts
+      from Whakano with Gold. If you do not, they stay out of your way.
+    todo: >-
+      Heist is a strong early-league earner. To start it, check Whakano's
+      Gold shop once you are level 68.
+    confidence: confirmed
+  official:
+    - "Smuggler's Caches and Sulphite Deposits no longer have a random chance to spawn in Map areas."
+    - "Several specific Maps on the Atlas now always spawn Sulphite Veins, or Smuggler's Caches."
+    - "Whakano now sells Contracts and rarely Blueprints for Gold once you are level 68 or higher."
+    - "Rogue Markers, Contracts and Blueprints are no longer part of the core drop pool."
+
+- id: map-pool-rotation
+  category: endgame
+  verdict: mixed
+  title: "31 maps return to the Atlas, 31 leave"
+  image: crimson-temple-map
+  summary: >-
+    The set of maps on the Atlas changes. Crimson Temple, Defiled Cathedral,
+    Underground Sea, Mud Geyser and 27 others are back. Toxic Sewer, Atoll,
+    Beach, Cells and 27 others are removed.
+  points:
+    - "**Added:** Academy, Ancient City, Armoury, Barrows, Bone Crypt, Carcass, Castle Ruins, Coves, Crimson Temple, Cursed Crypt, Defiled Cathedral, Dig, Dungeon, Maze, Moon Temple, Mud Geyser, Necropolis, Overgrown Ruin, Pen, Peninsula, Racecourse, Scriptorium, Sepulchre, Shore, Spider Forest, Thicket, Underground River, Underground Sea, Villa, Waste Pool, Wasteland."
+    - "**Removed:** Alleyways, Arachnid Tomb, Arsenal, Atoll, Bazaar, Beach, Bramble Valley, Cells, Chateau, Courthouse, Dark Forest, Estuary, Flooded Mine, Forbidden Woods, Forking River, Foundry, Frozen Cabins, Gardens, Ghetto, Infested Valley, Ivory Temple, Lair, Orchard, Pier, Plaza, Primordial Blocks, Shipyard, Stagnation, Toxic Sewer, Vault, Waterways."
+  impact:
+    meaning: >-
+      Each map has its own layout, boss and Divination Cards, so the "best
+      map to farm" changes every time the pool rotates. Guides that name a
+      removed map no longer apply, and cards that only drop in a removed
+      map become unobtainable this league.
+    todo: >-
+      Before following a farming guide, check that its map is on this
+      league's Atlas.
+    confidence: confirmed
+  official:
+    - "31 Maps have been added back to the Atlas, and 31 Maps have been removed from the Atlas."

@@ -1,0 +1,135 @@
+---
+import Detail from '../Detail.astro';
+import GameImage from '../GameImage.astro';
+import Popup from '../Popup.astro';
+import Rich from '../Rich.astro';
+import Tag from '../Tag.astro';
+import { t, type Locale } from '../../i18n';
+import type { ChangelogEntry } from '../../lib/changelog';
+
+interface Props {
+  entry: ChangelogEntry;
+  league: string;
+  locale: Locale;
+}
+const { entry, league, locale } = Astro.props;
+const popupId = `impact-${entry.id}`;
+const impactParts = [
+  { key: 'meaning', text: entry.impact.meaning },
+  { key: 'winners', text: entry.impact.winners },
+  { key: 'losers', text: entry.impact.losers },
+  { key: 'affected', text: entry.impact.affected },
+  { key: 'todo', text: entry.impact.todo },
+].filter((part): part is { key: string; text: string } => Boolean(part.text));
+---
+<article class="entry" id={entry.id} data-entry data-category={entry.category}>
+  <GameImage id={entry.image} size={64} where={entry.where} class="entry__image" />
+  <div class="entry__main">
+    <header class="entry__head">
+      <div>
+        <div class="eyebrow">{t(locale, `category.${entry.category}`)}</div>
+        <h3><a href={`#${entry.id}`}>{entry.title}</a></h3>
+      </div>
+      <Tag kind={entry.verdict} label={t(locale, `verdict.${entry.verdict}`)} />
+    </header>
+
+    <Rich text={entry.summary} league={league} where={entry.where} class="entry__summary" />
+
+    {entry.points && (
+      <ul class="entry__points">
+        {entry.points.map((point) => <li><Rich text={point} league={league} where={entry.where} inline /></li>)}
+      </ul>
+    )}
+
+    {entry.figure && (
+      <figure class="entry__figure">
+        <GameImage id={entry.figure.image} alt={entry.figure.caption} where={entry.where} class="game-image--cover" />
+        <figcaption>{entry.figure.caption}</figcaption>
+      </figure>
+    )}
+
+    {entry.gallery && (
+      <div class="entry__gallery">
+        {entry.gallery.map((id) => <GameImage id={id} size={40} where={entry.where} />)}
+      </div>
+    )}
+
+    <div class="entry__actions">
+      <button type="button" class="link-btn" popovertarget={popupId}>{t(locale, 'common.impact')}</button>
+      <span class="entry__hint">{t(locale, 'changelog.impactHint')}</span>
+    </div>
+
+    <Detail summary={t(locale, 'changelog.official', { count: entry.official.length })}>
+      <ul class="entry__official">
+        {entry.official.map((line) => <li>{line}</li>)}
+      </ul>
+    </Detail>
+  </div>
+
+  <Popup id={popupId} title={entry.title} eyebrow={t(locale, 'common.impact')} locale={locale}>
+    {impactParts.map((part) => (
+      <section class="impact-part">
+        <h4>{t(locale, `impact.${part.key}`)}</h4>
+        <Rich text={part.text} league={league} where={entry.where} />
+      </section>
+    ))}
+    <p class="impact-confidence">
+      <Tag kind={entry.impact.confidence === 'confirmed' ? 'buff' : 'rework'} label={t(locale, `common.${entry.impact.confidence}`)} />
+      <span>{t(locale, `impact.confidence.${entry.impact.confidence}`)}</span>
+    </p>
+  </Popup>
+</article>
+
+<style>
+  .entry {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .entry[hidden] { display: none; }
+  .entry__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 0.55rem; }
+  .entry__head h3 { font-size: 1.3rem; margin-top: 0.2rem; }
+  .entry__head h3 a { color: inherit; text-decoration: none; }
+  .entry__head h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .entry__main { max-width: var(--measure); }
+  .entry__points { margin: 0.7rem 0 0; font-size: 0.96rem; }
+  .entry__points li::marker { color: var(--text-muted); }
+  .entry__figure { margin: 1rem 0 0; }
+  .entry__figure :global(.game-image) { display: block; width: 100%; }
+  .entry__figure figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem; }
+  .entry__gallery { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+  .entry__actions { display: flex; align-items: baseline; gap: 0.75rem; margin: 0.95rem 0 0.9rem; }
+  .entry__hint { font-size: 0.85rem; color: var(--text-muted); }
+  .entry__official { margin: 0; font-size: 0.88rem; color: var(--text-muted); }
+  .entry__official li { margin: 0.35em 0; }
+
+  .impact-part + .impact-part { margin-top: 1.1rem; }
+  .impact-part h4 {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+  .impact-confidence {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .entry { grid-template-columns: 44px minmax(0, 1fr); gap: 0.9rem; padding: 1.3rem 0; }
+    .entry :global(.entry__image) { width: 44px !important; height: 44px !important; }
+    .entry__head h3 { font-size: 1.15rem; }
+    .entry__hint { display: none; }
+  }
+</style>

@@ -1,0 +1,119 @@
+---
+import { t, type Locale } from '../../i18n';
+import type { Category, Section } from '../../lib/changelog';
+
+interface Props {
+  locale: Locale;
+  counts: Record<Section, number>;
+  /** Categories that appear at least once, in display order. */
+  categories: Category[];
+}
+const { locale, counts, categories } = Astro.props;
+const sections: Section[] = ['big', 'small', 'new'];
+---
+<div class="section-bar" data-section-bar>
+  <div class="container section-bar__inner">
+    <nav class="section-bar__sections" aria-label={t(locale, 'changelog.sections')}>
+      {sections.map((section) => (
+        <a href={`#section-${section}`}>
+          {t(locale, `changelog.section.${section}`)}
+          <span class="count" data-count={section}>{counts[section]}</span>
+        </a>
+      ))}
+    </nav>
+    <div class="section-bar__filter" role="group" aria-label={t(locale, 'changelog.filter')}>
+      <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">{t(locale, 'changelog.all')}</button>
+      {categories.map((category) => (
+        <button type="button" class="chip" data-filter={category} aria-pressed="false">{t(locale, `category.${category}`)}</button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Category filter: hides entries of other categories and updates the counts.
+  function applyFilter(filter: string) {
+    for (const chip of document.querySelectorAll<HTMLElement>('[data-section-bar] [data-filter]')) {
+      const active = chip.dataset.filter === filter;
+      chip.classList.toggle('is-active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    }
+    for (const section of document.querySelectorAll<HTMLElement>('[data-section]')) {
+      let visible = 0;
+      for (const entry of section.querySelectorAll<HTMLElement>('[data-entry]')) {
+        const show = filter === 'all' || entry.dataset.category === filter;
+        entry.hidden = !show;
+        if (show) visible += 1;
+      }
+      const empty = section.querySelector<HTMLElement>('[data-empty]');
+      if (empty) empty.hidden = visible > 0;
+      const count = document.querySelector<HTMLElement>(`[data-count="${section.dataset.section}"]`);
+      if (count) count.textContent = String(visible);
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    const chip = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-section-bar] [data-filter]') : null;
+    if (chip?.dataset.filter) applyFilter(chip.dataset.filter);
+  });
+</script>
+
+<style>
+  .section-bar {
+    position: sticky;
+    top: var(--header-h, 3.8rem);
+    z-index: 10;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .section-bar__inner { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.7rem; padding-bottom: 0.7rem; }
+  .section-bar__sections { display: flex; gap: 1.5rem; }
+  .section-bar__sections a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .section-bar__sections a:hover { color: var(--accent); }
+  .count {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    padding: 0 0.42rem;
+    line-height: 1.5;
+    min-width: 1.6rem;
+    text-align: center;
+  }
+  .section-bar__filter { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .section-bar__filter::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.22rem 0.65rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .chip:hover { color: var(--text); background: var(--surface-2); }
+  .chip.is-active { background: var(--text); border-color: var(--text); color: var(--bg); }
+
+  @media (max-width: 720px) {
+    .section-bar { top: 0; }
+    .section-bar__sections { gap: 1rem; overflow-x: auto; }
+    .section-bar__filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
+    .section-bar__sections a { font-size: 0.98rem; }
+  }
+</style>

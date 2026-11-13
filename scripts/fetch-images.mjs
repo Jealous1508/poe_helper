@@ -1,10 +1,12 @@
 // Downloads every image in src/data/images.json that is not on disk yet,
 // converts it to WebP and records its size. Safe to re-run.
 //
-// Manifest entry:  "<id>": { "source": "<image url>" }
-//             or:  "<id>": { "poedb": "<poedb.tw page name>" }   (icon is looked up on that page)
-// Optional:        "league": "3.30" (folder, defaults to "shared"), "maxWidth": 1600, "credit": "..."
-// The script fills in "source" (for poedb entries), "file", "width" and "height".
+// A manifest entry names where the picture comes from, one of:
+//   "<id>": { "trade": "Exact Item Name" }   official trade-site icon (currency, fragments, essences, ...)
+//   "<id>": { "poedb": "Page_Name" }         icon looked up on that poedb.tw page (gems, uniques, new items)
+//   "<id>": { "source": "https://..." }      direct image URL
+// Optional: "league": "3.30" (folder, defaults to "shared"), "maxWidth": 1600, "credit": "..."
+// The script fills in "source", "file", "width" and "height".
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import sharp from 'sharp';
@@ -21,12 +23,32 @@ async function get(url) {
   return res;
 }
 
+let tradeIcons;
+async function iconFromTrade(name) {
+  if (!tradeIcons) {
+    const data = await (await get('https://www.pathofexile.com/api/trade/data/static')).json();
+    tradeIcons = new Map();
+    for (const group of data.result) {
+      for (const entry of group.entries) if (entry.image) tradeIcons.set(entry.text.toLowerCase(), entry.image);
+    }
+  }
+  const path = tradeIcons.get(name.toLowerCase());
+  if (!path) throw new Error(`"${name}" is not in the official trade data`);
+  return path.startsWith('http') ? path : `https://web.poecdn.com${path}`;
+}
+
 async function iconFromPoedb(page) {
   const html = await (await get(`https://poedb.tw/us/${page}`)).text();
+  const decode = (url) => url.replaceAll('&amp;', '&');
+  // Brand-new items are shown with the official promo picture.
+  const promo = html.match(/<img[^>]+src="(https:\/\/[^"]+\/promo\/[^"]*\/items\/[^"]+)"/);
+  if (promo) return decode(promo[1]);
+  // The page's share image is the item icon when it points into 2DItems.
   const og = html.match(/<meta property="og:image" content="([^"]+)"/);
+  if (og && og[1].includes('/2DItems/')) return og[1];
+  const inline = html.match(/<img[^>]+src="(https:\/\/[^"]+\/2DItems\/(?!Effects\/)[^"]+)"/);
+  if (inline) return decode(inline[1]);
   if (og) return og[1];
-  const img = html.match(/<img[^>]+src="(https:\/\/[^"]+(?:\/2DItems\/|\/promo\/[^"]*\/items\/)[^"]+)"/);
-  if (img) return img[1].replaceAll('&amp;', '&');
   throw new Error(`no icon found on poedb page "${page}"`);
 }
 
@@ -37,9 +59,11 @@ for (const [id, entry] of Object.entries(manifest)) {
   if (entry.file && existsSync(target) && entry.width) continue;
   try {
     if (!entry.source) {
-      if (!entry.poedb) throw new Error('entry has neither "source" nor "poedb"');
-      entry.source = await iconFromPoedb(entry.poedb);
-      await sleep(250);
+      if (entry.trade) entry.source = await iconFromTrade(entry.trade);
+      else if (entry.poedb) {
+        entry.source = await iconFromPoedb(entry.poedb);
+        await sleep(250);
+      } else throw new Error('entry needs "trade", "poedb" or "source"');
     }
     const input = Buffer.from(await (await get(entry.source)).arrayBuffer());
     let pipeline = sharp(input);
@@ -49,8 +73,8 @@ for (const [id, entry] of Object.entries(manifest)) {
     writeFileSync(target, data);
     Object.assign(entry, { file, width: info.width, height: info.height });
     done += 1;
-    console.log(`ok   ${id}  ${info.width}x${info.height}  ${(data.length / 1024).toFixed(1)} KB`);
-    await sleep(150);
+    console.log(`ok   ${id}  ${info.width}x${info.height}  ${(data.length / 1024).toFixed(1)} KB  ${entry.source.split('/').pop().split('?')[0]}`);
+    await sleep(120);
   } catch (error) {
     failures.push(`${id}: ${error.message}`);
     console.log(`FAIL ${id}: ${error.message}`);

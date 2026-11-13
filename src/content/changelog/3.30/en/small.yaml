@@ -1,0 +1,896 @@
+# Small changes: number tweaks and adjustments.
+# "official" lines are shortened from the official patch notes.
+
+- id: pathfinder-flask-changes
+  category: ascendancy
+  verdict: mixed
+  title: "Pathfinder: three flask notables changed"
+  image: asc-pathfinder
+  gallery: [bismuth-flask, diamond-flask, amethyst-flask, divine-life-flask]
+  summary: >-
+    [[Pathfinder]] keeps its identity but three notables work differently.
+    Life flasks now heal the full amount more slowly, flasks cleanse every
+    ailment, and Master Distiller trades critical strike chance for critical
+    strike multiplier.
+  points:
+    - "**Master Surgeon:** 50% less Life Flask Recovery *Rate* (was 50% less Life *Recovery* from Flasks)."
+    - "**Master Alchemist:** removes all Ailments on flask use (was Elemental Ailments only)."
+    - "**Master Distiller:** Bismuth 30% penetration (was 25%), Amethyst 47% of Physical as Extra Chaos (was 37%), Diamond +100% Critical Strike Multiplier (was 250% increased Critical Strike Chance)."
+  impact:
+    meaning: >-
+      **Master Surgeon is better.** Before, a life flask gave you half its
+      life. Now it gives all of it, spread over twice the time. The healing
+      per second is the same, but one flask use lasts twice as long, so
+      permanent flask recovery is easier to keep up.
+
+
+      **Master Alchemist now also removes Bleeding and Poison**, not only
+      Ignite, Freeze, Chill and Shock. Corrupted Blood is a debuff, not an
+      ailment, so you still need protection against it.
+
+
+      **Master Distiller changes shape for critical builds.** You lose a large
+      chunk of critical strike *chance* and gain a large chunk of critical
+      *damage*. Builds that relied on the Diamond Flask bonus to reach a high
+      crit chance must find that chance on gear or the tree.
+    winners: >-
+      Damage-over-time Pathfinders such as [[Toxic Rain]] and
+      [[Caustic Arrow]], which take Master Surgeon and never cared about
+      crit. Poison Pathfinders, which gain from the
+      Amethyst bonus.
+    losers: >-
+      Elemental critical-strike bow and wand Pathfinders that were built
+      around low base crit chance and the old Diamond bonus.
+    todo: >-
+      Playing a damage-over-time Pathfinder: nothing changes in your tree,
+      it is simply a little safer. Playing a crit Pathfinder: check your crit
+      chance in Path of Building before copying a 3.29 setup.
+    confidence: confirmed
+  official:
+    - "Master Surgeon now has 50% less Life Flask Recovery Rate (previously 50% less Life Recovery from Flasks)."
+    - "Master Alchemist now removes Ailments when you use a Flask (previously Elemental Ailments)."
+    - "Master Distiller: Bismuth charges give 30% Elemental Penetration (was 25%); Diamond charges give +100% Critical Strike Multiplier (was 250% increased Critical Strike Chance); Amethyst charges give 47% of Physical Damage as Extra Chaos (was 37%)."
+
+- id: warden-buffs
+  category: ascendancy
+  verdict: buff
+  title: "Warden: buffs to Barkskin, Tinctures and Unbound Avatar"
+  image: asc-warden
+  gallery: [tincture, living-blade]
+  summary: >-
+    [[Warden]] gets five small buffs at once. Barkskin stacks faster and
+    blocks more, Tinctures burn mana more slowly, and Unbound Avatar lasts
+    15 seconds instead of 10.
+  points:
+    - "Enduring Suffusion: 50% less Mana Burn rate (was 30%)."
+    - "Barkskin: gain 2 Bark per second (was 1), 6% more chance to Evade per missing Bark (was 4%), -75 Physical Damage taken from Attack Hits per Bark (was -60)."
+    - "Lesson of the Seasons: -40 Damage of each type from Spell Hits per Bark (was -25)."
+    - "Seasoned Hunter: adds 50% increased Projectile Speed while a Tincture is active."
+    - "Unbound Avatar: 15 second base duration (was 10)."
+    - "[[The Living Blade]] unique sword: 2 additional Tinctures active (was 1)."
+  impact:
+    meaning: >-
+      Warden was already a strong elemental attack ascendancy. These changes
+      mostly add defence and comfort: Bark comes back twice as fast after you
+      are hit, and you can keep Tinctures running longer before Mana Burn
+      forces you to turn them off.
+    winners: >-
+      Elemental bow and melee Wardens that use Tinctures. Flat damage
+      reduction per Bark is strongest against many small hits, so it helps
+      most while clearing maps.
+    todo: >-
+      If you planned a Deadeye attack build only for clear speed, Warden is a
+      closer alternative than it was in 3.29, with better defence.
+    confidence: confirmed
+  official:
+    - "Enduring Suffusion now has 50% less Mana Burn Rate (previously 30%)."
+    - "Lesson of the Seasons now has -40 Damage taken of each Damage Type from Spell Hits per Bark (previously 25)."
+    - "Seasoned Hunter now has 50% increased Projectile Speed while you have an Active Tincture."
+    - "Unbound Avatar now has a base duration of 15 seconds (previously 10)."
+    - "Barkskin now grants 2 Bark each second if you haven't been Hit by an Enemy Attack Recently (previously 1), 6% more chance to Evade Attacks per Bark below maximum (previously 4), and -75 Physical Damage taken from Attack Hits per Bark (previously -60)."
+    - "The Living Blade now has 'you can have 2 additional Tinctures active' (previously 1)."
+
+- id: trickster-buffs
+  category: ascendancy
+  verdict: buff
+  title: "Trickster: tougher against damage over time and slows"
+  image: asc-trickster
+  summary: >-
+    Three [[Trickster]] notables are stronger. The biggest one is One Step
+    Ahead, which now keeps your action speed at 105% or more, where it used
+    to only protect you down to 90%.
+  points:
+    - "One Step Ahead: your Action Speed is at least 105% of base (was 90%)."
+    - "Heartstopper: the damage-over-time half now gives 75% less Damage over Time taken (was 50%). The hit half is unchanged at 50%."
+    - "Spellbreaker: +20% to Suppressed Spell Damage prevented while on full Energy Shield (was +15%)."
+  impact:
+    meaning: >-
+      One Step Ahead now works as a permanent 5% speed bonus that nothing can
+      lower. Chill, Temporal Chains, Petrified Blood-style slows and map
+      modifiers that reduce action speed stop mattering for Trickster.
+
+
+      Heartstopper switches between two modes every few seconds. During the
+      damage-over-time mode you now ignore three quarters of burning ground,
+      poison, bleeding and similar damage.
+    winners: >-
+      Energy Shield Tricksters of every kind, especially damage-over-time
+      and Ephemeral Edge builds that already took these notables.
+    todo: >-
+      If you play Trickster you can stop looking for "cannot be Chilled" or
+      Temporal Chains immunity. One Step Ahead covers it.
+    confidence: confirmed
+  official:
+    - "Heartstopper: every 10 seconds, take 50% less Damage from Hits for 5 seconds (unchanged) and take 75% less Damage over Time for 5 seconds (previously 50%)."
+    - "One Step Ahead: your Action Speed is at least 105% of base value (previously 90%)."
+    - "Spellbreaker: +20% to amount of Suppressed Spell Damage Prevented while on Full Energy Shield (previously +15%)."
+
+- id: reliquarian-luminary
+  category: ascendancy
+  verdict: mixed
+  title: "Reliquarian notables shuffled, Luminary's mercenary link halved"
+  image: icon-mercenary
+  summary: >-
+    The Reliquarian ascendancy has a different set of notables this league.
+    The Luminary's Golden Glory now passes only half of its Light Radius
+    scaling to the Link buff on your Mercenary.
+  impact:
+    meaning: >-
+      Reliquarian is the Scion ascendancy whose notables rotate each league,
+      so any Reliquarian build from 3.29 has to be rebuilt from this league's
+      list. Check the list in the official notes before you commit.
+
+
+      Golden Glory builds stacked Light Radius to supercharge a Link skill on
+      a Mercenary. That scaling is cut in half, and Light Radius on several
+      uniques was lowered in the same patch.
+    losers: >-
+      Light Radius stacking Luminary builds that carried a Mercenary with a
+      Link skill. Together with the general Mercenary nerfs, this playstyle
+      is much weaker.
+    confidence: confirmed
+  official:
+    - "The Notables for the Reliquarian Ascendancy have been shuffled."
+    - "Luminary's Golden Glory: Increases and Reductions to Light Radius also apply to Effect of your Link Skill Buffs on your Mercenary at 50% of their value (previously 100%)."
+    - "The Hallowed Monarch now has 25-35% increased Light Radius (previously 50%). Rotmother's Mutiny now has 20-40% (previously 25-75%)."
+
+- id: winter-orb-nerf
+  category: skills
+  verdict: nerf
+  title: "Winter Orb loses a projectile and damage"
+  image: winter-orb
+  summary: >-
+    [[Winter Orb]] now fires 2 projectiles at every gem level, where it used
+    to reach 3. Its base cold damage at level 20 drops by about 15%, and
+    added damage is 70% effective instead of 80%.
+  impact:
+    meaning: >-
+      Losing the third projectile is the larger part of the nerf. Together
+      the changes remove roughly 40% of the skill's damage at level 20 before
+      any gear is counted.
+    losers: >-
+      Winter Orb builds of every ascendancy, which were among the most
+      played spell builds in 3.29. They still work, but need noticeably more
+      investment to reach the same bossing damage.
+    todo: >-
+      Do not league-start Winter Orb from a 3.29 guide. If you want a cold
+      spell starter, look at cold damage-over-time or wait for updated
+      guides.
+    confidence: confirmed
+  official:
+    - "Winter Orb now fires 2 Projectiles at all gem levels (previously 2-3 at gem levels 1-20)."
+    - "Has 70% Effectiveness of Added Damage (previously 80%)."
+    - "Deals 307 to 460 Cold Damage at gem level 20 (previously 360 to 539)."
+
+- id: golem-buff-nerfs
+  category: skills
+  verdict: nerf
+  title: "Golem buffs are smaller"
+  image: flame-golem
+  gallery: [lightning-golem]
+  summary: >-
+    The buffs you get from having golems out are lower. Flame Golem gives
+    15–24% increased damage (was 20–29%), Lightning Golem 8% attack and cast
+    speed (was 10%), and Stone Golem 16% increased defences (was 20%).
+  impact:
+    meaning: >-
+      For a build with one golem this is a rounding error. It matters for
+      builds that multiply golem buffs, mainly Golemancer Elementalists
+      using Primordial jewels and the Liege of the Primordial notable.
+    losers: >-
+      Golem-buff stacking Elementalists lose roughly a fifth of what their
+      golems gave them.
+    confidence: confirmed
+  official:
+    - "Summon Flame Golem: Golems grant 15% increased Area of Effect (previously 20%) and 15-24% increased Damage at gem levels 1-20 (previously 20-29%)."
+    - "Summon Lightning Golem: Golems grant 8% increased Attack and Cast Speed (previously 10%)."
+    - "Summon Stone Golem: Golems grant 16% increased Defences (previously 20%)."
+
+- id: link-and-pact-changes
+  category: skills
+  verdict: mixed
+  title: "Flame Link and Pact of Beidat adjusted"
+  image: flame-link
+  gallery: [pact-of-beidat]
+  summary: >-
+    [[Flame Link]] gives more flat fire damage from the gem itself and less
+    from your maximum life (3%, was 5%). [[Pact of Beidat]] now always adds
+    4 chains and 4 projectiles, where it used to scale up to 6.
+  impact:
+    meaning: >-
+      Flame Link is better on a low-life-pool support and worse on the
+      dedicated "life stacking aura bot" that fed huge fire damage to a
+      carry or a Mercenary. Pact of Beidat is the same at level 1 and loses
+      two chains and two projectiles at level 20.
+    losers: >-
+      Party support characters and Mercenary-link builds that stacked life
+      for Flame Link.
+    confidence: confirmed
+  official:
+    - "Flame Link: linked target gains 219 to 329 Added Fire Damage at gem level 20 (previously 169 to 254), and Added Fire Damage equal to 3% of your Maximum Life (previously 5%)."
+    - "Pact of Beidat: Beams from Empowered Skills Chain 4 additional times and Empowered Skills fire 4 additional Projectiles at all gem levels (previously 4-6)."
+
+- id: support-gem-changes
+  category: skills
+  verdict: rework
+  title: "Transfusion and Vaal Sacrifice supports reworked"
+  image: transfusion-support
+  gallery: [vaal-sacrifice-support]
+  summary: >-
+    [[Transfusion Support]] no longer works with instant spells, and gives a
+    nearby minion charges instead of Souls. [[Vaal Sacrifice Support]] now
+    leaves you at 20% of life and energy shield, where it used to leave
+    you at 1.
+  impact:
+    meaning: >-
+      Transfusion was used to feed Vaal skill Souls to minions by spamming a
+      cheap instant spell. That loop is gone. It now hands a minion a Power,
+      Frenzy or Endurance Charge for every 400 life you spend.
+
+
+      Vaal Sacrifice is safer: you keep a fifth of your pool instead of
+      dropping to 1, but the sacrifice is also smaller.
+    losers: >-
+      Minion builds from 3.29 that kept Vaal skills permanently active on
+      minions through Transfusion.
+    confidence: confirmed
+  official:
+    - "Transfusion Support no longer supports instant Spells. A Minion within 6 metres gains a Power, Frenzy or Endurance Charge for every 400 Life you spend on Upfront Costs with Supported Spells (previously a Soul for every 200 Life)."
+    - "Vaal Sacrifice Support: Supported Skills Sacrifice all but 20% of your maximum Life and Energy Shield on Use (previously all but 1)."
+
+- id: atziris-acuity
+  category: items
+  verdict: nerf
+  title: "Atziri's Acuity no longer grants Vaal Pact"
+  image: atziris-acuity
+  summary: >-
+    [[Atziri's Acuity]] now makes life leech from critical strikes instant,
+    and stops all life regeneration and recoup. It no longer gives Vaal Pact.
+    Existing gloves keep the old text.
+  impact:
+    meaning: >-
+      Old Acuity gave Vaal Pact, which doubles your maximum leech rate. New
+      Acuity gives instant leech only from critical strikes, with a permanent
+      "cannot Regenerate or Recoup Life" drawback. It is closer to the
+      gloves' original design, but you lose the option of combining Vaal
+      Pact-level leech with other recovery.
+    losers: >-
+      Crit attack builds that used Acuity alongside life recoup or
+      regeneration. Standard league gloves are unaffected.
+    confidence: confirmed
+  official:
+    - "Atziri's Acuity no longer grants Vaal Pact if you've dealt a Critical Strike Recently. It now has 'Life Leech from Critical Strikes is instant' and 'Cannot Regenerate or Recoup Life'. Existing versions are not affected."
+
+- id: ralakeshs-impatience
+  category: items
+  verdict: nerf
+  title: "Ralakesh's Impatience costs one maximum charge"
+  image: ralakeshs-impatience
+  summary: >-
+    New [[Ralakesh's Impatience]] boots roll -1 to maximum Power, Endurance
+    or Frenzy Charges. Existing boots are unchanged.
+  impact:
+    meaning: >-
+      Ralakesh's gives you the benefit of maximum charges without generating
+      them, which made it one of the most valuable unique boots. Each pair
+      now takes one charge of one type away. You can pick the type that
+      hurts your build least, so the nerf is small for builds that use only
+      one or two charge types.
+    affected: >-
+      Charge-stacking builds that use all three types lose one charge. Boots
+      with the "right" penalty for popular builds will cost more than the
+      others.
+    confidence: confirmed
+  official:
+    - "Ralakesh's Impatience now has either -1 to maximum Power, Endurance or Frenzy Charges. Existing versions are unaffected."
+
+- id: shavronnes-wrappings
+  category: items
+  verdict: buff
+  title: "Shavronne's Wrappings gains Energy Shield recoup"
+  image: shavronnes-wrappings
+  summary: >-
+    [[Shavronne's Wrappings]] now has 150–200% increased Energy Shield (was
+    100–150%) and recoups 20–30% of damage taken as Energy Shield. It loses
+    10% faster start of Energy Shield recharge.
+  impact:
+    meaning: >-
+      Shavronne's lets low-life builds ignore Chaos damage. It was a weak
+      chest for its job; now it has a respectable Energy Shield roll and a
+      built-in recovery layer.
+    winners: >-
+      Low-life aura stackers and spell casters on a budget, which can use
+      Shavronne's for longer before buying a rare chest.
+    confidence: confirmed
+  official:
+    - "Shavronne's Wrappings no longer has 10% faster start of Energy Shield Recharge. It now has 20-30% of Damage Taken Recouped as Energy Shield and 150-200% increased Energy Shield (previously 100-150%)."
+
+- id: malachais-loop
+  category: items
+  verdict: mixed
+  title: "Malachai's Loop: more Energy Shield, one charge fewer"
+  image: malachais-loop
+  summary: >-
+    [[Malachai's Loop]] now has 240–300% increased Energy Shield and a
+    20–40% chance to gain a Power Charge on hit, but only +1 maximum Power
+    Charge (was +2).
+  impact:
+    meaning: >-
+      The shield is tankier and generates charges more reliably, but gives
+      one less maximum Power Charge. Builds that used it purely to raise
+      their charge cap lose out; builds that wanted a big Energy Shield
+      shield gain.
+    confidence: confirmed
+  official:
+    - "Malachai's Loop now has 240-300% increased Energy Shield (previously 210-250%), +1 to Maximum Power Charges (previously +2), and 20-40% chance to gain a Power Charge on Hit (previously 20%)."
+
+- id: femurs-of-the-saints
+  category: items
+  verdict: rework
+  title: "Femurs of the Saints rebuilt for minion builds"
+  image: femurs-of-the-saints
+  summary: >-
+    [[Femurs of the Saints]] now has +2–3 to socketed minion gems and
+    80–100% increased minion damage. Its four fixed bonuses are replaced by
+    up to four modifiers rolled from a pool of seven.
+  points:
+    - "10–15% increased Minion Damage per Raised Spectre."
+    - "12–18% increased Spell Damage per Summoned Skeleton."
+    - "16–24% increased Attack Damage per Raised Zombie."
+    - "+1–2% chance to Block Attack Damage per Summoned Skeleton."
+    - "Regenerate 0.8–1% of Life per second per Raised Zombie."
+    - "40–60% increased Mana Regeneration Rate per Raised Spectre."
+    - "3–5% increased Attack and Cast Speed per Summoned Raging Spirit."
+  impact:
+    meaning: >-
+      The staff was a leveling item. With +3 minion gems and a good set of
+      rolled modifiers it can now carry a minion build into maps, and a few
+      rolls reward unusual hybrids, such as a caster who keeps skeletons out
+      for spell damage.
+    affected: >-
+      Because the modifiers are random, two staves can differ a lot in
+      value. Check which lines a staff has before you buy.
+    confidence: confirmed
+  official:
+    - "Femurs of the Saints now has +2-3 to level of Socketed Minion Gems (previously +2) and Minions deal 80-100% increased Damage (previously 60-80%)."
+    - "It no longer has its four fixed per-minion bonuses. Instead it can roll up to 4 Modifiers from a new set of seven."
+
+- id: doryani-and-doedre
+  category: items
+  verdict: rework
+  title: "Doryani's Invitation and Doedre's Tongue now roll random modifiers"
+  image: doryanis-invitation
+  gallery: [doedres-tongue]
+  summary: >-
+    [[Doryani's Invitation]] is now a single belt that always drops
+    corrupted with four modifiers, each picked from a set.
+    [[Doedre's Tongue]] has higher numbers and a new line, and only drops
+    from Covens of Umbra encounters.
+  points:
+    - "Doryani's Invitation: one damage line (15–60% Physical, Cold, Lightning or Fire), one defence line (+25–100% to one Resistance or +250–1000 Armour), one leech line, one flask-effect line."
+    - "Doedre's Tongue: 30–35% to all Elemental Resistances (was 20–25%), 25–50% chance to Freeze, Shock and Ignite (was 20–25%)."
+    - "Doedre's Tongue also rolls one of: All Damage can Ignite, Shock or Freeze against Cursed Enemies."
+  impact:
+    meaning: >-
+      A well-rolled Doryani's Invitation can be a strong belt: up to 100% to
+      one resistance on a single slot solves a gearing problem. It is
+      corrupted, so what drops is what you get.
+
+
+      Doedre's Tongue becomes a build-enabling amulet for "all damage can
+      shock" or "all damage can freeze" setups, as long as you curse your
+      targets.
+    confidence: confirmed
+  official:
+    - "Doryani's Invitation now always drops Corrupted with an Implicit. It has 4 Modifiers, each randomly picked from a set."
+    - "Doedre's Tongue can no longer drop outside of Covens of Umbra encounters. It now has 30-35% to all Elemental Resistances and 25-50% chance to Freeze, Shock and Ignite, and rolls a modifier from a new set."
+
+- id: other-unique-changes
+  category: items
+  verdict: mixed
+  title: "Shadowstitch, Steelworm and light-radius uniques"
+  image: shadowstitch
+  gallery: [steelworm]
+  summary: >-
+    [[Shadowstitch]] gets bigger bonuses and bigger penalties per corrupted
+    item. [[Steelworm]] gains 20–30% increased Impale effect. Two
+    light-radius uniques have lower light radius.
+  points:
+    - "Shadowstitch: +1–50 to all Attributes (was 20–30), -8 to -6% all Resistances per Corrupted item (was -6 to -4%), 10–12% increased maximum Energy Shield and 8–10% increased maximum Life per Corrupted item (was 8% and 6%)."
+    - "The Hallowed Monarch: 25–35% increased Light Radius (was 50%). Rotmother's Mutiny: 20–40% (was 25–75%)."
+  impact:
+    meaning: >-
+      Shadowstitch rewards a fully corrupted gear set more than before, and
+      is harder to cap resistances with. The light-radius nerfs target the
+      Luminary builds that converted Light Radius into Link effect.
+    confidence: confirmed
+  official:
+    - "Shadowstitch now has +1-50 to all Attributes, -8 to -6% to all Resistances, 10-12% increased Maximum Energy Shield and 8-10% increased Maximum Life for each Corrupted Item Equipped."
+    - "Steelworm now has 20-30% increased Impale Effect."
+    - "The Hallowed Monarch now has 25-35% increased Light Radius. Rotmother's Mutiny now has 20-40% increased Light Radius."
+
+- id: special-base-implicits
+  category: items
+  verdict: buff
+  title: "Special base types have stronger implicits"
+  image: spiked-gloves
+  gallery: [opal-ring, stygian-vise, artillery-quiver, simplex-amulet]
+  summary: >-
+    The "Atlas" base types such as Spiked Gloves, Two-Toned Boots and
+    Vanguard Belt have much larger implicit modifiers. Artillery Quiver now
+    gives +1 maximum totem for attack skills.
+  points:
+    - "Spiked Gloves 24–30% Melee Damage (was 16–20%). Gripped Gloves 22–28% Projectile Attack Damage (was 14–18%). Fingerless Silk Gloves 20–26% Spell Damage (was 12–16%)."
+    - "Apothecary's Gloves: +14–18% Damage over Time *Multiplier* (was 14–18% *increased* Damage over Time)."
+    - "Two-Toned Boots +16–20% to two Resistances (was +8–12%). Fugitive Boots +17–23% Chaos Resistance (was +13–17%)."
+    - "Vanguard Belt +260–480 Armour and Evasion. Crystal Belt +60–100 Energy Shield. Bone Helmet 20–30% Minion Damage."
+    - "Amethyst Ring is the one nerf: +13–19% Chaos Resistance (was +17–23%)."
+    - "Old items update with a [[Blessed Orb]]."
+  impact:
+    meaning: >-
+      These bases were already the ones to pick up. They are now clearly
+      better than normal bases, and they only drop when an item rolls a high
+      enough Item Tier (see the Item Tiers entry under What is new). Seeing
+      one on the ground means it is worth identifying.
+
+
+      Apothecary's Gloves changing to Damage over Time *Multiplier* is a
+      large buff: multiplier is a separate, stronger kind of scaling than
+      "increased".
+    winners: >-
+      Damage-over-time builds (Apothecary's Gloves), ballista and totem
+      attack builds (Artillery Quiver +1 totem), and anyone capping
+      resistances (Two-Toned Boots).
+    todo: >-
+      Add the special bases to your loot filter with a highlight. Most
+      public filters already do this.
+    confidence: confirmed
+  official:
+    - "The Implicit Modifiers on many Atlas Item Types have been adjusted; all can be updated with Blessed Orbs."
+    - "Artillery Quiver's Implicit is now 'Attack Skills have +1 to maximum number of Summoned Totems' (previously 20-30% increased Totem Placement speed). Existing items are not affected."
+    - "Light Radius modifiers on Weapons, Helmets and Rings now scale up to 30% at the highest tier (previously 15%)."
+    - "These base types can now only drop on Magic and Rare items with a certain Item Tier or higher."
+
+- id: vendor-recipe-changes
+  category: crafting
+  verdict: mixed
+  title: "Vendor recipes and gem prices changed, Orb of Binding gone"
+  image: orb-of-binding
+  gallery: [chaos-orb, exalted-orb, orb-of-alchemy]
+  summary: >-
+    [[Orb of Binding]] no longer drops. Selling two rare items with the same
+    name gives a [[Chaos Orb]], and three gives an [[Exalted Orb]]. Many
+    recipes that paid or cost Orbs of Chance now use other currency.
+  points:
+    - "Orbs of Alchemy are more common, to make up for Binding."
+    - "A full rare set with an item below level 60 sells for Orbs of Alchemy."
+    - "Gems that need level 28–33 sell for an Orb of Alteration; level 34–37 for an Orb of Alchemy."
+    - "Orb of Transmutation is bought with an Orb of Augmentation (was Portal Scrolls). Orb of Scouring costs 4 Orbs of Fusing."
+    - "The Bestiary recipe for Orbs of Binding now makes 2 Orbs of Regret."
+    - "The notes also say: \"Added a new Vendor Recipe\", without saying what it is."
+  impact:
+    meaning: >-
+      During the campaign you used Orbs of Binding to make a linked rare
+      item. That shortcut is gone, so four-links come from vendors, drops
+      and Orbs of Fusing.
+
+
+      The same-name recipe is the interesting one. Two rares with the same
+      random name are uncommon, but the payout went from an Orb of Chance to
+      a Chaos Orb, and from a Regal Orb to an Exalted Orb for three.
+    todo: >-
+      While leveling, check vendors for linked items each time you level up.
+      Keep Orbs of Augmentation instead of selling them: they now buy
+      Transmutation.
+    confidence: confirmed
+  official:
+    - "Orbs of Binding can no longer be obtained, though existing ones will still function. Orbs of Alchemy are now relatively more common."
+    - "Vendoring 2 Rare items with the same name now grants a Chaos Orb; 3 grants an Exalted Orb. These recipes no longer take Quality into account."
+    - "Orbs of Transmutation are now purchasable for an Orb of Augmentation (previously Portal Scrolls). Orbs of Scouring now cost 4 Orbs of Fusing."
+    - "Added a new Vendor Recipe."
+
+- id: crafting-service-tweaks
+  category: crafting
+  verdict: nerf
+  title: "Rog, the Recombinator and the Gambler are less generous"
+  image: recombinator
+  gallery: [scrap-metal]
+  summary: >-
+    Rog's reroll deals keep the best of 1, 3 or 5 attempts (was 3, 6 or 10).
+    Recombinators give fewer modifiers when the inputs have few, and cannot
+    take corrupted items. High-level gambling costs more and gives worse
+    items.
+  points:
+    - "Rog: deals that upgrade modifier tiers appear less often."
+    - "Recombinator: the result takes the item level of the chosen base, not the average."
+    - "Recombinator: with 1–3 total prefixes or suffixes on the inputs you get fewer on the result. With 4 or more, nothing changed."
+    - "Gambler: cheaper for non-jewellery in the mid campaign, more expensive at high level."
+    - "Genesis Tree: equipment notables give 200% increased chance for a modifier type (was 300%); small nodes +10 Modifier Tier Rating (was +20)."
+  impact:
+    meaning: >-
+      Each of these was a cheap way to make strong rare items early in a
+      league. All are a step weaker. Recombining two items with one good
+      modifier each was the classic early-league trick, and it now fails
+      more often.
+    losers: >-
+      SSF players and early-league crafters who lived on Rog and
+      Recombinators.
+    todo: >-
+      With Recombinators, feed in items that already have several wanted
+      modifiers between them. With Rog, take a good deal when you see one
+      instead of waiting for a tier-upgrade deal.
+    confidence: confirmed
+  official:
+    - "Rog now offers deals to Reroll Prefixes and Suffixes 1, 3, or 5 times, keeping the best outcome (previously 3, 6, or 10)."
+    - "When using the Recombinator, the resultant item always has the item level of the selected input base type."
+    - "Having 1-3 total Prefixes or Suffixes now results in on average fewer Prefixes or Suffixes on the resultant item."
+    - "The Recombinator cannot be used on Corrupted items."
+    - "Increased the Gold cost of Gambling for all items at high levels; such equipment has less Modifier Tier Rating and fewer Sockets and Links."
+
+- id: item-rule-changes
+  category: crafting
+  verdict: mixed
+  title: "Imprints and mirroring no longer count as modifying an item"
+  image: eternal-orb
+  gallery: [hinekoras-lock, mirror-of-kalandra, orb-of-annulment]
+  summary: >-
+    Using an [[Eternal Orb]] or a [[Mirror of Kalandra]] no longer removes
+    the foresight from [[Hinekora's Lock]]. Orbs of Annulment can now remove
+    caster modifiers even with "Cannot roll Caster Modifiers" on the item.
+  impact:
+    meaning: >-
+      These are rules for top-end crafting. The Annulment change matters
+      most: the meta-modifier used to protect caster modifiers from being
+      removed, which crafters used to steer an Annulment onto the modifier
+      they wanted gone. That protection is over, in both the Caster and the
+      Attack version.
+    affected: >-
+      Mirror-tier crafting methods that relied on "cannot roll" modifiers to
+      block Annulment outcomes need a different approach.
+    confidence: confirmed
+  official:
+    - "Creating an Imprint of an item or Mirroring an item is no longer considered as Modifying the item. Using these no longer removes the Foreseeing effect from Hinekora's Locks."
+    - "The 'Cannot roll Caster Modifiers' meta-crafted Modifier no longer prevents Currencies that remove Modifiers, such as Orbs of Annulment, from removing Caster Modifiers (likewise for Attack Modifiers)."
+    - "Assembled Eye Jewels can now roll the Modifiers that every Abyssal Jewel can roll."
+
+- id: map-device-items
+  category: endgame
+  verdict: rework
+  title: "Divine Vessels, Allflame Embers and Mercenary Warrants leave the Map Device"
+  image: divine-vessel
+  gallery: [allflame-divine, allflame-kulemak]
+  summary: >-
+    These three items are no longer placed in the Map Device next to a map.
+    [[Divine Vessel]] and Allflame Embers are now used directly on the map
+    item as an enchantment. Mercenary Warrants open a separate rematch area.
+  points:
+    - "A Divine Vessel makes the area **Deified**: bosses deal 25% more damage, act 25% faster, are twice as tough, and drop 50% more Rarity."
+    - "Divine Vessels stack to 20."
+    - "Allflame Embers now say how many monster packs they replace. Three new Embers: of the Cloister, of the Divine, of the Multitude."
+    - "Mercenary Warrants open a portal to the Proving Grounds, where you rematch that Mercenary."
+  impact:
+    meaning: >-
+      The Map Device slots that used to hold Scarabs now hold Threads, so
+      everything else moved onto the map itself. Upgrading your Pantheon is
+      the same idea as before, but the boss you capture is noticeably
+      harder.
+    todo: >-
+      When you upgrade a Pantheon power, apply the Divine Vessel to the map
+      before you open it, and expect a boss with double the toughness.
+    confidence: confirmed
+  official:
+    - "Divine Vessels are now Currency items that can be used on Maps to apply the Deified Enchantment Modifier. They now have a stack size of 20."
+    - "Deified Areas empower all Map Bosses with 25% increased Damage, 25% increased Attack and Cast Speed, 100% increased Toughness, 25% increased Area of Effect, and 50% increased Rarity of items dropped."
+    - "Allflame Embers are now Currency items which can be used on a Map to apply an Enchantment. Added three new Allflame Embers."
+    - "Mercenary Warrants can be used to open portals to the Proving Grounds."
+
+- id: ritual-changes
+  category: mechanics
+  verdict: mixed
+  title: "Ritual: vessels need Threads, rerolls give Omens"
+  image: atlas-ritual
+  gallery: [ritual-vessel, ritual-splinter]
+  summary: >-
+    Blood-Filled Vessels can only be used on maps with Ritual Threads.
+    Rerolling the reward window past the first one now guarantees an Omen,
+    where it used to guarantee an Audience with the King or a Waxen Soul.
+  points:
+    - "2 vessel slots with 4 or more Ritual Threads, 3 slots with 8."
+    - "The King in the Mists always drops an item level 85 or 86 Ritual base."
+    - "Wisp's Blessing gives 50% increased Tribute (was 30%), and the wisp teleports less."
+    - "Blood Shrine buffs can be removed with a right-click, and Blood Shrine of Crows gives much more Chaos Resistance."
+  impact:
+    meaning: >-
+      Ritual becomes an Omen farm first. Access to the King in the Mists is
+      less predictable because rerolling no longer forces an invitation.
+    todo: >-
+      If you farm Ritual, plan for 4 or 8 Ritual Threads per map so you can
+      slot Blood-Filled Vessels.
+    confidence: confirmed
+  official:
+    - "Blood-Filled Vessels can only be added to Maps that have Ritual Threads applied."
+    - "Rerolls of offered rewards beyond the initial window will no longer always guarantee an Audience with the King or Waxen Soul. They will instead always generate at least one Omen."
+    - "The King in the Mists now always drops an item level 85 or 86 Ritual base type."
+    - "The Wisp's Blessing Buff now grants 50% increased Tribute gained (previously 30%)."
+
+- id: legion-ultimatum-blight-scaling
+  category: mechanics
+  verdict: buff
+  title: "Legion, Ultimatum and Blight rewards scale with Atlas Drops"
+  image: atlas-legion
+  gallery: [atlas-ultimatum, atlas-blight, timeless-splinter]
+  summary: >-
+    Rewards in these three mechanics now grow with the Atlas Drops value of
+    your map. Ultimatum rewards also keep improving after round 10.
+  points:
+    - "Legion: monsters and chests with reward icons give more rewards with Atlas Drops. Breaking out monsters causes a Schism about 33% more slowly."
+    - "Ultimatum: stackable rewards such as currency scale with Atlas Drops (before, only Catalysts did)."
+    - "Blight: the number of chests per lane scales with Atlas Drops."
+  impact:
+    meaning: >-
+      Atlas Drops is the stat that replaced Item Quantity on maps (see Big
+      changes). For these mechanics, rolling a hard map with high Atlas
+      Drops now directly means more splinters, more currency stacks and more
+      Blight chests.
+    winners: >-
+      Players who run heavily modified maps. Legion in particular gives you
+      more time to break out the army before it wakes.
+    confidence: confirmed
+  official:
+    - "Legion Monsters and Chests with Reward Icons now scale the number of Rewards by a percentage of Atlas Drops in the area."
+    - "Reduced the amount that breaking out Legion monsters and chests causes a Schism by approximately 33%."
+    - "Ultimatum round rewards that can appear in stacks such as Currency are now scaled by a percentage of the Atlas Drops on the area."
+    - "Ultimatum rewards now get incrementally better after round 10."
+    - "The number of Blight chests in each Lane is now scaled by a percentage of Atlas Drops."
+
+- id: essence-changes
+  category: mechanics
+  verdict: mixed
+  title: "Essence: low tiers leave high maps"
+  image: atlas-essence
+  gallery: [screaming-essence]
+  summary: >-
+    Weeping Essences no longer appear in yellow or red maps, and Wailing
+    Essences no longer appear in red maps. The number of Essences on an
+    imprisoned monster scales with Atlas Drops.
+  impact:
+    meaning: >-
+      In red maps every Essence you free is now Screaming tier or better,
+      which is what you want for crafting. The catch for league start is
+      that cheap low-tier Essences, used to craft leveling and early map
+      gear, now only come from white maps and the campaign.
+    todo: >-
+      Use the Essences you find in the campaign and white maps on your
+      early gear instead of saving them.
+    confidence: confirmed
+  official:
+    - "In Yellow and Red Maps Weeping Essences no longer generate on Monsters, and in Red Maps Wailing Essences no longer generate on Monsters."
+    - "The average number of Essences on Imprisoned Monsters in Maps now scales with Atlas Drop scaling on your Map."
+    - "Added a new Essence, Essence of Trickery."
+
+- id: map-encounter-tweaks
+  category: endgame
+  verdict: mixed
+  title: "Strongboxes, Shrines, Rogue Exiles and other map encounters"
+  image: atlas-strongbox
+  gallery: [icon-shrine, atlas-torment]
+  summary: >-
+    A batch of adjustments to the smaller things you meet in maps.
+    Strongbox monster packs can be Magic or Rare, Rogue Exiles drop much
+    rarer items, and several encounters now appear in any map tier.
+  points:
+    - "Strongboxes: can no longer roll Identified or Mirrored items. Operative's Strongboxes are removed. \"Additional items\" can be any rarity."
+    - "Rogue Exiles: much higher Rarity and experience. Gigantic exiles pass all their modifiers to their split clones."
+    - "Shrines: Covetous Shrines can spawn by default; Gloom and Resonating Shrines are more common."
+    - "Buried Sentinels and the Viridian Wildwood can appear in any map tier (was tier 16 only)."
+    - "Ore Deposits give 50% more Ore. Verisium Outcrops and Petrified Amber give a temporary buff when finished."
+    - "Starfall Craters are more common. Lavish Wombgifts only give valuable currency."
+    - "The Consort of the Depths Abyss miniboss has less life."
+  impact:
+    meaning: >-
+      Under the new loot rules, valuable currency comes from Rare and Unique
+      monsters with high Rarity. Rogue Exiles and strongbox packs are now
+      exactly that, so they are worth stopping for.
+    confidence: confirmed
+  official:
+    - "Monster Packs spawned by Strongboxes now inherently have a chance to be Magic or Rare."
+    - "Rogue Exiles have much higher inherent Rarity of items dropped and also grant a higher amount of experience when killed."
+    - "Buried Sentinels and the Viridian Wildwood can now spawn randomly in any tier of Map (previously only tier 16)."
+    - "Increased the base amount of Ore granted by Ore Deposits in Maps by 50%."
+    - "Covetous Shrines now have a base chance to spawn. Gloom and Resonating Shrines now spawn more commonly."
+
+- id: kirac-valdo-voidborn
+  category: endgame
+  verdict: mixed
+  title: "Kirac, Valdo's maps and the Voidborn Reliquary"
+  image: valdos-puzzle-box
+  gallery: [voidborn-key, atlas-kirac]
+  summary: >-
+    Kirac sells unique maps more often. Valdo's Puzzle Box has 69 more
+    foiled Tier 17 maps and the Voidborn Reliquary 96 more foiled uniques,
+    but the rare, non-core uniques from both are now much rarer.
+  impact:
+    meaning: >-
+      Valdo maps and Voidborn keys were a way to target chase uniques that
+      do not drop normally. A larger pool and lower odds for the rare ones
+      means each key is more of a gamble. Rewards also drop unidentified.
+    confidence: confirmed
+  official:
+    - "Added 69 more foiled Tier 17 Valdo's Map options and 96 more foiled Unique Item options for the Voidborn Reliquary."
+    - "Unique items granted by Voidborn Reliquary Keys and as Valdo's Map rewards that are not part of the core drop pool are now much rarer from these sources."
+    - "Increased the chance for Kirac to sell Unique Maps when refreshing his shop."
+    - "Item rewards from the Voidborn Reliquary and Valdo Maps now always drop Unidentified."
+
+- id: divination-card-changes
+  category: loot
+  verdict: mixed
+  title: "Divination cards: league items excluded, eleven cards disabled"
+  image: divination-card
+  gallery: [stacked-deck]
+  summary: >-
+    Cards that give a random item from a pool can no longer give
+    current-league items. Eleven cards are temporarily disabled.
+  points:
+    - "Disabled: Buried Treasure, Cameria's Cut, Man With Bear, More is Never Enough, The Card Sharp, The Deal, The Rabbit's Foot, The Silly Boy."
+    - "Also disabled (Incursion rework): Her Mask, Last Hope, Sambodhi's Vow."
+    - "Rebirth and Renewal now gives an item level 86 Simplex Amulet."
+    - "The Peaceful Moments and The Eternal War can now give the Heroic Tragedy jewel."
+  impact:
+    meaning: >-
+      Most of the disabled cards rewarded Scarabs or Sacrifice Fragments,
+      which no longer exist. If you hold these cards in Standard they cannot
+      be turned in for now.
+
+
+      Under the new loot rules, monsters with high Rarity drop rarer cards
+      and stop dropping some common ones.
+    confidence: confirmed
+  official:
+    - "Divination Cards can no longer reward current league-specific items in their potential pool of rewards."
+    - "Eight Divination Cards have been temporarily disabled, plus three more as part of the Incursion changes."
+    - "Monsters with high Item Rarity will now have a higher chance to drop rarer Divination Cards."
+
+- id: campaign-changes
+  category: campaign
+  verdict: buff
+  title: "Campaign: Scrolls for Gold and a few new sights"
+  image: scroll-of-wisdom
+  gallery: [orb-of-transmutation, orb-of-augmentation]
+  summary: >-
+    Every town vendor sells [[Scroll of Wisdom]] for 15 Gold. The Viridian
+    Wildwood can appear in Act 7 and a Mirage in Act 9. The Harvest tutorial
+    quest and the identified-item chests at the end of the Labyrinth are
+    gone.
+  points:
+    - "Orbs of Transmutation are bought with an Orb of Augmentation."
+    - "Vendors no longer sell Orbs of Chance, and unidentified rares from vendors no longer cost one."
+    - "From Act 6, Magic and Rare items can drop with an Item Tier."
+    - "Gambling non-jewellery items with Gold is cheaper in the middle of the campaign."
+    - "Every campaign boss has a Viscera for the league's Wickerman."
+  impact:
+    meaning: >-
+      You will not run out of Scrolls of Wisdom again: Gold is plentiful
+      while leveling. Higher Rarity now makes monsters drop fewer scrolls,
+      so buying them is the intended way.
+
+
+      The cheaper mid-campaign gambling is a good use of spare Gold when a
+      gear slot falls behind.
+    todo: >-
+      Stop picking up Scrolls of Wisdom once you have a stack. Spend Gold on
+      scrolls, and on gambling a weapon or boots when yours are outdated.
+    confidence: confirmed
+  official:
+    - "Scrolls of Wisdom are now purchasable from vendors in all towns for 15 Gold."
+    - "The Northern Forest and the Dread Thicket in Act 7 have a chance to spawn the Viridian Wildwood. The Vastiri Desert and the Oasis in Act 9 have a chance to spawn a Mirage."
+    - "The tutorial Harvest Quest has been removed."
+    - "Removed the chests at the end of the Labyrinth that drop entirely identified items."
+    - "Reduced the Gold cost of Gambling during the mid-Campaign levels for non-Jewellery."
+
+- id: quality-of-life
+  category: qol
+  verdict: buff
+  title: "Quality of life: exact ranges, keywords and a white-socket craft"
+  image: reflecting-mist
+  gallery: [orb-of-scouring]
+  summary: >-
+    "Nearby" is replaced by the exact range in metres almost everywhere.
+    Granted skills and notables on items show their description on hover.
+    The crafting bench can turn all sockets white for an
+    [[Orb of Scouring]].
+  points:
+    - "Blood Shrine buffs and the Beyond Magnificence buffs persist between areas."
+    - "New stash slots: League section for Soul Cores, Allflame Embers, Royal Visage and more; Threads section in the Fragment tab."
+    - "Shards (Binding, Annulment, Chaos, Exalted, Regal) can no longer go in the Currency tab."
+    - "Hold Alt to pin keyword information in the area modifier list."
+    - "The Gilded Font in Sanctum vaults is moved away from the exit stairs."
+  impact:
+    meaning: >-
+      The white-socket craft is the notable one. Since 3.29 any gem fits
+      any socket, and a gem in a socket of its own colour gets +10% quality.
+      White sockets have always counted as every colour, so making all
+      sockets white should give that bonus to every gem in the item. We
+      have not tested this in 3.30 yet.
+    todo: >-
+      Once your main six-link is final, try the white-socket craft on it
+      and check that each gem shows the quality bonus.
+    confidence: prediction
+  official:
+    - "Added a new Crafting Bench option to set all Sockets on an item to be White for a cost of an Orb of Scouring (or an Orb of Scouring and a Vaal Orb for Corrupted items)."
+    - "Almost all effects that were described as 'nearby' now instead describe the exact range of the effect in metres."
+    - "Granted effects from Passive Skills and item modifiers are now keyworded in a number of cases."
+    - "K'Tash's, Ghorr's and Beidat's Magnificence and Blood Shrine buffs are now retained when transitioning between areas."
+
+- id: ruthless-changes
+  category: other
+  verdict: mixed
+  title: "Ruthless mode has its own list of changes"
+  image: map-tier-16
+  summary: >-
+    The patch notes contain a section that applies only to Ruthless leagues.
+    It changes map sustain, Kirac's shop and about twenty ascendancy
+    notables. None of it applies to the normal game.
+  impact:
+    meaning: >-
+      If you play normal Covens of Umbra you can ignore this section
+      completely. It is listed here because several early guides copied
+      Ruthless-only ascendancy changes, such as the Chieftain resistance
+      nerf, into their advice for the normal game.
+    todo: >-
+      When a guide mentions a Chieftain, Slayer, Hierophant, Saboteur,
+      Elementalist or Occultist change in 3.30, check it against the
+      official notes. Those classes were not changed outside Ruthless.
+    confidence: confirmed
+  official:
+    - "Ruthless-specific Changes: league mechanics spawn independently; Kirac offers at most Tier 14 Maps; the 3-map vendor recipe is removed; Voidstones set minimum Map Tier to 12."
+    - "About twenty Ascendancy notables are adjusted in Ruthless only, for Chieftain, Slayer, Champion, Hierophant, Guardian, Pathfinder, Saboteur, Elementalist, Occultist and Ascendant."
+
+- id: bug-fixes
+  category: other
+  verdict: mixed
+  title: "Bug fixes that can change a build"
+  image: orb-of-regret
+  summary: >-
+    Most fixes are visual or rare. A few change how skills behave: corpse
+    explosions can no longer hit the same corpse several times, and double
+    damage "while on full life" no longer rolls twice.
+  points:
+    - "Assassin's Mark from Deathmarked triggers only on attack critical strikes."
+    - "Hammers from Holy Sweep of Hammerfalls can now be evaded."
+    - "Pact of Beidat now adds chains to Dark Bargain."
+    - "Hexpass Support now prevents critical strikes when the curse comes from Blasphemy."
+    - "Ghorr's Magnificence made you take more damage instead of less. Fixed."
+    - "Gigantic Rogue Exiles split twice again, as intended."
+    - "Kinetic Fusillade gem experience corrected; gems may gain or lose a level."
+  impact:
+    meaning: >-
+      Two fixes are quiet nerfs. Builds that chained corpse explosions
+      through one corpse did more damage than intended, and so did builds
+      stacking "chance to deal double damage while on full life". Both now
+      work as written.
+    confidence: confirmed
+  official:
+    - "Fixed a bug where some explosion effects could explode the same corpse multiple times."
+    - "Fixed a bug where chance to deal double damage while on full life would roll an additional time if the enemy was on full life."
+    - "Fixed a bug where Assassin's Mark from Assassin's Deathmarked Notable Passive could trigger from any Critical Strike, instead of only from Attack Critical Strikes."
+    - "About sixty further fixes cover display issues, audio, hideouts and microtransactions."
