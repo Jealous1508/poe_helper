@@ -397,6 +397,185 @@ stages:
 
           Không món nào có giá 3.30. Tác giả đã ra build này qua 3.27, 3.28, 3.29 và 3.30, nên lộ trình là thật; chi phí thì chưa biết.
 
+powerCurve: |
+  Damage ở đây là một con số đi qua ba bộ multiplier. Con số đó là độ lớn cú hit của brand. Bộ thứ nhất biến nó thành lửa: [[Shaper of Flames]], phần physical gain as extra fire trên gear, và [[Herald of Ash]] scale theo herald effect. Bộ thứ hai là có bao nhiêu brand đang nằm trên mục tiêu, và [[Runebinder]] cho phép hai. Bộ thứ ba nằm bên phía quái: curse, exposure và phần resistance reduction còn lại. Clear là chuyện riêng, và nó được mua chứ không phải scale: một nguồn nổ xác và một nguồn lan ignite.
+
+  Mấy thứ này tới ở những thời điểm rất khác nhau, và toàn bộ cảm giác của build nằm ở đó. Trước level 28 thì chưa có brand nào cả. Từ 28 tới map bạn có cú hit và lớp đầu tiên — [[Shaper of Flames]] từ lab đầu, gem level từ Honourhome, flat damage qua [[Nycta's Lantern]] — và chưa có clear thật. Ở map trắng và map vàng, hai món rẻ là [[Obliteration]] với gloves lan ignite biến nó thành autobomber, còn [[Bringer of Ruin]] làm dàn herald bắt đầu có nghĩa. Nên chuyện chạy map lên đỉnh sớm và rẻ, trong khi single target vẫn chỉ ở mức trung bình.
+
+  Single target đuổi kịp ở map đỏ, khi các lớp resistance reduction lên người; nguyên văn bài viết là giữa game "cảm giác như bỗng dưng gấp đôi". Bước nhảy cuối là [[Archdemon Crown]] và dàn herald stack, cả hai bị chặn sau một cái base Elder và một seed jewel. Ước lượng bossing của researcher bên chúng tôi cũng đi theo đúng đường đó: 3.5 khi làm starter, tầm 4.5 khi đủ gear.
+
+  Phòng thủ tới sau cùng. Lớp vỏ maximum resistance và block chỉ tồn tại khi [[Melding of the Flesh]], [[Aegis Aurora]] và [[Purity of Ice]] chạy cùng nhau, mà đó là điều kiện để ra khỏi map đỏ chứ không phải để vào. Trước đó bạn là một nhân vật charge vào pack mà không có lớp vỏ ấy. Đoạn này là cách chúng tôi đọc thứ tự các stage; ghi chú hardcore ở trên chỉ nói là lớp vỏ tới muộn.
+
+upgrades:
+  - step: >-
+      [[Obliteration]]
+    why: >-
+      Món mua đầu tiên theo bài viết. 20% cơ hội cho quái bạn giết nổ ra, và
+      [[Shaper of Flames]] làm mọi cú nổ đều ignite. Nó là bước nhảy clear
+      speed lớn nhất với số tiền ít nhất, nên không có gì đứng trên nó.
+  - step: >-
+      Gloves có implicit Searing Exarch "ignites spread"
+    why: >-
+      Thứ hai, theo đúng thứ tự của bài viết. Chúng lan mỗi cú ignite 1.2 mét,
+      nên cú nổ từ bước đầu kéo cả pack đi theo. Chỉ có một trong hai món thì
+      bạn vẫn là một cái brand single target và không có clear.
+  - step: >-
+      [[Cinderswallow Urn]] và [[Lost Unity]]
+    why: >-
+      Hai cây unique rẻ mà bài viết bảo nhặt sớm: cái flask thì "thêm cả tấn
+      damage" theo lời tác giả, còn cái ring là một herald miễn phí cộng
+      resistance. Vị trí của chúng trong danh sách này là do chúng tôi đặt.
+      Chúng mua được ít hơn hai món phía trên, nhưng chúng rẻ, còn các bước
+      bên dưới thì không.
+  - step: >-
+      Một cây body armour six-link cho brand
+    why: >-
+      Thêm một support nữa lên cái cú hit mà mọi thứ khác đều là phần trăm của
+      nó. Bài viết liệt nó là gear map đầu mà không xếp hạng; đặt nó sau mấy
+      món clear là quyết định của chúng tôi, vì mấy món đó tạo ra clear từ con
+      số không, còn món này chỉ cộng thêm vào damage bạn đã có. Về sau nó
+      không bỏ phí: ở endgame chính cây six-link đó chứa dàn herald.
+  - step: >-
+      Các lớp resistance reduction: cây amulet dual-curse với
+      [[Whispers of Doom]], [[The Balance of Terror]], và Death Mitts có
+      implicit Eater
+    why: >-
+      Mỗi lớp nhân lên với damage bạn đã có, và đây là lúc single target đuổi
+      kịp. Chúng là những mảnh rời, mảnh nào cũng tự trả tiền cho nó, và đó
+      là lý do chúng tôi đặt chúng trước bộ phòng thủ; bài viết để cả hai ở
+      map đỏ và không xếp thứ tự giữa chúng.
+  - step: >-
+      [[Melding of the Flesh]], [[Aegis Aurora]] và [[Purity of Ice]], cùng
+      một lúc
+    why: >-
+      Phần phòng thủ, và là kiểu được ăn cả ngã về không: Melding mà thiếu
+      hai món kia thì hạ resistance của bạn. Nên đây là bước bạn để dành tiền
+      cho đủ bộ thay vì mua từng mảnh. Có cả ba chạy cùng nhau là thứ bài
+      viết tính là xong map đỏ.
+  - step: >-
+      [[Archdemon Crown]]
+    why: >-
+      Món damage lớn nhất: bốn gem level hiệu dụng, Burning Damage miễn phí
+      và 30% more elemental damage. Gem level đứng đầu thứ tự scale của tác
+      giả. Brand chuyển vào nó dưới dạng four-link và cây body armour rảnh ra
+      cho herald. Nó cần base Elder và chưa có giá 3.30, nên nó nằm ở stage
+      endgame.
+  - step: >-
+      Elegant Hubris với Supreme Ostentation, rồi 18 tattoo Arohongui
+    why: >-
+      Viên jewel đi trước vì mấy cái tattoo cần nó: Supreme Ostentation là
+      thứ bỏ yêu cầu attribute trên các node đi đường. Herald buff effect
+      đứng thứ sáu trong thứ tự scale của tác giả, và đó là cách chúng tôi
+      đọc lý do động cơ này được dựng sau cùng. Grace of the Goddess,
+      [[Mind Over Matter]] và cặp [[Forbidden Flame]] với
+      [[Forbidden Flesh]] tới sau nó; bài viết không cho thứ tự nào giữa
+      chúng và chúng tôi sẽ không bịa ra một cái.
+
+play:
+  mapping: |
+    [[Shield Charge]] vào pack rồi ra ở đầu bên kia. Con đầu tiên bạn giết có 20% cơ hội nổ qua [[Obliteration]], mỗi cú nổ đều ignite, và gloves chuyền từng cú ignite sang bất cứ con nào trong tầm 1.2 mét. Bạn không dừng lại xem. Lửa tự kết thúc phía sau bạn.
+
+    Chỉ cast [[Penance Brand]] lên thứ còn đứng, mà phần lớn nghĩa là quái rare. Vào trong tầm khoảng 3 mét, cắm hai brand lên cùng một mục tiêu, rồi đi tiếp trong lúc chúng nạp. [[Flame Dash]] là để băng qua khe và để thoát ra.
+
+    Cú nổ là một cơ hội, không phải chắc chắn, nên sẽ có pack không nổ dây chuyền. Lời khuyên của chúng tôi, không phải của guide: đừng charge qua charge lại chờ nó roll trúng. Cắm brand lên pack rồi đi tiếp.
+  bossing: |
+    Curse trước: [[Flammability]], và cả Elemental Weakness nữa khi [[Whispers of Doom]] đã nằm trên amulet. Trong campaign thì [[Wave of Conviction]] lo phần exposure; các link về sau bỏ nó, và bài viết nêu [[The Balance of Terror]] là nguồn Fire Exposure từ map đỏ trở đi.
+
+    Bước vào trong tầm khoảng 3 mét và gắn hai brand. [[Runebinder]] là thứ cho cái thứ hai dính được. Một brand cộng một energy mỗi một phần mười giây và phát nổ ở 20, nên theo con số của bài viết thì mỗi cái mất chừng hai giây từ lúc gắn tới lúc nổ — phép tính đó là của chúng tôi. Rồi nó biến mất và bạn cast lại.
+
+    Bạn không cần đứng đó trong lúc chúng nạp. Brand vẫn chạy trong lúc bạn né, và đó là lợi thế thật của build trong một trận boss: gắn, chạy, quay lại vào tầm, gắn tiếp. Hãy quen với chuyện thanh máu tụt chậm một nhịp sau cú nổ, vì ignite mới là thứ giết chính và nó có độ trễ.
+
+    Để mắt tới mana. Ở mức 47 mỗi lần cast thì bạn không thể cứ đè nút mãi được.
+
+deaths:
+  - situation: >-
+      Ngay sau khi mặc [[Melding of the Flesh]] một mình
+    cause: >-
+      Nó cap mọi resistance bằng maximum resistance cao nhất của bạn. Không có
+      [[Aegis Aurora]] và [[Purity of Ice]] nâng cap cold, thì bài viết nói
+      thẳng là mặc nó sẽ hạ resistance của bạn.
+    fix: >-
+      Mua cả ba trong một buổi và mặc lên cùng lúc. Phần chúng tôi thêm, suy
+      ra từ chính cơ chế đó: về sau bất cứ thứ gì gỡ cây shield hoặc tắt
+      Purity of Ice đều hạ mọi cap cùng một lúc, không riêng gì cold.
+  - situation: >-
+      Charge vào pack ở map trắng và map vàng
+    cause: >-
+      Lối chơi tới trước phần phòng thủ hai stage. Autobomber bắt đầu ở map
+      đầu; lớp vỏ maximum resistance là cách map đỏ kết thúc. Đó là cách
+      chúng tôi đọc thứ tự các stage — bản thân bài viết chỉ nói là lớp vỏ
+      tới muộn.
+    fix: >-
+      Chừng nào chưa đủ bộ, dùng [[Shield Charge]] để đi xuyên qua pack chứ
+      đừng dừng lại giữa nó, và để mấy cú nổ làm việc phía sau bạn. Giữ
+      resistance cap và [[Tempest Shield]] luôn bật. Đây là đánh giá của
+      chúng tôi; không nguồn nào cho quy tắc.
+  - situation: >-
+      Đứng cạnh boss chờ brand nổ
+    cause: >-
+      Brand chỉ gắn được trong tầm khoảng 3 mét rồi còn cần thời gian nạp,
+      nên phản xạ là đứng lại trong tầm mà nhìn nó. Không có gì bắt bạn làm
+      vậy. Bài viết nêu tầm gắn, đoạn nạp, và chuyện brand vẫn chạy trong lúc
+      bạn né; ghép ba cái lại là phần của chúng tôi.
+    fix: >-
+      Gắn cả hai brand, rồi đi ra. Quay lại khi chúng đã nổ.
+
+troubleshooting:
+  - symptom: >-
+      Tôi đứng đó mà brand không chịu cast
+    cause: >-
+      Mana. Mỗi lần cast tốn 47, cast liên tục là khoảng 107 mỗi giây, và
+      file showcase còn 78 mana trống.
+    fix: >-
+      [[Inspiration Support]] ở yên trong main link và Brand Mastery giảm
+      cost ở yên trên cây. Bỏ một trong hai là ra đúng triệu chứng này, và
+      nó trông như một cái bug.
+  - symptom: >-
+      Một con chết còn cả pack cứ đứng trơ ra đó
+    cause: >-
+      Thiếu một trong hai nửa của clear: nguồn nổ xác hoặc nguồn lan ignite.
+      Cú nổ cũng chỉ là 20% cơ hội, nên không phải con nào chết cũng kích
+      nó.
+    fix: >-
+      [[Obliteration]] trước, rồi gloves Searing Exarch. Chừng nào chưa có
+      gloves thì [[Ignite Proliferation Support]] trong link lo phần lan.
+  - symptom: >-
+      Brand trúng mà không có gì cháy
+    cause: >-
+      Chưa gán [[Shaper of Flames]]. Cú hit là physical và lightning, và
+      không có dòng "mọi damage đều có thể ignite" thì nó không ignite được
+      chút nào.
+    fix: >-
+      Lấy nó ở lab đầu tiên. Đó là lựa chọn ascendancy duy nhất mà guide
+      chốt rõ.
+  - symptom: >-
+      Boss chết lâu hơn pack rất nhiều
+    cause: >-
+      Một phần là bản chất build: single target giai đoạn đầu chỉ trung bình
+      và ignite có độ trễ. Một phần thì sửa được: một brand trên boss thay vì
+      hai, một curse thay vì hai, hoặc không có exposure.
+    fix: >-
+      Hai brand qua [[Runebinder]], cả hai curse khi đã anoint
+      [[Whispers of Doom]], và các lớp resistance reduction của map đỏ. Mỗi
+      thứ đều nhân lên cái bạn đã có.
+  - symptom: >-
+      Dàn herald không nhét vừa hết
+    cause: >-
+      Reservation. Cả bộ chỉ vừa là nhờ [[Bringer of Ruin]] cho 66% herald
+      reservation efficiency, cộng [[Enlighten Support]] về sau.
+    fix: >-
+      Chạy nhóm nhỏ hơn của campaign cho tới lab thứ ba, rồi mới thêm phần
+      còn lại. Nếu sau đó vẫn không vừa, kiểm xem Bringer of Ruin đã thật sự
+      được gán chưa trước khi đổ lỗi cho gear.
+  - symptom: >-
+      Con số của tôi chỉ bằng một phần nhỏ so với số người ta trích cho build này
+    cause: >-
+      Sai file. 14.7 triệu damage và 719,376 effective hit point là từ
+      planner 3.29 cũ hơn, một nhân vật showcase level 99.
+    fix: >-
+      Hãy so với Path of Building 3.30: 2.5 triệu damage mỗi giây và 281,003
+      effective hit point ở level 92 với gear thực tế.
+
 patch:
   - note: >-
       **Penance Brand, ignite và ascendancy Elementalist không bị đổi trong game

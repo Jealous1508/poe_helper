@@ -476,6 +476,128 @@ stages:
           - There is no leech, so every point of recovery depends on five keystones all working.
           - The low-life swap trades effective hit points for damage.
 
+powerCurve: |
+  Damage is how many rings overlap on the target and how hard each one hits. Three things move it, and they arrive far apart: **[[Ice Trap of Hollowness]]**, which the guide calls a massive boost to damage and area; **[[Sunblast]]**, which turns one throw into three traps that detonate themselves, and which the guide describes as effectively tripling the damage; and, late, [[Pain Attunement]] for 30% more spell damage. Underneath all of it sits throw speed, which is frenzy charges through [[Charged Traps Support]], kept alive by [[Swift Killer]].
+
+  In the campaign you have none of the three: [[Lightning Trap]] to level 28, then base [[Ice Trap]] aimed at enemies. In white and yellow maps you have the transfigured gem in a five-link, but you are still waiting for monsters to walk into your traps, and the article says plainly that the build before Sunblast is worse than its reputation. The belt is a red-map item and the guide itself calls it fairly rare at league start, so how long that awkward middle lasts is not in your hands. [[Carcass Jack]], cluster jewels and the low-life swap come after it.
+
+  Defence arrives in two lab steps and one gear step. [[Escape Artist]] and [[Eldritch Battery]] come at the Cruel lab; [[Spellbreaker]] at Merciless completes the recovery stack, and until then you should expect to die more; [[Spell Suppression]] only reaches 100% in red maps. There is no armour layer at any point, and the endgame swap spends part of the buffer on damage.
+
+  Read every "when" above as the guide's, and the guide runs on 3.28 and 3.29 data. "Tripled" is its word, not a measurement, and we could not confirm that its defensive numbers account for 3.30.
+
+play:
+  mapping: |
+    Before [[Sunblast]], enemies are what set your traps off, so you throw where a pack is about to walk and wait for it to walk in. That is the slow version of the build and there is no trick that makes it fast.
+
+    After Sunblast, you move with [[Shield Charge]] and throw ahead of yourself. The traps go off on their own about half a second to a second after landing, so the rhythm is throw, a beat, detonation, and you are already moving again. With the trigger craft on the wand, Shield Charge also applies [[Assassin's Mark]] for you.
+
+    Nothing else needs pressing. [[Summon Skitterbots]] chill, and trigger a trap every three seconds or so, which is where your charges now come from. [[Immortal Call]] sits on [[Cast when Damage Taken Support]].
+  bossing: |
+    Throw to the side of the boss, not onto it. The payload is a ring and its centre is dead space, so a trap on top of the boss puts the explosions around it. One throw is three rings, and the job is to make them overlap on the boss.
+
+    Traps can be laid before a boss is active, so start with a throw already down; the article lists that as a strength. After that, keep moving and keep throwing. Because the damage lands a beat after the throw, aim at where the boss will be standing rather than where it is — that sentence is our reading of the delay, not an instruction from the guide.
+
+    Through early maps the article lists a separate single-target link of [[Bear Trap]], [[Frost Bomb]] and [[Assassin's Mark]]. The red-map and endgame link lists no longer show it, and the guide never says whether it stays, so we will not tell you it does. Keep [[Diamond Flask]] up on bosses: the article calls it the build's only source of crit consistency.
+
+deaths:
+  - situation: >-
+      In the campaign, before the Merciless lab
+    cause: >-
+      The recovery stack is not finished. [[Spellbreaker]] is the piece that
+      makes [[Mind Over Matter]] and the energy shield recharge work together,
+      and it arrives with the third lab.
+    fix: >-
+      The article's answer is that this is the build, not your mistake. Fight
+      from trap range, put everything into life and resistances, and take the
+      lab as soon as you can.
+  - situation: >-
+      After importing a tree, or changing an armour piece
+    cause: >-
+      There is no leech, so recovery is [[Eldritch Battery]],
+      [[Mind Over Matter]], [[Ghost Dance]], [[Wicked Ward]] and
+      [[Spellbreaker]] working as one system, and the article says they fail
+      together. The guide's own cluster-jewel tree variant drops Ghost Dance
+      while its prose calls it core.
+    fix: >-
+      Count all five on your tree before you map. Keep hybrid evasion and
+      energy shield bases in every armour slot, because [[Escape Artist]] and
+      Ghost Dance both read from them.
+  - situation: >-
+      A map with reduced aura effect, no regeneration, or lowered maximum
+      resistances
+    cause: >-
+      The guide marks all three dangerous, and lists them twice. For the
+      first, the article gives the reason: [[Grace]], [[Zealotry]] and
+      [[Arctic Armour]] are the defence. For the other two the guide gives no
+      mechanism and we are not supplying one.
+    fix: >-
+      Reroll the map. None of the three is worth learning to play around.
+  - situation: >-
+      Right after the low-life swap
+    cause: >-
+      [[Petrified Blood]] and the reserved auras put you under half life to
+      turn on [[Pain Attunement]]. The article calls it a straight trade of
+      effective hit points for 30% more spell damage, and it only holds
+      together with life recoup on rings and the tree.
+    fix: >-
+      Have the recoup and the Reservation mastery in place before you swap.
+      If you still die, undo it; the article says to skip the swap in
+      hardcore or if you die a lot.
+  - situation: >-
+      A heavy physical hit, or standing in damage over time
+    cause: >-
+      There is no armour layer at all, and the article names degeneration and
+      damage over time as the thinnest part of the defence.
+    fix: >-
+      Use the range traps give you and do not stand in packs. For damage over
+      time, the article's own suggestion is [[Heartstopper]] through Forbidden
+      jewels; that is our inference from a 3.30 change and nobody has tested
+      it.
+
+troubleshooting:
+  - symptom: >-
+      Bosses barely take damage, though packs die
+    cause: >-
+      You are throwing onto the boss. The explosions form a ring around the
+      landing point, and the centre is the weak spot.
+    fix: >-
+      Throw to one side so the ring lands on the boss. The article says it
+      feels wrong for about an hour.
+  - symptom: >-
+      Charges became patchy the day [[Sunblast]] went on
+    cause: >-
+      [[Charged Traps Support]] gives charges when an enemy triggers a trap,
+      and Sunblast stops enemies triggering them. Only
+      [[Summon Skitterbots]] still do, on roughly a three-second cooldown.
+    fix: >-
+      Nothing is broken. Check the Skitterbots are out and [[Swift Killer]] is
+      allocated, since its charge duration is what makes the trickle last.
+  - symptom: >-
+      Passive points seem to do nothing after Sunblast
+    cause: >-
+      The Trap mastery trigger node and the trigger notables are still
+      allocated. They depend on enemies triggering traps, which no longer
+      happens.
+    fix: >-
+      Unspec them and spend the points elsewhere.
+  - symptom: >-
+      Energy shield is lower than the gear adds up to
+    cause: >-
+      [[Ghost Dance]] caps energy shield at your evasion rating. Pure energy
+      shield pieces raise one side of that and not the other.
+    fix: >-
+      Hybrid evasion and energy shield bases everywhere, and check what
+      [[Escape Artist]] is converting from your helmet and body armour.
+  - symptom: >-
+      Damage swings from throw to throw
+    cause: >-
+      It is a crit build whose only crit consistency is [[Diamond Flask]], and
+      the guide contradicts itself on which crit support to run.
+    fix: >-
+      Keep the flask up. The article's rule: crit chance support while your
+      base crit is low, crit damage once it is high, checked in Path of
+      Building and not against the guide's page.
+
 patch:
   - entry: trickster-buffs
     note: >-

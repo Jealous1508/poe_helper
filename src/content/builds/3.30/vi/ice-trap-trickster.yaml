@@ -475,6 +475,129 @@ stages:
           - Không có leech nào, nên từng điểm hồi phục đều phụ thuộc vào năm keystone cùng chạy.
           - Cú đổi sang low life đem effective hit point ra đổi lấy damage.
 
+powerCurve: |
+  Damage là có bao nhiêu cái vòng chồng lên mục tiêu và mỗi vòng đánh đau cỡ nào. Có ba thứ đẩy nó lên, và chúng tới cách nhau rất xa: **[[Ice Trap of Hollowness]]**, thứ guide gọi là một cú đẩy khổng lồ cho damage và area; **[[Sunblast]]**, thứ biến một cú ném thành ba cái trap tự nổ, và được guide mô tả là tăng damage gấp ba trên thực tế; và, về cuối, [[Pain Attunement]] cho 30% more spell damage. Nằm dưới tất cả là throw speed, tức là frenzy charge qua [[Charged Traps Support]], được [[Swift Killer]] giữ cho sống.
+
+  Trong campaign bạn không có cái nào trong ba thứ đó: [[Lightning Trap]] tới level 28, rồi [[Ice Trap]] gốc nhắm vào quái. Ở map trắng và map vàng bạn có transfigured gem trong một five-link, nhưng vẫn đang chờ quái đi vào trap, và bài viết nói thẳng là build trước Sunblast tệ hơn danh tiếng của nó. Cây belt là món của map đỏ và chính guide gọi nó là khá hiếm lúc league start, nên khúc giữa lóng ngóng đó kéo dài bao lâu thì không nằm trong tay bạn. [[Carcass Jack]], cluster jewel và cú đổi sang low life tới sau nó.
+
+  Phòng thủ tới trong hai bước lab và một bước gear. [[Escape Artist]] với [[Eldritch Battery]] tới ở Cruel lab; [[Spellbreaker]] ở Merciless hoàn tất chồng hồi phục, và tới trước lúc đó bạn nên chuẩn bị chết nhiều hơn; [[Spell Suppression]] thì tới map đỏ mới lên 100%. Không có lớp armour nào ở bất cứ mốc nào, và cú đổi ở endgame đem một phần bộ đệm ra tiêu vào damage.
+
+  Mọi chữ "khi nào" ở trên hãy đọc là của guide, mà guide thì chạy trên dữ liệu 3.28 với 3.29. "Gấp ba" là chữ của nó, không phải một phép đo, và chúng tôi không xác nhận được là mấy con số phòng thủ của nó đã tính tới 3.30.
+
+play:
+  mapping: |
+    Trước [[Sunblast]], quái là thứ làm trap của bạn nổ, nên bạn ném vào chỗ một pack sắp đi qua rồi chờ nó đi vào. Đó là bản chậm của build và không có mẹo nào làm nó nhanh lên.
+
+    Sau Sunblast, bạn di chuyển bằng [[Shield Charge]] và ném về phía trước mặt mình. Trap tự nổ tầm nửa giây tới một giây sau khi rơi, nên nhịp là ném, một nhịp chờ, nổ, và lúc đó bạn đã chạy tiếp rồi. Có craft trigger trên cây wand thì Shield Charge cũng áp [[Assassin's Mark]] thay bạn luôn.
+
+    Không còn gì khác phải bấm. [[Summon Skitterbots]] chill quái, và kích một cái trap mỗi ba giây hay cỡ đó, đó là chỗ charge của bạn giờ đến từ. [[Immortal Call]] nằm trên [[Cast when Damage Taken Support]].
+  bossing: |
+    Ném ra một bên con boss, đừng ném lên nó. Đòn đánh là một cái vòng và tâm của nó là vùng chết, nên một cái trap nằm ngay trên boss sẽ đặt mấy cú nổ vòng quanh nó. Một cú ném là ba cái vòng, và việc của bạn là cho chúng chồng lên người boss.
+
+    Trap đặt được trước khi boss hoạt động, nên hãy mở màn với một cú ném đã nằm sẵn dưới đất; bài viết liệt chuyện đó là một điểm mạnh. Sau đó thì cứ di chuyển và cứ ném. Vì damage rơi xuống trễ một nhịp so với cú ném, hãy nhắm vào chỗ boss sẽ đứng chứ không phải chỗ nó đang đứng — câu đó là cách chúng tôi đọc cái độ trễ, không phải một chỉ dẫn của guide.
+
+    Tới hết map đầu, bài viết có liệt một link single target riêng gồm [[Bear Trap]], [[Frost Bomb]] và [[Assassin's Mark]]. Danh sách link ở map đỏ và endgame không còn hiện nó, và guide chưa bao giờ nói nó có ở lại hay không, nên chúng tôi sẽ không bảo bạn là có. Giữ [[Diamond Flask]] chạy khi đánh boss: bài viết gọi nó là nguồn ổn định crit duy nhất của build.
+
+deaths:
+  - situation: >-
+      Trong campaign, trước Merciless lab
+    cause: >-
+      Chồng hồi phục chưa xong. [[Spellbreaker]] là mảnh làm cho
+      [[Mind Over Matter]] và energy shield recharge chạy được cùng nhau, và
+      nó tới cùng cái lab thứ ba.
+    fix: >-
+      Câu trả lời của bài viết là đó là bản chất build, không phải bạn làm
+      sai. Đánh từ tầm ném trap, dồn hết vào life với resistance, và lấy cái
+      lab đó sớm nhất có thể.
+  - situation: >-
+      Sau khi import một bản cây, hoặc đổi một món giáp
+    cause: >-
+      Không có leech, nên hồi phục là [[Eldritch Battery]],
+      [[Mind Over Matter]], [[Ghost Dance]], [[Wicked Ward]] và
+      [[Spellbreaker]] chạy như một hệ thống, và bài viết nói chúng sập cùng
+      nhau. Bản cây cluster jewel của chính guide thì bỏ Ghost Dance, trong
+      khi phần văn xuôi của nó gọi cái đó là lõi.
+    fix: >-
+      Đếm đủ cả năm cái trên cây trước khi chạy map. Giữ base hybrid evasion
+      với energy shield ở mọi ô giáp, vì [[Escape Artist]] và Ghost Dance đều
+      đọc từ chúng.
+  - situation: >-
+      Một cái map có reduced aura effect, không regeneration, hoặc bị hạ
+      maximum resistance
+    cause: >-
+      Guide đánh dấu cả ba là nguy hiểm, và liệt chúng hai lần. Với cái đầu,
+      bài viết có cho lý do: [[Grace]], [[Zealotry]] và [[Arctic Armour]]
+      chính là phần phòng thủ. Với hai cái còn lại thì guide không cho cơ chế
+      nào và chúng tôi cũng không tự đưa ra.
+    fix: >-
+      Roll lại map. Không cái nào trong ba đáng để tập chơi né.
+  - situation: >-
+      Ngay sau cú đổi sang low life
+    cause: >-
+      [[Petrified Blood]] và mấy aura đã reserve kéo bạn xuống dưới nửa life
+      để bật [[Pain Attunement]]. Bài viết gọi đó là một cú đổi thẳng, đem
+      effective hit point lấy 30% more spell damage, và nó chỉ đứng vững khi
+      có life recoup trên ring và trên cây.
+    fix: >-
+      Có sẵn recoup và Reservation mastery trước khi đổi. Nếu vẫn chết thì
+      gỡ ra; bài viết nói bỏ qua cú đổi ở hardcore hoặc nếu bạn chết nhiều.
+  - situation: >-
+      Một cú hit physical nặng, hoặc đứng trong damage over time
+    cause: >-
+      Không có lớp armour nào cả, và bài viết nêu degeneration với damage
+      over time là phần mỏng nhất của phòng thủ.
+    fix: >-
+      Dùng cái tầm xa mà trap cho bạn và đừng đứng trong pack. Với damage
+      over time, gợi ý của chính bài viết là [[Heartstopper]] qua jewel
+      Forbidden; đó là suy luận của chúng tôi từ một thay đổi 3.30 và chưa ai
+      thử nó.
+
+troubleshooting:
+  - symptom: >-
+      Boss gần như không mất máu, dù pack thì chết
+    cause: >-
+      Bạn đang ném lên người boss. Mấy cú nổ tạo thành một cái vòng quanh
+      điểm rơi, và tâm là chỗ yếu.
+    fix: >-
+      Ném lệch ra một bên để cái vòng rơi lên boss. Bài viết nói nó sẽ thấy
+      sai sai trong khoảng một tiếng.
+  - symptom: >-
+      Charge trở nên chập chờn từ ngày đeo [[Sunblast]]
+    cause: >-
+      [[Charged Traps Support]] cho charge khi quái kích trap, mà Sunblast
+      thì chặn quái kích chúng. Chỉ còn [[Summon Skitterbots]] kích được,
+      với cooldown tầm ba giây.
+    fix: >-
+      Không có gì hỏng cả. Kiểm xem Skitterbots có đang ra không và
+      [[Swift Killer]] đã được lấy chưa, vì charge duration của nó là thứ làm
+      mấy giọt charge đó sống đủ lâu.
+  - symptom: >-
+      Có mấy passive point như không làm gì sau khi đeo Sunblast
+    cause: >-
+      Node trigger của Trap mastery và mấy notable trigger vẫn đang được
+      gán. Chúng phụ thuộc vào chuyện quái kích trap, thứ không còn xảy ra
+      nữa.
+    fix: >-
+      Bỏ chúng đi và tiêu mấy điểm đó vào chỗ khác.
+  - symptom: >-
+      Energy shield thấp hơn tổng số trên gear
+    cause: >-
+      [[Ghost Dance]] chặn energy shield ở mức evasion rating của bạn. Món
+      energy shield thuần thì nâng một vế của chuyện đó mà không nâng vế kia.
+    fix: >-
+      Base hybrid evasion với energy shield ở mọi chỗ, và kiểm xem
+      [[Escape Artist]] đang chuyển những gì từ helmet và body armour của
+      bạn.
+  - symptom: >-
+      Damage lúc cao lúc thấp giữa các cú ném
+    cause: >-
+      Đây là build crit mà nguồn ổn định crit duy nhất là [[Diamond Flask]],
+      và guide thì tự mâu thuẫn về chuyện chạy support crit nào.
+    fix: >-
+      Giữ flask chạy. Quy tắc của bài viết: support crit chance khi base crit
+      còn thấp, crit damage khi nó đã cao, kiểm trong Path of Building chứ
+      không đối chiếu với trang guide.
+
 patch:
   - entry: trickster-buffs
     note: >-

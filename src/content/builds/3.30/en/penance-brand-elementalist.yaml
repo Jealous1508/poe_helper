@@ -397,6 +397,189 @@ stages:
 
           None of these have a 3.30 price. The author has shipped this build across 3.27, 3.28, 3.29 and 3.30, so the route is real; the cost is unknown.
 
+powerCurve: |
+  The damage is one number put through three sets of multipliers. The number is the size of the brand's hit. The first set turns it into fire: [[Shaper of Flames]], physical gained as extra fire on gear, and [[Herald of Ash]] scaled by herald effect. The second is how many brands sit on the target, and [[Runebinder]] allows two. The third is on the enemy's side: curses, exposure and the rest of the resistance reduction. Clear is a separate thing, and it is bought rather than scaled: one source of explosions and one source of ignite spread.
+
+  These arrive at very different times, and that is the whole feel of the build. Until level 28 there is no brand at all. From 28 to maps you have the hit and the first layer — [[Shaper of Flames]] from the first lab, gem levels from Honourhome, flat damage through [[Nycta's Lantern]] — and no real clear. In white and yellow maps two cheap items, [[Obliteration]] and the ignite-spread gloves, turn it into an autobomber, and [[Bringer of Ruin]] makes the heralds count. So mapping peaks early and cheaply, while single target is still only average.
+
+  Single target catches up in red maps, when the resistance reduction layers go on; the article's own words are that the mid-game "feels like it suddenly doubles". The last jump is [[Archdemon Crown]] and the herald stack, both gated behind an Elder base and a jewel seed. Our researcher's bossing estimate runs along the same line: 3.5 as a starter, about 4.5 once geared.
+
+  Defence comes last of all. The shell of maximum resistances and block exists only once [[Melding of the Flesh]], [[Aegis Aurora]] and [[Purity of Ice]] work together, and that is the exit condition of red maps, not the entry. Before it you are a character that charges into packs without that shell. This paragraph is our reading of the stage order; the hardcore note above says only that the shell arrives late.
+
+upgrades:
+  - step: >-
+      [[Obliteration]]
+    why: >-
+      The article's first purchase. A 20% chance for the enemies you kill to
+      explode, and [[Shaper of Flames]] makes every explosion ignite. It is
+      the biggest jump in clear speed for the least money, which is why
+      nothing sits above it.
+  - step: >-
+      Gloves with the Searing Exarch "ignites spread" implicit
+    why: >-
+      Second, by the article's own order. They spread each ignite 1.2 metres,
+      so the explosion from the first step takes the pack with it. With only
+      one of the two you still have a single-target brand and no clear.
+  - step: >-
+      [[Cinderswallow Urn]] and [[Lost Unity]]
+    why: >-
+      Two cheap uniques the article says to pick up early: the flask "adds a
+      ton of damage" in the author's words, and the ring is a free herald
+      plus resistances. Their place in this list is ours. They buy less than
+      the two items above, but they cost little and the steps below do not.
+  - step: >-
+      A six-link body armour for the brand
+    why: >-
+      One more support on the hit that everything else is a percentage of.
+      The article lists it as early-maps gear without ranking it; putting it
+      after the clear items is our call, because those create clear from
+      nothing and this only adds to damage you have. It is not wasted later:
+      in the endgame the same six-link carries the heralds.
+  - step: >-
+      The resistance reduction layers: a dual-curse amulet with
+      [[Whispers of Doom]], [[The Balance of Terror]], and Death Mitts with
+      the Eater implicit
+    why: >-
+      Each layer multiplies with the damage you already have, and this is
+      where single target catches up. They are separate pieces that each pay
+      on their own, which is our reason for placing them before the defensive
+      set; the article puts both in red maps and does not order them.
+  - step: >-
+      [[Melding of the Flesh]], [[Aegis Aurora]] and [[Purity of Ice]],
+      together
+    why: >-
+      The defence, and all or nothing: Melding without the other two lowers
+      your resistances. So this is the step you save for instead of buying a
+      piece at a time. Having all three working is what the article counts as
+      finishing red maps.
+  - step: >-
+      [[Archdemon Crown]]
+    why: >-
+      The biggest single damage item: four effective gem levels, free Burning
+      Damage and 30% more elemental damage. Gem levels are first in the
+      author's scaling order. The brand moves into it as a four-link and the
+      body armour is freed for heralds. It needs an Elder base and has no
+      3.30 price, which is why it sits in the endgame stage.
+  - step: >-
+      Elegant Hubris with Supreme Ostentation, then the 18 Arohongui tattoos
+    why: >-
+      The jewel comes first because the tattoos need it: Supreme Ostentation
+      is what removes the attribute requirements from travel nodes. Herald
+      buff effect is sixth in the author's scaling order, which is our
+      reading of why this engine is built last. Grace of the Goddess,
+      [[Mind Over Matter]] and the [[Forbidden Flame]] and
+      [[Forbidden Flesh]] pair come after it; the article gives no order
+      among them and we will not invent one.
+
+play:
+  mapping: |
+    [[Shield Charge]] into the pack and out the far side. The first thing you kill has a 20% chance to explode through [[Obliteration]], every explosion ignites, and the gloves pass each ignite to anything within 1.2 metres. You do not stop to watch. The fire finishes behind you.
+
+    Cast [[Penance Brand]] only on what is still standing, which mostly means rares. Get within about 3 metres, put two brands on the same target, and move on while they charge. [[Flame Dash]] is for gaps and for getting out.
+
+    The explosion is a chance, not a certainty, so some packs will not chain. Our advice, not the guide's: do not charge back and forth waiting for the roll. Brand the pack and keep going.
+  bossing: |
+    Curse first: [[Flammability]], and Elemental Weakness as well once [[Whispers of Doom]] is on the amulet. In the campaign [[Wave of Conviction]] supplies the exposure; the later links drop it, and the article names [[The Balance of Terror]] as the source of Fire Exposure from red maps on.
+
+    Step inside about 3 metres and attach two brands. [[Runebinder]] is what lets the second one stick. A brand gains one energy every tenth of a second and detonates at 20, so by the article's numbers each one takes roughly two seconds from attaching to exploding — that arithmetic is ours. Then it is gone and you cast again.
+
+    You do not have to stand there while they charge. The brands keep working while you dodge, and that is the build's real advantage in a boss fight: attach, move, come back into range, attach again. Expect the health bar to drop a beat after the explosion, because the ignite does most of the killing and it is delayed.
+
+    Watch your mana. At 47 per cast you cannot simply hold the button down.
+
+deaths:
+  - situation: >-
+      Right after equipping [[Melding of the Flesh]] on its own
+    cause: >-
+      It caps every resistance at your highest maximum resistance. Without
+      [[Aegis Aurora]] and [[Purity of Ice]] raising the cold cap, the article
+      says plainly that wearing it lowers your resistances.
+    fix: >-
+      Buy all three in one session and put them on together. Our addition,
+      which follows from the same mechanic: anything that later takes the
+      shield off or switches Purity of Ice off lowers every cap at once, not
+      only the cold one.
+  - situation: >-
+      Charging into packs in white and yellow maps
+    cause: >-
+      The playstyle arrives two stages before the defence does. The
+      autobomber starts in early maps; the maximum-resistance shell is how
+      red maps end. That is our reading of the stage order — the article
+      itself says only that the shell arrives late.
+    fix: >-
+      Until the set is on, use [[Shield Charge]] to go through a pack, not
+      to stop inside it, and let the explosions work behind you. Keep
+      resistances capped and [[Tempest Shield]] running. This is our
+      judgement; no source gives a rule.
+  - situation: >-
+      Standing next to a boss, waiting for the brands to go off
+    cause: >-
+      A brand only attaches within about 3 metres and then needs time to
+      charge, so the instinct is to stay in range and watch it. Nothing
+      requires that. The article states the range, the ramp, and that brands
+      keep working while you dodge; putting the three together is ours.
+    fix: >-
+      Attach both brands, then leave. Come back when they have detonated.
+
+troubleshooting:
+  - symptom: >-
+      I stand there and the brand will not cast
+    cause: >-
+      Mana. Each cast costs 47, sustained casting is about 107 per second,
+      and the showcase file has 78 unreserved.
+    fix: >-
+      [[Inspiration Support]] stays in the main link and the Brand Mastery
+      for reduced cost stays allocated. Dropping either one produces exactly
+      this, and it looks like a bug.
+  - symptom: >-
+      One enemy dies and the rest of the pack just stands there
+    cause: >-
+      One of the two halves of the clear is missing: the explode source or
+      the ignite-spread source. The explosion is also only a 20% chance, so
+      not every kill sets it off.
+    fix: >-
+      [[Obliteration]] first, then the Searing Exarch gloves. Until the
+      gloves, [[Ignite Proliferation Support]] in the link does the
+      spreading.
+  - symptom: >-
+      The brand hits and nothing burns
+    cause: >-
+      [[Shaper of Flames]] is not allocated. The hit is physical and
+      lightning, and without "all damage can ignite" it cannot ignite at
+      all.
+    fix: >-
+      Take it in the first lab. It is the one ascendancy pick the guide pins
+      explicitly.
+  - symptom: >-
+      Bosses take far longer than packs
+    cause: >-
+      Partly this is the build: early single target is only average and the
+      ignite is delayed. Partly it is fixable: one brand on the boss instead
+      of two, one curse instead of two, or no exposure.
+    fix: >-
+      Two brands through [[Runebinder]], both curses once
+      [[Whispers of Doom]] is anointed, and the red-maps resistance reduction
+      layers. Each one multiplies what you already have.
+  - symptom: >-
+      The heralds do not all fit
+    cause: >-
+      Reservation. The full set only fits because [[Bringer of Ruin]] gives
+      66% herald reservation efficiency, with [[Enlighten Support]] added
+      later.
+    fix: >-
+      Run the smaller campaign group until the third lab, then add the rest.
+      If they still do not fit afterwards, check that Bringer of Ruin is
+      actually allocated before you blame the gear.
+  - symptom: >-
+      My numbers are a fraction of the ones quoted for this build
+    cause: >-
+      Wrong file. 14.7 million damage and 719,376 effective hit points come
+      from the older 3.29 planner, a level 99 showcase character.
+    fix: >-
+      Compare against the 3.30 Path of Building instead: 2.5 million damage
+      per second and 281,003 effective hit points at level 92 with realistic
+      gear.
+
 patch:
   - note: >-
       **Penance Brand, ignite and the Elementalist ascendancy were not
