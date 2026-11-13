@@ -270,13 +270,16 @@ stages:
     levels: Level 28–68
     uses: >-
       [[Cyclone]] với [[Shockwave Support]] ngay từ lúc bạn lấy được gem ở level
-      28. [[Sunder]] vào stash.
+      28. [[Sunder]] vào stash. [[Brutality Support]] vào link ở level 38, đúng
+      level mà gem yêu cầu.
     changes: >-
       Cứ tiếp tục nâng cây mace hoặc staff và giữ resistance cap. Thêm một Decoy
       Totem hoặc [[Steelskin]] cho mấy con rare trâu. Chạy Merciless lab trước
       Kitava.
     links:
-      - name: Main skill
+      - name: Main skill, level 28–37
+        gems: [Cyclone, Shockwave Support, Melee Physical Damage Support]
+      - name: Main skill, từ level 38
         gems: [Cyclone, Shockwave Support, Melee Physical Damage Support, Brutality Support]
       - name: Aura
         gems: [Precision, Blood and Sand, Herald of Ash]
@@ -336,7 +339,7 @@ stages:
 
           Link Tumult đã được xác minh trên trang của poe-vault là: *Cyclone of Tumult, Shockwave, Melee Physical Damage, Brutality, Volatility, Infused Channelling*, với [[Void Shockwave Support]] thay Shockwave về sau.
 
-          [[Brutality Support]] cấm mọi damage không phải physical, nên trong build này không có chuyển đổi elemental ở đâu cả. Impale là lớp damage thứ hai; một bản export cho thấy 4.9 triệu hit cộng 3.3 triệu impale.
+          [[Brutality Support]] cấm mọi damage không phải physical, nên trong build này không có chuyển đổi elemental ở đâu cả. Impale là lớp damage thứ hai. Trang này từng trích một phép chia hit với impale từ "một bản export"; bản export chúng tôi mở được chỉ hiện một con số tổng, không có phép chia nào như vậy, và chúng tôi không truy ra được mấy con số đó từ nguồn nào. Nên chúng tôi không trích con nào: không có phép chia nào được đo giữa damage của hit và damage của impale.
       - title: "Aura: hai guide chạy hai bộ khác nhau"
         body: |
           Link aura phía trên là của maxroll: [[Precision]], Blood and Sand và [[Herald of Ash]], bật từ level 12 cùng với Autoexertion. Đó là bộ aura duy nhất mà phần chữ của maxroll nêu tên, và ghi chú campaign của họ giao việc cho Herald of Ash: dọn quái sót, và bật ignite cho Fire Mastery. Việc đó nằm khá vênh bên cạnh Brutality Support trong main link; ghi chú về Herald of Ash ở stage trước nói rõ thứ gì chúng tôi đọc được và không đọc được. Lời khuyên về Watcher's Eye cho endgame của họ thì tính có cả Pride lẫn Precision, nhưng phần chữ của guide không nói khi nào Pride vào.
@@ -348,7 +351,7 @@ stages:
         body: |
           - **Cannot be leeched from.** Cái này gỡ bỏ [[Brutal Fervour]], tức là cả hệ phòng thủ của bạn.
           - **Reduced recovery rate.**
-          - **−9% tới −12% maximum resistances.**
+          - **−9% tới −12% maximum resistances.** Maxroll gọi nó là rất nguy hiểm, và nói thêm rằng bạn vẫn chạy được nếu không ngại chết.
           - **Reduced cooldown recovery.** poe-vault liệt nó vì tốc độ mà nó lấy mất của bạn ở budget cao, lúc bạn di chuyển bằng Frostblink. Còn chuyện nó cũng làm chậm mấy đợt shockwave, vốn chạy trên cooldown, là cách đọc của chúng tôi.
 
           poe-vault còn ghi map Valdos là không hỗ trợ.
@@ -563,12 +566,15 @@ deaths:
       [[Mageblood]]; flask roll movement speed là giải pháp tạm.
   - situation: "Map có −9% tới −12% maximum resistances"
     cause: >-
-      Danh sách mod cần tránh không cho lý do cho mod này. Cách đọc của chúng
-      tôi: armour không làm gì trước các cú hit elemental, nên với chúng bạn
-      chỉ có block, resistance và một bể máu nhỏ, mà −12% tính từ cap 75% thì
-      để lọt thêm khoảng một nửa damage nữa.
+      Danh sách của Maxroll gọi mod này là "very dangerous", và không cho lý
+      do cơ chế nào. Cách đọc của chúng tôi về lý do: armour không làm gì trước
+      các cú hit elemental, nên với chúng bạn chỉ có block, resistance và một
+      bể máu nhỏ, mà −12% tính từ cap 75% thì để lọt thêm khoảng một nửa damage
+      nữa.
     fix: >-
-      Reroll, đúng như danh sách đó nói.
+      Reroll. Nguyên văn của Maxroll là bạn chạy được nó "if you don't mind
+      dying"; mod duy nhất họ gọi là thật sự không thể chạy là mod chặn
+      leech.
 
 troubleshooting:
   - symptom: "Cyclone vẫn xoay mà không có đợt shockwave nào bung ra"

@@ -271,13 +271,16 @@ stages:
     levels: Level 28–68
     uses: >-
       [[Cyclone]] with [[Shockwave Support]] from the moment you get the gem
-      at level 28. [[Sunder]] goes in the stash.
+      at level 28. [[Sunder]] goes in the stash. [[Brutality Support]] joins
+      the link at level 38, the level the gem requires.
     changes: >-
       Keep upgrading the mace or staff and keep resistances capped. Add a
       Decoy Totem or [[Steelskin]] for tanky rares. Run Merciless lab before
       Kitava.
     links:
-      - name: Main skill
+      - name: Main skill, level 28–37
+        gems: [Cyclone, Shockwave Support, Melee Physical Damage Support]
+      - name: Main skill, from level 38
         gems: [Cyclone, Shockwave Support, Melee Physical Damage Support, Brutality Support]
       - name: Auras
         gems: [Precision, Blood and Sand, Herald of Ash]
@@ -337,7 +340,7 @@ stages:
 
           poe-vault's page-verified Tumult link is: *Cyclone of Tumult, Shockwave, Melee Physical Damage, Brutality, Volatility, Infused Channelling*, with [[Void Shockwave Support]] replacing Shockwave later.
 
-          [[Brutality Support]] forbids all non-physical damage, so there is no elemental conversion anywhere in this build. Impale is the second damage layer; one export shows 4.9 million hit plus 3.3 million impale.
+          [[Brutality Support]] forbids all non-physical damage, so there is no elemental conversion anywhere in this build. Impale is the second damage layer. This page used to quote a hit and impale split from "one export"; the export we can open shows a single total and no such split, and we could not trace the numbers to any source. So we quote none: no measured split between hit and impale damage is available.
       - title: "Auras: the two guides run different sets"
         body: |
           The aura link above is maxroll's: [[Precision]], Blood and Sand and [[Herald of Ash]], reserved from level 12 together with Autoexertion. It is the only aura set maxroll's text names, and its campaign notes give Herald of Ash a job: cleanup, and enabling ignites for the Fire Mastery. That job sits oddly beside Brutality Support in the main link; the note on Herald of Ash in the previous stage says what we could and could not read. Its endgame Watcher's Eye advice counts on Pride as well as Precision, but the guide's text never says when Pride goes in.
@@ -349,7 +352,7 @@ stages:
         body: |
           - **Cannot be leeched from.** This removes [[Brutal Fervour]], which is your whole defence.
           - **Reduced recovery rate.**
-          - **−9% to −12% maximum resistances.**
+          - **−9% to −12% maximum resistances.** Maxroll calls it very dangerous, and adds that you can run it if you do not mind dying.
           - **Reduced cooldown recovery.** poe-vault lists it for the speed it costs you on a high budget, where you move by Frostblink. That it also slows the shockwaves, which run on a cooldown, is our reading.
 
           poe-vault also marks Valdos maps as not supported.
@@ -564,12 +567,15 @@ deaths:
       flasks rolled for movement speed are the stopgap.
   - situation: "A map with −9% to −12% maximum resistances"
     cause: >-
-      The list of modifiers to avoid gives no reason for this one. Our
-      reading: armour does nothing against elemental hits, so against them
-      you have block, resistances and a small life pool, and −12% from a 75%
-      cap lets about half again as much damage through.
+      Maxroll's list calls this modifier "very dangerous", and gives no
+      mechanical reason. Our reading of why: armour does nothing against
+      elemental hits, so against them you have block, resistances and a small
+      life pool, and −12% from a 75% cap lets about half again as much damage
+      through.
     fix: >-
-      Reroll it, as that list says.
+      Reroll it. Maxroll's own words are that you can run it "if you don't
+      mind dying"; the only modifier it calls truly impossible is the one
+      that stops leech.
 
 troubleshooting:
   - symptom: "Cyclone spins but no shockwaves come out"
