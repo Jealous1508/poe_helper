@@ -1,8 +1,8 @@
 ---
 // A quiet way to say thank you. Two entry points share one note: a small
 // button in the header, and a line in the footer. Neither interrupts
-// anything — no banner, no timer, no modal on arrival.
-import { donateIsConfigured, donateUrl } from '../config/site';
+// anything — no banner, no timer, nothing on arrival.
+import { donate } from '../config/site';
 import { t, type Locale } from '../i18n';
 
 interface Props {
@@ -12,6 +12,8 @@ interface Props {
 }
 const { locale, place } = Astro.props;
 const popupId = `donate-${place}`;
+const momo = donate.momo.trim();
+const url = donate.url.trim();
 ---
 {place === 'header' ? (
   <button type="button" class="donate-btn" popovertarget={popupId}>
@@ -32,15 +34,46 @@ const popupId = `donate-${place}`;
 <div popover id={popupId} class="donate-note" role="dialog" aria-labelledby={`${popupId}-title`}>
   <h3 id={`${popupId}-title`}>{t(locale, 'donate.title')}</h3>
   <p>{t(locale, 'donate.body')}</p>
-  {donateIsConfigured ? (
-    <a class="btn" href={donateUrl} rel="noopener" target="_blank">{t(locale, 'donate.cta')}</a>
-  ) : (
-    <p class="donate-note__todo">{t(locale, 'donate.unset')}</p>
+
+  {momo && (
+    <div class="momo">
+      <span class="momo__label">{t(locale, 'donate.momo')}</span>
+      <div class="momo__row">
+        <span class="momo__number" data-momo-number>{momo}</span>
+        <button type="button" class="momo__copy" data-copy={momo} data-copied={t(locale, 'donate.copied')}>
+          {t(locale, 'donate.copy')}
+        </button>
+      </div>
+    </div>
   )}
+
+  {url && <a class="btn" href={url} rel="noopener" target="_blank">{t(locale, 'donate.cta')}</a>}
+
   <button type="button" class="donate-note__close" popovertarget={popupId} popovertargetaction="hide">
     {t(locale, 'donate.close')}
   </button>
 </div>
+
+<script>
+  // Copy the number to the clipboard, with the label confirming it worked.
+  // If the clipboard is blocked the number is still there to read and select.
+  document.addEventListener('click', async (event) => {
+    const button = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-copy]') : null;
+    if (!button?.dataset.copy) return;
+    try {
+      await navigator.clipboard.writeText(button.dataset.copy.replace(/\s+/g, ''));
+      const original = button.textContent;
+      button.textContent = button.dataset.copied ?? 'Copied';
+      button.classList.add('is-done');
+      setTimeout(() => {
+        button.textContent = original;
+        button.classList.remove('is-done');
+      }, 1800);
+    } catch {
+      // Clipboard refused; the number is on screen to copy by hand.
+    }
+  });
+</script>
 
 <style>
   /* Header: quiet until you look for it. */
@@ -92,14 +125,46 @@ const popupId = `donate-${place}`;
   }
   .donate-note h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
   .donate-note p { font-size: 0.97rem; color: var(--text-muted); }
-  .donate-note .btn { margin-top: 1.1rem; }
-  .donate-note__todo {
-    margin-top: 1rem;
-    padding: 0.6rem 0.75rem;
-    border: 1px dashed var(--border-strong);
+  .donate-note .btn { margin-top: 1rem; }
+
+  .momo {
+    margin-top: 1.1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
-    font-size: 0.86rem;
+    background: var(--surface-2);
   }
+  .momo__label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .momo__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.3rem; }
+  .momo__number {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    user-select: all;
+  }
+  .momo__copy {
+    flex: none;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .momo__copy:hover { color: var(--accent); border-color: var(--accent); }
+  .momo__copy:global(.is-done) { color: var(--buff); border-color: var(--buff); }
+
   .donate-note__close {
     display: block;
     margin-top: 1rem;
