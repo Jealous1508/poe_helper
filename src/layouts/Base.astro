@@ -10,7 +10,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProgressBar from '../components/ProgressBar.astro';
 import type { League } from '../config/leagues';
-import { t, type Locale } from '../i18n';
+import { assetPath, t, type Locale } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -31,6 +31,9 @@ const fullTitle = `${title} · ${league.name} ${league.id}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href={assetPath('favicon-64.png')} />
+    <link rel="apple-touch-icon" href={assetPath('apple-touch-icon.png')} />
+    <meta name="theme-color" content="#0e0f13" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="article" />
