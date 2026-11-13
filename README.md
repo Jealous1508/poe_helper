@@ -100,8 +100,10 @@ Two settings decide the URLs, both read from the environment at build time:
 | `BASE_PATH` | `/poe-guide/` | The sub-path, or `/` at a domain root |
 
 `.github/workflows/deploy.yml` publishes to **GitHub Pages** on every push
-to `master`, and turns Pages on itself the first time it runs, so there is
-nothing to set up by hand. It fills both variables in too. The workflow runs
+to `master`. Turn Pages on once under Settings → Pages → Source: *GitHub
+Actions* — the workflow cannot do it for itself, because creating a Pages
+site needs a token with admin rights and the one Actions provides does not
+have them. After that it fills both variables in itself. The workflow runs
 `npm run verify` first, so a broken link or an unknown game term fails the
 build instead of reaching the site.
 
