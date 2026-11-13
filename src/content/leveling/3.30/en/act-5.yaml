@@ -1,0 +1,309 @@
+number: 5
+title: "Oriath, Innocence, and the Kitava penalty"
+town: Overseer's Tower
+levelIn: 41
+levelOut: 45
+skillPoints: 2
+skillPointsNote: "Plus 2 respec points from Kitava's Torments."
+boss: "Kitava, the Insatiable"
+keyRewards:
+  - "2 passive points: In Service to Science, Kitava's Torments"
+  - "A resistance ring from Lani in the very first zone"
+  - "A free utility flask from The Key to Freedom"
+intro: >-
+  Act 5 is the shortest act so far and the one with the longest shadow.
+  Eleven zones, two passive points, no Trials and no Pantheon souls. Then you
+  kill Kitava and lose 30 points of every resistance you have, permanently.
+  Everything you do in this act should be read as preparation for that.
+
+nodes:
+  - id: slave-pens
+    name: "The Slave Pens: Overseer Krow"
+    kind: zone
+    tag: must
+    level: 41
+    waypoint: true
+    summary: >-
+      You arrive in Oriath here. Killing Overseer Krow drops the ladder up to
+      Overseer's Tower.
+    quest: Return to Oriath
+    reward: "A ring from Lani: a Topaz, Sapphire or Ruby Ring, or one of three Two-Stone Rings."
+    tips: >-
+      Guides word the route differently, but the useful landmark is the hanged
+      Karui. Head for the right-hand end, turn down, then work back left.
+    newbie: >-
+      **This ring reward matters more than it looks.** Four zones from here
+      Kitava takes 30 points off all of your resistances. A Two-Stone Ring
+      covers two elements in one slot, so take the one that fills your two
+      worst gaps rather than the one with the prettiest name.
+
+  - id: overseers-tower
+    name: Overseer's Tower
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for the act. Utula sells equipment and quality currency, Lani
+      sells wands, jewellery, flasks and currency, and Vilenta handles quest
+      rewards.
+    tips: >-
+      Once Innocence is dead, Bannon replaces Utula as the equipment vendor.
+      Sin also first appears in this act and becomes the Pantheon NPC in Act 6.
+
+  - id: control-blocks
+    name: The Control Blocks
+    kind: zone
+    tag: must
+    level: 41
+    image: quest-miasmeter
+    badge: "+1 passive point"
+    summary: >-
+      Go up from the start to a room with the Miasmeter on the left, then
+      continue right.
+    quest: In Service to Science
+    reward: "Book of Skill from Vilenta: +1 passive point."
+    tips: >-
+      Head west as far as the zone lets you to find the Miasmeter, then
+      north-east from there for the rest of the zone.
+
+  - id: justicar-casticus
+    name: "Justicar Casticus"
+    kind: boss
+    tag: must
+    level: 41
+    image: quest-eyes-of-zeal
+    summary: >-
+      At the far end of the Control Blocks. He drops the Eyes of Zeal, which
+      is what gets you out of the prison.
+    quest: The Key to Freedom
+    reward: "A choice of utility flask from Lani: Ruby, Sapphire, Topaz, Amethyst, Granite, Jade or Diamond."
+    tips: >-
+      This is a free utility flask slot, so fill it. Nothing we read ranks the
+      seven options against each other, but an armour or survivability flask
+      is the safer pick for the Labyrinth and for Kitava than a damage one.
+
+  - id: oriath-square
+    name: Oriath Square
+    kind: zone
+    tag: travel
+    level: 42
+    waypoint: true
+    summary: >-
+      Cross the right-hand bridge, then head up towards the Templar Courts.
+
+  - id: the-matriarch
+    name: "The Matriarch"
+    kind: side
+    tag: skip
+    branchFrom: oriath-square
+    level: 42
+    summary: >-
+      An optional fight in Oriath Square, with two Oriath Enforcers alongside
+      her. Killing her unlocks the Stately Hideout.
+    why: >-
+      A hideout is decoration, not power. There is no passive point and no
+      permanent character reward here, so skip it on a first run unless you
+      actually want the hideout.
+
+  - id: templar-courts
+    name: The Templar Courts
+    kind: zone
+    tag: travel
+    level: 42
+    waypoint: true
+    summary: >-
+      Go right to the wall, up, then right again to a courtroom staircase. Take
+      it down to the large room; the Chamber of Innocence is on the left.
+    tips: "If you lose the thread, the overall direction through the zone is north-east."
+
+  - id: chamber-of-innocence
+    name: "The Chamber of Innocence: Avarius and Innocence"
+    kind: boss
+    tag: must
+    level: 43
+    waypoint: true
+    summary: >-
+      Loop around the zone clockwise, then spiral counter-clockwise to the
+      north-west for the Sanctum of Innocence.
+    quest: Death to Purity
+    reward: "A jewel or an Uncarved Gemstone from Lani."
+    tips: |
+      This is **one fight with two identities**, which is why other guides name it differently. High Templar Avarius is phase one; Innocence is phase two. If a guide lists only one of those names, it is still this fight.
+
+      **Phase 1, Avarius:** two slams you avoid by not standing in them, and slow-moving statues he wakes up to join in. At 50% he teleports to the centre, goes invulnerable and spawns enemies, so clear the adds.
+
+      **Phase 2, Innocence:** invulnerable at 50% and at 33%. On the line "I am the torch!" he channels a beam whose damage stacks the longer it tracks you, so a brief clip is survivable and a sustained hit is not. Stay at his back and circle him. On "I am the end" he detonates a large explosion outward from himself, so run out.
+    newbie: >-
+      Avarius' golden projectile barrage is what kills people in phase one,
+      and the recommended answer is unusual: use a [[Portal Scroll]], leave
+      the arena and wait it out. This is the one place in these acts where
+      leaving is a tactic rather than a retreat. Grab the crafting recipe in
+      the room to the left before you enter the Sanctum. Afterwards, talk to
+      Sin, take the right-hand exit, go past the waypoint and talk to Bannon.
+
+  - id: torched-courts
+    name: The Torched Courts
+    kind: zone
+    tag: travel
+    level: 44
+    summary: >-
+      You retrace your way back out through the burning courts, past Kitava's
+      cultists.
+    tips: "Cato, Scholar of Light and a Heretical Guardian are optional. Walk past both."
+
+  - id: ruined-square
+    name: The Ruined Square
+    kind: zone
+    tag: must
+    level: 44
+    waypoint: true
+    summary: >-
+      The hub for the last three zones: The Ossuary, The Reliquary and The
+      Cathedral Rooftop.
+    tips: >-
+      Loop counter-clockwise to find the waypoint, which sits in front of the
+      Ossuary entrance. Then go south to the main square and take the
+      right-hand path for the Reliquary.
+
+  - id: utula-feast
+    name: "Utula, Stone and Steel"
+    kind: side
+    tag: skip
+    branchFrom: ruined-square
+    level: 44
+    summary: >-
+      An optional fight in the Ruined Square. Killing him completes The King's
+      Feast, handed in to Bannon for a choice of twenty weapon and shield
+      bases.
+    why: >-
+      Twenty plain bases at level 44 is a thin reward, and the fastest routes
+      leave the quest out altogether. Take it only if your weapon is genuinely
+      holding you back. The Risen Matriarch is here too, and is also optional.
+
+  - id: the-ossuary
+    name: The Ossuary
+    kind: zone
+    tag: must
+    level: 44
+    image: quest-sign-of-purity
+    summary: >-
+      The Sign of Purity sits at the Tomb of the First Templar.
+    tips: >-
+      The small connecting room is shut, so you have to walk the long way
+      around to reach the tomb. **After you take the Sign of Purity, pull the
+      lever** to reopen the short way back. Bone Husk, Awoken Giant and Bone
+      Stalker are optional.
+
+  - id: the-reliquary
+    name: The Reliquary
+    kind: side
+    tag: worth
+    branchFrom: ruined-square
+    level: 44
+    waypoint: true
+    image: quest-karui-relic
+    badge: "+1 passive point"
+    summary: >-
+      Three Karui relic cases, one tucked in each of the far corners of the
+      map. Collect all three.
+    quest: Kitava's Torments
+    reward: "Book of Skill from Lani: +1 passive point and 2 respec points."
+    why: >-
+      The quest is optional but the zone is on your route to the Cathedral
+      Rooftop anyway, so the point costs you only the walk to the corners.
+    tips: >-
+      Start in one corner and work round the others. Guides name the relics
+      differently — Hinekora's Hair, Tukohama's Tooth and Valako's Jaw in one,
+      three copies of Kitava's Torment in another — but it is three cases in
+      the corners either way.
+
+  - id: cathedral-rooftop
+    name: The Cathedral Rooftop
+    kind: zone
+    tag: must
+    level: 45
+    waypoint: true
+    summary: >-
+      Head south-west. Interacting with the Cradle of Purity starts the act
+      boss fight in the Cathedral Apex above.
+    newbie: >-
+      Take your town trip now. This is your last chance to spend currency,
+      upgrade gear and top up resistances before the fight that takes 30
+      points off all of them.
+
+  - id: kitava-5
+    name: "Kitava, the Insatiable"
+    kind: boss
+    tag: must
+    level: 45
+    summary: >-
+      The act boss, and the reason the next act is harder than its area levels
+      suggest.
+    quest: The Ravenous God
+    reward: "Sin pulls you out to the Oriath Docks. Lilly Roth's ship sails for Wraeclast and Act 6."
+    tips: |
+      Kitava punishes both extremes of range, and that is the key to the fight.
+
+      - **Up close** he sweeps the ground from one side. Move to his other side.
+      - **At long range** he throws debris. Move in.
+      - His big slam sends out a shockwave, and he puts X-pattern runes and damaging lines on the floor. All of those are dodged by stepping sideways, not backwards.
+      - Interrupt him to make his Heart drop, then attack the Heart.
+
+      He has no flame breath in this act, whatever you may have read; the beam weapon belongs to the Act 10 version of him.
+    newbie: >-
+      Dying here is cheap. You respawn just outside the arena entrance and can
+      walk straight back in and carry on, as many times as you need, and the
+      fight does not reset. The resistance penalty lands after the fight ends,
+      not during it, so dying repeatedly does not trigger it early or stack it.
+
+sections:
+  - title: "The penalty is -30% to all resistances, chaos included"
+    body: >-
+      The common phrasing is "-30% to all elemental resistances", and it is
+      incomplete. **Fire, cold, lightning and chaos all drop by 30 points.**
+      It is permanent, it cannot be removed, and Act 10 Kitava applies a
+      second identical penalty for -60% in total by the end of the campaign.
+      It is applied after the fight, so dying to him several times does not
+      bring it on early.
+  - title: What to do about it, before the fight
+    body: >-
+      The whole trick is that this is preventative. Overcap your elemental
+      resistances by about 30 points **before** you fight Kitava, so the hit
+      lands on a buffer instead of on your cap: you want the bracketed number
+      on your character sheet to be well above the capped 75%, not just equal
+      to it. The levers, in order of how much they give you for the effort —
+      the crafting bench on every slot with a free prefix or suffix, the
+      Two-Stone Ring from Lani in the first zone of the act, and an Iron Ring
+      plus a skill gem of the matching colour at any vendor, which produces a
+      Ruby, Sapphire or Topaz Ring with that element's implicit. That last
+      recipe has been reported as removed by one source and is still
+      documented by another, so check the vendor window in your own league.
+      Later on, [[Purity of Elements]] covers all three elements with one
+      aura.
+  - title: After the fight, in order
+    body: >-
+      Open your character sheet and look at the four resistance numbers: they
+      just fell 30 points each. Add resistance mods at the crafting bench to
+      every slot that has room. Equip the ring from Return to Oriath and the
+      flask from The Key to Freedom if you have not already. Then do not walk
+      into Act 6's Twilight Strand under-capped — it is a level 45 zone and it
+      is the first real test of what you just lost.
+  - title: What to skip
+    body: >-
+      The Matriarch in Oriath Square, unless you want the Stately Hideout. The
+      King's Feast from Utula, unless your weapon is genuinely bad. Cato,
+      the Heretical Guardian, The Risen Matriarch, Bone Husk, Awoken Giant and
+      Bone Stalker. There are no Trials of Ascendancy anywhere in Act 5, so do
+      not go looking for one.
+
+patchNotes:
+  - "The Kitava resistance penalty is unchanged. Kitava is not mentioned anywhere in the 3.30 notes, and no Act 5 zone, quest or passive point changed."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Mobalytics Act 5 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-5" }
+  - { title: "PoE Vault Act 5 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-5" }
+  - { title: "PoEDB Act 5", url: "https://poedb.tw/us/Act_5" }
+  - { title: "Maxroll vendor recipes", url: "https://maxroll.gg/poe/resources/vendor-recipes" }

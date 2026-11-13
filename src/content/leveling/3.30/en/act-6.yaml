@@ -1,0 +1,375 @@
+number: 6
+title: "Wraeclast again, and your first Pantheon powers"
+town: Lioneye's Watch
+levelIn: 45
+levelOut: 50
+skillPoints: 3
+skillPointsNote: "Plus 2 respec points from Fallen from Grace, which hands you a Book of Regrets rather than a Book of Skill."
+boss: "Tsoagoth, The Brine King"
+keyRewards:
+  - "3 passive points: The Father of War, The Cloven One, The Puppet Mistress"
+  - "Four Pantheon souls: your first Major god and three Minors"
+  - "Lilly Roth sells every gem once Fallen from Grace is done"
+  - "A free rare helmet from Essence of Umbra"
+  - "The first of the three Trials for the Cruel Labyrinth"
+intro: >-
+  Act 6 is the densest act in the game for permanent unlocks. Three passive
+  points, four Pantheon souls, a gem vendor who sells everything, the first
+  Cruel Trial, and in 3.30 the point where Item Tiers start appearing on
+  drops. It is also the act you enter 30 resistance points poorer than you
+  were an hour ago, against area levels 45 to 50, so it is where under-capped
+  resistances start actually killing people.
+
+nodes:
+  - id: lioneyes-watch-6
+    name: Lioneye's Watch
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      You land in town before you see a single zone. Tarkleigh sells
+      equipment, Bestel sells wands, jewellery and flasks, and Lilly Roth
+      starts out on the pier.
+    tips: >-
+      Sin is here too and becomes your Pantheon NPC later in the act. Check
+      your resistances before you leave: the next zone is level 45 and you
+      have just lost 30 points of every one of them.
+
+  - id: twilight-strand-6
+    name: The Twilight Strand
+    kind: side
+    tag: worth
+    branchFrom: lioneyes-watch-6
+    level: 45
+    image: quest-book-of-regrets
+    badge: Lilly Roth's gem shop
+    summary: >-
+      Clear every undead on the beach, then go back to Lilly Roth. This is the
+      same strand you started the game on, five acts later.
+    quest: Fallen from Grace
+    reward: "Book of Regrets from Lilly Roth: 2 respec points, and she becomes a full gem vendor."
+    why: >-
+      The respec points are minor. The gem shop is not: Lilly then sells
+      almost every skill and support gem in the game regardless of your class,
+      which is the Act 6 equivalent of Siosa. This is the highest-value
+      optional quest in the act and worth doing once per league.
+    newbie: >-
+      A level 45 zone packed with undead, entered on whatever gear finished
+      Act 5 and with the fresh resistance penalty, is the first practical test
+      of whether you prepared for Kitava. If it feels dangerous, that is
+      information: go back to town and fix your resistances before the act
+      gets harder.
+
+  - id: the-coast-6
+    name: The Coast
+    kind: zone
+    tag: travel
+    level: 45
+    waypoint: true
+    summary: >-
+      Take the waypoint and head straight for the Mud Flats. Ignore the Tidal
+      Island.
+    tips: >-
+      A stranger here offers the Into the Breach questline. Walk past it:
+      Breach is endgame content. The zone's optional unique is not worth
+      stopping for either.
+
+  - id: tidal-island-6
+    name: The Tidal Island
+    kind: side
+    tag: skip
+    branchFrom: the-coast-6
+    level: 45
+    summary: >-
+      A dead-end island. Riptide drops Bestel's Manuscript, which Bestel
+      trades for a choice of belt or amulet base.
+    why: >-
+      No passive point, no respec point, no permanent unlock: a plain belt or
+      amulet base at level 45 for a detour that goes nowhere else. Guides call
+      the reward underwhelming and the fastest routes leave the zone out.
+
+  - id: mud-flats-6
+    name: "The Mud Flats: The Dishonoured Queen"
+    kind: zone
+    tag: must
+    level: 46
+    summary: >-
+      The Dishonoured Queen waits in the north-east corner, usually beside a
+      house. She drops the Eye of Conquest.
+    tips: >-
+      Kill her, then walk back west to open the Karui Fortress with the eye.
+    newbie: >-
+      From this zone onward you are in area level 46 or above, which is where
+      a hired mercenary starts taking a resistance penalty of its own in 3.30.
+      Expect yours to get noticeably less useful from here.
+
+  - id: karui-fortress
+    name: "The Karui Fortress: Tukohama"
+    kind: zone
+    tag: must
+    level: 46
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Head north-east to the southern entrance of Tukohama's Keep, destroying
+      the four totems on the way. Tukohama, Karui God of War is inside.
+    quest: The Father of War
+    reward: "Book of Skill from Tarkleigh: +1 passive point, and the Soul of Tukohama."
+    tips: >-
+      There is a crafting recipe in the fortress, and the exit is to the
+      north. Sin appears after the fight and introduces the Pantheon.
+    newbie: >-
+      Soul of Tukohama is a Minor god power: while you stand still you gain 3%
+      physical damage reduction per second, up to 9%. That is good for a build
+      that plants itself and channels, and close to useless for one that
+      kites.
+
+  - id: the-ridge
+    name: The Ridge
+    kind: zone
+    tag: travel
+    level: 46
+    waypoint: true
+    summary: >-
+      Head north and ignore the side loops. Take the rooftop down into the
+      Lower Prison.
+    tips: "The zone's optional unique gives nothing. Keep walking."
+
+  - id: lower-prison-6
+    name: The Lower Prison
+    kind: zone
+    tag: must
+    level: 47
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 1 of 3 for Cruel
+    summary: >-
+      You cross this zone either way. While you are here, do the Trial of
+      Ascendancy: it is the first of the three the Cruel Labyrinth needs.
+    tips: >-
+      The trial is usually in the southern part of the zone, with a crafting
+      recipe beside it. Spike traps, which apply a bleed worth a quarter of
+      your life and energy shield, so do not walk them on low life. The
+      entrance to Shavronne's Tower is at the top-left or the bottom-right.
+    newbie: >-
+      Some guides call this zone The Prison. It is the same place. The Cruel
+      Labyrinth needs only **three** trials, not the six you did for Normal:
+      this one, and two in Act 7.
+
+  - id: shavronnes-tower
+    name: "Shavronne's Tower: Brutus and Shavronne"
+    kind: boss
+    tag: must
+    level: 47
+    summary: >-
+      The Prison Rooftop holds Reassembled Brutus and Shavronne the Returned.
+      It is one tag-team fight with two swaps, not two separate fights.
+    quest: Essence of Umbra
+    reward: "A rare helmet from Tarkleigh: a genuine upgrade at level 47, and the zone is on your route anyway."
+    tips: |
+      **Brutus** has a tracking triple slam and a chain hook that pulls you to him.
+
+      Partway through he **swaps out for Shavronne**, who levitates while untargetable and uses telegraphed ring slams. There is nothing to hit during that stretch; you just survive the pattern until it ends.
+
+      Then **Brutus comes back with a permanent lightning damage buff** for the rest of the fight. Sources disagree about the exact life thresholds for the two swaps, so watch the fight rather than counting percentages.
+    newbie: >-
+      Both of them have moves that can kill you outright, and all of those
+      moves are telegraphed. This is a read-the-animation fight, not a gear
+      check. Afterwards, beating Brutus opens the way back down: talk to Sin,
+      then go left and down through The Warden's Chambers, which has a
+      crafting altar, to Prisoner's Gate.
+
+  - id: prisoners-gate
+    name: "Prisoner's Gate: Abberath"
+    kind: zone
+    tag: must
+    level: 47
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Go down the ledge beside the road and follow the gorge. One end has
+      Nessa, the other the Valley of the Fire Drinker, where Abberath, the
+      Cloven One waits.
+    quest: The Cloven One
+    reward: "Book of Skill from Bestel: +1 passive point, and the Soul of Abberath."
+    tips: >-
+      Abberath's arena comes in two halves. At 50% life he jumps to a second
+      arena and you walk a narrow connecting path to reach him. His main
+      mechanic is meteors, and the counter is simply to never stand still.
+    newbie: >-
+      The corridor between the two arenas is what kills people, not the boss.
+      It is full of goatmen and fireballs, so you arrive at the second arena
+      already chewed up. Clear it carefully and top your flasks off before you
+      step into arena two. Take the portal out afterwards and hand the quest
+      in to Bestel.
+
+  - id: western-forest-6
+    name: The Western Forest
+    kind: zone
+    tag: travel
+    level: 48
+    waypoint: true
+    summary: >-
+      Follow the road. Look for the torch that touches the road, then take the
+      trail in the direction the torch points.
+    tips: >-
+      Alira's camp has a crafting recipe along the stone path. The zone's
+      optional unique gives nothing.
+
+  - id: the-riverways
+    name: The Riverways
+    kind: zone
+    tag: travel
+    level: 48
+    waypoint: true
+    summary: >-
+      Follow the road to the waypoint, then keep following it. The side path
+      across from the waypoint leads to the Wetlands.
+    tips: >-
+      Use a movement skill to cross the collapsed bridges. The Animal Pack is
+      optional, and you run past it again on your way to the Southern Forest.
+
+  - id: the-wetlands
+    name: "The Wetlands: Ryslatha"
+    kind: side
+    tag: worth
+    branchFrom: the-riverways
+    level: 48
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      A short dead-end zone. Look for two pillars near the waypoint, follow the
+      trail, and The Spawning Ground is north-west.
+    quest: The Puppet Mistress
+    reward: "Book of Skill from Tarkleigh: +1 passive point, and the Soul of Ryslatha."
+    why: >-
+      Optional, and you should do it: one passive point and one Pantheon power
+      for one short zone. Do not skip it.
+    tips: >-
+      Destroy the three Ryslatha's Nests along the bottom of the arena. That is
+      the only documented mechanic for the fight, and no source we could reach
+      describes anything in particular that catches new players out here.
+    newbie: >-
+      Soul of Ryslatha refills three life flask charges every three seconds
+      while you are not drinking, which is the best Minor god power to carry
+      into the Cruel Labyrinth: running dry between two traps is the named way
+      people fail those runs.
+
+  - id: southern-forest-6
+    name: The Southern Forest
+    kind: zone
+    tag: travel
+    level: 49
+    waypoint: true
+    summary: >-
+      Follow the road until it ends, then go south-east. Fallen trees connect
+      the islands.
+    tips: >-
+      The waypoint and the Cavern of Anger entrance are both at the far right.
+      The zone's optional unique gives nothing.
+
+  - id: cavern-of-anger
+    name: The Cavern of Anger
+    kind: zone
+    tag: must
+    level: 49
+    summary: >-
+      Merveil's old Act 1 arena, now flooded. Open the Flag Chest for The Black
+      Flag.
+    tips: >-
+      A switch nearby unlocks the Coral Hideout. The exit to The Beacon is on
+      the left or the right.
+
+  - id: the-beacon
+    name: The Beacon
+    kind: zone
+    tag: must
+    level: 49
+    waypoint: true
+    summary: >-
+      Follow the shore to the beacon, then solve the puzzle to call Weylam
+      Roth's ship.
+    tips: >-
+      There is a crafting recipe on the elevated section. Talk to Weylam Roth
+      once the beacon is lit to sail to the Reef.
+    newbie: >-
+      **The puzzle stops people cold because nothing explains it.** There are
+      two tanks on the shore. Stand in the area marker in front of each one
+      and it moves; push both into the beacon, light it, and throw The Black
+      Flag in.
+
+  - id: brine-kings-reef
+    name: "Tsoagoth, The Brine King"
+    kind: boss
+    tag: must
+    level: 50
+    waypoint: true
+    summary: >-
+      Follow the shoreline to The Brine King's Throne. The act boss, and the
+      source of your first Major Pantheon power.
+    quest: The Brine King
+    reward: "Soul of the Brine King. Weylam Roth then takes you to Act 7."
+    tips: |
+      He has two melee attacks and the answer to both is to stay behind him — at his back, but not pressed against him. His water move gives him damage reduction and spawns small adds.
+
+      **Every 25% of his life the arena shrinks**, the ocean standing up around you, and he is untargetable while it happens. Lightning strikes and water splashes track you through it. In the final quarter the lightning keeps going after the shrink phase ends.
+    newbie: >-
+      Two specific things kill people inside the shrink phase: getting caught
+      in the walls of water, and the small white whirlpool circles on the
+      ground, which are genuinely hard to see against the water. Look down for
+      them. If you do die, you respawn just outside the arena and can walk
+      straight back in and resume, as many times as you need.
+
+sections:
+  - title: The Pantheon, and what to set
+    body: >-
+      Three of the four Act 6 bosses hand you a Minor god power and the Brine
+      King hands you your first Major, so the system is effectively live from
+      the end of this act. You can have exactly one Major and one Minor active
+      at a time, and swapping is free in any town or hideout — press Y. Set
+      **Major to Soul of the Brine King**: it stops you being stunned again
+      within two seconds of a stun, which breaks stun-locking, one of the main
+      ways a leveling character dies without getting to react. Set **Minor to
+      Soul of Ryslatha** for the flask sustain, or Soul of Tukohama if your
+      build stands still, and swap Soul of Abberath in for fire-heavy areas.
+      One correction worth making: the Brine King's **freeze immunity is an
+      upgrade, not the base effect** — a new player who picks him expecting it
+      during the campaign will be disappointed.
+  - title: Pantheon upgrades are an endgame job
+    body: >-
+      Upgrading a power needs a [[Divine Vessel]] in your map device plus a
+      map containing the specific boss the Pantheon panel names. You kill that
+      boss, retrieve the filled vessel and take the captured soul to Sin.
+      Major gods upgrade three times and Minor gods once. None of that is
+      campaign work, so read the panel now and come back to it after maps.
+      Upgrades apply to every character you have in the league.
+  - title: Lilly Roth sells everything
+    body: >-
+      Fallen from Grace on The Twilight Strand turns Lilly into a general gem
+      vendor, with the largest vendor gem list anywhere in the campaign. If
+      your build guide asked for a gem your class has never been offered and
+      you missed Siosa in Act 3, this is where you finally buy it. Put the
+      currency you want to spend in your inventory before you open her shop.
+  - title: What to skip
+    body: >-
+      The Tidal Island and Bestel's Epic. Into the Breach on The Coast, and
+      the Heist, Expedition and Delve questlines, all of which are endgame
+      systems you cannot use yet. Every optional unique monster in the act.
+      Maxroll names a boss in nearly every Act 6 zone, but we could not
+      corroborate most of those names anywhere, so this guide does not print
+      them.
+
+patchNotes:
+  - "From Act 6 onward, Magic and Rare items can drop with an Item Tier, which makes late-campaign gear easier to judge."
+  - "Hired mercenaries now take -30% to resistances in area levels 46 to 67, which starts at The Mud Flats. Expect yours to contribute less from here on."
+  - "[[Divine Vessel]] moved into the Atlas stash tab. It is still what upgrades Pantheon powers, and how you gain the Act 6 souls has not changed."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Maxroll Pantheon reference", url: "https://maxroll.gg/poe/resources/pantheon" }
+  - { title: "Mobalytics Act 6 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-6" }
+  - { title: "PoEDB Act 6", url: "https://poedb.tw/us/Act_6" }
+  - { title: "Path of Exile 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }

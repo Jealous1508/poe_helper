@@ -1,0 +1,379 @@
+number: 4
+title: "Highgate, two dreams, and Malachai"
+town: Highgate
+levelIn: 33
+levelOut: 40
+skillPoints: 1
+skillPointsNote: "Plus 2 respec points from An Indomitable Spirit."
+boss: "Malachai, The Nightmare"
+keyRewards:
+  - "1 passive point: An Indomitable Spirit, the only one in the whole act"
+  - "The Normal Labyrinth, where you choose your ascendancy class and gain 2 ascendancy points"
+  - "Gem reward tiers at level 34 and 40"
+  - "A utility flask from Lady Dialla after Malachai"
+intro: >-
+  Act 4 is short on zones and long on bosses. Five of them stand between you
+  and the end of it, and the act is where you run the Normal Labyrinth and
+  pick your ascendancy class. It also has exactly one passive point, hidden
+  off the main path in The Mines, and it is the one most commonly missed.
+
+nodes:
+  - id: the-aqueduct
+    name: The Aqueduct
+    kind: zone
+    tag: travel
+    level: 33
+    waypoint: true
+    summary: >-
+      A two-lane linear zone. The entrance to Highgate is at the end of the
+      left lane.
+    tips: >-
+      The Hundred Foot Shadow sits about halfway along, and Maelstrom is here
+      too. Both are optional. If you are short of levels this is a reasonable
+      zone to run again.
+
+  - id: highgate-4
+    name: Highgate
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for the act. The waypoint is in the middle, with The Dried
+      Lake to the left.
+    tips: >-
+      Tasuni stands to the right of the waypoint, and Oyun and Lady Dialla are
+      upstairs. The Mines open in the upper part once you break Deshret's
+      Seal, and The Ascent is to the right of Oyun and Dialla.
+
+  - id: dried-lake
+    name: "The Dried Lake: Voll"
+    kind: zone
+    tag: must
+    level: 34
+    image: quest-deshrets-banner
+    summary: >-
+      An open zone with Voll, Emperor of Purity somewhere in a corner or the
+      middle. He drops Deshret's Banner.
+    quest: Breaking the Seal
+    reward: "The level 34 gem tier from Oyun."
+    tips: >-
+      Voll has a slam and a charge, both of which you sidestep. It is a short,
+      simple fight. Take the banner to Deshret's Seal in the upper part of
+      Highgate and break it: that is what opens The Mines. Nightwane and
+      Knitted Horror are optional.
+    newbie: >-
+      There is an attack, cast and warcry speed crafting recipe in this zone.
+      If you need a couple of levels before the dream bosses, the Dried Lake
+      is one of the better places in the act to get them.
+
+  - id: mines-1
+    name: The Mines Level 1
+    kind: zone
+    tag: travel
+    level: 34
+    summary: >-
+      Mostly linear, with side paths that dead-end. A socket colours crafting
+      recipe sits in the upper left.
+    tips: >-
+      Niko appears here and offers the Delve questline. Walk past it on a first
+      character: Delve is endgame content and gives a leveling character
+      nothing. Pikerivet is optional.
+
+  - id: mines-2
+    name: The Mines Level 2
+    kind: zone
+    tag: must
+    level: 35
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      A U-shaped main path. Deshret's Spirit is off it, in a side room or on a
+      platform, so you have to look for it.
+    quest: An Indomitable Spirit
+    reward: "Book of Skill from Tasuni: +1 passive point, 2 respec points, and level 34 gems."
+    tips: "Hammerstorm and Voidscream are optional."
+    newbie: >-
+      **This is the only passive point in Act 4.** It is not on the critical
+      path, nobody tells you it is there, and you can finish the act without
+      noticing. Walk the side rooms until you find the spirit, free it, and
+      hand the quest in to Tasuni.
+
+  - id: crystal-veins
+    name: The Crystal Veins
+    kind: zone
+    tag: must
+    level: 36
+    waypoint: true
+    summary: >-
+      The hub for the rest of the act. Kaom's Dream, Daresso's Dream and later
+      The Belly of the Beast all lead off it.
+    tips: >-
+      Linear, with narrow paths. A cold damage crafting recipe is in the upper
+      part, and the Excavated Hideout unlocks here. The Burning Man stands on a
+      platform up a short flight of stairs and is optional.
+    newbie: >-
+      Go back to Highgate now and hand in An Indomitable Spirit. Most routes
+      then run the Labyrinth from here before touching either dream.
+
+  - id: normal-labyrinth
+    name: The Normal Labyrinth
+    kind: side
+    tag: worth
+    branchFrom: crystal-veins
+    level: 33
+    waypoint: true
+    image: quest-labyrinth
+    badge: 2 ascendancy points
+    summary: >-
+      Waypoint back to the Sarn Encampment and use the Aspirants' Plaza
+      plaque. You pick your ascendancy class at the Altar of Ascendancy and
+      gain 2 ascendancy points.
+    reward: "Your ascendancy class, 2 ascendancy points, and the Labyrinth chests."
+    why: >-
+      Your ascendancy is the biggest single power gain available during the
+      campaign, and the Normal run is the only one where you choose the class.
+      Eight ascendancy points exist in total, two per Labyrinth.
+    tips: >-
+      Area level 33. Dying or leaving the Labyrinth ends the run and you start
+      again from the beginning. The layout is the same for every player on a
+      given day and changes at midnight UTC, so a failed run teaches you the
+      exact layout for your retry. Trial completion is account-wide for the
+      league, so a second character does not have to find the six trials
+      again.
+    newbie: >-
+      Trap damage over time ignores armour, evasion and spell suppression, so
+      your defensive layers do not apply to it. What works is life, life
+      regeneration and flasks. Bring two or three large
+      [[Life Flask|life flasks]] rather than one, and save your
+      [[Quicksilver Flask]] and your movement skill for the trap corridors
+      instead of using them to travel. Izaro is fought three times in one run
+      and deals physical and fire damage.
+
+  - id: kaoms-dream
+    name: Kaom's Dream
+    kind: zone
+    tag: travel
+    level: 37
+    summary: >-
+      A linear path that ends at a long bridge into Kaom's Stronghold.
+    tips: >-
+      Guides describe the first half of this zone differently, so do not trust
+      a precise direction here. What they agree on is that you climb the
+      stairs near the start and that you are looking for the long bridge.
+      Torchoak Grove and Triskeriaki are optional.
+
+  - id: kaoms-stronghold
+    name: "Kaom's Stronghold: King Kaom"
+    kind: boss
+    tag: must
+    level: 38
+    waypoint: true
+    image: quest-eye-of-fury
+    summary: >-
+      Follow the bridges to the Caldera of the King. King Kaom drops The Eye of
+      Fury.
+    reward: "The Eye of Fury, one of the two keys to The Belly of the Beast."
+    tips: >-
+      Sources differ on which side of the bridges to hug, so just follow them.
+      A socket links crafting recipe is at the start. Kaom has basic melee and
+      a leap, and he spawns extra enemies as he loses life. Fireballs rain into
+      the arena from above the whole time.
+    newbie: >-
+      Standing still is what kills people here. The falling fire is area
+      denial: a stationary player eats meteors while fighting the adds. Keep
+      repositioning and the fight is easy. **Do Kaom before Daresso** — he is
+      the less dangerous of the two at this level.
+
+  - id: daressos-dream
+    name: Daresso's Dream
+    kind: zone
+    tag: must
+    level: 37
+    summary: >-
+      A barracks-style zone of linked arenas. Gates drop around you and you
+      clear waves of monsters to reopen them.
+    tips: >-
+      Barkhul, in the upper part, has to die along with the arena's monsters
+      before you can continue, so he is a gate rather than an optional fight.
+      Eyepecker and Steelchaw are optional.
+    newbie: >-
+      The cage that closes around you belongs to this zone, not to the Daresso
+      fight. If you have read that Daresso traps you, this is what that is
+      about.
+
+  - id: grand-arena
+    name: "The Grand Arena: Daresso"
+    kind: boss
+    tag: must
+    level: 38
+    waypoint: true
+    image: quest-eye-of-desire
+    summary: >-
+      Take the left-most passage every time you are offered a choice. The Trio
+      comes first, then Daresso, King of Swords in The Ring of Blades.
+    reward: "The Eye of Desire. Take both Eyes to Lady Dialla in The Crystal Veins to open The Belly of the Beast."
+    tips: |
+      A socket numbers crafting recipe is at the start. **The Trio** — Dimachaeri Cassius, Mevion and Rudiarius Felix — are fought together, and meeting them is your signal that Daresso is next.
+
+      **Daresso rests every time he loses 25% of his life, and spends the final quarter permanently enraged.** That makes four phases, and the last one is the hardest. He chills you, spawns clones of himself and scatters swords around the arena at random. An Icy Manifestation shares the arena with him.
+    newbie: >-
+      What kills people is overlapping effects: do not stand where two of the
+      swords, the chill and the clones land at once. Both main guides rate the
+      fight fairly easy otherwise. **He does not shrink the arena**, whatever
+      you may have read. That is the Act 6 Brine King.
+
+  - id: belly-1
+    name: The Belly of the Beast Level 1
+    kind: zone
+    tag: travel
+    level: 38
+    summary: >-
+      Linear. The way down to the next level is in the upper part. The Bone
+      Queen is optional.
+    newbie: >-
+      **Shop before you walk in.** From this zone the act runs as one
+      unbroken chain of events to Malachai. Make every gear upgrade you can
+      afford, buy the gems you have been putting off, and fill your flasks
+      first. It is the single most useful piece of advice in Act 4.
+
+  - id: belly-2
+    name: "The Belly of the Beast Level 2: Piety"
+    kind: boss
+    tag: must
+    level: 39
+    summary: >-
+      Piety, the Abomination waits in The Bowels of the Beast. She survives the
+      fight and guides you through the rest of the act afterwards.
+    tips: >-
+      She hits with heavy physical and lightning attacks, and her signature
+      move is a rotating beam that applies corrupted blood. Other enemies join
+      in with ground spells that detonate on a timer. An elemental resistances
+      crafting recipe is on the way to The Harvest.
+    newbie: >-
+      The beam is the killer. It does very heavy damage and rotates at
+      changing speeds, so you cannot strafe on autopilot. Orbit her
+      continuously and stay ahead of the rotation. A flask that removes
+      bleeding helps with the corrupted blood.
+
+  - id: the-harvest
+    name: "The Harvest: Maligaro, Shavronne and Doedre"
+    kind: zone
+    tag: must
+    level: 40
+    waypoint: true
+    image: quest-malachai-heart
+    summary: >-
+      Three boss rooms in random order. Each of the three drops one of
+      Malachai's organs, and all three are required.
+    quest: Corpus Malachus
+    reward: "Hand all three organs to Piety at the waypoint to open The Black Core."
+    tips: |
+      Guides disagree on the order: one sends you easiest first, the other takes the shortest walk. On a first character take them easiest first, which is **Maligaro, then Shavronne, then Doedre**.
+
+      **Maligaro, The Inquisitor** drops Malachai's Heart. Avoid his ground spells and his corpse explosions. The trap is that killing his adds next to you is what detonates them.
+
+      **Shavronne of Umbra** drops Malachai's Entrails. She casts delayed lightning and warps around the arena. Stay close to her: chasing a teleporter at range leaves you out of position when the lightning lands.
+
+      **Doedre Darktongue** drops Malachai's Lungs and is the hardest of the three.
+    newbie: |
+      Doedre's arena is covered in coloured curse circles, and she removes curses from herself and gains damage for doing it.
+
+      - **Purple is Temporal Chains**, which slows you
+      - **Green is Enfeeble**, which cuts your damage
+      - **Red is Vulnerability**, which raises the physical damage you take
+
+      Either stand in the red circle and fight at range, where Vulnerability costs you almost nothing, or stay close and keep moving. What kills new players is drifting into purple: once you are slowed you cannot leave anything.
+
+  - id: malachai
+    name: "Malachai, The Nightmare"
+    kind: boss
+    tag: must
+    level: 40
+    summary: >-
+      The act boss, fought across two arenas: The Black Core, then the smaller
+      Black Heart.
+    reward: "The Eternal Nightmare from Lady Dialla: the level 40 gem tier and a choice of flask."
+    tips: |
+      **The organs and the Hearts of the Beast are two different systems, and the names cause real confusion.** Malachai's Heart, Entrails and Lungs are the quest items from the Harvest trio, and they only open the fight. The Hearts of the Beast are something else entirely: they are the phase-two interrupt.
+
+      **Phase 1, The Black Core:** he goes invulnerable at 75% and at 50% life. Piety spawns at each of those gates, and she has to die before you can hurt him again.
+
+      **Phase 2, The Black Heart:** a smaller arena. He goes invulnerable at 75%, 50% and 25%, and each time you destroy the Hearts of the Beast that spawn in the corners. At 25% he adds a ring of fire to avoid.
+
+      His slams and his teleport slam are telegraphed: get behind him when the wind-up appears. He also submerges and explodes out of the ground, which other guides describe as whack-a-mole tentacles.
+    newbie: >-
+      The floor is what kills you. His mortars leave physical damage patches
+      that last around five seconds, and his fire traps leave burning ground
+      that lasts far longer, so two separate kinds of ground effect pile up
+      while you fight. Keep moving onto clean floor. One nasty detail: his
+      elemental cone cannot stun you, so you get no feedback that you are
+      being hit while it drains your life.
+
+  - id: the-ascent
+    name: The Ascent
+    kind: zone
+    tag: must
+    level: 40
+    summary: >-
+      Three parts. Pull the Resonator's lever in the third to open the Oriath
+      Portal, which is the way into Act 5.
+    tips: >-
+      An ailment, stun and curse mitigation crafting recipe is in the second
+      part. The White Death is optional. A red portal back to Highgate appears
+      after Malachai, so collect The Eternal Nightmare from Lady Dialla before
+      you come here.
+
+sections:
+  - title: Do not leave Act 4 with one point missing
+    body: >-
+      An Indomitable Spirit, in The Mines Level 2, is the act's only passive
+      point. Deshret's Spirit is not on the main path: it sits in a side room
+      or on a platform off the U-shaped route, and the quest is easy to walk
+      past entirely. Free the spirit, then hand the quest in to Tasuni in
+      Highgate for the Book of Skill and 2 respec points.
+  - title: When to run the Normal Labyrinth
+    body: >-
+      The gap between guides is narrower than the argument suggests. Every
+      recommendation lands between character level 28 and 38, and the question
+      is only whether you go at the end of Act 3 or in the middle of Act 4.
+      The safest single answer for a first character is to go from The Crystal
+      Veins, after you have freed Deshret and handed in your passive point:
+      that puts you a few levels above the area level 33 instead of under it.
+      If you feel strong you can go as soon as the sixth Trial is done. If you
+      die, you lose the run and nothing else, and you can come back two levels
+      later.
+  - title: Arcane Link is not a leveling skill
+    body: >-
+      [[Arcane Link]] is new in 3.30 and it is what the [[Scion]] is offered
+      for Breaking the Seal. **It is a party skill.** It targets an allied
+      player, grants them lightning damage based on your mana, and if the
+      linked player dies, you die with them. Solo it does nothing at all. If
+      you are playing alone, take something else from the quest reward list.
+  - title: Malachai's reputation
+    body: >-
+      Act 4 is remembered as the campaign's difficulty wall, and Malachai is
+      still the first fight that punishes you for not reading a telegraph.
+      That reputation formed before the expansion that added Acts 5 to 10 and
+      reworked this one, though, and we could find no current source ranking
+      him against the rest of the campaign. The harder modern squeeze is Act 5
+      Kitava and the resistance penalty that follows him.
+  - title: What to skip
+    body: >-
+      Niko's Delve questline in The Mines, and every optional unique in the
+      act: The Hundred Foot Shadow, Maelstrom, Nightwane, Knitted Horror,
+      Pikerivet, Hammerstorm, Voidscream, The Burning Man, Torchoak Grove,
+      Triskeriaki, Eyepecker, Steelchaw, The Bone Queen and The White Death.
+      None of them awards a point or a permanent reward.
+
+patchNotes:
+  - "The [[Scion]] is offered [[Arcane Link]], new in 3.30, for Breaking the Seal. It targets an allied player and you die if they die, so it is party-only. The [[Marauder]], [[Duelist]] and [[Templar]] buy it from Petarus and Vanja instead."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+  - "No Act 4 zone, quest or passive point changed in 3.30."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Maxroll Labyrinth guide", url: "https://maxroll.gg/poe/getting-started/labyrinth-guide" }
+  - { title: "Mobalytics Act 4 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-4" }
+  - { title: "PoEDB Act 4", url: "https://poedb.tw/us/Act_4" }
+  - { title: "Path of Exile 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }
