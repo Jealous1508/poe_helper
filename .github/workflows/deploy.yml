@@ -1,18 +1,22 @@
 # Builds the site and publishes it to GitHub Pages.
 #
-# Turn it on once: repository Settings -> Pages -> Source: "GitHub Actions".
-# The workflow cannot do this for you — configure-pages can create a Pages
-# site, but only with a token that has admin rights, and the token Actions
-# hands a workflow does not. Asking it to try fails with "Resource not
-# accessible by integration".
+# The live site is deployed by Cloudflare Pages instead, so this is kept as
+# the alternative rather than the default. To use it, first turn Pages on:
+# repository Settings -> Pages -> Source: "GitHub Actions". The workflow
+# cannot do that for you — configure-pages can create a Pages site, but only
+# with a token that has admin rights, and the token Actions hands a workflow
+# does not. Asking it to try fails with "Resource not accessible by
+# integration".
 #
-# Nothing else to configure. Images are committed to the repo, so the build
-# needs no network access beyond npm.
+# Images are committed to the repo, so the build needs no network access
+# beyond npm.
 name: Deploy
 
+# Manual only. The site is deployed by Cloudflare Pages, which builds on
+# its own when master changes; leaving this on push would run the same
+# build twice and fail every time unless Pages is enabled too. Run it from
+# the Actions tab if you ever want GitHub Pages instead.
 on:
-  push:
-    branches: [master, main]
   workflow_dispatch:
 
 permissions:

@@ -94,22 +94,43 @@ entry has no file on disk.
 The build is plain files in `dist/`, so any free static host will serve it.
 Two settings decide the URLs, both read from the environment at build time:
 
+### Cloudflare Pages
+
+This is how the site is deployed. Connect the repository in the Cloudflare
+dashboard and use:
+
+| Setting | Value |
+|---|---|
+| Framework preset | Astro (or None — it changes nothing here) |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Environment variables | none |
+
+Node comes from `.nvmrc`, which pins 22. Without it Cloudflare picks an
+older default and the build fails on syntax the toolchain expects to work.
+
+Cloudflare rebuilds on every push to `master`. To run the full checks there
+rather than only the build, set the build command to `npm run verify`; it
+adds about a minute and turns a broken link or an unknown game term into a
+failed deploy instead of a broken page.
+
+### Anywhere else
+
+The build is plain files in `dist/`, so any static host will serve it. Two
+settings decide the URLs, both read from the environment at build time:
+
 | Variable | Example | What it is |
 |---|---|---|
-| `SITE_URL` | `https://you.github.io` | The origin, used for absolute URLs |
-| `BASE_PATH` | `/poe-guide/` | The sub-path, or `/` at a domain root |
+| `SITE_URL` | `https://poe-helper.pages.dev` | The origin. Feeds Astro's `site`; nothing renders it yet, so it only matters once something needs absolute URLs, such as a sitemap |
+| `BASE_PATH` | `/poe-guide/` | The sub-path. Leave it unset at a domain root |
 
-`.github/workflows/deploy.yml` publishes to **GitHub Pages** on every push
-to `master`. Turn Pages on once under Settings → Pages → Source: *GitHub
-Actions* — the workflow cannot do it for itself, because creating a Pages
-site needs a token with admin rights and the one Actions provides does not
-have them. After that it fills both variables in itself. The workflow runs
-`npm run verify` first, so a broken link or an unknown game term fails the
-build instead of reaching the site.
-
-For Cloudflare Pages or Netlify instead: build command `npm run build`,
-output directory `dist`, and set `SITE_URL` to the domain they give you.
-Leave `BASE_PATH` unset — both serve at the root.
+`.github/workflows/deploy.yml` builds and publishes to **GitHub Pages**, and
+is set to run only when you start it from the Actions tab — on a push it
+would duplicate the Cloudflare build. To use it, first turn Pages on under
+Settings → Pages → Source: *GitHub Actions*. The workflow cannot do that
+for itself: creating a Pages site needs a token with admin rights, and the
+one Actions provides does not have them. It runs `npm run verify` before
+publishing, and fills both variables in from the Pages configuration.
 
 Images are committed to the repo, so no host needs network access to
 poedb or the trade API at build time.
