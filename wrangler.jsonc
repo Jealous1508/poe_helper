@@ -1,0 +1,20 @@
+// Cloudflare deployment.
+//
+// Committing this stops Wrangler from configuring the project on the fly.
+// Without it, `wrangler deploy` found no config, ran `astro add cloudflare`
+// during the build, installed an adapter, rewrote .gitignore and built the
+// whole site a second time — none of which is in the repository, so it
+// happened again on every deploy and could change under us at any time.
+//
+// The site is static. There is no Worker code, so this is an assets-only
+// Worker: Cloudflare serves the files in dist/ and nothing runs per request.
+// `name` must match the Worker the build is connected to, or the deploy is
+// pushed under one name and the CI expects another.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "poe-helper",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
