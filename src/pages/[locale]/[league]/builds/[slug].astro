@@ -202,7 +202,7 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
               <span class="sources__kind">{t(locale, `build.source.${source.kind}`)}</span>
               <span>
                 <a href={source.url} rel="noopener" target="_blank">{source.title}</a>
-                {source.note && <small>{source.note}</small>}
+                {source.note && <small><Rich text={source.note} league={league.id} where={build.where} inline /></small>}
               </span>
             </li>
           ))}

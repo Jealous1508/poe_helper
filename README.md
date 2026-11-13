@@ -26,7 +26,8 @@ Then open http://localhost:4321.
 | `npm test` | Unit tests |
 | `npm run images` | Downloads any images missing from the manifest |
 | `npm run check:links` | Checks every internal link in `dist/` |
-| `npm run verify` | check + test + build + link check. Run this before committing. |
+| `npm run check:markup` | Catches `**bold**` or `[[Term]]` that reached a page unrendered |
+| `npm run verify` | All of the above. Run this before committing. |
 
 ## Where the content lives
 

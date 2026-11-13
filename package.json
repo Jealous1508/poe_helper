@@ -11,7 +11,8 @@
     "test": "vitest run",
     "images": "node scripts/fetch-images.mjs",
     "check:links": "node scripts/check-links.mjs",
-    "verify": "npm run check && npm run test && npm run build && npm run check:links"
+    "verify": "npm run check && npm run test && npm run build && npm run check:links && npm run check:markup",
+    "check:markup": "node scripts/check-markup.mjs"
   },
   "dependencies": {
     "@fontsource-variable/source-serif-4": "^5.3.1",
