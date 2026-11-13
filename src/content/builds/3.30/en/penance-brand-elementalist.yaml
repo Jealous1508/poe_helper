@@ -58,7 +58,7 @@ chain:
   - label: Detonate
     text: "At 20 energy it explodes for a large physical and lightning hit. [[Runebinder]] lets you stack two brands on one target."
   - label: Ignite
-    text: "[[Shaper of Flames]] makes every hit ignite and converts 40% of physical damage to fire against ignited enemies."
+    text: "[[Shaper of Flames]] makes every hit ignite and lets all damage ignite, so a physical and lightning hit with no fire on it still sets the enemy burning."
   - label: Spread
     text: "[[Obliteration]] explodes kills, Searing Exarch gloves spread each ignite 1.2 metres, and the pack goes up together."
   - label: Survive
@@ -67,10 +67,10 @@ chain:
 chainDetails:
   - title: Where the fire actually comes from
     body: |
-      This is the part people get wrong. The brand has no native fire damage. Three layers create it, and they stack in order:
+      This is the part people get wrong. The brand has no native fire damage, and it needs none. Three layers make the burn, and they stack in order:
 
-      1. **[[Shaper of Flames]]** — hits always ignite, *all damage can ignite*, and enemies you have ignited take 40% of your physical damage as fire. The middle line is the load-bearing one: without it a physical and lightning hit cannot ignite at all.
-      2. **"Gain % of Physical Damage as Extra Fire" on gear.** [[Obliteration]], Grace of the Goddess and [[The Balance of Terror]] all do this.
+      1. **[[Shaper of Flames]]** — hits always ignite, and *all damage can ignite*. The second line is the load-bearing one: without it a physical and lightning hit cannot ignite at all. The notable's third line, "Enemies Ignited by you have 40% of Physical Damage they deal converted to Fire", is about the damage those enemies deal to you. It is defence, it adds nothing to your damage, and none of the figures on this page says how much it is worth.
+      2. **Physical damage gained as extra damage, on gear.** Not all of it is fire: [[Obliteration]] gives extra chaos, [[The Balance of Terror]] a random element while you have cast Elemental Weakness in the last 10 seconds, and Grace of the Goddess extra fire, cold and lightning. It does not have to be fire. Our reading of "All Damage can Ignite", which PoEDB does not spell out any further: whatever type is on the hit counts towards the ignite.
       3. **[[Herald of Ash]]**, multiplied by how many heralds you run.
 
       So the ignite is a percentage of the brand's total hit. Everything that makes the hit bigger makes the fire bigger.
@@ -113,8 +113,9 @@ mandatory:
       has no quest or Clarissa access.
   - term: Shaper of Flames
     why: >-
-      Hits always ignite, all damage can ignite, and ignited enemies take 40%
-      of your physical as fire. A physical brand cannot ignite without it.
+      Hits always ignite and all damage can ignite: a physical brand cannot
+      ignite without it. Its third line is defence, not damage — enemies you
+      ignite have 40% of the physical damage they deal converted to fire.
       Take it from the first lab.
   - term: Runebinder
     why: >-
@@ -434,13 +435,13 @@ stages:
           None of these have a 3.30 price. The author has shipped this build across 3.27, 3.28, 3.29 and 3.30, so the route is real; the cost is unknown.
 
 powerCurve: |
-  The damage is one number put through three sets of multipliers. The number is the size of the brand's hit. The first set turns it into fire: [[Shaper of Flames]], physical gained as extra fire on gear, and [[Herald of Ash]] scaled by herald effect. The second is how many brands sit on the target, and [[Runebinder]] allows two. The third is on the enemy's side: curses, exposure and the rest of the resistance reduction. Clear is a separate thing, and it is bought rather than scaled: one source of explosions and one source of ignite spread.
+  The damage is one number put through three sets of multipliers. The number is the size of the brand's hit. The first set is what makes it burn, and burn harder: [[Shaper of Flames]], which lets a hit with no fire on it ignite; physical gained as extra damage on gear; and [[Herald of Ash]] scaled by herald effect. The second is how many brands sit on the target, and [[Runebinder]] allows two. The third is on the enemy's side: curses, exposure and the rest of the resistance reduction. Clear is a separate thing, and it is bought rather than scaled: one source of explosions and one source of ignite spread.
 
   These arrive at very different times, and that is the whole feel of the build. Until level 28 there is no brand at all. From 28 to maps you have the hit and the first layer — [[Shaper of Flames]] from the first lab, gem levels from Honourhome, flat damage through [[Nycta's Lantern]] — and no real clear. In white and yellow maps two cheap items, [[Obliteration]] and the ignite-spread gloves, turn it into an autobomber, and [[Bringer of Ruin]] makes the heralds count. So mapping peaks early and cheaply, while single target is still only average.
 
   Single target catches up in red maps, when the resistance reduction layers go on; the article's own words are that the mid-game "feels like it suddenly doubles". The last jump is [[Archdemon Crown]] and the herald stack, both gated behind an Elder base and a jewel seed. Our researcher's bossing estimate runs along the same line: 3.5 as a starter, about 4.5 once geared.
 
-  Defence comes last of all. The shell of maximum resistances and block exists only once [[Melding of the Flesh]], [[Aegis Aurora]] and [[Purity of Ice]] work together, and that is the exit condition of red maps, not the entry. Before it you are a character that charges into packs without that shell. This paragraph is our reading of the stage order; the hardcore note above says only that the shell arrives late.
+  Defence comes last of all. The shell of maximum resistances and block exists only once [[Melding of the Flesh]], [[Aegis Aurora]] and [[Purity of Ice]] work together, and that is the exit condition of red maps, not the entry. Before it you are a character that charges into packs without that shell. One piece is early: from the first lab, [[Shaper of Flames]] converts 40% of the physical damage that enemies you have ignited deal into fire. That moves damage off your physical mitigation and onto your fire resistance; by our reading it is worth most once the maximum resistances are up, and no figure on this page says how much. This paragraph is our reading of the stage order; the hardcore note above says only that the shell arrives late.
 
 upgrades:
   - step: >-
@@ -696,6 +697,18 @@ sources:
     url: https://poedb.tw/us/Elementalist
     kind: data
     note: "Live ascendancy values, used to check Shaper of Flames and Mastermind of Discord."
+  - title: "PoEDB: Obliteration"
+    url: https://poedb.tw/us/Obliteration
+    kind: data
+    note: "The wand gains physical as extra chaos, not fire, and carries the 20% explode chance."
+  - title: "PoEDB: The Balance of Terror"
+    url: https://poedb.tw/us/The_Balance_of_Terror
+    kind: data
+    note: "Fire Exposure on hit with Flammability; physical gained as a random element with Elemental Weakness."
+  - title: "PoEDB: Grace of the Goddess"
+    url: https://poedb.tw/us/Grace_of_the_Goddess
+    kind: data
+    note: "Physical gained as extra fire, cold and lightning."
   - title: "insanebuild 3.30 tier list"
     url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
     kind: guide

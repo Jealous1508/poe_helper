@@ -58,7 +58,7 @@ chain:
   - label: Phát nổ
     text: "Ở 20 energy nó nổ thành một cú physical và lightning lớn. [[Runebinder]] cho bạn chồng hai brand lên cùng một mục tiêu."
   - label: Ignite
-    text: "[[Shaper of Flames]] khiến mọi cú hit đều ignite và chuyển 40% physical damage thành fire khi đánh quái đang cháy."
+    text: "[[Shaper of Flames]] khiến mọi cú hit đều ignite và cho mọi loại damage ignite được, nên một cú physical và lightning không có chút fire nào vẫn làm quái bốc cháy."
   - label: Lan
     text: "[[Obliteration]] cho xác nổ, gloves Searing Exarch lan mỗi cú ignite 1.2 mét, và cả pack bốc cháy cùng nhau."
   - label: Sống sót
@@ -67,10 +67,10 @@ chain:
 chainDetails:
   - title: Lửa thật ra đến từ đâu
     body: |
-      Đây là phần người ta hay hiểu sai. Bản thân brand không có fire damage. Ba lớp tạo ra nó, và chúng xếp theo thứ tự:
+      Đây là phần người ta hay hiểu sai. Bản thân brand không có fire damage, và nó cũng không cần. Ba lớp tạo ra ngọn lửa, và chúng xếp theo thứ tự:
 
-      1. **[[Shaper of Flames]]** — hit luôn ignite, *mọi damage đều có thể ignite*, và quái bạn đã ignite ăn 40% physical damage của bạn dưới dạng fire. Dòng giữa là dòng gánh cả build: không có nó thì một cú physical và lightning không ignite được chút nào.
-      2. **"Gain % of Physical Damage as Extra Fire" trên gear.** [[Obliteration]], Grace of the Goddess và [[The Balance of Terror]] đều làm việc này.
+      1. **[[Shaper of Flames]]** — hit luôn ignite, và *mọi damage đều có thể ignite*. Dòng thứ hai là dòng gánh cả build: không có nó thì một cú physical và lightning không ignite được chút nào. Dòng thứ ba của notable, "Enemies Ignited by you have 40% of Physical Damage they deal converted to Fire", nói về damage mà mấy con quái đó đánh lên bạn. Nó là phòng thủ, không cộng gì vào damage của bạn, và không con số nào trong bài này cho biết nó đáng bao nhiêu.
+      2. **Physical damage gain thành extra damage, trên gear.** Không phải tất cả đều là fire: [[Obliteration]] cho extra chaos, [[The Balance of Terror]] cho một element ngẫu nhiên khi bạn đã cast Elemental Weakness trong 10 giây vừa qua, còn Grace of the Goddess cho extra fire, cold và lightning. Mà nó cũng không cần phải là fire. Cách chúng tôi đọc dòng "All Damage can Ignite", chỗ mà PoEDB không giải thích gì thêm: loại damage nào nằm trên cú hit cũng được tính vào ignite.
       3. **[[Herald of Ash]]**, nhân lên theo số herald bạn chạy.
 
       Nên cái ignite là một phần trăm của tổng cú hit từ brand. Mọi thứ làm cú hit lớn hơn đều làm ngọn lửa lớn hơn.
@@ -80,7 +80,7 @@ chainDetails:
 
       Nó dùng [[Elemental Overload]] thay thế: 40% more elemental damage phẳng chỉ cần crit được thỉnh thoảng, đổi lại crit của bạn không gây thêm damage. Với một build mà damage là hiệu ứng damage over time scale theo độ lớn cú hit, cái đổi chác đó là miễn phí.
 
-      Thứ tự scale mà tác giả đưa ra là: gem level, rồi flat added damage to spell, rồi phần trăm physical chuyển thành extra element, rồi các multiplier "more" như [[Cruelty Support]] và [[Archdemon Crown]], rồi fire damage-over-time multiplier, rồi herald buff effect, rồi cast speed, rồi area.
+      Thứ tự scale mà tác giả đưa ra là: gem level, rồi flat added damage to spell, rồi phần trăm physical gain thành extra element, rồi các multiplier "more" như [[Cruelty Support]] và [[Archdemon Crown]], rồi fire damage-over-time multiplier, rồi herald buff effect, rồi cast speed, rồi area.
   - title: Trâu mà không cần Mageblood
     body: |
       Phòng thủ ở đây là maximum resistance, không phải life. [[Melding of the Flesh]] đặt mọi cap resistance bằng maximum resistance *cao nhất* của bạn. [[Aegis Aurora]] cộng 5% maximum cold resistance và hồi energy shield bằng 2% armour mỗi khi bạn block. [[Purity of Ice]] đẩy cap cold cao hơn nữa, rồi Melding copy nó đi khắp nơi.
@@ -113,9 +113,10 @@ mandatory:
       có quyền mua từ Clarissa.
   - term: Shaper of Flames
     why: >-
-      Hit luôn ignite, mọi damage đều có thể ignite, và quái đang cháy ăn 40%
-      physical của bạn dưới dạng fire. Một cái brand physical không ignite được
-      nếu không có nó. Lấy ngay từ lab đầu tiên.
+      Hit luôn ignite và mọi damage đều có thể ignite: một cái brand physical
+      không ignite được nếu không có nó. Dòng thứ ba của nó là phòng thủ chứ
+      không phải damage — quái bạn đã ignite bị chuyển 40% physical damage
+      chúng gây ra thành fire. Lấy ngay từ lab đầu tiên.
   - term: Runebinder
     why: >-
       Cho bạn gắn brand thứ hai lên cùng một con quái. Đó là gần như nhân đôi
@@ -430,13 +431,13 @@ stages:
           Không món nào có giá 3.30. Tác giả đã ra build này qua 3.27, 3.28, 3.29 và 3.30, nên lộ trình là thật; chi phí thì chưa biết.
 
 powerCurve: |
-  Damage ở đây là một con số đi qua ba bộ multiplier. Con số đó là độ lớn cú hit của brand. Bộ thứ nhất biến nó thành lửa: [[Shaper of Flames]], phần physical gain as extra fire trên gear, và [[Herald of Ash]] scale theo herald effect. Bộ thứ hai là có bao nhiêu brand đang nằm trên mục tiêu, và [[Runebinder]] cho phép hai. Bộ thứ ba nằm bên phía quái: curse, exposure và phần resistance reduction còn lại. Clear là chuyện riêng, và nó được mua chứ không phải scale: một nguồn nổ xác và một nguồn lan ignite.
+  Damage ở đây là một con số đi qua ba bộ multiplier. Con số đó là độ lớn cú hit của brand. Bộ thứ nhất là thứ làm nó cháy, và cháy to hơn: [[Shaper of Flames]], thứ cho một cú hit không có chút fire nào ignite được; phần physical gain thành extra damage trên gear; và [[Herald of Ash]] scale theo herald effect. Bộ thứ hai là có bao nhiêu brand đang nằm trên mục tiêu, và [[Runebinder]] cho phép hai. Bộ thứ ba nằm bên phía quái: curse, exposure và phần resistance reduction còn lại. Clear là chuyện riêng, và nó được mua chứ không phải scale: một nguồn nổ xác và một nguồn lan ignite.
 
   Mấy thứ này tới ở những thời điểm rất khác nhau, và toàn bộ cảm giác của build nằm ở đó. Trước level 28 thì chưa có brand nào cả. Từ 28 tới map bạn có cú hit và lớp đầu tiên — [[Shaper of Flames]] từ lab đầu, gem level từ Honourhome, flat damage qua [[Nycta's Lantern]] — và chưa có clear thật. Ở map trắng và map vàng, hai món rẻ là [[Obliteration]] với gloves lan ignite biến nó thành autobomber, còn [[Bringer of Ruin]] làm dàn herald bắt đầu có nghĩa. Nên chuyện chạy map lên đỉnh sớm và rẻ, trong khi single target vẫn chỉ ở mức trung bình.
 
   Single target đuổi kịp ở map đỏ, khi các lớp resistance reduction lên người; nguyên văn bài viết là giữa game "cảm giác như bỗng dưng gấp đôi". Bước nhảy cuối là [[Archdemon Crown]] và dàn herald stack, cả hai bị chặn sau một cái base Elder và một seed jewel. Ước lượng bossing của researcher bên chúng tôi cũng đi theo đúng đường đó: 3.5 khi làm starter, tầm 4.5 khi đủ gear.
 
-  Phòng thủ tới sau cùng. Lớp vỏ maximum resistance và block chỉ tồn tại khi [[Melding of the Flesh]], [[Aegis Aurora]] và [[Purity of Ice]] chạy cùng nhau, mà đó là điều kiện để ra khỏi map đỏ chứ không phải để vào. Trước đó bạn là một nhân vật charge vào pack mà không có lớp vỏ ấy. Đoạn này là cách chúng tôi đọc thứ tự các stage; ghi chú hardcore ở trên chỉ nói là lớp vỏ tới muộn.
+  Phòng thủ tới sau cùng. Lớp vỏ maximum resistance và block chỉ tồn tại khi [[Melding of the Flesh]], [[Aegis Aurora]] và [[Purity of Ice]] chạy cùng nhau, mà đó là điều kiện để ra khỏi map đỏ chứ không phải để vào. Trước đó bạn là một nhân vật charge vào pack mà không có lớp vỏ ấy. Có một mảnh tới sớm: từ lab đầu, [[Shaper of Flames]] chuyển 40% physical damage mà quái bạn đã ignite gây ra thành fire. Cái đó dời damage khỏi phần giảm physical của bạn sang fire resistance; theo cách chúng tôi đọc thì nó đáng giá nhất khi maximum resistance đã lên, và không con số nào trong bài này cho biết là bao nhiêu. Đoạn này là cách chúng tôi đọc thứ tự các stage; ghi chú hardcore ở trên chỉ nói là lớp vỏ tới muộn.
 
 upgrades:
   - step: >-
@@ -686,6 +687,18 @@ sources:
     url: https://poedb.tw/us/Elementalist
     kind: data
     note: "Giá trị ascendancy đang chạy, dùng để kiểm Shaper of Flames và Mastermind of Discord."
+  - title: "PoEDB: Obliteration"
+    url: https://poedb.tw/us/Obliteration
+    kind: data
+    note: "Cây wand gain physical thành extra chaos chứ không phải fire, và có 20% cơ hội nổ xác."
+  - title: "PoEDB: The Balance of Terror"
+    url: https://poedb.tw/us/The_Balance_of_Terror
+    kind: data
+    note: "Fire Exposure on hit khi đã cast Flammability; physical gain thành một element ngẫu nhiên khi đã cast Elemental Weakness."
+  - title: "PoEDB: Grace of the Goddess"
+    url: https://poedb.tw/us/Grace_of_the_Goddess
+    kind: data
+    note: "Physical gain thành extra fire, cold và lightning."
   - title: "insanebuild 3.30 tier list"
     url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
     kind: guide
