@@ -108,21 +108,6 @@ const quests = act.nodes.filter((node) => node.quest);
     <div class="map__key">
       <div class="map__key-head">
         <h3>{t(locale, 'leveling.map.quests')}</h3>
-        {/*
-          The summary. Ticking happens on the route below, one box per stop,
-          so this counts stops — the same number the route's own counter
-          shows. The bar carries it as a shape for people who read that
-          faster than a fraction.
-        */}
-        <p class="map__progress">
-          <span
-            data-progress-count
-            data-total={act.nodes.length}
-            data-template={t(locale, 'leveling.progress.count', { done: '{done}', total: '{total}' })}
-          >{t(locale, 'leveling.progress.count', { done: 0, total: act.nodes.length })}</span>
-          <span class="map__bar" data-progress-bar aria-hidden="true"><span style="width:0%"></span></span>
-          <button type="button" data-progress-reset hidden>{t(locale, 'leveling.progress.reset')}</button>
-        </p>
       </div>
       <ol class="map__quests">
         {quests.map((node) => (
@@ -240,15 +225,6 @@ const quests = act.nodes.filter((node) => node.quest);
 
 
   .map__key-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-  .map__progress { visibility: hidden; display: flex; margin: 0 0 0.5rem; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--text-muted); }
-  :global([data-route][data-enhanced]) .map__progress { visibility: visible; }
-  .map__bar { width: 5.5rem; height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
-  .map__bar > span { display: block; height: 100%; background: var(--accent); transition: width 0.18s var(--ease); }
-  .map__progress button {
-    border: 1px solid var(--border-strong); border-radius: var(--radius); background: transparent;
-    color: var(--text-muted); font: inherit; font-size: 0.76rem; padding: 0.1rem 0.5rem; cursor: pointer;
-  }
-  .map__progress button:hover { color: var(--text); border-color: var(--accent); }
   .map__quests li { display: flex; align-items: center; gap: 0.35rem; }
   .map__quests li > a { flex: 1; min-width: 0; }
   .map__quests li.is-done > a .map__quest-name { text-decoration: line-through; text-decoration-thickness: 1px; }

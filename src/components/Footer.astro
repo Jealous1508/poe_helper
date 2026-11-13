@@ -13,7 +13,7 @@ const { locale, league } = Astro.props;
       {t(locale, 'footer.sources')}{' '}
       <a href={league.patchNotesUrl} rel="noopener" target="_blank">{t(locale, 'footer.patchNotes', { version: league.id })}</a>
     </p>
-    <p class="site-footer__author">{t(locale, 'footer.author')}</p>
+    <p>{t(locale, 'footer.author')}</p>
     <Donate locale={locale} place="footer" />
   </div>
 </footer>
@@ -26,5 +26,4 @@ const { locale, league } = Astro.props;
     color: var(--text-muted);
   }
   .site-footer p { margin: 0 0 0.4rem; max-width: 52rem; }
-  .site-footer__author { color: var(--text); font-weight: 500; margin-top: 0.9rem; }
 </style>

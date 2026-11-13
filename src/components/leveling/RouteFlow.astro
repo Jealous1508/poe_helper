@@ -303,17 +303,24 @@ const first = act.nodes[0].id;
   .flow__item.is-done > .node .node__name { text-decoration: line-through; text-decoration-thickness: 1px; }
   .flow__item.is-done > .node { opacity: 0.6; }
 
+  /* One progress strip for the page, centred across the top of the split:
+     the route is on the left, the zone you picked on the right, and this
+     belongs to both of them rather than to either column. */
   .flow__progress {
+    grid-column: 1 / -1;
     visibility: hidden;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    margin: 0 0 0.6rem;
-    font-size: 0.8rem;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 0 0 0.3rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.84rem;
     color: var(--text-muted);
   }
   :global([data-route][data-enhanced]) .flow__progress { visibility: visible; }
-  .flow__bar { flex: 1; max-width: 7rem; height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .flow__bar { width: 11rem; max-width: 40vw; height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; }
   .flow__bar > span { display: block; height: 100%; background: var(--accent); transition: width 0.18s var(--ease); }
   .flow__progress button {
     border: 1px solid var(--border-strong); border-radius: var(--radius); background: transparent;
