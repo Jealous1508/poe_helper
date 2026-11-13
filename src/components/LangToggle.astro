@@ -1,0 +1,34 @@
+---
+import { localeNames, locales, switchLocalePath, t, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<div class="lang" role="group" aria-label={t(locale, 'lang.toggle')}>
+  {locales.map((code) => (
+    <a
+      href={switchLocalePath(Astro.url.pathname, code)}
+      class:list={['lang__item', { 'is-current': code === locale }]}
+      aria-current={code === locale ? 'true' : undefined}
+      hreflang={code}
+      lang={code}
+      title={localeNames[code]}
+    >{code.toUpperCase()}</a>
+  ))}
+</div>
+
+<style>
+  .lang { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius); overflow: hidden; }
+  .lang__item {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.55rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: background-color 0.15s var(--ease), color 0.15s var(--ease);
+  }
+  .lang__item + .lang__item { border-left: 1px solid var(--border-strong); }
+  .lang__item:hover { color: var(--text); background: var(--surface-2); }
+  .lang__item.is-current { background: var(--accent); color: var(--on-accent); }
+</style>

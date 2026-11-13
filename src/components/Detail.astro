@@ -1,0 +1,38 @@
+---
+// Expandable "read more" block for depth a veteran can skip.
+interface Props {
+  summary: string;
+  open?: boolean;
+}
+const { summary, open = false } = Astro.props;
+---
+<details class="detail" open={open}>
+  <summary>
+    <svg class="detail__chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg>
+    <span>{summary}</span>
+  </summary>
+  <div class="detail__body">
+    <slot />
+  </div>
+</details>
+
+<style>
+  .detail { border-top: 1px solid var(--border); }
+  .detail:last-of-type { border-bottom: 1px solid var(--border); }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text);
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--accent); }
+  .detail__chevron { flex: none; color: var(--text-muted); transition: transform 0.15s var(--ease); }
+  .detail[open] > summary .detail__chevron { transform: rotate(90deg); }
+  .detail__body { padding: 0.1rem 0 1rem 1.4rem; font-size: 0.95rem; color: var(--text); }
+</style>

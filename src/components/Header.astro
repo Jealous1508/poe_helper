@@ -1,0 +1,92 @@
+---
+import type { League } from '../config/leagues';
+import { pagePath, t, type Locale } from '../i18n';
+import LangToggle from './LangToggle.astro';
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+  locale: Locale;
+  league: League;
+  section?: 'changelog' | 'builds' | 'leveling';
+}
+const { locale, league, section } = Astro.props;
+const links = [
+  { id: 'changelog', href: pagePath(locale, league.id, 'changelog') },
+  { id: 'builds', href: pagePath(locale, league.id, 'builds') },
+  { id: 'leveling', href: pagePath(locale, league.id, 'leveling') },
+] as const;
+---
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href={pagePath(locale, league.id)}>
+      <span class="brand__name">{league.name}</span>
+      <span class="brand__version">{league.id}</span>
+    </a>
+    <nav class="nav" aria-label={t(locale, 'nav.menu')}>
+      {links.map((link) => (
+        <a href={link.href} class:list={['nav__link', { 'is-current': section === link.id }]} aria-current={section === link.id ? 'page' : undefined}>
+          {t(locale, `nav.${link.id}`)}
+        </a>
+      ))}
+    </nav>
+    <div class="tools">
+      <LangToggle locale={locale} />
+      <ThemeToggle locale={locale} />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0 2rem;
+    min-height: 3.75rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .brand__name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: -0.01em; white-space: nowrap; }
+  .brand__version {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+    padding: 0 0.35rem;
+    line-height: 1.5;
+  }
+  .nav { display: flex; gap: 0.25rem; align-self: stretch; }
+  .nav__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .nav__link:hover { color: var(--text); }
+  .nav__link.is-current { color: var(--text); border-bottom-color: var(--accent); }
+  .tools { display: flex; align-items: center; gap: 0.6rem; }
+
+  @media (max-width: 720px) {
+    .bar { grid-template-columns: 1fr auto; row-gap: 0; padding-top: 0.5rem; }
+    .nav { grid-column: 1 / -1; grid-row: 2; margin: 0.25rem calc(var(--gutter) * -1) 0; padding: 0 calc(var(--gutter) - 0.85rem); overflow-x: auto; min-height: 2.6rem; }
+  }
+</style>

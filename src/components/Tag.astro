@@ -1,0 +1,32 @@
+---
+interface Props {
+  /** Colour family: buff, nerf, rework, new, removed, mixed, must, worth, skip, travel, neutral. */
+  kind: string;
+  label: string;
+}
+const { kind, label } = Astro.props;
+---
+<span class={`tag tag--${kind}`}>{label}</span>
+
+<style>
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 0.32rem 0.45rem;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .tag--buff, .tag--worth { color: var(--buff); }
+  .tag--nerf { color: var(--nerf); }
+  .tag--rework { color: var(--rework); }
+  .tag--new, .tag--must { color: var(--accent); }
+  .tag--mixed { color: var(--mixed); }
+  .tag--removed, .tag--skip, .tag--travel, .tag--neutral { color: var(--removed); }
+  .tag--must { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+</style>

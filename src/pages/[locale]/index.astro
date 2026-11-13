@@ -1,0 +1,12 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import { currentLeague } from '../../config/leagues';
+import { isLocale, locales, pagePath } from '../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params;
+if (!isLocale(locale)) throw new Error(`Unknown locale ${locale}`);
+---
+<Redirect to={pagePath(locale, currentLeague.id)} />

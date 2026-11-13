@@ -1,3 +1,6 @@
 ---
+import Redirect from '../components/Redirect.astro';
+import { currentLeague } from '../config/leagues';
+import { pagePath } from '../i18n';
 ---
-<html lang="en"><head><meta charset="utf-8" /><title>scaffold</title></head><body>scaffold</body></html>
+<Redirect to={pagePath('en', currentLeague.id)} />
