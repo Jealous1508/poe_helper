@@ -1,0 +1,490 @@
+name: Toxic Rain Pathfinder
+tagline: >-
+  Build bow phủ quái bằng pod độc, và hồi máu nhanh hơn tốc độ mất máu nhờ một
+  life flask không bao giờ tắt. Gần như không cần gear.
+class: Ranger
+ascendancy: Pathfinder
+role: starter
+budget: starter
+budgetNote: >-
+  Đi hết campaign và map trắng bằng đồ tự nhặt. Nâng cấp lớn đầu tiên là cây bow
+  tự craft, league trước tốn 5–10 Divine.
+mainSkill: Toxic Rain
+image: toxic-rain
+hero: art-pathfinder
+tags: [Bow, Chaos damage over time, Một nút]
+ratings: { clear: 4, bossing: 3, survivability: 3, ease: 5 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  Build đã được kiểm chứng qua rất nhiều league, và 3.30 không đụng gì tới skill
+  của nó. Giá tuần đầu và vị trí recipe craft thì chưa xác nhận được.
+modes:
+  ssf: >-
+    Chơi được. Không bắt buộc unique nào cả. [[The Tides of Time]] và
+    [[Progenesis]] rơi từ boss, nên chuẩn bị tinh thần đeo belt rare khá lâu.
+  hardcore: >-
+    Làm được, nhưng chưa guide nào hiện tại khuyên vậy. Phòng thủ dựa vào evasion
+    và hồi máu, mà hai thứ đó không chặn nổi một cú đánh quá lớn.
+
+idea: |
+  [[Toxic Rain]] bắn tên lên trời. Mỗi mũi rơi xuống thành một pod bào tử, gây chaos damage over time cho mọi con quái đứng gần. Pod cộng dồn, nên cách thắng là giữ thật nhiều pod trên cùng một mục tiêu.
+
+  Damage nằm trên skill gem, không nằm trên bow. Đó là lý do build chạy ngon với bow rẻ tiền, và cũng là lý do nó lớn lên theo gem level, attack speed và thời gian pod tồn tại.
+
+  [[Pathfinder]] cho bạn hai thứ: Wither mạnh hơn, khiến quái ăn thêm chaos damage, và một life flask hồi máu liên tục không ngừng.
+
+chain:
+  - label: Bắn
+    text: "[[Toxic Rain]] bắn ra năm mũi tên. Mỗi mũi rơi thành một pod sống khoảng một giây."
+  - label: Chồng pod
+    text: "Mỗi pod gần quái tự gây damage riêng. Attack speed và duration giữ được nhiều pod sống cùng lúc hơn."
+  - label: Wither
+    text: "Mỗi stack Wither cho quái ăn thêm 6% chaos damage, tối đa 15 stack. Pathfinder làm mỗi stack mạnh thêm một nửa."
+  - label: Sống sót
+    text: "[[Life Flask]] hồi máu vĩnh viễn nhờ [[Master Surgeon]]. Spell suppression cắt một nửa spell damage."
+
+chainDetails:
+  - title: Vì sao damage trên bow của bạn không quan trọng
+    body: |
+      Pod dùng chỉ số chaos damage gốc ghi trên gem: 8 mỗi giây ở gem level 1 và 238 mỗi giây ở level 20. Physical hay elemental damage trên bow không cộng một chút nào vào đó.
+
+      Nên bạn chỉ so bow theo ba thứ: attack speed, cộng level cho gem gắn trong nó, và mod chaos damage over time. Các guide đều đồng ý: một cây bow nhặt ở Act 1 vẫn hạ được boss Act 10.
+  - title: "Luật area of effect: nhắm 37–43%"
+    body: |
+      Ở mức 37–43% increased area of effect, cả năm pod của một loạt bắn chồng lên cùng một mục tiêu. Ít hơn thì pod quá nhỏ để chồng nhau. Nhiều hơn thì tên bay tản ra quá xa.
+
+      20% đến từ [[Bow Mastery]] trên passive tree. Phần còn lại là một mod trên helmet hoặc gloves, craft ở bench sau khi bạn tìm được recipe.
+
+      Trong campaign thì chuyện này không quan trọng. Vào map thì nó là một trong những khác biệt damage lớn nhất giữa một Toxic Rain ngon và một Toxic Rain dở. Một guide ước tính sai area làm mất 20–60% damage.
+  - title: Đây không phải Poison
+    body: |
+      Toxic Rain gây chaos damage over time, nhưng đó không phải ailment Poison. Chance to Poison, Poison duration và Poison damage đều vô dụng với nó. Bỏ qua mấy cụm poison trên cây.
+
+      Thêm projectile cũng không tự động tốt hơn: nó đổi cách pod trải ra. Đó chính là lý do các guide khuyên không dùng Headhunter.
+  - title: Wither stack đến từ đâu
+    body: |
+      Ba nguồn, mở dần theo tiến độ:
+
+      1. [[Withering Step]], mua được từ Act 1. Từ Act 3, link nó với [[Automation]] để nó tự cast.
+      2. [[Nature's Reprisal]], notable ascendancy đầu tiên: 25% chance to Wither on hit.
+      3. Sau này, [[Toxic Rain of Withering]] được [[Manaforged Arrows Support]] bắn tự động. Mỗi pod của nó áp một stack.
+
+      Với 15 stack cộng Nature's Reprisal, quái ăn thêm 135% chaos damage. Không có Pathfinder thì chỉ 90%.
+  - title: Lối chơi một nút hoạt động thế nào
+    body: |
+      [[Manaforged Arrows Support]] tự bắn bow attack được link với nó sau khi bạn tiêu đủ mana cho các bow attack khác. Ở setup endgame, [[Caustic Arrow]] nằm trong link đó cùng [[Lifetap Support]], nên nó tốn máu thay vì mana và nổ liên tục.
+
+      Kết quả: bạn giữ nút Toxic Rain, còn Caustic Arrow dọn sạch đám quái quanh bạn mà không cần nút thứ hai. Trước khi có setup đó, trong campaign, bạn tự bấm Caustic Arrow để dọn pack.
+
+mandatory:
+  - term: Toxic Rain
+    why: >-
+      Bản thân skill. Giữ gem ở level cao nhất có thể. Gem level là nguồn damage
+      lớn nhất, không có gì sánh bằng.
+  - term: Void Manipulation Support
+    why: >-
+      More chaos damage. Cùng với Vicious Projectiles và Efficacy, nó nằm trong
+      main link của 97–99% nhân vật Toxic Rain trên ladder league trước.
+  - term: Vicious Projectiles Support
+    why: >-
+      More chaos damage over time cho projectile attack. Quest reward ở Act 2.
+  - term: Efficacy Support
+    why: >-
+      More damage over time và pod sống lâu hơn. Ranger không mua được từ vendor
+      thường: lấy từ Siosa ở Library, Act 3.
+    detail: >-
+      Siosa xuất hiện sau quest phụ A Fixture of Fate trong The Library, Act 3.
+      Ông này bán những gem mà class của bạn bình thường không được chào. Từ
+      Act 6, Lilly Roth bán mọi gem.
+  - term: Master Surgeon
+    why: >-
+      Cho phép life flask tiếp tục hồi máu cả khi bạn đã full máu. Đây là nguồn
+      hồi phục của bạn. Không có nó, build không có cách nào sống trong map.
+    detail: >-
+      Bình thường life flask tắt ngay khi máu đầy. Master Surgeon bỏ luật đó, nên
+      một lần bấm flask hồi suốt cả thời lượng. [[Nature's Adrenaline]] nạp lại
+      flask. Trong 3.30, mỗi lần bấm hồi lâu gấp đôi.
+  - term: Life Flask
+    why: >-
+      Cây life flask duy nhất của bạn cần một suffix xóa Bleeding, để bấm một nút
+      là chữa luôn bleed. Gán vào phím bạn bấm được theo phản xạ.
+  - term: Nature's Reprisal
+    why: >-
+      Notable damage lớn nhất của bạn. Nó áp Wither on hit và làm Wither mạnh
+      thêm 50%.
+  - term: Bow Mastery
+    why: >-
+      Lấy "20% increased Area of Effect while wielding a Bow". Đó là một nửa của
+      37–43% area bạn cần khi vào map.
+  - term: Mirage Archer Support
+    level: recommended
+    why: >-
+      Một bản sao của bạn tiếp tục bắn Toxic Rain trong lúc bạn di chuyển. Chính
+      nó làm build mượt. Khoảng ba phần tư nhân vật trên ladder dùng.
+  - term: Malevolence
+    level: recommended
+    why: >-
+      Aura damage chính: more damage over time và skill duration dài hơn. Ranger
+      lấy từ Siosa ở Act 3.
+  - term: Withering Step
+    level: recommended
+    why: >-
+      Áp Wither quanh bạn và cho một đoạn tăng tốc ngắn. Link với [[Automation]]
+      để nó tự cast.
+  - term: Despair
+    level: recommended
+    why: >-
+      Curse hạ chaos resistance tới 30%. Cast lên boss. Sau này có ring tự áp
+      giúp bạn.
+  - term: Magebane
+    level: recommended
+    why: >-
+      Keystone biến Dexterity thành spell suppression. Cách phổ biến nhất để đạt
+      100% suppression. Bản mainstream không lấy [[Acrobatics]].
+  - term: Quill Rain
+    level: recommended
+    why: >-
+      Cây bow campaign tốt nhất nếu bạn nhặt được hoặc mua được: attack cực nhanh
+      nghĩa là nhiều pod hơn hẳn, bù thừa cho penalty damage trên bow.
+  - term: Kintsugi
+    level: recommended
+    why: >-
+      Body armour unique rẻ cho map đầu. Thay bằng [[Lightning Coil]] khi
+      lightning resistance của bạn dư xa so với cap.
+  - term: The Tides of Time
+    level: recommended
+    why: >-
+      Belt endgame giữ flask luôn đầy charge. Khoảng 60% nhân vật trên ladder
+      đeo. Các guide thích nó hơn cả Headhunter lẫn Mageblood cho build này.
+
+labs:
+  - lab: Normal
+    node: Nature's Reprisal
+    why: "Bước nhảy damage lớn nhất trong campaign. Chạy lab ngay khi tới town Act 4."
+  - lab: Cruel
+    node: Nature's Adrenaline
+    why: "Flask nhận 3 charge mỗi 3 giây: flask chạy vĩnh viễn. Chạy quanh town Act 8."
+  - lab: Merciless
+    node: Master Surgeon
+    why: "Hồi máu vĩnh viễn. Chạy trước boss Act 10, con này hạ resistance của bạn."
+  - lab: Eternal
+    node: Nature's Boon
+    why: "Utility flask mạnh thêm 30%. Chạy khi map Tier 14 đã thấy nhẹ nhàng."
+
+stages:
+  - id: acts-1-3
+    image: caustic-arrow
+    title: Act 1–3
+    levels: Level 1–33
+    uses: >-
+      Mở đầu bằng [[Caustic Arrow]], quest reward đầu tiên. Tới level 12, lấy
+      [[Toxic Rain]] từ quest The Siren's Cadence và chuyển nó thành main skill.
+      Giữ Caustic Arrow để dọn pack quái nhỏ.
+    changes: >-
+      Mana là vấn đề đầu tiên bạn gặp. Chạy [[Clarity]] từ level 10 và mang theo
+      mana flask. Kiếm [[Quicksilver Flask]] và boots có movement speed càng sớm
+      càng tốt.
+    links:
+      - name: Level 1–11
+        gems: [Caustic Arrow, Pierce Support, Void Manipulation Support]
+      - name: Từ level 12
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support]
+      - name: Four-link trước level 25
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support]
+      - name: Utility
+        gems: [Withering Step, Blink Arrow, Clarity]
+    moveOn: "Toxic Rain đã nằm trong four-link và bạn đã xong Act 3."
+    details:
+      - title: Ranger lấy từng gem ở đâu
+        body: |
+          - **Level 1:** [[Caustic Arrow]], reward của Enemy at the Gate.
+          - **Level 4:** [[Mirage Archer Support]] và [[Pierce Support]], reward của Mercy Mission. [[Puncture]], reward của Breaking Some Eggs.
+          - **Level 8:** [[Void Manipulation Support]], [[Arrow Nova Support]] và [[Manaforged Arrows Support]], reward của The Caged Brute. Bạn chọn một làm reward rồi mua phần còn lại từ Nessa.
+          - **Level 10:** [[Withering Step]] và [[Clarity]], mua từ Nessa sau The Caged Brute.
+          - **Level 12:** [[Toxic Rain]], reward của The Siren's Cadence.
+          - **Level 18:** [[Vicious Projectiles Support]], reward của Sharp and Cruel ở Act 2.
+          - **Level 24:** [[Despair]] và [[Haste]], reward của Lost in Love ở Act 3.
+
+          Vendor thường không bán cho Ranger: [[Efficacy Support]], [[Flame Dash]], [[Malevolence]], [[Lifetap Support]] và [[Petrified Blood]]. Mua từ Siosa ở Library Act 3, hoặc từ Lilly Roth ở Act 6.
+      - title: Về town thì ngó vendor cái gì
+        body: |
+          Mỗi lần về town, mở vendor giáp xem hai thứ: một món có ba socket liền link, và boots có movement speed.
+
+          Màu socket không còn cản bạn nữa. Từ 3.29, gem nào cũng nhét được vào socket nào, và gem nằm đúng màu của nó thì được thêm chút quality. Link mới là thứ đáng quan tâm.
+
+          Bỏ qua bow rare chậm. Nếu rơi được hoặc mua rẻ được [[Quill Rain]], dùng nó suốt campaign luôn.
+      - title: Hai con boss của Act 1
+        body: |
+          **Brutus:** kéo [[Puncture]] lên thanh skill cho trận này. Bleed của nó cho single-target rất ngon ở level này.
+
+          **Merveil:** ả gây cold damage. Mua hoặc nhặt một [[Sapphire Ring]] trước khi vào. Lúc này bạn đã có Toxic Rain: rải pod dưới chân ả và di chuyển liên tục.
+      - title: "Mới chơi Toxic Rain? Nó chơi như thế này"
+        body: |
+          Pod rơi quanh con trỏ chuột, và damage đến sau một nhịp. Đừng đứng chờ xem kết quả: bắn vài loạt vào pack rồi đi tiếp, để pod tự kết liễu.
+
+          Đánh boss thì cứ bắn vào một chỗ để pod chồng lên nhau. Khi phải né, [[Mirage Archer Support]] bắn thay bạn vài giây.
+  - id: acts-4-10
+    image: notable-master-surgeon
+    title: Act 4–10
+    levels: Level 33–68
+    uses: >-
+      Vẫn link Toxic Rain đó, thêm [[Efficacy Support]] khi bạn kiếm được
+      five-link. Từ Act 5 chạy ba aura: [[Malevolence]], [[Haste]] và
+      [[Clarity]]. Tự cast [[Despair]] lên boss.
+    changes: >-
+      Bạn ascend ba lần (xem bảng Labyrinth bên dưới). Sau boss Act 5 bạn mất 30%
+      mọi elemental resistance, và mất thêm 30% nữa sau Act 10. Vá lại ở crafting
+      bench, bench có ở mọi town từ Act 2.
+    links:
+      - name: Main skill
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support]
+      - name: Dọn pack
+        gems: [Caustic Arrow, Pierce Support, Void Manipulation Support, Arrow Nova Support]
+      - name: Wither
+        gems: [Withering Step, Automation]
+      - name: Aura
+        gems: [Malevolence, Haste, Clarity]
+      - name: Curse và di chuyển
+        gems: [Despair, Flame Dash]
+    moveOn: "elemental resistance về lại 75% sau Act 10, life flask của bạn xóa được Bleeding, và bạn đã có Master Surgeon."
+    details:
+      - title: Giúp bandit nào
+        body: |
+          Giúp **Alira** ở Act 2. Bà này cho +15% tất cả elemental resistance, khiến chuyện lo gear suốt campaign dễ thở hẳn.
+
+          Sau này vào map, khi gear tự lo đủ resistance, phần lớn người chơi đổi sang giết cả ba bandit để lấy thêm một passive point. League trước khoảng bốn trên năm Toxic Rain Pathfinder kết thúc với lựa chọn đó.
+      - title: Ưu tiên trên passive tree
+        body: |
+          Thứ tự đại khái: life, bow attack speed, projectile damage, skill effect duration, chaos damage-over-time multiplier, rồi đến spell suppression, node flask và reservation efficiency.
+
+          Bỏ qua critical strike, elemental và mấy cụm poison. Chúng không làm gì cho damage của pod.
+
+          Mốc theo guide chính: [[Bow Mastery]] (area) và Mana Mastery (reservation efficiency) trước Act 3. [[Magebane]] và Duration Mastery (10% more skill effect duration) trước Act 10. Muốn cây chính xác thì mở link Path of Building ở mục Nguồn: trong đó có cây cho từng act.
+      - title: Nếu bạn cứ chết hoài
+        body: |
+          Đổi [[Haste]] sang [[Grace]] hoặc [[Purity of Elements]]. Thay life flask mỗi tầm mười level. Kiểm tra resistance đã cap chưa: đây là lý do chết phổ biến nhất sau Act 5.
+
+          Các guide cũng gợi ý lấy Master Surgeon sớm hơn lần thứ ba, nếu vấn đề của bạn là sống sót chứ không phải tốc độ.
+      - title: Chọn Pantheon nào
+        body: |
+          Trong lúc chạy campaign: **Soul of the Brine King** (major) và **Soul of Ryslatha** (minor), cái này giúp life flask nạp lại. Sau này, khi stun và ailment đã xử lý xong, nhiều người đổi major sang **Soul of Lunaris**.
+  - id: early-maps
+    image: kintsugi
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      Bow sáu socket cắm Toxic Rain, [[Kintsugi]] làm body armour, và đồ rare có
+      life với resistance ở mọi slot còn lại. Roll năm cây flask có ích.
+    changes: >-
+      Luật area of effect bắt đầu có ý nghĩa: lên cho được 37–43%. Hướng tới 100%
+      spell suppression trong lúc chạy map vàng. [[Vaal Caustic Arrow]] thay cho
+      Caustic Arrow.
+    links:
+      - name: Main skill (six-link)
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support, More Duration Support]
+      - name: Dọn pack
+        gems: [Vaal Caustic Arrow, Vicious Projectiles Support, Void Manipulation Support, Arrow Nova Support, Swift Affliction Support]
+      - name: Phòng thủ
+        gems: [Withering Step, Automation, Immortal Call]
+      - name: Aura
+        gems: [Malevolence, Haste, Clarity]
+    moveOn: "bạn có bow six-link cộng thêm gem level, area 37–43%, và spell suppression gần đầy."
+    details:
+      - title: Cây bow tử tế đầu tiên
+        body: |
+          Lộ trình guide chính khuyên:
+
+          1. Gom divination card [[The Porcupine]] để đổi lấy [[Short Bow]] six-link. [[Quill Rain]] six-link cũng được.
+          2. Dùng [[Shrieking Essence of Dread]] lên nó. Cái này bảo đảm +2 level cho bow gem gắn trong bow.
+          3. Thêm attack speed ở crafting bench. Nếu attack speed đã roll sẵn, thêm chaos damage-over-time multiplier.
+
+          Recipe này chỉ đến từ một tác giả, dù có guide thứ hai đồng ý rằng bất kỳ cây bow rare cơ bản nào cũng đủ để vào map. Trong 3.30, Shrieking Essence vẫn xuất hiện ở map mọi màu, nên recipe không bị ảnh hưởng bởi thay đổi về Essence.
+      - title: Roll những flask nào
+        body: |
+          - [[Life Flask]] (Divine) có xóa Bleeding.
+          - [[Quicksilver Flask]] và [[Silver Flask]] để chạy nhanh.
+          - [[Amethyst Flask]] cho chaos resistance.
+          - [[Jade Flask]] cho evasion.
+
+          Roll bằng [[Orb of Alteration]]. Prefix hữu ích là mấy cái tăng charge recovery. Trong 3.30, thêm mod flask bằng beast cần beast đỏ, nên Alteration và crafting bench là đường rẻ hơn ở giai đoạn đầu.
+      - title: Mod map cần tránh
+        body: |
+          Hai mod đánh thẳng vào động cơ của build:
+
+          - **Less Recovery Rate of Life and Energy Shield.** Flask hồi ít hẳn.
+          - **Reduced Flask Charges gained.** Flask cạn sạch.
+
+          Một guide thêm "less effect of Flasks". Reroll mấy map này cho tới khi nhân vật đủ mạnh.
+      - title: Kiếm currency đầu tiên trong 3.30
+        body: |
+          Guide cũ cho build này gợi ý Bestiary, Betrayal và Heist ở map trắng. Cả ba đều đổi trong patch này: mấy cơ chế đó không còn tự xuất hiện trong map nếu không có Thread, và Heist Contract giờ mua từ Whakano bằng Gold.
+
+          Kế hoạch an toàn giai đoạn đầu là cái changelog mô tả: chạy map bên trong Shaped Region để lấy Thread miễn phí, và đừng bỏ qua quái Rare với boss map, vì currency giờ rơi ở đó.
+  - id: red-maps
+    image: thicket-bow
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      [[Thicket Bow]] tự craft với +3 gem level và [[Empower Support]] trong main
+      link. [[Lightning Coil]] thay [[Kintsugi]]. [[Petrified Blood]] thay
+      Clarity.
+    changes: >-
+      Build trở thành một nút. Hai setup tự động dùng
+      [[Manaforged Arrows Support]] bắn Caustic Arrow và
+      [[Toxic Rain of Withering]] thay bạn. Mana căng cực, nên bạn thêm mod giảm
+      mana cost lên trang sức.
+    links:
+      - name: Main skill
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support, Empower Support]
+      - name: Dọn pack tự động
+        gems: [Vaal Caustic Arrow, Manaforged Arrows Support, Void Manipulation Support, Vicious Projectiles Support, Arrow Nova Support, Lifetap Support]
+      - name: Wither tự động
+        gems: [Toxic Rain of Withering, Manaforged Arrows Support, Frenzy, Culling Strike Support]
+      - name: Phòng thủ
+        gems: [Withering Step, Automation, Immortal Call]
+      - name: Aura
+        gems: [Malevolence, Haste, Petrified Blood]
+    moveOn: "bạn clear map Tier 16 mà không phải nghĩ tới flask hay mana."
+    details:
+      - title: Cây Thicket Bow +3
+        body: |
+          Mod cần nhắm theo guide chính: +1 to level of socketed gems, +2 to level of socketed support gems, increased chaos damage over time, 17–19% attack speed và 18–20% chaos damage-over-time multiplier.
+
+          League trước cây bow này tốn 5 tới 10 Divine Orb để craft hoặc mua. **Giá đó chưa được xác nhận cho 3.30.** Patch đã đổi chi phí mấy craft bench dùng để bảo vệ mod, và chưa ai công bố con số mới.
+      - title: Vì sao Petrified Blood ở đây không có mặt trái
+        body: |
+          [[Petrified Blood]] biến một phần mỗi cú hit thành damage over time, nhờ vậy mà sống nổi mấy cú đánh lớn. Nhược điểm của nó là chặn hồi máu khi bạn trên nửa máu, trừ hồi máu từ flask.
+
+          Mà nguồn hồi máu của bạn *chính là* flask. Nên bạn ăn phần lợi và né được phần hại.
+      - title: Đổi sang Lightning Coil
+        body: |
+          [[Lightning Coil]] khiến một phần lớn physical hit damage chuyển thành lightning damage, rồi resistance của bạn cắt bớt nó. Đổi lại nó có −60% lightning resistance.
+
+          Chỉ đổi khi lightning resistance của bạn vẫn cap được kể cả sau penalty, thường cần [[Topaz Flask]] đỡ. Trước đó thì [[Kintsugi]] vẫn là chest tốt hơn.
+      - title: Chữa mana
+        body: |
+          Ba aura chiếm gần hết mana: Path of Building endgame chỉ còn khoảng 45 mana trống trên tổng 720.
+
+          Cách các guide chữa: craft "−7 to total mana cost of non-channelling skills" lên cả hai ring và amulet, cắm [[Lifetap Support]] vào Caustic Arrow tự động, và lấy Mana Mastery cho reservation efficiency.
+  - id: endgame
+    image: tides-of-time
+    title: Endgame
+    levels: Pinnacle boss trở lên
+    uses: >-
+      Belt [[The Tides of Time]], flask [[Progenesis]], một large và hai medium
+      cluster jewel, cùng một quiver có attack speed và chaos damage-over-time
+      multiplier.
+    changes: >-
+      Nâng cấp bắt đầu đắt và mỗi món đem lại ít hơn. Bản top dùng [[Widowhail]]
+      với quiver gần hoàn hảo, một Watcher's Eye và gem double-corrupt.
+    moveOn: "không còn stage nào nữa. Từ đây bạn tự quyết định muốn đầu tư thêm tới đâu."
+    details:
+      - title: Nên kỳ vọng con số nào
+        body: |
+          Mấy file Path of Building top của build này hiện 20–30 triệu damage mỗi giây và 110,000–135,000 effective hit point.
+
+          Đọc mấy số đó cẩn thận. Chúng giả định pod chồng hoàn toàn và đủ 15 stack Wither. Dữ liệu ladder league trước, vốn không áp mấy giả định đó, cho thấy phần lớn nhân vật level 100 nằm ở 1.5–5 triệu. Sự thật cho một trận đánh thật nằm ở khoảng giữa.
+      - title: Cluster jewel
+        body: |
+          Một large cluster chaos damage với Unholy Grace, Unwaveringly Evil và Wicked Pall. Ba notable này nằm trên 70–80% nhân vật ladder.
+
+          Với hai cây medium, setup phổ biến nhất là một cluster flask (Spiked Concoction và Brewed for Potency) và một cluster chaos damage over time (Wicked Pall và Student of Decay). Tác giả của build cũng liệt kê medium projectile damage như một hướng damage nhỉnh hơn chút.
+      - title: Build vật lộn với cái gì
+        body: |
+          - **Uber boss** cần đầu tư thật sự.
+          - **Map dày đặc, juice nặng.** Build không có nổ xác, và Caustic Arrow tự động thì đuối.
+          - **Hiệu ứng on-death.** Bạn phải đứng đánh liên tục, nên bạn đứng cạnh mấy thứ phát nổ.
+          - **Bất cứ thứ gì cắt hồi phục hoặc cắt flask charge.**
+
+          Không nguồn nào nêu tên boss cụ thể mà build không giết được, nên chúng tôi cũng không liệt kê.
+
+patch:
+  - entry: pathfinder-flask-changes
+    note: >-
+      **Buff nhỏ.** Master Surgeon giờ hồi cùng lượng mỗi giây nhưng kéo dài gấp
+      đôi, nên bạn bấm life flask ít đi khoảng một nửa. Build không lấy Master
+      Alchemist hay Master Distiller, nên mấy thay đổi đó không liên quan.
+  - entry: ruthless-changes
+    note: >-
+      **Đừng tin mấy bài nói Nature's Reprisal bị nerf.** Vài bài viết ngày
+      launch liệt kê thay đổi Pathfinder vốn thuộc phần Ruthless của patch note.
+      Trong game thường, Nature's Reprisal vẫn giữ 50% increased Wither effect.
+  - entry: essence-changes
+    note: >-
+      **Không ảnh hưởng tới craft bow.** Craft đó dùng Shrieking Essence, tier
+      vẫn xuất hiện ở mọi map.
+  - entry: meta-crafting-costs
+    note: >-
+      **Cây Thicket Bow craft có thể tốn khác trước.** Bảo vệ mod ở bench giờ
+      tính giá khác. Coi con số 5–10 Divine của league trước chỉ là tham khảo
+      thô.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Lời khuyên kiếm currency sớm trong guide cũ đã lỗi thời.** Bestiary,
+      Betrayal và Heist không còn tự xuất hiện trong map nữa.
+  - entry: item-tiers
+    note: >-
+      **Có lợi.** Build chỉ cần life, resistance và suppression trên đồ rare, mà
+      drop theo tier từ Act 6 làm mấy thứ đó dễ kiếm hơn.
+  - entry: incursion-atziri-rework
+    note: >-
+      **Lựa chọn cuối game.** Soul Core từ Temple có thể thêm một hiệu ứng
+      support vào gem, bản top-end có dùng. Lapidary Lens giờ có thể phá hỏng
+      gem, nên chỉ làm khi currency dư.
+
+strengths:
+  - "Chạy được từ Act 1 mà không bắt buộc unique nào."
+  - "Damage trên bow không quan trọng, nên vũ khí của bạn rẻ trong thời gian rất dài."
+  - "Nhanh: flask chạy vĩnh viễn và movement speed cao."
+  - "Hồi máu cực mạnh, gần như miễn nhiễm phần lớn damage over time."
+  - "Dễ chơi. Một nút sau khi mấy setup tự động vào chỗ."
+  - "Chaos damage over time xuyên thẳng qua energy shield của quái."
+weaknesses:
+  - "Mana căng suốt cả đời nhân vật."
+  - "Bạn bấm life flask liên tục (từ 3.30 thì đỡ hơn)."
+  - "Damage có độ trễ, và sai area of effect thì âm thầm mất rất nhiều damage."
+  - "Trâu so với bow build, chứ không trâu nói chung. Một cú đánh cực lớn vẫn giết bạn."
+  - "Không có nổ xác. Clear chậm lại trong map quá dày."
+  - "Endgame sâu thì đắt, và Uber boss cần đầu tư."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn những cú hit to đùng hay nổ cả màn hình, muốn một
+  nhân vật đứng yên chịu mọi thứ, hoặc muốn một con giết Uber boss giá rẻ. Một
+  tier list 3.29 xếp nó hạng B: nó tới được cùng những mục tiêu như các build
+  top, nhưng phải chấp nhận nhiều thỏa hiệp hơn trên đường đi.
+
+sources:
+  - title: "PoE Vault: Toxic Rain Pathfinder build guide (PathofEvening)"
+    url: https://www.poe-vault.com/guides/toxic-rain-pathfinder-build-guide
+    kind: guide
+    note: "Cập nhật cho 3.30. Guide hiện tại đầy đủ nhất; phần lớn chi tiết chỉ có một nguồn trong bài này đến từ tác giả đó."
+  - title: "Mobalytics: Toxic Rain Pathfinder starter, có setup cho từng act"
+    url: https://mobalytics.gg/poe/builds/toxic-rain-pathfinder
+    kind: guide
+    note: "Cùng tác giả. Là nơi duy nhất có mục nói rõ về thay đổi 3.30."
+  - title: "Path of Building: PathofEvening"
+    url: https://pobb.in/c6XCMwysrnXk
+    kind: pob
+    note: "Cây cho từng act, bộ gem và bộ gear. Vẫn gắn nhãn 3.29."
+  - title: "Video guide cho 3.30 (PathofEvening)"
+    url: https://www.youtube.com/watch?v=GsDMr2NZRao
+    kind: video
+    note: "Chúng tôi dùng tiêu đề và link Path of Building đính kèm, không dùng nội dung video."
+  - title: "ExpCarry: guide Toxic Rain Pathfinder 3.29"
+    url: https://expcarry.com/best-poe-3-29-toxic-rain-pathfinder-build
+    kind: guide
+    note: "Bài viết độc lập, dùng để đối chiếu phần lõi của build."
+  - title: "Path of Building: Swearg (bản Acrobatics)"
+    url: https://pobb.in/THPwdIA0X1vm
+    kind: pob
+    note: "Một hướng phòng thủ khác: evasion cao, không dùng Lightning Coil."
+  - title: "poe.ninja: Toxic Rain Pathfinder trên ladder 3.29"
+    url: https://poe.ninja/poe1/builds/allflame?class=Pathfinder&skills=Toxic+Rain
+    kind: data
+    note: "Nguồn của mọi tỷ lệ sử dụng trong bài này."
+  - title: "PoEDB: dữ liệu gem Toxic Rain"
+    url: https://poedb.tw/us/Toxic_Rain
+    kind: data
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
