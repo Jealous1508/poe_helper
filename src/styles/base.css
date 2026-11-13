@@ -187,3 +187,10 @@ a.term--ref:focus-visible {
   text-decoration-style: solid;
   text-decoration-color: currentColor;
 }
+
+/* Any class rule with a display outranks the browser's own
+   [hidden] { display: none }, so an element the page marks hidden keeps
+   rendering. This bit the build filter: cards were flagged hidden and
+   stayed on screen. One reset here rather than remembering it in every
+   component that ever hides something. */
+[hidden] { display: none !important; }
