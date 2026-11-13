@@ -55,6 +55,8 @@ const schema = z
         uses: z.string().min(1),
         changes: z.string().min(1),
         moveOn: z.string().min(1),
+        /** Image manifest id of the item that defines this stage. */
+        image: z.string().optional(),
         /** Gem setups for this stage; gems are term names. */
         links: z.array(z.object({ name: z.string().min(1), gems: z.array(z.string().min(1)).min(1) }).strict()).optional(),
         details: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()),
