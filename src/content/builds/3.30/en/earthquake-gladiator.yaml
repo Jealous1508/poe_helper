@@ -90,7 +90,7 @@ chainDetails:
 
       So one mastery makes endurance charges simultaneously your damage stat and your defence stat. That single node is why two [[Kaom's Sign]] rings justify two ring slots, and why the author drops Determination in favour of [[Blood Magic]] plus charge stacking.
 
-      The endgame target is 8 charges. The published Path of Building reads 7, which is a small disagreement inside the same guide.
+      The endgame target is 8 charges, and the count can be checked: three base, Vigour and Stamina on the tree, the Endurance anoint on the amulet, and one from each [[Kaom's Sign]]. The published Path of Building reads 7 because its endgame item set wears only one Kaom's Sign, with a rare ring it labels an alternative in the other slot. Adding them up from that file's tree and items is our arithmetic; the 8 is the guide's own number.
   - title: What Jagged Technique is actually worth
     body: |
       Honest version, because the simple version oversells it.
@@ -149,6 +149,15 @@ mandatory:
     why: >-
       Your block becomes lucky, which takes 65% to roughly 88% on both attacks
       and spells. The single largest defensive multiplier in the build.
+    detail: >-
+      Those are the guide's own figures, and they hold up: 65% rolled twice is
+      87.75% by our arithmetic. The 65% is a ceiling, not a gearing target,
+      because [[Versatile Combatant]] also takes 10% off maximum block. The
+      level 98 file reads 87.75% spell block and 89.76% attack block; its tree
+      takes As The Mountain for +3% to maximum attack block, and 68% rolled
+      twice is 89.76%. One condition sits in the node's own text: block is
+      lucky only if you have blocked recently, and the file's figures are
+      worked out with that condition switched on.
   - term: Versatile Combatant
     why: >-
       Converts overcapped attack block into spell block at 2% per 1%. It is the
@@ -181,8 +190,9 @@ mandatory:
   - term: Fist of War Support
     level: recommended
     why: >-
-      At gem level 20, exerted slams deal 98% more damage with hits and
-      ailments every 1.8 seconds. [[Earthquake]] carries the Slam tag.
+      At gem level 20, Ancestrally Boosted slams deal 98% more damage with hits
+      and ailments, and a slam can be boosted no more than once every 1.8
+      seconds. [[Earthquake]] carries the Slam tag.
     detail: >-
       **One honest caveat:** nobody has confirmed whether Fist of War's boost
       reaches the aftershock or only the slam. The game data says the boost does
@@ -284,7 +294,7 @@ stages:
         body: |
           The author calls [[Intimidating Cry]] significant single-target damage early on. Use it on every rare and every boss until [[Seismic Cry]] replaces it at 24.
 
-          Keep Intimidating Cry on your bar after that, though. See the note about boss loading screens in the red maps stage.
+          After that it is gone. The planner's gem sets carry no Intimidating Cry from level 24 on; the Path of Building file keeps it in its level 18–31 set, so the two files differ by a few levels on when. The warcry the guide does tell you to keep for bosses behind a loading screen is [[Enduring Cry]], and that one arrives in maps. See the note in the red maps stage.
   - id: acts-4-10
     image: unwavering-stance
     title: Acts 4–10
@@ -300,7 +310,7 @@ stages:
       - name: Main skill from level 38
         gems: [Sunder, Fist of War Support, Chance to Bleed Support, Cruelty Support]
       - name: Warcries
-        gems: [Seismic Cry, Urgent Orders Support, Intimidating Cry]
+        gems: [Seismic Cry, Urgent Orders Support]
       - name: Auras and banner
         gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
       - name: Movement
@@ -323,11 +333,13 @@ stages:
           3. Respec the two-handed nodes into block, shield and armour masteries.
 
           The published Path of Building has a tree spec literally named for this step. Do all three in one sitting; half of it is worse than either.
-      - title: Pantheon is a conflict inside the same guide
+      - title: "Pantheon: two answers, for two versions of the build"
         body: |
-          The planner says Brine King with all three upgrades, plus Ralakesh. The published Path of Building says Lunaris plus Ralakesh. Both files were saved six minutes apart.
+          The planner says Brine King with all three upgrades, plus Ralakesh. The published Path of Building opens on Lunaris plus Ralakesh. Both files were saved six minutes apart, and we used to list this as a conflict.
 
-          Unresolved. Brine King is the safer progression pick; Lunaris is the usual mapping choice later.
+          It is not one. The Path of Building file carries two configurations. The one named Default has Brine King, and its name tags it for the midgame tree and the suppression endgame tree. The one named Ailment Avoid has Lunaris, is tagged for the no-suppression endgame tree and the cluster setup, and is the one the file was saved on. The file's notes say the no-suppression versions reach ailment immunity. Our reading is that this is why Brine King gives way there; the notes do not spell the reason out.
+
+          So: Brine King through the campaign and midgame, which is what the planner shows, and Lunaris once you are on an ailment-immune endgame setup. Ralakesh is the minor god in both.
   - id: early-maps
     image: versatile-combatant
     title: Early maps
@@ -335,22 +347,28 @@ stages:
     uses: >-
       [[Earthquake]] with [[Fist of War Support]] and
       [[Less Duration Support]], behind a one-handed [[Reaver Axe]] and a
-      shield. [[Brutality Support]] replaces [[Chance to Bleed Support]].
+      shield. [[Brutality Support]] replaces [[Chance to Bleed Support]]. The
+      guide publishes its map link only as six gems and does not say which one
+      to leave out while your chest has five links.
     changes: >-
       Fix the −30% resistances from the Act 10 boss first. Chaos resistance can
       lag, but push it towards 0%. Get [[Kaom's Sign]] rings as soon as they
       are affordable.
     links:
-      - name: Main skill
-        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support]
+      - name: "Main skill: the guide's map set, published as six links"
+        gems: [Earthquake, Brutality Support, Fist of War Support, Cruelty Support, Fortify Support, Less Duration Support]
       - name: Single target
         gems: [Bladestorm, Maim Support, Culling Strike Support, More Duration Support]
-      - name: Warcries
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash]
+      - name: "Warcry: Enduring Cry, or Seismic Cry while mapping"
         gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
       - name: Auras and banner
         gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
-      - name: Curse and guard
-        gems: [Vulnerability, Blood Rage, Steelskin]
+      - name: Curse and buff
+        gems: [Vulnerability, Blood Rage]
+      - name: Guard, on Cast when Damage Taken
+        gems: [Cast when Damage Taken Support, Molten Shell, More Duration Support]
     moveOn: "resistances are capped, you have two Kaom's Sign rings, and block is the main project."
     details:
       - title: Why Less Duration is in the main link
@@ -359,7 +377,7 @@ stages:
 
           Cracks created before the first one erupts do **not** spawn their own aftershocks. Slamming faster than the aftershock cycle wastes slams, which is another reason attack speed is not a damage stat here.
 
-          If your chest's socket colours will not take it, the author substitutes [[Swift Affliction Support]] instead.
+          The one substitution the author describes is for the Lacerate gem swap. That chest has to be five red sockets and one green, so Earthquake takes [[Swift Affliction Support]] in place of Less Duration there. Make the green socket white and you can keep Less Duration.
       - title: Socket colours are worth real damage
         body: |
           A gem in a socket of its own colour gets +10% quality. On [[Earthquake]], quality is directly more aftershock damage — up to +30% at 20% quality.
@@ -379,7 +397,7 @@ stages:
         body: |
           The author is refreshingly blunt about it: [[Bladestorm]] is single-target only, and even then it is not that important.
 
-          Keep it in a four-link if you have the sockets. Do not spend currency on it.
+          Keep it in a four-link if you have the sockets. Do not spend currency on it. It is not a stopgap, though: the guide's gem sets keep the same four-link through red maps and in the uber bossing setups.
   - id: red-maps
     image: more-than-skill
     title: Red maps
@@ -392,23 +410,29 @@ stages:
       the endgame axe, then Ryslatha's Coil, then a damage amulet re-anointed to
       Endurance, then cluster jewels, then a life-on-block shield.
     links:
-      - name: Main skill
-        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support, Cruelty Support]
-      - name: Boss swap
-        gems: [Lacerate of Haemorrhage, Brutality Support, Melee Physical Damage Support, Cruelty Support, Maim Support, Fist of War Support]
-      - name: Warcries
+      - name: "Main skill: the planner and Path of Building map set"
+        gems: [Earthquake, Brutality Support, Fist of War Support, Cruelty Support, Fortify Support, Less Duration Support]
+      - name: "Boss swap: the (Uber) Bossing set"
+        gems: [Lacerate of Haemorrhage, Brutality Support, Volatility Support, Melee Physical Damage Support, Endurance Charge on Melee Stun Support, Fortify Support]
+      - name: Single target
+        gems: [Bladestorm, Maim Support, Culling Strike Support, More Duration Support]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash]
+      - name: "Warcry: Enduring Cry, or Seismic Cry while mapping"
         gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
       - name: Auras and banner
         gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
-      - name: Curse and guard
-        gems: [Vulnerability, Blood Rage, Steelskin, Immortal Call]
+      - name: Curse and buff
+        gems: [Vulnerability, Blood Rage]
+      - name: Guard, on Cast when Damage Taken
+        gems: [Cast when Damage Taken Support, Molten Shell, More Duration Support]
     moveOn: "block is capped and lucky, and your axe is at 550 or more top-end physical damage."
     details:
       - title: Keep Enduring Cry for bosses with a loading screen
         body: |
-          [[Seismic Cry]] is the mapping warcry. But endurance charges are lost when you cross a loading screen, and endurance charges are a third of your damage and a third of your mitigation.
+          The guide's map gem sets list [[Enduring Cry]], linked to [[Urgent Orders Support]]. [[Seismic Cry]] is an optional swap: the author's FAQ says you can run it in place of Enduring Cry in the Earthquake setup, because your endurance charges should be permanently up while mapping anyway.
 
-          So keep [[Enduring Cry]] bound for any boss you walk into through a portal or a transition.
+          The same FAQ entry carries the warning: for bosses with their own loading screen you definitely want Enduring Cry. Endurance charges are lost when you cross a loading screen, and by the guide's count eight of them are 32% physical and 32% elemental damage reduction. Through the Bleeding mastery they are also +24% damage over time multiplier for bleeding, which is our arithmetic from 3% a charge. So if you do map with Seismic Cry, put Enduring Cry back for any boss you walk into through a portal or a transition.
       - title: The endgame axe, and the 3.30 problem
         body: |
           Two published routes to a [[Reaver Axe]] with 550+ top-end physical damage:
@@ -427,25 +451,29 @@ stages:
         body: |
           Corpse-explosion clear means things die behind you. The author concedes this, and the fix is a good loot filter rather than a build change.
 
-          Combine that with 75% attack speed slams, a one-second aftershock cycle and Shield Charge as your only movement, and you have the reason his own map clear rating is 3 out of 5.
+          Combine that with 75% attack speed slams, a one-second aftershock cycle and low mobility, which the author lists as a weakness himself (Shield Charge and a Flame Dash are all the movement in his map gem sets), and you have the reason his own map clear rating is 3 out of 5.
   - id: endgame
     image: kalandras-touch
     title: Endgame
     levels: Tier 17, uber pinnacle bosses and beyond
     uses: >-
       A life-on-block shield, cluster jewels, [[Kalandra's Touch]] to duplicate
-      your better ring, and the [[Lacerate of Haemorrhage]] swap for ubers.
+      a corrupted rare ring, and the [[Lacerate of Haemorrhage]] swap for ubers.
     changes: >-
       Damage stops coming from the tree and starts coming from implicits and a
       better axe. The far end is a synthesised-implicit axe at 800+ top-end
       physical, which the author says costs at least a
       [[Mirror of Kalandra]].
     links:
-      - name: Mapping
-        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support, Cruelty Support]
-      - name: Uber bossing
-        gems: [Lacerate of Haemorrhage, Brutality Support, Melee Physical Damage Support, Cruelty Support, Maim Support, Fist of War Support]
-      - name: Warcries
+      - name: "Mapping: the Path of Building file's Exceptional Gems set"
+        gems: [Earthquake, Melee Physical Damage Support, Brutality Support, Fist of War Support, Fortify Support, Less Duration Support]
+      - name: "Uber bossing: the Exceptional Gems set"
+        gems: [Lacerate of Haemorrhage, Volatility Support, Brutality Support, Melee Physical Damage Support, Greater Multistrike Support, Deadly Ailments Support]
+      - name: Single target
+        gems: [Bladestorm, Maim Support, Culling Strike Support, More Duration Support]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash]
+      - name: "Warcry: Enduring Cry, or Seismic Cry while mapping"
         gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
     moveOn: "there is no next stage. What is left is a mirror-tier axe and marginal implicits."
     details:
@@ -453,7 +481,7 @@ stages:
         body: |
           From the published Path of Building at level 98, configured for the no-suppression variant:
 
-          - About 90% attack block and 88% spell block.
+          - 89.76% attack block and 87.75% spell block, both after the lucky roll. The guide's text rounds both to 88%; the file's tree has a 68% ceiling on attack block against 65% on spell block.
           - 6,750 life, 23,063 armour, 90% physical damage reduction — the cap.
           - Resistances 77/76/76, and chaos at 47.
           - Around 1,100 life per second regenerated, 925 net, plus 675 leech per hit.
@@ -470,13 +498,13 @@ stages:
           This is the honest counterweight to everything good above. If a boss has a damage check, an enrage timer, or a phase you have to end quickly, a fixed-rate damage-over-time effect has no answer.
 
           "Damage not insane" is the author's own assessment of his own build. Believe him.
-      - title: One contradiction we could not resolve
+      - title: Jagged Technique in the Lacerate setup is an optional swap
         body: |
-          The guide's build information reads as though [[Jagged Technique]] is not active during the [[Lacerate of Haemorrhage]] boss setup, because it lists the 10% and 10% chance sources for that swap instead.
+          The guide's build information lists two chance sources of aggravation for the [[Lacerate of Haemorrhage]] boss setup, 10% from Bloodletting and 10% from [[Vulnerability]] quality, as though [[Jagged Technique]] were not there. We used to flag that as a contradiction. The notes inside the published Path of Building file settle it.
 
-          But Jagged Technique is an ascendancy node, and it is present in the resolved maps and endgame trees. Either the prose is loose or there is an undocumented swap. We flag it rather than guess.
+          Those notes say the author rates [[War of Attrition]] as the best fourth ascendancy pick for pinnacle bosses, and call it a nearly dead node in maps. The two chance sources are how you aggravate if you take it in place of Jagged Technique. He then adds that in Settlers league he did not bother swapping and it was still completely fine, and that if you do not want to swap he recommends sticking with Jagged Technique. Every tree in the file keeps Jagged Technique, and the node's text carries no condition: "Bleeding you inflict is Aggravated". So unless you choose the swap, it is active with Lacerate too.
 
-          Separately, the FAQ has an Uber lab section that frames Jagged Technique as the *fourth* pick and offers an alternative defensive notable in its place. That contradicts both the planner data and the tips text. The substantive takeaway stands either way: Jagged Technique is the designated droppable node if you would rather have the defensive option, and the guide tells you how to replace its aggravation.
+          One loose end remains. The guide's Uber lab section talks about Jagged Technique as the flexible pick and offers a defensive notable in its place, while the planner and the file's trees take it second, at Cruel lab. Our reading is that the section is about which node you give up once you have all four, not about the order you take them in. The substantive takeaway stands either way: Jagged Technique is the designated droppable node, and the guide tells you how to replace its aggravation.
 
 powerCurve: |
   The damage is three things multiplied together, and the defence is three layers stacked. Splitting it this way is our framing; each part is in the guide or the game data. **The size of one hit** is the aftershock's physical damage, which comes from the axe and later from [[Ryslatha's Coil]]. **Aggravation** triples the bleed that hit leaves, and [[Jagged Technique]] makes it certain. **The bleed multiplier** grows with every endurance charge, through the Bleeding mastery. On the other side sit block, armour, and the same endurance charges again.
@@ -485,7 +513,7 @@ powerCurve: |
 
   The Merciless Labyrinth, around level 68, is the largest single step, and all of it is defence. [[Determined Survivor]] and a shield give flat 50% block, [[Versatile Combatant]] turns the excess into spell block, and the swap to one hand costs you nothing offensively. Maps then add the cheap multipliers: [[Earthquake]] itself, with its 150% more aftershock; two [[Kaom's Sign]] rings, where each charge is damage and mitigation at once; and [[More Than Skill]] at the fourth lab, which takes block from 65% to about 88%.
 
-  From red maps on, the two halves part ways. The defence is finished: about 88% block and, in the author's level 98 file, physical damage reduction at the 90% cap. The damage is not, and what is left of it has to be bought, because by the guide's own account it stops coming from the tree and starts coming from implicits and a better axe. The far end of that road is an axe the author says costs at least a [[Mirror of Kalandra]]. So expect a character that stops dying long before it starts killing quickly, and bosses that go down at a steady rate, never in a burst. The author's own words for it are "damage not insane".
+  From red maps on, the two halves part ways. The defence is finished: about 88% block by the guide's figure (the author's level 98 file reads 89.76% against attacks and 87.75% against spells) and, in the same file, physical damage reduction at the 90% cap. The damage is not, and what is left of it has to be bought, because by the guide's own account it stops coming from the tree and starts coming from implicits and a better axe. The far end of that road is an axe the author says costs at least a [[Mirror of Kalandra]]. So expect a character that stops dying long before it starts killing quickly, and bosses that go down at a steady rate, never in a burst. The author's own words for it are "damage not insane".
 
 upgrades:
   - step: "Two [[Kaom's Sign]] rings"
@@ -509,20 +537,29 @@ upgrades:
     why: >-
       The colour is damage for the price of recolouring one socket: a gem in
       a socket of its own colour gets +10% quality, and on Earthquake that is
-      a straight 10% more aftershock damage. The sixth support in the guide's
-      red-map links is [[Cruelty Support]]. The author's ranked list does not
+      a straight 10% more aftershock damage. The guide publishes
+      its map link only as six gems: Brutality, Fist of War,
+      [[Cruelty Support]], Fortify and Less Duration behind Earthquake, with
+      Melee Physical Damage in place of Cruelty in the file's Exceptional Gems
+      set. It never shows a five-link, so no source says which support is the
+      sixth. The author's ranked list does not
       place the six-link anywhere. We put it here because a link multiplies
       whichever axe you hold, so it keeps its value through the axe upgrades
       below. That ordering is ours, and no source prices a six-link in 3.30.
   - step: "Eldritch implicits"
     why: >-
       The first item in the author's own red-map order, and from here down to
-      the shield the order is his. We did not record his reason. Our reading
-      is that implicits go onto pieces you already wear, so they add to the
-      character without replacing anything, and the guide's endgame stage
-      names implicits as one of the two places damage comes from once the
-      tree is done. We did not record which implicits he rolls either, so we
-      name none.
+      the shield the order is his. His reason is timing: the gloves, helmet,
+      body armour and boots are all due an upgrade, it is the last one those
+      slots get for a while, and so the implicits go on with it. He names
+      them slot by slot. Helmet: increased [[Vulnerability]] curse effect,
+      and physical damage from hits taken as elemental. Body armour: maximum
+      resistances, and increased [[Pride]] aura effect. Gloves: physical
+      damage over time multiplier, and chance to suppress spell damage.
+      Boots: action speed, and life regeneration per endurance charge. If you
+      give up [[Jagged Technique]], he rolls chance to aggravate on the
+      gloves in place of suppression. He gives no figure for what any of them
+      adds, and neither do we.
   - step: "The endgame axe: 550 or more top-end physical damage"
     why: >-
       The author's own milestone, and the number he says matters most. Two
@@ -553,9 +590,12 @@ upgrades:
   - step: "[[Kalandra's Touch]], the [[Lacerate of Haemorrhage]] six-link, then a better axe"
     why: >-
       Last because all of it belongs to the final stage, past everything on
-      the author's ranked list. Kalandra's Touch duplicates your better ring.
-      Our reading is that this is where a well-corrupted Kaom's Sign pays
-      twice; the guide says only that it duplicates the better ring. The
+      the author's ranked list. The guide's min-max ring is a rare one, corrupted
+      for +1 maximum endurance charge and crafted for damage over time
+      multiplier, and Kalandra's Touch copies it; the author's stated reason is
+      that this saves some Divines over making two. It is not a Kaom's Sign
+      that gets copied: the guide's text and the file's Minmax item set both
+      show a rare ring. The
       Lacerate link is a second six-link used only on uber pinnacle bosses,
       and the author reserves it for more advanced players. The axe ends at a
       synthesised-implicit one with 800+ top-end physical damage, which he
@@ -566,25 +606,25 @@ play:
     Written for red maps, with a shield on your arm and [[Earthquake]] on six links. The loop is short because the build is slow on purpose: a slam at 75% of your attack speed, then a wait for the crack.
 
     1. **Read the map before you open it.** Never run "Monsters have a chance to avoid Poison, Impale and Bleeding", and never run less Armour or reduced Chance to Block. The first removes your damage and the second your defence. The author supplies a regex for exactly these.
-    2. **[[Shield Charge]] to the pack.** It is the only movement skill the build has at this stage.
+    2. **[[Shield Charge]] to the pack.** That is the author's own description of mapping: you Shield Charge around. His map gem sets link it to [[Faster Attacks Support]] and also carry a [[Flame Dash]]; the playstyle note in his Path of Building file says he mostly just shield charges and flame dashes around.
     3. **Slam once, on the pack.** The crack erupts about a second later, sooner with [[Less Duration Support]], and that aftershock is the hit that matters. Cracks made before the first one erupts get no aftershock of their own. Our reading of that rule is that a second slam straight away adds little on an ordinary pack: slam and step on.
     4. **Let the explosions do the rest.** With [[Gratuitous Violence]], a bleeding monster you kill explodes for a fifth of its maximum life, and in a dense pack the explosions chain. Things die behind you. The author's answer is a good loot filter, not a change to the build.
-    5. **Keep [[Seismic Cry]] in the loop.** It is the guide's mapping warcry. We did not record how often the author presses it, so we give no rhythm for it.
-    6. **Stop for Rare monsters and the map boss.** Cast [[Vulnerability]], slam, wait for the aftershock, slam again. Nothing in the published links triggers the curse for you, so we read it as a button you press.
+    5. **The warcry is optional while you map.** The guide's map gem sets list [[Enduring Cry]]; its FAQ says you can run [[Seismic Cry]] in its place for mapping, because your endurance charges should stay up there anyway. The guide does not say how often to press either one, so we give no rhythm for it.
+    6. **Stop for Rare monsters and the map boss.** Cast [[Vulnerability]], slam, wait for the aftershock, slam again. The curse is a button you press: nothing in the published links triggers it, and the playstyle note in the author's file says that on single target you cast Vulnerability, use Bladestorm for Maim and put down your War Banner, which is instant.
 
-    Two things to keep an eye on. [[Blood Magic]] means every skill comes out of your life: the published file reads 55 life per use. And the "of Sealing" suffix on your life flask is what removes a bleed from you, so press it when you are bleeding. The guard skills, [[Steelskin]] and [[Immortal Call]], are listed without a trigger as well, so we read those as buttons too.
+    Two things to keep an eye on. [[Blood Magic]] means every skill comes out of your life: the published file reads 55 life per use. And the "of Sealing" suffix on your life flask is what removes a bleed from you, so press it when you are bleeding. The guard skill is the one thing you do not press: the guide's gem sets put [[Molten Shell]] on [[Cast when Damage Taken Support]] with More Duration, so it fires by itself when you take damage.
   bossing: |
     The plan is the one in the guide's opening lines: land one very large bleed, then move as much as you like while it ticks. A bleed lasts about five seconds and a stronger one replaces a weaker one, so you are never building a stack. You are trying to roll one big aftershock and then keep it refreshed.
 
-    1. **Get your charges back first.** Endurance charges are lost at a loading screen, and the guide counts them as a third of your damage and a third of your mitigation. If you reached the boss through a portal or a transition, press [[Enduring Cry]] before anything else.
+    1. **Get your charges back first.** Endurance charges are lost at a loading screen, and the guide counts eight of them as 32% physical and 32% elemental damage reduction. By our arithmetic they are also +24% damage over time multiplier for bleeding, at 3% a charge from the Bleeding mastery. If you reached the boss through a portal or a transition, press [[Enduring Cry]] before anything else.
     2. **Curse the boss** with [[Vulnerability]]. With quality on the gem, the boss takes 30% increased physical damage.
-    3. **Slam in time with the aftershock, not faster.** A crack made before the last one has erupted gets no aftershock, so the extra slams are wasted. [[Fist of War Support]] exerts a slam every 1.8 seconds; whether its bonus reaches the aftershock is not confirmed.
+    3. **Slam in time with the aftershock, not faster.** A crack made before the last one has erupted gets no aftershock, so the extra slams are wasted. [[Fist of War Support]] boosts a slam no more than once every 1.8 seconds; whether its bonus reaches the aftershock is not confirmed.
     4. **When the boss does something dangerous, walk away.** The bleed keeps ticking whether you are attacking or not. It lasts about five seconds, so that is how long you can stay away before the damage stops. The five-second limit is our arithmetic, not a line from the guide.
     5. **Come back and slam again.** [[Jagged Technique]] aggravates every bleed, so the first aftershock after a dodge is worth as much as any other. Each aftershock is also another roll at a bigger bleed: with [[Ryslatha's Coil]] the range is wide on purpose, the high roll stays and the low ones are overwritten.
 
-    If you still carry the [[Bladestorm]] four-link from early maps, it has [[Culling Strike Support]] in it. The author says plainly that the link is not that important.
+    The [[Bladestorm]] four-link, with [[Culling Strike Support]] in it, stays in the guide's gem sets through every map stage, the uber setups included. The author's FAQ says it applies Maim and Culling Strike and gives extra chances to aggravate, that you only use it on a single target, and that even then it is not that important.
 
-    For uber pinnacle bosses the author swaps the whole six-link to [[Lacerate of Haemorrhage]]: more damage on one target, worse clear, and reserved by him for more advanced players. The guide is unclear on whether Jagged Technique stays active in that setup. We flag that in the endgame stage and do not guess here.
+    For uber pinnacle bosses the author swaps the whole six-link to [[Lacerate of Haemorrhage]]: more damage on one target, worse clear, and reserved by him for more advanced players. Jagged Technique stays active in that setup unless you choose to swap it out. The notes in his Path of Building file rate [[War of Attrition]] higher for pinnacle bosses, with aggravation then coming from chance sources, and add that he did not bother swapping in Settlers league. The endgame stage has the detail.
 
     What does not change: bleed has no burst. A damage check, an enrage timer or a phase you must end quickly has no answer in this build. And block is a chance, so the hit that gets through is not made any smaller by it. The big telegraphed attacks are still worth walking out of. That last point is our reading, and this build makes it cheap to follow, because walking costs you no damage.
 
@@ -609,16 +649,17 @@ deaths:
       specific item for this, so neither do we.
   - situation: "A boss you reach through a portal or a loading screen"
     cause: >-
-      Endurance charges are lost at the loading screen. The guide counts them
-      as a third of your mitigation and a third of your damage, so you arrive
-      both softer and weaker.
+      Endurance charges are lost at the loading screen. The guide counts
+      eight of them as 32% physical and 32% elemental damage reduction, and
+      by our arithmetic they are +24% damage over time multiplier for
+      bleeding as well, so you arrive both softer and weaker.
     fix: >-
       Press [[Enduring Cry]] before the fight starts. It is in the guide's
       warcry link from early maps, and each [[Kaom's Sign]] also carries a
       level 10 one.
   - situation: "The large hit that block does not catch"
     cause: >-
-      Block is a chance. At about 88%, roughly one hit in eight gets through,
+      Block is a chance. At the guide's 88%, roughly one hit in eight gets through,
       and block does nothing to shrink that one. What is left is armour,
       endurance charges and life: the author's finished file survives 21,800
       physical in a single hit, on a 3.29 engine with endgame gear. No source
@@ -681,7 +722,9 @@ troubleshooting:
   - symptom: "Clear is slow, and the loot is always behind you"
     cause: >-
       A slam at 75% of your attack speed, a one-second aftershock cycle and
-      [[Shield Charge]] as the only movement skill. The explosions kill
+      low mobility, which is the author's own listed weakness:
+      [[Shield Charge]] and a Flame Dash are all the movement in his map gem
+      sets. The explosions kill
       monsters you have already passed, and they need a dense pack to chain.
       The author rates his own map clear 3 out of 5.
     fix: >-
@@ -755,7 +798,7 @@ strengths:
   - "Written for solo self-found by its author, with a documented no-suppression tree."
   - "The most current guide of the ten we looked at. The planner was saved on launch day."
 weaknesses:
-  - "Slow. 75% attack speed slams, a one-second aftershock cycle and Shield Charge as your only movement."
+  - "Slow. 75% attack speed slams, a one-second aftershock cycle, and low mobility by the author's own list: Shield Charge and a Flame Dash are all the movement in his map gem sets."
   - "No burst. Bleed is a fixed-rate damage-over-time effect, so damage checks and enrage timers have no answer."
   - "Things die behind you. Fix it with a loot filter, not with the build."
   - "Chaos damage is the thin layer: 47% resistance and about a third of the elemental buffer."
@@ -783,7 +826,7 @@ sources:
   - title: "Path of Building: the level 98 endgame file"
     url: https://maxroll.gg/poe/pob/oj1vam0g
     kind: pob
-    note: "Source of the block, life, armour, resistance and maximum-hit numbers in this article. Configured for the no-suppression softcore cluster setup, on the 3.29 engine."
+    note: "Source of the block, life, armour, resistance and maximum-hit numbers in this article. Configured for the no-suppression softcore cluster setup, on the 3.29 engine. Its gem sets are where the map-stage movement, warcry and Bladestorm links were checked, and its notes are where the War of Attrition swap is written down."
   - title: "PoEDB: Earthquake"
     url: https://poedb.tw/us/Earthquake
     kind: data

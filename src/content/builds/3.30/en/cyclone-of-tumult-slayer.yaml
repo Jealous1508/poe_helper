@@ -73,11 +73,11 @@ chainDetails:
       Everything else about the defence follows from having that implicit. Without it you are 25 percentage points short of a block total that only works because it is far past the cap.
   - title: How 87.75% lucky block is built
     body: |
-      [[Versatile Combatant]] is the Slayer notable that does the conversion: attack block overcapped past 65% becomes **double** that amount of spell block. So the plan is to stack attack block absurdly high and let spell block arrive for free.
+      [[Versatile Combatant]] is the keystone that does the conversion. It takes 10% off maximum attack and spell block, which is where the 65% line comes from, and attack block overcapped past that line becomes **double** that amount of spell block. So the plan is to stack attack block absurdly high and let spell block arrive for free.
 
       The named sources: the warstaff implicit at 25%, [[Serpent Stance]] 5%, [[Enigmatic Defence]] 8%, 9% on the body armour, [[Whirling Barrier]] 8%, [[Steelwood Stance]] 10%, and Tattoos of the Valako Shieldbearer to finish.
 
-      Then [[More Than Skill]] makes block lucky — two rolls, better result kept. One author puts the final figure at **87.75% attack and spell block**; another says "near 90%". Both agree on the mechanism. The author who publishes the number also says plainly that the Forbidden pair is **not strictly required**, just "really comfy", and names [[Master of Metal]] or [[Worthy Foe]] as the cheaper substitutes.
+      Then [[More Than Skill]] makes block lucky — two rolls, better result kept. The notable's text carries a condition: block is lucky if you have blocked recently, which the game defines as the past 4 seconds. One author puts the final figure at **87.75% attack and spell block**; another says "near 90%". Both agree on the mechanism. The first gives both ends himself, 65% attack and spell block before the Forbidden pair and 87.75% with it, and 65% rolled twice is exactly 87.75%. That check is our arithmetic. The author who publishes the number also says plainly that the Forbidden pair is **not strictly required**, just "really comfy", and names [[Master of Metal]] or [[Worthy Foe]] as the cheaper substitutes.
   - title: Zero mana cost is a requirement, not an optimisation
     body: |
       Channelling [[Cyclone of Tumult]] with any mana cost at all does not work. The fix is a **-20 mana cost modifier crafted on the chest** plus -3 on a ring.
@@ -85,16 +85,20 @@ chainDetails:
       This is why the build has a whole minus-mana-cost infrastructure that looks strange from the outside, and it is a current-era requirement created by recent mana-cost changes rather than something inherited from older Cyclone guides. If your Cyclone stutters, this is the first thing to check. Only one of the four authors states it explicitly, but he is unambiguous.
   - title: General's Cry, Desecrate, and when to drop both
     body: |
-      For boss fights the published setups run [[General's Cry]], which needs corpses to make mirage warriors from. An empty boss arena has none, so a **level 1 [[Desecrate]]** goes on your bar purely to make them.
+      The published setups run [[General's Cry]] linked to [[Autoexertion]], which casts the warcry for you, and to Ground Slam of Earthshaking, the attack the mirage warriors use. The warcry needs corpses to make the warriors from. Maps supply them as you kill. An empty boss arena has none, so a **level 1 [[Desecrate]]** goes on your bar purely to make them, and that one you cast yourself.
 
-      At the very top end one author **drops [[General's Cry]] entirely** and funnels everything into Cyclone. Both approaches are published by the same people; the difference is how much damage the staff and the tree are already producing.
+      At the very top end both Mobalytics authors **drop [[General's Cry]] entirely** and funnel everything into Cyclone. Both approaches are published by the same people; the difference is how much damage the staff and the tree are already producing.
   - title: The numbers, and why one of them is not what it looks like
     body: |
-      The level 100 min-max variant reports **177 million damage per second** and a **713,000 effective health pool**, with 4,892 life, 30,159 armour, 87.75% block, resistances 76/75/75/75, 352% movement speed, and 6 endurance, 4 frenzy and 3 power charges.
+      The level 100 min-max variant reports **177 million damage per second** and a **713,000 effective health pool**, with 4,892 life, 30,159 armour, 87.75% block, resistances 76/75/75/75, a movement speed readout of 352%, and 6 endurance, 4 frenzy and 3 power charges.
+
+      The 352% is the stats panel's number for that variant, which also runs [[Phase Run]] on automation. Our reading is that it is a total with the base included: the second author's panel shows exactly 150% on a loadout wearing The Stampede, whose text sets movement speed to 150% of its base value. It is not the same measure as the 200–250% in this author's own boots notes on the same page. That range is his estimate for rare boots and a Quicksilver flask under Mageblood, and he does not say whether it is a total or an increase.
 
       **Read the 177 million carefully.** The page labels it "Skill DPS *Estimation*" and the health pool "*Simulated* Effective Health Pool" — these are the site's own auto-derived figures from an imported Path of Building, not an author-stated configuration. **The page does not state a boss target**: no Uber Sirus, no Maven, no Uber Elder, no boss resistances, no shock, no Wither, no disclosure of whether flasks are up. The page also carries its own author's work-in-progress banner. Treat 177 million as an unconfigured display number.
 
-      The same author's other variant, pinned at level 96, is the useful one for planning: 4,809 life, 22,254 armour, **57% block**, 130,000 effective hit points, maximum hits taken 22,000 physical and 51,000–57,000 elemental. His stats panel would not switch to the bossing variant, and his damage readout rendered against the wrong gem, so **there is no damage figure for the bossing variant.** Two of the four authors publish no damage or effective hit point figures at all.
+      The other stat block is not his. It belongs to the second Mobalytics author, Sanavixx, it is pinned to his level 96 variant, and it is the useful one for planning: 4,809 life, 22,254 armour, **57% block**, 130,000 effective hit points, maximum hits taken 22,000 physical, 55,000–57,000 elemental and 51,000 chaos. Neither panel will switch to a bossing variant, and Sanavixx's damage readout rendered against the wrong gem, so **there is no damage figure for the bossing variant.** Two of the four authors publish no damage or effective hit point figures at all.
+
+      **That 57% is under the 65% line, and the page does not say why.** In his own text Sanavixx says the level 96 loadout reaches 65% attack and spell block with [[Rumi's Concoction]] running. The panel is the site's auto-derived readout, and nothing on the page says whether it counts a flask. So we cannot tell you whether 57% is the character with the flask down or something else, and we would not plan on the text's 65% without checking your own.
 
       All of it is 3.29 Path of Building output. Path of Building has not been updated for 3.30.
   - title: One tier-list contradiction to ignore
@@ -180,9 +184,12 @@ mandatory:
       [[Forbidden Flesh]] and [[Forbidden Flame]] pair.
     detail: >-
       The author who publishes 87.75% says it is **not strictly required**,
-      only that "the extra 17.75% chance to block is really comfy". He also
-      warns to buy the pair early, because its price climbs through the
-      league. Cheaper substitutes on the same slots: [[Master of Metal]] or
+      only that "the extra 17.75% chance to block is really comfy". That 17.75
+      does not fit his own figures. From the 65% he gives before the pair to
+      87.75% is 22.75 points; 17.75 would be the gap from 70%, a number his
+      page never mentions, and he does not say what he measured against. Take
+      the quote as his opinion of the pair, not as a figure. He also warns to
+      buy the pair early, because its price climbs through the league. Cheaper substitutes on the same slots: [[Master of Metal]] or
       [[Worthy Foe]], whichever is cheaper when you look.
   - term: Mageblood
     level: recommended
@@ -192,8 +199,10 @@ mandatory:
       as the build's main weakness and this as the answer.
     detail: >-
       After Mageblood you swap to rare boots with Onslaught, Elusive or
-      Tailwind plus a Quicksilver flask, reaching 200–250% movement speed.
-      One source's stated con for this build is literally "slow movement
+      Tailwind plus a Quicksilver flask, reaching 200–250% movement speed by
+      the author's own estimate. The 352% in the level 100 stat block is a
+      different number: the site's panel readout for the min-max variant,
+      which also runs Phase Run. One source's stated con for this build is literally "slow movement
       until you can afford Mageblood".
   - term: Watcher's Eye
     level: recommended
@@ -279,7 +288,10 @@ stages:
     uses: >-
       [[Lethal Pride]] seeded for Kaom and Strength of Blood, a
       [[Large Cluster Jewel]] with [[Overlord]], [[Void Shockwave Support]]
-      over plain [[Shockwave Support]], and [[The Stampede]] for movement.
+      over plain [[Shockwave Support]], and [[The Stampede]] for movement. The
+      boss damage link is [[General's Cry]] automated by [[Autoexertion]], as
+      both authors link it at level 90 and 96, with Ground Slam of
+      Earthshaking as the attack the mirage warriors use.
     changes: >-
       This is the best value in the build. Lethal Pride is the largest cheap
       damage jump at a 3.30-dated 1–3 Divine, and Overlord turns
@@ -288,7 +300,9 @@ stages:
       - name: Main skill
         gems: [Cyclone of Tumult, Brutality Support, Melee Physical Damage Support, Pulverise Support, Infused Channelling Support, Void Shockwave Support]
       - name: Boss damage
-        gems: [General's Cry, Desecrate]
+        gems: [General's Cry, Autoexertion, Ground Slam of Earthshaking, Melee Physical Damage Support, Brutality Support, Pulverise Support]
+      - name: Corpses for bosses
+        gems: [Desecrate]
       - name: Auras
         gems: [Pride, Blood and Sand, Flesh and Stone, Herald of Purity]
       - name: Defence
@@ -322,7 +336,8 @@ stages:
       [[Mageblood]], the [[Forbidden Flesh]] and [[Forbidden Flame]] pair for
       [[More Than Skill]], [[Watcher's Eye]] with the [[Pride]] impale
       modifier, [[Stranglegasp]] with four anoints, and level 4
-      [[Enlighten Support]].
+      [[Enlighten Support]]. The boss damage list below follows the first
+      author's link at the Mageblood swap.
     changes: >-
       Block goes lucky and the movement complaint disappears. This is where
       the build becomes what it is sold as. **No source prices this tier**;
@@ -331,7 +346,9 @@ stages:
       - name: Main skill
         gems: [Cyclone of Tumult, Brutality Support, Melee Physical Damage Support, Pulverise Support, Infused Channelling Support, Void Shockwave Support]
       - name: Boss damage
-        gems: [General's Cry, Desecrate]
+        gems: [General's Cry, Autoexertion, Ground Slam of Earthshaking, Melee Physical Damage Support, Pulverise Support]
+      - name: Corpses for bosses
+        gems: [Desecrate]
       - name: Auras
         gems: [Pride, Blood and Sand, Flesh and Stone, Herald of Purity, Enlighten Support]
       - name: Defence
@@ -340,7 +357,7 @@ stages:
     details:
       - title: What Mageblood actually fixes
         body: |
-          Flask automation, and the mobility problem. Once it is in you take [[The Stampede]] off and wear rare boots with Onslaught, Elusive or Tailwind, plus a Quicksilver flask, reaching 200–250% movement speed.
+          Flask automation, and the mobility problem. Once it is in you take [[The Stampede]] off and wear rare boots with Onslaught, Elusive or Tailwind, plus a Quicksilver flask, reaching 200–250% movement speed. That range is the author's estimate in his boots notes, and he does not say whether it is a total or an increase. The 352% on his stats panel is the site's readout for the min-max variant, which adds Phase Run on top.
 
           Before Mageblood the build maps *well* but not *fast*. That distinction is the one complaint every single source raises, and this is the item that answers it.
       - title: The anoints on Stranglegasp
@@ -350,7 +367,7 @@ stages:
         body: |
           Both Mobalytics authors ship an explicitly separate **bossing** loadout, taken at level 90 and revised at 95. That is a gear-and-tree switch, not a gem swap.
 
-          It is worth knowing that this is a real two-configuration build before you commit: you will respec. One author's top variant also **drops [[General's Cry]] entirely** and funnels everything into Cyclone.
+          It is worth knowing that this is a real two-configuration build before you commit: you will respec. Both authors' top variants also **drop [[General's Cry]] entirely** and funnel everything into Cyclone.
   - id: mirror-tier
     image: stranglegasp
     title: Mirror tier
@@ -390,9 +407,9 @@ powerCurve: |
 
   Early, you get the defence first, and it is cheap. Both published ladders swap to Cyclone at level 32 or 33 on a budget crafted warstaff, whose 25% block implicit is the reason to hold it, with [[Rumi's Concoction]] filling in for block you do not own yet. The labs at roughly 58, 70 and 81 bring the Slayer notables the plan rests on. None of the expensive items is needed to clear the atlas. What you do not get early is speed: the movement penalty at full stages is there from the first spin, [[The Stampede]] eases it, and every source still calls the build slow until [[Mageblood]].
 
-  The middle is the best value in the build. [[Lethal Pride]] is the largest cheap damage jump, [[Overlord]] makes Fortification permanent, and [[Void Shockwave Support]] replaces the plain version. Be clear about what the defence is at this point, though. The one published level 96 stat block shows 57% block, 4,809 life and 22,254 armour, and its author calls that loadout enough for the full atlas, 4 Voidstones and Tier 16 farming. That is a tanky character. It is not yet the 87.75% one. Those figures are 3.29 Path of Building output.
+  The middle is the best value in the build. [[Lethal Pride]] is the largest cheap damage jump, [[Overlord]] makes Fortification permanent, and [[Void Shockwave Support]] replaces the plain version. Be clear about what the defence is at this point, though. The one published level 96 stat block is Sanavixx's. It shows 57% block, 4,809 life and 22,254 armour, and he calls that loadout enough for the full atlas, 4 Voidstones and Tier 16 farming. That is a tanky character. It is not yet the 87.75% one. The 57% is also under the 65% line: his text says the loadout reaches 65% with [[Rumi's Concoction]] running, and his page does not say whether the panel counts the flask. Those figures are 3.29 Path of Building output.
 
-  Late, the two purchases that change how the build feels are neither of them damage. The Forbidden pair makes block lucky: 65% rolled twice comes to 87.75%, which is our arithmetic on the published figure. [[Mageblood]] ends the movement complaint. After that everything is margin, and its own author says so. So expect a character that is hard to kill from early on, slow for a long time, and never bursty. It kills bosses by outlasting them.
+  Late, the two purchases that change how the build feels are neither of them damage. The Forbidden pair makes block lucky. The author who publishes the figure gives 65% before the pair and 87.75% with it, and 65% rolled twice comes to exactly 87.75%, which is our arithmetic on the two published figures. [[Mageblood]] ends the movement complaint. After that everything is margin, and its own author says so. So expect a character that is hard to kill from early on, slow for a long time, and never bursty. It kills bosses by outlasting them.
 
 upgrades:
   - step: "A crafted warstaff with the 25% block implicit, and [[Rumi's Concoction]]"
@@ -458,7 +475,8 @@ upgrades:
       The last of the real purchases: the published progression makes the swap
       between level 95 and 100. It automates the flasks and fixes mobility.
       The Stampede comes off, rare boots with Onslaught, Elusive or Tailwind
-      go on, and movement speed reaches 200–250%. The build already clears the
+      go on, and movement speed reaches 200–250% by the author's estimate. The
+      build already clears the
       atlas without it; what it buys is speed, and flasks you no longer press
       yourself. That is why we are content to see it last, and that reading is
       ours. Past it is the mirror-tier crafting, which its own author calls
@@ -468,7 +486,7 @@ play:
   mapping: |
     One button, so the list is short. Most of what goes wrong in a map is decided before you open it.
 
-    1. **Read the map before you open it.** Reroll No Leech above all, then Reduced Recovery and less cooldown recovery rate. One author says to avoid Valdo's maps entirely. Reflect is not on the list: the build is immune to physical and elemental reflect.
+    1. **Read the map before you open it.** Reroll No Leech above all, then Reduced Recovery and less cooldown recovery rate. One author says to avoid Valdo's maps entirely. Reflect is not on the list, and the reasons are worth knowing. The elemental half is [[Brutality Support]]: you deal no elemental damage, so none comes back, and that is one author's own note on the gem. The physical half is the Slayer notable [[Bane of Legends]], whose text is "Cannot take Reflected Physical Damage"; it is in that author's ascendancy order, and a second author names it as the reason. Since 3.29 these map modifiers give rare monsters Thorns, a fixed amount of reflected damage in place of a percentage. The patch notes do not say whether the notable covers Thorns. They still call it reflected damage and both 3.30 pages keep the claim, so our reading is that it does.
     2. **Start [[Rumi's Concoction]] and keep it running.** Until the crafted chest and the tattoos arrive it is part of your block, and until [[Mageblood]] nothing presses it for you.
     3. **Hold [[Cyclone of Tumult]] and walk through the pack.** It hits in a full circle with a large area, so you steer with the cursor and do not aim.
     4. **Keep the channel going.** Leech from [[Brutal Fervour]] runs while you are hitting things, and [[Infused Channelling Support]] reduces damage while its infusion is up. Our reading is that a break in the spin costs you both at once. No source spells that out.
@@ -478,13 +496,13 @@ play:
   bossing: |
     The build kills bosses by outlasting them. There is no burst window to hit, so the fight is about keeping the spin going and not standing in the one attack that ends it.
 
-    1. **Make corpses.** A boss arena starts empty, so cast the level 1 [[Desecrate]].
-    2. **Press [[General's Cry]].** It turns those corpses into mirage warriors. No source we read gives a rhythm for repeating the pair, so we do not give one either.
+    1. **Make corpses.** A boss arena starts empty, so cast the level 1 [[Desecrate]]. It is the one part of this setup you press yourself. One author keeps it socketed all the time; the other swaps it in for Blood Rage before a boss.
+    2. **Let [[General's Cry]] fire.** Both Mobalytics authors link it to [[Autoexertion]], which casts the warcry for you, and it turns those corpses into mirage warriors. One of them says it takes 10 nearby corpses to get the full number of warriors. Neither says how often to cast Desecrate again in a long fight, so we do not either.
     3. **Spin on the boss, close.** [[Pride]] works on nearby enemies, and your leech only runs while you are hitting.
     4. **Walk out of the big telegraphed attacks.** Block is a chance, not a reduction. At 87.75% about one hit in eight still lands in full, which is our arithmetic, and both published stat blocks have under 5,000 life. The movement penalty at full stages means you leave early or not at all.
     5. **Keep Rumi's running** for the whole fight if your block still depends on it.
 
-    Two things change with level. From level 90 both Mobalytics authors use a separate bossing loadout, revised at 95. That is a gear-and-tree switch, so it is a respec and not a gem swap. And at the very top one author drops General's Cry altogether and puts everything into Cyclone, which removes steps 1 and 2.
+    Two things change with level. From level 90 both Mobalytics authors use a separate bossing loadout, revised at 95. That is a gear-and-tree switch, so it is a respec and not a gem swap. And at the very top both authors drop General's Cry altogether and put everything into Cyclone, which removes steps 1 and 2.
 
     On Ubers, one author says to wait for a medium budget before trying them. No damage figure exists for the bossing variant, so we cannot tell you how long a fight should take.
 
@@ -511,10 +529,11 @@ deaths:
   - situation: "Playing as though you had 87.75% block before you have it"
     cause: >-
       The headline figure belongs to the level 100 variant with the Forbidden
-      pair. The one published level 96 stat block shows 57%. Earlier still,
-      part of your block is [[Rumi's Concoction]], which only counts while it
-      is running, and before [[Mageblood]] you are the one who has to press
-      it.
+      pair. The one published level 96 stat block, Sanavixx's, shows 57%. That
+      is under the 65% line, and his page does not say why: his text says the
+      loadout reaches 65% with [[Rumi's Concoction]] running. Earlier still,
+      part of your block is Rumi's, which only counts while it is running, and
+      before [[Mageblood]] you are the one who has to press it.
     fix: >-
       Keep Rumi's up as a habit, not as a reaction. Treat Ubers as a later
       goal: one author says to wait for a medium budget. The stat block
@@ -528,10 +547,10 @@ deaths:
       follows from the published numbers.
     fix: >-
       Armour, endurance charges, permanent [[Fortification]] from [[Overlord]]
-      and [[Molten Shell]] are what make the hit that lands smaller. The level
-      96 stat block puts the largest survivable hit at 22,000 physical and
-      51,000–57,000 elemental, on a 3.29 Path of Building. Past that, the
-      answer is to walk out early.
+      and [[Molten Shell]] are what make the hit that lands smaller.
+      Sanavixx's level 96 stat block puts the largest survivable hit at 22,000
+      physical and 55,000–57,000 elemental, on a 3.29 Path of Building. Past
+      that, the answer is to walk out early.
 
 troubleshooting:
   - symptom: "Cyclone stutters, or stops and starts"
@@ -551,17 +570,21 @@ troubleshooting:
     fix: >-
       [[The Stampede]] or Replica Stampede now. Later, [[Mageblood]] with rare
       boots that have Onslaught, Elusive or Tailwind and a
-      [[Quicksilver Flask]], for 200–250% movement speed. Until then nothing
-      is wrong with your character; this is how the build maps.
+      [[Quicksilver Flask]], for 200–250% movement speed by the author's
+      estimate. Until then nothing is wrong with your character; this is how
+      the build maps.
   - symptom: "Bosses take far longer than the maps suggested"
     cause: >-
       Usually one of three things. (a) The arena has no corpses, so
-      [[General's Cry]] has nothing to make mirage warriors from. (b) You are
+      [[General's Cry]] has nothing to make mirage warriors from.
+      [[Autoexertion]] casts the warcry for you, but nothing makes the corpses
+      for you. (b) You are
       fighting in the mapping setup, where both Mobalytics authors switch to a
       separate bossing loadout from level 90. (c) It is the build: its bossing
       is sustained, with no burst ceiling.
     fix: >-
-      (a) Put a level 1 [[Desecrate]] on your bar and cast it first. (b) Plan
+      (a) Put a level 1 [[Desecrate]] on your bar and cast it yourself, near
+      the boss, as the fight starts. (b) Plan
       the respec; it changes gear and tree, not gems. (c) If [[Lethal Pride]]
       is not in yet, it is the largest cheap damage jump there is. After that,
       accept a longer fight.
@@ -573,9 +596,9 @@ troubleshooting:
       four authors publish no damage figure at all, and none exists for the
       bossing variant.
     fix: >-
-      Nothing is broken. Do not plan around that number. For defence, the
-      level 96 stat block is the one worth comparing yourself with, and it too
-      is 3.29 output.
+      Nothing is broken. Do not plan around that number. For defence,
+      Sanavixx's level 96 stat block is the one worth comparing yourself with,
+      and it too is 3.29 output.
   - symptom: "Spell block is far below attack block"
     cause: >-
       Spell block is not bought directly. [[Versatile Combatant]] gives double
@@ -630,7 +653,7 @@ strengths:
   - "Agreed across four independent authors: tanky, easy bossing, 360-degree clear, one button."
   - "87.75% lucky block on both attacks and spells, with spell block bought for free by overcapping attack block."
   - "Permanent leech through [[Brutal Fervour]], so chip damage never accumulates."
-  - "Immune to physical and elemental reflect, and to elemental ailments."
+  - "Listed by one author as immune to physical and elemental reflect, through [[Bane of Legends]] and [[Brutality Support]], and to elemental ailments. Reflect maps became Thorns in 3.29; that the immunity carries over is our reading."
   - "Transitions from its own cheap league starter rather than needing a separate character."
   - "3.30 changed nothing about it, so every 3.29 guide still applies."
   - "The only one of the four builds with a published hardcore and solo self-found claim."
@@ -656,7 +679,7 @@ sources:
   - title: "Mobalytics: Cyclone Slayer, league start to endgame (FGKorbyn21)"
     url: https://mobalytics.gg/poe/builds/cyclone-slayer-league-starter-to-endgame-step-by-step-guide-beginner-friendly
     kind: guide
-    note: "Updated 2026-11-13. The most detailed of the four: the variant ladder, the block source list, the 87.75% figure, the zero-mana-cost requirement and the mirror-tier crafting. Carries its own work-in-progress banner."
+    note: "Read 2026-11-14, when the page showed \"Updated on Nov 14, 2026\". The most detailed of the four: the variant ladder, the block source list, the 87.75% figure, the zero-mana-cost requirement and the mirror-tier crafting. Carries its own work-in-progress banner."
   - title: "Mobalytics: Cyclone Shockwave Slayer (Sanavixx)"
     url: https://mobalytics.gg/poe/builds/sanavixx-cyclone-shockwave-slayer
     kind: guide
@@ -664,7 +687,7 @@ sources:
   - title: "Maxroll: Cyclone Shockwave Slayer (cptngarbage)"
     url: https://maxroll.gg/poe/build-guides/cyclone-shockwave-slayer-league-starter
     kind: guide
-    note: "2026-11-12. Independently names More Than Skill, Master of Metal and the Pride impale Watcher's Eye modifier. Publishes no damage or effective hit point figures."
+    note: "2026-11-12. Independently names More Than Skill, Master of Metal and the Pride impale Watcher's Eye modifier, and credits Bane of Legends for running physical reflect maps. Publishes no damage or effective hit point figures."
   - title: "Maxroll: Path of Building for the Cyclone Slayer"
     url: https://maxroll.gg/poe/pob/m6hix0r6
     kind: pob
@@ -683,6 +706,22 @@ sources:
   - title: "Video: Cyclone Shockwave Slayer (Sanavixx)"
     url: https://www.youtube.com/watch?v=H9-aXrx93w4
     kind: video
+  - title: "PoEDB: Bane of Legends"
+    url: https://poedb.tw/us/Bane_of_Legends
+    kind: data
+    note: "Verbatim text: \"Cannot take Reflected Physical Damage\"."
+  - title: "PoEDB: More Than Skill"
+    url: https://poedb.tw/us/More_Than_Skill
+    kind: data
+    note: "Verbatim text: block is lucky \"if you've Blocked Recently\", and Recently is the past 4 seconds."
+  - title: "PoEDB: The Stampede"
+    url: https://poedb.tw/us/The_Stampede
+    kind: data
+    note: "\"Your Movement Speed is 150% of its base value\", used to read the stats panels' movement speed as a total."
+  - title: "PoEDB: version 3.29.0 patch notes"
+    url: https://poedb.tw/us/Version_3.29.0
+    kind: data
+    note: "The rework of reflect map modifiers into Physical and Elemental Thorns on rare monsters. Says nothing about existing reflect immunity."
   - title: "Official 3.30.0 patch notes"
     url: https://www.pathofexile.com/forum/view-thread/4013680
     kind: official
