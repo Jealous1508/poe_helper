@@ -1,0 +1,124 @@
+intro: >-
+  Labyrinth là nơi bạn chọn ascendancy class và gom sáu điểm đi kèm nó. Có ba
+  cái trong campaign và một cái sau campaign. Mỗi cái là một lượt chạy duy
+  nhất với đầy trap, ba lần đánh Izaro, và một luật khiến ai cũng từng dính:
+  bạn chết là xong lượt chạy.
+
+labs:
+  - id: normal
+    name: Normal Labyrinth
+    areaLevel: 33
+    requires: "Sáu trial trong Act 1–3. Không yêu cầu level nhân vật."
+    when: >-
+      Đầu Act 4. Nó mở ra từ cuối Act 3, và một số guide bảo vào luôn; số khác
+      bảo chờ thêm một act. Chờ thì chẳng mất gì, mà lần đánh Izaro thứ ba
+      chính là chỗ các nhân vật thiếu level bỏ mạng.
+    ready: "Tầm level 33–40, có 1.000 life trở lên và life flask tử tế."
+    reward: "Ascendancy class của bạn, cộng 2 ascendancy point."
+    trials:
+      - { zone: The Lower Prison, act: 1, trap: Trap chông }
+      - { zone: The Crypt Level 1, act: 2, trap: Lưỡi dao xoay }
+      - { zone: The Chamber of Sins Level 2, act: 2, trap: Lưỡi cưa }
+      - { zone: The Crematorium, act: 3, trap: Trap lò lửa }
+      - { zone: The Catacombs, act: 3, trap: Lưỡi dao tuần tra }
+      - { zone: The Imperial Gardens, act: 3, trap: Trap phóng tiêu }
+    notes:
+      - "Đây là cái quan trọng nhất: bạn chọn ascendancy class ở Altar of Ascendancy sau khi Izaro ngã, và lựa chọn đó định hình cả quãng đường còn lại của nhân vật."
+      - "Nếu lần đầu thấy chật vật, lên thêm vài level rồi quay lại. Chờ không bị phạt gì, và trial đã làm thì vẫn còn đó."
+
+  - id: cruel
+    name: Cruel Labyrinth
+    areaLevel: 55
+    requires: "Đã chạy Normal Labyrinth một lần, nhân vật level 40, và ba trial trong Act 6–7."
+    when: >-
+      Giữa Act 7, sau khi trả quest ở Dread Thicket, hoặc đầu Act 8. Các guide
+      chia đôi giữa hai mốc này; khác nhau chỉ vài level. Vào sớm thì bạn có
+      ascendancy để đánh Arakaali.
+    ready: "Tầm level 55–60, life khoảng 2.000."
+    reward: "Thêm 2 ascendancy point."
+    trials:
+      - { zone: The Lower Prison, act: 6, trap: Trap chông }
+      - { zone: The Crypt, act: 7, trap: Lưỡi dao xoay }
+      - { zone: The Chamber of Sins Level 2, act: 7, trap: Lưỡi cưa }
+    notes:
+      - "Cuối Act 7 bạn nhận Soul of Arakaali, giảm damage over time. Đây là lựa chọn Pantheon hợp cho lượt chạy này."
+
+  - id: merciless
+    name: Merciless Labyrinth
+    areaLevel: 68
+    requires: "Đã chạy Cruel Labyrinth một lần, nhân vật level 50, và ba trial trong Act 8–10."
+    when: >-
+      Act 10, và **trước khi bạn đánh Kitava**. Guide nào cũng nói vậy. Hạ
+      Kitava là bạn mất thêm 30% resistance, mà đây là zone area level 68.
+    ready: "Tầm level 65–70, life từ 2.800 trở lên."
+    reward: "Thêm 2 ascendancy point, tổng cộng sáu."
+    trials:
+      - { zone: The Bath House, act: 8, trap: Trap lò lửa }
+      - { zone: The Tunnel, act: 9, trap: Lưỡi dao tuần tra }
+      - { zone: The Ossuary, act: 10, trap: Trap phóng tiêu }
+    notes:
+      - "Từ đây trở đi Argus, con chó của Izaro, xuất hiện như một trận không bắt buộc. Hắn có pha enrage rất nguy hiểm và rơi một Treasure Key. Lần đầu thì cứ bỏ qua hắn."
+
+  - id: eternal
+    name: Eternal Labyrinth
+    areaLevel: 75
+    requires: "Đủ ba Labyrinth trước đó, nhân vật level 68, và một Offering to the Goddess. Không cần trial."
+    when: "Sau campaign, khi bạn đã chạy map thoải mái."
+    ready: "Level 75 trở lên, life từ 3.500 trở lên."
+    reward: "2 ascendancy point cuối cùng, tổng cộng tám."
+    trials: []
+    notes:
+      - "Guide cũ nói yêu cầu level 60. Thực tế là 68."
+      - "Với Tribute, Gift hay Dedication to the Goddess, area level lên cao tới 83."
+
+rules:
+  - title: Chết một lần là hết lượt
+    body: >-
+      Bạn chết là lượt chạy kết thúc, và phải bắt đầu lại từ cửa vào. Rời khỏi
+      khu cũng tính là bỏ lượt. Chính luật này làm Labyrinth khác hẳn phần còn
+      lại của campaign.
+  - title: Layout đổi mỗi ngày
+    body: >-
+      Nó đổi vào 0h UTC. Mọi lượt chạy trong cùng một ngày đều có chung layout,
+      chung lối đi ẩn và chung phòng bí mật, nên mới có bản đồ layout cho từng
+      ngày.
+  - title: Trial dùng chung, Labyrinth thì không
+    body: >-
+      Làm xong một trial trên một nhân vật là nó tính cho mọi nhân vật của bạn
+      trong league đó. Còn lượt chạy Labyrinth tính riêng từng nhân vật, nên
+      nhân vật nào cũng phải tự chạy. Sang league mới thì không mang theo được
+      gì.
+  - title: Dùng hết key trước khi ra
+    body: >-
+      Treasure Key, Silver Key và trinket đều bị xóa khi bạn rời Labyrinth.
+      Nhặt được gì thì dùng hết trước khi ra.
+  - title: Trap scale theo life của bạn
+    body: >-
+      Damage của trap tính theo phần trăm life, nên lên bao nhiêu level cũng
+      không làm chúng vô hại. Fire và chaos resistance giúp được, và một
+      movement skill như Flame Dash đưa bạn qua các sàn trap rất nhanh.
+  - title: Darkshrine là tùy bạn
+    body: >-
+      Mấy cái shrine ẩn nằm lệch đường chính cho bạn một buff tới hết lượt
+      chạy: tốc độ, resistance, hồi phục, có khi thêm một lần dùng Divine Font
+      ở cuối. Chúng có ích thật, nhưng đi mò chúng tốn thời gian hơn giá trị
+      của phần lớn trong số đó. Lần đầu thì cứ đi qua.
+
+traps:
+  - name: Trap chông
+    body: "Chông nhô lên từ sàn theo nhịp. Xem trọn một vòng, rồi đi qua."
+  - name: Lưỡi dao xoay
+    body: "Dao chạy trên đường ray cố định. Chúng rất dễ đoán; sai là ở chỗ nôn nóng."
+  - name: Lưỡi cưa
+    body: "Lưỡi dao to hơn, chạy dọc một hành lang. Hãy canh khoảng trống giữa hai lưỡi mà băng qua, đừng cố chạy đua với chúng."
+  - name: Trap lò lửa
+    body: "Những cột lửa phun theo nhịp đồng hồ. Fire resistance làm nó đỡ đau."
+  - name: Lưỡi dao tuần tra
+    body: "Lưỡi dao di động, chạy tuần theo một tuyến chứ không nằm một chỗ."
+  - name: Trap phóng tiêu
+    body: "Tiêu gắn trên tường, bắn thành loạt băng qua khoảng trống."
+
+sources:
+  - { title: "Maxroll Labyrinth guide", url: "https://maxroll.gg/poe/getting-started/labyrinth-guide" }
+  - { title: "Mobalytics Labyrinth and Ascendancy", url: "https://mobalytics.gg/poe/guides/labyrinth-ascendancy" }
+  - { title: "Official 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }

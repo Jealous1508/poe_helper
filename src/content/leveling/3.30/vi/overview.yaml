@@ -1,0 +1,171 @@
+updated: "2026-11-13"
+intro: >-
+  Campaign gồm mười act, đưa nhân vật từ level 1 lên khoảng 68. Guide này vẽ
+  từng act thành một lộ trình: bạn đi qua những zone nào, nhánh phụ nào đáng
+  làm, và nhánh nào bỏ được. Một lộ trình dùng chung cho mọi class.
+
+stops:
+  - slug: act-1
+    label: Act 1
+    town: Lioneye's Watch
+    levels: Area level 1–13
+    boss: Merveil, the Siren
+    points: "2 passive point"
+    markers:
+      - { kind: unlock, text: "Quicksilver Flask" }
+      - { kind: lab, text: "Trial 1 trong 6" }
+  - slug: act-2
+    label: Act 2
+    town: Forest Encampment
+    levels: Area level 13–23
+    boss: Vaal Oversoul
+    points: "2, hoặc 3 nếu bạn giết hết bandit"
+    markers:
+      - { kind: unlock, text: "Chọn bandit" }
+      - { kind: unlock, text: "Từ đây town nào cũng có crafting bench" }
+      - { kind: lab, text: "Trial 2 và 3" }
+  - slug: act-3
+    label: Act 3
+    town: Sarn Encampment
+    levels: Area level 23–33
+    boss: Dominus
+    points: "2 passive point"
+    markers:
+      - { kind: lab, text: "Trial 4, 5 và 6" }
+      - { kind: unlock, text: "Siosa bán gem của các class khác" }
+  - slug: act-4
+    label: Act 4
+    town: Highgate
+    levels: Area level 33–40
+    boss: Malachai
+    points: "1 passive point"
+    markers:
+      - { kind: lab, text: "Normal Labyrinth: ascendancy đầu tiên" }
+  - slug: act-5
+    label: Act 5
+    town: Overseer's Tower
+    levels: Area level 41–45
+    boss: Kitava, the Insatiable
+    points: "2 passive point"
+    markers:
+      - { kind: penalty, text: "−30% toàn bộ resistance sau khi hạ boss, kể cả chaos" }
+  - slug: act-6
+    label: Act 6
+    town: Lioneye's Watch
+    levels: Area level 45–50
+    boss: Tsoagoth, the Brine King
+    points: "3 passive point"
+    markers:
+      - { kind: unlock, text: "Pantheon" }
+      - { kind: unlock, text: "Lilly Roth bán mọi gem" }
+      - { kind: unlock, text: "Item Tier bắt đầu rơi" }
+      - { kind: lab, text: "Trial 1 trong 3 của Cruel" }
+  - slug: act-7
+    label: Act 7
+    town: Bridge Encampment
+    levels: Area level 50–55
+    boss: Arakaali
+    points: "3 passive point"
+    markers:
+      - { kind: lab, text: "Cruel Labyrinth: ascendancy thứ hai" }
+  - slug: act-8
+    label: Act 8
+    town: Sarn Encampment
+    levels: Area level 55–60
+    boss: Solaris and Lunaris
+    points: "3 passive point"
+    markers:
+      - { kind: lab, text: "Trial 1 trong 3 của Merciless" }
+  - slug: act-9
+    label: Act 9
+    town: Highgate
+    levels: Area level 61–64
+    boss: The Depraved Trinity
+    points: "2 passive point"
+    markers:
+      - { kind: lab, text: "Trial 2 trong 3 của Merciless" }
+  - slug: act-10
+    label: Act 10
+    town: Oriath Docks
+    levels: Area level 64–67
+    boss: Kitava, the Insatiable
+    points: "3 passive point"
+    markers:
+      - { kind: lab, text: "Merciless Labyrinth: chạy trước khi đánh boss" }
+      - { kind: penalty, text: "Thêm −30% toàn bộ resistance nữa, tổng cộng −60%" }
+
+labs:
+  - name: Normal
+    areaLevel: 33
+    trials: "6 trial: một ở Act 1, hai ở Act 2, ba ở Act 3"
+    when: "Act 4. Các guide không thống nhất: có nơi nói vừa tới town là chạy, có nơi nói để giữa act. Nhân vật đầu tiên thì chọn mốc muộn cho an toàn."
+    ready: "Khoảng level 33–38, có 800 life trở lên và life flask tử tế. Izaro đánh physical và fire."
+  - name: Cruel
+    areaLevel: 55
+    trials: "3 trial: một ở Act 6, hai ở Act 7. Cần nhân vật level 40."
+    when: "Cuối Act 7, hoặc khi vừa tới town của Act 8."
+    ready: "Khoảng level 50–55, life tầm 1.800 trở lên."
+  - name: Merciless
+    areaLevel: 68
+    trials: "3 trial: Act 8, 9 và 10. Cần nhân vật level 50."
+    when: "Act 10, trước con boss cuối, để chưa phải chịu lần trừ resistance thứ hai."
+    ready: "Khoảng level 65–70, life từ 2.500 trở lên và elemental resistance đủ 75%."
+
+legend:
+  - tag: must
+    text: "Không làm thì game không cho bạn đi tiếp."
+  - tag: worth
+    text: "Không bắt buộc, nhưng nên làm. Thưởng là loại vĩnh viễn hoặc rất mạnh."
+  - tag: skip
+    text: "Không bắt buộc, và lần chơi đầu thì không đáng thời gian."
+  - tag: travel
+    text: "Chỉ đi qua. Tìm cửa ra, và lấy waypoint nếu zone có."
+
+principles:
+  - title: Tốc độ là ưu tiên số một
+    body: >-
+      Lấy [[Quicksilver Flask]] từ quest phụ đầu tiên, chọn một movement skill
+      ngay lần đầu được mời, và để ý boots có movement speed. Đi nhanh giúp bạn
+      nhiều hơn bất kỳ nâng cấp damage nào ở giai đoạn đầu.
+  - title: Đừng clear sạch bản đồ
+    body: >-
+      Giết mấy pack nằm trên đường đi, còn lại đi thẳng. Mấy con unique không
+      bắt buộc trong campaign không đáng để bạn dừng lại. Thấp hơn area level
+      một hai level cũng không sao.
+  - title: Link mới quan trọng, màu thì không
+    body: >-
+      Từ 3.29 gem nào cũng cắm được vào socket nào. Màu khớp chỉ cho thêm một
+      chút quality bonus. Việc bạn cần là main skill nằm trong ba socket có
+      link, rồi bốn.
+  - title: Lên level là ghé vendor
+    body: >-
+      Hàng của vendor đổi mỗi lần bạn lên level. Ngó tìm socket có link, boots
+      có movement speed và vũ khí khá hơn. Trong 3.30 town nào cũng bán
+      [[Scroll of Wisdom]] giá 15 Gold.
+  - title: Chuyến về town miễn phí
+    body: >-
+      "Exit to character selection" rồi đăng nhập lại sẽ đưa bạn về town gần
+      nhất, không tốn gì. Mọi lộ trình nhanh đều dùng cách này thay cho
+      [[Portal Scroll]] sau khi vào zone cụt.
+  - title: Waypoint nào cũng lấy
+    body: >-
+      Một waypoint bỏ qua là một đoạn đường dài bạn phải đi lại sau này. Sơ đồ
+      lộ trình có đánh dấu từng zone có waypoint.
+  - title: Resistance chờ được, phần lớn là vậy
+    body: >-
+      Ở Act 1 chỉ cold resistance là đáng quan tâm, để đánh boss cuối act.
+      Lightning có ích ở Act 2. Từ Act 3 hãy nhắm cap 75%, và sau Act 5 thì
+      đây không còn là chuyện tùy ý nữa.
+  - title: Gặp Trial là làm luôn
+    body: >-
+      Sáu Trial of Ascendancy trong Act 1–3 mở Labyrinth, nơi bạn chọn
+      ascendancy class. Mỗi league chỉ cần làm một lần cho cả account.
+  - title: Coven ngay trong campaign
+    body: >-
+      Cauldron của league này cũng xuất hiện trong campaign. Click một cái,
+      hạ đám covenite rồi chọn một Fate. Tới boss của khu bạn có thể invoke tối
+      đa ba cái, mỗi cái tăng thêm cơ hội ra Viscera cho Wickerman của bạn.
+      Nhân vật mới thì invoke từng cái một. Báo chí viết về buổi reveal nói giờ
+      khu nào trong campaign cũng kết thúc bằng một con boss, thêm hơn hai chục
+      con; bọn mình không xác nhận được điều đó trong patch notes. Layout zone ở
+      đây lấy từ nguồn viết trước 3.30 và chưa kiểm tra lại trong game.

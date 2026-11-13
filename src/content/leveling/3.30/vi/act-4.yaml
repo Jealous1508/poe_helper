@@ -1,0 +1,377 @@
+number: 4
+title: "Highgate, hai giấc mơ, và Malachai"
+town: Highgate
+levelIn: 33
+levelOut: 40
+skillPoints: 1
+skillPointsNote: "Cộng thêm 2 respec point từ An Indomitable Spirit."
+boss: "Malachai, The Nightmare"
+keyRewards:
+  - "1 passive point: An Indomitable Spirit, điểm duy nhất của cả act"
+  - "Normal Labyrinth, nơi bạn chọn ascendancy class và nhận 2 ascendancy point"
+  - "Bậc gem reward ở level 34 và 40"
+  - "Một utility flask từ Lady Dialla sau khi hạ Malachai"
+intro: >-
+  Act 4 ít zone mà nhiều boss. Có năm con chắn giữa bạn và đoạn kết, và đây
+  cũng là act bạn chạy Normal Labyrinth rồi chọn ascendancy class. Nó cũng chỉ
+  có đúng một passive point, giấu lệch khỏi đường chính trong The Mines, và đó
+  là điểm bị bỏ sót nhiều nhất.
+
+nodes:
+  - id: the-aqueduct
+    name: The Aqueduct
+    kind: zone
+    tag: travel
+    level: 33
+    waypoint: true
+    summary: >-
+      Một zone thẳng, chia hai làn. Cửa vào Highgate nằm ở cuối làn bên trái.
+    tips: >-
+      The Hundred Foot Shadow đứng quãng giữa đường, và Maelstrom cũng ở đây.
+      Cả hai đều không bắt buộc. Nếu bạn đang hụt level thì đây là zone hợp lý
+      để chạy lại.
+
+  - id: highgate-4
+    name: Highgate
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong act này. Waypoint nằm ở giữa, The Dried Lake ở bên
+      trái.
+    tips: >-
+      Tasuni đứng bên phải waypoint, còn Oyun và Lady Dialla ở tầng trên.
+      The Mines mở ở phần trên sau khi bạn phá Deshret's Seal, và The Ascent
+      nằm bên phải chỗ Oyun với Dialla.
+
+  - id: dried-lake
+    name: "The Dried Lake: Voll"
+    kind: zone
+    tag: must
+    level: 34
+    image: quest-deshrets-banner
+    summary: >-
+      Một zone trống trải, Voll, Emperor of Purity đứng đâu đó ở một góc hoặc
+      ngay giữa. Hắn rơi Deshret's Banner.
+    quest: Breaking the Seal
+    reward: "Bậc gem level 34 từ Oyun."
+    tips: >-
+      Voll có một đòn slam và một đòn lao, cả hai đều bước tránh được. Trận này
+      ngắn và đơn giản. Mang cái banner tới Deshret's Seal ở phần trên Highgate
+      rồi phá nó: đó là thứ mở The Mines. Nightwane và Knitted Horror không
+      bắt buộc.
+    newbie: >-
+      Zone này có crafting recipe cho attack, cast và warcry speed. Nếu bạn cần
+      thêm vài level trước mấy con boss trong giấc mơ, Dried Lake là một trong
+      những chỗ cày tốt nhất của act.
+
+  - id: mines-1
+    name: The Mines Level 1
+    kind: zone
+    tag: travel
+    level: 34
+    summary: >-
+      Gần như thẳng, có mấy nhánh phụ cụt. Một crafting recipe về màu socket
+      nằm ở phía trên bên trái.
+    tips: >-
+      Niko xuất hiện ở đây và mời bạn chuỗi quest Delve. Nhân vật đầu tiên thì
+      cứ đi qua: Delve là nội dung endgame, không giúp gì cho nhân vật đang
+      leveling. Pikerivet không bắt buộc.
+
+  - id: mines-2
+    name: The Mines Level 2
+    kind: zone
+    tag: must
+    level: 35
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Đường chính hình chữ U. Deshret's Spirit nằm lệch khỏi đường đó, trong
+      một phòng phụ hoặc trên một cái bệ, nên bạn phải chịu khó tìm.
+    quest: An Indomitable Spirit
+    reward: "Book of Skill từ Tasuni: +1 passive point, 2 respec point, và gem level 34."
+    tips: "Hammerstorm và Voidscream không bắt buộc."
+    newbie: >-
+      **Đây là passive point duy nhất của Act 4.** Nó không nằm trên đường
+      chính, không ai nhắc bạn là nó ở đó, và bạn có thể đi hết act mà không
+      hay biết. Hãy lượn qua các phòng phụ cho tới khi thấy cái spirit, giải
+      phóng nó, rồi trả quest cho Tasuni.
+
+  - id: crystal-veins
+    name: The Crystal Veins
+    kind: zone
+    tag: must
+    level: 36
+    waypoint: true
+    summary: >-
+      Trục trung tâm của phần còn lại trong act. Kaom's Dream, Daresso's Dream
+      và sau đó The Belly of the Beast đều rẽ ra từ đây.
+    tips: >-
+      Đường thẳng, lối đi hẹp. Một crafting recipe cold damage nằm ở phần trên,
+      và Excavated Hideout mở ở đây. The Burning Man đứng trên một cái bệ, leo
+      mấy bậc thang ngắn là tới, và hắn không bắt buộc.
+    newbie: >-
+      Quay về Highgate ngay lúc này và trả quest An Indomitable Spirit. Phần
+      lớn lộ trình sau đó chạy Labyrinth từ đây, trước khi đụng vào giấc mơ
+      nào.
+
+  - id: normal-labyrinth
+    name: The Normal Labyrinth
+    kind: side
+    tag: worth
+    branchFrom: crystal-veins
+    level: 33
+    waypoint: true
+    image: quest-labyrinth
+    badge: 2 ascendancy point
+    summary: >-
+      Dùng waypoint về Sarn Encampment rồi chạm tấm bia ở Aspirants' Plaza.
+      Bạn chọn ascendancy class tại Altar of Ascendancy và nhận 2 ascendancy
+      point.
+    reward: "Ascendancy class của bạn, 2 ascendancy point, và mấy cái rương trong Labyrinth."
+    why: >-
+      Ascendancy là cú tăng sức mạnh lớn nhất bạn có được trong cả campaign,
+      và lượt Normal là lượt duy nhất bạn chọn class. Tổng cộng có tám
+      ascendancy point, mỗi Labyrinth hai điểm.
+    tips: >-
+      Area level 33. Chết hoặc rời khỏi Labyrinth là hết lượt và bạn phải bắt
+      đầu lại từ đầu. Layout giống nhau cho mọi người chơi trong cùng một ngày
+      và đổi vào 0h UTC, nên một lượt thất bại lại dạy bạn đúng layout cho lần
+      thử lại. Trial tính cho cả account trong league, nên nhân vật thứ hai
+      không phải đi tìm sáu trial lần nữa.
+    newbie: >-
+      Damage over time từ trap bỏ qua armour, evasion và spell suppression,
+      nên các lớp phòng thủ của bạn không có tác dụng với nó. Thứ có tác dụng
+      là life, life regeneration và flask. Hãy mang hai ba cái
+      [[Life Flask|life flask]] loại lớn thay vì một, và để dành
+      [[Quicksilver Flask]] cùng movement skill cho mấy hành lang trap thay vì
+      dùng để đi đường. Izaro bị đánh ba lần trong một lượt chạy và gây damage
+      physical với fire.
+
+  - id: kaoms-dream
+    name: Kaom's Dream
+    kind: zone
+    tag: travel
+    level: 37
+    summary: >-
+      Một đường thẳng kết thúc ở cây cầu dài dẫn vào Kaom's Stronghold.
+    tips: >-
+      Các guide mô tả nửa đầu zone này khác nhau, nên đừng tin một hướng dẫn
+      đường quá cụ thể ở đây. Điểm chung là bạn leo cầu thang gần đầu zone, và
+      thứ bạn đang tìm là cây cầu dài. Torchoak Grove và Triskeriaki không bắt
+      buộc.
+
+  - id: kaoms-stronghold
+    name: "Kaom's Stronghold: King Kaom"
+    kind: boss
+    tag: must
+    level: 38
+    waypoint: true
+    image: quest-eye-of-fury
+    summary: >-
+      Theo các cây cầu tới Caldera of the King. King Kaom rơi The Eye of Fury.
+    reward: "The Eye of Fury, một trong hai chìa khóa vào The Belly of the Beast."
+    tips: >-
+      Các nguồn nói khác nhau về việc nên bám mép cầu bên nào, nên cứ theo cầu
+      mà đi. Đầu zone có một crafting recipe về socket link. Kaom đánh cận
+      chiến cơ bản cộng một cú nhảy, và càng mất máu hắn càng gọi thêm quân.
+      Suốt trận, mưa lửa rơi xuống đấu trường từ trên cao.
+    newbie: >-
+      Đứng yên là thứ giết người chơi ở đây. Mưa lửa là để chặn chỗ đứng: ai
+      đứng im mà đánh adds là ăn trọn thiên thạch. Cứ đổi chỗ liên tục thì trận
+      này dễ. **Làm Kaom trước Daresso** — ở mốc level này hắn là con ít nguy
+      hiểm hơn trong hai con.
+
+  - id: daressos-dream
+    name: Daresso's Dream
+    kind: zone
+    tag: must
+    level: 37
+    summary: >-
+      Một zone kiểu doanh trại gồm các đấu trường nối nhau. Cổng sập xuống
+      quanh bạn, và bạn phải dọn từng đợt quái để nó mở lại.
+    tips: >-
+      Barkhul, ở phần trên, bắt buộc phải chết cùng đám quái trong đấu trường
+      thì bạn mới đi tiếp được, nên hắn là một cánh cổng chứ không phải trận
+      tùy chọn. Eyepecker và Steelchaw thì không bắt buộc.
+    newbie: >-
+      Cái lồng sập xuống quanh bạn là của zone này, không phải của trận
+      Daresso. Nếu bạn từng đọc ở đâu đó rằng Daresso nhốt bạn lại, thì nó nói
+      về chỗ này.
+
+  - id: grand-arena
+    name: "The Grand Arena: Daresso"
+    kind: boss
+    tag: must
+    level: 38
+    waypoint: true
+    image: quest-eye-of-desire
+    summary: >-
+      Cứ gặp ngã rẽ là chọn lối trái ngoài cùng. The Trio ra trước, rồi tới
+      Daresso, King of Swords trong The Ring of Blades.
+    reward: "The Eye of Desire. Mang cả hai Eye tới Lady Dialla ở The Crystal Veins để mở The Belly of the Beast."
+    tips: |
+      Đầu zone có một crafting recipe về số lượng socket. **The Trio** — Dimachaeri Cassius, Mevion và Rudiarius Felix — đánh cùng lúc, và gặp bọn họ nghĩa là Daresso sắp tới.
+
+      **Cứ mất 25% life là Daresso nghỉ một nhịp, và một phần tư máu cuối hắn enrage vĩnh viễn.** Thành ra có bốn phase, và phase cuối khó nhất. Hắn chill bạn, gọi ra bản sao của chính mình, và rải kiếm khắp đấu trường một cách ngẫu nhiên. Một con Icy Manifestation cũng có mặt trong đấu trường cùng hắn.
+    newbie: >-
+      Thứ giết người chơi là các hiệu ứng chồng lên nhau: đừng đứng chỗ hai
+      thanh kiếm, lớp chill và đám bản sao cùng đổ xuống một lúc. Ngoài ra thì
+      hai guide chính đều xếp trận này vào loại khá dễ. **Hắn không thu nhỏ
+      đấu trường**, bạn đọc ở đâu đó thì cũng là nhầm. Con thu nhỏ đấu trường
+      là Brine King ở Act 6.
+
+  - id: belly-1
+    name: The Belly of the Beast Level 1
+    kind: zone
+    tag: travel
+    level: 38
+    summary: >-
+      Đường thẳng. Lối xuống tầng kế nằm ở phần trên. The Bone Queen không bắt
+      buộc.
+    newbie: >-
+      **Mua sắm trước khi bước vào.** Từ zone này trở đi, act chạy thành một
+      chuỗi liền mạch không nghỉ cho tới Malachai. Hãy nâng cấp mọi món gear
+      trong khả năng, mua nốt mấy viên gem bạn còn chần chừ, và nạp đầy flask
+      trước đã. Đây là lời khuyên hữu ích nhất của cả Act 4.
+
+  - id: belly-2
+    name: "The Belly of the Beast Level 2: Piety"
+    kind: boss
+    tag: must
+    level: 39
+    summary: >-
+      Piety, the Abomination chờ bạn trong The Bowels of the Beast. Ả sống sót
+      sau trận này và dẫn đường cho bạn ở phần còn lại của act.
+    tips: >-
+      Ả đánh physical và lightning rất nặng tay, và đòn đặc trưng là một luồng
+      sáng quét vòng gây corrupted blood. Mấy con khác góp vui bằng spell dưới
+      đất nổ theo nhịp đếm. Trên đường tới The Harvest có một crafting recipe
+      về elemental resistance.
+    newbie: >-
+      Luồng sáng quét vòng mới là thứ giết bạn. Nó gây damage rất nặng và quay
+      với tốc độ thay đổi, nên không thể chạy vòng theo quán tính được. Hãy
+      xoay quanh ả liên tục và luôn đi trước hướng quét. Một flask xóa bleeding
+      giúp bạn xử lý corrupted blood.
+
+  - id: the-harvest
+    name: "The Harvest: Maligaro, Shavronne and Doedre"
+    kind: zone
+    tag: must
+    level: 40
+    waypoint: true
+    image: quest-malachai-heart
+    summary: >-
+      Ba phòng boss, thứ tự ngẫu nhiên. Mỗi con rơi một nội tạng của Malachai,
+      và cần đủ cả ba.
+    quest: Corpus Malachus
+    reward: "Đưa cả ba nội tạng cho Piety ở waypoint để mở The Black Core."
+    tips: |
+      Các guide không thống nhất thứ tự: một bên bảo đánh con dễ trước, bên kia chọn đường đi ngắn nhất. Nhân vật đầu tiên thì cứ dễ trước, tức là **Maligaro, rồi Shavronne, rồi Doedre**.
+
+      **Maligaro, The Inquisitor** rơi Malachai's Heart. Tránh spell dưới đất và mấy cú nổ xác của hắn. Cái bẫy nằm ở chỗ chính bạn giết adds sát bên mình là bạn kích nổ chúng.
+
+      **Shavronne of Umbra** rơi Malachai's Entrails. Ả cast lightning nổ chậm và dịch chuyển lung tung quanh đấu trường. Hãy bám sát ả: đuổi theo một con teleport từ xa chỉ khiến bạn đứng sai chỗ khi tia sét giáng xuống.
+
+      **Doedre Darktongue** rơi Malachai's Lungs và là con khó nhất trong ba.
+    newbie: |
+      Đấu trường của Doedre phủ đầy các vòng curse nhiều màu, và ả gỡ curse khỏi mình rồi nhận thêm damage nhờ việc đó.
+
+      - **Tím là Temporal Chains**, làm bạn chậm lại
+      - **Lục là Enfeeble**, cắt damage của bạn
+      - **Đỏ là Vulnerability**, tăng physical damage bạn phải chịu
+
+      Hoặc đứng trong vòng đỏ và đánh từ xa, khi đó Vulnerability gần như chẳng hại gì bạn, hoặc bám sát và di chuyển liên tục. Thứ giết người mới là lỡ trôi vào vòng tím: bị chậm rồi thì bạn không ra khỏi vòng nào được nữa.
+
+  - id: malachai
+    name: "Malachai, The Nightmare"
+    kind: boss
+    tag: must
+    level: 40
+    summary: >-
+      Boss của act, đánh qua hai đấu trường: The Black Core, rồi The Black
+      Heart nhỏ hơn.
+    reward: "The Eternal Nightmare từ Lady Dialla: bậc gem level 40 và một flask tùy bạn chọn."
+    tips: |
+      **Mấy cái nội tạng và Hearts of the Beast là hai thứ hoàn toàn khác nhau, và cái tên làm nhiều người nhầm thật sự.** Malachai's Heart, Entrails và Lungs là quest item từ bộ ba ở Harvest, và chúng chỉ để mở trận. Hearts of the Beast là chuyện khác hẳn: đó là thứ bạn phá để ngắt phase hai.
+
+      **Phase 1, The Black Core:** hắn bất tử ở mốc 75% và 50% life. Mỗi mốc đó Piety hiện ra, và ả phải chết thì bạn mới đánh hắn tiếp được.
+
+      **Phase 2, The Black Heart:** đấu trường nhỏ hơn. Hắn bất tử ở 75%, 50% và 25%, và mỗi lần bạn phải phá Hearts of the Beast mọc lên ở các góc. Tới 25% hắn thêm một vòng lửa để bạn tránh.
+
+      Mấy đòn slam và cú teleport slam của hắn đều có báo trước: thấy động tác lấy đà là vòng ra sau lưng hắn. Hắn cũng lặn xuống rồi nổ lên khỏi mặt đất, mấy guide khác gọi là trò đập chuột chũi với đám xúc tu.
+    newbie: >-
+      Thứ giết bạn là mặt đất. Mấy quả mortar của hắn để lại vũng physical
+      damage kéo dài chừng năm giây, còn trap lửa để lại burning ground kéo
+      dài lâu hơn nhiều, nên hai loại hiệu ứng mặt đất cứ chồng lên nhau trong
+      lúc bạn đánh. Hãy liên tục dời sang chỗ sàn còn sạch. Một chi tiết khó
+      chịu: cú phun hình nón nguyên tố của hắn không gây stun, nên bạn không
+      có cảm giác gì báo là mình đang ăn đòn trong lúc máu tụt.
+
+  - id: the-ascent
+    name: The Ascent
+    kind: zone
+    tag: must
+    level: 40
+    summary: >-
+      Ba phần. Kéo cần gạt Resonator ở phần thứ ba để mở Oriath Portal, đó là
+      đường sang Act 5.
+    tips: >-
+      Phần hai có crafting recipe giảm ailment, stun và curse. The White Death
+      không bắt buộc. Sau khi hạ Malachai sẽ có một portal đỏ về Highgate, nên
+      hãy nhận The Eternal Nightmare từ Lady Dialla trước khi tới đây.
+
+sections:
+  - title: Đừng rời Act 4 mà thiếu một điểm
+    body: >-
+      An Indomitable Spirit, ở The Mines Level 2, là passive point duy nhất
+      của act. Deshret's Spirit không nằm trên đường chính: nó ở trong một
+      phòng phụ hoặc trên một cái bệ lệch khỏi lộ trình hình chữ U, và quest
+      này rất dễ đi lướt qua hoàn toàn. Hãy giải phóng cái spirit, rồi trả
+      quest cho Tasuni ở Highgate để nhận Book of Skill và 2 respec point.
+  - title: Chạy Normal Labyrinth lúc nào
+    body: >-
+      Khoảng cách giữa các guide hẹp hơn người ta tranh cãi. Mọi khuyến nghị
+      đều rơi vào khoảng nhân vật level 28 tới 38, và câu hỏi duy nhất là bạn
+      đi vào cuối Act 3 hay giữa Act 4. Câu trả lời an toàn nhất cho nhân vật
+      đầu tiên là đi từ The Crystal Veins, sau khi đã giải phóng Deshret và
+      trả xong passive point: như vậy bạn cao hơn area level 33 vài level thay
+      vì thấp hơn. Thấy mình đủ mạnh thì làm trial thứ sáu xong là đi luôn
+      cũng được. Chết thì bạn chỉ mất lượt chạy, không mất gì khác, và hai
+      level nữa quay lại cũng được.
+  - title: Arcane Link không phải skill để leveling
+    body: >-
+      [[Arcane Link]] là gem mới trong 3.30 và là thứ [[Scion]] được mời cho
+      quest Breaking the Seal. **Nó là skill để chơi party.** Nó nhắm vào một
+      người chơi đồng minh, cho họ lightning damage dựa trên mana của bạn, và
+      nếu người được link chết thì bạn chết theo. Chơi một mình thì nó hoàn
+      toàn vô dụng. Nếu bạn đi solo, hãy chọn thứ khác trong danh sách quest
+      reward.
+  - title: Danh tiếng của Malachai
+    body: >-
+      Act 4 được nhớ tới như bức tường độ khó của campaign, và Malachai tới
+      giờ vẫn là trận đầu tiên phạt bạn vì không đọc động tác báo đòn. Nhưng
+      danh tiếng đó hình thành từ trước bản mở rộng thêm Act 5 tới 10 và làm
+      lại act này, và bọn mình không tìm được nguồn hiện tại nào xếp hạng hắn
+      so với phần còn lại của campaign. Cú siết khó nhất của bản hiện giờ là
+      Kitava ở Act 5 và hình phạt resistance đi kèm sau đó.
+  - title: Những gì nên bỏ qua
+    body: >-
+      Chuỗi quest Delve của Niko trong The Mines, và mọi con unique không bắt
+      buộc trong act: The Hundred Foot Shadow, Maelstrom, Nightwane, Knitted
+      Horror, Pikerivet, Hammerstorm, Voidscream, The Burning Man, Torchoak
+      Grove, Triskeriaki, Eyepecker, Steelchaw, The Bone Queen và The White
+      Death. Không con nào cho điểm hay phần thưởng vĩnh viễn.
+
+patchNotes:
+  - "[[Scion]] được mời [[Arcane Link]], gem mới trong 3.30, cho quest Breaking the Seal. Nó nhắm vào một người chơi đồng minh và họ chết thì bạn chết theo, nên chỉ dùng được khi chơi party. [[Marauder]], [[Duelist]] và [[Templar]] thì mua nó từ Petarus và Vanja."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+  - "3.30 không đổi zone, quest hay passive point nào của Act 4."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Maxroll Labyrinth guide", url: "https://maxroll.gg/poe/getting-started/labyrinth-guide" }
+  - { title: "Mobalytics Act 4 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-4" }
+  - { title: "PoEDB Act 4", url: "https://poedb.tw/us/Act_4" }
+  - { title: "Path of Exile 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }

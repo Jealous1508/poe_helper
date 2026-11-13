@@ -1,0 +1,307 @@
+number: 3
+title: "Sarn, hai lần gặp Piety, và Dominus"
+town: The Sarn Encampment
+levelIn: 23
+levelOut: 33
+skillPoints: 2
+skillPointsNote: "Cộng thêm 2 respec point từ Victario's Secrets."
+boss: "Dominus, High Templar"
+keyRewards:
+  - "2 passive point: Victario's Secrets, Piety's Pets"
+  - "Ba Trial of Ascendancy cuối cùng, mở ra Labyrinth"
+  - "Siosa trong The Library: vendor bán gần như mọi gem, bất kể class của bạn"
+  - "Bậc gem reward ở level 28 và 31"
+intro: >-
+  Act 3 là act dài nhất tính tới đây, và cũng đáng công nhất. Nó hoàn tất sáu
+  Trial của bạn, mở Labyrinth cùng ascendancy, và mở luôn tiệm gem của Siosa,
+  thứ tiện lợi nhất bạn mở được trong nửa đầu game. Piety xuất hiện hai lần:
+  lần đầu ả không chết.
+
+nodes:
+  - id: city-of-sarn
+    name: The City of Sarn
+    kind: zone
+    tag: travel
+    level: 23
+    waypoint: true
+    summary: >-
+      Đường thẳng. Cứu Clarissa đang bị đám Blackguard vây, rồi nói chuyện với
+      cô ta để mở quest Lost in Love.
+    tips: "Một Guard Captain dẫn đầu đám quanh cô ta. Trên đường có một crafting recipe."
+
+  - id: sarn-encampment-3
+    name: The Sarn Encampment
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong act này. Lên tầng trên là các lối sang The Slums,
+      Sarn Arena và Aspirants' Plaza.
+    tips: >-
+      Aspirants' Plaza là cửa vào Labyrinth, đánh dấu bằng cái đầu lâu xanh.
+      Nó chỉ mở khi bạn xong cả sáu Trial. Bỏ qua Sarn Arena: đó là khu đánh
+      nhau giữa người chơi với nhau.
+
+  - id: the-slums
+    name: The Slums
+    kind: zone
+    tag: travel
+    level: 24
+    summary: >-
+      Bám bức tường ở tầng trệt là tới Crematorium. Cửa vào The Sewers cũng ở
+      đây, nhưng khóa cho tới khi bạn trả quest Lost in Love.
+
+  - id: the-crematorium
+    name: "The Crematorium: Piety, first meeting"
+    kind: boss
+    tag: must
+    level: 25
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 4 trong 6
+    summary: >-
+      Một Trial of Ascendancy với trap lò lửa, và lần đầu bạn chạm mặt Piety.
+      Xong trận nhớ nhặt Tolman's Bracelet trên xác hắn.
+    quest: Lost in Love
+    reward: "Gem từ Maramoa, và Sewer Keys từ Clarissa."
+    tips: >-
+      Cứ bám cầu thang mà đi là tìm được đường. Piety cast mấy spell lightning
+      rất dễ bước tránh, có đám Blackguard hỗ trợ ả.
+    newbie: >-
+      **Ả không chết ở đây.** Xuống 50% life là ả biến mất và trận kết thúc.
+      Người mới hay đuổi theo một cú kill không bao giờ tới.
+
+  - id: the-sewers
+    name: The Sewers
+    kind: side
+    tag: worth
+    branchFrom: the-slums
+    level: 26
+    image: quest-bust
+    badge: "+1 passive point"
+    summary: >-
+      Gom ba bức tượng bán thân từ ba căn phòng. Zone này nằm sẵn trên lộ
+      trình, nên cái giá duy nhất là vài đoạn rẽ ngắn cho mỗi bức.
+    quest: Victario's Secrets
+    reward: "Book of Skill từ Hargan: +1 passive point và 2 respec point."
+    why: "Một passive point cho đoạn rẽ mà kiểu gì bạn cũng đi."
+    tips: >-
+      Một bức ở căn phòng lớn đầu tiên, một bức ở phòng ngay sau waypoint, bức
+      thứ ba ở phòng thứ ba, bên trái hay bên phải thì tùy layout. Lát nữa bạn
+      còn quay lại đây để đốt Undying Blockage.
+
+  - id: the-marketplace
+    name: The Marketplace
+    kind: zone
+    tag: travel
+    level: 26
+    waypoint: true
+    summary: >-
+      Waypoint nằm quá chỗ Marceus the Defaced, trong con hẻm tượng. Cửa vào
+      The Catacombs ngay cạnh đó.
+
+  - id: the-catacombs
+    name: The Catacombs
+    kind: side
+    tag: worth
+    branchFrom: the-marketplace
+    level: 27
+    image: quest-labyrinth
+    badge: Trial 5 trong 6
+    summary: "Một Trial of Ascendancy với lưỡi dao tuần tra. Chỉ một tầng, sát waypoint Marketplace."
+    why: >-
+      Không quest, không passive point: đây thuần túy là cái thứ năm trong sáu
+      Trial. Nếu bạn định không chạy Labyrinth thì bỏ được, nhưng bạn nên chạy
+      Labyrinth.
+
+  - id: the-battlefront
+    name: The Battlefront
+    kind: zone
+    tag: must
+    level: 27
+    waypoint: true
+    image: quest-ribbon-spool
+    summary: >-
+      Lấy waypoint trên nền đất đầu tiên, rồi tìm Ribbon Spool trong một cái
+      hòm của Blackguard.
+    tips: >-
+      Có hai lối ra: đường dưới đất đi lên The Docks, và nền trên dẫn sang
+      Solaris Temple. Bỏ qua Captain Aurelianus.
+
+  - id: the-docks
+    name: The Docks
+    kind: zone
+    tag: must
+    level: 29
+    waypoint: true
+    summary: >-
+      Thaumetic Sulphite nằm trong một thùng tiếp tế ở một bến tàu ngẫu nhiên.
+    quest: "Fiery Dust, and A Swig of Hope"
+    reward: "Một chiếc nhẫn từ Captain Fairgraves, đứng ở cuối một bến tàu ngẫu nhiên."
+    tips: >-
+      Chiếc nhẫn đó yếu, nhưng bạn đã ở đây rồi, nên tiện đường thì cứ nhận.
+
+  - id: solaris-temple-1-3
+    name: The Solaris Temple Level 1
+    kind: zone
+    tag: travel
+    level: 27
+    waypoint: true
+    summary: "Đường thẳng. Gần lối ra có mấy con boss không bắt buộc, chẳng con nào đáng dừng lại."
+
+  - id: solaris-temple-2-3
+    name: The Solaris Temple Level 2
+    kind: zone
+    tag: must
+    level: 28
+    waypoint: true
+    summary: >-
+      Bốn ngọn đuốc dọc tấm thảm chỉ đường tới chỗ Lady Dialla.
+    quest: "The Ribbon Spool, and Fiery Dust"
+    reward: "Một amulet từ Dialla khi trả spool, và Infernal Talc khi trả sulphite."
+    tips: "Eternal Laboratory trên bục của cô ta có một crafting recipe."
+
+  - id: ebony-barracks
+    name: "The Ebony Barracks: Gravicius"
+    kind: boss
+    tag: worth
+    level: 29
+    waypoint: true
+    summary: >-
+      Quay về waypoint The Sewers và đốt Undying Blockage bằng Infernal Talc.
+      General Gravicius nằm phía sau đó.
+    quest: Sever the Right Hand
+    reward: "Mở bậc gem level 28 ở chỗ Maramoa: một cú tăng sức mạnh thật sự."
+    why: >-
+      Gravicius không bắt buộc để đi tiếp, nhưng bậc gem hắn mở ra đáng giá
+      hơn hai phút bạn bỏ ra.
+    tips: >-
+      Hắn cast spell fire từ sau một hàng Blackguard hộ tống. Đám hộ tống mới
+      là mối nguy, không phải hắn. Lunaris Temple nằm trên nền phía sau hắn.
+
+  - id: lunaris-temple-1-3
+    name: The Lunaris Temple Level 1
+    kind: zone
+    tag: travel
+    level: 29
+    waypoint: true
+    summary: "Đường thẳng. Fleshrend và Kole đều không bắt buộc; bỏ cả hai."
+
+  - id: lunaris-temple-2-3
+    name: "The Lunaris Temple Level 2: Piety again"
+    kind: boss
+    tag: must
+    level: 30
+    image: quest-tower-key
+    badge: "+1 passive point"
+    summary: >-
+      Lần này Piety chết thật, và rơi The Tower Key.
+    quest: Piety's Pets
+    reward: "Book of Skill từ Grigor: +1 passive point."
+    tips: |
+      Giờ ả đổi qua lại giữa hai dạng.
+
+      **Dạng lửa:** đòn cận chiến của ả dán một debuff làm bạn ăn thêm damage. Nó không đau; nó làm mọi thứ khác đau.
+
+      **Dạng băng:** bảy mũi tên bắn thành hình cung, để lại chilling ground. Cái nguy hiểm là lớp chill đó, không phải mấy mũi tên.
+    newbie: >-
+      Tầng này là một mê cung lớn trải trên nhiều nền. Cứ theo cầu thang nào
+      đi lên. Tới ngã rẽ có mấy cỗ xe, chọn bên có **một** cỗ xe: bên có hai
+      cỗ là đường cụt.
+
+  - id: imperial-gardens
+    name: The Imperial Gardens
+    kind: zone
+    tag: must
+    level: 30
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 6 trong 6
+    summary: >-
+      Đường chính dẫn tới waypoint. Trial of Ascendancy cuối cùng, với trap
+      phóng tiêu, nằm ở phần trên.
+    tips: >-
+      The Library ở bên trái, Trial ở phía trên, còn Sceptre of God ở phía
+      trên chếch phải. Làm xong Trial này là Aspirants' Plaza mở.
+
+  - id: the-library
+    name: "The Library and The Archives"
+    kind: side
+    tag: worth
+    branchFrom: imperial-gardens
+    level: 30
+    waypoint: true
+    image: quest-golden-pages
+    badge: Tiệm gem của Siosa
+    summary: >-
+      Gom mấy trang giấy vàng trong The Archives rồi mang về để giải thoát
+      Siosa.
+    quest: A Fixture of Fate
+    reward: "Siosa bán gần như mọi skill gem và support gem thường, bất kể class của bạn."
+    why: >-
+      Không có passive point, nhưng đây là thứ mở khóa vĩnh viễn hữu ích nhất
+      trong nửa đầu campaign. Build của bạn cần một viên gem mà class bạn
+      không được mời? Chỗ này là nơi mua.
+
+  - id: sceptre-of-god
+    name: "The Sceptre of God and The Upper Sceptre"
+    kind: zone
+    tag: travel
+    level: 32
+    waypoint: true
+    summary: >-
+      Ba tầng phòng tròn, rồi thêm chừng đó nữa ở trên. Cầu thang nằm trong
+      các phòng góc. The Tower Key lấy từ Piety sẽ mở cửa.
+    tips: "Để ý mấy chướng ngại chắn đường, cứ theo đó là tìm được lối lên mái."
+
+  - id: dominus
+    name: "Dominus, High Templar"
+    kind: boss
+    tag: must
+    level: 33
+    summary: >-
+      Boss của act, và là trận nhiều phase nhất tính tới đây: hai đợt thuộc hạ,
+      rồi tới Dominus, rồi dạng thứ hai của hắn.
+    reward: "Mở The Aqueduct và Act 4."
+    tips: |
+      **Phase 1:** ba champion Blackguard cùng lúc. Thứ giết người chơi là bị vây. Giữ khoảng cách.
+
+      **Phase 2:** bộ ba Undying. Giết Alal trước, rồi Kali, rồi Orcus. Kali tăng tốc mọi thứ quanh ả, nên phải xử ả trước khi Orcus tới.
+
+      **Phase 3:** Dominus. Hắn phủ shock lên mặt đất dưới chân bạn, đứng trong đó là bạn ăn thêm **toàn bộ** damage. Khi hắn hét **"The Touch of God!"**, hắn lấy đà chừng một giây rưỡi rồi giáng xuống một đòn cực nặng. Nghe câu đó là chạy ra khỏi tầm cận chiến ngay.
+
+      **Phase 4:** hắn biến hình. Máu đổ như mưa khắp đấu trường và hắn dựng một quả bong bóng vàng quanh mình.
+    newbie: >-
+      Cách chống phase cuối ngược hẳn với bản năng của bạn: **hãy đứng sát
+      hắn, bên trong quả bong bóng.** Đứng ngoài là bạn ăn damage over time
+      cộng dồn, và nó sẽ giết bạn. Một flask xóa bleeding sẽ gỡ được hiệu ứng
+      đó, và flask armour cũng giúp ích. Thấy tụt máu thì cứ mở portal rút ra,
+      chẳng có gì phải ngại.
+
+sections:
+  - title: Sáu Trial của bạn đã xong
+    body: >-
+      The Crematorium, The Catacombs và The Imperial Gardens khép lại bộ sáu.
+      Tới tấm bia Aspirants' Plaza ở Sarn Encampment là Labyrinth đã mở. Phần
+      lớn guide khuyên chạy nó vào đầu Act 4 chứ không phải ngay lập tức, để
+      bạn có thêm vài level trước đã.
+  - title: Siosa đáng để rẽ qua
+    body: >-
+      Mỗi class chỉ được mời một lát cắt nhỏ trong kho gem qua quest reward.
+      Siosa bán gần như toàn bộ. Nếu build guide của bạn ghi một viên gem mà
+      bạn chưa từng được mời, đây là chỗ lấy nó, không thì phải chờ tới Act 6.
+  - title: Những gì nên bỏ qua
+    body: >-
+      Sarn Arena, Marceus the Defaced, Captain Aurelianus, Fleshrend, Kole và
+      mấy con boss không bắt buộc ở Solaris Temple. A Swig of Hope chỉ đáng
+      làm vì The Docks vốn đã nằm trên lộ trình.
+
+patchNotes:
+  - "3.30 không đổi quest, reward hay zone nào của Act 3."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Mobalytics Act 3 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-3" }
+  - { title: "PoEDB Act 3", url: "https://poedb.tw/us/Act_3" }

@@ -1,0 +1,306 @@
+number: 5
+title: "Oriath, Innocence, và cú phạt resistance của Kitava"
+town: Overseer's Tower
+levelIn: 41
+levelOut: 45
+skillPoints: 2
+skillPointsNote: "Cộng thêm 2 respec point từ Kitava's Torments."
+boss: "Kitava, the Insatiable"
+keyRewards:
+  - "2 passive point: In Service to Science, Kitava's Torments"
+  - "Một chiếc nhẫn resistance từ Lani ngay ở zone đầu tiên"
+  - "Một utility flask miễn phí từ The Key to Freedom"
+intro: >-
+  Act 5 là act ngắn nhất tính tới đây, và là act để lại cái bóng dài nhất.
+  Mười một zone, hai passive point, không Trial, không Pantheon soul. Rồi bạn
+  hạ Kitava và mất vĩnh viễn 30 điểm ở mọi loại resistance. Mọi việc bạn làm
+  trong act này nên được hiểu là chuẩn bị cho khoảnh khắc đó.
+
+nodes:
+  - id: slave-pens
+    name: "The Slave Pens: Overseer Krow"
+    kind: zone
+    tag: must
+    level: 41
+    waypoint: true
+    summary: >-
+      Bạn đặt chân tới Oriath ở đây. Hạ Overseer Krow là cái thang lên
+      Overseer's Tower thả xuống.
+    quest: Return to Oriath
+    reward: "Một chiếc nhẫn từ Lani: Topaz, Sapphire hay Ruby Ring, hoặc một trong ba loại Two-Stone Ring."
+    tips: >-
+      Các guide mô tả đường đi mỗi nơi một kiểu, nhưng mốc dễ nhận nhất là xác
+      người Karui bị treo. Đi về phía cuối bên phải, rẽ xuống, rồi vòng ngược
+      sang trái.
+    newbie: >-
+      **Chiếc nhẫn này quan trọng hơn vẻ ngoài của nó.** Bốn zone nữa là
+      Kitava lấy đi 30 điểm ở toàn bộ resistance của bạn. Một Two-Stone Ring
+      phủ hai nguyên tố trong một ô, nên hãy chọn cái lấp hai lỗ hổng tệ nhất
+      của bạn, đừng chọn cái tên nghe kêu nhất.
+
+  - id: overseers-tower
+    name: Overseer's Tower
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong act này. Utula bán trang bị và quality currency, Lani
+      bán wand, trang sức, flask và currency, còn Vilenta lo phần quest reward.
+    tips: >-
+      Innocence chết rồi thì Bannon thay Utula làm vendor trang bị. Sin cũng
+      lần đầu xuất hiện trong act này và sẽ thành NPC Pantheon ở Act 6.
+
+  - id: control-blocks
+    name: The Control Blocks
+    kind: zone
+    tag: must
+    level: 41
+    image: quest-miasmeter
+    badge: "+1 passive point"
+    summary: >-
+      Từ điểm xuất phát đi lên tới căn phòng có Miasmeter bên trái, rồi đi
+      tiếp sang phải.
+    quest: In Service to Science
+    reward: "Book of Skill từ Vilenta: +1 passive point."
+    tips: >-
+      Cứ đi về phía tây xa hết mức zone cho phép là thấy Miasmeter, rồi từ đó
+      đi đông bắc cho phần còn lại của zone.
+
+  - id: justicar-casticus
+    name: "Justicar Casticus"
+    kind: boss
+    tag: must
+    level: 41
+    image: quest-eyes-of-zeal
+    summary: >-
+      Ở cuối The Control Blocks. Hắn rơi Eyes of Zeal, thứ đưa bạn ra khỏi nhà
+      tù.
+    quest: The Key to Freedom
+    reward: "Chọn một utility flask từ Lani: Ruby, Sapphire, Topaz, Amethyst, Granite, Jade hoặc Diamond."
+    tips: >-
+      Đây là một ô utility flask miễn phí, nên đừng để trống. Không nguồn nào
+      bọn mình đọc xếp hạng bảy lựa chọn này với nhau, nhưng một flask thiên
+      về giáp hay khả năng sống vẫn an toàn hơn flask damage, cho cả Labyrinth
+      lẫn Kitava.
+
+  - id: oriath-square
+    name: Oriath Square
+    kind: zone
+    tag: travel
+    level: 42
+    waypoint: true
+    summary: >-
+      Băng qua cây cầu bên phải, rồi đi lên hướng Templar Courts.
+
+  - id: the-matriarch
+    name: "The Matriarch"
+    kind: side
+    tag: skip
+    branchFrom: oriath-square
+    level: 42
+    summary: >-
+      Một trận không bắt buộc ở Oriath Square, có hai con Oriath Enforcer đứng
+      cùng ả. Hạ ả thì mở Stately Hideout.
+    why: >-
+      Hideout là đồ trang trí, không phải sức mạnh. Ở đây không có passive
+      point và không có phần thưởng vĩnh viễn nào cho nhân vật, nên lần chơi
+      đầu cứ bỏ qua, trừ khi bạn thực sự muốn cái hideout.
+
+  - id: templar-courts
+    name: The Templar Courts
+    kind: zone
+    tag: travel
+    level: 42
+    waypoint: true
+    summary: >-
+      Đi sang phải tới sát tường, lên trên, rồi lại sang phải tới cầu thang
+      phòng xử án. Theo nó xuống căn phòng lớn; Chamber of Innocence ở bên
+      trái.
+    tips: "Lạc đường thì nhớ hướng chung xuyên qua zone này là đông bắc."
+
+  - id: chamber-of-innocence
+    name: "The Chamber of Innocence: Avarius and Innocence"
+    kind: boss
+    tag: must
+    level: 43
+    waypoint: true
+    summary: >-
+      Đi vòng quanh zone theo chiều kim đồng hồ, rồi xoắn ngược chiều kim đồng
+      hồ về phía tây bắc để tới Sanctum of Innocence.
+    quest: Death to Purity
+    reward: "Một viên jewel hoặc một Uncarved Gemstone từ Lani."
+    tips: |
+      Đây là **một trận với hai danh tính**, nên các guide khác gọi tên nó mỗi nơi một kiểu. High Templar Avarius là phase một; Innocence là phase hai. Guide nào chỉ ghi một trong hai cái tên thì vẫn là trận này.
+
+      **Phase 1, Avarius:** hai đòn slam, tránh bằng cách đừng đứng trong vùng đánh, cộng mấy pho tượng chậm chạp hắn đánh thức dậy phụ hắn. Tới 50% hắn teleport vào giữa, bật bất tử và gọi quái, nên hãy dọn adds.
+
+      **Phase 2, Innocence:** bất tử ở mốc 50% và 33%. Khi hắn hô "I am the torch!", hắn channel một luồng sáng mà damage cộng dồn theo thời gian nó bám bạn, nên quẹt qua một nhịp thì sống, ăn trọn cả luồng thì không. Hãy đứng sau lưng hắn và chạy vòng quanh. Khi hắn hô "I am the end", hắn kích một vụ nổ lớn lan ra từ chính mình, nên chạy ra xa.
+    newbie: >-
+      Loạt đạn vàng của Avarius mới là thứ giết người chơi ở phase một, và
+      cách xử lý được khuyên dùng khá lạ: dùng [[Portal Scroll]], rời đấu
+      trường và chờ cho nó qua. Đây là chỗ duy nhất trong mấy act này mà bỏ đi
+      là một chiến thuật chứ không phải rút lui. Nhớ nhặt crafting recipe ở
+      căn phòng bên trái trước khi vào Sanctum. Xong trận thì nói chuyện với
+      Sin, đi lối ra bên phải, qua waypoint rồi nói chuyện với Bannon.
+
+  - id: torched-courts
+    name: The Torched Courts
+    kind: zone
+    tag: travel
+    level: 44
+    summary: >-
+      Bạn lần ngược đường cũ ra khỏi khu tòa án đang cháy, đi xuyên qua đám
+      cultist của Kitava.
+    tips: "Cato, Scholar of Light và một con Heretical Guardian đều không bắt buộc. Đi qua cả hai."
+
+  - id: ruined-square
+    name: The Ruined Square
+    kind: zone
+    tag: must
+    level: 44
+    waypoint: true
+    summary: >-
+      Trục nối ba zone cuối: The Ossuary, The Reliquary và The Cathedral
+      Rooftop.
+    tips: >-
+      Đi vòng ngược chiều kim đồng hồ để tìm waypoint, nó nằm ngay trước cửa
+      vào Ossuary. Rồi đi xuống nam tới quảng trường chính và chọn lối bên
+      phải để sang Reliquary.
+
+  - id: utula-feast
+    name: "Utula, Stone and Steel"
+    kind: side
+    tag: skip
+    branchFrom: ruined-square
+    level: 44
+    summary: >-
+      Một trận không bắt buộc ở The Ruined Square. Hạ hắn là xong The King's
+      Feast, trả cho Bannon để chọn một trong hai mươi base vũ khí và khiên.
+    why: >-
+      Hai mươi cái base trơn ở level 44 là phần thưởng mỏng, và các lộ trình
+      nhanh bỏ hẳn quest này. Chỉ làm nếu vũ khí của bạn đang thực sự kéo bạn
+      lại. The Risen Matriarch cũng ở đây, và cũng không bắt buộc.
+
+  - id: the-ossuary
+    name: The Ossuary
+    kind: zone
+    tag: must
+    level: 44
+    image: quest-sign-of-purity
+    summary: >-
+      Sign of Purity nằm ở Tomb of the First Templar.
+    tips: >-
+      Căn phòng nối nhỏ bị đóng, nên bạn phải đi đường vòng xa mới tới được
+      lăng mộ. **Lấy Sign of Purity xong thì nhớ kéo cần gạt** để mở lại lối
+      tắt về. Bone Husk, Awoken Giant và Bone Stalker không bắt buộc.
+
+  - id: the-reliquary
+    name: The Reliquary
+    kind: side
+    tag: worth
+    branchFrom: ruined-square
+    level: 44
+    waypoint: true
+    image: quest-karui-relic
+    badge: "+1 passive point"
+    summary: >-
+      Ba hộp relic của người Karui, mỗi cái nằm ở một góc xa của bản đồ. Gom
+      đủ cả ba.
+    quest: Kitava's Torments
+    reward: "Book of Skill từ Lani: +1 passive point và 2 respec point."
+    why: >-
+      Quest này không bắt buộc, nhưng zone vốn đã nằm trên đường bạn tới
+      Cathedral Rooftop, nên cái điểm đó chỉ tốn công đi ra mấy góc.
+    tips: >-
+      Bắt đầu từ một góc rồi vòng sang các góc còn lại. Các guide gọi tên mấy
+      cái relic khác nhau — chỗ thì Hinekora's Hair, Tukohama's Tooth và
+      Valako's Jaw, chỗ thì ba cái Kitava's Torment giống nhau — nhưng kiểu gì
+      cũng là ba cái hộp nằm ở các góc.
+
+  - id: cathedral-rooftop
+    name: The Cathedral Rooftop
+    kind: zone
+    tag: must
+    level: 45
+    waypoint: true
+    summary: >-
+      Đi về hướng tây nam. Chạm vào Cradle of Purity là mở trận boss của act ở
+      Cathedral Apex phía trên.
+    newbie: >-
+      Về town ngay lúc này. Đây là cơ hội cuối để bạn tiêu currency, nâng cấp
+      gear và kéo resistance lên trước trận đánh sẽ lấy đi 30 điểm ở tất cả
+      các loại đó.
+
+  - id: kitava-5
+    name: "Kitava, the Insatiable"
+    kind: boss
+    tag: must
+    level: 45
+    summary: >-
+      Boss của act, và là lý do act kế tiếp khó hơn những con số area level
+      của nó.
+    quest: The Ravenous God
+    reward: "Sin kéo bạn ra Oriath Docks. Con tàu của Lilly Roth đi Wraeclast và Act 6."
+    tips: |
+      Kitava phạt cả hai thái cực khoảng cách, và đó là chìa khóa của trận này.
+
+      - **Đứng sát** thì hắn quét đất từ một bên. Hãy dời sang bên kia của hắn.
+      - **Đứng quá xa** thì hắn ném mảnh vỡ. Hãy áp vào gần.
+      - Cú slam lớn của hắn tỏa ra một sóng xung kích, và hắn đặt rune hình chữ X cùng mấy vạch gây damage trên sàn. Tất cả những cái đó đều né bằng cách bước sang ngang, không phải lùi về sau.
+      - Ngắt đòn của hắn để quả Heart lộ ra, rồi đánh vào quả Heart đó.
+
+      Hắn không có đòn phun lửa trong act này, bạn đọc ở đâu đó thì cũng là nhầm; món vũ khí bắn tia thuộc về phiên bản Kitava ở Act 10.
+    newbie: >-
+      Chết ở đây rẻ lắm. Bạn hồi sinh ngay ngoài cửa đấu trường, đi thẳng vào
+      lại và đánh tiếp, bao nhiêu lần cũng được, và trận không reset. Hình
+      phạt resistance chỉ giáng xuống sau khi trận kết thúc, không phải trong
+      lúc đánh, nên chết nhiều lần cũng không làm nó tới sớm hay cộng dồn.
+
+sections:
+  - title: "Hình phạt là −30% toàn bộ resistance, kể cả chaos"
+    body: >-
+      Cách nói quen thuộc là "−30% toàn bộ elemental resistance", và nó thiếu.
+      **Fire, cold, lightning và chaos đều tụt 30 điểm.** Nó vĩnh viễn, không
+      gỡ được, và Kitava ở Act 10 giáng thêm một hình phạt y hệt, thành −60%
+      tổng cộng khi bạn kết thúc campaign. Nó được áp sau trận đánh, nên chết
+      vài lần trước mặt hắn cũng không làm nó tới sớm.
+  - title: Làm gì với nó, trước trận đánh
+    body: >-
+      Toàn bộ mẹo nằm ở chỗ đây là việc phòng trước. Hãy đẩy elemental
+      resistance vượt cap khoảng 30 điểm **trước khi** bạn đánh Kitava, để cú
+      trừ rơi vào phần đệm chứ không rơi vào cap của bạn: con số trong ngoặc
+      trên bảng nhân vật cần cao hơn hẳn mức cap 75%, chứ không phải chỉ bằng
+      đúng nó. Các cách làm, xếp theo hiệu quả so với công sức — crafting bench
+      cho mọi ô còn trống prefix hay suffix, Two-Stone Ring từ Lani ở zone đầu
+      act, và một Iron Ring kèm một skill gem đúng màu bán cho vendor bất kỳ,
+      ra Ruby, Sapphire hoặc Topaz Ring có implicit của nguyên tố đó. Công thức
+      cuối này có một nguồn báo là đã bị gỡ, nguồn khác thì vẫn ghi là còn, nên
+      hãy tự kiểm tra cửa sổ vendor trong league của bạn. Về sau,
+      [[Purity of Elements]] phủ cả ba nguyên tố chỉ bằng một aura.
+  - title: Sau trận đánh, theo thứ tự
+    body: >-
+      Mở bảng nhân vật và nhìn bốn con số resistance: chúng vừa tụt 30 điểm
+      mỗi cái. Gắn mod resistance ở crafting bench cho mọi ô còn chỗ. Đeo chiếc
+      nhẫn từ quest Return to Oriath và flask từ The Key to Freedom nếu bạn
+      chưa đeo. Rồi đừng bước vào The Twilight Strand của Act 6 khi còn hụt
+      cap — đó là zone level 45 và là bài kiểm tra thật sự đầu tiên cho thứ
+      bạn vừa mất.
+  - title: Những gì nên bỏ qua
+    body: >-
+      The Matriarch ở Oriath Square, trừ khi bạn muốn Stately Hideout.
+      The King's Feast của Utula, trừ khi vũ khí của bạn tệ thật. Cato,
+      Heretical Guardian, The Risen Matriarch, Bone Husk, Awoken Giant và
+      Bone Stalker. Act 5 không có Trial of Ascendancy ở bất cứ đâu, nên đừng
+      mất công đi tìm.
+
+patchNotes:
+  - "Hình phạt resistance của Kitava không đổi. Kitava không được nhắc tới chỗ nào trong patch notes 3.30, và không zone, quest hay passive point nào của Act 5 thay đổi."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Mobalytics Act 5 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-5" }
+  - { title: "PoE Vault Act 5 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-5" }
+  - { title: "PoEDB Act 5", url: "https://poedb.tw/us/Act_5" }
+  - { title: "Maxroll vendor recipes", url: "https://maxroll.gg/poe/resources/vendor-recipes" }

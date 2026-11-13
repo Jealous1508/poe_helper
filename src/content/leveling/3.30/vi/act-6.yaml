@@ -1,0 +1,372 @@
+number: 6
+title: "Trở lại Wraeclast, và những Pantheon power đầu tiên"
+town: Lioneye's Watch
+levelIn: 45
+levelOut: 50
+skillPoints: 3
+skillPointsNote: "Cộng thêm 2 respec point từ Fallen from Grace, quest này trả bạn Book of Regrets chứ không phải Book of Skill."
+boss: "Tsoagoth, The Brine King"
+keyRewards:
+  - "3 passive point: The Father of War, The Cloven One, The Puppet Mistress"
+  - "Bốn Pantheon soul: vị Major đầu tiên và ba vị Minor"
+  - "Lilly Roth bán mọi gem sau khi bạn xong Fallen from Grace"
+  - "Một chiếc mũ rare miễn phí từ Essence of Umbra"
+  - "Trial đầu tiên trong ba Trial của Cruel Labyrinth"
+intro: >-
+  Act 6 là act dày đặc thứ mở khóa vĩnh viễn nhất game. Ba passive point, bốn
+  Pantheon soul, một vendor bán đủ mọi gem, Trial Cruel đầu tiên, và trong
+  3.30 là mốc Item Tier bắt đầu xuất hiện trên đồ rơi. Nó cũng là act bạn bước
+  vào với 30 điểm resistance ít hơn một tiếng trước, đối đầu area level 45 tới
+  50, nên đây chính là nơi resistance hụt cap bắt đầu giết người thật sự.
+
+nodes:
+  - id: lioneyes-watch-6
+    name: Lioneye's Watch
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Bạn cập bến ngay trong town trước khi thấy bất kỳ zone nào. Tarkleigh
+      bán trang bị, Bestel bán wand, trang sức và flask, còn Lilly Roth lúc
+      đầu đứng ngoài bến tàu.
+    tips: >-
+      Sin cũng ở đây và sẽ thành NPC Pantheon của bạn ở phần sau của act. Kiểm
+      tra resistance trước khi rời town: zone kế tiếp là level 45 còn bạn thì
+      vừa mất 30 điểm ở mọi loại.
+
+  - id: twilight-strand-6
+    name: The Twilight Strand
+    kind: side
+    tag: worth
+    branchFrom: lioneyes-watch-6
+    level: 45
+    image: quest-book-of-regrets
+    badge: Tiệm gem của Lilly Roth
+    summary: >-
+      Dọn sạch lũ undead trên bãi biển rồi quay lại chỗ Lilly Roth. Vẫn là bãi
+      biển bạn bắt đầu game, năm act về trước.
+    quest: Fallen from Grace
+    reward: "Book of Regrets từ Lilly Roth: 2 respec point, và cô ta thành vendor gem đầy đủ."
+    why: >-
+      Mấy điểm respec thì nhỏ. Tiệm gem thì không: sau đó Lilly bán gần như
+      mọi skill gem và support gem trong game, bất kể class của bạn, đúng kiểu
+      Siosa phiên bản Act 6. Đây là quest tùy chọn giá trị nhất của act và
+      đáng làm một lần mỗi league.
+    newbie: >-
+      Một zone level 45 đặc nghẹt undead, bước vào bằng đúng bộ gear vừa kết
+      thúc Act 5 và với cú phạt resistance còn nóng hổi, chính là bài kiểm tra
+      thực tế đầu tiên xem bạn đã chuẩn bị cho Kitava hay chưa. Thấy nguy hiểm
+      là một tín hiệu: quay về town sửa resistance trước khi act khó lên.
+
+  - id: the-coast-6
+    name: The Coast
+    kind: zone
+    tag: travel
+    level: 45
+    waypoint: true
+    summary: >-
+      Lấy waypoint rồi đi thẳng tới The Mud Flats. Bỏ qua The Tidal Island.
+    tips: >-
+      Có một người lạ ở đây mời bạn chuỗi quest Into the Breach. Cứ đi qua:
+      Breach là nội dung endgame. Con unique tùy chọn của zone cũng không đáng
+      dừng lại.
+
+  - id: tidal-island-6
+    name: The Tidal Island
+    kind: side
+    tag: skip
+    branchFrom: the-coast-6
+    level: 45
+    summary: >-
+      Một hòn đảo cụt. Riptide rơi Bestel's Manuscript, Bestel đổi nó lấy một
+      base belt hoặc amulet tùy bạn chọn.
+    why: >-
+      Không passive point, không respec point, không mở khóa vĩnh viễn: một
+      cái base belt hay amulet trơn ở level 45, đổi lấy một đoạn rẽ chẳng dẫn
+      đi đâu. Các guide gọi phần thưởng này là nhạt, và các lộ trình nhanh bỏ
+      hẳn zone.
+
+  - id: mud-flats-6
+    name: "The Mud Flats: The Dishonoured Queen"
+    kind: zone
+    tag: must
+    level: 46
+    summary: >-
+      The Dishonoured Queen chờ ở góc đông bắc, thường là cạnh một căn nhà. Ả
+      rơi Eye of Conquest.
+    tips: >-
+      Hạ ả xong thì đi ngược về phía tây để mở Karui Fortress bằng con mắt đó.
+    newbie: >-
+      Từ zone này trở đi bạn ở area level 46 trở lên, và đó là mốc mercenary
+      bạn thuê bắt đầu chịu một cú phạt resistance của riêng nó trong 3.30.
+      Hãy chuẩn bị tinh thần là từ đây nó đỡ hữu dụng đi thấy rõ.
+
+  - id: karui-fortress
+    name: "The Karui Fortress: Tukohama"
+    kind: zone
+    tag: must
+    level: 46
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Đi về đông bắc tới cổng nam của Tukohama's Keep, phá bốn cái totem trên
+      đường. Tukohama, Karui God of War ở bên trong.
+    quest: The Father of War
+    reward: "Book of Skill từ Tarkleigh: +1 passive point, và Soul of Tukohama."
+    tips: >-
+      Trong pháo đài có một crafting recipe, và lối ra nằm ở phía bắc. Sin
+      xuất hiện sau trận và giới thiệu hệ thống Pantheon.
+    newbie: >-
+      Soul of Tukohama là power của một vị Minor: đứng yên thì mỗi giây bạn
+      được thêm 3% physical damage reduction, tối đa 9%. Nó hợp với build cắm
+      chân một chỗ mà channel, và gần như vô dụng với build chạy kite.
+
+  - id: the-ridge
+    name: The Ridge
+    kind: zone
+    tag: travel
+    level: 46
+    waypoint: true
+    summary: >-
+      Đi về phía bắc và bỏ qua mấy vòng rẽ phụ. Theo mái nhà xuống
+      The Lower Prison.
+    tips: "Con unique tùy chọn của zone chẳng cho gì. Cứ đi tiếp."
+
+  - id: lower-prison-6
+    name: The Lower Prison
+    kind: zone
+    tag: must
+    level: 47
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 1 trong 3 của Cruel
+    summary: >-
+      Kiểu gì bạn cũng băng qua zone này. Đã ở đây thì làm luôn Trial of
+      Ascendancy: đây là cái đầu tiên trong ba cái Cruel Labyrinth cần.
+    tips: >-
+      Trial thường nằm ở phần phía nam của zone, cạnh nó có một crafting
+      recipe. Là trap chông, và chúng gây bleed bằng một phần tư life cộng
+      energy shield của bạn, nên đừng băng qua khi đang ít máu. Cửa vào
+      Shavronne's Tower ở góc trên bên trái hoặc góc dưới bên phải.
+    newbie: >-
+      Vài guide gọi zone này là The Prison. Vẫn là một chỗ thôi. Cruel
+      Labyrinth chỉ cần **ba** trial, không phải sáu như hồi Normal: cái này,
+      và hai cái ở Act 7.
+
+  - id: shavronnes-tower
+    name: "Shavronne's Tower: Brutus and Shavronne"
+    kind: boss
+    tag: must
+    level: 47
+    summary: >-
+      Prison Rooftop có Reassembled Brutus và Shavronne the Returned. Đây là
+      một trận đánh thay phiên với hai lần đổi người, không phải hai trận
+      riêng.
+    quest: Essence of Umbra
+    reward: "Một chiếc mũ rare từ Tarkleigh: nâng cấp thật sự ở level 47, mà zone thì vốn đã nằm trên lộ trình."
+    tips: |
+      **Brutus** có một cú triple slam biết bám theo bạn và một cú chain hook kéo bạn về phía hắn.
+
+      Giữa trận hắn **đổi chỗ cho Shavronne**, ả bay lơ lửng, không nhắm vào được, và dùng mấy cú slam hình vòng có báo trước. Suốt đoạn đó chẳng có gì để bạn đánh; bạn chỉ việc sống qua cái vòng lặp ấy.
+
+      Rồi **Brutus quay lại với một buff lightning damage vĩnh viễn** cho tới hết trận. Các nguồn nói khác nhau về mốc máu chính xác của hai lần đổi, nên hãy nhìn trận đánh thay vì đếm phần trăm.
+    newbie: >-
+      Cả hai đều có đòn giết bạn tại chỗ, và đòn nào cũng có động tác báo
+      trước. Đây là trận đọc animation, không phải trận kiểm tra gear. Xong
+      trận, hạ được Brutus là đường xuống mở ra: nói chuyện với Sin, rồi đi
+      sang trái và xuống qua The Warden's Chambers, chỗ đó có một crafting
+      altar, để tới Prisoner's Gate.
+
+  - id: prisoners-gate
+    name: "Prisoner's Gate: Abberath"
+    kind: zone
+    tag: must
+    level: 47
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Nhảy xuống bờ dốc cạnh đường rồi men theo hẻm núi. Một đầu có Nessa, đầu
+      kia là Valley of the Fire Drinker, nơi Abberath, the Cloven One đang chờ.
+    quest: The Cloven One
+    reward: "Book of Skill từ Bestel: +1 passive point, và Soul of Abberath."
+    tips: >-
+      Đấu trường của Abberath chia làm hai nửa. Xuống 50% life là hắn nhảy
+      sang đấu trường thứ hai, và bạn phải đi một lối hẹp nối sang đó. Cơ chế
+      chính của hắn là thiên thạch, và cách chống đơn giản là đừng bao giờ
+      đứng yên.
+    newbie: >-
+      Thứ giết người chơi là cái hành lang giữa hai đấu trường, không phải con
+      boss. Nó đầy goatmen và cầu lửa, nên bạn tới đấu trường hai là đã tơi
+      tả. Hãy dọn nó cẩn thận và nạp đầy flask trước khi bước vào đấu trường
+      hai. Xong trận thì dùng portal ra và trả quest cho Bestel.
+
+  - id: western-forest-6
+    name: The Western Forest
+    kind: zone
+    tag: travel
+    level: 48
+    waypoint: true
+    summary: >-
+      Cứ theo đường cái. Tìm cây đuốc dựng sát mặt đường, rồi rẽ vào lối mòn
+      theo đúng hướng cây đuốc chỉ.
+    tips: >-
+      Trại của Alira có một crafting recipe dọc lối đá. Con unique tùy chọn
+      của zone chẳng cho gì.
+
+  - id: the-riverways
+    name: The Riverways
+    kind: zone
+    tag: travel
+    level: 48
+    waypoint: true
+    summary: >-
+      Theo đường tới waypoint, rồi cứ theo tiếp. Lối rẽ đối diện waypoint dẫn
+      sang The Wetlands.
+    tips: >-
+      Dùng movement skill để vượt mấy cây cầu sập. Animal Pack không bắt buộc,
+      và bạn sẽ chạy ngang nó lần nữa trên đường tới The Southern Forest.
+
+  - id: the-wetlands
+    name: "The Wetlands: Ryslatha"
+    kind: side
+    tag: worth
+    branchFrom: the-riverways
+    level: 48
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Một zone cụt ngắn. Tìm hai cây cột gần waypoint, đi theo lối mòn, và
+      The Spawning Ground nằm ở hướng tây bắc.
+    quest: The Puppet Mistress
+    reward: "Book of Skill từ Tarkleigh: +1 passive point, và Soul of Ryslatha."
+    why: >-
+      Không bắt buộc, nhưng bạn nên làm: một passive point và một Pantheon
+      power chỉ đổi lấy một zone ngắn. Đừng bỏ.
+    tips: >-
+      Phá ba cái Ryslatha's Nest nằm dọc mép dưới đấu trường. Đó là cơ chế duy
+      nhất của trận này được ghi lại, và không nguồn nào bọn mình với tới mô
+      tả thứ gì đặc biệt hay làm người mới sập bẫy ở đây.
+    newbie: >-
+      Soul of Ryslatha nạp lại ba charge life flask mỗi ba giây trong lúc bạn
+      không uống, và đó là power Minor tốt nhất để mang vào Cruel Labyrinth:
+      cạn flask giữa hai cái trap là lý do có tên tuổi khiến người ta hỏng
+      lượt chạy.
+
+  - id: southern-forest-6
+    name: The Southern Forest
+    kind: zone
+    tag: travel
+    level: 49
+    waypoint: true
+    summary: >-
+      Theo đường cho tới khi hết đường, rồi đi hướng đông nam. Mấy thân cây đổ
+      nối các hòn đảo lại với nhau.
+    tips: >-
+      Waypoint và cửa vào Cavern of Anger đều nằm ở phía ngoài cùng bên phải.
+      Con unique tùy chọn của zone chẳng cho gì.
+
+  - id: cavern-of-anger
+    name: The Cavern of Anger
+    kind: zone
+    tag: must
+    level: 49
+    summary: >-
+      Đấu trường cũ của Merveil hồi Act 1, giờ ngập nước. Mở Flag Chest để lấy
+      The Black Flag.
+    tips: >-
+      Một cái cần gạt gần đó mở Coral Hideout. Lối ra sang The Beacon nằm bên
+      trái hoặc bên phải.
+
+  - id: the-beacon
+    name: The Beacon
+    kind: zone
+    tag: must
+    level: 49
+    waypoint: true
+    summary: >-
+      Men theo bờ biển tới ngọn hải đăng, rồi giải câu đố để gọi tàu của
+      Weylam Roth.
+    tips: >-
+      Có một crafting recipe ở phần nền cao. Hải đăng sáng rồi thì nói chuyện
+      với Weylam Roth để đi thuyền sang The Reef.
+    newbie: >-
+      **Câu đố này làm nhiều người đứng hình vì chẳng có gì giải thích nó.**
+      Trên bờ có hai cái bồn. Đứng vào ô đánh dấu trước mỗi cái là nó dịch
+      chuyển; đẩy cả hai vào ngọn hải đăng, đốt lửa lên, rồi ném The Black
+      Flag vào.
+
+  - id: brine-kings-reef
+    name: "Tsoagoth, The Brine King"
+    kind: boss
+    tag: must
+    level: 50
+    waypoint: true
+    summary: >-
+      Men theo bờ tới The Brine King's Throne. Boss của act, và là nguồn
+      Pantheon power Major đầu tiên của bạn.
+    quest: The Brine King
+    reward: "Soul of the Brine King. Sau đó Weylam Roth đưa bạn sang Act 7."
+    tips: |
+      Hắn có hai đòn cận chiến, và cách chống cả hai là đứng sau lưng hắn — ở phía sau, nhưng đừng dán sát vào. Đòn nước của hắn cho hắn damage reduction và gọi ra mấy con adds nhỏ.
+
+      **Cứ mỗi 25% life là đấu trường co lại**, biển dựng lên bao quanh bạn, và trong lúc đó không nhắm vào hắn được. Sét đánh và nước bắn vẫn bám theo bạn suốt đoạn đó. Ở một phần tư máu cuối, sét tiếp tục đánh cả sau khi pha co lại kết thúc.
+    newbie: >-
+      Có hai thứ cụ thể giết người chơi trong pha co đấu trường: bị kẹt vào
+      mấy bức tường nước, và mấy vòng xoáy nước nhỏ màu trắng trên mặt đất,
+      loại thật sự khó thấy trên nền nước. Nhớ nhìn xuống chân. Có chết thì
+      bạn hồi sinh ngay ngoài đấu trường, đi thẳng vào lại và đánh tiếp, bao
+      nhiêu lần cũng được.
+
+sections:
+  - title: Pantheon, và nên bật cái nào
+    body: >-
+      Ba trong bốn con boss của Act 6 cho bạn một power Minor, còn Brine King
+      cho bạn vị Major đầu tiên, nên hết act này là hệ thống coi như chạy đầy
+      đủ. Mỗi lúc bạn chỉ bật được đúng một Major và một Minor, và đổi thì
+      miễn phí ở town hay hideout bất kỳ — bấm Y. Hãy để **Major là Soul of
+      the Brine King**: nó chặn việc bạn bị stun lần nữa trong vòng hai giây
+      sau một cú stun, tức là phá được stun-lock, một trong những kiểu chết
+      phổ biến nhất của nhân vật đang leveling, chết mà không kịp phản ứng.
+      Hãy để **Minor là Soul of Ryslatha** cho phần flask, hoặc Soul of
+      Tukohama nếu build của bạn đứng yên, và đổi sang Soul of Abberath ở
+      những khu nặng fire. Một đính chính đáng nói: **miễn nhiễm freeze của
+      Brine King là bản nâng cấp, không phải hiệu ứng gốc** — người mới chọn
+      hắn mà trông chờ cái đó trong campaign sẽ thất vọng.
+  - title: Nâng cấp Pantheon là việc của endgame
+    body: >-
+      Nâng cấp một power cần một [[Divine Vessel]] đặt trong map device cộng
+      một map có đúng con boss mà bảng Pantheon chỉ định. Bạn hạ con boss đó,
+      lấy lại cái vessel đã đầy và mang linh hồn bắt được tới chỗ Sin. Các vị
+      Major nâng được ba lần, Minor một lần. Không cái nào là việc của
+      campaign, nên cứ đọc bảng cho biết rồi quay lại sau khi vào map. Nâng
+      cấp áp dụng cho mọi nhân vật của bạn trong league.
+  - title: Lilly Roth bán đủ thứ
+    body: >-
+      Quest Fallen from Grace ở The Twilight Strand biến Lilly thành vendor
+      gem tổng hợp, với danh sách gem dài nhất trong cả campaign. Nếu build
+      guide của bạn đòi một viên gem mà class bạn chưa từng được mời, mà bạn
+      lại lỡ Siosa ở Act 3, thì đây là chỗ cuối cùng để mua. Nhớ để sẵn số
+      currency định tiêu trong túi trước khi mở cửa hàng của cô ta.
+  - title: Những gì nên bỏ qua
+    body: >-
+      The Tidal Island và Bestel's Epic. Into the Breach ở The Coast, cùng các
+      chuỗi quest Heist, Expedition và Delve, tất cả đều là hệ thống endgame
+      bạn chưa dùng được. Mọi con unique không bắt buộc trong act. Maxroll có
+      nêu tên một con boss ở gần như mọi zone của Act 6, nhưng bọn mình không
+      đối chiếu được phần lớn các tên đó ở đâu cả, nên guide này không in
+      chúng ra.
+
+patchNotes:
+  - "Từ Act 6 trở đi, đồ Magic và Rare có thể rơi kèm Item Tier, nhờ vậy bạn dễ đánh giá gear giai đoạn cuối campaign hơn."
+  - "Mercenary bạn thuê giờ chịu −30% resistance trong các khu area level 46 tới 67, tính từ The Mud Flats. Từ đây trở đi hãy chuẩn bị tinh thần là nó đóng góp ít hơn."
+  - "[[Divine Vessel]] chuyển vào Atlas stash tab. Nó vẫn là thứ dùng để nâng cấp Pantheon power, và cách bạn nhận các soul của Act 6 không thay đổi."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Maxroll Pantheon reference", url: "https://maxroll.gg/poe/resources/pantheon" }
+  - { title: "Mobalytics Act 6 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-6" }
+  - { title: "PoEDB Act 6", url: "https://poedb.tw/us/Act_6" }
+  - { title: "Path of Exile 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }

@@ -1,0 +1,402 @@
+number: 2
+title: "Khu rừng, đám Bandit và Vaal Oversoul"
+town: Forest Encampment
+levelIn: 13
+levelOut: 23
+skillPoints: 2
+skillPointsNote: "Thành 3 nếu bạn giết cả ba bandit."
+boss: Vaal Oversoul
+keyRewards:
+  - "2 passive point: Through Sacred Ground, The Way Forward"
+  - "Lựa chọn bandit: thêm một passive point, hoặc một bonus vĩnh viễn"
+  - "Skill gem ở level 16 và 18"
+  - "[[Quicksilver Flask]] thứ hai từ The Great White Beast"
+  - "Trial 2 và 3 trong sáu"
+intro: >-
+  Act 2 là một cái trục. Town nằm giữa, các zone tỏa ra thành hai vòng: vòng
+  bắc qua The Crossroads, và vòng nam qua The Riverways. Bạn làm vòng bắc
+  trước. Trên đường đi bạn gặp ba bandit lord và phải quyết xem xử họ thế nào.
+
+nodes:
+  - id: southern-forest
+    name: The Southern Forest
+    kind: zone
+    tag: travel
+    level: 13
+    waypoint: true
+    summary: >-
+      Một con đường thẳng, một bên là nước, bên kia là vách đá. Cứ đi lên phía
+      bắc là tới town.
+
+  - id: forest-encampment
+    name: The Forest Encampment
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong Act 2. Có hai lối ra đáng nhớ: phía đông sang
+      The Old Fields cho vòng bắc, phía tây sang The Riverways cho vòng nam.
+    tips: >-
+      Greust bán vũ khí và giáp. Yeena bán gem. Từ act này trở đi town nào cũng
+      có crafting bench: dùng nó để gắn life và resistance giá rẻ lên gear.
+
+  - id: old-fields
+    name: The Old Fields
+    kind: zone
+    tag: travel
+    level: 14
+    summary: >-
+      Bám con đường ngoằn ngoèo đi về phía đông tới The Crossroads. Cửa vào
+      The Den nằm lệch khỏi đường, gần phía cuối hơn.
+
+  - id: the-den
+    name: The Den
+    kind: side
+    tag: worth
+    branchFrom: old-fields
+    level: 15
+    badge: Quicksilver Flask thứ hai
+    image: quicksilver-flask
+    summary: >-
+      Mấy đường hầm dẫn tới một cái hang lớn có Great White Beast. Hạ nó rồi
+      báo Yeena.
+    quest: The Great White Beast
+    reward: "Một flask hoặc một belt do bạn chọn, từ Yeena. Chưa có hai cái thì lấy [[Quicksilver Flask]]."
+    why: >-
+      Có Quicksilver thứ hai nghĩa là bạn giữ được tăng tốc gần như liên tục.
+      Nếu bạn đã nhặt được cái thứ hai rồi thì khỏi cần ghé.
+    tips: "Hạ xong, một lối ra ở vách sau đưa bạn về The Old Fields."
+
+  - id: crossroads
+    name: The Crossroads
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      Trung tâm của vòng bắc, waypoint nằm ngay chỗ các con đường gặp nhau.
+      Từ đây có ba lối đi tiếp.
+    tips: |
+      - **Tây bắc:** một đoạn ngắn, rồi leo qua vách đá, tới The Chamber of Sins.
+      - **Đông bắc:** theo đường tới The Broken Bridge.
+      - **Đông nam:** theo con đường thứ hai tới The Fellshrine Ruins.
+
+  - id: chamber-of-sins-1
+    name: The Chamber of Sins Level 1
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      Một mê cung phòng ốc vây quanh đại sảnh cao ở giữa, chỗ đặt waypoint.
+      Cầu thang đi xuống nằm quá đó một chút.
+    tips: >-
+      Một mẹo lộ trình: Level 2 nằm cùng hướng với hướng từ cửa vào tới
+      waypoint. Zombie ở đây chết là để lại một đám mây chaos.
+
+  - id: trial-chamber-of-sins
+    image: quest-labyrinth
+    name: "Trial of Ascendancy: sawblades"
+    kind: side
+    tag: worth
+    branchFrom: chamber-of-sins-1
+    badge: Trial 2 trong 6
+    summary: >-
+      Một phòng phụ ở Level 2 của Chamber, có lưỡi cưa chạy trên các rãnh ray
+      dưới sàn.
+    why: "Một trong sáu trial bạn cần để vào Labyrinth."
+    tips: >-
+      Lưỡi cưa chạy theo ray cố định. Xem trọn một lượt rồi hãy bước. Có guide
+      nói trial thường nằm ở phía đối diện với con boss quest trong cùng
+      level, nên làm trial trước.
+
+  - id: fidelitas
+    name: "Chamber of Sins Level 2: Fidelitas"
+    kind: boss
+    tag: must
+    level: 16
+    badge: Gem level 16
+    summary: >-
+      Ở cuối một hành lang dài, Piety nói vài câu rồi đi. Hạ Fidelitas phía
+      sau đó, nói chuyện với Helena, rồi lấy Baleful Gem từ Strange Device.
+    quest: Intruders in Black
+    reward: "Một gem level 16 từ Greust. Class nào cũng được mời ba Herald nguyên tố."
+    tips: >-
+      Đám Necromancer trong zone này curse bạn để hạ lightning resistance. Nên
+      tầm level 14–15 khi đánh Fidelitas. Giữ Baleful Gem lại: lát nữa bạn cần
+      nó ở The Wetlands.
+    classRewards:
+      - { class: All classes, reward: "Herald of Ash, Herald of Ice, Herald of Thunder" }
+      - { class: Marauder, reward: "Ancestral Cry, Corrupting Fever, Eviscerate, Molten Shell, Seismic Cry, Warlord's Mark" }
+      - { class: Duelist, reward: "Ancestral Cry, Blood Rage, Corrupting Fever, Defiance Banner, Eviscerate, Flesh and Stone, Frenzy, Poacher's Mark, Seismic Cry, Swordstorm, Warlord's Mark" }
+      - { class: Ranger, reward: "Arctic Armour, Blood Rage, Ensnaring Arrow, Frenzy, Herald of Agony, Poacher's Mark" }
+      - { class: Shadow, reward: "Arcane Cloak, Arctic Armour, Assassin's Mark, Blade Blast, Blood Rage, Cold Snap, Herald of Agony, Summon Skitterbots" }
+      - { class: Witch, reward: "Arcane Cloak, Arctic Armour, Cold Snap, Desecrate, Galvanic Field, Wall of Force" }
+      - { class: Templar, reward: "Arcane Cloak, Brand Recall, Divine Retribution, Herald of Purity, Mana-Infused Staff, Shield of Light, Wave of Conviction" }
+      - { class: Scion, reward: "Arctic Armour, Corrupting Fever, Frenzy" }
+
+  - id: broken-bridge
+    name: The Broken Bridge
+    kind: zone
+    tag: must
+    level: 16
+    waypoint: true
+    badge: "Bandit: Kraityn"
+    summary: >-
+      Theo đường tới trại của Kraityn trên cây cầu ở cuối zone. Giúp hắn hoặc
+      giết hắn. Nếu giết thì nhớ nhặt cái amulet.
+    quest: Deal with the Bandits
+    reward: "Giúp Kraityn cho 8% movement speed. Các guide nói gần như không build nào chọn hắn."
+    newbie: >-
+      Bạn phải xử đủ cả ba bandit mới xong act. Đọc mục "Chọn bandit nào?" bên
+      dưới trước khi quyết.
+
+  - id: fellshrine-ruins
+    name: The Fellshrine Ruins
+    kind: side
+    tag: worth
+    branchFrom: crossroads
+    level: 16
+    summary: >-
+      Con đường dẫn tới The Crypt. Cứ bám lấy nó: đường tách ra rồi nhập lại,
+      cuối cùng dừng ở một nhà thờ đổ nát có lối xuống.
+    why: "Nó dẫn tới một passive point và một trial. Bỏ qua mấy cửa phụ và khu nghĩa địa."
+
+  - id: crypt-1
+    image: quest-labyrinth
+    name: The Crypt Level 1
+    kind: side
+    tag: worth
+    branchFrom: fellshrine-ruins
+    level: 17
+    waypoint: true
+    badge: Trial 3 trong 6
+    summary: >-
+      Lấy waypoint ngay cạnh cửa vào. Tầng này chứa một Trial of Ascendancy
+      với mấy lưỡi dao xoay.
+    why: "Cái thứ ba trong sáu trial bạn cần để vào Labyrinth."
+    tips: "Quái ở đây đánh fire, cold và lightning. Vài phòng có nhện bò lên từ các hố."
+
+  - id: crypt-2
+    image: quest-book-of-skill
+    name: The Crypt Level 2
+    kind: side
+    tag: worth
+    branchFrom: crypt-1
+    level: 18
+    badge: "+1 passive point"
+    summary: >-
+      Băng qua cây cầu lớn ở phía bên kia để tới một cái bệ thờ, rồi lấy
+      Golden Hand. Mang nó về cho Yeena.
+    quest: Through Sacred Ground
+    reward: "Book of Skill từ Yeena: +1 passive point và 2 respec point."
+    why: "Một passive point vĩnh viễn."
+    tips: >-
+      Con unique canh bệ thờ không bắt buộc phải giết. Chộp lấy cái tay rồi
+      thoát ra character selection.
+
+  - id: riverways
+    name: The Riverways
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      Điểm bắt đầu của vòng nam. Một con đường đá chạy từ town tới
+      The Western Forest, waypoint nằm khoảng giữa.
+    tips: >-
+      Vài cây cầu bị gãy, nên có movement skill thì tiện. Lối rẽ sang
+      The Wetlands bắt đầu gần waypoint, ở một chỗ đường đứt đoạn được đánh
+      dấu bằng hai cây cột.
+
+  - id: western-forest
+    name: The Western Forest
+    kind: zone
+    tag: must
+    level: 17
+    waypoint: true
+    badge: "Bandit: Alira"
+    summary: >-
+      Trại của Alira nằm lệch khỏi đường. Giúp ả hoặc giết ả, giết thì nhớ
+      nhặt amulet. The Weaver's Chambers nằm ở phía bên kia đường.
+    quest: Deal with the Bandits
+    reward: "Giúp Alira cho +15% toàn bộ elemental resistance."
+    tips: >-
+      Một cây đuốc bên đường cạnh đống đá rời chỉ về phía có trại của ả. Quái
+      quanh trại cho nổ xác: đừng đứng lên xác chết.
+
+  - id: captain-arteri
+    image: quest-book-of-skill
+    name: "The sealed pass: Captain Arteri"
+    kind: side
+    tag: worth
+    branchFrom: western-forest
+    badge: "+1 passive point"
+    summary: >-
+      Ở cuối con đường Western Forest, đám Blackguard canh con đèo đã bị bịt
+      hồi Act 1. Hạ Captain Arteri, lấy Thaumetic Emblem rồi dùng nó lên dấu
+      niêm phong.
+    quest: The Way Forward
+    reward: "Book of Skill: +1 passive point. Nhận nó từ Bestel ở Lioneye's Watch, town của Act 1."
+    why: "Một passive point vĩnh viễn, và rất dễ quên vì bạn trả quest ở một act khác."
+    newbie: >-
+      Dùng waypoint đi về Lioneye's Watch ở Act 1, nói chuyện với Bestel, rồi
+      quay lại.
+
+  - id: weaver
+    name: "The Weaver's Chambers"
+    kind: boss
+    tag: must
+    level: 18
+    badge: Support gem level 18
+    summary: >-
+      Một mê cung phủ đầy mạng nhện. Tới cuối, Weaver thả mình xuống từ trần.
+      Hạ nó rồi lấy Maligaro's Spike.
+    quest: Sharp and Cruel
+    reward: "Một support gem level 18 từ Silk."
+    tips: >-
+      Weaver gây một phần damage dưới dạng chaos. Đòn bắn mạng từ xa làm bạn
+      chậm lại và là đòn nguy hiểm nhất, nên đừng đứng yên. Giữa trận nó rời
+      đấu trường rồi quay lại. Nên vào tầm level 16.
+    classRewards:
+      - { class: Marauder, reward: "Close Combat, Cruelty, Elemental Damage with Attacks, Melee Physical Damage, Rage, Shockwave, Volatility" }
+      - { class: Duelist, reward: "Close Combat, Elemental Damage with Attacks, Melee Physical Damage, Rage, Sadism, Vicious Projectiles" }
+      - { class: Ranger, reward: "Close Combat, Elemental Damage with Attacks, Trinity, Vicious Projectiles" }
+      - { class: Shadow, reward: "Deadly Ailments, Elemental Focus, Faster Casting, Melee Physical Damage, Nightblade, Trap and Mine Damage, Trinity" }
+      - { class: Witch, reward: "Concentrated Effect, Controlled Destruction, Cruelty, Elemental Focus, Faster Casting, Fresh Meat, Kinetic Instability, Living Lightning, Minion Speed, Overcharge, Predator, Sacred Wisps, Trinity" }
+      - { class: Templar, reward: "Concentrated Effect, Controlled Destruction, Cruelty, Elemental Damage with Attacks, Elemental Focus, Exemplar, Faster Casting, Melee Physical Damage, Shockwave" }
+      - { class: Scion, reward: "Concentrated Effect, Cruelty, Deadly Ailments, Elemental Damage with Attacks, Faster Casting, Melee Physical Damage, Sadism, Vicious Projectiles" }
+    classRewardsNote: "Sau quest này class nào cũng mua được Faster Casting từ Yeena."
+
+  - id: wetlands
+    name: The Wetlands
+    kind: zone
+    tag: must
+    level: 19
+    waypoint: true
+    badge: "Bandit: Oak"
+    summary: >-
+      Trại của Oak nằm trên một ngọn đồi gần giữa zone. Xử hắn xong thì đi tới
+      waypoint ở phía tây. Dùng Maligaro's Spike và Baleful Gem lên đám rễ cây
+      ở đó để mở The Vaal Ruins.
+    quest: "Deal with the Bandits, The Root of the Problem"
+    reward: "Giúp Oak cho +40 maximum life. Quest rễ cây không có reward."
+    newbie: >-
+      Bạn cần cả hai quest item cho đám rễ: Baleful Gem từ The Chamber of Sins
+      và Maligaro's Spike từ Weaver. Xử xong bandit thứ ba thì gặp Eramir
+      trong town.
+
+  - id: vaal-ruins
+    name: The Vaal Ruins
+    kind: zone
+    tag: must
+    level: 20
+    summary: >-
+      Một mê cung lớn. Gần cuối có một quả cầu tím to chắn đường: Ancient Seal.
+      Click vào nó. Thế giới bên ngoài tối sầm lại, và cầu thang lên
+      The Northern Forest nằm ngay phía sau.
+    quest: Shadow of the Vaal
+
+  - id: northern-forest
+    name: The Northern Forest
+    kind: zone
+    tag: travel
+    level: 21
+    waypoint: true
+    summary: >-
+      Lấy waypoint gần cửa vào. Lối ra sang The Caverns nằm ở phía bắc.
+
+  - id: dread-thicket
+    name: The Dread Thicket
+    kind: side
+    tag: skip
+    branchFrom: northern-forest
+    level: 21
+    summary: >-
+      Một khu phụ có cái hideout do hai con khỉ unique canh giữ.
+    why: >-
+      Không có passive point ở Act 2. Chỉ vào nếu bạn chưa từng mở hideout
+      bao giờ. Quest passive point ở zone này thuộc về Act 7.
+
+  - id: the-caverns
+    name: The Caverns
+    kind: zone
+    tag: travel
+    level: 22
+    waypoint: true
+    summary: >-
+      Đầu tiên là hang tự nhiên, rồi tới chân kim tự tháp. Waypoint nằm giữa
+      hai nửa đó. Lấy nó rồi tìm cầu thang đi lên.
+    tips: "Nhớ chắc chắn bạn đã có The Apex từ quest bandit trước khi tới đây. Thiếu nó là không đánh được boss."
+
+  - id: ancient-pyramid
+    name: The Ancient Pyramid
+    kind: zone
+    tag: travel
+    level: 23
+    summary: >-
+      Ba tầng mê cung nhỏ dần khi bạn leo lên, rồi tới đỉnh.
+    tips: >-
+      Một mẹo lộ trình: ở tầng một, cầu thang nằm ở một trong ba góc. Các tầng
+      sau thì nó nằm chéo góc với chỗ bạn vừa bước vào.
+
+  - id: vaal-oversoul
+    name: Vaal Oversoul
+    kind: boss
+    tag: must
+    level: 23
+    summary: >-
+      Click Dark Altar khi trong túi đã có The Apex rồi chờ: nó hiện ra khá
+      lâu. Chạy vòng quanh nó và đừng đứng yên.
+    reward: "Mở Act 3."
+    tips: |
+      - **Lightning beam** bắn ra từ cánh tay mảnh. Nó shock bạn, nghĩa là bạn ăn nhiều damage hơn. Lightning resistance giúp ích.
+      - **Vũng băng** trên mặt đất làm bạn chậm lại. Đừng đứng trong đó.
+      - **Slam** bằng cánh tay nặng, ở tầm gần.
+      - **Earthquake** quét khắp đấu trường.
+
+      Hãy bắt đầu di chuyển trước khi đòn đánh kết thúc.
+    newbie: "Nên vào tầm level 20–22."
+
+sections:
+  - title: Chọn bandit nào?
+    body: |
+      Bạn phải xử đủ cả ba. Lựa chọn là vĩnh viễn, nhưng về sau vẫn đổi được.
+
+      - **Giết cả ba:** 1 passive point. Mặc định của phần lớn build.
+      - **Giúp Alira:** +15% toàn bộ elemental resistance. Phương án được chấp nhận rộng rãi cho nhân vật đầu tiên còn gear yếu.
+      - **Giúp Oak:** +40 maximum life.
+      - **Giúp Kraityn:** 8% movement speed. Gần như không ai chọn.
+
+      Build guide của bạn chỉ định bandit nào thì theo. Còn phân vân thì giết cả ba. Giết bandit nào nhớ nhặt amulet của người đó: Eramir cần đủ ba cái.
+
+      Guide cũ nói giết cả ba được 2 điểm. Cái đó đổi từ 3.25 rồi: giờ là 1.
+  - title: Đổi bandit về sau
+    body: >-
+      Bán cho vendor 20 [[Orb of Regret]] kèm một amulet để lấy Book of Reform.
+      Onyx Amulet đổi sang "giết cả ba", Lapis sang Alira, Jade sang Kraityn
+      và Amber sang Oak.
+  - title: Thứ tự hai vòng
+    body: >-
+      Các guide khác nhau vài chi tiết nhỏ, nhưng điểm này thì thống nhất: làm
+      vòng bắc từ The Crossroads trước, rồi tới vòng nam từ The Riverways, và
+      hạ Fidelitas với Weaver xong rồi mới ra đám rễ ở The Wetlands.
+  - title: Resistance bắt đầu có trọng lượng
+    body: >-
+      Lightning resistance giúp ích trong The Chamber of Sins và khi đánh Vaal
+      Oversoul. Tới quãng The Crypt, các guide bắt đầu khuyên bạn tiến dần tới
+      75% ở mỗi nguyên tố. Crafting bench trong town gắn resistance lên đồ với
+      chi phí rất nhẹ.
+
+patchNotes:
+  - "3.30 không đổi quest, reward hay zone nào của Act 2."
+  - "Vendor không bán [[Orb of Chance]] nữa, và đồ rare chưa identify ở vendor cũng không còn tốn một cái."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+  - "Báo chí viết về buổi reveal nói giờ khu campaign nào cũng kết thúc bằng một con boss, với hơn hai chục con được thêm vào. Bọn mình không xác nhận được điều đó trong patch notes, và dữ liệu zone bọn mình kiểm tra vẫn còn những khu không có boss. Lộ trình này viết từ nguồn trước 3.30, nên gặp một con boss bất ngờ thì hãy coi là chuyện dễ xảy ra, chưa phải điều chắc chắn."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "PoE Vault Act 2 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-2" }
+  - { title: "Mobalytics Act 2 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-2" }
+  - { title: "Mobalytics passive point quests", url: "https://mobalytics.gg/poe/guides/side-quest-passive-points" }
+  - { title: "PoEDB Act 2", url: "https://poedb.tw/us/Act_2" }

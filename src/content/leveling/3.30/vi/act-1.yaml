@@ -1,0 +1,418 @@
+number: 1
+title: "Từ The Twilight Strand tới Merveil"
+town: Lioneye's Watch
+levelIn: 1
+levelOut: 13
+skillPoints: 2
+skillPointsNote: "Điểm thứ ba, The Way Forward, bắt đầu ở đây và kết thúc ở Act 2."
+boss: "Merveil, the Siren"
+keyRewards:
+  - "[[Quicksilver Flask]] từ Mercy Mission"
+  - "2 passive point: The Dweller of the Deep, The Marooned Mariner"
+  - "Skill gem ở level 1, 4, 8, 10 và 12"
+  - "Trial of Ascendancy đầu tiên trong sáu cái"
+intro: >-
+  Bạn dạt vào bãi biển với hai bàn tay trắng. Hết act này bạn sẽ có main skill,
+  một flask để chạy và hai passive point thêm. Có hai trận boss: Brutus trong
+  nhà tù, và Merveil trong hang của ả.
+
+nodes:
+  - id: twilight-strand
+    name: The Twilight Strand
+    kind: zone
+    tag: must
+    level: 1
+    summary: >-
+      Đi dọc bãi biển, nhặt cây vũ khí và mấy viên gem nằm trên đường, rồi hạ
+      Hillock ở cổng. Cổng mở là vào town.
+    quest: Enemy at the Gate
+    reward: "Một skill gem level 1 từ Tarkleigh. Danh sách tùy class của bạn."
+    tips: >-
+      Hillock chỉ đánh tầm gần. Đánh, lùi một bước, lặp lại. Dùng flask thoải
+      mái: về town là nạp lại miễn phí.
+    newbie: >-
+      Bạn không quay lại được zone này, và Portal Scroll không dùng được ở đây.
+      Hạ Hillock là bạn luôn lên level 2.
+    classRewards:
+      - { class: Marauder, reward: "Ground Slam, Molten Strike, Shield Crush" }
+      - { class: Duelist, reward: "Cleave, Galvanic Arrow, Molten Strike, Perforate, Splitting Steel" }
+      - { class: Ranger, reward: "Caustic Arrow, Frost Blades, Galvanic Arrow, Ice Shot, Split Arrow" }
+      - { class: Shadow, reward: "Blight, Cobra Lash, Ethereal Knives, Explosive Trap, Freezing Pulse, Stormblast Mine" }
+      - { class: Witch, reward: "Blight, Freezing Pulse, Kinetic Bolt, Lightning Tendrils, Raise Zombie, Rolling Magma" }
+      - { class: Templar, reward: "Frostbolt, Lightning Tendrils, Molten Strike, Purifying Flame, Rolling Magma, Smite" }
+      - { class: Scion, reward: "Lightning Tendrils, Molten Strike, Split Arrow, Splitting Steel" }
+    classRewardsNote: "Bạn chỉ chọn một. Chọn cái nào thì theo build guide của bạn."
+
+  - id: lioneyes-watch
+    name: Lioneye's Watch
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Town của bạn trong Act 1. Lấy gem từ Tarkleigh. Nessa bán gem, flask và
+      trang sức; Tarkleigh bán vũ khí và giáp.
+    tips: >-
+      Trong 3.30 Nessa bán [[Scroll of Wisdom]] giá 15 Gold, còn một
+      [[Orb of Transmutation]] đổi bằng một [[Orb of Augmentation]].
+    newbie: >-
+      Stash của bạn ở đây. Mọi thứ bạn để vào đó đều dùng chung với tất cả nhân
+      vật của bạn trong league này.
+
+  - id: the-coast
+    name: The Coast
+    kind: zone
+    tag: travel
+    level: 2
+    waypoint: true
+    summary: >-
+      Đi dọc bờ biển tới đầu bên kia rồi lấy waypoint. Cửa vào The Tidal Island
+      nằm dưới nước, gần lối ra sang The Mud Flats.
+    tips: >-
+      Nhiều lộ trình đi thẳng tới The Submerged Passage trước, rồi dùng waypoint
+      quay lại đây làm The Tidal Island. Làm vậy thì flask và mấy viên gem
+      level 4 gom được trong một lần về town. Thứ tự nào cũng được.
+
+  - id: tidal-island
+    name: The Tidal Island
+    kind: side
+    tag: worth
+    branchFrom: the-coast
+    level: 3
+    badge: Quicksilver Flask
+    image: quicksilver-flask
+    summary: >-
+      Hạ Hailrake cạnh con tàu đắm, nhặt Medicine Chest và mang về cho Nessa.
+      Chọn [[Quicksilver Flask]].
+    quest: Mercy Mission
+    reward: "Một flask bạn tự chọn (lấy [[Quicksilver Flask]]) và một support gem."
+    why: >-
+      Quicksilver Flask cho bạn một đợt tăng tốc chạy. Bạn sẽ dùng nó suốt
+      campaign và còn lâu sau đó. Guide nào cũng gọi nhánh phụ này là bắt buộc
+      phải làm.
+    tips: >-
+      Hailrake cast Glacial Cascade, một vệt băng nổ lên đúng chỗ bạn đang chạy
+      tới. Thấy hắn giơ tay là đổi hướng ngay. Hạ xong, thoát ra character
+      selection để về town miễn phí.
+    classRewards:
+      - { class: Marauder, reward: "Ancestral Call, Chance to Bleed, Momentum" }
+      - { class: Duelist, reward: "Ancestral Call, Chance to Poison, Mirage Archer, Momentum, Pierce, Ruthless, Volley" }
+      - { class: Ranger, reward: "Chance to Poison, Mirage Archer, Pierce, Volley" }
+      - { class: Shadow, reward: "Elemental Proliferation, Infused Channelling, Momentum, Pierce, Spell Cascade, Swift Assembly, Volley" }
+      - { class: Witch, reward: "Chance to Poison, Elemental Proliferation, Infused Channelling, Spell Cascade, Summon Phantasm" }
+      - { class: Templar, reward: "Ancestral Call, Arcane Surge, Chance to Bleed, Elemental Proliferation, Infused Channelling, Ruthless, Spell Cascade" }
+      - { class: Scion, reward: "Ancestral Call, Arcane Surge, Chance to Bleed, Chance to Poison, Elemental Proliferation, Pierce, Ruthless, Spell Cascade, Summon Phantasm, Volley" }
+    classRewardsNote: "Các support gem được mời kèm với flask."
+
+  - id: mud-flats
+    image: quest-glyph
+    name: The Mud Flats
+    kind: zone
+    tag: must
+    level: 4
+    summary: >-
+      Gom ba glyph từ ba tổ Rhoa, rồi gắn chúng lên bức tường glyph để mở
+      The Submerged Passage.
+    quest: Breaking Some Eggs
+    reward: "Một skill gem level 4 từ Tarkleigh. Danh sách có cả một movement skill."
+    tips: >-
+      Mấy con suối nhỏ nối ba cái tổ với nhau rồi chảy ra biển, nên cứ lần theo
+      nước. Ba tổ thường tạo thành hình tam giác. Rhoa lao thẳng một đường và
+      gây stun: bước tránh sang bên.
+    newbie: >-
+      Được mời movement skill là lấy ngay (Dash, Frostblink hay Shield Charge,
+      tùy class). Sau quest này class nào cũng mua được mấy gem đó từ Nessa.
+    classRewards:
+      - { class: Marauder, reward: "Crushing Fist, Decoy Totem, Steelskin, Vigilant Strike. Movement: Shield Charge" }
+      - { class: Duelist, reward: "Blood and Sand, Crushing Fist, Decoy Totem, Puncture, Sniper's Mark, Vigilant Strike, War Banner. Movement: Dash, Shield Charge" }
+      - { class: Ranger, reward: "Bear Trap, Puncture, Shrapnel Ballista, Sniper's Mark. Movement: Dash" }
+      - { class: Shadow, reward: "Bear Trap, Contagion, Detonate Dead, Orb of Storms. Movement: Dash, Frostblink" }
+      - { class: Witch, reward: "Contagion, Detonate Dead, Flame Wall, Frost Bomb, Orb of Storms, Summon Raging Spirit. Movement: Frostblink" }
+      - { class: Templar, reward: "Flame Wall, Frost Bomb, Holy Flame Totem, Summon Holy Relic, Vigilant Strike. Movement: Frostblink, Shield Charge" }
+      - { class: Scion, reward: "Bear Trap, Decoy Totem, Frost Bomb, Vigilant Strike. Movement: Dash, Frostblink, Shield Charge" }
+
+  - id: fetid-pool
+    image: quest-book-of-regrets
+    name: The Fetid Pool
+    kind: side
+    tag: skip
+    branchFrom: mud-flats
+    level: 5
+    summary: >-
+      Một khu phụ rẽ ra từ The Mud Flats. Quest bắt bạn giết sạch mọi con trong
+      đó.
+    quest: A Dirty Job
+    reward: "2 passive respec point."
+    why: >-
+      Không có passive point, chỉ có respec point, mà loại đó về sau bạn thừa.
+      Phần lớn lộ trình bỏ qua chỗ này.
+
+  - id: submerged-passage
+    name: The Submerged Passage
+    kind: zone
+    tag: travel
+    level: 5
+    waypoint: true
+    summary: >-
+      Lấy waypoint ngay ở cửa vào. Lối ra sang The Ledge nằm phía trên bên
+      phải; cửa vào The Flooded Depths nằm phía dưới bên phải.
+
+  - id: flooded-depths
+    image: quest-book-of-skill
+    name: The Flooded Depths
+    kind: side
+    tag: worth
+    branchFrom: submerged-passage
+    level: 6
+    badge: "+1 passive point"
+    summary: >-
+      Một hang phụ ngắn. The Dweller, con cua khổng lồ, nằm trong phòng cuối,
+      đóng băng trong khối tinh thể. Click vào nó để mở trận.
+    quest: The Dweller of the Deep
+    reward: "Book of Skill từ Tarkleigh: +1 passive point."
+    why: >-
+      Một passive point vĩnh viễn đổi lấy mấy phút công sức. Guide nào cũng làm.
+    tips: >-
+      Có guide nói đây là trận khó với nhân vật mới toanh. Nếu thấy chật vật thì
+      để đó, qua The Lower Prison rồi quay lại. Hạ xong, chiếc thuyền bên cạnh
+      con cua đưa bạn về thẳng The Submerged Passage.
+
+  - id: the-ledge
+    name: The Ledge
+    kind: zone
+    tag: travel
+    level: 6
+    waypoint: true
+    summary: >-
+      Một đường dài thẳng tắp. Waypoint nằm khoảng giữa đường. Cứ đi tới cuối
+      để sang The Climb.
+    tips: >-
+      Mấy chồng đá cạnh waypoint chỉ về phía lối ra. Bỏ qua con boss totem
+      Kuduku. Nếu bạn đang hụt level, đây là chỗ quen thuộc để bù lại.
+
+  - id: the-climb
+    name: The Climb
+    kind: zone
+    tag: travel
+    level: 7
+    waypoint: true
+    summary: >-
+      Leo lên tới cửa nhà tù ở trên cùng. Waypoint nằm khoảng một phần ba
+      đường vào, sát một bên rìa.
+    tips: "Goatmen nhảy vào bạn theo đàn. Cứ di chuyển liên tục."
+
+  - id: lower-prison
+    name: The Lower Prison
+    kind: zone
+    tag: travel
+    level: 8
+    waypoint: true
+    badge: Support gem level 8
+    summary: >-
+      Lấy waypoint gần cửa vào rồi về town: chỉ cần bước vào nhà tù là bạn đã
+      nhận được một support gem level 8 từ Nessa.
+    quest: "The Caged Brute (phần 1)"
+    reward: "Một support gem level 8 từ Nessa."
+    classRewards:
+      - { class: Marauder, reward: "Added Fire Damage, Faster Attacks, Flamewood, Lifetap, Melee Splash" }
+      - { class: Duelist, reward: "Added Fire Damage, Faster Attacks, Lifetap, Maim, Melee Splash, Multiple Projectiles" }
+      - { class: Ranger, reward: "Added Cold Damage, Arrow Nova, Faster Attacks, Manaforged Arrows, Melee Splash, Multiple Projectiles, Void Manipulation" }
+      - { class: Shadow, reward: "Added Cold Damage, Added Lightning Damage, Faster Attacks, Multiple Projectiles, Multiple Traps, Void Manipulation" }
+      - { class: Witch, reward: "Added Lightning Damage, Combustion, Devour, Efficacy, Infernal Legion, Minion Damage, Unbound Ailments, Void Manipulation" }
+      - { class: Templar, reward: "Added Fire Damage, Added Lightning Damage, Combustion, Lifetap, Melee Splash" }
+      - { class: Scion, reward: "Added Cold, Fire or Lightning Damage, Faster Attacks, Lifetap, Melee Splash, Multiple Projectiles, Unbound Ailments" }
+
+  - id: trial-lower-prison
+    image: quest-labyrinth
+    name: "Trial of Ascendancy: spike traps"
+    kind: side
+    tag: worth
+    branchFrom: lower-prison
+    badge: Trial 1 trong 6
+    summary: >-
+      Một phòng phụ trong The Lower Prison đầy chông sàn. Đi hết phòng rồi chạm
+      vào tấm bia ở cuối.
+    why: >-
+      Bạn cần đủ sáu trial của Act 1–3 mới vào được Labyrinth, nơi bạn chọn
+      ascendancy class. Trial tính cho cả account trong suốt league.
+    tips: "Chông nhô lên theo nhịp. Chờ nó hạ xuống rồi băng qua."
+
+  - id: upper-prison
+    name: The Upper Prison
+    kind: zone
+    tag: travel
+    level: 9
+    summary: >-
+      Tìm cửa sang The Warden's Quarters, rồi lần theo vệt máu tới chỗ Brutus.
+    tips: >-
+      Để ý trên map có icon strongbox mà trông như bị tường bịt kín. Một cái
+      cần gạt trên cột gần đó mở tường ra, bên trong là hòm flask, hay có thêm
+      một cái Quicksilver thứ hai.
+
+  - id: brutus
+    name: "Brutus, Lord Incarcerator"
+    kind: boss
+    tag: must
+    level: 9
+    summary: >-
+      Con boss đầu tiên ra dáng boss. Hắn đánh mạnh và chậm. Chạy vòng quanh
+      hắn, và đừng bao giờ đứng trước mặt khi hắn đang lấy đà.
+    quest: "The Caged Brute (phần 2)"
+    reward: "Một gem level 10 từ Tarkleigh: movement skill hoặc một aura, tùy class."
+    tips: |
+      - **Hook:** kéo bạn về phía hắn và gây bleed. Để sẵn một life flask.
+      - **Triple slam:** ba nhát trong vùng quanh hắn. Lùi ra.
+      - **Ground slam:** một nhát từ trên xuống rất chậm, tạo sóng lan về phía trước. Bước tránh sang bên.
+
+      Bạn chết thì life của hắn không hồi lại. Vào tiếp và đánh tiếp.
+
+      Nếu bạn có invoke một Fate, Brutus có thể rơi Warden's Arm, một Viscera cho maximum life.
+    newbie: >-
+      Nên vào tầm level 8. Đánh xong, waypoint Prisoner's Gate tự được kích
+      hoạt cho bạn.
+    classRewards:
+      - { class: Marauder, reward: "Enduring Cry, Intimidating Cry, Leap Slam, Vitality" }
+      - { class: Duelist, reward: "Blink Arrow, Enduring Cry, Intimidating Cry, Leap Slam, Precision, Vitality, Whirling Blades" }
+      - { class: Ranger, reward: "Blink Arrow, Precision, Smoke Mine, Whirling Blades" }
+      - { class: Shadow, reward: "Clarity, Flame Dash, Precision, Siphoning Trap, Smoke Mine, Unearth, Whirling Blades, Withering Step" }
+      - { class: Witch, reward: "Bodyswap, Clarity, Flame Dash, Lightning Warp, Summon Skeletons, Wither" }
+      - { class: Templar, reward: "Clarity, Flame Dash, Leap Slam, Vitality" }
+      - { class: Scion, reward: "Blink Arrow, Flame Dash, Leap Slam, Withering Step" }
+    classRewardsNote: "Sau trận này, class nào cũng mua được Clarity, Precision và Vitality từ Nessa."
+
+  - id: prisoners-gate
+    name: Prisoner's Gate
+    kind: zone
+    tag: travel
+    level: 10
+    waypoint: true
+    summary: >-
+      Đường lên phía bắc bị bịt, và nó bịt cho tới Act 2. Hãy tìm lối xuống
+      The Ship Graveyard.
+    tips: >-
+      Gần đầu zone, một bên đường có một bờ dốc thấp. Nhảy xuống đó rồi theo
+      bên đó tới lối ra.
+    newbie: >-
+      Đừng mất công tìm đường qua con đèo bị bịt. Nó được mở từ phía bên kia ở
+      Act 2, trong quest The Way Forward.
+
+  - id: ship-graveyard
+    name: The Ship Graveyard
+    kind: zone
+    tag: travel
+    level: 11
+    waypoint: true
+    summary: >-
+      Lấy waypoint gần cửa vào. Lối ra sang The Cavern of Wrath nằm ở vòng
+      tường ngoài của zone.
+
+  - id: ship-graveyard-cave
+    image: quest-allflame
+    name: The Ship Graveyard Cave
+    kind: side
+    tag: worth
+    branchFrom: ship-graveyard
+    level: 12
+    badge: "+1 passive point"
+    summary: >-
+      Captain Fairgraves, đứng cạnh waypoint, nhờ bạn lấy Allflame. Vào hang
+      bên trong con tàu đắm lấy về, đưa cho hắn, rồi hạ hắn khi hắn trở mặt.
+    quest: The Marooned Mariner
+    reward: "Book of Skill từ Bestel: +1 passive point."
+    why: "Một passive point vĩnh viễn. Guide nào cũng làm."
+    tips: >-
+      Trong hang, cứ đi thẳng xa cửa vào là tới phòng sâu nhất. Ở đó có một lối
+      ra một chiều, đổ bạn về ngay cạnh Fairgraves.
+
+
+      League trước Fairgraves đánh bạn ngay khi thấy mặt và tự rơi Allflame,
+      không phải vào hang. Bọn mình không xác nhận được 3.30 dùng bản nào. Nếu
+      hắn xông vào bạn lúc bạn tới gần thì cứ hạ hắn rồi nhặt Allflame.
+
+  - id: cavern-of-wrath
+    name: The Cavern of Wrath
+    kind: zone
+    tag: travel
+    level: 12
+    waypoint: true
+    badge: Skill gem level 12
+    summary: >-
+      Lấy waypoint ở cửa vào rồi về town: Nessa giờ cho bạn một skill gem
+      level 12. Với nhiều build, đây chính là main skill.
+    quest: The Siren's Cadence
+    reward: "Một skill gem level 12 từ Nessa."
+    tips: "Cứ lần theo nước. Lối ra ở phía trên bên phải."
+    classRewards:
+      - { class: Marauder, reward: "Chain Hook, Earthshatter, Holy Sweep, Infernal Blow, Static Strike, Sunder, Volcanic Fissure" }
+      - { class: Duelist, reward: "Earthshatter, Holy Sweep, Lacerate, Rain of Arrows, Shattering Steel" }
+      - { class: Ranger, reward: "Elemental Hit, Lightning Arrow, Lightning Strike, Poisonous Concoction, Rain of Arrows, Reave, Siege Ballista, Toxic Rain" }
+      - { class: Shadow, reward: "Blade Vortex, Essence Drain, Fire Trap, Icicle Mine, Lightning Trap, Reave, Venom Gyre, Volatile Dead, Voltaxic Burst" }
+      - { class: Witch, reward: "Arc, Blazing Salvo, Creeping Frost, Essence Drain, Flesh Offering, Ice Nova, Manabond, Scorching Ray, Volatile Dead" }
+      - { class: Templar, reward: "Absolution, Blazing Salvo, Ice Nova, Manabond, Scorching Ray, Searing Bond, Static Strike, Storm Brand, Storm Burst, Storm Call, Wintertide Brand" }
+      - { class: Scion, reward: "Blade Vortex, Exsanguinate, Ice Nova, Rain of Arrows, Scorching Ray, Spectral Helix, Static Strike, Storm Burst" }
+
+  - id: cavern-of-anger
+    name: The Cavern of Anger
+    kind: zone
+    tag: travel
+    level: 13
+    summary: >-
+      Cái hang thứ hai, không có waypoint. Merveil's Lair nằm phía trên bên
+      phải.
+    tips: "Thấy mấy đống vàng nằm dưới đất là cửa vào đã gần."
+
+  - id: merveil
+    name: "Merveil, the Siren"
+    kind: boss
+    tag: must
+    level: 13
+    image: sapphire-ring
+    summary: >-
+      Boss của act, có hai dạng. Gần như toàn bộ damage của ả là cold, nên hãy
+      mang cold resistance và liên tục bước ra khỏi các vùng hiệu ứng trên đất.
+    reward: "Mở Act 2 và kích hoạt waypoint đầu tiên ở đó."
+    tips: |
+      **Dạng một:** một cơn bão băng để lại chilled ground, từng loạt ice bolt, và mấy cây vũ khí xoay mà ả triệu lên.
+
+      **Dạng hai:** các cột nước phun lên gây sát thương nhiều lần, một viên đạn gây freeze, và lũ larvae nhỏ. Một số larvae nổ khi chạm vào: giết chúng từ xa hoặc chạy khỏi chúng.
+    newbie: >-
+      Nên vào tầm level 12. Đeo một [[Sapphire Ring]]: bán cho vendor một Iron
+      Ring kèm một skill gem màu xanh là có. Nó làm trận này nhẹ đi rất nhiều.
+
+sections:
+  - title: Có cold resistance trước khi đánh Merveil
+    body: >-
+      Bán một Iron Ring kèm một skill gem cho vendor nào cũng được là bạn có
+      một chiếc nhẫn resistance. Gem xanh cho [[Sapphire Ring]] (cold), gem đỏ
+      cho Ruby Ring (fire), gem lục cho Topaz Ring (lightning). Đánh Merveil thì
+      bạn cần Sapphire.
+  - title: Tự làm boots có movement speed
+    body: >-
+      Bán cho vendor một đôi boots bất kỳ, một [[Quicksilver Flask]] và một
+      [[Orb of Augmentation]] cùng lúc. Bạn nhận lại boots magic có 10%
+      movement speed. Làm lại với đôi boots đã có mod đó để nâng nó lên một
+      bậc.
+  - title: Vũ khí mạnh hơn từ vendor
+    body: >-
+      Bán cùng lúc một vũ khí, một Rustic Sash và một Blacksmith's Whetstone để
+      lấy vũ khí magic có tăng physical damage. Với spell, một wand hay sceptre
+      kèm Chain Belt và một Whetstone sẽ cho tăng spell damage. Belt magic hay
+      rare thì roll ra số cao hơn.
+  - title: Nên chọn gem nào
+    body: >-
+      Lộ trình giống nhau cho mọi class, nhưng gem thì không. Với skill damage
+      và support, hãy theo build guide của bạn. Có hai lựa chọn giống nhau cho
+      tất cả: Quicksilver Flask, và một movement skill ngay lần đầu được mời.
+
+patchNotes:
+  - "Vendor ở town nào cũng bán [[Scroll of Wisdom]] giá 15 Gold."
+  - "[[Orb of Transmutation]] giờ mua bằng [[Orb of Augmentation]], không còn bằng Portal Scroll."
+  - "[[Orb of Binding]] không rơi nữa, nên đồ có link phải trông vào vendor và đồ rơi."
+  - "Cauldron của Coven xuất hiện trong các khu campaign. Hạ đám covenite, chọn một Fate, rồi invoke nó lên boss của khu để có cơ hội ra Viscera của con đó."
+  - "Báo chí viết về buổi reveal nói giờ khu campaign nào cũng kết thúc bằng một con boss, với hơn hai chục con được thêm vào. Bọn mình không xác nhận được điều đó trong patch notes, và dữ liệu zone bọn mình kiểm tra vẫn còn những khu không có boss. Lộ trình này viết từ nguồn trước 3.30, nên gặp một con boss bất ngờ thì hãy coi là chuyện dễ xảy ra, chưa phải điều chắc chắn."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "PoE Vault Act 1 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-1" }
+  - { title: "Mobalytics Act 1 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-1" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoEDB Act 1", url: "https://poedb.tw/us/Act_1" }

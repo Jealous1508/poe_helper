@@ -1,0 +1,558 @@
+name: Lightning Tendrils of Escalation Lifestacking Inquisitor
+tagline: >-
+  Maximum life is the damage stat. One shield turns your life pool into spell
+  damage and spell crit, so every defensive upgrade is also a damage upgrade.
+class: Templar
+ascendancy: Inquisitor
+role: endgame
+budget: extreme
+budgetNote: >-
+  **Cheap to start, extreme to finish, and every price below is 3.29-era.**
+  poe.ninja has no Covens of Umbra economy yet — the API returns a 404 — so
+  these are end-of-Allflame prices, where 1 Divine was about 497 chaos. Expect
+  week-one Covens prices to differ wildly, [[Mageblood]] most of all. The core
+  items are genuinely cheap: [[Rathpith Globe]] about 0.19 Divine,
+  [[Kaom's Heart]] about 0.3, [[Glorious Vanity]] about 0.04. The whole set of
+  uniques through the midgame totals roughly 31 Divine. Then a 4-flask
+  [[Mageblood]] was 203 Divine on its own, and a 5-flask one 2,691. **That
+  arithmetic is ours over the author's price list, not his figure.**
+mainSkill: Lightning Tendrils of Escalation
+image: lightning-tendrils-of-escalation
+hero: art-inquisitor
+tags: [Spell, Lightning, Life stacker, Channelling, Crit]
+ratings: { clear: 3, bossing: 4, survivability: 5, ease: 2 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **The four ratings are our reading. No author or site publishes numeric
+  ratings for this build** — the guide page shows only the author's own
+  qualitative pros and cons plus a like count. Clear is a 3 because the author
+  says outright it is slow at lower budgets. Ease is a 2, the lowest on this
+  site, because his own weakness list says that if the guide is not properly
+  followed the build feels very weak, and he means it. One genuine point in
+  its favour: of the four builds here, this one's Path of Building
+  configuration is fully known, because the config block was read directly.
+  It is also single-author, and its shield is modelled better in Path of
+  Building than the real item is — see the note under the chain.
+modes:
+  ssf: >-
+    The core is unusually solo-self-found friendly for a build in this
+    bracket: [[Rathpith Globe]], [[Kaom's Heart]], [[Glorious Vanity]] and
+    [[Maligaro's Virtuosity]] are common drops. The ceiling is not — the
+    [[Forbidden Flame]] and [[Forbidden Flesh]] pair, a 4-flask Mageblood and
+    a double-corrupted [[The Dark Seer]] are trade items.
+  hardcore: >-
+    No source discusses it. The shape is unusual: enormous life, enormous
+    regeneration, permanently low life on purpose. That last part means
+    [[Petrified Blood]], [[Righteous Fire]] and a shield that sacrifices life
+    per cast are all draining you by design, which is a lot of moving parts
+    to trust with one life.
+
+idea: |
+  [[Rathpith Globe]] is a shield that gives you increased spell damage and increased spell critical strike chance for every 100 maximum life you have. So you stop treating life as a defensive stat. Every piece of life on your gear is also damage.
+
+  Then you stack life everywhere: [[Kaom's Heart]] for a flat 1,210, [[The Dark Seer]] for life and energy shield per level, [[Grand Spectrum]] jewels for percentage life, [[The Red Dream]] in its Foulborn version to turn resistance passives into life. The published character reaches 16,663 life.
+
+  On top of that sit the usual spell multipliers, but arranged oddly: you keep yourself permanently at low life with [[Petrified Blood]], which unlocks [[Pain Attunement]] for 30% more spell damage and makes large hits arrive slowly enough for your regeneration to outrun them. [[Righteous Fire]] burns you for another 40% more. It sounds reckless. It is the most survivable of the four builds on paper.
+
+chain:
+  - label: Stack life
+    text: "[[Kaom's Heart]], [[The Dark Seer]], [[Grand Spectrum]], Foulborn [[The Red Dream]] and life-heavy rares. The published file reaches 16,663 life."
+  - label: Life becomes damage
+    text: "[[Rathpith Globe]] gives 3% increased spell damage and 3% increased spell crit per 100 maximum life. At 16,663 life that is about +500% of each from one item."
+  - label: Go low life on purpose
+    text: "[[Petrified Blood]] keeps you permanently low, which turns on [[Pain Attunement]] for 30% more spell damage and staggers big hits into damage over time."
+  - label: Multiply
+    text: "[[Righteous Fire]] 40% more, [[Pact of Lycia]] while channelling, [[Arcane Surge Support]], [[Infused Channelling Support]], [[Intensify Support]] at 3, six channelling stacks, [[Zealotry]] consecrated ground and 40% shock."
+  - label: Survive
+    text: "6,342 life and 5,515 energy shield regenerated per second, [[Corrupted Soul]] from [[Glorious Vanity]] splitting damage between the two pools, [[Pious Path]] regenerating both, [[Mind Over Matter]] and max resistances at 89/87/87."
+
+chainDetails:
+  - title: The shield in Path of Building is better than the real one
+    body: |
+      This is the most important caveat on the build and it is worth reading twice.
+
+      The equipped [[Rathpith Globe]] in the published file reads **4%** increased spell damage and **4%** increased spell crit per 100 maximum life, sacrificing 9% of life. **The real item is 3% / 3% / sacrifice 10%.** It was nerfed from 5% in 3.29.0, and PoEDB and Path of Building's own current-variant data agree on the live values. **4% is not an obtainable roll.**
+
+      This looks like a Path of Building unique-database artefact at a slider position, not deception — the author himself writes "even with the nerfs to Rathpith Globe", so he knows about the nerf. But it means **real in-game damage will be meaningfully below the published 88 million**: roughly a quarter less of the Rathpith spell-damage multiplier, plus less crit.
+
+      The author's own shopping list also asks for a 4% / 4% Rathpith. Do not go looking for one.
+
+      One more wrong claim doing the rounds: that Rathpith gives 5% per 100 life, or 10% for the Foulborn version. Both halves are wrong. It has been 3% since 3.29, and the Foulborn version *replaces* the spell-damage and spell-crit modifiers with damage-over-time or ailment versions, which makes it actively bad here. The Foulborn copy traded at about 274 Divine and the one you want at about 0.19.
+  - title: The numbers, and exactly what they assume
+    body: |
+      Of the four builds on this site, this is the only one whose Path of Building configuration was read out of the file rather than guessed. So the caveats are precise rather than vague.
+
+      **The newer file:** [[Lightning Tendrils of Escalation]] at 20/20 reporting **88.1 million hit damage per second**, 5.97 casts per second, 100% critical strike chance, 570% critical multiplier. Life 16,663, energy shield 4,228, **244,286 effective hit points**. Resistances 89/87/87 elemental and 75 chaos, 5,167 armour, 56% physical damage reduction, 35% block and 39% spell block. Maximum hits taken 41,100 physical and 234,000–267,000 elemental. Regeneration 6,342 life and 5,515 energy shield per second, plus 1,141 life leeched per second.
+
+      **What is switched on:** endurance, frenzy and power charges all up. **Shock at 40% effect**, which is a strong assumption. Flasks active, because Mageblood keeps four magic utility flasks permanently up. Adrenaline, Arcane Surge, Fortification, the Infused Channelling infusion, Intensify 3, six channelling stacks, enemy blinded, chilled and unnerved, both you and the enemy on consecrated ground, Low Life, been-hit-recently and hit-spell-recently. Assassin's Mark is socketed so Path of Building applies it. Pantheon Lunaris and Tukohama, bandits kill all, level 100.
+
+      **What is not switched on: there is no boss.** The target is a generic **level 84** enemy at Path of Building's default 50% elemental and 30% chaos resistances. No boss curse-effectiveness penalty, no boss damage reduction. Wither is *not* enabled — the 15 stacks in the file are the greyed-out default placeholder.
+
+      And the tree data is marked 3.29, so no 3.30 tree or balance change is reflected. Path of Building has not been updated for this patch.
+  - title: Why Leadership's Price is a trap if you skim
+    body: |
+      On early and mid budgets the author balances Strength and Intelligence **exactly equal** on [[Leadership's Price]], so that all your damage saps, brittles and scorches at once. Brittle gives up to +6% flat critical strike chance and sap gives 20% less damage taken, which together with [[Maligaro's Virtuosity]] reaches about 300% critical multiplier at close to no cost.
+
+      The consequence is a rule that is easy to miss: **after the campaign, avoid Strength and Intelligence on your gear.** Put either on an item and the amulet stops working. Get the balance wrong and you lose crit cap and 20% damage reduction simultaneously.
+
+      This is what the author's own weakness — "if the build guide is not properly followed, it can make the build feel very weak" — is actually about. **That reading is ours**, but it follows directly from how the pieces interact. He also says explicitly not to run [[Annihilation's Approach]] alongside Maligaro's.
+  - title: Kaom's Heart has no sockets. Here is how you fix it.
+    body: |
+      [[Kaom's Heart]] is the biggest single block of life in the build and it has zero sockets. Your gem levels have to come from somewhere else.
+
+      Early, that is [[Crest of Desire]] with +8 to socketed gem levels. At the endgame it becomes a double-influenced Shaper and Elder Archdemon Crown with +2 skill gems, +2 area of effect gems, [[Concentrated Effect Support]] at 25, Hypothermia at 25, and socketed gems dealing 30% more elemental damage. The author calls his own one a mirror-tier helm and no price exists for it.
+  - title: Chase items this build does not use
+    body: |
+      Read straight off the item list: no [[Headhunter]], no [[Progenesis]] — incompatible, because Mageblood needs *magic* utility flasks — no [[Astramentis]], no Voices, no Militant Faith, no Sublime Vision, no Annihilating Light, no Dissolution of the Flesh, no Ashes of the Stars, no [[Malachai's Loop]], no [[Shavronne's Wrappings]]. No awakened gems in the gem list either.
+
+      The only Forbidden pair in the build is [[Arcane Blessing]], the Hierophant notable. It is not More Than Skill and not anything else.
+  - title: Foulborn items are obtainable in 3.30
+    body: |
+      Worth saying because two of the luxury items are Foulborn versions and people assume the mechanic is dead.
+
+      Foulborn uniques come from Breach content: birthing an Ancient Wombgift at the Genesis Tree at roughly a 20% base chance, modifiable by Genesis passives; Grasping Coffers in Hive Fortresses and Colonies; guaranteed from It That Was Esh in a Hive Colony; and It That Fled transportation safehouses. On trade, filter with "Is Foulborn".
+
+mandatory:
+  - term: Rathpith Globe
+    why: >-
+      The entire damage conversion. 3% increased spell damage and 3%
+      increased spell crit per 100 maximum life. Without it, life is just
+      life and the build has no reason to exist.
+    detail: >-
+      The normal version, **not** Foulborn — the Foulborn copy replaces the
+      spell-damage and spell-crit modifiers with damage-over-time or ailment
+      versions, which is useless here, and it cost roughly 274 Divine against
+      0.19 for the one you want. It also sacrifices 10% of your life per cast,
+      which is part of how you stay low-life.
+  - term: Kaom's Heart
+    why: >-
+      +1,210 flat life, the single biggest block in the build. About 0.3
+      Divine at 3.29 prices.
+    detail: >-
+      It has **no sockets**. That is not a drawback you work around later —
+      it is a design constraint that forces [[Crest of Desire]] early and a
+      double-influenced helmet at the endgame.
+  - term: Glorious Vanity
+    why: >-
+      Seeded for Doryani, to allocate [[Corrupted Soul]]. That splits
+      incoming damage between life and energy shield, which is what makes a
+      huge life pool a real defence rather than a number.
+    detail: >-
+      A base copy was about 0.04 Divine. One with good notables in its radius
+      costs considerably more and **no price was found** for a good roll.
+  - term: Corrupted Soul
+    why: >-
+      Splits incoming damage across your life and energy shield pools. With
+      [[Pious Path]] regenerating both at once, it is the core of the
+      defence.
+  - term: Petrified Blood
+    why: >-
+      Keeps you permanently at low life, which turns on
+      [[Pain Attunement]] and staggers big hits into damage over time that
+      your regeneration can outrun.
+  - term: Pain Attunement
+    why: >-
+      30% more spell damage while on low life. The build is deliberately
+      low-life anyway, so this is free.
+  - term: Righteous Fire
+    why: >-
+      40% more spell damage, paid for by burning your own life. With over
+      6,000 life per second regenerated the cost is not felt.
+  - term: Forbidden Flame
+    why: >-
+      Half of the pair that allocates [[Arcane Blessing]], the Hierophant
+      notable. About 5.08 Divine each at 3.29 prices, so roughly 10.2 for
+      the pair.
+  - term: Forbidden Flesh
+    why: >-
+      The other half. Both must name the same notable or the pair does
+      nothing. This is the only Forbidden pair in the build.
+  - term: Crest of Desire
+    why: >-
+      +8 to socketed gem levels, which is the only way to have gem levels
+      early when your chest has no sockets. About 5.18 Divine.
+  - term: Leadership's Price
+    why: >-
+      On early and mid budgets. Balanced with Strength and Intelligence
+      exactly equal, so everything you hit saps, brittles and scorches at
+      once.
+    detail: >-
+      The rule that comes with it: **after the campaign, avoid Strength or
+      Intelligence on your gear**, so the amulet can be balanced with
+      tattoos. Put either stat on an item and, in the author's words, the
+      amulet is useless. Its price was **not found** on poe.ninja.
+  - term: Maligaro's Virtuosity
+    why: >-
+      Part of the near-free 300% critical multiplier trick alongside
+      [[Leadership's Price]]. Worth a corrupted implicit for spell crit.
+      About 0.01 Divine.
+  - term: Enlighten Support
+    why: >-
+      Level 4. The build runs [[Zealotry]], [[Vitality]], [[Anger]],
+      [[Precision]] and [[Tempest Shield]] under [[Blood Magic]], and they
+      do not fit otherwise. About 12.18 Divine.
+  - term: Blood Magic
+    why: >-
+      Spend life instead of mana. Specced around Act 6 in the published
+      progression, and it is why the aura set needs Enlighten.
+  - term: The Dark Seer
+    level: recommended
+    why: >-
+      Corrupted with +2 maximum life **and** +2 maximum energy shield per
+      level — +200 of each at level 100. Base copies were about 1.02 Divine;
+      the double-corrupt version has **no published price**.
+    detail: >-
+      Ideally with a +1 to lightning skills implicit on top. This is the
+      single biggest life item after Kaom's Heart and it is also the hardest
+      of the mandatory-ish items to source.
+  - term: Mageblood
+    level: recommended
+    why: >-
+      With a 4-flask roll. About 203 Divine at 3.29 prices, and the single
+      purchase that moves this build from "done" to "finished".
+    detail: >-
+      **Do not pay the Foulborn premium.** Its modifier is rightmost flasks
+      instead of leftmost, which is the same thing worded differently. The
+      Foulborn 4-flask copy was 221.6 Divine against 203.1 for the normal
+      one, for nothing. The roll that matters is 4 flasks. A 5-flask
+      Mageblood was 2,691 Divine and is the mirror-tier purchase.
+  - term: Watcher's Eye
+    level: recommended
+    why: >-
+      The published one is a triple: +50% crit multiplier under
+      [[Anger]], +26% under [[Precision]], and 15% increased life recovery
+      rate under [[Vitality]].
+    detail: >-
+      The author's shopping list only demands the Vitality life-recovery
+      modifier first, so start there. A base Watcher's Eye was 0.07 Divine;
+      **this specific combination has no published price.**
+  - term: Grand Spectrum
+    level: recommended
+    why: >-
+      5% increased maximum life per Grand Spectrum, so a set of three is
+      worth far more than one. 0.1–0.45 Divine each.
+  - term: The Red Dream
+    level: recommended
+    why: >-
+      The Foulborn version, which makes resistance passives in its radius
+      also grant increased maximum life at 50% of their value. Single-modifier
+      copies were about 19.29 Divine, double-modifier about 117.3.
+  - term: The Light of Meaning
+    level: recommended
+    why: >-
+      Corrupted blood immunity, which a build that lives permanently at low
+      life cannot do without for long. About 0.24 Divine.
+  - term: Lori's Lantern
+    level: recommended
+    why: >-
+      The Foulborn version, for chaos resistance and lucky damage while on
+      low life. About 0.14 Divine, which is remarkably cheap for what it
+      does on a permanently low-life character.
+  - term: Oriath's End
+    level: recommended
+    why: >-
+      For clear, which is this build's weak axis. About 0.2 Divine and
+      bought in the endgame phase.
+  - term: Replica Dragonfangs' Flight
+    level: recommended
+    why: >-
+      With [[Lightning Tendrils of Escalation]], and **only** once you are
+      at or near crit cap. Price not found.
+  - term: Annihilation's Approach
+    level: recommended
+    why: >-
+      Permanent Adrenaline, about 0.2 Divine. The author says it is only
+      worth it at around 300% crit multiplier, and explicitly says not to
+      run it alongside [[Maligaro's Virtuosity]].
+
+stages:
+  - id: core-items
+    image: rathpith-globe
+    title: Transition in
+    levels: Phase 1, the core items
+    uses: >-
+      [[Singularity]] with a +1 lightning skills implicit,
+      [[Crest of Desire]], [[Kaom's Heart]], [[Rathpith Globe]], rare life
+      and resistance rings and belt, rare boots with percentage life
+      regeneration rate and movement speed, and
+      [[Maligaro's Virtuosity]] with a spell-crit corrupted implicit.
+    changes: >-
+      Then [[Glorious Vanity]] seeded for Doryani, [[Leadership's Price]]
+      with +3 maximum fire resistance, and a starter [[Watcher's Eye]]. The
+      whole phase is a handful of Divine at 3.29 prices and it is where the
+      build starts working.
+    links:
+      - name: Main skill
+        gems: [Lightning Tendrils of Escalation, Infused Channelling Support, Intensify Support, Arcane Surge Support, Concentrated Effect Support]
+      - name: Defensive core
+        gems: [Petrified Blood, Righteous Fire, Tempest Shield]
+      - name: Auras
+        gems: [Zealotry, Eternal Blessing Support, Vitality, Anger, Precision]
+      - name: Curse
+        gems: [Assassin's Mark]
+    moveOn: "Rathpith and Kaom's Heart are on, you are permanently low life on purpose, and the Leadership's Price attribute balance is exact."
+    details:
+      - title: The one rule that breaks the build
+        body: |
+          **After the campaign, do not take Strength or Intelligence on your gear.** [[Leadership's Price]] has to be balanced with tattoos, and any attribute from an item throws the balance off.
+
+          When the balance is off you stop applying sap and brittle. You lose up to 6% flat crit chance and 20% less damage taken at the same moment. This is the most likely way to end up with the author's own warning coming true: a build that feels very weak because the guide was not followed.
+      - title: Why it is slow here
+        body: |
+          The author says it plainly: slow at lower budgets. The clear comes from channelling a spell at things, and the quality-of-life items that fix it — [[Oriath's End]], [[Mageblood]] flask uptime — are two phases away.
+
+          He also says facetanking ubers "only comes at higher budgets". Expect this phase to be a mapping character that is very hard to kill and not fast.
+      - title: Levelling, briefly
+        body: |
+          Level with any spell you like — the author uses Freezing Pulse — and spec [[Blood Magic]] around Act 6. Take [[Vitality]], [[Petrified Blood]], [[Tempest Shield]] and [[Precision]], then [[Zealotry]] with [[Eternal Blessing Support]] once Blood Magic is in.
+
+          His twink unique list: Thousand Ribbons, Seven League Steps, Replica Karua Ward, Lochtonial Caress, Goldrim, Springleaf, Ashcaller, [[Lori's Lantern]] and two Ixchel Temptation.
+  - id: midgame
+    image: the-dark-seer
+    title: Mid budget
+    levels: Phase 2, before Mageblood
+    uses: >-
+      Uber boss [[Viscera]], then Foulborn [[Lori's Lantern]],
+      [[Lightning Tendrils of Escalation]] at gem level 20,
+      [[The Dark Seer]] with +2 life and +2 energy shield per level, and the
+      [[Arcane Blessing]] [[Forbidden Flame]] and [[Forbidden Flesh]] pair.
+    changes: >-
+      Then a better [[Watcher's Eye]], [[The Light of Meaning]], a better
+      [[Glorious Vanity]], Foulborn [[The Red Dream]], a rare Archdemon
+      Crown, [[Replica Dragonfangs' Flight]] once you are at crit cap, level
+      4 [[Enlighten Support]], a better Rathpith, and a Kaom's Heart with
+      +1200 life.
+    links:
+      - name: Main skill
+        gems: [Lightning Tendrils of Escalation, Infused Channelling Support, Intensify Support, Arcane Surge Support, Concentrated Effect Support]
+      - name: Defensive core
+        gems: [Petrified Blood, Righteous Fire, Tempest Shield]
+      - name: Auras
+        gems: [Zealotry, Eternal Blessing Support, Vitality, Anger, Precision, Enlighten Support]
+      - name: Boss routine
+        gems: [Pact of Lycia, Assassin's Mark]
+    moveOn: "the Forbidden pair is in, The Dark Seer is double-corrupted, and you are at or near 100% crit chance."
+    details:
+      - title: The most complete buy order of the four builds
+        body: |
+          This author publishes an explicit ordered shopping list inside his Path of Building notes, which none of the other three do. The order above is his, reproduced as sequence rather than text.
+
+          One caveat: **all of his trade links point at the 3.29 league**, and he states on the guide page that they do not work yet and will be updated once the league is live.
+      - title: The Forbidden pair is Arcane Blessing
+        body: |
+          Not More Than Skill, not anything else. [[Arcane Blessing]] is a [[Hierophant]] notable and this is the only Forbidden pair in the build. About 5.08 Divine each at 3.29 prices.
+
+          **And here is the trap:** the official 3.30 notes *do* change Arcane Blessing — it now grants Arcane Surge and 8% more spell damage — **but that entry is in the Ruthless-specific section and does not apply to the normal game.** Any source crediting that buff to trade league is wrong. The normal-game notable is unchanged, so the pair behaves exactly as it did in 3.29.
+      - title: Replica Dragonfangs' Flight, and when not to buy it
+        body: |
+          It raises the level of a specific skill gem, here [[Lightning Tendrils of Escalation]]. The author is explicit that it is only worth buying **once you are at or near crit cap**, because before that the crit you are missing is worth more than the gem levels.
+
+          No price was found for it, in any league.
+  - id: endgame
+    image: mageblood
+    title: High budget
+    levels: Phase 3, roughly 235–250 Divine
+    uses: >-
+      A 4-flask [[Mageblood]], [[Oriath's End]], a Manifold ring with +290
+      life and +35 crit multiplier, rare gloves with life regeneration rate,
+      +100 life and chaos resistance, and a Focused Amulet with +400 life and
+      +120 crit multiplier.
+    changes: >-
+      Then the [[Grand Spectrum]] trio and the mirror-tier helmet. The author
+      calls this the tier where the build is done. **The 235–250 Divine
+      figure is our arithmetic over his 3.29 price list, not his number.**
+    links:
+      - name: Main skill
+        gems: [Lightning Tendrils of Escalation, Infused Channelling Support, Intensify Support, Arcane Surge Support, Concentrated Effect Support]
+      - name: Defensive core
+        gems: [Petrified Blood, Righteous Fire, Tempest Shield]
+      - name: Auras
+        gems: [Zealotry, Eternal Blessing Support, Vitality, Anger, Precision, Enlighten Support]
+      - name: Boss routine
+        gems: [Pact of Lycia, Assassin's Mark]
+    moveOn: "Mageblood is in with a 4-flask roll and you are hunting percentage points rather than whole items."
+    details:
+      - title: What Mageblood is for here
+        body: |
+          Four magic utility flasks permanently up. That is also one of the assumptions baked into the published damage figure, so the number and the belt are not independent of each other.
+
+          [[Progenesis]] is **not** compatible — Mageblood needs magic flasks, and Progenesis is unique. If you are used to running both, you cannot here.
+      - title: The boss routine
+        body: |
+          Press [[Pact of Lycia]] and stand still to channel. That is genuinely it. The author's own strength list calls the playstyle "really lazy".
+
+          Optional: an Animated Guardian and spectres. He says they are "not really needed and they die a lot", which is as close to a recommendation against as a guide gets.
+      - title: What it struggles with, honestly
+        body: |
+          Reflect-style and no-regeneration or no-leech map modifiers are the obvious risk for a regeneration-based low-life build. **No source states this, so do not treat it as sourced** — we flag it as the question to ask, not as a finding. The author links curated 8-modifier and Nightmare map trade searches, which implies juiced maps are fine.
+  - id: mirror-tier
+    image: the-red-dream
+    title: Mirror tier
+    levels: Mostly unpriced
+    uses: >-
+      A 5-flask [[Mageblood]], the double-modifier Foulborn
+      [[The Red Dream]], a Shaper and Elder [[Archdemon Crown]], a
+      triple-modifier [[Watcher's Eye]], a double-corrupted
+      [[The Dark Seer]] and [[Replica Dragonfangs' Flight]].
+    changes: >-
+      The 5-flask Mageblood was 2,691 Divine and the double-modifier Red
+      Dream 117.3, both at 3.29 prices. **The other four items have no
+      published price at all.** This is the only one of the four builds on
+      this site with a documented mirror tier.
+    links:
+      - name: Main skill
+        gems: [Lightning Tendrils of Escalation, Infused Channelling Support, Intensify Support, Arcane Surge Support, Concentrated Effect Support]
+      - name: Auras
+        gems: [Zealotry, Eternal Blessing Support, Vitality, Anger, Precision, Enlighten Support]
+    moveOn: "there is no next stage."
+    details:
+      - title: The helmet
+        body: |
+          A double-influenced Shaper and Elder [[Archdemon Crown]] with +2 to skill gems, +2 to area of effect gems, [[Concentrated Effect Support]] at 25, Hypothermia at 25, and socketed gems dealing 30% more elemental damage.
+
+          The author calls his own one a mirror-tier helm and gives no price. It exists because [[Kaom's Heart]] has no sockets, so every gem level in the build has to come from the helmet.
+      - title: A 3.29 comparison point, low confidence
+        body: |
+          Search snippets for the author's 3.29 final build report 98.79 million damage per second, 237,350 effective hit points, 11,640 life and 4,870 energy shield.
+
+          The host site is behind a bot challenge and could not be verified, nor could its configuration be read. We include it only because it is the one data point suggesting the 3.30 version is not obviously stronger than the 3.29 one it replaced.
+
+patch:
+  - note: >-
+      **[[Inquisitor]] got no changes.** It appears in neither the
+      normal-game Ascendancy Changes section nor the Ruthless section.
+  - entry: ruthless-changes
+    note: >-
+      **The key check for this build, and it comes out clean.** The Forbidden
+      pair allocates [[Arcane Blessing]], a [[Hierophant]] notable. The
+      official notes *do* change Arcane Blessing to grant Arcane Surge and 8%
+      more spell damage — **but that entry sits in the Ruthless-specific
+      section and does not apply to the normal game.** We confirmed this by
+      reading the official thread directly. Any source crediting that buff to
+      trade league is wrong, and the pair behaves exactly as in 3.29.
+  - entry: winter-orb-nerf
+    note: >-
+      **Dodged, deliberately.** The author moved this build off
+      [[Winter Orb]] to [[Lightning Tendrils of Escalation]] for 3.30, which
+      his own changelog records. Winter Orb lost a projectile at low levels,
+      added damage effectiveness and base damage in this patch. The 3.29
+      Winter Orb versions of this build on his channel are the superseded
+      line — do not import them.
+  - note: >-
+      **No 3.30 change found** to [[Rathpith Globe]], [[Kaom's Heart]],
+      [[Mageblood]], Lightning Tendrils, [[Grand Spectrum]],
+      [[Glorious Vanity]], [[Petrified Blood]], [[Righteous Fire]],
+      [[Watcher's Eye]], [[The Dark Seer]], [[Annihilation's Approach]] or
+      [[Oriath's End]], in either the official notes or the independent
+      summary. Both fetches truncated near 100,000 characters, so read that
+      as "no mention found in two sources" rather than proven unchanged.
+  - entry: royal-visage-soul-cores
+    note: >-
+      **The author claims +50–60% more damage in 3.30. Treat it as his
+      estimate, untested, and partly his own speculation.** Part of it is a
+      Soul Core corruption adding an extra support directly into the skill
+      gem. The mechanic is real, but the support that comes out is random
+      from a compatible pool. His assumption that it would be Arcane Surge
+      for 35% more spell damage is a best case, not a guarantee.
+  - entry: wickerman-viscera
+    note: >-
+      **The other half of that claimed buff, and it is unconfirmed.** He is
+      counting on an uber [[Viscera]] granting free frenzy charges and a
+      [[Viscera]] making enemies on consecrated ground take increased damage.
+      The [[Wickerman]] system is confirmed real, but no source publishes the
+      individual Viscera buffs, and the author himself writes "will update
+      once we know more" next to that line. He also notes he has not seen all
+      the new uniques yet.
+
+strengths:
+  - "Incredibly tanky at every stage. 244,286 effective hit points on a 3.29 Path of Building, with over 6,000 life and 5,500 energy shield regenerated per second."
+  - "Every life upgrade is also a damage upgrade, so your shopping list never splits in two."
+  - "The core items are extremely cheap: Rathpith about 0.19 Divine, Kaom's Heart about 0.3, Glorious Vanity about 0.04."
+  - "A \"really lazy\" playstyle by the author's own description: channel and stand still."
+  - "Does content other builds struggle with, specifically Ultimatum and deep delve."
+  - "The only one of the four with a published buy order, budget tiers and a fully readable Path of Building configuration."
+  - "It dodged the 3.30 Winter Orb nerf because the author moved it off Winter Orb before launch."
+weaknesses:
+  - "Slow at lower budgets, by the author's own admission. Clear is the weak axis throughout."
+  - "Facetanking ubers only comes at higher budgets."
+  - "A trap for anyone who skims. Get the [[Leadership's Price]] attribute balance wrong and you lose crit cap and 20% damage reduction at once."
+  - "Any Strength or Intelligence on your gear makes the amulet useless after the campaign."
+  - "Single author, single source. Nobody has independently reproduced this build."
+  - "The published shield is a 4% roll that does not exist in game, so real damage is meaningfully below 88 million."
+  - "The 88.1 million figure assumes 40% shock and a generic level 84 target with no boss selected, on a 3.29 engine."
+  - "The claimed 3.30 damage buff rests on Viscera effects nobody has documented yet."
+avoidIf: >-
+  Pick something else if you want a fast day-one mapper, if you want uber
+  bosses dead on a small budget, or if you dislike channelling and standing
+  still for single target — the boss routine is literally press
+  [[Pact of Lycia]] and hold the button. Most importantly, skip it if you will
+  not read a long mechanics guide. This build stacks [[Blood Magic]],
+  [[Petrified Blood]], permanent low life, [[Righteous Fire]], a shield that
+  sacrifices life on every cast and [[Corrupted Soul]] on top of each other,
+  and an exact attribute balance holds the crit and the damage reduction
+  together. Half-following it produces a weak character, which is the one
+  weakness its own author puts in writing.
+
+sources:
+  - title: "Mobalytics: Lazy and Ridiculously Overpowered Lifestacker (Elegacy9)"
+    url: https://mobalytics.gg/poe/profile/worthy-robot-8jwl1t/builds/3f658dc4-b636-40ee-89c6-6e16f89bbe4e
+    kind: guide
+    note: "The full written guide: strengths and weaknesses, the \"How it Works\" section, the changelog recording the move off Winter Orb, and nine budget-variant loadouts. Tagged both Starter and End Game."
+  - title: "poebuilds.cc: Overpowered Lifestacking Inquisitor"
+    url: https://www.poebuilds.cc/poe1/build/8apVkX24m68
+    kind: guide
+    note: "2026-11-13. Three showcases for a league start on scuffed gear."
+  - title: "poebuilds.cc: Lazy and Ridiculously Overpowered Lifestacker"
+    url: https://www.poebuilds.cc/poe1/build/MbBrUOGHvks
+    kind: guide
+    note: "2026-11-12, 50.6k views. The author's 3.30 league starter page for the same build."
+  - title: "poebuilds.cc: Elegacy9 author page"
+    url: https://www.poebuilds.cc/poe1/author/elegacy9
+    kind: guide
+  - title: "Path of Building: the newer file (2026-11-13)"
+    url: https://poe.ninja/poe1/pob/9a8f8
+    kind: pob
+    note: "88.1 million hit damage per second, 16,663 life, 244,286 eHP. Twelve config sets and nine gear loadouts; the active set is #4, \"Endgame\". Target is a generic level 84 enemy, no boss. Tree data marked 3.29."
+  - title: "Path of Building: the earlier file (2026-11-12)"
+    url: https://poe.ninja/poe1/pob/9a899
+    kind: pob
+    note: "85.2 million damage per second, 15,770 life, 231,760 eHP. Same structure."
+  - title: "Video: Lazy and Ridiculously Overpowered Lifestacker"
+    url: https://www.youtube.com/watch?v=MbBrUOGHvks
+    kind: video
+  - title: "Video: Overpowered Lifestacking Inquisitor showcases"
+    url: https://www.youtube.com/watch?v=8apVkX24m68
+    kind: video
+  - title: "Video: mechanics explanation"
+    url: https://www.youtube.com/watch?v=DlBGD4T9d-Y
+    kind: video
+    note: "The author points at 18:48 for the mechanics walkthrough."
+  - title: "pobarchives: the 3.29 final version"
+    url: https://pobarchives.com/build/knQXMb8Q
+    kind: pob
+    note: "Reported as 98.79 million damage per second and 237,350 eHP, but the site returns 403 to automated fetching and serves a bot challenge to a browser. Unverified, and its configuration could not be read."
+  - title: "PoEDB: Rathpith Globe"
+    url: https://poedb.tw/us/Rathpith_Globe
+    kind: data
+    note: "The live values: 3% spell damage and 3% spell crit per 100 maximum life, sacrifice 10%, nerfed from 5% in 3.29.0. This is what proves the published 4% roll is not obtainable."
+  - title: "PoEWiki: Foulborn unique items"
+    url: https://www.poewiki.net/wiki/Foulborn_unique_item
+    kind: data
+    note: "Acquisition routes and the modifier table. Source of the finding that Foulborn Rathpith is actively bad here and Foulborn Mageblood is no better than normal."
+  - title: "PoE Vault: Covens of Umbra mechanic guide"
+    url: https://www.poe-vault.com/guides/covens-of-umbra-mechanic-guide
+    kind: guide
+    note: "The Viscera and Wickerman system. It confirms the system exists but does not list individual Viscera buffs, which is what the author's claimed 3.30 damage increase depends on."
+  - title: "poe.ninja: Allflame (3.29) economy data"
+    url: https://poe.ninja/poe1/economy/allflame/unique-accessories
+    kind: data
+    note: "Source of every price on this page. There is no Covens of Umbra economy yet — the API returns 404 for the new league. 1 Divine was about 497 chaos in this dataset."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Read directly to confirm that the Arcane Blessing change is in the Ruthless-specific section and does not apply to the normal game."
+  - title: "Maxroll: 3.30 Covens of Umbra patch notes summary"
+    url: https://maxroll.gg/poe/news/3-30-covens-of-umbra-patch-notes
+    kind: official
+    note: "The independent second source for the Ruthless-section split and for the absence of changes to this build's items."
