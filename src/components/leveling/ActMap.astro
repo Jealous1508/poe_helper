@@ -108,14 +108,20 @@ const quests = act.nodes.filter((node) => node.quest);
     <div class="map__key">
       <div class="map__key-head">
         <h3>{t(locale, 'leveling.map.quests')}</h3>
-        {/* The counter and the reset only mean anything once the script is
-            running, and the ticks are hidden until then, so these are too. */}
+        {/*
+          The one place in the guide that is ticked off, and the count is of
+          the quests listed right here — it used to count every stop on the
+          route, so it read "1 of 20" under a list of nine and looked broken.
+          The bar carries the same number as the words for people who read a
+          shape faster than a fraction.
+        */}
         <p class="map__progress">
           <span
             data-progress-count
-            data-total={act.nodes.length}
+            data-total={quests.length}
             data-template={t(locale, 'leveling.progress.count', { done: '{done}', total: '{total}' })}
-          >{t(locale, 'leveling.progress.count', { done: 0, total: act.nodes.length })}</span>
+          >{t(locale, 'leveling.progress.count', { done: 0, total: quests.length })}</span>
+          <span class="map__bar" data-progress-bar aria-hidden="true"><span style="width:0%"></span></span>
           <button type="button" data-progress-reset hidden>{t(locale, 'leveling.progress.reset')}</button>
         </p>
       </div>
@@ -245,8 +251,10 @@ const quests = act.nodes.filter((node) => node.quest);
 
 
   .map__key-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-  .map__progress { display: none; margin: 0 0 0.5rem; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--text-muted); }
-  :global([data-route][data-enhanced]) .map__progress { display: flex; }
+  .map__progress { visibility: hidden; display: flex; margin: 0 0 0.5rem; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--text-muted); }
+  :global([data-route][data-enhanced]) .map__progress { visibility: visible; }
+  .map__bar { width: 5.5rem; height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .map__bar > span { display: block; height: 100%; background: var(--accent); transition: width 0.18s var(--ease); }
   .map__progress button {
     border: 1px solid var(--border-strong); border-radius: var(--radius); background: transparent;
     color: var(--text-muted); font: inherit; font-size: 0.76rem; padding: 0.1rem 0.5rem; cursor: pointer;

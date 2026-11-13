@@ -17,6 +17,13 @@ const groups = [
   { id: 'starter', builds: builds.filter((b) => b.role === 'starter') },
   { id: 'endgame', builds: builds.filter((b) => b.role === 'endgame') },
 ] as const;
+
+// Classes in the game's own order, and only the ones that have a build, so
+// the row never offers a filter that leads to an empty page.
+const classOrder = ['Marauder', 'Duelist', 'Ranger', 'Shadow', 'Witch', 'Templar', 'Scion'];
+const classes = classOrder
+  .map((name) => ({ name, count: builds.filter((b) => b.class === name).length }))
+  .filter((entry) => entry.count > 0);
 ---
 <Base locale={locale} league={league} title={t(locale, 'nav.builds')} description={t(locale, 'builds.lede')} section="builds" isFallback={isFallback}>
   <div class="container page-head">
@@ -25,17 +32,37 @@ const groups = [
     <p class="lede">{t(locale, 'builds.lede')}</p>
   </div>
 
-  <div class="container">
+  <div class="container" data-builds>
+    {/*
+      Class first, then the build. Hidden until the script runs, because
+      without it the chips would filter nothing — every build is still on
+      the page and reachable by scrolling, which is the no-JavaScript
+      answer anyway.
+    */}
+    <div class="classbar" role="group" aria-label={t(locale, 'builds.filter')}>
+      <button type="button" class="chip is-active" data-class-filter="all" aria-pressed="true">
+        {t(locale, 'builds.filter.all')}<span class="chip__n">{builds.length}</span>
+      </button>
+      {classes.map((entry) => (
+        <button type="button" class="chip" data-class-filter={entry.name} aria-pressed="false">
+          {entry.name}<span class="chip__n">{entry.count}</span>
+        </button>
+      ))}
+    </div>
+
     {groups.map((group) => (
-      <section class="group">
+      <section class="group" data-group>
         <header>
           <h2>{t(locale, `builds.group.${group.id}`)}</h2>
           <p class="muted">{t(locale, `builds.group.${group.id}.desc`)}</p>
         </header>
         {group.builds.length > 0 ? (
-          <div class="grid">
-            {group.builds.map((build) => <BuildCard build={build} league={league.id} locale={locale} />)}
-          </div>
+          <>
+            <div class="grid">
+              {group.builds.map((build) => <BuildCard build={build} league={league.id} locale={locale} />)}
+            </div>
+            <div class="more more--alone" data-group-empty hidden>{t(locale, 'builds.filter.none')}</div>
+          </>
         ) : (
           <div class="more more--alone">{t(locale, 'builds.none')}</div>
         )}
@@ -57,7 +84,83 @@ const groups = [
   </div>
 </Base>
 
+<script>
+  // Filter the cards by character class. The chips carry their own counts,
+  // which do not change: a count that moved as you filtered would just be
+  // telling you how many of one class are of that class.
+  function applyClass(filter: string) {
+    const root = document.querySelector<HTMLElement>('[data-builds]');
+    if (!root) return;
+    for (const chip of root.querySelectorAll<HTMLElement>('[data-class-filter]')) {
+      const active = chip.dataset.classFilter === filter;
+      chip.classList.toggle('is-active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    }
+    for (const group of root.querySelectorAll<HTMLElement>('[data-group]')) {
+      let shown = 0;
+      for (const card of group.querySelectorAll<HTMLElement>('[data-build-class]')) {
+        const show = filter === 'all' || card.dataset.buildClass === filter;
+        card.hidden = !show;
+        if (show) shown += 1;
+      }
+      // Say so rather than leaving a heading over empty space.
+      const empty = group.querySelector<HTMLElement>('[data-group-empty]');
+      if (empty) empty.hidden = shown > 0;
+    }
+  }
+
+  function initClassFilter() {
+    const root = document.querySelector<HTMLElement>('[data-builds]');
+    if (root) root.dataset.enhanced = 'true';
+  }
+
+  document.addEventListener('click', (event) => {
+    const chip = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-class-filter]') : null;
+    if (chip?.dataset.classFilter) applyClass(chip.dataset.classFilter);
+  });
+  document.addEventListener('astro:page-load', initClassFilter);
+</script>
+
 <style>
+  .classbar {
+    visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  :global([data-builds][data-enhanced]) .classbar { visibility: visible; }
+  /* Same pill as the changelog filter, which is scoped to that component. */
+  .classbar .chip {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.22rem 0.7rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .classbar .chip:hover { color: var(--text); border-color: var(--accent); }
+  .classbar .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .classbar .chip.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .chip__n {
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+  }
+  .chip.is-active .chip__n { color: inherit; opacity: 0.8; }
+
   .group { padding-bottom: 3rem; }
   .group header { margin-bottom: 1.25rem; }
   .group header p { max-width: var(--measure); margin-top: 0.3rem; }

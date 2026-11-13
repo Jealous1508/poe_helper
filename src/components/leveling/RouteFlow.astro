@@ -53,19 +53,6 @@ const first = act.nodes[0].id;
           </span>
           <Tag kind={node.tag} label={t(locale, `leveling.tag.${node.tag}`)} />
         </a>
-        {/* A sibling of the link, not a child: a button inside an anchor is
-            invalid, and this must not also select the zone. Hidden until the
-            script runs, since without it a tick could not be remembered. */}
-        <button
-          type="button"
-          class="tick"
-          data-tick={node.id}
-          aria-pressed="false"
-          aria-label={`${t(locale, 'leveling.progress.mark')}: ${node.name}`}
-          title={t(locale, 'leveling.progress.mark')}
-        >
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
-        </button>
       </li>
     ))}
   </ol>
@@ -219,21 +206,27 @@ const first = act.nodes[0].id;
       tick.setAttribute('aria-pressed', String(on));
       tick.closest<HTMLElement>('[data-item], li')?.classList.toggle('is-done', on);
     }
+    // Count the ticks that are actually on the page, so the number and the
+    // bar can never disagree with the list beside them.
+    const counted = new Set<string>();
+    for (const tick of route.querySelectorAll<HTMLButtonElement>('[data-tick]')) {
+      if (tick.dataset.tick && done.has(tick.dataset.tick)) counted.add(tick.dataset.tick);
+    }
+
     const counter = route.querySelector<HTMLElement>('[data-progress-count]');
+    const total = Number(counter?.dataset.total ?? '0');
+    const hit = Math.min(counted.size, total);
+
     if (counter) {
-      const total = Number(counter.dataset.total ?? '0');
-      // Count zones, not buttons: a zone has a tick in the chart and another
-      // in the quest index, and both stand for the same one thing.
-      const counted = new Set<string>();
-      for (const tick of route.querySelectorAll<HTMLButtonElement>('[data-tick]')) {
-        if (tick.dataset.tick && done.has(tick.dataset.tick)) counted.add(tick.dataset.tick);
-      }
-      const hit = counted.size;
       counter.textContent = (counter.dataset.template ?? '{done}/{total}')
-        .replace('{done}', String(Math.min(hit, total)))
+        .replace('{done}', String(hit))
         .replace('{total}', String(total));
     }
-    route.querySelector<HTMLElement>('[data-progress-reset]')?.toggleAttribute('hidden', done.size === 0);
+
+    const bar = route.querySelector<HTMLElement>('[data-progress-bar] > span');
+    if (bar) bar.style.width = total > 0 ? `${Math.round((hit / total) * 100)}%` : '0%';
+
+    route.querySelector<HTMLElement>('[data-progress-reset]')?.toggleAttribute('hidden', counted.size === 0);
   }
 
   function initProgress() {
@@ -276,14 +269,15 @@ const first = act.nodes[0].id;
 
   /* ---------- the flow chart ---------- */
   .flow { list-style: none; margin: 0; padding: 0; position: relative; }
-  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; display: flex; align-items: center; gap: 0.4rem; }
-  .flow__item > .node { flex: 1; min-width: 0; }
+  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; }
 
   /* ---------- the tick ---------- */
-  /* Hidden until the script announces itself: a tick that cannot be
-     remembered is a worse promise than no tick at all. */
-  .tick { display: none; }
-  :global([data-route][data-enhanced]) .tick {
+  /* It keeps its space from the first paint and only becomes visible once
+     the script is running — hiding it with display would reflow every row
+     in the list the moment the script arrived, which is the jump you used
+     to see on load. A tick that cannot be remembered is still a worse
+     promise than no tick, hence the visibility rather than nothing. */
+  .tick {
     flex: none;
     display: inline-flex;
     align-items: center;
@@ -296,12 +290,13 @@ const first = act.nodes[0].id;
     background: var(--surface);
     color: transparent;
     cursor: pointer;
+    visibility: hidden;
     transition: border-color 0.12s var(--ease), background-color 0.12s var(--ease), color 0.12s var(--ease);
   }
+  :global([data-route][data-enhanced]) .tick { visibility: visible; }
   .tick:hover { border-color: var(--accent); color: var(--text-muted); }
+  .tick:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .tick[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-  .is-done > .node .node__name { text-decoration: line-through; text-decoration-thickness: 1px; }
-  .is-done > .node { opacity: 0.62; }
   /* spine */
   .flow__item::before { content: ''; position: absolute; left: 0.62rem; top: 0; bottom: 0; width: 1.5px; background: var(--border-strong); }
   .flow__item:first-child::before { top: 50%; }
