@@ -108,6 +108,25 @@ export function parseBuild(slug: string, file: YamlFile, ctx: BuildContext): Bui
   return { ...build, slug, where: file.where };
 }
 
+/**
+ * Reading order for the builds page.
+ *
+ * Alphabetical order says nothing. Someone picking a league starter reads
+ * from the top and wants the gentlest build first; someone shopping the
+ * endgame list reads by price, so it starts at the cheapest. Name breaks
+ * ties, so the order never wobbles between two equal builds.
+ */
+function compareBuilds(a: Build, b: Build): number {
+  if (a.role !== b.role) return a.role === 'starter' ? -1 : 1;
+  if (a.role === 'starter') {
+    if (a.ratings.ease !== b.ratings.ease) return b.ratings.ease - a.ratings.ease;
+  } else {
+    const rank = budgets.indexOf(a.budget) - budgets.indexOf(b.budget);
+    if (rank !== 0) return rank;
+  }
+  return a.name.localeCompare(b.name);
+}
+
 export function getBuilds(league: string, locale: Locale): { builds: Build[]; isFallback: boolean } {
   const byLocale = loadYamlDir('builds', league);
   if (!byLocale.en) return { builds: [], isFallback: locale !== 'en' };
@@ -117,7 +136,7 @@ export function getBuilds(league: string, locale: Locale): { builds: Build[]; is
     ...parseBuild(slug, file, ctx),
     isFallback: fellBack.has(slug),
   }));
-  builds.sort((a, b) => a.name.localeCompare(b.name));
+  builds.sort(compareBuilds);
   return { builds, isFallback: builds.some((b) => b.isFallback) };
 }
 

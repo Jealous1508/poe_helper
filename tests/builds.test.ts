@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { getBuilds, parseBuild } from '../src/lib/builds';
+import { budgets, getBuilds, parseBuild } from '../src/lib/builds';
 
 const base = () => ({
   name: 'Test Build',
@@ -62,5 +62,27 @@ describe('getBuilds', () => {
     const en = getBuilds('3.30', 'en').builds.map((x) => x.slug);
     const vi = getBuilds('3.30', 'vi').builds.map((x) => x.slug);
     expect(vi).toEqual(en);
+  });
+
+  // Alphabetical order tells a reader nothing. A new player reads the
+  // starter list from the top, so the gentlest build belongs there; the
+  // endgame list is read by budget, so it starts at the cheapest.
+  it('lists starters easiest first', () => {
+    const eases = getBuilds('3.30', 'en').builds.filter((b) => b.role === 'starter').map((b) => b.ratings.ease);
+    expect(eases).toEqual([...eases].sort((a, b) => b - a));
+  });
+
+  it('lists endgame builds cheapest first', () => {
+    const ranks = getBuilds('3.30', 'en').builds.filter((b) => b.role === 'endgame').map((b) => budgets.indexOf(b.budget));
+    expect(ranks).toEqual([...ranks].sort((a, b) => a - b));
+  });
+
+  it('breaks a tie by name, so the order never wobbles between builds', () => {
+    const starters = getBuilds('3.30', 'en').builds.filter((b) => b.role === 'starter');
+    for (let i = 1; i < starters.length; i += 1) {
+      const prev = starters[i - 1];
+      const here = starters[i];
+      if (prev.ratings.ease === here.ratings.ease) expect(prev.name.localeCompare(here.name)).toBeLessThan(0);
+    }
   });
 });

@@ -35,7 +35,6 @@ const groups = [
         {group.builds.length > 0 ? (
           <div class="grid">
             {group.builds.map((build) => <BuildCard build={build} league={league.id} locale={locale} />)}
-            <div class="more">{t(locale, 'builds.more')}</div>
           </div>
         ) : (
           <div class="more more--alone">{t(locale, 'builds.none')}</div>
