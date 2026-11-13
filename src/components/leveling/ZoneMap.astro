@@ -51,12 +51,19 @@ const py = point ? Math.round(point[1] * SCALE) : 0;
         class="zonemap__plane"
         style={`width:${planeW}px;height:${planeH}px;left:clamp(calc(100% - ${planeW}px), calc(50% - ${px}px), 0px);top:clamp(${WINDOW_H - planeH}px, ${Math.round(WINDOW_H / 2) - py}px, 0px)`}
       >
+        {/* Eager on purpose. Every panel but the open one starts inside a
+            hidden subtree, where a lazy image is never fetched and is not
+            reliably reconsidered when the panel is shown, so the map stayed
+            blank for every zone the reader picked. All the panels on an act
+            page point at the same file: one request for the page, not one
+            per zone. */}
         <img
           src={imageUrl(`map-act-${act}`, where)}
           alt=""
           width={planeW}
           height={planeH}
-          loading="lazy"
+          loading="eager"
+          fetchpriority="low"
           decoding="async"
         />
         <span class="zonemap__ring" style={`left:${px}px;top:${py}px`} aria-hidden="true"></span>
