@@ -1,0 +1,254 @@
+number: 9
+title: "The desert, the storm and the Depraved Trinity"
+town: Highgate
+levelIn: 61
+levelOut: 64
+skillPoints: 2
+skillPointsNote: "The only act in this stretch with two. Plus 2 respec points from Fastis Fortuna."
+boss: The Depraved Trinity
+keyRewards:
+  - "2 passive points: Queen of the Sands, The Ruler of Highgate"
+  - "2 respec points from Fastis Fortuna, which most routes forget"
+  - "The Storm Blade: the best gear reward of this stretch"
+  - "The second Merciless trial, in The Tunnel"
+intro: >-
+  Act 9 is short and gives only two passive points, but one of its rewards
+  is the best piece of gear the campaign hands out. It also contains the
+  Blood Aqueduct, the zone you will come back to farm after Act 10.
+
+nodes:
+  - id: blood-aqueduct
+    name: The Blood Aqueduct
+    kind: zone
+    tag: travel
+    level: 61
+    waypoint: true
+    summary: >-
+      The first zone of the act, entered from Act 8. The exit to Highgate is
+      at the end of the left lane.
+    tips: >-
+      Take this waypoint and remember it. After Act 10 this is the standard
+      place to level to 68, and it drops the Humility divination card: nine
+      of them trade for a Tabula Rasa, a free six-link.
+
+  - id: highgate-9
+    name: Highgate
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for the act. Irasha sells equipment, Petarus and Vanja sell
+      wands, jewellery and flasks, Tasuni handles quest rewards, and Sin is
+      here for the Pantheon.
+
+  - id: the-descent
+    name: The Descent
+    kind: zone
+    tag: travel
+    level: 61
+    summary: >-
+      Three floors, each with a Supply Hoist in a corner. Ride them down;
+      the third floor exits into the Vastiri Desert.
+
+  - id: vastiri-desert
+    name: The Vastiri Desert
+    kind: zone
+    tag: must
+    level: 61
+    image: quest-storm-blade
+    summary: >-
+      A big open zone. The Storm-Weathered Chest spawns waves of mummies
+      when you open it, then drops The Storm Blade.
+    quest: The Storm Blade
+    reward: "From Petarus and Vanja: a weapon, shield, quiver or body armour. The best gear reward in this stretch."
+    tips: >-
+      Follow a wall rather than wandering across the middle. Jun is first
+      met here. The Oasis entrance is buried under a sandstorm and needs
+      the Bottled Storm, which you get by handing in the Storm Blade,
+      talking to Sin, then going back to Petarus and Vanja.
+    newbie: >-
+      The Bottled Storm does **not** need the Basilisk Acid. Some route
+      guides kill the Basilisk first and it reads as if the acid were
+      required; it is only trip batching. In 3.30 this zone can spawn a
+      Mirage.
+
+  - id: the-oasis
+    name: The Oasis
+    kind: side
+    tag: worth
+    branchFrom: vastiri-desert
+    level: 61
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Once you hold the Bottled Storm, the sandstorm clears. Follow a wall
+      to the Sand Pit, where Shakari, Queen of the Sands waits.
+    quest: Queen of the Sands
+    reward: "Book of Skill from Irasha: +1 passive point, and Soul of Shakari."
+    why: "A permanent passive point and a Pantheon soul for one short detour."
+    tips: >-
+      Shakari burrows and resurfaces around 60% life. Stay behind her,
+      avoid the frontal attack, and keep off the swirls on the ground. In
+      3.30 this zone can spawn a Mirage.
+
+  - id: the-foothills
+    name: The Foothills
+    kind: zone
+    tag: must
+    level: 62
+    image: quest-calendar
+    badge: "+2 respec points"
+    summary: >-
+      From the waypoint, go up and right until you find the cliff, then up
+      and left. Boulderback roams here and drops The Calendar of Fortune.
+    quest: Fastis Fortuna
+    reward: "Book of Regrets from Petarus and Vanja: 2 respec points."
+    tips: >-
+      Boulderback is an optional unique, and several popular routes never
+      mention him, so this is the most commonly missed reward in the act.
+      Exits: up-left to The Tunnel, along the right-hand wall to The
+      Boiling Lake.
+
+  - id: boiling-lake
+    name: The Boiling Lake
+    kind: boss
+    tag: must
+    level: 62
+    summary: >-
+      Follow the water. The Basilisk sits in a corner near a cluster of
+      petrified soldiers, which are the landmark.
+    reward: "Basilisk Acid, one of the two items Sin needs."
+    tips: >-
+      Every one of the Basilisk's attacks can be avoided by staying behind
+      it. Killing it un-petrifies the soldiers, who are harmless. There is
+      a spell damage crafting recipe here.
+
+  - id: the-tunnel
+    name: The Tunnel
+    kind: zone
+    tag: must
+    level: 62
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 2 of 3 for Merciless
+    summary: >-
+      The second Merciless trial, with blade sentries. It sits on a side
+      path you reach before the waypoint, so do it on the way in.
+    tips: >-
+      A hidden switch about halfway to the plaque, in the corner opposite
+      the entrance, opens a transfigured gem stash. There is an all
+      attributes crafting recipe here.
+
+  - id: the-quarry
+    name: The Quarry
+    kind: zone
+    tag: travel
+    level: 63
+    waypoint: true
+    summary: >-
+      The waypoint is in the middle. Two destinations spawn in random
+      corners: The Refinery and the Shrine of the Winds. Sin stands here
+      and opens the Belly of the Beast once you bring him both items.
+    tips: "A physical damage crafting recipe is here too."
+
+  - id: shrine-of-the-winds
+    name: Shrine of the Winds
+    kind: side
+    tag: worth
+    branchFrom: the-quarry
+    level: 63
+    image: quest-feather
+    badge: "+1 passive point"
+    summary: >-
+      Garukhan, Queen of the Winds, in an arena against one of the side
+      walls. She drops the Sekhema Feather.
+    quest: The Ruler of Highgate
+    reward: "Book of Skill from Irasha: +1 passive point, and Soul of Garukhan."
+    why: "The act's second and last passive point."
+    tips: "Tornados roam the arena. Lure her into a clear corner and fight her there."
+
+  - id: the-refinery
+    name: The Refinery
+    kind: side
+    tag: must
+    branchFrom: the-quarry
+    level: 63
+    image: quest-trarthan
+    summary: >-
+      Follow the cart tracks up and right to General Adus. Behind his room,
+      the Theurgic Precipitate Machine gives you the Trarthan Powder.
+    reward: "Trarthan Powder, the second item Sin needs."
+    tips: >-
+      General Adus telegraphs heavy area attacks; the whole fight is about
+      not standing in them. A sewer grate off the cart tracks leads to the
+      Refinery Tunnels and a crafting recipe for triggering a socketed
+      spell when you use a skill. That one is worth the detour.
+
+  - id: belly-of-the-beast-9
+    name: The Belly of the Beast
+    kind: zone
+    tag: travel
+    level: 63
+    summary: >-
+      Opened by Sin once he has the acid and the powder. A walkthrough zone.
+    tips: "Droolmaw is optional. Skip."
+
+  - id: rotting-core
+    name: "The Rotting Core and The Black Core"
+    kind: zone
+    tag: must
+    level: 64
+    summary: >-
+      The Rotting Core leads to The Black Core, where Sin opens three
+      portals to Malachai's old lieutenants. Any order.
+    tips: |
+      The three are **Doedre, Darksoul**, **Maligaro, The Broken** and **Shavronne, Unbound**.
+
+      Doedre uses three totems that spread weaker versions of her Effluent debuffs. **Do not destroy the totems** — just stay away from them and the stacks stay low.
+    newbie: >-
+      Drop a town portal in the Black Core before you start. If you die,
+      you go back to town and the walk back is long.
+
+  - id: depraved-trinity
+    name: The Depraved Trinity
+    kind: boss
+    tag: must
+    level: 64
+    summary: >-
+      Talk to Sin again to open The Black Heart. Up close the Trinity
+      swipes and slams; at range it drops red spheres.
+    reward: "Sin rescues you, then Lilly Roth sails you to Oriath."
+    tips: |
+      Each red sphere lasts about thirty seconds and deals heavy damage, so the arena shrinks as they pile up. **Every 25% of its life lost spawns six monsters.**
+
+      So: kill the adds quickly, do not let the spheres box you into a corner, and do not try to fight it from maximum range.
+
+sections:
+  - title: The Storm Blade chain, in order
+    body: >-
+      This is the part that confuses people. Open the Storm-Weathered Chest
+      in the Vastiri Desert for The Storm Blade. Hand it to Petarus and
+      Vanja and pick your reward. Talk to Sin. Go back to Petarus and Vanja
+      for the Bottled Storm. That clears the sandstorm over the Oasis. The
+      Basilisk is not part of this chain.
+  - title: Do not miss Fastis Fortuna
+    body: >-
+      Boulderback in The Foothills is an optional unique, and the most
+      popular route data never mentions him. He drops The Calendar of
+      Fortune, which Petarus and Vanja trade for two respec points. If you
+      are following a speedrun route, this is the thing it skipped.
+  - title: What to skip
+    body: >-
+      Droolmaw, Colossus Crusher, Knitted Horror and the other optional
+      uniques. The Forbidden Vault in the Oasis is only worth it if you are
+      doing Jun's Betrayal questline.
+
+patchNotes:
+  - "The Vastiri Desert and The Oasis can spawn a Mirage."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 9 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-9" }
+  - { title: "PoEDB Act 9", url: "https://poedb.tw/us/Act_9" }

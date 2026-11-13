@@ -1,0 +1,124 @@
+intro: >-
+  The Labyrinth is where you choose your ascendancy class and collect the
+  six points that go with it. There are three during the campaign and one
+  after it. Each is a single run with traps, three fights against Izaro,
+  and one rule that catches everybody: if you die, the run is over.
+
+labs:
+  - id: normal
+    name: Normal Labyrinth
+    areaLevel: 33
+    requires: "The six trials in Acts 1–3. No character level requirement."
+    when: >-
+      At the start of Act 4. It opens at the end of Act 3, and some guides
+      send you straight in; others wait one act. Waiting costs nothing, and
+      the third Izaro fight is where under-levelled characters die.
+    ready: "Around level 33–40, with 1,000 life or more and good life flasks."
+    reward: "Your ascendancy class, plus 2 ascendancy points."
+    trials:
+      - { zone: The Lower Prison, act: 1, trap: Spike traps }
+      - { zone: The Crypt Level 1, act: 2, trap: Spinning blades }
+      - { zone: The Chamber of Sins Level 2, act: 2, trap: Sawblades }
+      - { zone: The Crematorium, act: 3, trap: Furnace traps }
+      - { zone: The Catacombs, act: 3, trap: Blade sentries }
+      - { zone: The Imperial Gardens, act: 3, trap: Dart traps }
+    notes:
+      - "This is the big one: you pick your ascendancy class at the Altar of Ascendancy after Izaro dies, and that choice shapes the rest of the character."
+      - "If the first attempt feels bad, come back a few levels later. There is no penalty for waiting and the trials stay done."
+
+  - id: cruel
+    name: Cruel Labyrinth
+    areaLevel: 55
+    requires: "The Normal Labyrinth done once, character level 40, and the three trials in Acts 6–7."
+    when: >-
+      Mid Act 7, after the Dread Thicket hand-ins, or at the start of Act 8.
+      Guides split between the two; the difference is a couple of levels.
+      Going earlier gives you the ascendancy for the Arakaali fight.
+    ready: "Around level 55–60, with roughly 2,000 life."
+    reward: "2 more ascendancy points."
+    trials:
+      - { zone: The Lower Prison, act: 6, trap: Spike traps }
+      - { zone: The Crypt, act: 7, trap: Spinning blades }
+      - { zone: The Chamber of Sins Level 2, act: 7, trap: Sawblades }
+    notes:
+      - "You get Soul of Arakaali at the end of Act 7, which reduces damage over time. It is a good Pantheon pick for this run."
+
+  - id: merciless
+    name: Merciless Labyrinth
+    areaLevel: 68
+    requires: "The Cruel Labyrinth done once, character level 50, and the three trials in Acts 8–10."
+    when: >-
+      Act 10, and **before you fight Kitava**. Every guide agrees on this.
+      Killing Kitava costs you another 30% resistance, and this is an area
+      level 68 zone.
+    ready: "Around level 65–70, with 2,800 life or more."
+    reward: "2 more ascendancy points, for six in total."
+    trials:
+      - { zone: The Bath House, act: 8, trap: Furnace traps }
+      - { zone: The Tunnel, act: 9, trap: Blade sentries }
+      - { zone: The Ossuary, act: 10, trap: Dart traps }
+    notes:
+      - "Argus, Izaro's hound, appears as an optional fight from here on. He has a dangerous enrage phase and drops a Treasure Key. Skip him on a first clear."
+
+  - id: eternal
+    name: Eternal Labyrinth
+    areaLevel: 75
+    requires: "All three previous Labyrinths, character level 68, and one Offering to the Goddess. No trials."
+    when: "After the campaign, once you are comfortably into maps."
+    ready: "Level 75 or above, with 3,500 life or more."
+    reward: "The last 2 ascendancy points, for eight in total."
+    trials: []
+    notes:
+      - "Older guides say the level requirement is 60. It is 68."
+      - "With a Tribute, Gift or Dedication to the Goddess the area level rises as high as 83."
+
+rules:
+  - title: One death ends the run
+    body: >-
+      You die, the run is over and you start again from the entrance.
+      Leaving the area also ends the attempt. This is the rule that makes
+      the Labyrinth feel different from the rest of the campaign.
+  - title: The layout changes every day
+    body: >-
+      It rotates at midnight UTC. Every run that day shares the same
+      layout, the same hidden passages and the same secret rooms, which is
+      why layout maps exist for each day.
+  - title: Trials are shared, Labyrinths are not
+    body: >-
+      Finish a trial on one character and it counts for every character you
+      have in that league. The Labyrinth runs themselves are per character,
+      so each one has to do its own. Nothing carries into a new league.
+  - title: Spend your keys before you leave
+    body: >-
+      Treasure Keys, Silver Keys and trinkets are deleted when you leave
+      the Labyrinth. Whatever you picked up, use it before the exit.
+  - title: Traps scale with your life
+    body: >-
+      Trap damage is a percentage of your life, so no amount of levelling
+      makes them harmless. Fire and chaos resistance help, and a movement
+      skill such as Flame Dash gets you across trap floors quickly.
+  - title: Darkshrines are optional
+    body: >-
+      Hidden shrines off the main path give you a buff for the rest of the
+      run: speed, resistances, regeneration, sometimes an extra use of the
+      Divine Font at the end. They are genuinely useful, but hunting for
+      them costs more time than most are worth. On a first clear, walk past.
+
+traps:
+  - name: Spike traps
+    body: "Floor spikes on a rhythm. Watch one full cycle, then walk through."
+  - name: Spinning blades
+    body: "Blades on fixed tracks. They are predictable; the mistake is rushing."
+  - name: Sawblades
+    body: "Larger blades along a corridor. Time your run between them rather than trying to outpace them."
+  - name: Furnace traps
+    body: "Jets of fire on a timer. Fire resistance takes the edge off."
+  - name: Blade sentries
+    body: "Roaming blades that patrol a route rather than sitting in one place."
+  - name: Dart traps
+    body: "Wall-mounted darts that fire in volleys across a gap."
+
+sources:
+  - { title: "Maxroll Labyrinth guide", url: "https://maxroll.gg/poe/getting-started/labyrinth-guide" }
+  - { title: "Mobalytics Labyrinth and Ascendancy", url: "https://mobalytics.gg/poe/guides/labyrinth-ascendancy" }
+  - { title: "Official 3.30.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680" }

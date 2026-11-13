@@ -1,0 +1,272 @@
+number: 7
+title: "Maligaro, the Fireflies and Arakaali"
+town: The Bridge Encampment
+levelIn: 50
+levelOut: 55
+skillPoints: 3
+skillPointsNote: "Plus 2 respec points from Kishara's Star."
+boss: "Arakaali, Spinner of Shadows"
+keyRewards:
+  - "3 passive points: The Master of a Million Faces, Queen of Despair, Kishara's Star"
+  - "The Cruel Labyrinth: your second ascendancy"
+  - "Four-linked boots from Essence of the Artist"
+  - "Three Pantheon souls: Ralakesh, Gruthkul, Arakaali"
+intro: >-
+  Act 7 revisits Act 2's forest, now rotten. The act has three passive
+  points, all handed in on one town trip, and it is where most guides put
+  the Cruel Labyrinth. The one part that trips people up is Maligaro's
+  Sanctum, which gives you six portals and no second chances.
+
+nodes:
+  - id: broken-bridge-7
+    name: The Broken Bridge
+    kind: zone
+    tag: travel
+    level: 50
+    summary: >-
+      Linear. Follow the road towards the Crossroads. A Silver Locket sits
+      in a square ruin near a broken waypoint: it is a Dirty Lockbox, and
+      Weylam Roth trades it for a utility flask.
+    tips: "Worth the half-minute on a fresh character for the free flask."
+
+  - id: crossroads-7
+    name: The Crossroads
+    kind: zone
+    tag: travel
+    level: 51
+    waypoint: true
+    summary: >-
+      The hub of the act, visited twice. The road to the Old Fields is
+      barricaded. One fork leads to the Fellshrine Ruins, the other to the
+      Chamber of Sins. Do Fellshrine first.
+
+  - id: fellshrine-7
+    name: The Fellshrine Ruins
+    kind: zone
+    tag: travel
+    level: 51
+    summary: >-
+      Follow the path to the ruined church in the corner; the Crypt door is
+      there.
+    tips: "Bundle of Woe and Bringer of Souls are optional and give nothing. Walk past."
+
+  - id: crypt-7
+    name: The Crypt
+    kind: zone
+    tag: must
+    level: 51
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial of 3 for Cruel
+    summary: >-
+      Do the Trial of Ascendancy here, then find the Sarcophagus in a small
+      room on the zone border. It drops you into a lower section where the
+      Container of Sins holds Maligaro's Map.
+    quest: "Web of Secrets, and a Trial of Ascendancy (spinning blades)"
+    tips: >-
+      The container is usually in the corner opposite where you land. There
+      is also a damage-over-time crafting recipe here.
+
+  - id: chamber-of-sins-7
+    name: The Chamber of Sins Level 1
+    kind: zone
+    tag: must
+    level: 52
+    waypoint: true
+    summary: >-
+      Head to the central round chamber for the waypoint and for Silk. Put
+      Maligaro's Map in the map device here to open the Sanctum.
+    tips: "A lightning damage crafting recipe sits in the same chamber."
+
+  - id: maligaros-sanctum
+    name: Maligaro's Sanctum
+    kind: boss
+    tag: must
+    level: 52
+    summary: >-
+      A map instance with **six portals and no more**. Three islands joined
+      by narrow bridges. Maligaro's Workshop is on the far island.
+    quest: Web of Secrets
+    reward: "Black Venom, which Silk turns into the Obsidian Key, and Helena into four-linked boots."
+    tips: |
+      Maligaro summons Black Death at 75% life and Fidelitas at 50%. All three have to die for Black Venom to drop. Kill each summon as it arrives rather than fighting all three at once.
+    newbie: >-
+      This is the first place in the campaign where dying costs you
+      something real: every death or logout burns one of the six portals.
+      Run out and you go back to the Crypt for another map. Follow the zone
+      edges and cross at the corners, where the bridges usually are.
+
+  - id: chamber-of-sins-2-7
+    name: The Chamber of Sins Level 2
+    kind: side
+    tag: worth
+    branchFrom: chamber-of-sins-7
+    level: 52
+    image: quest-labyrinth
+    badge: Last Cruel trial
+    summary: >-
+      The last of the three trials for the Cruel Labyrinth, with sawblades.
+      The Obsidian Key from Silk opens the way in.
+    why: >-
+      With the Act 6 Prison trial and the Crypt trial, this completes the
+      Cruel set. Finish it and you can ascend a second time.
+    tips: >-
+      A hidden switch behind the trial plaque opens a quality gem stash.
+      The exit is a long narrow hallway, then a secret passage behind a
+      fence into The Den.
+
+  - id: the-den-7
+    name: The Den
+    kind: zone
+    tag: travel
+    level: 53
+    waypoint: true
+    summary: "Hug the leftmost wall for the fastest way out."
+    tips: "The Bone Sculptor and The Great White Bones are optional. Skip both."
+
+  - id: ashen-fields
+    name: The Ashen Fields
+    kind: zone
+    tag: must
+    level: 53
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Head down and to the left for the Forest Encampment arena, where
+      Greust, Lord of the Forest waits. The exit continues to the Northern
+      Forest.
+    quest: The Master of a Million Faces
+    reward: "Book of Skill from Eramir: +1 passive point, and Soul of Ralakesh."
+
+  - id: northern-forest-7
+    name: The Northern Forest
+    kind: zone
+    tag: travel
+    level: 53
+    waypoint: true
+    summary: >-
+      Visited twice: it holds the exits to both the Causeway and the Dread
+      Thicket.
+    tips: >-
+      Optional: take Greust's Necklace from Helena, place it on the Azmeri
+      Shrine here, and she gives you an amulet. Worth one extra town trip
+      if your amulet is poor. In 3.30 this zone can spawn the Viridian
+      Wildwood.
+
+  - id: causeway
+    name: The Causeway
+    kind: zone
+    tag: must
+    level: 54
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      Kishara's Lockbox holds Kishara's Star, and sits on the same platform
+      as the Vaal City exit.
+    quest: Kishara's Star
+    reward: "Book of Skill from Weylam Roth: +1 passive point and 2 respec points."
+    tips: >-
+      Easy to get lost here. Follow one wall instead of cutting across the
+      middle. There is a cold damage crafting recipe on the way.
+
+  - id: vaal-city
+    name: The Vaal City
+    kind: zone
+    tag: travel
+    level: 54
+    waypoint: true
+    summary: >-
+      A maze of dead ends. The waypoint and Yeena are in the central area,
+      usually behind a long wall. Take the waypoint and leave: you come back
+      after the fireflies.
+
+  - id: dread-thicket-7
+    name: The Dread Thicket
+    kind: zone
+    tag: must
+    level: 53
+    image: quest-firefly
+    summary: >-
+      Collect seven fireflies scattered around the zone, then find the Den
+      of Despair for Gruthkul, Mother of Despair.
+    quest: "Lighting the Way, Queen of Despair"
+    reward: "Book of Skill from Eramir for Gruthkul: +1 passive point, and Soul of Gruthkul."
+    tips: >-
+      One firefly is often right beside the boss arena. Gruthkul hits hard
+      with physical damage; the thing that kills people is standing still
+      while she channels, which fires projectiles along the ground. Keep
+      moving and do not melee her through it. In 3.30 this zone can spawn
+      the Viridian Wildwood.
+    newbie: >-
+      Hand in all three passive point quests on one town trip: Greust and
+      Gruthkul to Eramir, Kishara's Star to Weylam Roth. This is also where
+      most guides run the Cruel Labyrinth.
+
+  - id: temple-of-decay-1
+    name: The Temple of Decay Level 1
+    kind: zone
+    tag: travel
+    level: 54
+    summary: >-
+      Yeena opens this once you bring the fireflies. A central pit room with
+      stone bridges.
+    tips: "A side area off the pit holds a corrupted unique if you want it."
+
+  - id: temple-of-decay-2
+    name: The Temple of Decay Level 2
+    kind: zone
+    tag: travel
+    level: 55
+    summary: >-
+      The same shape as the floor above. A linear run to Arakaali's Web.
+    tips: "A chaos damage crafting recipe sits on the centre platform."
+
+  - id: arakaali
+    name: "Arakaali, Spinner of Shadows"
+    kind: boss
+    tag: must
+    level: 55
+    summary: >-
+      The act boss, in two phases. She holds a corner and rotates between
+      them, firing lasers and throwing spider eggs when you stand far away.
+    reward: "Soul of Arakaali from Sin, and the way into Act 8."
+    tips: |
+      **At 50% life she consumes Silk and heals back to 66%.** That is not a bug; the fight is meant to go twice round.
+
+      The second phase adds mortars and a laser barrage. The pattern that works: bait the laser to one side of her, then move to the other side. Stay out of melee range, keep moving, and clear the eggs before they hatch.
+    newbie: >-
+      Chaos resistance helps here, and a life flask with instant recovery
+      covers the moment when two mortars overlap. Soul of Arakaali, which
+      you get for killing her, reduces damage over time — a good pick for
+      the Labyrinth.
+
+sections:
+  - title: The Cruel Labyrinth
+    body: >-
+      The Chamber of Sins trial completes the set of three. Guides disagree
+      about exactly when to run it: some say mid-Act 7, right after the
+      Dread Thicket hand-ins, others say at the start of Act 8 when you have
+      an extra act of gear. Both are long past the level 40 requirement, and
+      the difference is a couple of levels. Running it here gives you the
+      ascendancy for the Arakaali fight.
+  - title: Two free four-links
+    body: >-
+      The boots from Essence of the Artist, handed in to Helena after
+      Maligaro, come four-linked. The body armour from Act 10 does too.
+      Between them the campaign gives you two free four-link setups, which
+      is usually enough to reach maps.
+  - title: What to skip
+    body: >-
+      Fellshrine's optional bosses, the two bosses in The Den, Tunnelworm,
+      and The Dreadstone. None of them award a point or a permanent reward.
+
+patchNotes:
+  - "The Northern Forest and The Dread Thicket can spawn the Viridian Wildwood."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 7 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-7" }
+  - { title: "PoEDB Act 7", url: "https://poedb.tw/us/Act_7" }

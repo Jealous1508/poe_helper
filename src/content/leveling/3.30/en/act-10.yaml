@@ -1,0 +1,250 @@
+number: 10
+title: "Oriath, the Merciless Labyrinth and Kitava"
+town: Oriath Docks
+levelIn: 64
+levelOut: 67
+skillPoints: 3
+skillPointsNote: "An End to Hunger gives two of them. Plus 2 respec from No Love for Old Ghosts."
+boss: "Kitava, the Insatiable"
+keyRewards:
+  - "3 passive points: Vilenta's Vengeance (1), An End to Hunger (2)"
+  - "The last Merciless trial, then the Merciless Labyrinth: your third ascendancy"
+  - "A four-linked body armour from Death and Rebirth"
+  - "The Atlas and your own Map Device, from Kirac"
+intro: >-
+  The last act, and the hardest. Run the Merciless Labyrinth before you
+  fight Kitava, because killing him takes another 30% off your resistances
+  and the Labyrinth is an area level 68 zone. Almost everything that kills
+  new players here comes back to that one number.
+
+nodes:
+  - id: cathedral-rooftop
+    name: The Cathedral Rooftop
+    kind: zone
+    tag: must
+    level: 64
+    summary: >-
+      The Cathedral Apex is just off the entrance. Kill the cultists,
+      gargoyles and Plaguewing to free Bannon, then cross back and go right
+      into the Ravaged Square.
+    quest: Safe Passage
+    reward: "A flask of your choice from Lani, including Divine Life and Mana flasks."
+
+  - id: ravaged-square
+    name: The Ravaged Square
+    kind: zone
+    tag: must
+    level: 64
+    waypoint: true
+    summary: >-
+      The hub of the act, cleared in two halves, and you come back here
+      repeatedly.
+    tips: >-
+      Place a town portal in the plaza as soon as you arrive. The whole
+      route is built around returning here, and a portal scroll used later
+      would consume it.
+    newbie: >-
+      You also have to talk to Innocence here, not in town, to open the
+      Canals later. That is the most common place to get stuck in this act.
+
+  - id: control-blocks
+    name: The Control Blocks
+    kind: side
+    tag: worth
+    branchFrom: ravaged-square
+    level: 66
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+1 passive point"
+    summary: >-
+      South from the Ravaged Square. Take the waypoint, then find Vilenta
+      in the southern arena.
+    quest: Vilenta's Vengeance
+    reward: "Book of Skill from Lani: +1 passive point."
+    why: "A permanent passive point a short walk off the hub."
+
+  - id: the-ossuary
+    name: The Ossuary
+    kind: side
+    tag: worth
+    branchFrom: ravaged-square
+    level: 67
+    image: quest-labyrinth
+    badge: Last Merciless trial
+    summary: >-
+      Through the door beside the Ravaged Square waypoint. The last
+      Merciless trial, with dart traps, and the Elixir of Allure near the
+      waypoint.
+    quest: No Love for Old Ghosts
+    reward: "Book of Regrets from Weylam Roth: 2 respec points, plus the trial."
+    why: >-
+      Finishing this trial opens the Merciless Labyrinth, so treat it as
+      required. Two respec points come along for free.
+    tips: >-
+      Follow the walls to find things. A switch just before the zig-zagging
+      walls opens the far side for a Facetor's Lens. There is a chaos
+      damage crafting recipe here.
+
+  - id: merciless-lab
+    name: The Merciless Labyrinth
+    kind: side
+    tag: must
+    branchFrom: the-ossuary
+    level: 68
+    image: quest-labyrinth
+    badge: Third ascendancy
+    summary: >-
+      Run it from the Aspirants' Plaza waypoint, before Kitava. Two more
+      ascendancy points.
+    why: >-
+      Killing Kitava costs you another 30% resistance, and this is an area
+      level 68 zone. Doing it afterwards is much harder for no reason.
+    tips: >-
+      Some guides run it right now; others wait until after the Desecrated
+      Chambers so you already have the free body armour. Both are before
+      Kitava, which is the part that matters.
+
+  - id: the-reliquary
+    name: The Reliquary
+    kind: side
+    tag: skip
+    branchFrom: ravaged-square
+    level: 67
+    waypoint: true
+    image: quest-teardrop
+    summary: >-
+      The Teardrop in a Pearl Case completes Map to Tsoatha, and Lilly Roth
+      gives you a rare belt.
+    why: >-
+      No passive point. Guides disagree: some skip it, others like the
+      experience and the belt. Take it if your belt is poor, otherwise
+      walk on.
+
+  - id: torched-courts
+    name: The Torched Courts
+    kind: zone
+    tag: travel
+    level: 65
+    summary: >-
+      The second half of the Ravaged Square: north past the first street,
+      then the second street north, follow it to the waypoint, then right.
+
+  - id: desecrated-chambers
+    name: The Desecrated Chambers
+    kind: boss
+    tag: must
+    level: 65
+    waypoint: true
+    summary: >-
+      Grab the waypoint immediately, then loop around to the Sanctum of
+      Innocence for Avarius, Reassembled.
+    quest: Death and Rebirth
+    reward: "The Staff of Purity. Give it to Bannon, who becomes Innocence, and Lani gives you a four-linked body armour."
+    tips: >-
+      Avarius deals heavy physical damage and fires physical
+      damage-over-time beams. Avoid the beams. Armour, endurance charges
+      or a granite flask make this one easy. The zone is dense and good
+      experience, and has an accuracy crafting recipe.
+
+  - id: the-canals
+    name: The Canals
+    kind: zone
+    tag: travel
+    level: 66
+    summary: >-
+      Talk to Innocence in the Ravaged Square to open the way, then a
+      linear run.
+
+  - id: feeding-trough
+    name: The Feeding Trough
+    kind: zone
+    tag: travel
+    level: 67
+    summary: >-
+      Talk to Sin at the end, then enter the Altar of Hunger.
+    tips: "A life and mana crafting recipe sits in this zone."
+
+  - id: kitava-10
+    name: "Kitava, the Insatiable"
+    kind: boss
+    tag: must
+    level: 67
+    summary: >-
+      The hardest fight in the campaign. A new phase begins every 20% of
+      his life, and each one drops monsters into the arena.
+    reward: "+2 passive points from An End to Hunger, and the end of the campaign."
+    tips: |
+      **Kitava's Heart becomes targetable after the first, third and last phases.** Destroying it after the last phase is what kills him.
+
+      His attacks are laser sweeps, detonating runes, a lasering orb and fire that spreads across the floor, mostly physical and fire damage. **In the last phase, the corner furthest from where you came in is the safest place to stand.**
+    newbie: |
+      Four things kill new players here, in order:
+
+      1. **Resistances.** You have been at -30% since Act 5 and most people never notice. Over-cap your elemental resistances by 30% before this fight.
+      2. **Standing still.** The floor fills with fire and runes, and the heart phases leave shadows that telegraph hits.
+      3. **No movement skill or quicksilver flask.**
+      4. **No ascendancy.** Run the Merciless Labyrinth first.
+
+  - id: karui-shores
+    name: "Oriath Docks and Karui Shores"
+    kind: town
+    tag: must
+    waypoint: true
+    image: quest-book-of-skill
+    badge: "+2 passive points"
+    summary: >-
+      Sin portals you to the Docks. Talk to Lilly Roth and set sail for
+      Karui Shores, the endgame town.
+    quest: "An End to Hunger, Toward the Future"
+    reward: "Book of Skill from Lani: +2 passive points. Then Kirac gives you your first map."
+    tips: >-
+      Pick a hideout from Helena, use the recipe altar nearby, then run
+      Kirac's map and return to him. That unlocks the Atlas and your own
+      Map Device.
+    newbie: >-
+      Type `/passives` in chat to check you collected everything. You
+      should have 23 or 24 quest points, depending on what you did with
+      the Act 2 bandits. Anything missing can still be collected.
+
+sections:
+  - title: Before you fight Kitava
+    body: |
+      - **Over-cap elemental resistances by 30%.** After the fight you lose another 30%, so this is the single most valuable thing on this page.
+      - **Finish the Merciless Labyrinth first.**
+      - Roughly 3,000 life at this level on a life-based build, as a rough target rather than a requirement.
+      - A quicksilver flask, a movement skill, and a life flask with instant recovery.
+      - Armour or other physical mitigation, and fire resistance in particular.
+      - A four-link with every gem actually levelled beats a five-link that is not.
+  - title: What the resistance penalty really means
+    body: >-
+      Two Kitava fights take 30% each, so you finish the campaign at -60%.
+      To show 75% in each element you need 135 points of resistance on your
+      gear. That is why characters that felt fine in Act 9 fall apart in
+      their first maps. Sources differ slightly on whether the second
+      penalty touches chaos resistance as well, so treat chaos as "keep it
+      above zero" rather than something to cap.
+  - title: After the campaign
+    body: >-
+      The Blood Aqueduct in Act 9 is the standard place to finish levelling.
+      It is linear, dense, and drops the Humility divination card: nine of
+      them trade for a Tabula Rasa, a free six-linked body armour. Stay
+      until your resistances are capped and the zone feels easy, somewhere
+      around level 68 to 70, and do your crafting bench and vendor shopping
+      while you are there rather than after.
+  - title: What to skip
+    body: >-
+      Every optional unique: The Rotten Matriarch, Kiln Mother, Kitava's
+      Heralds, the Heretical Adjudicators and Guardians, and the Ossuary's
+      Bone Husk and Awoken Giant. The Reliquary is the only genuinely
+      debatable one.
+
+patchNotes:
+  - "The chests at the end of the Labyrinth that dropped fully identified items have been removed."
+  - "From Act 6 onward, Magic and Rare items can drop with an Item Tier, so late campaign gear is easier to judge."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoE Vault Act 10 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-10" }
+  - { title: "PoEDB Act 10", url: "https://poedb.tw/us/Act_10" }

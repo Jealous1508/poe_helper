@@ -50,13 +50,18 @@ describe('parseAct', () => {
 });
 
 describe('leveling content', () => {
-  it('has Act 1 and Act 2 for 3.30, in order', () => {
-    expect(getActs('3.30', 'en').acts.map((a) => a.slug)).toEqual(['act-1', 'act-2']);
+  it('returns the written acts in numeric order, starting at Act 1', () => {
+    const acts = getActs('3.30', 'en').acts;
+    expect(acts.length).toBeGreaterThan(0);
+    expect(acts[0].number).toBe(1);
+    expect(acts.map((a) => a.number)).toEqual([...acts.map((a) => a.number)].sort((x, y) => x - y));
+    expect(acts.every((a) => a.slug === `act-${a.number}`)).toBe(true);
   });
-  it('overview lists ten acts and marks which have a page', () => {
+  it('overview lists ten acts, and every written act is marked available', () => {
     const { overview } = getOverview('3.30', 'en');
     expect(overview.stops).toHaveLength(10);
-    expect(overview.stops.filter((s) => s.available).map((s) => s.slug)).toEqual(['act-1', 'act-2']);
+    const written = new Set(getActs('3.30', 'en').acts.map((a) => a.slug));
+    for (const stop of overview.stops) expect(stop.available).toBe(written.has(stop.slug));
   });
   it('falls back to English for Vietnamese', () => {
     expect(getActs('3.30', 'vi').isFallback).toBe(true);
