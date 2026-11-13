@@ -1,0 +1,29 @@
+---
+import { t, type Locale } from '../../i18n';
+
+interface Props {
+  ratings: { clear: number; bossing: number; survivability: number; ease: number };
+  locale: Locale;
+}
+const { ratings, locale } = Astro.props;
+const rows = ['clear', 'bossing', 'survivability', 'ease'] as const;
+---
+<dl class="ratings">
+  {rows.map((key) => (
+    <div class="ratings__row">
+      <dt>{t(locale, `build.rating.${key}`)}</dt>
+      <dd aria-label={`${ratings[key]} / 5`}>
+        {[1, 2, 3, 4, 5].map((n) => <span class:list={['pip', { 'is-on': n <= ratings[key] }]} />)}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .ratings { margin: 0; display: grid; gap: 0.35rem; }
+  .ratings__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  dt { font-size: 0.85rem; color: var(--text-muted); }
+  dd { margin: 0; display: flex; gap: 3px; }
+  .pip { width: 14px; height: 6px; border-radius: 1px; background: var(--border); }
+  .pip.is-on { background: var(--accent); }
+</style>

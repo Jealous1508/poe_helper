@@ -1,0 +1,496 @@
+name: Toxic Rain Pathfinder
+tagline: >-
+  A bow build that covers enemies in poison pods and out-heals damage with a
+  life flask that never stops. It works on almost no gear.
+class: Ranger
+ascendancy: Pathfinder
+role: starter
+budget: starter
+budgetNote: >-
+  Campaign and white maps on self-found gear. The first large upgrade, a
+  crafted bow, cost 5–10 Divine last league.
+mainSkill: Toxic Rain
+image: toxic-rain
+hero: art-pathfinder
+tags: [Bow, Chaos damage over time, One button]
+ratings: { clear: 4, bossing: 3, survivability: 3, ease: 5 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  The build is proven over many leagues and 3.30 did not touch its skills.
+  Launch-week prices and crafting recipe locations are not confirmed yet.
+modes:
+  ssf: >-
+    Works. No unique item is required. [[The Tides of Time]] and
+    [[Progenesis]] are boss drops, so expect a rare belt for a long time.
+  hardcore: >-
+    Possible, but no current guide recommends it. The defence leans on
+    evasion and recovery, which does not stop one very large hit.
+
+idea: |
+  [[Toxic Rain]] fires arrows into the air. Each arrow lands as a spore pod that deals chaos damage over time to every enemy near it. Pods stack, so you win by keeping many pods on the same enemy at once.
+
+  The damage is written on the skill gem, not on your bow. That is why the build works with a cheap bow, and why it grows with gem level, attack speed and how long the pods live.
+
+  [[Pathfinder]] adds two things: stronger Wither, which makes enemies take more chaos damage, and a life flask that keeps healing all the time.
+
+chain:
+  - label: Shoot
+    text: "[[Toxic Rain]] fires five arrows. Each one lands as a pod that lasts about a second."
+  - label: Stack pods
+    text: "Every pod near an enemy deals its own damage. Attack speed and duration keep more pods alive together."
+  - label: Wither
+    text: "Each Wither stack makes the enemy take 6% increased chaos damage, up to 15 stacks. Pathfinder makes each stack half again as strong."
+  - label: Survive
+    text: "A [[Life Flask]] heals you permanently through [[Master Surgeon]]. Spell suppression halves spell damage."
+
+chainDetails:
+  - title: Why your bow's damage does not matter
+    body: |
+      The pods use a base chaos damage value on the gem: 8 per second at gem level 1 and 238 per second at level 20. Nothing from the bow's physical or elemental damage is added to it.
+
+      So you compare bows by three things only: attack speed, extra levels for the gems socketed in it, and chaos damage-over-time modifiers. Guides agree that a bow from Act 1 can kill the Act 10 boss.
+  - title: "The area-of-effect rule: aim for 37–43%"
+    body: |
+      At 37–43% increased area of effect, all five pods from one volley overlap on a single target. With less area the pods are too small to overlap. With more, the arrows spread too far apart.
+
+      You get 20% from the [[Bow Mastery]] on the passive tree. The rest comes from one modifier on your helmet or gloves, which you can add at the crafting bench once you find the recipe.
+
+      This does not matter in the campaign. In maps it is one of the biggest damage differences between a good and a bad Toxic Rain character. One guide puts the loss from wrong area at 20–60%.
+  - title: It is not Poison
+    body: |
+      Toxic Rain deals chaos damage over time, but it is not the Poison ailment. Chance to Poison, Poison duration and Poison damage do nothing for it. Ignore the poison clusters on the tree.
+
+      More projectiles are not automatically better either: they change how the pods spread. That is the reason guides give for not using Headhunter.
+  - title: Where the Wither stacks come from
+    body: |
+      Three sources, added as you progress:
+
+      1. [[Withering Step]], which you can buy in Act 1. From Act 3, link it to [[Automation]] so it casts itself.
+      2. [[Nature's Reprisal]], your first ascendancy notable: 25% chance to Wither on hit.
+      3. Later, [[Toxic Rain of Withering]] fired automatically by [[Manaforged Arrows Support]]. Each of its pods applies a stack.
+
+      With 15 stacks and Nature's Reprisal, the enemy takes 135% increased chaos damage. Without Pathfinder it would be 90%.
+  - title: How the one-button playstyle works
+    body: |
+      [[Manaforged Arrows Support]] fires its linked bow attack by itself after you have spent enough mana on your other bow attacks. In the endgame setup, [[Caustic Arrow]] sits in that link with [[Lifetap Support]], so it costs life instead of mana and triggers constantly.
+
+      The result: you hold down Toxic Rain, and Caustic Arrow clears the packs around you without a second button. Until you have that setup, in the campaign, you press Caustic Arrow yourself for packs.
+
+mandatory:
+  - term: Toxic Rain
+    why: >-
+      The skill itself. Keep the gem at the highest level you can. Gem level
+      is the largest single source of damage.
+  - term: Void Manipulation Support
+    why: >-
+      More chaos damage. With Vicious Projectiles and Efficacy, this is in the
+      main link of 97–99% of Toxic Rain characters on last league's ladder.
+  - term: Vicious Projectiles Support
+    why: >-
+      More chaos damage over time for projectile attacks. Quest reward in
+      Act 2.
+  - term: Efficacy Support
+    why: >-
+      More damage over time and longer pod duration. Rangers cannot buy it
+      from the normal vendors: get it from Siosa in the Act 3 Library.
+    detail: >-
+      Siosa appears after the optional quest A Fixture of Fate in The
+      Library, Act 3. He sells gems your class is not normally offered. From
+      Act 6, Lilly Roth sells every gem.
+  - term: Master Surgeon
+    why: >-
+      Lets a life flask keep healing while you are at full life. This is
+      your recovery. Without it the build has no way to stay alive in maps.
+    detail: >-
+      Normally a life flask stops the moment your life is full. Master
+      Surgeon removes that rule, so one flask press keeps recovering for its
+      whole duration. [[Nature's Adrenaline]] refills the flask. In 3.30 the
+      heal lasts twice as long per press.
+  - term: Life Flask
+    why: >-
+      Your one life flask needs a suffix that removes Bleeding, so you can
+      also press it to cure bleeds. Bind it to a key you can hit without
+      thinking.
+  - term: Nature's Reprisal
+    why: >-
+      Your largest damage notable. It applies Wither on hit and makes Wither
+      50% stronger.
+  - term: Bow Mastery
+    why: >-
+      Take "20% increased Area of Effect while wielding a Bow". It is half of
+      the 37–43% area you need in maps.
+  - term: Mirage Archer Support
+    level: recommended
+    why: >-
+      A copy of you keeps firing Toxic Rain while you move. It is what makes
+      the build feel smooth. Used by about three quarters of ladder
+      characters.
+  - term: Malevolence
+    level: recommended
+    why: >-
+      The main damage aura: more damage over time and longer skill duration.
+      Rangers get it from Siosa in Act 3.
+  - term: Withering Step
+    level: recommended
+    why: >-
+      Applies Wither around you and gives a short burst of speed. Link it to
+      [[Automation]] so it casts itself.
+  - term: Despair
+    level: recommended
+    why: >-
+      A curse that lowers chaos resistance by up to 30%. Cast it on bosses.
+      Later a ring applies it for you.
+  - term: Magebane
+    level: recommended
+    why: >-
+      Keystone that turns Dexterity into spell suppression. The usual way to
+      reach 100% suppression. The mainstream version does not take
+      [[Acrobatics]].
+  - term: Quill Rain
+    level: recommended
+    why: >-
+      The best campaign bow if you find or buy one: very fast attacks mean
+      many more pods, which outweighs the damage penalty on the bow.
+  - term: Kintsugi
+    level: recommended
+    why: >-
+      Cheap unique body armour for early maps. Replace it with
+      [[Lightning Coil]] once your lightning resistance is far above the cap.
+  - term: The Tides of Time
+    level: recommended
+    why: >-
+      Endgame belt that keeps flasks charged. Worn by about 60% of ladder
+      characters. Guides prefer it to Headhunter and Mageblood for this
+      build.
+
+labs:
+  - lab: Normal
+    node: Nature's Reprisal
+    why: "The biggest damage step in the campaign. Run the lab when you reach the Act 4 town."
+  - lab: Cruel
+    node: Nature's Adrenaline
+    why: "Flasks gain 3 charges every 3 seconds: permanent flask uptime. Run it around the Act 8 town."
+  - lab: Merciless
+    node: Master Surgeon
+    why: "Permanent life recovery. Run it before the Act 10 boss, which lowers your resistances."
+  - lab: Eternal
+    node: Nature's Boon
+    why: "30% stronger utility flasks. Run it when Tier 14 maps feel comfortable."
+
+stages:
+  - id: acts-1-3
+    title: Acts 1–3
+    levels: Level 1–33
+    uses: >-
+      Start with [[Caustic Arrow]], your first quest reward. At level 12,
+      take [[Toxic Rain]] from the quest The Siren's Cadence and make it
+      your main skill. Keep Caustic Arrow for packs of small monsters.
+    changes: >-
+      Mana is the first problem you will meet. Run [[Clarity]] from level 10
+      and carry a mana flask. Get a [[Quicksilver Flask]] and boots with
+      movement speed as early as you can.
+    links:
+      - name: Level 1–11
+        gems: [Caustic Arrow, Pierce Support, Void Manipulation Support]
+      - name: From level 12
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support]
+      - name: Four-link by level 25
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support]
+      - name: Utility
+        gems: [Withering Step, Blink Arrow, Clarity]
+    moveOn: "Toxic Rain is in a four-link and you have finished Act 3."
+    details:
+      - title: Where a Ranger gets each gem
+        body: |
+          - **Level 1:** [[Caustic Arrow]], reward for Enemy at the Gate.
+          - **Level 4:** [[Mirage Archer Support]] and [[Pierce Support]], rewards for Mercy Mission. [[Puncture]], reward for Breaking Some Eggs.
+          - **Level 8:** [[Void Manipulation Support]], [[Arrow Nova Support]] and [[Manaforged Arrows Support]], rewards for The Caged Brute. You pick one as the reward and buy the others from Nessa.
+          - **Level 10:** [[Withering Step]] and [[Clarity]], bought from Nessa after The Caged Brute.
+          - **Level 12:** [[Toxic Rain]], reward for The Siren's Cadence.
+          - **Level 18:** [[Vicious Projectiles Support]], reward for Sharp and Cruel in Act 2.
+          - **Level 24:** [[Despair]] and [[Haste]], rewards for Lost in Love in Act 3.
+
+          Not sold to Rangers by the normal vendors: [[Efficacy Support]], [[Flame Dash]], [[Malevolence]], [[Lifetap Support]] and [[Petrified Blood]]. Buy them from Siosa in the Act 3 Library, or from Lilly Roth in Act 6.
+      - title: What to look for at vendors
+        body: |
+          Check the armour vendor every time you return to town for two things: an item with three linked sockets, and boots with movement speed.
+
+          Socket colours no longer block you. Since 3.29 any gem fits any socket, and a gem in a socket of its own colour gets a small quality bonus. Links are what matter.
+
+          Skip slow rare bows. If a [[Quill Rain]] drops or is cheap to buy, use it for the whole campaign.
+      - title: The two bosses of Act 1
+        body: |
+          **Brutus:** put [[Puncture]] on your bar for this fight. Its bleed does good single-target damage at this level.
+
+          **Merveil:** she deals cold damage. Buy or find a [[Sapphire Ring]] before the fight. You will have Toxic Rain by now: place pods under her and keep moving.
+      - title: "New to Toxic Rain? How it plays"
+        body: |
+          The pods land around your cursor, and the damage arrives a moment later. Do not wait to see the result: fire a few volleys at a pack, then move on while the pods finish the job.
+
+          On bosses, keep firing at the same spot so the pods overlap. When you must dodge, [[Mirage Archer Support]] keeps shooting for you for a few seconds.
+  - id: acts-4-10
+    title: Acts 4–10
+    levels: Level 33–68
+    uses: >-
+      The same Toxic Rain link, with [[Efficacy Support]] added when you find
+      a five-link. From Act 5 run three auras: [[Malevolence]], [[Haste]] and
+      [[Clarity]]. Cast [[Despair]] on bosses yourself.
+    changes: >-
+      You ascend three times (see the Labyrinth table below). After the
+      Act 5 boss you lose 30% of every elemental resistance, and another 30%
+      after Act 10. Repair them at the crafting bench, which stands in every
+      town from Act 2.
+    links:
+      - name: Main skill
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support]
+      - name: Pack clear
+        gems: [Caustic Arrow, Pierce Support, Void Manipulation Support, Arrow Nova Support]
+      - name: Wither
+        gems: [Withering Step, Automation]
+      - name: Auras
+        gems: [Malevolence, Haste, Clarity]
+      - name: Curse and movement
+        gems: [Despair, Flame Dash]
+    moveOn: "elemental resistances are back at 75% after Act 10, your life flask removes Bleeding, and you have Master Surgeon."
+    details:
+      - title: Which bandit to help
+        body: |
+          Help **Alira** in Act 2. She gives +15% to all elemental resistances, which makes gearing through the campaign much easier.
+
+          Later, in maps, when your gear covers resistances on its own, most players switch to killing all three bandits for an extra passive point. Last league about four in five Toxic Rain Pathfinders ended on that choice.
+      - title: Passive tree priorities
+        body: |
+          In rough order: life, bow attack speed, projectile damage, skill effect duration, chaos damage-over-time multiplier, then spell suppression, flask nodes and reservation efficiency.
+
+          Skip critical strike, elemental and poison clusters. They do nothing for pod damage.
+
+          Milestones from the main guide: the [[Bow Mastery]] (area) and the Mana Mastery (reservation efficiency) by Act 3. [[Magebane]] and the Duration Mastery (10% more skill effect duration) by Act 10. For the exact tree, open the Path of Building link under Sources: it has a tree for each act.
+      - title: If you keep dying
+        body: |
+          Swap [[Haste]] for [[Grace]] or [[Purity of Elements]]. Replace your life flasks every ten levels or so. Check that your resistances are capped: this is the usual reason for deaths after Act 5.
+
+          Guides also suggest taking Master Surgeon earlier than third if survival, not speed, is your problem.
+      - title: Which Pantheon powers
+        body: |
+          While progressing: **Soul of the Brine King** (major) and **Soul of Ryslatha** (minor), which helps your life flask refill. Later, when stuns and ailments are handled, many players switch the major to **Soul of Lunaris**.
+  - id: early-maps
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      A six-socket bow with Toxic Rain, [[Kintsugi]] as body armour, and
+      rare items with life and resistances everywhere else. Roll five useful
+      flasks.
+    changes: >-
+      The area-of-effect rule starts to matter: get to 37–43%. Work towards
+      100% spell suppression through yellow maps. [[Vaal Caustic Arrow]]
+      replaces Caustic Arrow.
+    links:
+      - name: Main skill (six-link)
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support, More Duration Support]
+      - name: Pack clear
+        gems: [Vaal Caustic Arrow, Vicious Projectiles Support, Void Manipulation Support, Arrow Nova Support, Swift Affliction Support]
+      - name: Defence
+        gems: [Withering Step, Automation, Immortal Call]
+      - name: Auras
+        gems: [Malevolence, Haste, Clarity]
+    moveOn: "you have a six-link bow with extra gem levels, 37–43% area, and close to full spell suppression."
+    details:
+      - title: Your first real bow
+        body: |
+          The route the main guide recommends:
+
+          1. Collect [[The Porcupine]] divination cards for a six-linked [[Short Bow]]. A [[Quill Rain]] with six links also works.
+          2. Use a [[Shrieking Essence of Dread]] on it. That guarantees +2 to the level of socketed bow gems.
+          3. Add attack speed at the crafting bench. If attack speed already rolled, add chaos damage-over-time multiplier.
+
+          This recipe comes from a single author, though a second guide agrees that any basic rare bow is enough to enter maps. In 3.30, Shrieking Essences still appear in maps of every colour, so the recipe is not affected by the Essence change.
+      - title: Flasks to roll
+        body: |
+          - [[Life Flask]] (Divine) with Bleeding removal.
+          - [[Quicksilver Flask]] and [[Silver Flask]] for speed.
+          - [[Amethyst Flask]] for chaos resistance.
+          - [[Jade Flask]] for evasion.
+
+          Roll them with [[Orb of Alteration]]. Useful prefixes add charge recovery. In 3.30, adding a flask modifier with a beast needs a red beast, so Alterations and the crafting bench are the cheaper route early on.
+      - title: Map modifiers to avoid
+        body: |
+          Two modifiers attack the engine of the build:
+
+          - **Less Recovery Rate of Life and Energy Shield.** Your flask heals for much less.
+          - **Reduced Flask Charges gained.** Your flasks run dry.
+
+          One guide adds "less effect of Flasks". Reroll these maps until your character is strong.
+      - title: Earning your first currency in 3.30
+        body: |
+          Older guides for this build suggest Bestiary, Betrayal and Heist in white maps. All three changed in this patch: those mechanics no longer appear in maps without a Thread, and Heist Contracts are bought from Whakano for Gold.
+
+          The safe early plan is the one the changelog describes: run maps inside Shaped Regions for free Threads, and do not skip Rare monsters and map bosses, because that is where currency now drops.
+  - id: red-maps
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      A crafted [[Thicket Bow]] with +3 to gem levels and [[Empower Support]]
+      in the main link. [[Lightning Coil]] replaces Kintsugi.
+      [[Petrified Blood]] replaces Clarity.
+    changes: >-
+      The build becomes one-button. Two automatic setups using
+      [[Manaforged Arrows Support]] fire Caustic Arrow and
+      [[Toxic Rain of Withering]] for you. Mana becomes very tight, so you
+      add mana-cost reductions on jewellery.
+    links:
+      - name: Main skill
+        gems: [Toxic Rain, Mirage Archer Support, Void Manipulation Support, Vicious Projectiles Support, Efficacy Support, Empower Support]
+      - name: Automatic clear
+        gems: [Vaal Caustic Arrow, Manaforged Arrows Support, Void Manipulation Support, Vicious Projectiles Support, Arrow Nova Support, Lifetap Support]
+      - name: Automatic Wither
+        gems: [Toxic Rain of Withering, Manaforged Arrows Support, Frenzy, Culling Strike Support]
+      - name: Defence
+        gems: [Withering Step, Automation, Immortal Call]
+      - name: Auras
+        gems: [Malevolence, Haste, Petrified Blood]
+    moveOn: "you clear Tier 16 maps without thinking about flasks or mana."
+    details:
+      - title: The +3 Thicket Bow
+        body: |
+          Target modifiers from the main guide: +1 to level of socketed gems, +2 to level of socketed support gems, increased chaos damage over time, 17–19% attack speed and 18–20% chaos damage-over-time multiplier.
+
+          Last league this bow cost 5 to 10 Divine Orbs to make or buy. **That price is not confirmed for 3.30.** The patch changed the cost of the bench crafts that protect modifiers, and nobody has published new numbers yet.
+      - title: Why Petrified Blood has no downside here
+        body: |
+          [[Petrified Blood]] turns part of each hit into damage over time, which makes big hits survivable. Its drawback is that it blocks life recovery above half life, except recovery from flasks.
+
+          Your recovery *is* a flask. So you get the benefit and skip the drawback.
+      - title: Switching to Lightning Coil
+        body: |
+          [[Lightning Coil]] makes you take a large part of physical hit damage as lightning damage, which your resistance then reduces. It also has −60% lightning resistance.
+
+          Only switch when your lightning resistance stays capped with the penalty, usually with help from a [[Topaz Flask]]. Until then, [[Kintsugi]] is the better chest.
+      - title: Fixing mana
+        body: |
+          Three auras leave almost no free mana: the endgame Path of Building shows about 45 unreserved out of 720.
+
+          The fixes guides use: "−7 to total mana cost of non-channelling skills" crafted on both rings and the amulet, [[Lifetap Support]] on the automatic Caustic Arrow, and the Mana Mastery for reservation efficiency.
+  - id: endgame
+    title: Endgame
+    levels: Pinnacle bosses and beyond
+    uses: >-
+      [[The Tides of Time]] belt, [[Progenesis]] flask, one large and two
+      medium cluster jewels, and a quiver with attack speed and chaos
+      damage-over-time multiplier.
+    changes: >-
+      Upgrades get expensive and each one adds less. The top versions use
+      [[Widowhail]] with a near-perfect quiver, a Watcher's Eye and
+      double-corrupted gems.
+    moveOn: "there is no next stage. From here you decide how much more to invest."
+    details:
+      - title: What numbers to expect
+        body: |
+          The top Path of Building files for this build show 20–30 million damage per second and 110,000–135,000 effective hit points.
+
+          Read those with care. They assume full pod overlap and 15 Wither stacks. Ladder data from last league, which does not apply those assumptions, shows most level 100 characters at 1.5–5 million. The truth for a real fight is in between.
+      - title: Cluster jewels
+        body: |
+          One large chaos-damage cluster with Unholy Grace, Unwaveringly Evil and Wicked Pall. These three were on 70–80% of ladder characters.
+
+          For the two mediums, the most common setup is one flask cluster (Spiked Concoction and Brewed for Potency) and one chaos damage-over-time cluster (Wicked Pall and Student of Decay). The build's author also lists projectile-damage mediums as a slightly stronger damage option.
+      - title: What it struggles with
+        body: |
+          - **Uber bosses** need real investment.
+          - **Dense, heavily juiced maps.** The build has no on-kill explosions, and automatic Caustic Arrow falls behind.
+          - **On-death effects.** You have to keep attacking, so you stand near things that explode.
+          - **Anything that cuts recovery or flask charges.**
+
+          No source names specific bosses the build cannot kill, so we do not list any.
+
+patch:
+  - entry: pathfinder-flask-changes
+    note: >-
+      **Small buff.** Master Surgeon now heals the same amount per second for
+      twice as long, so you press the life flask about half as often. The
+      build does not take Master Alchemist or Master Distiller, so those
+      changes do not apply.
+  - entry: ruthless-changes
+    note: >-
+      **Ignore claims that Nature's Reprisal was nerfed.** A few launch
+      articles list Pathfinder changes that belong to the Ruthless section
+      of the notes. In the normal game, Nature's Reprisal still has 50%
+      increased Wither effect.
+  - entry: essence-changes
+    note: >-
+      **No effect on the bow craft.** It uses a Shrieking Essence, a tier
+      that still appears in all maps.
+  - entry: meta-crafting-costs
+    note: >-
+      **The crafted Thicket Bow may cost a different amount.** Protecting
+      modifiers at the bench is priced differently now. Treat last league's
+      5–10 Divine figure as a rough guide only.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Early currency advice in older guides is out of date.** Bestiary,
+      Betrayal and Heist no longer show up in maps by themselves.
+  - entry: item-tiers
+    note: >-
+      **Helpful.** The build needs only life, resistances and suppression on
+      its rare items, and tiered drops from Act 6 make those easier to find.
+  - entry: incursion-atziri-rework
+    note: >-
+      **Late-game option.** Soul Cores from the Temple can add an extra
+      support effect to a gem, which the top-end version uses. The Lapidary
+      Lens can now destroy the gem, so this is for spare currency only.
+
+strengths:
+  - "Works from Act 1 with no required unique item."
+  - "Bow damage is irrelevant, so your weapon is cheap for a long time."
+  - "Fast: permanent flask uptime and high movement speed."
+  - "Very high life recovery, which ignores most damage-over-time effects."
+  - "Simple to play. One button once the automatic setups are in."
+  - "Chaos damage over time ignores enemy energy shield."
+weaknesses:
+  - "Mana is tight for the whole life of the character."
+  - "You press a life flask constantly (less often since 3.30)."
+  - "Damage is delayed, and the wrong area of effect silently costs a lot of it."
+  - "Tanky for a bow build, not tanky in general. One huge hit can still kill you."
+  - "No explosions. Clear slows down in very dense maps."
+  - "The deep endgame is expensive, and Uber bosses need investment."
+avoidIf: >-
+  Pick something else if you want big hits or screen-wide explosions, a
+  character that can stand still in anything, or a cheap Uber boss killer.
+  One 3.29 tier list places it in B tier: it reaches the same goals as the
+  top builds, with more compromises along the way.
+
+sources:
+  - title: "PoE Vault: Toxic Rain Pathfinder build guide (PathofEvening)"
+    url: https://www.poe-vault.com/guides/toxic-rain-pathfinder-build-guide
+    kind: guide
+    note: "Updated for 3.30. The most complete current guide; most single-source details here come from this author."
+  - title: "Mobalytics: Toxic Rain Pathfinder starter, with a setup for each act"
+    url: https://mobalytics.gg/poe/builds/toxic-rain-pathfinder
+    kind: guide
+    note: "Same author. Has the only explicit section on 3.30 changes."
+  - title: "Path of Building: PathofEvening"
+    url: https://pobb.in/c6XCMwysrnXk
+    kind: pob
+    note: "Trees for every act, gem sets and gear sets. Still labelled 3.29."
+  - title: "Video guide for 3.30 (PathofEvening)"
+    url: https://www.youtube.com/watch?v=GsDMr2NZRao
+    kind: video
+    note: "We used the title and linked Path of Building, not the video itself."
+  - title: "ExpCarry: 3.29 Toxic Rain Pathfinder guide"
+    url: https://expcarry.com/best-poe-3-29-toxic-rain-pathfinder-build
+    kind: guide
+    note: "Independent write-up used to cross-check the core of the build."
+  - title: "Path of Building: Swearg (Acrobatics variant)"
+    url: https://pobb.in/THPwdIA0X1vm
+    kind: pob
+    note: "A different defensive setup: high evasion, no Lightning Coil."
+  - title: "poe.ninja: Toxic Rain Pathfinders on the 3.29 ladder"
+    url: https://poe.ninja/poe1/builds/allflame?class=Pathfinder&skills=Toxic+Rain
+    kind: data
+    note: "Source of the usage percentages in this article."
+  - title: "PoEDB: Toxic Rain gem data"
+    url: https://poedb.tw/us/Toxic_Rain
+    kind: data
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official

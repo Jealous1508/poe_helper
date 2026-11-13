@@ -1,0 +1,258 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import Chain from '../../../../components/builds/Chain.astro';
+import Mandatory from '../../../../components/builds/Mandatory.astro';
+import Ratings from '../../../../components/builds/Ratings.astro';
+import Stages from '../../../../components/builds/Stages.astro';
+import Detail from '../../../../components/Detail.astro';
+import GameImage from '../../../../components/GameImage.astro';
+import Rich from '../../../../components/Rich.astro';
+import Tag from '../../../../components/Tag.astro';
+import { getLeague, leagues } from '../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../i18n';
+import { getBuild, getBuilds } from '../../../../lib/builds';
+import { getChangelog } from '../../../../lib/changelog';
+import { imageUrl } from '../../../../lib/images';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      getBuilds(league.id, 'en').builds.map((build) => ({ params: { locale, league: league.id, slug: build.slug } })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, slug } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const { build, isFallback } = getBuild(league.id, locale, slug);
+const changelog = new Map(getChangelog(league.id, locale).entries.map((entry) => [entry.id, entry]));
+const must = build.mandatory.filter((piece) => piece.level === 'must');
+const recommended = build.mandatory.filter((piece) => piece.level === 'recommended');
+const toc = [
+  { id: 'idea', label: t(locale, 'build.toc.idea') },
+  { id: 'how', label: t(locale, 'build.toc.how') },
+  { id: 'pieces', label: t(locale, 'build.toc.pieces') },
+  { id: 'progression', label: t(locale, 'build.toc.progression') },
+  { id: 'patch', label: t(locale, 'build.toc.patch', { version: league.id }) },
+  { id: 'verdict', label: t(locale, 'build.toc.verdict') },
+  { id: 'sources', label: t(locale, 'common.sources') },
+];
+const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[build.confidence];
+---
+<Base locale={locale} league={league} title={build.name} description={build.tagline ?? build.name} section="builds" isFallback={isFallback}>
+  <header class="hero">
+    {build.hero && <img class="hero__art" src={imageUrl(build.hero, build.where)} alt="" loading="eager" decoding="async" />}
+    <div class="container hero__inner">
+      <a class="back" href={pagePath(locale, league.id, 'builds')}>← {t(locale, 'build.back')}</a>
+      <div class="hero__title">
+        <GameImage id={build.image} size={72} where={build.where} />
+        <div>
+          <div class="eyebrow">{t(locale, `builds.group.${build.role}.one`)} · {build.class} · {build.ascendancy}</div>
+          <h1>{build.name}</h1>
+        </div>
+      </div>
+      {build.tagline && <p class="lede">{build.tagline}</p>}
+      <div class="hero__tags">
+        <Tag kind="new" label={t(locale, `build.budget.${build.budget}`)} />
+        {build.tags.map((tag) => <Tag kind="neutral" label={tag} />)}
+      </div>
+    </div>
+  </header>
+
+  <div class="container layout">
+    <aside class="side">
+      <div class="side__box">
+        <Ratings ratings={build.ratings} locale={locale} />
+      </div>
+      <dl class="side__facts">
+        <div><dt>{t(locale, 'build.budget')}</dt><dd>{t(locale, `build.budget.${build.budget}`)}{build.budgetNote && <small>{build.budgetNote}</small>}</dd></div>
+        <div><dt>{t(locale, 'common.verified')}</dt><dd>{build.verified}</dd></div>
+        <div>
+          <dt>{t(locale, 'build.confidence')}</dt>
+          <dd><Tag kind={confidenceKind} label={t(locale, `build.confidence.${build.confidence}`)} />{build.confidenceNote && <small>{build.confidenceNote}</small>}</dd>
+        </div>
+      </dl>
+      <nav class="toc" aria-label={t(locale, 'build.toc')}>
+        {toc.map((item) => <a href={`#${item.id}`}>{item.label}</a>)}
+      </nav>
+    </aside>
+
+    <article class="article">
+      <section id="idea">
+        <h2>{t(locale, 'build.toc.idea')}</h2>
+        <Rich text={build.idea} league={league.id} where={build.where} class="idea" />
+      </section>
+
+      <section id="how">
+        <h2>{t(locale, 'build.toc.how')}</h2>
+        <Chain steps={build.chain} league={league.id} where={build.where} />
+        {build.chainDetails && (
+          <div class="details">
+            {build.chainDetails.map((detail) => (
+              <Detail summary={detail.title}><Rich text={detail.body} league={league.id} where={build.where} /></Detail>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section id="pieces">
+        <h2>{t(locale, 'build.toc.pieces')}</h2>
+        <p class="muted section-note">{t(locale, 'build.pieces.note')}</p>
+        <Mandatory pieces={must} league={league.id} locale={locale} where={build.where} />
+        {recommended.length > 0 && (
+          <>
+            <h3 class="sub">{t(locale, 'build.pieces.recommended')}</h3>
+            <Mandatory pieces={recommended} league={league.id} locale={locale} where={build.where} />
+          </>
+        )}
+      </section>
+
+      <section id="progression">
+        <h2>{t(locale, 'build.toc.progression')}</h2>
+        <p class="muted section-note">{t(locale, 'build.progression.note')}</p>
+        <Stages stages={build.stages} league={league.id} locale={locale} where={build.where} />
+        {build.labs && (
+          <div class="labs">
+            <h3 class="sub">{t(locale, 'build.labs')}</h3>
+            <table>
+              <thead><tr><th>{t(locale, 'build.labs.lab')}</th><th>{t(locale, 'build.labs.node')}</th><th>{t(locale, 'build.labs.why')}</th></tr></thead>
+              <tbody>
+                {build.labs.map((lab) => (
+                  <tr><td>{lab.lab}</td><td><strong>{lab.node}</strong></td><td><Rich text={lab.why} league={league.id} where={build.where} inline /></td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <section id="patch">
+        <h2>{t(locale, 'build.toc.patch', { version: league.id })}</h2>
+        <ul class="patch">
+          {build.patch.map((change) => {
+            const entry = change.entry ? changelog.get(change.entry) : undefined;
+            return (
+              <li>
+                {entry && (
+                  <div class="patch__head">
+                    <Tag kind={entry.verdict} label={t(locale, `verdict.${entry.verdict}`)} />
+                    <a href={`${pagePath(locale, league.id, 'changelog')}#${entry.id}`}>{entry.title}</a>
+                  </div>
+                )}
+                <Rich text={change.note} league={league.id} where={build.where} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section id="verdict">
+        <h2>{t(locale, 'build.toc.verdict')}</h2>
+        <div class="verdict">
+          <div>
+            <h3 class="plus">{t(locale, 'build.strengths')}</h3>
+            <ul>{build.strengths.map((item) => <li><Rich text={item} league={league.id} where={build.where} inline /></li>)}</ul>
+          </div>
+          <div>
+            <h3 class="minus">{t(locale, 'build.weaknesses')}</h3>
+            <ul>{build.weaknesses.map((item) => <li><Rich text={item} league={league.id} where={build.where} inline /></li>)}</ul>
+          </div>
+        </div>
+        <div class="avoid">
+          <h3>{t(locale, 'build.avoid')}</h3>
+          <Rich text={build.avoidIf} league={league.id} where={build.where} />
+        </div>
+        <dl class="modes">
+          <div><dt>SSF</dt><dd><Rich text={build.modes.ssf} league={league.id} where={build.where} inline /></dd></div>
+          <div><dt>Hardcore</dt><dd><Rich text={build.modes.hardcore} league={league.id} where={build.where} inline /></dd></div>
+        </dl>
+      </section>
+
+      <section id="sources">
+        <h2>{t(locale, 'common.sources')}</h2>
+        <p class="muted section-note">{t(locale, 'build.sources.note')}</p>
+        <ul class="sources">
+          {build.sources.map((source) => (
+            <li>
+              <span class="sources__kind">{t(locale, `build.source.${source.kind}`)}</span>
+              <span>
+                <a href={source.url} rel="noopener" target="_blank">{source.title}</a>
+                {source.note && <small>{source.note}</small>}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .hero { position: relative; border-bottom: 1px solid var(--border); overflow: hidden; }
+  .hero__art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; opacity: 0.16; pointer-events: none; }
+  .hero__inner { position: relative; padding-top: 1.5rem; padding-bottom: 2.25rem; }
+  .back { font-size: 0.88rem; font-weight: 500; text-decoration: none; color: var(--text-muted); }
+  .back:hover { color: var(--accent); }
+  .hero__title { display: flex; align-items: center; gap: 1.1rem; margin: 1.5rem 0 0.9rem; }
+  .hero__title h1 { margin-top: 0.3rem; }
+  .hero__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.1rem; }
+
+  .layout { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 3.5rem; padding-top: 2.5rem; }
+  .side { position: sticky; top: 5rem; align-self: start; display: grid; gap: 1.25rem; font-size: 0.9rem; max-height: calc(100vh - 6rem); overflow-y: auto; scrollbar-width: thin; }
+  .side__box { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 0.9rem 1rem; }
+  .side__facts { margin: 0; display: grid; gap: 0.8rem; }
+  .side__facts dt { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); }
+  .side__facts dd { margin: 0.2rem 0 0; }
+  .side__facts small { display: block; margin-top: 0.3rem; color: var(--text-muted); font-size: 0.82rem; line-height: 1.45; }
+  .toc { display: grid; border-top: 1px solid var(--border); padding-top: 1rem; }
+  .toc a { padding: 0.3rem 0; color: var(--text-muted); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+
+  .article section { padding-bottom: 3.25rem; scroll-margin-top: 5rem; }
+  .article h2 { margin-bottom: 1.1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border); }
+  .idea { font-size: 1.08rem; max-width: var(--measure); }
+  .details { margin-top: 1.5rem; max-width: var(--measure); }
+  .section-note { margin: -0.4rem 0 1.25rem; font-size: 0.93rem; max-width: var(--measure); }
+  .sub { margin: 2rem 0 0.25rem; }
+
+  .labs table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.94rem; }
+  .labs th { text-align: left; font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--border-strong); }
+  .labs td { padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .labs td:first-child { white-space: nowrap; color: var(--text-muted); }
+
+  .patch { list-style: none; padding: 0; margin: 0; max-width: var(--measure); }
+  .patch li { padding: 1rem 0; border-top: 1px solid var(--border); margin: 0; font-size: 0.96rem; }
+  .patch li:first-child { border-top: 0; padding-top: 0; }
+  .patch__head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+  .patch__head a { font-weight: 600; }
+
+  .verdict { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; font-size: 0.96rem; }
+  .verdict h3 { padding-bottom: 0.4rem; margin-bottom: 0.5rem; border-bottom: 2px solid currentColor; }
+  .plus { color: var(--buff); }
+  .minus { color: var(--nerf); }
+  .verdict ul { color: var(--text); }
+  .avoid { margin-top: 2rem; padding: 1rem 1.1rem; border: 1px solid var(--border-strong); border-radius: var(--radius); max-width: var(--measure); font-size: 0.96rem; }
+  .avoid h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+  .modes { margin: 1.5rem 0 0; display: grid; gap: 0.6rem; max-width: var(--measure); font-size: 0.95rem; }
+  .modes div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 1rem; }
+  .modes dt { font-weight: 600; }
+  .modes dd { margin: 0; }
+
+  .sources { list-style: none; padding: 0; margin: 0; font-size: 0.93rem; }
+  .sources li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: 0.55rem 0; border-top: 1px solid var(--border); margin: 0; }
+  .sources__kind { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding-top: 0.2rem; }
+  .sources small { display: block; color: var(--text-muted); font-size: 0.84rem; }
+
+  @media (max-width: 960px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; padding-top: 1.75rem; }
+    .side { position: static; grid-template-columns: 1fr 1fr; max-height: none; overflow: visible; }
+    .toc { display: none; }
+    .verdict { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+  @media (max-width: 560px) {
+    .side { grid-template-columns: 1fr; }
+    .hero__title :global(.game-image) { width: 52px !important; height: 52px !important; }
+  }
+</style>

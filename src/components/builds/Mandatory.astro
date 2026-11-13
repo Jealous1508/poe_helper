@@ -1,0 +1,51 @@
+---
+import Detail from '../Detail.astro';
+import GameImage from '../GameImage.astro';
+import Rich from '../Rich.astro';
+import Tag from '../Tag.astro';
+import { t, type Locale } from '../../i18n';
+import type { Build } from '../../lib/builds';
+import { getTerms } from '../../lib/terms';
+
+interface Props {
+  pieces: Build['mandatory'];
+  league: string;
+  locale: Locale;
+  where: string;
+}
+const { pieces, league, locale, where } = Astro.props;
+const terms = getTerms(league);
+---
+<ul class="pieces">
+  {pieces.map((piece) => {
+    const term = terms.get(piece.term.toLowerCase())!;
+    return (
+      <li class="piece">
+        {term.image ? <GameImage id={term.image} size={48} where={where} /> : <span class="piece__noimg" aria-hidden="true" />}
+        <div class="piece__body">
+          <div class="piece__head">
+            <span class={`term term--${term.kind}`}>{term.name}</span>
+            <Tag kind={piece.level === 'must' ? 'must' : 'neutral'} label={t(locale, `build.level.${piece.level}`)} />
+          </div>
+          <Rich text={piece.why} league={league} where={where} />
+          {piece.detail && (
+            <Detail summary={t(locale, 'build.whyDetail')}>
+              <Rich text={piece.detail} league={league} where={where} />
+            </Detail>
+          )}
+        </div>
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .pieces { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; }
+  .piece { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 0.9rem; margin: 0; padding: 1.1rem 0; border-top: 1px solid var(--border); font-size: 0.95rem; }
+  .piece__noimg { width: 48px; height: 48px; border: 1px dashed var(--border-strong); border-radius: var(--radius); }
+  .piece__head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.3rem; }
+  .piece__head .term { font-size: 1.02rem; }
+  .piece :global(.detail) { margin-top: 0.6rem; }
+  .piece :global(.detail:last-of-type) { border-bottom: 0; }
+  @media (max-width: 820px) { .pieces { grid-template-columns: 1fr; } }
+</style>

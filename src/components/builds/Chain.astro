@@ -1,0 +1,80 @@
+---
+// The build's mechanic chain: boxes joined by arrows. Wraps to a column on phones.
+import Rich from '../Rich.astro';
+
+interface Props {
+  steps: { label: string; text: string }[];
+  league: string;
+  where: string;
+}
+const { steps, league, where } = Astro.props;
+---
+<ol class="chain" style={`--steps:${steps.length}`}>
+  {steps.map((step, index) => (
+    <li class="chain__step">
+      <span class="chain__num">{index + 1}</span>
+      <h4>{step.label}</h4>
+      <Rich text={step.text} league={league} where={where} />
+    </li>
+  ))}
+</ol>
+
+<style>
+  .chain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--steps), minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+  .chain__step {
+    position: relative;
+    margin: 0;
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    font-size: 0.92rem;
+  }
+  .chain__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .chain__step h4 { font-family: var(--font-body); font-size: 0.98rem; font-weight: 600; margin: 0.55rem 0 0.35rem; }
+  /* Arrow between boxes */
+  .chain__step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -1.3rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-top: 2px solid var(--text-muted);
+    border-right: 2px solid var(--text-muted);
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .chain__step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -1.25rem;
+    width: 0.9rem;
+    height: 2px;
+    background: var(--text-muted);
+    transform: translateY(-50%);
+  }
+  @media (max-width: 900px) {
+    .chain { grid-template-columns: 1fr; gap: 1.6rem; }
+    .chain__step:not(:last-child)::after { top: auto; bottom: -1.15rem; right: auto; left: 1.45rem; transform: rotate(135deg); }
+    .chain__step:not(:last-child)::before { top: auto; bottom: -1.1rem; right: auto; left: 1.7rem; width: 2px; height: 0.9rem; transform: none; }
+  }
+</style>

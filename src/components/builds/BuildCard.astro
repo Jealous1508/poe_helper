@@ -1,0 +1,55 @@
+---
+import GameImage from '../GameImage.astro';
+import Tag from '../Tag.astro';
+import Ratings from './Ratings.astro';
+import { pagePath, t, type Locale } from '../../i18n';
+import type { Build } from '../../lib/builds';
+
+interface Props {
+  build: Build;
+  league: string;
+  locale: Locale;
+}
+const { build, league, locale } = Astro.props;
+---
+<a class="build-card" href={pagePath(locale, league, 'builds', build.slug)}>
+  <div class="build-card__top">
+    <GameImage id={build.image} size={56} where={build.where} />
+    <div>
+      <div class="eyebrow">{build.class} · {build.ascendancy}</div>
+      <h3>{build.name}</h3>
+    </div>
+  </div>
+  {build.tagline && <p class="build-card__tagline">{build.tagline}</p>}
+  <Ratings ratings={build.ratings} locale={locale} />
+  <div class="build-card__meta">
+    <Tag kind="neutral" label={t(locale, `build.budget.${build.budget}`)} />
+    {build.tags.slice(0, 3).map((tag) => <Tag kind="neutral" label={tag} />)}
+  </div>
+  <div class="build-card__foot">
+    <span>{t(locale, 'common.verified')} {build.verified}</span>
+    <span class="build-card__go">{t(locale, 'build.read')} →</span>
+  </div>
+</a>
+
+<style>
+  .build-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease);
+  }
+  .build-card:hover { border-color: var(--accent); color: var(--text); }
+  .build-card__top { display: flex; align-items: center; gap: 0.9rem; }
+  .build-card h3 { font-size: 1.3rem; margin-top: 0.15rem; }
+  .build-card__tagline { font-size: 0.93rem; color: var(--text-muted); margin: 0; }
+  .build-card__meta { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .build-card__foot { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+  .build-card__go { font-weight: 600; color: var(--accent); font-size: 0.88rem; }
+</style>

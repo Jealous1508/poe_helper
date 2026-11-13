@@ -1,0 +1,133 @@
+---
+// Progression timeline: one block per stage, newest detail hidden in expandables.
+import Detail from '../Detail.astro';
+import Rich from '../Rich.astro';
+import { t, type Locale } from '../../i18n';
+import type { Build } from '../../lib/builds';
+import { imageUrl } from '../../lib/images';
+import { getTerms } from '../../lib/terms';
+
+interface Props {
+  stages: Build['stages'];
+  league: string;
+  locale: Locale;
+  where: string;
+}
+const { stages, league, locale, where } = Astro.props;
+const terms = getTerms(league);
+---
+<nav class="stage-nav" aria-label={t(locale, 'build.stages')}>
+  {stages.map((stage, index) => (
+    <a href={`#stage-${stage.id}`}>
+      <span class="stage-nav__num">{index + 1}</span>
+      <span>
+        <strong>{stage.title}</strong>
+        <small>{stage.levels}</small>
+      </span>
+    </a>
+  ))}
+</nav>
+
+<ol class="stages">
+  {stages.map((stage, index) => (
+    <li class="stage" id={`stage-${stage.id}`}>
+      <div class="stage__rail" aria-hidden="true"><span class="stage__dot">{index + 1}</span></div>
+      <div class="stage__body">
+        <header>
+          <h3>{stage.title}</h3>
+          <span class="stage__levels">{stage.levels}</span>
+        </header>
+
+        <div class="stage__grid">
+          <section>
+            <h4>{t(locale, 'build.stage.uses')}</h4>
+            <Rich text={stage.uses} league={league} where={where} />
+          </section>
+          <section>
+            <h4>{t(locale, 'build.stage.changes')}</h4>
+            <Rich text={stage.changes} league={league} where={where} />
+          </section>
+        </div>
+
+        {stage.links && (
+          <div class="links">
+            {stage.links.map((link) => (
+              <div class="links__row">
+                <span class="links__name">{link.name}</span>
+                <span class="links__gems">
+                  {link.gems.map((gem) => {
+                    const term = terms.get(gem.toLowerCase())!;
+                    return (
+                      <span class={`gem term--${term.kind}`}>
+                        {term.image && <img src={imageUrl(term.image, where)} alt="" width="22" height="22" loading="lazy" decoding="async" />}
+                        {term.name.replace(/ Support$/, '')}
+                      </span>
+                    );
+                  })}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <p class="stage__move"><strong>{t(locale, 'build.stage.moveOn')}</strong> <Rich text={stage.moveOn} league={league} where={where} inline /></p>
+
+        {stage.details.map((detail) => (
+          <Detail summary={detail.title}>
+            <Rich text={detail.body} league={league} where={where} />
+          </Detail>
+        ))}
+      </div>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .stage-nav { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); border: 1px solid var(--border); border-radius: 6px; background: var(--surface); overflow: hidden; margin-bottom: 2rem; }
+  .stage-nav a { display: flex; align-items: center; gap: 0.6rem; padding: 0.7rem 0.9rem; color: var(--text); text-decoration: none; font-size: 0.88rem; transition: background-color 0.15s var(--ease); }
+  .stage-nav a + a { border-left: 1px solid var(--border); }
+  .stage-nav a:hover { background: var(--surface-2); }
+  .stage-nav strong { display: block; font-weight: 600; line-height: 1.25; }
+  .stage-nav small { color: var(--text-muted); font-size: 0.76rem; }
+  .stage-nav__num, .stage__dot {
+    flex: none; display: inline-flex; align-items: center; justify-content: center;
+    width: 1.6rem; height: 1.6rem; border-radius: 50%;
+    border: 1.5px solid var(--accent); color: var(--accent); background: var(--bg);
+    font-size: 0.8rem; font-weight: 600;
+  }
+
+  .stages { list-style: none; margin: 0; padding: 0; }
+  .stage { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: 1.25rem; margin: 0; }
+  .stage__rail { position: relative; display: flex; justify-content: center; }
+  .stage__rail::before { content: ''; position: absolute; top: 0; bottom: 0; width: 1.5px; background: var(--border-strong); }
+  .stage:last-child .stage__rail::before { bottom: auto; height: 1rem; }
+  .stage__dot { position: relative; margin-top: 0.15rem; }
+  .stage__body { padding-bottom: 2.75rem; min-width: 0; }
+  .stage__body header { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+  .stage__body h3 { font-size: 1.4rem; }
+  .stage__levels { font-size: 0.82rem; color: var(--text-muted); border: 1px solid var(--border-strong); border-radius: 3px; padding: 0.05rem 0.4rem; }
+  .stage__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem; font-size: 0.96rem; }
+  .stage__grid h4, .links__name {
+    font-family: var(--font-body); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--text-muted);
+  }
+  .stage__grid h4 { margin-bottom: 0.35rem; }
+
+  .links { margin-top: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+  .links__row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: 0.6rem 0.9rem; }
+  .links__row + .links__row { border-top: 1px solid var(--border); }
+  .links__gems { display: flex; flex-wrap: wrap; gap: 0.3rem 0.4rem; }
+  .gem { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.86rem; font-weight: 600; padding: 0.15rem 0.5rem 0.15rem 0.3rem; border: 1px solid var(--border); border-radius: 999px; background: var(--bg); }
+  .gem img { width: 22px; height: 22px; object-fit: contain; }
+  .gem:not(:has(img)) { padding-left: 0.6rem; }
+
+  .stage__move { margin: 1.25rem 0 1rem; padding: 0.75rem 0.9rem; border-left: 3px solid var(--accent); background: var(--accent-soft); font-size: 0.95rem; }
+
+  @media (max-width: 820px) {
+    .stage-nav { grid-auto-flow: row; }
+    .stage-nav a + a { border-left: 0; border-top: 1px solid var(--border); }
+    .stage__grid { grid-template-columns: 1fr; gap: 1.1rem; }
+    .links__row { grid-template-columns: 1fr; gap: 0.35rem; }
+    .stage { gap: 0.8rem; }
+  }
+</style>
