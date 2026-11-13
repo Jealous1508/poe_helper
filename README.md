@@ -68,6 +68,14 @@ and the term. Use `[[Toxic Rain|the skill]]` to show different text.
 The manifest records the source URL of every file, and a test fails if an
 entry has no file on disk.
 
+## The donate button
+
+`src/config/site.ts` holds it. `donate.momo` is the MoMo number shown with
+a copy button; `donate.url` is there if you ever add a link-based option
+such as Ko-fi. Set either, both or neither — the note shows whatever is
+there. The button lives beside the site name in the header and as one line
+in the footer, and it never interrupts reading.
+
 ## Conventions worth keeping
 
 - **Say where a claim comes from.** Changelog entries carry the official
