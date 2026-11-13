@@ -23,6 +23,12 @@ interface Props {
 }
 const { locale, league, title, description, section, isFallback = false } = Astro.props;
 const fullTitle = `${title} · ${league.name} ${league.id}`;
+
+// Absolute URLs, because a preview card is fetched by someone else's server
+// and a relative path means nothing to it. `site` comes from SITE_URL, or
+// the deployed origin as the default.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const shareImage = new URL(assetPath('share.jpg'), Astro.site).href;
 ---
 <!doctype html>
 <html lang={locale}>
@@ -31,12 +37,30 @@ const fullTitle = `${title} · ${league.name} ${league.id}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/png" href={assetPath('favicon-64.png')} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={assetPath('favicon.svg')} type="image/svg+xml" />
+    <link rel="icon" href={assetPath('favicon-32.png')} sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href={assetPath('apple-touch-icon.png')} />
     <meta name="theme-color" content="#f6f4ee" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={`${league.name} ${league.id}`} />
+    <meta property="og:locale" content={locale === 'vi' ? 'vi_VN' : 'en_GB'} />
+    {/* Without an og:image a scraper picks whatever large file it finds on
+        the page, which on the home page is the darkest frame of the hero.
+        One card, in JPEG because some of the places people paste links do
+        not fetch WebP previews. */}
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${league.name} ${league.id} — ${t(locale, 'site.share.alt')}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={shareImage} />
     <script is:inline>
       // Apply the saved theme before first paint, and again after each
       // client-side navigation swaps the document.

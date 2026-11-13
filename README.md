@@ -27,6 +27,7 @@ Then open http://localhost:4321.
 | `npm run images` | Downloads any images missing from the manifest |
 | `npm run check:links` | Checks every internal link in `dist/` |
 | `npm run check:markup` | Catches `**bold**` or `[[Term]]` that reached a page unrendered |
+| `npm run brand` | Rebuilds the icons and the link preview card |
 | `npm run verify` | All of the above. Run this before committing. |
 
 ## Where the content lives
@@ -134,6 +135,25 @@ publishing, and fills both variables in from the Pages configuration.
 
 Images are committed to the repo, so no host needs network access to
 poedb or the trade API at build time.
+
+## Icons and the link preview
+
+`public/favicon.svg` is the mark — a waypoint, since the site is a route
+through the campaign. `npm run brand` renders it to the PNG sizes and the
+`.ico`, and builds `public/share.jpg`, the 1200×630 card that chat apps and
+social sites show when someone pastes a link.
+
+The card is generated, not hand-made: league art from `public/img/<league>/`,
+darkened, with the league name on a flat band. Run `npm run brand` after
+changing the mark or moving to a new league, and **commit the output** — the
+text is drawn with the fonts on the machine that runs it, so generating it
+on a build server would quietly change how it looks.
+
+A preview is fetched by someone else's server, so the tags in
+`src/layouts/Base.astro` use absolute URLs built from Astro's `site`. That
+is why `site` defaults to the deployed origin rather than localhost. The
+card is a JPEG on purpose: several popular chat apps still do not fetch a
+WebP preview, and a card nobody sees is worse than a slightly bigger file.
 
 ## The donate button
 
