@@ -67,9 +67,9 @@ const impactParts = [
   </div>
 
   <Popup id={popupId} title={entry.title} eyebrow={t(locale, 'common.impact')} locale={locale}>
-    {impactParts.map((part) => (
-      <section class="impact-part">
-        <h4>{t(locale, `impact.${part.key}`)}</h4>
+    {impactParts.map((part, index) => (
+      <section class="impact-part" data-part={part.key}>
+        <h4><span class="impact-part__n" aria-hidden="true">{index + 1}</span>{t(locale, `impact.${part.key}`)}</h4>
         <Rich text={part.text} league={league} where={entry.where} />
       </section>
     ))}
@@ -105,15 +105,50 @@ const impactParts = [
   .entry__official { margin: 0; font-size: 0.88rem; color: var(--text-muted); }
   .entry__official li { margin: 0.35em 0; }
 
-  .impact-part + .impact-part { margin-top: 1.1rem; }
+  /*
+    Each part of the popup answers a different question, so each gets its
+    own colour and its own number. The colours are the ones the site
+    already uses to mean these things — green for who gains, red for who
+    loses — so they carry meaning rather than decorate. The number is what
+    separates one part from the next, and it is aria-hidden: a screen
+    reader gets the heading, which already says what the part is.
+  */
+  .impact-part { --part: var(--accent); }
+  .impact-part[data-part='winners'] { --part: var(--buff); }
+  .impact-part[data-part='losers'] { --part: var(--nerf); }
+  .impact-part[data-part='affected'] { --part: var(--mixed); }
+  .impact-part[data-part='todo'] { --part: var(--rework); }
+
+  .impact-part + .impact-part {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
   .impact-part h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
     font-family: var(--font-body);
-    font-size: 0.74rem;
-    font-weight: 600;
+    font-size: 0.78rem;
+    font-weight: 700;
     letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.3rem;
+    color: var(--part);
+    margin-bottom: 0.45rem;
+  }
+  .impact-part__n {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    border: 1px solid var(--part);
+    border-radius: 50%;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
   }
   .impact-confidence {
     display: flex;
