@@ -1,0 +1,311 @@
+number: 3
+title: "Sarn, Piety twice, and Dominus"
+town: The Sarn Encampment
+levelIn: 23
+levelOut: 33
+skillPoints: 2
+skillPointsNote: "Plus 2 respec points from Victario's Secrets."
+boss: "Dominus, High Templar"
+keyRewards:
+  - "2 passive points: Victario's Secrets, Piety's Pets"
+  - "The last three Trials of Ascendancy, which open the Labyrinth"
+  - "Siosa in The Library: a vendor who sells almost every gem, whatever your class"
+  - "Gem reward tiers at level 28 and 31"
+intro: >-
+  Act 3 is the longest act so far and the most worthwhile. It finishes your
+  six Trials, which unlocks the Labyrinth and your ascendancy, and it opens
+  Siosa's gem shop, the biggest convenience unlock in the first half of the
+  game. Piety appears twice: the first time she will not die.
+
+nodes:
+  - id: city-of-sarn
+    name: The City of Sarn
+    kind: zone
+    tag: travel
+    level: 23
+    waypoint: true
+    summary: >-
+      Linear. Help Clarissa, who is surrounded by Blackguards, and talk to
+      her to start Lost in Love.
+    tips: "A Guard Captain leads the pack around her. There is a crafting recipe on the way."
+
+  - id: sarn-encampment-3
+    name: The Sarn Encampment
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for the act. Upstairs are the exits to The Slums, the Sarn
+      Arena, and the Aspirants' Plaza.
+    tips: >-
+      The Aspirants' Plaza is the Labyrinth entrance, marked with a green
+      skull. It only opens once all six Trials are done. Ignore the Sarn
+      Arena: it is a player-versus-player area.
+
+  - id: the-slums
+    name: The Slums
+    kind: zone
+    tag: travel
+    level: 24
+    summary: >-
+      Follow the ground-level wall to reach the Crematorium. The Sewers
+      entrance is here too, but locked until Lost in Love is handed in.
+
+  - id: the-crematorium
+    name: "The Crematorium: Piety, first meeting"
+    kind: boss
+    tag: must
+    level: 25
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 4 of 6
+    summary: >-
+      A Trial of Ascendancy with furnace traps, and your first meeting with
+      Piety. Loot Tolman's Bracelet from his corpse afterwards.
+    quest: Lost in Love
+    reward: "Gems from Maramoa, and the Sewer Keys from Clarissa."
+    tips: >-
+      Follow the stairs to find your way. Piety casts lightning spells that
+      are easy to sidestep, with Blackguards supporting her.
+    newbie: >-
+      **She does not die here.** At 50% life she disappears and the fight
+      ends. New players keep chasing a kill that is not coming.
+
+  - id: the-sewers
+    name: The Sewers
+    kind: side
+    tag: worth
+    branchFrom: the-slums
+    level: 26
+    image: quest-bust
+    badge: "+1 passive point"
+    summary: >-
+      Collect three busts from three rooms. The zone is on your route
+      anyway, so the only cost is a short detour per bust.
+    quest: Victario's Secrets
+    reward: "Book of Skill from Hargan: +1 passive point and 2 respec points."
+    why: "A passive point for a detour you were going to make regardless."
+    tips: >-
+      One bust is in the first large room, one in the room past the
+      waypoint, and the third in the third room, left or right depending on
+      the layout. You come back here later to burn the Undying Blockage.
+
+  - id: the-marketplace
+    name: The Marketplace
+    kind: zone
+    tag: travel
+    level: 26
+    waypoint: true
+    summary: >-
+      The waypoint is past Marceus the Defaced, in the statue alley. The
+      Catacombs entrance is right beside it.
+
+  - id: the-catacombs
+    name: The Catacombs
+    kind: side
+    tag: worth
+    branchFrom: the-marketplace
+    level: 27
+    image: quest-labyrinth
+    badge: Trial 5 of 6
+    summary: "A Trial of Ascendancy with blade sentries. One level, close to the Marketplace waypoint."
+    why: >-
+      No quest and no passive point: this is purely the fifth of the six
+      Trials. If you were not going to run the Labyrinth you could skip
+      it, but you should run the Labyrinth.
+
+  - id: the-battlefront
+    name: The Battlefront
+    kind: zone
+    tag: must
+    level: 27
+    waypoint: true
+    image: quest-ribbon-spool
+    summary: >-
+      Take the waypoint on the first platform, then find the Ribbon Spool
+      in a Blackguard chest.
+    tips: >-
+      Two exits: the ground path up to The Docks, and the upper platform to
+      the Solaris Temple. Skip Captain Aurelianus.
+
+  - id: the-docks
+    name: The Docks
+    kind: zone
+    tag: must
+    level: 29
+    waypoint: true
+    summary: >-
+      Thaumetic Sulphite sits in a supply container on a random dock.
+    quest: "Fiery Dust, and A Swig of Hope"
+    reward: "A ring from Captain Fairgraves, who stands at the end of a random dock."
+    tips: >-
+      The ring is a weak reward, but you are here anyway, so take it on
+      your way past.
+
+  - id: solaris-temple-1-3
+    name: The Solaris Temple Level 1
+    kind: zone
+    tag: travel
+    level: 27
+    waypoint: true
+    summary: "Linear. Optional bosses near the exit, none worth stopping for."
+
+  - id: solaris-temple-2-3
+    name: The Solaris Temple Level 2
+    kind: zone
+    tag: must
+    level: 28
+    waypoint: true
+    summary: >-
+      Four torches along the carpet mark the way to Lady Dialla.
+    quest: "The Ribbon Spool, and Fiery Dust"
+    reward: "An amulet from Dialla for the spool, and the Infernal Talc for the sulphite."
+    tips: "The Eternal Laboratory on her platform holds a crafting recipe."
+
+  - id: ebony-barracks
+    name: "The Ebony Barracks: Gravicius"
+    kind: boss
+    tag: worth
+    level: 29
+    waypoint: true
+    summary: >-
+      Go back to the Sewers waypoint and burn the Undying Blockage with the
+      Infernal Talc. General Gravicius is through it.
+    quest: Sever the Right Hand
+    reward: "The level 28 gem tier from Maramoa: a real power spike."
+    why: >-
+      Gravicius is optional for progression, but the gem tier he unlocks is
+      worth more than the two minutes he costs.
+    tips: >-
+      He casts fire spells from inside an escort of Blackguards. The escort
+      is the threat, not him. The Lunaris Temple is on the platform past
+      him.
+
+  - id: lunaris-temple-1-3
+    name: The Lunaris Temple Level 1
+    kind: zone
+    tag: travel
+    level: 29
+    waypoint: true
+    summary: "Linear. Fleshrend and Kole are optional; skip both."
+
+  - id: lunaris-temple-2-3
+    name: "The Lunaris Temple Level 2: Piety again"
+    kind: boss
+    tag: must
+    level: 30
+    image: quest-tower-key
+    badge: "+1 passive point"
+    summary: >-
+      This time Piety dies, and drops The Tower Key.
+    quest: Piety's Pets
+    reward: "Book of Skill from Grigor: +1 passive point."
+    tips: |
+      She now swaps between two forms.
+
+      **Fire form:** her melee applies a debuff that increases the damage you take. It does not hit hard; it makes everything else hit hard.
+
+      **Ice form:** seven arrows in an arc that leave chilling ground. The chill is the danger, not the arrows.
+    newbie: >-
+      The level is a large maze across several platforms. Follow stairs
+      that go up. At the fork with wagons, take the side with **one**
+      wagon: the side with two is a dead end.
+
+  - id: imperial-gardens
+    name: The Imperial Gardens
+    kind: zone
+    tag: must
+    level: 30
+    waypoint: true
+    image: quest-labyrinth
+    badge: Trial 6 of 6
+    summary: >-
+      The main path leads to the waypoint. The last Trial of Ascendancy,
+      with dart traps, is in the upper part.
+    tips: >-
+      The Library is to the left, the Trial is up, and the Sceptre of God
+      is up and to the right. Finishing this Trial opens the Aspirants'
+      Plaza.
+
+  - id: the-library
+    name: "The Library and The Archives"
+    kind: side
+    tag: worth
+    branchFrom: imperial-gardens
+    level: 30
+    waypoint: true
+    image: quest-golden-pages
+    badge: Siosa's gem shop
+    summary: >-
+      Collect the golden pages in The Archives and bring them back to free
+      Siosa.
+    quest: A Fixture of Fate
+    reward: "Siosa sells almost every normal skill and support gem, whatever your class."
+    why: >-
+      No passive point, but the single most useful permanent unlock in the
+      first half of the campaign. If your build needs a gem your class is
+      not offered, this is where you buy it.
+
+  - id: sceptre-of-god
+    name: "The Sceptre of God and The Upper Sceptre"
+    kind: zone
+    tag: travel
+    level: 32
+    waypoint: true
+    summary: >-
+      Three floors of circular rooms, then more of the same above. The
+      stairs are in the corner rooms. The Tower Key from Piety opens it.
+    tips: "Look for barricades to find the way up to the rooftop."
+
+  - id: dominus
+    name: "Dominus, High Templar"
+    kind: boss
+    tag: must
+    level: 33
+    summary: >-
+      The act boss, and the most phase-heavy fight so far: two waves of
+      lieutenants, then Dominus himself, then his second form.
+    reward: "Opens The Aqueduct and Act 4."
+    tips: |
+      **Stage 1:** three Blackguard champions at once. Getting surrounded is what kills people. Keep your distance.
+
+      **Stage 2:** the Undying trio. Kill Alal, then Kali, then Orcus. Kali speeds up everything near her, so she goes before Orcus arrives.
+
+      **Stage 3:** Dominus. He shocks the ground under you, and standing in it increases **all** damage you take. When he shouts **"The Touch of God!"** he winds up for about a second and a half, then slams for very heavy damage. Run out of melee range the moment you hear it.
+
+      **Stage 4:** he transforms. Blood rains across the arena and he casts a yellow bubble around himself.
+    newbie: >-
+      The counter in the last phase is the opposite of your instinct:
+      **stand next to him, inside the bubble.** Outside it you take a
+      stacking damage-over-time that will kill you. A flask that removes
+      bleeding clears the effect, and an armour flask helps. Portalling out
+      when you are low is a perfectly good idea.
+
+sections:
+  - title: Your six Trials are now done
+    body: >-
+      The Crematorium, the Catacombs and the Imperial Gardens finish the
+      set. Go to the Aspirants' Plaza plaque in the Sarn Encampment, and
+      the Labyrinth is open. Most guides run it at the start of Act 4
+      rather than straight away, which gives you a couple of levels first.
+  - title: Siosa is worth the detour
+    body: >-
+      Every class is only offered a slice of the gem pool as quest rewards.
+      Siosa sells almost all of it. If your build guide lists a gem you
+      have never been offered, this is where it comes from, and otherwise
+      you wait until Act 6.
+  - title: What to skip
+    body: >-
+      The Sarn Arena, Marceus the Defaced, Captain Aurelianus, Fleshrend,
+      Kole and the Solaris Temple's optional bosses. A Swig of Hope is only
+      worth it because The Docks is already on your route.
+
+patchNotes:
+  - "No Act 3 quest, reward or zone changed in 3.30."
+  - "Coven cauldrons appear in campaign areas. Defeat the covenites, pick a Fate, and invoke it on the area boss for a chance at its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "Mobalytics Act 3 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-3" }
+  - { title: "PoEDB Act 3", url: "https://poedb.tw/us/Act_3" }
