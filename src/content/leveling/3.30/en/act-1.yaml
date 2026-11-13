@@ -1,0 +1,421 @@
+number: 1
+title: "The Twilight Strand to Merveil"
+town: Lioneye's Watch
+levelIn: 1
+levelOut: 13
+skillPoints: 2
+skillPointsNote: "A third point, The Way Forward, starts here and is finished in Act 2."
+boss: "Merveil, the Siren"
+keyRewards:
+  - "[[Quicksilver Flask]] from Mercy Mission"
+  - "2 passive points: The Dweller of the Deep, The Marooned Mariner"
+  - "Skill gems at level 1, 4, 8, 10 and 12"
+  - "The first of six Trials of Ascendancy"
+intro: >-
+  You wash up on a beach with nothing. By the end of the act you have your
+  main skill, a movement flask and two extra passive points. There are two
+  boss fights: Brutus in the prison, and Merveil in her cave.
+
+nodes:
+  - id: twilight-strand
+    name: The Twilight Strand
+    kind: zone
+    tag: must
+    level: 1
+    summary: >-
+      Walk along the beach, pick up the weapon and the gems lying on the
+      path, and kill Hillock at the gate. That opens the town.
+    quest: Enemy at the Gate
+    reward: "One level 1 skill gem from Tarkleigh. The list depends on your class."
+    tips: >-
+      Hillock only hits in melee. Attack, step back, repeat. Use your
+      flasks freely: they refill for free in town.
+    newbie: >-
+      You cannot come back to this zone, and Portal Scrolls do not work
+      here. Killing Hillock always brings you to level 2.
+    classRewards:
+      - { class: Marauder, reward: "Ground Slam, Molten Strike, Shield Crush" }
+      - { class: Duelist, reward: "Cleave, Galvanic Arrow, Molten Strike, Perforate, Splitting Steel" }
+      - { class: Ranger, reward: "Caustic Arrow, Frost Blades, Galvanic Arrow, Ice Shot, Split Arrow" }
+      - { class: Shadow, reward: "Blight, Cobra Lash, Ethereal Knives, Explosive Trap, Freezing Pulse, Stormblast Mine" }
+      - { class: Witch, reward: "Blight, Freezing Pulse, Kinetic Bolt, Lightning Tendrils, Raise Zombie, Rolling Magma" }
+      - { class: Templar, reward: "Frostbolt, Lightning Tendrils, Molten Strike, Purifying Flame, Rolling Magma, Smite" }
+      - { class: Scion, reward: "Lightning Tendrils, Molten Strike, Split Arrow, Splitting Steel" }
+    classRewardsNote: "You pick one. Follow your build guide for which."
+
+  - id: lioneyes-watch
+    name: Lioneye's Watch
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for Act 1. Collect your gem from Tarkleigh. Nessa sells gems,
+      flasks and jewellery; Tarkleigh sells weapons and armour.
+    tips: >-
+      In 3.30 Nessa sells [[Scroll of Wisdom]] for 15 Gold, and an
+      [[Orb of Transmutation]] costs one [[Orb of Augmentation]].
+    newbie: >-
+      Your stash is here. Anything you put in it is shared with all your
+      characters in this league.
+
+  - id: the-coast
+    name: The Coast
+    kind: zone
+    tag: travel
+    level: 2
+    waypoint: true
+    summary: >-
+      Follow the shore to the far end and take the waypoint. The entrance to
+      The Tidal Island is in the water near the exit to The Mud Flats.
+    tips: >-
+      Many routes run on to The Submerged Passage first, then use the
+      waypoint to come back here for The Tidal Island. That way the flask
+      and the level 4 gems are collected in one town visit. Either order
+      works.
+
+  - id: tidal-island
+    name: The Tidal Island
+    kind: side
+    tag: worth
+    branchFrom: the-coast
+    level: 3
+    badge: Quicksilver Flask
+    image: quicksilver-flask
+    summary: >-
+      Kill Hailrake at the wrecked ship, pick up the Medicine Chest and
+      bring it to Nessa. Choose the [[Quicksilver Flask]].
+    quest: Mercy Mission
+    reward: "A flask of your choice (take the [[Quicksilver Flask]]) and one support gem."
+    why: >-
+      The Quicksilver Flask gives a burst of movement speed. You will use it
+      for the whole campaign and beyond. Every guide calls this side trip
+      essential.
+    tips: >-
+      Hailrake casts Glacial Cascade, a line of ice that erupts where you
+      are walking to. Change direction when he raises his arms. After the
+      kill, exit to character selection for a free trip to town.
+    classRewards:
+      - { class: Marauder, reward: "Ancestral Call, Chance to Bleed, Momentum" }
+      - { class: Duelist, reward: "Ancestral Call, Chance to Poison, Mirage Archer, Momentum, Pierce, Ruthless, Volley" }
+      - { class: Ranger, reward: "Chance to Poison, Mirage Archer, Pierce, Volley" }
+      - { class: Shadow, reward: "Elemental Proliferation, Infused Channelling, Momentum, Pierce, Spell Cascade, Swift Assembly, Volley" }
+      - { class: Witch, reward: "Chance to Poison, Elemental Proliferation, Infused Channelling, Spell Cascade, Summon Phantasm" }
+      - { class: Templar, reward: "Ancestral Call, Arcane Surge, Chance to Bleed, Elemental Proliferation, Infused Channelling, Ruthless, Spell Cascade" }
+      - { class: Scion, reward: "Ancestral Call, Arcane Surge, Chance to Bleed, Chance to Poison, Elemental Proliferation, Pierce, Ruthless, Spell Cascade, Summon Phantasm, Volley" }
+    classRewardsNote: "Support gems offered with the flask."
+
+  - id: mud-flats
+    name: The Mud Flats
+    kind: zone
+    tag: must
+    level: 4
+    summary: >-
+      Collect three glyphs from three Rhoa nests, then place them in the
+      glyph wall to open The Submerged Passage.
+    quest: Breaking Some Eggs
+    reward: "A level 4 skill gem from Tarkleigh. The list includes a movement skill."
+    tips: >-
+      Small streams connect the three nests and run down to the sea, so
+      follow the water. The nests usually form a triangle. Rhoas charge in a
+      straight line and stun: step sideways.
+    newbie: >-
+      Take a movement skill as soon as you are offered one (Dash, Frostblink
+      or Shield Charge, depending on class). Any class can buy these from
+      Nessa after this quest.
+    classRewards:
+      - { class: Marauder, reward: "Crushing Fist, Decoy Totem, Steelskin, Vigilant Strike. Movement: Shield Charge" }
+      - { class: Duelist, reward: "Blood and Sand, Crushing Fist, Decoy Totem, Puncture, Sniper's Mark, Vigilant Strike, War Banner. Movement: Dash, Shield Charge" }
+      - { class: Ranger, reward: "Bear Trap, Puncture, Shrapnel Ballista, Sniper's Mark. Movement: Dash" }
+      - { class: Shadow, reward: "Bear Trap, Contagion, Detonate Dead, Orb of Storms. Movement: Dash, Frostblink" }
+      - { class: Witch, reward: "Contagion, Detonate Dead, Flame Wall, Frost Bomb, Orb of Storms, Summon Raging Spirit. Movement: Frostblink" }
+      - { class: Templar, reward: "Flame Wall, Frost Bomb, Holy Flame Totem, Summon Holy Relic, Vigilant Strike. Movement: Frostblink, Shield Charge" }
+      - { class: Scion, reward: "Bear Trap, Decoy Totem, Frost Bomb, Vigilant Strike. Movement: Dash, Frostblink, Shield Charge" }
+
+  - id: fetid-pool
+    name: The Fetid Pool
+    kind: side
+    tag: skip
+    branchFrom: mud-flats
+    level: 5
+    summary: >-
+      A side area off The Mud Flats. The quest asks you to kill every
+      monster in it.
+    quest: A Dirty Job
+    reward: "2 passive respec points."
+    why: >-
+      No passive point, only respec points, and you get plenty of those
+      later. Most routes leave it out.
+
+  - id: submerged-passage
+    name: The Submerged Passage
+    kind: zone
+    tag: travel
+    level: 5
+    waypoint: true
+    summary: >-
+      Take the waypoint right at the entrance. The exit to The Ledge is near
+      the upper right; the entrance to The Flooded Depths is near the lower
+      right.
+
+  - id: flooded-depths
+    name: The Flooded Depths
+    kind: side
+    tag: worth
+    branchFrom: submerged-passage
+    level: 6
+    badge: "+1 passive point"
+    summary: >-
+      A short side cave. The Dweller, a giant crab, waits in the last room,
+      frozen in crystals. Click it to start the fight.
+    quest: The Dweller of the Deep
+    reward: "Book of Skill from Tarkleigh: +1 passive point."
+    why: >-
+      A permanent passive point for a few minutes of work. Every guide does
+      it.
+    tips: >-
+      One guide calls this a hard fight for a brand-new character. If it
+      goes badly, leave it and come back after The Lower Prison. After the
+      kill, a boat beside the crab takes you straight back to The Submerged
+      Passage.
+
+  - id: the-ledge
+    name: The Ledge
+    kind: zone
+    tag: travel
+    level: 6
+    waypoint: true
+    summary: >-
+      One long straight path. The waypoint is about halfway. Keep going to
+      the far end for The Climb.
+    tips: >-
+      The stacked stones next to the waypoint point towards the exit. Skip
+      the totem boss Kuduku. If you are behind in level, this is the usual
+      place to catch up.
+
+  - id: the-climb
+    name: The Climb
+    kind: zone
+    tag: travel
+    level: 7
+    waypoint: true
+    summary: >-
+      Climb to the prison door at the top. The waypoint is about a third of
+      the way in, along one edge.
+    tips: "Goatmen leap at you in packs. Keep moving."
+
+  - id: lower-prison
+    name: The Lower Prison
+    kind: zone
+    tag: travel
+    level: 8
+    waypoint: true
+    badge: Level 8 support gem
+    summary: >-
+      Take the waypoint near the entrance and go back to town: just entering
+      the prison lets you collect a level 8 support gem from Nessa.
+    quest: "The Caged Brute (part 1)"
+    reward: "One level 8 support gem from Nessa."
+    classRewards:
+      - { class: Marauder, reward: "Added Fire Damage, Faster Attacks, Flamewood, Lifetap, Melee Splash" }
+      - { class: Duelist, reward: "Added Fire Damage, Faster Attacks, Lifetap, Maim, Melee Splash, Multiple Projectiles" }
+      - { class: Ranger, reward: "Added Cold Damage, Arrow Nova, Faster Attacks, Manaforged Arrows, Melee Splash, Multiple Projectiles, Void Manipulation" }
+      - { class: Shadow, reward: "Added Cold Damage, Added Lightning Damage, Faster Attacks, Multiple Projectiles, Multiple Traps, Void Manipulation" }
+      - { class: Witch, reward: "Added Lightning Damage, Combustion, Devour, Efficacy, Infernal Legion, Minion Damage, Unbound Ailments, Void Manipulation" }
+      - { class: Templar, reward: "Added Fire Damage, Added Lightning Damage, Combustion, Lifetap, Melee Splash" }
+      - { class: Scion, reward: "Added Cold, Fire or Lightning Damage, Faster Attacks, Lifetap, Melee Splash, Multiple Projectiles, Unbound Ailments" }
+
+  - id: trial-lower-prison
+    name: "Trial of Ascendancy: spike traps"
+    kind: side
+    tag: worth
+    branchFrom: lower-prison
+    badge: Trial 1 of 6
+    summary: >-
+      A side room in The Lower Prison full of floor spikes. Walk through it
+      and touch the plaque at the end.
+    why: >-
+      You need all six trials from Acts 1–3 to enter the Labyrinth, where
+      you choose your ascendancy class. Trials count for your whole account
+      for the league.
+    tips: "Spikes rise in a rhythm. Wait for them to drop, then cross."
+
+  - id: upper-prison
+    name: The Upper Prison
+    kind: zone
+    tag: travel
+    level: 9
+    summary: >-
+      Find the door to The Warden's Quarters, then follow the blood trail to
+      Brutus.
+    tips: >-
+      Look for a strongbox icon on the map that seems walled in. A switch on
+      a pillar nearby opens the wall to a chest of flasks, often with a
+      second Quicksilver.
+
+  - id: brutus
+    name: "Brutus, Lord Incarcerator"
+    kind: boss
+    tag: must
+    level: 9
+    summary: >-
+      The first real boss. He hits hard and slowly. Circle around him and
+      never stand in front while he winds up.
+    quest: "The Caged Brute (part 2)"
+    reward: "One level 10 gem from Tarkleigh: a movement skill or an aura, depending on class."
+    tips: |
+      - **Hook:** pulls you to him and makes you bleed. Keep a life flask ready.
+      - **Triple slam:** three hits in an area around him. Back off.
+      - **Ground slam:** a slow overhead strike that sends a wave forward. Step to the side.
+
+      If you die, his life does not reset. Go back in and continue.
+    newbie: >-
+      Be around level 8. After the fight, the Prisoner's Gate waypoint is
+      activated for you.
+    classRewards:
+      - { class: Marauder, reward: "Enduring Cry, Intimidating Cry, Leap Slam, Vitality" }
+      - { class: Duelist, reward: "Blink Arrow, Enduring Cry, Intimidating Cry, Leap Slam, Precision, Vitality, Whirling Blades" }
+      - { class: Ranger, reward: "Blink Arrow, Precision, Smoke Mine, Whirling Blades" }
+      - { class: Shadow, reward: "Clarity, Flame Dash, Precision, Siphoning Trap, Smoke Mine, Unearth, Whirling Blades, Withering Step" }
+      - { class: Witch, reward: "Bodyswap, Clarity, Flame Dash, Lightning Warp, Summon Skeletons, Wither" }
+      - { class: Templar, reward: "Clarity, Flame Dash, Leap Slam, Vitality" }
+      - { class: Scion, reward: "Blink Arrow, Flame Dash, Leap Slam, Withering Step" }
+    classRewardsNote: "All classes can buy Clarity, Precision and Vitality from Nessa after this fight."
+
+  - id: prisoners-gate
+    name: Prisoner's Gate
+    kind: zone
+    tag: travel
+    level: 10
+    waypoint: true
+    summary: >-
+      The road north is sealed, and it stays sealed until Act 2. Look for
+      the way down to The Ship Graveyard.
+    tips: >-
+      Near the start, one side of the road has a small ledge. Drop down
+      there and follow that side to the exit.
+    newbie: >-
+      Do not search for a way through the sealed pass. It is opened from the
+      other side in Act 2, as part of the quest The Way Forward.
+
+  - id: ship-graveyard
+    name: The Ship Graveyard
+    kind: zone
+    tag: travel
+    level: 11
+    waypoint: true
+    summary: >-
+      Take the waypoint near the entrance. The exit to The Cavern of Wrath is
+      on the outer wall of the zone.
+
+  - id: ship-graveyard-cave
+    name: The Ship Graveyard Cave
+    kind: side
+    tag: worth
+    branchFrom: ship-graveyard
+    level: 12
+    badge: "+1 passive point"
+    summary: >-
+      Captain Fairgraves, next to the waypoint, asks for the Allflame. Fetch
+      it from the cave inside a wrecked ship, hand it over, and kill him
+      when he turns on you.
+    quest: The Marooned Mariner
+    reward: "Book of Skill from Bestel: +1 passive point."
+    why: "A permanent passive point. Every guide does it."
+    tips: >-
+      In the cave, go straight away from the entrance to the deepest room.
+      A one-way exit there drops you back beside Fairgraves.
+
+
+      Last league Fairgraves attacked on sight and dropped the Allflame
+      himself, with no cave trip. We could not confirm which version 3.30
+      uses. If he attacks you as you approach, kill him and pick up the
+      Allflame.
+
+  - id: cavern-of-wrath
+    name: The Cavern of Wrath
+    kind: zone
+    tag: travel
+    level: 12
+    waypoint: true
+    badge: Level 12 skill gem
+    summary: >-
+      Take the waypoint at the entrance and go to town: Nessa now gives you a
+      level 12 skill gem. For many builds this is the main skill.
+    quest: The Siren's Cadence
+    reward: "One level 12 skill gem from Nessa."
+    tips: "Follow the water. The exit is in the upper right."
+    classRewards:
+      - { class: Marauder, reward: "Chain Hook, Earthshatter, Holy Sweep, Infernal Blow, Static Strike, Sunder, Volcanic Fissure" }
+      - { class: Duelist, reward: "Earthshatter, Holy Sweep, Lacerate, Rain of Arrows, Shattering Steel" }
+      - { class: Ranger, reward: "Elemental Hit, Lightning Arrow, Lightning Strike, Poisonous Concoction, Rain of Arrows, Reave, Siege Ballista, Toxic Rain" }
+      - { class: Shadow, reward: "Blade Vortex, Essence Drain, Fire Trap, Icicle Mine, Lightning Trap, Reave, Venom Gyre, Volatile Dead, Voltaxic Burst" }
+      - { class: Witch, reward: "Arc, Blazing Salvo, Creeping Frost, Essence Drain, Flesh Offering, Ice Nova, Manabond, Scorching Ray, Volatile Dead" }
+      - { class: Templar, reward: "Absolution, Blazing Salvo, Ice Nova, Manabond, Scorching Ray, Searing Bond, Static Strike, Storm Brand, Storm Burst, Storm Call, Wintertide Brand" }
+      - { class: Scion, reward: "Blade Vortex, Exsanguinate, Ice Nova, Rain of Arrows, Scorching Ray, Spectral Helix, Static Strike, Storm Burst" }
+
+  - id: cavern-of-anger
+    name: The Cavern of Anger
+    kind: zone
+    tag: travel
+    level: 13
+    summary: >-
+      A second cave with no waypoint. Merveil's Lair is in the upper right.
+    tips: "Piles of gold on the ground mean the entrance is close."
+
+  - id: merveil
+    name: "Merveil, the Siren"
+    kind: boss
+    tag: must
+    level: 13
+    image: sapphire-ring
+    summary: >-
+      The act boss, in two forms. Almost all of her damage is cold, so bring
+      cold resistance and keep moving off the ground effects.
+    reward: "Opens Act 2 and activates the first waypoint there."
+    tips: |
+      **First form:** an ice storm that leaves chilled ground, volleys of ice bolts, and spinning weapons she summons.
+
+      **Second form:** water geysers that hit many times, a projectile that freezes, and small larvae. Some larvae explode on contact: kill them or run from them.
+    newbie: >-
+      Be around level 12. Wear a [[Sapphire Ring]]: sell an Iron Ring and
+      any blue skill gem to a vendor together to get one. It makes this
+      fight much easier.
+
+sections:
+  - title: Get cold resistance before Merveil
+    body: >-
+      Sell an Iron Ring together with one skill gem to any vendor and you
+      get a resistance ring. A blue gem gives a [[Sapphire Ring]] (cold), a
+      red gem a Ruby Ring (fire), a green gem a Topaz Ring (lightning). You
+      want the Sapphire for Merveil.
+  - title: Make boots with movement speed
+    body: >-
+      Sell any boots, a [[Quicksilver Flask]] and an [[Orb of Augmentation]]
+      to a vendor together. You get magic boots with 10% movement speed.
+      Do it again with boots that already have the modifier to raise it one
+      step.
+  - title: A stronger weapon from the vendor
+    body: >-
+      Sell a weapon, a Rustic Sash and a Blacksmith's Whetstone together for
+      a magic weapon with increased physical damage. For spells, a wand or
+      sceptre with a Chain Belt and a Whetstone gives increased spell
+      damage. A magic or rare belt gives a higher roll.
+  - title: Which gems to pick
+    body: >-
+      The route is the same for every class, but the gems are not. For
+      damage skills and supports, follow your build guide. Two picks are
+      the same for everyone: the Quicksilver Flask, and a movement skill the
+      first time one is offered.
+
+patchNotes:
+  - "Every town vendor sells [[Scroll of Wisdom]] for 15 Gold."
+  - "[[Orb of Transmutation]] is bought with an [[Orb of Augmentation]], no longer with Portal Scrolls."
+  - "[[Orb of Binding]] no longer drops, so linked items come from vendors and drops."
+  - "Covens can appear in the campaign, and each boss has a Viscera. See the league entry in the changelog."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "PoE Vault Act 1 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-1" }
+  - { title: "Mobalytics Act 1 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-1" }
+  - { title: "Maxroll campaign guide", url: "https://maxroll.gg/poe/getting-started/campaign-guide" }
+  - { title: "PoEDB Act 1", url: "https://poedb.tw/us/Act_1" }

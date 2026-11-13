@@ -1,0 +1,242 @@
+---
+// The act's route as a flow chart: the main path is a vertical spine, side
+// areas branch off to the right. Selecting a node shows its panel.
+// Without JavaScript every panel is simply listed under the chart.
+import Rich from '../Rich.astro';
+import Tag from '../Tag.astro';
+import GameImage from '../GameImage.astro';
+import { t, type Locale } from '../../i18n';
+import type { Act } from '../../lib/leveling';
+
+interface Props {
+  act: Act;
+  league: string;
+  locale: Locale;
+}
+const { act, league, locale } = Astro.props;
+const first = act.nodes[0].id;
+---
+<div class="route" data-route>
+  <ol class="flow" aria-label={t(locale, 'leveling.route')}>
+    {act.nodes.map((node) => (
+      <li class:list={['flow__item', `flow__item--${node.kind}`]}>
+        <a
+          href={`#zone-${node.id}`}
+          class:list={['node', `node--${node.tag}`, { 'is-active': node.id === first }]}
+          data-node={node.id}
+        >
+          <span class="node__dot" aria-hidden="true"></span>
+          <span class="node__text">
+            <span class="node__name">{node.name}</span>
+            <span class="node__meta">
+              {node.level && <span>{t(locale, 'leveling.areaLevel', { level: node.level })}</span>}
+              {node.waypoint && <span class="node__wp" title={t(locale, 'leveling.waypoint')}>
+                <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" /></svg>
+                {t(locale, 'leveling.waypoint')}
+              </span>}
+              {node.badge && <span class="node__badge">{node.badge}</span>}
+            </span>
+          </span>
+          <Tag kind={node.tag} label={t(locale, `leveling.tag.${node.tag}`)} />
+        </a>
+      </li>
+    ))}
+  </ol>
+
+  <div class="panels" data-panels>
+    <button type="button" class="panels__close" data-panels-close aria-label={t(locale, 'common.close')}>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18" /></svg>
+    </button>
+    {act.nodes.map((node) => (
+      <section class:list={['panel', { 'is-active': node.id === first }]} id={`zone-${node.id}`} data-panel={node.id}>
+        <header class="panel__head">
+          {node.image && <GameImage id={node.image} size={52} where={act.where} />}
+          <div>
+            <div class="eyebrow">
+              {t(locale, `leveling.kind.${node.kind}`)}
+              {node.level && ` · ${t(locale, 'leveling.areaLevel', { level: node.level })}`}
+              {node.waypoint && ` · ${t(locale, 'leveling.waypoint')}`}
+            </div>
+            <h3>{node.name}</h3>
+          </div>
+          <Tag kind={node.tag} label={t(locale, `leveling.tag.${node.tag}`)} />
+        </header>
+
+        <Rich text={node.summary} league={league} where={act.where} class="panel__summary" />
+
+        {(node.quest || node.reward) && (
+          <dl class="panel__facts">
+            {node.quest && <div><dt>{t(locale, 'leveling.quest')}</dt><dd>{node.quest}</dd></div>}
+            {node.reward && <div><dt>{t(locale, 'leveling.reward')}</dt><dd><Rich text={node.reward} league={league} where={act.where} inline /></dd></div>}
+          </dl>
+        )}
+
+        {node.why && (
+          <div class="panel__block">
+            <h4>{t(locale, `leveling.why.${node.tag}`)}</h4>
+            <Rich text={node.why} league={league} where={act.where} />
+          </div>
+        )}
+        {node.tips && (
+          <div class="panel__block">
+            <h4>{t(locale, node.kind === 'boss' ? 'leveling.fight' : 'leveling.tips')}</h4>
+            <Rich text={node.tips} league={league} where={act.where} />
+          </div>
+        )}
+        {node.newbie && (
+          <details class="panel__more">
+            <summary>{t(locale, 'leveling.newbie')}</summary>
+            <Rich text={node.newbie} league={league} where={act.where} />
+          </details>
+        )}
+        {node.classRewards && (
+          <details class="panel__more">
+            <summary>{t(locale, 'leveling.classRewards')}</summary>
+            {node.classRewardsNote && <p class="muted">{node.classRewardsNote}</p>}
+            <table>
+              <tbody>
+                {node.classRewards.map((row) => <tr><th scope="row">{row.class}</th><td>{row.reward}</td></tr>)}
+              </tbody>
+            </table>
+          </details>
+        )}
+      </section>
+    ))}
+  </div>
+</div>
+
+<script>
+  // Master-detail behaviour for the route chart.
+  function select(route: HTMLElement, id: string, open: boolean) {
+    for (const node of route.querySelectorAll<HTMLElement>('[data-node]')) node.classList.toggle('is-active', node.dataset.node === id);
+    for (const panel of route.querySelectorAll<HTMLElement>('[data-panel]')) panel.classList.toggle('is-active', panel.dataset.panel === id);
+    const panels = route.querySelector<HTMLElement>('[data-panels]');
+    if (panels) {
+      panels.scrollTop = 0;
+      if (open) panels.classList.add('is-open');
+    }
+  }
+
+  function init() {
+    const route = document.querySelector<HTMLElement>('[data-route]');
+    if (!route) return;
+    route.dataset.enhanced = 'true';
+    const fromHash = location.hash.startsWith('#zone-') ? location.hash.slice(6) : '';
+    if (fromHash && route.querySelector(`[data-panel="${CSS.escape(fromHash)}"]`)) select(route, fromHash, false);
+  }
+
+  document.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+    const close = target.closest('[data-panels-close]');
+    if (close) {
+      close.closest('[data-panels]')?.classList.remove('is-open');
+      return;
+    }
+    const node = target.closest<HTMLElement>('[data-node]');
+    const route = node?.closest<HTMLElement>('[data-route]');
+    if (!node || !route || !node.dataset.node) return;
+    event.preventDefault();
+    select(route, node.dataset.node, true);
+    history.replaceState(null, '', `#zone-${node.dataset.node}`);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') document.querySelector('[data-panels].is-open')?.classList.remove('is-open');
+  });
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  .route { display: grid; grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+
+  /* ---------- the flow chart ---------- */
+  .flow { list-style: none; margin: 0; padding: 0; position: relative; }
+  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; }
+  /* spine */
+  .flow__item::before { content: ''; position: absolute; left: 0.62rem; top: 0; bottom: 0; width: 1.5px; background: var(--border-strong); }
+  .flow__item:first-child::before { top: 50%; }
+  .flow__item:last-child::before { bottom: 50%; }
+  /* side branches sit further right, joined to the spine by an elbow */
+  .flow__item--side { padding-left: 4.25rem; }
+  .flow__item--side::after {
+    content: ''; position: absolute; left: 0.62rem; top: 50%; width: 3rem; height: 1.5px; background: var(--border-strong);
+  }
+
+  .node {
+    position: relative;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.6rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+    color: var(--text); text-decoration: none;
+    transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease);
+  }
+  .node:hover { border-color: var(--border-strong); color: var(--text); }
+  .node.is-active { border-color: var(--accent); background: var(--accent-soft); }
+  .node__dot {
+    position: absolute; left: -1.75rem; top: 50%; width: 0.75rem; height: 0.75rem; transform: translateY(-50%);
+    border-radius: 50%; background: var(--bg); border: 2px solid var(--border-strong); z-index: 1;
+  }
+  .flow__item--side .node__dot { left: -0.95rem; width: 0.6rem; height: 0.6rem; }
+  .node--must .node__dot { border-color: var(--accent); background: var(--accent); }
+  .node--worth .node__dot { border-color: var(--buff); }
+  .node.is-active .node__dot { box-shadow: 0 0 0 3px var(--accent-soft); border-color: var(--accent); }
+  .flow__item--town .node { border-style: dashed; }
+  .flow__item--boss .node { border-width: 1.5px; border-color: var(--border-strong); }
+  .flow__item--boss .node__dot { border-radius: 2px; transform: translateY(-50%) rotate(45deg); }
+  .node__name { display: block; font-weight: 600; font-size: 0.95rem; line-height: 1.3; }
+  .flow__item--boss .node__name { font-family: var(--font-display); font-size: 1.05rem; }
+  .node__meta { display: flex; flex-wrap: wrap; gap: 0.15rem 0.6rem; margin-top: 0.15rem; font-size: 0.76rem; color: var(--text-muted); }
+  .node__wp { display: inline-flex; align-items: center; gap: 0.2rem; }
+  .node__badge { color: var(--buff); font-weight: 600; }
+
+  /* ---------- the detail panel ---------- */
+  .panels { position: sticky; top: 7.5rem; max-height: calc(100vh - 8.5rem); overflow-y: auto; scrollbar-width: thin; }
+  .panels__close { display: none; }
+  .panel { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 1.25rem 1.4rem 1.4rem; scroll-margin-top: 8rem; }
+  .panel + .panel { margin-top: 1rem; }
+  /* With the script running, show only the selected panel. */
+  .route[data-enhanced] .panel { display: none; margin-top: 0; }
+  .route[data-enhanced] .panel.is-active { display: block; }
+  .panel__head { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 0.9rem; }
+  .panel__head > div { flex: 1; min-width: 0; }
+  .panel__head h3 { font-size: 1.45rem; margin-top: 0.15rem; }
+  .panel__summary { font-size: 1.02rem; }
+  .panel__facts { margin: 1.1rem 0 0; border-top: 1px solid var(--border); }
+  .panel__facts div { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1rem; padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 0.94rem; }
+  .panel__facts dt, .panel__block h4 {
+    font-family: var(--font-body); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted);
+  }
+  .panel__facts dt { padding-top: 0.2rem; }
+  .panel__facts dd { margin: 0; }
+  .panel__block { margin-top: 1.15rem; font-size: 0.95rem; }
+  .panel__block h4 { margin-bottom: 0.3rem; }
+  .panel__more { margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 0.7rem; font-size: 0.93rem; }
+  .panel__more summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+  .panel__more summary + * { margin-top: 0.6rem; }
+  .panel__more table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  .panel__more th { text-align: left; font-weight: 600; white-space: nowrap; padding: 0.4rem 0.9rem 0.4rem 0; vertical-align: top; }
+  .panel__more td { padding: 0.4rem 0; color: var(--text-muted); }
+  .panel__more tr + tr th, .panel__more tr + tr td { border-top: 1px solid var(--border); }
+
+  @media (max-width: 900px) {
+    .route { grid-template-columns: 1fr; gap: 1.5rem; }
+    .panels { position: static; max-height: none; overflow: visible; }
+    /* On phones the selected panel opens as a sheet over the chart. */
+    .route[data-enhanced] .panels {
+      display: none;
+      position: fixed; inset: auto 0 0 0; z-index: 40;
+      max-height: 78vh; overflow-y: auto;
+      background: var(--surface); border-top: 1px solid var(--border-strong); border-radius: 10px 10px 0 0;
+      padding-top: 0.25rem;
+    }
+    .route[data-enhanced] .panels.is-open { display: block; }
+    .route[data-enhanced] .panel { border: 0; border-radius: 0; }
+    .route[data-enhanced] .panels__close {
+      display: inline-flex; align-items: center; justify-content: center;
+      position: sticky; top: 0.5rem; margin: 0.5rem 0.75rem 0 auto; float: right;
+      width: 2.1rem; height: 2.1rem; border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); color: var(--text-muted); cursor: pointer; z-index: 2;
+    }
+    .route[data-enhanced] .panel__head { padding-right: 2.5rem; }
+  }
+</style>

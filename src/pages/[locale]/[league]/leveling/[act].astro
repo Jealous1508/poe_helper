@@ -1,0 +1,133 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ActTabs from '../../../../components/leveling/ActTabs.astro';
+import RouteFlow from '../../../../components/leveling/RouteFlow.astro';
+import Rich from '../../../../components/Rich.astro';
+import { getLeague, leagues } from '../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../i18n';
+import { getActs, getOverview } from '../../../../lib/leveling';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      getActs(league.id, 'en').acts.map((act) => ({ params: { locale, league: league.id, act: act.slug } })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, act: actSlug } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const { acts, isFallback } = getActs(league.id, locale);
+const act = acts.find((a) => a.slug === actSlug);
+if (!act) throw new Error(`No act ${actSlug}`);
+const { overview } = getOverview(league.id, locale);
+const index = acts.indexOf(act);
+const prev = acts[index - 1];
+const next = acts[index + 1];
+const counts = {
+  must: act.nodes.filter((n) => n.tag === 'must').length,
+  worth: act.nodes.filter((n) => n.tag === 'worth').length,
+  skip: act.nodes.filter((n) => n.tag === 'skip').length,
+};
+---
+<Base locale={locale} league={league} title={`${t(locale, 'leveling.act', { number: act.number })}: ${act.title}`} description={act.intro} section="leveling" isFallback={isFallback}>
+  <div class="container page-head">
+    <div class="eyebrow">{t(locale, 'leveling.eyebrow')} · {t(locale, 'leveling.act', { number: act.number })}</div>
+    <h1>{act.title}</h1>
+    <p class="lede">{act.intro}</p>
+  </div>
+
+  <ActTabs stops={overview.stops} current={act.slug} league={league.id} locale={locale} />
+
+  <div class="container">
+    <dl class="glance">
+      <div><dt>{t(locale, 'leveling.glance.levels')}</dt><dd>{act.levelIn} → {act.levelOut}</dd></div>
+      <div><dt>{t(locale, 'leveling.town')}</dt><dd>{act.town}</dd></div>
+      <div><dt>{t(locale, 'leveling.glance.points')}</dt><dd>{act.skillPoints}{act.skillPointsNote && <small>{act.skillPointsNote}</small>}</dd></div>
+      <div><dt>{t(locale, 'leveling.glance.boss')}</dt><dd>{act.boss}</dd></div>
+      <div class="glance__wide">
+        <dt>{t(locale, 'leveling.glance.rewards')}</dt>
+        <dd><ul>{act.keyRewards.map((reward) => <li><Rich text={reward} league={league.id} where={act.where} inline /></li>)}</ul></dd>
+      </div>
+    </dl>
+
+    <section class="block">
+      <header class="block__head">
+        <h2>{t(locale, 'leveling.route')}</h2>
+        <p class="muted">{t(locale, 'leveling.route.note', counts)}</p>
+      </header>
+      <RouteFlow act={act} league={league.id} locale={locale} />
+    </section>
+
+    {act.patchNotes.length > 0 && (
+      <section class="block patch">
+        <h2>{t(locale, 'leveling.patch', { version: league.id })}</h2>
+        <ul>{act.patchNotes.map((note) => <li><Rich text={note} league={league.id} where={act.where} inline /></li>)}</ul>
+      </section>
+    )}
+
+    {act.sections.length > 0 && (
+      <section class="block">
+        <h2>{t(locale, 'leveling.goodToKnow')}</h2>
+        <div class="notes">
+          {act.sections.map((section) => (
+            <article>
+              <h3>{section.title}</h3>
+              <Rich text={section.body} league={league.id} where={act.where} />
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <nav class="pager">
+      {prev ? <a href={pagePath(locale, league.id, 'leveling', prev.slug)}>← {t(locale, 'leveling.act', { number: prev.number })}</a> : <a href={pagePath(locale, league.id, 'leveling')}>← {t(locale, 'leveling.overview')}</a>}
+      {next ? <a href={pagePath(locale, league.id, 'leveling', next.slug)}>{t(locale, 'leveling.act', { number: next.number })} →</a> : <span class="muted">{t(locale, 'leveling.nextComing', { number: act.number + 1 })}</span>}
+    </nav>
+
+    {act.sources.length > 0 && (
+      <p class="sources muted">
+        {t(locale, 'common.sources')}:
+        {act.sources.map((source, i) => <>{i > 0 && ' · '}<a href={source.url} rel="noopener" target="_blank">{source.title}</a></>)}
+      </p>
+    )}
+  </div>
+</Base>
+
+<style>
+  .glance {
+    margin: 2rem 0 0; display: grid; grid-template-columns: max-content max-content max-content max-content minmax(16rem, 1fr);
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+  }
+  .glance > div { padding: 0.9rem 1.1rem; }
+  .glance > div + div { border-left: 1px solid var(--border); }
+  .glance dt { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); }
+  .glance dd { margin: 0.25rem 0 0; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; line-height: 1.25; }
+  .glance dd small { display: block; max-width: 13rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; color: var(--text-muted); margin-top: 0.2rem; }
+  .glance__wide dd { font-family: var(--font-body); font-size: 0.9rem; font-weight: 400; }
+  .glance__wide ul { margin: 0; padding-left: 1.1rem; }
+  .glance__wide li { margin: 0.1rem 0; }
+
+  .block { padding-top: 3rem; }
+  .block__head { margin-bottom: 1.4rem; }
+  .block__head p { margin-top: 0.3rem; max-width: var(--measure); }
+  .patch ul { max-width: var(--measure); margin-top: 0.8rem; }
+  .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; margin-top: 1.25rem; }
+  .notes article { border-top: 2px solid var(--text); padding-top: 0.8rem; font-size: 0.96rem; }
+  .notes h3 { margin-bottom: 0.45rem; }
+  .pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); font-weight: 600; }
+  .pager a { text-decoration: none; }
+  .sources { margin-top: 1.5rem; font-size: 0.84rem; }
+
+  @media (max-width: 900px) {
+    .glance { grid-template-columns: 1fr 1fr; }
+    .glance > div + div { border-left: 0; }
+    .glance > div { border-top: 1px solid var(--border); }
+    .glance > div:nth-child(-n + 2) { border-top: 0; }
+    .glance > div:nth-child(even) { border-left: 1px solid var(--border); }
+    .glance__wide { grid-column: 1 / -1; border-left: 0 !important; }
+    .notes { grid-template-columns: 1fr; }
+  }
+</style>

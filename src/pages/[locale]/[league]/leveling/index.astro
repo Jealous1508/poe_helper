@@ -1,0 +1,106 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ActTabs from '../../../../components/leveling/ActTabs.astro';
+import CampaignFlow from '../../../../components/leveling/CampaignFlow.astro';
+import Rich from '../../../../components/Rich.astro';
+import Tag from '../../../../components/Tag.astro';
+import { getLeague } from '../../../../config/leagues';
+import { isLocale, t } from '../../../../i18n';
+import { getOverview } from '../../../../lib/leveling';
+import { leaguePaths } from '../../../../lib/paths';
+
+export const getStaticPaths = leaguePaths;
+
+const { locale: rawLocale, league: leagueId } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const { overview, isFallback } = getOverview(league.id, locale);
+---
+<Base locale={locale} league={league} title={t(locale, 'nav.leveling')} description={overview.intro} section="leveling" isFallback={isFallback}>
+  <div class="container page-head">
+    <div class="eyebrow">{t(locale, 'leveling.eyebrow')} · {t(locale, 'common.verified')} {overview.updated}</div>
+    <h1>{t(locale, 'leveling.title')}</h1>
+    <p class="lede">{overview.intro}</p>
+  </div>
+
+  <ActTabs stops={overview.stops} current="overview" league={league.id} locale={locale} />
+
+  <div class="container">
+    <section class="block">
+      <h2>{t(locale, 'leveling.campaign')}</h2>
+      <p class="muted note">{t(locale, 'leveling.campaign.note')}</p>
+      <CampaignFlow stops={overview.stops} league={league.id} locale={locale} />
+    </section>
+
+    <section class="block">
+      <h2>{t(locale, 'leveling.howToRead')}</h2>
+      <p class="muted note">{t(locale, 'leveling.howToRead.note')}</p>
+      <ul class="legend">
+        {overview.legend.map((item) => (
+          <li><Tag kind={item.tag} label={t(locale, `leveling.tag.${item.tag}`)} /><span>{item.text}</span></li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>{t(locale, 'leveling.labsTitle')}</h2>
+      <div class="table-wrap">
+        <table class="labs">
+          <thead>
+            <tr>
+              <th>{t(locale, 'build.labs.lab')}</th>
+              <th>{t(locale, 'leveling.labs.level')}</th>
+              <th>{t(locale, 'leveling.labs.trials')}</th>
+              <th>{t(locale, 'leveling.labs.when')}</th>
+              <th>{t(locale, 'leveling.labs.ready')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.labs.map((lab) => (
+              <tr>
+                <th scope="row">{lab.name}</th>
+                <td>{lab.areaLevel}</td>
+                <td>{lab.trials}</td>
+                <td>{lab.when}</td>
+                <td>{lab.ready}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>{t(locale, 'leveling.principles')}</h2>
+      <div class="principles">
+        {overview.principles.map((item, index) => (
+          <article>
+            <span class="principles__num">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.title}</h3>
+            <Rich text={item.body} league={league.id} where={overview.where} />
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .block { padding-top: 3rem; }
+  .block h2 { margin-bottom: 0.4rem; }
+  .note { max-width: var(--measure); margin-bottom: 1.5rem; }
+  .legend { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; max-width: var(--measure); }
+  .legend li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); align-items: baseline; gap: 0.75rem; margin: 0; font-size: 0.95rem; }
+  .legend :global(.tag) { justify-self: start; }
+  .table-wrap { overflow-x: auto; margin-top: 1.25rem; }
+  .labs { width: 100%; min-width: 40rem; border-collapse: collapse; font-size: 0.92rem; }
+  .labs thead th { text-align: left; font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--border-strong); }
+  .labs tbody th { text-align: left; font-family: var(--font-display); font-size: 1.05rem; white-space: nowrap; }
+  .labs td, .labs tbody th { padding: 0.75rem 1rem 0.75rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem 2.25rem; margin-top: 1.5rem; }
+  .principles article { border-top: 2px solid var(--text); padding-top: 0.8rem; font-size: 0.95rem; }
+  .principles__num { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.08em; color: var(--text-muted); }
+  .principles h3 { margin: 0.25rem 0 0.45rem; }
+  @media (max-width: 900px) { .principles { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>

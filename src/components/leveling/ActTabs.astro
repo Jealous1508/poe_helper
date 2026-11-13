@@ -1,0 +1,52 @@
+---
+import { pagePath, t, type Locale } from '../../i18n';
+import type { Overview } from '../../lib/leveling';
+
+interface Props {
+  stops: Overview['stops'];
+  /** Slug of the current page: "overview", "act-1", ... */
+  current: string;
+  league: string;
+  locale: Locale;
+}
+const { stops, current, league, locale } = Astro.props;
+---
+<nav class="act-tabs" aria-label={t(locale, 'leveling.tabs')}>
+  <div class="container act-tabs__inner">
+    <a href={pagePath(locale, league, 'leveling')} class:list={['tab', { 'is-current': current === 'overview' }]} aria-current={current === 'overview' ? 'page' : undefined}>
+      {t(locale, 'leveling.overview')}
+    </a>
+    {stops.map((stop) =>
+      stop.available ? (
+        <a href={pagePath(locale, league, 'leveling', stop.slug)} class:list={['tab', { 'is-current': current === stop.slug }]} aria-current={current === stop.slug ? 'page' : undefined}>
+          {stop.label}
+        </a>
+      ) : (
+        <span class="tab is-disabled" title={t(locale, 'common.coming')}>{stop.label}</span>
+      ),
+    )}
+    <span class="tab is-disabled" title={t(locale, 'common.coming')}>{t(locale, 'leveling.labs')}</span>
+  </div>
+</nav>
+
+<style>
+  .act-tabs { position: sticky; top: var(--header-h, 3.8rem); z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .act-tabs__inner { display: flex; gap: 0.15rem; overflow-x: auto; scrollbar-width: none; }
+  .act-tabs__inner::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: none;
+    padding: 0.75rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  a.tab:hover { color: var(--text); }
+  .tab.is-current { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
+  .tab.is-disabled { opacity: 0.45; cursor: default; }
+  @media (max-width: 720px) { .act-tabs { top: 0; } }
+</style>

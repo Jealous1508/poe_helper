@@ -1,0 +1,84 @@
+---
+// The whole campaign as one flow: ten acts in order, with labs, penalties
+// and unlocks marked on the act where they happen.
+import { pagePath, t, type Locale } from '../../i18n';
+import type { Overview } from '../../lib/leveling';
+
+interface Props {
+  stops: Overview['stops'];
+  league: string;
+  locale: Locale;
+}
+const { stops, league, locale } = Astro.props;
+---
+<ol class="campaign">
+  {stops.map((stop, index) => {
+    const Tag = stop.available ? 'a' : 'div';
+    return (
+      <li class="campaign__stop">
+        <Tag class:list={['stop', { 'is-link': stop.available }]} href={stop.available ? pagePath(locale, league, 'leveling', stop.slug) : undefined}>
+          <div class="stop__top">
+            <span class="stop__num">{index + 1}</span>
+            <span class="stop__levels">{stop.levels}</span>
+          </div>
+          <h3>{stop.label}</h3>
+          <dl>
+            <div><dt>{t(locale, 'leveling.town')}</dt><dd>{stop.town}</dd></div>
+            <div><dt>{t(locale, 'leveling.boss')}</dt><dd>{stop.boss}</dd></div>
+            <div><dt>{t(locale, 'leveling.points')}</dt><dd>{stop.points}</dd></div>
+          </dl>
+          {stop.markers.length > 0 && (
+            <ul class="stop__markers">
+              {stop.markers.map((marker) => <li class={`marker marker--${marker.kind}`}>{marker.text}</li>)}
+            </ul>
+          )}
+          <span class="stop__go">{stop.available ? `${t(locale, 'leveling.open')} →` : t(locale, 'common.coming')}</span>
+        </Tag>
+      </li>
+    );
+  })}
+</ol>
+
+<style>
+  .campaign { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.5rem 1.25rem; }
+  .campaign__stop { margin: 0; position: relative; }
+  /* connector line between stops */
+  .campaign__stop:not(:nth-child(5n))::after {
+    content: ''; position: absolute; top: 1.55rem; right: -1.25rem; width: 1.25rem; height: 1.5px; background: var(--border-strong);
+  }
+  .stop {
+    display: flex; flex-direction: column; height: 100%;
+    padding: 0.9rem 0.9rem 0.8rem;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+    color: var(--text); text-decoration: none; font-size: 0.86rem;
+    transition: border-color 0.15s var(--ease);
+  }
+  .stop.is-link:hover { border-color: var(--accent); color: var(--text); }
+  .stop:not(.is-link) { background: transparent; }
+  .stop__top { display: flex; align-items: center; justify-content: space-between; }
+  .stop__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.6rem; height: 1.6rem; border-radius: 50%;
+    border: 1.5px solid var(--accent); color: var(--accent); font-weight: 600; font-size: 0.8rem;
+  }
+  .stop.is-link .stop__num { background: var(--accent); color: var(--on-accent); }
+  .stop__levels { font-size: 0.76rem; color: var(--text-muted); }
+  .stop h3 { font-size: 1.1rem; margin: 0.6rem 0 0.5rem; }
+  dl { margin: 0; display: grid; gap: 0.25rem; }
+  dl div { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0.4rem; }
+  dt { color: var(--text-muted); font-size: 0.76rem; padding-top: 0.08rem; }
+  dd { margin: 0; }
+  .stop__markers { list-style: none; margin: 0.7rem 0 0; padding: 0; display: grid; gap: 0.3rem; }
+  .marker { margin: 0; padding: 0.2rem 0.45rem; border-left: 3px solid var(--border-strong); font-size: 0.78rem; line-height: 1.35; background: var(--surface-2); }
+  .marker--lab { border-left-color: var(--accent); }
+  .marker--penalty { border-left-color: var(--nerf); }
+  .marker--unlock { border-left-color: var(--buff); }
+  .stop__go { margin-top: auto; padding-top: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+  .stop.is-link .stop__go { color: var(--accent); }
+
+  @media (max-width: 1000px) {
+    .campaign { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .campaign__stop::after { display: none; }
+  }
+  @media (max-width: 480px) { .campaign { grid-template-columns: 1fr; } }
+</style>

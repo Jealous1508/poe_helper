@@ -1,0 +1,405 @@
+number: 2
+title: "The Forest, the Bandits and the Vaal Oversoul"
+town: Forest Encampment
+levelIn: 13
+levelOut: 23
+skillPoints: 2
+skillPointsNote: "3 if you kill all three bandits."
+boss: Vaal Oversoul
+keyRewards:
+  - "2 passive points: Through Sacred Ground, The Way Forward"
+  - "The bandit choice: a third passive point or a permanent bonus"
+  - "Skill gems at level 16 and 18"
+  - "A second [[Quicksilver Flask]] from The Great White Beast"
+  - "Trials 2 and 3 of six"
+intro: >-
+  Act 2 is a hub. The town sits in the middle and the zones spread out in
+  two loops: north through The Crossroads, and south through The Riverways.
+  You do the north loop first. Along the way you meet three bandit lords and
+  decide what to do with them.
+
+nodes:
+  - id: southern-forest
+    name: The Southern Forest
+    kind: zone
+    tag: travel
+    level: 13
+    waypoint: true
+    summary: >-
+      A straight path with water on one side and cliffs on the other. Go
+      north to the town.
+
+  - id: forest-encampment
+    name: The Forest Encampment
+    kind: town
+    tag: travel
+    waypoint: true
+    summary: >-
+      Your town for Act 2. Two exits matter: east to The Old Fields for the
+      north loop, and west to The Riverways for the south loop.
+    tips: >-
+      Greust sells weapons and armour. Yeena sells gems. From this act on,
+      every town has a crafting bench: use it for cheap life and resistance
+      on your gear.
+
+  - id: old-fields
+    name: The Old Fields
+    kind: zone
+    tag: travel
+    level: 14
+    summary: >-
+      Stay on the winding road east to The Crossroads. The entrance to The
+      Den is off the road, nearer the far end.
+
+  - id: the-den
+    name: The Den
+    kind: side
+    tag: worth
+    branchFrom: old-fields
+    level: 15
+    badge: Second Quicksilver Flask
+    image: quicksilver-flask
+    summary: >-
+      Tunnels that end in a large cave with the Great White Beast. Kill it
+      and tell Yeena.
+    quest: The Great White Beast
+    reward: "A flask or a belt of your choice from Yeena. Take a [[Quicksilver Flask]] if you do not have two."
+    why: >-
+      A second Quicksilver means you can keep the speed boost running almost
+      all the time. If you already found a second one, this trip is not
+      needed.
+    tips: "After the kill, an exit on the back wall takes you to The Old Fields."
+
+  - id: crossroads
+    name: The Crossroads
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      The hub of the north loop, with the waypoint where the roads meet.
+      Three exits lead on from here.
+    tips: |
+      - **North-west:** a short path, then up past the cliffs, to The Chamber of Sins.
+      - **North-east:** along the road to The Broken Bridge.
+      - **South-east:** along the second road to The Fellshrine Ruins.
+
+  - id: chamber-of-sins-1
+    name: The Chamber of Sins Level 1
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      A maze of rooms around a tall central hall, where the waypoint is.
+      The stairs down are a little past it.
+    tips: >-
+      One route note: Level 2 lies in the same direction as the waypoint was
+      from the entrance. Zombies here leave a chaos cloud when they die.
+
+  - id: trial-chamber-of-sins
+    name: "Trial of Ascendancy: sawblades"
+    kind: side
+    tag: worth
+    branchFrom: chamber-of-sins-1
+    badge: Trial 2 of 6
+    summary: >-
+      A side room on Level 2 of the Chamber, with sawblades running along
+      tracks in the floor.
+    why: "One of the six trials you need for the Labyrinth."
+    tips: >-
+      Blades follow fixed tracks. Watch one full pass before you move. One
+      guide says the trial is usually on the opposite side of the level from
+      the quest boss, so do it first.
+
+  - id: fidelitas
+    name: "Chamber of Sins Level 2: Fidelitas"
+    kind: boss
+    tag: must
+    level: 16
+    badge: Level 16 gem
+    summary: >-
+      At the end of a long hallway, Piety speaks and leaves. Kill Fidelitas
+      beyond, talk to Helena, and take the Baleful Gem from the Strange
+      Device.
+    quest: Intruders in Black
+    reward: "One level 16 gem from Greust. Every class is offered the three elemental Heralds."
+    tips: >-
+      Necromancers in this zone curse you to lower lightning resistance. Be
+      around level 14–15 for Fidelitas. Keep the Baleful Gem: you need it
+      later at The Wetlands.
+    classRewards:
+      - { class: All classes, reward: "Herald of Ash, Herald of Ice, Herald of Thunder" }
+      - { class: Marauder, reward: "Ancestral Cry, Corrupting Fever, Eviscerate, Molten Shell, Seismic Cry, Warlord's Mark" }
+      - { class: Duelist, reward: "Ancestral Cry, Blood Rage, Corrupting Fever, Defiance Banner, Eviscerate, Flesh and Stone, Frenzy, Poacher's Mark, Seismic Cry, Swordstorm, Warlord's Mark" }
+      - { class: Ranger, reward: "Arctic Armour, Blood Rage, Ensnaring Arrow, Frenzy, Herald of Agony, Poacher's Mark" }
+      - { class: Shadow, reward: "Arcane Cloak, Arctic Armour, Assassin's Mark, Blade Blast, Blood Rage, Cold Snap, Herald of Agony, Summon Skitterbots" }
+      - { class: Witch, reward: "Arcane Cloak, Arctic Armour, Cold Snap, Desecrate, Galvanic Field, Wall of Force" }
+      - { class: Templar, reward: "Arcane Cloak, Brand Recall, Divine Retribution, Herald of Purity, Mana-Infused Staff, Shield of Light, Wave of Conviction" }
+      - { class: Scion, reward: "Arctic Armour, Corrupting Fever, Frenzy" }
+
+  - id: broken-bridge
+    name: The Broken Bridge
+    kind: zone
+    tag: must
+    level: 16
+    waypoint: true
+    badge: "Bandit: Kraityn"
+    summary: >-
+      Follow the road to Kraityn's camp on the bridge at the far end. Help
+      him or kill him. If you kill him, pick up his amulet.
+    quest: Deal with the Bandits
+    reward: "Helping Kraityn gives 8% movement speed. Guides say almost no build chooses him."
+    newbie: >-
+      You must deal with all three bandits to finish the act. See "Which
+      bandit?" below before you decide.
+
+  - id: fellshrine-ruins
+    name: The Fellshrine Ruins
+    kind: side
+    tag: worth
+    branchFrom: crossroads
+    level: 16
+    summary: >-
+      The road to The Crypt. Stay on it: it splits and rejoins, then ends at
+      a ruined church with the door down.
+    why: "It leads to a passive point and a trial. Ignore the side doors and graveyards."
+
+  - id: crypt-1
+    name: The Crypt Level 1
+    kind: side
+    tag: worth
+    branchFrom: fellshrine-ruins
+    level: 17
+    waypoint: true
+    badge: Trial 3 of 6
+    summary: >-
+      Take the waypoint by the entrance. This level holds a Trial of
+      Ascendancy with spinning blades.
+    why: "The third of the six trials you need for the Labyrinth."
+    tips: "Monsters here deal fire, cold and lightning damage. Spiders climb out of pits in some rooms."
+
+  - id: crypt-2
+    name: The Crypt Level 2
+    kind: side
+    tag: worth
+    branchFrom: crypt-1
+    level: 18
+    badge: "+1 passive point"
+    summary: >-
+      Cross the large bridge on the far side to an altar and take the Golden
+      Hand. Bring it to Yeena.
+    quest: Through Sacred Ground
+    reward: "Book of Skill from Yeena: +1 passive point and 2 respec points."
+    why: "A permanent passive point."
+    tips: >-
+      The unique monster guarding the altar does not have to be killed. Grab
+      the hand and exit to character selection.
+
+  - id: riverways
+    name: The Riverways
+    kind: zone
+    tag: travel
+    level: 15
+    waypoint: true
+    summary: >-
+      The start of the south loop. A stone road runs from the town to The
+      Western Forest, with the waypoint near the middle.
+    tips: >-
+      Some bridges are broken, so a movement skill helps. The side path to
+      The Wetlands starts near the waypoint, at a break in the road marked
+      by two pillars.
+
+  - id: western-forest
+    name: The Western Forest
+    kind: zone
+    tag: must
+    level: 17
+    waypoint: true
+    badge: "Bandit: Alira"
+    summary: >-
+      Alira's camp is off the road. Help her or kill her, and pick up her
+      amulet if you kill her. The Weaver's Chambers are on the opposite side
+      of the road.
+    quest: Deal with the Bandits
+    reward: "Helping Alira gives +15% to all elemental resistances."
+    tips: >-
+      A torch on the road next to loose stones points to the side her camp
+      is on. Enemies near her camp explode corpses: do not stand on bodies.
+
+  - id: captain-arteri
+    name: "The sealed pass: Captain Arteri"
+    kind: side
+    tag: worth
+    branchFrom: western-forest
+    badge: "+1 passive point"
+    summary: >-
+      At the end of the Western Forest road, Blackguards guard the pass that
+      was sealed in Act 1. Kill Captain Arteri, take the Thaumetic Emblem and
+      use it on the seal.
+    quest: The Way Forward
+    reward: "Book of Skill: +1 passive point. Collect it from Bestel in Lioneye's Watch, the Act 1 town."
+    why: "A permanent passive point, and easy to forget because you hand it in in another act."
+    newbie: >-
+      Use the waypoint to travel to Lioneye's Watch in Act 1, talk to
+      Bestel, then come back.
+
+  - id: weaver
+    name: "The Weaver's Chambers"
+    kind: boss
+    tag: must
+    level: 18
+    badge: Level 18 support gem
+    summary: >-
+      A web-covered maze. At the end, the Weaver drops from the ceiling.
+      Kill it and take Maligaro's Spike.
+    quest: Sharp and Cruel
+    reward: "One level 18 support gem from Silk."
+    tips: >-
+      The Weaver deals part of its damage as chaos. Its ranged web shot
+      slows you and is the dangerous attack, so keep moving. It leaves the
+      arena partway through the fight and comes back. Be around level 16.
+    classRewards:
+      - { class: Marauder, reward: "Close Combat, Cruelty, Elemental Damage with Attacks, Melee Physical Damage, Rage, Shockwave, Volatility" }
+      - { class: Duelist, reward: "Close Combat, Elemental Damage with Attacks, Melee Physical Damage, Rage, Sadism, Vicious Projectiles" }
+      - { class: Ranger, reward: "Close Combat, Elemental Damage with Attacks, Trinity, Vicious Projectiles" }
+      - { class: Shadow, reward: "Deadly Ailments, Elemental Focus, Faster Casting, Melee Physical Damage, Nightblade, Trap and Mine Damage, Trinity" }
+      - { class: Witch, reward: "Concentrated Effect, Controlled Destruction, Cruelty, Elemental Focus, Faster Casting, Fresh Meat, Kinetic Instability, Living Lightning, Minion Speed, Overcharge, Predator, Sacred Wisps, Trinity" }
+      - { class: Templar, reward: "Concentrated Effect, Controlled Destruction, Cruelty, Elemental Damage with Attacks, Elemental Focus, Exemplar, Faster Casting, Melee Physical Damage, Shockwave" }
+      - { class: Scion, reward: "Concentrated Effect, Cruelty, Deadly Ailments, Elemental Damage with Attacks, Faster Casting, Melee Physical Damage, Sadism, Vicious Projectiles" }
+    classRewardsNote: "All classes can buy Faster Casting from Yeena after this quest."
+
+  - id: wetlands
+    name: The Wetlands
+    kind: zone
+    tag: must
+    level: 19
+    waypoint: true
+    badge: "Bandit: Oak"
+    summary: >-
+      Oak's camp is on a hill near the centre. Deal with him, then go to the
+      waypoint in the west. Use Maligaro's Spike and the Baleful Gem on the
+      tree roots there to open The Vaal Ruins.
+    quest: "Deal with the Bandits, The Root of the Problem"
+    reward: "Helping Oak gives +40 maximum life. The roots quest has no reward."
+    newbie: >-
+      You need both quest items for the roots: the Baleful Gem from The
+      Chamber of Sins and Maligaro's Spike from the Weaver. After the third
+      bandit, see Eramir in town.
+
+  - id: vaal-ruins
+    name: The Vaal Ruins
+    kind: zone
+    tag: must
+    level: 20
+    summary: >-
+      A large maze. Near the end, a big purple orb blocks the way: the
+      Ancient Seal. Click it. The world outside turns dark, and the stairs
+      to The Northern Forest are just beyond.
+    quest: Shadow of the Vaal
+
+  - id: northern-forest
+    name: The Northern Forest
+    kind: zone
+    tag: travel
+    level: 21
+    waypoint: true
+    summary: >-
+      Take the waypoint near the entrance. The exit to The Caverns is to the
+      north.
+
+  - id: dread-thicket
+    name: The Dread Thicket
+    kind: side
+    tag: skip
+    branchFrom: northern-forest
+    level: 21
+    summary: >-
+      A side area with a hideout guarded by two unique apes.
+    why: >-
+      No passive point in Act 2. Only go in if you have never unlocked a
+      hideout. The passive point quest in this zone belongs to Act 7.
+
+  - id: the-caverns
+    name: The Caverns
+    kind: zone
+    tag: travel
+    level: 22
+    waypoint: true
+    summary: >-
+      Natural caves first, then the base of the pyramid. The waypoint sits
+      between the two halves. Take it and find the stairs up.
+    tips: "Make sure you have The Apex from the bandit quest before you come here. You need it for the boss."
+
+  - id: ancient-pyramid
+    name: The Ancient Pyramid
+    kind: zone
+    tag: travel
+    level: 23
+    summary: >-
+      Three maze floors that get smaller as you climb, then the top.
+    tips: >-
+      One route note: on the first floor the stairs are in one of three
+      corners. On later floors they are diagonally opposite where you came
+      in.
+
+  - id: vaal-oversoul
+    name: Vaal Oversoul
+    kind: boss
+    tag: must
+    level: 23
+    summary: >-
+      Click the Dark Altar with The Apex in your inventory and wait: it
+      takes a while to appear. Circle it and keep moving.
+    reward: "Opens Act 3."
+    tips: |
+      - **Lightning beams** from the thin arm. They shock you, so you take more damage. Lightning resistance helps.
+      - **Ice patches** on the ground that slow you. Do not stand in them.
+      - **Slam** with the heavy arm, at close range.
+      - **Earthquake** across the arena.
+
+      Start moving before each attack finishes.
+    newbie: "Be around level 20–22."
+
+sections:
+  - title: Which bandit?
+    body: |
+      You must deal with all three. The choice is permanent, but you can change it later.
+
+      - **Kill all three:** 1 passive point. The default for most builds.
+      - **Help Alira:** +15% to all elemental resistances. The accepted alternative for a first character with weak gear.
+      - **Help Oak:** +40 maximum life.
+      - **Help Kraityn:** 8% movement speed. Almost never chosen.
+
+      If your build guide names a bandit, follow it. If you are unsure, kill all three. When you kill a bandit, pick up the amulet: Eramir needs all three.
+
+      Older guides say killing all gives 2 points. That changed in 3.25: it is 1.
+  - title: Changing your bandit later
+    body: >-
+      Sell 20 [[Orb of Regret]] and one amulet to a vendor for a Book of
+      Reform. An Onyx Amulet switches to "kill all", Lapis to Alira, Jade to
+      Kraityn and Amber to Oak.
+  - title: The order of the two loops
+    body: >-
+      Guides differ in small ways, and all of them agree on this much: do
+      the north loop from The Crossroads first, then the south loop from The
+      Riverways, and kill Fidelitas and the Weaver before you go to the
+      roots in The Wetlands.
+  - title: Resistances start to matter
+    body: >-
+      Lightning resistance helps in The Chamber of Sins and against the Vaal
+      Oversoul. Around The Crypt, guides start asking you to work towards
+      75% in each element. The crafting bench in town adds resistance to an
+      item for a small cost.
+
+patchNotes:
+  - "No Act 2 quest, reward or zone changed in 3.30."
+  - "Vendors no longer sell [[Orb of Chance]], and unidentified rare items at vendors no longer cost one."
+  - "Covens can appear in the campaign. Choose a Fate before you kill a boss if you want its Viscera."
+
+sources:
+  - { title: "exile-leveling route data", url: "https://heartofphos.github.io/exile-leveling/" }
+  - { title: "PoE Vault Act 2 quick reference", url: "https://www.poe-vault.com/guides/quick-reference-leveling-guide-act-2" }
+  - { title: "Mobalytics Act 2 guide", url: "https://mobalytics.gg/poe/guides/campaign-act-2" }
+  - { title: "Mobalytics passive point quests", url: "https://mobalytics.gg/poe/guides/side-quest-passive-points" }
+  - { title: "PoEDB Act 2", url: "https://poedb.tw/us/Act_2" }
