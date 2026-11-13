@@ -47,7 +47,14 @@ const entrySchema = z
 
 export type ChangelogEntry = z.infer<typeof entrySchema> & { section: Section; where: string };
 
-const metaSchema = z.object({ updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), intro: z.string().min(1) }).strict();
+const metaSchema = z
+  .object({
+    updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    intro: z.string().min(1),
+    /** Where this article's facts come from, shown under the lede. */
+    note: z.string().optional(),
+  })
+  .strict();
 export type ChangelogMeta = z.infer<typeof metaSchema>;
 
 /** Validate the per-section files. The section comes from the file name. */

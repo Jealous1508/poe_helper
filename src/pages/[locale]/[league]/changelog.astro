@@ -27,6 +27,7 @@ const order: Section[] = ['big', 'small', 'new'];
     <h1>{t(locale, 'changelog.title', { league: league.name })}</h1>
     <p class="lede">{meta.intro}</p>
     <p class="how">{t(locale, 'changelog.how')}</p>
+    {meta.note && <p class="how muted">{meta.note}</p>}
     <ul class="legend" aria-label={t(locale, 'changelog.legend')}>
       {verdicts.map((verdict) => (
         <li><Tag kind={verdict} label={t(locale, `verdict.${verdict}`)} /><span>{t(locale, `verdict.${verdict}.desc`)}</span></li>
