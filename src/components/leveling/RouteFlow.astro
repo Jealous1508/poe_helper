@@ -122,7 +122,11 @@ const first = act.nodes[0].id;
     if (!route) return;
     route.dataset.enhanced = 'true';
     const fromHash = location.hash.startsWith('#zone-') ? location.hash.slice(6) : '';
-    if (fromHash && route.querySelector(`[data-panel="${CSS.escape(fromHash)}"]`)) select(route, fromHash, false);
+    if (!fromHash || !route.querySelector(`[data-panel="${CSS.escape(fromHash)}"]`)) return;
+    // A shared link must show the zone it points at. On a phone the panel is
+    // a sheet, so it has to be opened, not just marked active.
+    select(route, fromHash, true);
+    route.querySelector(`[data-node="${CSS.escape(fromHash)}"]`)?.scrollIntoView({ block: 'center' });
   }
 
   document.addEventListener('click', (event) => {

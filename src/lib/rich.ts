@@ -9,11 +9,19 @@ function escapeHtml(text: string): string {
   return text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
 }
 
+/** Only links that go somewhere safe survive. */
+function isSafeHref(url: string): boolean {
+  const trimmed = url.trim().toLowerCase();
+  if (/^(https?:|mailto:)/.test(trimmed)) return true;
+  // Relative links and fragments have no scheme at all.
+  return !/^[a-z][a-z0-9+.-]*:/.test(trimmed);
+}
+
 function render(text: string, terms: Map<string, Term>, where: string, resolveIcon: IconResolver | undefined, inline: boolean): string {
   const chips: string[] = [];
-  // Raw HTML in content is never trusted: neutralise tags before Markdown runs.
-  const safe = text.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
-  const withTokens = safe.replace(TERM, (_match, rawName: string, rawLabel?: string) => {
+  // Terms come out of the raw text first, so a name or label containing "&"
+  // is matched and rendered exactly once.
+  const withTokens = text.replace(TERM, (_match, rawName: string, rawLabel?: string) => {
     const name = rawName.trim();
     const term = terms.get(name.toLowerCase());
     if (!term) throw new Error(`${where}: unknown game term "[[${name}]]". Add it to the term registry or fix the spelling.`);
@@ -23,9 +31,13 @@ function render(text: string, terms: Map<string, Term>, where: string, resolveIc
     chips.push(`<span class="term term--${term.kind}">${icon}${label}</span>`);
     return `@@TERM${chips.length - 1}@@`;
   });
-  const html = (inline ? marked.parseInline(withTokens) : marked.parse(withTokens)) as string;
+  // Raw HTML in content is never trusted: neutralise tags before Markdown runs.
+  const safe = withTokens.replaceAll('&', '&amp;').replaceAll('<', '&lt;');
+  const html = (inline ? marked.parseInline(safe) : marked.parse(safe)) as string;
   return html
-    .replace(/<a href="(https?:[^"]*)"/g, '<a href="$1" rel="noopener" target="_blank"')
+    .replace(/<a href="([^"]*)"/g, (match, href: string) =>
+      isSafeHref(href) ? (/^https?:/i.test(href.trim()) ? `<a href="${href}" rel="noopener" target="_blank"` : match) : '<a',
+    )
     .replace(/@@TERM(\d+)@@/g, (_m, i: string) => chips[Number(i)]);
 }
 

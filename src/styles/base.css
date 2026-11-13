@@ -156,10 +156,14 @@ html[data-reveal="on"] [data-reveal].is-in { opacity: 1; transform: none; will-c
   .hoverable:hover { transform: translateY(-2px); }
 }
 
-/* A picture that slowly pushes in while it is on screen. */
-.kenburns img, .kenburns video { transform: scale(1.04); transition: transform 14s linear; }
+/* A picture that drifts slowly in and out, so a still screenshot does not
+   sit completely dead on the page. */
+@keyframes kenburns {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.12); }
+}
 @media (prefers-reduced-motion: no-preference) {
-  .kenburns.is-in img, .kenburns.is-in video { transform: scale(1.12); }
+  .kenburns img { animation: kenburns 32s ease-in-out infinite alternate; }
 }
 
 @media (prefers-reduced-motion: reduce) {

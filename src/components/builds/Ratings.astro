@@ -12,8 +12,11 @@ const rows = ['clear', 'bossing', 'survivability', 'ease'] as const;
   {rows.map((key) => (
     <div class="ratings__row">
       <dt>{t(locale, `build.rating.${key}`)}</dt>
-      <dd aria-label={`${ratings[key]} / 5`}>
-        {[1, 2, 3, 4, 5].map((n) => <span class:list={['pip', { 'is-on': n <= ratings[key] }]} />)}
+      <dd>
+        <span class="visually-hidden">{ratings[key]} / 5</span>
+        <span class="pips" aria-hidden="true">
+          {[1, 2, 3, 4, 5].map((n) => <span class:list={['pip', { 'is-on': n <= ratings[key] }]} />)}
+        </span>
       </dd>
     </div>
   ))}
@@ -23,7 +26,8 @@ const rows = ['clear', 'bossing', 'survivability', 'ease'] as const;
   .ratings { margin: 0; display: grid; gap: 0.35rem; }
   .ratings__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   dt { font-size: 0.85rem; color: var(--text-muted); }
-  dd { margin: 0; display: flex; gap: 3px; }
+  dd { margin: 0; }
+  .pips { display: flex; gap: 3px; }
   .pip { width: 14px; height: 6px; border-radius: 1px; background: var(--border); }
   .pip.is-on { background: var(--accent); }
 </style>

@@ -98,7 +98,7 @@ const counts = {
 
 <style>
   .glance {
-    margin: 2rem 0 0; display: grid; grid-template-columns: max-content max-content max-content max-content minmax(16rem, 1fr);
+    margin: 2rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, auto)) minmax(13rem, 1.6fr);
     border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
   }
   .glance > div { padding: 0.9rem 1.1rem; }
@@ -121,7 +121,7 @@ const counts = {
   .pager a { text-decoration: none; }
   .sources { margin-top: 1.5rem; font-size: 0.84rem; }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1040px) {
     .glance { grid-template-columns: 1fr 1fr; }
     .glance > div + div { border-left: 0; }
     .glance > div { border-top: 1px solid var(--border); }

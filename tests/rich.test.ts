@@ -23,6 +23,26 @@ describe('renderRich', () => {
   it('escapes raw HTML in the source text', () => {
     expect(renderRich('<script>x</script>', terms, 'x')).not.toContain('<script>');
   });
+
+  it('renders an ampersand in a term label once, not double-escaped', () => {
+    const html = renderRich('[[Toxic Rain|pods & spores]]', terms, 'x');
+    expect(html).toContain('>pods &amp; spores</span>');
+    expect(html).not.toContain('&amp;amp;');
+  });
+
+  it('renders an ampersand in ordinary text once', () => {
+    expect(renderRich('life & mana', terms, 'x')).not.toContain('&amp;amp;');
+  });
+
+  it('refuses a javascript: link', () => {
+    const html = renderRich('[click](javascript:alert(1))', terms, 'x');
+    expect(html).not.toContain('javascript:');
+  });
+
+  it('keeps ordinary relative and http links', () => {
+    expect(renderRich('[a](https://a.b)', terms, 'x')).toContain('href="https://a.b"');
+    expect(renderRich('[a](/en/3.30/)', terms, 'x')).toContain('href="/en/3.30/"');
+  });
   it('adds an icon when the term has an image and a resolver is given', () => {
     const withIcon = new Map<string, Term>([['chaos orb', { name: 'Chaos Orb', kind: 'currency', image: 'chaos-orb' }]]);
     const html = renderRich('[[Chaos Orb]]', withIcon, 'x', (id) => `/img/${id}.webp`);

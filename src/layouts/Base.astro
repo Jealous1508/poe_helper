@@ -99,7 +99,23 @@ const fullTitle = `${title} · ${league.name} ${league.id}`;
           for (var k = 0; k < els.length; k++) io.observe(els[k]);
         }
 
+        // Keep --header-h in step with the real header, so a header that
+        // wraps onto two lines does not cover the sticky bar beneath it.
+        function measureHeader() {
+          var header = document.querySelector('.site-header');
+          if (!header) return;
+          var h = header.getBoundingClientRect().height;
+          if (h > 0) root.style.setProperty('--header-h', Math.round(h) + 'px');
+        }
+        var measureTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(measureTimer);
+          measureTimer = setTimeout(measureHeader, 150);
+        });
+        document.addEventListener('astro:page-load', measureHeader);
+
         function safeReveal() {
+          measureHeader();
           try {
             reveal();
           } catch (e) {
@@ -118,11 +134,14 @@ const fullTitle = `${title} · ${league.name} ${league.id}`;
     <ProgressBar />
     <Header locale={locale} league={league} section={section} />
     {isFallback && (
-      <div class="fallback-notice" role="note">
+      <div class="fallback-notice" role="note" lang="en">
         <div class="container">{t(locale, 'notice.fallback')}</div>
       </div>
     )}
-    <main>
+    {/* On a fallback page the document language is the one the reader asked
+        for, but the words are English: say so, or a screen reader will read
+        English text with the other language's pronunciation. */}
+    <main lang={isFallback ? 'en' : undefined}>
       <slot />
     </main>
     <Footer locale={locale} league={league} />
