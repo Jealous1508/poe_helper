@@ -1,0 +1,19 @@
+---
+import { renderRich, renderRichInline } from '../lib/rich';
+import { getTerms } from '../lib/terms';
+import { imageUrl } from '../lib/images';
+
+interface Props {
+  text: string;
+  league: string;
+  /** Content file the text came from, for error messages. */
+  where: string;
+  inline?: boolean;
+  class?: string;
+}
+const { text, league, where, inline = false, class: className } = Astro.props;
+const render = inline ? renderRichInline : renderRich;
+const html = render(text, getTerms(league), where, (id) => imageUrl(id, where));
+const Tag = inline ? 'span' : 'div';
+---
+<Tag class:list={['rich', className]} set:html={html} />

@@ -1,0 +1,19 @@
+---
+import { getImage } from '../lib/images';
+import { assetPath } from '../i18n';
+
+interface Props {
+  id: string;
+  alt?: string;
+  /** Rendered box size in px. The image keeps its aspect ratio inside it. */
+  size?: number;
+  where?: string;
+  class?: string;
+}
+const { id, alt = '', size, where = 'component', class: className } = Astro.props;
+const image = getImage(id, where);
+const style = size ? `width:${size}px;height:${size}px` : `aspect-ratio:${image.width}/${image.height}`;
+---
+<span class:list={['game-image', className]} style={style}>
+  <img src={assetPath(image.file)} alt={alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
+</span>
