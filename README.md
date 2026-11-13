@@ -49,9 +49,29 @@ keep working at their own URLs.
 ### Writing text
 
 Long fields accept Markdown plus `[[Game Term]]`, which renders the term in
-the game's colour with its icon. Every term must exist in
-`src/content/terms/3.30.yaml`, otherwise the build fails and names the file
-and the term. Use `[[Toxic Rain|the skill]]` to show different text.
+the game's colour with its icon. Every term must exist in the registry,
+otherwise the build fails and names the file and the term. Use
+`[[Toxic Rain|the skill]]` to show different text.
+
+The registry is `src/content/terms/3.30.yaml` plus any
+`src/content/terms/3.30.<name>.yaml` shard beside it; they are merged, and a
+name defined twice fails the build naming both files. Shards exist so that
+several people writing different articles at the same time do not have to
+edit one large file.
+
+### Icons for new terms
+
+A writer adds terms without an `image:`, because the image manifest is a
+single shared file. The icons are attached afterwards, in one pass:
+
+```bash
+node scripts/attach-icons.mjs plan && npm run images && node scripts/attach-icons.mjs prune
+```
+
+`plan` points every icon-less term at a poedb icon, `npm run images`
+downloads what exists, and `prune` removes the references that did not
+arrive. Plenty of names have no poedb page; those terms render as plain
+coloured text, which is fine. Both phases are safe to re-run.
 
 ### Adding an image
 
@@ -67,6 +87,29 @@ and the term. Use `[[Toxic Rain|the skill]]` to show different text.
 
 The manifest records the source URL of every file, and a test fails if an
 entry has no file on disk.
+
+## Publishing
+
+The build is plain files in `dist/`, so any free static host will serve it.
+Two settings decide the URLs, both read from the environment at build time:
+
+| Variable | Example | What it is |
+|---|---|---|
+| `SITE_URL` | `https://you.github.io` | The origin, used for absolute URLs |
+| `BASE_PATH` | `/poe-guide/` | The sub-path, or `/` at a domain root |
+
+`.github/workflows/deploy.yml` publishes to **GitHub Pages** on every push
+to `master`. Turn it on once under Settings → Pages → Source: *GitHub
+Actions*; it fills both variables in itself. The workflow runs
+`npm run verify` first, so a broken link or an unknown game term fails the
+build instead of reaching the site.
+
+For Cloudflare Pages or Netlify instead: build command `npm run build`,
+output directory `dist`, and set `SITE_URL` to the domain they give you.
+Leave `BASE_PATH` unset — both serve at the root.
+
+Images are committed to the repo, so no host needs network access to
+poedb or the trade API at build time.
 
 ## The donate button
 
