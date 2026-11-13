@@ -1,0 +1,586 @@
+name: Cold Damage over Time Creeping Frost Occultist
+tagline: >-
+  Patches of ice that rot enemies while you walk away, on a character that
+  drives their cold resistance deep into the negative and then multiplies it
+  with a helmet that looks like a downside.
+class: Witch
+ascendancy: Occultist
+role: endgame
+budget: high
+budgetNote: >-
+  **The "100 Divine" figure is a video title and nothing else, and every
+  price on this page is missing rather than stale.** The author's own build
+  page carries no currency section, no item prices and no budget tiers — we
+  checked all three of his 3.30 pages. There is no Covens of Umbra economy
+  yet, and poe.ninja's 3.29 Allflame economy pages do not render to
+  automated reading, so we could not price a single item in the list. Worse
+  for the headline: the published character wears a [[Kalandra's Touch]],
+  which copies your other ring and has historically been a many-hundred
+  Divine item. **Either the 100 Divine refers to an earlier version of the
+  character or it excludes the ring. We could not resolve which, and we are
+  not going to guess.** Treat `high` as our bracket for "well past a starter,
+  short of a Mageblood build", not as a quoted number.
+mainSkill: Creeping Frost of Floes
+image: art-occultist
+tags: [Spell, Cold damage over time, Energy shield, Chaos Inoculation, Curses]
+ratings: { clear: 4, bossing: 4, survivability: 4, ease: 3 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **The skill is proven, the author is prolific, and the planner says 3.29 on
+  the tin.** [[Creeping Frost of Floes]]' numbers come from PoEDB and are
+  solid: its last change was 3.29.0 and 3.30 does not mention it. The build
+  comes from one author, bLut, who has published three separate 3.30 pages
+  for it in six days and a long 3.29 lineage behind them, which is more
+  continuity than most builds on this site have. **But the planner behind the
+  "100 Div Endgame" post is titled "Level 100 CI MoM Creeping Frost of Floes
+  Occultist 3.29" and its configuration set reads "None"** — no boss, no
+  enemy level, no curses or shock switched on in the config tab. His
+  "Zero to Endgame" planner is worse: it reports 1,707 life and 1,772
+  effective hit points at level 100, which means no gear is applied in the
+  active set, so no number can be read out of it at all. The four ratings
+  are ours. The cold damage-over-time archetype itself is independently
+  alive in 3.30 — a second author, rank1gear, posted an Elementalist version
+  the same week — but nobody else has published this Occultist.
+modes:
+  ssf: >-
+    The core is fine: [[Creeping Frost]] is an Act 1 quest reward,
+    [[Creeping Frost of Floes]] comes out of a Labyrinth Divine Font, and
+    [[Eye of Malice]] is a level 45 core-pool unique. The ceiling is not.
+    [[Kalandra's Touch]], a corrupted Eye of Malice, corrupted gloves, a
+    level 4 [[Empower Support]], an [[Elegant Hubris]] and two large cluster
+    jewels are trade items. **No source discusses solo self-found.**
+  hardcore: >-
+    No source discusses it. The shape is reasonable for it — energy shield,
+    78% spell block, 56% block, and no deliberate self-damage anywhere — but
+    the published character has 2% physical damage reduction and a maximum
+    physical hit taken of 15,600, which is the number to worry about.
+
+idea: |
+  [[Creeping Frost of Floes]] throws a projectile that bursts into a patch of ice on the ground. The patch chills, and it deals cold damage over time to anything standing in it. You place patches and leave; the damage arrives on its own.
+
+  Because the damage is a degeneration rather than a hit, it ignores enemy armour entirely and it keeps working while you are somewhere else. [[Vortex]] is the second half of the same idea, cast instantly on top of a boss.
+
+  What makes this version expensive rather than just pleasant is one item used backwards. [[Eye of Malice]] reads "Nearby Enemies have 50% increased Fire and Cold Resistances", which looks like a straightforward penalty. It is not, if the enemy's cold resistance is already *negative*: increasing a negative number by 50% makes it more negative. So the build spends its whole gear and gem budget pushing enemy cold resistance down — [[Frostbite]], [[Elemental Weakness]], [[Punishment]], Cold Exposure from the helmet itself — and then the helmet multiplies the hole it just dug.
+
+  The [[Occultist]] supplies the energy shield and the curse effectiveness that the rest of it leans on, and the character ends up on [[Chaos Inoculation]]: one life, immune to chaos damage, everything in the energy shield pool.
+
+chain:
+  - label: Place the patches
+    text: "[[Creeping Frost of Floes]] bursts on impact into a chilling area. Up to 5 can exist at once, each lasting a base 5 seconds."
+  - label: The ground does the damage
+    text: "Base cold damage per second is 3,035.2 at gem level 20. It is a degeneration, so enemy armour is irrelevant and you do not have to stay."
+  - label: Vortex for the boss
+    text: "[[Vortex]] is cast instantly where you stand, with its own chilling area. It is the single-target half of the pair."
+  - label: Dig the resistance hole
+    text: "[[Frostbite]], [[Elemental Weakness]] and [[Punishment]] as curses, plus Cold Exposure from [[Eye of Malice]], drive enemy cold resistance well below zero."
+  - label: Then multiply it
+    text: "[[Eye of Malice]] gives nearby enemies 50% increased fire and cold resistance. Applied to a negative resistance, that makes it worse, which is the point."
+  - label: Live in energy shield
+    text: "[[Chaos Inoculation]], 8,200 energy shield, 78% spell block and 56% block. One life, no chaos damage, and [[Vaal Discipline]] for emergencies."
+
+chainDetails:
+  - title: The Eye of Malice trick, stated carefully
+    body: |
+      [[Eye of Malice]] is a Callous Mask, level 45, and its full modifier list from PoEDB is:
+
+      - (400–500)% increased Evasion and Energy Shield
+      - +(20–40)% to Fire Resistance
+      - +(20–40)% to Cold Resistance
+      - 25% chance to inflict Cold Exposure on Hit
+      - 25% chance to inflict Fire Exposure on Hit
+      - Nearby Enemies have 50% increased Fire and Cold Resistances
+
+      Cold Exposure applies −10% to cold resistance for 4 seconds, per the item's own reminder text.
+
+      The last line is the one that does the work. "Increased" modifiers scale the value they apply to, and resistance can be negative. Drive a monster to −60% cold resistance with curses and exposure, and a 50% increase on that value takes it further down rather than back up.
+
+      **That reading is ours, from the item text.** The author's page has no written explanation of anything, so we cannot attribute the reasoning to him — only the item, which is unambiguous, and the three curses and the exposure source he pairs it with, which only make sense together. If you are unsure, check the enemy's resistance with and without the helmet on a boss before you commit to it: that is a one-minute test and it settles the question.
+
+      Note also what the helmet is *not* doing here: its own +20–40% fire and cold resistance and its 400–500% increased evasion and energy shield are real, and on an energy-shield character the last of those is most of why the helmet is affordable to wear at all.
+  - title: The planner's headline number is not the skill's damage
+    body: |
+      This catches people out and it is worth being exact about.
+
+      pobb.in headlines the file at **Total DPS 31,441,178**. The same file, broken out, reports [[Creeping Frost of Floes]] at **5.9 million total damage per second** — 226,000 of hit damage and 5.7 million of damage over time, at 2.42 casts per second, 3.6% critical strike chance and 150% critical multiplier.
+
+      The 31.4 million is Path of Building's **Full DPS**: every damaging thing the character has running added together. On this character that includes [[Vortex]], [[Vaal Cold Snap]], the [[Punishment]] curse and an [[Aspect of the Spider]] granted by the boots, which the page lists separately at 93,700 per hit.
+
+      Both numbers are true and they answer different questions. If you want "how fast does one boss die", the honest figure is somewhere between the 5.9 million the main skill reports and the 31.4 million total, because several of those sources genuinely do apply to a single target and several do not.
+
+      **And the configuration set reads "None".** No boss type, no enemy level, no Wither, no curse application and no shock are switched on in the config tab, which for a build whose entire premise is enemy resistance reduction is a significant omission in both directions: the curses are socketed, so some of their effect is counted, but no boss curse-effectiveness penalty is applied either.
+  - title: Three planners, three different characters
+    body: |
+      The author published three 3.30 pages in six days and they do not describe the same character. Laid out plainly, because the differences are large:
+
+      **"100 Div Endgame Build"**, 8 November, pobb.in/70BTtuQwEnxu, titled "Level 100 CI MoM Creeping Frost of Floes Occultist 3.29". Level 100, 8,200 energy shield, **121,393 effective hit points**, resistances 76/76/77 and −26 chaos, 56% block and 78% spell block, 2,504 evasion, 2% physical damage reduction, 100 energy shield regenerated per second. Maximum hit taken 15,600 physical and about 51,000 of each element. Main skill 5.9 million, full 31.4 million.
+
+      **"CI Swap Guide"**, 13 November. Level 94, 6,129 energy shield, **82,806 effective hit points**, resistances 75/75/76 and −60 chaos, 57% block and 78% spell block. [[Vortex]] as the listed main skill at 2.5 million total and 12.1 million full. Keystones [[Chaos Inoculation]], [[Bitter Frost]] and [[Wicked Ward]].
+
+      **"From Zero to Endgame"**, 12 November, pobb.in/tZctFTpeCShp. Level 100 and it reports 1,707 life, 105 energy shield and **1,772 effective hit points** with negative resistances across the board. That is a file with no gear applied in the active set. **No number can be taken from it.**
+
+      So the "zero to endgame" guide — the one that sounds most useful — is the one whose planner is empty, and the 100 Divine claim belongs to a file already on Chaos Inoculation while a separate, later page is titled as a guide to swapping onto Chaos Inoculation. We cannot reconcile that, and we are flagging it rather than smoothing it over.
+  - title: What the gem actually does, with the 3.29 numbers that still apply
+    body: |
+      [[Creeping Frost of Floes]] at gem level 20, from PoEDB:
+
+      - 248 to 372 cold damage per hit, and **3,035.2 base cold damage per second** for the chilling area
+      - 65% effectiveness of added damage
+      - 7.50% critical strike chance
+      - 0.60 second cast time
+      - Up to **5** chilling areas at once, each with a 5 second base duration
+      - The chilling area has 100% increased movement speed at gem level 20
+
+      It was last changed in **3.29.0**, and that change is worth knowing because it is recent enough that older guides are wrong about it: critical strike chance went from 6% to 7.5%, effectiveness of added damage at level 20 dropped from 80% to 65%, base cold damage per second rose from 2,669.1 to 3,035.2, and the per-hit damage fell from 395–592 to 248–372.
+
+      Read together, 3.29 moved the skill further towards being a pure degeneration: less hit, more ground damage. That is why the current version pairs it with [[Hypothermia Support]] and [[Controlled Destruction Support]] rather than crit scaling, and why the planner's 3.6% critical strike chance is not a mistake.
+
+      **No 3.30 change.** The transfigured version is the one you want, not base [[Creeping Frost]]: fewer patches that are larger and hit harder.
+  - title: Why this is a different shape from the other endgame builds here
+    body: |
+      Deliberately said, because the site's other four endgame articles are a Mageblood-tier Slayer, a bow Deadeye, a strength stacker and a life stacker, and all four are hit-based characters that want one enormous number.
+
+      This is not that. The damage is a degeneration, which means:
+
+      - **Enemy armour does nothing.** Neither does physical damage reduction.
+      - **You do not have to be there.** Place patches, walk, let them finish. This is why the clear rating is as high as the bossing rating.
+      - **Accuracy and critical strikes are nearly irrelevant.** 3.6% critical strike chance on the published character.
+      - **The scaling stat is enemy resistance, not your own damage.** Which is why one helmet is worth more than a weapon upgrade.
+
+      The cost is also different. There is no single 200-Divine purchase that transforms it. The expensive parts are a corrupted helmet, corrupted gloves, a level 4 [[Empower Support]], two large cluster jewels, an [[Elegant Hubris]] and — in the published file — a [[Kalandra's Touch]]. It is a build you assemble rather than a build you buy one item for.
+  - title: The three Pacts, and a 3.30 change that quietly helps
+    body: |
+      The published character runs [[Pact of Lycia]], [[Pact of K'Tash]] and [[Pact of Ghorr]] together. The author publishes no explanation, so we will not invent one beyond the obvious: three Pact buffs rather than one.
+
+      The relevant 3.30 note is small and real. "K'Tash's, Ghorr's and Beidat's Magnificence and Blood Shrine buffs are now retained when transitioning between areas." Two of the three buffs this character maintains now survive a portal. On a build that otherwise has to re-apply three Pacts and three curses on entering a map, that is a genuine quality-of-life gain.
+
+      The only Pact that was changed numerically this patch is [[Pact of Beidat]], which this build does not use.
+
+mandatory:
+  - term: Creeping Frost of Floes
+    why: >-
+      The main skill. A transfigured [[Creeping Frost]] that trades many
+      small patches for up to 5 larger, harder-hitting ones.
+    detail: >-
+      Base [[Creeping Frost]] is an Act 1 quest reward from The Siren's
+      Cadence at level 12, for Scion, Shadow, Templar and Witch. The
+      transfigured version comes from a Divine Font at the end of a
+      Labyrinth run, or from trade. Gem level matters more than almost
+      anything else here, which is why the published file runs it at 21/20
+      with a level 4 [[Empower Support]].
+  - term: Vortex
+    why: >-
+      The single-target half. Cast instantly where you stand, with its own
+      chilling area, so you can keep it on a boss while moving.
+    detail: >-
+      The CI Swap file lists Vortex rather than Creeping Frost as its main
+      skill, at 2.5 million total damage per second. The two files disagree
+      about which skill is the primary one, and the author does not say.
+  - term: Eye of Malice
+    why: >-
+      The item the build is really about. Its "Nearby Enemies have 50%
+      increased Fire and Cold Resistances" multiplies an already-negative
+      cold resistance, and it also supplies 25% chance to inflict Cold
+      Exposure and 400–500% increased evasion and energy shield.
+    detail: >-
+      The published copy is **corrupted**. A Callous Mask, level 45, and a
+      core-pool unique since 3.14.0, so it drops normally. Its version
+      history shows nothing in 3.29 or 3.30.
+  - term: Frostbite
+    why: >-
+      Lowers cold resistance. The first and largest of the three curses that
+      make the helmet worth wearing.
+  - term: Elemental Weakness
+    why: >-
+      Lowers all three elemental resistances, which stacks with Frostbite on
+      the cold axis.
+  - term: Chaos Inoculation
+    why: >-
+      Maximum life becomes 1 and you are immune to chaos damage. It is why
+      the published character's −26% or −60% chaos resistance does not
+      matter, and why everything lives in the energy shield pool.
+  - term: Hypothermia Support
+    why: >-
+      More cold damage over time against chilled enemies. Your own chilling
+      areas guarantee the condition, so it is close to a free multiplier.
+      It is in both of the author's main links.
+  - term: Controlled Destruction Support
+    why: >-
+      More spell damage at the cost of critical strike chance, which this
+      build does not use. In both main links.
+  - term: Empower Support
+    why: >-
+      At level 4 in the published file. On a degeneration whose damage is
+      written on the gem, gem levels are the single most efficient damage
+      purchase.
+  - term: Inspiration Support
+    why: >-
+      Less mana cost and more elemental damage. Present in both links, and
+      the build has only 989 mana with [[Mind Over Matter]] taking damage
+      out of it.
+  - term: Punishment
+    level: recommended
+    why: >-
+      The third curse. Path of Building counts it towards the Full DPS
+      figure, which is part of why that number is so much larger than the
+      main skill's.
+  - term: Vaal Discipline
+    level: recommended
+    why: >-
+      Instant energy shield and a window of immunity to energy shield
+      interruption. On a Chaos Inoculation character this is the panic
+      button.
+  - term: Pact of Lycia
+    level: recommended
+    why: >-
+      One of three Pact buffs the published character runs. The author gives
+      no reason, and we are not inventing one.
+  - term: Pact of K'Tash
+    level: recommended
+    why: >-
+      The second Pact. Its buff now persists between areas as of 3.30, which
+      makes carrying three of them less tedious than it was.
+  - term: Pact of Ghorr
+    level: recommended
+    why: >-
+      The third Pact, and the other one whose buff now survives a portal.
+  - term: Wicked Ward
+    level: recommended
+    why: >-
+      Keystone allocated in the CI Swap file. Energy shield recharge is not
+      interrupted by damage, which is the recharge-based answer to chip
+      damage.
+  - term: Bitter Frost
+    level: recommended
+    why: >-
+      Allocated in the CI Swap file alongside Chaos Inoculation and Wicked
+      Ward. **The notable's text was not verified**, so this entry records
+      that he takes it, not what it does.
+  - term: Kalandra's Touch
+    level: recommended
+    why: >-
+      In the published endgame file: it mirrors your other ring. It is also
+      the item that makes the "100 Divine" headline hard to believe. Buy it
+      last or not at all.
+  - term: Elegant Hubris
+    level: recommended
+    why: >-
+      A timeless jewel in the published file. Which seed and which notables
+      it converts is **not published**, and that detail is the whole value
+      of a timeless jewel, so treat this as an unresolved line on the
+      shopping list.
+  - term: Aspect of the Spider
+    level: recommended
+    why: >-
+      Granted by the boots in the published file, at level 30. It slows and
+      hinders, and it is one of the damage sources inflating the Full DPS
+      figure.
+
+stages:
+  - id: transition-in
+    image: frostbite
+    title: Transition in
+    levels: From any cold or spell character
+    uses: >-
+      [[Creeping Frost of Floes]] and [[Vortex]] with
+      [[Controlled Destruction Support]], [[Hypothermia Support]] and
+      [[Inspiration Support]], [[Frostbite]] and [[Elemental Weakness]] as
+      curses, and an [[Eye of Malice]] as early as you can wear it at
+      level 45.
+    changes: >-
+      The helmet is the cheapest large damage step and it is a common
+      core-pool unique, so it comes first. Everything else at this stage is
+      rares with energy shield and resistances.
+    links:
+      - name: Main skill
+        gems: [Creeping Frost of Floes, Inspiration Support, Controlled Destruction Support, Hypothermia Support]
+      - name: Single target
+        gems: [Vortex, Inspiration Support, Controlled Destruction Support, Elemental Focus Support, Hypothermia Support]
+      - name: Curses
+        gems: [Frostbite, Elemental Weakness, Punishment]
+      - name: Movement and utility
+        gems: [Frostblink, Shield Charge, Faster Attacks Support, Automation]
+    moveOn: >-
+      the helmet is on, three curses are landing, and your energy shield pool
+      is large enough that [[Chaos Inoculation]] is survivable.
+    details:
+      - title: There is no published leveling or Labyrinth plan
+        body: |
+          Said at the top of the stage so it is not buried. The author's three 3.30 pages have no written text at all — no leveling section, no ascendancy order, no bandit, no Pantheon. His 3.29 "League Start Build Guide" post exists and has 11,700 views, but it is a video with no written content on the page either.
+
+          So this page has no Labyrinth table. We do not know which [[Occultist]] notable he takes first, and we are not going to assert one.
+      - title: Why Chaos Inoculation rather than a life build
+        body: |
+          [[Chaos Inoculation]] sets maximum life to 1 and makes you immune to chaos damage. The published endgame file sits at −26% chaos resistance and the CI Swap file at −60%, and neither matters, because chaos damage cannot touch you.
+
+          That frees every resistance point and every gear slot for energy shield, which [[Eye of Malice]] then multiplies by 400–500%. It is a coherent package rather than two separate choices.
+
+          The cost: no life flask does anything, and a single physical hit is the thing that kills you. The published character's maximum physical hit taken is 15,600 against about 51,000 for each element, with 2% physical damage reduction. **That asymmetry is the build's real weakness and no source mentions it.**
+      - title: Where the cold damage-over-time archetype stands in 3.30
+        body: |
+          This league's one relevant balance change is a nerf to a *different* cold skill. [[Winter Orb]] lost its third projectile, 15% of its base damage and 10 points of added damage effectiveness — roughly 40% of its damage at gem level 20 — and it was one of the most-played spells in 3.29.
+
+          Our own changelog entry for that nerf says, in as many words, that if you want a cold spell starter you should look at cold damage over time. So the archetype is not just unaffected, it is the named beneficiary.
+
+          Independently, a second author, rank1gear, posted a 3.30 cold damage-over-time Elementalist guide the same week, and jungroan's 3.29 Spellslinger Cold DoT Elementalist guide — 170,000 views — is the archetype's biggest recent document. None of those is this build, but together they say the engine works.
+  - id: midgame
+    image: empower
+    title: Gem levels and the curse stack
+    levels: Before the corrupted items
+    uses: >-
+      The same links with [[Empower Support]] added, a sceptre or wand with
+      cold damage-over-time multiplier, spell damage and cast speed, and the
+      three Pacts.
+    changes: >-
+      This is where the damage actually arrives. The skill's damage is
+      written on the gem, so gem levels and cold damage-over-time multiplier
+      are worth more than anything else you can buy.
+    links:
+      - name: Main skill
+        gems: [Creeping Frost of Floes, Inspiration Support, Controlled Destruction Support, Hypothermia Support, Empower Support]
+      - name: Single target
+        gems: [Vortex, Inspiration Support, Controlled Destruction Support, Elemental Focus Support, Hypothermia Support]
+      - name: Pacts
+        gems: [Pact of Lycia, Pact of K'Tash, Pact of Ghorr]
+      - name: Auras and defence
+        gems: [Malevolence, Vaal Discipline, Tempest Shield, Immortal Call, Automation]
+      - name: Burst
+        gems: [Vaal Cold Snap, Efficacy Support, More Duration Support]
+    moveOn: >-
+      [[Empower Support]] is at level 4, your main gem is at 21, and the
+      three curses plus Cold Exposure are all landing on bosses.
+    details:
+      - title: Why Empower is not optional here
+        body: |
+          A degeneration whose base damage is printed on the gem scales almost linearly with gem level, and nothing else on your gear multiplies as cleanly. The published file runs the main skill at 21/20 with a level 4 [[Empower Support]] in the link.
+
+          This is the same logic as the +3 bow on this site's Toxic Rain page, applied to a spell: buy gem levels before you buy anything else.
+      - title: The weapon is a stat stick, and we cannot tell you its modifiers
+        body: |
+          The published file's weapon is a rare Tyrant's Sekhem sceptre, listed with spell damage, cast speed and cold damage over time. The off-hand is a rare Vaal Spirit Shield. The CI Swap file instead uses a Foulborn Opal Wand.
+
+          **The exact modifier tiers are not published on the page**, and two of his three files use different weapon types, so there is no single target item to craft towards. What the slot is for is clear enough: cold damage-over-time multiplier first, then spell damage, then cast speed.
+
+          If you are crafting it yourself, note that 3.30 changed meta-crafting costs — protecting one prefix or suffix is now cheaper at 1 to 2 Divine, while protecting all of them costs 4 Divine plus a second currency, and the game picks which modifier is protected at random without telling you.
+      - title: Reading the curse stack as a system
+        body: |
+          [[Frostbite]] and [[Elemental Weakness]] both reduce cold resistance, Cold Exposure from [[Eye of Malice]] applies another −10% for 4 seconds, and [[Punishment]] is a third curse doing its own damage.
+
+          Two things follow. First, **curse effect and curse effectiveness on your gear are damage modifiers for this build**, not quality-of-life. Second, a boss with high curse resistance or a map modifier that reduces curse effect is a real damage loss rather than an annoyance.
+
+          Neither point is made by any source. Both follow from the item and gem list.
+  - id: endgame
+    image: kalandras-touch
+    title: The published endgame
+    levels: The "100 Divine" file
+    uses: >-
+      A corrupted [[Eye of Malice]], corrupted gloves, a level 4
+      [[Empower Support]], an [[Elegant Hubris]], two large cluster jewels,
+      boots granting [[Aspect of the Spider]], and a [[Kalandra's Touch]] in
+      one ring slot.
+    changes: >-
+      The file reports 5.9 million for the main skill and 31.4 million Full
+      DPS at level 100, with 8,200 energy shield and 121,393 effective hit
+      points. **Those are 3.29-engine figures with the configuration set to
+      "None".**
+    links:
+      - name: Main skill
+        gems: [Creeping Frost of Floes, Inspiration Support, Controlled Destruction Support, Hypothermia Support, Empower Support]
+      - name: Single target
+        gems: [Vortex, Inspiration Support, Controlled Destruction Support, Elemental Focus Support, Hypothermia Support]
+      - name: Pacts
+        gems: [Pact of Lycia, Pact of K'Tash, Pact of Ghorr]
+      - name: Curses and aura
+        gems: [Malevolence, Punishment, Elemental Weakness, Frostbite]
+      - name: Defence and movement
+        gems: [Tempest Shield, Vaal Discipline, Immortal Call, Frostblink, Shield Charge, Automation]
+    moveOn: >-
+      you are buying corrupted implicits and cluster jewel rolls rather than
+      whole items. The author publishes nothing beyond this file.
+    details:
+      - title: The full gear list, as published
+        body: |
+          Weapon a rare Tyrant's Sekhem with Shield Charge, Faster Attacks and Elemental Weakness socketed; off-hand a rare Vaal Spirit Shield; helmet a **corrupted** [[Eye of Malice]]; body armour a rare Twilight Regalia; gloves **corrupted** Bronzescale Gauntlets; boots rare Warlock Boots granting [[Aspect of the Spider]] at level 30; amulet a rare Jade Amulet; rings [[Kalandra's Touch]] and a fractured Cogwork Ring; belt a rare Cloth Belt.
+
+          Flasks: a Quartz and two Quicksilver and two Silver flasks, all magic. Jewels: five Cobalt jewels, an [[Elegant Hubris]] timeless jewel, and two [[Large Cluster Jewel]]s.
+
+          Notice what is absent: no [[Mageblood]], no [[Headhunter]], no [[Progenesis]], no [[Watcher's Eye]], no Forbidden pair, no awakened gems. For an endgame build that is an unusual list — the money is in corruptions and cluster jewels rather than in named uniques.
+      - title: What the corruptions are for, and what we do not know
+        body: |
+          Two items in the file are corrupted: the helmet and the gloves. **The page does not show what the corrupted implicits are.** On an [[Eye of Malice]] the obvious targets are an extra level of socketed gems or increased effect of the helmet's own lines; on gloves, cold damage or curse effect.
+
+          We are listing this as a gap rather than filling it. A corrupted implicit you cannot name is not a shopping instruction.
+      - title: Map modifiers to be careful with
+        body: |
+          **No source lists any**, so this is reasoning from the build's structure and should be treated as a question to test rather than a finding:
+
+          - **Reduced effect of curses on monsters.** Three curses and the whole Eye of Malice interaction depend on enemy resistance being negative.
+          - **Monsters have increased elemental resistance.** Same reason, from the other direction.
+          - **Less recovery or no regeneration.** The published character recovers 100 energy shield per second and leans on [[Vaal Discipline]]; a recharge-based pool dislikes chip damage.
+          - **Heavy physical damage.** 2% physical damage reduction and a 15,600 maximum physical hit on a 121,393 effective-hit-point character is the one lopsided number in the file.
+
+          The author links no map strategy at all, so none of this is contradicted either.
+  - id: ci-swap
+    image: chaos-inoculation
+    title: The Chaos Inoculation swap
+    levels: His newest page, and the most confusing one
+    uses: >-
+      [[Chaos Inoculation]], [[Wicked Ward]] and [[Bitter Frost]], with
+      [[Vortex]] listed as the main skill and a Foulborn Opal Wand in place
+      of the sceptre.
+    changes: >-
+      Level 94, 6,129 energy shield, 82,806 effective hit points, 2.5 million
+      on Vortex and 12.1 million Full DPS. **Lower on every axis than the
+      "100 Div" file, which is already on Chaos Inoculation.**
+    moveOn: >-
+      nowhere, in the sense that we cannot tell you what this stage is for.
+      Read the detail below before following it.
+    details:
+      - title: Why we have put this last and flagged it
+        body: |
+          The page is titled "Cold DoT Build CI Swap Guide", posted 13 November, and had 58 views when we read it. Its planner is level 94 with less energy shield, fewer effective hit points and less damage than the 8 November "100 Div Endgame" file — which is itself titled "Level 100 CI MoM Creeping Frost of Floes Occultist".
+
+          So either the earlier file was built ahead of the guide that explains how to reach it, or the two are different characters at different points, or one of the titles is wrong. **The pages carry no written text, so there is nothing to resolve it with.**
+
+          What we take from it: Chaos Inoculation is where this build ends up, the swap is a deliberate step the author thinks is worth a dedicated video, and the lower numbers are most likely a mid-swap snapshot rather than a downgrade. **That last sentence is a guess and labelled as one.**
+      - title: The one concrete thing it adds
+        body: |
+          Three keystones, named: [[Chaos Inoculation]], [[Wicked Ward]] and [[Bitter Frost]]. The endgame file's keystone list was not published, so this is the only place the defensive keystone package appears at all.
+
+          [[Wicked Ward]] making energy shield recharge uninterruptible is the obvious partner to Chaos Inoculation on a character with no life to recover. We could not verify [[Bitter Frost]]'s wording, so we record that he takes it and nothing more.
+
+patch:
+  - entry: winter-orb-nerf
+    note: >-
+      **The reason to look at this build at all.** [[Winter Orb]] fires 2
+      projectiles at every gem level instead of reaching 3, lost about 15% of
+      its base damage and 10 points of added damage effectiveness —
+      altogether roughly 40% of its damage at gem level 20. It was one of the
+      most-played spells in 3.29. Our own changelog entry's advice for anyone
+      who wanted a cold spell is to look at cold damage over time, which is
+      exactly this.
+  - entry: ruthless-changes
+    note: >-
+      **The trap for this build specifically, and it is a nasty one.** The
+      official notes do change [[Occultist]] notables — [[Withering
+      Presence]], [[Void Beacon]] and [[Profane Bloom]] all have new text —
+      **and every one of those entries sits in the Ruthless-specific
+      section.** [[Void Beacon]] in particular is a cold-build staple, so a
+      launch article reprinting that change as general would look entirely
+      plausible. In normal Covens of Umbra the Occultist is unchanged. We
+      confirmed this by reading the official thread directly.
+  - note: >-
+      **[[Creeping Frost of Floes]] was not changed in 3.30.** Its last
+      change was 3.29.0 — critical strike chance 6% to 7.5%, effectiveness
+      of added damage at level 20 from 80% to 65%, base cold damage per
+      second from 2,669.1 to 3,035.2 — and that is recent enough that 3.28
+      and earlier guides have the wrong numbers. [[Vortex]], [[Cold Snap]]
+      and [[Eye of Malice]] also show nothing in 3.30. Read that as "not
+      mentioned in the sources we read" rather than proven unchanged.
+  - entry: quality-of-life
+    note: >-
+      **A small, real gain for a build carrying three Pacts.** "K'Tash's,
+      Ghorr's and Beidat's Magnificence and Blood Shrine buffs are now
+      retained when transitioning between areas", so two of the three Pact
+      buffs survive a portal. The bench can also set every socket to white
+      for an [[Orb of Scouring]], which matters on a character running two
+      five-links and three curses.
+  - entry: link-and-pact-changes
+    note: >-
+      **Not relevant, despite the title.** The only Pact changed numerically
+      is [[Pact of Beidat]], which loses two chains and two projectiles at
+      gem level 20. This build runs [[Pact of Lycia]],
+      [[Pact of K'Tash]] and [[Pact of Ghorr]] and is untouched.
+  - entry: meta-crafting-costs
+    note: >-
+      **Changes how you craft the weapon.** Protecting a single prefix or
+      suffix now costs 1 or 2 Divine, while the full "prefixes cannot be
+      changed" craft costs 4 Divine plus a second currency — and GGG's FAQ
+      says the game picks which modifier is protected at random and does not
+      show you. Any 3.29 crafting plan for the sceptre needs re-costing.
+  - entry: doryani-and-doedre
+    note: >-
+      **Worth a look, not in the build.** [[Doedre's Tongue]] now gives
+      30–35% to all elemental resistances and rolls "All Damage can Freeze
+      against Cursed Enemies". On a character that already lands three
+      curses this is at least worth testing against the published rare Jade
+      Amulet. **Nobody has suggested it and we have not tested it.** The
+      amulet now drops only from Covens of Umbra encounters.
+
+strengths:
+  - "A genuinely different shape from this site's other endgame builds: a degeneration, so enemy armour and physical damage reduction do nothing."
+  - "You place the damage and leave, which makes the clear as strong as the bossing."
+  - "The main skill is an Act 1 gem and a Labyrinth transfigure, not a purchase."
+  - "Eye of Malice is a cheap core-pool unique doing the single largest job in the build."
+  - "Critical strikes and accuracy are irrelevant, which removes two whole gearing problems."
+  - "The named beneficiary of the 3.30 Winter Orb nerf, by our own changelog's advice."
+  - "Three separate 3.30 pages from the author in six days, on top of a long 3.29 lineage."
+weaknesses:
+  - "Not one price exists, for any item, in any league. The \"100 Divine\" figure is a video title."
+  - "The published file wears a Kalandra's Touch, which makes that figure hard to believe."
+  - "The planner is labelled 3.29 and its configuration set reads \"None\" — no boss, no enemy level."
+  - "The \"Zero to Endgame\" planner has no gear applied and reports 1,772 effective hit points at level 100."
+  - "The three published files disagree about which skill is the main one and about the character's level and stats."
+  - "No written text anywhere: no leveling plan, no Labyrinth order, no bandit, no Pantheon, no map strategy."
+  - "2% physical damage reduction and a 15,600 maximum physical hit, against about 51,000 for each element."
+  - "Damage depends on landing three curses, so curse-resistant bosses and curse map modifiers hurt more than usual."
+avoidIf: >-
+  Pick something else if you want to know what a build costs before you start
+  it, because this one has no prices at all and its headline figure is
+  contradicted by its own gear list. Skip it too if you dislike delayed
+  damage — you place patches and the result arrives a moment later, which
+  never stops feeling different from a build that kills what it hits. And
+  skip it if you are not willing to do the one test this page cannot do for
+  you: put the [[Eye of Malice]] on, look at a boss's cold resistance, and
+  satisfy yourself that the interaction the whole build rests on is working
+  the way the item text reads.
+
+sources:
+  - title: "poebuilds.cc: PoE 3.30 Cold DoT Occultist | 100 Div Endgame Build (bLut)"
+    url: https://www.poebuilds.cc/poe1/build/fWBdCdtLg5U
+    kind: guide
+    note: "Posted 8 November 2026, 20.9k views, tagged 3.30 Covens. The source of the endgame gear list, gem list and stats. No written text, no prices, no budget section; the \"100 Div\" claim appears only in the video title."
+  - title: "Path of Building: Level 100 CI MoM Creeping Frost of Floes Occultist 3.29 (bLut)"
+    url: https://pobb.in/70BTtuQwEnxu
+    kind: pob
+    note: "Labelled 3.29. Total DPS 31,441,178 — which is Full DPS, not the main skill's 5.9M — eHP 121,393, level 100, config set \"None\", bandits killed. The passive tree link is titled \"Level 87 (110 passives)\"."
+  - title: "poebuilds.cc: PoE 3.30 | Cold DoT Build Guide — From Zero to Endgame (bLut)"
+    url: https://www.poebuilds.cc/poe1/build/0p0TaQq3xPc
+    kind: guide
+    note: "Posted 12 November 2026, 8.5k views. Full gem list with levels and qualities. Its planner, pobb.in/tZctFTpeCShp, reports 1,707 life and 1,772 eHP at level 100, i.e. no gear applied, so no stat can be read from it."
+  - title: "poebuilds.cc: PoE 3.30 | Cold DoT Build CI Swap Guide (bLut)"
+    url: https://www.poebuilds.cc/poe1/build/Pnsc8TwIPfk
+    kind: guide
+    note: "Posted 13 November 2026, 58 views when read. The only place the defensive keystones are named: Chaos Inoculation, Wicked Ward, Bitter Frost. Level 94, 6,129 ES, 82,806 eHP, Vortex 2.5M total and 12.1M full."
+  - title: "poebuilds.cc: bLut's author page"
+    url: https://www.poebuilds.cc/poe1/author/blut
+    kind: guide
+    note: "Used to establish the three 3.30 pages and the 3.29 lineage behind them: a league-start guide, a \"GIGA\" version, a budget version at 23M DPS, and a T17-and-Ubers showcase."
+  - title: "poebuilds.cc: Spellslinger x Cold DoT Elementalist League Start Build Guide, 3.29 (jungroan)"
+    url: https://www.poebuilds.cc/poe1/build/a0qmdTU8PLI
+    kind: guide
+    note: "170k views. The archetype's largest recent document, for a different ascendancy and a different league. Used only to establish that cold damage over time is a well-trodden engine."
+  - title: "PoEDB: Creeping Frost of Floes"
+    url: https://poedb.tw/us/Creeping_Frost_of_Floes
+    kind: data
+    note: "Every gem number on this page: 248–372 cold damage, 3,035.2 base cold damage per second, 65% effectiveness of added damage, 7.5% critical strike chance, 0.60s cast, up to 5 chilling areas at 5 seconds each. The full 3.29.0 change list, and no 3.30 entry."
+  - title: "PoEDB: Creeping Frost"
+    url: https://poedb.tw/us/Creeping_Frost
+    kind: data
+    note: "The base gem: Act 1 quest reward from The Siren's Cadence at level 12 for Scion, Shadow, Templar and Witch. Version history ends at 3.29.0."
+  - title: "PoEDB: Eye of Malice"
+    url: https://poedb.tw/us/Eye_of_Malice
+    kind: data
+    note: "The full modifier list, including \"Nearby Enemies have 50% increased Fire and Cold Resistances\" and the two Exposure lines. Callous Mask, level 45, core pool since 3.14.0, nothing in 3.29 or 3.30."
+  - title: "poe.ninja: Allflame (3.29) unique accessories"
+    url: https://poe.ninja/poe1/economy/allflame/unique-accessories
+    kind: data
+    note: "Listed to record a negative result. There is no Covens of Umbra economy yet, and this page does not render to automated reading, so no price for Kalandra's Touch or anything else could be obtained."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Read in two passes to confirm that the Occultist changes to Withering Presence, Void Beacon and Profane Bloom are all in the Ruthless-specific section, and that Creeping Frost, Vortex and Cold Snap are not mentioned."
+  - title: "Maxroll: 3.30 Covens of Umbra patch notes summary"
+    url: https://maxroll.gg/poe/news/3-30-covens-of-umbra-patch-notes
+    kind: official
+    note: "The independent second source for the Ruthless-section split and for the Winter Orb nerf."

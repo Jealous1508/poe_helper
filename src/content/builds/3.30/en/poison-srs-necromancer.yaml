@@ -1,0 +1,534 @@
+name: Poison Summon Raging Spirit Necromancer
+tagline: >-
+  Flaming skulls that only live five seconds, turned into chaos damage by one
+  ascendancy node. Two guides updated for 3.30, and 3.30 buffed its gear.
+class: Witch
+ascendancy: Necromancer
+role: starter
+budget: starter
+budgetNote: >-
+  **Neither guide gives a currency figure for anything, with one exception:
+  a [[Melee Splash Support]] costs one [[Orb of Transmutation]].** That is the
+  only price in either source, and it is for a vendor gem at level 8. Both
+  guides are otherwise structural: the hybrid version needs no uniques, and the
+  poison version is gated behind [[The Jinxed Juju]] and
+  [[Darkness Enthroned]]. PoE Vault's own warning is that going poison "is
+  expected to be somewhat expensive", and its advice is to **start without
+  poison** and convert later. We take that seriously enough to write the
+  stages in that order.
+mainSkill: Summon Raging Spirit
+image: summon-raging-spirit
+hero: art-necromancer
+tags: [Minions, Chaos, Poison, Two button]
+ratings: { clear: 4, bossing: 4, survivability: 4, ease: 4 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **Two independent guides and both of them really are updated for 3.30.** The
+  Maxroll guide's changelog entry of 12 November 2026 reads "Updated for Covens
+  of Umbra 3.30"; the PoE Vault guide is titled Covens of Umbra 3.30 and dated
+  12 November 2026. That is more corroboration than most builds on this site
+  have.
+
+
+  What is not proven: **neither guide publishes a damage figure**, and the one
+  defensive figure that exists — "over 200,000 eHP with proper gearing" — is a
+  claim in prose with no planner reading attached and no league stamp, so treat
+  it as 3.29-era at best. Neither guide gives a rating table, so the four
+  above are our reading. We also found one mechanical description in the PoE
+  Vault material that does not match PoEDB — see the ascendancy section — and
+  we go with PoEDB.
+modes:
+  ssf: >-
+    Good for the hybrid version, which needs no unique items, and
+    [[Summon Raging Spirit]] is usable from character level 4. The poison
+    conversion is the wall: [[The Jinxed Juju]] and
+    [[Darkness Enthroned]] are both specific uniques, and the spectres the
+    guides want — Perfect Guardian Turtle, Perfect Judgemental Spirit — come
+    from league encounters. Our assessment; neither guide gives an SSF verdict.
+  hardcore: >-
+    Neither guide gives a verdict. Our read: minions take the hits and
+    [[Bone Barrier]] converts their number into physical damage reduction and
+    leech, which is a genuine defensive layer. Against it, PoE Vault's own cons
+    list includes "Damage Halts" and "Slight Ramp-Up Time" — your damage is
+    temporary by design, and a build whose damage can go to zero while you
+    resummon is an awkward hardcore proposition.
+
+idea: |
+  [[Summon Raging Spirit]] summons a flaming skull that charges the nearest enemy and attacks it. It lives **five seconds** and then disappears. You can have twenty out at once.
+
+  So the loop is: cast repeatedly, build the stack up, and keep it topped up. Nothing about this build is passive — the minions expire whether or not anything died.
+
+  What makes it a chaos build is one ascendancy node. [[Unnatural Strength]] gives your minions [[Unholy Might]], which PoEDB states as **100% of physical damage converted to chaos damage and a 25% chance to apply Withered on hit**. Raging Spirits convert their physical damage to fire by default, so what that node does, and what the whole poison version is built on, is redirect their damage type into something that can poison — and it hands you free Wither stacks, which make chaos damage over time land harder, at the same time.
+
+  The second half of the build is a curse-and-corpse engine on a trigger: [[Arcanist Brand]] firing [[Desecrate]], then [[Flesh Offering]], then [[Despair]], in that socket order, so one brand throw sets up the kill.
+
+chain:
+  - label: Summon
+    text: "Cast [[Summon Raging Spirit]]. Each skull lives five seconds; twenty is the cap. The stack is your damage, so you keep casting."
+  - label: Convert
+    text: "[[Unnatural Strength]] grants minions [[Unholy Might]] — physical damage becomes chaos, plus a 25% chance to apply Withered on hit."
+  - label: Poison
+    text: "Chaos hits poison. [[Chance to Poison Support]] and [[Unbound Ailments Support]] turn each skull's rapid attacks into stacking chaos damage over time."
+  - label: Curse and feed
+    text: "[[Arcanist Brand]] triggers [[Desecrate]], then [[Flesh Offering]], then [[Despair]]. Socket order decides the order they fire."
+  - label: Survive behind them
+    text: "[[Bone Barrier]] turns minion count into physical damage reduction and leeches life from their damage. [[Commander of Darkness]] hands you +30% elemental resistances."
+
+chainDetails:
+  - title: The node the whole build rests on, and a wording we could not match
+    body: |
+      [[Unnatural Strength]] is the pivot. Without it the skulls deal fire damage and cannot poison; with it they deal chaos and can.
+
+      **PoEDB's text for the node is simply "Minions have Unholy Might"**, and [[Unholy Might]] is 100% of physical damage converted to chaos damage plus a 25% chance to apply Withered on hit. That is the version we have written above, because it is the primary data source.
+
+      PoE Vault's ascendancy page describes the same node as converting "the base fire of Raging Spirits to 50% base chaos". **Those two descriptions are not the same mechanic** — one converts physical, the other fire, and the percentages differ. We could not reconcile them and we are not going to average them. If you are building the tree in Path of Building, check what the node actually does in your own copy before you commit to poison supports.
+  - title: Why your damage is temporary on purpose
+    body: |
+      Five seconds. That is the whole lifetime of a Raging Spirit, and it does not reset on kill.
+
+      Everything awkward about the build comes from that one number. PoE Vault's cons list reads "Slight Ramp-Up Time" and "Damage Halts", and both are the same fact: you arrive at a boss with no minions, spend a few seconds summoning, and if you have to spend a second dodging instead of casting the stack decays.
+
+      [[Unleash Support]] in the endgame link is the structural answer — it banks casts and releases several at once, so one press refills more of the stack. Before you have it, you are pressing the button a great deal.
+  - title: The trigger link, and why socket order is a rule not a preference
+    body: |
+      [[Arcanist Brand]] fires the spells linked to it, and Maxroll states the rule explicitly: "Triggered skills fire in socket order, starting from the top-left socket. Desecrate must come before Flesh Offering."
+
+      The reason is that [[Flesh Offering]] consumes a corpse, and [[Desecrate]] is what puts the corpse there. Get the order wrong and the offering simply does not fire.
+
+      Keep [[Desecrate]] at **gem level 1**. Maxroll says so, and it is because a higher-level Desecrate creates higher-level corpses, which is not what you want from a corpse you intend to immediately destroy.
+  - title: Hybrid first, poison later — and what changes
+    body: |
+      Both guides describe two versions, and the order matters.
+
+      The **hybrid** version is physical and chaos, needs no uniques, and is the league-start setup. Its six-link in Maxroll's words: [[Summon Raging Spirit]], [[Unleash Support]], [[Melee Splash Support]], [[Chance to Poison Support]], [[Added Chaos Damage Support]], [[Minion Damage Support]].
+
+      The **poison** version drops [[Added Chaos Damage Support]] for [[Unbound Ailments Support]], and swaps [[Chance to Poison Support]] for [[Void Manipulation Support]] once you have enough poison chance from elsewhere. It also swaps the [[Malevolence]] aura for [[Envy]], and the movement skill from [[Shield Charge]] to [[Whirling Blades]].
+
+      In both versions, **[[Melee Splash Support]] comes out for [[Multistrike Support]] on single target**. That is a manual swap, not a second link.
+  - title: What 3.30 did for this build, which is more than for most
+    body: |
+      Two item changes, both favourable, and neither of them in either guide's text.
+
+      **[[Femurs of the Saints]] was rebuilt.** It now gives +2–3 to the level of socketed minion gems, up from a flat +2, and minions deal 80–100% increased damage, up from 60–80%. Its four fixed per-minion bonuses were replaced by up to four modifiers rolled from a pool of seven — and one of those seven is **3–5% increased attack and cast speed per Summoned Raging Spirit**. With twenty spirits out that is a line written for this exact build. It is random, so two staves are worth very different amounts.
+
+      **[[Bone Helmet]]'s implicit went from 15–20% to 20–30% increased minion damage.** Straightforward.
+
+      One change goes the other way, and it is worth knowing about because it invalidates a 3.29 trick rather than nerfing the build: see the patch note on [[Transfusion Support]] below.
+
+mandatory:
+  - term: Summon Raging Spirit
+    why: >-
+      The skill. Usable from character level 4, which makes it one of the
+      earliest real main skills in the game.
+    detail: >-
+      PoEDB: five-second base duration, twenty maximum spirits, 0.5 second cast
+      time, and the spirits convert all of their physical damage to fire by
+      default. Quality adds up to a 30% chance to summon an extra minion.
+  - term: Unnatural Strength
+    why: >-
+      The node that makes the poison version exist at all. It grants minions
+      [[Unholy Might]], and with it the free Wither stacks that make chaos
+      damage over time land harder.
+  - term: Commander of Darkness
+    why: >-
+      Taken first. +30% to elemental resistances for you and your minions,
+      30% increased damage, and increased attack and cast speed — which here
+      also means faster summoning.
+  - term: Mindless Aggression
+    why: >-
+      Minions have 20% more maximum life and deal 10% more damage. PoE Vault
+      takes it partly for the travel towards the fourth ascendancy point.
+  - term: Bone Barrier
+    why: >-
+      Taken last, because it is not needed early. 1% additional physical
+      damage reduction per minion up to 10%, 1% of minion damage leeched to
+      you as life, and minions gain 40% of maximum life as extra energy
+      shield.
+  - term: Melee Splash Support
+    why: >-
+      Your clear, from level 8. One [[Orb of Transmutation]] at the vendor,
+      which is the only price either guide quotes for anything.
+    detail: >-
+      Swap it for [[Multistrike Support]] on single target. Both guides treat
+      this as a manual swap rather than a second gem setup.
+  - term: Minion Damage Support
+    why: >-
+      More minion damage. In every published link for this build, at every
+      budget.
+  - term: Unleash Support
+    why: >-
+      The answer to the five-second lifetime. It banks casts and releases
+      several at once, so one press rebuilds more of the stack.
+  - term: Chance to Poison Support
+    why: >-
+      What turns chaos hits into stacking chaos damage over time. Replaced by
+      [[Void Manipulation Support]] once you have enough poison chance from
+      gear and the tree.
+  - term: Arcanist Brand
+    why: >-
+      The trigger that runs your curse and your offering for you.
+      [[Desecrate]] must sit before [[Flesh Offering]] in socket order.
+  - term: Despair
+    why: >-
+      Lowers chaos resistance and increases chaos damage over time taken,
+      which is the exact resistance your damage is measured against.
+  - term: Death Attunement
+    why: >-
+      The amulet anoint both guides use. More minions, more damage.
+  - term: Infernal Legion Support
+    level: recommended
+    why: >-
+      An alternative to [[Melee Splash Support]] for the first few acts. It
+      comes from the Tidal Island quest and wants three blue sockets, so it is
+      free where Melee Splash costs a transmute.
+  - term: The Jinxed Juju
+    level: recommended
+    why: >-
+      Listed as required for the poison and hybrid endgame setups. One of the
+      two items the poison conversion actually waits on.
+  - term: Darkness Enthroned
+    level: recommended
+    why: >-
+      The belt for the poison version, carrying two abyss jewels at greatly
+      increased effect.
+  - term: Femurs of the Saints
+    level: recommended
+    why: >-
+      Rebuilt in 3.30 and now worth a slot in maps rather than only while
+      leveling: +2–3 to socketed minion gem levels, 80–100% increased minion
+      damage, and one of its seven possible rolls is attack and cast speed per
+      Summoned Raging Spirit.
+    detail: >-
+      The four modifiers are rolled from a pool, so two staves can differ
+      enormously. Read the lines before you buy one.
+  - term: Aegis Aurora
+    level: recommended
+    why: >-
+      Listed as an optional shield. Block plus energy shield recovery on
+      block, which suits standing behind a wall of minions.
+
+labs:
+  - lab: Normal
+    node: Commander of Darkness
+    why: "**Neither guide ties notables to specific labyrinths**, with one exception noted below. PoE Vault lists this first, for resistances, minion speed and damage, and faster summoning. We have placed the four picks in the published order across the four labs; the order is sourced, the lab labels are our inference."
+  - lab: Cruel
+    node: Mindless Aggression
+    why: "Listed second. PoE Vault's stated reason is \"the increased damage, but also the travel towards our converted uber lab\"."
+  - lab: Merciless
+    node: Unnatural Strength
+    why: "The poison enabler. If you are still running the hybrid version you can take this later, but there is no reason to — the free Withered stacks help either version."
+  - lab: Eternal
+    node: Bone Barrier
+    why: "Quoted: taken last because it \"isn't needed early\". This is the one pick PoE Vault does tie to a lab — it names the converted uber lab in connection with the fourth point."
+
+stages:
+  - id: acts-1-3
+    image: stormblast-mine
+    title: Acts 1–3
+    levels: Level 1–21
+    uses: >-
+      [[Stormblast Mine]] for single target and [[Freezing Pulse]] for packs
+      until level 8. From 8, [[Summon Raging Spirit]] with
+      [[Minion Damage Support]] and either [[Melee Splash Support]] or
+      [[Infernal Legion Support]].
+    changes: >-
+      [[Frost Bomb]] replaces [[Freezing Pulse]] when you get it.
+      [[Clarity]] in Act 1, [[Summon Skitterbots]] in Act 2, [[Anger]] in
+      Act 3. An optional [[Holy Flame Totem]] link covers Act 1.
+    links:
+      - name: Before level 8
+        gems: [Stormblast Mine, Freezing Pulse]
+      - name: From level 8
+        gems: [Summon Raging Spirit, Minion Damage Support, Melee Splash Support]
+      - name: Optional Act 1 link
+        gems: [Holy Flame Totem, Combustion Support, Summon Phantasm Support]
+      - name: Auras
+        gems: [Clarity, Summon Skitterbots, Anger]
+    moveOn: "the minions are in a four-link and you have finished Act 3."
+    details:
+      - title: Level 8 is the real start
+        body: |
+          [[Summon Raging Spirit]] itself is available at character level 4, but PoE Vault's instruction is to begin using minions at **level 8**, which is when [[Melee Splash Support]] becomes purchasable. Without splash the skulls hit one target at a time and the clear is miserable.
+
+          [[Infernal Legion Support]], from the Tidal Island quest, is the free alternative for the first few acts. It needs three blue sockets.
+      - title: What neither guide gives you
+        body: |
+          **There is no level-by-level gem table, no quest reward list and no vendor list in either guide.** Maxroll keeps its leveling detail inside an embedded planner that is not readable as text; PoE Vault gives the prose above and nothing more granular.
+
+          We have written what the prose names, in the order it names it, and we are not filling the gaps with a plausible route.
+      - title: Two trees and a respec
+        body: |
+          PoE Vault's instruction: switch to the "LvLing Tree 90 points" during the campaign, and then, around level 68 after the campaign, to the endgame tree. It notes this "requires some respec points".
+
+          Budget a handful of [[Orb of Regret]] for that, or spend the quest refund points on it.
+      - title: Bandits and Pantheon
+        body: |
+          **Kill all three bandits.** PoE Vault's author says they "give no significant gains worth a skill point", which is the usual verdict for a build with no particular resistance or mana problem.
+
+          Pantheon: **Soul of the Brine King** upgraded as major, to avoid being frozen — the author presents this as personal taste rather than a requirement — and **Soul of Shakari** as minor, for chaos damage mitigation.
+  - id: acts-4-10
+    image: melee-splash-support
+    title: Acts 4–10
+    levels: Level 21–68
+    uses: >-
+      The minion link growing to five sockets, [[Arcanist Brand]] running your
+      curse and offering, and a golem on [[Feeding Frenzy Support]] to push the
+      minions forward.
+    changes: >-
+      You ascend three times. The trigger link goes in as soon as you have four
+      linked sockets for it, and the auras settle into [[Vitality]],
+      [[Determination]] and [[Tempest Shield]].
+    links:
+      - name: Main skill
+        gems: [Summon Raging Spirit, Minion Damage Support, Melee Splash Support, Unleash Support, Chance to Poison Support]
+      - name: Curse and offering
+        gems: [Arcanist Brand, Desecrate, Flesh Offering, Despair]
+      - name: Spectres and guardian
+        gems: [Raise Spectre, Meat Shield Support, Minion Life Support, Animate Guardian]
+      - name: Golem
+        gems: [Summon Stone Golem, Feeding Frenzy Support]
+      - name: Auras
+        gems: [Vitality, Determination, Tempest Shield]
+    moveOn: "resistances are capped after Act 10, the trigger link works, and three ascendancy notables are allocated."
+    details:
+      - title: Masteries the guides name
+        body: |
+          These are the only tree specifics either guide commits to in text:
+
+          - **Reservation Mastery:** +30% aura area of effect.
+          - **Minion Defence Mastery:** minions recover 5% of life on minion death.
+          - **Minion Offence Mastery:** +30% minion area of effect, and optionally +20% offering effect.
+          - **Mana Mastery:** +12% mana reservation efficiency.
+          - **Amulet anoint:** [[Death Attunement]].
+
+          After the tree is finished, the stated priority is extra jewel sockets, then cluster jewels.
+      - title: Keep Desecrate at level 1
+        body: |
+          Worth repeating because it is easy to level a gem by accident: [[Desecrate]] stays at gem level 1 in the trigger link, and [[Desecrate]] must sit before [[Flesh Offering]] in socket order, counting from the top-left socket.
+      - title: The spectre you want, and the one Maxroll warns about losing
+        body: |
+          The four spectres named are Perfect Judgemental Spirit, Perfect Guardian Turtle, Perfect Forest Warrior and Perfect Warlord. **Neither guide says which to use** — PoE Vault lists all four without a recommendation — and some of them come from Affliction league content reintroduced through Ritual encounters.
+
+          Maxroll's changelog records that it added "an FAQ about avoiding Spectre loss" in August 2026, which tells you that losing them is a real and recurring annoyance.
+
+          [[Animate Guardian]] is optional and neither guide lists its items in text; both point at a planner item set instead.
+  - id: early-maps
+    image: asc-icon-necromancer
+    title: Early maps, hybrid version
+    levels: White and yellow maps
+    uses: >-
+      The hybrid six-link — no uniques required — with
+      [[Added Chaos Damage Support]] in the sixth socket. [[Shield Charge]] for
+      movement, [[Malevolence]] as the damage aura.
+    changes: >-
+      This is the version both guides say to start on. The poison conversion
+      waits until you can afford [[The Jinxed Juju]] and
+      [[Darkness Enthroned]].
+    links:
+      - name: Main skill, hybrid
+        gems: [Summon Raging Spirit, Unleash Support, Melee Splash Support, Chance to Poison Support, Added Chaos Damage Support, Minion Damage Support]
+      - name: Curse and offering
+        gems: [Arcanist Brand, Desecrate, Flesh Offering, Despair]
+      - name: Spectres and guardian
+        gems: [Raise Spectre, Meat Shield Support, Minion Life Support, Animate Guardian]
+      - name: Auras
+        gems: [Vitality, Determination, Tempest Shield, Malevolence]
+      - name: Golem and movement
+        gems: [Summon Stone Golem, Feeding Frenzy Support, Shield Charge, Frostblink]
+    moveOn: "you are comfortable in yellow maps and you have, or can buy, the two poison uniques."
+    details:
+      - title: Start without poison. The guide says so, twice.
+        body: |
+          PoE Vault's advice is to start without poison "to keep costs down, since it is expected to be somewhat expensive to go poison". We have built the stages around that, and it is the right call at launch: there is no economy yet, so nobody — including us — can tell you what [[The Jinxed Juju]] will cost this week.
+
+          The hybrid version is not a downgrade you suffer through. It is a complete build that happens to need no uniques.
+      - title: The one defensive number that exists anywhere
+        body: |
+          "Later, you'll have over 200,000 eHP with proper gearing."
+
+          That is PoE Vault's claim, verbatim, and it is the only effective-hit-point figure in either guide. **There is no planner reading attached to it, no gear set, no character level and no league stamp.** Read it as a 3.29-era aspiration about a fully geared character, not as a number you can plan with.
+
+          **Neither guide publishes a damage figure at all**, at any budget. We are not going to supply one.
+      - title: Map modifiers
+        body: |
+          **Maxroll's FAQ section is said to cover these and the text we could read does not list them; PoE Vault lists none.** So we have nothing sourced.
+
+          Our own note, flagged as ours: your minions are the build, so modifiers that kill minions quickly — heavy elemental damage, degeneration auras — cost you the ramp-up as well as the damage. And since your output is chaos damage over time, monsters with high chaos resistance are the obvious bad roll.
+  - id: red-maps
+    image: femurs-of-the-saints
+    title: Red maps, poison version
+    levels: Tier 11–16 maps
+    uses: >-
+      [[The Jinxed Juju]] and [[Darkness Enthroned]] in, the sixth socket
+      changed to [[Unbound Ailments Support]], and [[Envy]] replacing
+      [[Malevolence]]. [[Whirling Blades]] replaces [[Shield Charge]].
+    changes: >-
+      The conversion to poison. [[Chance to Poison Support]] comes out for
+      [[Void Manipulation Support]] once you have enough poison chance from
+      gear and the tree, and an [[Aegis Aurora]] is an option in the shield
+      slot.
+    links:
+      - name: Main skill, poison
+        gems: [Summon Raging Spirit, Unleash Support, Melee Splash Support, Void Manipulation Support, Unbound Ailments Support, Minion Damage Support]
+      - name: Curse and offering
+        gems: [Arcanist Brand, Desecrate, Flesh Offering, Despair]
+      - name: Spectres and guardian
+        gems: [Raise Spectre, Meat Shield Support, Minion Life Support, Animate Guardian]
+      - name: Golem and aura
+        gems: [Summon Stone Golem, Feeding Frenzy Support, Minion Life Support, Vitality]
+      - name: Weapon link
+        gems: [Generosity Support, Whirling Blades, Frostblink]
+    moveOn: "there is no next stage. What is left is cluster jewels, better abyss jewels and a well-rolled Femurs of the Saints."
+    details:
+      - title: The Envy aura trick
+        body: |
+          Maxroll's weapon link is [[Generosity Support]] supporting
+          [[United in Dream]], which is where [[Envy]] comes from — the sword
+          grants the aura, and Generosity makes it stronger for your minions at
+          the cost of giving you nothing from it. Since every point of the aura
+          is meant for the minions, that cost is zero.
+
+          This is also why the movement skill changes to [[Whirling Blades]]:
+          you are now holding a sword.
+      - title: Why Femurs of the Saints is worth re-reading in 3.30
+        body: |
+          It used to be a leveling staff. 3.30 gave it +2–3 to socketed minion gem levels and 80–100% increased minion damage, and replaced its four fixed bonuses with up to four rolled from a pool of seven. One of the seven is **3–5% increased attack and cast speed per Summoned Raging Spirit**.
+
+          With a full stack of twenty that line is enormous, and it is the single most build-specific item change in the patch for anything on this site. **Neither guide mentions it**, because both were written against 3.29 item lists even where their text was updated.
+
+          It is random, though. A staff without the Raging Spirit line is a different and much worse item, and you must read the modifiers rather than the name.
+      - title: What it still cannot do
+        body: |
+          - Your damage expires on a timer, so there is no such thing as arriving at a fight ready.
+          - "Damage Halts" is in the guide's own cons list. Any second spent not casting is a second of decay.
+          - The poison conversion is gated behind two specific uniques with no known 3.30 price.
+          - Spectres die and are a recurring chore, enough that one guide added an FAQ about it.
+          - No tier list we read places this build above B.
+
+patch:
+  - entry: femurs-of-the-saints
+    note: >-
+      **The best 3.30 news for this build, and neither guide mentions it.**
+      [[Femurs of the Saints]] now gives +2–3 to the level of socketed minion
+      gems (was a flat +2) and 80–100% increased minion damage (was 60–80%),
+      and its four fixed per-minion bonuses are replaced by up to four rolled
+      from a pool of seven. One of those seven is **3–5% increased attack and
+      cast speed per Summoned Raging Spirit** — a line that could not be more
+      specifically aimed at this build. Because the modifiers are random, two
+      staves can be worth wildly different amounts; read the lines.
+  - entry: special-base-implicits
+    note: >-
+      **A second item buff.** [[Bone Helmet]]'s implicit went from 15–20% to
+      20–30% increased minion damage. Old helmets update with a
+      [[Blessed Orb]]. The special bases now only drop at a high enough Item
+      Tier, so a Bone Helmet on the ground is worth identifying.
+  - entry: support-gem-changes
+    note: >-
+      **Read this before importing a 3.29 planner.**
+      [[Transfusion Support]] no longer supports instant spells, and now hands
+      a nearby minion a charge for every 400 life spent instead of a Soul for
+      every 200. The changelog names the losers directly: "Minion builds from
+      3.29 that kept Vaal skills permanently active on minions through
+      Transfusion." Neither guide we read uses that loop, so neither is hit —
+      but if you find a 3.29 Summon Raging Spirit file that keeps a Vaal skill
+      running on its minions, that part of it is dead.
+  - entry: ruthless-changes
+    note: >-
+      **Necromancer is not on either 3.30 ascendancy list, and that is the
+      honest answer.** The patch's normal-game ascendancy changes cover
+      Pathfinder, Warden, Trickster, Reliquarian and the Luminary; the
+      Ruthless-only section covers ten other classes. Necromancer appears in
+      neither. So if you read that 3.30 buffed or nerfed Necromancer, it is
+      wrong in both directions — the ascendancy was untouched, and what
+      improved for this build was its gear.
+  - note: >-
+      **The skill itself was not touched.** [[Summon Raging Spirit]] does not
+      appear in the 3.30 skill changes, and PoEDB records no change to it this
+      patch. The five-second duration, the twenty-minion cap and the fire
+      conversion are all unchanged.
+  - entry: golem-buff-nerfs
+    note: >-
+      **Small and real.** [[Summon Stone Golem]] now gives 16% increased
+      defences instead of 20%. It is in the build's golem link from the
+      campaign onwards, carried mostly for
+      [[Feeding Frenzy Support]], so the loss is a few percent of a secondary
+      defensive buff and nothing more.
+  - entry: loot-rarity-rework
+    note: >-
+      **Favourable, structurally, and this is a reading of the notes rather
+      than a measurement.** Rare currency now only drops from rare monsters
+      and the old rarity penalties were removed. A minion build clears dense
+      packs and rare monsters without needing to stand in them, which points
+      the right way for the new loot rules.
+
+strengths:
+  - "Playable from level 8, with a free support gem option before that."
+  - "The hybrid version needs no unique item at all."
+  - "Two guides genuinely updated for 3.30, which is unusual this week."
+  - "3.30 buffed two of its items and nerfed none of them."
+  - "Minions take the hits; Bone Barrier turns their number into damage reduction and leech."
+  - "Strong single target — PoE Vault lists Bosser as a pro."
+  - "The poison conversion is a later choice, not a prerequisite."
+weaknesses:
+  - "Your damage expires every five seconds whether or not anything died."
+  - "\"Damage Halts\" and \"Slight Ramp-Up Time\" are the guide's own listed cons."
+  - "No damage figure exists in any source, and the one eHP claim has no planner behind it."
+  - "The poison version waits on two specific uniques with no 3.30 price."
+  - "Spectres die and need re-farming often enough to have their own FAQ."
+  - "One ascendancy node is described differently by the guide and by PoEDB."
+  - "No tier list we read places it above B."
+avoidIf: >-
+  Pick something else if you want to walk into a boss arena and immediately
+  deal damage — you cannot, by design, and no amount of gear changes that.
+  Skip it if a build with a constant upkeep button annoys you, or if you were
+  hoping to go poison straight away: both guides tell you to start hybrid and
+  convert later, and at launch nobody knows what the conversion costs. And
+  skip it if you want an ascendancy the patch improved; Necromancer was not
+  touched this league, only its items were.
+
+sources:
+  - title: "Maxroll: Poison SRS Necromancer League Starter (Helm Breaker)"
+    url: https://maxroll.gg/poe/build-guides/poison-srs-necromancer-league-starter
+    kind: guide
+    note: "Labelled Covens of Umbra 3.30, changelog entry 12 November 2026 \"Updated for Covens of Umbra 3.30\". Not archived. Source of the trigger socket-order rule, the level 1 Desecrate note, the masteries and the anoint. Its leveling and gear detail sits in an embedded planner we could not read as text."
+  - title: "PoE Vault: BalorMage's Poison Summon Raging Spirits Necromancer"
+    url: https://www.poe-vault.com/guides/balormage-summon-raging-spirits-necromancer-build-guide
+    kind: guide
+    note: "Titled Covens of Umbra 3.30, dated 12 November 2026. Source of the pros and cons, the level 8 start, the Infernal Legion alternative, the two-tree respec, the required uniques and the \"over 200,000 eHP\" claim. Its own caveat: \"the video might get outdated in terms of information\"."
+  - title: "PoE Vault: gem links and passive tree"
+    url: https://www.poe-vault.com/guides/ghazzy-summon-raging-spirits-necromancer-pob-passive-skill-tree-gem-links
+    kind: guide
+    note: "Source of every gem setup in this article: the hybrid and poison six-links, the trigger link, the spectre link, the golem setups, the aura list and the United in Dream weapon link."
+  - title: "PoE Vault: ascendancy, bandits, pantheon, spectres and Animate Guardian"
+    url: https://www.poe-vault.com/guides/balormage-summon-raging-spirits-necromancer-ascendancy-bandits-pantheon-powers-spectres-animate-guardian
+    kind: guide
+    note: "Source of the notable order, kill-all-bandits, Brine King and Shakari, and the four spectre options. It is also where the Unnatural Strength description sits that we could not match to PoEDB."
+  - title: "Path of Building: league start, mid budget and min-max in one file"
+    url: https://pobb.in/7_6IS6EVRZfT
+    kind: pob
+    note: "The guide's own file, carrying several item and skill sets. No league stamp was visible to us and no damage figure is quoted from it anywhere in the guide."
+  - title: "PoEDB: Summon Raging Spirit"
+    url: https://poedb.tw/us/Summon_Raging_Spirit
+    kind: data
+    note: "Source of the level 4 requirement, the five-second duration, the twenty-minion cap, the 0.5 second cast time, the quality bonus, and the fact that spirits convert all physical damage to fire. Records no 3.30 change."
+  - title: "PoEDB: Necromancer ascendancy"
+    url: https://poedb.tw/us/Necromancer
+    kind: data
+    note: "Source of the exact notable text for Unnatural Strength, Commander of Darkness, Mindless Aggression and Bone Barrier — and of the conflict with PoE Vault's description of Unnatural Strength."
+  - title: "Maxroll: Poison SRS Necromancer (archived)"
+    url: https://maxroll.gg/poe/build-guides/poison-srs-necromancer
+    kind: guide
+    note: "The older guide at the shorter URL, by aer0. Marked Archived, titled 3.24, last updated July 2024. Listed here so you do not mistake it for the current one — the current guide's URL ends in -league-starter."
+  - title: "insanebuild: 3.30 build tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Places Summon Raging Spirit in B tier, \"steady all league\", with its 3.30 change given as \"buffed through minion items\" — and it names the two items we discuss, Femurs of the Saints and the Bone Helmet implicit. It lists no Necromancer ascendancy change, which matches the patch notes."
+  - title: "poebuilds.cc: 3.30 community build index"
+    url: https://www.poebuilds.cc/poe1?league=covens
+    kind: guide
+    note: "Checked on launch day. The only 3.30 community video naming this skill is BalorMage's \"Poison Holy Relic And Summon Raging Spirits\", posted the same day as the written guides. Its ascendancy is not listed there, so we have not used it as a source for anything."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Source of the Femurs of the Saints rework and its seven-modifier pool, the Bone Helmet implicit, the Transfusion Support rework, the Summon Stone Golem change, and the confirmation that Necromancer appears in neither the normal-game nor the Ruthless ascendancy lists."
