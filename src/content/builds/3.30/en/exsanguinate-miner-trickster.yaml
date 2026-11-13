@@ -1,0 +1,793 @@
+name: Exsanguinate Miner Trickster
+tagline: >-
+  Throw five mines and walk on. Blood tendrils pick their own targets, chain
+  across the screen and freeze what they touch. Very fast, not sturdy, and it
+  needs three specific unique items before it works.
+class: Shadow
+ascendancy: Trickster
+role: starter
+budget: low
+budgetNote: >-
+  **The guide gives no total and no price for the items it calls
+  mandatory.** Its own budget rating is 2 out of 5, labelled "High", and it
+  lists "Reliant on Core Uniques" as a weakness. The uniques themselves are
+  ordinary drops: [[Hrimsorrow]], [[Kikazaru]] and [[Heatshiver]]. The few
+  figures it does print were written before 3.30: Screaming Essences at "2c
+  or below" each, a crafted endgame amulet at "roughly 6 Divines", and
+  [[Replica Dragonfangs' Flight]] worth buying at "max 12d". Treat all three
+  as last league's.
+mainSkill: Exsanguinate
+image: asc-icon-trickster
+hero: art-trickster
+tags: [Mine, Cold conversion, Crit, Freeze, Evasion]
+ratings: { clear: 5, bossing: 4, survivability: 2, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **The guide says it was updated for 3.30, and the evidence for that is
+  thin.** In its favour: a changelog entry dated 12 November 2026, and a
+  planner saved the same day with its league set to 3.30. Against: the page
+  title still reads 3.28, the planner file is named "Exsang 3.27", its
+  passive trees are stamped with the 3.24 tree and its ascendancy with 3.25,
+  and the text describes [[One Step Ahead]] with numbers that 3.30 replaced.
+  Nothing in the text mentions a 3.30 change. What we could verify
+  ourselves: 3.30 did not touch [[Exsanguinate]], [[Reap]] or any mine
+  support, and it buffed two Trickster notables this build takes. The
+  guide's own ratings are Difficulty 3, Budget 2, Mapping 5, Bossing 5,
+  Defence 2. We keep four of them and lower bossing to 4, because the boss
+  setup needs a gem swap, a brand kept up by hand, and by the guide's own
+  word "life sustain is the main weakness" on long fights. This is one
+  author's build; we found no second written guide for the Trickster
+  version.
+modes:
+  ssf: >-
+    The guide: workable once the uniques drop, and until then
+    [[Hrimsorrow]] can be replaced by a conversion mastery plus
+    [[Physical to Lightning Support]], at a cost in early damage. It adds:
+    "If you are a Path of Exile beginner I heavily advise against league
+    starting this build in SSF."
+  hardcore: >-
+    No. "Not HC viable" is the first weakness the guide lists, and its
+    defence rating is 2 out of 5.
+
+idea: |
+  [[Exsanguinate]] is a spell that shoots tendrils of blood at up to nine enemies in front of you. The tendrils can chain to more enemies. They hit instantly: there is no projectile to wait for.
+
+  You do not cast it. A support gem turns the spell into a **mine**, and a second one makes each throw place **five** mines. When they go off, each mine casts the spell at the nearest enemy, one after another. The first kills a pack, so the second picks the next pack, and so on. One throw empties a screen without you aiming at anything.
+
+  Cheap unique gloves, [[Hrimsorrow]], turn all of the damage from physical into cold. Cold damage freezes. A frozen pack cannot hit you, and that, more than any number on the character sheet, is how this build stays alive.
+
+  The cost is on the other side. The guide rates its defence 2 out of 5 and says plainly that bosses need a different gem, [[Reap]], swapped in.
+
+chain:
+  - label: Throw
+    text: "One throw places five mines, through [[Minefield Support]]. Each mine holds one cast of [[Exsanguinate]]."
+  - label: Detonate
+    text: "[[Detonate Mines]] linked to [[Automation]] sets them off for you. They fire one at a time, a few milliseconds apart."
+  - label: Chain and freeze
+    text: "Each mine targets the nearest living enemy. The tendrils chain onward, and [[Hrimsorrow]] makes the damage cold, so it freezes."
+  - label: Move
+    text: "[[Shield Charge]] to the next screen. Frozen monsters, 100% [[Spell Suppression]] and evasion from [[Grace]] cover the gaps."
+
+chainDetails:
+  - title: Why mines and not casting it yourself
+    body: |
+      The guide's argument, which holds up:
+
+      - A mine targets the closest enemy when it goes off. You never aim.
+      - Exsanguinate deals its damage the instant it is used, so nothing is wasted on travel time.
+      - Mines detonate in sequence. By the time the second one fires, the first pack is dead, so it picks a different pack. No cast is spent on something already killed.
+
+      The author's target is a throw time of about 0.25 seconds, "which corresponds to a caster who casts 4 times a second". Getting there takes investment: [[Minefield Support]] alone carries 46–55% less throwing speed.
+  - title: It costs life, and the mines hold on to it
+    body: |
+      Exsanguinate costs life, not mana: 16 at gem level 1 and 46 at level 20.
+
+      [[High Impact Mine Support]] changes that cost into a **reservation**. While a mine sits on the ground, the life it cost is reserved and you cannot heal it back.
+
+      The guide pays for this with [[Kikazaru]], a ring that regenerates 3 life per second for each character level. At level 90 that is 270 life per second from one ring. It is why the ring is on the mandatory list, and why the "cannot regenerate" map modifier is one of only two the guide tells you to skip.
+  - title: "Conversion: the mistake that costs 40% of your damage"
+    body: |
+      Early on, [[Hrimsorrow]] converts 100% of physical damage to cold by itself.
+
+      Late on, you replace it with rare gloves, and the 100% comes from three pieces: 25% from a bench craft, 35% from an Eldritch implicit, and 40% from the Cold Mastery.
+
+      The guide prints this in capitals: change the Cold Mastery to "40% of Physical Damage Converted to Cold Damage" when you swap gloves, "as otherwise your damage will only be 60% converted, resulting in a massive damage loss".
+  - title: Heatshiver, and why bosses feel different
+    body: |
+      [[Heatshiver]] gives 30% of cold damage as extra fire damage against frozen enemies, and 1% per 1% of chill effect on enemies that are only chilled.
+
+      In maps everything is frozen, so you get all of it. The guide: "once a monster is tanky enough to not get frozen your damage goes down substantially as Heatshiver no longer adds its full damage".
+
+      That is the mechanical reason the build changes gems for bosses.
+  - title: Reap, the boss setup
+    body: |
+      For bosses you take [[Exsanguinate]] out of the main link and put [[Reap]] in. The guide says this doubles your single-target damage.
+
+      A second, level 1 [[Vaal Reap]] sits in [[Arcanist Brand]]. The brand casts Reap on the boss again and again, and each hit that does not kill builds a Blood Charge. You hold 5 at most, or 9 after using Vaal Reap, and the guide gives each charge as 20% more damage for every Reap gem you have, including the ones in your mines.
+
+      [[Swift Killer]] triples how long the charges last, which is what keeps them up.
+  - title: Trick Shot, which the author calls undervalued
+    body: |
+      [[Trick Shot]] is 30% increased chaining range. For a skill that clears by chaining, the guide compares it to a notable that read "45% more Area of Effect".
+
+      It is also the guide's main reason for choosing Trickster over Inquisitor: an Inquisitor cannot reach it without an Impossible Escape jewel.
+  - title: The guide disagrees with itself about One Step Ahead
+    body: |
+      The levelling tips say to take [[One Step Ahead]] in the Cruel Labyrinth. The planner's ascendancy steps agree, and then refund it at the last lab for [[Escape Artist]] and [[Heartstopper]].
+
+      But the planner's "Early" and "Mid" map trees already show Heartstopper in its place, and the guide's own changelog for 3.27 says One Step Ahead was replaced.
+
+      3.30 changed both notables, which makes the choice a live one again. See the patch section. **Our suggestion, not the guide's**: follow the levelling tips through the campaign, then decide.
+
+mandatory:
+  - term: Exsanguinate
+    why: >-
+      The spell. The plain version: the guide says the transfigured one has
+      a quarter of the hit damage and is the wrong choice here.
+    detail: >-
+      PoEDB: Nessa sells it to a Shadow after The Siren's Cadence in Act 1,
+      at level 12. Buy it then and level it in a spare socket. You will not
+      use it until maps.
+  - term: High Impact Mine Support
+    why: >-
+      Turns the spell into a mine. Each mine near an enemy also adds a 2%
+      chance to deal double damage. It carries 55–60% less damage, which the
+      five-mine throw more than pays back.
+  - term: Minefield Support
+    why: >-
+      Four additional mines per throw. The guide's whole clear pattern
+      depends on five mines going off in sequence.
+    detail: >-
+      PoEDB: a Shadow gets it as a reward for The Eternal Nightmare in
+      Act 4. It needs level 38.
+  - term: Charged Mines Support
+    why: >-
+      Frenzy and power charges as mines detonate. With [[Swift Killer]]'s
+      two extra frenzy charges and longer duration, this is your throwing
+      speed and crit.
+  - term: Hrimsorrow
+    why: >-
+      100% of physical damage converted to cold. The guide: "mandatory
+      before swapping". Without conversion nothing freezes and [[Hatred]]
+      does much less.
+  - term: Kikazaru
+    why: >-
+      Regenerates 3 life per second per level. It pays the life that your
+      mines reserve.
+  - term: Detonate Mines
+    why: >-
+      Linked to [[Automation]], it detonates without a key press. During
+      the campaign the Mine Mastery "Detonate Mines is Triggered while you
+      are moving" does the same job.
+  - term: Hatred
+    why: >-
+      The guide calls it "an extremely strong way to scale Physical Skills
+      that are converted to Cold damage", and chases extra Hatred aura
+      effect on the body armour and the ring.
+  - term: Grace
+    why: >-
+      The evasion layer. Also the aura your [[Watcher's Eye]] will read.
+  - term: Swift Killer
+    why: >-
+      +2 maximum frenzy charges and 200% increased charge duration. First
+      lab, in every version of the guide.
+  - term: Heatshiver
+    level: recommended
+    why: >-
+      30% of cold damage as extra fire against frozen enemies. The guide
+      lists it fourth among the things to own before the swap, "for a
+      sizable damage increase".
+  - term: Reap
+    level: recommended
+    why: >-
+      The boss gem. Swapped into the main link for hard single targets.
+    detail: >-
+      The guide says to pick it up from Clarissa in Act 3 and level it
+      beside Exsanguinate. It needs level 28.
+  - term: Arcanist Brand
+    level: recommended
+    why: >-
+      Holds a level 1 [[Vaal Reap]] and casts it on the boss to build Blood
+      Charges for you.
+  - term: Stormshroud
+    level: recommended
+    why: >-
+      The guide uses it to reach 100% chance to avoid elemental ailments,
+      together with a boot modifier and an Eldritch implicit.
+  - term: Ghost Dance
+    level: recommended
+    why: >-
+      Recovers energy shield equal to 3% of your evasion each time you are
+      hit, up to three times. The guide's example: 1,200 per hit at 40,000
+      evasion.
+  - term: Trick Shot
+    level: recommended
+    why: >-
+      30% increased chaining range, which is clear speed for this skill.
+  - term: Watcher's Eye
+    level: recommended
+    why: >-
+      With "+8% chance to Evade Attack Hits while affected by Grace". The
+      guide calls this modifier mandatory once you are in the midgame.
+    detail: >-
+      Evasion cannot reach the 95% cap from rating alone. This modifier is
+      added on top, so you only need 87% from everything else. Going from
+      90% to 95% halves the hits you take.
+  - term: Replica Dragonfangs' Flight
+    level: recommended
+    why: >-
+      The guide's most efficient endgame amulet, with a rare as the
+      substitute when it is priced out of reach.
+
+labs:
+  - lab: Normal
+    node: Swift Killer
+    why: "From the guide's tips: +2 frenzy charges that last 30 seconds, which \"heavily boosts the bonuses from Charged Mines Support\"."
+  - lab: Cruel
+    node: One Step Ahead
+    why: "From the guide's tips. **Its description is out of date**: it promises 8% action speed and chill immunity. In 3.30 the notable reads: your action speed is at least 105% of base, and nearby monsters' is at most 90%."
+  - lab: Merciless
+    node: Polymath
+    why: "2% more damage per type of mastery allocated. The guide counts about nine by this point, for 18% more damage."
+  - lab: Eternal
+    node: Heartstopper
+    why: "Taken together with [[Escape Artist]]: the planner's last step allocates both and refunds One Step Ahead to pay for one of them. Escape Artist turns helmet energy shield into evasion and body armour evasion into energy shield. Heartstopper was buffed in 3.30."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: skitterbots
+    title: Acts 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Explosive Trap]] with [[Swift Assembly Support]] and
+      [[Added Fire Damage Support]]. You are a trapper until level 28.
+    changes: >-
+      At level 16 add [[Summon Skitterbots]], [[Herald of Ash]] and
+      [[Wave of Conviction]]. At level 22 [[Grace]] replaces the herald and
+      [[Assassin's Mark]] joins.
+    links:
+      - name: Level 1–15
+        gems: [Explosive Trap, Swift Assembly Support, Added Fire Damage Support]
+      - name: From level 16
+        gems: [Wave of Conviction, Combustion Support]
+      - name: Utility at 16
+        gems: [Summon Skitterbots, Herald of Ash, Bear Trap, Frostblink, Flame Dash]
+      - name: Utility at 22
+        gems: [Summon Skitterbots, Grace, Assassin's Mark, Bear Trap, Frostblink]
+    moveOn: "you are level 28 and have Exsanguinate and Reap levelling in spare sockets."
+    details:
+      - title: Small things the guide tells you to do
+        body: |
+          - Buy or pick up Goat's Horn wands: the fire damage implicit is a real boost this early.
+          - If you cannot get the socket colours for [[Added Fire Damage Support]], use [[Added Cold Damage Support]] or [[Added Lightning Damage Support]].
+          - [[Sapphire Ring]] for Merveil, a Ruby Ring for the Vaal Ruins in Act 2.
+          - Two-Stone Rings after level 20, and resistances as near 75% as you can.
+          - [[Grace]] is "an amazing defensive layer", to be taken earlier if you are dying.
+      - title: Buy the gems you will not use yet
+        body: |
+          [[Exsanguinate]] from Nessa in Act 1 and [[Reap]] from Clarissa in Act 3. Put both in spare sockets or your weapon swap.
+
+          The guide repeats this twice, because the alternative is reaching maps with a level 1 main skill.
+      - title: Bandits
+        body: |
+          The guide: kill all three. Or help Alira "to reduce suffix pressure when gearing", and for a campaign that leans less on mana flasks.
+      - title: What the planner does not tell us
+        body: |
+          The planner's gem steps switch at levels 16, 22 and 28. Its list of where each gem is obtained is generated on the page and was not in the data we could read, so apart from Exsanguinate and Reap we have not listed vendors.
+  - id: acts-4-10
+    phase: early
+    image: swift-killer
+    title: Acts 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Pyroclast Mine]] with [[Charged Mines Support]]. You become a miner
+      at level 28 and stay on this skill to the end of the campaign.
+    changes: >-
+      [[Shield Charge]] becomes your movement. Three Labyrinths:
+      [[Swift Killer]], [[One Step Ahead]], [[Polymath]]. Detonation is
+      automatic through a Mine Mastery.
+    links:
+      - name: Main skill
+        gems: [Pyroclast Mine, Charged Mines Support, Swift Assembly Support, Added Cold Damage Support]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: Curse and exposure
+        gems: [Wave of Conviction, Combustion Support, Assassin's Mark]
+      - name: Utility
+        gems: [Summon Skitterbots, Grace, Bear Trap, Frostblink]
+    moveOn: "the campaign is done and you can afford Hrimsorrow and Kikazaru."
+    details:
+      - title: The level 28 switch
+        body: |
+          From the guide's tips: swap [[Explosive Trap]] for [[Pyroclast Mine]], and use the free passive refunds to move points out of Expeditious Munitions and into Blast Waves.
+
+          Take the Mine Mastery "Detonate Mines is Triggered while you are moving". From here you throw and walk.
+
+          "Pay close attention to what gems have changed", the guide adds. Several links change at once.
+      - title: Why Pyroclast first
+        body: |
+          The guide: Pyroclast Mine with Charged Mines "provides easy damage" thanks to [[Swift Killer]], and makes for "smooth levelling progression".
+
+          Exsanguinate cannot do this job yet. Without [[Hrimsorrow]] it does not freeze, and without [[Kikazaru]] its life cost has nothing paying for it.
+      - title: Pantheon
+        body: |
+          Soul of the Brine King against stun-locks. Soul of Garukhan early, for shocks. Later Soul of Abberath for burning ground, and Soul of Ryslatha for hard bosses, with extra life flasks.
+  - id: early-maps
+    phase: early
+    image: minefield-support
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      [[Pyroclast Mine]] for the first few maps, then the swap:
+      [[Hrimsorrow]], [[Kikazaru]], a five-linked evasion and energy shield
+      chest, and [[Heatshiver]].
+    changes: >-
+      [[Exsanguinate]] becomes the main skill. [[Hatred]] joins [[Grace]].
+      [[Reap]] and [[Arcanist Brand]] go in for bosses.
+    links:
+      - name: Main skill (five-link)
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Cold Penetration Support, Minefield Support]
+      - name: Automatic detonation
+        gems: [Detonate Mines, Automation]
+      - name: Movement and curse
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Assassin's Mark]
+      - name: Auras
+        gems: [Grace, Hatred]
+      - name: Boss charges
+        gems: [Arcanist Brand, Vaal Reap]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Steelskin, More Duration Support]
+      - name: Reflect-safe blink
+        gems: [Frostblink, Bonechill Support, Brutality Support]
+    moveOn: "Exsanguinate is in a five-link, both auras are on, and one throw clears a white-map screen."
+    details:
+      - title: What to own before the swap, in the guide's order
+        body: |
+          1. [[Hrimsorrow]]. "Mandatory before swapping."
+          2. [[Kikazaru]], for the life regeneration.
+          3. A five-link, or six if you can, on an evasion and energy shield base with more than 300 energy shield.
+          4. [[Heatshiver]].
+
+          Staying on Pyroclast Mine "for a few Maps" is fine, the guide says. It has short range, so the swap "feels a lot better" once you can make it.
+      - title: A five-link is expected
+        body: |
+          The guide's wording: the build uses "a lot of mechanically mandatory gems, causing damage links to fall a bit short". Mine, Minefield and Charged Mines are three of your five before any damage support.
+
+          It suggests a corrupted six-link in the right colours as the cheap way up. And it says [[Cold Penetration Support]] can be swapped for [[Chain Support]] when damage is enough.
+      - title: Weapon and the rest of the gear
+        body: |
+          On the sceptre, in the guide's order: +1 to level of physical spell gems, +1 to all spell gems, mine throwing speed, spell damage, cold damage, crit multiplier, spell crit chance. [[Singularity]] is its pick if you would rather not shop for a rare.
+
+          Everywhere else except the chest: life, and resistances to 75%. A [[Sadist Garb]] or similar hybrid base for the chest, because [[Escape Artist]] will read it later.
+      - title: Flasks and the first anoint
+        body: |
+          [[Divine Life Flask]] with partial instant recovery and bleed removal, [[Silver Flask]], [[Quicksilver Flask]], [[Diamond Flask]], [[Jade Flask]]. Evasion and movement speed suffixes on the utility flasks.
+
+          Anoint Entrench on the amulet. The guide likes it for spell suppression and for keeping the life flask filled, and it needs only Sepia, Azure and Violet oil.
+      - title: Map modifiers to avoid
+        body: |
+          Only two, by the guide's count:
+
+          - **Reduced effect of non-curse auras.**
+          - **Cannot regenerate life, mana or energy shield.** Runnable if you swap two flasks for a life and a mana flask.
+
+          Reflect is safe, because the mine hits the monster and you do not. The one exception is your own [[Frostblink]], which is why it is linked to [[Brutality Support]].
+  - id: red-maps
+    phase: endgame
+    image: watchers-eye
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      A six-link with [[Increased Critical Damage Support]], a rare sceptre
+      and shield with +1 to physical spell gems, a body armour with 300
+      energy shield and 1,200 evasion, cluster jewels and a
+      [[Watcher's Eye]].
+    changes: >-
+      [[Ghost Dance]] is allocated. [[Zealotry]] arrives through a spectre.
+      Spell suppression reaches 100%. This is the stretch the guide itself
+      calls a "tougher start into late red maps".
+    links:
+      - name: Main skill (six-link)
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Cold Penetration Support, Minefield Support, Increased Critical Damage Support]
+      - name: Automatic detonation
+        gems: [Detonate Mines, Automation]
+      - name: Auras
+        gems: [Grace, Hatred]
+      - name: Aura from a spectre
+        gems: [Raise Spectre, Guardian's Blessing Support, Zealotry]
+      - name: Movement and curse
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Assassin's Mark]
+      - name: Boss charges
+        gems: [Arcanist Brand, Vaal Reap]
+    moveOn: "resistances at 75%, suppression at 100%, chaos resistance positive, and the Watcher's Eye in."
+    details:
+      - title: The order to rebuild your gear in
+        body: |
+          The guide gives one: **sceptre, body armour, shield, amulet, boots, rings, belt.** Highest potential gain first.
+
+          It also gives a rule worth repeating. Do not give up a good percentage roll just to get +1 gem level: "A weapon with 100% increased damage generally outperforms a +1 if you do not have many %increases elsewhere." It wants at least one roll of 80% or more spell or cold damage on the sceptre or the shield.
+
+          Your rare suffixes have to supply about 29 Strength, 23 Dexterity, and roughly 115% fire, 90% cold, 110% lightning and 50% chaos resistance in total, assuming the uniques are on.
+      - title: How the guide makes this gear, and what 3.30 did to the method
+        body: |
+          The method: buy a base with one wanted modifier **fractured**, apply Screaming Essences until a second wanted modifier lands, then add a third at the bench.
+
+          Two 3.30 changes bear on it. Fractured items now come from far fewer places, so those bases will be scarcer. And low Essence tiers left higher maps, though Screaming is not one of the tiers removed.
+
+          The guide's other routes are Rog, who is less generous in 3.30, and Harvest reforges for the chest.
+      - title: The body armour target
+        body: |
+          At least 300 energy shield and 1,200 evasion on a hybrid base. [[Escape Artist]] turns the evasion into more energy shield and the helmet's energy shield into evasion, and [[Ghost Dance]] then heals from the total.
+
+          The guide calls a well-rolled chest "the most important piece of gear for the Trickster Ascendancy".
+      - title: Zealotry without reserving it
+        body: |
+          [[Raise Spectre]] with [[Guardian's Blessing Support]] and [[Zealotry]], on two Dark Marionettes. They revive themselves every 4 seconds, so the aura passes between them and you never resummon.
+
+          The guide drops this setup "once you acquire a Mercenary with Zealotry". Mercenaries were weakened in 3.30 and now have resistance penalties in maps, so check yours survives before you rely on it. That caution is ours.
+      - title: Cluster jewels, jewels and free damage
+        body: |
+          - A [[Large Cluster Jewel]] with any three useful notables, crafted with Jagged Fossils on an eight-passive base.
+          - A trap and mine [[Medium Cluster Jewel]], rolled with Harvest's speed reforge.
+          - Rare jewels: mine throwing speed on every one, then crit multiplier and life. One with "Corrupted Blood cannot be inflicted on you".
+          - Twenty quality on every support, and a level 21 [[Exsanguinate]] and [[Reap]].
+
+          One trap the guide flags: crit multiplier "with Cold Skills" or "with Elemental Skills" does **not** work. Exsanguinate is a physical spell that happens to be converted.
+  - id: endgame
+    phase: endgame
+    image: heartstopper
+    title: Endgame
+    levels: Tier 17, pinnacle and Uber bosses
+    uses: >-
+      Rare gloves with "+2 chains" for mines, a body armour with +1 to
+      socketed Strength gems and [[Empower Support]] in the link,
+      [[Replica Dragonfangs' Flight]], and [[Enlighten Support]] to fit
+      [[Summon Skitterbots]] back in.
+    changes: >-
+      The gloves replace [[Hrimsorrow]], so conversion now comes from three
+      places and the Cold Mastery must change. The final Labyrinth adds
+      [[Escape Artist]] and [[Heartstopper]].
+    links:
+      - name: Main skill
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Awakened Cold Penetration Support, Minefield Support, Empower Support]
+      - name: Auras
+        gems: [Grace, Hatred, Summon Skitterbots, Enlighten Support]
+      - name: Aura from a spectre
+        gems: [Raise Spectre, Guardian's Blessing Support, Zealotry]
+      - name: Movement and detonation
+        gems: [Shield Charge, Faster Attacks Support, Detonate Mines, Automation]
+      - name: Blink and curse
+        gems: [Frostblink, Bonechill Support, Assassin's Mark]
+      - name: Boss charges
+        gems: [Arcanist Brand, Vaal Reap, Faster Casting Support]
+    moveOn: "there is no next stage. The guide's last word is an \"aspirational\" [[Mageblood]] loadout."
+    details:
+      - title: The gloves
+        body: |
+          A modifier added in 3.26: "Skills used by your Traps and Mines Chain 2 additional times". The guide calls it "extremely powerful for this build", and it is why the main link no longer needs [[Chain Support]].
+
+          Bench-craft 25% conversion, roll the Eldritch implicits for 35% conversion and 9% mine throwing speed, and **change the Cold Mastery to 40% conversion**. Miss that last step and you are at 60%.
+      - title: The body armour, and why it is worth the trouble
+        body: |
+          "+1 to Level of Socketed Strength Gems". [[Exsanguinate]], [[Reap]] and [[Empower Support]] are all Strength gems, so the one modifier raises the skill by two levels.
+
+          The guide's craft is long: split a [[Necrotic Armour]] with a beast, fossils for the +1, a [[Fracturing Orb]], then Dense Fossils and Harvest for defences, then Eldritch currency. It says outright that parts of it are "tedious and expensive".
+
+          Its last step uses "Prefixes Cannot Be Changed". 3.30 raised the price of that craft to 4 Divine Orbs plus a second currency.
+      - title: The amulet
+        body: |
+          [[Replica Dragonfangs' Flight]] with Charisma anointed is "the most efficient path". When it is too dear, the guide crafts a rare with +1 to physical spell gems, a resistance and mine throwing speed.
+
+          Its price guidance, from before 3.30: about 6 Divine for the crafted rare, and buy the unique if it is 12 Divine or less.
+      - title: Numbers
+        body: |
+          The guide's changelog mentions one figure: an aspirational [[Mageblood]] loadout at "roughly 45 million Exsanguinate DPS", added in 3.26. It gives no figure for the versions below that, and no effective hit point figure at all.
+
+          On defence it describes, not measures: capped suppression, 95% evasion, and "up to 2k Energy Shield that fully recovers when hit".
+      - title: Ubers and Tier 17
+        body: |
+          Ubers: "Yes, absolutely", with a condition. "It's not a facetank build so dodging is required." Run at least three life flasks and Soul of Ryslatha.
+
+          Tier 17: "Yes, but there are certainly better options for max-juice T17 farming."
+
+powerCurve: |
+  The guide describes its own curve honestly: "It starts off somewhat slow, but as you slowly gear up and your Mine Throwing Speed and Shield Charge speed increases the build's clear speed picks up."
+
+  Five things multiply the damage, and they arrive at different times.
+
+  1. **Five mines per throw**, from [[Minefield Support]] at level 38.
+  2. **Conversion to cold**, from [[Hrimsorrow]]. This is the switch that turns on freezing, [[Hatred]] and cold penetration together.
+  3. **Extra fire against frozen enemies**, from [[Heatshiver]].
+  4. **Crit and charges**, from [[Charged Mines Support]], [[Swift Killer]] and [[Assassin's Mark]].
+  5. **Gem levels and throwing speed**, from gear.
+
+  **At level 30** you have part of number 4 and nothing else. You are playing [[Pyroclast Mine]], a different skill, and it is comfortable. This tells you nothing about the real build.
+
+  **At level 70** you buy numbers 2 and 3 in one shopping trip and the character changes in an afternoon. This is the jump. But number 5 is still at zero, you are on a five-link, and the build is at its worst relative to the content. The guide's "tougher start into late red maps" is this gap.
+
+  **At level 95** it is number 5 that has grown: +1 gem levels on three or four slots, throwing speed on everything, clusters, and later the chain gloves. None of those is a single big purchase. That is why the middle of this build feels like a long climb, and why the guide answers "my damage feels too low" with "trust the process of incremental upgrades".
+
+  The defence follows a different curve. It is mostly **not being hit**: freeze first, then evasion. Freeze scales with your damage, so the same slow stretch that has low damage also has fewer frozen monsters. The dangerous part of this build and the weak part are the same weeks. That last observation is ours.
+
+upgrades:
+  - step: "[[Hrimsorrow]]"
+    why: >-
+      First in the guide's own order. It is the conversion: freezing, Hatred
+      and cold penetration all do nothing useful without it, so every later
+      purchase multiplies this one.
+  - step: "[[Kikazaru]]"
+    why: >-
+      Second in the guide's order. It adds no damage. It pays the life your
+      mines reserve, which is what lets you keep throwing.
+  - step: "A five-linked hybrid chest with 300+ energy shield"
+    why: >-
+      Third. Three of the five sockets are mine mechanics, so a four-link
+      has one damage support. The base matters now because you will not
+      want to buy it twice.
+  - step: "[[Heatshiver]]"
+    why: >-
+      Fourth, "for a sizable damage increase". Below the chest because it
+      only pays against frozen targets, and you need the damage to freeze
+      them first.
+  - step: "A rare sceptre: gem level, spell or cold damage, mine throwing speed"
+    why: >-
+      Top of the guide's gear order: "the slot that grants you the highest
+      potential damage increase". It comes after the uniques because they
+      switch the build on and this only scales it.
+    cost: "The guide prices the Essences for these crafts at 2 Chaos or less each. Written before 3.30."
+  - step: "Body armour with 300 energy shield and 1,200 evasion"
+    why: >-
+      Second in the gear order, and the first purchase that is about
+      staying alive. [[Escape Artist]] and [[Ghost Dance]] both scale from
+      it.
+  - step: "[[Watcher's Eye]] with evade chance while affected by Grace"
+    why: >-
+      The guide calls it mandatory. It moves you from 87% evasion to the
+      95% cap, which halves attacks taken. It is here and not earlier
+      because you need the 87% first.
+  - step: "Cluster jewels, gem quality, level 21 gems"
+    why: >-
+      Many small multipliers. The guide files these under "stuff to look
+      out for": worth doing whenever you can, never urgent.
+
+play:
+  mapping: |
+    1. [[Shield Charge]] **past** the first packs. The guide's instruction is to keep going "until the monsters you passed are almost off your screen".
+    2. Throw once. Five mines land and detonate by themselves, each picking the nearest pack.
+    3. Keep moving. Do not stop to check.
+
+    The skill in piloting this build, by the guide's account, is restraint: "minimizing the overcasting" and "trusting in the build's ability to one-shot the screen in one throw". A second throw at a dead screen is time lost.
+
+    Flasks are automated with [[Instilling Orb]]s set to use at full charges. With cheap strategies the guide would clear about 80% of a map and leave.
+
+    The built-in tension: the mines reserve life while they are out, and your defence is weakest exactly when something survives the throw.
+  bossing: |
+    Before the fight:
+
+    1. Take [[Exsanguinate]] out of the main link and put [[Reap]] in. Same supports.
+    2. For Ubers, swap utility flasks until you carry at least three life flasks, and take Soul of Ryslatha.
+
+    In the fight:
+
+    1. Drop [[Arcanist Brand]] on the boss. It casts [[Vaal Reap]]'s normal skill for you and builds Blood Charges.
+    2. Use Vaal Reap itself when it is charged. That raises the Blood Charge limit from 5 to 9.
+    3. Curse with [[Assassin's Mark]], throw Reap mines, and move.
+
+    The guide is direct about the style: "it's not a facetank build so dodging is required." You throw between the boss's attacks. You do not stand and trade.
+
+deaths:
+  - situation: "Something survives the throw and walks out of the freeze."
+    cause: >-
+      The guide's main defence is "outright denying mobs the chance to
+      attack". A monster too tough to freeze has skipped that layer, and
+      behind it is a defence the guide itself rates 2 out of 5.
+    fix: >-
+      Do not stand still after a throw. More damage is also more freeze, so
+      this improves with every damage upgrade.
+  - situation: "Attacks land far more often than the evasion number suggests."
+    cause: >-
+      Evasion rating has diminishing returns and stops short of the cap.
+      At 90% you are hit by one attack in ten; at 95%, one in twenty.
+    fix: >-
+      The [[Watcher's Eye]] modifier for evade chance while affected by
+      [[Grace]], on top of 87% from rating. The guide: this "more than
+      doubles" how well you avoid attacks.
+  - situation: "Long boss fights, Ubers above all."
+    cause: >-
+      "Life sustain is the main weakness of the build for Ubers", in the
+      guide's words. There is no leech, mines reserve life, and
+      [[Ghost Dance]] restores energy shield, not life.
+    fix: >-
+      At least three life flasks, keeping the [[Quicksilver Flask]], and
+      Soul of Ryslatha as the minor god.
+  - situation: "A map that will not let you regenerate, or that weakens auras."
+    cause: >-
+      [[Kikazaru]]'s regeneration is what pays for your mines, and
+      [[Grace]] is most of your evasion.
+    fix: >-
+      Reroll both. The no-regeneration one can be run with a life flask
+      and a mana flask in place of two utility flasks.
+
+troubleshooting:
+  - symptom: "My damage on bosses is far lower than in maps."
+    cause: >-
+      [[Heatshiver]] only adds its full damage against frozen enemies, and
+      a boss is rarely frozen. You are also still using the clear gem.
+    fix: >-
+      Swap [[Reap]] into the main link and keep [[Arcanist Brand]] on the
+      boss for Blood Charges. The guide says the swap doubles single-target
+      damage and the charges double it again.
+  - symptom: "My damage dropped by a third when I changed gloves."
+    cause: >-
+      [[Hrimsorrow]] was all of your conversion. Rare gloves give 60% from
+      the craft and the implicit. The rest of your physical damage is no
+      longer cold, so it misses [[Hatred]], penetration and freeze.
+    fix: >-
+      Change the Cold Mastery to "40% of Physical Damage Converted to Cold
+      Damage".
+  - symptom: "I cannot cast Shield Charge or Frostblink: no mana."
+    cause: >-
+      The mines cost life, so mana only pays for movement and the curse,
+      but two or three auras leave very little of it unreserved.
+    fix: >-
+      The guide: drop [[Summon Skitterbots]] until your next reservation
+      milestone, and do not level [[Frostblink]] to 20. A [[Heatshiver]]
+      corrupted with a 90% cost and reservation multiplier for socketed
+      gems is its late fix.
+  - symptom: "Throwing feels slow and clumsy."
+    cause: >-
+      [[Minefield Support]] has 46–55% less mine throwing speed. That is
+      the "mines are clunky" reputation, and the guide says it comes from
+      builds that "skimped out on proper investment into throwing speed".
+    fix: >-
+      Throwing speed on the sceptre craft, amulet, belt and every jewel,
+      and frenzy charges from [[Charged Mines Support]]. The target is
+      about a quarter of a second per throw.
+  - symptom: "My damage feels too low and the next upgrade is out of reach."
+    cause: >-
+      You are in the stretch between the swap and the gear that scales it.
+    fix: >-
+      The guide: map with [[Reap]] in place of Exsanguinate for a while,
+      or fill the Atlas to about Tier 14 and then farm lower maps. Its
+      list of what to farm there is partly out of date: see the patch
+      section.
+  - symptom: "I die in elemental reflect maps."
+    cause: >-
+      The mines are safe, because they deal the damage and you do not.
+      Your movement skill is not.
+    fix: >-
+      Link [[Frostblink]] to [[Brutality Support]], which removes its
+      elemental damage.
+
+patch:
+  - entry: trickster-buffs
+    note: >-
+      **Two of the three Trickster buffs reach this build.**
+      [[Heartstopper]], its last ascendancy pick, now takes 75% less damage
+      over time for half of every ten seconds, up from 50%.
+      [[One Step Ahead]], its Cruel lab pick, now keeps your action speed
+      at 105% of base or better, where it used to be a floor of 90%.
+      **The guide's text has neither change in it**, and its final setup
+      refunds One Step Ahead. A permanent 5% speed on a build whose feel
+      depends on throwing speed is worth a second look. That is our
+      suggestion. [[Spellbreaker]], the third buff, is not in the planner.
+  - note: >-
+      **The skills were not touched.** [[Exsanguinate]], [[Reap]] and the
+      mine supports do not appear in the skill or support sections of the
+      notes. Reap is in the bug fixes, for a tooltip that showed the wrong
+      number.
+  - entry: mercenary-nerfs
+    note: >-
+      **No mine nerf for you.** The lines about Trap and Mine Damage
+      supports are under Mercenary Changes. Separately, the guide's plan to
+      get [[Zealotry]] from a Mercenary now depends on a Mercenary that has
+      -60% to all resistances in maps.
+  - entry: fractured-items-rarer
+    note: >-
+      **The guide's gearing method starts from fractured bases, and those
+      are scarcer.** Legion, Ritual, Heist, Blight, Delirium, Delve and
+      Incursion no longer drop them. Expect to pay more, or to craft
+      without the locked modifier.
+  - entry: essence-changes
+    note: >-
+      **The Essences the guide names are still there.** It uses Screaming
+      and Deafening tiers. The tiers removed from higher maps are Weeping
+      and Wailing.
+  - entry: no-random-league-mechanics
+    note: >-
+      **The fallback farming list is half out of date.** The guide suggests
+      Essences, Expedition, beast farming or Legion in low maps when damage
+      is short. Expedition, Bestiary and Legion now need [[Threads]].
+      Essence still appears by itself.
+  - entry: meta-crafting-costs
+    note: >-
+      **The endgame crafts cost more.** The shield, boots, amulet and body
+      armour recipes all use "Prefixes" or "Suffixes cannot be changed",
+      now 4 Divine Orbs plus a second currency each time.
+  - entry: crafting-service-tweaks
+    note: >-
+      **Rog is a weaker route to the chest.** His reroll deals keep the
+      best of fewer attempts than before.
+  - entry: royal-visage-soul-cores
+    note: >-
+      **Coins are now Soul Cores.** The guide recommends adding a built-in
+      level 1 support to Exsanguinate and Reap with a Coin. Soul Cores do
+      the same and can now also roll a bad effect.
+
+strengths:
+  - "Clears a screen per throw, with no aiming (guide rating: Mapping 5 of 5)."
+  - "Freezes almost everything it does not kill."
+  - "Does not need a transfigured gem."
+  - "Runs nearly every map modifier, reflect included."
+  - "Strong single-target damage once Reap is swapped in, by the guide's account."
+  - "Its ascendancy was buffed in 3.30."
+weaknesses:
+  - "Not hardcore viable (the guide's first listed weakness)."
+  - "Mediocre life sustain, worst on long boss fights."
+  - "Reliant on three specific uniques before it functions."
+  - "A tough stretch going into late red maps."
+  - "Bossing means a gem swap and a brand to keep up."
+  - "The guide's 3.30 update changed a date and little else we could find."
+avoidIf: >-
+  Pick something else if you play hardcore, if you want a character that
+  can stand in a boss's attacks, or if a delayed, throw-and-move rhythm
+  annoys you. Skip it as a league starter in solo self-found unless you
+  know the game well: the guide says so itself. And if you dislike
+  re-socketing gems before every boss, know that this build asks for it.
+  The Ice Trap Trickster on this site is the nearest alternative: same
+  class, fewer required uniques, and a sturdier recovery system.
+
+sources:
+  - title: "Maxroll: Exsanguinate Miner Trickster league starter (Cptn Garbage)"
+    url: https://maxroll.gg/poe/build-guides/exsanguinate-miner-trickster-league-starter
+    kind: guide
+    note: "The only written guide for this version. Changelog claims a 3.30 update on 12 November 2026; the page title still reads 3.28."
+  - title: "Maxroll planner for the guide"
+    url: https://maxroll.gg/poe/planner/2q5b004m
+    kind: pob
+    note: "Source of every gem link, the lab order, the ratings and the quoted text. Named \"Exsang 3.27\"; passive trees stamped 3.24."
+  - title: "Path of Building: the guide's file"
+    url: https://maxroll.gg/poe/pob/rrnj780t
+    kind: pob
+    note: "Linked from the guide. We did not open it."
+  - title: "Video: the guide's showcase"
+    url: https://www.youtube.com/watch?v=zTTixqnBUyc
+    kind: video
+    note: "Linked from the guide. Not watched; nothing here comes from it."
+  - title: "PoEDB: Exsanguinate"
+    url: https://poedb.tw/us/Exsanguinate
+    kind: data
+    note: "Life cost, target count, and where a Shadow buys it."
+  - title: "PoEDB: High-Impact Mine Support"
+    url: https://poedb.tw/us/High-Impact_Mine_Support
+    kind: data
+    note: "Source of the reservation line and the double damage aura."
+  - title: "PoEDB: Minefield Support"
+    url: https://poedb.tw/us/Minefield_Support
+    kind: data
+    note: "Four additional mines, 46-55% less throwing speed."
+  - title: "PoEDB: Hrimsorrow"
+    url: https://poedb.tw/us/Hrimsorrow
+    kind: data
+  - title: "PoEDB: Heatshiver"
+    url: https://poedb.tw/us/Heatshiver
+    kind: data
+    note: "30% of cold as extra fire against frozen enemies."
+  - title: "PoEDB: Kikazaru"
+    url: https://poedb.tw/us/Kikazaru
+    kind: data
+    note: "3 life regenerated per second per level."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Live 3.30 text for the Trickster notables, Trick Shot and Ghost Dance. This is how we know the guide's One Step Ahead description is out of date."
+  - title: "poebuilds.cc: a 3.30 Exsanguinate and Reap Elementalist"
+    url: https://www.poebuilds.cc/poe1/build/FX4p_V0TqHg
+    kind: video
+    note: "The only 3.30-dated Exsanguinate build we found there. A different ascendancy and no mines, so it corroborates the skill, not this build."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Source of the Trickster buffs and of every 3.30 change listed above."

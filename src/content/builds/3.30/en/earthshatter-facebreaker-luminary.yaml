@@ -1,0 +1,839 @@
+name: Earthshatter Facebreaker Luminary
+tagline: >-
+  A slam build that fights bare-handed. A hired Mercenary shouts, the shout
+  lends you a share of his axe, and a pair of gloves multiplies it. The
+  Luminary build that 3.30 left almost alone.
+class: Scion
+ascendancy: Luminary
+role: starter
+budget: low
+budgetNote: >-
+  **The guide gives no currency figure for anything, so neither do we.**
+  What it says in words: you can start with no unique items; ordinary
+  [[Facebreaker]] gloves are "very easy to get ahold of"; buy
+  [[Carnage Heart]] only "if it's a handful of Chaos Orbs"; and
+  [[Runegraft of the Warp]] is the "first big purchase" once you farm Tier
+  16 maps. The swap to Luminary needs a small kit bought together — the
+  gloves, two [[Timeclasp]] rings, [[Breathstealer]] with an anoint — and
+  its own FAQ admits that on the first day some of the Mercenary's uniques
+  may be "really expensive" or not exist yet.
+mainSkill: Earthshatter
+image: asc-icon-ascendant
+hero: art-ascendant
+tags: [Slam, Warcry, Mercenary, Physical, Block]
+ratings: { clear: 4, bossing: 4, survivability: 4, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **One author, checked where we could.** This is Shayd's guide on Maxroll,
+  written for 3.29 on 9 October 2026 and revised for 3.30 on 11 and 13
+  November. Unlike several "3.30" guides, its planner really is on 3.30
+  data: every tree page is stamped 3300. Maxroll's league starter tier list
+  of 13 November puts it in S tier. Against that: it is one person's build,
+  the tier list is the same site's, there is no 3.30 ladder yet, and the
+  revision missed three places — the FAQ still says Mercenaries have no
+  resistance penalty, still describes always-on pinnacle implicits, and the
+  last planner page still holds a gem the changelog says was removed. The
+  guide has no rating block; the four ratings are ours. Its damage figure
+  is the author's 3.29 number.
+modes:
+  ssf: >-
+    Good, on the author's word: "Definitely!" He played it solo self-found
+    hardcore in 3.26 and 3.29, starting as ordinary slams until he had the
+    gloves and "an adequate Merc". The hard parts solo are
+    [[Runegraft of the Warp]] — you keep the [[Timeclasp]] rings longer —
+    and the double Foulborn [[Deidbell]], which he says is not worth farming
+    unless you play the build all league.
+  hardcore: >-
+    The author's own territory, with a different setup. For hardcore he
+    capped spell suppression, and says that costs "a substantial amount of
+    damage and attack speed" and "very good gear". The softcore version
+    below does not suppress spells. The [[Echoes of Creation]] stage damages
+    you with every attack and is for softcore unless you know exactly what
+    your armour does to it.
+
+idea: |
+  [[Earthshatter]] slams the ground and leaves a ring of stone spikes. When you use a warcry, the spikes burst and hit again. So the build is a slam followed by shouts, and the shouts are automatic.
+
+  The odd part is the weapon. You do not carry one. [[Facebreaker]] gloves give 600–1000% more physical damage with unarmed attacks, but bare hands have almost no damage to multiply.
+
+  The [[Mercenary]] supplies it. As a [[Luminary]] you hire one for good — a two-handed fighter called a Swiftblade — and his [[Rallying Cry]] lends nearby allies a share of **his** weapon's damage. You are the nearby ally. His axe becomes your fists, and the gloves multiply it.
+
+  You are not a Luminary from the start. You level as an Ascendant with [[Sunder]] and a real axe, and change ascendancy in the fourth Labyrinth, once you have the gloves and a suitable Mercenary.
+
+chain:
+  - label: Slam
+    text: "[[Earthshatter]] hits and leaves up to 15 spikes around you. With no weapon, it attacks unarmed."
+  - label: Shout
+    text: "[[Autoexertion]] uses your warcries for you. Each one bursts the spikes and makes the next slams hit harder."
+  - label: Borrow
+    text: "Your Mercenary's [[Rallying Cry]] adds up to 24% of his weapon's damage to your attacks. [[Facebreaker]] multiplies that seven to eleven times."
+  - label: Hold
+    text: "A shield, capped block through [[Versatile Combatant]], [[Flesh and Stone]], Fortification, and [[Loyal Bodyguard]] sending a fifth of each hit to the Mercenary."
+
+chainDetails:
+  - title: "Our arithmetic: why bare hands beat the axe"
+    body: |
+      This sum is ours, built from the gem and item text on PoEDB. The guide gives the picture — "imagine you stapled six Two-Handed Axes together" — and not the working.
+
+      [[Rallying Cry]] gives allies added attack damage equal to 4% of the user's main-hand weapon damage per 5 Power, counting at most 30 Power. That is 24% at the cap.
+
+      [[Facebreaker]] is 600–1000% more physical damage with unarmed melee attacks: seven times at the worst roll, eleven at the best.
+
+      24% × 7 is about 1.7 axes. 24% × 11 is about 2.6. And "increased Warcry Buff Effect" on the Mercenary raises the 24% itself, which is how the guide gets to six.
+
+      So even the worst gloves beat holding the axe yourself, with a hand free for a shield. The catch is in the next section.
+  - title: The buff is the build, and it is short
+    body: |
+      [[Rallying Cry]] has an 8-second cooldown. PoEDB gives its buff a base duration of 3.4 seconds at gem level 20.
+
+      Unimproved, that is more time without the buff than with it. And without the buff your bare hands hit for almost nothing. The guide lists this as its own weakness — "Rallying Cry can fall off early on" — and warns you can go to "literally zero damage".
+
+      Nearly every item on the Mercenary exists to close that gap:
+
+      - A duration support on his Rallying Cry: "More Duration II" at least, "Greater Duration III" ideally. This is what you hire him for.
+      - Two [[Timeclasp]] rings with at least 15% **increased** skill effect duration each. The ring rolls from 20% reduced to 20% increased, so read the sign.
+      - [[Breathstealer]] anointed with [[Deep Breaths]], for warcry cooldown recovery and area.
+      - Later, [[Runegraft of the Warp]], which the guide describes as "42% more Buff Effect Duration".
+
+      By the endgame setup his buff lasts "over twice as long as his Rallying Cry cooldown", and the problem is gone.
+  - title: Where Power comes from, and why bosses are different
+    body: |
+      Warcries count the Power of enemies and allies near the user. Normal monsters are 1, magic 2, rare 10, unique 20, and a player is 5.
+
+      In a pack the count passes 30 at once. Against a lone boss it is 20 for the boss and 5 for you: 25, which is 20% of the weapon and not 24%.
+
+      The guide's fix is the Roaring Challenge anoint on his [[Breathstealer]] — 25% increased total Power counted — which lifts 25 to just over 30.
+  - title: Spikes, and why small rooms help
+    body: |
+      [[Earthshatter]] deals its slam, then leaves spikes: 15 at most, more with gem quality. A warcry near a spike bursts it for 30% less than the slam.
+
+      The slam and several spikes can hit the same enemy. The guide expects "at least 2 Spikes per Earthshatter" on one target, and more on large enemies and in tight spaces.
+
+      That is why area of effect is a damage stat here, and why the guide will not let you map before the gem has 20% quality. It is also why three of the automatic warcries carry different quality — 16%, 12% and 8% in the published setup — so they go off staggered and not together.
+  - title: What you press and what presses itself
+    body: |
+      [[Autoexertion]] is a support gem that uses linked warcries when their cooldown is ready. [[Intimidating Cry]], [[Infernal Cry]], [[Battlemage's Cry]] and [[Seismic Cry]] all sit in it. It is part of the game, not an outside tool.
+
+      You press [[Earthshatter]], your own [[Rallying Cry]], [[Shield Charge]] and, on bosses in the earlier setups, [[Enduring Cry]].
+
+      Your own Rallying Cry does a different job from the Mercenary's. The buff never applies to the one who shouts, so yours gives you no weapon damage. What it does is exert your attacks for up to 25% more damage, 5% per nearby ally — and [[Living Lightning Support]] exists to make those allies.
+  - title: Why the Mercenary has to outlive you
+    body: |
+      [[Loyal Bodyguard]] reads: if your Mercenary's life is higher than yours, 20% of damage from hits is taken from his life before yours. The guide treats it as "Take 20% Less Damage" and adds one rule: make sure he always has more maximum life than you.
+
+      His aura matters too. He runs [[Pride]], and [[Bestowed Knighthood]] gives his auras 50% increased effect.
+
+      So a dead Mercenary costs you three things at once: the weapon, a fifth of your defence and a damage aura.
+
+mandatory:
+  - term: Earthshatter
+    why: >-
+      The skill, from the day you finish Act 10. A Scion buys it from Nessa
+      after The Siren's Cadence at level 12; level it in your weapon swap
+      until then.
+    detail: >-
+      It must have 20% quality before you start maps. The guide's two routes
+      are farming the Merciless Labyrinth or buying one. Quality adds
+      spikes.
+  - term: Sunder
+    why: >-
+      What you level with, from level 12 to the end of Act 10. It attacks
+      from range, which the guide values against bosses such as Shavronne.
+  - term: Facebreaker
+    why: >-
+      600–1000% more physical damage with unarmed melee attacks. The build
+      does not exist without it. Ordinary ones are fine for the swap.
+    detail: >-
+      There are three kinds. The plain one adds critical strike multiplier,
+      useless here. Foulborn ones add 20–30% area of effect while unarmed
+      and are "generally cheap". Vestigial ones carry a borrowed line from
+      another unique; the guide's pick grants Adrenaline.
+  - term: Noble Blood
+    why: >-
+      The Luminary notable that lets you hire a Mercenary for good. You take
+      it in the fourth Labyrinth, when you change ascendancy.
+  - term: Mercenary
+    why: >-
+      A Swiftblade. They always have [[Rallying Cry]]; you want a duration
+      support on it and, ideally, [[Pride]]. Avoid one with Leap Slam, which
+      breaks his targeting.
+  - term: Rallying Cry
+    why: >-
+      On the Mercenary it is your weapon. On you it exerts your slams.
+      Scions buy it from Clarissa in Act 3.
+  - term: Autoexertion
+    why: >-
+      Uses your warcries for you. Without it this is a five-button rotation
+      every two seconds.
+  - term: Intimidating Cry
+    why: >-
+      Exerted attacks deal double damage. Keep it and
+      [[Autoexertion]] at 20% quality.
+  - term: Admonisher
+    why: >-
+      15% increased damage for each warcry used recently. The guide puts it
+      at "roughly a third of your total damage", and automatic warcries
+      count.
+  - term: Deep Breaths
+    why: >-
+      35% faster warcry cooldown and bigger warcries. Take it the moment you
+      switch to Earthshatter; the guide says "do not forget this".
+  - term: Resolute Technique
+    why: >-
+      Your hits cannot be evaded and never crit. No accuracy to gear for,
+      and three map modifiers stop mattering.
+  - term: Versatile Combatant
+    why: >-
+      Lets a slam character cap block at 68% attack and 65% spell with a
+      decent shield, which is otherwise out of reach.
+  - term: Timeclasp
+    why: >-
+      Two, on the Mercenary, each with 15% or more increased skill effect
+      duration. "Mandatory for the swap."
+    detail: >-
+      He needs the Legendary Rings node to wear them.
+      [[Runegraft of the Warp]] and a better duration support let you
+      replace them later.
+  - term: Breathstealer
+    why: >-
+      On the Mercenary, anointed with [[Deep Breaths]]. Also "mandatory for
+      the swap". Needs the Legendary Gloves node.
+  - term: Living Lightning Support
+    level: recommended
+    why: >-
+      Makes small lightning minions that count as allies, so your own
+      [[Rallying Cry]] exerts for the full 25%. Needs any flat "adds
+      lightning damage to attacks" roll on your gear.
+  - term: Loyal Bodyguard
+    level: recommended
+    why: >-
+      A fifth of every hit goes to the Mercenary while his life is higher
+      than yours.
+  - term: Runegraft of the Warp
+    level: recommended
+    why: >-
+      The first big purchase in Tier 16 maps. With it the Mercenary's buff
+      "rarely, if ever" falls off.
+  - term: Kaom's Binding
+    level: recommended
+    why: >-
+      A belt on the Mercenary that turns part of nearby enemies' physical
+      damage into fire. The guide calls it an item "you never replace".
+  - term: Echoes of Creation
+    level: recommended
+    why: >-
+      The last stage: 10–15% more damage for each warcry exerting an attack,
+      paid for with 15–20% of your life as physical damage each time.
+
+labs:
+  - lab: Normal
+    node: "Ascendant: Strength and Dexterity, then Passive Point"
+    why: "Two small Ascendant nodes. The guide's whole comment is \"It's only up from here!\""
+  - lab: Cruel
+    node: "Ascendant: Slayer"
+    why: "The big campaign step. Life leech is not removed at full life, plus culling strike and area of effect. A second small node covers the Dexterity and Intelligence that slams lack."
+  - lab: Merciless
+    node: "Ascendant: Saboteur"
+    why: "30% area of effect, 15% cooldown recovery and a 20% chance to deal 50% more area damage. The guide: \"a lot better than it may look at first glance\"."
+  - lab: Eternal
+    node: Noble Blood
+    why: "Run it when you are ready to swap, and change to [[Luminary]] at the altar: [[Noble Blood]], Legendary Gloves, Legendary Rings, [[Loyal Bodyguard]] and [[Bestowed Knighthood]]. Bring respec points — it is 5 for each Ascendant node you undo."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: spectral-throw
+    title: Acts 1–3
+    levels: Level 1–37
+    uses: >-
+      [[Spectral Throw]] to level 12, then [[Sunder]] with any two-handed
+      weapon, and two-handed axes from Act 2 on.
+    changes: >-
+      [[Intimidating Cry]] arrives with Sunder, and [[Autoexertion]] takes
+      over pressing it at level 24. You path through projectile damage in
+      Act 1 and refund it at 12.
+    links:
+      - name: Level 1–11
+        gems: [Spectral Throw, Volley Support, Chance to Bleed Support]
+      - name: Level 12–17
+        gems: [Sunder, Ruthless Support, Chance to Bleed Support]
+      - name: Level 18–23
+        gems: [Sunder, Melee Physical Damage Support, Ruthless Support]
+      - name: Level 24–37
+        gems: [Sunder, Melee Physical Damage Support, Fortify Support, Ruthless Support]
+      - name: Warcries
+        gems: [Intimidating Cry, Autoexertion, Seismic Cry, Herald of Ash]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Rage Support]
+      - name: Utility
+        gems: [Blood Rage, Frostblink, Vulnerability]
+    moveOn: "Sunder is in a four-link, Autoexertion is shouting for you, and the first Labyrinth is done."
+    details:
+      - title: Gear in the campaign
+        body: |
+          Physical damage on the weapon first. Then life and resistances on everything else, on armour bases where you can.
+
+          One exception: no life roll on the body armour, so you can take the Life Mastery that gives 15% increased maximum life for exactly that. Life regeneration counts as a life roll.
+
+          For mana, a jewel with physical attack damage leeched as mana, bought or rolled with [[Orb of Alteration]]. By level 65 the guide wants a mana flask with the Enduring prefix.
+      - title: Tree milestones
+        body: |
+          - Martial Experience straight away, with the Two Hand Mastery for damage against rare and unique enemies.
+          - [[Measured Fury]]: warcries exert one more attack, so [[Intimidating Cry]] covers three slams and not two.
+          - The Warcry Mastery that stops warcries exerting travel skills. Until you have it, a [[Leap Slam]] between shout and slam wastes an exert.
+          - [[Resolute Technique]], and drop [[Precision]].
+
+          For the exact route, open the planner under Sources. It has a tree for each level band.
+      - title: Level 1 to 12
+        body: |
+          The Scion starts with [[Spectral Throw]]. The planner's first setup adds [[Sniper's Mark]] and [[Decoy Totem]] for bosses, and [[Leap Slam]] with [[Frostblink]] to move. Keep Frostblink at level 1.
+
+          Buy [[Earthshatter]] at 12 as well and let it level in your second weapon set. You will not use it for fifty levels.
+  - id: acts-4-10
+    phase: early
+    image: sunder
+    title: Acts 4–10
+    levels: Level 38–67
+    uses: >-
+      [[Sunder]] with [[Fist of War Support]], warcries on
+      [[Autoexertion]], and your own [[Rallying Cry]] backed by
+      [[Herald of Purity]].
+    changes: >-
+      Two more Labyrinths as an Ascendant: Slayer, then Saboteur.
+      [[Molten Shell]] goes on [[Cast when Damage Taken Support]], and
+      [[Enduring Cry]] comes out for bosses.
+    links:
+      - name: Main skill
+        gems: [Sunder, Melee Physical Damage Support, Fortify Support, Fist of War Support]
+      - name: Warcries
+        gems: [Intimidating Cry, Autoexertion, Seismic Cry, Herald of Ash]
+      - name: Buffs
+        gems: [Blood Rage, Vulnerability, Herald of Purity, Frostblink]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Rage Support]
+      - name: Guard and shouts
+        gems: [Cast when Damage Taken Support, Molten Shell, Rallying Cry, Enduring Cry]
+    moveOn: "Kitava is dead in Act 10 and your Earthshatter gem has 20% quality."
+    details:
+      - title: A first taste of the endgame trick
+        body: |
+          [[Herald of Purity]] summons Sentinels when you hit or kill. They do no damage worth counting. They are there because they are allies, and your own [[Rallying Cry]] exerts for more damage per ally nearby. The guide puts it at 20% more with Sentinels alive.
+
+          It is the same mechanic you will later build the character on, pointed the other way.
+      - title: Set Molten Shell up correctly
+        body: |
+          [[Cast when Damage Taken Support]] at level 1 and [[Molten Shell]] at level 7. Those are the guide's levels; the pairing makes the shell come up after very little damage taken.
+      - title: A Rage Mastery to change later
+        body: |
+          During the campaign the tree takes the Rage Mastery that intimidates nearby enemies while you have Rage. At the end of the campaign, swap it for the one that grants Rage when you use a warcry.
+      - title: Bandits
+        body: |
+          The planner kills all three, for the passive point, on every page from level 1. The guide's text does not discuss it.
+  - id: early-maps
+    phase: early
+    image: intimidating-cry
+    title: Early maps, still an Ascendant
+    levels: White and yellow maps
+    uses: >-
+      [[Earthshatter]] with a two-handed axe. Six warcries, four of them on
+      [[Autoexertion]]. Rare gear, plus cheap uniques if they are going for
+      a few Chaos.
+    changes: >-
+      The playstyle is now the final one: slam, and the shouts burst the
+      spikes. Only the weapon is still your own. Meanwhile you collect the
+      kit for the swap and look for a Swiftblade.
+    links:
+      - name: Main skill
+        gems: [Earthshatter, Overexertion Support, Pulverise Support, Fortify Support, Brutality Support]
+      - name: Automatic warcries
+        gems: [Intimidating Cry, Autoexertion, Infernal Cry, Maim Support]
+      - name: More warcries and curse
+        gems: [Autoexertion, Battlemage's Cry, Seismic Cry, Vulnerability]
+      - name: Buffs
+        gems: [Herald of Purity, Rallying Cry, Enduring Cry, Frostblink]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Blood Rage]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Molten Shell]
+    moveOn: "you own Facebreaker, two Timeclasps, an anointed Breathstealer, a shield, an amulet with flat physical damage — and a Swiftblade's Warrant."
+    details:
+      - title: The sixth link
+        body: |
+          The planner lists two versions of this setup, one with [[Melee Physical Damage Support]] as a sixth gem and one without.
+
+          The author's FAQ explains why he leaves it out later: it is the best damage support on paper but carries 10% less attack speed, and "you can't one hit monsters harder than you already do". [[Pulverise Support]] has a similar penalty and stays, because its area of effect makes more spikes hit.
+      - title: Mana without a flask
+        body: |
+          "Non-Channelling Skills have −X to Total Mana Cost" on both rings and the amulet lets you drop the mana flask. The bench recipe is usually found in high red maps, so buy the items or wear Praxis until then.
+      - title: Cheap uniques, and one flask roll
+        body: |
+          [[Carnage Heart]] fixes resistances and attributes and adds damage, because the Slayer node means you always count as leeching. Belt of the Deceiver is "a hard belt to beat early on".
+
+          Put "reduced effect of Shock on you" on one flask. The guide asks for shock protection at every stage and never says why in so many words.
+      - title: Finding the Mercenary without being a Luminary
+        body: |
+          You do not have to wait. From the guide's FAQ, added on 13 November:
+
+          1. As an Ascendant, when you meet a Swiftblade with a duration support on [[Rallying Cry]] and ideally [[Pride]], choose Rematch and beat him. He drops his [[Mercenary Warrant]].
+          2. **Do not use the Warrant yet.**
+          3. Run the fourth Labyrinth, change to Luminary and take [[Noble Blood]].
+          4. Use the Warrant, beat him again, and now the game offers to hire him.
+
+          In 3.30 a Warrant opens a rematch area called the Proving Grounds and is no longer placed with a map. The guide's steps read the same either way.
+  - id: luminary-swap
+    phase: endgame
+    image: breathstealer
+    title: "The swap: the first working version"
+    levels: Red maps
+    uses: >-
+      [[Facebreaker]], a shield, and no weapon. A hired Swiftblade holding
+      your old axe, wearing two [[Timeclasp]] rings and an anointed
+      [[Breathstealer]].
+    changes: >-
+      You change ascendancy and stop owning a weapon. The tree trades axe
+      and two-hand nodes for shield and block, and takes
+      [[Versatile Combatant]]. [[Living Lightning Support]] replaces
+      [[Herald of Purity]]; [[Flesh and Stone]] and [[Shield Charge]] come
+      in.
+    links:
+      - name: Main skill
+        gems: [Earthshatter, Overexertion Support, Fortify Support, Brutality Support, Fist of War Support, Pulverise Support]
+      - name: Automatic warcries
+        gems: [Intimidating Cry, Autoexertion, Infernal Cry, Living Lightning Support]
+      - name: More warcries and curse
+        gems: [Autoexertion, Battlemage's Cry, Vulnerability, Seismic Cry]
+      - name: Buffs
+        gems: [Rallying Cry, Enduring Cry, Frostblink, Flesh and Stone]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Blood Rage]
+      - name: The Mercenary's own skills
+        gems: [Rallying Cry, Pride]
+    moveOn: "the Mercenary's buff stays up through a whole map and you farm Tier 16."
+    details:
+      - title: The kit, and the one stat that keeps you alive
+        body: |
+          Before the swap, the guide calls one roll on your own gear mandatory: "Adds Physical Damage to Attacks", tier 2 or better, on your amulet. When the Mercenary's buff drops, that roll is all your fists have. With it you "can still clear most trash mobs".
+
+          The rest:
+
+          - [[Facebreaker]]. Foulborn if cheap, plain if not.
+          - Any roll of flat lightning damage to attacks, for [[Living Lightning Support]]. A ring is the usual place; the tier does not matter.
+          - 100% chance to avoid being shocked, from your belt and an Abyss jewel, topped up with avoid-ailments boots if short.
+          - For the Mercenary: his weapon, two [[Timeclasp]] rings, [[Breathstealer]] anointed with [[Deep Breaths]], and boots with 100% chance to avoid being frozen. "Freeze is a big issue on Mercenaries."
+      - title: His weapon is your weapon
+        body: |
+          Only the minimum and maximum physical damage of his weapon matter. Attack speed on it does nothing for you.
+
+          So do not search the trade site by physical damage per second: you would pay for speed. Search by the damage numbers. Karui Chopper is the best base, and for the first swap the axe you levelled with is good enough.
+      - title: His resistances — where the guide contradicts itself
+        body: |
+          The 3.30 revision changed the early Mercenary setup "to prioritize his Resistances due to Mercenaries receiving −60% to all Elemental Resistances".
+
+          But the FAQ further down still says: "Mercenaries do not have a Resistance Penalty like Characters do, meaning he needs a total of 75% in each Resistance." That line is 3.29 and is now wrong. In a level 68+ area he needs 135% in total to show 75%.
+
+          The guide's own order still holds: no resistance below zero first, then elemental, then chaos. And it concedes "you probably won't be able to fully cap his Resistances" at this stage.
+      - title: If the uniques are not on the market yet
+        body: |
+          The 13 November FAQ lists stand-ins that add duration or cooldown recovery to his [[Rallying Cry]]:
+
+          - Elder boots whose "supported by More Duration" modifier also carries 10–15% increased skill effect duration.
+          - Shaper or Crusader belts and boots with increased cooldown recovery rate; a weaker version can be crafted at the bench.
+          - A belt corrupted with 10–15% increased skill effect duration.
+          - Howlcrack, only as a last resort. It makes him shout constantly, and "he often kills himself".
+      - title: Ascendancy points at the swap
+        body: |
+          [[Noble Blood]]; Legendary Gloves and Legendary Rings, so he can wear [[Breathstealer]] and the [[Timeclasp]] rings; [[Loyal Bodyguard]]; [[Bestowed Knighthood]] for his [[Pride]].
+
+          The guide notes the taunt on Bestowed Knighthood is unreliable, because your own warcries taunt and overwrite his.
+
+          The planner has two pages for this moment and they disagree: one matches the list above, the other takes four unique-slot nodes and no Bestowed Knighthood. The written guide describes the first. Follow the text.
+  - id: endgame
+    phase: endgame
+    image: stranglegasp
+    title: "Endgame: the Mercenary's real gear"
+    levels: Tier 16 maps and pinnacle bosses
+    uses: >-
+      On the Mercenary: [[Kaom's Binding]], a double Foulborn [[Deidbell]],
+      [[Shaper's Seed]], and a weapon made for him. On you:
+      [[Runegraft of the Warp]], cluster jewels, [[The Light of Meaning]]
+      and [[Unnatural Instinct]].
+    changes: >-
+      His buff stops falling off, so the rings can go. He curses with
+      [[Vulnerability]] for you, and you switch your own curse to
+      [[Punishment]]. [[Tempest Shield]] caps spell block.
+    links:
+      - name: Main skill
+        gems: [Earthshatter, Overexertion Support, Fortify Support, Brutality Support, Fist of War Support, Pulverise Support]
+      - name: Automatic warcries
+        gems: [Intimidating Cry, Autoexertion, Infernal Cry, Living Lightning Support]
+      - name: More warcries and curse
+        gems: [Autoexertion, Battlemage's Cry, Seismic Cry, Punishment]
+      - name: Buffs
+        gems: [Rallying Cry, Frostblink, Flesh and Stone, Tempest Shield]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Blood Rage]
+      - name: The Mercenary's own skills
+        gems: [Rallying Cry, Pride, Vulnerability]
+    moveOn: "you kill pinnacle bosses and want more than the build needs."
+    details:
+      - title: What each Mercenary item does
+        body: |
+          - **[[Kaom's Binding]].** The guide compares it to taking 25% of physical hit damage as fire, with a twist: it changes how nearby enemies convert their damage, so it is stronger against monsters that already convert. "Nearby" is 6 metres. It protects both of you.
+          - **Foulborn [[Deidbell]].** Warcry buff effect and warcry cooldown recovery, "some of the most important Modifiers for your Mercenary". Buff effect raises the 24% directly. If the double version is too dear, take the one with cooldown recovery.
+          - **[[Shaper's Seed]].** 4% of life regenerated per second for both of you. With an "additional curse" implicit, he can also apply [[Vulnerability]] through a ring.
+
+          Each unique slot costs an ascendancy point. The planner's endgame page spends four — Amulets, Belts, Gloves and Helmets — and gives up [[Bestowed Knighthood]] to pay for them. The rings are no longer needed, and [[Breathstealer]] can be corrupted into a rare item, which frees Legendary Gloves again.
+      - title: A supposed bonus that 3.30 removed
+        body: |
+          The FAQ says Eldritch implicits "when in Presence of a Pinnacle Atlas Boss" are always active on a Mercenary, because the player counts as one.
+
+          3.30 fixed that as a bug. The guide's own changelog for 11 November says the mention was removed; the FAQ sentence is still there. Roll ordinary implicits on his gear.
+      - title: Your jewels, in the guide's order
+        body: |
+          1. [[Runegraft of the Warp]], before anything else.
+          2. A large cluster with Furious and Iron Breaker; cheaper clusters with a single Mob Mentality notable work.
+          3. [[The Light of Meaning]], then [[Unnatural Instinct]] beside it.
+          4. [[Stormshroud]], which lets you change Pantheon from Soul of the Brine King to Soul of Lunaris.
+
+          On rare jewels: attack speed while holding a shield, then life. You need three specific lines somewhere across them — reduced effect of curses on you, physical attack damage leeched as mana, and 3% mana reservation efficiency.
+      - title: What numbers to expect
+        body: |
+          One figure, from the author's FAQ: "Even without Echoes of Creation you can easily hit >20m DPS as Pure Physical Non-Crit without Ramp."
+
+          It is a 3.29 statement and we could not reproduce it: a planner cannot easily show damage that arrives through another character's buff. The guide publishes no effective hit point figure at all.
+  - id: echoes
+    phase: endgame
+    image: resolute-technique
+    title: "Echoes of Creation: the finished version"
+    levels: Uber bosses and beyond
+    uses: >-
+      [[Echoes of Creation]], a Royal Plate with as much flat physical
+      damage reduction as you can get, a [[Glorious Vanity]] for
+      [[Corrupted Soul]], and [[Divine Shield]].
+    changes: >-
+      Every attack now hurts you first. With enough armour that becomes a
+      source of energy shield regeneration, and the helmet's damage bonus
+      stacks once per warcry.
+    links:
+      - name: Main skill
+        gems: [Earthshatter, Overexertion Support, Fortify Support, Brutality Support, Fist of War Support, Pulverise Support]
+      - name: Automatic warcries
+        gems: [Intimidating Cry, Autoexertion, Infernal Cry, Living Lightning Support]
+      - name: More warcries and curse
+        gems: [Autoexertion, Battlemage's Cry, Seismic Cry, Punishment]
+      - name: Buffs
+        gems: [Rallying Cry, Frostblink, Flesh and Stone]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Blood Rage]
+    moveOn: "there is no next stage."
+    details:
+      - title: The self-hit, in the author's numbers
+        body: |
+          [[Echoes of Creation]]: "When you Attack, take 15–20% of Life as Physical Damage for each Warcry Exerting the Attack", and "Skills deal 10–15% more Damage for each Warcry Exerting them".
+
+          The author counts about 4.5 warcries exerting each slam and works with 5. At the best rolls that is 75% of your life as physical damage per attack — about 4,700 on his character — for 75% more damage. You attack more than twice a second.
+
+          Armour, flat physical damage reduction, [[Flesh and Stone]] and Fortification all apply to it. His result: "instead of 4,700 damage you actually end up taking something in the realm of 150–300".
+
+          Flat reduction is the part that matters most, because it is added after armour. His example: going from 80% to 90% halves what gets through. Hence the Royal Plate.
+      - title: How the damage turns into recovery
+        body: |
+          [[Glorious Vanity]] with Doryani's name gives [[Corrupted Soul]]: about 1,000 energy shield, and incoming damage is split between life and energy shield.
+
+          [[Divine Shield]] regenerates energy shield based on physical damage you prevented. Reducing a 4,700 hit to 200 counts as preventing 4,500. The author's estimate is 600–1,000 energy shield per second from your own attacks.
+
+          He adds a disclaimer and so do we: the exact numbers depend on your gear.
+      - title: Priorities on the helmet and chest
+        body: |
+          On [[Echoes of Creation]], the self-damage roll first — as close to 15% as you can find — then the damage roll.
+
+          The Royal Plate needs 297 Strength. The tree is built around a "40% reduced Attribute Requirements" enchant on it, from Tailoring Orbs or Heist Blueprints, so that Strength nodes can be turned into tattoos. Without the enchant, the FAQ gives a fallback tree that drops one jewel socket and takes block nodes.
+      - title: Two points in a bloodline
+        body: |
+          The planner's last page takes only two unique-slot nodes, Amulets and Belts, and puts its final two ascendancy points into Primal Roar, a notable the tree data files under "Farrul": 4% increased attack speed per minion. With all eight [[Living Lightning Support]] minions that is 32%.
+
+          The author's FAQ weighs it against [[Bestowed Knighthood]], which he says is about 10% more damage, and chooses speed because "the build struggles with Attack Speed".
+
+          The guide does not say how that bloodline is unlocked, so we cannot tell you either. Until you know, [[Bestowed Knighthood]] is the stated alternative.
+      - title: A gem that should not be in the planner
+        body: |
+          The 11 November changelog reads: "Removed Aspect of Lunaris from Echoes Variant as it did not go Core."
+
+          The last planner page still lists an Aspect of Lunaris gem in the body armour, and the FAQ still explains how the self-hit keeps its stacks up. Ignore both. The same changelog says the chest was changed to a Royal Plate to make up for the lost mitigation.
+
+powerCurve: |
+  This is our reading; the guide describes the stages and not the curve.
+
+  The damage is a product of three things. A **weapon**: yours at first, then a share of the Mercenary's through [[Rallying Cry]]. A **multiplier on that weapon**: nothing at first, then [[Facebreaker]]'s 600–1000% more. And the **warcry stack**: exerted slams, [[Admonisher]], and spikes that hit a second time.
+
+  At level 30 you have the smallest version of the third and none of the second: [[Sunder]], an axe, and [[Intimidating Cry]] on [[Autoexertion]]. It is a normal slam character and plays like one. At level 70 the third part is complete — [[Earthshatter]], four warcries, [[Deep Breaths]] — and that is what carries the first maps. The guide's own praise for this phase is about slams in general, not about this build.
+
+  Then the swap replaces the first part and adds the second in a single afternoon. By our arithmetic the worst gloves already beat holding the axe, and the gap widens with every point of warcry buff effect on the Mercenary. This is the "sudden" in the curve, and it is why the tier list rates the build so high.
+
+  The same swap is the build's one fragile moment. Before it, your damage was a weapon you could not lose. After it, your damage is a buff with a duration, and for a while that duration is shorter than its cooldown. Everything bought between the swap and Tier 16 — the duration support, the rings, the anoint, the Runegraft — is spent on making a borrowed weapon behave like an owned one. Once it does, the rest is ordinary scaling: a better axe for him, attack speed for you.
+
+  Defence grows the other way round: steadily. Life and armour in the campaign, a shield and capped block at the swap, a fifth of every hit moved to the Mercenary, and only at the very end a helmet that turns your own attacks into recovery.
+
+upgrades:
+  - step: "[[Earthshatter]] with 20% quality"
+    why: >-
+      First because the guide will not let you map without it, and because
+      it costs Labyrinth runs, not currency. Quality is extra spikes, and
+      spikes are your single-target damage until the swap.
+  - step: "An amulet with tier 2 or better flat physical damage to attacks"
+    why: >-
+      Before the swap, not after. It is the only damage your fists have when
+      the Mercenary's buff is down, and early on the buff is down often. It
+      sits above the gloves because the gloves are worthless without
+      something to multiply.
+  - step: "The swap kit: [[Facebreaker]], two [[Timeclasp]], [[Breathstealer]] with [[Deep Breaths]], and a Swiftblade with a duration support"
+    why: >-
+      One purchase in effect, because none of the parts works without the
+      others. The gloves are the multiplier; the rest is buff uptime. An
+      ordinary pair of gloves and your old axe are enough to start.
+  - step: "Resistances and freeze avoidance on the Mercenary"
+    why: >-
+      New in 3.30, and ahead of any damage item for him: he has −60% to all
+      resistances in maps, and when he dies you lose the weapon, a fifth of
+      your defence and an aura together.
+  - step: "[[Runegraft of the Warp]]"
+    why: >-
+      The guide's "absolute highest priority and first big purchase" once
+      you farm Tier 16. It multiplies buff duration, so it turns "usually
+      up" into "always up" — and it frees both ring slots on the Mercenary
+      for the items below. No price given.
+  - step: "[[Kaom's Binding]] and a Foulborn [[Deidbell]] on the Mercenary"
+    why: >-
+      After the Runegraft because they need the ascendancy points the rings
+      were using. One is the largest physical mitigation in the build, the
+      other raises the 24% itself.
+  - step: "A purpose-made weapon for the Mercenary, then cluster jewels and [[The Light of Meaning]]"
+    why: >-
+      A better axe scales every hit. Only its damage range counts, not its
+      speed, so — our reading — the axe you want is not the one other
+      players are bidding on. The guide makes it with the Recombinator,
+      which 3.30 made less generous. Jewels come after: they add to damage
+      you already have.
+  - step: "[[Echoes of Creation]] with a high-armour Royal Plate"
+    why: >-
+      Last, and only with the chest. It adds up to 75% more damage to a
+      build whose author says it "really doesn't need more damage", and
+      without enough physical reduction it kills you.
+
+play:
+  mapping: |
+    1. Check the map. The guide's list to avoid: less cooldown recovery rate, 60% less recovery of life and energy shield, buffs on players expire faster, reduced chance to block or less armour, and monsters cannot be leeched from. The guide's claim is that the build "ignores most map modifiers" otherwise: it cannot miss, does not crit, and deals only physical damage.
+    2. Turn on [[Blood Rage]]. Make sure [[Flesh and Stone]] is in Sand Stance.
+    3. [[Shield Charge]] into the pack and slam with [[Earthshatter]].
+    4. Press your own [[Rallying Cry]] when it is ready. The other warcries fire themselves, and each one bursts the spikes.
+    5. Move on. Do not outrun the Mercenary.
+
+    Step 5 is the tension in this build. You are fast and the weapon is not yours. His shout has to reach you, which is why the guide wants area of effect on his [[Rallying Cry]] "when you are moving very quickly ahead of him". If your hits suddenly do nothing, you have left him behind.
+  bossing: |
+    1. Curse the boss. Early that is your own [[Vulnerability]]; in the endgame setup the Mercenary applies it and you add [[Punishment]].
+    2. Stand close and slam. More spikes hit a big target, and more again in a small arena.
+    3. Keep your own [[Rallying Cry]] on cooldown, and in the earlier setups [[Enduring Cry]] for Endurance Charges.
+    4. For pinnacle bosses the guide swaps [[Fist of War Support]] for [[Melee Physical Damage Support]].
+
+    Two things differ from a map. A lone boss is worth 25 Power, not 30, until the Mercenary has the Roaring Challenge anoint, so his buff is a sixth weaker. And there are no packs to keep charges and [[Blood Rage]] going, which is what the Mob Mentality cluster and one leech tattoo are for.
+
+    The author says the finished build can "instantly phase Pinnacle bosses". That is his claim, from 3.29.
+
+deaths:
+  - situation: "Just after the swap, your hits stop doing damage in the middle of a pack"
+    cause: >-
+      The Mercenary's [[Rallying Cry]] buff ran out before he could shout
+      again, or you ran out of its range. Unarmed, nearly all your damage
+      was that buff.
+    fix: >-
+      Flat physical damage on your amulet so you are never at zero. A
+      duration support on his cry, two good [[Timeclasp]] rings and the
+      [[Deep Breaths]] anoint. Then [[Runegraft of the Warp]].
+  - situation: "The Mercenary dies, and then you do"
+    cause: >-
+      Since 3.30 he has −60% to all resistances in maps and less damage
+      reduction at high level. The guide adds freeze as a known problem.
+      With him gone, [[Loyal Bodyguard]] and [[Pride]] go too.
+    fix: >-
+      Resistances on his gear before damage, 100% freeze avoidance on his
+      boots, and more maximum life on him than on you. Do not give him
+      Howlcrack in red maps.
+  - situation: "You put on Echoes of Creation and die to your own attacks"
+    cause: >-
+      Each slam takes 15–20% of your life as physical damage for every
+      warcry exerting it, and four or five usually are.
+    fix: >-
+      Do not equip it without the chest. Flat physical damage reduction on
+      a high-armour body armour, [[Flesh and Stone]] and Fortification up,
+      and the lowest self-damage roll you can afford.
+  - situation: "A map that looked fine kills you"
+    cause: >-
+      The few modifiers that matter all attack the engine: warcry cooldown,
+      buff duration, recovery, block and armour, or leech.
+    fix: >-
+      Reroll any map with less cooldown recovery, buffs expiring faster,
+      less recovery, reduced block or armour, or no leech.
+
+troubleshooting:
+  - symptom: "Damage flickers: strong for a few seconds, then nothing"
+    cause: >-
+      Buff uptime. An 8-second cooldown against a buff that lasts a few
+      seconds unless you extend it.
+    fix: >-
+      Check, in order: the duration support on his [[Rallying Cry]]; the
+      sign and size of the duration roll on each [[Timeclasp]]; the anoint
+      on [[Breathstealer]]; then buy [[Runegraft of the Warp]].
+  - symptom: "Packs melt, bosses are slow"
+    cause: >-
+      Power. A boss and you make 25 of the 30 Power the cry can count. And
+      spikes need room to overlap.
+    fix: >-
+      Roaring Challenge on his gloves, [[Melee Physical Damage Support]]
+      for the fight, and stand so the ring of spikes sits on the boss.
+  - symptom: "I run out of mana"
+    cause: >-
+      Slams are expensive and warcries cost mana too.
+    fix: >-
+      A mana-leech jewel in the campaign; an Enduring mana flask by level
+      65; then reduced mana cost of non-channelling skills on both rings
+      and the amulet.
+  - symptom: "Earthshatter feels weak compared with Sunder"
+    cause: >-
+      The spikes are not bursting, or there are too few. They only burst
+      when a warcry or another slam goes off near them.
+    fix: >-
+      20% quality on the gem, [[Deep Breaths]] allocated, and warcries of
+      different quality so they go off one after another.
+  - symptom: "The Mercenary jumps away and stops shouting near me"
+    cause: >-
+      He has Leap Slam, or to a lesser degree Flicker Strike, in his skill
+      list. The guide says both upset his targeting.
+    fix: >-
+      Hire a different Swiftblade. His skills cannot be changed.
+  - symptom: "I cannot wear the body armour after the swap, or attributes fall short"
+    cause: >-
+      Slam trees are short of Dexterity and Intelligence, and the endgame
+      chest needs 297 Strength without its enchant.
+    fix: >-
+      The Ascendant small nodes cover this while levelling.
+      [[Living Lightning Support]] needs 105 Intelligence at level 18 for
+      all eight minions; the guide says seven is fine.
+
+patch:
+  - note: >-
+      **Nothing 3.30 did touches the skills.** We searched the official
+      notes for Earthshatter, Rallying Cry, warcries, exerted attacks and
+      Facebreaker. There are no changes to any of them in the normal game.
+  - entry: mercenary-nerfs
+    note: >-
+      **The Mercenary needs resistances now, and the guide says two
+      different things about it.** Its 11 November revision puts his
+      resistances first because of the −60% penalty. Its FAQ still claims
+      Mercenaries have no penalty. The patch notes settle it: −60% in level
+      68+ areas. He also has less damage reduction at high level, which
+      matters because [[Loyal Bodyguard]] sends your damage to him.
+  - entry: mercenary-nerfs
+    note: >-
+      **The 20% attack damage nerf should not matter — our reading, not
+      confirmed.** It lowers how hard a Mercenary's own attacks hit. This
+      build does not use his attacks; it uses the damage of the weapon in
+      his hand, through [[Rallying Cry]]. The author's 3.30 changelog lists
+      no damage loss. Nobody has tested it.
+  - note: >-
+      **Always-on pinnacle implicits are gone.** "Eldritch modifiers that
+      only applied while a Unique Monster or Pinnacle Boss was in your
+      Presence were always applying when on a Minion or a Mercenary." Fixed
+      in 3.30. The guide's changelog says it removed the advice; one FAQ
+      line survived.
+  - entry: reliquarian-luminary
+    note: >-
+      **The Luminary nerf does not apply here.** Golden Glory was halved,
+      but it only affects Link skills, and this build has none. It takes
+      Noble Blood, Loyal Bodyguard, Bestowed Knighthood and the unique-slot
+      nodes. None of them appears in the notes, and their text in GGG's
+      live tree data matches the guide.
+  - entry: crafting-service-tweaks
+    note: >-
+      **The Recombinator advice is from before the change.** The guide calls
+      it the best way to make your endgame amulet, body armour and shield,
+      and the cheapest way to make his weapon. In 3.30 it gives fewer
+      modifiers when the inputs have few, takes the item level of the chosen
+      base, and refuses corrupted items. The 3.30 changelog does not mention
+      it.
+  - entry: item-tiers
+    note: >-
+      **Small gain.** Cord Belt now drops normally, and the guide added it
+      to the last stage for an extra anoint.
+  - entry: map-device-items
+    note: >-
+      **Warrants work differently.** A Mercenary Warrant now opens a rematch
+      in the Proving Grounds and is not used with a map. The guide's hiring
+      steps were written on 13 November and fit that.
+  - entry: ruthless-changes
+    note: >-
+      **Ignore the Ascendant lines if you see them quoted.** 3.30 changes
+      the Ascendant's Gladiator and Pathfinder nodes — in the Ruthless
+      section only. This build levels on the Ascendant's Slayer and Saboteur
+      nodes, and in the live tree data both read as the guide describes.
+
+strengths:
+  - "Very tanky for a damage dealer: capped block, armour, Fortification and a Mercenary taking a fifth of each hit."
+  - "Ignores most map modifiers. No accuracy, no crit, no elemental damage, pure physical that ignores enemy reduction."
+  - "Starts as ordinary slams, which have been a safe league start for years, and needs no unique item to begin."
+  - "The planner is on real 3.30 data, and 3.30 changed none of its skills."
+  - "Very high damage once the Mercenary's buff is permanent, by its author's account."
+  - "Works solo self-found, according to someone who has done it twice."
+weaknesses:
+  - "Melee. You stand in the pack."
+  - "Your weapon is a buff from another character. Early after the swap it falls off, and your damage with it."
+  - "You change ascendancy in the fourth Labyrinth, which costs respec points and needs a kit bought in advance."
+  - "Depends on finding a Swiftblade with the right supports, and on keeping him alive now that he has −60% resistances."
+  - "One author. The tier list that ranks it is published by the same site."
+  - "No prices anywhere in the guide, and its only damage figure is a 3.29 claim."
+  - "The last stage hurts you with every attack and punishes mistakes in gearing."
+avoidIf: >-
+  Pick something else if you dislike melee, or if you want a character whose
+  damage is entirely its own. Skip it if changing ascendancy halfway sounds
+  like a chore, or if hunting a particular Mercenary does. If you came here
+  for the Luminary that stands back while the Mercenary kills, that is a
+  different build — the Flame Link Mercenary Luminary on this site — and it
+  came out of 3.30 much worse than this one.
+
+sources:
+  - title: "Maxroll: Facebreaker Luminary League Starter (Shayd)"
+    url: https://maxroll.gg/poe/build-guides/facebreaker-luminary-league-starter
+    kind: guide
+    note: "The only guide for this build. Written 9 October 2026 for 3.29, revised for 3.30 on 11 and 13 November. Three leftovers from 3.29 are called out in this article."
+  - title: "Maxroll planner"
+    url: https://maxroll.gg/poe/planner/l54q5b0v
+    kind: pob
+    note: "Source of every gem setup and the bandit choice. All tree pages are stamped 3300, which is 3.30 data. Its last page still lists an Aspect of Lunaris gem the changelog says was removed."
+  - title: "Maxroll: league starter tier list for 3.30"
+    url: https://maxroll.gg/poe/tierlists/league-starter-build-tier-list
+    kind: data
+    note: "Dated 13 November 2026. Six builds in S tier; this is one. The list only covers builds with a guide on the same site."
+  - title: "PoEDB: Rallying Cry"
+    url: https://poedb.tw/us/Rallying_Cry
+    kind: data
+    note: "Source of the 4% per 5 Power, the 30 Power cap, the 8-second cooldown, the Power values and the exert line. An old patch note quoted on the same page says 3%; the gem text and the guide's 24% agree on 4%."
+  - title: "PoEDB: Facebreaker"
+    url: https://poedb.tw/us/Facebreaker
+    kind: data
+    note: "600–1000% more physical damage with unarmed melee attacks, and the Foulborn area-of-effect line."
+  - title: "PoEDB: Earthshatter"
+    url: https://poedb.tw/us/Earthshatter
+    kind: data
+    note: "Level 12, works unarmed, 15 spikes, spikes deal 30% less, and that a Scion buys it from Nessa."
+  - title: "PoEDB: Echoes of Creation"
+    url: https://poedb.tw/us/Echoes_of_Creation
+    kind: data
+    note: "Exact wording and ranges of the self-damage and damage lines. The Timeclasp duration range also comes from its PoEDB page."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Live 3.30 text for Loyal Bodyguard, Bestowed Knighthood, Admonisher, Deep Breaths, Roaring Challenge, Versatile Combatant and the Ascendant's Slayer and Saboteur nodes."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Source of the Mercenary changes, the Eldritch implicit fix and the Recombinator changes. Searched for changes to the build's skills; found none outside the Ruthless section."
