@@ -20,7 +20,9 @@ const { locale } = Astro.props;
     const target = event.target instanceof Element ? event.target.closest('[data-theme-toggle]') : null;
     if (!target) return;
     const root = document.documentElement;
-    const current = root.dataset.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    // Light unless the reader has already switched: the stylesheet does not
+    // consult the system preference, so neither does the toggle.
+    const current = root.dataset.theme === 'dark' ? 'dark' : 'light';
     const next = current === 'dark' ? 'light' : 'dark';
     root.dataset.theme = next;
     try {
@@ -49,10 +51,6 @@ const { locale } = Astro.props;
   /* Show the icon of the theme you would switch to. */
   .icon--sun { display: none; }
   .icon--moon { display: block; }
-  @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme='light'])) .icon--sun { display: block; }
-    :global(:root:not([data-theme='light'])) .icon--moon { display: none; }
-  }
   :global(:root[data-theme='dark']) .icon--sun { display: block; }
   :global(:root[data-theme='dark']) .icon--moon { display: none; }
 </style>

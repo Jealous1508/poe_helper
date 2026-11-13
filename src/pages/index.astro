@@ -1,6 +1,6 @@
 ---
 import Redirect from '../components/Redirect.astro';
 import { currentLeague } from '../config/leagues';
-import { pagePath } from '../i18n';
+import { defaultLocale, pagePath } from '../i18n';
 ---
-<Redirect to={pagePath('en', currentLeague.id)} />
+<Redirect to={pagePath(defaultLocale, currentLeague.id)} />

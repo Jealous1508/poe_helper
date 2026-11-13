@@ -4,6 +4,15 @@ import vi from './vi.json';
 export const locales = ['en', 'vi'] as const;
 export type Locale = (typeof locales)[number];
 
+/**
+ * Where `/` sends a reader who has not chosen a language.
+ *
+ * Vietnamese, because that is who the site is for. English is still the
+ * language every page is written in first, and the one a missing
+ * translation falls back to — that is a separate job from this one.
+ */
+export const defaultLocale: Locale = 'vi';
+
 export const localeNames: Record<Locale, string> = { en: 'English', vi: 'Tiếng Việt' };
 
 const dictionaries: Record<Locale, Record<string, string>> = { en, vi };

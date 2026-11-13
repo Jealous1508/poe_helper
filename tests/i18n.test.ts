@@ -1,5 +1,16 @@
 import { describe, expect, it } from 'vitest';
-import { pagePath, switchLocalePath, t } from '../src/i18n';
+import { defaultLocale, locales, pagePath, switchLocalePath, t } from '../src/i18n';
+
+describe('defaultLocale', () => {
+  // The site is for Vietnamese players; English is the language it is
+  // written in first, which is a different thing. Pinned here because the
+  // only place it shows is the redirect from "/", which no test can see.
+  it('sends an undecided reader to the Vietnamese pages', () => {
+    expect(defaultLocale).toBe('vi');
+    expect(locales).toContain(defaultLocale);
+    expect(pagePath(defaultLocale, '3.30')).toBe('/vi/3.30/');
+  });
+});
 
 describe('pagePath', () => {
   it('joins locale, league and segments with a trailing slash', () => {
