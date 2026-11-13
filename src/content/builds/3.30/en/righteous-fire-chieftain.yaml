@@ -438,6 +438,198 @@ stages:
 
           His own atlas page currently reads, in full, that the atlas changed and he needs time to work it out. **Nobody has re-solved Righteous Fire's farming strategies for 3.30 yet.**
 
+powerCurve: |
+  This build has two damage engines, and they grow in different ways. The burn from [[Righteous Fire]] is a share of **your** maximum life, multiplied by burning and damage-over-time modifiers. The explosions from [[Hinekora, Death's Fury]] are a share of **the monster's** life, so they grow with the map and not with your gear. The defence is one loop — fire resistance cuts the self-burn and, through the [[Fire Mastery]], heals you — with block and recovery on block added much later.
+
+  Early, you have none of it: for 30 levels you are a melee Marauder. Then, in one respec and three labs, nearly everything arrives for free. The burn at level 31, [[Tasalio, Cleansing Water]] at the start of Act 4, then Hinekora and [[Ramako, Sun's Light]]. None of those costs currency, which is why the campaign and the first maps feel stronger than the gear you are wearing.
+
+  The middle is where it thins out. From level 68 to about 85 the damage grows by ordinary steps — a six-link, the Elder helmet — and the defence is still resistances and regeneration, with nothing that answers a hit. Pohx calls this the dangerous window. It closes around level 85 with [[Glancing Blows]] and a shield that heals you on block, the largest survivability jump the build has.
+
+  Late, the two engines part ways. Clearing holds up, because an explosion worth 250% of a monster's life is as big as the monster is. Single target does not, and this is our reading of why: the burn is tied to your life pool, which does not multiply the way a weapon does, and a boss alone in a room gives you no kills to explode. So the late damage is bought somewhere else — [[Fire Trap]], then [[Scorching Ray of Immolation]] totems from about level 90 — and Pohx puts the average player's ceiling at 2–4 million damage per second.
+
+upgrades:
+  - step: "[[Rise of the Phoenix]] and [[Immortal Flesh]]"
+    cost: "3.29: both cheap — a few chaos at most for the belt"
+    why: >-
+      Cheapest first, in Pohx's own order. Both feed the loop the build lives
+      on: the shield is his best early route to 90% maximum fire resistance,
+      which cuts the self-burn, and the belt is a large lump of flat life
+      regeneration. Nothing further down this list helps while the burn is
+      still winning.
+  - step: "Ignite spread on gloves (Searing Exarch implicit)"
+    why: >-
+      Pohx's number one priority for currency spent. It is what turns one
+      [[Hinekora, Death's Fury]] explosion into a chain across the pack, and
+      it needs 30–50% global ignite chance to do anything. Buy the gloves
+      rather than roll them: the implicit is roughly a 1-in-50 roll. Our
+      reading of why it outranks a six-link: it multiplies clear speed, and
+      clear speed is how this build earns everything below.
+  - step: "A five- or six-link body armour for [[Righteous Fire]]"
+    cost: "3.29: about 20 chaos for a six-link — not a current price"
+    why: >-
+      Each extra socket is one more support on the burn that is always on.
+      Pohx puts it after the gloves; our reading is that a support adds to
+      damage you already have, while ignite spread changes how whole packs
+      die. Expect it to be harder than last league: [[Orb of Binding]] is gone
+      and [[Orb of Chance]] is much rarer.
+  - step: "Crafted Elder helmet with level 16 Concentrated Effect and level 16 Burning Damage, with [[Fire Trap]] socketed in it"
+    why: >-
+      Two more supports on your single target without needing more links. It
+      comes after the Righteous Fire links in Pohx's order. It is also the
+      first purchase on this list aimed at bosses, the one thing the build is
+      bad at, and in a league built around bosses we would not leave it long.
+  - step: "A Shaper shield with 3–5% of life gained on block, and the respec into [[Glancing Blows]]"
+    why: >-
+      The largest survivability jump in the build, and Pohx's first answer to
+      dying in red maps. He places it around level 85. It is a respec as well
+      as a purchase: you need the shield and the block nodes together, aiming
+      for 75% block and 75% spell block. If red maps are killing you before
+      that, move this step up. It takes the shield slot from
+      [[Rise of the Phoenix]]; check your maximum fire resistance after the
+      swap, because the article does not say what replaces the shield's share.
+  - step: "[[Cloak of Flame]]"
+    why: >-
+      Converts physical damage taken to fire, which your fire resistance then
+      eats, so it covers the one damage type your resistances do not. The
+      article lists it with the block respec in red maps. It is a body armour,
+      so the Righteous Fire links have to move into it; we have no price for a
+      linked one.
+  - step: "[[Scorching Ray of Immolation]] on [[Spell Totem Support]], with a +1 totem shield and Totemic Zeal"
+    why: >-
+      The best single target the build has: totems bypass the stacking cap, so
+      the debuff passes 70 stacks. Pohx calls it a level-90-plus transition,
+      not a starter setup, which is why it sits this low. But bossing is the
+      build's weakness and 3.30 is a league about bosses, so plan it earlier
+      than last league. The article does not say how the +1 totem shield sits
+      with the block shield above — read Pohx's totem Path of Building before
+      you buy it.
+  - step: "[[Archdemon Crown]], then [[Mageblood]]"
+    why: >-
+      The deep end. The crown replaces the crafted Elder helmet and still
+      holds Fire Trap. Mageblood is the belt Pohx is explicit about — this,
+      not [[Headhunter]]. They come last because everything above changes
+      whether you live or how fast you clear, while these raise a ceiling the
+      article prices at 50–300 Divine in last league's money.
+
+play:
+  mapping: |
+    1. Read the map's modifiers before you open it. No Regeneration, reduced effect of non-curse auras and negative maximum resistances are never run; Less Recovery only in white maps.
+    2. [[Righteous Fire]] is already on. There is nothing to press for damage.
+    3. [[Shield Charge]] from pack to pack. Things burn as you pass, and a kill that explodes takes its neighbours with it.
+    4. In maps [[Infernal Cry]] sits where [[Enduring Cry]] was. The swap is Pohx's; the article does not record what it adds, so we will not invent a reason.
+    5. Throw [[Fire Trap]] at anything that outlives the burn: a tough rare, the map boss.
+
+    If a rare will not die, stop moving. [[Ramako, Sun's Light]] only works while you are stationary. That follows from the node's wording; no source spells it out for mapping.
+  bossing: |
+    1. From about level 90, put the [[Scorching Ray of Immolation]] totems down first. Before that, skip this step.
+    2. Throw [[Fire Trap]] under the boss and keep its burning ground there. The ground is the part that does the work, which is why Fire Trap of Blasting is no use.
+    3. Walk in until the boss is inside your fire, then **stand still**. [[Ramako, Sun's Light]] sets its fire resistance to −20% only while you are stationary.
+    4. Keep [[Punishment]] on it. [[Summon Skitterbots]] needs nothing from you.
+    5. When a slam is coming, move. You lose Ramako for as long as you are moving and get it back when you stop.
+
+    Two things differ from a map, and both are our reading rather than a quote. There are no kills, so [[Hinekora, Death's Fury]] does nothing against a lone boss. And the warcry swap presumably goes back: the article puts Infernal Cry on the bar "while mapping", which we take to mean [[Enduring Cry]] returns for a boss.
+
+deaths:
+  - situation: "You turn Righteous Fire on, or swap a piece of gear, and your life drains away"
+    cause: >-
+      Your fire resistance is too low. The self-burn is fire damage and
+      nothing but fire resistance cuts it; the same number sets your
+      [[Fire Mastery]] regeneration. The article is flat about it: that is
+      the only cause.
+    fix: >-
+      Read the uncapped number in brackets on the character sheet, not the
+      75% cap. 120% minimum before you turn it on, 130% or more by red maps:
+      two Ruby Rings, and bench-crafted fire resistance on every open suffix.
+  - situation: "Level 68 to 85, early red maps: a pack or a rare kills you straight through your regeneration"
+    cause: >-
+      You have no recovery on block yet. This is the window Pohx warns about.
+      Our gloss on the mechanics: regeneration heals at the same rate whatever
+      is hitting you, so until the hits themselves heal you, a burst outruns
+      it.
+    fix: >-
+      A Shaper shield with 3–5% of life gained on block plus
+      [[Glancing Blows]], up to 75% block and 75% spell block. Until you have
+      both, take red maps slowly — that is Pohx's own hardcore advice.
+  - situation: "You open a map and die in the first pack, or to your own fire"
+    cause: >-
+      A map modifier took the defence away. No Regeneration and Less Recovery
+      cut the healing; reduced effect of non-curse auras weakens every aura
+      you run; negative maximum resistances raises the burn and lowers the
+      healing at the same time.
+    fix: >-
+      Never run No Regeneration, reduced aura effect or negative maximum
+      resistances. Less Recovery in white maps only. Reroll the map; do not
+      try to play through it.
+  - situation: "A boss kills you while you stand in front of it"
+    cause: >-
+      [[Ramako, Sun's Light]] pays you to stand still, and block is a chance,
+      not a guarantee. The article calls standing still on a boss the worst
+      habit to have on a budget. Counting it among the usual deaths is our
+      inference, not a statistic.
+    fix: >-
+      Step out of anything telegraphed and stop again afterwards; you lose
+      Ramako's −20% only while you are moving. If a fight never lets you
+      stand, this is the wrong build for it: Pohx does not advise Uber bosses
+      at all.
+
+troubleshooting:
+  - symptom: "Cold or lightning resistance is suddenly under the cap"
+    cause: >-
+      Your fire resistance went down. [[Tasalio, Cleansing Water]] caps cold
+      and lightning by applying 50% of your fire resistance modifiers to
+      them, so all three fall together.
+    fix: >-
+      Put the fire resistance back. The early-maps pivot away from stacking
+      it is about the passive tree; base fire resistance stays high.
+  - symptom: "Packs die one monster at a time instead of chain-exploding"
+    cause: >-
+      One link of the chain is missing. The explosion has to ignite, which
+      needs 30–50% global ignite chance; the ignite has to spread, which
+      needs one of three sources; and nothing may shatter the corpses.
+    fix: >-
+      Check ignite chance first, then that you have exactly one spread source
+      — Searing Exarch gloves, the Fan the Flames cluster or Berek's Respite.
+      Remove any source of cold explosions. And check the map: "monsters
+      cannot be affected by elemental ailments" switches the chain off
+      entirely.
+  - symptom: "[[Swift Affliction Support]] adds nothing to Righteous Fire"
+    cause: >-
+      [[Lifetap Support]] is not in the same link. Lifetap gives Righteous
+      Fire a hidden Duration tag, and that tag is the only reason Swift
+      Affliction applies.
+    fix: "Put Lifetap back in the Righteous Fire link."
+  - symptom: "A new weapon or a new passive did not move the damage"
+    cause: >-
+      It gave a stat Righteous Fire ignores. The skill does not hit, so
+      critical strikes, accuracy, attack speed and cast speed do nothing, and
+      **spell damage does not scale it** either.
+    fix: >-
+      A sceptre, never a wand. Look for fire damage-over-time multiplier
+      first, then +1 to level of all fire skill gems, then increased fire
+      damage.
+  - symptom: "The burn is survivable, but your life sits low and never fills"
+    cause: >-
+      Not enough regeneration on top of the burn. The mid-game target is
+      800–1,400 life regenerated per second; endgame is 1,000+ with 7,000+
+      life.
+    fix: >-
+      Flat life regeneration, and "% increased Life Regeneration Rate", which
+      multiplies the Fire Mastery regeneration. [[Immortal Flesh]] if you are
+      not wearing it. Take the six-node Life Mastery setup in one go for the
+      life.
+  - symptom: "Bosses take far too long"
+    cause: >-
+      Partly the build: its single target is low by design. Beyond that,
+      check three things. You are moving, so Ramako is off. You are still
+      paying for resistance reduction — [[Flammability]], Fire Exposure,
+      Legacy of Fury — which does nothing once Ramako sets the value. Or you
+      are using Fire Trap of Blasting, which has no burning ground.
+    fix: >-
+      Stand still. Swap to [[Punishment]]. Use plain [[Fire Trap]], in the
+      Elder helmet. Run [[Summon Skitterbots]] with
+      [[Unbound Ailments Support]] after Uber lab. Then plan the Scorching
+      Ray totems, which are the build's real answer.
+
 patch:
   - note: >-
       **Nothing in 3.30 touched this build.** Righteous Fire, [[Fire Trap]],

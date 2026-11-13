@@ -337,6 +337,93 @@ stages:
 
           Nên cái đánh đổi, theo chính hai file của anh ta, là: cùng damage, ít armour thô hơn, nhiều block hơn, và một con số effective hit point lớn hơn hẳn. **Anh ta không đưa lý do nào cho việc đổi** ngoài tiêu đề video, và chúng tôi không xem video đó.
 
+powerCurve: |
+  Build này là hai nửa không bao giờ chạm nhau, nên nó có hai đường cong. Damage là một phép nhân: effectiveness of added damage của gem, leo từ 150.6% ở gem level 1 lên 346% ở level 20, áp lên physical damage trên vũ khí của bạn, rồi một nửa kết quả chuyển thành lightning. Crit và [[The Taming]] nhân nó thêm lần nữa trên nhân vật được công bố. Phòng thủ là block với armour từ phía [[Guardian]], cùng [[Divine Shield]] trả thêm lên trên một khi đã có armour cho nó làm việc.
+
+  Đường cong damage thì chúng tôi mô tả được, vì nó đọc ra từ gem và từ cây staff. Từ level 12 skill đã bật, và thứ bạn cảm thấy là gem level với roll vũ khí: mỗi gem level nâng hệ số nhân lên, và mỗi cây vũ khí bạn đổi vào đều được nhân với nó. Có đúng một bậc thật sự, ở level 66, khi [[The Yielding Mortality]] thay cho cây hai tay rare nào đó bạn đang cầm. Cách đọc đó là của chúng tôi, từ các con số của PoEDB; tác giả không công bố lộ trình leveling nào.
+
+  Đường cong phòng thủ thì chúng tôi không mô tả được. Chính bài viết nói block và armour đến từ cây passive và ascendancy, nhưng không có cây leveling nào và không có thứ tự Labyrinth nào được công bố, nên không gì nói được chúng tới lúc nào. Thứ tồn tại là đầu xa: một nhân vật level 98 trên planner 3.29 với 75% block, 75% spell block, 10,348 armour và 10.6 triệu hit damage mỗi giây khi không chọn boss. Một phần spell block đó là +25% của chính cây staff. Hãy coi mọi thứ nằm giữa level 12 và file đó là chưa có bản đồ.
+
+play:
+  mapping: |
+    Nhịp chơi dưới đây đến từ chính chữ trên gem. Tác giả không công bố guide viết nào, nên chưa ai mô tả anh ta chơi nó thế nào.
+
+    1. Đánh một con quái bằng [[Static Strike]]. Cú hit cho static energy trong 4 giây gốc; nó chồng tới 3 lần.
+    2. Cứ đi tiếp. Khi static energy còn, tia tự bắn ra từ người bạn — mỗi 0.32 giây ở gem level 20, vào tối đa 6 mục tiêu, cộng một lần chain. Chúng lo phần dọn quái.
+    3. Đánh một cái nữa trước khi hết 4 giây. Skill effect duration kéo dài cái cửa sổ đó.
+    4. [[Vaal Molten Shell]] nằm trên [[Cast when Damage Taken Support]] và không cần bạn làm gì.
+
+    Nhân vật được công bố có mang [[Elemental Weakness]], mà trang không hiện nó được áp bằng cách nào.
+  bossing: |
+    Mấy cái tia gây ít damage hơn cú attack 30%, nên khi đánh boss thì cú attack là công cụ còn tia là phần thêm. Bạn đứng trong tầm melee và cứ vung, ngược hẳn với cách bạn dọn quái.
+
+    1. Curse boss bằng [[Elemental Weakness]].
+    2. Giữ cho mấy cú vung tới đều. Nếu bạn chạy hình dáng link lấy từ file Slayer 3.29 của tác giả, [[Ruthless Support]] làm mỗi cú hit thứ ba lớn hơn hẳn; ở mức 1.83 attack mỗi giây được công bố thì nhịp đó dễ giữ.
+    3. Bước ra khỏi bất cứ thứ gì lớn và là elemental. Block với armour là thứ giữ nhân vật này đứng được, và bài viết gắn cờ những cú elemental không tránh được cùng chaos damage nặng là chỗ hình dáng đó đáng lẽ phải sụp. Chưa nguồn nào thử chuyện đó; nó suy ra từ mấy con số.
+
+    Đừng trông đợi con 10.6 triệu được công bố khi đánh pinnacle boss. Con số đó không chọn boss nào.
+
+troubleshooting:
+  - symptom: "[[The Taming]] thêm ít hơn hẳn so với chữ ghi trên nó"
+    cause: >-
+      Cái ring trả theo mỗi loại elemental ailment trên quái, mà Static Strike
+      cấp được một. Nó tự shock được nhưng không gây một chút cold hay fire
+      damage nào, nên freeze với ignite chỉ đến từ dòng 10% chance của chính
+      cái ring. Đây là cách đọc của chúng tôi; không có gì trên trang của tác
+      giả giải thích ailment thứ ba.
+    fix: >-
+      Chưa ai công bố câu trả lời. Hãy định giá cái ring theo một loại ailment
+      cho tới khi bạn tận mắt thấy ba loại trên một mục tiêu. 3.30 có đưa ra
+      một ý chưa được thử: [[Doedre's Tongue]] với "All Damage can Ignite,
+      Shock or Freeze against Cursed Enemies", trên một mục tiêu bị curse bằng
+      [[Elemental Weakness]].
+  - symptom: "[[Trinity Support]] không cho bạn gì"
+    cause: >-
+      Nó chỉ trả công khi bạn đang gây fire, cold và lightning damage. Static
+      Strike cho bạn lightning nhờ chuyển đổi và không cho gì khác.
+    fix: >-
+      Cold với fire phải đến từ gear hoặc aura. File Slayer 3.29 của tác giả
+      dùng [[Hatred]] và [[Herald of Ash]]; trang Guardian của anh ta không
+      công bố dàn aura, nên chúng tôi không nói được là bản Guardian có giữ
+      chúng.
+  - symptom: "Cặp Forbidden jewel không làm gì"
+    cause: >-
+      [[Forbidden Flame]] và [[Forbidden Flesh]] chỉ chạy khi là một cặp ghi
+      cùng một notable. Hai notable khác nhau thì vô dụng.
+    fix: >-
+      Khớp notable trên cả hai trước khi mua. Nhân vật được công bố dùng
+      notable nào thì trang không hiện, nên chúng tôi không nói được bạn cần
+      khớp cái nào — đừng mua một cặp chỉ vì nhân vật đó có đeo.
+  - symptom: "[[Divine Shield]] không hồi được gì"
+    cause: >-
+      Nó trả 3% phần physical damage đã chặn từ các hit gần đây, nên nó không
+      trả gì khi bạn chưa bị đánh và trả rất ít khi armour chưa chặn được
+      nhiều. Energy shield không hồi vượt quá giá trị armour của bạn được. Còn
+      chuyện hit bị block có được tính là đã chặn hay không là câu hỏi chúng
+      tôi không giải quyết được.
+    fix: >-
+      Lấy nó khi armour của bạn đã lớn. Nó là phần thưởng cho việc đã trâu,
+      không phải cách để trở nên trâu.
+  - symptom: "Damage của bạn không ở đâu gần con 10.6 triệu được công bố"
+    cause: >-
+      Con số đó là một nhân vật level 98 với gem 20/20, cây staff, 92.7%
+      critical strike chance và multiplier 415%, power charge và một mức shock
+      15%, trên engine 3.29, không chọn boss. Nó là một điểm đến, không phải
+      mốc so sánh cho một nhân vật đang chạy map.
+    fix: >-
+      So cùng điều kiện với nhau. Rồi kiểm hai thứ gem nhân mạnh nhất: phần
+      added physical damage trên vũ khí của bạn, và level của chính viên gem.
+  - symptom: "Campaign chậm lại như bò"
+    cause: >-
+      Không có nguồn — đây là quy tắc chung cho một skill melee physical có
+      chuyển đổi, và chúng tôi nói rõ như vậy. Vũ khí của bạn đã tụt lại. Khi
+      added damage bị nhân nặng thế này, một cây vũ khí cũ ở đây khiến bạn mất
+      nhiều hơn phần lớn build khác.
+    fix: >-
+      Một cây hai tay rare có roll physical damage đơn lẻ lớn nhất bạn tìm
+      được. Từ Act 6, Item Tier in ngay trong tên, nên bạn đọc được một cây
+      ngon ngay trên mặt đất.
+
 patch:
   - entry: ruthless-changes
     note: >-

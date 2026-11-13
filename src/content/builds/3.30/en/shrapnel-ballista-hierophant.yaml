@@ -392,6 +392,171 @@ stages:
         body: |
           The gem page lists none at all. That is a gap in the guide rather than proof they are worthless, but it means nobody has published what an awakened version of this link is worth. Do not assume the usual upgrades apply.
 
+powerCurve: |
+  Damage here is damage per totem multiplied by the number of totems, and Strength is on both sides of that sum. [[Replica Alberon's Warpath]] turns every 80 Strength into added chaos damage on each hit; [[Replica Iron Commander]] turns every 200 Strength into another totem; and [[Ritual of Awakening]] then pays 3% more damage per totem on top. The same two numbers are the defence: [[The Iron Fortress]] turns Strength into block, and each totem is 1% life regeneration.
+
+  There is no early part to this curve. Nothing works alone — no boots, no damage; no bow, no reason to stack Strength; no [[Crown of Eyes]], and the tree does nothing — so the character goes from not functioning to the entry tier in one purchase. The entry file reports about 40 million damage per second at 2,712 Strength. That is a 3.29 figure with 3 frenzy charges, 15 Wither stacks and no boss target set.
+
+  After that, power arrives in lumps, and this is our reading of why. A point of Strength adds a little chaos damage, but a totem arrives only at each 200, and a totem is damage, a Ritual of Awakening stack and regeneration at once. So upgrades feel like nothing, nothing, then a jump. It is also why [[Mageblood]] is a sideways step: about 200 Strength lost, a whole totem, for about 24,000 more effective hit points in the published files.
+
+  The top of the published ladder is the min-max file at 3,351 Strength: three more totems and about 72 million, with the same missing configuration. What never improves is clearing. The totems last 8 seconds, their range is shorter than the other ballista builds, and the guide never claims this maps well.
+
+upgrades:
+  - step: "The whole entry set at once: [[Replica Iron Commander]], [[Replica Alberon's Warpath]], [[Crown of Eyes]], [[The Iron Fortress]], [[Maligaro's Virtuosity]], [[Astramentis]] with the [[Watchtowers]] anoint, a crafted [[Penetrating Arrow Quiver]] and the twelve-passive spell-damage [[Large Cluster Jewel]]"
+    cost: "3.29: about 150 Divine for the entry tier — the only published budget"
+    why: >-
+      It is first because there is no order inside it: nothing works alone.
+      The boots are the damage, the bow is the totem count, the helmet makes
+      the tree work, the chest is the block. Buying half of it buys nothing.
+      Budget extra for the quiver: in 3.30 its "Prefixes cannot be changed"
+      craft costs 4 Divine plus 4 Blessed.
+  - step: "Strength up to the next 200: past 2,000, then 2,200"
+    why: >-
+      The guide sets a hard floor of 2,000 Strength and names 1,800, 2,000
+      and 2,200 as the breakpoints. Each one is a totem, and a totem is
+      damage, 3% more damage on every other totem, and 1% life regeneration.
+      The buying rule — take whatever cheapest Strength crosses the next 200
+      — is our reading; no source states it as advice.
+  - step: "A corrupted [[The Iron Fortress]] with +1 socketed gems or +2 socketed projectile gems"
+    why: >-
+      It takes [[Shrapnel Ballista]] to level 22, which unlocks the gem's
+      fourth innate totem. The article calls it the corruption that pays. We
+      put it straight after the Strength floor because it is a totem you
+      cannot get from Strength at any price; where it falls by cost we cannot
+      say, because nothing prices it.
+  - step: "Undo the budget substitutions: [[Emperor's Mastery]], then a Perfect Guardian Turtle, then the cooldown recovery support in place of Enhance"
+    why: >-
+      That is the gear page's own order. The Perfect turtle adds a free
+      Determination aura to the regeneration and stun immunity that
+      [[Fertile Will]] already gives through the plain one. These sit below
+      the totem steps because none of them adds a totem.
+  - step: "[[Mageblood]] with a 4-flask roll — if your problem is dying"
+    why: >-
+      A defensive purchase, not a damage one: capped resistances, movement
+      speed, permanent phasing and better suppression, for about 200
+      Strength. The published files show lower damage and about 24,000 more
+      effective hit points. Do not pay extra for a Foulborn copy; at 3.29
+      prices that was roughly 18 Divine for an equivalent modifier.
+  - step: "[[Simplex Amulet]] and more Strength — if your problem is damage"
+    why: >-
+      The article is direct about the choice: if you are killing bosses and
+      surviving, this is the better use of the same money than Mageblood. It
+      replaces Astramentis and is part of how the min-max file reaches 3,351
+      Strength.
+  - step: "[[Kalandra's Touch]], [[Bound by Destiny]], and corruptions on the gloves, helmet and boots"
+    why: >-
+      The last stretch of Strength. Bound by Destiny is +15% Strength while you wear
+      two Warlord-influenced items. Together with the amulet this is three
+      more totems in the published file. It is last because it is the most
+      currency per totem on the list — our judgement, since no source prices
+      any of it. A corrupted Alberon's must still read at least 1 to 80 chaos
+      per 80 Strength.
+
+play:
+  mapping: |
+    1. Place the [[Shrapnel Ballista]] totems and stand back. They do all of the damage.
+    2. Place them again. They last 8 seconds, so you are resummoning the whole time, and their range is shorter than the other ballista builds — you place closer and more often than you expect.
+    3. Move with [[Dash]].
+    4. Leave the rest alone. [[Steelskin]] and [[Blood Rage]] sit on [[Automation]] in the bow, and the utility flasks use themselves when full.
+
+    Two gaps we will not paper over. [[Despair]] and [[Frenzy]] are in the links, and the article does not record how either is fired. And Tier 17 and Tier 16.5 maps need a modifier filter that the guide does not supply.
+  bossing: |
+    The buttons are the same. What changes is that keeping totems on the field becomes the whole job.
+
+    1. Check the Beast Spectre is alive before you go in. [[Fertile Will]] gives nothing without it.
+    2. Place the totems, and place them again before they expire rather than after. The guide lists totems dying in some fights as a real weakness.
+    3. Treat the totem count as your life bar as well as your damage. Each totem is 1% life regeneration from [[Ritual of Awakening]], so a fight that clears your totems also cuts your recovery. That link is our reading of the node, not something the guide says about bossing.
+    4. Stay out of what you can see coming. Block, evasion and suppression are chances.
+
+    The published damage assumes 15 Wither stacks. [[Withering Touch Support]] is in the main link, so we read the opening seconds of a fight as weaker than the number; no source says how long the stacks take.
+
+deaths:
+  - situation: "The Beast Spectre dies in the middle of a fight"
+    cause: >-
+      The article states the mechanism: if the spectre dies you lose the
+      regeneration and the stun immunity together, because [[Fertile Will]]
+      only works while you have a Beast Spectre. That it is a usual death is
+      our inference; no source reports how this build dies.
+    fix: >-
+      [[Raise Spectre]] at gem level 20 or higher, and check the turtle
+      before every boss. [[Convocation]] is in the bow link; we read that as
+      being there to keep it beside you.
+  - situation: "Your totems are gone and your life stops coming back"
+    cause: >-
+      Our reasoning from the node text. [[Ritual of Awakening]]'s
+      regeneration is per totem, the totems last 8 seconds and die in some
+      fights, and almost none of this build's survivability is a pool: about
+      2,000 life per second on a little over 6,000 life.
+    fix: >-
+      Resummon early, not late. [[Pursuit of Faith]]'s placement speed is
+      what makes that possible; treat an empty field as an emergency, not as
+      a gap in damage.
+  - situation: "A map with no regeneration"
+    cause: >-
+      An open risk, not a finding. The regeneration is load-bearing and
+      [[Lifetap Support]] is in four separate setups, so this modifier should
+      hurt badly. The guide claims the build handles every Tier 16 modifier
+      and never addresses it. No source confirms or denies it.
+    fix: >-
+      Until someone has tested it in 3.30, skip the modifier. We have no
+      measured answer to give you.
+
+troubleshooting:
+  - symptom: "You have fewer totems than you expected"
+    cause: >-
+      No source states a total, so check each contributor: Strength against
+      the next 200 on [[Replica Iron Commander]], the gem at level 22 for its
+      fourth innate totem, [[Pursuit of Faith]], and the [[Watchtowers]]
+      anoint — not Surveillance. Our own sum comes to around 20 at 2,712
+      Strength.
+    fix: >-
+      Count them in Path of Building rather than trusting our arithmetic,
+      then buy the cheapest Strength that crosses the next 200.
+  - symptom: "The totems fire and almost nothing dies"
+    cause: >-
+      One of the pieces that makes the damage is missing or wrong. A
+      corrupted [[Replica Alberon's Warpath]] that no longer reads at least
+      1 to 80 chaos per 80 Strength is scrap. And [[Crown of Eyes]] only
+      carries increases across, so the [[Large Cluster Jewel]] must be the
+      base whose small passives give 10% increased spell damage.
+    fix: >-
+      Read the boots' chaos line and the cluster's base before anything
+      else. There is no version of this build that works on partial gear.
+  - symptom: "Attack block is far lower than the guide's"
+    cause: >-
+      You have the Foulborn [[The Iron Fortress]], which swaps attack and
+      spell block. Or your Strength is lower than the file's: the chest
+      gives 1% attack block per 50 Strength.
+    fix: >-
+      The normal version of the chest. Spell block is Unlucky on it either
+      way; that downside comes with the item.
+  - symptom: "Your Path of Building number is well under the published one"
+    cause: >-
+      The published files are configured with 3 frenzy charges and 15 Wither
+      stacks, at level 100, on the 3.29 engine, with no boss target set.
+      They are not boss numbers, and they are not your numbers until your
+      configuration matches.
+    fix: >-
+      Match the configuration before comparing, and then compare Strength:
+      the three files sit at 2,712, 2,665 and 3,351.
+  - symptom: "You bought Mageblood and your damage went down"
+    cause: >-
+      That is the trade working as described. It costs about 200 Strength,
+      which is a whole totem; the published Mageblood file has less damage
+      than the entry file and about 24,000 more effective hit points.
+    fix: >-
+      Nothing is broken. If damage was your problem, the article's answer
+      was [[Simplex Amulet]] and more Strength instead.
+  - symptom: "Crafting the quiver costs far more than the guide implies"
+    cause: >-
+      3.30 changed the crafting the guide was written against. Meta-modifier
+      recipes moved to Nightmare Maps, and "Prefixes cannot be changed" on
+      armour and quivers now costs 4 Divine plus 4 Blessed — exactly the
+      craft the [[Penetrating Arrow Quiver]] needs.
+    fix: >-
+      Budget for it, or buy a finished quiver. It must carry an additional
+      arrow, pierce 2 additional targets and tier-1 Strength.
+
 patch:
   - note: >-
       **The headline caveat: this is a 3.29 guide wearing a 3.30 label.** The

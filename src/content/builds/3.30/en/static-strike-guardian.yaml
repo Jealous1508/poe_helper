@@ -337,6 +337,93 @@ stages:
 
           So the trade, on his own two files, is: the same damage, less raw armour, more block, and a much larger effective hit point number. **He gives no reason for the switch** beyond the title of the video, and we did not watch it.
 
+powerCurve: |
+  This build is two halves that never touch, so it has two curves. The damage is a multiplication: the gem's effectiveness of added damage, which climbs from 150.6% at gem level 1 to 346% at level 20, applied to the physical damage on your weapon, with half of the result converted to lightning. Crit and [[The Taming]] multiply that again in the published character. The defence is block and armour from the [[Guardian]] side, with [[Divine Shield]] paying out on top once there is armour for it to work with.
+
+  The damage curve we can describe, because it is read off the gem and the staff. From level 12 the skill is on, and what you feel is gem levels and weapon rolls: every gem level raises the multiplier, and every weapon you swap in is multiplied by it. There is one real step, at level 66, when [[The Yielding Mortality]] replaces whatever rare two-hander you were carrying. That reading is ours, from PoEDB's numbers; the author publishes no levelling plan.
+
+  The defence curve we cannot describe. The article's own line is that block and armour come from the tree and the ascendancy, but no levelling tree and no Labyrinth order is published, so nothing says when they arrive. What exists is the far end: a level 98 character on a 3.29 planner with 75% block, 75% spell block, 10,348 armour and 10.6 million hit damage per second against no selected boss. Part of that spell block is the staff's own +25%. Treat everything between level 12 and that file as unmapped.
+
+play:
+  mapping: |
+    The rhythm below comes from the gem's own text. The author has published no written guide, so nobody has described how he plays it.
+
+    1. Hit one enemy with [[Static Strike]]. The hit grants static energy for a base 4 seconds; it stacks up to 3 times.
+    2. Keep moving. While static energy is up, beams fire from you on their own — every 0.32 seconds at gem level 20, at up to 6 targets, with one extra chain. They do the clearing.
+    3. Hit something again before the 4 seconds run out. Skill effect duration stretches that window.
+    4. [[Vaal Molten Shell]] sits on [[Cast when Damage Taken Support]] and needs nothing from you.
+
+    The published character carries [[Elemental Weakness]], and the page does not show how it is applied.
+  bossing: |
+    The beams deal 30% less damage than the attack, so on a boss the attack is the tool and the beams are a bonus. You stand in melee range and keep swinging, which is the opposite of how you clear.
+
+    1. Curse the boss with [[Elemental Weakness]].
+    2. Keep the swings coming. If you run the link shape from the author's 3.29 Slayer file, [[Ruthless Support]] makes every third hit much larger; at the published 1.83 attacks per second that pattern is easy to keep.
+    3. Step out of anything large and elemental. Block and armour are what hold this character up, and the article flags unavoidable elemental hits and heavy chaos damage as the place that shape should fail. No source has tested that; it follows from the numbers.
+
+    Do not expect the published 10.6 million on a pinnacle boss. That figure has no boss selected.
+
+troubleshooting:
+  - symptom: "[[The Taming]] adds far less than its text suggests"
+    cause: >-
+      The ring pays per type of elemental ailment on the enemy, and Static
+      Strike supplies one. It shocks on its own but deals no cold or fire
+      damage, so freeze and ignite come only from the ring's own 10% chance.
+      This is our reading; nothing on the author's page explains the third
+      ailment.
+    fix: >-
+      Nobody has published an answer. Value the ring at one ailment type
+      until you have seen three on a target. 3.30 offers an untested idea:
+      [[Doedre's Tongue]] with "All Damage can Ignite, Shock or Freeze
+      against Cursed Enemies", on a target cursed with [[Elemental Weakness]].
+  - symptom: "[[Trinity Support]] is giving you nothing"
+    cause: >-
+      It only pays out while you deal fire, cold and lightning damage.
+      Static Strike gives you lightning by conversion and nothing else.
+    fix: >-
+      Cold and fire have to come from gear or auras. The author's 3.29
+      Slayer file uses [[Hatred]] and [[Herald of Ash]]; his Guardian page
+      does not publish an aura set, so we cannot say the Guardian keeps
+      them.
+  - symptom: "The Forbidden jewel pair does nothing"
+    cause: >-
+      [[Forbidden Flame]] and [[Forbidden Flesh]] only work as a pair that
+      names the same notable. Two different notables do nothing.
+    fix: >-
+      Match the notable on both before you buy. Which notable the published
+      character uses is not shown on the page, so we cannot tell you which
+      one to match — do not buy a pair on that character's say-so.
+  - symptom: "[[Divine Shield]] is not regenerating anything"
+    cause: >-
+      It pays 3% of the physical damage prevented from hits recently, so it
+      pays nothing until you are being hit and little until armour is
+      stopping a lot. Energy shield cannot be recovered above your armour
+      value. Whether blocked hits count as prevented is a question we could
+      not resolve.
+    fix: >-
+      Take it once your armour is large. It is a reward for being tanky, not
+      a way of becoming tanky.
+  - symptom: "Your damage is nowhere near the published 10.6 million"
+    cause: >-
+      That number is a level 98 character with a 20/20 gem, the staff, 92.7%
+      critical strike chance and a 415% multiplier, power charges and a 15%
+      shock, on the 3.29 engine with no boss selected. It is a destination,
+      not a benchmark for a character in maps.
+    fix: >-
+      Compare like with like. Then check the two things the gem multiplies
+      hardest: the added physical damage on your weapon, and the gem's own
+      level.
+  - symptom: "The campaign has slowed to a crawl"
+    cause: >-
+      Not sourced — this is the general rule for a converted physical melee
+      skill, and we say so. Your weapon has fallen behind. With added damage
+      multiplied this heavily, an old weapon costs more here than on most
+      builds.
+    fix: >-
+      A rare two-hander with the largest single physical damage roll you can
+      find. From Act 6 the Item Tier is printed in the name, so you can read
+      a good one off the ground.
+
 patch:
   - entry: ruthless-changes
     note: >-

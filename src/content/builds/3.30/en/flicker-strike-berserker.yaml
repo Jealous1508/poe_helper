@@ -459,6 +459,137 @@ stages:
 
           So your edge is worth relatively less than it was, even though nothing about the build changed. Plan to actually kill the rare monsters rather than blinking past them.
 
+powerCurve: |
+  Once it is assembled, this build's damage is a chain that starts at your life total. [[Foulborn Ghostwrithe]] sets maximum energy shield to 35% of maximum life, [[Energy Blade]] turns maximum energy shield into weapon lightning damage, [[Voice of the Storm]] rolls that damage twice, and [[Ancestral Fury]] lands every use in two places. The defence comes off the same pool: leech, kept running at full life by [[Immortal Ambition]]. One stat, maximum life, feeds both halves, which is how we read the guide's scaling order — life first, attack speed last.
+
+  None of that exists for most of the levelling. You are a slam character to about level 45, on [[Static Strike]]. From the Act 6 swap you have Flicker's speed and none of its defence: if you took [[Aspect of Carnage]] second it is already adding 10% increased damage taken, and the leech that is meant to pay for it is not built. This is the stretch two independent sources warn about, and it is why our survivability score is an average of roughly 1.5 before the chest and 4.5 after.
+
+  The power then arrives in one step, and it is gated by items, not by level: the Ghostwrithe with the right roll, Energy Blade on a socket-holder sword, and a [[Glorious Vanity]] with the Ahuana roll. Before that step, life is only survival; after it, every point of life is also damage. Later purchases multiply what is already there — Voice of the Storm at roughly 33% more by the guide's figure, [[Crown of the Inward Eye]] turning life increases into attack damage, [[Greater Multistrike Support]] adding a fourth hit.
+
+  Hold all of this loosely. The guide is 3.29 data that its author re-read and declared still valid, no source rates the build at all, and the Ghostwrithe number was cut from 50% to 35% during 3.29. The shape of the curve is well supported. The size of each step is one author's claim about his own build.
+
+upgrades:
+  - step: "[[Foulborn Ghostwrithe]] with the roll that sets maximum energy shield to 35% of maximum life — plus [[Energy Blade]], a [[Hollow Fossil]] sword and the [[Tattoo of the Kitava Blood Drinker]]"
+    why: >-
+      First in the guide's order, and there is no build before it: everything
+      before Ghostwrithe is survival. It is what turns your life pool into
+      damage. It is described as surprisingly common from the Breach tree, so
+      farm it rather than price it; no trustworthy price exists. The sword is
+      only a socket holder, so spend nothing on its damage. The guide calls
+      the tattoo mandatory for leeching with Energy Blade.
+  - step: "[[Glorious Vanity]] with the Ahuana roll, for [[Immortal Ambition]]"
+    why: >-
+      Second in the guide's order, and the guide calls it mandatory: without
+      it you cannot properly recover energy shield and you lose overleech. It
+      is the hardest gate in the build and a trade item, not a drop you plan
+      around. Our reading: treat this and the step above as one purchase,
+      because the article does not call the build real until both are in.
+  - step: "[[Voice of the Storm]]"
+    why: >-
+      Lightning damage with non-critical strikes becomes lucky, which the
+      guide puts at roughly 33% more damage, unconditionally. It is the best
+      damage item after the core. It comes third because the two steps above
+      make the build exist, and this only multiplies it.
+  - step: "[[Crown of the Inward Eye]]"
+    why: >-
+      Increases to maximum life also apply to attack damage at 30% of their
+      value, so every life node on the tree becomes a damage node. Fourth in
+      the guide's order. The guide does not say why it sits below Voice of
+      the Storm, and we have no figure to compare the two with.
+  - step: "[[Greater Multistrike Support]]"
+    why: >-
+      Four hits per use instead of three. The guide's own note is that it is
+      very expensive, which is the whole reason it is this far down. Our
+      addition, from our own charge arithmetic and from no source: a fourth
+      attack per charge spent should also ease frenzy charge sustain.
+  - step: "[[Mageblood]] or [[Headhunter]]"
+    why: >-
+      What the guide names as left after everything else. It gives no reason
+      for either and no way to choose between them, and we will not invent
+      one.
+
+deaths:
+  - situation: "Between the Act 6 swap and [[Foulborn Ghostwrithe]], you die in packs again and again"
+    cause: >-
+      You have the speed and not the defence. Flicker puts you in the middle
+      of packs you did not choose, [[Aspect of Carnage]] adds a flat 10%
+      increased damage taken, and the overleech that is meant to carry all of
+      it does not exist yet. Two independent sources list this as the build's
+      main con.
+    fix: >-
+      Take these stages slowly. Cap resistances at 75% before maps, keep
+      [[Flesh and Stone]] on Sand Stance, and if your gear cannot absorb the
+      extra damage, take [[Crave the Slaughter]] second instead of Aspect of
+      Carnage. Gore Dancer as the fourth lab is our reading, not the guide's.
+      None of this closes the gap; only the chest does.
+  - situation: "The Flicker chain stops in the middle of a pack"
+    cause: >-
+      Charge starvation. Three things happen at once: you stop moving, you
+      lose 10% attack speed per missing charge, and [[Rite of Ruin]], if you
+      have taken it, keeps draining you. You cannot fix it mid-fight.
+    fix: >-
+      Fix it before the fight, in the article's order: quality on the Flicker
+      Strike gem, quality on [[Poacher's Mark]], the Sword mastery for unique
+      enemies, then [[Melee Splash Support]] or [[Tribal Fury]] so each swing
+      touches more targets. And do not swap to Flicker at level 38 just
+      because [[Multistrike Support]] unlocks there.
+  - situation: "You die on an empty screen with nothing hitting you"
+    cause: >-
+      [[Rite of Ruin]]. It is not increased damage taken; it is a life drain
+      of 0.1% per second per rage, which is 5% of your life every second at
+      50 rage. Only leech throughput beats it. Our gloss on the empty
+      screen: with nothing to hit, there is nothing to leech from.
+    fix: >-
+      Armour and resistances do nothing here. Do not take Rite of Ruin until
+      your life pool and leech are large — our lab order holds it back for
+      exactly that reason — and have [[Immortal Ambition]] and the
+      [[Tattoo of the Kitava Blood Drinker]] in place first.
+
+troubleshooting:
+  - symptom: "[[Energy Blade]] does not work"
+    cause: >-
+      Since 3.29 every equipped weapon must be a sword. One non-sword
+      anywhere is enough to break it.
+    fix: >-
+      Check both hands and the weapon swap. The sword only has to carry
+      sockets: any five- or six-socket sword with a [[Hollow Fossil]] on it.
+  - symptom: "Your energy shield bar sits near empty and never refills"
+    cause: >-
+      That is [[Immortal Ambition]] working as written: energy shield starts
+      at zero, cannot recharge or regenerate, and you lose 5% of it per
+      second. It costs you nothing offensively, because Energy Blade scales
+      off maximum energy shield, not current.
+    fix: >-
+      Nothing to fix. Judge the character by its maximum energy shield, and
+      expect leech to refill the bar only while your life is full.
+  - symptom: "Your damage is well below the published Path of Building"
+    cause: >-
+      Check the chest first. Base Ghostwrithe only converts life; it has to be
+      [[Foulborn Ghostwrithe]] with the roll that adds energy shield equal to
+      35% of maximum life. That number was 50%, then 40%, during 3.29, and if
+      the published file predates the last cut its damage is overstated. We
+      could not verify that without decoding the file.
+    fix: >-
+      Read the line on your own chest, and compare it with the file when you
+      import it. A gap that comes from the file's number is not yours to
+      close.
+  - symptom: "You run out of mana once the attack speed is up"
+    cause: >-
+      Flicker Strike at high attack speed is a mana problem before it is
+      anything else.
+    fix: "Mana leech from [[Fuel the Fight]] on a cluster jewel."
+  - symptom: "A pinnacle boss takes far too long — or your clear collapses right after one"
+    cause: >-
+      The gem swap, one way or the other. [[Melee Splash Support]] is for
+      packs and [[Ruthless Support]] is for pinnacle bosses; the guide's own
+      note says not to forget to switch back.
+    fix: "Swap before the boss, and swap back before the next map."
+  - symptom: "After a death, you start taking far more hits than before"
+    cause: >-
+      [[Flesh and Stone]] has flipped to Blood Stance. Only Sand Stance
+      blinds nearby enemies, and it is easy to flip by accident.
+    fix: "Check the stance after every death."
+
 patch:
   - note: >-
       **Nothing in this build changed.** [[Flicker Strike]] is not mentioned

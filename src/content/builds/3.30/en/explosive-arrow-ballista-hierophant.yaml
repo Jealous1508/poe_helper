@@ -393,6 +393,139 @@ stages:
 
           Its own suggested answer is to transition to a different build for that content — the same author's Shrapnel Ballista Hierophant, which is the endgame article on this site. That transition reuses your Hierophant and your totem tree, which is a real part of the appeal.
 
+powerCurve: |
+  The damage is one explosion, and three things set its size. How many arrows are stuck in the target when the first fuse runs out: totems multiplied by attack speed, up to 20 arrows, 22 at full gem quality. How hard each arrow counts, which is mostly gem level — the guide calls it the largest single damage source. And the target's fire resistance, pushed down by [[Elemental Equilibrium]], [[Flammability]] and [[Combustion Support]]. The defence is positional before it is anything else: the totems stand in front and take the hits, with [[Grace]], [[Purity of Elements]] and an automated [[Steelskin]] behind them.
+
+  Almost all of that is in place by Act 4. [[Explosive Arrow]] unlocks at level 28 with [[Ballista Totem Support]], the first lab adds totems, and the two items the budget build is made of — [[Quill Rain]] and [[Skirmish]] — are common uniques. That is why this build feels finished unusually early: nothing it needs is rare.
+
+  The middle is tidying, not growth. A six-link, [[Lifetap Support]] in every link so that mana stops existing, and the swap to Combustion once [[Master Fletcher]] is allocated. What can go wrong here goes wrong silently, which is why the guide keeps a common-mistakes list.
+
+  Late, the curve flattens, and the guide says so itself: Tier 16.5 maps are the ceiling, with no Uber pinnacle bosses and Tier 17 only when fully maxed. Our reading of why, from the gem's own text and from no source: the stack is capped. Once your totems land twenty arrows inside one fuse, more totems and more attack speed add nothing, and only per-arrow damage — gem levels, resistance — still grows. We cannot tell you where that point falls, because the guide's only planner is a 3.29 level 78 snapshot that reports no damage figure at all.
+
+upgrades:
+  - step: "[[Quill Rain]] with close to 100% projectile speed, and [[Skirmish]]"
+    why: >-
+      The guide ranks nothing and prices nothing, so the order of this list
+      is ours, read off its budget column and the article's stages. These two
+      are the budget column. Quill Rain's 100% increased attack speed is more
+      fuses per second, and the Bow Mastery turns its projectile speed into
+      up to 100% increased damage; Skirmish is +1 totem. Both are common
+      uniques, so nothing else gives this much this cheaply.
+  - step: "A six-link body armour"
+    why: >-
+      Explosive Arrow, Ballista Totem, Elemental Damage with Attacks,
+      Lifetap, Combustion and [[Cruelty Support]] in the sixth socket. Each
+      socket is a multiplier on every arrow in the stack. It follows the two
+      uniques because they change how many arrows there are, and a support
+      only changes what each one is worth.
+  - step: "Gem level: a 21/20 [[Explosive Arrow]], and a rare amulet with +1 to all fire skill gems"
+    why: >-
+      The guide calls gem level the largest single damage source. This is
+      the cheap end of it: the amulet is the guide's budget stand-in for
+      [[Replica Dragonfangs' Flight]]. It keeps paying after the stack is
+      full, which attack speed does not — that last clause is our reasoning.
+  - step: "[[Viridi's Veil]] with a magic ring in the left slot, and [[Daresso's Defiance]]"
+    why: >-
+      The two uniques the article starts hunting in early maps. The helmet
+      is defence: critical strike immunity, and enemy hits roll unlucky. It
+      does nothing without a magic ring in the left ring slot. The chest is
+      permanent Onslaught at double effect, 40% increased attack and movement
+      speed, with armour, evasion and life. The guide lists both as
+      best-in-slot without ranking them against each other.
+  - step: "[[Dawnstrider]]"
+    why: >-
+      It grants [[Ancestral Bond]], which refunds the passive points you
+      spent reaching the keystone, redirects damage to your totems for
+      roughly 10% mitigation with the Totem mastery, and gives 30% movement
+      speed. We put it after the helmet and chest only because the article's
+      stages name those first; the guide gives no order.
+  - step: "An [[Artillery Quiver]] that dropped in 3.30"
+    why: >-
+      Its new implicit is +1 maximum totem for attack skills — the same +1
+      that Skirmish already gives you. So replacing Skirmish does not add a
+      totem; what it adds is whatever else a rare quiver carries, and the
+      guide's crafting guide for it does not exist yet. That is why we rank
+      it this low as a purchase. A quiver from before the patch keeps the
+      old implicit and is no use at all.
+  - step: "[[Replica Dragonfangs' Flight]] with +3 to Explosive Arrow gems, and a level 4 [[Empower Support]] in place of Cruelty"
+    why: >-
+      The expensive end of gem level. The amulet must be the roll for
+      Explosive Arrow specifically, and the article calls it a long hunt.
+      Last because the budget versions already give you the first step of
+      the same thing. Beyond this the guide's best-in-slot column ends at
+      [[Headhunter]] and [[Mageblood]].
+
+play:
+  mapping: |
+    1. Aim at the pack and hold the one button. The ballistas go down and fire at whatever you are pointing at.
+    2. Wait out the fuse. Arrows do nothing when they land; the pack dies about a second later, when the first fuse expires and every stuck arrow goes off together.
+    3. Move on with [[Dash]] and place again at the next pack.
+    4. Press nothing else. [[Steelskin]] is on [[Automation]], [[Frenzy]] and [[Flammability]] fire themselves from the bow, and the utility flasks are set to use themselves when full.
+
+    Stay behind the totems. That they take the hits for you is our reading of the build's shape; the guide does not put it in those words.
+  bossing: |
+    Nothing about the buttons changes. Two things about where you stand do.
+
+    1. Place the totems close to the boss. [[Point Blank]] makes projectile hits deal more damage at close range, and your totems stand where you stand.
+    2. Keep holding. The stack fills to its cap and detonates once per fuse, so the damage arrives in beats, not as a stream.
+    3. When the boss moves away, place again next to it rather than letting distant totems keep shooting.
+
+    Know where this stops. The guide says in its own words that the build cannot farm pinnacle bosses on Uber mode, and its answer is to move to the same author's Shrapnel Ballista Hierophant for that content.
+
+troubleshooting:
+  - symptom: "Your damage is far lower than it should be and nothing on screen says why"
+    cause: >-
+      Flat "Added Fire Damage to Attacks" somewhere on your gear has broken
+      [[Elemental Equilibrium]]. The arrows are meant to hit with cold or
+      lightning, which lowers fire resistance, before the explosion deals
+      fire. Fire on the arrow raises the very resistance you need lowered.
+      It is on the guide's common-mistakes list.
+    fix: >-
+      Read every item for added fire damage to attacks: rings, gloves,
+      quiver, jewels. The guide's optional abyss jewel with flat cold or
+      lightning damage to attacks does the opposite and helps Elemental
+      Equilibrium fire correctly.
+  - symptom: "The stack never builds and the explosions stay small"
+    cause: >-
+      Your arrows pierce. An arrow that pierces does not stick, and an arrow
+      that does not stick is not in the explosion. The guide names the
+      [[Penetrating Arrow Quiver]] as the usual culprit.
+    fix: "Remove every source of pierce, starting with the quiver."
+  - symptom: "Damage has been quietly low since the campaign"
+    cause: >-
+      One of two things the guide lists as common mistakes.
+      [[Lesser Multiple Projectiles Support]] is still in the link after
+      [[Master Fletcher]] was allocated, so you are paying its damage
+      penalty for an arrow the tree already gives you. Or [[Point Blank]]
+      was never taken.
+    fix: >-
+      Swap Lesser Multiple Projectiles for [[Combustion Support]], and
+      allocate Point Blank.
+  - symptom: "You bought an Artillery Quiver and did not get an extra totem"
+    cause: >-
+      Either it dropped before 3.30 — existing items keep the old placement
+      speed implicit — or it replaced [[Skirmish]], which was already giving
+      you the same +1.
+    fix: >-
+      Check the implicit line before you pay: it must read "Attack Skills
+      have +1 to maximum number of Summoned Totems". Keep Skirmish until you
+      have one that does.
+  - symptom: "[[Viridi's Veil]] is on and seems to do nothing"
+    cause: >-
+      It requires a magic ring in the left ring slot. This is why the
+      guide's first ring is deliberately magic.
+    fix: "Put a magic ring in the left ring slot, and keep it magic."
+  - symptom: "The spectre bonus from [[Fertile Will]] is not there"
+    cause: >-
+      The guide's own mistakes list includes not unlocking the labs,
+      "including the Farrul Ascendancy with the Spectre combo", and its
+      description needs a Beast spectre — a Perfect Guardian Turtle in
+      [[Raise Spectre]]. Beyond that the guide does not spell the setup out,
+      and we could not confirm the mechanism from a second source.
+    fix: >-
+      We cannot give you steps the guide does not give. Treat the bonus as
+      unconfirmed and do not gear on the assumption that you have it.
+
 patch:
   - entry: special-base-implicits
     note: >-

@@ -404,6 +404,166 @@ stages:
 
           Note the split. **If your bleed is not applying, you have lost 90% of your damage** and the character will feel broken rather than weak.
 
+powerCurve: |
+  Three things multiply this build's damage. Trauma, at 8% more per stack. The bleed, which with 100% chance to bleed and [[Bloodletting]] is about 90% of everything you deal. And the average physical damage on the axe, which the bleed is built from. Attack speed, the stat every other melee build buys, is not on that list. The defence is one number: endurance charges, nine or ten of them, which hold you at 90% physical damage reduction while [[Untiring]] heals back what your own attack takes.
+
+  Through the campaign you have the defence and none of the damage. [[Unflinching]] and Untiring arrive with the Cruel and Merciless labs — by our reading of Maxroll's order — but you are a [[Sunder]] character with no bleed nodes, and your power is a vendor-recipe axe you re-roll three or four times. That is why the build feels like plain, sturdy melee for ten acts.
+
+  The damage arrives all at once at maps: the transfigured gem, the bleed cluster and a character sheet that reads 100% chance to bleed. There is no half-way state, which is why a missing piece makes the character feel broken rather than weak. Two flat multipliers follow quickly — a [[Blood Sap Tincture]] at about 30% more and [[Ryslatha's Coil]] at about 40% more, figures the guide carries but did not re-benchmark for 3.30.
+
+  After that it is a gear curve and nothing else; the playstyle never changes again. It ends at Uber bosses, with the author's own Path of Building at 9.6 million damage per second, 8.7 million of it bleed. The sources call the late scaling limited next to crit builds. Our reading of why: [[Resolute Technique]] means you never crit, so the multiplier those builds grow into is closed to this one. Clear stays the weak axis throughout, because a strike hits one monster.
+
+upgrades:
+  - step: "\"Non-Vaal strike skills target one or two additional enemies\", from the Attack Mastery or an eldritch glove implicit"
+    why: >-
+      Not on Maxroll's upgrade list. We put it first because the article says
+      to take it as soon as you can, and the mastery version costs a passive
+      point rather than currency. It is the one fix for the build's weakest
+      axis: the difference between hitting one monster and hitting three.
+  - step: "[[Blood Sap Tincture]]"
+    why: >-
+      First in Maxroll's own order. About 30% more damage, which Maxroll
+      compares to an extra support gem, and it is cheap. Nothing else on this
+      list gives that much for that little.
+  - step: "[[Ryslatha's Coil]]"
+    why: >-
+      About 40% more damage and Maxroll's top unique priority; the largest
+      single upgrade, and the one it lists as hard to obtain. It takes the
+      belt slot, so move your energy shield to the amulet or rings before you
+      put it on, or [[Divine Shield]] stops working.
+  - step: "[[Kaom's Sign]], corrupted for +1 maximum endurance charge"
+    why: >-
+      Everything defensive rests on endurance charges, and this is one more
+      of them. A Tainted Mythic Orb on a +1 Coral Ring is the route to a
+      second. Maxroll puts the two damage multipliers ahead of it without
+      saying why; our reading is that survivability is already the build's
+      strong side, so damage is what it is short of.
+  - step: "[[The Light of Meaning]] with a physical damage roll"
+    why: >-
+      Straightforward damage, in a jewel socket near a good cluster. Fourth
+      in Maxroll's order, which gives no reason for the position; we have
+      none to add.
+  - step: "[[Corrupted Soul]] through a [[Glorious Vanity]] with the Doryani seed"
+    why: >-
+      Gives you energy shield for [[Divine Shield]] without spending a gear
+      slot on it. Fifth in Maxroll's order. Our reading of why it is this
+      low: energy shield on the amulet or rings already does the same job,
+      and this only frees the slots. A long-shot target in SSF.
+  - step: "A multimodded Sundering Axe: the highest average physical damage you can buy, with at least 16% attack speed"
+    cost: "3.29: about 2 Divine of bench costs to multimod — the author disclaims his own crafting advice for 3.30"
+    why: >-
+      The article calls it the last big purchase. The bleed is built from the
+      weapon's average damage, so this lifts everything, but it is also the
+      most expensive line here. Do not pay for attack speed beyond the
+      minimum: bleed does not scale with it. Compare the crafting route
+      against simply buying a finished axe.
+  - step: "[[Watcher's Eye]] with the [[Pride]] physical damage modifier"
+    why: >-
+      Last in Maxroll's order. Only the one Pride-conditional modifier
+      matters; ignore the rest of the jewel. Maxroll gives no reason for the
+      position and we will not supply one.
+
+play:
+  mapping: |
+    1. Check the map before you open it: reroll "monsters cannot be stunned", chance to avoid bleeding, and anything that removes endurance charges.
+    2. [[Leap Slam]] into the pack.
+    3. Hold [[Boneshatter of Complex Trauma]]. Every hit hurts you, adds a Trauma, feeds your endurance charges and applies the bleed. At ten Trauma the stacks wipe and you start again; that is the safety valve, not a fault.
+    4. Press nothing else. The warcries fire themselves through [[Autoexertion]], and [[Vaal Molten Shell]] triggers off your own self-hit.
+    5. Keep the [[Blood Sap Tincture]] running and [[Blood Rage]] up.
+    6. Glance at the endurance charge counter. Seven is Maxroll's floor; nine or ten is the target.
+
+    On an Eater altar, never take **reduced physical damage reduction**.
+  bossing: |
+    1. Before an instanced boss such as Maven, use the level 1 [[Forbidden Rite]] to hurt yourself. That builds endurance charges through [[Unflinching]], so you walk in already charged.
+    2. Put [[Vulnerability]] on the boss. It is in the gem list with no trigger attached, so we read it as cast by hand.
+    3. Stand on the boss and keep attacking. Trauma climbs to ten and resets; the bleed does the killing, and [[Bloodletting]] makes the boss count as moving whether it moves or not.
+    4. Watch the charge counter harder than the boss's life bar.
+
+    What changes is that nothing in the room will recharge you except your own attack. This part is our reasoning: Unflinching gives charges when you are hit, including by yourself, so the dangerous moments are the ones where you cannot swing — a phase change, a long dodge. [[Enduring Cry]] refills charges and recovers life; in the published links it sits with Autoexertion, so check that it is firing.
+
+deaths:
+  - situation: "You take an Eater altar and your next few swings kill you"
+    cause: >-
+      The altar had **reduced physical damage reduction**. The self-hit only
+      works as a cost you pay and recover because of 90% physical damage
+      reduction; cut that and each swing takes more than [[Untiring]] gives
+      back. Maxroll warns about this altar by name, and the article ranks it
+      the most common death.
+    fix: "Read every Eater altar before you click it. Never take that one."
+  - situation: "Mid-map, your endurance charges drop and you fall over"
+    cause: >-
+      Everything rests on the charges: they are the physical damage reduction
+      that makes both the monsters and your own attack survivable. A map
+      modifier or a monster removed them.
+    fix: >-
+      Reroll anything that removes endurance charges. If the counter falls
+      below seven mid-fight, [[Enduring Cry]] is what refills it.
+  - situation: "A map with \"monsters cannot be stunned\""
+    cause: >-
+      It disables [[Endurance Charge on Melee Stun Support]], one of your two
+      charge generators, so you sit on fewer charges than the build assumes.
+    fix: "Reroll the map. It is one of the four banned modifiers."
+  - situation: "The first seconds of an instanced boss fight"
+    cause: >-
+      There are no monsters in the arena to hit, so you walk in with no
+      Trauma and no endurance charges, and the boss's first hit lands on an
+      uncharged character.
+    fix: >-
+      A level 1 [[Forbidden Rite]] before you enter. Keep it at level 1 and
+      never raise it.
+
+troubleshooting:
+  - symptom: "The character feels broken, not weak: things simply stop dying"
+    cause: >-
+      Your bleed is not applying, and the bleed is 90% of your damage. Either
+      the character sheet reads under 100% chance to bleed, or
+      [[Bloodletting]] is not allocated — that alone cuts damage by about two
+      thirds — or the map gives monsters a chance to avoid bleeding.
+    fix: >-
+      Get bleed chance to 100% on the sheet before anything else, take
+      Bloodletting, and reroll the avoid-bleeding modifier.
+  - symptom: "Your own attack takes more life than you get back"
+    cause: >-
+      Maxroll's FAQ says heavy damage while attacking is expected, and to
+      check that you hold at least seven endurance charges. Below that, the
+      mitigation is not there. The other candidates follow from the article:
+      [[Untiring]] not taken yet, or a gem level well past your defences —
+      PoEDB's self-damage rises from 582 at gem 20 to 5,066 at gem 40.
+    fix: >-
+      Charges first, then 90% physical damage reduction, then Untiring. Do
+      not push the gem's level ahead of all three.
+  - symptom: "You added attack speed and the damage did not move"
+    cause: >-
+      Bleed damage does not scale with attack speed. Only Trauma accumulation
+      does, and too much of it burns through the ten-stack reset faster than
+      the stacks pay you.
+    fix: >-
+      About 16% attack speed on the axe as a minimum, then average physical
+      damage with everything else; then bleed multipliers, then Strength.
+  - symptom: "[[Divine Shield]] does nothing"
+    cause: >-
+      Your energy shield is zero. The moment to check is when
+      [[Ryslatha's Coil]] replaces a Crystal Belt.
+    fix: >-
+      Any energy shield at all: on the amulet or rings, on a pair of
+      Apothecary's Gloves, or from [[Corrupted Soul]]. It needs to exist, not
+      to be large.
+  - symptom: "Clearing is one monster at a time"
+    cause: >-
+      A strike hits one target, and no source disputes that clear is the
+      build's weakest axis.
+    fix: >-
+      The "non-Vaal strike skills target one or two additional enemies"
+      modifier, from the Attack Mastery or an eldritch glove implicit. It
+      improves the clear; it does not make this a fast mapper.
+  - symptom: "[[Vaal Molten Shell]] is rarely up"
+    cause: >-
+      The trigger is levelled too high, so it waits for a large hit instead
+      of firing off your own attack.
+    fix: >-
+      [[Cast when Damage Taken Support]] at level 1 with Vaal Molten Shell at
+      level 7. Both deliberately low.
+
 patch:
   - note: >-
       **Nothing relevant changed.** Juggernaut appears nowhere in the normal
