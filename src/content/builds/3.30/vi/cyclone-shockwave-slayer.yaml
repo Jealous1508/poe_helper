@@ -396,6 +396,216 @@ stages:
 
           Đó là một skill melee channel gặp một loại encounter hoàn toàn mới. Đáng để theo dõi, và đáng để không giả định.
 
+powerCurve: |
+  Mỗi đợt shockwave là một tỷ lệ phần trăm attack damage của bạn, nên damage của build này là tích của ba thứ, và chúng tới vào những thời điểm khác nhau. Cách chia này là của chúng tôi; từng phần thì do các guide hoặc dữ liệu gem nói ra. **Cây vũ khí** là cái nền mà mọi cú nổ lấy phần trăm từ đó. **Nhịp nổ** là [[Shockwave Support]] bật thường xuyên cỡ nào: mỗi giây một lần với gem level 1, bốn lần mỗi giây ở level 20, và [[Void Shockwave Support]] thì cắt cooldown còn một nửa. **Mấy hệ số nhân phía trên** là 40% more của [[Precise Technique]], rồi tới critical strike thế chỗ nó, cộng [[Bane of Legends]] lên quái unique, đòn execute của [[Headsman]] và impale làm lớp thứ hai.
+
+  Giai đoạn đầu, bạn chỉ có cây vũ khí, và trước level 28 thì đến skill cũng chưa có: [[Spectral Throw]] với [[Sunder]] gánh ba act đầu. Từ 28 build mới là chính nó, nhưng nhịp nổ vẫn còn leo theo level của gem, nên damage trong campaign là cây mace hay staff mà vendor recipe vừa cho bạn lần gần nhất. Phòng thủ thì tới theo từng lab. [[Brutal Fervour]] đứng đầu trong thứ tự lab của chúng tôi, mà theo thời điểm của poe-vault là level 38 trở lên, và trước lúc đó thì cái leech mà cả build dựa vào vẫn chưa có.
+
+  Giai đoạn giữa đi đều chứ không dốc. Six-link thêm support, còn armour, [[Rumi's Concoction]] và [[Molten Shell]] bắt đầu dựng lớp vỏ mà bản export level 96 cho thấy là 90% physical damage reduction và 57% block. Thứ kìm quãng này lại là một cái luật chứ không phải giá tiền. Khi còn dùng Precise Technique, mỗi điểm life lại đẩy mức accuracy bạn cần lên cao hơn, nên life và damage kéo ngược nhau. Mana là giới hạn thứ hai, vì đây là skill channel.
+
+  Hai bậc thang thật sự thì tới muộn. Bước đổi sang crit ở level 85 tới 90 gỡ cái luật đó, và nó là phần thưởng mà build cày level để tới. Void Shockwave là bước nhảy gem lớn nhất: cooldown một nửa, tới 528% attack damage trong khi Shockwave dừng ở 336%, và hit tới mười con quái trong khi Shockwave hit tới hai. Qua hai bậc đó thì bạn đang mua movement speed, tần suất shockwave và effective hit point. Nên cứ kỳ vọng một nhân vật clear tốt từ level 28, đánh boss thấy dở dang cho tới lúc đổi sang crit, và phải chờ level nhiều ngang với chờ currency: poe-vault tả độ cần level của nó bằng chữ "incredibly". Điểm số cũng nói đúng chuyện đó: bossing 3.5 khi làm starter, tầm 4.5 khi đủ gear.
+
+upgrades:
+  - step: "Một cây mace hoặc staff tốt hơn, mỗi lần damage tụt"
+    why: >-
+      Đứng đầu ở mọi giai đoạn, vì mỗi đợt shockwave là một tỷ lệ phần trăm
+      attack damage của bạn và không unique nào thay được cây vũ khí. Trong
+      campaign nó gần như miễn phí: một base mace hoặc staff, một viên
+      Blacksmith's Whetstone và một cây Rustic Sash rare bán cùng lúc cho
+      vendor. Lên map thì là một cây rare có physical damage cao. Khi vũ khí
+      còn tụt lại thì không món nào phía dưới danh sách này đáng bao nhiêu.
+  - step: "Một cây body armour six-link có armour cao và không mod life nào"
+    why: >-
+      Món đầu tiên trên đường cong chi phí. Nó đưa [[Cyclone]] với
+      [[Shockwave Support]] từ four-link lên six-link. Cái bẫy là Barbarism
+      Life Mastery: nó ngừng chạy nếu chest có life phẳng hay life
+      regeneration, nên bạn đi tìm armour và bỏ qua cái roll life mà ai khác
+      cũng muốn. Nó nằm dưới cây vũ khí vì vendor recipe gần như không tốn gì,
+      còn sáu link thì có. Không nguồn nào định giá nó cho 3.30.
+  - step: "Mana cost của Cyclone kéo về không"
+    why: >-
+      Một lần channel bị ngắt vì hết mana thì không gây damage gì, nên chúng
+      tôi đặt bước này trước chuyện thêm damage. Vị trí đó là nhận định của
+      chúng tôi. Hai nguồn đồng ý về vấn đề này. Maxroll giữ cả hai bánh xe
+      mana cost trên cây cho tới khi bạn có một cây body armour
+      double-influence với −20 to mana cost. Mấy cây ring mức trung bình của
+      poe-vault thì mang "reduced cost for channelling skills", nhắm tổng −3.
+      Ring là lời giải mức trung bình, nên bắt đầu từ đó. Maxroll chỉ nói giữ
+      hai bánh xe cho tới khi có cây chest rồi dừng ở đó; cách đọc của chúng
+      tôi là mấy điểm trong đó lấy lại được khi gear đã lo xong mana cost.
+  - step: "Bước đổi sang crit, mua trọn một gói ở level 85 tới 90"
+    why: >-
+      Một cây staff có physical damage cao và critical strike chance, một
+      [[Diamond Flask]] với suffix crit, và [[Assassin's Mark]] áp khi hit.
+      Rồi bạn bỏ [[Precise Technique]]. Đây là phần thưởng mà build cày level
+      để tới, và nó chấm dứt cái ngưỡng accuracy, nên thêm life không còn làm
+      bạn mất damage. Cầm cây staff trong tay rồi hãy respec: không có vũ khí
+      crit thì bạn bỏ đi 40% more damage mà không nhận lại gì. Abyssus là tùy
+      chọn và là một rủi ro thật với melee. Lộ trình của poe-vault để có cây
+      staff là một cây Ezomyte Staff recombinate, và không thứ gì trong đó có
+      giá cho 3.30.
+  - step: "[[The Stampede]] hoặc [[Replica Stampede]], rồi tới [[Cyclone of Tumult]]"
+    why: >-
+      Tự đôi boots không thêm damage. Nó đặt movement speed của bạn về một giá
+      trị cố định, thứ xóa cái 10% less movement speed mỗi stage của Tumult,
+      còn năm stage của Tumult là khoảng 125% more attack speed và thêm chút
+      bán kính. Boots trước, gem sau. Không nguồn nào xếp bước này so với bước
+      đổi sang crit. Chúng tôi đặt nó sau vì bước đổi sang crit là thứ cả quá
+      trình lên level của build nhắm tới, còn maxroll thì ở lại Cyclone gốc vì
+      tính di động và ít thời gian ramp, và coi Tumult là tùy chọn. Thứ tự này
+      là của chúng tôi.
+  - step: "[[Void Shockwave Support]]"
+    why: >-
+      Bước nhảy gem lớn nhất của build: cooldown một nửa, 440% lên tới 528%
+      attack damage trong khi Shockwave dừng ở 336%, và hit tới mười con quái
+      thay vì tới hai. Nó còn cho bạn dùng axe. Nó cần level 72 và chỉ rơi từ
+      Uber Elder, nên hoặc bạn mua, hoặc bạn tự đi giết, và đó là lý do duy
+      nhất nó nằm tận dưới này. Không bước nào phía trên là điều kiện để nó
+      chạy. Nếu có một viên vừa tầm tay sớm hơn thì lấy sớm hơn; lời khuyên đó
+      là của chúng tôi.
+  - step: "[[Stranglegasp]], để lấy anoint [[Enigmatic Defence]]"
+    why: >-
+      Maxroll ghi cây amulet này là nguồn áp lực gear nặng nhất của build.
+      Đường cong chi phí chạm tới nó trước viên gem phía trên. Chúng tôi đổi
+      chỗ hai món vì con số của viên gem đã được công bố, còn anoint này đáng
+      bao nhiêu với build thì không nguồn nào chúng tôi đọc đo cả. Thứ tự này
+      là của chúng tôi.
+  - step: "[[Mageblood]], rồi phần còn lại của danh sách endgame"
+    why: >-
+      Đứng cuối vì nó là đỉnh của đường cong chi phí, và vì tới đây lối chơi
+      không đổi gì nữa: bạn đang mua movement speed, tần suất shockwave và
+      effective hit point. Mageblood cũng là cách insanebuild nói để chữa
+      chuyện di chuyển chậm của build, với [[Headhunter]] là phương án thay
+      thế. Quanh nó là [[Progenesis]], một cây staff Shaper, [[Lethal Pride]],
+      một [[Watcher's Eye]] và cluster jewel, chỗ maxroll ghi rằng
+      [[Overlord]] cho bạn bỏ bánh xe Fortify. Không nguồn nào xếp hạng mấy
+      món này với nhau hay định giá chúng cho 3.30, nên chúng tôi cũng không.
+
+play:
+  mapping: |
+    Viết cho giai đoạn từ map đầu trở đi, lúc [[Autoexertion]] và [[Automation]] đã biến build thành một nút.
+
+    1. **Đọc map trước khi mở.** Reroll "cannot be leeched from", reduced recovery rate, −9% tới −12% maximum resistances và reduced cooldown recovery. Physical damage phản lại thì an toàn một khi bạn có [[Bane of Legends]]. poe-vault ghi map Valdos là không hỗ trợ.
+    2. **Giữ [[Cyclone]] và đi thẳng vào pack.** Bạn vừa attack vừa di chuyển, nên không có lý do gì để dừng. [[Shockwave Support]] bung ra từ những con quái bạn hit, trong bán kính tới 2.7 mét, nên hãy đi xuyên giữa pack chứ đừng lượn quanh mép.
+    3. **Giữ tiếp xúc chừng nào còn thứ nguy hiểm sống.** Leech từ [[Brutal Fervour]], cùng 10% ít damage hơn đi kèm với nó, chỉ kéo dài chừng nào các cú hit của bạn còn giữ cho leech chạy.
+    4. **Để mấy phần tự động làm việc.** [[General's Cry]] tự bật qua Autoexertion và dựng tới năm mirage warrior từ xác quanh bạn. [[Molten Shell]] tự cast qua Automation. [[Assassin's Mark]] thì dính lên quái theo các cú hit của bạn.
+    5. **Bấm những gì còn lại.** [[Leap Slam]] hoặc [[Frostblink]] để băng qua khoảng trống, [[Rumi's Concoction]] trước một con quái Rare hoặc boss, và life flask khi corrupted blood chồng lên, vì miễn nhiễm được roll trên cây flask đó.
+
+    Chơi [[Cyclone of Tumult]] thì chuẩn bị tinh thần chờ ramp. Stage dựng mỗi 0.4 giây một cái, tới năm cái, nên một lần channel mới mất hai giây để lên hết tốc độ, và maxroll nêu chuyện ít thời gian ramp làm một lý do để ở lại Cyclone gốc. Chưa guide nào nói stage ra sao khi bạn thả nút, nên chúng tôi không khuyên gì về chuyện đó.
+  bossing: |
+    Single target là mặt yếu hơn của build này, nên một trận boss là chuyện bật đủ mọi lớp damage cùng lúc và đừng buông tay.
+
+    1. **Cast [[Desecrate]] một lần trước trận boss trong phòng riêng.** General's Cry cần xác, mà một đấu trường trống thì không có cái nào. Nó không tiêu thụ xác, nên một lần là đủ.
+    2. **Bật flask.** Rumi's Concoction cho block và armour. Sau khi đổi sang crit thì [[Diamond Flask]] là một phần damage của bạn, nên giữ nó chạy.
+    3. **Xoay trên người boss và bám lấy nó.** Shockwave bật tới bốn lần mỗi giây, nhưng chỉ khi có hit. Mark thì tự áp, còn Bane of Legends thêm 20% more damage lên quái unique.
+    4. **Đi ra khỏi telegraph mà không buông nút.** Cyclone vẫn attack trong lúc bạn di chuyển, và đó là thứ giúp bạn trước telegraph của boss.
+    5. **Một phần năm máu cuối là miễn phí.** [[Headsman]] giết luôn quái ở 20% máu trở xuống.
+
+    Thứ không đổi là kích cỡ bể máu. Bản export level 96 có 4,809 life đứng sau 90% physical damage reduction và 57% block. Leech hồi cho bạn sau cú hit còn block là xác suất, nên mấy đòn lớn có báo trước thì phải tự tay né. Một phase mà bạn không hit được boss cũng là một phase không có leech. Không nguồn nào nói điều này; nó suy ra từ cách Brutal Fervour hoạt động.
+
+    Hãy đặt kỳ vọng đúng chỗ điểm số: bossing 3.5 khi làm starter và tầm 4.5 khi đủ gear. Đây không phải một con giết pinnacle boss giá rẻ ngay từ đầu, và chưa ai biết cơ chế [[Wickerman]] xử lý Cyclone thế nào.
+
+deaths:
+  - situation: "Map có \"cannot be leeched from\", hoặc có reduced recovery rate"
+    cause: >-
+      [[Brutal Fervour]] là cả hệ phòng thủ: leech chạy tiếp cả khi full máu,
+      mức hồi tối đa mỗi lần leech nhân đôi, và ăn ít damage hơn 10% trong lúc
+      nó chạy. Mod thứ nhất gỡ hết mấy thứ đó, mod thứ hai làm leech trả lại
+      ít đi.
+    fix: >-
+      Reroll mấy map này. Không nguồn nào đưa ra cách chữa bằng gear; hãy coi
+      mod thứ nhất là một đối trọng cứng.
+  - situation: "Một cú đánh cực lớn, thường là đòn boss mà bạn đứng trong đó"
+    cause: >-
+      Bản export level 96 có 4,809 life. Build này trâu nhờ leech, block và
+      giảm trừ, không nhờ một bể máu lớn: leech hồi sau cú hit, còn 57% block
+      là xác suất.
+    fix: >-
+      Vừa xoay vừa đi ra khỏi telegraph. Giữ [[Molten Shell]] trên
+      [[Automation]] và [[Rumi's Concoction]] luôn chạy, và đừng đội Abyssus
+      nếu bạn hay chết kiểu này. Trước khi đổi sang crit, thêm life còn đẩy
+      mức accuracy mà [[Precise Technique]] cần lên cao hơn, nên lúc đó lời
+      giải rẻ hơn là armour và block. Cái đánh đổi cuối này là cách đọc của
+      chúng tôi.
+  - situation: "Mắc trong một hiệu ứng mặt đất khi chơi [[Cyclone of Tumult]] mà không có [[The Stampede]]"
+    cause: >-
+      Mỗi stage của Tumult là 10% less movement speed, tức khoảng một nửa tốc
+      độ ở năm stage. Bạn ở trong tầm melee của mọi thứ và đứng trong mọi hiệu
+      ứng mặt đất, mà giờ lại rời khỏi chúng với nửa tốc độ.
+    fix: >-
+      Ở lại [[Cyclone]] gốc cho tới khi bạn có đôi boots đó hoặc
+      [[Replica Stampede]]. Cyclone gốc thì vẫn chậm cho tới khi có
+      [[Mageblood]]; flask roll movement speed là giải pháp tạm.
+  - situation: "Map có −9% tới −12% maximum resistances"
+    cause: >-
+      Danh sách mod cần tránh không cho lý do cho mod này. Cách đọc của chúng
+      tôi: armour không làm gì trước các cú hit elemental, nên với chúng bạn
+      chỉ có block, resistance và một bể máu nhỏ, mà −12% tính từ cap 75% thì
+      để lọt thêm khoảng một nửa damage nữa.
+    fix: >-
+      Reroll, đúng như danh sách đó nói.
+
+troubleshooting:
+  - symptom: "Cyclone vẫn xoay mà không có đợt shockwave nào bung ra"
+    cause: >-
+      Do cây vũ khí. [[Shockwave Support]] chỉ chạy với mace, sceptre và
+      staff. Cầm sword hay axe thì nó không làm gì cả.
+      [[Void Shockwave Support]] thêm axe, ngoài ra không thêm gì.
+    fix: >-
+      Cầm một cây mace, sceptre hoặc staff. Trong campaign, nếu cây sword hay
+      axe tốt hơn hẳn, maxroll nói bạn có thể giữ nó và tháo Shockwave khỏi
+      link cho tới khi có một cây mace hoặc staff tử tế.
+  - symptom: "Damage tụt hơn một phần tư sau một lần đổi gear, lúc chưa đổi sang crit"
+    cause: >-
+      Accuracy của bạn không còn cao hơn máu tối đa, nên 40% more attack
+      damage của [[Precise Technique]] đã tắt. Mỗi điểm life lại đẩy cái mốc
+      lên, nên thủ phạm thường gặp là một món mới có life, hoặc một món thế
+      chỗ món có accuracy.
+    fix: >-
+      So accuracy rating với máu tối đa trên bảng nhân vật sau mỗi lần đổi
+      gear. Rồi nâng accuracy: [[Precision]] là nguồn rẻ nhất, [[Impact]] cho
+      50% increased accuracy, phần còn lại là roll trên gear. Bước đổi sang
+      crit ở level 85 tới 90 dứt hẳn vấn đề này.
+  - symptom: "Cyclone bị ngắt vì hết mana"
+    cause: >-
+      Channel tốn mana suốt lúc bạn giữ nút. Setup map đầu còn chạy năm aura
+      và [[Autoexertion]] chiếm thêm 20%, nên cách đọc của chúng tôi là không
+      còn bao nhiêu mana để trả.
+    fix: >-
+      Giữ cả hai bánh xe mana cost trên cây, như maxroll nói. Rồi làm theo
+      poe-vault: ring có "reduced cost for channelling skills", tổng −3, để
+      mana cost bằng không. Một cây body armour double-influence với −20 to
+      mana cost là lời giải về sau của maxroll.
+  - symptom: "Bạn mua cây chest quen thuộc: six-link, armour và một cục life lớn"
+    cause: >-
+      Barbarism Life Mastery ngừng chạy nếu body armour của bạn có life phẳng
+      hay life regeneration.
+    fix: >-
+      Mua chest theo armour cao và không mod life nào, ngược hẳn với lời
+      khuyên bình thường. Soát cả hai loại mod đó trước khi trả tiền cho một
+      cây six-link.
+  - symptom: "Boss chết quá lâu"
+    cause: >-
+      Một phần là do build: single target là mặt yếu hơn của nó, nhất là khi
+      còn gear starter. Phần bạn sửa được là (a) cây vũ khí đã tụt lại, (b)
+      phòng boss riêng không có xác, nên [[General's Cry]] không gọi ra được
+      gì, và (c) map có reduced cooldown recovery, thứ làm chậm mấy đợt
+      shockwave.
+    fix: >-
+      (a) Chạy lại vendor recipe hoặc mua một cây staff tốt hơn. (b) Cast
+      [[Desecrate]] một lần trước trận. (c) Reroll map. Xong mấy thứ đó thì
+      hai bước thay đổi damage lên boss là bước đổi sang crit và
+      [[Void Shockwave Support]].
+  - symptom: "Damage tụt sau khi bạn bỏ Precise Technique"
+    cause: >-
+      Bạn đổi trước khi các mảnh của nó vào chỗ. Không có vũ khí crit thì bạn
+      mất 40% more damage và thay bằng không gì cả.
+    fix: >-
+      Quay lại Precise Technique cho tới khi bạn cầm một cây staff có physical
+      damage cao và critical strike chance. Bước đổi còn cần một
+      [[Diamond Flask]] với suffix crit và [[Assassin's Mark]] áp khi hit, và
+      maxroll đặt nó ở level 85 tới 90.
+
 patch:
   - note: >-
       **Không có gì trong build này bị đổi.** Cyclone, [[Cyclone of Tumult]],

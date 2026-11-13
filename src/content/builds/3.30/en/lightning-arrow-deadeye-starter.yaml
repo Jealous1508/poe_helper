@@ -398,6 +398,157 @@ stages:
 
           Treat that with caution. It is **one site's estimate, not a measurement**, it belongs to an Ice Shot setup rather than a Lightning Arrow one, and the video it comes from could not be opened. It is adjacent to this build, not part of it.
 
+powerCurve: |
+  The damage is a base multiplied by what [[Deadeye]] does to projectiles. The base is flat added damage, and the question at every stage is who supplies it: the gem or your gear. On top of it sit two extra arrows from [[Endless Munitions]], [[Far Shot]] at range, [[Trinity Support]], and later crit. Putting it as one base and several multipliers is our framing. The parts are the sources'.
+
+  Early, the campaign is easy. [[Lightning Arrow]] is free at level 12, [[Precise Technique]] gives a large bonus with no crit to build, and each lab adds a multiplier, with Endless Munitions at the third the biggest for clear. The skill carries the whole campaign.
+
+  The middle is where it shows. In white and yellow maps your bow and rings add almost nothing, so Lightning Arrow has nothing to multiply. That is why this stretch is played on [[Elemental Hit of the Spectrum]], which carries its base on the gem. The build does not get weaker here. It changes skill so that it does not.
+
+  Late, the base is bought. A bow with real elemental damage and base crit lets you swap back to Lightning Arrow and respec from Precise Technique to crit. That is the one large step in the build, and it comes from currency, not from levels. The defence never takes a step like it: evasion, 100% spell suppression and about 4,500 life, with no absorbing layer and no recovery, in a **3.29** file. So the character gets much faster and stays about as fragile, and bossing stays where its own author rates it, at 2 out of 5.
+
+upgrades:
+  - step: "A bow good enough to swap back to Lightning Arrow"
+    why: >-
+      Lightning Arrow scales off what gear adds, so this is the purchase that
+      ends the Elemental Hit stage. The usual base is a [[Spine Bow]]. Two
+      sources give a bar and they differ: 8% base crit with 800+ elemental
+      damage per second, or 6% base crit as the point to change crit supports.
+      The three-source order below does not list this first bow. Placing it at
+      the top follows the stages above, which say to spend on the bow first.
+      One author notes that "cannot roll attack" no longer works for
+      annulments in 3.30, so check the crafting method before you spend.
+  - step: "A six-link"
+    why: >-
+      First in the order three sources agree on. One older write-up, marked
+      out of date by its own author, says a five-link carries you to Tier 16,
+      which is why we let it wait behind the bow.
+  - step: "Rare armour that caps [[Spell Suppression]]"
+    why: >-
+      Second in the sources' order, and the only defensive step on the list.
+      The tree gives about 80% and the Evasion Mastery another 15%, but only
+      if helmet, body, gloves and boots all have evasion. With about 4,500
+      life and no recovery, the half of spell damage this removes is not
+      optional.
+  - step: "[[Hyrri's Truth]]"
+    why: >-
+      Bow damage, accuracy and crit on one cheap amulet. It is third in the
+      sources' order and the default early amulet for the archetype.
+  - step: "[[The Taming]]"
+    why: >-
+      The sources place it here, ahead of the chest. Two of them are the core
+      of the endgame version of this character, so this is where the starter
+      begins turning into that build. No source says why it ranks above
+      Hyrri's Ire, and we will not guess.
+  - step: "[[Hyrri's Ire]]"
+    cost: "7–10 Divine at league start in 3.29"
+    why: >-
+      Its flat damage is worth more to Lightning Arrow than to Elemental Hit,
+      so it only pays once you have swapped back. The price is one author's,
+      from a different economy; do not read it as a 3.30 figure.
+      [[Daresso's Defiance]] is the cheap stand-in, with movement speed and
+      none of the suppression.
+  - step: "[[The Fledgling]], then a crafted bow with three top-tier prefixes"
+    why: >-
+      The Fledgling's Far Shot stacks with the ascendancy's; one author states
+      up to 90% more damage at maximum range. The second bow is the expensive
+      version of the first step, and the sources put it this late.
+  - step: "[[Lethal Pride]] and [[Nimis]], then [[Headhunter]] and [[Mageblood]]"
+    why: >-
+      The end of the sources' order. One author wants two or three "double
+      damage" rolls on the jewel. No source gives a cost for any of it, and
+      from here the endgame article on this site takes over.
+
+play:
+  mapping: |
+    Written for the red-map setup. In white and yellow maps the loop is the same with [[Elemental Hit of the Spectrum]] as the arrow.
+
+    1. **Fire one arrow at the pack and keep moving.** Packs die before the arrow finishes travelling, and [[Mirage Archer Support]] goes on shooting behind you.
+    2. **Press nothing else.** [[Manaforged Arrows Support]] fires [[Storm Rain]] and [[Blast Rain]] for you, the [[Frenzy]] link keeps your charges up, and [[Mark On Hit Support]] applies [[Sniper's Mark]].
+    3. **Stop for Rare monsters.** In 3.30 that is where the currency is, so do not run past them.
+
+    The sources give no more of a rotation than this.
+  bossing: |
+    Bossing is the weak axis and nothing below fixes it. This is what the sources give you to work with.
+
+    1. **Keep your distance.** [[Far Shot]] adds damage the further the arrow has travelled, up to a cap one source puts around 75 units and another at 70. Standing on top of the boss throws that away.
+    2. **Mark the boss.** [[Sniper's Mark]] by hand until [[Mark On Hit Support]] does it for you.
+    3. **In the early and middle setups, place [[Artillery Ballista]].** It sits in a separate link with [[Focused Ballista Support]] and is your single target there. The red-map links no longer list a ballista, so from that point the boss is killed by the same arrow as everything else. That last part is our reading of the link lists.
+    4. **Do not trade hits.** About 4,500 life behind evasion means one large hit still kills you, and there is no recovery to stand in.
+
+    The patch empowers area bosses and puts rewards behind them. The honest plan, as the patch notes above say, is to borrow or buy boss damage.
+
+deaths:
+  - situation: "One large hit"
+    cause: >-
+      About 4,500 life behind evasion, with no absorbing layer and no recovery
+      engine. Evasion avoids hits; it does not shrink the one that lands.
+    fix: >-
+      Nothing in the published build removes this. Cap suppression so spells
+      are halved, keep [[Cast when Damage Taken Support]] with
+      [[Immortal Call]] from the early-maps links, and dodge what is
+      telegraphed.
+  - situation: "Spell damage, with suppression short of 100%"
+    cause: >-
+      The tree gives about 80%. The Evasion Mastery's 15% switches off if any
+      one of helmet, body, gloves or boots has no evasion value.
+    fix: >-
+      Check all four pieces after every swap. One armour base without evasion
+      is enough to kill the mastery.
+  - situation: "A gear change that left a resistance under 75%"
+    cause: >-
+      The build has no spare defence to absorb an uncapped resistance. It is
+      one of three breakpoints you manage yourself, with suppression and
+      accuracy.
+    fix: >-
+      Recheck resistances at the crafting bench after each upgrade, not only
+      after the Act 5 and Act 10 bosses.
+
+troubleshooting:
+  - symptom: "Damage dropped after you put on a better piece of gear"
+    cause: >-
+      [[Precise Technique]] only works while accuracy is higher than maximum
+      life. A big life roll can push life past it, and the bonus switches off
+      without telling you.
+    fix: >-
+      Open the character sheet and compare the two numbers after every life
+      upgrade. Add accuracy until it is ahead again.
+  - symptom: "Lightning Arrow feels dead in white and yellow maps"
+    cause: >-
+      It scales off flat damage from gear, and you have none yet. Nothing is
+      wrong with your character.
+    fix: >-
+      Swap to [[Elemental Hit of the Spectrum]], as the guide's own planner
+      does in its early and mid loadouts. Come back when the bow is good.
+  - symptom: "Spell suppression is stuck around 80%"
+    cause: >-
+      The Evasion Mastery is not active. It needs an evasion value on helmet,
+      body armour, gloves and boots, all four.
+    fix: >-
+      Replace the one piece that has none.
+  - symptom: "You are trying to deal all three elements for [[Trinity Support]]"
+    cause: >-
+      A common misreading. Trinity gives its full effect with two of the three
+      elements dealing damage.
+    fix: >-
+      Stop rebuilding gear around the third element.
+  - symptom: "Arrows miss after the crit respec"
+    cause: >-
+      Precise Technique was what made you never miss. Without it accuracy
+      matters again. Linking the two is our reading; the numbers are a
+      source's.
+    fix: >-
+      Aim for about 3,300 accuracy for Tier 16. Past about 4,500 it is
+      wasted.
+  - symptom: "Bosses take far too long"
+    cause: >-
+      Mostly the build. Its own author rates bossing 2 out of 5, and a second
+      source gives boss damage its lowest score.
+    fix: >-
+      Use range for [[Far Shot]] and keep [[Sniper's Mark]] on the boss. Past
+      that there is no clean answer: run plenty of maps instead of hard ones,
+      and get boss damage from somewhere else.
+
 patch:
   - note: >-
       **Nothing about this build changed in 3.30.** [[Lightning Arrow]] is not
