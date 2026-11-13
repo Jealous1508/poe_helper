@@ -12,7 +12,7 @@ interface Props {
 }
 const { build, league, locale } = Astro.props;
 ---
-<a class="build-card" href={pagePath(locale, league, 'builds', build.slug)}>
+<a class="build-card hoverable" data-reveal href={pagePath(locale, league, 'builds', build.slug)}>
   <div class="build-card__top">
     <GameImage id={build.image} size={56} where={build.where} />
     <div>

@@ -26,3 +26,23 @@ export function getImage(id: string, where: string): ImageInfo {
 export function imageUrl(id: string, where: string): string {
   return assetPath(getImage(id, where).file);
 }
+
+export interface MediaInfo {
+  file: string;
+  source: string;
+  bytes?: number;
+  credit?: string;
+}
+
+/**
+ * Look up a downloaded media file that is not a still image, such as the
+ * hero video. Unlike getImage this does not require pixel dimensions.
+ */
+export function getMedia(id: string, where: string): MediaInfo {
+  const entry = images[id] as Partial<MediaInfo> | undefined;
+  if (!entry) throw new Error(`${where}: unknown media id "${id}". Add it to src/data/images.json and run "npm run images".`);
+  if (!entry.file || !entry.source) {
+    throw new Error(`${where}: media "${id}" is in the manifest but not downloaded. Run "npm run images".`);
+  }
+  return entry as MediaInfo;
+}

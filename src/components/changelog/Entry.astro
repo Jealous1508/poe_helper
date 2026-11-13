@@ -22,7 +22,7 @@ const impactParts = [
   { key: 'todo', text: entry.impact.todo },
 ].filter((part): part is { key: string; text: string } => Boolean(part.text));
 ---
-<article class="entry" id={entry.id} data-entry data-category={entry.category}>
+<article class="entry" id={entry.id} data-entry data-reveal data-category={entry.category}>
   <GameImage id={entry.image} size={64} where={entry.where} class="entry__image" />
   <div class="entry__main">
     <header class="entry__head">
@@ -96,8 +96,8 @@ const impactParts = [
   .entry__main { max-width: var(--measure); }
   .entry__points { margin: 0.7rem 0 0; font-size: 0.96rem; }
   .entry__points li::marker { color: var(--text-muted); }
-  .entry__figure { margin: 1rem 0 0; }
-  .entry__figure :global(.game-image) { display: block; width: 100%; }
+  .entry__figure { margin: 1.1rem 0 0; }
+  .entry__figure :global(.game-image) { display: block; width: 100%; border-radius: 6px; overflow: hidden; }
   .entry__figure figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem; }
   .entry__gallery { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
   .entry__actions { display: flex; align-items: baseline; gap: 0.75rem; margin: 0.95rem 0 0.9rem; }

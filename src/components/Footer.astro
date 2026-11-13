@@ -9,7 +9,7 @@ const { locale, league } = Astro.props;
   <div class="container">
     <p>{t(locale, 'footer.disclaimer')}</p>
     <p>
-      {t(locale, 'footer.sources')}
+      {t(locale, 'footer.sources')}{' '}
       <a href={league.patchNotesUrl} rel="noopener" target="_blank">{t(locale, 'footer.patchNotes', { version: league.id })}</a>
     </p>
   </div>

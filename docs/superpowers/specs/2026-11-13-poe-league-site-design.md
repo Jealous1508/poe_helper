@@ -37,6 +37,12 @@ Vietnamese added in a later phase for readers with weak English.
 
 ## Non-goals
 
+**Page weight (owner's decision, 2026-11-13):** the earlier "under 50 KB of
+JavaScript per page" budget is lifted. Quality comes before size: rich
+imagery and real animation are wanted, and pages may be much larger. The
+page must still feel fast, so images stay lazy-loaded and compressed, and
+nothing blocks the first paint.
+
 - No backend, accounts, comments, or database.
 - No in-site passive tree renderer or Path of Building importer. Link out to
   PoB codes and tree planners instead.

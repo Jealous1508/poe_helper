@@ -138,7 +138,32 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
   .page-head { padding-top: 2rem; padding-bottom: 1.5rem; }
 }
 
+/* Scroll reveal. The hiding rules apply only once the inline script has set
+   data-reveal="on", so with JavaScript off, or under reduced motion, every
+   element is visible from the start. */
+html[data-reveal="on"] [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+html[data-reveal="on"] [data-reveal].is-in { opacity: 1; transform: none; will-change: auto; }
+
+/* Cards lift slightly on hover. */
+.hoverable { transition: transform 0.18s var(--ease), border-color 0.18s var(--ease), background-color 0.18s var(--ease); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hoverable:hover { transform: translateY(-2px); }
+}
+
+/* A picture that slowly pushes in while it is on screen. */
+.kenburns img, .kenburns video { transform: scale(1.04); transition: transform 14s linear; }
+@media (prefers-reduced-motion: no-preference) {
+  .kenburns.is-in img, .kenburns.is-in video { transform: scale(1.12); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+  .kenburns img, .kenburns video { transform: none !important; }
 }

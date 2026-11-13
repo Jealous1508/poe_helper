@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - No gradients, glassmorphism, glow, or emoji icons anywhere in the UI.
-- No UI framework (no React/Vue/Svelte). Under 50 KB of JavaScript per page.
+- No UI framework (no React/Vue/Svelte). **Page-size budget lifted by the owner on 2026-11-13: quality over size.** Rich imagery and animation are wanted; keep images lazy-loaded and nothing blocking first paint.
 - No runtime requests to third-party hosts: fonts and images are served from the site.
 - Fonts must cover Vietnamese: headings Source Serif 4, body Be Vietnam Pro (Fontsource, variable where available).
 - Nothing in `src/layouts`, `src/components` or `src/pages` may contain the literal `3.30` or `Covens of Umbra`; both come from `src/config/leagues.ts`.

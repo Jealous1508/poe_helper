@@ -15,8 +15,8 @@ const { stops, league, locale } = Astro.props;
   {stops.map((stop, index) => {
     const Tag = stop.available ? 'a' : 'div';
     return (
-      <li class="campaign__stop">
-        <Tag class:list={['stop', { 'is-link': stop.available }]} href={stop.available ? pagePath(locale, league, 'leveling', stop.slug) : undefined}>
+      <li class="campaign__stop" data-reveal style={`--reveal-delay:${Math.min(index, 4) * 60}ms`}>
+        <Tag class:list={['stop', 'hoverable', { 'is-link': stop.available }]} href={stop.available ? pagePath(locale, league, 'leveling', stop.slug) : undefined}>
           <div class="stop__top">
             <span class="stop__num">{index + 1}</span>
             <span class="stop__levels">{stop.levels}</span>

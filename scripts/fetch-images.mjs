@@ -66,6 +66,17 @@ for (const [id, entry] of Object.entries(manifest)) {
       } else throw new Error('entry needs "trade", "poedb" or "source"');
     }
     const input = Buffer.from(await (await get(entry.source)).arrayBuffer());
+    if (entry.video) {
+      // Videos are stored as they come: no conversion, no dimensions probe.
+      const target = join('public', entry.file ?? `video/${entry.league ?? 'shared'}/${id}.webm`);
+      mkdirSync(dirname(target), { recursive: true });
+      writeFileSync(target, input);
+      entry.file = (entry.file ?? `video/${entry.league ?? 'shared'}/${id}.webm`);
+      entry.bytes = input.length;
+      done += 1;
+      console.log(`ok   ${id}  video  ${(input.length / 1024).toFixed(0)} KB`);
+      continue;
+    }
     let pipeline = sharp(input);
     if (entry.maxWidth) pipeline = pipeline.resize({ width: entry.maxWidth, withoutEnlargement: true });
     const { data, info } = await pipeline.webp({ quality: 88 }).toBuffer({ resolveWithObject: true });

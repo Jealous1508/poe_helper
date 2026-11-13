@@ -47,6 +47,67 @@ const fullTitle = `${title} · ${league.name} ${league.id}`;
         apply();
         document.addEventListener('astro:after-swap', apply);
       })();
+
+      // Scroll reveal and the hero video. Both live in this inline script on
+      // purpose: if it runs at all, it both hides and reveals, so content can
+      // never be left invisible by a script that failed to load.
+      (function () {
+        var root = document.documentElement;
+        var still = false;
+        try {
+          still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        } catch (e) {
+          still = true;
+        }
+
+        function startVideos() {
+          var videos = document.querySelectorAll('video[data-src]:not([src])');
+          for (var i = 0; i < videos.length; i++) {
+            var v = videos[i];
+            if (still) continue;
+            v.src = v.getAttribute('data-src');
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        }
+
+        // Set before first paint, otherwise the page paints the elements and
+        // then hides them again, which reads as a flicker.
+        if (!still) root.setAttribute('data-reveal', 'on');
+
+        function reveal() {
+          startVideos();
+          var els = document.querySelectorAll('[data-reveal]:not(.is-in)');
+          if (still || !window.IntersectionObserver) {
+            for (var i = 0; i < els.length; i++) els[i].classList.add('is-in');
+            return;
+          }
+          var io = new IntersectionObserver(
+            function (entries) {
+              for (var j = 0; j < entries.length; j++) {
+                if (entries[j].isIntersecting) {
+                  entries[j].target.classList.add('is-in');
+                  io.unobserve(entries[j].target);
+                }
+              }
+            },
+            { rootMargin: '0px 0px -6% 0px', threshold: 0.04 },
+          );
+          for (var k = 0; k < els.length; k++) io.observe(els[k]);
+        }
+
+        function safeReveal() {
+          try {
+            reveal();
+          } catch (e) {
+            // Never leave the page hidden because of a scripting error.
+            root.removeAttribute('data-reveal');
+          }
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', safeReveal);
+        else safeReveal();
+        document.addEventListener('astro:page-load', safeReveal);
+      })();
     </script>
     <ClientRouter />
   </head>

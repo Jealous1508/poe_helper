@@ -78,13 +78,16 @@ export function parseChangelog(files: Partial<Record<string, YamlFile>>): Change
   return entries;
 }
 
-export function getChangelog(league: string, locale: Locale): { entries: ChangelogEntry[]; meta: ChangelogMeta; isFallback: boolean } {
+export function getChangelog(
+  league: string,
+  locale: Locale,
+): { entries: ChangelogEntry[]; meta: ChangelogMeta & { where: string }; isFallback: boolean } {
   const { data, isFallback } = resolveLocale(loadYamlDir('changelog', league), locale);
   const metaFile = data.meta;
   if (!metaFile) throw new Error(`changelog/${league}: missing meta.yaml`);
   const meta = metaSchema.safeParse(metaFile.data);
   if (!meta.success) throw new Error(`${metaFile.where}: ${meta.error.message}`);
-  return { entries: parseChangelog(data), meta: meta.data, isFallback };
+  return { entries: parseChangelog(data), meta: { ...meta.data, where: metaFile.where }, isFallback };
 }
 
 /** Ids of every changelog entry in a league, for cross-links from other content. */

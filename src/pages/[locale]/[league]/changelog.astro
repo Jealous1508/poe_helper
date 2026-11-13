@@ -7,6 +7,7 @@ import { getLeague } from '../../../config/leagues';
 import { isLocale, t } from '../../../i18n';
 import { categories, getChangelog, sections, verdicts, type Section } from '../../../lib/changelog';
 import { leaguePaths } from '../../../lib/paths';
+import { imageUrl } from '../../../lib/images';
 
 export const getStaticPaths = leaguePaths;
 
@@ -20,6 +21,7 @@ const bySection = Object.fromEntries(sections.map((s) => [s, entries.filter((e) 
 const counts = Object.fromEntries(sections.map((s) => [s, bySection[s].length])) as Record<Section, number>;
 const usedCategories = categories.filter((c) => entries.some((e) => e.category === c));
 const order: Section[] = ['big', 'small', 'new'];
+const sectionArt: Record<Section, string> = { big: 'league-threads', small: 'league-loot', new: 'league-fates' };
 ---
 <Base locale={locale} league={league} title={t(locale, 'nav.changelog')} description={meta.intro} section="changelog" isFallback={isFallback}>
   <div class="container page-head">
@@ -40,9 +42,14 @@ const order: Section[] = ['big', 'small', 'new'];
   <div class="container">
     {order.map((section) => (
       <section class="cl-section" id={`section-${section}`} data-section={section}>
-        <header class="cl-section__head">
-          <h2>{t(locale, `changelog.section.${section}`)}</h2>
-          <p class="muted">{t(locale, `changelog.section.${section}.desc`)}</p>
+        <header class="cl-section__head" data-reveal>
+          <div class="cl-section__art kenburns" aria-hidden="true">
+            <img src={imageUrl(sectionArt[section], meta.where)} alt="" loading="lazy" decoding="async" width="800" height="324" />
+          </div>
+          <div class="cl-section__text">
+            <h2>{t(locale, `changelog.section.${section}`)}</h2>
+            <p class="muted">{t(locale, `changelog.section.${section}.desc`)}</p>
+          </div>
         </header>
         {bySection[section].map((entry) => <Entry entry={entry} league={league.id} locale={locale} />)}
         <p class="muted cl-empty" data-empty hidden>{t(locale, 'changelog.empty')}</p>
@@ -60,7 +67,9 @@ const order: Section[] = ['big', 'small', 'new'];
   .legend { list-style: none; padding: 0; margin: 1.4rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-size: 0.84rem; color: var(--text-muted); }
   .legend li { display: inline-flex; align-items: center; gap: 0.45rem; margin: 0; }
   .cl-section { padding-top: 3rem; }
-  .cl-section__head { padding-bottom: 1.2rem; }
+  .cl-section__head { padding-bottom: 1.4rem; }
+  .cl-section__art { display: block; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: #0c0d12; aspect-ratio: 32 / 9; margin-bottom: 1.1rem; }
+  .cl-section__art img { width: 100%; height: 100%; object-fit: cover; }
   .cl-section__head h2 { margin-bottom: 0.3rem; }
   .cl-section__head p { max-width: var(--measure); }
   .cl-empty { padding: 1.2rem 0; border-top: 1px solid var(--border); }
