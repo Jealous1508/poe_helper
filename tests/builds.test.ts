@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { budgets, getBuilds, parseBuild } from '../src/lib/builds';
+import { budgets, getBuilds, parseBuild, stagePhase } from '../src/lib/builds';
 
 const base = () => ({
   name: 'Test Build',
@@ -118,6 +118,30 @@ describe('the two languages', () => {
       // sentences rather than notable names ("the other of the two"), and
       // those read as nonsense left in English.
       expect(other.labs?.map((l) => l.lab), `${build.slug}.labs order`).toEqual(build.labs?.map((l) => l.lab));
+      // The endgame sections: a translation has the same ones, the same
+      // length, and puts every stage in the same half of the article.
+      expect(other.stages.map(stagePhase), `${build.slug}.stage phases`).toEqual(build.stages.map(stagePhase));
+      expect(Boolean(other.powerCurve), `${build.slug}.powerCurve`).toEqual(Boolean(build.powerCurve));
+      expect(Boolean(other.play), `${build.slug}.play`).toEqual(Boolean(build.play));
+      expect(other.upgrades?.length, `${build.slug}.upgrades`).toEqual(build.upgrades?.length);
+      expect(other.deaths?.length, `${build.slug}.deaths`).toEqual(build.deaths?.length);
+      expect(other.troubleshooting?.length, `${build.slug}.troubleshooting`).toEqual(build.troubleshooting?.length);
     }
+  });
+});
+
+describe('stagePhase', () => {
+  const stage = (id: string, phase?: 'early' | 'endgame') =>
+    ({ id, phase, title: 't', levels: 'l', uses: 'u', changes: 'c', moveOn: 'm', details: [] }) as Parameters<typeof stagePhase>[0];
+
+  it('puts the acts and the first maps in the early half', () => {
+    for (const id of ['acts-1-3', 'acts-4-10', 'acts-1-12', 'early-maps', 'getting-the-gem']) expect(stagePhase(stage(id)), id).toBe('early');
+  });
+  it('puts red maps and everything after in the endgame half', () => {
+    for (const id of ['red-maps', 'endgame', 'transition-in', 'mageblood', 'min-max']) expect(stagePhase(stage(id)), id).toBe('endgame');
+  });
+  it('lets a stage say for itself', () => {
+    expect(stagePhase(stage('red-maps', 'early'))).toBe('early');
+    expect(stagePhase(stage('acts-1-3', 'endgame'))).toBe('endgame');
   });
 });

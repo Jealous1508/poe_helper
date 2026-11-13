@@ -10,7 +10,7 @@ import Rich from '../../../../components/Rich.astro';
 import Tag from '../../../../components/Tag.astro';
 import { getLeague, leagues } from '../../../../config/leagues';
 import { isLocale, locales, pagePath, t } from '../../../../i18n';
-import { getBuild, getBuilds } from '../../../../lib/builds';
+import { getBuild, getBuilds, stagePhase } from '../../../../lib/builds';
 import { getChangelog } from '../../../../lib/changelog';
 import { imageUrl } from '../../../../lib/images';
 import { getTerms } from '../../../../lib/terms';
@@ -31,11 +31,22 @@ const { build, isFallback } = getBuild(league.id, locale, slug);
 const changelog = new Map(getChangelog(league.id, locale).entries.map((entry) => [entry.id, entry]));
 const must = build.mandatory.filter((piece) => piece.level === 'must');
 const recommended = build.mandatory.filter((piece) => piece.level === 'recommended');
+// The article reads in two halves: getting there, and being there. A build
+// you only ever transition into has no early half, and one with nothing
+// written about its endgame has no second one; neither leaves an empty
+// heading behind.
+const earlyStages = build.stages.filter((stage) => stagePhase(stage) === 'early');
+const endgameStages = build.stages.filter((stage) => stagePhase(stage) === 'endgame');
+const hasEarly = earlyStages.length > 0 || Boolean(build.labs);
+const hasEndgame =
+  endgameStages.length > 0 ||
+  Boolean(build.powerCurve || build.upgrades || build.play || build.deaths || build.troubleshooting);
 const toc = [
   { id: 'idea', label: t(locale, 'build.toc.idea') },
   { id: 'how', label: t(locale, 'build.toc.how') },
   { id: 'pieces', label: t(locale, 'build.toc.pieces') },
-  { id: 'progression', label: t(locale, 'build.toc.progression') },
+  ...(hasEarly ? [{ id: 'early', label: t(locale, 'build.toc.early') }] : []),
+  ...(hasEndgame ? [{ id: 'endgame', label: t(locale, 'build.toc.endgame') }] : []),
   { id: 'patch', label: t(locale, 'build.toc.patch', { version: league.id }) },
   { id: 'verdict', label: t(locale, 'build.toc.verdict') },
   { id: 'sources', label: t(locale, 'common.sources') },
@@ -120,10 +131,12 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
         )}
       </section>
 
-      <section id="progression" data-reveal>
-        <h2>{t(locale, 'build.toc.progression')}</h2>
-        <p class="muted section-note">{t(locale, 'build.progression.note')}</p>
-        <Stages stages={build.stages} league={league.id} locale={locale} where={build.where} />
+      {hasEarly && (
+      <section id="early" class="half" data-reveal>
+        <div class="half__label">1</div>
+        <h2>{t(locale, 'build.early.title')}</h2>
+        <p class="muted section-note">{t(locale, 'build.early.note')}</p>
+        {earlyStages.length > 0 && <Stages stages={earlyStages} league={league.id} locale={locale} where={build.where} />}
         {build.labs && (
           <div class="labs">
             <h3 class="sub">{t(locale, 'build.labs')}</h3>
@@ -150,6 +163,97 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
           </div>
         )}
       </section>
+      )}
+
+      {hasEndgame && (
+      <section id="endgame" class="half" data-reveal>
+        <div class="half__label">2</div>
+        <h2>{t(locale, 'build.endgame.title')}</h2>
+        <p class="muted section-note">{t(locale, 'build.endgame.note')}</p>
+
+        {endgameStages.length > 0 && <Stages stages={endgameStages} league={league.id} locale={locale} where={build.where} start={earlyStages.length + 1} />}
+
+        {build.powerCurve && (
+          <div class="deep">
+            <h3 class="sub">{t(locale, 'build.powerCurve')}</h3>
+            <Rich text={build.powerCurve} league={league.id} where={build.where} class="deep__prose" />
+          </div>
+        )}
+
+        {build.upgrades && (
+          <div class="deep">
+            <h3 class="sub">{t(locale, 'build.upgrades')}</h3>
+            <p class="muted section-note">{t(locale, 'build.upgrades.note')}</p>
+            <ol class="upgrades">
+              {build.upgrades.map((upgrade, index) => (
+                <li>
+                  <span class="upgrades__n" aria-hidden="true">{index + 1}</span>
+                  <div>
+                    <div class="upgrades__step">
+                      <Rich text={upgrade.step} league={league.id} where={build.where} inline />
+                      {upgrade.cost && <span class="upgrades__cost"><Rich text={upgrade.cost} league={league.id} where={build.where} inline /></span>}
+                    </div>
+                    <Rich text={upgrade.why} league={league.id} where={build.where} class="upgrades__why" />
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        {build.play && (
+          <div class="deep">
+            <h3 class="sub">{t(locale, 'build.play')}</h3>
+            <div class="play">
+              <div>
+                <h4>{t(locale, 'build.play.mapping')}</h4>
+                <Rich text={build.play.mapping} league={league.id} where={build.where} />
+              </div>
+              <div>
+                <h4>{t(locale, 'build.play.bossing')}</h4>
+                <Rich text={build.play.bossing} league={league.id} where={build.where} />
+              </div>
+            </div>
+          </div>
+        )}
+
+        {build.deaths && (
+          <div class="deep">
+            <h3 class="sub">{t(locale, 'build.deaths')}</h3>
+            <p class="muted section-note">{t(locale, 'build.deaths.note')}</p>
+            <ul class="cases cases--deaths">
+              {build.deaths.map((death) => (
+                <li>
+                  <div class="cases__head"><Rich text={death.situation} league={league.id} where={build.where} inline /></div>
+                  <dl>
+                    <div><dt>{t(locale, 'build.deaths.cause')}</dt><dd><Rich text={death.cause} league={league.id} where={build.where} inline /></dd></div>
+                    <div><dt>{t(locale, 'build.deaths.fix')}</dt><dd><Rich text={death.fix} league={league.id} where={build.where} inline /></dd></div>
+                  </dl>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {build.troubleshooting && (
+          <div class="deep">
+            <h3 class="sub">{t(locale, 'build.troubleshooting')}</h3>
+            <p class="muted section-note">{t(locale, 'build.troubleshooting.note')}</p>
+            <ul class="cases">
+              {build.troubleshooting.map((item) => (
+                <li>
+                  <div class="cases__head"><Rich text={item.symptom} league={league.id} where={build.where} inline /></div>
+                  <dl>
+                    <div><dt>{t(locale, 'build.troubleshooting.cause')}</dt><dd><Rich text={item.cause} league={league.id} where={build.where} inline /></dd></div>
+                    <div><dt>{t(locale, 'build.troubleshooting.fix')}</dt><dd><Rich text={item.fix} league={league.id} where={build.where} inline /></dd></div>
+                  </dl>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
+      )}
 
       <section id="patch" data-reveal>
         <h2>{t(locale, 'build.toc.patch', { version: league.id })}</h2>
@@ -243,6 +347,60 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
   .details { margin-top: 1.5rem; max-width: var(--measure); }
   .section-note { margin: -0.4rem 0 1.25rem; font-size: 0.93rem; max-width: var(--measure); }
   .sub { margin: 2rem 0 0.25rem; }
+
+  /* ---------- the two halves ---------- */
+  /* Early game and endgame are the article's two chapters, so each opens
+     with a rule and a numeral rather than looking like one more section. */
+  .half { border-top: 2px solid var(--border-strong); padding-top: 1.6rem; }
+  .half__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-bottom: 0.5rem;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .deep { margin-top: 2.4rem; }
+  .deep :global(.deep__prose) { max-width: var(--measure); }
+
+  /* What to buy, in order. The number is the point, so it gets the weight. */
+  .upgrades { list-style: none; margin: 0.9rem 0 0; padding: 0; display: grid; gap: 0.2rem; }
+  .upgrades li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.85rem; padding: 0.85rem 0; border-bottom: 1px solid var(--border); }
+  .upgrades li:last-child { border-bottom: 0; }
+  .upgrades__n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.8rem; height: 1.8rem; border-radius: 50%;
+    background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 0.85rem;
+  }
+  .upgrades__step { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.75rem; font-weight: 600; }
+  .upgrades__cost { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); border: 1px solid var(--border-strong); border-radius: 999px; padding: 0.05rem 0.55rem; }
+  .upgrades :global(.upgrades__why) { margin-top: 0.25rem; font-size: 0.94rem; color: var(--text-muted); }
+  .upgrades :global(.upgrades__why p) { margin: 0; }
+
+  /* Maps and bosses side by side: the same build, played two ways. */
+  .play { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 0.9rem; }
+  .play > div { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 1rem 1.15rem 1.1rem; }
+  .play h4 { font-family: var(--font-body); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .play :global(p:last-child), .play :global(ol:last-child), .play :global(ul:last-child) { margin-bottom: 0; }
+
+  /* A death or a symptom on top, the reason and the fix under it. */
+  .cases { list-style: none; margin: 0.9rem 0 0; padding: 0; display: grid; gap: 0.75rem; }
+  .cases li { border: 1px solid var(--border); border-left: 3px solid var(--rework); border-radius: 6px; background: var(--surface); padding: 0.85rem 1.1rem 0.95rem; }
+  .cases--deaths li { border-left-color: var(--nerf); }
+  .cases__head { font-weight: 600; }
+  .cases dl { margin: 0.55rem 0 0; display: grid; gap: 0.4rem; }
+  .cases dl > div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.75rem; font-size: 0.94rem; }
+  .cases dt { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding-top: 0.18rem; }
+  .cases dd { margin: 0; }
+  @media (max-width: 640px) {
+    .play { grid-template-columns: 1fr; }
+    .cases dl > div { grid-template-columns: 1fr; gap: 0.1rem; }
+  }
 
   .labs table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.94rem; }
   .labs th { text-align: left; font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--border-strong); }

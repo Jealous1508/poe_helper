@@ -50,6 +50,9 @@ const schema = z
     stages: z.array(
       z.object({
         id: z.string().regex(/^[a-z0-9-]+$/),
+        /** Which half of the article the stage belongs to. Left out, it is
+         *  worked out from the id: the acts and the first maps are early. */
+        phase: z.enum(['early', 'endgame']).optional(),
         title: z.string().min(1),
         levels: z.string().min(1),
         uses: z.string().min(1),
@@ -62,6 +65,32 @@ const schema = z
         details: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()),
       }).strict(),
     ).min(1),
+    // ---- Endgame depth. All optional: a build whose sources do not support
+    // a section leaves it out, and the page simply does not show it. ----
+
+    /** Where the build's power comes from and when each part of it arrives:
+     *  why it feels the way it does at level 40, 80 and 95 (rich text). */
+    powerCurve: z.string().min(1).optional(),
+    /** What to buy next, in the order it pays off. */
+    upgrades: z.array(
+      z.object({
+        step: z.string().min(1),
+        /** Why it sits at this position and not earlier or later. */
+        why: z.string().min(1),
+        cost: z.string().optional(),
+      }).strict(),
+    ).min(1).optional(),
+    /** How the build is actually played: clearing maps, and killing a boss. */
+    play: z.object({ mapping: z.string().min(1), bossing: z.string().min(1) }).strict().optional(),
+    /** The usual ways this build dies, what causes each, and the fix. */
+    deaths: z.array(
+      z.object({ situation: z.string().min(1), cause: z.string().min(1), fix: z.string().min(1) }).strict(),
+    ).min(1).optional(),
+    /** Diagnosis by symptom: "my damage is low on bosses" and the like. */
+    troubleshooting: z.array(
+      z.object({ symptom: z.string().min(1), cause: z.string().min(1), fix: z.string().min(1) }).strict(),
+    ).min(1).optional(),
+
     /** What this patch changed for the build. `entry` is a changelog id. */
     patch: z.array(z.object({ entry: z.string().optional(), note: z.string().min(1) }).strict()),
     strengths: z.array(z.string().min(1)),
@@ -79,6 +108,16 @@ const schema = z
   .strict();
 
 export type Build = z.infer<typeof schema> & { slug: string; where: string; isFallback?: boolean };
+
+/**
+ * Early game or endgame? A stage says so itself, or its id does: the acts,
+ * the first maps and the hunt for the build's gem are early, and everything
+ * from red maps onward is endgame.
+ */
+export function stagePhase(stage: Build['stages'][number]): 'early' | 'endgame' {
+  if (stage.phase) return stage.phase;
+  return /^(acts-|early-maps$|getting-the-gem$)/.test(stage.id) ? 'early' : 'endgame';
+}
 
 export interface BuildContext {
   league: string;

@@ -13,14 +13,17 @@ interface Props {
   league: string;
   locale: Locale;
   where: string;
+  /** Number of the first stage shown. The endgame half carries on counting
+   *  from where the early half stopped, so the journey reads as one. */
+  start?: number;
 }
-const { stages, league, locale, where } = Astro.props;
+const { stages, league, locale, where, start = 1 } = Astro.props;
 const terms = getTerms(league);
 ---
 <nav class="stage-nav" aria-label={t(locale, 'build.stages')}>
   {stages.map((stage, index) => (
     <a href={`#stage-${stage.id}`}>
-      <span class="stage-nav__num">{index + 1}</span>
+      <span class="stage-nav__num">{index + start}</span>
       <span>
         <strong>{stage.title}</strong>
         <small>{stage.levels}</small>
@@ -32,7 +35,7 @@ const terms = getTerms(league);
 <ol class="stages">
   {stages.map((stage, index) => (
     <li class="stage" id={`stage-${stage.id}`}>
-      <div class="stage__rail" aria-hidden="true"><span class="stage__dot">{index + 1}</span></div>
+      <div class="stage__rail" aria-hidden="true"><span class="stage__dot">{index + start}</span></div>
       <div class="stage__body">
         <header>
           {stage.image && <GameImage id={stage.image} size={44} where={where} />}
