@@ -56,7 +56,9 @@ let done = 0;
 for (const [id, entry] of Object.entries(manifest)) {
   const file = entry.file ?? `img/${entry.league ?? 'shared'}/${id}.webp`;
   const target = join('public', file);
-  if (entry.file && existsSync(target) && entry.width) continue;
+  // Already done: on disk, and measured (images) or marked as a video.
+  const complete = entry.video ? Boolean(entry.bytes) : Boolean(entry.width && entry.height);
+  if (entry.file && existsSync(target) && complete) continue;
   try {
     if (!entry.source) {
       if (entry.trade) entry.source = await iconFromTrade(entry.trade);
