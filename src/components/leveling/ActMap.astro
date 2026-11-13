@@ -12,15 +12,17 @@
 // Lives inside the route's `[data-route]` element so that selecting a zone
 // here runs the same handler as selecting it in the flow chart below, and
 // falls back to the `#zone-…` anchor when there is no JavaScript.
+import Rich from '../Rich.astro';
 import { t, type Locale } from '../../i18n';
 import { imageUrl } from '../../lib/images';
 import type { Act, RouteNode } from '../../lib/leveling';
 
 interface Props {
   act: Act;
+  league: string;
   locale: Locale;
 }
-const { act, locale } = Astro.props;
+const { act, league, locale } = Astro.props;
 
 /** Quests get their number from the order you meet them walking the act. */
 const questNumbers = new Map<string, number>();
@@ -104,7 +106,19 @@ const quests = act.nodes.filter((node) => node.quest);
 
   {quests.length > 0 && (
     <div class="map__key">
-      <h3>{t(locale, 'leveling.map.quests')}</h3>
+      <div class="map__key-head">
+        <h3>{t(locale, 'leveling.map.quests')}</h3>
+        {/* The counter and the reset only mean anything once the script is
+            running, and the ticks are hidden until then, so these are too. */}
+        <p class="map__progress">
+          <span
+            data-progress-count
+            data-total={act.nodes.length}
+            data-template={t(locale, 'leveling.progress.count', { done: '{done}', total: '{total}' })}
+          >{t(locale, 'leveling.progress.count', { done: 0, total: act.nodes.length })}</span>
+          <button type="button" data-progress-reset hidden>{t(locale, 'leveling.progress.reset')}</button>
+        </p>
+      </div>
       <ol class="map__quests">
         {quests.map((node) => (
           <li>
@@ -113,10 +127,34 @@ const quests = act.nodes.filter((node) => node.quest);
               <span class="map__quest-name">{node.quest}</span>
               <span class="map__quest-zone">{node.name}</span>
             </a>
+            <button
+              type="button"
+              class="tick"
+              data-tick={node.id}
+              aria-pressed="false"
+              aria-label={`${t(locale, 'leveling.progress.mark')}: ${node.quest}`}
+              title={t(locale, 'leveling.progress.mark')}
+            >
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
+            </button>
           </li>
         ))}
       </ol>
     </div>
+  )}
+
+  {act.speedTips.length > 0 && (
+    <section class="map__speed">
+      <h3>{t(locale, 'leveling.speed.act')}</h3>
+      <div class="map__speed-grid">
+        {act.speedTips.map((tip) => (
+          <article>
+            <h4>{tip.title}</h4>
+            <Rich text={tip.body} league={league} where={act.where} />
+          </article>
+        ))}
+      </div>
+    </section>
   )}
 </section>
 
@@ -205,6 +243,25 @@ const quests = act.nodes.filter((node) => node.quest);
     line-height: 1;
   }
 
+
+  .map__key-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .map__progress { display: none; margin: 0 0 0.5rem; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--text-muted); }
+  :global([data-route][data-enhanced]) .map__progress { display: flex; }
+  .map__progress button {
+    border: 1px solid var(--border-strong); border-radius: var(--radius); background: transparent;
+    color: var(--text-muted); font: inherit; font-size: 0.76rem; padding: 0.1rem 0.5rem; cursor: pointer;
+  }
+  .map__progress button:hover { color: var(--text); border-color: var(--accent); }
+  .map__quests li { display: flex; align-items: center; gap: 0.35rem; }
+  .map__quests li > a { flex: 1; min-width: 0; }
+  .map__quests li.is-done > a .map__quest-name { text-decoration: line-through; text-decoration-thickness: 1px; }
+  .map__quests li.is-done > a { opacity: 0.62; }
+
+  .map__speed { margin-top: 1.6rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+  .map__speed h3 { font-size: 1rem; margin-bottom: 0.7rem; }
+  .map__speed-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1rem 1.5rem; }
+  .map__speed-grid article { font-size: 0.92rem; }
+  .map__speed-grid h4 { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; margin-bottom: 0.2rem; }
   .map__key { margin-top: 1.1rem; }
   .map__key h3 {
     font-family: var(--font-body);

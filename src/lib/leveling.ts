@@ -29,6 +29,9 @@ const nodeSchema = z
     tips: z.string().optional(),
     /** Extra explanation for first-time players. */
     newbie: z.string().optional(),
+    /** How people who race the campaign handle this zone: portal placement,
+     *  what to skip, what to do in which order. */
+    speed: z.string().optional(),
     /** Reward options that differ by class. */
     classRewards: z.array(z.object({ class: z.string().min(1), reward: z.string().min(1) }).strict()).optional(),
     classRewardsNote: z.string().optional(),
@@ -52,6 +55,8 @@ const actSchema = z
     intro: z.string().min(1),
     nodes: z.array(nodeSchema).min(1),
     sections: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()),
+    /** Act-wide tricks for getting through faster. */
+    speedTips: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()).default([]),
     /** What this patch changed for the act (rich text). */
     patchNotes: z.array(z.string().min(1)).default([]),
     sources: z.array(z.object({ title: z.string().min(1), url: z.string().regex(/^https?:\/\//) }).strict()).default([]),

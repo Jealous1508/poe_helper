@@ -3,6 +3,7 @@
 // areas branch off to the right. Selecting a node shows its panel.
 // Without JavaScript every panel is simply listed under the chart.
 import ActMap from './ActMap.astro';
+import ZoneMap from './ZoneMap.astro';
 import Rich from '../Rich.astro';
 import Tag from '../Tag.astro';
 import GameImage from '../GameImage.astro';
@@ -18,11 +19,11 @@ interface Props {
 const { act, league, locale } = Astro.props;
 const first = act.nodes[0].id;
 ---
-<div class="route" data-route>
+<div class="route" data-route data-league={league} data-act={act.slug}>
   {/* Inside [data-route] so a pin on the map selects a zone through the same
       handler as the chart, and falls back to the same anchor without JS. */}
   <div class="route__map">
-    <ActMap act={act} locale={locale} />
+    <ActMap act={act} league={league} locale={locale} />
   </div>
 
   <ol class="flow" aria-label={t(locale, 'leveling.route')}>
@@ -52,6 +53,19 @@ const first = act.nodes[0].id;
           </span>
           <Tag kind={node.tag} label={t(locale, `leveling.tag.${node.tag}`)} />
         </a>
+        {/* A sibling of the link, not a child: a button inside an anchor is
+            invalid, and this must not also select the zone. Hidden until the
+            script runs, since without it a tick could not be remembered. */}
+        <button
+          type="button"
+          class="tick"
+          data-tick={node.id}
+          aria-pressed="false"
+          aria-label={`${t(locale, 'leveling.progress.mark')}: ${node.name}`}
+          title={t(locale, 'leveling.progress.mark')}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
+        </button>
       </li>
     ))}
   </ol>
@@ -84,6 +98,8 @@ const first = act.nodes[0].id;
           </dl>
         )}
 
+        <ZoneMap act={act.number} node={node.id} locale={locale} where={act.where} />
+
         {node.why && (
           <div class="panel__block">
             <h4>{t(locale, `leveling.why.${node.tag}`)}</h4>
@@ -94,6 +110,12 @@ const first = act.nodes[0].id;
           <div class="panel__block">
             <h4>{t(locale, node.kind === 'boss' ? 'leveling.fight' : 'leveling.tips')}</h4>
             <Rich text={node.tips} league={league} where={act.where} />
+          </div>
+        )}
+        {node.speed && (
+          <div class="panel__block panel__block--speed">
+            <h4>{t(locale, 'leveling.speed')}</h4>
+            <Rich text={node.speed} league={league} where={act.where} />
           </div>
         )}
         {node.newbie && (
@@ -161,6 +183,91 @@ const first = act.nodes[0].id;
     if (event.key === 'Escape') document.querySelector('[data-panels].is-open')?.classList.remove('is-open');
   });
   document.addEventListener('astro:page-load', init);
+
+  // ---------- what the reader has already done ----------
+  //
+  // Kept in this browser only. There are no accounts on this site, so there
+  // is nowhere else for it to go, and a campaign is played on one machine
+  // anyway. Every read and write is guarded: storage can be switched off or
+  // full, and a guide that throws on load is worse than one that forgets.
+
+  function storeKey(route: HTMLElement) {
+    return `progress:${route.dataset.league ?? ''}:${route.dataset.act ?? ''}`;
+  }
+
+  function readDone(route: HTMLElement): Set<string> {
+    try {
+      const raw = localStorage.getItem(storeKey(route));
+      const list = raw ? JSON.parse(raw) : [];
+      return new Set(Array.isArray(list) ? list.filter((x): x is string => typeof x === 'string') : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  function writeDone(route: HTMLElement, done: Set<string>) {
+    try {
+      localStorage.setItem(storeKey(route), JSON.stringify([...done]));
+    } catch {
+      // Private window, or the quota is gone. The ticks still work for now.
+    }
+  }
+
+  function paint(route: HTMLElement, done: Set<string>) {
+    for (const tick of route.querySelectorAll<HTMLButtonElement>('[data-tick]')) {
+      const on = done.has(tick.dataset.tick ?? '');
+      tick.setAttribute('aria-pressed', String(on));
+      tick.closest<HTMLElement>('[data-item], li')?.classList.toggle('is-done', on);
+    }
+    const counter = route.querySelector<HTMLElement>('[data-progress-count]');
+    if (counter) {
+      const total = Number(counter.dataset.total ?? '0');
+      // Count zones, not buttons: a zone has a tick in the chart and another
+      // in the quest index, and both stand for the same one thing.
+      const counted = new Set<string>();
+      for (const tick of route.querySelectorAll<HTMLButtonElement>('[data-tick]')) {
+        if (tick.dataset.tick && done.has(tick.dataset.tick)) counted.add(tick.dataset.tick);
+      }
+      const hit = counted.size;
+      counter.textContent = (counter.dataset.template ?? '{done}/{total}')
+        .replace('{done}', String(Math.min(hit, total)))
+        .replace('{total}', String(total));
+    }
+    route.querySelector<HTMLElement>('[data-progress-reset]')?.toggleAttribute('hidden', done.size === 0);
+  }
+
+  function initProgress() {
+    for (const route of document.querySelectorAll<HTMLElement>('[data-route]')) {
+      paint(route, readDone(route));
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+
+    const reset = target.closest<HTMLElement>('[data-progress-reset]');
+    if (reset) {
+      const route = reset.closest<HTMLElement>('[data-route]');
+      if (!route) return;
+      writeDone(route, new Set());
+      paint(route, new Set());
+      return;
+    }
+
+    const tick = target.closest<HTMLButtonElement>('[data-tick]');
+    if (!tick || !tick.dataset.tick) return;
+    const route = tick.closest<HTMLElement>('[data-route]');
+    if (!route) return;
+    event.preventDefault();
+    const done = readDone(route);
+    if (done.has(tick.dataset.tick)) done.delete(tick.dataset.tick);
+    else done.add(tick.dataset.tick);
+    writeDone(route, done);
+    paint(route, done);
+  });
+
+  document.addEventListener('astro:page-load', initProgress);
 </script>
 
 <style>
@@ -169,7 +276,32 @@ const first = act.nodes[0].id;
 
   /* ---------- the flow chart ---------- */
   .flow { list-style: none; margin: 0; padding: 0; position: relative; }
-  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; }
+  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; display: flex; align-items: center; gap: 0.4rem; }
+  .flow__item > .node { flex: 1; min-width: 0; }
+
+  /* ---------- the tick ---------- */
+  /* Hidden until the script announces itself: a tick that cannot be
+     remembered is a worse promise than no tick at all. */
+  .tick { display: none; }
+  :global([data-route][data-enhanced]) .tick {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+    border: 1px solid var(--border-strong);
+    border-radius: 5px;
+    background: var(--surface);
+    color: transparent;
+    cursor: pointer;
+    transition: border-color 0.12s var(--ease), background-color 0.12s var(--ease), color 0.12s var(--ease);
+  }
+  .tick:hover { border-color: var(--accent); color: var(--text-muted); }
+  .tick[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .is-done > .node .node__name { text-decoration: line-through; text-decoration-thickness: 1px; }
+  .is-done > .node { opacity: 0.62; }
   /* spine */
   .flow__item::before { content: ''; position: absolute; left: 0.62rem; top: 0; bottom: 0; width: 1.5px; background: var(--border-strong); }
   .flow__item:first-child::before { top: 50%; }

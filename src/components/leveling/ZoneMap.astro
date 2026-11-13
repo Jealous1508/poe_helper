@@ -1,0 +1,113 @@
+---
+// The act's own in-game map, cropped around one zone, with that zone ringed.
+//
+// This is the map the game draws for the act: the zones and the paths between
+// them. It is not a picture of the ground inside a zone, because there is no
+// such picture to show — the inside of a campaign zone is generated again
+// every time you enter it. What the act map does fix is where a zone sits and
+// what it connects to, which is the thing someone looking for a quest needs.
+//
+// The window is a fixed-size porthole over the full map image, positioned so
+// the zone lands in the middle and clamped so it never runs off the edge of
+// the picture. One image per act serves every zone in it, so moving between
+// zones costs no new download.
+import { t, type Locale } from '../../i18n';
+import { getImage, imageUrl } from '../../lib/images';
+import maps from '../../data/act-maps.json';
+
+interface Props {
+  /** Act number. */
+  act: number;
+  /** Route node id, as used in the act's content file. */
+  node: string;
+  locale: Locale;
+  where: string;
+}
+const { act, node, locale, where } = Astro.props;
+
+// JSON widens [x, y] to number[], so the pair is checked rather than asserted.
+type ActMap = { width: number; height: number; zones: Record<string, number[]>; nodes: Record<string, string> };
+const data = (maps as Record<string, ActMap>)[String(act)] as ActMap | undefined;
+const zoneName = data?.nodes[node];
+const found = zoneName ? data?.zones[zoneName] : undefined;
+const point = found?.length === 2 ? found : undefined;
+
+// Shown a little larger than life: the source is a 610px screenshot and the
+// porthole only shows part of it, so a small zone would otherwise be tiny.
+const SCALE = 1.45;
+const WINDOW_H = 240;
+
+const show = data !== undefined && point !== undefined;
+const image = show ? getImage(`map-act-${act}`, where) : undefined;
+const planeW = data ? Math.round(data.width * SCALE) : 0;
+const planeH = data ? Math.round(data.height * SCALE) : 0;
+const px = point ? Math.round(point[0] * SCALE) : 0;
+const py = point ? Math.round(point[1] * SCALE) : 0;
+---
+{show && image && (
+  <figure class="zonemap">
+    <div class="zonemap__window" style={`height:${WINDOW_H}px`}>
+      <div
+        class="zonemap__plane"
+        style={`width:${planeW}px;height:${planeH}px;left:clamp(calc(100% - ${planeW}px), calc(50% - ${px}px), 0px);top:clamp(${WINDOW_H - planeH}px, ${Math.round(WINDOW_H / 2) - py}px, 0px)`}
+      >
+        <img
+          src={imageUrl(`map-act-${act}`, where)}
+          alt=""
+          width={planeW}
+          height={planeH}
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="zonemap__ring" style={`left:${px}px;top:${py}px`} aria-hidden="true"></span>
+      </div>
+    </div>
+    <figcaption>{t(locale, 'leveling.map.where', { zone: zoneName ?? '' })}</figcaption>
+  </figure>
+)}
+
+<style>
+  .zonemap { margin: 1.1rem 0 0; }
+  .zonemap__window {
+    position: relative;
+    /* A porthole, not a letterbox: capped so it keeps roughly the
+       proportions of the map it is cut from. */
+    max-width: 430px;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    background: #140f0a;
+  }
+  .zonemap__plane { position: absolute; }
+  /* The screenshots are dim at this size; a light lift makes the paths
+     readable without touching the colours of the map itself. */
+  .zonemap__plane img { display: block; width: 100%; height: 100%; filter: brightness(1.12) saturate(1.06); }
+  /* The map is already full of rings, so this one has to be unmistakable:
+     bigger than a marker, in the site's accent, with a white edge outside
+     and a dark halo beyond that so it survives both parchment and water. */
+  .zonemap__ring {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 2px rgb(255 255 255 / 0.85),
+      0 0 0 4px rgb(0 0 0 / 0.55),
+      0 0 16px 5px rgb(0 0 0 / 0.45);
+    animation: zonemap-pulse 2.4s var(--ease) infinite;
+  }
+  @keyframes zonemap-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.09); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .zonemap__ring { animation: none; }
+  }
+  .zonemap figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+</style>
