@@ -78,11 +78,11 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
         <Ratings ratings={build.ratings} locale={locale} />
       </div>
       <dl class="side__facts">
-        <div><dt>{t(locale, 'build.budget')}</dt><dd>{t(locale, `build.budget.${build.budget}`)}{build.budgetNote && <small>{build.budgetNote}</small>}</dd></div>
+        <div><dt>{t(locale, 'build.budget')}</dt><dd>{t(locale, `build.budget.${build.budget}`)}{build.budgetNote && <small><Rich text={build.budgetNote} league={league.id} where={build.where} inline /></small>}</dd></div>
         <div><dt>{t(locale, 'common.verified')}</dt><dd>{build.verified}</dd></div>
         <div>
           <dt>{t(locale, 'build.confidence')}</dt>
-          <dd><Tag kind={confidenceKind} label={t(locale, `build.confidence.${build.confidence}`)} />{build.confidenceNote && <small>{build.confidenceNote}</small>}</dd>
+          <dd><Tag kind={confidenceKind} label={t(locale, `build.confidence.${build.confidence}`)} />{build.confidenceNote && <small><Rich text={build.confidenceNote} league={league.id} where={build.where} inline /></small>}</dd>
         </div>
       </dl>
       <nav class="toc" aria-label={t(locale, 'build.toc')}>
