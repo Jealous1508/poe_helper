@@ -249,6 +249,22 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
   .labs td { padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
   .labs td:first-child { white-space: nowrap; color: var(--text-muted); }
   .labs__node { display: inline-flex; align-items: center; gap: 0.6rem; }
+  /*
+    Three columns do not fit on a phone: the lab name and the ascendancy
+    notable take 258px between them, which leaves the "why" column less
+    than its shortest word and pushes the whole page sideways. Stacked,
+    each row still reads as one thought — NORMAL, the notable, the reason —
+    so the header is no loss.
+  */
+  @media (max-width: 560px) {
+    .labs thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .labs table, .labs tbody, .labs tr, .labs td { display: block; }
+    .labs tr { padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+    .labs tr:last-child { border-bottom: 0; }
+    .labs td { padding: 0; border: 0; }
+    .labs td:first-child { font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; }
+    .labs td:nth-child(2) { margin: 0.15rem 0 0.4rem; }
+  }
 
   .patch { list-style: none; padding: 0; margin: 0; max-width: var(--measure); }
   .patch li { padding: 1rem 0; border-top: 1px solid var(--border); margin: 0; font-size: 0.96rem; }
