@@ -117,9 +117,9 @@ chainDetails:
       It is a straight trade: a large chunk of effective hit points for 30% more spell damage. In softcore with a good trigger rhythm, take it. In hardcore, or if you die a lot, do not.
   - title: The one gem that is not a league-start goal
     body: |
-      [[Invert the Rules Support]] sits in the guide's endgame six-link. It requires gem level 72 to 76, costs 140% mana multiplier, and is **dropped by the Maven and Uber Maven**.
+      [[Invert the Rules Support]] sits in the endgame six-link of the guide's planner. It requires gem level 72 to 76, costs 140% mana multiplier, and is **dropped by the Maven and Uber Maven**.
 
-      That makes the published six-link aspirational, not a starting target. The guide never says which five gems you run in the five-link, and dropping Invert the Rules from the six is our inference.
+      That makes that six-link aspirational, not a starting target. The guide's own Path of Building does not use the gem at all: its endgame link has Awakened Added Cold Damage in that socket, and the guide never mentions the difference. Nor does it say which five gems you run in the five-link; ours are the five that every six-link it publishes has in common.
 
 mandatory:
   - term: Ice Trap of Hollowness
@@ -151,8 +151,8 @@ mandatory:
       equal to 3% of your evasion rating.
     detail: >-
       It also caps your energy shield at your evasion. That is why the build
-      wants hybrid evasion and energy shield bases on everything, not pure
-      energy shield.
+      wants hybrid evasion and energy shield bases on everything but the
+      helmet, not pure energy shield.
   - term: Wicked Ward
     why: >-
       Energy shield recharge is not interrupted by damage if it began recently.
@@ -321,7 +321,7 @@ stages:
         body: |
           [[Escape Artist]] reads evasion off your body armour and energy shield off your helmet. [[Ghost Dance]] reads both.
 
-          That means hybrid Dexterity-and-Intelligence bases on every armour slot. The published setup uses them everywhere. Pure armour or pure energy shield pieces are a real loss here, not a minor one.
+          That means hybrid Dexterity-and-Intelligence bases on every armour slot but one. The published setup uses them everywhere except the helmet, which is a pure energy shield [[Hubris Circlet]]: the guide wants it for Escape Artist and the Energy Shield mastery. In the other slots, pure armour or pure energy shield pieces are a real loss, not a minor one.
       - title: Aim off-centre
         body: |
           Start practising now, on act bosses. The payload is a ring, so a trap thrown directly on top of a boss puts the explosions *around* it.
@@ -342,7 +342,7 @@ stages:
       - name: Main skill
         gems: [Ice Trap of Hollowness, Charged Traps Support, Trap and Mine Damage Support, Cold Penetration Support, Increased Critical Damage Support]
       - name: Single target
-        gems: [Bear Trap, Frost Bomb, Assassin's Mark]
+        gems: [Assassin's Mark, Arcanist Brand, Frost Bomb]
       - name: Chill and freeze
         gems: [Summon Skitterbots, Bonechill Support, Unbound Ailments Support]
       - name: Auras
@@ -357,12 +357,12 @@ stages:
 
           Buy a five-linked Sadist Garb, Carnal Armour or Blood Raiment, or craft one with Dense fossils, or wear [[Tinkerskin]].
 
-          **The guide never lists which five gems go in the five-link.** The set above is our reading: the published six-link minus [[Invert the Rules Support]], which is a Maven drop and not a starting goal.
-      - title: One internal conflict in the guide you will notice
+          **The guide never lists which five gems go in the five-link.** The set above is our reading: the five gems that every six-link the guide publishes has in common. The sixth is [[Increased Critical Strikes Support]] in its Path of Building's Early Maps link, and [[Invert the Rules Support]], a Maven drop and not a starting goal, in its planner's endgame link.
+      - title: The crit supports, and the one real conflict
         body: |
-          The guide's own crit support is inconsistent across three places. Its planner six-link uses [[Increased Critical Damage Support]]; its prose discusses [[Increased Critical Strikes Support]] as the crit-chance source; and its awakened-gem section tells you to replace Increased Critical Strikes with Awakened Added Cold Damage.
+          The guide's crit supports look inconsistent until you open its Path of Building. That file has two skill sets. **Early Maps** is a six-link that runs both [[Increased Critical Damage Support]] and [[Increased Critical Strikes Support]] — it is the link shown at red maps on this page. **Endgame** keeps Increased Critical Damage and replaces Increased Critical Strikes with Awakened Added Cold Damage, which is exactly what the guide's awakened-gem section tells you to do. So the three statements we first read as a conflict are one progression: crit damage is in every published link, and crit chance is the sixth gem, the one that is later replaced.
 
-          Three statements that cannot all be true. Use crit chance while your base crit is low and crit damage once it is high, and check in Path of Building rather than following the page.
+          What does not reconcile is that sixth socket at the very end. The Path of Building and the prose put Awakened Added Cold Damage there; the only endgame link in the Maxroll planner puts [[Invert the Rules Support]] there instead. The guide never mentions the difference. At the endgame stage we show the planner's link, and we are not telling you which is better: check both in Path of Building.
       - title: Flasks
         body: |
           A Divine [[Life Flask]] with the instant-on-low-life prefix and a bleed or corrupted-blood suffix, then [[Quartz Flask]], [[Quicksilver Flask]], [[Diamond Flask]] and [[Jade Flask]].
@@ -417,9 +417,11 @@ stages:
           It is fiddly to set up once and then free forever.
       - title: Automating the curse
         body: |
-          Craft "Trigger a Socketed Spell when you Use a Skill" on your wand and socket [[Assassin's Mark]]. Your [[Shield Charge]] then applies the curse for you.
+          Craft "Trigger a Socketed Spell when you Use a Skill" on your wand and socket [[Assassin's Mark]]. Your [[Shield Charge]] then applies the curse for you. Until you have the craft, the guide says to cast the mark yourself.
 
           That is one fewer button in a build that already asks for several.
+
+          It is also where the separate single-target link ends, and the guide never comments on that; this is read off its setups. [[Bear Trap]] appears only in its leveling steps. The Early Maps set in its Path of Building carries [[Frost Bomb]] and Assassin's Mark on an [[Arcanist Brand]]. Its Endgame set, and the planner's, have neither Bear Trap nor Frost Bomb: only Assassin's Mark is left, in the wand with Shield Charge. Our reading: from here on, bosses are fought with the main link alone.
   - id: endgame
     image: pain-attunement
     title: Endgame
@@ -463,27 +465,35 @@ stages:
           misreading. Those numbers do not apply to your game.
       - title: Another guide conflict, in the trees
         body: |
-          The guide's cluster-jewel endgame tree variant **drops
-          [[Ghost Dance]]**, even though its own prose calls Ghost Dance core
-          to the recovery stack.
+          The cluster-jewel tree in the guide's Maxroll planner **does not
+          allocate [[Ghost Dance]]**, even though its prose names Ghost Dance
+          every time it lists the recovery stack.
 
-          Unresolved. Check which recovery you actually have before you import a
-          tree variant.
+          We went back and checked, and that tree is the odd one out. The
+          cluster tree in the guide's Path of Building does allocate Ghost
+          Dance, and so does the planner's own tree without clusters. The
+          planner variant that lacks it is also the only tree stamped with 3.28
+          data; the others are 3.29. Our reading is that it is a stale variant
+          and not a decision to drop the keystone, which is why Ghost Dance
+          stays on the must-have list.
+
+          If you want the cluster tree, import it from the Path of Building,
+          and count the recovery stack after any import.
       - title: What the build still cannot do
         body: |
           - The centre of your blast is dead space, so single targets must be clipped off-centre forever.
-          - [[Charged Traps Support]] is partly disabled by its own mandatory belt.
+          - [[Charged Traps Support]] is partly disabled by [[Sunblast]], the belt the build is built around.
           - There is no leech, so every point of recovery depends on five keystones all working.
           - The low-life swap trades effective hit points for damage.
 
 powerCurve: |
   Damage is how many rings overlap on the target and how hard each one hits. Three things move it, and they arrive far apart: **[[Ice Trap of Hollowness]]**, which the guide calls a massive boost to damage and area; **[[Sunblast]]**, which turns one throw into three traps that detonate themselves, and which the guide describes as effectively tripling the damage; and, late, [[Pain Attunement]] for 30% more spell damage. Underneath all of it sits throw speed, which is frenzy charges through [[Charged Traps Support]], kept alive by [[Swift Killer]].
 
-  In the campaign you have none of the three: [[Lightning Trap]] to level 28, then base [[Ice Trap]] aimed at enemies. In white and yellow maps you have the transfigured gem in a five-link, but you are still waiting for monsters to walk into your traps, and the article says plainly that the build before Sunblast is worse than its reputation. The belt is a red-map item and the guide itself calls it fairly rare at league start, so how long that awkward middle lasts is not in your hands. [[Carcass Jack]], cluster jewels and the low-life swap come after it.
+  In the campaign you have none of the three: [[Lightning Trap]] to level 28, then base [[Ice Trap]] aimed at enemies. In white and yellow maps you have the transfigured gem in a five-link, but you are still waiting for monsters to walk into your traps, and the article says plainly that the build before Sunblast is worse than its reputation. Nothing but supply stops you wearing the belt sooner — it only requires level 37 — but the guide lists it under its Mid Game milestone, after the early-game gearing, and calls it fairly rare at league start. Putting it at red maps is our placement of that milestone, not the guide's wording, and how long that awkward middle lasts is not in your hands. [[Carcass Jack]], cluster jewels and the low-life swap come after it.
 
   Defence arrives in two lab steps and one gear step. [[Escape Artist]] and [[Eldritch Battery]] come at the Cruel lab; [[Spellbreaker]] at Merciless completes the recovery stack, and until then you should expect to die more; [[Spell Suppression]] only reaches 100% in red maps. There is no armour layer at any point, and the endgame swap spends part of the buffer on damage.
 
-  Read every "when" above as the guide's, and the guide runs on 3.28 and 3.29 data. "Tripled" is its word, not a measurement, and we could not confirm that its defensive numbers account for 3.30.
+  Read every other "when" above as the guide's, and the guide runs on 3.28 and 3.29 data. "Tripled" is its word, not a measurement, and we could not confirm that its defensive numbers account for 3.30.
 
 play:
   mapping: |
@@ -497,7 +507,7 @@ play:
 
     Traps can be laid before a boss is active, so start with a throw already down; the article lists that as a strength. After that, keep moving and keep throwing. Because the damage lands a beat after the throw, aim at where the boss will be standing rather than where it is — that sentence is our reading of the delay, not an instruction from the guide.
 
-    Through early maps the article lists a separate single-target link of [[Bear Trap]], [[Frost Bomb]] and [[Assassin's Mark]]. The red-map and endgame link lists no longer show it, and the guide never says whether it stays, so we will not tell you it does. Keep [[Diamond Flask]] up on bosses: the article calls it the build's only source of crit consistency.
+    The separate single-target link is a campaign and early-map tool, and the guide never comments on where it goes; this is read off its setups. [[Bear Trap]] appears only in its leveling steps. The Early Maps set in its Path of Building has [[Arcanist Brand]] casting [[Frost Bomb]] and [[Assassin's Mark]]. Its endgame setups have neither Bear Trap nor Frost Bomb: only Assassin's Mark is left, on the trigger wand, and the guide says to cast it yourself until you have that craft. Keep [[Diamond Flask]] up on bosses: the article calls it the build's only source of crit consistency.
 
 deaths:
   - situation: >-
@@ -516,12 +526,13 @@ deaths:
       There is no leech, so recovery is [[Eldritch Battery]],
       [[Mind Over Matter]], [[Ghost Dance]], [[Wicked Ward]] and
       [[Spellbreaker]] working as one system, and the article says they fail
-      together. The guide's own cluster-jewel tree variant drops Ghost Dance
-      while its prose calls it core.
+      together. The cluster-jewel tree in the guide's planner leaves out Ghost
+      Dance; the cluster tree in its Path of Building and its prose both keep
+      it.
     fix: >-
       Count all five on your tree before you map. Keep hybrid evasion and
-      energy shield bases in every armour slot, because [[Escape Artist]] and
-      Ghost Dance both read from them.
+      energy shield bases in every armour slot but the helmet, because
+      [[Escape Artist]] and Ghost Dance both read from them.
   - situation: >-
       A map with reduced aura effect, no regeneration, or lowered maximum
       resistances
@@ -581,22 +592,29 @@ troubleshooting:
     fix: >-
       Unspec them and spend the points elsewhere.
   - symptom: >-
-      Energy shield is lower than the gear adds up to
+      Energy shield will not refill all the way
     cause: >-
-      [[Ghost Dance]] caps energy shield at your evasion rating. Pure energy
-      shield pieces raise one side of that and not the other.
+      [[Ghost Dance]] reads "Cannot Recover Energy Shield to above Evasion
+      Rating"; that is the keystone's own text. The rest is our reasoning from
+      it, not something the guide says: a pure energy shield piece adds to the
+      pool and nothing to that ceiling, except on the helmet, where
+      [[Escape Artist]] turns energy shield into evasion.
     fix: >-
-      Hybrid evasion and energy shield bases everywhere, and check what
-      [[Escape Artist]] is converting from your helmet and body armour.
+      Hybrid evasion and energy shield bases everywhere but the helmet, and
+      check what [[Escape Artist]] is converting from your helmet and body
+      armour.
   - symptom: >-
       Damage swings from throw to throw
     cause: >-
-      It is a crit build whose only crit consistency is [[Diamond Flask]], and
-      the guide contradicts itself on which crit support to run.
+      It is a crit build, and the article calls [[Diamond Flask]] its only
+      source of crit consistency. Our five-link also leaves out the crit
+      chance support: in the guide's Path of Building,
+      [[Increased Critical Strikes Support]] is the sixth gem.
     fix: >-
-      Keep the flask up. The article's rule: crit chance support while your
-      base crit is low, crit damage once it is high, checked in Path of
-      Building and not against the guide's page.
+      Keep the flask up. [[Increased Critical Damage Support]] is in every
+      link the guide publishes; [[Increased Critical Strikes Support]] is the
+      sixth gem of its Early Maps link, so that is what a six-link adds. Check
+      your own numbers in Path of Building.
 
 patch:
   - entry: trickster-buffs
@@ -657,7 +675,7 @@ weaknesses:
   - "Low physical mitigation. There is no armour layer at all."
   - "No leech of any kind, so recovery is five keystones that fail together."
   - "The payload is a ring, so the centre of your blast is dead space."
-  - "Charged Traps is partly disabled by Sunblast, the belt the build requires."
+  - "Charged Traps is partly disabled by Sunblast, the belt the build is built around."
   - "The guide is 3.28 and 3.29 data with at least one outright wrong number in it."
   - "Zero third-party corroboration: no tier list lists this build at all."
 avoidIf: >-
@@ -666,9 +684,11 @@ avoidIf: >-
   willing to keep [[Eldritch Battery]], [[Mind Over Matter]],
   [[Ghost Dance]], [[Wicked Ward]] and later [[Petrified Blood]] all working
   as one system — they do not degrade gracefully, they fail together. And skip
-  it if you cannot get the transfigured gem or a [[Sunblast]] reasonably early,
-  because the build is substantially weaker without either. The trap playstyle
-  is divisive and the guide says so itself.
+  it if you cannot get the transfigured gem reasonably early, or if you would
+  not put up with playing it without a [[Sunblast]] for a while: the build runs
+  without the belt, and the guide's own advice on an expensive one is to skip
+  it and come back, but it is substantially weaker without either. The trap
+  playstyle is divisive and the guide says so itself.
 
 sources:
   - title: "Maxroll: Ice Trap Trickster league starter (aer0)"
