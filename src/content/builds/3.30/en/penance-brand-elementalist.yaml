@@ -1,0 +1,483 @@
+name: Penance Brand Ignite Elementalist
+tagline: >-
+  You Shield Charge through packs and they explode into chain ignites behind
+  you. Anything that survives gets two brands parked on it.
+class: Witch
+ascendancy: Elementalist
+role: starter
+budget: starter
+budgetNote: >-
+  **No source publishes a budget for this build, at any tier.** Our researcher
+  searched the full guide page for prices and found none; the tier lists give
+  none either. The only affordability signal the author gives is a gearing
+  difficulty of 2 out of 5, where lower is easier. The starting kit is
+  genuinely cheap — [[Obliteration]], [[Lost Unity]], [[Cinderswallow Urn]],
+  [[Nycta's Lantern]] and Replica Prismweave are all low-value league-start
+  uniques. The expensive end ([[Archdemon Crown]], [[Melding of the Flesh]],
+  Elegant Hubris) is unpriced for 3.30, and nothing is priced on day one.
+mainSkill: Penance Brand
+image: asc-icon-elementalist
+hero: art-elementalist
+tags: [Brand, Ignite, Autobomber, Tanky]
+ratings: { clear: 5, bossing: 3, survivability: 4, ease: 3 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **The maxroll page carries a 3.30 label over 3.29 text.** Its embedded
+  planner is stamped `version: 3290`, saved 3 August 2026. The author did ship
+  a real 3.30 revision off-site on 12 November — it deletes the old Storm
+  Brand levelling route, adds two wand-attack levelling trees, adds a red-maps
+  stage and adds two gems — so the Path of Building file is current and the
+  prose is about 95% accurate 3.29 text. We have used the 3.30 Path of
+  Building as the authority throughout. Ratings are our researcher's day-zero
+  judgement, rounded down from half points (bossing 3.5 as a starter, rising
+  to about 4.5 once geared; ease 3.5).
+modes:
+  ssf: >-
+    Workable but not addressed by the guide. The cheap uniques that carry the
+    early game are common drops, but [[Archdemon Crown]] needs an Elder base
+    and Elegant Hubris needs a specific seed. Expect to sit at the mid-game
+    power level for a long time.
+  hardcore: >-
+    No source rates it. The defensive shell — capped block, high maximum
+    resistances, 90% physical damage reduction — is sound on paper, but it
+    arrives late and nobody has tested it this league.
+
+idea: |
+  [[Penance Brand]] attaches to an enemy. Every tenth of a second it adds one energy and grows. At 20 energy it detonates for one large hit and disappears.
+
+  The hit is physical and lightning. There is no fire on it at all. The fire comes from the ascendancy: [[Shaper of Flames]] says all your damage can ignite, so that big physical hit sets the enemy on fire, and the fire does the real killing.
+
+  Because the ignite scales off the size of the hit, you chase flat added damage, gem levels and "more" multipliers instead of critical strikes. The build deliberately runs almost no crit at all.
+
+  To clear, you Shield Charge into a pack, [[Obliteration]] explodes the first thing you kill, every explosion ignites, and gloves with an ignite-spread implicit chain that fire across the screen. You barely cast.
+
+chain:
+  - label: Attach
+    text: "[[Penance Brand]] sticks to an enemy within about 3 metres and starts charging."
+  - label: Detonate
+    text: "At 20 energy it explodes for a large physical and lightning hit. [[Runebinder]] lets you stack two brands on one target."
+  - label: Ignite
+    text: "[[Shaper of Flames]] makes every hit ignite and converts 40% of physical damage to fire against ignited enemies."
+  - label: Spread
+    text: "[[Obliteration]] explodes kills, Searing Exarch gloves spread each ignite 1.2 metres, and the pack goes up together."
+  - label: Survive
+    text: "[[Melding of the Flesh]] and [[Aegis Aurora]] push every maximum resistance up, instead of stacking life."
+
+chainDetails:
+  - title: Where the fire actually comes from
+    body: |
+      This is the part people get wrong. The brand has no native fire damage. Three layers create it, and they stack in order:
+
+      1. **[[Shaper of Flames]]** — hits always ignite, *all damage can ignite*, and enemies you have ignited take 40% of your physical damage as fire. The middle line is the load-bearing one: without it a physical and lightning hit cannot ignite at all.
+      2. **"Gain % of Physical Damage as Extra Fire" on gear.** [[Obliteration]], Grace of the Goddess and [[The Balance of Terror]] all do this.
+      3. **[[Herald of Ash]]**, multiplied by how many heralds you run.
+
+      So the ignite is a percentage of the brand's total hit. Everything that makes the hit bigger makes the fire bigger.
+  - title: Why there is no critical strike here
+    body: |
+      The build's critical strike chance is 9.78%. That is not an oversight.
+
+      It uses [[Elemental Overload]] instead: a flat 40% more elemental damage for hitting a crit occasionally, at the cost of your crits dealing no extra damage. For a build whose damage is a damage-over-time effect scaled off hit size, that trade is free.
+
+      The scaling order the author gives is: gem levels, then flat added damage to spells, then percentage of physical as extra element, then "more" multipliers like [[Cruelty Support]] and [[Archdemon Crown]], then fire damage-over-time multiplier, then herald buff effect, then cast speed, then area.
+  - title: Tanky without a Mageblood
+    body: |
+      The defence is maximum resistances, not life. [[Melding of the Flesh]] sets every resistance cap to your *highest* maximum resistance. [[Aegis Aurora]] adds 5% maximum cold resistance and recovers energy shield equal to 2% of your armour whenever you block. [[Purity of Ice]] pushes the cold cap higher still, and Melding copies it everywhere.
+
+      The result is roughly 86% effective maximum resistances, on top of 75% block and 71% spell block, [[Tempest Shield]], Vaal Molten Shell on a trigger, 90% physical damage reduction, and [[Mind Over Matter]] late.
+
+      The author's own line is that this is an extremely tanky setup that does not require a [[Mageblood]]. For a league starter that is unusual and worth the shopping list.
+  - title: Not Penance Brand of Dissipation
+    body: |
+      The transfigured version was nerfed hard: its activation went from 0.75 to 1 second and its per-energy "more" multiplier from 30% to 20%.
+
+      The author's own note is to play normal [[Penance Brand]] with ignite instead. PoEDB's changelog corroborates the numbers. If a guide tells you to use Dissipation, it is out of date.
+  - title: The mana problem
+    body: |
+      Each cast costs 47 mana, and sustained casting is about 107 mana per second. The showcase Path of Building has 78 unreserved mana.
+
+      That is why [[Inspiration Support]] sits in the main link and why the Brand Mastery for reduced cost is not optional. If you drop either one you will stand there unable to cast, and it will look like a bug.
+
+mandatory:
+  - term: Penance Brand
+    why: >-
+      The skill. Level 28, and a Witch cannot get it as a quest reward.
+    detail: >-
+      PoEDB is clear that the Act 3 "Sever the Right Hand" reward goes to the
+      Templar and that Clarissa sells it to Scion and Templar only — the Witch
+      was removed as a recipient in 3.15.0. The usual route is Siosa in The
+      Library after A Fixture of Fate, who sells gems regardless of class, or
+      simply buying it. **Plan to buy or trade it at level 28.** We could not
+      verify the Siosa route this session; what is verified is that the Witch
+      has no quest or Clarissa access.
+  - term: Shaper of Flames
+    why: >-
+      Hits always ignite, all damage can ignite, and ignited enemies take 40%
+      of your physical as fire. A physical brand cannot ignite without it.
+      Take it from the first lab.
+  - term: Runebinder
+    why: >-
+      Lets you attach a second brand to the same enemy. That is roughly double
+      single-target damage.
+  - term: Elemental Overload
+    why: >-
+      The damage multiplier for a build that deliberately does not crit.
+  - term: Cruelty Support
+    why: >-
+      The largest single "more" multiplier in the link.
+  - term: Ignite Proliferation Support
+    why: >-
+      Without an ignite-spreading effect you have single target and no clear.
+      The gem does it early; Searing Exarch gloves do it better later.
+  - term: Shield Charge
+    why: >-
+      The delivery system. This build is an autobomber: you charge into a
+      pack, kill one thing, and the explosions do the rest.
+  - term: Obliteration
+    why: >-
+      A cheap unique wand with a 20% chance to explode enemies you kill.
+      Biggest single jump in clear speed for the least money.
+  - term: Bringer of Ruin
+    why: >-
+      66% increased herald buff effect and 66% herald reservation efficiency.
+      This is what lets five or more heralds fit at once.
+  - term: Mastermind of Discord
+    level: recommended
+    why: >-
+      Your exposure effect applies an extra −25% resistance. Swappable late
+      for Lycia's Farewell to Flesh once your herald buff effect is high.
+  - term: Liege of the Primordial
+    level: recommended
+    why: >-
+      Two extra golems, golems immune to elemental damage, and automatic
+      resummoning. The build runs four golems.
+  - term: Cinderswallow Urn
+    level: recommended
+    why: >-
+      The author's words: adds a ton of damage. Cheap. Get it early.
+  - term: Lost Unity
+    level: recommended
+    why: >-
+      A free herald, 20% to all resistances and 37% chaos resistance in one
+      cheap unique.
+  - term: Nycta's Lantern
+    level: recommended
+    why: >-
+      Grants Battlemage, so the weapon's added fire damage feeds the spell.
+      This covers the window from level 28 into maps.
+  - term: Melding of the Flesh
+    level: recommended
+    why: >-
+      Caps every resistance at your highest maximum resistance. One of three
+      pieces that make the build tanky without a [[Mageblood]].
+  - term: Aegis Aurora
+    level: recommended
+    why: >-
+      +5% maximum cold resistance and energy shield recovery equal to 2% of
+      armour on block. With 75% block that is constant recovery.
+  - term: Purity of Ice
+    level: recommended
+    why: >-
+      Raises maximum cold resistance, which [[Melding of the Flesh]] then
+      copies to every other resistance.
+  - term: Archdemon Crown
+    level: recommended
+    why: >-
+      The biggest single damage item: +2 and +2 to gem levels, free Burning
+      Damage, and 30% more elemental damage. Needs an Elder base.
+  - term: The Balance of Terror
+    level: recommended
+    why: >-
+      Fire Exposure plus a percentage of physical as extra fire. One jewel,
+      two of the build's scaling layers.
+  - term: Whispers of Doom
+    level: recommended
+    why: >-
+      Anointed on the amulet, so you can curse with [[Flammability]] and
+      Elemental Weakness at once.
+
+labs:
+  - lab: Normal
+    node: Shaper of Flames
+    why: "The guide pins this one explicitly. Until you have it, your brand cannot ignite and the build does not exist."
+  - lab: Cruel
+    node: Liege of the Primordial
+    why: "Two extra golems, elemental immunity and auto-resummon. Your four golems stop dying."
+  - lab: Merciless
+    node: Bringer of Ruin
+    why: "Herald effect and reservation efficiency. This is where the herald stack becomes the damage."
+  - lab: Uber
+    node: Mastermind of Discord
+    why: "An extra −25% resistance from exposure. Late, you may swap it for Lycia's Farewell to Flesh; the two are close."
+
+stages:
+  - id: acts-1-12
+    image: asc-icon-elementalist
+    title: Acts 1–3, levels 1–28
+    levels: Level 1–28
+    uses: >-
+      [[Rolling Magma]] the whole way, with [[Holy Flame Totem]] and
+      [[Flame Wall]] for bosses. [[Shield Charge]] from the start, because the
+      endgame playstyle is the same movement habit.
+    changes: >-
+      At level 12, add [[Herald of Ice]] and [[Herald of Thunder]], and take
+      [[Runebinder]] and [[Elemental Overload]] on the tree. Swap
+      [[Frostblink]] for [[Flame Dash]].
+    links:
+      - name: Main skill
+        gems: [Rolling Magma, Elemental Proliferation Support, Combustion Support]
+      - name: Bosses
+        gems: [Holy Flame Totem, Flame Wall]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: From level 12
+        gems: [Herald of Ice, Herald of Thunder]
+    moveOn: "you are level 28 and you have a Penance Brand gem in your hand."
+    details:
+      - title: Gear to look for
+        body: |
+          Ashcaller, Honourhome, Wanderlust, Berek's Grip and Replica Prismweave. All of them are cheap league-start uniques and all of them carry you to maps.
+
+          Honourhome matters most: it gives +2 to socketed gem levels, which is where your first real damage jump comes from.
+      - title: The 3.30 wand-attack alternative
+        body: |
+          The 3.30 revision adds a second levelling route: Kinetic Bolt into a Kinetic Fusillade ballista setup, with two dedicated trees.
+
+          This is new and absent from the older planner, so there is no community experience with it. [[Rolling Magma]] is the proven route. Use the wand route only if you already know you like it.
+      - title: Do not plan on Storm Brand
+        body: |
+          The 3.29 guide text offers Storm Brand as a levelling option. **The 3.30 Path of Building deletes that tree entirely.**
+
+          Stay on Rolling Magma until 28. If you read the older prose and it suggests otherwise, the planner is the newer artefact.
+  - id: acts-4-10
+    image: tempest-shield
+    title: Acts 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Penance Brand]] in a four- or five-link in a +2 Honourhome, with
+      [[Nycta's Lantern]] as the weapon so the sceptre's added fire damage
+      feeds the spell.
+    changes: >-
+      The golem group comes in here: four golems, kept alive by
+      [[Liege of the Primordial]]. Add [[Wave of Conviction]] for exposure
+      and [[Flammability]] on bosses.
+    links:
+      - name: Main skill
+        gems: [Penance Brand, Elemental Proliferation Support, Cruelty Support, Swiftbrand Support]
+      - name: Exposure
+        gems: [Wave of Conviction, Added Fire Damage Support]
+      - name: Heralds
+        gems: [Tempest Shield, Herald of Ash, Herald of Purity]
+      - name: Golems
+        gems: [Summon Lightning Golem, Summon Flame Golem, Summon Stone Golem, Summon Chaos Golem]
+      - name: Movement and curse
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash, Flammability]
+    moveOn: "Penance Brand is in a five-link, your resistances are capped after Act 10, and you have ascended twice."
+    details:
+      - title: Bandits and Pantheon
+        body: |
+          **Kill all three bandits** for the passive point.
+
+          Pantheon: Soul of the Brine King and Soul of Garukhan. Both Path of Building files agree on this. The maxroll planner field says Brine King and Abberath instead — trust the Path of Building, which is the newer file.
+      - title: There are almost no auras
+        body: |
+          This is a herald-reservation build, not an aura build. You run Heralds of Ash, Thunder, Ice and Purity, Herald of the Hive from [[Lost Unity]], [[Tempest Shield]], and later [[Purity of Ice]], [[Flesh and Stone]] and [[Enlighten Support]].
+
+          That is why [[Bringer of Ruin]] is the third ascendancy and not an afterthought. Reservation efficiency is what makes the set fit.
+      - title: How the ascendancy order was worked out
+        body: |
+          The guide names only the first notable in prose. It then gives four separate two-point steps that map one-to-one onto the four labyrinths.
+
+          Reading them as the lab order is the only sensible interpretation, but it is **our inference, not the author's statement**. If you want to deviate, [[Shaper of Flames]] first is the only part that is certain.
+  - id: early-maps
+    image: herald-of-purity
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      A six-link body armour with the brand in it, [[Obliteration]] as the
+      weapon, and gloves with the Searing Exarch "ignites spread" implicit.
+    changes: >-
+      This is where the build becomes an autobomber. Pick up
+      [[Cinderswallow Urn]] and Kaom's Binding, consolidate the heralds into
+      one four-socket group, and ascend for [[Bringer of Ruin]].
+    links:
+      - name: Main skill (six-link)
+        gems: [Penance Brand, Swiftbrand Support, Ignite Proliferation Support, Cruelty Support, Spellblade Support, Inspiration Support]
+      - name: Heralds
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Tempest Shield]
+      - name: Golems
+        gems: [Summon Lightning Golem, Summon Flame Golem, Summon Stone Golem, Summon Chaos Golem]
+      - name: Movement and curse
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash, Flammability]
+    moveOn: "packs die in one charge through them, and you have both an ignite spread and an explode source."
+    details:
+      - title: The two cheap items that change everything
+        body: |
+          [[Obliteration]] and the ignite-spread gloves. Buy them in that order.
+
+          Obliteration gives a 20% chance for enemies you kill to explode. Because [[Shaper of Flames]] makes every one of those explosions ignite, and the gloves spread each ignite 1.2 metres, one kill at the edge of a pack takes the pack.
+
+          Without either item you have a respectable single-target brand and no clear speed at all.
+      - title: What the numbers actually look like
+        body: |
+          The 3.30 Path of Building, at level 92 with realistic gear: **2.5 million damage per second**, of which 1.9 million is ignite. Effective hit points 281,003. Life 5,285 and energy shield 2,742. Resistances 76/78/76/68.
+
+          The older 3.29 planner shows 14.7 million damage and 719,376 effective hit points at level 99 with maximum resistances everywhere. **That is a showcase character, not a league start.** If you see those numbers quoted for this build, they are the wrong file.
+      - title: One claim we could not verify
+        body: |
+          The guide carries a note that Pyre Support only works with a sceptre equipped. Pyre Support is real, but no source confirms a weapon restriction on it, and it appears in neither Path of Building file.
+
+          Single-source and unverified. We mention it only so you recognise it if you read the guide.
+  - id: red-maps
+    image: whispers-of-doom
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      The 125-point red-maps tree from the 3.30 Path of Building, with
+      [[Mastermind of Discord]] and the groundwork for
+      [[Melding of the Flesh]].
+    changes: >-
+      The main link changes shape: [[Burning Damage Support]] and
+      [[Unbound Ailments Support]] come in. The dual-curse amulet with
+      [[Whispers of Doom]] goes on, and the resistance stack starts.
+    links:
+      - name: Main skill (six-link)
+        gems: [Penance Brand, Cruelty Support, Ignite Proliferation Support, Inspiration Support, Burning Damage Support, Unbound Ailments Support]
+      - name: Heralds and defence
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Purity of Ice, Tempest Shield, Enlighten Support]
+      - name: Curses
+        gems: [Flammability, Elemental Weakness]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Flame Dash]
+    moveOn: "you have Melding of the Flesh, Aegis Aurora and Purity of Ice working together."
+    details:
+      - title: Stacking resistance reduction
+        body: |
+          Unlike the Chieftain on this site, this build *wants* resistance reduction and stacks it hard.
+
+          Two curses through [[Whispers of Doom]]. Fire Exposure from [[The Balance of Terror]]. Death Mitts with an Eater implicit for −13% fire resistance. [[Mastermind of Discord]] for an extra −25% on the exposure. Two Fire Masteries at −5% each.
+
+          Each layer multiplies with the damage you already have, which is why the mid-game feels like it suddenly doubles.
+      - title: The defensive conversion
+        body: |
+          [[Melding of the Flesh]], [[Aegis Aurora]] and [[Purity of Ice]] only work as a set. Melding caps every resistance at your highest maximum resistance, Aegis raises the cold cap and recovers energy shield on block, and Purity of Ice raises the cold cap again.
+
+          Buy all three in the same session if you can. Wearing Melding without the other two lowers your resistances.
+  - id: endgame
+    image: archdemon-crown
+    title: Endgame
+    levels: Pinnacle bosses and juiced mapping
+    uses: >-
+      [[Penance Brand]] moves into an [[Archdemon Crown]] as a four-link,
+      because the helmet supplies Burning Damage, 30% more elemental damage
+      and four effective gem levels on its own.
+    changes: >-
+      That frees the six-link body armour entirely for heralds. Add Elegant
+      Hubris with the Supreme Ostentation keystone, 18 Arohongui tattoos,
+      Grace of the Goddess, [[Mind Over Matter]] and the
+      [[Forbidden Flame]] and [[Forbidden Flesh]] pair.
+    links:
+      - name: Main skill (in the helmet)
+        gems: [Penance Brand, Cruelty Support, Ignite Proliferation Support, Inspiration Support]
+      - name: Body armour
+        gems: [Herald of Ash, Herald of Purity, Herald of Thunder, Purity of Ice, Enlighten Support, Tempest Shield]
+      - name: Curses
+        gems: [Flammability, Elemental Weakness]
+    moveOn: "there is no next stage. The remaining upgrades are Elegant Hubris seeds and Watcher's Eye rolls."
+    details:
+      - title: Herald stacking, properly
+        body: |
+          The endgame damage engine is Bringer of Ruin plus 18 copies of the Tattoo of the Arohongui Shaman, which need Supreme Ostentation from an Elegant Hubris jewel with the Caspiro seed to remove attribute requirements from travel nodes.
+
+          It is a specific shopping list with a specific order, and none of it is league-start material. Treat it as the direction of travel, not a plan for week one.
+      - title: Where it is gated
+        body: |
+          [[Archdemon Crown]] needs an Elder base. Elegant Hubris needs the right seed. Grace of the Goddess is very late.
+
+          None of these have a 3.30 price. The author has shipped this build across 3.27, 3.28, 3.29 and 3.30, so the route is real; the cost is unknown.
+
+patch:
+  - note: >-
+      **Penance Brand, ignite and the Elementalist ascendancy were not
+      changed in the normal game.** The Elementalist lines in the patch notes
+      sit in the **Ruthless-only** section and do not apply here.
+  - entry: golem-buff-nerfs
+    note: >-
+      **A small, real nerf.** This build runs four golems for their buffs, so
+      it takes the full reduction: Flame Golem 15–24% increased damage
+      instead of 20–29%, Lightning Golem 8% attack and cast speed instead of
+      10%, Stone Golem 16% increased defences instead of 20%. It is a few
+      percent, not a rework.
+  - entry: league-fates
+    note: >-
+      **The brands keep working while you dodge.** That is a genuine
+      advantage against a boss-centred league mechanic: you attach, you move,
+      the damage continues. The weakness is the other side of it — early
+      single target is only average, and ignite is delayed.
+  - entry: mercenary-nerfs
+    note: >-
+      **A relative buff.** Mercenary resistances were cut hard in maps, so
+      the builds that carried a mercenary fell. This one never used one.
+  - entry: loot-rarity-rework
+    note: >-
+      **Neutral to mildly positive.** Pack-density farming lost item quantity
+      modifiers, which hurts pure mappers, but this build kills rares as fast
+      as it kills white monsters.
+  - entry: ruthless-changes
+    note: >-
+      **Check any article claiming Elementalist was nerfed.** Elementalist is
+      one of the ten ascendancies changed in the Ruthless-only section. The
+      normal game changed only Reliquarian/Luminary, Pathfinder, Warden and
+      Trickster.
+
+strengths:
+  - "Exceptional mapping. Charge in, one kill takes the pack."
+  - "Very tanky without a Mageblood, through maximum resistances and block."
+  - "The author rates complexity 2 out of 5 and gearing 2 out of 5."
+  - "Cheap uniques carry the whole early game."
+  - "Brands keep damaging while you move, which suits boss fights."
+  - "Maintained across four patches by the same author."
+weaknesses:
+  - "Only average single target early, and ignite damage is delayed and mushy."
+  - "Brand attachment range is about 3 metres and the energy ramp is real."
+  - "Mana-tight: 47 per cast, 107 per second sustained."
+  - "The top end is heavily gear-gated: Elder base, specific jewel seed."
+  - "Four golems, which 3.30 nerfed slightly."
+  - "The Witch cannot get the gem from a quest. You must buy it at 28."
+avoidIf: >-
+  Pick something else if you want big visible numbers on screen rather than a
+  damage-over-time effect finishing things off a second later. Pick something
+  else if you will not keep moving — the clear depends on charging through
+  packs — or if you need strong single target on day one for the league's
+  bosses.
+
+sources:
+  - title: "Maxroll: Penance Brand Ignite Elementalist (goratha)"
+    url: https://maxroll.gg/poe/build-guides/penance-brand-ignite-elementalist
+    kind: guide
+    note: "The prose. Labelled 3.30; its embedded planner is version 3290, saved 3 August 2026. Note the slug has no -league-starter: the widely shared URL 404s."
+  - title: "Path of Building: the 3.30 revision"
+    url: https://maxroll.gg/poe/pob/co1gcw0g
+    kind: pob
+    note: "Published 12 November 2026. Deletes the Storm Brand levelling tree, adds the wand route and a red-maps stage. This is the authority for gem links and numbers here."
+  - title: "PoEDB: Penance Brand"
+    url: https://poedb.tw/us/Penance_Brand
+    kind: data
+    note: "Activation rate, energy cap and damage effectiveness."
+  - title: "PoEDB: Penance Brand of Dissipation"
+    url: https://poedb.tw/us/Penance_Brand_of_Dissipation
+    kind: data
+    note: "Confirms the nerf that makes the transfigured version the wrong choice."
+  - title: "PoEDB: Elementalist"
+    url: https://poedb.tw/us/Elementalist
+    kind: data
+    note: "Live ascendancy values, used to check Shaper of Flames and Mastermind of Discord."
+  - title: "insanebuild 3.30 tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Rates this S tier. Weak evidence: its build cards are substantially derived from maxroll, so it is not independent corroboration."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Used to confirm the Elementalist changes are in the Ruthless-only section."

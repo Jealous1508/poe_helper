@@ -1,0 +1,542 @@
+name: Righteous Fire Chieftain
+tagline: >-
+  You turn on one skill and walk. Everything near you burns. The whole build
+  exists to keep that burn from killing you.
+class: Marauder
+ascendancy: Chieftain
+role: starter
+budget: starter
+budgetNote: >-
+  The start costs almost nothing: two Iron Rings, about six
+  [[Orb of Transmutation]] and a respec that cost Pohx roughly 750 gold.
+  **Every other figure we have is from the 3.29 economy.** Pohx's own numbers
+  — a 6-link body armour "shouldn't cost more than 20c", first two Voidstones
+  under 1 [[Divine Orb]], Uber Elder and Maven under 10 Divine, T17 around 30
+  Divine, Uber bosses 50+ Divine — were written against last league's prices.
+  3.30 reworked the economy. Treat all of them as a rough ordering, not as
+  prices.
+mainSkill: Righteous Fire
+image: righteous-fire
+hero: art-chieftain
+tags: [Fire damage over time, One button, Tanky, Cheap start]
+ratings: { clear: 4, bossing: 2, survivability: 4, ease: 4 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  The sources are current and the build was not touched by 3.30. Nothing else
+  is settled. There is no 3.30 ladder data, no 3.30 economy and no play-rate
+  numbers, because the league started today. Maxroll has **no** Righteous Fire
+  Chieftain guide at all — its only RF guide is a 3.21 Juggernaut page, nine
+  patches old. The canonical source is Pohx: his Path of Building files and
+  his FAQ are stamped 11–12 November 2026 and are genuinely 3.30, but his
+  written Mobalytics guide is still 3.29 text from August. The ratings are our
+  researcher's day-zero judgement, not measurements, rounded down from half
+  points (clear 4.5, survivability 4.5, ease 4.5). Bossing 2 is the one number
+  a source agrees with independently.
+modes:
+  ssf: >-
+    Strongly viable. The core is two Ruby Rings from a vendor recipe and
+    crafting-bench fire resistance, both self-found. Pohx has SSF Uber and
+    Maven kills.
+  hardcore: >-
+    Yes, and Pohx recommends Chieftain over the other Righteous Fire
+    ascendancies for it. His caveat: early red maps are rippy, so take them
+    slowly. The dangerous window is level 68 to 85, before block and the
+    recovery shield.
+
+idea: |
+  [[Righteous Fire]] is a toggle. While it is on, it burns every enemy near you for 70% of your maximum life per second. It also burns *you*, for 90% of your maximum life per second.
+
+  That second number is the whole build. You do not reduce it with life regeneration alone. You reduce it with **fire resistance**, because the self-burn is fire damage, and one passive mastery turns that same fire resistance into life regeneration.
+
+  So the build is a loop: stack fire resistance, which lowers the burn and raises the healing at the same time. [[Chieftain]] then makes one stat do three jobs — [[Tasalio, Cleansing Water]] makes your fire resistance count for cold and lightning too.
+
+  You press nothing in a map. You walk, and things die. On a boss you stand still and wait, which is the build's real cost.
+
+chain:
+  - label: Turn it on
+    text: "[[Righteous Fire]] burns everything in a small radius around you, forever, with no hit, no crit and no attack speed."
+  - label: Survive your own fire
+    text: "High fire resistance cuts the self-burn. The [[Fire Mastery]] gives 1 life regenerated per second per uncapped fire resistance."
+  - label: Cap everything else
+    text: "[[Tasalio, Cleansing Water]] applies 50% of your fire resistance modifiers to cold and lightning. [[Valako, Storm's Embrace]] does the same for maximum resistances."
+  - label: Clear
+    text: "[[Hinekora, Death's Fury]] explodes 10% of your kills for 250% of their life. Make the explosion ignite and it chains across the pack."
+  - label: Kill the boss
+    text: "Righteous Fire alone will not do it. [[Fire Trap]] is your single target until you can build a Scorching Ray totem."
+
+chainDetails:
+  - title: Why fire resistance is your damage stat and your defence stat
+    body: |
+      The self-burn is fire damage, so your fire resistance reduces it like any other fire hit. Nothing else does.
+
+      The [[Fire Mastery]] "Regenerate 1 Life per second per uncapped Fire Resistance" is what makes this work with no gear. At 120% fire resistance that is 120 life per second, at level 20, for free. Pohx says the skill is technically runnable at level 17 with 120% fire resistance, though his own guide switches around level 30.
+
+      "Uncapped" is the number in brackets on your character sheet, not the 75% cap. Keep pushing it: 120% minimum before you turn Righteous Fire on, 130% or more by red maps.
+
+      Mid-game you want 800–1,400 life regenerated per second. Endgame is 1,000+ regeneration and 7,000+ life.
+  - title: What scales the damage, and what does nothing
+    body: |
+      Righteous Fire is a degeneration. It does not hit. So critical strikes, accuracy, attack speed and cast speed are all worthless.
+
+      It scales with: fire damage, burning damage, damage over time, fire damage-over-time multiplier, generic increased damage, elemental damage, area damage, frenzy charges, and your maximum life and energy shield.
+
+      **Spell damage does not scale it.** That one fact decides your weapon: you use a sceptre, which can roll up to 40% increased elemental damage, and never a wand. On the sceptre, look for fire damage-over-time multiplier first, then +1 to level of all fire skill gems, then increased fire damage.
+  - title: The explosion chain that makes it a mapper
+    body: |
+      [[Hinekora, Death's Fury]] gives enemies you kill a 10% chance to explode for 250% of their maximum life as fire damage. Pohx's words: the damage is so extreme it can one-tap map bosses.
+
+      To chain it, the explosion has to **ignite**, which needs 30–50% global ignite chance, and the ignite has to spread. Three sources spread it: gloves with the Searing Exarch implicit, the Fan the Flames cluster, or Berek's Respite. Use one, not two.
+
+      One warning: any source of cold explosions shatters corpses, which breaks the chain. Do not mix them.
+  - title: "Ramako, and why you stand still"
+    body: |
+      [[Ramako, Sun's Light]] gives nearby enemies −20% fire resistance against damage over time **while you are stationary**.
+
+      It *sets* that value. Map modifiers and monster resistances stop mattering, which Pohx calls the most insane mapping node in the game. The price is twofold. You cannot stack resistance reduction on top of it, so Chieftain drops [[Flammability]] (it runs [[Punishment]] instead), drops every source of Fire Exposure and drops Legacy of Fury. And you have to hold still for full damage on a boss.
+
+      That is the single biggest drawback of the build. Decide now whether you mind.
+  - title: What Lifetap is really for
+    body: |
+      [[Lifetap Support]] on Righteous Fire does three things. It adds about 20% damage. It frees nearly all your mana for auras.
+
+      And it adds a hidden Duration tag to Righteous Fire, which is the only reason [[Swift Affliction Support]] works on it. Pohx calls Swift Affliction one of the build's strongest gems. Without Lifetap in the link, it does nothing.
+
+mandatory:
+  - term: Righteous Fire
+    why: >-
+      The skill. Usable from level 16, but it is your fire resistance, not the
+      gem level, that decides when you can turn it on.
+    detail: >-
+      You get it in Act 2 from Yeena in the Forest Encampment. Pohx describes
+      buying it after the quest Intruders in Black; PoEDB lists it as the
+      reward for The Root of the Problem. Either way it is Act 2, Yeena, and
+      you should put it in your weapon swap to level while you are still
+      playing melee.
+  - term: Fire Mastery
+    why: >-
+      "Regenerate 1 Life per second per uncapped Fire Resistance." Without
+      this node Righteous Fire simply kills you. It is the reason the build
+      needs no gear to start.
+  - term: Tasalio, Cleansing Water
+    why: >-
+      Fire resistance modifiers also apply to cold and lightning at 50%. This
+      is the entire gearing premise: one stat covers three resistances.
+    detail: >-
+      It also makes you Unaffected by Ignite. Note that several launch
+      articles claim Tasalio was cut to 25% in 3.30. That change is in the
+      **Ruthless-only** section of the patch notes. In the normal game it is
+      still 50%.
+  - term: Ramako, Sun's Light
+    why: >-
+      Sets nearby enemies to −20% fire resistance against damage over time
+      while you stand still. Map modifiers stop mattering.
+  - term: Hinekora, Death's Fury
+    why: >-
+      Your clear speed. 10% of your kills explode for 250% of the monster's
+      maximum life.
+  - term: Valako, Storm's Embrace
+    why: >-
+      Maximum fire resistance modifiers also apply to maximum cold and
+      lightning resistance. The only route to 90% maximum all resistances.
+    detail: >-
+      Pohx's notes never name the fourth ascendancy node. We infer Valako
+      because the build spends all eight points, his red-map checklist asks
+      whether you are at 90% maximum all resistances, and no other node gets
+      you there. Near-certain, but inferred.
+  - term: Lifetap Support
+    why: >-
+      In the Righteous Fire link and the Fire Trap link. Adds damage, frees
+      your mana, and legalises [[Swift Affliction Support]].
+  - term: Swift Affliction Support
+    why: >-
+      One of the strongest supports in the build, and only usable because
+      Lifetap gives Righteous Fire a Duration tag.
+  - term: Fire Trap
+    why: >-
+      Righteous Fire cannot kill a boss. Fire Trap is your single target for
+      most of the league. Buy it in the Act 3 Library.
+    detail: >-
+      Fire Trap of Blasting does **not** work: it removes the burning ground,
+      which is the part you want.
+  - term: Rise of the Phoenix
+    level: recommended
+    why: >-
+      Level 65 shield. Pohx calls it the best way to reach 90% maximum fire
+      resistance early. Cheap last league; unpriced this one.
+  - term: Immortal Flesh
+    level: recommended
+    why: >-
+      Level 50 belt, large flat life regeneration. Do not pay more than a few
+      chaos for it.
+  - term: Cloak of Flame
+    level: recommended
+    why: >-
+      Level 18 body armour that converts physical damage taken to fire, which
+      your enormous fire resistance then eats. Usable to level 100.
+  - term: Glancing Blows
+    level: recommended
+    why: >-
+      Around level 85, with a Shaper shield rolled with 3–5% of life gained
+      on block, this is Pohx's first answer to "why am I dying in red maps".
+    detail: >-
+      Glancing Blows doubles your block chance and makes blocked hits deal
+      half damage instead of none. Paired with recovery on block it turns
+      every incoming hit into healing. Target 75% block and 75% spell block.
+  - term: Punishment
+    level: recommended
+    why: >-
+      Your curse once you take Ramako. Resistance-reduction curses stop
+      helping at that point, so [[Flammability]] comes off the bar.
+  - term: Archdemon Crown
+    level: recommended
+    why: >-
+      The endgame helmet, after a crafted Elder helmet with Concentrated
+      Effect and Burning Damage. You socket Fire Trap into it.
+  - term: Purity of Elements
+    level: recommended
+    why: >-
+      Resistances plus full ailment immunity through the campaign. Take it
+      after the first Piety kill in Act 3.
+  - term: Summon Skitterbots
+    level: recommended
+    why: >-
+      After Uber lab, this is the highest damage per point of mana reserved
+      for single target. Link it with [[Unbound Ailments Support]].
+  - term: Mageblood
+    level: recommended
+    why: >-
+      The deep endgame belt. Pohx is explicit that you want this, not
+      [[Headhunter]].
+
+labs:
+  - lab: Normal
+    node: Tasalio, Cleansing Water
+    why: "The sustain and gearing unlock. Pohx ascends at the start of Act 4, when he picks up his golem."
+  - lab: Cruel
+    node: Hinekora, Death's Fury or Ramako, Sun's Light
+    why: "Pohx's own words: he prefers Hinekora for clear speed, but Ramako provides a lot more damage. Pick one."
+  - lab: Merciless
+    node: The other of the two
+    why: "The moment Ramako is allocated, swap Combustion out for Swift Affliction and Flammability for Punishment."
+  - lab: Uber
+    node: Valako, Storm's Embrace
+    why: "90% maximum all resistances. Inferred rather than quoted, but nothing else reaches that number."
+
+stages:
+  - id: acts-1-3
+    image: asc-icon-chieftain
+    title: Acts 1–3
+    levels: Level 1–30
+    uses: >-
+      You are a plain melee Marauder. [[Ground Slam]] with a two-handed axe
+      from Tarkleigh, then [[Sunder]] at Merveil's Caverns. Righteous Fire
+      sits in your weapon swap, levelling.
+    changes: >-
+      Buy **two Iron Rings** early and keep them: they become Ruby Rings. Sell
+      rares unidentified for [[Orb of Transmutation]] — you need at least six
+      for bench fire-resistance crafts.
+    links:
+      - name: Main attack
+        gems: [Ground Slam, Ruthless Support, Chance to Bleed Support]
+      - name: From Merveil
+        gems: [Sunder, Ruthless Support, Chance to Bleed Support]
+      - name: Utility
+        gems: [Leap Slam, Faster Attacks Support, Intimidating Cry]
+      - name: Auras from Act 3
+        gems: [Blood and Sand, Purity of Elements, Herald of Ash]
+    moveOn: "you have Righteous Fire in your weapon swap, two Iron Rings, and you have done the Act 3 Library."
+    details:
+      - title: The passive route
+        body: |
+          Born to Fight, Versatility, Butchery, Barbarism, [[Resolute Technique]], Hearty. You are building a melee character and you will respec most of it around level 31.
+
+          Pohx paid about 750 gold for that respec at level 32. Budget for it; do not avoid the melee nodes to save the cost.
+      - title: The Act 3 Library is not optional
+        body: |
+          Before you kill Piety the second time, do **A Fixture of Fate** and unlock Siosa in The Library.
+
+          Shopping list: [[Fire Trap]], [[Efficacy Support]], [[Elemental Focus Support]], Trap and Mine Damage, [[Burning Damage Support]], [[Armageddon Brand]], [[Flammability]], [[Combustion Support]], and two copies of [[Lifetap Support]]. Add two [[Swift Affliction Support]] and [[Malevolence]] if you have the gold.
+
+          This is where the build's whole gem set comes from. Skipping it costs you hours.
+      - title: What to pick up on the way
+        body: |
+          After Hailrake: [[Chance to Bleed Support]] and a [[Quicksilver Flask]]. After Brutus: [[Leap Slam]], [[Faster Attacks Support]], [[Intimidating Cry]] and [[Vitality]].
+
+          After the first Piety kill, take [[Purity of Elements]]. The usual Act 3 aura set is [[Blood and Sand]], Purity of Elements and [[Herald of Ash]].
+  - id: acts-4-10
+    image: righteous-fire
+    title: Acts 4–10
+    levels: Level 30–68
+    uses: >-
+      Around level 31 you stop being melee. You turn [[Righteous Fire]] on,
+      pick up a shield and start Shield Charging. [[Fire Trap]] replaces
+      [[Armageddon Brand]] at about level 40.
+    changes: >-
+      Ascend at the start of Act 4 for [[Tasalio, Cleansing Water]]. Cruel lab
+      after Maligaro, Merciless around level 65. After Daresso and Kaom,
+      [[Increased Area of Effect Support]] replaces [[Efficacy Support]] in
+      the main link.
+    links:
+      - name: Main skill
+        gems: [Righteous Fire, Burning Damage Support, Elemental Focus Support, Lifetap Support]
+      - name: Single target
+        gems: [Fire Trap, Lifetap Support, Swift Affliction Support, Controlled Destruction Support]
+      - name: Before Fire Trap
+        gems: [Armageddon Brand, Combustion Support, Efficacy Support]
+      - name: Movement
+        gems: [Shield Charge, Faster Attacks Support, Lifetap Support]
+      - name: Auras
+        gems: [Blood and Sand, Purity of Elements, Herald of Ash]
+    moveOn: "Righteous Fire is on permanently, you are at 120% or more uncapped fire resistance, and you have ascended twice."
+    details:
+      - title: The turn-on checklist at level 31
+        body: |
+          Do these in order:
+
+          1. Vendor two Ruby Rings: Iron Ring plus any red skill gem, twice.
+          2. Craft "+% to Fire Resistance" on every open suffix you have.
+          3. Check the uncapped number in brackets. You want **120% minimum**.
+          4. Gamble or buy a four-link.
+          5. Swap your two-hander for a sceptre and a shield, and start using [[Shield Charge]].
+          6. Ascend for [[Tasalio, Cleansing Water]].
+
+          If the burn is killing you, your fire resistance is too low. That is the only cause.
+      - title: Which bandit
+        body: |
+          Pohx takes **Kraityn**. He suggests **Oak** for newer players, because the extra life and regeneration are forgiving.
+
+          Killing all three for the passive point is the single-target choice. All three are defensible; none of them decides the build.
+      - title: Things you will be told to use that you should not
+        body: |
+          Pohx names these as common mistakes: Legacy of Fury, [[Flammability]] (after Ramako), any source of Fire Exposure, Master of Fire, [[Herald of Ash]] in the endgame, [[Headhunter]] and Brass Dome.
+
+          Most of them are resistance-reduction effects, which [[Ramako, Sun's Light]] makes useless, because it sets the value rather than adding to it.
+  - id: early-maps
+    image: purity-of-elements
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      The six-link Righteous Fire setup, Fire Trap in a crafted Elder helmet,
+      and after Uber lab a new aura block built around
+      [[Summon Skitterbots]].
+    changes: >-
+      **Stop stacking fire resistance for its own sake.** Pivot the tree to
+      life, chaos resistance, dexterity, flat life regeneration and
+      "% increased Life Regeneration Rate", which multiplies your Fire Mastery
+      regeneration. Keep base fire resistance high anyway, because Tasalio is
+      still capping cold and lightning through it.
+    links:
+      - name: Main skill (six-link)
+        gems: [Righteous Fire, Burning Damage Support, Elemental Focus Support, Increased Area of Effect Support, Lifetap Support, Swift Affliction Support]
+      - name: Single target
+        gems: [Fire Trap, Lifetap Support, Swift Affliction Support, Controlled Destruction Support]
+      - name: Auras after Uber lab
+        gems: [Summon Skitterbots, Unbound Ailments Support, Tempest Shield, Flesh and Stone, Purity of Fire]
+      - name: Utility
+        gems: [Shield Charge, Faster Attacks Support, Enduring Cry]
+    moveOn: "you have done Uber lab, you are at 90% maximum all resistances, and ignite spread is on your gloves."
+    details:
+      - title: First things to buy
+        body: |
+          In Pohx's order, cheapest first: [[Rise of the Phoenix]], [[Immortal Flesh]], then **ignite spread on gloves**, which he calls his number one priority for currency spent. The Searing Exarch implicit that does it is roughly a 1-in-50 roll, so buying is usually better than rolling.
+
+          Then a five- or six-link for Righteous Fire, then the crafted Elder helmet with level 16 Concentrated Effect and level 16 Burning Damage, with Fire Trap socketed in it.
+
+          Last league a six-link body armour was about 20 chaos. **That price is from 3.29 and is not current.** 3.30 removed [[Orb of Binding]] entirely and made [[Orb of Chance]] much rarer, which makes cheap links harder, not easier.
+      - title: Pantheon and golems
+        body: |
+          Soul of the Brine King as the major power, Ralakesh as the minor. Farm Brine King with a [[Divine Vessel]] for the freeze avoidance.
+
+          Your golems start dying in yellow maps. Drop them entirely around red maps; the buff is not worth resummoning them.
+      - title: Type /passives
+        body: |
+          The campaign hands out passive points for optional quests you probably skipped. Type `/passives` in chat and it lists every one you are missing.
+
+          For this build that is often four or five points, which at this stage is a whole life wheel.
+  - id: red-maps
+    image: titanium-spirit-shield
+    title: Red maps
+    levels: Tier 11–16 maps, level 85+
+    uses: >-
+      The same gem setup with a block-based defence under it: a Shaper shield
+      with 3–5% of life gained on block, plus [[Glancing Blows]].
+    changes: >-
+      Respec into block. Buy [[Cloak of Flame]]. Take the whole six-node Life
+      Mastery setup at once, which takes you past 7,000 life on a small
+      budget. Swap [[Enduring Cry]] for Infernal Cry while mapping.
+    links:
+      - name: Main skill
+        gems: [Righteous Fire, Burning Damage Support, Elemental Focus Support, Increased Area of Effect Support, Lifetap Support, Swift Affliction Support]
+      - name: Single target
+        gems: [Fire Trap, Lifetap Support, Swift Affliction Support, Controlled Destruction Support]
+      - name: Auras
+        gems: [Summon Skitterbots, Unbound Ailments Support, Tempest Shield, Flesh and Stone, Purity of Fire]
+      - name: Mapping
+        gems: [Infernal Cry, Shield Charge, Faster Attacks Support]
+      - name: Guard
+        gems: [Immortal Call, Steelskin]
+    moveOn: "you block three hits in four, recover on block, and Tier 16 maps do not threaten you."
+    details:
+      - title: Why block, specifically
+        body: |
+          Pohx's answer to the most common question he gets — why am I dying in red maps at level 80-something — is always the same: you have no recovery on block yet.
+
+          The shield is a Shaper base rolled with "3–5% of Life gained when you Block", through Pristine fossils or a Harvest life reforge. With [[Glancing Blows]] you reach 75% block and 75% spell block, and every blocked hit heals you.
+
+          This is the single largest survivability jump in the build, and it is why levels 68 to 85 are the dangerous window.
+      - title: Map modifiers that kill you
+        body: |
+          - **No Regeneration.** Never run it. Your entire defence is regeneration.
+          - **Less Recovery.** Fine in white maps only.
+          - **Reduced effect of non-curse auras.** Never.
+          - **Negative maximum resistances.** Your burn goes up and your healing goes down at the same time.
+
+          Chieftain-specific: **monsters cannot be affected by elemental ailments** kills your explode chain, and **monsters steal endurance charges** removes a defensive layer.
+      - title: Where the budget goes next
+        body: |
+          Dawnbreaker, a Pyre ring, and Nebulis in the middle and late game. Anoint Disciple of the Unyielding.
+
+          Prices for all of these are 3.29 prices. We do not have 3.30 numbers for anything, and nobody does on day one.
+  - id: endgame
+    image: archdemon-crown
+    title: Endgame
+    levels: Pinnacle bosses and juiced mapping
+    uses: >-
+      [[Archdemon Crown]], and from around level 90 a Scorching Ray of
+      Immolation totem setup for single target. [[Mageblood]] is the deep
+      investment.
+    changes: >-
+      Your damage stops coming from Righteous Fire and starts coming from the
+      totems. Pohx's single-target order is Scorching Ray of Immolation on
+      [[Spell Totem Support]] first, then [[Fire Trap]], then Searing Bond of
+      Detonation.
+    links:
+      - name: Main skill
+        gems: [Righteous Fire, Burning Damage Support, Elemental Focus Support, Increased Area of Effect Support, Lifetap Support, Swift Affliction Support]
+      - name: Single target (level 90+)
+        gems: [Scorching Ray of Immolation, Spell Totem Support, Swift Affliction Support, Efficacy Support]
+      - name: Auras
+        gems: [Summon Skitterbots, Unbound Ailments Support, Tempest Shield, Flesh and Stone, Purity of Fire]
+    moveOn: "there is no next stage. From here the question is how much the ceiling is worth to you."
+    details:
+      - title: The totem transition, and why to do it earlier in 3.30
+        body: |
+          Scorching Ray of Immolation on [[Spell Totem Support]] is the best single target the build has. It needs a +1 totem shield and the Totemic Zeal notable. Totems bypass the stacking cap, so you reach over 70 stacks of the debuff.
+
+          This is explicitly a level-90-plus transition, not a starter setup. **But 3.30's league mechanic is built around bosses, and bossing is this build's one weakness.** Plan the transition earlier than you would have last league.
+      - title: Fireball of Radiation is not a plan
+        body: |
+          [[Fireball of Radiation]] is new in 3.30, and Pohx published a video asking whether it is the new Righteous Fire single target.
+
+          His own FAQ, the same day, guesses it is worse than [[Fire Trap]], because it does not hit and therefore cannot ignite. Nobody has tested it in a real fight. **Do not plan your league start around it.**
+      - title: What this build does not do
+        body: |
+          Pohx is blunt about the ceiling: the average player stops at 2–4 million damage per second, and killing Uber bosses is not advised.
+
+          It is bad at Sanctum, where the goal is not getting hit and this build is designed around getting hit. It is bad at 80%+ Delirium, Legion and high-wave Simulacrum.
+
+          His own atlas page currently reads, in full, that the atlas changed and he needs time to work it out. **Nobody has re-solved Righteous Fire's farming strategies for 3.30 yet.**
+
+patch:
+  - note: >-
+      **Nothing in 3.30 touched this build.** Righteous Fire, [[Fire Trap]],
+      Scorching Ray of Immolation, Searing Bond and the Chieftain ascendancy
+      appear in no normal-game section of the patch notes.
+  - entry: ruthless-changes
+    note: >-
+      **Ignore the "Chieftain was nerfed" articles.** At least one launch
+      site states that [[Tasalio, Cleansing Water]] now converts only 25% and
+      that the Chieftain minor passives give 10% fire resistance instead of
+      15%. Those numbers are from the **Ruthless-only** section of the notes.
+      GGG's own passive-tree export confirms the normal-game values for
+      Tasalio (50%) and Pyromaniac are unchanged from 3.29.
+  - entry: league-fates
+    note: >-
+      **The real problem with this build in 3.30.** The league mechanic is
+      built around empowered area bosses, and bossing is this build's single
+      weakness. Nothing was nerfed; the rewards simply moved towards the one
+      thing it is bad at. Plan the Scorching Ray totem transition earlier
+      than last league.
+  - entry: vendor-recipe-changes
+    note: >-
+      **A quiet, build-agnostic nerf.** [[Orb of Binding]] no longer drops
+      and [[Orb of Chance]] is much rarer, so the cheap early five- or
+      six-link that this build's plan assumes is harder to get. Four-links
+      now come from vendors, drops and [[Orb of Fusing]].
+  - entry: loot-rarity-rework
+    note: >-
+      **Helpful.** A much greater percentage of valuable currency now comes
+      from rare and unique monsters. Dense maps full of rares are exactly
+      what [[Hinekora, Death's Fury]] farms. Note the wording — "a much
+      greater percentage", not "most".
+  - entry: golem-buff-nerfs
+    note: >-
+      **Almost irrelevant.** Golem buffs are smaller, but Pohx drops golems
+      in yellow maps anyway because they die.
+  - entry: winter-orb-nerf
+    note: >-
+      **Competitive context.** The most-played spell of 3.29 lost about 40%
+      of its damage, and mercenary builds were cut hard. Righteous Fire did
+      not get better, but a lot of its rivals got worse.
+
+strengths:
+  - "The cheapest start on this site: two Iron Rings and six Transmutes."
+  - "Very tanky once block is online: 90% maximum all resistances, big regeneration, five endurance charges."
+  - "You ignore cold and lightning resistance on gear entirely."
+  - "Best-in-class resistance to map modifiers, because Ramako sets the value."
+  - "Almost no buttons. You walk and things die."
+  - "Strong in SSF: every core piece is craftable or a vendor recipe."
+weaknesses:
+  - "Low single target. The average player stops at 2–4 million damage per second."
+  - "You must stand still on bosses for Ramako, which is the worst habit to have on a budget."
+  - "You spend the first 30 levels as a melee character playing a different build."
+  - "Four map modifiers are hard bans, and two more are Chieftain-specific."
+  - "Bad at Sanctum, Ubers, high Delirium, Legion and deep Simulacrum."
+  - "The ceiling costs 50–300 Divine to reach, in last league's money."
+avoidIf: >-
+  Do not pick this if you want to farm Uber pinnacle bosses, run Sanctum, or
+  clear Tier 17 maps cheaply. Do not pick it if standing still on a boss
+  annoys you, or if you will not play 30 levels of melee first. Its one
+  weakness is bossing, and 3.30 is a league about bosses.
+
+sources:
+  - title: "pohx.net — the Righteous Fire resource"
+    url: https://pohx.net/
+    kind: guide
+    note: "Front page reads 3.30 Covens of the Umbra. Path of Building files updated 12 November 2026."
+  - title: "Pohx's FAQ (147 questions)"
+    url: https://pohx.net/faq/
+    kind: guide
+    note: "Entries stamped 11–12 November 2026. The single best source for this build, and the source of most detail here."
+  - title: "Path of Building: RF Chieftain League Start"
+    url: https://pobb.in/Ba_RuRYb0Y_f
+    kind: pob
+    note: "Uploaded around 12 November. pobb.in renders it as 3.29 — that is the Path of Building data version, not a stale build."
+  - title: "Path of Building: RF Scorching Ray totem (level 90+)"
+    url: https://pobb.in/Y6jHZomP3qPi
+    kind: pob
+    note: "The single-target transition described in the endgame stage."
+  - title: "3.30 RF Chieftain league start video"
+    url: https://www.youtube.com/watch?v=QHdav1bFVls
+    kind: video
+    note: "We used the title and the linked Path of Building, not the video itself."
+  - title: "Mobalytics: Pohx Righteous Fire Chieftain"
+    url: https://mobalytics.gg/poe/builds/pohx-righteous-fire-chieftain
+    kind: guide
+    note: "The written guide. Still 3.29, last updated 7 August 2026. Useful for structure, not for current values."
+  - title: "PoEDB: Righteous Fire"
+    url: https://poedb.tw/us/Righteous_Fire
+    kind: data
+    note: "Source of the 70% / 90% degeneration figures."
+  - title: "PoEDB: Chieftain"
+    url: https://poedb.tw/us/Chieftain
+    kind: data
+    note: "Live node values. Confirms Tasalio at 50% in the normal game."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+  - title: "GGG passive tree export"
+    url: https://github.com/grindinggear/skilltree-export
+    kind: data
+    note: "Ships the normal tree and the Ruthless tree as separate files. Used to confirm the Chieftain nodes did not change."

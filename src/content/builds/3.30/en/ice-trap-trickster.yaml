@@ -1,0 +1,589 @@
+name: Ice Trap of Hollowness Trickster
+tagline: >-
+  Throw three traps that detonate by themselves into overlapping rings of
+  cold. The only build here whose ascendancy 3.30 actually buffed.
+class: Shadow
+ascendancy: Trickster
+role: starter
+budget: starter
+budgetNote: >-
+  **The guide gives no currency figures anywhere — not for any item, not for
+  the build.** We are not going to invent any. Its own budget rating is Low, 4
+  out of 5, and that rating is **3.29-vintage**. What the guide does say in
+  words: few uniques are needed; [[Sunblast]] is "fairly rare, and may be
+  difficult to acquire on league start", so skip it and come back; a
+  [[Large Cluster Jewel]] can be very expensive at launch, so buy a cheap one
+  with two useful notables; awakened gems may not be worth it early; and an
+  early six-link is expensive, so run a five-link for a long time.
+mainSkill: Ice Trap of Hollowness
+image: asc-icon-trickster
+hero: art-trickster
+tags: [Trap, Cold, Crit, Energy shield]
+ratings: { clear: 3, bossing: 4, survivability: 3, ease: 3 }
+verified: "2026-11-13"
+confidence: predicted
+confidenceNote: >-
+  **Two warnings, both important.** First, the guide's own ratings are
+  **3.29-vintage**: Difficulty 4, Budget 4, Mapping 3, Bossing 4, Defence 3.
+  Our independent read is close — we would say bossing 4.5 and clear 3.5, and
+  we round halves down. Second, and larger: **this guide was not actually
+  revised for 3.30.** Its changelog claims it was, but its planner carries
+  league 3.28, its ascendancy data is stamped 3280, and its own prose still
+  says [[Spellbreaker]] prevents an additional 10% of spell damage. The live
+  value is 20%. **Expect to re-derive the tree yourself and do not trust the
+  guide's defensive arithmetic.** On top of that, this is a single-source pick:
+  no tier list places an Ice Trap build in any tier for 3.30. The archetype has
+  support — other trap builds rate well — but this specific build does not.
+modes:
+  ssf: >-
+    Reasonable. "Few uniques" is real, and
+    [[Ice Trap of Hollowness]] is self-farmable from Merciless Labyrinth. The
+    one genuine wall is [[Replica Dragonfangs' Flight]], which comes from Heist
+    curio displays, and the guide pre-supplies the substitute. Our assessment;
+    the guide gives no verdict.
+  hardcore: >-
+    The guide gives no verdict. Our read: cautiously viable through the
+    campaign and yellow maps, and **skip the low-life endgame swap entirely**,
+    because it converts the build's one real buffer into damage. Low physical
+    mitigation, delayed damage and no leech is a bad hardcore combination.
+
+idea: |
+  [[Ice Trap of Hollowness]] is a spell that a trap delivers. You throw the trap, it arms, it goes off, and a **ring** of cold explosions detonates around the point where it landed.
+
+  Read that word again. A ring. **The centre of the blast is the weak spot.** On a boss you throw your traps off to the side, so the ring lands on the boss rather than around it. This is the single most counter-intuitive thing about the build and the thing most people get wrong on day one.
+
+  A belt called [[Sunblast]] turns the build from awkward into good. It stops enemies triggering your traps, and makes them detonate on their own when their shortened duration runs out. Combined with throwing extra traps, one throw becomes three traps that go off about a second later by themselves.
+
+  So the real feel is: throw, brief pause, three overlapping rings. You keep moving while they do the work.
+
+  [[Trickster]] supplies the defence, which is a web of energy shield and evasion keystones rather than armour.
+
+chain:
+  - label: Throw
+    text: "One throw places up to three traps, thanks to [[Sunblast]] and the trap notables."
+  - label: Detonate
+    text: "With Sunblast, enemies cannot trigger your traps. Their shortened duration expires instead, about half a second to a second later, and all three go off."
+  - label: Ring of cold
+    text: "Each trap detonates a circle of icy explosions. Overlapping three of them is your damage; aim off-centre on single targets."
+  - label: Survive
+    text: "[[Eldritch Battery]], [[Mind Over Matter]], [[Ghost Dance]], [[Wicked Ward]] and [[Spellbreaker]], plus 100% [[Spell Suppression]] and freezing things so they cannot act."
+
+chainDetails:
+  - title: The recovery stack is one system, and it fails as a unit
+    body: |
+      There is no leech available to a trap build. None. So recovery is entirely five interlocking pieces, and if one is missing the whole thing collapses. The guide says this twice, and it is the build's structural fragility.
+
+      - [[Eldritch Battery]] — energy shield protects mana instead of life, and you spend it before mana.
+      - [[Mind Over Matter]] — 40% of damage comes off mana before life, so your energy shield pool ends up absorbing for life too.
+      - [[Ghost Dance]] — three ghost shrouds; on being hit you lose one and recover energy shield equal to 3% of your evasion rating. Your energy shield cannot exceed your evasion.
+      - [[Wicked Ward]] — energy shield recharge is not interrupted by damage if it started recently.
+      - [[Spellbreaker]] — 50% chance to restart the recharge when you suppress spell damage.
+
+      Notice the circularity: [[Escape Artist]] turns helmet energy shield into evasion and body-armour evasion into energy shield; Ghost Dance caps energy shield at evasion and heals from evasion.
+
+      This is not Chaos Inoculation. Every gear piece in the published setup rolls maximum life, and the endgame goes **low life**, not [[Chaos Inoculation]].
+  - title: Why Swift Killer is the first ascendancy pick
+    body: |
+      This is a genuine anti-synergy that the guide only half-explains, so here it is in full.
+
+      [[Charged Traps Support]] generates frenzy and power charges "when your trap is triggered by an enemy". [[Sunblast]] makes that impossible, because enemies no longer trigger your traps.
+
+      The patch is [[Summon Skitterbots]], which triggers your traps on roughly a three-second cooldown. So charges still trickle in, just sporadically.
+
+      [[Swift Killer]] gives +2 maximum frenzy charges and 200% increased charge duration. That duration is what makes those sporadic charges last long enough to keep your throw speed and crit multiplier up. That is why it goes first.
+  - title: The three systems that fight over your throw speed
+    body: |
+      1. **Throw speed.** [[Trap and Mine Damage Support]] gives 30–49% more trap damage but carries 10% less trap throwing speed. [[Charged Traps Support]] gives back 10% increased throwing speed per frenzy charge.
+      2. **Placement cap.** The Saboteur notable on the tree adds +2 placed traps, and the [[Master Sapper]] anoint adds +2 more. Note that "additional traps *placed*" and "additional traps *thrown*" are different stats. Both matter.
+      3. **Detonation.** [[Sunblast]] flips who sets the traps off, from enemies to the clock.
+
+      Before Sunblast the build is worse than its reputation: you must aim traps *at* enemies and wait for them to walk in. After Sunblast the guide describes the damage as effectively tripled.
+  - title: What 3.30 actually gave this ascendancy
+    body: |
+      Trickster received three normal-game buffs. This build allocates two of them.
+
+      - **[[Spellbreaker]]: 15% to 20% prevented.** With Inveterate at 100% suppression, prevented damage goes from 68% to 73%, which is about 15.6% less spell damage taken — but only while you are at full energy shield. Real, and conditional.
+      - **[[One Step Ahead]]: action speed floor 90% to 105%.** This is the important one. At 90% it did nothing unless something slowed you. At 105% it is an unconditional 5% faster action speed, which means about 5% faster trap throwing, **and** a hard floor against Temporal Chains, chill and maim. It directly improves the build's weakest axis, the delayed rhythm.
+      - **[[Heartstopper]]: 50% to 75% less damage over time taken.** The largest of the three buffs, and **this build does not allocate it**, so the gain is zero as written.
+
+      Our suggestion, flagged as ours and not the 3.29-vintage guide's: since the build's thinnest defensive area is degeneration and damage over time, a Forbidden Flame and Flesh pair for **Heartstopper** is now a more attractive endgame target than the ones the guide lists.
+  - title: The low-life swap, and why you can skip it
+    body: |
+      Late on, the build reserves slightly under half your life with [[Petrified Blood]] plus [[Vitality]] and [[Arctic Armour]] through [[Arrogance Support]], to turn on [[Pain Attunement]] for 30% more spell damage.
+
+      It needs life recoup on rings and the tree to offset what Petrified Blood costs you, plus the Reservation mastery.
+
+      It is a straight trade: a large chunk of effective hit points for 30% more spell damage. In softcore with a good trigger rhythm, take it. In hardcore, or if you die a lot, do not.
+  - title: The one gem that is not a league-start goal
+    body: |
+      [[Invert the Rules Support]] sits in the guide's endgame six-link. It requires gem level 72 to 76, costs 140% mana multiplier, and is **dropped by the Maven and Uber Maven**.
+
+      That makes the published six-link aspirational, not a starting target. The guide never says which five gems you run in the five-link, and dropping Invert the Rules from the six is our inference.
+
+mandatory:
+  - term: Ice Trap of Hollowness
+    why: >-
+      The transfigured gem. The guide calls it a massive boost to damage and
+      area of effect, and says get it before you start maps.
+    detail: >-
+      It comes from the [[Divine Font]] at the end of the Labyrinth, which the
+      guide says you can farm in Merciless, or from trade. It shares base
+      [[Ice Trap]]'s level 28 requirement, so it drops straight into your
+      existing link the moment you have it.
+  - term: Trickster
+    why: >-
+      [[Escape Artist]] and [[Spellbreaker]] are the load-bearing defence.
+      Nothing substitutes for them, which is why this is not a build you can
+      port to another ascendancy.
+  - term: Eldritch Battery
+    why: >-
+      Energy shield protects mana instead of life, and you spend it first. Part
+      one of the recovery stack.
+  - term: Mind Over Matter
+    why: >-
+      40% of damage taken comes off mana before life. Stacked on
+      [[Eldritch Battery]], your energy shield pool ends up absorbing for your
+      life pool too.
+  - term: Ghost Dance
+    why: >-
+      Three ghost shrouds. Each hit consumes one and recovers energy shield
+      equal to 3% of your evasion rating.
+    detail: >-
+      It also caps your energy shield at your evasion. That is why the build
+      wants hybrid evasion and energy shield bases on everything, not pure
+      energy shield.
+  - term: Wicked Ward
+    why: >-
+      Energy shield recharge is not interrupted by damage if it began recently.
+      Without it the recharge never finishes in a fight.
+  - term: Spell Suppression
+    why: >-
+      100%. The guide calls it one of the strongest damage reductions in the
+      game, and [[Spellbreaker]]'s recharge restart only triggers when you
+      suppress.
+    detail: >-
+      The tree gets you all but about 11%. The rest comes from gloves, boots and
+      body armour, plus the Eater glove implicit.
+  - term: Summon Skitterbots
+    why: >-
+      After [[Sunblast]], the only thing still triggering your traps, which
+      makes it the only thing still generating charges through
+      [[Charged Traps Support]].
+  - term: Charged Traps Support
+    why: >-
+      Frenzy and power charges on trap trigger, and 10% increased throwing
+      speed per frenzy charge.
+  - term: Trap and Mine Damage Support
+    why: >-
+      30–49% more trap damage, at the cost of 10% less throwing speed. The
+      largest flat damage support in the link.
+  - term: Cold Penetration Support
+    why: >-
+      Enemy cold resistance is the main thing between you and your damage
+      number. In every published setup.
+  - term: Sunblast
+    level: recommended
+    why: >-
+      Traps cannot be triggered by enemies, and trap duration is cut by 50–75%.
+      One throw becomes three traps that detonate themselves. The guide says it
+      effectively triples your damage.
+    detail: >-
+      Its own guide warns it is fairly rare and may be hard to get at league
+      start, and says to skip it and come back if it is expensive. Equipping it
+      also means unspeccing the Trap mastery trigger node and the trigger
+      notables.
+  - term: Carcass Jack
+    level: recommended
+    why: >-
+      +50% area damage and +50% area of effect. The ring's footprint is your
+      clear speed, so this is both a damage and a clear item.
+    detail: >-
+      The best corruptions are +2 to socketed area-of-effect gems or +2 to
+      socketed trap and mine gems.
+  - term: Tinkerskin
+    level: recommended
+    why: >-
+      Explicitly the good chest *before* [[Sunblast]]. Cheap, and it covers the
+      part of the game where the build is weakest.
+  - term: Replica Dragonfangs' Flight
+    level: recommended
+    why: >-
+      Anointed [[Master Sapper]]. It must be the roll that adds levels to
+      [[Ice Trap]] specifically, not any Dragonfangs.
+    detail: >-
+      The fallback the guide supplies is a plain +1 cold skill gems amulet.
+      Replica uniques come from Heist curio displays, which makes this the one
+      real solo self-found wall.
+  - term: Hubris Circlet
+    level: recommended
+    why: >-
+      Maximum energy shield base. The Energy Shield mastery doubles helmet
+      energy shield, which then feeds [[Escape Artist]] and so your evasion.
+  - term: Medium Cluster Jewel
+    level: recommended
+    why: >-
+      Guerilla Tactics and Set and Forget. The guide calls the medium clusters
+      far more important than the large one.
+
+labs:
+  - lab: Normal
+    node: Swift Killer
+    why: "Quoted from the guide: take Swift Killer in the first lab for 2 frenzy charges. It provides damage and trap throwing speed, and its charge duration is what makes sporadic charges usable."
+  - lab: Cruel
+    node: Escape Artist
+    why: "Quoted: take Escape Artist in the second lab. This is when you switch to a high evasion or hybrid base and spec Eldritch Battery."
+  - lab: Merciless
+    node: Spellbreaker
+    why: "Quoted: take Spellbreaker in the Merciless Labyrinth to enable the Eldritch Battery and Mind Over Matter setup. Buffed in 3.30 from 15% to 20%."
+  - lab: Eternal
+    node: One Step Ahead
+    why: "**The lab label is inferred** — the guide does not name the fourth. 3.30 raised its action speed floor from 90% to 105%, which turns it from insurance into a permanent 5% gain and strengthens the case for it over [[Heartstopper]]."
+
+stages:
+  - id: acts-1-3
+    image: skitterbots
+    title: Acts 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Stormblast Mine]] and [[Orb of Storms]] from level 4, then
+      [[Lightning Trap]] from level 12 in Act 2.
+      [[Ice Trap]] replaces it at 28.
+    changes: >-
+      [[Summon Skitterbots]] joins at 16. At 28 the real main skill arrives and
+      [[Charged Traps Support]] goes in with it. Normal Labyrinth gives you
+      [[Swift Killer]].
+    links:
+      - name: Level 4–11
+        gems: [Stormblast Mine, Swift Assembly Support, Orb of Storms, Arcane Surge Support]
+      - name: Level 12 onward
+        gems: [Lightning Trap, Swift Assembly Support, Added Lightning Damage Support]
+      - name: Level 28
+        gems: [Ice Trap, Swift Assembly Support, Added Cold Damage Support, Charged Traps Support]
+      - name: Single target
+        gems: [Bear Trap, Frost Bomb, Assassin's Mark]
+      - name: Utility
+        gems: [Summon Skitterbots, Flame Dash, Frostblink, Clarity, Vitality]
+    moveOn: "Ice Trap is in a four-link and you have cleared The Library in Act 3."
+    details:
+      - title: We do not know what you press at level 1
+        body: |
+          **The guide does not say.** Its own progression starts at level 4, and it defers to a general campaign guide for the first few levels.
+
+          We are not going to invent one. Take whatever your class offers at level 1 and get to [[Stormblast Mine]] at 4.
+      - title: Where a Shadow gets Ice Trap
+        body: |
+          Base [[Ice Trap]] requires character level 28. It is the Act 3 quest reward for "Sever the Right Hand" from Clarissa, and it is also purchasable.
+
+          [[Siosa]] in The Library in Act 3 sells gems to every class, which is the reliable route if you spent the reward on something else.
+
+          So the plan is: [[Lightning Trap]] from 12 to 28, then swap.
+      - title: Small leveling buys
+        body: |
+          - Vendor-recipe a spell damage wand: wand plus a Chain Belt plus a [[Blacksmith's Whetstone]].
+          - [[Sapphire Ring]] before Merveil; a Ruby Ring for the Vaal Ruins in Act 2.
+          - A Jade Amulet for the Dexterity.
+          - Two-stone rings after level 20.
+      - title: Bandits
+        body: |
+          Help **Alira**. The guide says so, and the resistances and mana regeneration suit a crit build with no leech.
+  - id: acts-4-10
+    image: grace
+    title: Acts 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Ice Trap]] in a four-link. [[Grace]] as your main aura from level 24 if
+      you are struggling, [[Shield Charge]] for movement, and
+      [[Bear Trap]] plus [[Frost Bomb]] for anything with a health bar.
+    changes: >-
+      At Cruel Labyrinth you take [[Escape Artist]], then switch to a high
+      evasion or hybrid evasion and energy shield base and spec
+      [[Eldritch Battery]]. [[Summon Stone Golem]] joins at 34.
+    links:
+      - name: Main skill
+        gems: [Ice Trap, Swift Assembly Support, Added Cold Damage Support, Charged Traps Support]
+      - name: Single target
+        gems: [Bear Trap, Frost Bomb, Assassin's Mark]
+      - name: Auras
+        gems: [Grace, Clarity, Vitality]
+      - name: Utility
+        gems: [Summon Skitterbots, Summon Stone Golem, Shield Charge, Faster Attacks Support, Flame Dash]
+    moveOn: "Escape Artist is taken, you are on hybrid bases, and Eldritch Battery is specced."
+    details:
+      - title: The order the defence comes online
+        body: |
+          Cruel lab gives you [[Escape Artist]] and lets you spec
+          [[Eldritch Battery]]. Merciless lab gives you [[Spellbreaker]], which
+          is what makes the whole [[Mind Over Matter]] and recharge system work.
+
+          Until Merciless, your recovery is incomplete and you should expect to die more than you will later. That is the build, not a mistake you are making.
+      - title: Switch your bases, not just your gear
+        body: |
+          [[Escape Artist]] reads evasion off your body armour and energy shield off your helmet. [[Ghost Dance]] reads both.
+
+          That means hybrid Dexterity-and-Intelligence bases on every armour slot. The published setup uses them everywhere. Pure armour or pure energy shield pieces are a real loss here, not a minor one.
+      - title: Aim off-centre
+        body: |
+          Start practising now, on act bosses. The payload is a ring, so a trap thrown directly on top of a boss puts the explosions *around* it.
+
+          Throw to the side. It will feel wrong for about an hour.
+  - id: early-maps
+    image: spell-suppression
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      [[Ice Trap of Hollowness]] in a five-link. A cheap five-linked evasion or
+      energy shield chest, or [[Tinkerskin]].
+    changes: >-
+      Merciless Labyrinth gives you [[Spellbreaker]] and the full recovery
+      stack turns on. Spend everything on life and resistances. Get the
+      transfigured gem before you start mapping if you can.
+    links:
+      - name: Main skill
+        gems: [Ice Trap of Hollowness, Charged Traps Support, Trap and Mine Damage Support, Cold Penetration Support, Increased Critical Damage Support]
+      - name: Single target
+        gems: [Bear Trap, Frost Bomb, Assassin's Mark]
+      - name: Chill and freeze
+        gems: [Summon Skitterbots, Bonechill Support, Unbound Ailments Support]
+      - name: Auras
+        gems: [Grace, Vitality, Arrogance Support]
+      - name: Guard and movement
+        gems: [Cast when Damage Taken Support, Immortal Call, Shield Charge, Faster Attacks Support]
+    moveOn: "the recovery stack works, you have the transfigured gem, and you are hunting a Sunblast."
+    details:
+      - title: A five-link is genuinely enough
+        body: |
+          The guide says explicitly that this build can run a five-link for quite a while. An early six-link is expensive and it is not where your currency belongs.
+
+          Buy a five-linked Sadist Garb, Carnal Armour or Blood Raiment, or craft one with Dense fossils, or wear [[Tinkerskin]].
+
+          **The guide never lists which five gems go in the five-link.** The set above is our reading: the published six-link minus [[Invert the Rules Support]], which is a Maven drop and not a starting goal.
+      - title: One internal conflict in the guide you will notice
+        body: |
+          The guide's own crit support is inconsistent across three places. Its planner six-link uses [[Increased Critical Damage Support]]; its prose discusses [[Increased Critical Strikes Support]] as the crit-chance source; and its awakened-gem section tells you to replace Increased Critical Strikes with Awakened Added Cold Damage.
+
+          Three statements that cannot all be true. Use crit chance while your base crit is low and crit damage once it is high, and check in Path of Building rather than following the page.
+      - title: Flasks
+        body: |
+          A Divine [[Life Flask]] with the instant-on-low-life prefix and a bleed or corrupted-blood suffix, then [[Quartz Flask]], [[Quicksilver Flask]], [[Diamond Flask]] and [[Jade Flask]].
+
+          [[Diamond Flask]] matters more than usual: this is a crit build with no other source of crit consistency.
+      - title: Map modifiers to avoid
+        body: |
+          The guide lists these twice, which suggests people ignore them:
+
+          - **Reduced effect of non-curse auras.** Dangerous. [[Grace]], [[Zealotry]] and [[Arctic Armour]] *are* the defence.
+          - **Cannot regenerate life, mana or energy shield.** Dangerous.
+          - **−% maximum resistances.** Dangerous.
+          - **Monsters reflect elemental damage.** Only a problem if you hit things with [[Frostblink]].
+  - id: red-maps
+    image: replica-dragonfangs-flight
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      [[Sunblast]], a fractured-base crit wand with the trigger craft, and
+      [[Replica Dragonfangs' Flight]] anointed [[Master Sapper]].
+    changes: >-
+      Spell suppression goes to 100%. Equipping Sunblast means unspeccing the
+      Trap mastery trigger node and the trigger notables, and the playstyle
+      changes from aiming traps at enemies to throwing ahead of yourself.
+    links:
+      - name: Main skill
+        gems: [Ice Trap of Hollowness, Charged Traps Support, Trap and Mine Damage Support, Cold Penetration Support, Increased Critical Damage Support, Increased Critical Strikes Support]
+      - name: Chill and freeze
+        gems: [Summon Skitterbots, Bonechill Support, Unbound Ailments Support]
+      - name: Aura from a spectre
+        gems: [Raise Spectre, Guardian's Blessing Support, Zealotry]
+      - name: Auras
+        gems: [Grace, Vitality, Arctic Armour, Arrogance Support]
+      - name: Guard and movement
+        gems: [Cast when Damage Taken Support, Immortal Call, Shield Charge, Faster Attacks Support]
+    moveOn: "Sunblast is equipped, suppression is at 100%, and your traps detonate themselves."
+    details:
+      - title: What changes the day you equip Sunblast
+        body: |
+          Before: you throw traps where enemies will walk, and wait.
+
+          After: traps go off on their own roughly half a second to a second after landing, and you throw ahead of yourself while moving with [[Shield Charge]].
+
+          You also have to unspec the trap trigger nodes, because enemies triggering traps no longer happens. Do not forget that step — it is free passive points otherwise wasted.
+      - title: The spectre aura trick
+        body: |
+          [[Zealotry]] comes from a [[Raise Spectre]] linked to
+          [[Guardian's Blessing Support]]. You summon two Dark Marionettes in
+          your hideout; while one lives, you keep the aura without paying the
+          reservation.
+
+          It is fiddly to set up once and then free forever.
+      - title: Automating the curse
+        body: |
+          Craft "Trigger a Socketed Spell when you Use a Skill" on your wand and socket [[Assassin's Mark]]. Your [[Shield Charge]] then applies the curse for you.
+
+          That is one fewer button in a build that already asks for several.
+  - id: endgame
+    image: pain-attunement
+    title: Endgame
+    levels: Tier 17, pinnacle bosses and beyond
+    uses: >-
+      [[Carcass Jack]], a maximum-energy-shield [[Hubris Circlet]], life-recoup
+      rings, cluster jewels, and the low-life swap for [[Pain Attunement]].
+    changes: >-
+      [[Petrified Blood]] plus reserved [[Vitality]] and [[Arctic Armour]] take
+      you under half life to turn on Pain Attunement for 30% more spell damage.
+      That is a real trade, not a free upgrade.
+    links:
+      - name: Main skill
+        gems: [Ice Trap of Hollowness, Charged Traps Support, Trap and Mine Damage Support, Cold Penetration Support, Increased Critical Damage Support, Invert the Rules Support]
+      - name: Chill and freeze
+        gems: [Summon Skitterbots, Bonechill Support, Unbound Ailments Support]
+      - name: Low life
+        gems: [Petrified Blood, Vitality, Arctic Armour, Arrogance Support]
+    moveOn: "there is no next stage. What is left is a [[Watcher's Eye]], [[Lethal Pride]] and awakened gems."
+    details:
+      - title: Our one suggestion the guide could not have made
+        body: |
+          3.30 made [[Heartstopper]] the largest single Trickster buff: 75% less damage over time taken, up from 50%. This build does not allocate it, so it gets nothing.
+
+          The build's thinnest defensive area is degeneration and damage over time. So a [[Forbidden Flame]] and [[Forbidden Flesh]] pair for Heartstopper is now a better endgame target than the ones the guide lists — it names Polymath, [[Born in the Shadows]] and [[Pyromaniac]] instead.
+
+          This is our inference from a 3.30 change against a 3.29 guide. Nobody has tested it.
+      - title: Two Saboteur nodes on that list, and the Ruthless trap
+        body: |
+          Watch out here. The guide's Forbidden jewel list includes
+          [[Born in the Shadows]] and [[Pyromaniac]], which are **Saboteur**
+          nodes.
+
+          3.30's notes change both of those — inside the **Ruthless-specific**
+          section. Born in the Shadows going from 10% to 15% is Ruthless
+          catching up to the normal game, where it has been 15% all along. We
+          confirmed this by diffing the official tree data: the normal-game
+          value did not move.
+
+          So if you read that Saboteur was buffed in 3.30, that is the
+          misreading. Those numbers do not apply to your game.
+      - title: Another guide conflict, in the trees
+        body: |
+          The guide's cluster-jewel endgame tree variant **drops
+          [[Ghost Dance]]**, even though its own prose calls Ghost Dance core
+          to the recovery stack.
+
+          Unresolved. Check which recovery you actually have before you import a
+          tree variant.
+      - title: What the build still cannot do
+        body: |
+          - The centre of your blast is dead space, so single targets must be clipped off-centre forever.
+          - [[Charged Traps Support]] is partly disabled by its own mandatory belt.
+          - There is no leech, so every point of recovery depends on five keystones all working.
+          - The low-life swap trades effective hit points for damage.
+
+patch:
+  - entry: trickster-buffs
+    note: >-
+      **The best ascendancy news of any build on this site.** Trickster got
+      three normal-game buffs and this build takes two of them.
+      [[Spellbreaker]] now prevents 20% rather than 15%, worth roughly 15.6%
+      less spell damage taken while at full energy shield. [[One Step Ahead]]
+      now floors your action speed at 105% of base rather than 90%, which is an
+      unconditional 5% faster trap throwing plus a hard floor against slows —
+      and that is exactly the build's weakest axis. [[Heartstopper]] got the
+      biggest buff of the three and the build does not take it.
+  - note: >-
+      **[[Ice Trap]] itself was not touched.** None of the changed active skills
+      or support gems affect it.
+  - entry: mercenary-nerfs
+    note: >-
+      **There is no player-facing trap nerf in 3.30 — check this if you read
+      otherwise.** The two lines about trap and mine damage supports sit under
+      Mercenary Changes and name mercenaries in the text itself. The player's
+      own [[Trap and Mine Damage Support]] is unchanged at 30–49% more damage
+      with a 10% throwing speed penalty. The "Greater" supports are mercenary
+      gems only.
+  - entry: ruthless-changes
+    note: >-
+      **The Saboteur changes are Ruthless-only, and this build's Forbidden
+      jewel list names two Saboteur nodes.** Born in the Shadows going to 15%
+      and Pyromaniac to 2% per second are inside the Ruthless section. GGG's own
+      tree export shows the normal-game values are numerically identical before
+      and after 3.30. Several launch articles get this wrong for other classes.
+  - entry: golem-buff-nerfs
+    note: >-
+      **Trivial, and campaign-only.** [[Summon Stone Golem]] now gives 16%
+      increased defences instead of 20%. It appears in the level 34 leveling
+      setup and nowhere else.
+  - entry: loot-rarity-rework
+    note: >-
+      **Favourable, structurally.** Rare currency now only drops from rare
+      rolls, and the old penalties were removed. A build its guide rates 4 out
+      of 5 for bossing, with high single-target damage and trap pre-loading, is
+      pointed the right way. This is a reading of the notes, not a measurement.
+  - entry: league-fates
+    note: >-
+      **Suits the build.** You pick a Fate for an area boss and claim
+      [[Viscera]] from it. Traps let you pre-load damage onto a boss before the
+      fight starts, and freezing is a real defensive layer against something
+      that hits hard.
+
+strengths:
+  - "Few uniques required, and none of them is expensive on its own."
+  - "Freezes things, which is a defence that does not show up in Path of Building."
+  - "Very large area of effect once Carcass Jack is on."
+  - "Easy, safe leveling: traps let you fight from a distance all campaign."
+  - "High single-target damage. You can pre-load traps onto a boss before it is active."
+  - "The only build here whose ascendancy 3.30 genuinely buffed."
+weaknesses:
+  - "Delayed damage. Throw, pause, detonate. It is not click-to-kill and it never becomes that."
+  - "Low physical mitigation. There is no armour layer at all."
+  - "No leech of any kind, so recovery is five keystones that fail together."
+  - "The payload is a ring, so the centre of your blast is dead space."
+  - "Charged Traps is partly disabled by Sunblast, the belt the build requires."
+  - "The guide is 3.28 and 3.29 data with at least one outright wrong number in it."
+  - "Zero third-party corroboration: no tier list lists this build at all."
+avoidIf: >-
+  Pick something else if you want instant click-to-kill feedback, or if you
+  want to stand in a pack and absorb physical damage. Skip it if you are not
+  willing to keep [[Eldritch Battery]], [[Mind Over Matter]],
+  [[Ghost Dance]], [[Wicked Ward]] and later [[Petrified Blood]] all working
+  as one system — they do not degrade gracefully, they fail together. And skip
+  it if you cannot get the transfigured gem or a [[Sunblast]] reasonably early,
+  because the build is substantially weaker without either. The trap playstyle
+  is divisive and the guide says so itself.
+
+sources:
+  - title: "Maxroll: Ice Trap Trickster league starter (aer0)"
+    url: https://maxroll.gg/poe/build-guides/ice-trap-trickster-league-starter
+    kind: guide
+    note: "The only guide for this build. Its changelog claims a 3.30 update, but its planner reads league 3.28, its ascendancy data is stamped 3280, and its prose still gives Spellbreaker at 10% when the live value is 20%."
+  - title: "Maxroll planner"
+    url: https://maxroll.gg/poe/planner/1h01099o
+    kind: pob
+    note: "Source of the leveling steps, the link progression and the rating block. All of it 3.28 and 3.29 data."
+  - title: "Path of Building: aer0's file"
+    url: https://pobb.in/H_P1gLjSyt07
+    kind: pob
+  - title: "PoEDB: Ice Trap of Hollowness"
+    url: https://poedb.tw/us/Ice_Trap_of_Hollowness
+    kind: data
+    note: "Source of the level 28 requirement, the trap duration, and the ring-shaped payload description that matches the guide's donut wording."
+  - title: "PoEDB: Sunblast"
+    url: https://poedb.tw/us/Sunblast
+    kind: data
+    note: "Verbatim source of \"traps cannot be triggered by enemies\" and the 50-75% reduced trap duration."
+  - title: "PoEDB: Trap and Mine Damage Support"
+    url: https://poedb.tw/us/Trap_and_Mine_Damage_Support
+    kind: data
+    note: "Confirms the player's version is unchanged in 3.30: 30-49% more damage, 10% less throwing speed. The nerfed version is a mercenary gem."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Carries live 3.30 node text. Used to verify all three Trickster buffs, and to confirm that Born in the Shadows is still 15% in the normal game."
+  - title: "Maxroll: Exsanguinate Miner Trickster (cptngarbage)"
+    url: https://maxroll.gg/poe/build-guides/exsanguinate-miner-trickster-league-starter
+    kind: guide
+    note: "The honest alternative, and a mine build rather than a trap build. It is genuinely updated for 3.30 and it takes Heartstopper, so it captures the patch's biggest Trickster buff. But its own ratings are Budget 2 and Defence 2, and its listed weaknesses include \"not HC viable\" and \"reliant on core uniques\"."
+  - title: "Maxroll: Lightning Trap of Sparking Elementalist (velyna)"
+    url: https://maxroll.gg/poe/build-guides/lightning-trap-of-sparking-elementalist-league-starter
+    kind: guide
+    note: "The trap alternative we rejected. Elementalist got no 3.30 ascendancy changes, its planner takes a direct 3.30 Flame Golem nerf, and its planner contains no written guide at all."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Source of the three Trickster buffs, and of the confirmation that the trap support nerfs are in the Mercenary section and the Saboteur changes are in the Ruthless section."

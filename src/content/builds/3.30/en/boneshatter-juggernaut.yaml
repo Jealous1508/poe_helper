@@ -1,0 +1,507 @@
+name: Boneshatter Juggernaut
+tagline: >-
+  You hurt yourself on purpose. Each self-hit stacks Trauma, Trauma makes the
+  slam enormous, and the slam's bleed does nine tenths of the killing.
+class: Marauder
+ascendancy: Juggernaut
+role: starter
+budget: starter
+budgetNote: >-
+  **No source publishes a currency total, and you should be sceptical of
+  anyone who does.** Maxroll calls the build cheap and states plainly that no
+  unique item is required. The only two hard numbers on the whole guide page
+  are one [[Orb of Transmutation]] for a bench resistance craft and about
+  2 [[Divine Orb]] to multimod the endgame axe — and the author's own caveat
+  is that buying a finished axe in a trade league may be cheaper. **All of
+  that is 3.29-era pricing**, and the author explicitly disclaims his crafting
+  section: those tips were written before playing 3.30, which changed
+  crafting significantly. The ring corruption route is dated to a July 2026
+  changelog entry.
+mainSkill: Boneshatter of Complex Trauma
+image: asc-icon-juggernaut
+hero: art-juggernaut
+tags: [Melee, Bleed, Tanky, Hardcore, Boss killer]
+ratings: { clear: 2, bossing: 4, survivability: 5, ease: 3 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  The guide is **genuinely 3.30** — its changelog says so and the build was
+  untouched by the patch — but two large holes remain. The author disclaims
+  his own crafting section as pre-3.30, and **maxroll publishes no gem links
+  at all**: every link group below is reverse-engineered from the author's
+  Path of Building, which does not mark link boundaries. Four- and five-link
+  intermediate setups are published by nobody. The overall tier is the
+  biggest unresolved disagreement in our research: insanebuild rates it C,
+  mmoexp A, aoeah 4 out of 5. All three describe the same qualities and
+  differ only in the verdict. Survivability and bossing here are the sources'
+  own numbers; clear and ease are our researcher's, rounded down from 2.5.
+modes:
+  ssf: >-
+    No 3.30 source rates it. Our judgement: the core is friendly — no required
+    uniques, a vendor-recipe axe, and the transfigured gem has only two
+    variants to roll at the Labyrinth font. But [[Ryslatha's Coil]] and a
+    Doryani [[Glorious Vanity]] are long-shot solo targets, so expect to sit
+    at the pre-Coil power level for a long time.
+  hardcore: >-
+    One of the strongest picks on this site. Maxroll calls it hardcore-viable
+    and the author plays hardcore; insanebuild's own card says it is best for
+    league start, especially hardcore. The "That didn't happen!" swap is the
+    explicit hardcore option.
+
+idea: |
+  [[Boneshatter of Complex Trauma]] damages you every time it hits. Each self-hit gives you a stack of Trauma, and each Trauma makes the attack deal more damage. Ten stacks is the cap; at ten they all vanish and you start again.
+
+  The slam itself is not what kills things. The **bleed** is. With 100% chance to bleed and the [[Bloodletting]] passive — which makes enemies count as moving, tripling the bleed they take — about 90% of your damage is the bleeding, not the hit.
+
+  You survive your own attack with nine or ten endurance charges, 90% physical damage reduction, and [[Untiring]], which heals you faster than you can hurt yourself.
+
+  You do not play this skill in the campaign. You play [[Sunder]] for ten acts and switch at maps.
+
+chain:
+  - label: Hit yourself
+    text: "Every [[Boneshatter of Complex Trauma]] hit deals you physical damage and grants one Trauma."
+  - label: Stack
+    text: "Each Trauma is 8% more damage at gem 20, capped at +200%. All stacks are lost at ten, which is also the safety valve."
+  - label: Bleed
+    text: "100% chance to bleed, and [[Bloodletting]] makes the target count as moving: three times the bleed damage."
+  - label: Charge up
+    text: "[[Unflinching]] turns the self-hit into endurance charges. Nine or ten of them, at 90% physical damage reduction."
+  - label: Out-heal it
+    text: "[[Untiring]] recovers more than the mitigated self-hit takes. The loop is stable as long as your charges hold."
+
+chainDetails:
+  - title: The self-damage, honestly
+    body: |
+      PoEDB lists the transfigured gem's self-damage as 18 at gem level 1, 582 at gem 20 and 5,066 at gem 40. Base Boneshatter is far gentler: 6 and 194.
+
+      The figure is **per Trauma**, so the hit grows with your current stack count. At nine stacks with a level 20 gem that is roughly 5,200 raw physical damage to yourself per attack, before mitigation. That multiplication is our reading of the wording, not a stated formula — maxroll's FAQ says only that heavy damage taken while attacking is expected and that you should check your endurance charges are at least seven. **Treat the exact number as untested.**
+
+      What matters is the shape: 90% physical damage reduction plus [[Untiring]] turns it into a cost you pay and recover, not a countdown.
+  - title: Why the transfigured gem and not the base one
+    body: |
+      The transfigured gem trades about three times the self-harm for about 2.7 times the damage per Trauma — 8% instead of 3–6% — **and a hard cap at ten stacks**.
+
+      That cap is the point. Complex Trauma cannot run away from you, because the stacks wipe. Base Boneshatter has no listed cap and is the version that classically kills players by escalation.
+
+      Maxroll lists "requires a transfigured gem" as a con, and it is a real one. You get it from the Labyrinth's Divine Font, and Boneshatter has only two variants, so expect one or two attempts. You can also just buy it.
+  - title: Why you cap your attack speed
+    body: |
+      This is the counter-intuitive part. **Bleed damage does not scale with attack speed.** Only Trauma accumulation does.
+
+      So the guide specifies about 16% attack speed as a minimum on the endgame axe and tells you to buy average damage with everything beyond that. Too much attack speed is actively bad: you blow through the ten-stack reset faster than you benefit from the stacks.
+
+      Everything else is average physical damage on the weapon, bleed chance until it reads 100% on the character sheet, then bleed multipliers, then Strength.
+  - title: What actually kills you
+    body: |
+      Four things, in order of how often:
+
+      - An Eater altar with **reduced physical damage reduction**. Maxroll warns about this one by name.
+      - **Losing endurance charges.** Everything rests on them.
+      - **"Monsters cannot be stunned"**, which disables Endurance Charge on Melee Stun.
+      - **"50% chance to avoid bleeding"**, which removes 90% of your damage rather than killing you.
+  - title: Divine Shield needs any energy shield at all
+    body: |
+      [[Divine Shield]] does nothing if your energy shield is zero. It does not need to be large — it needs to exist.
+
+      Early that means a Crystal Belt or a pair of Apothecary's Gloves. Later it means [[Corrupted Soul]] from a [[Glorious Vanity]] with the Doryani seed, which frees the belt slot for [[Ryslatha's Coil]].
+
+mandatory:
+  - term: Boneshatter of Complex Trauma
+    why: >-
+      The transfigured gem, not base Boneshatter. Eight percent more damage
+      per Trauma instead of three to six, and a hard cap at ten stacks that
+      stops the self-damage escalating.
+    detail: >-
+      Base Boneshatter requires character level 28 and is an Act 3 reward from
+      Sever the Right Hand. **Whether a Marauder can take it is unresolved:**
+      PoEDB's quest and vendor tables list Duelist, Scion and Templar only,
+      while PoEDB's own 3.15.0 patch-note excerpt says the Marauder is
+      offered it. If Clarissa will not sell it to you, buy it from trade. The
+      transfigured version comes from the Labyrinth's Divine Font either way.
+  - term: Bloodletting
+    why: >-
+      Makes enemies count as moving, which triples the bleed damage they
+      take. Remove it and you cut your damage by about two thirds.
+  - term: Unflinching
+    why: >-
+      Endurance charges from being hit, including by yourself, and +1 to the
+      maximum. The engine starts working the moment you take it.
+  - term: Untiring
+    why: >-
+      The recovery that pays for the self-damage. With roughly 90% physical
+      mitigation it heals more than the self-hit deals.
+  - term: Resolute Technique
+    why: >-
+      Your hits never miss and never crit. Accuracy stops being a stat you
+      think about. Take it early in the campaign.
+  - term: Pride
+    why: >-
+      The only aura in the build. Enemies near you take more physical damage.
+  - term: Divine Shield
+    why: >-
+      Needs any amount of energy shield to function. Zero energy shield means
+      the node does nothing, so put some on the belt or gloves.
+  - term: Blood Sap Tincture
+    level: recommended
+    why: >-
+      About 30% more damage. Maxroll's comparison is that it is worth roughly
+      an extra support gem. Cheap, and the first thing to get at maps.
+  - term: Ryslatha's Coil
+    level: recommended
+    why: >-
+      About 40% more damage and maxroll's stated top unique priority. Also
+      listed as a con, because it is hard to obtain.
+  - term: Kaom's Sign
+    level: recommended
+    why: >-
+      Corrupt it for +1 maximum endurance charge. A Tainted Mythic Orb on a
+      +1 Coral Ring is the route to a second one.
+  - term: Corrupted Soul
+    level: recommended
+    why: >-
+      Taken through a [[Glorious Vanity]] with the Doryani seed. It gives you
+      energy shield for [[Divine Shield]] without spending the belt slot.
+  - term: Autoexertion
+    level: recommended
+    why: >-
+      Your warcries fire themselves from level 24. This is what stops the
+      build being a four-button melee character.
+  - term: Enduring Cry
+    level: recommended
+    why: >-
+      Refills endurance charges and recovers life. Your panic button and part
+      of your sustain.
+  - term: Endurance Charge on Melee Stun Support
+    level: recommended
+    why: >-
+      A second charge generator. It is also why "monsters cannot be stunned"
+      is one of your banned map modifiers.
+  - term: The Light of Meaning
+    level: recommended
+    why: >-
+      With a physical damage roll, in a jewel socket near a good cluster.
+      Straightforward damage.
+  - term: Watcher's Eye
+    level: recommended
+    why: >-
+      Only the [[Pride]]-conditional physical damage modifier matters. Ignore
+      the rest.
+  - term: Forbidden Rite
+    level: recommended
+    why: >-
+      Kept at level 1 and used deliberately to hurt yourself before an
+      instanced boss like Maven, where there are no monsters to build
+      endurance charges on.
+
+labs:
+  - lab: Normal
+    node: Unstoppable
+    why: "Slow and stun immunity, plus 10% movement speed. A stunned Juggernaut is a dead Juggernaut."
+  - lab: Cruel
+    node: Unflinching
+    why: "Endurance charges from your own self-hit, and +1 maximum. This is where the build starts working."
+  - lab: Merciless
+    node: Untiring
+    why: "The recovery that pays for the self-damage."
+  - lab: Uber
+    node: Unrelenting
+    why: >-
+      Extra mitigation while charged. Swap it for "That didn't happen!" from
+      the Delirious bloodline tree if you are in hardcore or have no good
+      jewels. Note that maxroll lists the order without naming the labs, so
+      the mapping above is our inference.
+
+stages:
+  - id: acts-1-3
+    image: asc-icon-juggernaut
+    title: Acts 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Ground Slam]] to level 4, then [[Spectral Throw]] until 12, then
+      [[Sunder]]. **You do not play Boneshatter here.** Keep enemies just
+      inside the maximum range of Spectral Throw, where it hits three times.
+    changes: >-
+      Buy two Iron Rings and a Rustic Sash immediately: flat physical damage
+      works even on normal items. Bench extra resistance with an
+      [[Orb of Transmutation]], which also works on normal items.
+    links:
+      - name: Level 1–4
+        gems: [Ground Slam, Ruthless Support]
+      - name: Level 4–12
+        gems: [Spectral Throw, Volley Support, Faster Attacks Support]
+      - name: From level 12
+        gems: [Sunder, Ruthless Support, Melee Physical Damage Support]
+      - name: Bosses
+        gems: [Intimidating Cry, Blood and Sand]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support]
+    moveOn: "you have Sunder in a four-link and a rare two-handed axe from the vendor recipe."
+    details:
+      - title: The axe vendor recipe
+        body: |
+          Sell a **rare** Rustic Sash, a Blacksmith's Whetstone and any two-handed axe together. You get back an axe with 50–64% increased physical damage.
+
+          Use a cheap essence to make the Sash rare. Re-run the recipe every time your damage starts to sag — it is the cheapest upgrade in the campaign and you will do it three or four times.
+
+          Pick up a Woodsplitter at level 13 as the base if you have nothing better. In Act 3 swap your Iron Rings for Two-Stone Rings.
+      - title: Swapping on bosses
+        body: |
+          With Spectral Throw, swap [[Volley Support]] for [[Faster Attacks Support]] on a boss: the extra projectiles are a clear tool, not a damage tool.
+
+          [[Intimidating Cry]] roughly doubles your single-target damage for two attacks. Press it at the start of a fight and again whenever it is up.
+
+          If you would rather not bother with Spectral Throw at all, maxroll says staying on [[Ground Slam]] until 12 costs only a couple of minutes.
+      - title: Tree priorities
+        body: |
+          Slaughter, Wrecking Ball, [[Resolute Technique]] early, Steadfast, and the Melee mastery that grants Fortify on melee hits — which lets you skip a Fortify support gem entirely.
+
+          **Do not take bleed nodes yet.** You are a pure hit-based Sunder character until maps, and the bleed cluster does nothing for you before then.
+  - id: acts-4-10
+    image: orb-of-transmutation
+    title: Acts 4–10
+    levels: Level 28–68
+    uses: >-
+      Still [[Sunder]]. At level 24 you add [[Autoexertion]] and stop
+      pressing warcries by hand. [[Blood and Sand]] stays in blood stance —
+      the guide's view is that swapping stances is not worth the button.
+    changes: >-
+      Ascend twice. Re-roll the axe recipe whenever your damage sags. Buy
+      your [[Boneshatter of Complex Trauma]] gem when you see one cheap, and
+      level it in your weapon swap.
+    links:
+      - name: Main skill
+        gems: [Sunder, Melee Physical Damage Support, Brutality Support, Ruthless Support]
+      - name: Warcries
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
+      - name: Aura and curse
+        gems: [Pride, Vulnerability]
+    moveOn: "you have finished Act 10, resistances are capped, and the transfigured gem is in your bag."
+    details:
+      - title: When Boneshatter actually comes online
+        body: |
+          Realistically, **level 68 or later — the start of maps.**
+
+          Maxroll's own structure confirms this: Boneshatter appears only under its map gem section, never under campaign gems. Every other source handles the timing loosely, which is why players expect it earlier and are disappointed.
+
+          Base Boneshatter needs level 28. The transfigured version needs a Labyrinth run at the Divine Font. One 3.29 article says Merciless lab specifically; general sources say the font appears at the end of every lab run. Assume Merciless to be safe.
+      - title: Bandits and Pantheon
+        body: |
+          Maxroll's section here is an empty pointer — it names no god and no bandit. These come from the author's Path of Building: **kill all three bandits**, and take Soul of Lunaris with Soul of Garukhan.
+
+          A 3.29 article says Brine King and Garukhan instead. The Path of Building is the 3.30 artefact, so we follow it.
+  - id: early-maps
+    image: tincture
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      Now you switch. [[Boneshatter of Complex Trauma]] in your best link,
+      bleed nodes taken, and the character sheet checked for **100% chance to
+      bleed**.
+    changes: >-
+      Take Spirit of War early for mana leech. Buy a
+      [[Blood Sap Tincture]]. Get any energy shield onto the belt or gloves
+      so [[Divine Shield]] works. Start corrupting [[Kaom's Sign]].
+    links:
+      - name: Main skill (six-link)
+        gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Lifetap Support]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
+      - name: Warcries
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Aura, curse and utility
+        gems: [Pride, Vulnerability, Blood Rage]
+    moveOn: "your character sheet reads 100% chance to bleed and you hold seven or more endurance charges in a fight."
+    details:
+      - title: A gap we are not going to paper over
+        body: |
+          **Maxroll gives no gem links and no link counts anywhere on the page.** It says only to prioritise links on your items.
+
+          The six-link above is reverse-engineered from the author's Path of Building, which does not mark link boundaries either. It is a sound reading, but it is inference.
+
+          **Four- and five-link intermediate setups are published by nobody for 3.30.** The nearest reference is a 3.28 page that is explicitly marked out of date, uses five auras and a different six-link, and is built for *base* Boneshatter. Do not port it. Drop Volatility first, then Ruthless, if you have fewer sockets.
+      - title: Keep the trigger setup low level
+        body: |
+          [[Cast when Damage Taken Support]] at level 1 with [[Vaal Molten Shell]] at level 7. Both deliberately low, so the trigger fires constantly instead of waiting for a large hit.
+
+          This is the standard setup, and on a build that takes damage every single attack it fires more reliably than on anything else.
+      - title: Clear speed, and the one trick for it
+        body: |
+          Clear is this build's weakest axis and no source disputes that. The one fix available is the "non-Vaal strike skills target one or two additional enemies" modifier, from an eldritch glove implicit or the Attack Mastery.
+
+          Take it as soon as you can. It is the difference between hitting one monster and hitting three.
+  - id: red-maps
+    image: corrupted-soul
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      The same six-link with [[Ryslatha's Coil]] on the belt, which means
+      moving your energy shield source to the amulet and rings, or taking
+      [[Corrupted Soul]] from a [[Glorious Vanity]].
+    changes: >-
+      Add [[Forbidden Rite]] at level 1 for pre-charging before instanced
+      bosses. Ban the four map modifiers. Start looking at a recombinated
+      Sundering Axe.
+    links:
+      - name: Main skill (six-link)
+        gems: [Boneshatter of Complex Trauma, Volatility Support, Melee Physical Damage Support, Brutality Support, Ruthless Support, Endurance Charge on Melee Stun Support]
+      - name: Warcries
+        gems: [Autoexertion, Battlemage's Cry, Ancestral Cry, Enduring Cry]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, More Duration Support]
+      - name: Boss preparation
+        gems: [Forbidden Rite, Blood Rage]
+    moveOn: "you hold nine or ten endurance charges, 90% physical damage reduction, and Tier 16 bosses die without a portal."
+    details:
+      - title: The Forbidden Rite trick
+        body: |
+          In an instanced boss arena there are no monsters to hit, so you walk in with no Trauma and no endurance charges.
+
+          A level 1 [[Forbidden Rite]] solves it: it damages you, which generates charges through [[Unflinching]], so you can walk into the fight already charged.
+
+          It is a deliberate use of a self-damage skill on a build that is already built to take self-damage. Keep it at level 1 and never raise it.
+      - title: Map modifiers to reroll
+        body: |
+          - **Reduced physical damage reduction** on an Eater altar. The worst one.
+          - **Monsters cannot be stunned.** No Endurance Charge on Melee Stun.
+          - **Monsters have a chance to avoid bleeding.** Removes most of your damage.
+          - Anything that removes endurance charges.
+      - title: '"That didn''t happen!"'
+        body: |
+          The guide claims this Delirious bloodline notable gives about 40% less damage taken from hits, at the cost of every jewel socket on your tree.
+
+          It is worth it in hardcore, or before you own good jewels, and not otherwise. **This mechanic post-dates our research baseline and is reported as the guide states it, not verified.**
+  - id: endgame
+    image: watchers-eye
+    title: Endgame
+    levels: Uber bosses
+    uses: >-
+      A multimodded Sundering Axe with the highest average physical damage you
+      can buy and at least 16% attack speed, plus [[Watcher's Eye]] and
+      [[The Light of Meaning]].
+    changes: >-
+      Nothing about the playstyle changes. This is purely a gear curve, and
+      it ends with the build killing Uber bosses, which is what the sources
+      agree it is best at.
+    moveOn: "there is no next stage. The axe is the last big purchase."
+    details:
+      - title: The axe, and a warning about the crafting advice
+        body: |
+          The published route is to recombine two Sundering Axes and then multimod the result, for roughly 2 Divine of bench costs.
+
+          **The author disclaims this himself.** His words are that the crafting tips were written before playing 3.30, which has significant crafting changes. Treat the recipe as a direction, check current bench costs yourself, and compare against simply buying a finished axe.
+      - title: Upgrade order
+        body: |
+          Maxroll's own order: [[Blood Sap Tincture]], then [[Ryslatha's Coil]], then a corrupted +1 or +2 endurance charge [[Kaom's Sign]], then [[The Light of Meaning]], then [[Corrupted Soul]] through [[Glorious Vanity]], then the multimodded axe, then [[Watcher's Eye]].
+
+          The 30%, 40% and 21% figures attached to these items are on the 3.30-updated page but were **not re-benchmarked for 3.30**.
+      - title: What the finished character looks like
+        body: |
+          From the author's Path of Building: 9.6 million total damage per second, of which 8.7 million is bleed and 964,000 is the hit. 5,890 life, 33,724 armour, 71,294 effective hit points, 1,146 life regenerated and 1,069 leeched per second, ten endurance charges, 90% physical damage reduction.
+
+          Note the split. **If your bleed is not applying, you have lost 90% of your damage** and the character will feel broken rather than weak.
+
+patch:
+  - note: >-
+      **Nothing relevant changed.** Juggernaut appears nowhere in the normal
+      game's patch notes. Boneshatter, Trauma and every support gem this
+      build uses are untouched.
+  - entry: support-gem-changes
+    note: >-
+      **Does not apply.** The only two reworked supports are Transfusion and
+      Vaal Sacrifice, and this build uses neither.
+  - entry: loot-rarity-rework
+    note: >-
+      **Mildly positive.** A monster's own rarity now decides its drop pool,
+      and the old currency penalty on rare and unique monsters is gone. A
+      build that is 90% single-target bleed and already kills Uber bosses is
+      pointed the right way.
+  - entry: quantity-to-atlas-drops
+    note: >-
+      **Relatively favourable.** Item quantity was removed from monster
+      modifiers and quantity altars are gone, which is a general nerf to
+      pack-density farming. That hurts fast clearers more than it hurts a
+      slow, tanky bosser.
+  - entry: meta-crafting-costs
+    note: >-
+      **The one real negative.** Crafting changed enough that the guide's
+      author disclaims his own gearing section. The recombine-then-multimod
+      axe plan may not work as written, and the 2 Divine multimod figure is
+      from 3.29.
+  - entry: league-fates
+    note: >-
+      **Well aligned.** The league mechanic is built around empowered
+      bosses. This build's own sources rate it 4.5 to 5 for bossing and 5 for
+      survivability, which is exactly the profile 3.30 rewards.
+  - entry: mercenary-nerfs
+    note: >-
+      **Competitive context.** Mercenaries were cut hard, which removes a
+      rival power source without helping this build directly.
+  - entry: special-base-implicits
+    note: >-
+      **Minor.** Stygian Vise now only drops at high map tiers, which makes
+      an abyss jewel socket slightly less convenient early.
+
+strengths:
+  - "One of the tankiest starters available: 90% physical damage reduction, ten endurance charges, 71k effective hit points."
+  - "Uber-boss viable, which is rare for a cheap starter."
+  - "No unique item is required to function."
+  - "Fast to the first four Voidstones."
+  - "The best hardcore pick on this site, endorsed by three sources."
+  - "The ten-stack cap means the self-damage cannot escalate out of control."
+weaknesses:
+  - "Average clear speed, and every source says so."
+  - "It needs a transfigured gem, which gates the real build behind the Labyrinth or trade."
+  - "You play Sunder for the whole campaign. The actual build starts at maps."
+  - "Ryslatha's Coil is the biggest upgrade and is hard to obtain."
+  - "Watching your own health bar lurch every attack is not for everyone."
+  - "Limited late-game damage scaling compared with crit builds."
+avoidIf: >-
+  Do not pick this if you want fast clear or juiced-map farming speed. Do not
+  pick it if you will not maintain a tincture and watch an endurance charge
+  counter, or if you are chasing a very high damage ceiling later in the
+  league. And do not pick it if you cannot get the transfigured gem in the
+  first few days — without it you are playing a worse version of the build.
+
+sources:
+  - title: "Maxroll: Boneshatter Juggernaut league starter (Zizaran)"
+    url: https://maxroll.gg/poe/build-guides/boneshatter-juggernaut-league-starter
+    kind: guide
+    note: "Changelog updated 12 November 2026 for 3.30. Genuinely current, but the author disclaims his own crafting section and publishes no gem links."
+  - title: "Path of Building: Zizaran's endgame character"
+    url: https://pobb.in/qRFk_VlQJyRx
+    kind: pob
+    note: "Source of every number and every link group here. pobb.in labels it 3.29 — probably the app's version string, but check on import."
+  - title: "Maxroll planner"
+    url: https://maxroll.gg/poe/pob/co1gcw0g
+    kind: pob
+  - title: "Low-budget Maven variant (Aleshxile)"
+    url: https://pobb.in/jXNziRbq4Uxo
+    kind: pob
+    note: "A cheaper take on the same shell."
+  - title: "PoEDB: Boneshatter of Complex Trauma"
+    url: https://poedb.tw/us/Boneshatter_of_Complex_Trauma
+    kind: data
+    note: "Trauma scaling, the +200% cap, and the self-damage table."
+  - title: "PoEDB: Boneshatter"
+    url: https://poedb.tw/us/Boneshatter
+    kind: data
+    note: "Used for the base-gem comparison and the unresolved Marauder quest access."
+  - title: "Build guide video (Zizaran)"
+    url: https://www.youtube.com/watch?v=vV8Z7MELGno
+    kind: video
+    note: "We used the linked Path of Building, not the video itself."
+  - title: "insanebuild 3.30 tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Rates it C, while its own card says unchanged and best for hardcore league start. We treat the C as a popularity artefact."
+  - title: "aoeah 3.30 build tier list"
+    url: https://www.aoeah.com/news/4886--poe-330-best-builds-for-league-starter--endgame-trade--ssf--poe-330-tier-list
+    kind: guide
+    note: "Rates it 4 out of 5 overall with endgame 5 out of 5. Written 9 November, before the patch notes existed."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official

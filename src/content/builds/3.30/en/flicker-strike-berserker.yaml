@@ -1,0 +1,587 @@
+name: Flicker Strike Berserker
+tagline: >-
+  Teleport-chain through packs without ever walking. The fastest clear on this
+  site, and the one that asks the most of you before it works.
+class: Marauder
+ascendancy: Berserker
+role: starter
+budget: starter
+budgetNote: >-
+  **No source publishes currency figures for this build. Not 3.30, not 3.29.**
+  Maxroll gives no prices anywhere on the page, and neither tier list that
+  covers it gives any. A day-one league has no economy to price against. What
+  the author does claim in words is "very cost effective endgame setup" and
+  "easy straightforward gearing" — his own words about his own build. Two
+  useful facts: [[Foulborn Ghostwrithe]] is described as surprisingly common
+  from the Breach tree, so it is farmable rather than bought; and
+  [[Opalescent Oil]] for the anoint is cheap. **Stale price snapshots for
+  Ghostwrithe exist on one site, from July 2026, and two listings on the same
+  page disagree by nearly threefold. Do not use them.**
+mainSkill: Flicker Strike
+image: asc-icon-berserker
+hero: art-berserker
+tags: [Melee, Lightning, High speed, High effort]
+ratings: { clear: 5, bossing: 3, survivability: 3, ease: 2 }
+verified: "2026-11-13"
+confidence: predicted
+confidenceNote: >-
+  **All four ratings are ours. No source rates this build at all.** Maxroll
+  publishes no ratings for it, and its stored profile is a raw Path of Building
+  blob rather than Maxroll's richer format, so the rating, strengths and
+  weaknesses fields genuinely do not exist. The star tables elsewhere do not
+  cover Flicker. We rounded bossing down from 3.5. Survivability 3 is an
+  average of two very different states: roughly 1.5 before
+  [[Foulborn Ghostwrithe]] and roughly 4.5 after. On sources: **do not call
+  this a 3.30 guide.** Its changelog says "virtually unchanged for 3.30", but
+  the planner is dated 28 July 2026 with no league field. It is 3.29 data that
+  the author re-read and declared still valid. One tier list independently
+  labels it 3.29 too.
+modes:
+  ssf: >-
+    Poor to bad, and we would tell you to take Slayer instead. Two hard-gated
+    drops with no substitutes: [[Foulborn Ghostwrithe]] with the right roll,
+    and [[Glorious Vanity]] from one specific conqueror. Ghostwrithe is
+    farmable; the jewel is the killer. Slayer's equivalent defences come free
+    from its ascendancy. No source addresses either question — this is our
+    judgement.
+  hardcore: >-
+    Do not. [[Aspect of Carnage]] adds a flat 10% increased damage taken,
+    [[Rite of Ruin]] drains life continuously, you teleport into packs you
+    cannot see, and your one defensive layer fails all at once. Two independent
+    sources warn that you die before the build comes online. Again, our
+    judgement; no source rates it.
+
+idea: |
+  [[Flicker Strike]] teleports you to an enemy and hits it. It has a two-second cooldown, and you skip that cooldown by spending a frenzy charge. So as long as charges keep coming in, you never stop moving.
+
+  That is the whole feel of the build: you do not walk anywhere. You blink through a pack and it dies behind you.
+
+  The damage comes from somewhere unexpected. You stack **maximum life**, then [[Foulborn Ghostwrithe]] converts a chunk of that life into energy shield, then [[Energy Blade]] turns your energy shield into weapon lightning damage. A ten-thousand life character ends up swinging a sword with roughly 1 to 3,500 lightning damage on it.
+
+  **Be honest with yourself before you start this one.** You play about 45 levels as a slam character, then a fragile Flicker phase, before the real build exists. And Flicker goes where it pleases — if no specific monster is targeted, the game picks one at random. Plenty of people cannot play it for that reason alone, and that is not a skill issue.
+
+chain:
+  - label: Teleport
+    text: "[[Flicker Strike]] has a two-second cooldown you bypass by spending a frenzy charge. Charges in, movement out."
+  - label: Double the hits
+    text: "[[Ancestral Fury]] makes strike skills also target the previous location they were used. Every Flicker hits twice: where you are, and where you were."
+  - label: Life into damage
+    text: "[[Foulborn Ghostwrithe]] turns life into energy shield, [[Energy Blade]] turns energy shield into weapon lightning damage, and [[Voice of the Storm]] rolls that damage twice and keeps the better result."
+  - label: Overleech
+    text: "[[Immortal Ambition]] keeps leech running when your life is full. That throughput is what keeps you alive, and what keeps [[Rite of Ruin]] from killing you."
+
+chainDetails:
+  - title: Why Berserker and not Slayer
+    body: |
+      This choice is genuinely live. One tier list puts the build in its top tier as "Flicker Strike, Slayer **or** Berserker", and the most-watched 3.30 Flicker video is a Slayer.
+
+      **The one decisive argument for Berserker is [[Ancestral Fury]]:** strike skills also target the previous location they were used. On a skill that teleports, that means every use hits both where you landed and where you came from. The guide says this doubles your damage and doubles your frenzy charge generation. No Slayer notable does anything comparable for Flicker specifically.
+
+      **Where Slayer is genuinely better, and we will not pretend otherwise:** Bane of Legends gives 20% more damage against unique enemies, which is aimed squarely at what 3.30 rewards. Brutal Fervour gives overleech-like behaviour for free, where Berserker has to buy a [[Glorious Vanity]] for it. Masterful Form adds charge headroom. And the Slayer guide is genuinely 3.30-authored.
+
+      **In solo self-found, take Slayer.** Berserker's endgame is far more item-gated.
+  - title: Frenzy charges, and the arithmetic behind "self-sustaining"
+    body: |
+      The sources the build uses:
+
+      - [[Flicker Strike]] itself: 15% chance to gain a frenzy charge on hit.
+      - Its quality: up to 10% more. **The game data contradicts itself here** — the quality range reads 0–10% but an older note computes to 5% at 20% quality, and the data flags its own inconsistency. Somewhere between 5% and 10%.
+      - [[Poacher's Mark]] quality: 5% chance for cursed enemies to grant a charge when hit.
+      - The Sword mastery: 8% chance on hitting a **unique** enemy.
+      - [[Multistrike Support]]: three attacks per charge spent.
+      - [[Ancestral Fury]]: doubles your hit locations.
+      - [[Blood Rage]]: charges on kill, so clearing only.
+
+      **Our arithmetic, labelled as ours rather than any source's:** one use spends one charge; Multistrike gives three attacks; Ancestral Fury adds a second location per attack, so roughly six hits per charge. At about 30% per hit against packs, that returns around 1.8 charges. Against a boss, with the Sword mastery, around 2.3.
+
+      Comfortably self-sustaining — which is why this build needs no enabling unique weapon at all.
+
+      **One real uncertainty:** we could not confirm that Ancestral Fury's second hit location rolls charge chance independently. The guide asserts it does. If it does not, halve those figures to about 0.9 and 1.14 — still sustaining, but marginal.
+  - title: A correction worth reading twice
+    body: |
+      Two Berserker notables get mixed up constantly, and getting them backwards changes what you should do about it.
+
+      - **[[Aspect of Carnage]]** is the increased-damage-taken node: 40% more damage dealt, 10% increased damage taken. Flat, always on.
+      - **[[Rite of Ruin]]** is **not** increased damage taken. It is a rage-scaling life degeneration: you lose 0.1% of life per second per rage while you are not losing rage. At 50 rage that is 5% of your life every second, draining continuously.
+
+      Different problems. Rite of Ruin is beaten by **leech throughput**, not by armour or resistances. If your leech breaks, Rite of Ruin kills you on an empty screen.
+  - title: Things this build does not need, despite the folklore
+    body: |
+      - **Oro's Sacrifice is not used, and the story about it is simply false.** We checked the full modifier list. There is **no** "Flicker Strike does not consume Frenzy Charges" modifier on it. It gives a frenzy charge when an attack ignites, which is an ignite engine and incompatible with a lightning build anyway.
+      - **[[Terminus Est]] is not used.** It gives a charge on critical strike, and this build never crits because of [[Resolute Technique]]. More fundamentally, [[Energy Blade]] replaces your weapon, so any unique sword's modifiers are discarded.
+      - **The Red Trail is not used.** Viable charge technology in general, just not this route.
+
+      **So this is not a weapon-gated build. It is body-armour-and-jewel-gated.** The bottleneck is [[Foulborn Ghostwrithe]] and the right [[Glorious Vanity]].
+  - title: Why the energy shield degeneration does not matter
+    body: |
+      [[Immortal Ambition]] is a strong keystone with ugly fine print: energy shield starts at zero, cannot recharge or regenerate, and you lose 5% of it per second.
+
+      That looks like it should ruin an energy shield build. It does not, because [[Energy Blade]] scales off your **maximum** energy shield, not your current energy shield. The drain costs you nothing offensively.
+
+      What you get in return is permanent overleech: leech effects are not removed when your unreserved life is full, and they recover energy shield instead while you are at full life.
+  - title: Voice of the Storm is a non-crit item now
+    body: |
+      This confuses people, so: [[Voice of the Storm]] makes lightning damage with **non-critical** strikes lucky, meaning it rolls that enormous 1-to-3,500 range twice and keeps the better result. The guide puts it at about 33% more damage, unconditionally.
+
+      Its old crit-based effect was removed several patches ago. That is exactly why [[Resolute Technique]] works here. There is no contradiction, despite how it reads.
+
+mandatory:
+  - term: Flicker Strike
+    why: >-
+      The skill. A Marauder cannot get it as a quest reward — you buy it from
+      [[Nessa]] in Act 1 after The Caged Brute, or from [[Siosa]] in Act 3.
+    detail: >-
+      Level 1 of the gem needs character level 10 and 29 Dexterity, and level 20
+      needs 155 Dexterity. A Marauder has to path for that, which is why
+      [[Versatility]] comes early.
+  - term: Multistrike Support
+    why: >-
+      Three attacks for one frenzy charge spent. **This is the real gate on the
+      swap, not Flicker itself** — without three attacks per charge the loop
+      starves.
+    detail: >-
+      It unlocks at level 38, which is the earliest the guide says you can
+      swap. It recommends waiting until level 45, and its own walkthrough places
+      the swap in Act 6, which is consistent with 45 rather than 38.
+  - term: Ancestral Fury
+    why: >-
+      Strike skills also target the previous location they were used. On a
+      teleporting skill that doubles your hits and your charge generation. This
+      is the single reason a Flicker Berserker exists.
+  - term: Glorious Vanity
+    why: >-
+      You need the roll from one specific conqueror, Ahuana, to get
+      [[Immortal Ambition]]. The guide calls it mandatory: without it you cannot
+      properly recover energy shield and you lose overleech.
+    detail: >-
+      This is the build's hardest gate, and the reason it is a bad solo
+      self-found pick. A specific conqueror on a random timeless jewel is a
+      trade item, not a drop you plan around.
+  - term: Foulborn Ghostwrithe
+    why: >-
+      It must be the roll that says your maximum energy shield is equal to 35%
+      of your maximum life. There is no substitute.
+    detail: >-
+      Base Ghostwrithe only *converts* life, so you lose it. Foulborn **adds**
+      energy shield on top while keeping the conversion line. Worth knowing:
+      that number was nerfed from 50% to 40% to 35% during 3.29, and existing
+      items can be downgraded with a [[Divine Orb]]. No 3.30 change. If any
+      numbers in the published file predate the final downgrade, its damage is
+      overstated — check on import.
+  - term: Energy Blade
+    why: >-
+      Turns your maximum energy shield into weapon lightning damage. A
+      two-handed Energy Blade gets 70% more lightning damage.
+    detail: >-
+      Requires character level 24. Since 3.29 **every equipped weapon must be a
+      sword** for it to work, and the buff itself grants 50% less maximum energy
+      shield.
+  - term: Tattoo of the Kitava Blood Drinker
+    why: >-
+      The guide calls it mandatory for leeching with [[Energy Blade]]. Leech is
+      your entire defence, so this is not optional.
+  - term: Resolute Technique
+    why: >-
+      Never crit, never miss. It removes accuracy from your gearing entirely
+      and it is why [[Voice of the Storm]]'s non-crit effect works.
+  - term: Voice of the Storm
+    level: recommended
+    why: >-
+      Lightning damage with non-critical strikes is lucky, which the guide puts
+      at roughly 33% more damage. The best damage item after the core.
+  - term: Crown of the Inward Eye
+    level: recommended
+    why: >-
+      Increases to maximum life also apply to attack damage at 30% of their
+      value. Every life node on your tree becomes a damage node.
+  - term: Poacher's Mark
+    level: recommended
+    why: >-
+      With quality, cursed enemies have a 5% chance to grant a frenzy charge
+      when hit. A small but real part of your sustain.
+  - term: Melee Splash Support
+    level: recommended
+    why: >-
+      Hits around your target, which is what feeds charge generation in a pack.
+      Swap it out for [[Ruthless Support]] on pinnacle bosses, and remember to
+      swap back.
+    detail: >-
+      One other 3.30 guide reportedly calls [[Tribal Fury]] mandatory instead —
+      it grants splash from the tree, freeing this socket at the cost of passive
+      points. We could not read that page directly. **They are alternatives, not
+      both mandatory.** Both solve the same problem.
+  - term: Carnage Heart
+    level: recommended
+    why: >-
+      Attributes, life leech and resistances in one amulet. On the guide's own
+      recommended list.
+  - term: Bronn's Lithe
+    level: recommended
+    why: >-
+      Attack and movement speed scaling off quality. A cheap chest for the
+      stretch before [[Foulborn Ghostwrithe]].
+  - term: Greater Multistrike Support
+    level: recommended
+    why: >-
+      Quadruples hits instead of tripling them. The guide's own note is that it
+      is very expensive, so treat it as a far-endgame purchase.
+  - term: Fuel the Fight
+    level: recommended
+    why: >-
+      Mana leech from a cluster jewel. [[Flicker Strike]] at high attack speed
+      is a mana problem before it is anything else.
+
+labs:
+  - lab: Normal
+    node: Ancestral Fury
+    why: "Unambiguous, and the only one the guide is clear about. It is what makes Flicker function at all: double hits means double charge generation means a loop that sustains."
+  - lab: Cruel
+    node: Aspect of Carnage
+    why: "40% more damage for 10% increased damage taken. **The guide contradicts itself on this pick** — its intro says Aspect of Carnage second, its FAQ and Act 6 section say Crave the Slaughter second. Take Aspect of Carnage if your gear can absorb the extra damage taken, [[Crave the Slaughter]] if it cannot."
+  - lab: Merciless
+    node: Crave the Slaughter
+    why: "Whichever of the two you did not take second. Rage generation and the attack speed that comes with it."
+  - lab: Eternal
+    node: Gore Dancer
+    why: "**Our reading, not the guide's.** It gives 30% of life leech as instant leech, and instant leech is what keeps [[Rite of Ruin]]'s drain and Aspect of Carnage's extra damage taken survivable on a league start. Swap to [[Rite of Ruin]] later, once your life pool and leech are large."
+
+stages:
+  - id: acts-1-3
+    image: blood-rage
+    title: Acts 1–3
+    levels: Level 1–38
+    uses: >-
+      [[Ground Slam]] from Tarkleigh after Hillock, then [[Static Strike]] from
+      level 12. [[Intimidating Cry]] for double damage on exerted attacks.
+    changes: >-
+      Rush [[Measured Fury]], which the guide says significantly improves
+      quality of life by cutting the time you spend on warcries. Grab
+      [[Versatility]] for accuracy and the Dexterity you will need later.
+    links:
+      - name: Level 1–11
+        gems: [Ground Slam, Chance to Bleed Support, Momentum Support]
+      - name: From level 12
+        gems: [Static Strike, Ancestral Call Support, Close Combat Support]
+      - name: Movement and warcries
+        gems: [Leap Slam, Faster Attacks Support, Intimidating Cry, Frostblink]
+    moveOn: "you are level 38 or more, and ideally level 45, with [[Multistrike Support]] in hand."
+    details:
+      - title: Static Strike is a real skill, not filler
+        body: |
+          You spend a long time on it, so it is worth knowing that one tier list lists [[Static Strike]] as its own B-tier 3.30 build. It is not a placeholder you tolerate.
+
+          [[Close Combat Support]] only works with swords and axes, so pick your campaign weapon accordingly.
+      - title: Where a Marauder gets Flicker Strike
+        body: |
+          **It is not a Marauder quest reward.** It is a vendor purchase.
+
+          Buy it from [[Nessa]] in Act 1 after The Caged Brute — the quest unlock table lists Marauder as eligible to buy. If you miss that, [[Siosa]] in The Library in Act 3 sells every gem to every class.
+      - title: Small leveling buys
+        body: |
+          - Two Iron Rings and a [[Rustic Sash]] from [[Nessa]].
+          - An [[Orb of Transmutation]] plus the bench for a resistance on each.
+          - A Lapis Amulet, or [[Versatility]] on the tree, for the Dexterity that [[Frostblink]] needs.
+  - id: acts-4-10
+    image: flesh-and-stone
+    title: Acts 4–10
+    levels: Level 38–68
+    uses: >-
+      **The swap happens here, in Act 6.** [[Flicker Strike]] with
+      [[Multistrike Support]] and [[Melee Splash Support]], plus
+      [[Poacher's Mark]].
+    changes: >-
+      Take [[Resolute Technique]] in Acts 4 or 5 to permanently fix accuracy.
+      Link [[Intimidating Cry]] to [[Autoexertion Support]] to automate the
+      warcry. Add [[Herald of Ash]] and [[Blood Rage]]. Cap resistances at 75%
+      before you map.
+    links:
+      - name: Main skill
+        gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
+      - name: Warcry, automated
+        gems: [Intimidating Cry, Autoexertion Support]
+      - name: Buffs and auras
+        gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Frostblink]
+    moveOn: "resistances are at 75% and you can hold a Flicker chain through a pack without stopping."
+    details:
+      - title: Do not swap at level 38 just because you can
+        body: |
+          [[Multistrike Support]] unlocks at 38, and the guide says you *can* swap then. It also recommends 45, and its own walkthrough puts the swap in Act 6, which lines up with 45.
+
+          The reason is charge sustain. Three attacks per charge is the minimum viable ratio. At level 38 your gear and your tree are not there yet, and a starving Flicker is miserable.
+      - title: Berserk is optional here
+        body: |
+          The guide's words: [[Berserk]] can be added at this point but is not necessary yet, because it drains your rage quickly.
+
+          Leave it off until your rage generation is better. One fewer button during the hardest stretch of the build.
+      - title: Flesh and Stone must be on Sand Stance
+        body: |
+          [[Flesh and Stone]] has two stances and only one of them helps you. Sand Stance blinds nearby enemies; Blood Stance does something else entirely.
+
+          Check it after every time you die, because it is easy to flip by accident.
+      - title: This is the window the sources both warn about
+        body: |
+          Two independent sources list the same con, almost word for word: you can die before your key armour piece comes online, and Flicker goes where it pleases.
+
+          Two independent sources converging on "you die before Ghostwrithe" is the strongest negative signal we found for any build on this site. Take the next two stages slowly.
+  - id: early-maps
+    image: molten-shell
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      [[Flicker Strike]] with [[Multistrike Support]], socketed in body armour
+      for the extra gem levels. [[Melee Splash Support]] for clear.
+    changes: >-
+      Nothing structural changes here. You are gathering the three core items
+      and surviving until they arrive. Keep resistances capped and your life
+      pool growing, because life is the root of your damage.
+    links:
+      - name: Main skill
+        gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
+      - name: Warcry and berserk
+        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+      - name: Buffs and auras
+        gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Molten Shell]
+      - name: Mark
+        gems: [Poacher's Mark]
+    moveOn: "you have [[Foulborn Ghostwrithe]] with the right roll. Until then you are not playing the real build."
+    details:
+      - title: On socket counts, we will not guess
+        body: |
+          **The guide names the gems but gives no socket counts and no complete aura list.** We are not going to invent four-link, five-link and six-link breakdowns for it.
+
+          The gems above are the ones it names. For the colour and socket progression you would have to import the Path of Building, which is linked under Sources.
+      - title: What to buy first
+        body: |
+          The order the guide gives, with no prices attached because none exist:
+
+          [[Foulborn Ghostwrithe]] → [[Glorious Vanity]] with the Ahuana roll → [[Voice of the Storm]] → [[Crown of the Inward Eye]] → [[Greater Multistrike Support]] → [[Mageblood]] or [[Headhunter]].
+
+          Everything before Ghostwrithe is survival. Everything after it is the build.
+      - title: Two cheap extras worth knowing about
+        body: |
+          [[Death Rush]] is described as a generic power boost if you can afford it, and in no way required. The guide adds a specific warning: do not buy a one-second roll, because the uptime suffers too much.
+
+          [[Cinderswallow Urn]] is worth an abyss jewel with flat fire damage alongside it, if you run one.
+  - id: red-maps
+    image: glorious-vanity
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      The real build: [[Foulborn Ghostwrithe]], [[Energy Blade]] on a
+      [[Hollow Fossil]]-crafted sword, and [[Glorious Vanity]] for
+      [[Immortal Ambition]].
+    changes: >-
+      Overleech turns on and the build changes character completely. Energy
+      shield now carries your damage. [[Rite of Ruin]]'s drain and
+      [[Aspect of Carnage]]'s extra damage taken both become survivable,
+      because leech is finally doing its job.
+    links:
+      - name: Main skill
+        gems: [Flicker Strike, Multistrike Support, Melee Splash Support, Close Combat Support]
+      - name: Boss swap
+        gems: [Flicker Strike, Multistrike Support, Ruthless Support, Close Combat Support]
+      - name: Energy shield
+        gems: [Energy Blade]
+      - name: Warcry and berserk
+        gems: [Intimidating Cry, Autoexertion Support, Berserk]
+      - name: Buffs and auras
+        gems: [Herald of Ash, Blood Rage, Flesh and Stone, Arctic Armour]
+    moveOn: "overleech is permanent, your energy shield pool is large, and you stop dying for no reason."
+    details:
+      - title: The sword is a substrate, nothing more
+        body: |
+          [[Energy Blade]] replaces your weapon. So the sword you hold exists only to carry sockets.
+
+          Take any five- or six-socket sword — a [[Lion Sword]] base is the usual pick — and use a [[Hollow Fossil]] on it. Do not spend currency on its damage, because none of it survives the swap.
+
+          Remember that since 3.29 **every** equipped weapon must be a sword, so if you dual-wield or carry a swap, check both.
+      - title: The boss swap, and remembering to undo it
+        body: |
+          For pinnacle bosses, swap [[Melee Splash Support]] for
+          [[Ruthless Support]]. The guide's own note includes "don't forget to
+          switch back though", which tells you how often people do not.
+
+          The author claims that with sufficient investment in the Ghostwrithe setup you can comfortably do all ubers. That is a single source making a claim about his own build, on 3.29 data. Plausible, untested in 3.30.
+      - title: What to do about charge starvation
+        body: |
+          When charges dry up, three bad things happen at once: you stop moving, you lose 10% attack speed per missing charge, and [[Rite of Ruin]] keeps draining you.
+
+          The fixes, in order: quality on your [[Flicker Strike]] gem, quality on [[Poacher's Mark]], the Sword mastery for unique enemies, and [[Melee Splash Support]] or [[Tribal Fury]] so each swing touches more targets.
+
+          The guide's framing is fair: you do not need every charge source, but skipping all of them collapses your sustain.
+  - id: endgame
+    image: mageblood
+    title: Endgame
+    levels: Tier 17, uber pinnacle bosses and beyond
+    uses: >-
+      [[Voice of the Storm]], [[Crown of the Inward Eye]], a cluster jewel with
+      [[Fuel the Fight]], and eventually
+      [[Greater Multistrike Support]].
+    changes: >-
+      Scaling order from here is fixed: maximum life, then energy shield, then
+      lightning damage, then attack speed. Accuracy is solved by
+      [[Resolute Technique]] and never scaled.
+    links:
+      - name: Mapping
+        gems: [Flicker Strike, Greater Multistrike Support, Melee Splash Support, Close Combat Support]
+      - name: Uber bossing
+        gems: [Flicker Strike, Greater Multistrike Support, Ruthless Support, Close Combat Support]
+      - name: Energy shield
+        gems: [Energy Blade]
+    moveOn: "there is no next stage. [[Mageblood]] and [[Headhunter]] are what is left."
+    details:
+      - title: Reference numbers, and why you cannot compare them
+        body: |
+          Two real 3.30-dated Path of Building files exist for Flicker, and they are **not comparable to each other** — different ascendancies, budgets and stages:
+
+          - A **Slayer** at level 89: 5.6 million hit damage per second, 8.89 attacks per second, 3,614 life, 23,526 effective hit points.
+          - A **Berserker**: 1.1 million total damage per second, 4.74 attacks per second, 3,723 life, **30 energy shield**, 11,185 effective hit points.
+
+          Read that second one carefully. **30 energy shield proves it is not a Ghostwrithe or Energy Blade build at all** — it is a different, earlier Berserker Flicker. It is not evidence that Berserker is weaker than Slayer.
+
+          No like-for-like comparison exists in any source, and we are not going to manufacture one.
+      - title: Does it have a single-target plan
+        body: |
+          Yes, qualified. [[Ruthless Support]] on the swap, [[Energy Blade]]'s
+          70% more lightning damage on a two-hander,
+          [[Voice of the Storm]]'s roughly 33% lucky multiplier,
+          [[Intimidating Cry]]'s double damage, and the Sword mastery's charge
+          generation that works specifically on unique enemies.
+
+          That is a real plan. It is also one author's claim about his own build, on 3.29 data.
+      - title: What the 3.30 economy does to it
+        body: |
+          Flicker's traditional edge is sheer volume of monsters killed per hour. 3.30 moved value onto rares, uniques and bosses, and stripped item quantity from monster modifiers.
+
+          So your edge is worth relatively less than it was, even though nothing about the build changed. Plan to actually kill the rare monsters rather than blinking past them.
+
+patch:
+  - note: >-
+      **Nothing in this build changed.** [[Flicker Strike]] is not mentioned
+      anywhere in the official notes, and one tier list independently confirms
+      "3.30 change: unchanged". [[Berserker]] is not mentioned at all.
+      [[Energy Blade]], [[Multistrike Support]], [[Poacher's Mark]],
+      [[Blood Rage]], [[Berserk]] and Ghostwrithe appear nowhere in the balance
+      changes.
+  - entry: ruthless-changes
+    note: >-
+      **Slayer appears only in the Ruthless section, which matters if you are
+      choosing between the two.** The Impact and Endless Hunger lines are
+      Ruthless-only. **One live data problem to know about:** poedb's Slayer
+      page renders Impact with up to 50% area of effect and Endless Hunger with
+      20% increased attack speed while leeching, with no Ruthless label. It is
+      merging Ruthless overrides into one block rather than making a false
+      claim, but a reader using that page alone would wrongly conclude Slayer
+      was buffed in 3.30. Treat the official notes as authoritative.
+  - entry: ralakeshs-impatience
+    note: >-
+      **One tangential item nerf.** [[Ralakesh's Impatience]] now has either −1
+      to maximum power, endurance **or** frenzy charges. That is relevant to
+      frenzy-charge builds which used it. This build does not.
+  - entry: loot-rarity-rework
+    note: >-
+      **The real headwind.** Value now concentrates in rare and unique monsters
+      and in bosses. Flicker's advantage has always been volume of kills per
+      hour, and volume is worth relatively less this patch. Nothing was nerfed;
+      the rewards moved.
+  - entry: quantity-to-atlas-drops
+    note: >-
+      **Same direction.** Item quantity was stripped from monster modifiers and
+      the quantity altars are gone, which devalues raw pack-density farming —
+      the thing this build is best at.
+  - entry: league-fates
+    note: >-
+      **Mildly unfavourable.** The league mechanic rewards single target, which
+      is Flicker's weaker half. Berserker specifically lacks Slayer's 20% more
+      damage against unique enemies, so this is the axis where the
+      Berserker-versus-Slayer choice costs you most.
+  - entry: mercenary-nerfs
+    note: >-
+      **Relative buff, for what it is worth.** Mercenaries were cut hard and
+      this build uses none.
+  - note: >-
+      **One already-banked nerf to check on import.**
+      [[Foulborn Ghostwrithe]] went from 50% to 40% to 35% during 3.29. The
+      3.29-dated published file should already reflect 35%, but if any of its
+      numbers predate the final downgrade, its damage is overstated. We could
+      not verify this without decoding the file.
+
+strengths:
+  - "The fastest clear on this site. Flicker is the genre benchmark and nothing walks."
+  - "Ancestral Fury doubles every hit, which is unique to Berserker on this skill."
+  - "No enabling unique weapon is needed. The sword is just a socket holder."
+  - "Every life node is a damage node once Crown of the Inward Eye is on."
+  - "Very high survivability once assembled: permanent overleech on a large pool."
+  - "Can go from nothing to a full endgame character without a weapon purchase."
+weaknesses:
+  - "You can die repeatedly before Foulborn Ghostwrithe arrives. Two independent sources list this as the main con."
+  - "Flicker goes where it pleases. If nothing is targeted, the game picks at random."
+  - "High button count: Flicker, Berserk, warcry, mark, Blood Rage and a stance, plus a boss gem swap."
+  - "Charge starvation feels arbitrary and you cannot fix it mid-fight."
+  - "About 45 levels of a completely different skill before the build begins."
+  - "Gated behind a specific-conqueror timeless jewel, which makes it a trade-only build."
+  - "The guide is 3.29 data re-verified for 3.30, not rewritten for it."
+avoidIf: >-
+  This is the one build on this site we would actively talk some people out of.
+  Do not play it if you are prone to motion sickness or visual disorientation:
+  you teleport constantly and you do not control where you land, and that is
+  not something practice fixes. Do not play it if you want low effort — it is
+  the opposite of a one-button build. Do not play it if arbitrary-feeling deaths
+  will sour your league, because charge starvation produces exactly those. Do
+  not play it if you dislike a character that is bad before it is good. And do
+  not play it if you will not trade, because the [[Glorious Vanity]] you need
+  comes from one specific conqueror. In solo self-found or hardcore, take
+  Slayer or another build entirely.
+
+sources:
+  - title: "Maxroll: Flicker Strike Berserker league starter (cptngarbage)"
+    url: https://maxroll.gg/poe/build-guides/flicker-strike-berserker-league-starter
+    kind: guide
+    note: "The primary source. Its changelog says \"virtually unchanged for 3.30\", but the stored planner is dated 28 July 2026 with no league field. It is 3.29 data re-verified, not rewritten."
+  - title: "Path of Building: the published file"
+    url: https://maxroll.gg/poe/pob/1xq93w0x
+    kind: pob
+    note: "A raw Path of Building blob rather than Maxroll's richer planner format, which is why no ratings, strengths or weaknesses exist for this build. Import it for the socket and colour progression the page does not give."
+  - title: "Slayer comparison: MAGEFIST's 3.30 Flicker guide"
+    url: https://www.poebuilds.cc/poe1/build/fjCN-vN_Tvk
+    kind: guide
+    note: "The most-watched 3.30 Flicker video, and genuinely 3.30-authored. Source of the Slayer reference numbers. If you want the better-documented version of this archetype, this is it."
+  - title: "Path of Building: MAGEFIST Slayer, level 89"
+    url: https://poe.ninja/poe1/pob/9a72a
+    kind: pob
+  - title: "Path of Building: LugoHQ Berserker, 3.30-dated"
+    url: https://pobb.in/oC261dUuG64l
+    kind: pob
+    note: "A second Berserker file, at 30 energy shield — so not a Ghostwrithe or Energy Blade build. Quoted only to show why the two reference stat blocks cannot be compared."
+  - title: "PoEDB: Flicker Strike"
+    url: https://poedb.tw/us/Flicker_Strike
+    kind: data
+    note: "Source of the two-second cooldown, the charge-bypass rule, the innate 15% charge chance and the random-target behaviour. Its quality range contradicts its own older note, which is why we give a range."
+  - title: "PoEDB: Energy Blade"
+    url: https://poedb.tw/us/Energy_Blade
+    kind: data
+    note: "Source of the level 24 requirement, the swords-only rule since 3.29, and the 70% more lightning damage on two-handed blades."
+  - title: "PoEDB: Ghostwrithe"
+    url: https://poedb.tw/us/Ghostwrithe
+    kind: data
+    note: "Confirms the two Foulborn variants, and that only the 35%-of-life roll adds energy shield rather than converting it."
+  - title: "PoEDB: Oro's Sacrifice"
+    url: https://poedb.tw/us/Oros_Sacrifice
+    kind: data
+    note: "Checked specifically to confirm that the \"Flicker Strike does not consume Frenzy Charges\" modifier does not exist on this item. An exact-phrase search found nothing."
+  - title: "PoEDB: Slayer"
+    url: https://poedb.tw/us/Slayer
+    kind: data
+    note: "**Displays Ruthless values with no label.** Useful for node text, but do not read Slayer's 3.30 changes off this page."
+  - title: "insanebuild: 3.30 build tier list"
+    url: https://insanebuild.gg/blog/path-of-exile/build-guide-e35d/poe-3-30-build-tier-list
+    kind: guide
+    note: "Top tier, as \"Flicker Strike, Slayer or Berserker\". It labels this Maxroll guide 3.29 independently, and its two cons are nearly identical to the author's own: you die before the armour piece, and Flicker goes where it pleases."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Checked for Flicker Strike, Berserker, Energy Blade, Multistrike, Poacher's Mark, Blood Rage, Berserk and Ghostwrithe. None appear in the balance sections. Slayer appears only inside the Ruthless section."

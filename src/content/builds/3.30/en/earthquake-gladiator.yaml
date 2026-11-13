@@ -1,0 +1,594 @@
+name: Earthquake Gladiator
+tagline: >-
+  Slam the ground, let the aftershock apply one enormous bleed, then dodge
+  freely while it ticks. Bleeding monsters you kill explode and chain.
+class: Duelist
+ascendancy: Gladiator
+role: starter
+budget: starter
+budgetNote: >-
+  **No price figures exist for this build in any source, in any patch.** The
+  guide quotes no chaos and no Divine amounts anywhere — the only monetary
+  language is "a couple of Chaos Orbs" for some early uniques and "at least a
+  [[Mirror of Kalandra]]" for the far-endgame axe. So there is not even a stale
+  3.29 number to warn you about. What is published is the author's own budget
+  rating of Moderate, 3 out of 5, and one named cost risk:
+  [[Ryslatha's Coil]]. Two popular Gladiator guides require that belt, so
+  expect launch-week demand for it.
+mainSkill: Earthquake
+image: asc-icon-gladiator
+hero: art-gladiator
+tags: [Melee, Bleed, Block, Tanky]
+ratings: { clear: 3, bossing: 4, survivability: 5, ease: 4 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **The four ratings are the author's own**, taken from the planner's rating
+  block: map clear 3 (Average), bossing 4 (Great), survivability 5 (Amazing),
+  ease 4 (Low difficulty). Our independent read agrees, except that we would
+  put clear at 3.5 and we round halves down. On sources, this is the most
+  current guide we found for any build: the planner was saved on launch day
+  with the league field set to 3.30, and the author annotates a 3.30-specific
+  change inline. **But the author states in his own FAQ that he had no alpha
+  access and could not test the build on 3.30 before launch**, and says he will
+  adjust in the first days. That is well-informed pre-league theory, not tested
+  practice, and it is a more honest disclosure than most guides make.
+modes:
+  ssf: >-
+    Excellent, and probably the best choice on this site for it. The author
+    wrote the progression for solo self-found explicitly. Everything is
+    essence-craftable rares, [[Resolute Technique]] removes accuracy gearing,
+    and [[Determined Survivor]] removes block-roll hunting. There is a
+    documented no-suppression tree variant too. The one real pain is
+    [[Ryslatha's Coil]] and [[Kaom's Sign]] dropping at all.
+  hardcore: >-
+    Very strong, and the guide's headline claim. Roughly 88% attack and spell
+    block, 90% capped physical damage reduction, 6,750 life, 23,000 armour,
+    stun immunity and life on block. Two caveats: chaos damage is the thin
+    layer, and the guide ships no dedicated hardcore tree — the nearest thing
+    is its pre-suppression armour tree.
+
+idea: |
+  You slam the ground with [[Earthquake]]. A crack appears. One second later the crack erupts, and that eruption deals 150% more damage than the slam did.
+
+  Bleeding is applied by the physical damage of the hit that caused it, and a stronger bleed replaces a weaker one. So the eruption's bleed is the one that sticks. The whole build exists to land eruptions, as big as possible, as often as possible.
+
+  Then [[Jagged Technique]] makes every bleed you apply **aggravated**, which means it always deals damage as though the enemy were moving. That is three times the damage, with no dice roll.
+
+  So on a boss you land one enormous bleed and then dodge for as long as you like. The damage keeps ticking whether you are attacking or not.
+
+  In maps, bleeding monsters you kill explode for a fifth of their maximum life, and the explosions chain.
+
+chain:
+  - label: Slam
+    text: "[[Earthquake]] hits at 75% of your attack speed and leaves a crack on the ground."
+  - label: Aftershock
+    text: "After one second the crack erupts for 150% more damage with hits **and** ailments. This is the hit that matters."
+  - label: Aggravated bleed
+    text: "[[Jagged Technique]] aggravates every bleed. Aggravated bleeding deals damage as if the target were moving: three times the normal rate."
+  - label: Explode and block
+    text: "[[Gratuitous Violence]] explodes bleeding enemies you kill. [[More Than Skill]] makes your block lucky, taking 65% to about 88%."
+
+chainDetails:
+  - title: "The rule that shapes everything: maximum hit, not damage per second"
+    body: |
+      Bleeding is calculated from the physical damage of the hit that applied it. It does not care about your damage per second.
+
+      Both authors of Maxroll's Gladiator guides repeat the same line: maximum hit damage matters, not damage per second.
+
+      That is why attack speed sits ninth on the author's own scaling list, described as "not a damage stat here, but very good for how the build feels". And it is why the build wears a belt that deliberately widens its damage range.
+  - title: Why Ryslatha's Coil is a damage item
+    body: |
+      [[Ryslatha's Coil]] gives −30% minimum and +40% maximum physical attack damage. On most builds that is a wash.
+
+      Here it is not, because only the biggest bleed you have applied is dealing damage. You hit often, so sooner or later you roll near the top of a deliberately widened band, and that oversized bleed persists. The low rolls simply get overwritten.
+
+      It also brings +40 Strength, +100 maximum life and 50 life on stun. The author calls it the biggest non-weapon upgrade in the build.
+  - title: Endurance charges are the key to the whole thing
+    body: |
+      The Bleeding mastery gives "+3% to Damage over Time Multiplier for Bleeding per Endurance Charge". Each charge is also 4% physical and 4% elemental damage reduction.
+
+      So one mastery makes endurance charges simultaneously your damage stat and your defence stat. That single node is why two [[Kaom's Sign]] rings justify two ring slots, and why the author drops Determination in favour of [[Blood Magic]] plus charge stacking.
+
+      The endgame target is 8 charges. The published Path of Building reads 7, which is a small disagreement inside the same guide.
+  - title: What Jagged Technique is actually worth
+    body: |
+      Honest version, because the simple version oversells it.
+
+      Aggravated bleeding is three times normal. Without [[Jagged Technique]] you get aggravation from chance sources instead — 10% from Bloodletting, 10% from [[Vulnerability]] quality, up to 30% from a glove implicit.
+
+      Per hit, the gap looks enormous: about 1.4 times against 3 times with no glove implicit. But bleeds last about five seconds and an aggravated bleed overwrites a weaker one, so at roughly two attacks a second you get eleven hits inside one bleed window. Even at a 19% per-hit chance, something aggravates about 91% of the time.
+
+      **So Jagged Technique does not pay in sustained face-tanking. It pays in ramp time and interrupted uptime.** Every time you stop attacking — a dodge, a phase change, an invulnerability window, a knockback — the chance-based build starts flipping coins again while yours is at full value on the next hit.
+
+      That is exactly the shape of a 3.30 boss fight with hazards to dodge. Neither case was run in Path of Building, so the exact difference is untested.
+  - title: Crimson Dance is not used, and the reason is in the keystone
+    body: |
+      [[Crimson Dance]] lets bleeds stack, which sounds good and is the usual bleed keystone.
+
+      It is absent from every tree variant in this guide, and 3.30's text makes it a hard no: under Crimson Dance bleeding **cannot be aggravated**, on top of 50% less damage with bleeding.
+
+      Aggravation is the build. So the keystone is off the table, not a preference.
+  - title: The 2-hand to 1-hand switch, and why it is the biggest spike
+    body: |
+      You level with two-handed axes. After Merciless Labyrinth, around level 68, you swap to a one-handed axe and a shield, and respec the two-handed nodes at the same time.
+
+      [[Earthquake]] supports both one-handed and two-handed axes, which is exactly why this works without changing your main skill.
+
+      Everything defensive turns on at once: [[Determined Survivor]] gives flat 50% block from any shield, [[Versatile Combatant]] converts your overcapped attack block into spell block at two for one, and [[More Than Skill]] later makes it lucky. It costs you nothing offensively.
+
+      This is the single largest power spike in the build.
+
+mandatory:
+  - term: Earthquake
+    why: >-
+      The base gem, not a transfigured version, and not Vaal Earthquake. Usable
+      from level 28.
+    detail: >-
+      The guide keeps [[Sunder]] through the campaign and lists Earthquake only
+      in its maps skill set. **It never states the swap level.** Earthquake is
+      usable at 28; treat the changeover as somewhere between there and the
+      Merciless lab, and do not trust any precise level you read.
+  - term: Jagged Technique
+    why: >-
+      Every bleed you apply is aggravated, which means a flat three times
+      damage against anything, moving or not. No other bleed build on this site
+      has it.
+  - term: Gratuitous Violence
+    why: >-
+      Bleeding enemies you kill explode for 20% of their maximum life. This is
+      the entire clear, and it chains.
+    detail: >-
+      The author tempers expectations: do not expect much from it in Normal
+      Labyrinth. It comes alive in maps, where packs are dense enough to chain.
+  - term: Determined Survivor
+    why: >-
+      Flat 50% block chance from any shield, so you never hunt for block rolls
+      on gear. Requires a shield, which is why the one-hand swap is mandatory.
+  - term: More Than Skill
+    why: >-
+      Your block becomes lucky, which takes 65% to roughly 88% on both attacks
+      and spells. The single largest defensive multiplier in the build.
+  - term: Versatile Combatant
+    why: >-
+      Converts overcapped attack block into spell block at 2% per 1%. It is the
+      only reason your spell block reaches the same number as your attack
+      block.
+  - term: Resolute Technique
+    why: >-
+      Never crit, never miss. Zero accuracy on gear, zero crit scaling, and
+      perfectly predictable bleed application.
+  - term: Blood Magic
+    why: >-
+      Permanent here, in every tree variant. Skills cost life instead of mana,
+      and the points that would have gone to Determination go into endurance
+      charges instead.
+    detail: >-
+      The trade-off is real: no mana-based panic buttons, and every skill use
+      comes off your life pool. The published file reads 55 life per use.
+  - term: Unwavering Stance
+    why: >-
+      Stun immunity. You stand still and slam, so you cannot afford to be
+      stun-locked.
+  - term: Ryslatha's Coil
+    why: >-
+      The biggest non-weapon upgrade. It widens your damage range, and only
+      your biggest bleed matters.
+    detail: >-
+      The author's own listed weakness is that it may be expensive. Two popular
+      Gladiator guides both require it, so demand will be concentrated at
+      league start.
+  - term: Fist of War Support
+    level: recommended
+    why: >-
+      At gem level 20, exerted slams deal 98% more damage with hits and
+      ailments every 1.8 seconds. [[Earthquake]] carries the Slam tag.
+    detail: >-
+      **One honest caveat:** nobody has confirmed whether Fist of War's boost
+      reaches the aftershock or only the slam. The game data says the boost does
+      not apply to repeats of an attack, and never says whether the aftershock
+      counts as a repeat. The author puts it in the six-link and has it enabled,
+      so he plainly believes it applies. Treat any specific multiplier here as
+      unverified.
+  - term: Kaom's Sign
+    level: recommended
+    why: >-
+      Two of them. +1 maximum endurance charge each, which is both damage and
+      defence thanks to the Bleeding mastery. Cheap on trade.
+    detail: >-
+      Also +30 life implicit, +20 Strength and a level 10 [[Enduring Cry]].
+      Corrupt your spares looking for +1 maximum charge, bleed damage over time
+      multiplier, attack speed, or increased [[Pride]] aura effect.
+  - term: Vulnerability
+    why: >-
+      With quality: 30% increased physical damage taken, 25% chance to bleed,
+      and up to 10% chance to aggravate. Keep the quality.
+  - term: Lacerate of Haemorrhage
+    level: recommended
+    why: >-
+      A separate six-link swap for uber pinnacle bosses. More damage than
+      [[Earthquake]] on a single target, worse for clear.
+    detail: >-
+      The author gates this behind "more advanced player". The gem itself
+      carries 75–132% more damage with bleeding, plus up to 40% more from
+      quality.
+  - term: Kongming's Stratagem
+    level: recommended
+    why: >-
+      A cheap early shield. Its "No Chance to Block" line does not apply to
+      you, because [[Determined Survivor]] forces 50% shield block regardless.
+    detail: >-
+      It needs a chance-to-blind-on-hit source somewhere in your gear. A second
+      Maxroll author independently confirms Determined Survivor is 50% in the
+      normal game, not the 40% that appears in the Ruthless section of the
+      notes.
+
+labs:
+  - lab: Normal
+    node: Gratuitous Violence
+    why: "Around level 33. Bleed explosions. Taken first only because nothing else is better that early: the block nodes do nothing until you hold a shield, three labs away."
+  - lab: Cruel
+    node: Jagged Technique
+    why: "Around level 52. The pivot point. The author's words: the build starts mostly hit-based and slowly transitions to bleed, and Cruel lab is where you can fully focus on bleed damage."
+  - lab: Merciless
+    node: Determined Survivor
+    why: "Around level 68, and you do the two-hand to one-hand swap in the same session. Flat 50% block from any shield."
+  - lab: Eternal
+    node: More Than Skill
+    why: "Lucky block on attacks and spells, 65% to about 88%. Last, because it needs the block base to exist first."
+
+stages:
+  - id: acts-1-3
+    image: blood-and-sand
+    title: Acts 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Spectral Throw]] from level 1, then [[Sunder]] with
+      [[Ruthless Support]] from level 12. Two-handed axes the whole way.
+    changes: >-
+      [[Seismic Cry]] replaces [[Intimidating Cry]] at 24, and [[Vulnerability]]
+      comes in at the same time. [[Pride]] joins at 28. Keep repeating the
+      weapon vendor recipe below as you find bigger axes.
+    links:
+      - name: Level 1–11
+        gems: [Spectral Throw, Chance to Bleed Support, Volley Support]
+      - name: Level 12
+        gems: [Sunder, Ruthless Support, Maim Support]
+      - name: Level 18, first four-link
+        gems: [Sunder, Chance to Bleed Support, Cruelty Support, Close Combat Support]
+      - name: Level 28
+        gems: [Sunder, Chance to Bleed Support, Cruelty Support, Maim Support]
+      - name: Movement and warcries
+        gems: [Leap Slam, Faster Attacks Support, Intimidating Cry, Dash, Frostblink]
+      - name: Buffs
+        gems: [War Banner, Blood and Sand, Blood Rage, Warlord's Mark]
+    moveOn: "you have a four-link Sunder, Normal Labyrinth is done, and you are heading into Act 4."
+    details:
+      - title: The one vendor recipe to repeat all campaign
+        body: |
+          Vendor any weapon together with a magic or rare [[Rustic Sash]] and a [[Blacksmith's Whetstone]]. You get the same base back with increased physical damage.
+
+          Do this to your first axe and to every upgrade after it. For a build that lives on maximum hit damage, it is free power.
+      - title: Other small leveling buys
+        body: |
+          - [[Sapphire Ring]] before Merveil.
+          - [[Amber Amulet]] for the Strength to equip [[Leap Slam]].
+          - Vendor an Iron Ring plus a red, green or blue gem for a Ruby, Topaz or Sapphire Ring.
+          - Bench resistances cost one [[Orb of Transmutation]] and work on normal items.
+      - title: Which bandit, and an unresolved disagreement
+        body: |
+          **The guide disagrees with itself here.** Its written FAQ says that if you are not sure, stick with Oak for the flat life. Its planner data says kill all three.
+
+          We flag it rather than guess. Oak is the safer pick for a newer player; kill-all is what the build data assumes.
+      - title: Intimidating Cry is real damage early
+        body: |
+          The author calls [[Intimidating Cry]] significant single-target damage early on. Use it on every rare and every boss until [[Seismic Cry]] replaces it at 24.
+
+          Keep Intimidating Cry on your bar after that, though. See the note about boss loading screens in the red maps stage.
+  - id: acts-4-10
+    image: unwavering-stance
+    title: Acts 4–10
+    levels: Level 28–68
+    uses: >-
+      Still [[Sunder]], now with [[Fist of War Support]] from level 38.
+      [[Pride]] with [[Eternal Blessing Support]] so it costs no reservation.
+    changes: >-
+      Add [[Urgent Orders Support]] to [[Seismic Cry]] at level 31. You ascend
+      twice here: [[Gratuitous Violence]] around 33 and [[Jagged Technique]]
+      around 52. The second one is where the build changes character.
+    links:
+      - name: Main skill from level 38
+        gems: [Sunder, Fist of War Support, Chance to Bleed Support, Cruelty Support]
+      - name: Warcries
+        gems: [Seismic Cry, Urgent Orders Support, Intimidating Cry]
+      - name: Auras and banner
+        gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
+      - name: Movement
+        gems: [Leap Slam, Faster Attacks Support, Frostblink]
+      - name: Curse and buff
+        gems: [Vulnerability, Blood Rage]
+    moveOn: "Merciless Labyrinth is done, you are holding a one-handed axe and a shield, and the two-handed nodes are respecced."
+    details:
+      - title: The hit-to-bleed pivot at Cruel lab
+        body: |
+          Before [[Jagged Technique]], your damage is mostly the hit. After it, your damage is mostly the bleed.
+
+          That changes what you look for on gear. From Cruel lab onward, chase physical damage over time multiplier and the Bleeding mastery rather than raw attack speed.
+      - title: The one-hand swap, step by step
+        body: |
+          At Merciless Labyrinth, around level 68:
+
+          1. Take [[Determined Survivor]].
+          2. Equip a one-handed axe and a shield.
+          3. Respec the two-handed nodes into block, shield and armour masteries.
+
+          The published Path of Building has a tree spec literally named for this step. Do all three in one sitting; half of it is worse than either.
+      - title: Pantheon is a conflict inside the same guide
+        body: |
+          The planner says Brine King with all three upgrades, plus Ralakesh. The published Path of Building says Lunaris plus Ralakesh. Both files were saved six minutes apart.
+
+          Unresolved. Brine King is the safer progression pick; Lunaris is the usual mapping choice later.
+  - id: early-maps
+    image: versatile-combatant
+    title: Early maps
+    levels: White and yellow maps
+    uses: >-
+      [[Earthquake]] with [[Fist of War Support]] and
+      [[Less Duration Support]], behind a one-handed [[Reaver Axe]] and a
+      shield. [[Brutality Support]] replaces [[Chance to Bleed Support]].
+    changes: >-
+      Fix the −30% resistances from the Act 10 boss first. Chaos resistance can
+      lag, but push it towards 0%. Get [[Kaom's Sign]] rings as soon as they
+      are affordable.
+    links:
+      - name: Main skill
+        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support]
+      - name: Single target
+        gems: [Bladestorm, Maim Support, Culling Strike Support, More Duration Support]
+      - name: Warcries
+        gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
+      - name: Auras and banner
+        gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
+      - name: Curse and guard
+        gems: [Vulnerability, Blood Rage, Steelskin]
+    moveOn: "resistances are capped, you have two Kaom's Sign rings, and block is the main project."
+    details:
+      - title: Why Less Duration is in the main link
+        body: |
+          The crack takes one second to erupt. [[Less Duration Support]] shortens that, so aftershocks land sooner and your big bleed refreshes faster.
+
+          Cracks created before the first one erupts do **not** spawn their own aftershocks. Slamming faster than the aftershock cycle wastes slams, which is another reason attack speed is not a damage stat here.
+
+          If your chest's socket colours will not take it, the author substitutes [[Swift Affliction Support]] instead.
+      - title: Socket colours are worth real damage
+        body: |
+          A gem in a socket of its own colour gets +10% quality. On [[Earthquake]], quality is directly more aftershock damage — up to +30% at 20% quality.
+
+          So the correct colour under your main skill gem is a straight 10% more aftershock damage. The published file has both Earthquake and [[Lacerate of Haemorrhage]] at 30% quality for this reason.
+      - title: Your first real weapon
+        body: |
+          A high-quality one-handed [[Reaver Axe]] with maximum physical damage, made with a Deafening or Shrieking [[Essence of Contempt]].
+
+          The milestone to aim for is 550 or more top-end physical damage. That is the author's own target and it is the number that matters most.
+      - title: Flasks and the bleed problem
+        body: |
+          A Divine [[Life Flask]] with either the instant or the 50%-instant prefix, and the "of Sealing" suffix for bleed immunity. Then [[Jade Flask]], [[Quicksilver Flask]], [[Quartz Flask]] and [[Sulphur Flask]].
+
+          Utility suffix priority: reduced curse effect, then increased armour, then reduced shock, then reduced chill and freeze, then movement speed.
+      - title: Bladestorm, honestly
+        body: |
+          The author is refreshingly blunt about it: [[Bladestorm]] is single-target only, and even then it is not that important.
+
+          Keep it in a four-link if you have the sockets. Do not spend currency on it.
+  - id: red-maps
+    image: more-than-skill
+    title: Red maps
+    levels: Tier 11–16 maps
+    uses: >-
+      A six-link [[Earthquake]], [[Ryslatha's Coil]], and about 88% block on
+      both attacks and spells after [[More Than Skill]].
+    changes: >-
+      The author's priority order is explicit: Eldritch implicits first, then
+      the endgame axe, then Ryslatha's Coil, then a damage amulet re-anointed to
+      Endurance, then cluster jewels, then a life-on-block shield.
+    links:
+      - name: Main skill
+        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support, Cruelty Support]
+      - name: Boss swap
+        gems: [Lacerate of Haemorrhage, Brutality Support, Melee Physical Damage Support, Cruelty Support, Maim Support, Fist of War Support]
+      - name: Warcries
+        gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
+      - name: Auras and banner
+        gems: [Pride, Eternal Blessing Support, Vitality, War Banner]
+      - name: Curse and guard
+        gems: [Vulnerability, Blood Rage, Steelskin, Immortal Call]
+    moveOn: "block is capped and lucky, and your axe is at 550 or more top-end physical damage."
+    details:
+      - title: Keep Enduring Cry for bosses with a loading screen
+        body: |
+          [[Seismic Cry]] is the mapping warcry. But endurance charges are lost when you cross a loading screen, and endurance charges are a third of your damage and a third of your mitigation.
+
+          So keep [[Enduring Cry]] bound for any boss you walk into through a portal or a transition.
+      - title: The endgame axe, and the 3.30 problem
+        body: |
+          Two published routes to a [[Reaver Axe]] with 550+ top-end physical damage:
+
+          1. **Recombinators.** About ten item-level-83 Reaver Axes, a few thousand [[Orb of Alteration]], and a one-in-three success rate per recombine.
+          2. **The older route.** [[Essence of Contempt]], a [[Veiled Orb]], the prefixes-cannot-be-changed bench option, finished with a Warlord's Exalted Orb.
+
+          The author warns inline that recombinators were nerfed in 3.30 by an amount he calls currently unknown. That pushes you towards the slower second route or towards buying the finished axe.
+      - title: The two map modifiers that brick you
+        body: |
+          The author supplies the filter regex himself. The two to never run:
+
+          - **Monsters have a chance to avoid Poison, Impale and Bleeding.** His words: if we do not bleed, we do not deal damage.
+          - **Players have less Armour, or reduced Chance to Block.** Your entire defence is those two numbers.
+      - title: Where the explode clear falls short
+        body: |
+          Corpse-explosion clear means things die behind you. The author concedes this, and the fix is a good loot filter rather than a build change.
+
+          Combine that with 75% attack speed slams, a one-second aftershock cycle and Shield Charge as your only movement, and you have the reason his own map clear rating is 3 out of 5.
+  - id: endgame
+    image: kalandras-touch
+    title: Endgame
+    levels: Tier 17, uber pinnacle bosses and beyond
+    uses: >-
+      A life-on-block shield, cluster jewels, [[Kalandra's Touch]] to duplicate
+      your better ring, and the [[Lacerate of Haemorrhage]] swap for ubers.
+    changes: >-
+      Damage stops coming from the tree and starts coming from implicits and a
+      better axe. The far end is a synthesised-implicit axe at 800+ top-end
+      physical, which the author says costs at least a
+      [[Mirror of Kalandra]].
+    links:
+      - name: Mapping
+        gems: [Earthquake, Fist of War Support, Brutality Support, Melee Physical Damage Support, Less Duration Support, Cruelty Support]
+      - name: Uber bossing
+        gems: [Lacerate of Haemorrhage, Brutality Support, Melee Physical Damage Support, Cruelty Support, Maim Support, Fist of War Support]
+      - name: Warcries
+        gems: [Seismic Cry, Urgent Orders Support, Enduring Cry]
+    moveOn: "there is no next stage. What is left is a mirror-tier axe and marginal implicits."
+    details:
+      - title: What the finished character looks like
+        body: |
+          From the published Path of Building at level 98, configured for the no-suppression variant:
+
+          - About 90% attack block and 88% spell block.
+          - 6,750 life, 23,063 armour, 90% physical damage reduction — the cap.
+          - Resistances 77/76/76, and chaos at 47.
+          - Around 1,100 life per second regenerated, 925 net, plus 675 leech per hit.
+          - Largest survivable hit: 21,800 physical, about 57,000 elemental, 20,810 chaos.
+
+          **These are the author's numbers from a 3.29-engine Path of Building, for a softcore cluster-jewel setup.** Read the chaos figures carefully: your chaos buffer is about a third of your elemental buffer. That is the build's one thin layer.
+      - title: The shield to finish on
+        body: |
+          A shield with increased spell suppression and "Recover 5% of Life when you Block". Use a pure evasion base such as a [[Lacquered Buckler]], which makes suppression easier to reach.
+
+          Alternatively, take the documented no-suppression route: drop suppression and [[Iron Reflexes]], invest fully into armour, and use the guide's pre-suppression tree. That is the route the solo self-found and hardcore-adjacent players should look at.
+      - title: Bleed cannot be burst-scaled
+        body: |
+          This is the honest counterweight to everything good above. If a boss has a damage check, an enrage timer, or a phase you have to end quickly, a fixed-rate damage-over-time effect has no answer.
+
+          "Damage not insane" is the author's own assessment of his own build. Believe him.
+      - title: One contradiction we could not resolve
+        body: |
+          The guide's build information reads as though [[Jagged Technique]] is not active during the [[Lacerate of Haemorrhage]] boss setup, because it lists the 10% and 10% chance sources for that swap instead.
+
+          But Jagged Technique is an ascendancy node, and it is present in the resolved maps and endgame trees. Either the prose is loose or there is an undocumented swap. We flag it rather than guess.
+
+          Separately, the FAQ has an Uber lab section that frames Jagged Technique as the *fourth* pick and offers an alternative defensive notable in its place. That contradicts both the planner data and the tips text. The substantive takeaway stands either way: Jagged Technique is the designated droppable node if you would rather have the defensive option, and the guide tells you how to replace its aggravation.
+
+patch:
+  - note: >-
+      **Nothing in this build changed.** [[Gladiator]] is not mentioned once in
+      the normal-game sections of the notes. No [[Earthquake]], [[Sunder]],
+      [[Fist of War Support]], slam, bleed, aggravate or block changes appear
+      anywhere.
+  - entry: ruthless-changes
+    note: >-
+      **The one Gladiator line in the notes is not about you.** The only
+      occurrence of the word "Gladiator" in the whole patch notes is inside the
+      Ruthless section, and it refers to the Scion Ascendant's notable of that
+      name dropping from 50% to 40% shield block. **The Duelist's
+      [[Determined Survivor]] is still 50% in the normal game**, confirmed by
+      the official tree data and restated independently by a second Maxroll
+      author. If you read that Gladiator block was nerfed, that is the error.
+  - entry: item-tiers
+    note: >-
+      **A direct gearing buff.** Rare and magic items now carry tiers from Act 6
+      onward, influencing modifier tiers, base level, quality, sockets and
+      links. This build wears eleven rare slots and crafts nearly everything, so
+      it benefits more than most.
+  - entry: mercenary-nerfs
+    note: >-
+      **Relative buff.** Mercenaries were cut hard and this build uses none.
+  - entry: loot-rarity-rework
+    note: >-
+      **Well aligned.** Value now concentrates in rare and unique monsters and
+      in bosses. A build its own author rates 4 out of 5 for bossing and 5 out
+      of 5 for survivability is pointed at where the rewards are.
+  - entry: league-fates
+    note: >-
+      **The best fit on this site, with one reservation.** The league lets you
+      empower an area boss and then take [[Viscera]] from it for your
+      [[Wickerman]]. Guaranteed aggravation is worth most exactly when your
+      attack uptime is interrupted, which is what a harder boss fight with more
+      hazards produces. Your damage also keeps ticking while you dodge. The
+      reservation: none of this has been tested in 3.30 by anyone, including the
+      author.
+  - note: >-
+      **One concrete nerf to your gearing path.** The author notes inline that
+      recombinators were nerfed in 3.30 by a currently unknown amount. That
+      degrades the cheaper of the two routes to the endgame axe. Magnitude
+      untested; nobody has published a figure.
+  - note: >-
+      **A new defensive option the guide already uses.** 3.30 added Bloodline
+      alternate ascendancies, and the author already integrates one of them as
+      a swap for [[Jagged Technique]] if your jewels are not there yet. That is
+      further evidence this guide is genuinely current.
+
+strengths:
+  - "The tankiest build on this site. About 88% block on attacks and spells, with 90% physical damage reduction."
+  - "Damage keeps ticking while you dodge, so boss uptime is not a problem."
+  - "Guaranteed bleed aggravation. No dice rolls, and no ramp after an interruption."
+  - "Bleeding enemies you kill explode and the explosions chain."
+  - "Easy to gear: Resolute Technique removes accuracy, Determined Survivor removes block hunting."
+  - "Written for solo self-found by its author, with a documented no-suppression tree."
+  - "The most current guide of the ten we looked at. The planner was saved on launch day."
+weaknesses:
+  - "Slow. 75% attack speed slams, a one-second aftershock cycle and Shield Charge as your only movement."
+  - "No burst. Bleed is a fixed-rate damage-over-time effect, so damage checks and enrage timers have no answer."
+  - "Things die behind you. Fix it with a loot filter, not with the build."
+  - "Chaos damage is the thin layer: 47% resistance and about a third of the elemental buffer."
+  - "Blood Magic means no mana-based panic buttons, and every skill use costs life."
+  - "Two map modifiers shut you down completely rather than slowing you."
+  - "The mid-campaign two-hand to one-hand switch is a real restructure, not a tweak."
+avoidIf: >-
+  Pick something else if you are a clear-speed player. The author's own map
+  clear rating is 3 out of 5, and that is with explosions. Skip it too if you
+  want to delete bosses quickly rather than outlast them, if you will not do a
+  six-link gem swap for uber pinnacles, or if you dislike respeccing — the
+  two-hand to one-hand transition is a genuine mid-campaign restructure. And if
+  your league plan is chaos-heavy content, budget extra chaos resistance before
+  you start.
+
+sources:
+  - title: "Maxroll: Earthquake Gladiator league starter (Zizaran)"
+    url: https://maxroll.gg/poe/build-guides/earthquake-gladiator-league-starter
+    kind: guide
+    note: "The primary source, and genuinely 3.30: the planner was saved on launch day with the league field set to 3.30. The author discloses that he had no alpha access and could not test it on 3.30."
+  - title: "Maxroll planner"
+    url: https://maxroll.gg/poe/planner/2c2a2800
+    kind: pob
+    note: "Where the ascendancy order, the rating block and the leveling steps live."
+  - title: "Path of Building: the level 98 endgame file"
+    url: https://maxroll.gg/poe/pob/oj1vam0g
+    kind: pob
+    note: "Source of the block, life, armour, resistance and maximum-hit numbers in this article. Configured for the no-suppression softcore cluster setup, on the 3.29 engine."
+  - title: "PoEDB: Earthquake"
+    url: https://poedb.tw/us/Earthquake
+    kind: data
+    note: "Source of the two-stage damage figures, the 75% attack speed, the one-second crack duration and the quality bonus to aftershock damage."
+  - title: "PoEDB: Lacerate of Haemorrhage"
+    url: https://poedb.tw/us/Lacerate_of_Haemorrhage
+    kind: data
+    note: "Confirms this is the one-handed transfigured version, and the source of the more-damage-with-bleeding figures."
+  - title: "PoEDB: Ryslatha's Coil"
+    url: https://poedb.tw/us/Ryslathas_Coil
+    kind: data
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Used for every node claim in this article, including the confirmation that Determined Survivor is still 50% in the normal game and that Crimson Dance now prevents aggravation."
+  - title: "aoeah: 3.30 build tier list"
+    url: https://www.aoeah.com/news/4886--poe-330-best-builds-for-league-starter--endgame-trade--ssf--poe-330-tier-list
+    kind: guide
+    note: "Archetype corroboration only. Ranks a Lacerate of Haemorrhage Gladiator 5th in solo self-found at 4 out of 5, reasoning that Gladiator block scales off the tree rather than off expensive uniques. Dated 9 November, two days before the patch notes."
+  - title: "Maxroll: Eviscerate Bleed Gladiator (goratha)"
+    url: https://maxroll.gg/poe/build-guides/eviscerate-bleed-gladiator-league-starter
+    kind: guide
+    note: "The alternative we did not pick: 3.28 data under a 3.30 banner, and it does not take Jagged Technique. Its genuine edges are better mapping and a lower budget, plus a dedicated hardcore cluster tree."
+  - title: "Official 3.30.0 patch notes"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Checked for Gladiator, Earthquake, Lacerate, Sunder, Fist of War, slam, bleed and block. The only \"Gladiator\" occurrence is the Scion notable inside the Ruthless section."
