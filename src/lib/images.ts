@@ -46,3 +46,17 @@ export function getMedia(id: string, where: string): MediaInfo {
   }
   return entry as MediaInfo;
 }
+
+/**
+ * The poedb page an image was scraped from, if it was scraped from one.
+ *
+ * This doubles as proof that the page exists: the icon on disk was fetched
+ * from it. Terms whose picture came from somewhere else, or which have no
+ * picture at all, get no reference link rather than a guessed URL that
+ * might 404 on the reader.
+ */
+export function poedbPage(imageId: string | undefined): string | undefined {
+  if (!imageId) return undefined;
+  const entry = images[imageId] as { poedb?: string; file?: string } | undefined;
+  return entry?.poedb && entry.file ? entry.poedb : undefined;
+}

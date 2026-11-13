@@ -171,3 +171,19 @@ html[data-reveal="on"] [data-reveal].is-in { opacity: 1; transform: none; will-c
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   .kenburns img, .kenburns video { transform: none !important; }
 }
+
+/* A game term you can look up. Underlined because that is what a reader
+   expects to be clickable, but with a dotted line and the term's own colour
+   so a paragraph full of item names does not turn into a wall of links. */
+a.term--ref {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+a.term--ref:hover,
+a.term--ref:focus-visible {
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+}

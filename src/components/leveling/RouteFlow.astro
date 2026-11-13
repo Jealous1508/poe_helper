@@ -26,6 +26,19 @@ const first = act.nodes[0].id;
     <ActMap act={act} league={league} locale={locale} />
   </div>
 
+  {/* The same count as the summary above the quest list, repeated here
+      because this is where the ticking happens and a progress figure you
+      have to scroll to find is a progress figure nobody reads. */}
+  <p class="flow__progress">
+    <span
+      data-progress-count
+      data-total={act.nodes.length}
+      data-template={t(locale, 'leveling.progress.count', { done: '{done}', total: '{total}' })}
+    >{t(locale, 'leveling.progress.count', { done: 0, total: act.nodes.length })}</span>
+    <span class="flow__bar" data-progress-bar aria-hidden="true"><span style="width:0%"></span></span>
+    <button type="button" data-progress-reset hidden>{t(locale, 'leveling.progress.reset')}</button>
+  </p>
+
   <ol class="flow" aria-label={t(locale, 'leveling.route')}>
     {act.nodes.map((node) => (
       <li class:list={['flow__item', `flow__item--${node.kind}`]}>
@@ -53,6 +66,20 @@ const first = act.nodes[0].id;
           </span>
           <Tag kind={node.tag} label={t(locale, `leveling.tag.${node.tag}`)} />
         </a>
+        {/* A sibling of the link, not a child: a button inside an anchor is
+            invalid, and ticking a stop must not also select it. This is the
+            only place in the guide you tick — the quest list below just
+            reports the total. */}
+        <button
+          type="button"
+          class="tick"
+          data-tick={node.id}
+          aria-pressed="false"
+          aria-label={`${t(locale, 'leveling.progress.mark')}: ${node.name}`}
+          title={t(locale, 'leveling.progress.mark')}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
+        </button>
       </li>
     ))}
   </ol>
@@ -213,20 +240,22 @@ const first = act.nodes[0].id;
       if (tick.dataset.tick && done.has(tick.dataset.tick)) counted.add(tick.dataset.tick);
     }
 
-    const counter = route.querySelector<HTMLElement>('[data-progress-count]');
-    const total = Number(counter?.dataset.total ?? '0');
-    const hit = Math.min(counted.size, total);
-
-    if (counter) {
+    // Every counter, not the first: the figure appears above the route
+    // where you tick and again with the quest list, and two that disagree
+    // would be worse than one.
+    for (const counter of route.querySelectorAll<HTMLElement>('[data-progress-count]')) {
+      const total = Number(counter.dataset.total ?? '0');
       counter.textContent = (counter.dataset.template ?? '{done}/{total}')
-        .replace('{done}', String(hit))
+        .replace('{done}', String(Math.min(counted.size, total)))
         .replace('{total}', String(total));
     }
-
-    const bar = route.querySelector<HTMLElement>('[data-progress-bar] > span');
-    if (bar) bar.style.width = total > 0 ? `${Math.round((hit / total) * 100)}%` : '0%';
-
-    route.querySelector<HTMLElement>('[data-progress-reset]')?.toggleAttribute('hidden', counted.size === 0);
+    for (const bar of route.querySelectorAll<HTMLElement>('[data-progress-bar] > span')) {
+      const total = Number(bar.closest<HTMLElement>('p')?.querySelector<HTMLElement>('[data-progress-count]')?.dataset.total ?? '0');
+      bar.style.width = total > 0 ? `${Math.round((Math.min(counted.size, total) / total) * 100)}%` : '0%';
+    }
+    for (const reset of route.querySelectorAll<HTMLElement>('[data-progress-reset]')) {
+      reset.toggleAttribute('hidden', counted.size === 0);
+    }
   }
 
   function initProgress() {
@@ -269,7 +298,28 @@ const first = act.nodes[0].id;
 
   /* ---------- the flow chart ---------- */
   .flow { list-style: none; margin: 0; padding: 0; position: relative; }
-  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; }
+  .flow__item { margin: 0; position: relative; padding: 0.3rem 0 0.3rem 2rem; display: flex; align-items: center; gap: 0.4rem; }
+  .flow__item > .node { flex: 1; min-width: 0; }
+  .flow__item.is-done > .node .node__name { text-decoration: line-through; text-decoration-thickness: 1px; }
+  .flow__item.is-done > .node { opacity: 0.6; }
+
+  .flow__progress {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.6rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  :global([data-route][data-enhanced]) .flow__progress { visibility: visible; }
+  .flow__bar { flex: 1; max-width: 7rem; height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .flow__bar > span { display: block; height: 100%; background: var(--accent); transition: width 0.18s var(--ease); }
+  .flow__progress button {
+    border: 1px solid var(--border-strong); border-radius: var(--radius); background: transparent;
+    color: var(--text-muted); font: inherit; font-size: 0.76rem; padding: 0.1rem 0.5rem; cursor: pointer;
+  }
+  .flow__progress button:hover { color: var(--text); border-color: var(--accent); }
 
   /* ---------- the tick ---------- */
   /* It keeps its space from the first paint and only becomes visible once

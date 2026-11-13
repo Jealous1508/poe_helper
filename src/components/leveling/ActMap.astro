@@ -109,18 +109,17 @@ const quests = act.nodes.filter((node) => node.quest);
       <div class="map__key-head">
         <h3>{t(locale, 'leveling.map.quests')}</h3>
         {/*
-          The one place in the guide that is ticked off, and the count is of
-          the quests listed right here — it used to count every stop on the
-          route, so it read "1 of 20" under a list of nine and looked broken.
-          The bar carries the same number as the words for people who read a
-          shape faster than a fraction.
+          The summary. Ticking happens on the route below, one box per stop,
+          so this counts stops — the same number the route's own counter
+          shows. The bar carries it as a shape for people who read that
+          faster than a fraction.
         */}
         <p class="map__progress">
           <span
             data-progress-count
-            data-total={quests.length}
+            data-total={act.nodes.length}
             data-template={t(locale, 'leveling.progress.count', { done: '{done}', total: '{total}' })}
-          >{t(locale, 'leveling.progress.count', { done: 0, total: quests.length })}</span>
+          >{t(locale, 'leveling.progress.count', { done: 0, total: act.nodes.length })}</span>
           <span class="map__bar" data-progress-bar aria-hidden="true"><span style="width:0%"></span></span>
           <button type="button" data-progress-reset hidden>{t(locale, 'leveling.progress.reset')}</button>
         </p>
@@ -133,16 +132,6 @@ const quests = act.nodes.filter((node) => node.quest);
               <span class="map__quest-name">{node.quest}</span>
               <span class="map__quest-zone">{node.name}</span>
             </a>
-            <button
-              type="button"
-              class="tick"
-              data-tick={node.id}
-              aria-pressed="false"
-              aria-label={`${t(locale, 'leveling.progress.mark')}: ${node.quest}`}
-              title={t(locale, 'leveling.progress.mark')}
-            >
-              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
-            </button>
           </li>
         ))}
       </ol>

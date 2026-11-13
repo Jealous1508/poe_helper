@@ -68,3 +68,25 @@ describe('getTerms', () => {
     for (const [key, term] of registry) expect(key).toBe(term.name.toLowerCase());
   });
 });
+
+describe('reference links', () => {
+  const linked = new Map<string, Term>([['chaos orb', { name: 'Chaos Orb', kind: 'currency', image: 'chaos-orb' }]]);
+  const ref = (term: Term) => (term.image ? `https://poedb.tw/us/${term.name.replace(/\s+/g, '_')}` : undefined);
+
+  it('turns a term with a reference page into a link that opens away from the guide', () => {
+    const html = renderRich('[[Chaos Orb]]', linked, 'x', undefined, ref);
+    expect(html).toContain('href="https://poedb.tw/us/Chaos_Orb"');
+    expect(html).toContain('target="_blank"');
+    expect(html).toContain('rel="noopener nofollow"');
+  });
+
+  it('leaves a term with no reference page as plain text, not a dead link', () => {
+    const html = renderRich('[[Toxic Rain]]', terms, 'x', undefined, ref);
+    expect(html).toContain('<span class="term term--gem">');
+    expect(html).not.toContain('<a');
+  });
+
+  it('keeps the label when one is given', () => {
+    expect(renderRich('[[Chaos Orb|a chaos]]', linked, 'x', undefined, ref)).toContain('>a chaos</a>');
+  });
+});

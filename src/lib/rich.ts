@@ -2,6 +2,8 @@ import { marked } from 'marked';
 import type { Term } from './terms';
 
 export type IconResolver = (imageId: string) => string | undefined;
+/** Where a reader can look this term up. Undefined means no link. */
+export type RefResolver = (term: Term) => string | undefined;
 
 const TERM = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
 
@@ -17,7 +19,14 @@ function isSafeHref(url: string): boolean {
   return !/^[a-z][a-z0-9+.-]*:/.test(trimmed);
 }
 
-function render(text: string, terms: Map<string, Term>, where: string, resolveIcon: IconResolver | undefined, inline: boolean): string {
+function render(
+  text: string,
+  terms: Map<string, Term>,
+  where: string,
+  resolveIcon: IconResolver | undefined,
+  inline: boolean,
+  resolveRef?: RefResolver,
+): string {
   const chips: string[] = [];
   // Terms come out of the raw text first, so a name or label containing "&"
   // is matched and rendered exactly once.
@@ -28,7 +37,14 @@ function render(text: string, terms: Map<string, Term>, where: string, resolveIc
     const label = escapeHtml((rawLabel ?? term.name).trim());
     const src = term.image && resolveIcon ? resolveIcon(term.image) : undefined;
     const icon = src ? `<img class="term__icon" src="${escapeHtml(src)}" alt="" width="20" height="20" loading="lazy" decoding="async" />` : '';
-    chips.push(`<span class="term term--${term.kind}">${icon}${label}</span>`);
+    // A term people can look up becomes a link to the reference page. One
+    // that has no page stays plain text rather than becoming a dead link.
+    const ref = resolveRef?.(term);
+    chips.push(
+      ref
+        ? `<a class="term term--${term.kind} term--ref" href="${escapeHtml(ref)}" rel="noopener nofollow" target="_blank">${icon}${label}</a>`
+        : `<span class="term term--${term.kind}">${icon}${label}</span>`,
+    );
     return `@@TERM${chips.length - 1}@@`;
   });
   // Raw HTML in content is never trusted: neutralise tags before Markdown runs.
@@ -42,11 +58,11 @@ function render(text: string, terms: Map<string, Term>, where: string, resolveIc
 }
 
 /** Markdown plus [[Game Term]] chips, as block HTML. Throws on an unknown term. */
-export function renderRich(text: string, terms: Map<string, Term>, where: string, resolveIcon?: IconResolver): string {
-  return render(text, terms, where, resolveIcon, false);
+export function renderRich(text: string, terms: Map<string, Term>, where: string, resolveIcon?: IconResolver, resolveRef?: RefResolver): string {
+  return render(text, terms, where, resolveIcon, false, resolveRef);
 }
 
 /** Same as renderRich but without a wrapping paragraph, for one-line fields. */
-export function renderRichInline(text: string, terms: Map<string, Term>, where: string, resolveIcon?: IconResolver): string {
-  return render(text, terms, where, resolveIcon, true);
+export function renderRichInline(text: string, terms: Map<string, Term>, where: string, resolveIcon?: IconResolver, resolveRef?: RefResolver): string {
+  return render(text, terms, where, resolveIcon, true, resolveRef);
 }
