@@ -5,8 +5,8 @@ import CampaignFlow from '../../../../components/leveling/CampaignFlow.astro';
 import Rich from '../../../../components/Rich.astro';
 import Tag from '../../../../components/Tag.astro';
 import { getLeague } from '../../../../config/leagues';
-import { isLocale, t } from '../../../../i18n';
-import { getOverview } from '../../../../lib/leveling';
+import { isLocale, pagePath, t } from '../../../../i18n';
+import { getOverview, hasLabs } from '../../../../lib/leveling';
 import { leaguePaths } from '../../../../lib/paths';
 
 export const getStaticPaths = leaguePaths;
@@ -16,6 +16,7 @@ if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
 const locale = rawLocale;
 const league = getLeague(leagueId);
 const { overview, isFallback } = getOverview(league.id, locale);
+const labsReady = hasLabs(league.id);
 ---
 <Base locale={locale} league={league} title={t(locale, 'nav.leveling')} description={overview.intro} section="leveling" isFallback={isFallback}>
   <div class="container page-head">
@@ -45,6 +46,7 @@ const { overview, isFallback } = getOverview(league.id, locale);
 
     <section class="block">
       <h2>{t(locale, 'leveling.labsTitle')}</h2>
+      {labsReady && <p class="note"><a href={pagePath(locale, league.id, 'leveling', 'labs')}>{t(locale, 'leveling.labs.full')} →</a></p>}
       <div class="table-wrap">
         <table class="labs">
           <thead>
