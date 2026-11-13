@@ -16,4 +16,13 @@ export const donate = {
   url: '',
 };
 
+/**
+ * The owner's own wording for the Vietnamese version of the donate note,
+ * kept here so the translation pass uses his voice rather than a
+ * translation of the English:
+ *
+ *   "Mình không làm app này để kiếm tiền nhưng nếu bạn mời mình 1 ly cafe,
+ *    1 bữa lẩu mình sẽ rất vui"
+ */
+
 export const hasDonate = donate.momo.trim().length > 0 || donate.url.trim().length > 0;
