@@ -34,9 +34,13 @@ jobs:
 
       - run: npm ci
 
+      # `enablement` turns Pages on the first time this runs, so a fresh
+      # clone of this repo deploys without anyone visiting Settings.
       - name: Work out the URL this will be served from
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       # The same checks that run locally. A broken link or an unknown game
       # term fails here rather than reaching the site.
