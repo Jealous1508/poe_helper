@@ -1,6 +1,7 @@
 ---
 import type { League } from '../config/leagues';
 import { t, type Locale } from '../i18n';
+import Donate from './Donate.astro';
 
 interface Props { locale: Locale; league: League }
 const { locale, league } = Astro.props;
@@ -12,6 +13,7 @@ const { locale, league } = Astro.props;
       {t(locale, 'footer.sources')}{' '}
       <a href={league.patchNotesUrl} rel="noopener" target="_blank">{t(locale, 'footer.patchNotes', { version: league.id })}</a>
     </p>
+    <Donate locale={locale} place="footer" />
   </div>
 </footer>
 

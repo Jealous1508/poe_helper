@@ -1,0 +1,122 @@
+---
+// A quiet way to say thank you. Two entry points share one note: a small
+// button in the header, and a line in the footer. Neither interrupts
+// anything — no banner, no timer, no modal on arrival.
+import { donateIsConfigured, donateUrl } from '../config/site';
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  /** `header` is a small button; `footer` is a line of text with a link. */
+  place: 'header' | 'footer';
+}
+const { locale, place } = Astro.props;
+const popupId = `donate-${place}`;
+---
+{place === 'header' ? (
+  <button type="button" class="donate-btn" popovertarget={popupId}>
+    <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z" />
+      <path d="M16 10h2.2a2.3 2.3 0 0 1 0 4.6H16" />
+      <path d="M7 3.2v2M10.5 2.6v2.6M14 3.2v2" />
+    </svg>
+    <span>{t(locale, 'donate.button')}</span>
+  </button>
+) : (
+  <p class="donate-line">
+    {t(locale, 'donate.footer')}{' '}
+    <button type="button" class="link-btn" popovertarget={popupId}>{t(locale, 'donate.footerLink')}</button>
+  </p>
+)}
+
+<div popover id={popupId} class="donate-note" role="dialog" aria-labelledby={`${popupId}-title`}>
+  <h3 id={`${popupId}-title`}>{t(locale, 'donate.title')}</h3>
+  <p>{t(locale, 'donate.body')}</p>
+  {donateIsConfigured ? (
+    <a class="btn" href={donateUrl} rel="noopener" target="_blank">{t(locale, 'donate.cta')}</a>
+  ) : (
+    <p class="donate-note__todo">{t(locale, 'donate.unset')}</p>
+  )}
+  <button type="button" class="donate-note__close" popovertarget={popupId} popovertargetaction="hide">
+    {t(locale, 'donate.close')}
+  </button>
+</div>
+
+<style>
+  /* Header: quiet until you look for it. */
+  .donate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .donate-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .donate-btn svg { flex: none; }
+
+  .donate-line { margin: 0.9rem 0 0; }
+
+  .donate-note {
+    width: min(26rem, calc(100vw - 2rem));
+    margin: auto;
+    padding: 1.4rem 1.5rem 1.3rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.16s var(--ease), transform 0.16s var(--ease), overlay 0.16s allow-discrete, display 0.16s allow-discrete;
+  }
+  .donate-note:popover-open { opacity: 1; transform: none; }
+  @starting-style {
+    .donate-note:popover-open { opacity: 0; transform: translateY(6px); }
+  }
+  .donate-note::backdrop {
+    background: var(--backdrop);
+    opacity: 0;
+    transition: opacity 0.16s var(--ease), overlay 0.16s allow-discrete, display 0.16s allow-discrete;
+  }
+  .donate-note:popover-open::backdrop { opacity: 1; }
+  @starting-style {
+    .donate-note:popover-open::backdrop { opacity: 0; }
+  }
+  .donate-note h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
+  .donate-note p { font-size: 0.97rem; color: var(--text-muted); }
+  .donate-note .btn { margin-top: 1.1rem; }
+  .donate-note__todo {
+    margin-top: 1rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius);
+    font-size: 0.86rem;
+  }
+  .donate-note__close {
+    display: block;
+    margin-top: 1rem;
+    font: inherit;
+    font-size: 0.86rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  .donate-note__close:hover { color: var(--text); }
+
+  @media (max-width: 720px) {
+    .donate-btn span { display: none; }
+    .donate-btn { padding: 0.3rem 0.45rem; }
+  }
+</style>
