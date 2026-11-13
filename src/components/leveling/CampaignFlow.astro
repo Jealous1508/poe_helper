@@ -64,10 +64,11 @@ const { stops, league, locale } = Astro.props;
   .stop.is-link .stop__num { background: var(--accent); color: var(--on-accent); }
   .stop__levels { font-size: 0.76rem; color: var(--text-muted); }
   .stop h3 { font-size: 1.1rem; margin: 0.6rem 0 0.5rem; }
-  dl { margin: 0; display: grid; gap: 0.25rem; }
-  dl div { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0.4rem; }
-  dt { color: var(--text-muted); font-size: 0.76rem; padding-top: 0.08rem; }
-  dd { margin: 0; }
+  /* Labels sit above their values: the cards are too narrow for two columns
+     without breaking words like "Encampment" mid-word. */
+  dl { margin: 0; display: grid; gap: 0.5rem; }
+  dt { color: var(--text-muted); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; }
+  dd { margin: 0.05rem 0 0; line-height: 1.35; overflow-wrap: normal; hyphens: auto; }
   .stop__markers { list-style: none; margin: 0.7rem 0 0; padding: 0; display: grid; gap: 0.3rem; }
   .marker { margin: 0; padding: 0.2rem 0.45rem; border-left: 3px solid var(--border-strong); font-size: 0.78rem; line-height: 1.35; background: var(--surface-2); }
   .marker--lab { border-left-color: var(--accent); }
