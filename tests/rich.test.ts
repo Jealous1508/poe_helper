@@ -58,4 +58,13 @@ describe('getTerms', () => {
   it('throws for a league with no registry', () => {
     expect(() => getTerms('0.0')).toThrow(/0\.0/);
   });
+
+  it('merges extra registry files so several writers can add terms at once', () => {
+    // Terms live in 3.30.yaml plus any 3.30.<name>.yaml shard. Two people
+    // adding terms in parallel would otherwise overwrite each other.
+    const registry = getTerms('3.30');
+    expect(registry.size).toBeGreaterThan(100);
+    // Every term still resolves by lower-cased name, whichever file it came from.
+    for (const [key, term] of registry) expect(key).toBe(term.name.toLowerCase());
+  });
 });

@@ -84,3 +84,23 @@ export function loadYamlFile(relPath: string): YamlFile | undefined {
   const raw = rawFiles[`/src/content/${relPath}`];
   return raw === undefined ? undefined : { where: relPath, data: parse(raw) };
 }
+
+/**
+ * Load a base file plus any shards matching a `*` pattern, in a stable
+ * order: the base first, then the shards by name.
+ */
+export function loadYamlFiles(basePath: string, shardPattern: string): YamlFile[] {
+  const [prefix, suffix] = shardPattern.split('*');
+  const out: YamlFile[] = [];
+  const base = loadYamlFile(basePath);
+  if (base) out.push(base);
+  const shards = Object.keys(rawFiles)
+    .map((path) => path.replace('/src/content/', ''))
+    .filter((rel) => rel !== basePath && rel.startsWith(prefix) && rel.endsWith(suffix))
+    .sort();
+  for (const rel of shards) {
+    const file = loadYamlFile(rel);
+    if (file) out.push(file);
+  }
+  return out;
+}
