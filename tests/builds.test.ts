@@ -86,3 +86,38 @@ describe('getBuilds', () => {
     }
   });
 });
+
+describe('the two languages', () => {
+  // A translation drifts silently: nothing fails when a Vietnamese file ends
+  // up with a different ascendancy, a gem the English does not list, or a
+  // rating nobody meant to change. These fields are keys and data rather
+  // than prose, so they have to match, and this is the only thing that
+  // notices when they stop.
+  const keys = ['class', 'ascendancy', 'role', 'budget', 'mainSkill', 'image', 'hero', 'verified', 'confidence'] as const;
+  const names = (value: unknown) =>
+    [...new Set([...JSON.stringify(value).matchAll(/\[\[([^\]|]+)/g)].map((m) => m[1].toLowerCase()))].sort();
+
+  it('describe every build with the same facts', () => {
+    const en = getBuilds('3.30', 'en').builds;
+    const vi = getBuilds('3.30', 'vi').builds;
+    expect(vi.map((b) => b.slug)).toEqual(en.map((b) => b.slug));
+
+    for (const [i, build] of en.entries()) {
+      const other = vi[i];
+      if (other.isFallback) continue; // not translated yet; English is shown as-is
+      for (const key of keys) expect(other[key], `${build.slug}.${key}`).toEqual(build[key]);
+      expect(other.ratings, `${build.slug}.ratings`).toEqual(build.ratings);
+      expect(other.mandatory.map((m) => [m.term, m.level]), `${build.slug}.mandatory`).toEqual(build.mandatory.map((m) => [m.term, m.level]));
+      expect(other.stages.map((s) => [s.id, s.image, s.links?.map((l) => l.gems)]), `${build.slug}.stages`).toEqual(build.stages.map((s) => [s.id, s.image, s.links?.map((l) => l.gems)]));
+      expect(other.patch.map((p) => p.entry), `${build.slug}.patch`).toEqual(build.patch.map((p) => p.entry));
+      expect(other.sources.map((s) => [s.url, s.kind]), `${build.slug}.sources`).toEqual(build.sources.map((s) => [s.url, s.kind]));
+      // Game terms are registry keys, so both languages must name the same
+      // ones; which words wrap them is the translator's business.
+      expect(names(other), `${build.slug} terms`).toEqual(names(build));
+      // labs[].node is deliberately not compared: a couple of them are
+      // sentences rather than notable names ("the other of the two"), and
+      // those read as nonsense left in English.
+      expect(other.labs?.map((l) => l.lab), `${build.slug}.labs order`).toEqual(build.labs?.map((l) => l.lab));
+    }
+  });
+});

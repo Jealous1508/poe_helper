@@ -1,0 +1,466 @@
+name: Static Strike Guardian
+tagline: >-
+  Đánh một con quái là tia lightning tự bắn vào mọi thứ quanh bạn trong bốn giây
+  tiếp theo. Nửa Guardian trả giá cho chuyện đó bằng 75% block và mười nghìn
+  armour.
+class: Templar
+ascendancy: Guardian
+role: starter
+budget: starter
+budgetNote: >-
+  **Không nguồn nào công bố một con số currency nào cho build này.** Không có
+  budget khởi đầu, không có giá cho cây unique mà cả build dựng quanh nó, không
+  có chi phí cho cặp Forbidden jewel mà nhân vật hoàn thiện đang đeo. Skill gem
+  là quest reward Act 1, nên mấy ngày đầu không tốn gì; sau đó thì chúng tôi
+  thật sự không biết, và cũng không có bảng giá 3.29 nào cho cây staff.
+mainSkill: Static Strike
+image: static-strike
+hero: art-guardian
+tags: [Melee, Lightning, Block, Staff]
+ratings: { clear: 4, bossing: 4, survivability: 5, ease: 4 }
+verified: "2026-11-13"
+confidence: mixed
+confidenceNote: >-
+  **Skill thì đã được kiểm chứng; còn build cụ thể này là lời khẳng định của một
+  người.** Cơ chế của [[Static Strike]] đọc thẳng từ PoEDB và không có gì phải
+  bàn: lần đổi gần nhất là 3.28.0 và 3.30 không nhắc tới nó ở đâu cả. Bản
+  Guardian đến từ một tác giả duy nhất, Alohaa, đăng ngày 11 tháng 11 năm 2026
+  dưới tiêu đề "The Strongest Leaguestarter I Ever Played" với 154,000 view tới
+  ngày launch — build đơn lẻ có nhiều view nhất trong danh sách Covens của
+  poebuilds.cc, cách biệt khá xa. **Nhưng planner của anh ta ghi nhãn 3.29**, và
+  nó là một nhân vật level 98 đã hoàn thiện với một cặp Forbidden jewel cắm
+  trong đó, không phải một lộ trình lên level. Không site guide có tên tuổi nào
+  — Maxroll, Mobalytics, PoE Vault — công bố bất cứ thứ gì về Static Strike
+  Guardian cho 3.30. Bốn điểm số là của chúng tôi. Thứ *được* kiểm chứng độc lập
+  là chuyện Static Strike đáng làm skill league start cho 3.30: jungroan đăng
+  một bản Blade Flurry Static Strike Slayer khởi đầu league cùng tuần, và một
+  bản Static Strike Assassin khởi đầu khác cũng nằm trên cùng danh sách.
+modes:
+  ssf: >-
+    Cây staff là vấn đề. [[The Yielding Mortality]] là một unique forged: PoEDB
+    ghi nó rơi từ Harvest và có cả vendor recipe, [[The Enmity Divine]] cộng một
+    [[Haemocombustion Scroll]]. Harvest vẫn là cơ chế "secondary" trong 3.30,
+    nên Sacred Flora vẫn tự mọc trong map, nghĩa là con đường đó còn mở — nhưng
+    nó là một con đường, không phải một lời bảo đảm. **Không nguồn nào bàn về
+    solo self-found cho build này.**
+  hardcore: >-
+    Cũng không nguồn nào bàn tới. Trên giấy thì nhân vật được công bố là nhân vật
+    phòng thủ tốt nhất trên site này: 219,015 effective hit point, 82% physical
+    damage reduction, 75% block và 75% spell block. Hãy đọc đó như một điểm đến.
+    Nó là một nhân vật trade level 98, và không có gì cho bạn biết phòng thủ của
+    nó trông ra sao ở Act 6.
+
+idea: |
+  [[Static Strike]] là một melee attack có phần thưởng tới sau. Bạn đánh một con quái bằng vũ khí, và cú đó cho bạn một buff gọi là static energy. Khi buff còn đó, các tia tự bắn ra từ người bạn vào quái gần đó, mỗi một phần ba giây một lần, chain sang thêm mục tiêu.
+
+  Nên nhịp chơi là: đánh một cái, rồi đi tiếp. Mấy cái tia lo phần dọn quái. Bạn không bao giờ bị buộc phải đứng trong đám quái mà vung liên tục.
+
+  Nửa [[Guardian]] của build thì đang làm một việc hoàn toàn khác và không liên quan: nó làm bạn cực khó chết. Nhân vật được công bố block ba phần tư attack và ba phần tư spell, có mười nghìn armour, và ăn ít hơn 82% physical damage từ hit. [[Divine Shield]] rồi biến phần damage mà armour và block đã chặn thành energy shield regeneration.
+
+  Hai nửa đó là lý do đây là một build league start chứ không phải một con glass cannon. Damage gần như hoàn toàn đến từ một skill gem bạn nhận ở Act 1 và một cây staff; phần sống sót đến từ cây passive và ascendancy, hai thứ không tốn gì ngoài passive point.
+
+chain:
+  - label: Đánh một cái
+    text: "[[Static Strike]] là một attack. Đánh trúng quái cho bạn static energy trong 4 giây gốc, và nó chồng tới 3 lần."
+  - label: Tia tự bắn
+    text: "Khi static energy còn, tia đánh quái mỗi 0.32 giây ở gem level 20, tối đa 6 mục tiêu, cộng một lần chain. Chúng gây ít damage hơn cú attack 30%."
+  - label: Một nửa thành lightning
+    text: "Skill chuyển 50% physical damage của nó thành lightning, nên build lớn lên theo cả physical weapon damage lẫn lightning damage."
+  - label: Ailment nhân nó lên
+    text: "[[The Taming]] cho 30–40% increased elemental damage với hit và ailment *cho mỗi loại* elemental ailment đang có trên quái. Static Strike tự shock được."
+  - label: Không gì giết nổi bạn
+    text: "75% block, 75% spell block, 10,348 armour và 82% physical damage reduction. [[Divine Shield]] biến physical damage đã chặn thành energy shield regeneration."
+
+chainDetails:
+  - title: Vì sao vũ khí quan trọng ở đây, khác với build damage over time
+    body: |
+      Đây là mặt đối lập của một build như Toxic Rain, nơi gem gánh damage và vũ khí gần như vô nghĩa.
+
+      [[Static Strike]] có 346% effectiveness of added damage ở gem level 20, tăng từ 150.6% ở level 1. Effectiveness là hệ số nhân áp lên damage được cộng vào từ vũ khí và gear của bạn. Ở 346%, từng điểm added damage đáng giá gấp ba phẩy năm lần con số trên giấy, khiến một roll vũ khí lớn trở thành khổng lồ.
+
+      Đó cũng là lý do build dùng đúng cây staff nó dùng. [[The Yielding Mortality]] cộng 225–265 tới 315–385 physical damage và 30–40% increased critical strike chance, và một nửa toàn bộ phần physical damage đó chuyển thành lightning trên đường ra.
+
+      Mấy cái tia gây ít damage hơn chính cú attack 30%, nên cú attack vẫn là công cụ single-target và mấy cái tia là phần clear.
+  - title: Cây staff chính là build, và nó là một unique forged
+    body: |
+      [[The Yielding Mortality]] là một Imperial Staff, level 66, 113 Strength và 113 Intelligence. Danh sách mod đầy đủ từ PoEDB:
+
+      - +25% Chance to Block Spell Damage
+      - Socketed Gems are supported by Level 1 Chance to Bleed
+      - Grants [[Summon Greater Harbinger of Brutality]] Skill
+      - +5% Chance to Block Attack Damage while wielding a Staff
+      - +(60–80)% to Damage over Time Multiplier for Bleeding from Critical Strikes
+      - Adds (225–265) to (315–385) Physical Damage
+      - (30–40)% increased Critical Strike Chance
+
+      Hai trong số các dòng đó là lý do Guardian đạt 75% spell block: +25% spell block và +5% attack block trên cùng một món. Phần added physical damage với critical strike chance là damage. Mấy dòng bleeding là phần bạn *không* dùng — không có gì trong build làm chúng có ý nghĩa.
+
+      Cách lấy nó: PoEDB ghi một nguồn drop từ Harvest, và một vendor recipe gồm [[The Enmity Divine]] cộng một [[Haemocombustion Scroll]]. Nó được thêm vào core drop pool trong 3.28.0. **Không tồn tại giá nào cho nó ở bất kỳ league nào mà chúng tôi tìm được.**
+  - title: "The Taming muốn ba ailment. Static Strike cho bạn một."
+    body: |
+      [[The Taming]] là một Prismatic Ring: +(8–10)% và +(20–30)% to all elemental resistances, 10% chance to Freeze, Shock và Ignite, và **(30–40)% increased elemental damage with hits and ailments for each type of elemental ailment on the enemy.**
+
+      Dòng cuối đó nhân theo số *loại* ailment. Chỉ riêng shock cho bạn một stack của nó. Shock, freeze và ignite cùng lúc cho ba. Trên một roll 40% thì đó là khác biệt giữa +40% và +120%.
+
+      [[Static Strike]] có 10% chance to shock gốc từ 3.0.0, và nó chuyển một nửa physical damage thành lightning, nên shock tự tới. Freeze và ignite thì không: skill không gây một chút cold hay fire damage nào. Dòng 10% chance to freeze, shock và ignite của chính cái ring là con đường duy nhất món đồ đó cho bạn.
+
+      **Đây là cách đọc của chúng tôi, không phải của tác giả**, và nó là câu hỏi mở lớn nhất của build: không có gì trên trang của anh ta giải thích ailment thứ ba được áp bằng cách nào. 3.30 thì có đưa cho bạn một câu trả lời mới nếu bạn muốn — [[Doedre's Tongue]] giờ roll được "All Damage can Ignite, Shock or Freeze against Cursed Enemies", thứ sẽ biến lightning damage của bạn thành một freeze và một ignite trên mục tiêu đang bị curse. Build vốn đã chạy [[Elemental Weakness]]. Chưa ai thử cặp đó.
+  - title: Planner thật sự nói gì, và nó giả định những gì
+    body: |
+      Một file duy nhất, pobb.in/Wpo4TuYfRXFT, tiêu đề "Level 98 Hybrid Crit Static Strike Guardian" và **ghi nhãn 3.29**.
+
+      **Damage:** [[Static Strike]] ở 20/20 báo **10.6 triệu hit damage mỗi giây** ở 1.83 attack mỗi giây, 92.7% critical strike chance và 415% critical multiplier. Tổng damage mỗi giây của mọi thứ, tức con số planner để lên tiêu đề, là **11,630,874**, và phần chênh đến từ [[Summon Greater Harbinger of Brutality]] do cây staff cho.
+
+      **Phòng thủ:** 4,922 life, 1,777 energy shield, **219,015 effective hit point**. Resistance 79 fire, 79 cold, 78 lightning, 46 chaos. 10,348 armour, 82% physical damage reduction, 75% block, 75% spell block. 984 life leech mỗi giây, 150 life và 150 energy shield hồi mỗi giây, +50% movement speed. Level 98, giết hết bandit, Pantheon Brine King với Garukhan, 223 Strength / 98 Dexterity / 187 Intelligence.
+
+      **Những gì đang bật:** dòng configuration chỉ đọc ra **"15% Shock, Power"** — một mức shock effect 15% và power charge. **Không có boss nào được chọn và không hiện level quái.** Nên con 10.6 triệu là đánh vào mục tiêu mặc định của planner, không phải vào một pinnacle boss, và giả định shock là một giả định khiêm tốn chứ không phải hào phóng.
+
+      Và dữ liệu cây là 3.29. Path of Building chưa cập nhật cho Covens of Umbra, nên không có thay đổi cây hay balance nào của 3.30 nằm trong con số đó.
+  - title: "Divine Shield có một cái trần bạn nên biết"
+    body: |
+      Keystone này hồi 3% phần physical damage đã được chặn từ các hit trong vài giây gần nhất, thành energy shield mỗi giây — và, theo wiki, **bạn không hồi energy shield vượt quá giá trị armour của mình được**.
+
+      Trên nhân vật này cái trần đó là 10,348, còn bể energy shield là 1,777, nên cái trần không chạm tới. Nó quan trọng theo hướng ngược lại: Divine Shield không trả cho bạn gì cả khi bạn chưa bị đánh, và nó trả theo tỷ lệ với lượng mà armour và block của bạn đã chặn được. Nó là phần thưởng cho việc đã trâu, không phải cách để trở nên trâu.
+
+      Một chi tiết chúng tôi không giải quyết được: liệu các hit bị block có được tính là "prevented" hay không. Có một thread trên forum chính thức với tiêu đề đúng y câu hỏi đó, và chúng tôi không đọc ra được câu trả lời từ nó. Nếu damage bị block không được tính, thì một nhân vật 75% block chỉ thu Divine Shield từ một phần tư số hit nó hứng.
+  - title: Những gì không được công bố cho build này
+    body: |
+      Nói thẳng, vì vài thứ trong đây là những thứ một guide starter bình thường vẫn có:
+
+      - **Không có cây leveling và không có lộ trình gem.** Planner duy nhất là nhân vật level 98 đã hoàn thiện.
+      - **Không có thứ tự Labyrinth.** Chúng tôi không biết anh ta lấy notable Guardian nào trước, nên trang này không có bảng Labyrinth.
+      - **Không có danh sách support gem cho bản Guardian.** Trang chỉ hiện [[Static Strike]] và cái skill cây staff cho, và không hiện cái gì link với cái gì.
+      - **Cặp Forbidden allocate notable nào.** Nhân vật đeo một [[Forbidden Flame]] và một [[Forbidden Flesh]] đã corrupt, mà trang không nói trên đó ghi gì. Một cặp Forbidden ghi hai notable khác nhau thì vô dụng, nên đây không phải một chỗ trống nhỏ.
+      - **Bất cứ giá nào, dù một con.**
+
+mandatory:
+  - term: Static Strike
+    why: >-
+      Bản thân skill. Một quest reward Act 1 từ The Siren's Cadence cho Marauder,
+      Scion và Templar, dùng được từ level 12.
+    detail: >-
+      Gem level là nguồn scale chính mà bạn kiểm soát được từ sớm: effectiveness
+      of added damage chạy từ 150.6% ở level 1 tới 346% ở level 20, và các tia
+      bắn nhanh hơn, đánh được nhiều mục tiêu hơn khi gem lên level. Giữ nó ở
+      mức cao nhất bạn gánh được.
+  - term: The Yielding Mortality
+    why: >-
+      Cây staff mà cả build xếp quanh nó: added physical damage, increased
+      critical strike chance, +25% spell block và +5% attack block while
+      wielding a staff.
+    detail: >-
+      Một unique forged. PoEDB ghi một nguồn drop từ Harvest và một vendor recipe
+      gồm [[The Enmity Divine]] cộng một [[Haemocombustion Scroll]]. **Không tìm
+      được giá ở bất kỳ league nào.** Trước khi có nó, bất kỳ cây hai tay rare
+      nào có roll physical lớn cũng làm cùng việc đó, chỉ dở hơn.
+  - term: Divine Shield
+    why: >-
+      Keystone biến physical damage đã chặn thành energy shield regeneration. Nó
+      là keystone duy nhất nhân vật được công bố lấy.
+    detail: >-
+      3% physical damage đã chặn từ các hit gần đây, hồi thành energy shield mỗi
+      giây, và energy shield không hồi vượt quá armour của bạn được. Với 10,348
+      armour thì cái trần đó không phải vấn đề ở đây.
+  - term: The Taming
+    level: recommended
+    why: >-
+      Một hệ số nhân elemental damage lớn theo mỗi loại elemental ailment trên
+      quái, cộng tới +40% to all elemental resistances trên một slot ring. Nhân
+      vật được công bố có đeo.
+    detail: >-
+      Đọc phần chi tiết ở trên trước khi mua: Static Strike tự shock được nhưng
+      không gây một chút cold hay fire damage nào, nên hai trong ba ailment phải
+      đến từ đâu đó, và không nguồn nào nói là từ đâu.
+  - term: Summon Greater Harbinger of Brutality
+    level: recommended
+    why: >-
+      Cây staff cho miễn phí, và nó là toàn bộ khác biệt giữa con 10.6 triệu của
+      planner cho Static Strike và 11.6 triệu tổng. Bạn không tốn một socket nào
+      cho nó.
+  - term: Trinity Support
+    level: recommended
+    why: >-
+      More elemental damage khi bạn gây đủ ba loại elemental damage. **Lấy từ file
+      Static Strike Slayer 3.29 của tác giả, không phải file Guardian** — trang
+      Guardian của anh ta không công bố link nào.
+  - term: Melee Physical Damage Support
+    level: recommended
+    why: >-
+      More melee physical damage, một nửa trong đó chuyển thành lightning. Cũng
+      lấy từ file Slayer 3.29.
+  - term: Ruthless Support
+    level: recommended
+    why: >-
+      Mỗi cú hit thứ ba gây damage cao hơn hẳn. Lấy từ file Slayer 3.29. Trên một
+      nhân vật 1.83 attack mỗi giây thì nhịp đó dễ giữ.
+  - term: Fortify Support
+    level: recommended
+    why: >-
+      Ăn ít damage hơn từ hit, và nó hợp với một nhân vật melee đang đánh liên
+      tục. Lấy từ file Slayer 3.29.
+  - term: Elemental Damage with Attacks Support
+    level: recommended
+    why: >-
+      More elemental damage với attack, mà đó đúng là chỗ một nửa damage của
+      Static Strike rơi vào sau khi chuyển đổi. Lấy từ file Slayer 3.29.
+  - term: Elemental Weakness
+    level: recommended
+    why: >-
+      Hạ cả ba elemental resistance. Nhân vật Guardian được công bố có mang. Nó
+      cũng là curse bạn sẽ cần nếu bạn theo hướng ailment bằng
+      [[Doedre's Tongue]].
+  - term: Shield Charge
+    level: recommended
+    why: >-
+      Di chuyển. Nhân vật được công bố có nó, hơi lạ trên một build staff và có
+      thể là đồ sót lại — **chúng tôi gắn cờ chứ không giải thích.**
+
+stages:
+  - id: acts-1-10
+    image: static-strike
+    title: Act 1–10
+    levels: Level 12–68
+    uses: >-
+      [[Static Strike]] từ quest The Siren's Cadence ở Act 1, trong bất kỳ link
+      nào bạn tìm được, với cây vũ khí hai tay nào có roll physical lớn nhất.
+      Trước level 12 thì dùng skill khởi đầu nào của Templar cũng được.
+    changes: >-
+      **Không có gì ở đây là có nguồn.** Không có lộ trình leveling nào được công
+      bố cho build này. Phần dưới đây là quy tắc chung cho một skill melee
+      physical có chuyển đổi, và chúng tôi nói rõ như vậy chứ không khoác lên nó
+      cái áo lời khuyên của tác giả.
+    links:
+      - name: "Từ level 12 (gợi ý của chúng tôi, không có nguồn)"
+        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support]
+      - name: "Four-link (gợi ý của chúng tôi, không có nguồn)"
+        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support, Fortify Support]
+      - name: Utility
+        gems: [Molten Shell, Flame Dash, Precision]
+    moveOn: >-
+      bạn đã xong Act 10, elemental resistance về lại 75%, và Static Strike nằm
+      trong ít nhất một four-link.
+    details:
+      - title: Templar lấy gem ở đâu
+        body: |
+          [[Static Strike]] là quest reward của The Siren's Cadence ở Act 1, chào cho Marauder, Scion và Templar, và nó yêu cầu nhân vật level 12 với 21 Strength và 14 Intelligence. PoEDB cũng ghi tên Nessa cạnh quest đó, nhưng không nói thẳng là bà ấy bán nó, nên cứ lấy bằng quest reward.
+
+          Tag của nó là Attack, Melee, Strike, Area of Effect, Duration, Lightning và Chaining. Tag Duration có ý nghĩa: skill effect duration kéo dài thời gian static energy tồn tại, tức là nhiều thời gian bắn tia hơn trên mỗi cú hit.
+      - title: Vì sao cây staff không thể là vũ khí campaign của bạn
+        body: |
+          [[The Yielding Mortality]] cần level 66, tức là khoảng cuối Act 10. Nên cả campaign chạy bằng vũ khí rare, và thứ bạn đi tìm là một roll physical damage lớn duy nhất, vì cái 346% added-damage effectiveness kia.
+
+          3.30 giúp bạn ở đây. Từ Act 6, đồ Magic và Rare có thể rơi kèm một Item Tier từ 2 tới 5 in ngay trong tên, và tier cao hơn nghĩa là mod tốt hơn. Giờ bạn thấy được một cây vũ khí ngon ngay trên mặt đất thay vì phải identify tất cả.
+      - title: Những gì chúng tôi không nói được cho bạn
+        body: |
+          Lấy notable Guardian nào trước, chạy Labyrinth theo thứ tự nào, giúp bandit nào, hay dùng Pantheon nào trong lúc chạy campaign. Nhân vật được công bố thì giết hết bandit và chọn Brine King với Garukhan ở level 98; đó là lựa chọn endgame và không nhất thiết là lựa chọn cho campaign.
+
+          Nếu bạn muốn một lộ trình leveling cho skill này chứ không phải cho ascendancy này, bài Static Strike Slayer 3.29 của tác giả có quảng cáo một Path of Building leveling đầy đủ trong video. **Chúng tôi không đọc được file đó** — trên trang chỉ link bản Slayer 3.29 đã hoàn thiện, pobb.in/767t-xufLl6G.
+  - id: early-maps
+    image: divine-shield
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      [[The Yielding Mortality]] ngay khi bạn kiếm được một cây, đồ rare có life
+      với resistance ở mọi slot còn lại, và [[Divine Shield]] khi armour của bạn
+      đã đủ lớn để nó trả công.
+    changes: >-
+      Đây là lúc nửa Guardian bắt đầu thành cái điểm chính. Block và armour đến
+      từ cây passive và ascendancy, nên chúng tới đúng hẹn bất kể gear của bạn
+      trông thế nào.
+    links:
+      - name: "Main link (hình dáng lấy từ file Slayer 3.29)"
+        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support, Fortify Support, Trinity Support, Elemental Damage with Attacks Support]
+      - name: Curse và di chuyển
+        gems: [Elemental Weakness, Shield Charge, Faster Attacks Support]
+      - name: Phòng thủ
+        gems: [Vaal Molten Shell, Cast when Damage Taken Support]
+    moveOn: "block của bạn cao, resistance đã cap, và cây staff đã lên người."
+    details:
+      - title: Kiếm cây staff
+        body: |
+          Hai đường, cả hai đều từ PoEDB chứ không phải từ tác giả build:
+
+          1. **Harvest.** Nó được ghi là drop từ Harvest. Harvest đổi hình dáng trong 3.30 — cổng Sacred Grove không còn và Sacred Flora mọc ngay trong map — nhưng Harvest là cơ chế *secondary*, nên nó vẫn tự xuất hiện trong map mà không cần Thread.
+          2. **Vendor recipe.** [[The Enmity Divine]] cộng một [[Haemocombustion Scroll]].
+
+          **Cả hai đường đều không có chi phí hay tỷ lệ drop được công bố.** Nếu bạn định trade, đây là món nên đi dò giá chứ không nên lập ngân sách cho nó.
+      - title: Trinity cần đủ ba element
+        body: |
+          [[Trinity Support]] chỉ trả công nếu bạn đang gây fire, cold *và* lightning damage. Static Strike cho bạn lightning nhờ chuyển đổi. Hai cái còn lại phải đến từ gear của bạn hoặc từ một aura như [[Hatred]] cho cold.
+
+          File Slayer 3.29 của tác giả chạy [[Hatred]] và [[Herald of Ash]], tức là lo xong cold với fire. **Trang Guardian của anh ta không công bố dàn aura của nó**, nên chúng tôi không nói được là bản Guardian có giữ cách xếp đó hay không.
+      - title: Kiếm currency trong 3.30
+        body: |
+          Đáng nhắc lại trên mọi trang starter league này: Abyss, Bestiary, Betrayal, Blight, Breach, Expedition, Incursion, Legion, Ritual và Ultimatum không còn tự xuất hiện trong map nữa. Chúng chỉ hiện ở chỗ nào có Thread đặt vào.
+
+          Nên kế hoạch giai đoạn đầu là Thread từ Shaped Region, và đừng bỏ qua quái rare hay boss map.
+  - id: red-maps
+    image: the-taming
+    title: Map đỏ và nhân vật được công bố
+    levels: Map Tier 11–16
+    uses: >-
+      Setup level 98 được công bố: [[The Yielding Mortality]], [[The Taming]] ở
+      một slot ring, đồ rare ở mọi slot khác, và một cặp [[Forbidden Flame]] với
+      [[Forbidden Flesh]] đã corrupt.
+    changes: >-
+      Block lên tới 75% và 75%, armour lên tới mười nghìn, và damage dừng ở 10.6
+      triệu cho Static Strike trên một planner 3.29 với giả định shock 15% và
+      không chọn boss.
+    links:
+      - name: "Main link (hình dáng lấy từ file Slayer 3.29)"
+        gems: [Static Strike, Melee Physical Damage Support, Ruthless Support, Fortify Support, Trinity Support, Elemental Damage with Attacks Support]
+      - name: "Aura (từ file Slayer 3.29, không phải file Guardian)"
+        gems: [Hatred, Herald of Ash, Precision, Arrogance Support, Enlighten Support]
+      - name: Cây staff cho sẵn
+        gems: [Summon Greater Harbinger of Brutality]
+    moveOn: >-
+      không có stage tiếp theo nào được công bố. File của tác giả là một nhân vật
+      đã hoàn thiện và anh ta không mô tả gì xa hơn nó.
+    details:
+      - title: Danh sách gear, đúng như được công bố
+        body: |
+          [[The Yielding Mortality]] ở slot vũ khí. Rồi đồ rare ở mọi slot còn lại: helmet Magistrate Crown, body armour Paladin's Hauberk, Mesh Gloves, Legion Boots, một amulet, một ring rare, và một belt. [[The Taming]] là cái ring thứ hai.
+
+          Jewel gồm một cặp [[Forbidden Flame]] với [[Forbidden Flesh]] đã corrupt. **Notable mà chúng allocate không được hiện trên trang**, và đó là chỗ trống gánh nhiều nhất trong cả setup.
+
+          Để ý xem cái gì *vắng mặt*: không [[Mageblood]], không [[Progenesis]], không [[Headhunter]], không [[Watcher's Eye]], không cluster jewel. Với một nhân vật mười một triệu rưỡi damage mỗi giây và 219,000 effective hit point, đó là một danh sách trông rẻ — và đó là một phần lý do tác giả gọi nó là build league start.
+      - title: Đọc con số 219,015 một cách trung thực
+        body: |
+          Effective hit point trong Path of Building là một con số duy nhất được ép ra từ life, energy shield, resistance, armour, block và physical damage reduction, đối chiếu với một profile attack giả định. Nó hữu ích khi so hai bản của cùng một build và dở khi so giữa các build khác nhau.
+
+          Mấy phần bạn kiểm tra trực tiếp được thì nói nhiều hơn: 4,922 life và 1,777 energy shield không phải một bể lớn, còn 82% physical damage reduction với 75% block trên cả attack và spell là thứ giữ nó đứng được. Hình dáng đó sụp theo một cách rất cụ thể — trước thứ gì không block được mà cũng không ngán armour, ví dụ một cú elemental lớn không tránh được, hoặc chaos damage nặng, chỗ mà chaos resistance chỉ nằm ở 46%.
+
+          **Không nguồn nào nói điều này.** Nó suy ra từ mấy con số, và chúng tôi gắn cờ nó như câu hỏi cần hỏi chứ không phải một nhược điểm đã được kiểm chứng.
+      - title: Vì sao Guardian chứ không phải Slayer
+        body: |
+          Tác giả viết cả hai. Bản Static Strike Slayer 3.29 của anh ta báo 11.6 triệu damage mỗi giây, 5,556 life, 149,638 effective hit point, 22,589 armour và 90% physical damage reduction với 65% block trên cả hai trục. Bản Guardian 3.30 của anh ta báo damage gần như y hệt với 219,015 effective hit point, ít armour hơn và nhiều hơn mười điểm block trên mỗi trục.
+
+          Nên cái đánh đổi, theo chính hai file của anh ta, là: cùng damage, ít armour thô hơn, nhiều block hơn, và một con số effective hit point lớn hơn hẳn. **Anh ta không đưa lý do nào cho việc đổi** ngoài tiêu đề video, và chúng tôi không xem video đó.
+
+patch:
+  - entry: ruthless-changes
+    note: >-
+      **Hãy kiểm lại mọi lời nói rằng [[Guardian]] bị đổi league này.** Patch note
+      chính thức có đúng một dòng về Guardian — Elemental Relic từ
+      [[Unwavering Crusade]] có level tối đa 80, giảm từ 85 — và **nó nằm ở phần
+      riêng của Ruthless.** Nó không áp dụng cho Covens of Umbra thường. Vài bài
+      viết ngày launch đang in lại các thay đổi ascendancy của Ruthless như thể
+      chúng là thay đổi chung, và Guardian chỉ nằm trong danh sách class bị ảnh
+      hưởng ở đúng chỗ đó.
+  - note: >-
+      **[[Static Strike]] không bị đụng tới.** Lịch sử phiên bản trên PoEDB dừng
+      ở 3.28.0, và tên skill không xuất hiện ở bất cứ đâu trong patch note 3.30.
+      [[The Yielding Mortality]] với [[The Taming]] cũng không, lịch sử phiên bản
+      của cả hai cũng dừng ở 3.28.0. Hãy đọc đó là "không được nhắc trong các
+      nguồn chúng tôi đọc" chứ không phải đã chứng minh là không đổi: thread
+      chính thức dài 129,000 ký tự và chúng tôi đọc nó trong hai lượt.
+  - entry: doryani-and-doedre
+    note: >-
+      **Một câu trả lời khả dĩ cho câu hỏi mở của build.**
+      [[Doedre's Tongue]] giờ roll được một trong các mod "All Damage can Ignite,
+      Shock or Freeze against Cursed Enemies", và có 30–35% to all elemental
+      resistances. Trên một nhân vật curse bằng [[Elemental Weakness]] và muốn đủ
+      ba loại ailment cho [[The Taming]], đó là cặp đôi hiển nhiên. **Hoàn toàn
+      chưa được thử, và chưa ai đề xuất.** Cái amulet giờ chỉ rơi từ các encounter
+      Covens of Umbra.
+  - entry: item-tiers
+    note: >-
+      **Có lợi, và có lợi hơn mức bình thường.** Static Strike nhân added damage
+      lên 346% ở gem level 20, nên một lần nâng cấp vũ khí cảm thấy được ngay
+      lập tức. Việc đọc được tier của một món Rare ngay trên mặt đất từ Act 6
+      làm chuyện đi săn vũ khí campaign bớt mò mẫm hẳn.
+  - entry: harvest-rework
+    note: >-
+      **Đây là con đường của bạn tới cây staff.** Harvest không còn dùng cổng
+      Sacred Grove; Sacred Flora mọc ngay trong map. Harvest là cơ chế secondary,
+      nên nó vẫn xuất hiện mà không cần Thread, và điều đó giữ cho nguồn drop
+      được ghi vẫn còn sống.
+  - entry: quality-of-life
+    note: >-
+      **Hai cái lợi nhỏ.** Crafting bench giờ chuyển được mọi socket thành màu
+      trắng với một [[Orb of Scouring]], xóa nốt lý do cuối để quan tâm tới màu
+      socket trên một six-link. Và skill do item cho sẵn giờ hiện mô tả khi hover,
+      rất tiện trên một cây staff cho sẵn một skill mà có thể bạn chưa dùng bao
+      giờ.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Kế hoạch kiếm currency giai đoạn đầu của bạn phải đổi.** Mười cơ chế giờ
+      chỉ xuất hiện qua Thread. Mọi lời khuyên 3.29 về việc farm Betrayal hay
+      Legion ở map trắng đều không còn chạy.
+
+strengths:
+  - "Skill là quest reward Act 1, nên ngày đầu không tốn một đồng."
+  - "Đánh một cái rồi đi: mấy cái tia dọn quái trong lúc bạn bước đi, chuyện khá lạ với một build melee."
+  - "Build đơn lẻ có nhiều view nhất trong danh sách 3.30 của poebuilds.cc, cách biệt rộng."
+  - "Phòng thủ được công bố là mạnh nhất trên site này: 75% block, 75% spell block, 82% physical damage reduction, 219,015 effective hit point."
+  - "Không có unique chase đắt đỏ nào trong gear được công bố. Không Mageblood, không Headhunter, không cluster jewel."
+  - "Trong game thường, cả skill lẫn ascendancy đều không bị đổi trong 3.30."
+weaknesses:
+  - "Một tác giả duy nhất. Chưa site guide nào viết về nó cho 3.30."
+  - "Không có lộ trình leveling, không có lộ trình gem, không có thứ tự Labyrinth, không có giá nào được công bố ở đâu cả."
+  - "Planner ghi nhãn 3.29, là một nhân vật level 98 đã hoàn thiện, và không chọn boss."
+  - "Notable của cặp Forbidden jewel không được công bố, mà một cặp lệch nhau thì vô dụng."
+  - "[[The Taming]] muốn ba loại elemental ailment còn skill cấp được một. Chưa ai giải thích chỗ hụt đó."
+  - "Cây staff là một unique forged, không có giá công bố và đường drop phụ thuộc Harvest."
+  - "Phòng thủ kiểu block với armour yếu đúng ở chỗ nó yếu: những cú elemental không tránh được và 46% chaos resistance."
+avoidIf: >-
+  Chọn build khác nếu bạn cần một guide leveling viết sẵn để theo, vì build này
+  không có — ba build starter khác trên site này công bố cây theo từng act còn
+  cái này không công bố gì trước level 98. Cũng bỏ qua nếu bạn không thích tầm
+  đánh melee, hoặc nếu bạn muốn biết một build tốn bao nhiêu trước khi cam kết
+  với nó. Thứ bạn mua ở đây là một skill rất mạnh và một ascendancy rất mạnh,
+  được ghép lại bởi một người không viết xuống anh ta tới đó bằng cách nào.
+
+sources:
+  - title: "poebuilds.cc: The Strongest Leaguestarter I Ever Played | Static Strike Guardian | 3.30 (Alohaa)"
+    url: https://www.poebuilds.cc/poe1/build/MI3e0Gz6R6s
+    kind: guide
+    note: "Đăng ngày 11 tháng 11 năm 2026, 154k view tới ngày launch, gắn tag 3.30 Covens. Nguồn của mọi món gear, mọi chỉ số và mọi con số damage trên trang này. Nó không có phần guide viết, không có mục leveling và không có giá."
+  - title: "Path of Building: Level 98 Hybrid Crit Static Strike Guardian (Alohaa)"
+    url: https://pobb.in/Wpo4TuYfRXFT
+    kind: pob
+    note: "Ghi nhãn 3.29. Total DPS 11,630,874, eHP 219,014, level 98, giết hết bandit. Dòng configuration chỉ đọc ra \"15% Shock, Power\" — không chọn boss và không hiện level quái."
+  - title: "poebuilds.cc: trang tác giả Alohaa"
+    url: https://www.poebuilds.cc/poe1/author/alohaa
+    kind: guide
+    note: "Dùng để xác lập rằng bài Guardian là build Static Strike 3.30 duy nhất của anh ta, và rằng dòng Static Strike của anh ta là mấy bản Slayer với Berserker của 3.29."
+  - title: "poebuilds.cc: Static Strike Slayer Leaguestarter Guide, 3.29 (Alohaa)"
+    url: https://www.poebuilds.cc/poe1/build/jQy7qtUnQHM
+    kind: guide
+    note: "89.6k view. Danh sách support gem và dàn aura duy nhất được công bố cho Static Strike của tác giả này: Melee Physical Damage, Ruthless, Fortify, Trinity, Elemental Damage with Attacks, cùng Hatred và Herald of Ash. Nó là một Slayer, không phải Guardian. Video của nó quảng cáo một Path of Building leveling đầy đủ mà trang không link tới."
+  - title: "Path of Building: Static Strike Slayer, 3.29 (Alohaa)"
+    url: https://pobb.in/767t-xufLl6G
+    kind: pob
+    note: "Mốc so sánh Slayer 3.29: 11.6M DPS, 5,556 life, 149,638 eHP, 22,589 armour, 90% physical reduction, 65% block và spell block."
+  - title: "poebuilds.cc: Blade Flurry Static Strike Slayer | 3.30 League Start Guide (jungroan)"
+    url: https://www.poebuilds.cc/poe1/build/ifQIDAl1MPE
+    kind: guide
+    note: "Bằng chứng độc lập rằng Static Strike là một lựa chọn league start của 3.30. Một build khác của một tác giả khác; chỉ dùng cho mục đó."
+  - title: "PoEDB: Static Strike"
+    url: https://poedb.tw/us/Static_Strike
+    kind: data
+    note: "Cơ chế và mọi con số gem ở đây: duration gốc 4 giây chồng 3 lần, tia mỗi 0.32–0.4 giây, +1 chain, 4–6 mục tiêu, tia ít damage hơn 30%, 50% physical chuyển thành lightning, effectiveness 150.6%–346%, 10% chance to shock gốc từ 3.0.0. Lịch sử phiên bản dừng ở 3.28.0. Cũng là nguồn cho cách lấy gem bằng quest Act 1."
+  - title: "PoEDB: The Yielding Mortality"
+    url: https://poedb.tw/us/The_Yielding_Mortality
+    kind: data
+    note: "Danh sách mod đầy đủ, base Imperial Staff, level 66, nguồn drop Harvest và recipe The Enmity Divine cộng Haemocombustion Scroll. Thêm vào core drop pool trong 3.28.0."
+  - title: "PoEDB: The Taming"
+    url: https://poedb.tw/us/The_Taming
+    kind: data
+    note: "Prismatic Ring, danh sách mod đầy đủ, và một lịch sử phiên bản không có gì ở 3.29 hay 3.30."
+  - title: "PoEWiki: Divine Shield"
+    url: https://poewiki.net/wiki/Divine_Shield
+    kind: data
+    note: "3% physical damage đã chặn từ các hit gần đây hồi thành energy shield mỗi giây, và luật rằng energy shield không hồi vượt quá armour."
+  - title: "Official forum: the new Divine Shield Keystone and its interaction with block"
+    url: https://www.pathofexile.com/forum/view-thread/3185490
+    kind: thread
+    note: "Liệt kê vì câu hỏi đó quan trọng trên một nhân vật 75% block và chúng tôi không đọc ra được câu trả lời từ nó."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Đọc trong hai lượt để xác nhận rằng thay đổi Guardian duy nhất — Elemental Relic của Unwavering Crusade tụt từ level 85 xuống 80 — nằm ở phần riêng của Ruthless, và rằng Static Strike không được nhắc tới."
+  - title: "Maxroll: tóm tắt patch note 3.30 Covens of Umbra"
+    url: https://maxroll.gg/poe/news/3-30-covens-of-umbra-patch-notes
+    kind: official
+    note: "Nguồn thứ hai độc lập cho việc phân tách phần Ruthless."
