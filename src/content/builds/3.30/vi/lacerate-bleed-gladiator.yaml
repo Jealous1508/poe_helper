@@ -1,0 +1,823 @@
+name: Lacerate Bleed Gladiator
+tagline: >-
+  Hai nhát chém rộng từ cách một sải tay đặt một vết bleed khổng lồ lên mọi thứ
+  trước mặt bạn, sau một cây shield block gần chín trên mười cú đánh. Khởi đầu
+  gần như không cần gear.
+class: Duelist
+ascendancy: Gladiator
+role: starter
+budget: starter
+budgetNote: >-
+  **Guide viết chính không nêu một cái giá nào cả.** Nó chỉ nói build
+  "requires nothing to function" (không cần gì để chạy), rằng [[Jack, the Axe]]
+  "is cheap even with a fortify corruption" (rẻ kể cả khi có corruption
+  fortify), và rằng [[Ryslatha's Coil]] thì "likely far too expensive early"
+  (nhiều khả năng quá đắt ở giai đoạn đầu). Nguồn duy nhất có con số là phần mô
+  tả của một video đăng hai ngày trước league: map Tier 16 "for 200 Chaos
+  Orbs", scale "up to over 170 divines". Mấy con số đó được viết khi 3.30 chưa
+  có nền kinh tế nào, nên chúng là **giá 3.29** và chỉ để tham khảo thô.
+mainSkill: Lacerate of Haemorrhage
+image: lacerate-of-haemorrhage
+hero: art-gladiator
+tags: [Melee, Bleed, Block, Tanky]
+ratings: { clear: 3, bossing: 4, survivability: 5, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **Bốn điểm số là của chúng tôi.** Không nguồn nào công bố bảng điểm cho build
+  này. Cơ chế thì đã được kiểm chứng: bleed [[Gladiator]] là league starter
+  nhiều năm nay và 3.30 không đụng tới nó. Nguồn thì yếu hơn vẻ ngoài của
+  chúng. Guide PoE Vault mang banner 3.30 đề ngày 12/11/2026, nhưng mục duy
+  nhất trong changelog của nó là từ tháng 3/2020 và các file Path of Building
+  của nó dùng passive tree 3.27 và 3.28. Hai creator đăng video 3.30 ngày
+  11/11; chúng tôi đọc phần mô tả và giải mã file Path of Building của họ (cây
+  3.29) nhưng không xem video. Chưa ai chơi 3.30 vào lúc bất kỳ thứ nào trong
+  số này được viết ra. Mọi con số damage, life và giá bên dưới đều thuộc thời
+  3.29 hoặc cũ hơn.
+modes:
+  ssf: >-
+    Chơi được. Nguyên văn của guide là build "requires nothing to function":
+    skill gem là quest reward, block đến từ ascendancy, và
+    [[Resolute Technique]] gỡ luôn accuracy khỏi gear của bạn. Bạn nâng cấp gem
+    ở [[Divine Font]] trong Labyrinth. [[Jack, the Axe]] và [[Ryslatha's Coil]]
+    là đồ drop mà có khi bạn chẳng bao giờ thấy; phương án dự phòng được công
+    bố cho cây axe là một cây rare craft bằng Jagged Fossil.
+  hardcore: >-
+    Không nguồn nào đưa ra kết luận, và file Path of Building chính mở đầu bằng
+    câu "We're on softcore." Cách đọc của chúng tôi: block thì đủ mạnh, nhưng
+    file budget thấp có 4,025 life, không có spell suppression và −6% chaos
+    resistance. Lấy phương án suppression của guide từ sớm và vá chaos
+    resistance trước khi bạn tin nó.
+
+idea: |
+  [[Lacerate of Haemorrhage]] chém hai nhát. Mỗi nhát phóng ra một lượt sóng rộng, và con quái đứng ở chỗ hai lượt sóng giao nhau thì ăn cả hai cú hit. Sóng vươn xa hơn hẳn tầm vũ khí của bạn, nên đây là melee chơi từ cách một bước chân.
+
+  Bạn không cố giết bằng cú hit. Mỗi cú hit đều có thể gây Bleeding, một hiệu ứng physical damage over time lớn nhỏ theo cú hit đã gây ra nó. Gem nhân vết bleed đó lên: tới 132% more damage with bleeding ở level 20, và thêm 40% more nữa từ 20% quality.
+
+  Bình thường một vết bleed chỉ gây đủ damage khi con quái đang đi. [[Jagged Technique]] bỏ điều kiện đó. Mọi vết bleed bạn gây ra đều **aggravated**, nghĩa là nó luôn coi như con quái đang di chuyển. Đó là gấp ba damage, lên một con boss đứng yên.
+
+  Quái chết trong lúc đang bleed thì nổ, gây damage bằng một phần năm máu của chúng ([[Gratuitous Violence]]), và đó là cách bạn clear map.
+
+  Nửa còn lại của [[Gladiator]] là cây shield. Shield nào cũng cho bạn 50% block, phần attack block dư tràn sang spell block, và điểm ascendancy cuối cùng khiến mỗi lần block được roll hai lần rồi giữ kết quả tốt hơn.
+
+chain:
+  - label: Chém hai nhát
+    text: "[[Lacerate of Haemorrhage]] phóng ra hai lượt sóng. Quái đứng trong vùng giao nhau ăn cả hai cú hit. Skill cần axe hoặc sword một tay."
+  - label: Bleed
+    text: "Mỗi cú hit có cơ hội gây Bleeding. Chỉ vết bleed mạnh nhất của bạn trên một con quái mới gây damage, nên hit to mới quan trọng còn hit nhanh thì không."
+  - label: Aggravate
+    text: "[[Jagged Technique]] làm mọi vết bleed thành aggravated: nó luôn gây damage như thể con quái đang di chuyển, tức gấp ba tốc độ bình thường."
+  - label: Nổ và block
+    text: "[[Gratuitous Violence]] cho nổ những con quái đang bleed mà bạn giết. [[Determined Survivor]] và [[More Than Skill]] cho bạn 50% block từ bất kỳ shield nào, roll hai lần."
+
+chainDetails:
+  - title: Chỉ vết bleed lớn nhất của bạn mới tính
+    body: |
+      Câu chữ của PoEDB về Bleeding là nó "deals Physical Damage over time, based on the base Physical Damage of the Skill". Vết bleed thứ hai trên cùng một con quái không cộng vào vết thứ nhất. Vết mạnh hơn gây damage còn vết yếu hơn thì nằm chờ.
+
+      Nên build không quan tâm cú hit trung bình của bạn. Nó quan tâm cận trên của dải damage, vì sớm hay muộn bạn cũng roll cao và vết bleed đó mới là vết trừ máu.
+
+      Ba món có mặt trong mọi bản được công bố đều vì lý do này:
+
+      - [[Volatility Support]]: 30–58% more maximum attack damage, 50–69% less minimum.
+      - Physical Mastery "10% more Maximum Physical Attack Damage".
+      - Về sau là [[Ryslatha's Coil]]: tới 40% more maximum và tới 40% less minimum physical attack damage.
+
+      Mấy cú roll thấp mà chúng tạo ra thì đơn giản là bị ghi đè.
+  - title: Bản transfigured của gem đổi những gì
+    body: |
+      [[Lacerate]] gốc có hai stance. Nó chỉ gây được Bleeding ở Blood Stance, nơi nó có 25% chance to bleed và 50–88% more damage with bleeding. Nó attack ở 60% tốc độ vũ khí của bạn.
+
+      [[Lacerate of Haemorrhage]] bỏ luôn stance. Nó luôn có 25% chance đó và 75–132% more damage with bleeding, cộng tới 40% more từ quality, và attack ở 80% base speed. Đổi lại nó chỉ chạy với axe hoặc sword một tay.
+
+      Mấy con số đó lấy từ PoEDB. Con "172% more" của guide là giá trị level 20 cộng bonus của 20% quality. Guide gọi gem này là nâng cấp thẳng so với bản gốc và nói nó "should be acquired as early as possible", tức lấy càng sớm càng tốt.
+
+      **Quality trên gem này quan trọng hơn thường lệ.** Gem nằm trong socket đúng màu của nó còn được thêm chút quality, nên hãy cắm nó vào socket xanh lá.
+  - title: "Hai trường phái: Jagged Technique hay Crimson Dance"
+    body: |
+      Guide viết và một trong hai build video lấy [[Jagged Technique]]. Một vết bleed aggravated khổng lồ, được mỗi cú hit làm mới.
+
+      Build video 3.30 được xem nhiều nhất thì làm ngược lại. Cây của nó lấy keystone [[Crimson Dance]] và notable ascendancy [[War of Attrition]], và bỏ qua Jagged Technique.
+
+      Dòng chữ trên cây hiện hành giải thích cuộc đánh đổi. Crimson Dance: "You can inflict Bleeding on an Enemy up to 8 times", nhưng bleeding của bạn "cannot be Aggravated" và gây 50% less damage. War of Attrition: 1% more damage lên quái rare và unique cho mỗi giây chúng đã ở trong presence của bạn, tối đa 100%.
+
+      Nên bản đó chồng tám vết bleed yếu hơn và càng mạnh khi boss sống càng lâu. Tác giả của nó nói nó chạm trần damage over time của game, và file của anh ta đúng là hiện chính xác con số đó, 35.8 triệu mỗi giây, trên bộ gear anh ta định giá hơn 170 Divine (3.29).
+
+      **Bài này đi theo bản Jagged Technique.** Đó là bản có guide viết và có cây cho từng khoảng level, và nó đủ sức mạnh ngay cú hit đầu tiên sau mỗi lần né. Chúng tôi không thử bản nào cả.
+  - title: Một cây shield, hay hai vũ khí
+    body: |
+      [[Determined Survivor]] có hai dòng: "Gain 50% Chance to Block from Equipped Shield instead of the Shield's value", và "Inherent Bonuses from Dual Wielding are doubled".
+
+      Guide viết dùng dòng thứ nhất. Shield nào cũng cho 50% block, nên bạn chọn shield theo các mod khác của nó.
+
+      Một build video dùng dòng thứ hai với một cây axe và cây sword [[Rigwald's Command]]. Tác giả của nó viết rằng cách này "gives us more damage but requires slightly more investment to cap block": nhiều damage hơn, nhưng phải đầu tư thêm một chút mới cap được block. File của anh ta hiện cùng một con số 87.75% attack và spell block ở cả hai cách.
+
+      Bắt đầu bằng shield. Nó rẻ hơn và cả hai mốc trong guide viết đều giả định bạn cầm shield.
+  - title: Ở đây endurance charge là damage
+    body: |
+      Bleeding Mastery cho "+3% to Damage over Time Multiplier for Bleeding per Endurance Charge". Mọi cây được công bố đều lấy nó.
+
+      Charge đến từ notable Deflection (25% cơ hội nhận một charge khi bạn block) và từ [[Enduring Cry]]. Khi đứng giữa pack bạn block liên tục và luôn đầy charge. Lúc mở đầu một trận boss thì bạn không có cái nào.
+
+      Đó là lý do guide đánh giá [[Kaom's Sign]] cao như vậy: ring này thêm một maximum endurance charge, mà ở đây một charge vừa là damage vừa là phòng thủ.
+  - title: Blood Magic hay mana, các nguồn nói khác nhau
+    body: |
+      Cây budget thấp và budget trung bình của guide lấy [[Blood Magic]]. Bạn không có mana, skill tốn máu, và [[Pride]] chạy qua [[Eternal Blessing Support]] mà không reserve gì. Guide gọi đó là aura duy nhất của nó.
+
+      File budget cao của cùng guide đó thì bỏ Blood Magic và chạy [[Pride]] với [[Determination]] bằng mana. Cả hai build video đều ở lại với mana từ đầu.
+
+      Còn có một chỗ chao đảo ngay trong file leveling: cây cho level 52–67 có Blood Magic, cây kế thì không, và cây budget thấp hoàn chỉnh lại có. **Đi theo cây hoàn chỉnh, và kiểm xem bạn thật sự đang có keystone nào trước khi chép một bộ gem.**
+  - title: Một con số mà guide nói sai về chính nó
+    body: |
+      Phần tổng quan của guide nói kể cả với gear tốt nhất, damage cũng "unlikely to exceed ~5m DPS", tức khó mà vượt quá khoảng 5 triệu DPS.
+
+      Hai file Path of Building budget cao của chính nó thì hiện 14.4 và 17.8 triệu bleed damage mỗi giây, và một ghi chú bên trong một file định giá riêng một viên jewel ở "about 2.5 million dps, so roughly a fifth".
+
+      Phần chữ và mấy cái file không thể cùng đúng. File thì mới hơn (cây 3.28; phần chữ có trước chúng), nên chúng tôi coi dòng 5 triệu là đã cũ. Tất cả đều là số Path of Building trên cây cũ, với giả định quái đang bleed, bị maim và bị curse.
+
+mandatory:
+  - term: Lacerate of Haemorrhage
+    why: >-
+      Skill chính. Tới 132% more damage with bleeding mà không cần stance, và
+      attack nhanh hơn gem gốc.
+    detail: >-
+      Đây là transfigured gem: bạn lấy nó từ [[Divine Font]] ở cuối Labyrinth,
+      hoặc từ người chơi khác. [[Lacerate]] gốc là quest reward level 12 của
+      Duelist và gánh bạn tới lúc đó. Nó đòi axe hoặc sword một tay, và đó là
+      lý do bạn chỉ đổi sang nó khi đã cầm shield.
+  - term: Jagged Technique
+    why: >-
+      "Bleeding you inflict is Aggravated." Gấp ba bleed damage lên mọi thứ,
+      đang chạy hay đứng yên cũng vậy.
+    detail: >-
+      Một build video 3.30 thay nó bằng [[Crimson Dance]] và
+      [[War of Attrition]]. Xem phần hai trường phái ở trên.
+  - term: Gratuitous Violence
+    why: >-
+      Quái đang bleed mà bạn giết thì nổ, gây physical damage bằng 20% máu tối
+      đa của chúng. Đây là phần clear map của bạn.
+  - term: Determined Survivor
+    why: >-
+      50% block chance từ bất kỳ shield nào, mặc kệ shield ghi gì. Bạn không
+      bao giờ phải đi săn dòng block.
+  - term: More Than Skill
+    why: >-
+      "Chance to Block Attack or Spell Damage is Lucky if you've Blocked
+      Recently." File budget thấp hiện 87.75% attack block khi có nó.
+  - term: Versatile Combatant
+    why: >-
+      Hạ maximum block của bạn 10%, và cho 2% spell block cho mỗi 1% attack
+      block vượt cap. Đó là cách spell block đuổi kịp.
+    detail: >-
+      Nó chỉ có lời khi attack block của bạn vượt cap. Mấy cái cây tới được đó
+      nhờ Shield Mastery, Deflection và Aggressive Bastion.
+  - term: Resolute Technique
+    why: >-
+      Cú hit của bạn không bị evade và không bao giờ crit. Bleed vốn dĩ không
+      crit được, nên bạn chẳng mất gì và không cần accuracy trên gear.
+  - term: Brutality Support
+    why: >-
+      More physical damage, và skill không gây loại damage nào khác. Có trong
+      cả bốn six-link được công bố.
+  - term: Melee Physical Damage Support
+    why: >-
+      Có trong cả bốn six-link được công bố. Guide thích nó hơn
+      [[Ruthless Support]]: damage ngang ngửa, mà ít điều kiện hơn.
+  - term: Volatility Support
+    why: >-
+      30–58% more maximum attack damage đổi lấy 50–69% less minimum. Chỉ vết
+      bleed lớn nhất mới tính, nên mặt trái chẳng tốn gì.
+    detail: >-
+      Duelist mua nó từ Yeena ở Act 2 sau quest Sharp and Cruel. Cần level 18.
+  - term: Pride
+    level: recommended
+    why: >-
+      Aura damage trong mọi bản. Quái ở gần ăn thêm physical damage.
+  - term: Vulnerability
+    level: recommended
+    why: >-
+      Quái bị curse ăn thêm physical damage. Guide liệt kê một "manual curse"
+      trong số các nút bạn bấm.
+  - term: Enduring Cry
+    level: recommended
+    why: >-
+      Endurance charge theo yêu cầu. Link với [[Urgent Orders Support]] để hô
+      cho nhanh. Bấm nó lúc mở đầu mọi trận boss.
+  - term: Jack, the Axe
+    level: recommended
+    why: >-
+      Vũ khí khởi đầu của guide: 130–150% increased physical damage và +25–35%
+      bleed damage over time multiplier, và nó cấp một skill cho 20% more
+      damage with bleeding.
+    detail: >-
+      Nó đòi level 65, vừa khớp với cú đổi sang một tay ở tầm 68. Ghi chú của
+      tác giả: "incredibly potent early on. Consider grabbing this if it is
+      cheap." Phương án dự phòng của anh ta là một cây axe rare làm bằng Jagged
+      Fossil.
+  - term: Kaom's Sign
+    level: recommended
+    why: >-
+      +1 maximum endurance charge trên một cây ring. Mỗi charge là 3% bleed
+      multiplier và một ít giảm damage.
+    detail: >-
+      Guide nói: nếu nó thành ra quá đắt thì đeo Amethyst Ring thay.
+  - term: Ryslatha's Coil
+    level: recommended
+    why: >-
+      Belt tốt nhất trong mọi nguồn. Nó nới rộng dải physical damage của bạn,
+      mà cận trên của dải đó chính là thứ làm nên vết bleed.
+    detail: >-
+      Guide cảnh báo nó "likely far too expensive early" và gợi ý
+      [[Belt of the Deceiver]] hoặc một cây Stygian Vise rare cho tới lúc đó.
+
+labs:
+  - lab: Normal
+    node: Gratuitous Violence
+    why: "Guide đưa thứ tự mà không nêu lý do. Cây leveling của nó chạy lab này ở tầm level 33. Nổ xác có ích ngay; mấy node block thì chẳng làm gì cho tới khi bạn cầm shield."
+  - lab: Cruel
+    node: Jagged Technique
+    why: "Level 44–52 trong các cây của guide. Từ đây vết bleed của bạn luôn aggravated."
+  - lab: Merciless
+    node: Determined Survivor
+    why: "Level 52–67 trong các cây của guide. Đây là tín hiệu để chuyển sang axe một tay và shield. Một build video lấy cái này thứ hai và Jagged Technique thứ ba."
+  - lab: Eternal
+    node: More Than Skill
+    why: "Block lucky. Lấy cuối, vì nó nhân lên một block chance phải có sẵn trước đã."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: sunder
+    title: Act 1–3
+    levels: Level 1–33
+    uses: >-
+      Một vũ khí hai tay và một skill slam. [[Ground Slam]] từ level 1, rồi
+      [[Sunder]] từ level 12. Bạn chưa chơi Lacerate đâu.
+    changes: >-
+      Sau Chamber of Sins ở Act 2 bạn thêm [[Blood Rage]],
+      [[Herald of Purity]] và [[Warlord's Mark]]. Normal Labyrinth cho bạn
+      [[Gratuitous Violence]], và cây lấy luôn [[Resolute Technique]] cùng lúc
+      đó.
+    links:
+      - name: Act 1, trước Merveil
+        gems: [Ground Slam, Ruthless Support, Maim Support]
+      - name: Sau Merveil
+        gems: [Sunder, Maim Support, Ruthless Support]
+      - name: Four-link Act 2
+        gems: [Sunder, Close Combat Support, Chance to Bleed Support, Cruelty Support]
+      - name: Di chuyển và warcry
+        gems: [Leap Slam, Faster Attacks Support, Frostblink, Intimidating Cry]
+      - name: Buff
+        gems: [Blood and Sand, War Banner, Blood Rage, Herald of Purity, Warlord's Mark]
+    moveOn: "Sunder đã nằm trong four-link, Normal Labyrinth đã xong, và bạn đang ở Act 4."
+    details:
+      - title: Ba nguồn, ba đường lên level
+        body: |
+          Chúng đồng ý về đích đến chứ không đồng ý về đường đi.
+
+          - **Guide viết:** slam hai tay suốt campaign, đổi sang Lacerate sau Merciless Labyrinth, ở tầm level 68. Đây là lộ trình ở trên. File của nó nói chọn Sunder hay Ground Slam là "100% preference", tức hoàn toàn tùy sở thích.
+          - **Một build video:** cũng mấy skill slam đó, rồi [[Bladestorm]] từ Act 6, rồi [[Lacerate]] ở Act 10.
+          - **Build video còn lại:** [[Splitting Steel]] trước, rồi Lacerate gốc từ level 12 "until you can either farm lab or trade for the alternate gem", tức cho tới khi bạn farm được lab hoặc trade được viên gem kia.
+
+          Chúng tôi theo guide viết vì nó là cái duy nhất có cây cho từng khoảng level. Nếu bạn thích học skill thật từ sớm thì đường thứ ba là chính đáng: Lacerate gốc chạy được với axe và sword hai tay.
+      - title: Gem lấy ở đâu
+        body: |
+          - **Level 4:** [[Blood and Sand]], reward của Duelist cho Breaking Some Eggs.
+          - **Level 12:** [[Lacerate]], reward của Duelist cho The Siren's Cadence. Cứ lấy nó kể cả khi bạn lên level bằng Sunder, để nó ăn experience trong một socket trống.
+          - **Level 18:** [[Volatility Support]], mua từ Yeena sau Sharp and Cruel ở Act 2.
+
+          File của guide ghi chú rằng Blood Rage, Herald of Purity và cái mark đều tới cùng lúc sau Chamber of Sins.
+
+          **Guide không nói Duelist lấy Ground Slam hay Sunder ở đâu.** File của nó cứ thế mở đầu bằng hai skill đó. Chúng tôi sẽ không đoán vendor.
+      - title: Mẹo đánh Brutus
+        body: |
+          Bộ gem Act 1 của guide có một link phụ nhỏ dán nhãn "Grab these for Brutus": [[Double Strike]] với [[Chance to Bleed Support]]. Đó là công cụ single-target cho đúng một trận, trên một nhân vật mà cú slam còn chậm ở level đó.
+  - id: acts-4-10
+    phase: early
+    image: jagged-technique
+    title: Act 4–10
+    levels: Level 33–68
+    uses: >-
+      Vẫn [[Sunder]] trên vũ khí hai tay. Từ Act 5, [[Pride]] link với
+      [[Eternal Blessing Support]] thay cho [[Blood and Sand]] và
+      [[Herald of Purity]].
+    changes: >-
+      Thêm hai lab: [[Jagged Technique]] ở level 44–52 và
+      [[Determined Survivor]] ở 52–67. Rồi tới cú respec lớn duy nhất của
+      build: axe một tay, shield, và [[Lacerate]].
+    links:
+      - name: Main skill
+        gems: [Sunder, Close Combat Support, Chance to Bleed Support, Cruelty Support]
+      - name: Aura từ Act 5
+        gems: [Pride, Eternal Blessing Support]
+      - name: Buff
+        gems: [War Banner, Intimidating Cry, Blood Rage, Warlord's Mark]
+      - name: Sau cú đổi
+        gems: [Lacerate, Volatility Support, Melee Physical Damage Support, Brutality Support]
+      - name: Di chuyển sau cú đổi
+        gems: [Shield Charge, Faster Attacks Support, Culling Strike Support, Maim Support]
+      - name: Charge sau cú đổi
+        gems: [Enduring Cry, Urgent Orders Support]
+    moveOn: "Merciless Labyrinth đã xong, bạn cầm axe một tay với shield, và mấy passive hai tay đã được hoàn điểm."
+    details:
+      - title: Cú đổi, từng bước một
+        body: |
+          File leveling của guide có hẳn một cây đặt tên cho việc này: "Clean up. Unspec 2H nodes, go shield." Làm trong một lần ngồi:
+
+          1. Lấy [[Determined Survivor]] ở Merciless Labyrinth.
+          2. Cầm một cây axe một tay và shield nào cũng được. Chỉ số block của chính cây shield không quan trọng.
+          3. Hoàn điểm mấy notable damage hai tay và Two Hand Mastery.
+          4. Lấy [[Versatile Combatant]], Shield Mastery ("+1% Chance to Block Attack Damage per 5% Chance to Block on Equipped Shield"), Block Mastery ("+1% Chance to Block Spell Damage per 5% Chance to Block Attack Damage") và Axe Mastery ("Bleeding you inflict deals Damage 15% Faster").
+          5. Cắm [[Lacerate]] vào bộ link tốt nhất của bạn.
+
+          [[Jack, the Axe]] đòi level 65, nên nó có thể chính là cây axe bạn đổi sang.
+      - title: Lacerate gốc cần Blood Stance
+        body: |
+          Khi chưa có transfigured gem, gem gốc chỉ gây bleed ở Blood Stance. PoEDB ghi chú rằng mặc định bạn đang ở Blood Stance.
+
+          Guide nói thẳng về stance còn lại: lỡ bước sang Sand Stance thì damage "feel really bad". Nếu damage của bạn biến mất, kiểm xem bạn có lỡ tay bấm [[Blood and Sand]] không.
+      - title: Link guard lúc này chưa bắt buộc
+        body: |
+          Bộ gem lúc đổi của guide thêm một link [[Cast when Damage Taken Support]] level thấp với [[Molten Shell]], [[Purifying Flame]] và [[Cold Snap]]. Nhãn của chính nó ghi: "Spells not important yet. Ditch if no blue sockets." Tức là mấy spell này chưa quan trọng, không có socket xanh dương thì bỏ.
+      - title: Bandit và Pantheon
+        body: |
+          Guide đưa cả hai lựa chọn: giết cả ba bandit để lấy passive point, hoặc giúp **Alira** để lấy 15% tất cả elemental resistance, cái mà nó gọi là lựa chọn cho league start. Sau này đổi được.
+
+          Pantheon: **Soul of the Brine King** làm major, để chống freeze và chill. **Soul of Abberath** làm minor, chống burning ground.
+  - id: early-maps
+    phase: early
+    image: determined-survivor
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      [[Lacerate]] trong bộ link tốt nhất của bạn, [[Jack, the Axe]] nếu kiếm
+      được, một cây shield, [[Kaom's Sign]], và đồ armour rare có life với
+      resistance.
+    changes: >-
+      Lấy [[Lacerate of Haemorrhage]] sớm nhất có thể. Chạy Eternal Labyrinth
+      lấy [[More Than Skill]]. Thêm [[Fortify Support]] và [[Cruelty Support]]
+      khi có thêm link.
+    links:
+      - name: Main skill (six-link)
+        gems: [Lacerate of Haemorrhage, Volatility Support, Brutality Support, Melee Physical Damage Support, Cruelty Support, Fortify Support]
+      - name: Aura
+        gems: [Pride, Eternal Blessing Support]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Maim Support, Culling Strike Support]
+      - name: Charge và buff
+        gems: [Enduring Cry, Urgent Orders Support, Blood Rage, War Banner]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Molten Shell, Purifying Flame, Cold Snap]
+      - name: Curse và blink
+        gems: [Vulnerability, Frostblink]
+    moveOn: "bạn có transfigured gem, resistance đã cap, block lucky, và chaos resistance đã ra khỏi số âm."
+    details:
+      - title: Nhân vật budget thấp trông ra sao
+        body: |
+          Từ file budget thấp của guide ở level 90:
+
+          - 4,025 life, 8,279 armour, 68% physical damage reduction.
+          - 87.75% attack block và 79.75% spell block.
+          - Không có spell suppression.
+          - Resistance 79/78/79, còn chaos ở **−6%**.
+          - Khoảng 2 triệu bleed damage mỗi giây.
+
+          **File này dùng passive tree 3.27.** Nó cũng giả định quái đang bleed, bị maim và bị curse. Đọc dòng chaos hai lần: đó là điểm yếu của bản rẻ.
+      - title: Khi bạn chưa có six-link
+        body: |
+          Món chữa cháy của guide là helmet unique [[The Bringer of Rain]], hoạt động như một six-link gói trong một món. Nó lấy mất slot body armour của bạn. Guide gọi đó là cuộc đổi chác công bằng ở giai đoạn đầu, vì body armour lúc đó còn yếu, và bảo bạn thay nó khi đã đủ tiền mua một cây six-link tử tế.
+
+          Bỏ gem nào khi chỉ có bốn hay năm link thì bộ gem lúc đổi đã chỉ ra: [[Volatility Support]], [[Melee Physical Damage Support]] và [[Brutality Support]] đi trước.
+      - title: Cây shield
+        body: |
+          Vì block đến từ ascendancy, shield được chọn theo đúng một mod: "Recover 5% of Life when you Block". Guide chấp nhận 4% khi budget eo hẹp, rồi tới armour, rồi life.
+
+          Mod đó cần shield có influence Shaper. Guide bảo bạn tự craft và gọi chuyện đó là "rather simple once you have the base", **nhưng nó không in các bước ra**; nó trỏ sang một trang crafting riêng. Chúng tôi không kiểm chứng được recipe nào, nên không đưa ra cái nào.
+      - title: Gear rare và một cái mastery
+        body: |
+          Danh sách budget thấp của guide: base armour ở mọi slot, ưu tiên resistance và life trước. Movement speed trên boots. Attack speed và life trên gloves. Amulet là một trong những chỗ tốt nhất để tìm physical damage over time multiplier.
+
+          Một cái bẫy: cây lấy Life Mastery "15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour". Nên file bảo tránh life trên chest "until you can get a really, really good one"; còn câu của guide là một dòng life trên 100 thì đáng để bỏ mastery.
+      - title: Flask
+        body: |
+          Một [[Life Flask]] Divine hồi tức thì và xóa bleed, rồi [[Granite Flask]], [[Silver Flask]], [[Sulphur Flask]] và [[Quicksilver Flask]].
+
+          Mấy cây flask được công bố dùng prefix nhận charge khi bạn bị hit. Guide có hai luật:
+
+          1. Một utility flask phải có increased armour trong lúc có hiệu lực, lý tưởng là 50%.
+          2. Một cây phải cho miễn freeze, cái mà nó gọi là bắt buộc, cho tới khi Brine King của bạn được nâng cấp.
+  - id: red-maps
+    phase: endgame
+    image: versatile-combatant
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      Budget trung bình của guide. Gear armour-và-evasion có spell
+      suppression, một cây [[Reaver Axe]] craft, [[Ryslatha's Coil]], và một
+      cây [[Lacquered Buckler]] có hồi life khi block.
+    changes: >-
+      Spell suppression đi từ con số không lên 100%, và [[Iron Reflexes]] biến
+      evasion trên bộ gear mới thành armour. Rồi tới vũ khí. Thứ tự của guide
+      rất rõ: gear suppression trước cây axe.
+    links:
+      - name: Main skill
+        gems: [Lacerate of Haemorrhage, Melee Physical Damage Support, Brutality Support, Volatility Support, Cruelty Support, Fortify Support]
+      - name: Aura
+        gems: [Pride, Eternal Blessing Support]
+      - name: Curse và buff
+        gems: [Vulnerability, Enhance Support, Blood Rage]
+      - name: Charge
+        gems: [Enduring Cry, Urgent Orders Support, More Duration Support, War Banner]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Maim Support, Culling Strike Support]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, Cold Snap, Purifying Flame]
+    moveOn: "suppression đã cap, cây axe đã craft xong, và map Tier 16 thành chuyện thường ngày."
+    details:
+      - title: Bản này lấy của bạn gì và cho bạn gì
+        body: |
+          Từ file budget trung bình ở level 95, trên cây 3.28:
+
+          - 5,942 life, 10,896 armour, 85% physical damage reduction.
+          - 89.76% attack block, 87.75% spell block, 100% spell suppression.
+          - Resistance 82/80/81, chaos 71%.
+          - Cú physical hit lớn nhất sống sót được: 19,851, tăng từ 8,117 ở file budget thấp.
+          - Khoảng 3.3 triệu bleed damage mỗi giây.
+
+          Damage tăng khoảng hai phần ba. Phòng thủ tăng hơn gấp đôi. Đó mới là mục đích thật của chặng này.
+
+          **Không nguồn nào định giá bộ gear này.** Những con số duy nhất tồn tại ở bất cứ đâu là 200 Chaos của tác giả video cho lúc bắt đầu Tier 16 và hơn 170 Divine cho nhân vật hoàn chỉnh của anh ta, cả hai đều là 3.29.
+      - title: Những món gear thay đổi
+        body: |
+          - **Helmet, body, gloves, boots:** base armour-và-evasion hoặc evasion có spell suppression. Amulet trong file anoint notable Inveterate để lấy 15% cuối.
+          - **Shield:** một cây [[Lacquered Buckler]] Shaper có "Recover 5% of Life when you Block" và suppression.
+          - **Axe:** một cây [[Reaver Axe]] rare. Cây mẫu trong file có 144% increased physical damage, 29–52 added physical damage, 25% attack speed và một dòng craft 18–20% physical damage over time multiplier.
+          - **Belt:** [[Ryslatha's Coil]].
+          - **Ring:** life và resistance; file dùng Vermillion Ring.
+
+          Lời khuyên của guide về cây axe unique: axe craft cuối cùng sẽ vượt nó, và bạn chỉ thay nó sau khi gear suppression đã vào chỗ.
+      - title: Eldritch implicit trong file
+        body: |
+          - Helmet: increased curse effect của [[Vulnerability]], và physical damage from hits taken as lightning.
+          - Body armour: nhận một frenzy charge mỗi 15 giây, và increased aura effect của [[Pride]].
+          - Gloves: physical damage over time multiplier, và spell suppression.
+          - Boots: increased action speed, và "Bleeding you inflict deals Damage faster".
+      - title: Cây axe endgame được làm thế nào
+        body: |
+          Recipe được viết trong phần ghi chú của file budget cao của guide:
+
+          1. Bắt đầu từ một cây axe có mod hybrid fractured: increased physical damage đi kèm accuracy.
+          2. Roll nó bằng Deafening [[Essence of Contempt]], cái này bảo đảm added physical damage.
+          3. Bạn đang tìm một tier cao của increased physical damage.
+          4. Khi trúng và còn trống một suffix, bảo vệ prefix ở crafting bench rồi scour suffix.
+          5. Gỡ dòng bảo vệ, thêm "Can have up to 3 Crafted Modifiers", rồi craft physical damage over time multiplier và attack speed.
+
+          Tác giả dán nhãn kết quả là 'Somewhat "easy" to make'. **Cả base fractured lẫn mấy craft bench đều đã đổi trong 3.30**; xem mục 3.30 đổi gì cho build này bên dưới.
+  - id: endgame
+    phase: endgame
+    image: ryslathas-coil
+    title: Endgame
+    levels: Tier 17, pinnacle boss và uber boss
+    uses: >-
+      Budget cao của guide ở level 100. [[Pride]] và [[Determination]] cùng
+      lúc, [[Swift Affliction Support]] và [[Deadly Ailments Support]] trong
+      main link, một [[Blood Sap Tincture]], và tattoo trên cây.
+    changes: >-
+      [[Blood Magic]] rời khỏi cây và bạn quay về mana. [[Fortify Support]]
+      rời six-link rồi quay lại dưới dạng hiệu ứng thứ bảy được imbue lên gem.
+      Tác giả của guide nói file này chỉ dành cho người thật sự mê Lacerate.
+    links:
+      - name: Main skill
+        gems: [Lacerate of Haemorrhage, Volatility Support, Melee Physical Damage Support, Brutality Support, Swift Affliction Support, Deadly Ailments Support]
+      - name: Aura
+        gems: [Determination, Pride, Frostblink]
+      - name: Curse và buff
+        gems: [War Banner, Vulnerability, Blood Rage, Enhance Support]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support, Maim Support, Culling Strike Support]
+      - name: Charge
+        gems: [Enduring Cry, Urgent Orders Support, More Duration Support, Lifetap Support]
+      - name: Guard
+        gems: [Vaal Molten Shell, Cast when Damage Taken Support, Lifetap Support]
+    moveOn: "không còn chặng nào nữa. Thứ còn lại là một cây axe tốt hơn và trường phái kia của build."
+    details:
+      - title: Hiệu ứng thứ bảy trên gem
+        body: |
+          Kế hoạch của guide là imbue main gem bằng một hiệu ứng Fortify rồi rút [[Fortify Support]] khỏi six-link. Nó nói gem phải có sẵn 20% quality lúc bạn làm, nên hãy mua một viên 20% rồi imbue viên đó.
+
+          Những kết quả yếu hơn mà nó chấp nhận: Deadly Ailments, Swift Affliction, Melee Physical Damage hoặc Volatility. Nó coi cả chuyện này là món thêm vào sau cùng, vì kết quả là ngẫu nhiên và tốn kém.
+
+          Tác giả video thứ hai xếp hạng các lựa chọn y như vậy, Fortify đứng đầu, và thêm một lời cảnh báo mà chúng tôi nhắc lại: "I have no idea how rare or common, or expensive or cheap they will be." Anh ta không biết chúng sẽ hiếm hay nhiều, đắt hay rẻ.
+
+          Guide gọi mấy món đó là Coin. **Trong 3.30 chúng là Soul Core, và giờ chúng có thể roll ra hiệu ứng xấu.**
+      - title: Những ghi chú tác giả để lại trong file
+        body: |
+          - **Shield:** cây mẫu là shield synthesised chứ không phải Shaper, vì base synthesised rẻ vào lúc file được làm. Đó là một nhận định giá của 3.28.
+          - **Dòng life** được cố ý giữ thấp "to simulate a sort of minimum", tức để mô phỏng một kiểu mức tối thiểu.
+          - **[[The Light of Meaning]]:** bản damage nằm trong cây. Đổi sang bản chaos resistance thì mất "about 2.5 million dps, so roughly a fifth" (khoảng 2.5 triệu dps, tức tầm một phần năm) và được 73% chaos resistance.
+          - **[[Sulphur Flask]]:** "doesn't truthfully do very much". Thật ra nó chẳng làm được bao nhiêu, cứ đổi thoải mái.
+          - **[[Silver Flask]]:** giữ lại. "Lacerate feels pretty bad mechanically when the attackspeed drops too low."
+          - **[[Progenesis]]:** "a massive upgrade defensively", một nâng cấp phòng thủ khổng lồ, nhưng ở đây nó không chạy vĩnh viễn được và nó không cho phép bạn bỏ chaos resistance. "Do not do that. You will die."
+          - **Bốn passive point cuối:** life, qua Heart of the Warrior.
+      - title: Trường phái kia ở tầm đỉnh
+        body: |
+          Build video 3.30 được xem nhiều nhất kết thúc với [[Crimson Dance]] và [[War of Attrition]], có [[Multistrike Support]] trong main link, và thêm [[Eviscerate]], một đòn retaliation dùng được sau khi bạn block.
+
+          File của nó ở level 98, trên cây 3.29, hiện 4,773 life, 26,456 armour, 90% physical damage reduction, chaos resistance 75%, và bleed damage ở trần của game là 35.8 triệu mỗi giây.
+
+          Hai điều cần dè chừng. Cũng file đó, ở trạng thái được lưu, hiện 70% attack block và 65% spell block, thấp hơn cái tiêu đề "Max Block" gợi ra; có thể chỉ đơn giản là điều kiện "blocked recently" chưa được tick. Và [[War of Attrition]] cần 100 giây ở trong presence của boss mới đạt đủ giá trị.
+
+powerCurve: |
+  Bốn thứ nhân build này lên, và chúng tới vào những thời điểm khác nhau.
+
+  1. **Độ lớn của cú hit to nhất.** Physical damage của vũ khí, [[Volatility Support]], Physical Mastery, và về sau là [[Ryslatha's Coil]].
+  2. **Hệ số bleed.** Dòng "more damage with bleeding" của chính gem, và damage over time multiplier từ axe, amulet, cây và endurance charge.
+  3. **Aggravate.** [[Jagged Technique]], gấp ba cố định.
+  4. **Block.** 50% từ [[Determined Survivor]], spell block qua [[Versatile Combatant]], rồi lucky từ [[More Than Skill]].
+
+  **Ở level 30** bạn chưa có cái nào. Bạn là một nhân vật slam hai tay có [[Resolute Technique]] và xác quái phát nổ. Nó chơi y như mọi build leveling của Duelist, và nên như vậy.
+
+  **Ở level 70** bạn vừa đổi nhân vật. Aggravate đã bật từ Cruel Labyrinth, còn shield, 50% block và skill thật thì tới cùng lúc ở tầm 68. Phòng thủ nhảy vọt ngay. Damage thì không, vì gem vẫn là bản gốc và axe thì nhặt được cây nào dùng cây đó. Chuẩn bị tinh thần cho một tuần bằng phẳng ở map trắng và map vàng, lúc bạn an toàn và hơi chậm.
+
+  **Ở level 95** mọi hệ số đã vào chỗ và chúng chồng lên nhau: transfigured gem, axe craft, Coil, suppression. Mấy file được công bố đi từ khoảng 2 triệu lên 3.3 triệu giữa budget thấp và budget trung bình, rồi lên 14–18 triệu ở budget cao.
+
+  **Cách đọc của chúng tôi, không phải của guide:** đây là build có một bậc nhảy đột ngột (cú đổi ở 68) rồi một con dốc dài, đều. Sau transfigured gem không còn gì đổi cách nó chơi. Mỗi món mua thêm là một con số phần trăm, và đó là lý do nó hợp với người ghét dựng lại nhân vật mà làm chán người muốn một cú lột xác.
+
+upgrades:
+  - step: "[[Lacerate of Haemorrhage]], ở 20% quality nếu được"
+    why: >-
+      Đứng đầu vì nó nhân mọi thứ đi sau nó: tới 132% more bleed damage so với
+      88%, thêm 40% nữa từ quality, và nhiều hơn một phần ba số attack mỗi
+      giây. Guide: "Should be acquired as early as possible."
+  - step: "[[Jack, the Axe]]"
+    why: >-
+      Một vũ khí có bleed multiplier và 20% more bleed damage miễn phí, dùng
+      được từ level 65. Nó đứng trước mọi thứ craft vì nó không cần craft gì.
+      Guide gọi nó là rẻ; không đưa con số nào.
+  - step: "Resistance đã cap, chaos resistance trên số không, và [[Kaom's Sign]]"
+    why: >-
+      File budget thấp nằm ở −6% chaos resistance và sống được một cú chaos
+      hit 4,271. Không món damage nào đáng mua hơn việc vá chỗ đó. Kaom's Sign
+      nằm trong bước này vì endurance charge của nó vừa là giảm damage vừa là
+      bleed multiplier.
+  - step: "Một cây shield có hồi life khi block"
+    why: >-
+      Bạn block gần chín trên mười cú đánh, nên 4–5% life mỗi lần block là
+      nguồn hồi phục chính. Nó nằm dưới resistance vì hồi phục không cứu được
+      bạn khỏi một cú hit giết thẳng.
+  - step: "Một cây six-link"
+    why: >-
+      Thêm hai support cho main skill. [[The Bringer of Rain]] lấp khoảng
+      trống, và đó là lý do bước này đứng thứ năm chứ không phải thứ hai.
+  - step: "Spell suppression trên cả bốn slot armour, và [[Iron Reflexes]]"
+    why: >-
+      Guide đặt cái này trước vũ khí, nói thẳng ra bằng chữ. Giữa file budget
+      thấp và file budget trung bình, damage tăng hai phần ba còn cú physical
+      hit lớn nhất sống sót được tăng từ 8,117 lên 19,851.
+  - step: "Một cây [[Reaver Axe]] craft"
+    why: >-
+      Bậc damage lớn nhất còn lại: vết bleed của bạn làm từ damage vũ khí. Đi
+      sau suppression vì nó là món đơn lẻ đắt nhất và Jack đủ tốt để tới map
+      đỏ.
+  - step: "[[Ryslatha's Coil]]"
+    why: >-
+      Tới 40% more maximum physical attack damage, tức gần 40% more bleed.
+      Đứng cuối trong số các nâng cấp thật chỉ vì guide đoán nó sẽ "far too
+      expensive early". Sau món này: Eldritch implicit, gem imbue, một cây
+      tincture.
+    cost: "Không nguồn nào có con số. Nhân vật hoàn chỉnh duy nhất có giá là build video: hơn 170 Divine, 3.29."
+
+play:
+  mapping: |
+    Di chuyển bằng [[Shield Charge]]. Trang gem của guide dùng nó; phần tổng quan và file budget cao thì thích [[Leap Slam]] hơn. Cả hai đều nằm trong cùng một four-link với [[Maim Support]] và [[Culling Strike Support]], nên skill di chuyển cũng maim và kết liễu luôn quái rare.
+
+    Dừng cách pack một bước rồi đánh một hai cú. Sóng vươn xa hơn bạn tưởng. Mấy con chết đầu tiên phát nổ, và mấy cú nổ lo nốt phần còn lại của pack.
+
+    Giữ [[Blood Rage]] chạy. Link guard tự kích khi bạn ăn damage. Guide nói chỉ cắm [[War Banner]] với mục tiêu trâu, vì giờ nó tích lên chậm.
+
+    Bạn không cần chờ vết bleed. Một khi con quái rare đã bleed và dính curse, cứ đi tiếp và để nó chết sau lưng.
+  bossing: |
+    Trước trận: bấm [[Enduring Cry]]. Bạn bước vào mà không có endurance charge nào, và mỗi cái là 3% bleed multiplier. Một tác giả video viết rằng hô lúc mở đầu "is a good idea", và rằng về sau charge tự giữ được vì bạn block rất nhiều.
+
+    Rồi curse bằng [[Vulnerability]], cắm [[War Banner]], và đánh. Đứng sao cho boss nằm trong cả hai lượt sóng.
+
+    **Chỗ giằng co của build nằm ở đây.** Vết bleed giữ nguyên sức mạnh aggravated đầy đủ trong lúc bạn né, và đó là toàn bộ lý do lấy [[Jagged Technique]]. Nhưng bleed thì hết hạn, nên cứ vài giây bạn phải quay lại đánh tiếp. Còn [[More Than Skill]] chỉ làm block thành lucky "if you've Blocked Recently", nên sau một cú né dài, phòng thủ của bạn quay về block trơn cho cú hit đầu tiên. Điểm cuối này là cách đọc của chúng tôi từ dòng chữ của node; không guide nào nói rõ.
+
+    Dùng utility flask để lấy armour, và để dành [[Vaal Molten Shell]] cho phase mà bạn biết là đau.
+
+deaths:
+  - situation: "Chaos damage trên setup rẻ: mây poison, boss map gây chaos damage, caustic ground."
+    cause: >-
+      File budget thấp có −6% chaos resistance và sống được một cú chaos hit
+      4,271, so với khoảng 24,000 cho mỗi element. Block chẳng làm được gì
+      trước damage over time.
+    fix: >-
+      Amethyst Ring và chaos resistance trên mọi món rare. Ghi chú của file:
+      amethyst ring thì "infinitely better, but also infinitely more
+      expensive", tốt hơn vô cùng mà cũng đắt hơn vô cùng. Tác giả của file
+      budget cao thêm rằng một cây [[Progenesis]] "does not permit us to drop
+      chaos resistance on gear".
+  - situation: "Bị freeze hoặc chill giữa một pack."
+    cause: >-
+      Bạn đứng sát, mà nhân vật bị freeze thì không làm được gì.
+    fix: >-
+      Luật của guide: miễn freeze trên một cây flask, "consider this
+      mandatory", cho tới khi Brine King được nâng cấp. Sau đó đổi cây flask
+      ấy sang chống ignite hoặc shock.
+  - situation: "Đúng cái cú hit mà bạn không block."
+    cause: >-
+      Block là xác suất. Trong file budget thấp, một cú physical hit không
+      block được trên khoảng 8,100 sẽ giết một nhân vật 4,025 life có 68%
+      physical reduction.
+    fix: >-
+      Một cây flask armour luôn bật, [[Molten Shell]], và [[Fortify Support]]
+      trong main link. Budget trung bình mới là cách vá thật: 85% reduction và
+      sống được cú hit 19,851.
+  - situation: "Mấy giây đầu của một trận boss, hoặc khoảnh khắc ngay sau một cú né dài."
+    cause: >-
+      Chưa có endurance charge, và block lucky cần một lần block gần đây. Đây
+      là cách đọc của chúng tôi về Deflection và [[More Than Skill]], không
+      phải một câu trong guide nào.
+    fix: >-
+      [[Enduring Cry]] trước khi lao vào, và nếu được thì cố ý ăn mấy cú hit
+      đầu từ thứ gì đó nhỏ.
+
+troubleshooting:
+  - symptom: "Bleed của tôi gần như chẳng gây gì, trên một nhân vật mà một tiếng trước còn ổn."
+    cause: >-
+      Bạn đang chơi [[Lacerate]] gốc ở Sand Stance. Gem gốc chỉ gây Bleeding,
+      và chỉ có bleed multiplier của nó, ở Blood Stance.
+    fix: >-
+      Bấm [[Blood and Sand]] một lần để quay lại. Transfigured gem không có
+      stance và dứt hẳn vấn đề này.
+  - symptom: "Lacerate thấy chậm và vụng."
+    cause: >-
+      Attack speed. Lacerate gốc chém ở 60% tốc độ vũ khí còn transfigured gem
+      ở 80%. Tác giả của file budget cao viết rằng nó "feels pretty bad
+      mechanically when the attackspeed drops too low".
+    fix: >-
+      Giữ một cây [[Silver Flask]], tìm attack speed trên axe và gloves, và
+      nâng cấp gem. Cả hai build video còn đi xa hơn và cắm
+      [[Multistrike Support]] vào main link.
+  - symptom: "Map thì tan chảy, boss thì đánh mãi không chết."
+    cause: >-
+      Trong map phần lớn damage là [[Gratuitous Violence]]: mấy cú nổ bằng một
+      phần năm máu của mỗi con quái. Boss thì chẳng được cái nào trong đó. Nó
+      chỉ ăn đúng một vết bleed của bạn, mà lúc mở trận bạn lại không có
+      endurance charge.
+    fix: >-
+      [[Enduring Cry]], [[Vulnerability]] và [[War Banner]] ở mọi trận boss.
+      Sau đó là chuyện damage vũ khí: vết bleed làm từ cận trên của cú hit.
+  - symptom: "Spell block của tôi thấp hơn attack block rất xa."
+    cause: >-
+      [[Versatile Combatant]] cho 2% spell block cho mỗi 1% attack block
+      *vượt cap*. Nếu attack block của bạn chỉ vừa chạm cap thì bạn chẳng được
+      gì từ nó.
+    fix: >-
+      Lấy Shield Mastery và Deflection, cùng Block Mastery biến attack block
+      thành spell block. File budget thấp vẫn kết thúc thiếu 8 điểm ở spell;
+      file budget trung bình thì lấp được khoảng cách đó.
+  - symptom: "Mọi thứ ổn cho tới map đỏ."
+    cause: >-
+      Nhân vật budget thấp có 4,025 life và không có spell suppression. Guide
+      của nó tự nói vậy: "We're foregoing suppression early on in favor of
+      damage."
+    fix: >-
+      Gear budget trung bình: suppression trên bốn slot armour và
+      [[Iron Reflexes]]. Nếu bạn muốn sớm hơn, file bảo lấy wheel Entrench
+      thay cho mấy node damage.
+
+patch:
+  - note: >-
+      **Không gì trong build này thay đổi.** Chúng tôi đã tìm trong patch note
+      chính thức các từ Lacerate, bleeding, aggravate, block,
+      [[Volatility Support]], [[Jack, the Axe]] và [[Ryslatha's Coil]]. Không
+      cái nào xuất hiện trong các phần của game thường. Lần duy nhất Lacerate
+      được nhắc tới là một bản sửa lỗi cho mô tả của một mod Crucible cũ.
+  - entry: ruthless-changes
+    note: >-
+      **Đừng tin mấy lời nói block của Gladiator bị cắt xuống 40%.** Chữ
+      "Gladiator" xuất hiện một lần trong patch note, bên trong phần Ruthless,
+      và nó chỉ notable cùng tên của Scion Ascendant. Dữ liệu cây của chính
+      GGG cho thấy [[Determined Survivor]] của Duelist là 50% trong game
+      thường và 40% chỉ trong file Ruthless.
+  - entry: special-base-implicits
+    note: >-
+      **Một buff nhỏ và một nerf nhỏ cho gear mà guide nêu tên.**
+      [[Apothecary's Gloves]], món guide liệt kê như một lựa chọn đáng nhắc
+      tới, giờ có implicit +14–18% damage over time *multiplier*, trước đây là
+      increased damage over time. Đó là chỉ số build này chồng, nên chúng là
+      lựa chọn tốt hơn mức phần chữ của guide giả định; đây là cách đọc của
+      chúng tôi. Amethyst Ring, ring endgame của guide, tụt xuống +13–19%
+      chaos resistance từ +17–23%.
+  - entry: royal-visage-soul-cores
+    note: >-
+      **Kế hoạch imbue gem rủi ro hơn.** Mấy "Coin" của guide giờ là Soul
+      Core, và chúng có thể roll ra một trong một nhóm hiệu ứng support xấu.
+      Đừng dùng lên một viên [[Lacerate of Haemorrhage]] 20% quality mà bạn
+      không thay được.
+  - entry: fractured-items-rarer
+    note: >-
+      **Cây axe endgame bắt đầu từ một base hiếm hơn.** Recipe được công bố mở
+      đầu bằng một cây axe fractured, mà đồ fractured giờ đến từ ít nguồn hơn
+      hẳn. Tính trước là base sẽ đắt hơn league trước. Giá chưa ổn định.
+  - entry: meta-crafting-costs
+    note: >-
+      **Cũng recipe đó bảo vệ prefix ở crafting bench.** Mấy chi phí bench đó
+      đã đổi trong 3.30. Chưa ai công bố lại cách craft với con số mới.
+  - entry: harvest-rework
+    note: >-
+      **Một phương án dự phòng trong file chưa được kiểm chứng.** Nếu
+      [[Jack, the Axe]] đắt, tác giả gợi ý Jagged Fossil hoặc reforge lấy mod
+      physical ở bench Harvest. Harvest được làm lại trong 3.30 và chúng tôi
+      không xác nhận được craft đó còn nguyên.
+  - entry: league-fates
+    note: >-
+      **Hợp, nhưng chưa ai thử.** League làm boss khu vực khó hơn và trả
+      thưởng cho việc giết chúng. Một vết bleed giữ nguyên sức mạnh trong lúc
+      bạn né mấy mối nguy mới, sau 88% block, là đang chĩa đúng hướng. Chưa ai
+      đo cả.
+
+strengths:
+  - "Khởi đầu từ con số không: gem là quest reward và block đến từ ascendancy."
+  - "Khoảng 88% attack block trên bản rẻ nhất được công bố, 90% và 88% trên bản kế."
+  - "Bleed aggravated bảo đảm: đủ damage lên con boss đứng yên, và ngay cú hit đầu tiên sau mỗi lần né."
+  - "Vươn xa hơn melee thường, nên bạn đánh từ cách một bước chân."
+  - "Không phải lo accuracy hay crit trên gear."
+  - "Đường nâng cấp dài và đều, không có lần dựng lại thứ hai sau level 68."
+weaknesses:
+  - "Nhiều nút: guide liệt kê main skill, Molten Shell, Blood Rage, một curse bấm tay và War Banner."
+  - "Chaos damage là lớp mỏng trên bản rẻ."
+  - "Campaign được chơi như một build khác, và cú đổi ở 68 là một lần respec thật sự."
+  - "Không có burst. Bleed trừ máu theo nhịp riêng của nó, nên mấy cửa sổ damage ngắn là phí với bạn."
+  - "Resolute Technique chặn trần scale của damage; đến cả tác giả guide cũng gọi bản đỉnh của nó là file dành cho người mê."
+  - "Guide viết tốt nhất là đồ cũ dưới banner mới, và tự mâu thuẫn với chính các file của nó về trần damage."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn chạy map nhanh bằng một nút, hoặc muốn xóa boss
+  trong một cú burst rồi đi. Bỏ qua nếu bạn ghét respec giữa campaign. Còn nếu
+  bạn muốn một Gladiator chuyên slam, build Earthquake trên site này dùng cùng
+  ascendancy với một guide thật sự cập nhật.
+
+sources:
+  - title: "PoE Vault: Lacerate Gladiator build guide"
+    url: https://www.poe-vault.com/guides/lacerate-gladiator-build-guide
+    kind: guide
+    note: "Nguồn viết chính. Banner 3.30 đề ngày 12/11/2026, nhưng mục changelog duy nhất là từ tháng 3/2020. Không đưa giá nào."
+  - title: "PoE Vault: trang passive tree và gem link"
+    url: https://www.poe-vault.com/guides/lacerate-gladiator-passive-skill-tree-gem-links
+    kind: guide
+    note: "Nguồn của six-link, các link utility và lời khuyên về imbue gem."
+  - title: "PoE Vault: trang gear, jewel và flask"
+    url: https://www.poe-vault.com/guides/lacerate-gladiator-gear-jewels-flasks
+    kind: guide
+    note: "Nguồn của thứ tự ưu tiên từng slot, mấy luật flask và chỉ dẫn mua gear suppression trước khi mua vũ khí tốt hơn."
+  - title: "Path of Building: budget thấp, có cây cho từng khoảng level"
+    url: https://pobb.in/6aPoNRN2E_1j
+    kind: pob
+    note: "Passive tree 3.27. Nguồn của lộ trình leveling, cú đổi ở level 68 và các con số budget thấp."
+  - title: "Path of Building: budget trung bình"
+    url: https://pobb.in/LvFcYsOaZvyd
+    kind: pob
+    note: "Passive tree 3.28. Nguồn của các con số map đỏ."
+  - title: "Path of Building: budget cao"
+    url: https://pobb.in/i8A9gJKkJ8TR
+    kind: pob
+    note: "Passive tree 3.28. Phần ghi chú của nó chứa recipe cây axe. Hiện 17.8 triệu bleed damage mỗi giây, so với cái trần \"~5m\" của chính guide."
+  - title: "Video: Max Block Bleed Gladiator League Starter, PoE 3.30 (Altek2k)"
+    url: https://www.youtube.com/watch?v=uRTv4bzUXZc
+    kind: video
+    note: "Guide Lacerate 3.30 được xem nhiều nhất. Chúng tôi dùng phần mô tả và các file đính kèm, không dùng nội dung video. Nguồn của những con số giá duy nhất."
+  - title: "Path of Building: file endgame của Altek2k"
+    url: https://pobb.in/MbN_MJ0pxYR9
+    kind: pob
+    note: "Passive tree 3.29. Bản Crimson Dance và War of Attrition."
+  - title: "Video: Lacerate Gladiator League Starter, 3.30 (limit_break_overdrive)"
+    url: https://www.youtube.com/watch?v=Rep1pS-BT6s
+    kind: video
+    note: "Chúng tôi chỉ dùng file đính kèm."
+  - title: "Path of Building: limit_break_overdrive"
+    url: https://pobb.in/vvkIGqBMSTPb
+    kind: pob
+    note: "Passive tree 3.29, kèm ghi chú viết rất dài. Nguồn của phương án dual-wield và các câu trích về imbue gem với Enduring Cry."
+  - title: "poebuilds.cc: các build melee đăng cho Covens of Umbra"
+    url: https://www.poebuilds.cc/poe1/melee?league=covens
+    kind: data
+    note: "Một bảng chỉ mục video build 3.30 kèm lượt xem. Dùng để tìm xem có những guide Lacerate nào và cái nào được xem nhiều nhất."
+  - title: "PoEDB: Lacerate of Haemorrhage"
+    url: https://poedb.tw/us/Lacerate_of_Haemorrhage
+    kind: data
+    note: "Nguồn của bleed multiplier, bonus quality, attack speed và giới hạn vũ khí."
+  - title: "PoEDB: Lacerate"
+    url: https://poedb.tw/us/Lacerate
+    kind: data
+    note: "Nguồn của luật stance và quest reward level 12."
+  - title: "PoEDB: Jack, the Axe"
+    url: https://poedb.tw/us/Jack%2C_the_Axe
+    kind: data
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Dùng để lấy nguyên văn mọi keystone, notable và mastery được trích ở đây, và để xác nhận Determined Survivor là 50% trong game thường."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
