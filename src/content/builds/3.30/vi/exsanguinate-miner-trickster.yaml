@@ -1,0 +1,787 @@
+name: Exsanguinate Miner Trickster
+tagline: >-
+  Ném năm quả mine rồi đi tiếp. Mấy cái xúc tu máu tự chọn mục tiêu, chain khắp
+  màn hình và đóng băng thứ chúng chạm vào. Rất nhanh, không trâu, và nó cần
+  đúng ba món unique cụ thể thì mới chạy.
+class: Shadow
+ascendancy: Trickster
+role: starter
+budget: low
+budgetNote: >-
+  **Guide không đưa ra tổng nào và không đưa ra giá nào cho mấy món nó gọi là
+  bắt buộc.** Điểm budget của chính nó là 2 trên 5, gắn nhãn "High", và nó liệt
+  "Reliant on Core Uniques" là một điểm yếu. Bản thân mấy món unique là đồ rơi
+  bình thường: [[Hrimsorrow]], [[Kikazaru]] và [[Heatshiver]]. Vài con số nó có
+  in ra thì được viết từ trước 3.30: Screaming Essence ở mức "2c or below" mỗi
+  viên, một cây amulet endgame tự craft ở mức "roughly 6 Divines", và
+  [[Replica Dragonfangs' Flight]] đáng mua ở mức "max 12d". Hãy coi cả ba là
+  của league trước.
+mainSkill: Exsanguinate
+image: asc-icon-trickster
+hero: art-trickster
+tags: [Mine, Cold conversion, Crit, Freeze, Evasion]
+ratings: { clear: 5, bossing: 4, survivability: 2, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **Guide nói nó đã được cập nhật cho 3.30, và bằng chứng cho chuyện đó thì
+  mỏng.** Bên thuận: một dòng changelog đề ngày 12/11/2026, và một planner lưu
+  cùng ngày với league đặt là 3.30. Bên nghịch: tiêu đề trang vẫn ghi 3.28,
+  file planner mang tên "Exsang 3.27", mấy passive tree của nó đóng dấu cây
+  3.24 còn ascendancy thì 3.25, và phần chữ mô tả [[One Step Ahead]] bằng những
+  con số mà 3.30 đã thay. Không chỗ nào trong phần chữ nhắc tới một thay đổi
+  3.30. Những gì chúng tôi tự kiểm được: 3.30 không đụng tới [[Exsanguinate]],
+  [[Reap]] hay support mine nào, và nó buff hai notable Trickster mà build này
+  lấy. Điểm của chính guide là Difficulty 3, Budget 2, Mapping 5, Bossing 5,
+  Defence 2. Chúng tôi giữ bốn cái và hạ bossing xuống 4, vì setup boss cần đổi
+  gem, cần một cái brand phải tự tay giữ, và theo lời của chính guide thì "life
+  sustain is the main weakness" ở mấy trận dài. Đây là build của một tác giả;
+  chúng tôi không tìm thấy guide viết thứ hai nào cho bản Trickster.
+modes:
+  ssf: >-
+    Guide: chơi được một khi mấy món unique rơi, và trước lúc đó thì
+    [[Hrimsorrow]] thay được bằng một conversion mastery cộng
+    [[Physical to Lightning Support]], với cái giá là damage giai đoạn đầu. Nó
+    nói thêm: "If you are a Path of Exile beginner I heavily advise against
+    league starting this build in SSF."
+  hardcore: >-
+    Không. "Not HC viable" là điểm yếu đầu tiên guide liệt kê, và điểm defence
+    của nó là 2 trên 5.
+
+idea: |
+  [[Exsanguinate]] là một spell bắn mấy cái xúc tu máu vào tối đa chín con quái trước mặt bạn. Xúc tu có thể chain sang thêm quái khác. Chúng trúng ngay lập tức: không có projectile nào phải chờ.
+
+  Bạn không cast nó. Một support gem biến spell thành một quả **mine**, và một viên thứ hai làm mỗi cú ném đặt **năm** quả mine. Khi chúng nổ, mỗi quả cast spell vào con quái gần nhất, quả này nối quả kia. Quả đầu giết một pack, nên quả thứ hai chọn pack kế, và cứ vậy. Một cú ném dọn sạch một màn hình mà bạn chẳng nhắm vào thứ gì.
+
+  Một đôi gloves unique rẻ, [[Hrimsorrow]], biến toàn bộ damage từ physical sang cold. Cold damage thì đóng băng. Một pack bị đóng băng thì không đánh được bạn, và chính chuyện đó, hơn bất kỳ con số nào trên character sheet, là cách build này sống.
+
+  Cái giá nằm ở mặt bên kia. Guide chấm defence của nó 2 trên 5 và nói thẳng là boss cần một viên gem khác, [[Reap]], đổi vào.
+
+chain:
+  - label: Ném
+    text: "Một cú ném đặt năm quả mine, nhờ [[Minefield Support]]. Mỗi quả giữ một lần cast [[Exsanguinate]]."
+  - label: Kích nổ
+    text: "[[Detonate Mines]] link với [[Automation]] kích chúng thay bạn. Chúng nổ từng quả một, cách nhau vài mili giây."
+  - label: Chain và freeze
+    text: "Mỗi quả mine nhắm con quái còn sống gần nhất. Xúc tu chain tiếp đi, và [[Hrimsorrow]] biến damage thành cold, nên nó đóng băng."
+  - label: Di chuyển
+    text: "[[Shield Charge]] sang màn hình kế. Quái bị đóng băng, 100% [[Spell Suppression]] và evasion từ [[Grace]] che mấy khoảng hở."
+
+chainDetails:
+  - title: Vì sao dùng mine mà không tự cast
+    body: |
+      Lập luận của guide, và nó đứng vững:
+
+      - Một quả mine nhắm con quái gần nhất lúc nó nổ. Bạn không bao giờ phải nhắm.
+      - Exsanguinate gây damage ngay khoảnh khắc nó được dùng, nên không có gì bị phí cho thời gian bay.
+      - Mine nổ theo thứ tự. Lúc quả thứ hai bắn thì pack đầu đã chết, nên nó chọn một pack khác. Không lần cast nào bị tiêu vào thứ đã chết rồi.
+
+      Mục tiêu của tác giả là thời gian ném khoảng 0.25 giây, "which corresponds to a caster who casts 4 times a second". Tới được đó thì phải đầu tư: riêng [[Minefield Support]] đã mang 46–55% less throwing speed.
+  - title: Nó tốn life, và mấy quả mine giữ luôn chỗ life đó
+    body: |
+      Exsanguinate tốn life, không phải mana: 16 ở gem level 1 và 46 ở level 20.
+
+      [[High Impact Mine Support]] đổi cost đó thành một khoản **reservation**. Khi một quả mine còn nằm dưới đất, phần life nó tốn bị reserve và bạn không hồi lại được.
+
+      Guide trả khoản này bằng [[Kikazaru]], một cây ring hồi 3 life mỗi giây cho mỗi level nhân vật. Ở level 90 thì đó là 270 life mỗi giây từ một cây ring. Đó là lý do cây ring nằm trong danh sách bắt buộc, và lý do mod map "cannot regenerate" là một trong đúng hai cái guide bảo bạn bỏ qua.
+  - title: "Conversion: cái lỗi làm bạn mất 40% damage"
+    body: |
+      Giai đoạn đầu, [[Hrimsorrow]] tự nó convert 100% physical damage sang cold.
+
+      Về sau, bạn thay nó bằng gloves rare, và 100% đó đến từ ba mảnh: 25% từ một craft bench, 35% từ một Eldritch implicit, và 40% từ Cold Mastery.
+
+      Guide in chuyện này bằng chữ hoa: đổi Cold Mastery sang "40% of Physical Damage Converted to Cold Damage" khi bạn đổi gloves, "as otherwise your damage will only be 60% converted, resulting in a massive damage loss".
+  - title: Heatshiver, và vì sao đánh boss thấy khác
+    body: |
+      [[Heatshiver]] cho 30% cold damage thành extra fire damage lên quái bị đóng băng, và 1% cho mỗi 1% chill effect lên quái chỉ bị chill.
+
+      Trong map thì mọi thứ đều bị đóng băng, nên bạn ăn trọn. Guide: "once a monster is tanky enough to not get frozen your damage goes down substantially as Heatshiver no longer adds its full damage".
+
+      Đó là lý do về mặt cơ chế khiến build đổi gem khi đánh boss.
+  - title: Reap, setup đánh boss
+    body: |
+      Đánh boss thì bạn rút [[Exsanguinate]] khỏi main link và cắm [[Reap]] vào. Guide nói chuyện này nhân đôi single-target damage của bạn.
+
+      Một viên [[Vaal Reap]] thứ hai, level 1, nằm trong [[Arcanist Brand]]. Cái brand cast Reap lên boss hết lần này tới lần khác, và mỗi cú hit không giết được thì dựng một Blood Charge. Bạn giữ tối đa 5 cái, hoặc 9 sau khi dùng Vaal Reap, và guide ghi mỗi charge là 20% more damage cho mọi viên Reap bạn có, kể cả mấy viên trong mine.
+
+      [[Swift Killer]] nhân ba thời gian charge tồn tại, và đó là thứ giữ chúng không rụng.
+  - title: Trick Shot, thứ tác giả gọi là bị đánh giá thấp
+    body: |
+      [[Trick Shot]] là 30% increased chaining range. Với một skill clear bằng chain, guide so nó với một notable ghi "45% more Area of Effect".
+
+      Nó cũng là lý do chính guide chọn Trickster thay vì Inquisitor: một con Inquisitor không với tới nó được nếu thiếu một viên jewel Impossible Escape.
+  - title: Guide tự mâu thuẫn với chính nó về One Step Ahead
+    body: |
+      Mấy mẹo leveling bảo lấy [[One Step Ahead]] ở Cruel Labyrinth. Các bước ascendancy trên planner cũng đồng ý, rồi tới lab cuối thì refund nó để lấy [[Escape Artist]] với [[Heartstopper]].
+
+      Nhưng mấy cây map "Early" và "Mid" trên planner đã hiện Heartstopper ở chỗ của nó rồi, và chính changelog 3.27 của guide nói One Step Ahead đã bị thay.
+
+      3.30 đổi cả hai notable, nên lựa chọn này lại thành chuyện còn bỏ ngỏ. Xem mục patch. **Gợi ý của chúng tôi, không phải của guide**: theo mấy mẹo leveling qua hết campaign, rồi hãy quyết.
+
+mandatory:
+  - term: Exsanguinate
+    why: >-
+      Cái spell. Bản thường: guide nói bản transfigured chỉ có một phần tư hit
+      damage và là lựa chọn sai ở đây.
+    detail: >-
+      PoEDB: Nessa bán nó cho Shadow sau The Siren's Cadence ở Act 1, ở level
+      12. Mua nó lúc đó rồi level trong một socket dư. Bạn sẽ không dùng nó cho
+      tới khi vào map.
+  - term: High Impact Mine Support
+    why: >-
+      Biến spell thành một quả mine. Mỗi quả mine gần một con quái còn cộng 2%
+      cơ hội gây double damage. Nó mang 55–60% less damage, khoản mà cú ném năm
+      quả mine trả lại dư sức.
+  - term: Minefield Support
+    why: >-
+      Thêm bốn quả mine mỗi cú ném. Cả kiểu clear của guide phụ thuộc vào
+      chuyện năm quả mine nổ nối nhau.
+    detail: >-
+      PoEDB: Shadow nhận nó làm reward của The Eternal Nightmare ở Act 4. Nó
+      cần level 38.
+  - term: Charged Mines Support
+    why: >-
+      Frenzy và power charge khi mine nổ. Cùng với hai frenzy charge thêm và
+      duration dài hơn của [[Swift Killer]], đây là throwing speed và crit của
+      bạn.
+  - term: Hrimsorrow
+    why: >-
+      100% physical damage được convert sang cold. Guide: "mandatory before
+      swapping". Không có conversion thì không thứ gì bị đóng băng và
+      [[Hatred]] làm được ít hơn nhiều.
+  - term: Kikazaru
+    why: >-
+      Hồi 3 life mỗi giây mỗi level. Nó trả phần life mà mấy quả mine của bạn
+      reserve.
+  - term: Detonate Mines
+    why: >-
+      Link với [[Automation]] thì nó kích nổ mà không cần bấm phím. Trong
+      campaign, Mine Mastery "Detonate Mines is Triggered while you are moving"
+      làm cùng việc đó.
+  - term: Hatred
+    why: >-
+      Guide gọi nó là "an extremely strong way to scale Physical Skills that
+      are converted to Cold damage", và đi săn thêm Hatred aura effect trên
+      body armour và trên ring.
+  - term: Grace
+    why: >-
+      Lớp evasion. Cũng là cái aura mà [[Watcher's Eye]] của bạn sẽ đọc.
+  - term: Swift Killer
+    why: >-
+      +2 maximum frenzy charge và 200% increased charge duration. Lab đầu
+      tiên, trong mọi phiên bản của guide.
+  - term: Heatshiver
+    level: recommended
+    why: >-
+      30% cold damage thành extra fire lên quái bị đóng băng. Guide xếp nó thứ
+      tư trong số những thứ cần có trước khi đổi skill, "for a sizable damage
+      increase".
+  - term: Reap
+    level: recommended
+    why: >-
+      Viên gem đánh boss. Đổi vào main link cho mấy mục tiêu đơn khó.
+    detail: >-
+      Guide bảo lấy nó từ Clarissa ở Act 3 và level nó bên cạnh Exsanguinate.
+      Nó cần level 28.
+  - term: Arcanist Brand
+    level: recommended
+    why: >-
+      Giữ một viên [[Vaal Reap]] level 1 và cast nó lên boss để dựng Blood
+      Charge cho bạn.
+  - term: Stormshroud
+    level: recommended
+    why: >-
+      Guide dùng nó để đạt 100% chance to avoid elemental ailments, cùng với
+      một mod trên boots và một Eldritch implicit.
+  - term: Ghost Dance
+    level: recommended
+    why: >-
+      Hồi energy shield bằng 3% evasion của bạn mỗi lần bạn bị hit, tối đa ba
+      lần. Ví dụ của guide: 1,200 mỗi cú hit ở 40,000 evasion.
+  - term: Trick Shot
+    level: recommended
+    why: >-
+      30% increased chaining range, với skill này thì đó là tốc độ clear.
+  - term: Watcher's Eye
+    level: recommended
+    why: >-
+      Với dòng "+8% chance to Evade Attack Hits while affected by Grace". Guide
+      gọi mod này là bắt buộc một khi bạn đã vào midgame.
+    detail: >-
+      Evasion không lên tới cap 95% chỉ bằng rating được. Mod này được cộng lên
+      trên, nên bạn chỉ cần 87% từ mọi thứ còn lại. Đi từ 90% lên 95% là giảm
+      một nửa số hit bạn ăn.
+  - term: Replica Dragonfangs' Flight
+    level: recommended
+    why: >-
+      Cây amulet endgame hiệu quả nhất của guide, với một cây rare làm phương
+      án thay khi giá của nó vượt tầm.
+
+labs:
+  - lab: Normal
+    node: Swift Killer
+    why: "Từ mấy mẹo của guide: +2 frenzy charge tồn tại 30 giây, thứ \"heavily boosts the bonuses from Charged Mines Support\"."
+  - lab: Cruel
+    node: One Step Ahead
+    why: "Từ mấy mẹo của guide. **Phần mô tả của nó đã lỗi thời**: nó hứa 8% action speed và miễn nhiễm chill. Trong 3.30 notable này ghi: action speed của bạn ít nhất là 105% base, còn của quái ở gần thì nhiều nhất là 90%."
+  - lab: Merciless
+    node: Polymath
+    why: "2% more damage cho mỗi loại mastery đã lấy. Guide đếm được khoảng chín loại tới lúc này, tức 18% more damage."
+  - lab: Eternal
+    node: Heartstopper
+    why: "Lấy cùng với [[Escape Artist]]: bước cuối trên planner lấy cả hai và refund One Step Ahead để trả cho một trong hai. Escape Artist biến energy shield trên helmet thành evasion và evasion trên body armour thành energy shield. Heartstopper được buff trong 3.30."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: skitterbots
+    title: Act 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Explosive Trap]] với [[Swift Assembly Support]] và
+      [[Added Fire Damage Support]]. Bạn là một con trapper cho tới level 28.
+    changes: >-
+      Ở level 16 thêm [[Summon Skitterbots]], [[Herald of Ash]] và
+      [[Wave of Conviction]]. Ở level 22 [[Grace]] thay cái herald và
+      [[Assassin's Mark]] vào.
+    links:
+      - name: Level 1–15
+        gems: [Explosive Trap, Swift Assembly Support, Added Fire Damage Support]
+      - name: Từ level 16
+        gems: [Wave of Conviction, Combustion Support]
+      - name: Utility ở level 16
+        gems: [Summon Skitterbots, Herald of Ash, Bear Trap, Frostblink, Flame Dash]
+      - name: Utility ở level 22
+        gems: [Summon Skitterbots, Grace, Assassin's Mark, Bear Trap, Frostblink]
+    moveOn: "bạn level 28 và có Exsanguinate với Reap đang level trong socket dư."
+    details:
+      - title: Mấy việc nhỏ guide bảo bạn làm
+        body: |
+          - Mua hoặc nhặt wand Goat's Horn: implicit fire damage là một cú đẩy thật ở giai đoạn sớm thế này.
+          - Nếu không ra được màu socket cho [[Added Fire Damage Support]], dùng [[Added Cold Damage Support]] hoặc [[Added Lightning Damage Support]].
+          - [[Sapphire Ring]] cho Merveil, một Ruby Ring cho Vaal Ruins ở Act 2.
+          - Two-Stone Ring sau level 20, và resistance sát 75% hết mức có thể.
+          - [[Grace]] là "an amazing defensive layer", nên lấy sớm hơn nếu bạn đang chết.
+      - title: Mua mấy viên gem bạn chưa dùng tới
+        body: |
+          [[Exsanguinate]] từ Nessa ở Act 1 và [[Reap]] từ Clarissa ở Act 3. Cắm cả hai vào socket dư hoặc weapon swap.
+
+          Guide lặp lại chuyện này hai lần, vì phương án còn lại là tới map với một main skill level 1.
+      - title: Bandit
+        body: |
+          Guide: giết cả ba. Hoặc giúp Alira "to reduce suffix pressure when gearing", và để có một campaign ít phải dựa vào mana flask hơn.
+      - title: Những gì planner không cho chúng tôi biết
+        body: |
+          Các bước gem trên planner đổi ở level 16, 22 và 28. Danh sách chỗ lấy từng viên gem của nó được sinh ra ngay trên trang và không nằm trong phần dữ liệu chúng tôi đọc được, nên ngoài Exsanguinate và Reap ra chúng tôi không liệt kê vendor.
+  - id: acts-4-10
+    phase: early
+    image: swift-killer
+    title: Act 4–10
+    levels: Level 28–68
+    uses: >-
+      [[Pyroclast Mine]] với [[Charged Mines Support]]. Bạn thành một con miner
+      ở level 28 và ở lại với skill này tới hết campaign.
+    changes: >-
+      [[Shield Charge]] thành cách bạn di chuyển. Ba cái Labyrinth:
+      [[Swift Killer]], [[One Step Ahead]], [[Polymath]]. Kích nổ là tự động
+      nhờ một Mine Mastery.
+    links:
+      - name: Main skill
+        gems: [Pyroclast Mine, Charged Mines Support, Swift Assembly Support, Added Cold Damage Support]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: Curse và exposure
+        gems: [Wave of Conviction, Combustion Support, Assassin's Mark]
+      - name: Utility
+        gems: [Summon Skitterbots, Grace, Bear Trap, Frostblink]
+    moveOn: "campaign đã xong và bạn đủ tiền mua Hrimsorrow với Kikazaru."
+    details:
+      - title: Cú đổi ở level 28
+        body: |
+          Từ mấy mẹo của guide: đổi [[Explosive Trap]] sang [[Pyroclast Mine]], và dùng mấy lượt refund passive miễn phí để chuyển điểm ra khỏi Expeditious Munitions sang Blast Waves.
+
+          Lấy Mine Mastery "Detonate Mines is Triggered while you are moving". Từ đây bạn ném rồi đi.
+
+          "Pay close attention to what gems have changed", guide nói thêm. Có vài link đổi cùng một lúc.
+      - title: Vì sao Pyroclast đi trước
+        body: |
+          Guide: Pyroclast Mine với Charged Mines "provides easy damage" nhờ [[Swift Killer]], và cho một "smooth levelling progression".
+
+          Exsanguinate chưa làm được việc này. Thiếu [[Hrimsorrow]] thì nó không đóng băng, và thiếu [[Kikazaru]] thì life cost của nó không có gì trả.
+      - title: Pantheon
+        body: |
+          Soul of the Brine King chống bị stun liên hoàn. Soul of Garukhan ở giai đoạn đầu, chống shock. Về sau là Soul of Abberath cho burning ground, và Soul of Ryslatha cho mấy con boss khó, kèm thêm life flask.
+  - id: early-maps
+    phase: early
+    image: minefield-support
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      [[Pyroclast Mine]] cho vài map đầu, rồi tới cú đổi: [[Hrimsorrow]],
+      [[Kikazaru]], một cái chest evasion với energy shield five-link, và
+      [[Heatshiver]].
+    changes: >-
+      [[Exsanguinate]] thành main skill. [[Hatred]] vào cùng [[Grace]].
+      [[Reap]] và [[Arcanist Brand]] vào cho boss.
+    links:
+      - name: Main skill (five-link)
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Cold Penetration Support, Minefield Support]
+      - name: Kích nổ tự động
+        gems: [Detonate Mines, Automation]
+      - name: Di chuyển và curse
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Assassin's Mark]
+      - name: Aura
+        gems: [Grace, Hatred]
+      - name: Charge cho boss
+        gems: [Arcanist Brand, Vaal Reap]
+      - name: Guard
+        gems: [Cast when Damage Taken Support, Steelskin, More Duration Support]
+      - name: Blink an toàn với reflect
+        gems: [Frostblink, Bonechill Support, Brutality Support]
+    moveOn: "Exsanguinate đã nằm trong five-link, cả hai aura đã bật, và một cú ném dọn sạch một màn hình map trắng."
+    details:
+      - title: Cần có gì trước khi đổi, theo thứ tự của guide
+        body: |
+          1. [[Hrimsorrow]]. "Mandatory before swapping."
+          2. [[Kikazaru]], để có life regeneration.
+          3. Một cái five-link, hoặc six-link nếu được, trên base evasion với energy shield có hơn 300 energy shield.
+          4. [[Heatshiver]].
+
+          Ở lại với Pyroclast Mine "for a few Maps" thì không sao, guide nói vậy. Nó có tầm ngắn, nên cú đổi "feels a lot better" một khi bạn làm được.
+      - title: Five-link là chuyện đã tính trước
+        body: |
+          Lời của guide: build dùng "a lot of mechanically mandatory gems, causing damage links to fall a bit short". Mine, Minefield và Charged Mines là ba trong năm viên của bạn trước khi có support damage nào.
+
+          Nó gợi ý một cái six-link corrupt đúng màu làm đường đi lên rẻ. Và nó nói [[Cold Penetration Support]] đổi được sang [[Chain Support]] khi damage đã đủ.
+      - title: Vũ khí và phần gear còn lại
+        body: |
+          Trên cây sceptre, theo thứ tự của guide: +1 level cho physical spell gem, +1 cho mọi spell gem, mine throwing speed, spell damage, cold damage, crit multiplier, spell crit chance. [[Singularity]] là lựa chọn của nó nếu bạn không muốn đi lùng một cây rare.
+
+          Mọi chỗ khác trừ chest: life, và resistance lên 75%. Một cây [[Sadist Garb]] hoặc base hybrid tương tự cho chest, vì [[Escape Artist]] về sau sẽ đọc nó.
+      - title: Flask và cái anoint đầu tiên
+        body: |
+          [[Divine Life Flask]] có hồi instant một phần và xóa bleed, [[Silver Flask]], [[Quicksilver Flask]], [[Diamond Flask]], [[Jade Flask]]. Suffix evasion và movement speed trên mấy cây utility flask.
+
+          Anoint Entrench lên amulet. Guide thích nó vì spell suppression và vì nó giữ life flask đầy, mà nó chỉ cần Sepia, Azure và Violet oil.
+      - title: Mod map cần tránh
+        body: |
+          Chỉ có hai, theo cách đếm của guide:
+
+          - **Reduced effect of non-curse auras.**
+          - **Cannot regenerate life, mana or energy shield.** Chạy được nếu bạn đổi hai cây flask lấy một life flask và một mana flask.
+
+          Reflect thì an toàn, vì quả mine đánh quái chứ không phải bạn. Ngoại lệ duy nhất là [[Frostblink]] của chính bạn, và đó là lý do nó được link với [[Brutality Support]].
+  - id: red-maps
+    phase: endgame
+    image: watchers-eye
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      Một cái six-link có [[Increased Critical Damage Support]], một cây
+      sceptre rare và một cái shield rare có +1 cho physical spell gem, một cái
+      body armour có 300 energy shield và 1,200 evasion, cluster jewel và một
+      viên [[Watcher's Eye]].
+    changes: >-
+      [[Ghost Dance]] được lấy. [[Zealotry]] tới qua một con spectre. Spell
+      suppression lên 100%. Đây là khúc mà chính guide gọi là một "tougher
+      start into late red maps".
+    links:
+      - name: Main skill (six-link)
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Cold Penetration Support, Minefield Support, Increased Critical Damage Support]
+      - name: Kích nổ tự động
+        gems: [Detonate Mines, Automation]
+      - name: Aura
+        gems: [Grace, Hatred]
+      - name: Aura từ một con spectre
+        gems: [Raise Spectre, Guardian's Blessing Support, Zealotry]
+      - name: Di chuyển và curse
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Assassin's Mark]
+      - name: Charge cho boss
+        gems: [Arcanist Brand, Vaal Reap]
+    moveOn: "resistance ở 75%, suppression ở 100%, chaos resistance dương, và viên Watcher's Eye đã vào."
+    details:
+      - title: Thứ tự dựng lại gear
+        body: |
+          Guide đưa ra một thứ tự: **sceptre, body armour, shield, amulet, boots, ring, belt.** Món có tiềm năng lợi cao nhất đi trước.
+
+          Nó cũng đưa ra một quy tắc đáng nhắc lại. Đừng bỏ một dòng phần trăm tốt chỉ để lấy +1 gem level: "A weapon with 100% increased damage generally outperforms a +1 if you do not have many %increases elsewhere." Nó muốn có ít nhất một dòng 80% trở lên spell damage hoặc cold damage trên cây sceptre hoặc cái shield.
+
+          Mấy suffix trên đồ rare của bạn phải lo khoảng 29 Strength, 23 Dexterity, và tổng cộng tầm 115% fire, 90% cold, 110% lightning và 50% chaos resistance, với giả định là mấy món unique đang được đeo.
+      - title: Guide làm ra bộ gear này thế nào, và 3.30 đã làm gì với cách đó
+        body: |
+          Cách làm: mua một cái base có một mod mong muốn được **fracture**, đập Screaming Essence cho tới khi mod mong muốn thứ hai rơi vào, rồi thêm cái thứ ba ở bench.
+
+          Có hai thay đổi 3.30 đụng tới nó. Đồ fractured giờ đến từ ít chỗ hơn hẳn, nên mấy cái base đó sẽ hiếm hơn. Và mấy tier Essence thấp đã rời khỏi map cao, dù Screaming không nằm trong số tier bị bỏ.
+
+          Mấy đường còn lại của guide là Rog, người giờ kém hào phóng hơn trong 3.30, và Harvest reforge cho chest.
+      - title: Mục tiêu cho body armour
+        body: |
+          Ít nhất 300 energy shield và 1,200 evasion trên một base hybrid. [[Escape Artist]] biến chỗ evasion đó thành thêm energy shield và biến energy shield trên helmet thành evasion, rồi [[Ghost Dance]] hồi dựa trên tổng đó.
+
+          Guide gọi một cái chest roll đẹp là "the most important piece of gear for the Trickster Ascendancy".
+      - title: Zealotry mà không phải reserve
+        body: |
+          [[Raise Spectre]] với [[Guardian's Blessing Support]] và [[Zealotry]], trên hai con Dark Marionette. Chúng tự hồi sinh mỗi 4 giây, nên cái aura chuyền qua lại giữa chúng và bạn không bao giờ phải triệu lại.
+
+          Guide bỏ setup này "once you acquire a Mercenary with Zealotry". Mercenary bị làm yếu trong 3.30 và giờ dính penalty resistance trong map, nên hãy kiểm xem con của bạn có sống nổi không trước khi dựa vào nó. Lời dè chừng đó là của chúng tôi.
+      - title: Cluster jewel, jewel và damage miễn phí
+        body: |
+          - Một [[Large Cluster Jewel]] có ba notable hữu ích bất kỳ, craft bằng Jagged Fossil trên một base tám passive.
+          - Một [[Medium Cluster Jewel]] trap và mine, roll bằng speed reforge của Harvest.
+          - Jewel rare: mine throwing speed trên mọi viên, rồi tới crit multiplier và life. Một viên có "Corrupted Blood cannot be inflicted on you".
+          - Quality 20 trên mọi support, và [[Exsanguinate]] với [[Reap]] level 21.
+
+          Một cái bẫy guide có cắm cờ: crit multiplier "with Cold Skills" hay "with Elemental Skills" thì **không** ăn. Exsanguinate là một physical spell tình cờ được convert.
+  - id: endgame
+    phase: endgame
+    image: heartstopper
+    title: Endgame
+    levels: Tier 17, pinnacle boss và Uber boss
+    uses: >-
+      Gloves rare có "+2 chains" cho mine, một cái body armour có +1 cho
+      Strength gem gắn trong đó cùng [[Empower Support]] trong link,
+      [[Replica Dragonfangs' Flight]], và [[Enlighten Support]] để nhét
+      [[Summon Skitterbots]] vào lại.
+    changes: >-
+      Đôi gloves thay [[Hrimsorrow]], nên conversion giờ đến từ ba chỗ và Cold
+      Mastery phải đổi. Cái Labyrinth cuối thêm [[Escape Artist]] và
+      [[Heartstopper]].
+    links:
+      - name: Main skill
+        gems: [Exsanguinate, High Impact Mine Support, Charged Mines Support, Awakened Cold Penetration Support, Minefield Support, Empower Support]
+      - name: Aura
+        gems: [Grace, Hatred, Summon Skitterbots, Enlighten Support]
+      - name: Aura từ một con spectre
+        gems: [Raise Spectre, Guardian's Blessing Support, Zealotry]
+      - name: Di chuyển và kích nổ
+        gems: [Shield Charge, Faster Attacks Support, Detonate Mines, Automation]
+      - name: Blink và curse
+        gems: [Frostblink, Bonechill Support, Assassin's Mark]
+      - name: Charge cho boss
+        gems: [Arcanist Brand, Vaal Reap, Faster Casting Support]
+    moveOn: "không còn stage nào nữa. Lời cuối của guide là một bộ đồ [[Mageblood]] \"aspirational\"."
+    details:
+      - title: Đôi gloves
+        body: |
+          Một mod được thêm vào ở 3.26: "Skills used by your Traps and Mines Chain 2 additional times". Guide gọi nó là "extremely powerful for this build", và đó là lý do main link không còn cần [[Chain Support]].
+
+          Craft bench 25% conversion, roll Eldritch implicit để có 35% conversion và 9% mine throwing speed, và **đổi Cold Mastery sang 40% conversion**. Bỏ sót bước cuối đó là bạn chỉ còn 60%.
+      - title: Cái body armour, và vì sao nó đáng công
+        body: |
+          "+1 to Level of Socketed Strength Gems". [[Exsanguinate]], [[Reap]] và [[Empower Support]] đều là Strength gem, nên một mod đó nâng skill lên hai level.
+
+          Cách craft của guide thì dài: tách một cây [[Necrotic Armour]] bằng một con beast, fossil để lấy +1, một viên [[Fracturing Orb]], rồi Dense Fossil với Harvest cho defence, rồi Eldritch currency. Nó nói thẳng là có những khúc "tedious and expensive".
+
+          Bước cuối của nó dùng "Prefixes Cannot Be Changed". 3.30 nâng giá craft đó lên 4 Divine Orb cộng một loại currency thứ hai.
+      - title: Cây amulet
+        body: |
+          [[Replica Dragonfangs' Flight]] anoint Charisma là "the most efficient path". Khi nó quá đắt, guide craft một cây rare có +1 cho physical spell gem, một dòng resistance và mine throwing speed.
+
+          Hướng dẫn giá của nó, từ trước 3.30: khoảng 6 Divine cho cây rare tự craft, và mua cây unique nếu nó từ 12 Divine trở xuống.
+      - title: Con số
+        body: |
+          Changelog của guide nhắc đúng một con số: một bộ đồ [[Mageblood]] để mơ ở mức "roughly 45 million Exsanguinate DPS", thêm vào ở 3.26. Nó không cho con số nào cho mấy phiên bản bên dưới đó, và hoàn toàn không có con số effective hit point nào.
+
+          Về phòng thủ thì nó mô tả chứ không đo: suppression đã cap, 95% evasion, và "up to 2k Energy Shield that fully recovers when hit".
+      - title: Uber và Tier 17
+        body: |
+          Uber: "Yes, absolutely", kèm một điều kiện. "It's not a facetank build so dodging is required." Mang ít nhất ba cây life flask và Soul of Ryslatha.
+
+          Tier 17: "Yes, but there are certainly better options for max-juice T17 farming."
+
+powerCurve: |
+  Guide mô tả đường cong của chính nó một cách thật thà: "It starts off somewhat slow, but as you slowly gear up and your Mine Throwing Speed and Shield Charge speed increases the build's clear speed picks up."
+
+  Có năm thứ nhân damage lên, và chúng tới vào những lúc khác nhau.
+
+  1. **Năm quả mine mỗi cú ném**, từ [[Minefield Support]] ở level 38.
+  2. **Conversion sang cold**, từ [[Hrimsorrow]]. Đây là cái công tắc bật cùng lúc đóng băng, [[Hatred]] và cold penetration.
+  3. **Extra fire lên quái bị đóng băng**, từ [[Heatshiver]].
+  4. **Crit và charge**, từ [[Charged Mines Support]], [[Swift Killer]] và [[Assassin's Mark]].
+  5. **Gem level và throwing speed**, từ gear.
+
+  **Ở level 30** bạn có một phần của số 4 và không gì khác. Bạn đang chơi [[Pyroclast Mine]], một skill khác, và nó dễ chịu. Chuyện đó không cho bạn biết gì về build thật.
+
+  **Ở level 70** bạn mua số 2 và số 3 trong một lượt đi chợ và nhân vật đổi khác trong một buổi chiều. Đây là cú nhảy. Nhưng số 5 vẫn đang ở không, bạn đang dùng five-link, và build đang ở lúc tệ nhất so với content. Cái "tougher start into late red maps" của guide chính là khoảng hở này.
+
+  **Ở level 95** thì số 5 là thứ đã lớn lên: +1 gem level trên ba hoặc bốn ô, throwing speed trên mọi thứ, cluster, và về sau là đôi gloves chain. Không cái nào trong đó là một lần mua lớn. Đó là lý do khúc giữa của build này cho cảm giác một đoạn leo dài, và lý do guide trả lời câu "my damage feels too low" bằng "trust the process of incremental upgrades".
+
+  Phòng thủ đi theo một đường cong khác. Nó chủ yếu là **không bị đánh trúng**: đóng băng trước, rồi tới evasion. Đóng băng lớn theo damage của bạn, nên chính cái khúc chậm có damage thấp đó cũng có ít quái bị đóng băng hơn. Phần nguy hiểm của build này và phần yếu của nó là cùng mấy tuần đó. Nhận xét cuối này là của chúng tôi.
+
+upgrades:
+  - step: "[[Hrimsorrow]]"
+    why: >-
+      Đứng đầu trong thứ tự của chính guide. Nó là conversion: đóng băng,
+      Hatred và cold penetration đều không làm được gì có ích nếu thiếu nó, nên
+      mọi món mua về sau đều nhân lên món này.
+  - step: "[[Kikazaru]]"
+    why: >-
+      Thứ hai trong thứ tự của guide. Nó không cộng damage nào. Nó trả phần
+      life mà mine của bạn reserve, và đó là thứ cho bạn ném tiếp được.
+  - step: "Một cái chest hybrid five-link có 300+ energy shield"
+    why: >-
+      Thứ ba. Ba trong năm socket là cơ chế mine, nên một cái four-link chỉ có
+      một support damage. Cái base quan trọng ngay từ bây giờ vì bạn sẽ không
+      muốn mua nó hai lần.
+  - step: "[[Heatshiver]]"
+    why: >-
+      Thứ tư, "for a sizable damage increase". Nằm dưới cái chest vì nó chỉ trả
+      lợi trên mục tiêu bị đóng băng, mà bạn cần damage để đóng băng chúng
+      trước đã.
+  - step: "Một cây sceptre rare: gem level, spell damage hoặc cold damage, mine throwing speed"
+    why: >-
+      Đứng đầu thứ tự gear của guide: "the slot that grants you the highest
+      potential damage increase". Nó đi sau mấy món unique vì chúng bật build
+      lên còn món này chỉ đẩy nó lớn thêm.
+    cost: "Guide định giá Essence cho mấy cái craft này ở mức 2 Chaos trở xuống mỗi viên. Viết từ trước 3.30."
+  - step: "Body armour có 300 energy shield và 1,200 evasion"
+    why: >-
+      Thứ hai trong thứ tự gear, và là món mua đầu tiên nhằm vào chuyện sống
+      sót. [[Escape Artist]] và [[Ghost Dance]] đều lớn lên từ nó.
+  - step: "[[Watcher's Eye]] có evade chance while affected by Grace"
+    why: >-
+      Guide gọi nó là bắt buộc. Nó đưa bạn từ 87% evasion lên cap 95%, tức là
+      giảm một nửa số attack ăn phải. Nó nằm ở đây chứ không sớm hơn vì bạn
+      cần 87% đó trước.
+  - step: "Cluster jewel, gem quality, gem level 21"
+    why: >-
+      Nhiều hệ số nhân nhỏ. Guide xếp mấy thứ này dưới mục "stuff to look out
+      for": đáng làm bất cứ khi nào làm được, không bao giờ gấp.
+
+play:
+  mapping: |
+    1. [[Shield Charge]] **vượt qua** mấy pack đầu. Chỉ dẫn của guide là cứ đi tiếp "until the monsters you passed are almost off your screen".
+    2. Ném một lần. Năm quả mine rơi xuống và tự nổ, mỗi quả chọn pack gần nhất.
+    3. Cứ di chuyển. Đừng dừng lại kiểm.
+
+    Cái kỹ năng khi lái build này, theo lời guide, là sự kiềm chế: "minimizing the overcasting" và "trusting in the build's ability to one-shot the screen in one throw". Một cú ném thứ hai vào một màn hình đã chết là thời gian bị mất.
+
+    Flask được tự động hóa bằng [[Instilling Orb]] đặt dùng khi đầy charge. Với mấy chiến thuật rẻ, guide sẽ clear khoảng 80% map rồi rời đi.
+
+    Cái thế giằng co có sẵn: mine reserve life trong lúc chúng còn nằm ngoài đó, và phòng thủ của bạn yếu nhất đúng vào lúc có thứ gì sống sót qua cú ném.
+  bossing: |
+    Trước trận:
+
+    1. Rút [[Exsanguinate]] khỏi main link và cắm [[Reap]] vào. Vẫn mấy support đó.
+    2. Với Uber, đổi utility flask cho tới khi bạn mang ít nhất ba cây life flask, và lấy Soul of Ryslatha.
+
+    Trong trận:
+
+    1. Thả [[Arcanist Brand]] lên boss. Nó cast skill thường của [[Vaal Reap]] thay bạn và dựng Blood Charge.
+    2. Dùng chính Vaal Reap khi nó đã nạp xong. Chuyện đó nâng giới hạn Blood Charge từ 5 lên 9.
+    3. Curse bằng [[Assassin's Mark]], ném mine Reap, và di chuyển.
+
+    Guide nói thẳng về lối chơi: "it's not a facetank build so dodging is required." Bạn ném giữa các đòn của boss. Bạn không đứng lại đổi đòn.
+
+deaths:
+  - situation: "Có thứ gì sống sót qua cú ném và bước ra khỏi lớp băng."
+    cause: >-
+      Phòng thủ chính của guide là "outright denying mobs the chance to
+      attack". Một con quái quá trâu để đóng băng thì đã nhảy qua lớp đó, và
+      đằng sau nó là một phần phòng thủ mà chính guide chấm 2 trên 5.
+    fix: >-
+      Đừng đứng yên sau một cú ném. Thêm damage cũng là thêm đóng băng, nên
+      chuyện này khá lên theo từng nâng cấp damage.
+  - situation: "Attack trúng thường xuyên hơn hẳn so với con số evasion gợi ra."
+    cause: >-
+      Evasion rating có diminishing returns và dừng lại trước cap. Ở 90% thì
+      cứ mười cú attack bạn ăn một; ở 95% thì hai mươi cú ăn một.
+    fix: >-
+      Mod [[Watcher's Eye]] cho evade chance while affected by [[Grace]], cộng
+      lên trên 87% từ rating. Guide: chuyện này "more than doubles" khả năng
+      né attack của bạn.
+  - situation: "Mấy trận boss dài, nhất là Uber."
+    cause: >-
+      "Life sustain is the main weakness of the build for Ubers", theo lời
+      guide. Không có leech, mine reserve life, và [[Ghost Dance]] hồi energy
+      shield chứ không hồi life.
+    fix: >-
+      Ít nhất ba cây life flask, vẫn giữ [[Quicksilver Flask]], và Soul of
+      Ryslatha làm minor god.
+  - situation: "Một cái map không cho bạn regenerate, hoặc làm yếu aura."
+    cause: >-
+      Phần regeneration của [[Kikazaru]] là thứ trả cho mine của bạn, còn
+      [[Grace]] là gần hết evasion của bạn.
+    fix: >-
+      Roll lại cả hai. Cái không-regeneration thì chạy được với một life flask
+      và một mana flask thay cho hai cây utility flask.
+
+troubleshooting:
+  - symptom: "Damage của tôi lên boss thấp hơn hẳn so với trong map."
+    cause: >-
+      [[Heatshiver]] chỉ cộng trọn damage của nó lên quái bị đóng băng, mà
+      boss thì hiếm khi bị đóng băng. Bạn cũng vẫn đang dùng viên gem clear.
+    fix: >-
+      Đổi [[Reap]] vào main link và giữ [[Arcanist Brand]] trên boss để có
+      Blood Charge. Guide nói cú đổi đó nhân đôi single-target damage và mấy
+      cái charge nhân đôi nó thêm lần nữa.
+  - symptom: "Damage của tôi tụt một phần ba khi tôi đổi gloves."
+    cause: >-
+      [[Hrimsorrow]] là toàn bộ conversion của bạn. Gloves rare cho 60% từ cái
+      craft và cái implicit. Phần physical damage còn lại của bạn không còn là
+      cold nữa, nên nó trượt mất [[Hatred]], penetration và freeze.
+    fix: >-
+      Đổi Cold Mastery sang "40% of Physical Damage Converted to Cold
+      Damage".
+  - symptom: "Tôi không cast được Shield Charge hay Frostblink: hết mana."
+    cause: >-
+      Mine tốn life, nên mana chỉ trả cho di chuyển và cái curse, nhưng hai
+      hoặc ba aura để lại rất ít mana chưa bị reserve.
+    fix: >-
+      Guide: bỏ [[Summon Skitterbots]] cho tới mốc reservation kế tiếp của
+      bạn, và đừng level [[Frostblink]] lên 20. Một cây [[Heatshiver]] corrupt
+      có dòng 90% cost and reservation multiplier cho gem gắn trong đó là cách
+      chữa về sau của nó.
+  - symptom: "Ném thấy chậm và lóng ngóng."
+    cause: >-
+      [[Minefield Support]] có 46–55% less mine throwing speed. Đó là cái
+      tiếng "mines are clunky", và guide nói nó đến từ mấy build "skimped out
+      on proper investment into throwing speed".
+    fix: >-
+      Throwing speed trên cái craft sceptre, amulet, belt và mọi viên jewel,
+      cùng frenzy charge từ [[Charged Mines Support]]. Mục tiêu là khoảng một
+      phần tư giây mỗi cú ném.
+  - symptom: "Damage của tôi thấy quá thấp mà nâng cấp kế tiếp thì ngoài tầm với."
+    cause: >-
+      Bạn đang ở khúc giữa cú đổi skill và bộ gear đẩy nó lớn lên.
+    fix: >-
+      Guide: chạy map bằng [[Reap]] thay cho Exsanguinate một thời gian, hoặc
+      lấp Atlas tới khoảng Tier 14 rồi farm map thấp hơn. Danh sách những thứ
+      nên farm ở đó của nó đã lỗi thời một phần: xem mục patch.
+  - symptom: "Tôi chết trong map elemental reflect."
+    cause: >-
+      Mine thì an toàn, vì chúng gây damage chứ không phải bạn. Skill di
+      chuyển của bạn thì không.
+    fix: >-
+      Link [[Frostblink]] với [[Brutality Support]], viên này bỏ phần
+      elemental damage của nó.
+
+patch:
+  - entry: trickster-buffs
+    note: >-
+      **Hai trong ba buff Trickster tới được build này.** [[Heartstopper]],
+      lựa chọn ascendancy cuối của nó, giờ ăn 75% less damage over time trong
+      một nửa của mỗi mười giây, tăng từ 50%. [[One Step Ahead]], lựa chọn ở
+      Cruel lab của nó, giờ giữ action speed của bạn ở 105% base trở lên,
+      trong khi trước đây nó là một cái sàn 90%. **Phần chữ của guide không có
+      thay đổi nào trong hai cái đó**, và setup cuối của nó refund One Step
+      Ahead. 5% tốc độ vĩnh viễn trên một build mà cảm giác chơi phụ thuộc vào
+      throwing speed thì đáng nhìn lại lần nữa. Đó là gợi ý của chúng tôi.
+      [[Spellbreaker]], cái buff thứ ba, không có trên planner.
+  - note: >-
+      **Mấy skill không bị đụng tới.** [[Exsanguinate]], [[Reap]] và các
+      support mine không xuất hiện trong mục skill hay mục support của patch
+      note. Reap nằm trong phần sửa bug, vì một cái tooltip hiện sai con số.
+  - entry: mercenary-nerfs
+    note: >-
+      **Không có nerf mine nào cho bạn.** Mấy dòng về support Trap and Mine
+      Damage nằm dưới Mercenary Changes. Riêng một chuyện khác, kế hoạch lấy
+      [[Zealotry]] từ một Mercenary của guide giờ phụ thuộc vào một con
+      Mercenary có -60% mọi resistance trong map.
+  - entry: fractured-items-rarer
+    note: >-
+      **Cách lên gear của guide bắt đầu từ base fractured, và mấy cái đó hiếm
+      hơn rồi.** Legion, Ritual, Heist, Blight, Delirium, Delve và Incursion
+      không còn rơi chúng nữa. Chuẩn bị trả nhiều hơn, hoặc craft mà không có
+      cái mod bị khóa.
+  - entry: essence-changes
+    note: >-
+      **Mấy loại Essence guide nêu tên thì vẫn còn đó.** Nó dùng tier
+      Screaming và Deafening. Mấy tier bị bỏ khỏi map cao là Weeping và
+      Wailing.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Danh sách farm dự phòng đã lỗi thời một nửa.** Guide gợi ý Essence,
+      Expedition, farm beast hoặc Legion ở map thấp khi thiếu damage.
+      Expedition, Bestiary và Legion giờ cần [[Threads]]. Essence thì vẫn tự
+      xuất hiện.
+  - entry: meta-crafting-costs
+    note: >-
+      **Mấy cái craft endgame tốn hơn.** Các recipe cho shield, boots, amulet
+      và body armour đều dùng "Prefixes" hoặc "Suffixes cannot be changed",
+      giờ là 4 Divine Orb cộng một loại currency thứ hai mỗi lần.
+  - entry: crafting-service-tweaks
+    note: >-
+      **Rog là một đường yếu hơn để tới cái chest.** Mấy deal reroll của ông
+      ta giữ kết quả tốt nhất trong ít lượt thử hơn trước.
+  - entry: royal-visage-soul-cores
+    note: >-
+      **Coin giờ là Soul Core.** Guide khuyên dùng một Coin để thêm một
+      support level 1 có sẵn vào Exsanguinate và Reap. Soul Core làm cùng việc
+      đó và giờ còn có thể roll ra một hiệu ứng xấu.
+
+strengths:
+  - "Clear một màn hình mỗi cú ném, không cần nhắm (điểm của guide: Mapping 5 trên 5)."
+  - "Đóng băng gần như mọi thứ nó không giết."
+  - "Không cần transfigured gem."
+  - "Chạy được gần như mọi mod map, kể cả reflect."
+  - "Single-target damage mạnh một khi đã đổi Reap vào, theo lời guide."
+  - "Ascendancy của nó được buff trong 3.30."
+weaknesses:
+  - "Không chơi hardcore được (điểm yếu đầu tiên guide liệt kê)."
+  - "Life sustain xoàng, tệ nhất ở mấy trận boss dài."
+  - "Phụ thuộc vào ba món unique cụ thể thì mới chạy."
+  - "Một khúc khó khi vào map đỏ cuối."
+  - "Đánh boss nghĩa là đổi gem và có một cái brand phải giữ."
+  - "Bản cập nhật 3.30 của guide đổi một cái ngày, và ngoài ra thì chẳng mấy thứ mà chúng tôi tìm ra được."
+avoidIf: >-
+  Chọn build khác nếu bạn chơi hardcore, nếu bạn muốn một nhân vật đứng được
+  trong đòn của boss, hoặc nếu cái nhịp ném-rồi-đi có độ trễ làm bạn bực. Bỏ
+  qua nó ở vai league starter trong solo self-found trừ khi bạn rành game:
+  chính guide cũng nói vậy. Và nếu bạn không ưa chuyện cắm lại gem trước mỗi
+  con boss, hãy biết là build này đòi đúng chuyện đó. Ice Trap Trickster trên
+  site này là phương án gần nhất: cùng class, cần ít unique hơn, và có một hệ
+  hồi phục chắc hơn.
+
+sources:
+  - title: "Maxroll: Exsanguinate Miner Trickster league starter (Cptn Garbage)"
+    url: https://maxroll.gg/poe/build-guides/exsanguinate-miner-trickster-league-starter
+    kind: guide
+    note: "Guide viết duy nhất cho bản này. Changelog khẳng định có một bản cập nhật 3.30 ngày 12/11/2026; tiêu đề trang vẫn ghi 3.28."
+  - title: "Maxroll planner của guide"
+    url: https://maxroll.gg/poe/planner/2q5b004m
+    kind: pob
+    note: "Nguồn của mọi gem link, thứ tự lab, điểm số và phần chữ được trích. Mang tên \"Exsang 3.27\"; mấy passive tree đóng dấu 3.24."
+  - title: "Path of Building: file của guide"
+    url: https://maxroll.gg/poe/pob/rrnj780t
+    kind: pob
+    note: "Được link từ guide. Chúng tôi đã không mở nó."
+  - title: "Video: phần showcase của guide"
+    url: https://www.youtube.com/watch?v=zTTixqnBUyc
+    kind: video
+    note: "Được link từ guide. Chưa xem; không thứ gì ở đây đến từ nó."
+  - title: "PoEDB: Exsanguinate"
+    url: https://poedb.tw/us/Exsanguinate
+    kind: data
+    note: "Life cost, số mục tiêu, và chỗ Shadow mua nó."
+  - title: "PoEDB: High-Impact Mine Support"
+    url: https://poedb.tw/us/High-Impact_Mine_Support
+    kind: data
+    note: "Nguồn của dòng reservation và cái aura double damage."
+  - title: "PoEDB: Minefield Support"
+    url: https://poedb.tw/us/Minefield_Support
+    kind: data
+    note: "Thêm bốn quả mine, 46-55% less throwing speed."
+  - title: "PoEDB: Hrimsorrow"
+    url: https://poedb.tw/us/Hrimsorrow
+    kind: data
+  - title: "PoEDB: Heatshiver"
+    url: https://poedb.tw/us/Heatshiver
+    kind: data
+    note: "30% cold thành extra fire lên quái bị đóng băng."
+  - title: "PoEDB: Kikazaru"
+    url: https://poedb.tw/us/Kikazaru
+    kind: data
+    note: "Hồi 3 life mỗi giây mỗi level."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Phần chữ 3.30 đang chạy trong game của mấy notable Trickster, Trick Shot và Ghost Dance. Nhờ nó mà chúng tôi biết phần mô tả One Step Ahead của guide đã lỗi thời."
+  - title: "poebuilds.cc: một Exsanguinate và Reap Elementalist cho 3.30"
+    url: https://www.poebuilds.cc/poe1/build/FX4p_V0TqHg
+    kind: video
+    note: "Build Exsanguinate duy nhất đề ngày 3.30 mà chúng tôi tìm thấy ở đó. Một ascendancy khác và không có mine, nên nó chứng thực cho skill, không phải cho build này."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Nguồn của mấy buff Trickster và của mọi thay đổi 3.30 liệt kê ở trên."

@@ -1,0 +1,712 @@
+name: Consecrated Path of Endurance Juggernaut
+tagline: >-
+  Một cú slam teleport bạn vào giữa pack, đánh mạnh hơn 10% và rộng hơn 10% cho
+  mỗi endurance charge bạn đang giữ. Chưa ai công bố guide 3.30 nào cho nó, nên
+  trang này được dựng từ ladder league trước và hai guide cũ hơn.
+class: Marauder
+ascendancy: Juggernaut
+role: endgame
+budget: low
+budgetNote: >-
+  **Không nguồn nào đưa ra con số currency cho bất kỳ phần nào của build này, ở
+  bất kỳ league nào.** Guide của Odealo có một điểm budget mà chúng tôi không
+  đọc được, và gọi [[Kaom's Sign]] với [[Ryslatha's Coil]] là rẻ, theo lời của
+  thời 3.25. Chúng tôi xếp build vào endgame chứ không phải starter vì ba lý
+  do: không guide nào dẫn một cú league start trong 3.30, viên gem phải lấy ra
+  từ [[Divine Font]], và bản trên ladder league trước đội một cái helmet chỉ
+  rơi từ boss cùng mấy viên jewel Forbidden. Nó vẫn level được từ con số không,
+  và các stage bên dưới nói cách làm.
+mainSkill: Consecrated Path of Endurance
+image: asc-icon-juggernaut
+hero: art-juggernaut
+tags: [Slam, Fire, Endurance charge, Warcry, Two-handed]
+ratings: { clear: 4, bossing: 3, survivability: 4, ease: 2 }
+verified: "2026-11-14"
+confidence: predicted
+confidenceNote: >-
+  **Không có guide 3.30 nào cho build này. Chúng tôi đã tìm trên Maxroll, PoE
+  Vault, Mobalytics, poebuilds.cc và forum, và không thấy cái nào.** Trang này
+  đứng trên những thứ sau: guide viết của Odealo, cập nhật lần cuối cho 3.25
+  vào tháng 7/2024; một guide Odealo thứ hai cho 3.29, chơi cùng skill đó qua
+  totem nhưng level nó bằng tay; 245 nhân vật dùng skill này trên ladder 3.29
+  của poe.ninja; file Path of Building của một nhân vật level 100 từ 3.29; và
+  phần chữ của gem, item với passive như nó đang đứng hôm nay. Patch note 3.30
+  không đổi skill, support của nó hay Juggernaut, chuyện này chúng tôi đã kiểm
+  từng dòng. Mọi tỷ lệ sử dụng ở đây là dữ liệu ladder 3.29, mà ladder thì chỉ
+  hiện những nhân vật đã đi được xa, nên nó mô tả build đã hoàn thiện chứ không
+  phải tuần đầu. Điểm số là của chúng tôi: không nguồn nào cho một điểm số mà
+  chúng tôi đọc được. PoB Archives liệt kê thêm build cho skill này, nhưng phần
+  kiểm tra bot của nó chặn chúng tôi và chúng tôi đã không mở chúng.
+modes:
+  ssf: >-
+    Làm được ở dạng trơn, và không nguồn nào nói vậy, nên đây là cách đọc của
+    chúng tôi. Viên gem đến từ [[Divine Font]], thứ vốn dĩ đã là tự kiếm.
+    [[Kaom's Sign]] là một cây ring unique bình thường. Thứ bạn sẽ không có
+    trong thời gian dài là [[Echoes of Creation]], món PoEDB ghi là rơi từ Uber
+    Shaper, và mấy viên jewel Forbidden.
+  hardcore: >-
+    Không nguồn nào đưa ra kết luận. Odealo gọi bản 3.25 là "extremely
+    durable". Rủi ro chúng tôi thấy là phần giảm damage và phần damage là cùng
+    một tài nguyên: khi charge cạn, bạn mất cả hai cùng lúc.
+
+idea: |
+  [[Consecrated Path of Endurance]] là một cú slam. Bạn click gần một con quái, skill teleport bạn tới chỗ nó, bạn nện xuống đất, và mọi thứ quanh bạn ăn fire damage.
+
+  Viên gem có hai dòng quyết định tất cả: **10% more attack damage và 10% more area of effect cho mỗi endurance charge bạn có.** Một nhân vật bình thường giữ ba charge. Build này giữ mười cái trở lên.
+
+  Cái kẹt nằm ở cooldown. Skill chỉ dùng được mỗi 2 giây một lần, trừ khi bạn tiêu một endurance charge để bỏ qua khoảng chờ. Nên mọi cú slam sau cú đầu đều tốn một charge, mà charge cũng chính là damage của bạn. Cả build xoay quanh chuyện lấy charge về nhanh hơn tốc độ cú slam tiêu chúng.
+
+  [[Juggernaut]] là câu trả lời mà các nguồn đưa ra. [[Unflinching]] đưa bạn charge khi bạn bị đánh, và cứ bốn lần thì một lần nó nạp đầy lại tất cả cùng lúc.
+
+chain:
+  - label: Slam
+    text: "[[Consecrated Path of Endurance]] teleport bạn tới mục tiêu và đánh quanh bạn. Một nửa physical damage đã sẵn là fire."
+  - label: Tiêu một charge
+    text: "Cooldown 2 giây được bỏ qua bằng cách tiêu một endurance charge. Tức là mọi cú slam trừ cú đầu."
+  - label: Lấy lại
+    text: "[[Endurance Charge on Melee Stun Support]] trả lại một charge khi cú hit stun. [[Unflinching]] trả lại charge khi bạn bị đánh."
+  - label: Hét
+    text: "[[Autoexertion]] tự bắn warcry của bạn. Mỗi warcry exert cú slam cộng thêm damage qua [[Overexertion Support]]."
+
+chainDetails:
+  - title: Một charge đáng bao nhiêu
+    body: |
+      Từ phần chữ của gem và support trên PoEDB:
+
+      - Viên gem: 10% more attack damage và 10% more area of effect mỗi charge.
+      - [[Endurance Charge on Melee Stun Support]]: 4% more damage mỗi charge.
+      - [[Unyielding]], nếu bạn lấy: 8% increased damage và 6% increased area mỗi charge.
+
+      Hai cái đầu nhân với nhau. Ở 4 charge thì đó là khoảng 1.6 lần damage của một nhân vật không có charge nào. Ở 10 charge là 2.8 lần. Ở 11 là khoảng 3 lần. **Phép tính đó là của chúng tôi**, từ hai dòng "more" ở trên; không guide nào in nó ra.
+
+      Đó là lý do guide 3.25 bảo nhắm 10 hoặc 11 charge, và lý do một video 3.29 có tiêu đề "18 Endurance Charge Stacker".
+  - title: Charge đến từ đâu
+    body: |
+      Guide của Odealo liệt kê mấy nguồn này, và chúng tôi đã kiểm từng cái với phần chữ hiện tại:
+
+      1. [[Endurance Charge on Melee Stun Support]]: một charge khi một cú melee hit từ skill được link stun quái.
+      2. [[Unflinching]]: 30% cơ hội nhận một charge khi bạn bị đánh, một charge mỗi giây nếu bạn vừa bị đánh gần đây, và 25% cơ hội để bất kỳ charge nào bạn nhận được biến thành một cú nạp đầy.
+      3. [[Unyielding]]: 25% cơ hội nhận một charge khi bạn stun.
+      4. [[Enduring Cry]], tự tay bấm.
+
+      Điểm cuối cùng đó có lý do. Chính phần chữ của [[Autoexertion]] ghi rằng warcry do nó trigger "do not grant Buffs or Charges to You or Allies". Cắm Enduring Cry vào link tự động thì nó không cho bạn gì cả. Odealo để nó trên một phím, và bạn cũng nên vậy.
+  - title: Vì sao gần như ai cũng lấy Avatar of Fire
+    body: |
+      Skill convert 50% physical damage của nó sang fire. [[Avatar of Fire]] convert nửa còn lại, nên từng điểm damage đều là fire và một loại penetration lo được hết.
+
+      62% nhân vật trên ladder league trước có lấy nó. Guide Odealo 3.29 đưa ra một đường thứ hai trong lúc leveling: một Fire Mastery convert 40% physical damage sang fire, thứ 14% ladder dùng.
+
+      Avatar of Fire cũng có nghĩa là bạn không gây damage nào không phải fire. Added cold hay lightning damage trên vũ khí là phí mất một nửa.
+  - title: Cái helmet làm đau chính bạn
+    body: |
+      [[Echoes of Creation]] nằm trên 78% nhân vật ladder league trước. Phần chữ của nó: skill gây 10–15% more damage cho mỗi warcry đang exert chúng, và khi bạn attack, bạn ăn 15–20% life của mình dưới dạng physical damage cho mỗi warcry đang exert cú attack đó.
+
+      Với bốn warcry exert một cú slam, đó là 40–60% more damage và một cú hit bằng 60–80% life của bạn trước khi giảm trừ. **Phép nhân đó là của chúng tôi.** Chính mấy endurance charge chạy cú slam cũng là thứ giảm cú hit đó, qua [[Unrelenting]] và qua bản thân các charge.
+
+      PoEDB ghi cái helmet này rơi từ Uber Shaper. Nó không phải món khởi đầu, và không thứ gì trong build cần nó thì mới chạy.
+  - title: Crit hay không crit
+    body: |
+      Hai guide viết không dùng critical strike. Chúng lấy [[Precise Technique]], tức 40% more attack damage khi accuracy của bạn cao hơn life, và [[Undeniable]] làm chuyện đó dễ bằng cách cho accuracy bằng hai lần Strength của bạn.
+
+      Ladder league trước thì đi hướng ngược lại: 75% nhân vật là crit và 25% thì không. File Path of Building duy nhất chúng tôi giải mã dùng [[Resolute Technique]].
+
+      **Không nguồn nào chúng tôi mở được giải thích bản crit**: node nào, bao nhiêu accuracy, tốn bao nhiêu. Chúng tôi sẽ không đoán. Hãy bắt đầu với Precise Technique, bản mà hai guide có mô tả.
+
+mandatory:
+  - term: Consecrated Path of Endurance
+    why: >-
+      Bản thân skill. Nó là transfigured gem, nên nó không đến từ vendor hay
+      quest nào.
+    detail: >-
+      PoEDB ghi viên gem gốc, [[Consecrated Path]], ở level 28 từ Clarissa ở
+      Act 3 cho Marauder. Bản "of Endurance" đến từ [[Divine Font]] ở cuối một
+      lượt Labyrinth, hoặc từ một người chơi khác. PoEDB liệt nó là bản
+      transfigured duy nhất của viên gem gốc, nên cái font không có gì khác để
+      đưa nhầm cho bạn. Điểm cuối đó là cách chúng tôi đọc danh sách họ gem.
+  - term: Endurance Charge on Melee Stun Support
+    why: >-
+      Trả lại một charge khi cú slam stun, và cho 4% more damage mỗi charge.
+      Odealo gọi nó là bắt buộc, và nó có trong 95% link trên ladder league
+      trước.
+    detail: >-
+      PoEDB: Yeena bán nó cho Marauder sau Sharp and Cruel ở Act 2, từ level
+      18.
+  - term: Unflinching
+    why: >-
+      Charge khi bạn bị đánh, thêm một maximum charge, và một phần tư cơ hội
+      nạp đầy hoàn toàn. 94% nhân vật trên ladder league trước có nó. Guide
+      3.29 coi nó là thời điểm bạn đổi sang skill.
+  - term: Enduring Cry
+    why: >-
+      Nút nạp lại bằng tay của bạn. Bấm nó lúc vào map và bất cứ khi nào số
+      charge tụt. Nó phải nằm ngoài link [[Autoexertion]].
+    detail: >-
+      [[Kaom's Sign]] cho một Enduring Cry level 10, nên đeo cây ring đó thì
+      bạn không cần viên gem hay một socket cho nó.
+  - term: Pulverise Support
+    why: >-
+      More melee area damage và thêm area. Có trong 90% link trên ladder league
+      trước.
+  - term: Overexertion Support
+    why: >-
+      7–10% more damage cho mỗi warcry đang exert cú attack, và 10–14% more nếu
+      nó có được exert. Có trong 89% link trên ladder.
+    detail: >-
+      PoEDB: Marauder nhận nó làm reward của The Eternal Nightmare ở Act 4. Nó
+      cần level 38.
+  - term: Autoexertion
+    why: >-
+      Bắn mấy warcry được link mỗi khi cooldown của chúng hết, nên bốn tiếng
+      hét không tốn của bạn phím nào. 92% ladder dùng nó.
+    detail: >-
+      Nó reserve mana cho mỗi warcry link với nó; PoEDB ghi reservation 20%
+      trên viên support. Nó cần level 24.
+  - term: Kaom's Sign
+    level: recommended
+    why: >-
+      +1 maximum endurance charge trên một cây ring chỉ cần level 1, kèm một
+      [[Enduring Cry]] miễn phí. Nằm trên 86% nhân vật ladder league trước.
+      Odealo nêu nó là phương án rẻ thay cho mấy cây ring tốt nhất.
+  - term: Avatar of Fire
+    level: recommended
+    why: >-
+      Convert nửa damage mà viên gem còn để lại là physical. 62% ladder lấy nó.
+  - term: Precise Technique
+    level: recommended
+    why: >-
+      40% more attack damage khi accuracy cao hơn life. Bản mà cả hai guide
+      viết đều mô tả.
+  - term: Determination
+    level: recommended
+    why: >-
+      Cái aura duy nhất mà mọi nguồn đều đồng ý. Có [[Sublime Vision]] thì nó
+      còn thành một maximum charge.
+  - term: Death's Door
+    level: recommended
+    why: >-
+      Boots có +1 maximum endurance charge và miễn nhiễm bleeding. Nằm trên 36%
+      ladder. Odealo ghi chú là boots nào cũng corrupt được để có cơ hội ra
+      đúng charge đó.
+  - term: Sublime Vision
+    level: recommended
+    why: >-
+      Bản Determination cho +1 maximum endurance charge và aura mạnh hơn trên
+      người bạn, và tắt mọi aura khác. Nằm trên 68% ladder.
+  - term: Echoes of Creation
+    level: recommended
+    why: >-
+      10–15% more damage mỗi warcry đang exert cú slam, trả bằng chính life của
+      bạn. Nằm trên 78% ladder, và là đồ rơi từ Uber Shaper.
+
+labs:
+  - lab: Normal
+    node: Undeniable
+    why: "Cả hai guide Odealo đều lấy nó đầu tiên. Nó cộng 500 accuracy cùng hai lần Strength của bạn, đó là thứ bật [[Precise Technique]] lên."
+  - lab: Cruel
+    node: Unflinching
+    why: "Cái động cơ. Guide 3.29 nói đây là lúc bạn đổi sang skill được: \"after the second lab where you allocate Unflinching\"."
+  - lab: Merciless
+    node: Unyielding
+    why: "Thêm damage và area mỗi charge, và một cách thứ hai để nhận charge khi stun. **Hai guide không thống nhất ở đây**: guide 3.25 lấy [[Unbreakable]] thứ ba, guide 3.29 lấy Unyielding."
+  - lab: Eternal
+    node: Unrelenting
+    why: "1% less elemental và 1% less physical damage taken mỗi charge. Cả hai guide đều kết thúc ở nó hoặc đưa nó ra làm lựa chọn, và 82% ladder có nó."
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: sunder
+    title: Act 1–3
+    levels: Level 1–33
+    uses: >-
+      [[Ground Slam]], rồi [[Sunder]] từ level 12. **Ở đây bạn không chơi
+      Consecrated Path.** Guide 3.29 nói vậy trong một dòng: bắt đầu bằng
+      Sunder.
+    changes: >-
+      Bạn nhặt mấy mảnh về sau sẽ cần:
+      [[Endurance Charge on Melee Stun Support]] ở Act 2, và viên
+      [[Consecrated Path]] gốc từ Clarissa ở Act 3, để level trong một socket
+      dư.
+    links:
+      - name: Level 1–11
+        gems: [Ground Slam, Ruthless Support]
+      - name: Từ level 12
+        gems: [Sunder, Ruthless Support, Melee Physical Damage Support]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support]
+    moveOn: "Sunder đã nằm trong three-link trở lên và bạn đã xong Act 3."
+    details:
+      - title: Mấy cái link này từ đâu ra
+        body: |
+          **Không guide Odealo nào liệt kê gem leveling cho build này.** Guide 3.25 chỉ sang một guide Marauder two-handed chung. Guide 3.29 nêu tên Sunder rồi dừng.
+
+          Mấy link ở trên là màn mở đầu Marauder chuẩn từ guide Boneshatter Juggernaut của Maxroll, guide mà site này đã có sẵn. Cùng class, cùng loại vũ khí và cùng mười act đầu.
+      - title: Guide 3.29 thêm gì
+        body: |
+          Nó bảo bạn giữ [[Blood Rage]] bật, thêm fire damage bằng [[Herald of Ash]] với [[Infernal Cry]], và đưa [[Seismic Cry]] với [[Intimidating Cry]] vào khi chúng mở ra.
+
+          Trên cây: [[Graceful Assault]] để có Onslaught, một nguồn Rage on hit, và mấy node two-handed damage. Nó cũng liệt [[Kaom's Sign]] trong số các unique đáng đeo sớm.
+
+          Nó được viết cho một bản totem của skill. Lời khuyên leveling này thuộc về khúc trước khi totem tới, lúc bạn vẫn đang tự tay slam, nên nó áp dụng được.
+      - title: Level viên gem gốc từ bây giờ
+        body: |
+          Mua [[Consecrated Path]] từ Clarissa sau Sever the Right Hand rồi để nó trong một socket dư. PoEDB ghi nó ở level 28.
+
+          Chuyện [[Divine Font]] có giữ level của viên gem khi nó đổi gem hay không là thứ chúng tôi không xác nhận được. Đằng nào thì level viên gem gốc cũng chẳng tốn gì.
+  - id: acts-4-10
+    phase: early
+    image: unflinching
+    title: Act 4–10
+    levels: Level 33–68
+    uses: >-
+      [[Sunder]] cho tới Cruel Labyrinth. Sau [[Unflinching]], đổi sang
+      [[Consecrated Path of Endurance]] nếu bạn đã có viên gem. Warcry vào
+      [[Autoexertion]] từ level 24.
+    changes: >-
+      [[Undeniable]] từ lab đầu, rồi [[Precise Technique]] ngay sau đó. Lúc đổi
+      skill, bạn convert phần damage còn lại sang fire, bằng một Fire Mastery
+      hoặc [[Avatar of Fire]].
+    links:
+      - name: Tới lúc đổi
+        gems: [Sunder, Ruthless Support, Melee Physical Damage Support, Endurance Charge on Melee Stun Support]
+      - name: Sau khi đổi
+        gems: [Consecrated Path of Endurance, Endurance Charge on Melee Stun Support, Pulverise Support, Melee Physical Damage Support]
+      - name: Warcry tự động
+        gems: [Autoexertion, Intimidating Cry, Seismic Cry, Infernal Cry]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support]
+      - name: Tự bấm
+        gems: [Enduring Cry, Blood Rage]
+    moveOn: "bạn đã chơi Consecrated Path of Endurance, cú slam không bao giờ nằm chờ cooldown giữa một pack, và resistance đã về lại 75%."
+    details:
+      - title: Khi nào đổi
+        body: |
+          Guide 3.29: sau lab thứ hai. Guide 3.25 thì cẩn thận hơn: đổi "if you're positive you can withstand the Endurance Charge drain".
+
+          Ghép hai cái lại. Trước [[Unflinching]] bạn có ba charge và một cách lấy lại chúng. Sau nó bạn có bốn charge và ba cách. Nếu cú slam vẫn khựng ở cooldown 2 giây, quay lại [[Sunder]] vài level. Không mất gì cả.
+
+          Bạn cũng cần viên gem, nghĩa là một lượt Labyrinth kết thúc ở [[Divine Font]], hoặc một cú trade. Tới Cruel mà chưa có cái nào thì cứ chơi Sunder tiếp. Đó là một nhân vật hoàn chỉnh.
+      - title: Four-link sau khi đổi là của chúng tôi
+        body: |
+          Không guide nào đưa ra four-link. Bộ ở trên là bốn support được dùng nhiều nhất với skill này trên ladder league trước, trừ [[Overexertion Support]], viên này không làm gì cho tới khi có warcry exert cú slam, và nó nhân mana cost của skill lên 1.4 lần.
+
+          Thêm Overexertion khi [[Autoexertion]] đã chạy và mana của bạn cho phép.
+      - title: Bandit và Pantheon
+        body: |
+          **Giết cả ba bandit.** Odealo nói vậy, và 86% nhân vật trên ladder league trước làm vậy. File Path of Building duy nhất chúng tôi giải mã thì giúp Alira, lựa chọn của 13%.
+
+          Pantheon thì chưa ngã ngũ. Guide 3.25 của Odealo lấy Soul of Solaris và Soul of Abberath. Guide 3.29 của nó lấy Brine King và Gruthkul. Ladder chia ba giữa Brine King, Lunaris và Arakaali, mỗi cái khoảng 30%.
+      - title: Passive tree
+        body: |
+          Guide 3.25 mô tả mỗi cây của nó trong một dòng. Ở 26 điểm: life, chút damage, và convert phần damage còn lại sang fire. Ở 67 điểm: thêm life, elemental damage, và mấy node maximum endurance charge đầu tiên.
+
+          Nó có link tới cây đầy đủ, cho 3.25. **Chúng tôi không tìm thấy cây leveling nào làm cho 3.29 hay 3.30.**
+  - id: early-maps
+    phase: early
+    image: kaoms-sign
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      [[Consecrated Path of Endurance]] trong một five-link trên một cây vũ khí
+      two-handed rare có physical damage cao, một hoặc hai cây ring
+      [[Kaom's Sign]], và giáp rare có life với resistance.
+    changes: >-
+      Bạn bắt đầu đếm maximum charge. [[Determination]] bật lên.
+      [[Overexertion Support]] vào main link.
+    links:
+      - name: Main skill
+        gems: [Consecrated Path of Endurance, Endurance Charge on Melee Stun Support, Pulverise Support, Overexertion Support, Melee Physical Damage Support]
+      - name: Warcry tự động
+        gems: [Autoexertion, Intimidating Cry, Seismic Cry, Infernal Cry, Battlemage's Cry]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support, Blood Rage]
+      - name: Guard và curse
+        gems: [Cast when Damage Taken Support, Molten Shell, Flammability]
+      - name: Aura
+        gems: [Determination]
+    moveOn: "bạn giữ sáu charge trở lên trong một trận và cú slam clear một pack trong một hit."
+    details:
+      - title: Đừng mua Tidebreaker chỉ vì guide cũ nói
+        body: |
+          Guide 3.25 khuyên [[Tidebreaker]] làm vũ khí rẻ đầu tiên, vì nó có sẵn [[Endurance Charge on Melee Stun Support]] và, vào thời đó, 10% increased physical damage mỗi endurance charge.
+
+          **3.29 đã viết lại cây mace này.** Lịch sử trên PoEDB: nó mất phần damage mỗi charge, và giờ có "50% chance to gain a Brine Charge instead of an Endurance Charge".
+
+          Với một skill tiêu một endurance charge mỗi lần dùng, mất một nửa số charge nhận được là một cái giá thật. Đó là cách chúng tôi đọc dòng chữ mới, và chưa ai viết về chuyện này. Ladder cũng đồng ý theo kiểu của nó: chỉ 9% nhân vật league trước dùng mace two-handed loại nào đó.
+      - title: Tìm gì trên vũ khí
+        body: |
+          Odealo: vũ khí là "still the most important part of an attack build", và bạn muốn physical damage mỗi giây cao nhất có thể. Mục tiêu 3.25 của nó cho một cây mace rare hoàn chỉnh là 750.
+
+          Skill dùng 167% damage vũ khí của bạn ở gem level 1 và 306% ở level 20, và attack ở 80% tốc độ của vũ khí. Chậm mà nặng thì không sao. Odealo nói attack speed là "redundant for clearing".
+      - title: Đếm charge ở stage này
+        body: |
+          Ba cái để bắt đầu, một từ [[Unflinching]], một từ mỗi cây [[Kaom's Sign]]. Vậy là năm hoặc sáu, cộng với bao nhiêu node maximum charge mà cây của bạn đã chạm tới.
+
+          Mỗi cái sau đó là một ô gear: boots, một cây staff, một viên jewel. Mấy thứ đó thuộc stage map đỏ.
+      - title: Mana
+        body: |
+          [[Autoexertion]] reserve mana cho mỗi warcry link với nó, và [[Determination]] reserve thêm nữa. Phần còn lại phải trả cho cú slam.
+
+          79% ladder league trước lấy mastery cho 12% mana reservation efficiency, và 26% lấy "Skills Cost Life instead of 15% of Mana Cost". Nhân vật level 100 chúng tôi giải mã mang hai cây mana flask. Cứ chuẩn bị là khoản này sẽ căng.
+  - id: red-maps
+    phase: endgame
+    image: sublime-vision
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      Một cây staff rare trên base [[Eventuality Rod]], [[Death's Door]], một
+      viên [[Sublime Vision]] chọn [[Determination]], và six-link.
+    changes: >-
+      Bạn chạm 10 hoặc 11 charge mà guide 3.25 nhắm tới. Mọi aura trừ
+      Determination bị viên jewel tắt, nên build càng mạnh lên thì càng đơn
+      giản đi.
+    links:
+      - name: Main skill
+        gems: [Consecrated Path of Endurance, Endurance Charge on Melee Stun Support, Pulverise Support, Overexertion Support, Melee Physical Damage Support, Fist of War Support]
+      - name: Warcry tự động
+        gems: [Autoexertion, Intimidating Cry, Seismic Cry, Infernal Cry, Battlemage's Cry]
+      - name: Di chuyển
+        gems: [Leap Slam, Faster Attacks Support, Momentum Support, Blood Rage]
+      - name: Guard và curse
+        gems: [Cast when Damage Taken Support, Vaal Molten Shell, Flammability]
+      - name: Aura
+        gems: [Determination, Enlighten Support]
+    moveOn: "mười charge trở lên, resistance đã cap, và map Tier 16 mà cú slam không bao giờ khựng."
+    details:
+      - title: Vì sao ladder chuyển sang staff
+        body: |
+          80% nhân vật league trước dùng skill này cầm staff. Nhân vật chúng tôi giải mã dùng một cây [[Eventuality Rod]], implicit của nó là +1 maximum power và endurance charge, kèm thêm một dòng +1 maximum endurance charge nữa dưới dạng mod roll ra.
+
+          Hai charge trên ô vũ khí là lý do. Guide 3.25 của Odealo đã nhắc base này như một lựa chọn "for one extra Endurance Charge", và cảnh báo là nó cần đổi cây. Nó không nói đổi những gì, và chúng tôi không tìm thấy chỗ nào viết ra chuyện đó.
+      - title: Support thứ sáu là một lựa chọn
+        body: |
+          Bốn support thì gần như ai trên ladder cũng dùng. Viên thứ năm và thứ sáu thì thay đổi: [[Melee Physical Damage Support]] 81%, [[Increased Critical Damage Support]] 41%, [[Elemental Damage with Attacks Support]] 35%, [[Fist of War Support]] 20%.
+
+          Link 3.25 của Odealo kết thúc bằng Fist of War và bảo thay nó ra nếu attack speed của bạn rất cao. Support crit là cho bản crit, bản mà chúng tôi không mô tả được.
+      - title: Sublime Vision lấy của bạn cái gì
+        body: |
+          Viên jewel tắt mọi aura khác ngoài [[Determination]]. Vậy là mất [[Herald of Ash]] và [[Precision]], hai cái mà guide 3.25 có chạy.
+
+          Đổi lại: thêm một maximum charge, và bản thân Determination mạnh hơn tới một phần ba trên người bạn. 68% ladder đã chấp nhận cú đổi đó.
+      - title: Con số, tất cả từ 3.29
+        body: |
+          Nhân vật level 100 trên pobb.in hiện 12.6 triệu damage mỗi giây, 94,000 effective hit point, 40,000 armour và 4,576 life.
+
+          Nó cũng cho thấy nó mỏng ở đâu. Cú hit lớn nhất nó sống được là khoảng 228,000 fire và 61,500 physical, còn chaos là 22,900. **Chaos damage là lỗ hổng** trên nhân vật đó.
+
+          Trên poe.ninja, các nhân vật level 97–100 trải từ dưới 5 triệu tới hơn 100 triệu damage, và từ 25,000 tới hơn 200,000 effective hit point. Đó là một khoảng rất rộng, và không con số nào trong đó là của 3.30.
+  - id: endgame
+    phase: endgame
+    image: autoexertion
+    title: Endgame
+    levels: Tier 17, pinnacle boss trở lên
+    uses: >-
+      [[Echoes of Creation]], một cặp [[Forbidden Flame]] và
+      [[Forbidden Flesh]] để lấy thêm một notable Juggernaut,
+      [[Elegant Hubris]], [[Kalandra's Touch]] copy một cây [[Kaom's Sign]], và
+      cluster jewel.
+    changes: >-
+      Đây là bản trên ladder league trước, và ba trong bốn nhân vật đó là crit.
+      Cái helmet làm mỗi cú slam được exert tốn life của bạn.
+    moveOn: "không còn stage nào nữa. Một phần tư ladder đi tiếp lên [[Mageblood]]."
+    details:
+      - title: Đỉnh ladder mặc gì
+        body: |
+          Tỷ lệ sử dụng trong 245 nhân vật, 3.29:
+
+          - [[Kaom's Sign]] 86%, [[Kalandra's Touch]] 72%.
+          - [[Echoes of Creation]], [[Elegant Hubris]], và cặp jewel Forbidden: mỗi thứ 78%.
+          - [[Sublime Vision]] 68%, [[Thread of Hope]] 58%.
+          - [[Death's Door]] 36%, [[Watcher's Eye]] 33%.
+          - [[Mageblood]] 27%, [[Ralakesh's Impatience]] 24%, một cây [[Ambu's Charge]] Foulborn 23%.
+
+          Đây là danh sách những gì nhân vật đã hoàn thiện có. Nó không phải thứ tự mua đồ, và nó không nói gì về giá.
+      - title: Notable trong cặp jewel Forbidden
+        body: |
+          Nhân vật chúng tôi giải mã dùng cặp này để lấy [[Unyielding]], bên trên [[Unflinching]], [[Unrelenting]] và [[Untiring]] từ cây.
+
+          Trên cả ladder: Unflinching 94%, Unrelenting 82%, Unyielding 62%, [[Unstoppable]] 61%. [[Undeniable]], lựa chọn lab đầu tiên trong cả hai guide, không nằm trong mười hai notable được lấy nhiều nhất. Chuyện đó khớp với một cái ladder đã đi crit và thôi cần accuracy của nó cho [[Precise Technique]]. **Lời giải thích đó là của chúng tôi.**
+      - title: Cluster jewel và mastery
+        body: |
+          Mấy notable lặp đi lặp lại: Fuel the Fight 76%, Overlord 72%, Martial Prowess 64%, và trên mấy cây medium warcry là Lead By Example với Mob Mentality, mỗi cái 70%.
+
+          Mastery: 3% increased damage mỗi endurance, frenzy hoặc power charge (80%), warcry có tối thiểu 10 power (73%), và warcry cho Rage (66%).
+      - title: Những thứ chúng tôi không tìm ra
+        body: |
+          - Một cây crit, hay bất kỳ lời giải thích nào cho chuyện đổi sang crit.
+          - Budget cho bất kỳ stage nào.
+          - Build xử lý tệ những boss nào. Odealo chỉ nói single-target damage là "relatively low".
+          - Bất cứ thứ gì được viết cho 3.30.
+
+powerCurve: |
+  Build này có một hệ số nhân quan trọng hơn mọi thứ còn lại, và nó là một con số bạn đọc được ngay trên màn hình: **bạn đang giữ bao nhiêu endurance charge.** Viên gem cho 10% more damage và area mỗi charge, và support stun cho thêm 4% more damage mỗi charge. Mọi thứ khác, vũ khí, warcry, phần convert sang fire, đều nằm bên trên cái đó.
+
+  **Ở level 30 bạn không có gì trong số đó.** Bạn là một nhân vật [[Sunder]] với ba charge và không có lý do gì để quan tâm tới chúng. Viên gem chưa tồn tại với bạn. Khúc game này không nói gì về chuyện build sẽ cho cảm giác ra sao.
+
+  **Quanh level 55, ở Cruel Labyrinth, nó bắt đầu.** [[Unflinching]] cho charge thứ tư và, quan trọng hơn, cú nạp đầy. Bốn charge là khoảng 1.6 lần damage so với không có cái nào, theo phép tính của chúng tôi. Ở level 70, với hai cây ring [[Kaom's Sign]], bạn ở mức sáu: khoảng gấp đôi. Đó là một nhân vật chạy được, và nó sẽ cho cảm giác bình thường.
+
+  **Tới level 95 bạn muốn có mười hoặc mười một**, từ boots, một cây staff và một viên jewel: khoảng gấp ba. Bước cuối là một trục khác. [[Echoes of Creation]] và [[Overexertion Support]] nhân theo số warcry exert mỗi cú slam, và đó là chỗ ladder 3.29 tìm ra phần đỉnh của nó.
+
+  Vậy đường cong là phẳng, rồi một bậc ở Cruel lab, rồi một đoạn leo đều mà **mỗi nâng cấp là thêm một charge**. Đó cũng là lý do build mong manh theo đúng một kiểu: cùng một con số đó đặt ra damage của bạn, area của bạn và, qua [[Unrelenting]], phần giảm damage của bạn. Mất charge là cả ba cùng rơi. Phần lập luận trong mục này là của chúng tôi; các con số trong đó là của game.
+
+upgrades:
+  - step: "Một cây [[Kaom's Sign]], rồi cây thứ hai"
+    why: >-
+      Một maximum charge mỗi cây ring, từ level 1, trên một món unique bình
+      thường. Mỗi charge là 10% more damage và area trên viên gem cùng 4% more
+      trên viên support. Không thứ gì khác cho một charge với giá thấp hơn. Thứ
+      tự của cả danh sách này là của chúng tôi: không nguồn nào xếp hạng mấy
+      món này.
+  - step: "Một cây vũ khí two-handed có nhiều physical damage hơn"
+    why: >-
+      Cú slam dùng tới 306% damage vũ khí, nên vũ khí là cái nền mà mọi thứ
+      nhân lên. Nó đứng thứ hai chỉ vì một charge thì rẻ hơn một cây vũ khí.
+      Mục tiêu 3.25 của Odealo là 750 physical damage mỗi giây trên một cây
+      rare.
+  - step: "Six-link với [[Pulverise Support]] và [[Overexertion Support]]"
+    why: >-
+      Thêm hai hệ số nhân trên cùng một cú hit. Đi sau vũ khí, vì support nhân
+      damage của vũ khí, và một cây vũ khí yếu thì để lại cho chúng chẳng mấy
+      thứ để nhân.
+  - step: "Boots có +1 maximum endurance charge"
+    why: >-
+      [[Death's Door]] có sẵn dòng đó. Odealo nói boots nào cũng corrupt được
+      để có cơ hội ra nó. Thêm một charge, ở một ô vốn không cho chút damage
+      nào.
+  - step: "[[Sublime Vision]] cho [[Determination]]"
+    why: >-
+      Thêm một charge và một Determination mạnh hơn. Nó nằm muộn thế này vì nó
+      tắt mọi aura khác, nên hãy mua khi bạn đã sẵn sàng bỏ mấy cái đó.
+  - step: "Một cây staff trên base [[Eventuality Rod]]"
+    why: >-
+      Tới hai charge trên ô vũ khí. Nó nằm dưới viên jewel vì nó thay cây vũ
+      khí của bạn, và guide 3.25 cảnh báo cây phải đổi cho vừa với nó mà không
+      nói đổi thế nào.
+  - step: "[[Echoes of Creation]]"
+    why: >-
+      10–15% more damage mỗi warcry đang exert cú slam. Nó nhân một trục khác
+      với charge, nên nó cộng dồn với mọi thứ ở trên. Đứng cuối là có chủ ý: nó
+      rơi từ Uber Shaper, và nó làm đau bạn cho tới khi charge và armour của
+      bạn hấp thụ nổi cú tự đánh.
+  - step: "Một cặp jewel Forbidden, rồi [[Kalandra's Touch]]"
+    why: >-
+      Một notable ascendancy thứ năm, và trên thực tế là một cây Kaom's Sign
+      thứ ba. Cả hai đều nằm trên khoảng ba phần tư ladder 3.29. Đồ xa xỉ:
+      chúng cộng thêm vào một build vốn đã chạy.
+
+play:
+  mapping: |
+    1. **Trước pack đầu tiên, bấm [[Enduring Cry]].** Bạn vào map nào cũng không có charge, nghĩa là không có bonus damage và một cái cooldown 2 giây.
+    2. Click [[Consecrated Path of Endurance]] lên một pack. Nó teleport bạn vào và slam. Click pack kế. Skill này chính là cách bạn di chuyển trong một trận đánh.
+    3. [[Autoexertion]] hét thay bạn. Bạn không bấm mấy cái warcry đó.
+    4. [[Leap Slam]] qua khe hở và giữa mấy pack ở quá xa để teleport tới.
+    5. Để mắt tới số charge. Nếu nó tụt xuống hai hoặc ba, Enduring Cry lần nữa.
+
+    Odealo tóm tắt chuyện clear: area và kích cỡ cú hit làm attack speed thành không quan trọng. Bạn nên giết pack trong một cú slam, chứ không phải đứng trong chúng.
+
+    Cái thế giằng co có sẵn: skill đặt bạn vào giữa mọi pack, lần nào cũng vậy. Bạn không được chọn chỗ đứng.
+  bossing: |
+    Odealo nêu single-target damage là điểm yếu duy nhất của build, và cơ chế cho thấy vì sao.
+
+    - **Đứng lên người boss.** Viên gem gây tới 20% more damage lên mục tiêu ở gần hơn.
+    - **Enduring Cry cứ hết cooldown là bấm.** Boss là một mục tiêu. Nếu cú hit của bạn không stun được nó thì bạn không lấy lại được gì từ support stun, và [[Unflinching]] chỉ trả khi bạn đang bị đánh.
+    - **Đếm số exert.** [[Intimidating Cry]] chỉ exert hai cú attack, ba nếu có Measured Fury. Odealo ghi chú là bạn attack khoảng một lần mỗi giây, nên nó "may not always be available".
+    - Curse bằng [[Flammability]]. Guide áp nó bằng tay, qua một implicit corrupt trên gloves, hoặc bằng Hextouch.
+
+    Nếu cú slam rơi vào cooldown giữa trận, bạn đã hết charge. Dừng lại, hét, rồi bắt đầu lại. Slam theo nhịp 2 giây mà không có charge là dính cái tệ nhất của cả hai đằng.
+
+deaths:
+  - situation: "Pack đầu tiên của một map, hoặc mấy giây đầu sau một quãng đi bộ dài."
+    cause: >-
+      Không có charge. Bạn teleport vào một pack mà không có chút giảm damage
+      nào trong số những thứ build được thiết kế xoay quanh, và cú slam rơi vào
+      cooldown 2 giây sau một lần dùng. Đây là cách chúng tôi đọc cơ chế; không
+      nguồn nào báo lại chuyện này.
+    fix: >-
+      [[Enduring Cry]] trước khi lao vào, lần nào cũng vậy. Có
+      [[Kaom's Sign]] thì nó luôn nằm sẵn trên thanh skill của bạn.
+  - situation: "Một cái map mà quái không stun được, hoặc một con boss bạn không stun nổi."
+    cause: >-
+      [[Endurance Charge on Melee Stun Support]] và [[Unyielding]] đều cần một
+      cú stun. Không có stun thì cú slam tiêu charge và chỉ có chuyện bị đánh
+      mới trả chúng lại.
+    fix: >-
+      Roll lại mấy map "cannot be stunned". Với boss, cứ hết cooldown là bấm
+      Enduring Cry và chấp nhận một nhịp chậm hơn. Bài Boneshatter Juggernaut
+      trên site này, một build endurance charge khác, cũng liệt đúng cái mod
+      map đó trong số những thứ giết nó.
+  - situation: "Chết vì cú attack của chính mình sau khi đội Echoes of Creation."
+    cause: >-
+      Cái helmet gây 15–20% life của bạn lên chính bạn dưới dạng physical
+      damage cho mỗi warcry đang exert cú attack. Với bốn warcry mà ít charge
+      đang chạy, phần lớn life của bạn bay mất trước khi quái kịp làm gì. Phép
+      cộng đó là của chúng tôi, từ phần chữ của item.
+    fix: >-
+      Đừng đội nó cho tới khi charge và armour của bạn đã vào chỗ. Rồi giữ cho
+      charge luôn đầy: chúng là thứ giảm cú hit đó.
+  - situation: "Chaos damage và damage over time ở map đỏ."
+    cause: >-
+      Mọi thứ ở đây đều giảm hit, và chủ yếu là hit physical với elemental.
+      Nhân vật 3.29 duy nhất chúng tôi giải mã chịu được một cú hit fire
+      228,000 mà chỉ chịu được một cú hit chaos 22,900.
+    fix: >-
+      Chaos resistance trên gear rare. Danh sách chỉ số của Odealo xếp nó thứ
+      bảy; chúng tôi sẽ xếp nó cao hơn một khi bạn đã vào map đỏ.
+
+troubleshooting:
+  - symptom: "Skill cứ rơi vào cooldown 2 giây."
+    cause: >-
+      Bạn không có endurance charge nào để tiêu. Hoặc là mấy cú hit không stun,
+      hoặc [[Endurance Charge on Melee Stun Support]] bị thiếu trong link, hoặc
+      bạn đang dùng một cây vũ khí biến charge nhận được thành thứ khác.
+    fix: >-
+      Kiểm link trước. Rồi kiểm vũ khí: [[Tidebreaker]] đã biến một nửa số
+      endurance charge nhận được thành Brine Charge kể từ 3.29. Hit damage càng
+      cao thì stun càng thường xuyên; phần reduced stun threshold của chính
+      viên support, tăng theo level của nó, cũng vậy.
+  - symptom: "Damage của tôi lên boss thấp hơn hẳn so với trong map."
+    cause: >-
+      Trong map, pack nào cũng nạp lại cho bạn qua stun và qua chuyện bị đánh.
+      Boss thì không làm cái nào một cách đáng tin, nên bạn đánh nó với ít
+      charge hơn, và số exert từ warcry của bạn cạn nhanh hơn tốc độ chúng quay
+      lại.
+    fix: >-
+      [[Enduring Cry]] cứ hết cooldown là bấm, đứng sát để ăn 20% bonus của
+      viên gem, và curse bằng [[Flammability]]. Thêm maximum charge cũng có
+      nghĩa là một kho dự trữ sâu hơn để tiêu trong trận.
+  - symptom: "Tôi hết mana."
+    cause: >-
+      [[Autoexertion]] reserve mana cho mỗi warcry được link, và
+      [[Determination]] lấy gần hết phần còn lại. [[Overexertion Support]] nhân
+      cost của cú slam lên 1.4 lần.
+    fix: >-
+      Cái mastery reservation efficiency, thứ 79% ladder đã lấy. Bớt warcry
+      trong link tự động. Một phần tư ladder dùng cái mastery chuyển một phần
+      cost sang life.
+  - symptom: "40% từ Precise Technique không hiện ra."
+    cause: >-
+      Accuracy của bạn không cao hơn maximum life. Cả hai guide Odealo đều lặp
+      lại lời cảnh báo này.
+    fix: >-
+      [[Undeniable]] cho accuracy bằng hai lần Strength của bạn, nên thêm
+      Strength là sửa được. Accuracy trên gloves, hoặc một [[Precision]] level
+      thấp nếu bạn chưa gắn [[Sublime Vision]].
+  - symptom: "Nó vẫn ổn cho tới map đỏ."
+    cause: >-
+      Bạn vẫn đang ở năm hoặc sáu charge. Damage mỗi charge không đổi, nhưng
+      content thì đổi. Ở sáu charge bạn có khoảng hai phần ba damage của một
+      nhân vật mười charge, theo phép tính của chúng tôi.
+    fix: >-
+      Đếm maximum charge của bạn và thêm cái kế tiếp: boots, rồi viên jewel,
+      rồi cây staff. Tiện thể kiểm luôn resistance đã cap chưa.
+
+patch:
+  - note: >-
+      **Không thứ gì trong 3.30 đụng tới skill, support của nó hay
+      Juggernaut.** Chúng tôi đã đọc các mục skill, support, ascendancy và
+      unique item của patch note cho tất cả chúng, và so mấy notable của
+      Juggernaut với dữ liệu cây hiện tại của GGG. Juggernaut thậm chí còn
+      không nằm trong danh sách riêng của Ruthless.
+  - entry: mercenary-nerfs
+    note: >-
+      **Thay đổi của Pulverise không phải của bạn.** Patch note nâng Pulverise
+      Support lên 25% more melee area damage, dưới mục Mercenary Changes, cho
+      gem do mercenary được thuê dùng. [[Pulverise Support]] của người chơi thì
+      không được nhắc tới.
+  - entry: ralakeshs-impatience
+    note: >-
+      **Kiểm đôi boots trước khi mua.** [[Ralakesh's Impatience]] mới roll -1
+      maximum power, endurance hoặc frenzy charge. Một đôi dính penalty
+      endurance làm build này mất một charge. Một phần tư ladder league trước
+      mang đôi boots này. Mấy đôi cũ thì không đổi.
+  - entry: special-base-implicits
+    note: >-
+      **Một buff nhỏ miễn phí.** [[Spiked Gloves]] giờ cho 24–30% increased
+      melee damage, tăng từ 16–20%. 96% nhân vật trên ladder đeo gloves rare,
+      nên base này để ngỏ cho bạn.
+  - note: >-
+      **Thay đổi đáng kể thì đến từ 3.29, và guide chính có từ trước nó.**
+      [[Tidebreaker]] mất phần damage mỗi endurance charge và nhận thêm 50% cơ
+      hội cho một Brine Charge thay vì một endurance charge. Cây vũ khí khởi
+      đầu rẻ của guide 3.25 giờ chống lại chính skill.
+  - entry: league-fates
+    note: >-
+      **Lúc đầu nhẹ tay với Fate thôi.** Mỗi Fate làm boss khu vực khó hơn, mà
+      mục tiêu đơn là chỗ build này yếu nhất. Gợi ý của chúng tôi, chưa được
+      thử: một Fate mỗi boss cho tới khi bạn giữ được mười charge.
+  - entry: item-tiers
+    note: >-
+      **Có ích cho bản trơn.** Gear khởi đầu là giáp rare có life với
+      resistance và một cây vũ khí two-handed rare, mà drop theo tier từ Act 6
+      làm mấy thứ đó dễ kiếm hơn.
+
+strengths:
+  - "Clear nhanh: skill tự đưa bạn từ pack này sang pack khác (Odealo)."
+  - "Hit và area rất lớn, cả hai cùng lớn lên theo một con số bạn nhìn thấy được."
+  - "Bền trước hit. Odealo gọi nó là một trong những build bền nhất so với giá."
+  - "Một bước đầu rẻ là [[Kaom's Sign]], và một danh sách nâng cấp dài phía sau nó."
+  - "Warcry được tự động hóa, nên số nút ít hơn mấy guide cũ gợi ra."
+weaknesses:
+  - "Không có guide nào cho 3.30, 3.29 hay bất cứ bản nào mới hơn 3.25 mà chơi nó bằng tay."
+  - "Single-target damage tương đối thấp (nhược điểm duy nhất Odealo liệt kê)."
+  - "Damage, area và giảm damage cùng rơi một lượt khi charge cạn."
+  - "Viên gem là transfigured: không vendor, không quest."
+  - "Bản trên ladder là crit và chưa ai viết ra nó làm thế nào."
+  - "Mana căng giữa Autoexertion và Determination."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn một build đi theo được từng bước: build này
+  không có guide hiện hành nào, và bạn sẽ phải đọc một cái cây từ 2024 cùng một
+  cái ladder của league trước. Cũng bỏ qua nếu bạn muốn damage boss mạnh với
+  budget thấp, hoặc nếu bạn không ưa một nhân vật nhảy vào giữa mọi pack dù bạn
+  có định vậy hay không. Nếu thứ bạn muốn là một con Juggernaut trâu có guide
+  chống lưng, Boneshatter Juggernaut trên site này có một cái.
+
+sources:
+  - title: "Odealo: Consecrated Path of Endurance Juggernaut"
+    url: https://odealo.com/articles/consecrated-path-of-endurance-juggernaut-build
+    kind: guide
+    note: "Guide viết duy nhất chơi skill này bằng tay. Tạo tháng 12/2022, cập nhật lần cuối cho 3.25 vào tháng 7/2024. Lời khuyên về Tidebreaker của nó đã lỗi thời từ 3.29."
+  - title: "Odealo: Consecrated Path of Endurance Earthbreaker Totem Juggernaut"
+    url: https://odealo.com/articles/consecrated-path-of-endurance-earthbreaker-totem-juggernaut
+    kind: guide
+    note: "Cập nhật cho 3.29. Một build khác, totem mới là thứ dùng skill, nhưng mục leveling của nó thì chơi bằng tay và là lời khuyên leveling mới nhất hiện có."
+  - title: "poe.ninja: Consecrated Path of Endurance trên ladder 3.29"
+    url: https://poe.ninja/poe1/builds/allflame?skills=Consecrated+Path+of+Endurance
+    kind: data
+    note: "245 nhân vật, 92% Juggernaut và 2% Chieftain. Nguồn của mọi tỷ lệ sử dụng trong bài này."
+  - title: "Path of Building: một Juggernaut level 100 từ 3.29"
+    url: https://pobb.in/Ve7gaihVp9Mt
+    kind: pob
+    note: "Nhân vật của một người chơi, không phải một guide. Chúng tôi giải mã nó để lấy gem link, item và cây. Bản cây 3.29."
+  - title: "Video: một Juggernaut 18 endurance charge cho 3.29"
+    url: https://www.youtube.com/watch?v=0NfqM1TY-Iw
+    kind: video
+    note: "Chúng tôi chỉ đọc được tiêu đề. Dẫn ra vì con số charge và không gì khác."
+  - title: "PoEDB: Consecrated Path of Endurance"
+    url: https://poedb.tw/us/Consecrated_Path_of_Endurance
+    kind: data
+    note: "Phần chữ của gem, cooldown 2 giây, damage effectiveness, và lịch sử phiên bản: lần đổi cuối là ở 3.28."
+  - title: "PoEDB: Tidebreaker"
+    url: https://poedb.tw/us/Tidebreaker
+    kind: data
+    note: "Nguồn của thay đổi 3.29 đã thay damage mỗi endurance charge bằng Brine Charge."
+  - title: "PoEDB: Echoes of Creation"
+    url: https://poedb.tw/us/Echoes_of_Creation
+    kind: data
+    note: "Phần chữ của item, và nguồn rơi là Uber Shaper."
+  - title: "PoEDB: Autoexertion"
+    url: https://poedb.tw/us/Autoexertion
+    kind: data
+    note: "Nguồn của dòng nói warcry được trigger không cho buff hay charge."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Phần chữ đang chạy trong game của mọi notable và keystone Juggernaut được trích ở đây."
+  - title: "PoB Archives: các build dùng Consecrated Path of Endurance"
+    url: https://pobarchives.com/builds/poe?mainSkill=Consecrated+Path+of+Endurance
+    kind: data
+    note: "Chưa đọc. Phần kiểm tra bot của site từ chối chúng tôi. Liệt ra để bạn tự xem; kết quả tìm kiếm gợi ý là nó chứa build 3.25 và 3.29."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Đã kiểm cho skill, support của nó, Juggernaut và mọi item được nêu tên ở đây."

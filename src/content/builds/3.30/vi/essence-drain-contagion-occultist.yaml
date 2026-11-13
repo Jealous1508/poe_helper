@@ -1,0 +1,734 @@
+name: Essence Drain Contagion Occultist
+tagline: >-
+  Hai lần cast là pack chết, rồi tới pack kế, rồi tới cái pack ngoài màn hình.
+  Một build chaos damage over time kinh điển, leveling bằng trigger trên wand
+  và kết thúc là một con power charge stacker. Guide của nó là một guide 3.29
+  dán nhãn 3.30.
+class: Witch
+ascendancy: Occultist
+role: starter
+budget: starter
+budgetNote: >-
+  **Guide không có mục budget, không có bảng điểm và không có giá cho bất cứ
+  thứ gì.** Chúng tôi gọi nó là budget starter vì trước khi vào map không thứ
+  gì cần unique: bạn leveling bằng một cây wand rare có +1 cho chaos gem. Món
+  mua thật sự đầu tiên là [[Cane of Unravelling]], và guide bảo đừng đổi sang
+  staff khi chưa có nó. PoEDB gắn tag cây staff đó là item Betrayal, mà
+  Betrayal không còn xuất hiện trong map nếu thiếu một Thread, nên chúng tôi
+  không nói được nó sẽ tốn bao nhiêu ở league này. Bản cuối của guide đeo
+  [[Mageblood]] với [[Kalandra's Touch]] và xét theo thước đo nào cũng không
+  phải build budget.
+mainSkill: Essence Drain
+image: asc-icon-occultist
+hero: art-occultist
+tags: [Spell, Chaos damage over time, Energy shield, Power charge]
+ratings: { clear: 5, bossing: 3, survivability: 3, ease: 3 }
+verified: "2026-11-14"
+confidence: mixed
+confidenceNote: >-
+  **Đọc ngày tháng, đừng đọc banner.** Trang đề "Covens of Umbra 3.30" và
+  "Updated November 13, 2026". Changelog của nó có hai dòng: tạo ngày 23/7/2026
+  cho 3.29, và một lần đổi gem ngày 3/8. Không có dòng 3.30 nào. Planner đứng
+  sau nó được lưu lần cuối ngày 19/9/2026 với mọi cây đóng dấu 3.29. Nên đây là
+  một build 3.29 được dán nhãn lại, do một tác giả dày dạn viết cho một patch
+  đã ba tháng tuổi. Thứ còn dùng được: 3.30 không đổi [[Essence Drain]],
+  [[Contagion]], [[Blight]] hay Occultist trong game thường, chuyện này chúng
+  tôi đã kiểm trong patch note và đối chiếu với dữ liệu cây của GGG. Thứ guide
+  không thể biết: hai món nó dựa vào đến từ Betrayal, mà Betrayal giờ chạy khác
+  rồi. **Điểm số là của chúng tôi.** Guide không công bố điểm nào, cũng không
+  có danh sách điểm mạnh hay điểm yếu. Mục bandit và Pantheon của nó để trống
+  trên trang; mấy lựa chọn đó ở đây lấy từ planner.
+modes:
+  ssf: >-
+    Guide không đưa ra kết luận nào. Cách đọc của chúng tôi: phần leveling và
+    bản wand không cần thứ gì bạn không tự tìm được, và mấy viên gem là quest
+    reward. Bản staff thì cần [[Cane of Unravelling]], còn endgame power charge
+    thì cần [[Badge of the Brotherhood]] và [[Ralakesh's Impatience]]. Hãy tính
+    chuyện ở lại với bản trước đó trong một thời gian dài.
+  hardcore: >-
+    Guide không đưa ra kết luận nào cho build này. Tác giả của nó nói ông
+    "generally" chơi hardcore và làm build cho cả hai, đó là bối cảnh chứ không
+    phải một lời khuyên. Phòng thủ là energy shield, block và
+    [[Chaos Inoculation]], mà cả ba đều tới muộn.
+
+idea: |
+  Hai spell làm hết việc.
+
+  [[Contagion]] đặt một hiệu ứng chaos damage over time yếu lên một nhóm quái. Việc thật của nó nằm ở dòng cuối: khi một con quái chết với Contagion trên người, hiệu ứng **lây** sang mấy con quái gần đó.
+
+  [[Essence Drain]] là một projectile đặt một hiệu ứng chaos damage over time mạnh lên một con quái, và hồi máu cho bạn bằng một phần của nó. Trên một con quái đang có Contagion, nó trở thành một phần của thứ được lây đi.
+
+  Vậy nên: Contagion lên pack, Essence Drain lên một con. Con đó chết và chuyền cả hai hiệu ứng đi, mấy con kia chết và chuyền tiếp lần nữa. Guide mô tả là "dead monsters multiple screens away".
+
+  [[Occultist]] thêm Wither lên mọi thứ gần bạn mà không cần nút nào, hạ chaos resistance của quái ở gần, và cho một bể energy shield lớn để trả mana cost của bạn.
+
+chain:
+  - label: Contagion
+    text: "Cast [[Contagion]] lên pack trước. Luôn luôn trước: nó là thứ chở mọi thứ còn lại."
+  - label: Essence Drain
+    text: "Một phát [[Essence Drain]] lên bất kỳ con quái nào trong pack. Cái debuff gây damage, và bạn được hồi máu bằng một phần của nó."
+  - label: Lây
+    text: "Khi một con quái chết với cả hai trên người, cả hai nhảy sang mấy con bên cạnh. Rồi lần nữa. Lúc đó bạn đã đi tiếp rồi."
+  - label: Single target
+    text: "Không có gì chết để lây đi, nên bạn curse bằng [[Despair]], thêm Wither, cast Essence Drain và channel [[Blight]]."
+
+chainDetails:
+  - title: Vì sao bạn leveling bằng một cây wand và một cú attack
+    body: |
+      Tự cast hai spell mỗi pack thì cần cast speed và area of effect, mà một nhân vật level thấp không có cái nào. Guide: "Cast Speed & AoE are massive problems early on."
+
+      [[Spellslinger]] lách qua chuyện đó. Nó reserve mana, rồi mỗi cú wand attack bạn đánh sẽ bắn mấy spell được link ngay lập tức. Một cú click [[Frenzy]] cast Contagion, Essence Drain và thêm hai spell nữa cùng lúc.
+
+      Bạn leveling bằng cách tự cast cũng được. Câu trả lời của guide: "be warned: it's much slower."
+  - title: Occultist cho gì, theo đúng lời game ghi hôm nay
+    body: |
+      Từ dữ liệu cây hiện tại của GGG:
+
+      - [[Vile Bastion]]: hồi 100 energy shield mỗi giây, không bị stun khi bạn còn energy shield, và maximum energy shield được tăng theo chance to block spell damage của bạn.
+      - [[Void Beacon]]: quái ở gần có -20% chaos và cold resistance.
+      - [[Withering Presence]]: +60% chaos resistance, 15% more chaos damage, và mỗi giây nó áp Withered lên quái trong vòng 6 mét, kéo dài 15 giây.
+      - [[Forbidden Power]]: +1 maximum power charge, một power charge sau khi tiêu 200 mana, và 6% increased damage và area mỗi power charge.
+
+      Cái đầu tiên là lý do guide lấy nó đầu tiên. Có [[Eldritch Battery]] thì skill của bạn được trả bằng energy shield, mà Vile Bastion thì nạp lại energy shield. Guide gọi nó là "basically your 'mana' sustain".
+  - title: Power charge chính là endgame
+    body: |
+      Mọi nâng cấp về sau trong guide đều nuôi một con số. Mỗi power charge cho bạn:
+
+      - 6% increased damage và area, từ [[Forbidden Power]].
+      - 5% increased cast speed và 5 mana hồi mỗi giây, từ [[Cane of Unravelling]].
+      - 8% increased damage, từ [[Disciple of the Forbidden]].
+      - 3% more spell damage, từ [[Inner Conviction]], thứ guide lấy qua [[Militant Faith]].
+
+      Rồi [[Badge of the Brotherhood]] đặt maximum frenzy charge của bạn bằng maximum power charge, và [[Ralakesh's Impatience]] làm bạn được tính là đang có đủ hết chúng.
+
+      Guide tóm lại: "8+ Frenzy Charge and Power Charges".
+  - title: Cái bẫy khi đổi staff
+    body: |
+      [[Forbidden Power]] và [[Cane of Unravelling]] đều cho một power charge sau khi bạn **tiêu 200 mana**.
+
+      Vũ khí cuối của guide là một cây [[Battery Staff]] rare. Base đó làm skill gắn trong nó tiêu energy shield trước mana. Nên đúng khoảnh khắc bạn cắm Essence Drain vào nó, bạn thôi tiêu mana, và cả hai nguồn charge đó im bặt.
+
+      Guide cảnh báo đúng chuyện này: "you need another way to generate Power Charges, since you no longer spend mana." Cách chữa của nó gồm ba mảnh: [[Disciple of the Forbidden]], một Caster Mastery cho một power charge trong lúc channel, và [[Whirling Barrier]] cho một cái khi block.
+  - title: Chaos Inoculation và cách Essence Drain hồi cho nó
+    body: |
+      [[Chaos Inoculation]] đặt life của bạn về 1 và làm bạn miễn nhiễm chaos damage. Energy shield là toàn bộ thanh máu của bạn.
+
+      Phần hồi của Essence Drain là life regeneration: 0.5% damage của cái debuff. Với life ở mức 1 thì cái đó vô dụng. [[Zealot's Oath]] chuyển life regeneration sang energy shield, nên skill hồi đúng cái bể mà bạn thật sự có.
+
+      Guide chờ tới khi "you have enough ES gear" rồi mới làm cú đổi này, và không cho con số nào cho chữ "enough".
+  - title: Blight of Contagion, và một viên gem guide đã bỏ
+    body: |
+      Với single target, guide thích [[Blight of Contagion]] hơn [[Blight]] thường: "It ramps much faster than the base Blight but has lower top-end, that being said it's almost always better in practice." Cái debuff của nó cũng lây theo Contagion. Dùng Blight thường cho tới khi bạn có nó.
+
+      **Một chỗ mâu thuẫn nên biết.** Changelog của guide nói Bane of Condemnation đã bị bỏ ngày 3/8/2026. Phần chữ rotation ở stage giữa của nó vẫn bắt đầu bằng viên gem đó. Rotation cuối thì bắt đầu bằng [[Despair]]. Hãy theo cái cuối.
+
+mandatory:
+  - term: Essence Drain
+    why: >-
+      Phần damage. Một lần cast mỗi pack, và là thứ chính mà gem level với
+      damage-over-time multiplier của bạn cải thiện.
+    detail: >-
+      PoEDB: Witch nhận nó làm reward của The Siren's Cadence ở Act 1, ở level
+      12.
+  - term: Contagion
+    why: >-
+      Phần lây. Không có nó thì Essence Drain giết một con quái rồi dừng.
+    detail: >-
+      PoEDB: Witch nhận nó làm reward của Breaking Some Eggs ở Act 1, ở level
+      4.
+  - term: Spellslinger
+    why: >-
+      Bắn cả hai spell từ một cú wand attack. Cách leveling của guide từ level
+      28.
+    detail: >-
+      Nó reserve mana cho mỗi spell được link. Guide lấy [[Wandslinger]] và cái
+      mastery reservation của nó để kham nổi hai setup.
+  - term: Vile Bastion
+    why: >-
+      Energy shield regeneration, thứ mà cùng với [[Eldritch Battery]] sẽ trả
+      cost của bạn. Kèm miễn nhiễm stun. Labyrinth đầu tiên.
+  - term: Eldritch Battery
+    why: >-
+      Energy shield được tiêu trước mana. Guide ghép nó với
+      [[Mind Over Matter]] trong campaign, "both for defensive purposes and
+      also for sustaining the high costs" của hai setup Spellslinger.
+  - term: Withering Presence
+    why: >-
+      Wither lên mọi thứ trong vòng 6 mét, mỗi giây, không cần bấm phím nào. Và
+      60% chaos resistance, thứ guide nói là "makes pre-CI gearing much
+      easier".
+  - term: Void Beacon
+    why: >-
+      Quái ở gần mất 20% chaos resistance. Labyrinth thứ hai.
+  - term: Despair
+    why: >-
+      Cái curse mở đầu mọi rotation single target trong bản cuối của guide.
+  - term: Blight
+    level: recommended
+    why: >-
+      Skill single target dạng channel. Nó cũng hinder, và
+      [[Withering Presence]] làm quái bị hinder gây ít hơn 15% damage over
+      time.
+    detail: >-
+      [[Allelopathy]] cho một Blight level 25 từ level 41. Guide: "a massive
+      level Blight very early into the game".
+  - term: Cane of Unravelling
+    level: recommended
+    why: >-
+      +2 cho chaos spell gem, +1 maximum power charge, một power charge mỗi 200
+      mana tiêu, cùng cast speed và mana regeneration mỗi power charge. Guide:
+      "Do not swap to Staff without" nó.
+  - term: Forbidden Power
+    level: recommended
+    why: >-
+      Labyrinth cuối. 6% increased damage và area mỗi power charge, và thêm một
+      charge.
+  - term: Chaos Inoculation
+    level: recommended
+    why: >-
+      Phòng thủ endgame của guide, lấy cùng [[Zealot's Oath]] một khi gear
+      energy shield của bạn đã sẵn sàng.
+  - term: Mana-Infused Staff
+    level: recommended
+    why: >-
+      20–24% more chance to block và 30% less mana cost of skills, đổi lấy 30%
+      mana của bạn bị reserve. Guide cần [[Sovereignty]] thì mới nhét vừa nó.
+    detail: >-
+      PoEDB chỉ liệt nó là một quest reward của Templar, ở Act 2. Witch thì mua
+      nó từ Siosa ở Library Act 3 hoặc từ Lilly Roth ở Act 6.
+  - term: Pact of Ghorr
+    level: recommended
+    why: >-
+      Ba spell damage-over-time kế tiếp của bạn gây 40% more damage over time.
+      Có trong mấy link endgame của guide.
+    detail: >-
+      Phần mô tả trên PoEDB nói cái pact còn đè lên bạn "with an Affliction".
+      Guide không nhắc tới mặt trái nào và chúng tôi không tìm ra cái
+      affliction đó làm gì. Hãy đọc viên gem trước khi dựa vào nó.
+  - term: Honourhome
+    level: recommended
+    why: >-
+      Một cái helmet leveling có +2 cho gem gắn trong đó và reduced mana cost.
+      Guide: tốt "until endgame".
+  - term: Badge of the Brotherhood
+    level: recommended
+    why: >-
+      Maximum frenzy charge bằng maximum power charge. Mảnh biến một con power
+      charge stacker thành luôn cả frenzy charge stacker.
+  - term: Ralakesh's Impatience
+    level: recommended
+    why: >-
+      Bạn được tính là có maximum frenzy charge mà không cần tạo ra chúng. Bị
+      đổi trong 3.30: xem mục patch.
+
+labs:
+  - lab: Normal
+    node: Vile Bastion
+    why: "Từ guide: \"basically your 'mana' sustain when combined with Eldritch Battery\", cộng miễn nhiễm stun."
+  - lab: Cruel
+    node: Void Beacon
+    why: "\"Adds a lot of damage by reducing the enemies resistances.\""
+  - lab: Merciless
+    node: Withering Presence
+    why: "\"A TON of Chaos Resistance\", và nó tự động hóa Wither."
+  - lab: Eternal
+    node: Forbidden Power
+    why: "\"Works really well especially once you start stacking Power Charges.\""
+
+stages:
+  - id: acts-1-3
+    phase: early
+    image: flame-wall
+    title: Act 1–3
+    levels: Level 1–28
+    uses: >-
+      [[Kinetic Bolt]] tới level 12, rồi hai bản [[Kinetic Fusillade]].
+      [[Holy Flame Totem]] và [[Flame Wall]] cho boss. **Bạn chưa cast Essence
+      Drain đâu.**
+    changes: >-
+      [[Herald of Ice]] và [[Herald of Thunder]] ở level 16. [[Precision]] ngay
+      từ đầu: guide gọi nó là "very important", vì bạn đang attack bằng wand mà
+      Witch thì có ít accuracy.
+    links:
+      - name: Level 1–11
+        gems: [Kinetic Bolt, Elemental Proliferation Support, Prismatic Burst Support]
+      - name: Level 12–27, cắm hai lần
+        gems: [Kinetic Fusillade, Volley Support, Added Lightning Damage Support]
+      - name: Single target
+        gems: [Holy Flame Totem, Flame Wall, Combustion Support]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support]
+      - name: Utility
+        gems: [Frostblink, Arcane Surge Support, Precision]
+    moveOn: "bạn level 28 và có Essence Drain với Contagion đã level sẵn trong socket dư."
+    details:
+      - title: Hai cái Kinetic Fusillade
+        body: |
+          Guide cắm cùng một link hai lần rồi luân phiên. Mỗi cái tích projectile của nó rồi tự bắn chúng đi, nên xoay giữa hai cái nghĩa là bạn không bao giờ phải chờ một cái.
+
+          Một chú thích 3.30: patch sửa đường cong kinh nghiệm của [[Kinetic Fusillade]], và patch note nói gem đang có "may have gained or lost a level". Với một nhân vật mới thì nó không đổi gì.
+      - title: Gear cho mấy level này
+        body: |
+          - Một cây wand có flat elemental damage cao. Lúc này mấy cú attack của bạn chính là build.
+          - Một [[Citrine Amulet]] cho Strength và Dexterity, thứ Witch thiếu mà gem với giáp về sau lại cần.
+          - [[Honourhome]] nếu bạn nhặt được hoặc mua được một cái. Cắm main skill vào nó.
+          - Ngó vendor thường xuyên. Guide ghi chú là wand dùng được xuất hiện nhiều hơn ở level thấp.
+      - title: Nhặt sớm mấy skill thật
+        body: |
+          [[Contagion]] là quest reward ở level 4 và [[Essence Drain]] ở level 12. Lấy cả hai rồi để chúng trong socket dư.
+
+          Đó là lời khuyên của chúng tôi, không phải của guide: nó không nhắc chuyện này, nhưng phương án còn lại là đổi skill ở level 28 với gem level 1.
+      - title: Bandit và Pantheon
+        body: |
+          **Mục này của guide để trống.** Từ planner của nó: giúp Alira trong lúc leveling và ở stage staff, rồi giết cả ba cho bản cuối.
+
+          Pantheon trên planner: Soul of the Brine King với Soul of Garukhan, về cuối đổi sang Lunaris và Ralakesh.
+  - id: acts-4-10
+    phase: early
+    image: frenzy
+    title: Act 4–10
+    levels: Level 28–68
+    uses: >-
+      Hai setup [[Spellslinger]] được [[Frenzy]] bắn. Một cú click cast
+      [[Essence Drain]], [[Contagion]], [[Soulrend]] và [[Cold Snap]].
+    changes: >-
+      Cây wand elemental của bạn được thay bằng một cây có +1 cho chaos spell
+      gem và chaos damage-over-time multiplier. [[Eldritch Battery]] và
+      [[Mind Over Matter]] vào. Bốn cái Labyrinth trải trên khúc này và mấy map
+      đầu.
+    links:
+      - name: Spellslinger một
+        gems: [Spellslinger, Essence Drain, Soulrend, Efficacy Support, Controlled Destruction Support]
+      - name: Spellslinger hai
+        gems: [Spellslinger, Contagion, Cold Snap, Controlled Destruction Support]
+      - name: Cú wand attack
+        gems: [Frenzy, Decay Support]
+      - name: Curse cho boss
+        gems: [Bane, Despair, Punishment]
+      - name: Totem Wither
+        gems: [Wither, Spell Totem Support, Multiple Totems Support, Faster Casting Support]
+      - name: Di chuyển
+        gems: [Shield Charge, Faster Attacks Support, Momentum Support, Flame Dash]
+    moveOn: "campaign đã xong, resistance ở 75%, và bạn có Vile Bastion, Void Beacon với Withering Presence."
+    details:
+      - title: Rotation, tức là một nút
+        body: |
+          Guide: "Use Frenzy to trigger both Spellslinger set-ups." Đánh boss thì thêm [[Bane]] để áp curse.
+
+          Từ level 41, [[Allelopathy]] cho bạn một [[Blight]] level 25 để channel lên mục tiêu đơn. Setup campaign trên planner có đeo nó.
+      - title: Một chỗ mâu thuẫn nhỏ trong guide
+        body: |
+          Phần chữ nói link Spellslinger thứ nhất giữ Contagion với Essence Drain, và link thứ hai giữ Cold Snap với Soulrend.
+
+          Planner thì ghép chúng theo kiểu ngược lại: Essence Drain với Soulrend, Contagion với Cold Snap. Chúng tôi hiện bản của planner. Kiểu nào cũng chạy; cả bốn đều bắn trên cùng một cú attack.
+      - title: Vì sao là Eldritch Battery và Mind Over Matter
+        body: |
+          Hai setup Spellslinger reserve rất nhiều mana, mà mỗi cú Frenzy vẫn tốn một ít.
+
+          [[Eldritch Battery]] làm skill tiêu energy shield trước, và [[Vile Bastion]] hồi 100 energy shield mỗi giây. [[Mind Over Matter]] sau đó cho 40% damage nhận vào trừ ra từ mana.
+
+          Cả hai đều biến mất khỏi cây stage staff trên planner. Tới lúc đó [[Cane of Unravelling]] nhận lấy bài toán mana.
+      - title: Passive tree
+        body: |
+          Ghi chú của guide cho stage này:
+
+          - Spell damage và node elemental lúc đầu. Spell damage đẩy mấy skill kinetic lên.
+          - [[Wandslinger]] và cái mastery reservation của nó trước level 28.
+          - Mấy notable damage-over-time chung: Harsh Lessons, Acrimony và Hasty Demise. Cái cuối về sau bị bỏ.
+
+          Bản thân mấy cái cây thì nằm trên planner, đóng dấu 3.29.
+  - id: early-maps
+    phase: early
+    image: withering-presence
+    title: Map đầu
+    levels: Map trắng và map vàng
+    uses: >-
+      Hoặc ở lại với [[Spellslinger]] cùng một cây wand tốt hơn, hoặc kiếm
+      [[Cane of Unravelling]] và bắt đầu tự tay cast. Giáp rare có life, armour
+      và energy shield.
+    changes: >-
+      Với cây staff, [[Mana-Infused Staff]] cho block và [[Zealot's Oath]]
+      chuyển phần hồi của Essence Drain sang energy shield. Rotation thành hai
+      lần cast mỗi pack.
+    links:
+      - name: Essence Drain (six-link trên cây staff)
+        gems: [Essence Drain, Controlled Destruction Support, Void Manipulation Support, Efficacy Support, Power Charge On Critical Support, Empower Support]
+      - name: Contagion
+        gems: [Contagion, Intensify Support, Increased Area of Effect Support]
+      - name: Single target
+        gems: [Blight, Controlled Destruction Support, Infused Channelling Support, Swift Affliction Support, Void Manipulation Support, Arcane Surge Support]
+      - name: Skill di chuyển tự động
+        gems: [Automation, Withering Step, Phase Run]
+      - name: Aura và curse
+        gems: [Malevolence, Mana-Infused Staff, Flesh and Stone, Despair]
+      - name: Burst
+        gems: [Pact of Ghorr, Frostblink]
+    moveOn: "bạn đã cầm staff, tự tay cast, đã lấy mấy node block và cây cluster jewel đầu tiên đã vào."
+    details:
+      - title: Đừng đổi vũ khí sớm
+        body: |
+          Guide rất dứt khoát: "Do not swap to Staff without having Cane of Unravelling, if you want to self-cast early maps, upgrade your wand to a similar higher level version."
+
+          Lý do là mana. Cây staff hồi 5 mana mỗi giây mỗi power charge và dựng mấy cái charge đó khi bạn tiêu. Không có nó thì chuyện tự cast không có gì trả cho. Một cái shield thay cho staff là "a very valid way to play", nhưng khi đó "you need to fix early mana problems", tự bạn lo.
+      - title: Mấy link ở trên lấy từ bộ gem nào
+        body: |
+          Chúng là setup "Cane of Unravelling" trên planner, cái nó gắn nhãn Endgame và hiện ở gem level 20–21. Guide không đưa ra một danh sách link riêng cho mấy map đầu.
+
+          Nên hãy coi mấy cái six-link là mục tiêu. Lấp chúng dần khi bạn kiếm được socket, theo thứ tự đã viết.
+      - title: Ưu tiên gear từ guide
+        body: |
+          - Armour và energy shield trên mọi thứ. Boots, gloves và helmet mỗi món phải có **armour** cùng với energy shield. Đó là điều kiện của Armour and Energy Shield Mastery, cái cho 100% increased armour và energy shield từ body armour.
+          - Moonstone Ring để lấy cast speed: "this build needs a lot of it to feel good."
+          - Một cây amulet có +1 cho chaos gem hoặc spell gem và damage-over-time multiplier.
+          - Anoint Fangs of the Viper lúc đầu và Infused về sau. Infused là +1 maximum power charge.
+      - title: Block, thứ cũng là energy shield
+        body: |
+          Cây stage staff lấy [[Enigmatic Defence]], Enigmatic Reach và [[Whirling Barrier]].
+
+          Mấy cái này làm hai việc. Chúng là block. Và vì [[Vile Bastion]] tăng maximum energy shield theo chance to block spell damage của bạn, chúng cũng là energy shield.
+      - title: Những gì guide bỏ trống ở đây
+        body: |
+          Không có danh sách flask. Không có mod map cần tránh. Không có con số nào cho chuyện bạn nên có bao nhiêu energy shield trước khi vào map hay trước [[Chaos Inoculation]].
+
+          Chúng tôi sẽ không lấy thói quen chung ra lấp mấy chỗ đó. Bài Cold DoT Occultist trên site này nói về một kiểu phòng thủ tương tự, với những nguồn có trả lời mấy câu hỏi đó.
+  - id: red-maps
+    phase: endgame
+    image: chaos-inoculation
+    title: Map đỏ
+    levels: Map Tier 11–16
+    uses: >-
+      [[Chaos Inoculation]] với [[Zealot's Oath]], energy shield trên mọi ô,
+      [[Blight of Contagion]] trong six-link, và large cluster jewel có Wicked
+      Pall.
+    changes: >-
+      Life thôi còn quan trọng. Thanh máu của bạn là energy shield, được
+      [[Essence Drain]] hồi và được block bảo vệ. Mấy node power charge bắt đầu
+      vào cây.
+    links:
+      - name: Essence Drain
+        gems: [Essence Drain, Controlled Destruction Support, Void Manipulation Support, Efficacy Support, Power Charge On Critical Support, Empower Support]
+      - name: Contagion
+        gems: [Contagion, Intensify Support, Increased Area of Effect Support]
+      - name: Single target
+        gems: [Blight of Contagion, Controlled Destruction Support, Infused Channelling Support, Swift Affliction Support, Void Manipulation Support, Arcane Surge Support]
+      - name: Skill di chuyển tự động
+        gems: [Automation, Withering Step, Phase Run]
+      - name: Aura và curse
+        gems: [Malevolence, Mana-Infused Staff, Flesh and Stone, Despair]
+      - name: Burst
+        gems: [Pact of Ghorr, Frostblink]
+    moveOn: "Chaos Inoculation đã được lấy, mấy cây cluster jewel đã vào, và map Tier 16 chạy thoải mái."
+    details:
+      - title: Khi nào lấy Chaos Inoculation
+        body: |
+          Guide: "Once you have enough ES gear go for Chaos Inoculation and Zealot's Oath."
+
+          Nó không nói bao nhiêu là đủ. [[Withering Presence]] cho 60% chaos resistance, đó là thứ cho bạn hoãn cú đổi mà không chết vì chaos damage trong lúc chờ.
+
+          Sau cú đổi: càng nhiều energy shield càng tốt, "especially on Body Armor", và gloves, boots, helmet vẫn là hybrid vì cái mastery.
+      - title: Cluster jewel
+        body: |
+          "Clusters are quite big for this character's damage", guide nói vậy, và notable nó muốn nhất là Wicked Pall, "for the duration". Trong dữ liệu cây hôm nay, notable đó là 30% increased chaos damage và 5% increased skill effect duration.
+
+          Mẹo craft của nó là một viên Aberrant Fossil.
+
+          Trước khi có cluster, guide gợi ý Heart of Darkness và Spiritual Aid làm damage tạm, với đường đi được đổi để chạy qua Lord of the Dead.
+      - title: Hai viên jewel guide đặt sẵn chỗ cho bạn
+        body: |
+          - The Red Nightmare ở ô jewel Templar, để lấy block. Nó "works best with Fire Resistance Tattoos".
+          - [[Militant Faith]] ở ô Witch gần Minion Instability, để lấy [[Inner Conviction]]: 3% more spell damage mỗi power charge.
+      - title: Rotation ở stage này
+        body: |
+          Clear: [[Contagion]], rồi [[Essence Drain]]. Luôn theo thứ tự đó.
+
+          Single target: [[Despair]], rồi Wither từ [[Withering Step]], rồi Essence Drain, rồi channel [[Blight of Contagion]].
+
+          [[Withering Step]] và [[Phase Run]] đều nằm trên [[Automation]], nên cú burst Wither và phần tốc độ diễn ra trong lúc bạn di chuyển.
+  - id: endgame
+    phase: endgame
+    image: ralakeshs-impatience
+    title: Endgame
+    levels: Tier 17, pinnacle boss trở lên
+    uses: >-
+      Một cây [[Battery Staff]] rare, [[Badge of the Brotherhood]],
+      [[Ralakesh's Impatience]], và mọi power charge mà cây với gear chứa nổi.
+    changes: >-
+      Build thôi tạo charge bằng cách tiêu mana và bắt đầu được tính là đang có
+      chúng. Frenzy charge tới mà không có cách nào tạo ra chúng.
+    moveOn: "không còn stage nào nữa. Nhân vật cuối của chính guide thêm [[Mageblood]] và [[Kalandra's Touch]]."
+    details:
+      - title: Cây staff
+        body: |
+          "Staves can roll +4 to Chaos Spell Gems and +2 to All Spell Gems, this combined with higher %Spell Damage and block rolls make them the highest DPS option."
+
+          Cây ví dụ trên planner có cả hai mod gem, 199% spell damage, 64% chaos damage-over-time multiplier và spell block, với dòng +2 là một mod fractured. Không có giá, không có các bước craft.
+      - title: Giữ power charge mà không tiêu mana
+        body: |
+          Battery Staff làm Essence Drain tốn energy shield. Mấy nguồn thay thế của guide:
+
+          - [[Disciple of the Forbidden]]: +1 minimum power charge và một cơ hội nhận một cái khi giết quái.
+          - Một Caster Mastery cho một power charge trong lúc channel. Blight là skill channel.
+          - [[Whirling Barrier]]: 20% cơ hội nhận một power charge khi bạn block.
+
+          Rồi [[Ralakesh's Impatience]] lo phía frenzy qua [[Badge of the Brotherhood]].
+      - title: Con số, từ chính nhân vật 3.29 của tác giả
+        body: |
+          File Path of Building cuối của tác giả cho 3.29, như được liệt trên poebuilds.cc: 10,397 energy shield, 739 energy shield hồi mỗi giây, khoảng 453,000 effective hit point, và 34.2 triệu tổng damage mỗi giây.
+
+          Nhân vật đó đeo [[Mageblood]] và [[Kalandra's Touch]]. Nó là cái trần. Guide không cho con số nào cho bất kỳ stage nào sớm hơn.
+      - title: Essence Drain hay Blight làm main skill
+        body: |
+          Chính mục FAQ của guide cho phép làm ngược lại: [[Blight of Contagion]] làm main skill là "a great ability for both single target and clear speed" và "does more damage".
+
+          Cái giá: "It doesn't have recovery like Essence Drain."
+
+powerCurve: |
+  Damage có bốn phần, và chúng đến từ những chỗ khác nhau.
+
+  1. **Gem level của Essence Drain.** Base damage của cái debuff nằm trên viên gem: 41 mỗi giây ở level 1 và 2,729 ở level 20. "+1 to chaos spell gems" trên một cây wand, +2 trên [[Cane of Unravelling]], +4 và +2 trên một cây staff hoàn chỉnh.
+  2. **Quái ăn thêm bao nhiêu.** Stack Wither, -20% chaos resistance từ [[Void Beacon]], và [[Despair]].
+  3. **Damage-over-time multiplier**, từ wand, amulet, staff và cây.
+  4. **Power charge**, thứ cộng damage, area và cast speed cùng lúc.
+
+  **Ở level 30** bạn có một viên gem đúng level, một cây wand +1, và [[Spellslinger]] lo chuyện cast. Số 2 và số 4 còn trống. Nó vẫn cho cảm giác mạnh, vì chuyện lây không quan tâm bạn có bao nhiêu damage: nếu con quái đầu chết, cả pack chết. Build này clear giỏi từ rất lâu trước khi nó giết boss giỏi.
+
+  **Ở level 70** số 2 đã tới gần như miễn phí. [[Void Beacon]] và [[Withering Presence]] là điểm ascendancy, không phải đồ mua. Đây là cú nhảy lớn rẻ nhất của build. Rồi tới một chỗ trũng: bạn thôi dùng Spellslinger, bắt đầu tự tay cast, và thấm từng điểm cast speed còn thiếu. Guide nói ring có cast speed quan trọng vì "this build needs a lot of it to feel good".
+
+  **Ở level 95** thì số 4 là thứ đã lớn lên. Mỗi power charge là damage, area và cast speed cùng một lúc, và mấy món về sau của guide tồn tại để nâng mức tối đa rồi giữ nó mà không tốn công. Đó là lý do guide nói build "ramps hard" về cuối.
+
+  Phòng thủ chạy theo một cái đồng hồ riêng: mỏng suốt campaign, được [[Eldritch Battery]] với [[Mind Over Matter]] giữ cho khỏi rã, rồi được dựng lại một lần quanh energy shield, block và [[Chaos Inoculation]]. Cách đọc đường cong trong mục này là của chúng tôi. Guide cho các phần, và không cho mốc thời gian nào.
+
+upgrades:
+  - step: "Một cây wand có +1 cho chaos spell gem và chaos damage-over-time multiplier"
+    why: >-
+      Món thay đầu tiên của guide, vào đúng lúc bạn bắt đầu dùng
+      [[Spellslinger]]. Gem level là cái nền mà mọi thứ khác nhân lên, và một
+      cây wand rare là chỗ rẻ nhất để lấy một level. Cách xếp hạng danh sách
+      này là của chúng tôi; các món và trình tự của chúng là của guide.
+  - step: "[[Allelopathy]]"
+    why: >-
+      Một [[Blight]] level 25 từ level 41. Nó sửa phần yếu nhất của nhân vật
+      giai đoạn đầu, mục tiêu đơn, chỉ bằng một món, mà đằng nào bạn cũng không
+      dùng ô gloves cho damage.
+  - step: "[[Cane of Unravelling]]"
+    why: >-
+      +2 gem level, một power charge, và chỗ mana để tự tay cast. Nó là cánh
+      cổng vào cả nửa sau của build, và đó là lý do guide cấm đổi sang staff
+      khi chưa có nó. Nằm dưới Allelopathy chỉ vì bạn cần level 60 mới cầm
+      được nó.
+  - step: "Energy shield và armour trên mọi ô"
+    why: >-
+      Không thứ gì ở đây cộng damage. Nó đi trước mấy món damage bên dưới vì
+      [[Chaos Inoculation]] là cửa một chiều: đổi khi quá ít energy shield thì
+      bạn không còn life để dựa vào.
+  - step: "Large cluster jewel có Wicked Pall"
+    why: >-
+      "Quite big for this character's damage" theo lời guide. Đi sau phòng
+      thủ, vì chúng tốn passive point mà bạn đang tiêu vào chuyện sống sót.
+  - step: "[[Blight of Contagion]] trong six-link"
+    why: >-
+      Single-target damage tốt hơn trên thực tế, theo lời guide. Là một
+      transfigured gem, nên nó phụ thuộc vào thứ Divine Font hay chợ đưa cho
+      bạn. Blight thường làm cùng việc đó nhưng chậm hơn.
+  - step: "Một cây [[Battery Staff]] rare có gem level"
+    why: >-
+      Vũ khí damage cao nhất, và là nâng cấp đầu tiên làm hỏng một thứ: mấy
+      nguồn power charge dựa vào tiêu mana của bạn ngừng chạy. Chỉ mua nó khi
+      mấy nguồn thay thế đã nằm sẵn trên cây.
+  - step: "[[Badge of the Brotherhood]] cùng [[Ralakesh's Impatience]]"
+    why: >-
+      Frenzy charge bằng power charge của bạn, lúc nào cũng có. Đứng cuối vì
+      món này cần món kia, và cả hai cần một mức power charge tối đa cao thì
+      mới đáng một ô.
+
+play:
+  mapping: |
+    Trong campaign, với [[Spellslinger]]:
+
+    1. Attack bằng [[Frenzy]]. Mọi thứ khác tự bắn.
+
+    Trong map, tự tay cast:
+
+    1. [[Contagion]] lên pack. Guide: dùng nó "first to ensure it spreads Essence Drain".
+    2. Một phát [[Essence Drain]] vào bất kỳ con quái nào trong đó.
+    3. Đi. Phần lây xử nốt cái pack và thường mở luôn cái kế.
+    4. [[Withering Step]] và [[Phase Run]] tự bắn qua [[Automation]] trong lúc bạn đi.
+
+    Cái sai là đứng chờ. Damage là over time, và không việc gì bạn làm sau lần cast thứ hai khiến nó nhanh hơn. Cast, đi, cast.
+
+    Cái thế giằng co có sẵn: Wither từ [[Withering Presence]] chỉ với tới 6 mét, và [[Void Beacon]] chỉ ảnh hưởng quái ở gần. Mấy hệ số nhân mạnh nhất của bạn muốn bạn đứng sát, trên một nhân vật mà damage không cần bạn phải vậy.
+  bossing: |
+    Rotation cuối của guide, theo thứ tự:
+
+    1. [[Despair]] lên boss.
+    2. [[Withering Step]], để có một cú burst stack Wither. Về sau [[Automation]] làm việc này.
+    3. [[Essence Drain]].
+    4. Channel [[Blight of Contagion]], hoặc [[Blight]] thường.
+
+    [[Pact of Ghorr]] vào trước mấy lần cast damage: nó làm ba spell damage-over-time kế tiếp của bạn gây 40% more.
+
+    Rồi lặp lại từ bước 3 khi mấy cái debuff hết. Essence Drain kéo dài 3.8 giây ở base, nên đây là một cái nhịp, không phải một lần dựng rồi thôi.
+
+    Đứng trong vòng 6 mét nếu được. Đó là tầm mà [[Withering Presence]] còn tiếp tục cộng Wither.
+
+troubleshooting:
+  - symptom: "Essence Drain giết một con quái còn phần còn lại của pack thì không hề hấn gì."
+    cause: >-
+      [[Contagion]] không nằm trên con quái lúc nó chết. Essence Drain tự nó
+      không lây; Contagion mới là thứ chở nó.
+    fix: >-
+      Contagion trước, lần nào cũng vậy. Nếu pack trải quá rộng cho một lần
+      cast, guide link Contagion với mấy support area đúng vì chuyện này: nó
+      "increases the spread range by quite a bit".
+  - symptom: "Damage của tôi lên boss thấp hơn hẳn so với trong map."
+    cause: >-
+      Trong map, cái chết của quái làm hết việc: phần lây nhân một lần cast ra
+      khắp màn hình. Boss không cho bạn thứ gì để lây đi, nên bạn thấy kích cỡ
+      thật của một cái debuff.
+    fix: >-
+      Dùng trọn rotation: [[Despair]], Wither, Essence Drain, rồi channel
+      [[Blight]]. Trước level 60, [[Allelopathy]] là cách chữa rẻ. Đứng đủ gần
+      cho [[Withering Presence]].
+  - symptom: "Tôi hết mana khi thôi dùng Spellslinger."
+    cause: >-
+      Tự cast hai spell mỗi pack thì đắt, và câu trả lời của guide cho chuyện
+      đó là một món đồ.
+    fix: >-
+      [[Cane of Unravelling]], hoặc ở lại với cây wand. Với setup shield thì
+      guide nói bạn phải "fix early mana problems" bằng cách khác và không nói
+      cách nào.
+  - symptom: "Power charge của tôi biến mất sau khi tôi đổi staff."
+    cause: >-
+      Một cây [[Battery Staff]] làm skill gắn trong nó tiêu energy shield chứ
+      không phải mana. [[Forbidden Power]] đếm mana đã tiêu. Cây Cane bạn vừa
+      tháo ra cũng vậy.
+    fix: >-
+      [[Disciple of the Forbidden]], cái Caster Mastery cho một power charge
+      trong lúc channel, và [[Whirling Barrier]].
+  - symptom: "Cast thấy chậm và lóng ngóng ở map đầu."
+    cause: >-
+      [[Spellslinger]] đang che cast speed của bạn. Tự tay cast thì mỗi pack
+      là hai lần cast trọn: 0.6 giây cho Contagion và 0.7 cho Essence Drain ở
+      base.
+    fix: >-
+      Cast speed trên Moonstone Ring, và 5% mỗi power charge từ cây Cane. Nếu
+      vẫn khó chịu thì quay lại cây wand vài level.
+
+patch:
+  - note: >-
+      **3.30 không đổi skill nào.** [[Essence Drain]], [[Contagion]],
+      [[Blight]], [[Spellslinger]] và [[Pact of Ghorr]] không nằm trong mục
+      skill hay mục support gem của patch note. Cái pact bị đổi là Pact of
+      Beidat.
+  - entry: ruthless-changes
+    note: >-
+      **Occultist không bị đổi trong game thường.** Patch note có liệt
+      [[Void Beacon]], [[Withering Presence]] và [[Profane Bloom]], bên trong
+      phần riêng của Ruthless. Ở đó, Void Beacon lên -15%. Trong game thường
+      nó là -20% và không nhúc nhích: dữ liệu cây hiện tại của GGG xác nhận
+      chuyện đó. Nếu bạn đọc thấy Occultist được buff, đó là Ruthless.
+  - entry: betrayal-rewards
+    note: >-
+      **Mấy món unique chủ chốt của guide đến từ Betrayal, mà Betrayal đã
+      đổi.** PoEDB gắn cả [[Cane of Unravelling]] lẫn
+      [[Badge of the Brotherhood]] với biểu tượng Betrayal của Catarina.
+      Reward safehouse của bà ta được làm lại trong patch này. Chúng tôi không
+      xác nhận được giờ mỗi món rơi thường xuyên cỡ nào.
+  - entry: no-random-league-mechanics
+    note: >-
+      **Và Betrayal không còn tự xuất hiện nữa.** Nó chỉ có trong một cái map
+      có Betrayal Thread. Đầu league thì chuyện đó nghĩa là trên chợ có ít
+      Cane hơn mức một guide 3.29 sẽ trông đợi. Đây là suy luận của chúng tôi;
+      chưa có nền kinh tế nào để đối chiếu.
+  - entry: ralakeshs-impatience
+    note: >-
+      **Mua đúng đôi boots.** [[Ralakesh's Impatience]] mới roll -1 maximum
+      power, endurance hoặc frenzy charge. Build này stack power charge rồi
+      copy chúng sang frenzy, nên đôi bạn muốn là đôi lấy đi một
+      **endurance** charge. Hai loại kia làm bạn mất damage.
+  - entry: special-base-implicits
+    note: >-
+      **Hai buff miễn phí.** [[Apothecary's Gloves]], cái base trong bộ gear
+      stage staff trên planner, giờ cho +14–18% damage-over-time *multiplier*,
+      trong khi trước đây nó cho increased damage over time. Và một cây
+      [[Crystal Belt]] giờ roll tới 100 energy shield, tăng từ 80.
+  - entry: fractured-items-rarer
+    note: >-
+      **Cây staff cuối khó làm hơn.** Cây ví dụ trên planner có dòng +2 cho
+      spell gem là một mod fractured, mà đồ fractured giờ đến từ ít nguồn hơn
+      hẳn.
+  - note: >-
+      **Cái buff mà build này được dựng trên đó là từ 3.29.** Patch đó cho
+      [[Cane of Unravelling]] +1 maximum power charge và nâng cast speed mỗi
+      charge của nó từ 2% lên 5%. Đó là thứ guide muốn nói khi viết "after the
+      patch, endgame scaling is much better with a Staff".
+
+strengths:
+  - "Clear nguyên màn hình từ hai lần cast, kể cả thứ nằm ngoài màn hình."
+  - "Leveling bằng một cây wand rare: không cần unique nào trước khi vào map."
+  - "Ba trong số các hệ số nhân damage lớn nhất của nó là điểm ascendancy, không phải item."
+  - "Essence Drain hồi máu cho bạn trong lúc nó giết."
+  - "Chaos damage over time bỏ qua energy shield của quái."
+  - "Một cái trần rất cao nhờ stack power charge."
+weaknesses:
+  - "Guide là một build 3.29 dưới một cái banner 3.30."
+  - "Single-target damage cần một rotation bốn bước và một skill channel."
+  - "Cú đổi từ wand sang staff phải chờ một món unique từ Betrayal."
+  - "Tự tay cast thấy chậm cho tới khi gear của bạn có cast speed."
+  - "Guide không cho flask, không cho mod map, không cho budget và không cho điểm số."
+  - "Mấy cái debuff tốt nhất của bạn chỉ với tới quái ở sát bạn."
+avoidIf: >-
+  Chọn build khác nếu bạn muốn thấy mấy con số hit to đùng, nếu hai lần cast
+  mỗi pack nghe đã là dư một lần, hoặc nếu bạn muốn một guide nói cho bạn mua
+  gì ở từng bước và nó tốn bao nhiêu. Guide này thì không. Cũng bỏ qua nếu bạn
+  cần một con giết boss mạnh từ sớm: build này clear được từ rất lâu trước khi
+  nó đánh boss được. Nếu bạn muốn một con Occultist có guide đầy đủ hơn chống
+  lưng, Cold DoT Occultist trên site này là lựa chọn được ghi chép kỹ hơn.
+
+sources:
+  - title: "Maxroll: Essence Drain Contagion Occultist league starter (Goratha)"
+    url: https://maxroll.gg/poe/build-guides/essence-drain-contagion-occultist-league-starter
+    kind: guide
+    note: "Đề 3.30 và ghi ngày 13/11/2026. Changelog của nó dừng ở ngày 3/8/2026 và nói nó được tạo cho 3.29. Không có điểm số, budget, flask hay mod map."
+  - title: "Maxroll planner của guide"
+    url: https://maxroll.gg/poe/planner/f9mek30t
+    kind: pob
+    note: "Nguồn của mọi gem link, mấy cái cây, bandit và Pantheon. Lưu lần cuối ngày 19/9/2026; mọi cây đóng dấu 3.29."
+  - title: "Path of Building: file của guide"
+    url: https://maxroll.gg/poe/pob/m5ui4t0x
+    kind: pob
+    note: "Được link từ guide. Chúng tôi đã không mở nó."
+  - title: "poebuilds.cc: nhân vật 3.29 cuối của tác giả"
+    url: https://www.poebuilds.cc/poe1/build/jUeb5xBhmtc
+    kind: video
+    note: "Trang liệt kê cho video ngày 4/8/2026 của tác giả. Nguồn của các con số energy shield, effective hit point và damage. Chúng tôi đọc trang liệt kê, không phải video."
+  - title: "Path of Building: nhân vật 3.29 cuối của tác giả"
+    url: https://pobb.in/KKwuS6uAOh7i
+    kind: pob
+    note: "Được link từ trang liệt kê đó. Chưa mở; các con số ở trên là theo đúng như trang liệt kê hiện."
+  - title: "PoEDB: Essence Drain"
+    url: https://poedb.tw/us/Essence_Drain
+    kind: data
+    note: "Base damage theo gem level, duration, mức regeneration 0.5%, và cái quest cho nó."
+  - title: "PoEDB: Contagion"
+    url: https://poedb.tw/us/Contagion
+    kind: data
+  - title: "PoEDB: Cane of Unravelling"
+    url: https://poedb.tw/us/Cane_of_Unravelling
+    kind: data
+    note: "Phần chữ hiện tại của item, cái buff 3.29 trong lịch sử phiên bản của nó, và cái tag Betrayal."
+  - title: "PoEDB: Badge of the Brotherhood"
+    url: https://poedb.tw/us/Badge_of_the_Brotherhood
+    kind: data
+  - title: "PoEDB: Mana-Infused Staff"
+    url: https://poedb.tw/us/Mana-Infused_Staff
+    kind: data
+    note: "Giá trị block và mana cost, và chuyện nó là quest reward chỉ dành cho Templar."
+  - title: "GGG passive tree export"
+    url: https://raw.githubusercontent.com/grindinggear/skilltree-export/master/data.json
+    kind: data
+    note: "Phần chữ đang chạy trong game của bốn notable Occultist và mấy keystone. Dùng để xác nhận Void Beacon vẫn là -20% trong game thường."
+  - title: "Patch note chính thức 3.30.0"
+    url: https://www.pathofexile.com/forum/view-thread/4013680
+    kind: official
+    note: "Đã kiểm cho mấy skill, Occultist, và mọi item được nêu tên ở đây. Mấy dòng về Occultist nằm trong phần Ruthless."
