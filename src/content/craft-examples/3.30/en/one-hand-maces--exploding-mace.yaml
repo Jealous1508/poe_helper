@@ -1,0 +1,227 @@
+category: one-hand-maces
+title: "An exploding mace: an influenced suffix, an Imprint and a suffix lock"
+level: 4
+summary: "Roll the one suffix that only an influenced mace can have, save it with a beast, then lock the suffixes and let a Harvest reforge supply physical prefixes."
+goal: >-
+  A Redeemer mace with "Enemies Killed with Attack or Spell Hits Explode,
+  dealing 5% of their Life as Fire Damage" and physical prefixes built around
+  it. Every other mace craft says the prefixes come first. This one is the
+  exception, and the reason is the general rule behind that advice:
+  **protect whatever you could not roll twice.** Here that is a suffix, so
+  the craft runs the other way round, and each protection used, an Imprint
+  and then a lock, is chosen for what it holds against.
+base: "Behemoth Mace"
+itemLevel: 80
+baseWhy: >-
+  The Behemoth Mace has 6% increased Attack Speed on the implicit, which
+  matters more than usual here because the suffix side will be short of
+  room. The Redeemer version of the exploding suffix needs item level 78.
+  The base must carry **Redeemer influence**; a Shaper mace has the same
+  suffix from item level 68 and rolls it more often.
+methods: [influence, currency, beast, meta, harvest, bench]
+result:
+  note: "Redeemer"
+  implicits: ["6% increased Attack Speed"]
+  prefixes:
+    - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+    - { text: "112% increased Physical Damage", how: harvest }
+    - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+  suffixes:
+    - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+    - { text: "+38 to Strength" }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "A Redeemer-influenced Behemoth Mace, item level 78+", amount: "1", note: "Normal or Magic; see stage 1" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Alterations in bulk for the suffix, a few beasts, and then locks: 4
+  [[Divine Orb]]s and 1 [[Sacred Orb]] each time the prefixes are rerolled.
+  The Lifeforce is 50 per reforge and hardly counts. The influenced base is
+  the part we cannot price or even place with confidence in 3.30.
+odds: >-
+  **The suffix.** On a Redeemer mace at item level 80 the exploding
+  modifier is about 1 suffix roll in 129, by our arithmetic with the
+  Redeemer weights added to the pool. On a Shaper mace it is about 1 in 74.
+  An Alteration does not always roll a suffix: budget a few hundred.
+
+
+  **The prefixes.** With the suffixes locked, a Physical reforge should
+  have to place its guaranteed modifier on the prefix side. If it is drawn
+  by weight, it is flat Physical Damage about half the time and each
+  percentage family about a quarter. Each other prefix the reforge rolls
+  is physical about 42% of the time on this pool. Tiers are luck: flat
+  damage of Tier 3 or better is about 1 in 6 of the times flat damage
+  comes. Our arithmetic; not measured in 3.30.
+steps:
+  - title: "Stage 1: a Redeemer mace you can use Alterations on"
+    do: >-
+      Get a Behemoth Mace of item level 78 or more with Redeemer influence,
+      as a Normal or Magic item. A [[Redeemer's Exalted Orb]] gives that
+      influence, and one random Redeemer modifier, to a Rare mace with no
+      influence; an [[Orb of Scouring]] then returns it to Normal.
+    why: >-
+      Influence belongs to the item, not to its modifiers, so it adds the
+      Redeemer pool to everything rolled on this mace from now on. In 3.30
+      the conquerors drop their Exalted Orbs. That influence survives a
+      Scouring is long-standing behaviour that we did not re-test in 3.30,
+      and we could not confirm where influenced bases drop this league, so
+      check the base on a cheap item if you make it yourself.
+    check: >-
+      The item header shows the Redeemer symbol, the mace is Normal, and
+      the item level is 78 or more. An influenced mace cannot be fractured,
+      which is why this craft uses other protection.
+    state:
+      note: "Redeemer"
+      rarity: normal
+      implicits: ["6% increased Attack Speed"]
+  - title: "Alterations until the suffix appears"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s. Read
+      only the suffix. Stop at **"Enemies Killed with Attack or Spell Hits
+      Explode, dealing 5% of their Life as Fire Damage"**. Its name on the
+      item ends "of Redemption".
+    why: >-
+      A Magic item has one suffix, so each Alteration is one clean look at
+      the suffix lottery. It is slow, about 1 suffix in 129, but no cheaper
+      tool aims at this modifier, and you only have to do it once.
+    check: >-
+      Look at the prefix that came with it. An empty prefix or any physical
+      one is fine. The prefix will be replaced in stage 3, so it is not a
+      reason to keep rolling.
+    state:
+      note: "Redeemer"
+      rarity: magic
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+  - title: "Imprint before the Regal Orb"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item**
+      ([[Craicic Croaker]] and three other Rare beasts). Then use a
+      [[Regal Orb]] and read what it added.
+    why: >-
+      The Regal Orb adds one random modifier, and if that is a suffix it
+      will be locked onto the mace with the exploding one for the rest of
+      the craft. The Imprint lets you refuse it. **Keep** the result if
+      the new modifier is a prefix of any kind, since the prefixes will be
+      rerolled, or a suffix you would use: attack speed, Strength, a
+      critical strike modifier.
+    fail: >-
+      A suffix you would not use, such as light radius or mana on kill:
+      apply the [[Imprint]] to return to the Magic mace, make a new
+      Imprint with another Croaker, and use another Regal Orb.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Stage 2: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      This is the mirror image of the usual lock. The meta-modifier is a
+      prefix, it protects both suffixes, and the next reroll will spend it.
+      Use the full lock: with two suffixes on the mace, the cheaper
+      one-suffix version would protect one of them at random and not say
+      which.
+    check: >-
+      The lock needs an open prefix slot. After a Regal Orb the mace has
+      at most two prefixes, so there is always room the first time.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Reforge with a Physical modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Physical modifier** for 50
+      [[Vivid Crystallised Lifeforce]].
+    why: >-
+      On an open mace this reforge is vague: five modifiers carry the
+      physical tag, three prefixes and two leech suffixes. With the
+      suffixes locked the leech suffixes cannot be placed, so the
+      guarantee should have to be met by a prefix. A lock that costs
+      Divine Orbs has turned the cheapest reforge in the game into a
+      guaranteed physical prefix.
+    check: >-
+      Both suffixes unchanged, the lock gone, at least one physical prefix
+      present. Then judge: you want **two physical prefixes** at tiers you
+      set beforehand.
+    fail: >-
+      One physical prefix, or two poor ones: craft the lock again and
+      reforge again. That Harvest respects the lock, and that the
+      guarantee moves to the prefix side, are both player knowledge; try
+      the pair on a cheap Rare first.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+        - { text: "112% increased Physical Damage", how: harvest }
+        - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Bench the attack speed"
+    do: >-
+      Craft **11–15% increased Attack Speed** for 2 [[Chaos Orb]]s in the
+      open suffix, or 16–20% for 4 Exalted Orbs.
+    why: >-
+      The one suffix slot left goes to the suffix every mace needs. This
+      is where the Behemoth Mace's implicit earns its place: the mace had
+      6% attack speed before any suffix was spent on it.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+        - { text: "112% increased Physical Damage", how: harvest }
+        - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Scour the prefixes instead.** With the suffixes locked, an
+  [[Orb of Scouring]] is reported to remove only the prefixes and the lock.
+  That leaves three empty prefix slots for the bench and for
+  [[Exalted Orb]]s. It is the right move when the reforges keep filling the
+  prefixes with elemental damage.
+
+
+  **On a Shaper mace.** The same suffix exists from item level 68 and is
+  nearly twice as likely per roll. We could not confirm where Shaper bases
+  or [[Shaper's Exalted Orb]]s are found in 3.30.
+
+
+  **The other way to look for the suffix.** Harvest has "Reforge an
+  Influenced Rare item with random modifiers, including an Influence
+  modifier" for 5,000 Primal Lifeforce and a Sacred Crystallised Lifeforce.
+  It guarantees some Redeemer modifier, not this one, and a mace has
+  eight kinds. Alterations are slower and far cheaper.
+mistakes:
+  - "Rolling the prefixes first out of habit. The suffix is the part that cannot be rolled twice; the prefixes can be reforged under a lock."
+  - "Using the Regal Orb without an Imprint. A useless suffix added there is locked in with the good one."
+  - "Trying to fracture the suffix. Influenced items cannot be fractured."
+  - "Using the Physical reforge without the lock. It rerolls the suffixes, and it may meet its guarantee with a leech suffix."
+  - "Using an Essence on the locked mace. Essences are reported to ignore the lock."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Redeemer and Shaper modifiers on one-handed maces, tags, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The cost of the protection modifiers; conqueror bosses drop their Exalted Orbs." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and its beast." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Physical reforge, the Influence reforge and their costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Orb of Scouring respect a locked side. Partly older than 3.30." }

@@ -1,0 +1,248 @@
+category: one-hand-maces
+title: "Hai suffix influence, một lần khóa: Awakener's Orb"
+level: 5
+summary: "Roll một suffix influence trên mỗi cây trong hai cây mace, gộp chúng bằng một Awakener's Orb, rồi hoàn thiện prefix dưới một khóa suffix duy nhất. Kế hoạch được quyết định bởi việc hai modifier nằm ở phía nào."
+goal: >-
+  Một cây mace có hai suffix influence mà không một influence đơn lẻ nào cho
+  cùng lúc: "Enemies Killed with Attack or Spell Hits Explode" của Redeemer
+  để clear, và "Hits with this Weapon have 66–80% chance to ignore Enemy
+  Physical Damage Reduction" của Hunter cho boss, với các prefix physical và
+  attack speed quanh chúng. Lập luận cần học là cách một người craft endgame
+  chọn cặp: **cả hai modifier ở cùng một phía**, để một lần khóa bảo vệ mọi
+  thứ có giá trị trong khi phía kia được dựng lại bao nhiêu lần cũng được.
+base: "Behemoth Mace"
+itemLevel: 83
+baseWhy: >-
+  Item hoàn chỉnh giữ base của cây mace nhận orb, nên cây đó là Behemoth
+  Mace: 6% attack speed trên implicit, trên một weapon mà suffix sẽ gần đầy
+  những thứ khác. Item level 83 cho phép mọi tier physical ở giai đoạn cuối;
+  hai suffix influence cần 78 (Redeemer) và 71 (Hunter).
+
+
+  Cây mace thứ hai bị phá hủy. Nó có thể là bất kỳ mace một tay nào item
+  level 78 trở lên.
+methods: [influence, currency, meta, harvest, bench, lock]
+result:
+  note: "Redeemer và Hunter"
+  implicits: ["6% increased Attack Speed"]
+  prefixes:
+    - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+    - { text: "138% increased Physical Damage", how: harvest }
+    - { text: "Adds 61 to 118 Cold Damage" }
+  suffixes:
+    - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+    - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+    - { text: "18% increased Attack Speed", how: crafted }
+needs:
+  - { item: "Một cây Behemoth Mace có influence Hunter, item level 83+", amount: "1", note: "Normal hoặc Magic" }
+  - { item: "Một cây mace một tay có influence Redeemer, item level 78+", amount: "1", note: "base nào cũng được; nó bị phá hủy" }
+  - { item: "[[Orb of Alteration]]", amount: "vài trăm", note: "cho cả hai cây mace" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 mỗi lần reforge" }
+  - { item: "[[Exalted Orb]]", amount: "5", note: "4 cho bench, 1 cho prefix cuối cùng" }
+  - { item: "[[Hinekora's Lock]]", amount: "0–1", note: "chỉ khi lần gộp không chừa chỗ cho khóa" }
+cost: >-
+  Hai base có influence, số Alteration để roll một suffix trên mỗi cây, một
+  [[Awakener's Orb]], rồi các lần khóa với giá 4 [[Divine Orb]] và 1
+  [[Sacred Orb]] cho mỗi lần thử ở phía prefix. Chúng tôi không đưa ra tổng
+  số. Mô tả thành thật là đây là một dự án cho nhân vật đã hoàn thiện ở mọi
+  chỗ khác, và lần gộp ở giai đoạn 3 chỉ xảy ra một lần: nếu nó hỏng thì
+  không có lần thử thứ hai nào mà không phải làm lại cả hai cây mace.
+odds: >-
+  **Giai đoạn 1 và 2.** Theo phép tính của chúng tôi ở item level 80, suffix
+  explode là khoảng 1 trên 129 lần roll suffix trên mace Redeemer, và tier
+  cao nhất của suffix Hunter cũng khoảng 1 trên 129 trên mace Hunter (tier
+  nào cũng được: 1 trên 65). Tổng cộng vài trăm Alteration.
+
+
+  **Giai đoạn 3.** Các trang tra cứu nói Awakener's Orb giữ một modifier
+  influence từ mỗi item, và đó là lý do mỗi cây mace mang đúng một cái. Các
+  modifier khác của kết quả là ngẫu nhiên và số lượng của chúng không phải
+  thứ chúng tôi tính được.
+
+
+  **Giai đoạn 4.** Trên pool đã gộp, khoảng 37% số lần roll prefix là
+  physical. Khi suffix đã khóa, một reforge Physical, về lý, sẽ luôn đặt một
+  prefix physical: flat damage khoảng một nửa số lần, mỗi họ phần trăm khoảng
+  một phần tư, nếu được bốc theo weight. Hai prefix physical tốt tốn vài lần
+  khóa. Chưa được đo trong 3.30.
+steps:
+  - title: "Kế hoạch: chọn hai modifier ở cùng một phía"
+    do: >-
+      Trước khi mua bất cứ thứ gì, hãy viết ra hai modifier influence và phía
+      mà mỗi cái nằm. Ở đây cả hai đều là **suffix**.
+    why: >-
+      Sau lần gộp, item có hai influence. Nó không fracture được, và lớp bảo
+      vệ duy nhất còn lại là một lần khóa, thứ chỉ che một phía. Hai modifier
+      cần giữ ở cùng một phía thì đều được một lần khóa che trong khi phía
+      kia được roll lại thoải mái. Mỗi phía một cái thì bạn không roll lại
+      được gì mà không mất một trong hai. Chỉ riêng lựa chọn này quyết định
+      lần craft có hoàn thành được hay không.
+  - title: "Giai đoạn 1: suffix explode trên cây mace bạn sẽ hy sinh"
+    do: >-
+      Trên một cây mace Normal có influence Redeemer, item level 78 trở lên
+      (làm hoặc tìm như trong ví dụ mức Khó, level 4), dùng một
+      [[Orb of Transmutation]] rồi tới [[Orb of Alteration]] tới khi suffix
+      là "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of
+      their Life as Fire Damage". Để nó ở **Magic**, không có modifier
+      Redeemer nào khác trên đó.
+    why: >-
+      Lần gộp giữ một modifier influence từ mỗi cây mace. Nếu một cây có đúng
+      một cái thì không còn nghi ngờ gì đó sẽ là cái nào. Một prefix trên cây
+      mace Magic là vô hại trừ khi nó là prefix Redeemer; nếu vậy thì roll
+      tiếp.
+    check: >-
+      Một suffix "of Redemption", và không có prefix nào bắt đầu bằng
+      "Redeemer's".
+  - title: "Giai đoạn 2: suffix Hunter trên Behemoth Mace"
+    do: >-
+      Trên một cây Behemoth Mace Normal có influence Hunter, item level 83,
+      làm y như vậy tới khi suffix là "Hits with this Weapon have #% chance
+      to ignore Enemy Physical Damage Reduction" từ 66% trở lên. Để nó ở
+      Magic.
+    why: >-
+      Đây là cây mace sống sót, nên base và item level của nó là của item
+      hoàn chỉnh. Cả Exalted Orb của Hunter lẫn của Redeemer đều rơi từ
+      conqueror của chúng trong 3.30, và đó là lý do cặp influence này là cặp
+      được lên kế hoạch ở đây.
+    check: >-
+      Một suffix "of the Hunt" và không có prefix nào bắt đầu bằng
+      "Hunter's". Suffix này có hai tier: 50–65% và 66–80%.
+    state:
+      note: "Hunter"
+      rarity: magic
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Giai đoạn 3: Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên cây mace Redeemer, rồi lên Behemoth Mace.
+    why: >-
+      Orb phá hủy item thứ nhất và áp influence của nó lên item thứ hai, thứ
+      được reforge thành Rare với cả hai influence và các modifier mới. Theo
+      các trang tra cứu, nó giữ một modifier influence từ mỗi cây, và mỗi cây
+      chỉ có một cái để cho. Mọi thứ khác trên kết quả là một lần roll mới từ
+      pool của cả hai influence và pool thường.
+    check: >-
+      Cả hai suffix đều có mặt. Rồi đếm: giai đoạn kế cần **một ô prefix
+      trống** cho khóa, và bạn cũng muốn ô suffix thứ ba trống nữa.
+    fail: >-
+      Ba prefix và không còn chỗ cho khóa. Cách duy nhất để mở một ô là
+      [[Orb of Annulment]], thứ gỡ ngẫu nhiên một modifier và có thể lấy mất
+      một cái cần giữ. Đây là chỗ duy nhất một [[Hinekora's Lock]] đáng giá
+      của nó: nó cho thấy Annulment sẽ gỡ cái gì trước khi bạn chốt. Nếu nó
+      sẽ lấy một cái cần giữ, đừng dùng Annulment. Khi đó cây mace dùng được
+      như nó đang có, với hai suffix của nó và bất cứ prefix nào lần gộp cho,
+      và đó có thể là chỗ nên dừng.
+    state:
+      note: "Redeemer và Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 58 to 115 Cold Damage" }
+        - { text: "+1 to Level of Socketed Gems" }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Giai đoạn 4: khóa suffix và reforge prefix"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]). Rồi, ở [[Horticrafting Station]], **Reforge a Rare
+      item with random modifiers, including a Physical modifier** (50
+      [[Vivid Crystallised Lifeforce]]). Lặp lại cả hai tới khi cây mace có
+      hai prefix physical ở các tier bạn đã đặt từ trước.
+    why: >-
+      Giờ một lần khóa che cả hai suffix influence. Khi phía suffix đã đóng,
+      phần đảm bảo physical, về lý, sẽ buộc phải rơi vào một prefix. Cả
+      Hunter lẫn Redeemer đều không thêm prefix mang tag physical nào cho
+      mace, nên cái được đảm bảo luôn là flat damage hoặc một trong hai
+      prefix phần trăm thường.
+    check: >-
+      Cả hai suffix không đổi sau mỗi lần reforge. Nếu có lúc nào chúng đổi,
+      hãy dừng lại: có điều gì đó về khóa đã thay đổi kể từ khi bài này được
+      viết.
+    fail: >-
+      Mỗi lần lặp tốn trọn một lần khóa. Nếu prefix cứ ra elemental, hãy dùng
+      một [[Orb of Scouring]] dưới khóa thay cho reforge: nó được ghi nhận là
+      chỉ xóa prefix, và khi đó bench cùng Exalted Orb có thể lấp chúng.
+    state:
+      note: "Redeemer và Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Giai đoạn 5: đếm ô, rồi bench"
+    do: >-
+      Craft **16–20% increased Attack Speed** giá 4 [[Exalted Orb]] vào
+      suffix thứ ba. Đừng craft "Can have up to 3 Crafted Modifiers".
+    why: >-
+      Hai ô suffix đã có chủ, nên cây mace còn đúng một ô, và attack speed là
+      suffix nó không thể thiếu. Craft multi-modifier sẽ chiếm ô đó, và
+      prefix mà nó cho phép thêm sau đó chẳng có gì tốt để chứa: prefix phần
+      trăm của bench và flat damage của bench đều chung group với thứ reforge
+      đã roll ra.
+    state:
+      note: "Redeemer và Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+        - { text: "18% increased Attack Speed", how: crafted }
+  - title: "Prefix cuối cùng"
+    do: >-
+      Dùng một [[Exalted Orb]] cho prefix trống, rồi hoàn thiện bằng quality,
+      socket và một [[Divine Orb]] nếu chỉ số kém.
+    why: >-
+      Năm ô đã được lấp có chủ đích và Exalted Orb chỉ có thể thêm một
+      prefix. Cái bạn mong là hybrid Accuracy, họ physical duy nhất chưa có
+      trên cây mace, khoảng 1 trên 8 lần roll prefix trên pool này. Ví dụ cho
+      thấy một kết quả dễ xảy ra hơn. Không gì nó có thể thêm lại làm cây
+      mace tệ đi.
+    state:
+      note: "Redeemer và Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+        - { text: "Adds 61 to 118 Cold Damage" }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+        - { text: "18% increased Attack Speed", how: crafted }
+variations: >-
+  **Các cặp khác ở phía suffix.** 22–25% increased Impale Effect của
+  Crusader, "3% increased Area of Effect per 50 Strength" của Elder và
+  "33–37% increased Physical Attack Damage while Dual Wielding" của Elder
+  hoặc Warlord đều là suffix và có thể thế chỗ một trong hai modifier. Quy
+  tắc vẫn vậy: hai suffix, hoặc hai prefix, không bao giờ mỗi phía một cái.
+
+
+  **Chỉ một influence.** Một cây mace Shaper hoặc Redeemer chỉ có suffix
+  explode là ví dụ mức Khó (level 4) và là phần lớn lợi ích. Influence thứ
+  hai là thứ mà Awakener's Orb, base thứ hai và rủi ro của giai đoạn 3 đang
+  trả tiền để có.
+
+
+  **Memory Strands.** Theo bảng data-mine, một Awakener's Orb có thể tiêu tới
+  100 strand. Một base strand là phí phạm trong lần craft này.
+mistakes:
+  - "Chọn một prefix influence và một suffix influence. Không khóa nào che được cả hai, và item không fracture được."
+  - "Để một modifier influence thứ hai trên bất kỳ cây mace Magic nào. Orb giữ một cái từ mỗi cây, và bạn không còn biết là cái nào."
+  - "Dùng orb sai thứ tự. Cây mace được click trước bị phá hủy; Behemoth Mace phải là cây thứ hai."
+  - "Craft meta-modifier multi-modifier lên cây mace chỉ còn một suffix trống. Nó chiếm ô mà attack speed cần."
+  - "Dùng Essence lên cây mace đã khóa. Essence được ghi nhận là phớt lờ khóa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Redeemer và Hunter trên mace một tay, tag và weight của chúng, giá bench, và mô tả trong game của Awakener's Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các boss conqueror rơi Exalted Orb của mình; giá của các modifier bảo vệ; Hinekora's Lock trong 3.30." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Orb giữ một modifier influence từ mỗi item." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Physical và giá của nó." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest và Orb of Scouring tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

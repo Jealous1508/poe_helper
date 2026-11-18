@@ -1,0 +1,144 @@
+category: two-hand-maces
+title: "A levelling maul from Alterations and the bench"
+level: 1
+summary: "Your first craft: roll one physical prefix on a white maul, make it Rare, and let the bench add what is missing."
+goal: >-
+  A weapon for the second half of the campaign that hits much harder than
+  anything on the ground, made from currency you already have. More than the
+  item, the point is the routine: **roll one modifier, keep it, add to it.**
+  Every craft on this site is that routine with better tools.
+base: "Totemic Maul"
+itemLevel: 36
+baseWhy: >-
+  A Totemic Maul can be worn at level 36 and has the biggest hit of the mauls
+  around that level, 57–85. Item level 35 is the first at which Tier 5
+  increased Physical Damage (85–109%) can roll, so check that the one you
+  picked up or bought is at least that: hold Alt over it.
+
+
+  Any white maul of your level works the same way. Do not use one that is
+  already Magic or Rare unless you have an [[Orb of Scouring]] to clean it.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["30% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "74% increased Physical Damage" }
+    - { text: "Adds 33 to 61 Cold Damage" }
+  suffixes:
+    - { text: "+24 to Strength" }
+    - { text: "9% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–30", note: "plus 6 for the bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s and one [[Regal Orb]]. Nothing here is
+  worth saving at this point in a league. The bench craft costs 6 more
+  Alterations.
+odds: >-
+  At item level 36, one prefix roll is increased Physical Damage of 65% or
+  more about 1 time in 15, by our arithmetic from the modifier weights. An
+  Alteration does not always roll a prefix, so expect 20 to 30 of them. The
+  Regal Orb and the Augmentation are plain luck, and the craft is built so
+  that their result does not matter much.
+steps:
+  - title: "Quality first, while it is cheap"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s on the white maul until it reads 20%
+      quality.
+    why: >-
+      Quality adds to the base's physical damage, and every local modifier
+      you roll afterwards multiplies the result. Doing it first also means
+      you judge the finished item on its real numbers.
+    state: { rarity: normal, implicits: ["30% increased Stun Duration on Enemies"] }
+  - title: "Make it Magic and roll the prefix"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s, one at a
+      time. Hold Alt and read the prefix after each. Stop when it is
+      **increased Physical Damage of 65% or more**: the names are "Wicked"
+      (65–84%) or "Vicious" (85–109%).
+    why: >-
+      A Magic item has one prefix and one suffix. Rolling two slots is cheap
+      and you only need one of them to be right. Increased Physical Damage is
+      the modifier the bench replaces worst at this level, so it is the one
+      to roll.
+    check: >-
+      The prefix line says "increased Physical Damage" with nothing else
+      attached, and the number is 65 or higher. Ignore the suffix.
+    fail: >-
+      If you run low, lower the bar to any increased Physical Damage. A 50%
+      roll still beats a white weapon by a wide margin.
+    state:
+      rarity: magic
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "74% increased Physical Damage" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the item has no suffix, use an [[Orb of Augmentation]]. If it
+      already has one, skip this step.
+    why: >-
+      An Augmentation adds a modifier to an empty slot on a Magic item and
+      never touches what is there. It is a free roll at attack speed, one of
+      the more common suffixes on a mace.
+    state:
+      rarity: magic
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "74% increased Physical Damage" }]
+      suffixes: [{ text: "+24 to Strength" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      It makes the item Rare, keeps both modifiers, and adds a third at
+      random. Rare is what opens the remaining slots to the bench.
+    check: >-
+      Read what was added and which side it is on. That decides the next
+      step. Here it added cold damage, a prefix the build does not use.
+    state:
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "74% increased Physical Damage" }
+        - { text: "Adds 33 to 61 Cold Damage" }
+      suffixes: [{ text: "+24 to Strength" }]
+  - title: "Let the bench add the missing piece"
+    do: >-
+      At the [[Crafting Bench]], add **one** modifier. If the item has no
+      attack speed, craft 8–10% increased Attack Speed (6 Orbs of
+      Alteration). If the Regal Orb or the Augmentation already gave you
+      attack speed, craft flat Physical Damage instead: adds 9–12 to 18–21
+      for 4 Orbs of Transmutation.
+    why: >-
+      An item holds one bench modifier, so spend it on the best thing the
+      item lacks. The bench cannot add increased Physical Damage here,
+      because the rolled one is the same group; flat Physical Damage and
+      attack speed are different groups and fit.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Craft the best physical or speed option it does offer and move
+      on.
+    state:
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "74% increased Physical Damage" }
+        - { text: "Adds 33 to 61 Cold Damage" }
+      suffixes:
+        - { text: "+24 to Strength" }
+        - { text: "9% increased Attack Speed", how: crafted }
+variations: >-
+  **Starting from an Essence.** If you have a low Essence of Contempt, use it
+  on the white maul instead of steps 2 to 4: it makes the item Rare with flat
+  Physical Damage guaranteed, and the bench then adds increased Physical
+  Damage (40–59% for 4 Orbs of Alteration). In 3.30 the weak Essences only
+  drop in the campaign and white maps, so this is the time to spend them.
+
+
+  **Higher up.** The same five steps make a mapping weapon on a level 60 base,
+  where Tier 3 (135–154%) can roll. The next example shows a better way.
+mistakes:
+  - "Using the bench while the item is still Magic, then a Regal Orb. It works, but you spent the craft before knowing what the item needed."
+  - "Rolling for the suffix. Attack speed is on the bench for 6 Alterations; a good prefix is not."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

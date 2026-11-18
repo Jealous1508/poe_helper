@@ -1,0 +1,543 @@
+name: "Bow"
+short: "Một item class, ba cây weapon khác nhau: bow elemental, bow physical và bow gem-level muốn những prefix hoàn toàn khác nhau. Hãy biết mình đang làm cây nào trước đã."
+icon: "Spine Bow"
+intro: >-
+  Bow là weapon hai tay, nên nó chiếm trọn chỗ weapon của một cung thủ và có
+  sáu socket. Chừng đó thì nó giống mace hai tay. Thứ nó không giống là một
+  mục tiêu duy nhất. Mace lúc nào cũng là weapon physical. Bow là một trong
+  ba thứ, và chúng gần như chẳng có gì chung:
+
+
+  **Bow elemental** mang flat fire, cold và lightning damage. Physical
+  damage gốc của nó hầu như không quan trọng.
+  **Bow physical** lại chính là cây mace: damage của chính base, được nhân
+  lên.
+  **Bow gem-level** có "+1 to Level of Socketed Gems" và "+2 to Level of
+  Socketed Bow Gems", cho những skill có damage đến từ gem: trên hết là
+  damage over time. Trên cây bow đó, damage của weapon hoàn toàn không quan
+  trọng.
+
+
+  Bow nào cũng roll tất cả những thứ này từ một pool, nên không gì ngăn một
+  lần craft trôi dạt giữa chúng. Việc đầu tiên ở loại item này là quyết định
+  đó là cây bow nào, và nhận ra cây bạn đang nhìn là cây nào.
+basics:
+  itemLevel:
+    text: >-
+      Bạn cần item level nào là tùy vào kiểu bow. Một **bow gem-level** hoàn
+      chỉnh ở 64, nơi "+2 to Level of Socketed Bow Gems" mở ra. Một **bow
+      elemental** muốn 75 cho một lần craft bình thường (Tier 2 của ba
+      prefix flat elemental) và 82 cho tier cao nhất của chúng. Một
+      **bow physical** đi theo mace: 77 cho phần lớn, 83 cho tier cuối của
+      các prefix phần trăm.
+
+
+      Attack speed là điều bất ngờ. Tier cao nhất của nó trên bow, 17–19%,
+      chỉ cần item level 37. Còn item level 86 quan trọng ở đây vì hai thứ:
+      tier cao nhất của increased Elemental Damage with Attack Skills, và
+      "Bow Attacks fire 2 additional Arrows".
+    breakpoints:
+      - ilvl: 37
+        unlocks: "Tier 1 của attack speed, \"of Acclaim\" (17–19%). Mọi cây bow từ giữa campaign trở đi đều roll được attack speed cao nhất hiện có."
+      - ilvl: 50
+        unlocks: "\"+1 to Level of Socketed Gems\". Prefix gem còn lại, +1 to Level of Socketed Bow Gems, đã mở từ item level 9."
+      - ilvl: 64
+        unlocks: "\"+2 to Level of Socketed Bow Gems\". Tier 3 của flat Fire, Cold và Lightning Damage (từ 62–63) và Tier 3 của increased Physical Damage (từ 60). **Đủ cho một bow gem-level, và là mốc đầu tiên đáng craft một bow elemental để chạy map.**"
+      - ilvl: 70
+        unlocks: "\"Bow Attacks fire an additional Arrow\"."
+      - ilvl: 75
+        unlocks: "Tier 2 của ba prefix flat elemental (Fire và Lightning ở 74, Cold ở 75). Tier 1 của Critical Strike Chance và Critical Strike Multiplier (35–38%, từ 73). **Đủ cho một bow elemental bình thường.**"
+      - ilvl: 77
+        unlocks: "Tier 1 của flat Physical Damage (adds 34–47 to 72–84)."
+      - ilvl: 83
+        unlocks: "Tier 1 của ba prefix flat elemental (từ 82), Tier 1 của Damage over Time Multiplier (24–26%, từ 82), và Tier 1 của cả hai prefix physical phần trăm: \"Merciless\" (170–179%) và \"Dictator's\" (75–79% kèm Accuracy)."
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (87–100%) và \"Bow Attacks fire 2 additional Arrows\". **Trần.**"
+  bases:
+    text: >-
+      Có 28 bow roll được modifier, và chúng là một pool: không base nào mở
+      ra một modifier mà base khác thiếu. Chúng khác nhau với tư cách
+      weapon, ở damage mỗi cú đánh, số attack mỗi giây, critical strike
+      chance và implicit. Một pool thứ hai chứa đúng một cây bow không roll
+      ra gì cả.
+    types:
+      - title: "Bow thường"
+        pools: [standard]
+        text: >-
+          Từ Crude Bow tới Harbinger Bow, theo từng dòng lặp lại sau mỗi vài
+          level. Phần lớn không có implicit, và trong số đó có những cây
+          đánh nhanh nhất (Grove, Thicket: 1.5 mỗi giây) và một dòng có 6.5%
+          critical strike chance (Bone, Ivory, Spine). Một dòng có 20–24%
+          increased Elemental Damage with Attack Skills (Royal, Highborn,
+          Imperial). Một dòng có 30–50% increased Critical Strike Chance
+          cùng cú đánh chậm nhất, đau nhất (Death, Decimation, Harbinger).
+          Một dòng có +15–25% to Global Critical Strike Multiplier và 6.7%
+          critical strike chance (Recurve, Sniper, Assassin).
+      - title: "Bow Maraketh"
+        text: >-
+          Reflex, Steelwood và Maraketh Bow. Implicit của chúng là increased
+          Movement Speed: 6% trên hai cây đầu, 10% trên Maraketh Bow. Cùng
+          pool với bow thường, với khoảng damage hẹp (61–92 trên Maraketh
+          Bow).
+      - title: "Bow Heist"
+        text: >-
+          Hedron, Foundry và Solarine Bow. Gần như không có physical damage
+          (16–24 trên Solarine) và một implicit flat Fire Damage rất lớn:
+          adds 121–133 to 184–197 trên Solarine. Đó là một modifier flat
+          elemental thứ tư mà không chiếm ô prefix nào. Chúng là bow
+          elemental ngay từ thiết kế và vô dụng nếu làm bow physical.
+      - title: "Ethereal Bow"
+        pools: [ethereal-bow]
+        text: >-
+          Một cây bow duy nhất trong pool riêng của nó, không có implicit,
+          drop level là 1 và mang một tag giữ nó khỏi các shop. Trong dữ
+          liệu 3.30, **không prefix nào và không suffix nào có weight trên
+          nó**, nên không có gì để craft. Chúng tôi không tìm ra được nó
+          dùng để làm gì. Nếu gặp một cây, đừng tiêu currency lên nó.
+    picks:
+      - base: "Thicket Bow"
+        for: "Bow elemental và bow gem-level"
+        why: >-
+          1.5 attack mỗi giây, base nhanh nhất ở level này. Flat elemental
+          damage là local trên bow, nên nó được gây ra một lần mỗi attack,
+          và attack speed trên bow nhân vào tốc độ của base. Không implicit
+          và không có bonus critical strike: đây là lựa chọn khi tốc độ là
+          thứ bạn bỏ tiền mua.
+      - base: "Spine Bow"
+        for: "Build elemental critical strike"
+        why: >-
+          1.4 attack mỗi giây với 6.5% critical strike chance gốc, so với 5%
+          trên Thicket Bow. Tức nhiều hơn ba phần mười số critical strike
+          trước khi tính bất kỳ modifier nào, đổi lấy tốc độ kém đi một phần
+          mười lăm.
+      - base: "Imperial Bow"
+        for: "Build elemental không crit"
+        why: >-
+          1.45 attack mỗi giây và 20–24% increased Elemental Damage with
+          Attack Skills trên implicit. Bản của bench cho modifier đó là
+          24–32%, nên implicit đáng giá gần bằng một craft bench.
+      - base: "Citadel Bow"
+        for: "Bow physical"
+        why: >-
+          36–144 physical damage với 1.25 attack mỗi giây: 112.5 damage mỗi
+          giây, ngang với Ranger Bow ở mức cao nhất của loại item này, và 6%
+          critical strike chance. Các modifier physical local nhân vào con
+          số này, nên nó là con số quan trọng.
+      - base: "Harbinger Bow"
+        for: "Một cú đánh physical lớn có crit"
+        why: >-
+          50–133, cú đánh trung bình lớn nhất trong mọi cây bow, với 30–50%
+          increased Critical Strike Chance trên implicit. Base hàng đầu chậm
+          nhất, ở 1.2 attack mỗi giây.
+      - base: "Solarine Bow"
+        for: "Build elemental thiên về fire"
+        why: >-
+          Adds 121–133 to 184–197 Fire Damage dưới dạng implicit. Mức đó nằm
+          giữa Tier 4 và Tier 3 của prefix Fire roll ra (adds 85–115 to
+          172–200, và adds 110–150 to 223–260) mà không chiếm ô nào. Còn lại
+          ba prefix cho Cold, Lightning và một cái nữa.
+    impact: >-
+      Base quyết định điều gì thì tùy vào bạn đang làm cây bow nào, và đó
+      chính là lý do phải quyết định trước.
+
+
+      **Số attack mỗi giây và critical strike chance** quan trọng với cả bow
+      elemental lẫn bow physical. Attack speed trên weapon là local: nó nhân
+      vào tốc độ của chính base, 1.2 tới 1.5 trên các base hàng đầu.
+
+
+      **Các con số physical damage** chỉ quan trọng với bow physical, nơi
+      mọi phần trăm local nhân chúng lên. Trên bow elemental chúng là một
+      khoản thêm nhỏ. Trên bow gem-level chúng không là gì cả.
+
+
+      **Implicit.** Một [[Blessed Orb]] roll lại con số của nó; không gì
+      trong craft thông thường đổi được nó là modifier nào.
+
+
+      **Yêu cầu Dexterity**, 212 trên các base hàng đầu.
+
+
+      Thứ base không quyết định là pool. Mọi cây bow trừ Ethereal Bow đều
+      có thể thành bất kỳ kiểu nào trong ba kiểu.
+tools:
+  - method: currency
+    note: >-
+      Roll thường nghiêng hẳn về bow elemental. Ở item level 83, ba prefix
+      flat elemental chiếm 64% mọi lần roll prefix, theo phép tính của chúng
+      tôi từ weight, và một trên 10 lần roll prefix là Tier 3 trở lên của
+      một trong số đó.
+
+
+      Các prefix physical phần trăm ở đây hiếm hơn nhiều so với trên mace,
+      vì mấy prefix elemental đó nặng weight quá: increased Physical Damage
+      thuần ở Tier 3 trở lên là 1 trên 311 lần roll prefix, và Tier 1 là 1
+      trên 2,174. "+2 to Level of Socketed Bow Gems" và "+1 to Level of
+      Socketed Gems" mỗi cái là 1 trên 54 lần roll.
+
+
+      Ở phía suffix, attack speed chiếm 8% số lần roll, Critical Strike
+      Chance và Multiplier mỗi cái 10%, còn một additional arrow là 1 trên
+      60 lần roll.
+  - method: bench
+    note: >-
+      Bench bán cho mọi kiểu bow một điểm khởi đầu. **Elemental:** adds
+      60–72 to 110–128 Fire hoặc Cold Damage, hoặc adds 10–14 to 162–197
+      Lightning, mỗi cái giá 4 Chaos Orb: cỡ Tier 5 của prefix roll ra.
+      **Physical:** 80–99% increased Physical Damage giá 4 Chaos Orb,
+      100–129% giá 4 Exalted Orb; adds 18–24 to 36–42 Physical Damage giá 4
+      Chaos Orb. **Gem-level:** 21–30% increased Damage over Time (2 Chaos
+      Orb), và +18–20% to Chaos, Cold, Fire hoặc Physical Damage over Time
+      Multiplier (mỗi cái 4 Chaos Orb).
+
+
+      Suffix cho cả ba: Critical Strike Chance 25–27% hoặc Critical Strike
+      Multiplier 25–28% giá 4 Chaos Orb; 8–10% chance to deal Double Damage
+      giá 8. **Attack speed là cái yếu:** 8–10% giá 6 Orb of Alteration và
+      11–13% giá 4 Exalted Orb, so với 17–19% roll ra.
+
+
+      Ba luật về group. Một element của bench cùng group với prefix roll ra
+      của element đó. "+2 to Level of Socketed Support Gems" của bench (4
+      Exalted Orb) cùng group với "+# to Level of Socketed Bow Gems", nên
+      hai cái không thể cùng nằm trên một cây bow. Còn các Damage over Time
+      Multiplier của bench thì khác group với "+#% to Damage over Time
+      Multiplier" roll ra, nên hai cái đó thì được.
+  - method: finishing
+    note: >-
+      Quality là physical damage trên base, nên nó quan trọng trọn vẹn trên
+      bow physical, chút ít trên bow elemental và hoàn toàn không trên bow
+      gem-level. Socket thì ngược lại: các prefix gem chỉ nâng những gem
+      **gắn trong bow**, nên một bow gem-level chưa xong chừng nào chưa có
+      sáu socket link với nhau. Bench chỉnh socket với link ở giá cố định
+      khi [[Orb of Fusing]] không chịu hợp tác.
+  - method: essence
+    note: >-
+      Bow có một Essence cho từng kiểu. **Anger, Hatred và Wrath** đảm bảo
+      flat Fire, Cold và Lightning Damage; Screaming cho đúng khoảng của
+      Tier 3, Shrieking cho khoảng của Tier 2, còn Deafening nằm giữa Tier 2
+      và Tier 1. **Contempt** đảm bảo flat Physical Damage (adds 31–42 to
+      65–75 ở bậc Deafening). **Dread** đảm bảo gem level: +1 to Level of
+      Socketed Bow Gems ở Screaming, +2 ở Shrieking và ở Deafening.
+      **Zeal** cho attack speed, 17–18% ở Deafening, và **Loathing** cho
+      Critical Strike Chance, 35–38%.
+
+
+      **Rage, Sorrow và Spite** cho một prefix mà pool tự nhiên không có:
+      Damage Penetrates 15–16% Fire, Cold hoặc Lightning Resistance ở bậc
+      Deafening.
+
+
+      Hãy đọc bảng trước khi dùng bất cứ thứ gì khác. Trên bow, Woe, Anguish,
+      Suffering, Torment, Misery và Scorn đều cho modifier spell.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) dành cho cây bow Magic đang mang
+      thứ gì đó hiếm: một tier elemental hàng đầu, hoặc một additional arrow.
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]])
+      hợp với bow elemental còn một prefix trống và chưa có suffix nào, vì
+      gần hai trên ba lần roll prefix là một element.
+  - method: fossil
+    note: >-
+      Fossil quan trọng nhất với bow gem-level. Một [[Faceted Fossil]] làm
+      hai prefix gem dễ ra gấp mười, và nửa "no" của hai Fossil khác xóa
+      phần còn lại của pool prefix: một
+      [[Corroded Fossil]] loại mọi modifier Elemental và một
+      [[Metallic Fossil]] loại mọi modifier Physical. Ví dụ làm mẫu cho
+      thấy còn lại những gì.
+
+
+      Với bow elemental, một [[Prismatic Fossil]] nâng các modifier
+      Elemental. Trong dữ liệu 3.30, hệ số nhân của nó là sáu, không phải
+      mười như thường lệ: ba element đi từ 64% số lần roll prefix lên 89%.
+      Chỉ riêng một [[Metallic Fossil]] đã làm Lightning chiếm 80% số lần
+      roll prefix và loại hẳn các prefix physical.
+
+
+      Bow có những modifier chỉ có từ Fossil rất mạnh: 80–94% increased
+      Elemental Damage, Attacks with this Weapon Penetrate 9–12% Elemental
+      Resistances, và "+1 to Level of Socketed Dexterity Gems", một suffix
+      mà dữ liệu xếp dưới Faceted Fossil. Các tỉ lệ của chúng tôi bỏ
+      modifier chỉ có từ Fossil ra ngoài.
+  - method: harvest
+    note: >-
+      Hai reforge suffix thì sạch sẽ trên bow. **Critical** (150 Primal) cho
+      Critical Strike Chance hoặc Critical Strike Multiplier, hai suffix duy
+      nhất mang tag đó. **Speed** (150 Vivid) cho attack speed hoặc
+      Projectile Speed, chia đều nhau.
+
+
+      **Fire, Cold và Lightning** (mỗi cái 50 Lifeforce) thì đáng biết: trên
+      bow, mỗi tag đó nằm trên đúng một modifier tự nhiên, là prefix flat
+      damage của element đó. Reforge đảm bảo element và để tier cho may rủi,
+      trong khi Essence cố định tier.
+      **Physical** thì bất kỳ cái nào trong ba prefix hoặc hai suffix leech
+      cũng thỏa được, còn **Attack** thì gần như cái gì cũng thỏa.
+  - method: veiled
+    note: >-
+      Prefix veiled là cách phần lớn bow physical có được phần trăm của
+      mình: 120–139% increased Physical Damage kèm 21–25% chance to Impale,
+      Bleed, Poison hoặc Blind, cùng group với increased Physical Damage
+      thuần. Với bow elemental: Attacks with this Weapon Penetrate 14–16%
+      Elemental Resistances. Suffix: 12–14% chance to deal Double Damage,
+      27–30% attack speed khi có enemy Rare hoặc Unique ở gần, và +24–28% to
+      Chaos, Fire hoặc Physical Damage over Time Multiplier.
+  - method: fracture
+    note: >-
+      Hãy fracture cái modifier mà không công cụ nào nhắm được vào. Trên bow
+      elemental, Essence làm lại được bất kỳ prefix flat nào, nên ứng viên
+      là một element flat Tier 1 hoặc, tốt hơn, một suffix additional
+      arrows. Trên bow physical, đó là một prefix phần trăm cao, như trên
+      mace.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" và "Suffix Modifiers cannot be
+      changed" tốn 4 Divine Orb và 1 [[Sacred Orb]] trên bow trong 3.30. Hãy
+      khóa prefix khi ba cái tốt đã xong còn suffix thì chưa. Khóa suffix có
+      công dụng riêng ở đây: dưới nó, một
+      [[Veiled Chaos Orb]] buộc phải đặt veiled modifier của nó vào phía
+      prefix.
+  - method: influence
+    note: >-
+      Bảng đầy đủ nằm trong danh sách modifier. Những cái dân craft hay với
+      tới: suffix "Skills fire an additional Projectile" của Elder và
+      Warlord (item level 82); prefix "Damage Penetrates 11–12% Elemental
+      Resistances" của Shaper (83); prefix 90–94% increased Chaos Damage
+      over Time của Hunter và 90–94% increased Physical Damage over Time của
+      Warlord (78), cho bow gem-level; và các hybrid physical của Crusader
+      và Hunter, 65–69% increased Physical Damage kèm Projectile Speed hoặc
+      Pierce, chung group với hybrid kèm Accuracy. Một cây bow có influence
+      thì không fracture được.
+  - method: corruption
+    note: >-
+      Một [[Vaal Orb]] có thể cho bow một implicit "Bow Attacks fire an
+      additional Arrow" hoặc "Arrows Chain +1 times". Nó thay implicit của
+      base, nên các base không có implicit chẳng mất gì. Bước cuối cùng,
+      trên một cây bow mà bạn chịu mất được.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: chúng hợp với bow elemental và không giúp được mấy cho bow gem-level."
+memoryStrands: >-
+  Bow elemental có vấn đề của mace ở dạng nhẹ hơn: các prefix flat elemental
+  là thứ hay roll ra nhất, và chỉ các tier cao nhất của chúng mới nhẹ
+  weight. "Vapourising" có weight 126 trong một họ có tổng weight 11,536.
+  [[Memory Strands]] cắt các tier đáy khỏi bất cứ thứ gì được roll ra, nên
+  một base có strand, roll bằng [[Orb of Alteration]] và kết thúc bằng một
+  [[Regal Orb]] hoặc [[Exalted Orb]], là cách chắc tay để có một hai prefix
+  elemental cao. Mỗi orb đó tiêu ít strand, theo bảng data-mine, và game
+  hiện chi phí trước khi bạn bấm.
+
+
+  Chúng giúp ít hơn nhiều cho bow gem-level. "+1 to Level of Socketed Gems"
+  có một tier, và strand không bao giờ làm một modifier dễ ra hơn. Chúng có
+  đẩy "+# to Level of Socketed Bow Gems" từ tier +1 lên tier +2 hay không
+  thì chúng tôi chưa xác nhận được: các con số do người chơi thử nghiệm là
+  cho modifier có nhiều tier.
+
+
+  Đừng tiêu một base có strand vào Essence, thứ có thể lấy tới 80 strand mỗi
+  cái, hay vào Fossil, thứ mà theo thử nghiệm của người chơi thì phớt lờ
+  strand.
+reading:
+  intro: >-
+    Giữ Alt rồi rê chuột lên một cây bow và đọc prefix trước mọi thứ khác.
+    **Gem level** nghĩa là bow gem-level: bỏ qua damage của nó.
+    **Increased Physical Damage** nghĩa là bow physical: đánh giá nó như
+    mace, theo physical damage mỗi giây. **Flat fire, cold và
+    lightning** nghĩa là bow elemental: cộng ba cái lại rồi nhân với số
+    attack mỗi giây. Một cây bow có mỗi kiểu một prefix là cây bow không ai
+    chủ đích làm ra.
+  prefixes:
+    text: >-
+      Phía prefix chứa ba bộ riêng biệt, và một cây bow hoàn chỉnh có một
+      trong số đó.
+
+
+      **Elemental:** flat Fire, Cold và Lightning Damage. Ba group, nên cả
+      ba đều vừa, và đủ bộ là mục tiêu thường gặp. Increased Elemental
+      Damage with Attack Skills là ứng viên thứ tư, chỉ đáng một ô khi ở
+      tier cao.
+
+
+      **Physical:** increased Physical Damage thuần, hybrid kèm Accuracy
+      Rating và flat Physical Damage, y như trên mace: ba group cộng dồn
+      được.
+
+
+      **Gem level:** "+1 to Level of Socketed Gems" và "+# to Level of
+      Socketed Bow Gems" là hai group, nên cả hai đều vừa, tổng cộng +3.
+      Prefix thứ ba đến từ bench hoặc từ influence.
+
+
+      Các bộ này cạnh tranh nhau. Trên bow physical, mỗi prefix elemental là
+      một ô phí, mà chúng là hai trên ba lần roll prefix. Trên bow gem-level,
+      mọi thứ không phải prefix gem đều là phí.
+    key:
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Damage của bow elemental. Local: được gây ra một lần mỗi attack và được nhân với attack speed của bow. Mỗi element chiếm 21% số lần roll prefix."
+        aim: "T3 của mỗi cái (ilvl 62–63). T2 cần ilvl 74–75, T1 cần ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Global, nên nó cạnh tranh với cùng modifier đó trên các món đồ khác. Lựa chọn thứ tư tốt khi thiếu một element."
+        aim: "T3, 63–71% (ilvl 60). T1 là 87–100% (ilvl 86)."
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân chính của bow physical. Hiếm hơn nhiều so với trên mace: các tier tốt của nó có weight 25 tới 100 trong một pool 54,000."
+        aim: "T3, 135–154% (ilvl 60), hoặc bản veiled ở 120–139%."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Phần trăm thứ hai, ở group riêng, nên nó nằm cạnh cái đầu hoặc cạnh cái của bench được."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Nâng con số mà các phần trăm nhân lên. Phí trên hai kiểu bow còn lại."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 cần ilvl 77."
+      - mod: "+# to Level of Socketed Bow Gems"
+        why: "Hai tier, +1 và +2, với weight bằng nhau. Chỉ dành cho skill gắn trong bow."
+        aim: "+2 (ilvl 64), hoặc một Shrieking hay Deafening Essence of Dread."
+      - mod: "+# to Level of Socketed Gems"
+        why: "Một tier. Khác group với prefix bow-gem, nên hai cái cộng lại thành +3."
+        aim: "+1 (ilvl 50). Khoảng 1 trên 54 lần roll prefix."
+  suffixes:
+    text: >-
+      Phía suffix là phần chung của cả ba kiểu bow, và attack speed dẫn đầu
+      với từng kiểu. Nó là local và nhân vào số attack mỗi giây của base;
+      tier cao nhất của nó chỉ cần item level 37; và bench thì kém khoản
+      này. Tổ hợp đó là nét riêng của bow và wand: **attack speed dễ roll
+      cao và dở khi mua.**
+
+
+      Sau đó các kiểu rẽ mỗi đường. Build critical strike muốn Critical
+      Strike Chance và Multiplier, cả hai đều phổ biến và đều có bán ở
+      bench. Bow gem-level muốn Damage over Time Multiplier: bản chung roll
+      ra và bản theo loại damage của bench là hai group khác nhau và cộng
+      dồn được. Additional arrow là để clear: một arrow là 1 trên 60 lần
+      roll suffix, hai arrow là 1 trên 600 và chỉ có ở item level 86.
+
+
+      Khoảng một nửa pool là đồ lấp chỗ: Dexterity, Accuracy, stun duration,
+      Projectile Speed, life và mana on kill.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. Suffix duy nhất cây bow nào cũng muốn, và là cái bench thay thế kém nhất."
+        aim: "T2, 14–16% (ilvl 30). T1 là 17–19% (ilvl 37)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Cho build crit. Global. Không Essence nào cho nó trên bow; reforge Critical của Harvest hoặc bench thì có."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Nhân vào 5% tới 6.7% của base. Cho build crit."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "Bow Attacks fire # additional Arrows"
+        why: "Tốc độ clear. Không gì nhắm được vào nó: tag duy nhất của nó là attack."
+        aim: "Một arrow (ilvl 70). Hai arrow cần ilvl 86 và có weight 100."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Cho bow gem-level. Weight 300 mỗi tier. Cộng dồn với multiplier theo loại damage của bench."
+        aim: "T3, 16–19% (ilvl 68). T1 là 24–26% (ilvl 82)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Không có trong pool tự nhiên. Bench bán 8–10% và bản veiled là 12–14%."
+approach:
+  principle: >-
+    **Gọi tên cây bow trước orb đầu tiên.** Elemental, physical hay
+    gem-level: prefix cần có, base, Essence và Fossil đều suy ra từ một chữ
+    đó, và không công cụ nào đúng cho hai kiểu. Rồi dựng bộ prefix bằng công
+    cụ sinh ra cho nó, và xử lý phía suffix theo cùng một cách cho cả ba:
+    attack speed trước.
+  order:
+    - title: "Đó là cây bow nào?"
+      text: >-
+        Hãy hỏi damage của skill đến từ đâu. **Từ added elemental damage
+        trên weapon:** elemental. **Từ physical damage của chính
+        weapon:** physical. **Từ level của skill gem**, như với damage over
+        time: gem-level. Nếu bạn không trả lời được, hãy xem build guide bạn
+        đang theo mô tả weapon của nó thế nào.
+    - title: "Base và item level cho kiểu đó"
+      text: >-
+        Elemental: một base nhanh, item level 75 hoặc 82. Physical: damage
+        gốc cao nhất, item level 77 hoặc 83. Gem-level: base nào cũng được
+        từ item level 64 trở lên, và hãy tính tới sáu link.
+    - title: "Bộ prefix, bằng công cụ sinh ra cho nó"
+      text: >-
+        Elemental: một Essence of Anger, Hatred hoặc Wrath cố định một
+        element, và cuộc xổ số, vốn hai phần ba là elemental, cấp cái kế
+        tiếp. Gem-level: một Essence of Dread cho +2, hoặc ba Fossil cho +3.
+        Physical: một Essence of Contempt, rồi bench hoặc một prefix veiled
+        cho phần trăm, vì roll nó là ván cược tồi trên bow.
+    - title: "Chỉ bảo vệ prefix nếu chúng đáng"
+      text: >-
+        Ba prefix elemental tốt hoặc một bộ +3 đầy đủ đáng 4 Divine Orb và
+        một Sacred Orb. Hai cái trung bình thì không.
+    - title: "Attack speed, rồi tới suffix của build"
+      text: >-
+        Attack speed đáng để roll: một Essence of Zeal, hoặc một reforge
+        Speed dưới khóa prefix. Các modifier critical strike và Damage over
+        Time Multiplier có thể đến từ bench mà không thiệt mấy.
+    - title: "Bench ô cuối cùng; socket cho bow gem-level"
+      text: >-
+        Một ô được chừa cho bench. Trên bow gem-level, socket và link là một
+        phần của lần craft, không phải chuyện tính sau.
+  finishing: >-
+    Quality lên 20% trên bow physical trước khi bạn đánh giá nó. Sáu socket
+    và số link skill của bạn cần. Rồi một [[Divine Orb]] nếu các con số quan
+    trọng nằm thấp trong khoảng của chúng: trên bow elemental các khoảng
+    flat damage rộng, nên con số roll ra bên trong tier đáng giá hơn thường
+    lệ.
+
+
+    Nếu ô dành cho bench chưa dùng thì dùng đi.
+  stopping: >-
+    **Elemental:** hai element roll ra từ Tier 4 trở lên, cái thứ ba từ
+    bench và attack speed là một cây bow cho map đỏ. Ba element roll ra ở
+    Tier 3 là chỗ chi phí bắt đầu leo thang, còn Tier 1 ở cả ba là item tầm
+    mirror. **Gem-level:** +2 từ một Essence kèm một multiplier bench đưa
+    một build damage over time đi rất xa; +3 là bước kế tiếp và Fossil khiến
+    nó nằm trong tầm với. **Physical:** một phần trăm veiled hoặc bench cùng
+    flat Physical Damage và attack speed là một cây bow dùng được; xa hơn
+    nữa thì theo hướng dẫn mace hai tay, với giá cao hơn.
+
+
+    Hãy dừng khi bước kế tiếp tốn nhiều hơn giá trị phần cải thiện đối với
+    bạn, và hãy quyết định điều đó trước khi bắt đầu.
+special:
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Fossil"
+    where: "Một prefix từ Essence of Rage (Fire), Sorrow (Cold) hoặc Spite (Lightning): 11–12% ở bậc Screaming, 15–16% ở Deafening. Các bản chỉ có từ Fossil cho 12–15%."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25% chance. Bench: 95–105% kèm 18–20%, giá 8 Chaos Orb. Có các bản cho Bleeding, Poison và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "8–10% từ [[Crafting Bench]] giá 8 Chaos Orb. 12–14% dưới dạng suffix unveil ra."
+  - mod: "+#% to Chaos / Fire / Physical Damage over Time Multiplier"
+    source: "Bench / Veiled"
+    where: "18–20% từ bench giá 4 Chaos Orb (có cả Cold), 24–28% khi unveil. Khác group với \"+#% to Damage over Time Multiplier\" roll ra, nên một cây bow chứa được cả hai."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 giá 8 Chaos Orb, +2 giá 4 Exalted Orb. Cùng group với \"+# to Level of Socketed Bow Gems\": chọn một."
+  - mod: "+1 to Level of Socketed Dexterity Gems"
+    source: "Fossil"
+    where: "Một suffix chỉ có từ Fossil. Dữ liệu game xếp nó dưới [[Faceted Fossil]]. Phần lớn skill bow là gem Dexterity, nên trên bow gem-level nó là một level thứ tư."
+  - mod: "#% increased Elemental Damage"
+    source: "Fossil"
+    where: "Một prefix chỉ có từ Fossil, 80–94% ở item level 75. Dữ liệu không cho biết Fossil nào đưa nó vào."
+  - mod: "Skills fire an additional Projectile"
+    source: "Influence Elder hoặc Warlord"
+    where: "Một suffix ở item level 82, với weight 500 trên bow Elder và 200 trên bow Warlord."
+  - mod: "#% increased Chaos Damage over Time"
+    source: "Influence Hunter"
+    where: "Một prefix Hunter, 90–94% ở item level 78, với weight 100. Warlord có bản tương tự cho Physical Damage over Time. Prefix thứ ba của một bow gem-level hàng đỉnh."
+  - mod: "Bow Attacks fire an additional Arrow (implicit)"
+    source: "Corruption"
+    where: "Một [[Vaal Orb]] có thể thay implicit bằng nó. \"Arrows Chain +1 times\" cũng đến theo cách đó."
+  - mod: "Trigger a Socketed Spell when you Use a Skill"
+    source: "Bench"
+    where: "Một suffix bench giá 3 Chaos Orb, với cooldown 8 giây. Nó chiếm một ô suffix và dành cho build gắn một spell tiện ích trong bow."
+mistakes:
+  - "**Craft một cây bow mà không gọi tên nó.** Một prefix elemental, một physical và một gem level là ba phần ba của ba cây weapon khác nhau."
+  - "**Roll tìm increased Physical Damage trên bow như bạn làm trên mace.** Tier 3 trở lên là 1 trên 311 lần roll prefix ở đây. Hãy dùng một prefix veiled hoặc bench."
+  - "**Bench \"+2 to Level of Socketed Support Gems\" cạnh prefix bow-gem.** Chúng là một group. Bench sẽ từ chối, và nếu bạn craft nó trước thì nó block cái +2 bạn muốn."
+  - "**Mua attack speed.** Bản rẻ của bench là 8–10% so với 17–19% roll ra, và phần chênh đó nhân lên mọi thứ cây bow làm."
+  - "**Đánh giá một bow gem-level theo damage mỗi giây của nó,** hoặc để nó với bốn socket link. Damage của nó là các gem gắn trong đó."
+  - "**Dùng Woe, Scorn hoặc Misery trên bow.** Ở đây các Essence đó cho spell damage, spell critical strike chance và cast speed."
+  - "**Trả tiền cho item level 86 trên bow gem-level.** Mọi thứ nó cần đã mở ở 64; chỉ Tier 1 của Damage over Time Multiplier mới đòi 82."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên weapon." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Critical, Speed và theo element." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

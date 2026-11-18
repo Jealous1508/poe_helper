@@ -1,0 +1,158 @@
+category: amulets
+title: "+1 to all Skill Gems, được giữ bằng Imprint"
+level: 3
+summary: "Prefix hiếm nhất mà amulet roll được, tìm bằng Alteration, lưu lại bằng một Imprint từ beast, rồi đưa qua bao nhiêu Regal Orb cũng được cho tới khi đạt."
+goal: >-
+  Một chiếc amulet Rare có "+1 to Level of all Skill Gems", một thứ hữu ích
+  bên cạnh nó, Life từ bench, và vẫn còn ô trống. Không công cụ nào trong
+  game nhắm tốt vào prefix này, nên lần craft này là kiên nhẫn, tiếp theo là
+  **bảo hiểm**: một Imprint đảm bảo rằng lần roll duy nhất bạn không bao giờ
+  lặp lại nổi sẽ không bị tiêu vào một Regal Orb ra xấu.
+base: "Onyx Amulet"
+itemLevel: 75
+baseWhy: >-
+  Item level 75 là nơi prefix này mở, và cũng là nơi nó dễ ra nhất: 1 trên
+  1,565 lần roll prefix, so với 1 trên 1,746 ở item level 84, theo phép tính
+  của chúng tôi. Hãy chủ đích mua một base level 75. Implicit của Onyx là lựa
+  chọn an toàn cho một chiếc amulet mà nhân vật nào rồi cũng có thể đeo.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+14 to all Attributes"]
+  prefixes:
+    - { text: "+1 to Level of all Skill Gems" }
+    - { text: "+49 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+36 to Strength" }
+    - { text: "+41% to Fire Resistance" }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "2,000 trở lên" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng ba beast Rare cho mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Alteration tính bằng nghìn. Đây là việc dùng Alteration dài nhất của loại
+  item này, và không có cách nào rút ngắn nó bằng cùng loại currency đó. Sau
+  đó là một [[Regal Orb]] và một bộ beast cho mỗi lần thử Regal. Trong 3.30
+  chỉ beast đỏ mới bị bắt, nên hãy đếm Menagerie của bạn trước khi bắt đầu.
+odds: >-
+  1 trên 1,565 lần roll prefix ở item level 75, theo phép tính của chúng tôi
+  từ weight: modifier này có weight 50 trong một pool prefix có tổng weight
+  78,250. Alteration không phải lúc nào cũng roll ra prefix, nên số orb còn
+  cao hơn thế. Một đợt xui thì gấp đôi mức trung bình.
+
+
+  Regal Orb thêm một modifier ngẫu nhiên. Trên chiếc amulet này, xấp xỉ một
+  nửa những thứ nó có thể thêm là đáng giữ: bất kỳ attribute nào, bất kỳ
+  resistance nào, Life, một suffix damage. Hãy tính là cần hai hoặc ba
+  Imprint.
+steps:
+  - title: "Alteration tới khi prefix xuất hiện"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Bạn
+      đang tìm một từ trong tên item: **"Exalter's"**. Giữ Alt để xác nhận
+      prefix ghi "+1 to Level of all Skill Gems".
+    why: >-
+      Item Magic roll hai ô và bạn chỉ đọc một. Năm gem level theo loại
+      ("Vulcanist's", "Rimedweller's" và các cái khác) mỗi cái phổ biến gấp
+      bốn lần; chúng là group khác và không phải thứ lần craft này nhắm tới,
+      dù cái nào trong số đó cũng đáng để riêng ra.
+    check: >-
+      Suffix nào đi kèm prefix thì cứ để đó. Đừng cố cải thiện nó.
+    fail: >-
+      Hết Alteration: dừng lại rồi quay lại sau. Tạm nghỉ không mất gì, và
+      một gem level theo loại tìm được dọc đường là điểm xuất phát có sẵn cho
+      bước bench của ví dụ Fossil.
+    state:
+      rarity: magic
+      implicits: ["+14 to all Attributes"]
+      prefixes: [{ text: "+1 to Level of all Skill Gems" }]
+      suffixes: [{ text: "+36 to Strength" }]
+  - title: "Để yên suffix"
+    do: >-
+      Đừng làm gì với chiếc amulet Magic. Không [[Orb of Annulment]] để xóa
+      một suffix nhạt, không Augmentation để lấp một ô trống.
+    why: >-
+      Một Annulment dùng lên item Magic có hai modifier sẽ gỡ prefix một nửa
+      số lần. Một Augmentation thêm một suffix ngẫu nhiên, và từ đó nó thành
+      một phần của mọi lần thử về sau. Một suffix làng nhàng tốn một ô; một
+      trong hai orb kia có thể làm mất cả chiếc amulet.
+  - title: "Imprint"
+    do: >-
+      Ở [[Menagerie]], dùng **Create an Imprint of a Magic Item** lên
+      amulet. Nó cần một [[Craicic Croaker]] và ba beast Rare khác.
+    why: >-
+      Imprint là một bản sao lưu của amulet đúng như nó đang có lúc này. Nó
+      chỉ dùng được trên item Magic, vì thế nó đi trước Regal Orb chứ không
+      phải sau.
+    check: >-
+      Imprint nằm trong inventory của bạn như một item riêng. Khoan dùng nó.
+  - title: "Regal Orb, rồi đánh giá"
+    do: >-
+      Dùng một [[Regal Orb]]. Đọc modifier nó thêm vào và xem nó nằm ở phía
+      nào.
+    why: >-
+      Amulet thành Rare và gem level còn nguyên. **Giữ** kết quả nếu modifier
+      mới là Life, một attribute, một resistance, hoặc một suffix damage mà
+      build của bạn dùng. Một chiếc amulet Rare có prefix này cùng thêm một
+      modifier tử tế đã đáng để hoàn thiện rồi.
+    fail: >-
+      Mana on kill, Item Rarity, một chỉ số phòng thủ bạn không dùng: dùng
+      [[Imprint]] lên amulet để đưa nó về trạng thái Magic, tạo một Imprint
+      mới bằng một con Croaker khác, rồi dùng một Regal Orb khác.
+    state:
+      implicits: ["+14 to all Attributes"]
+      prefixes: [{ text: "+1 to Level of all Skill Gems" }]
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Bench Life"
+    do: >-
+      Ở [[Crafting Bench]], craft +41–55 to maximum Life giá 2
+      [[Orb of Alchemy]].
+    why: >-
+      Life là prefix, amulet còn trống hai ô prefix, và không Essence hay
+      kiểu roll lại rẻ tiền nào thêm được nó mà không gỡ gem level. Sau bước
+      này vẫn còn trống một prefix và một suffix.
+    check: >-
+      **Đừng** dùng công thức beast thêm một suffix và gỡ một prefix ngẫu
+      nhiên. Khi trên amulet có một prefix roll ra, prefix nó gỡ chính là cái
+      này.
+    state:
+      implicits: ["+14 to all Attributes"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems" }
+        - { text: "+49 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+41% to Fire Resistance" }
+variations: >-
+  **Một Faceted Fossil thay vì Alteration.** Theo phép tính của chúng tôi, nó
+  khiến prefix này ra khoảng 1 trên 200 lần roll. Tức ít lần thử hơn hẳn, mỗi
+  lần tốn một Fossil và một Resonator, và mỗi lần để lại một item Rare, nên
+  không có Imprint và không có cơ hội xem lại những thứ đi kèm. Alteration
+  chậm hơn và cho bạn một item sạch hơn.
+
+
+  **Lấp các ô trống.** Một [[Exalted Orb]] thêm một modifier ngẫu nhiên và
+  không gỡ được gì. Trên base có [[Memory Strands]], nó tiêu nhiều nhất 16
+  strand theo bảng data-mine, và thứ nó thêm vào sẽ tới ở một tier cao hơn.
+  Strand không làm gì cho chính gem level, vốn chỉ có một tier.
+
+
+  **Đường fractured.** Chiếc amulet Magic ở bước 1 cũng là nơi lần craft khó
+  nhất của loại item này bắt đầu: đưa lên đúng bốn modifier rồi dùng một
+  [[Fracturing Orb]], nó có một phần tư cơ hội khóa vĩnh viễn gem level.
+  Imprint không dùng được lên fractured item, nên ván cược đó không có bảo
+  hiểm. Ví dụ cuối cùng bắt đầu từ kết quả của nó.
+mistakes:
+  - "Dùng Regal Orb trước Imprint. Không tạo được Imprint từ item Rare."
+  - "Annul suffix trên chiếc amulet Magic. Một nửa số lần orb sẽ lấy mất prefix mà bạn đã tốn hai nghìn Alteration để có."
+  - "Từ chối mọi kết quả Regal không phải modifier damage. Mỗi lần thử lại tốn một Croaker và ba beast Rare, mà trong 3.30 đó chỉ là beast đỏ."
+  - "Craft cái này ở item level 84 hoặc 86. Prefix vẫn y như vậy mà khó ra hơn khoảng một phần mười."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các beast nó cần trong 3.30." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beast vàng không còn bị bắt nữa." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

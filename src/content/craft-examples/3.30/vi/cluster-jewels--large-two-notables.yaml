@@ -1,0 +1,164 @@
+category: cluster-jewels
+title: "Một Large Cluster Jewel: hai notable trên jewel Magic"
+level: 2
+summary: "Roll cùng lúc một notable prefix và một notable suffix bằng Alteration, rồi để Regal Orb thêm gì tùy nó, vì trên jewel này nó không lấy đi được thứ gì."
+goal: >-
+  Một Large Cluster Jewel Fire Damage với hai notable do bạn chọn và còn chỗ
+  cho cái thứ ba. Nó dạy hình dáng của jewel Large, thứ không item nào khác
+  có: **hai notable prefix, một notable suffix, không bao giờ hơn**, và hình
+  dáng đó cho bạn làm gì một cách an toàn.
+base: "Large Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  **Enchantment:** "Added Small Passive Skills grant: 12% increased Fire
+  Damage". **Passive:** "Adds 8 Passive Skills", mức ít nhất một jewel Large
+  có thể có. **Item level:** 50 tới 67. Ba notable ví dụ này nêu tên cần item
+  level 1 hoặc 50; từ 68 trở lên, cũng jewel đó còn roll được tới bốn notable
+  nữa và thêm các tier của mọi bonus cho small passive, tất cả đều sẽ cản
+  đường.
+methods: [currency, finishing]
+result:
+  implicits:
+    - "Adds 8 Passive Skills"
+    - "2 Added Passive Skills are Jewel Sockets"
+    - "Added Small Passive Skills grant: 12% increased Fire Damage"
+  prefixes:
+    - { text: "1 Added Passive Skill is Burning Bright" }
+  suffixes:
+    - { text: "1 Added Passive Skill is Widespread Destruction" }
+    - { text: "Added Small Passive Skills also grant: +3% to Fire Resistance" }
+needs:
+  - { item: "Một Large Cluster Jewel có enchantment Fire Damage", amount: "1", note: "8 passive, item level 50–67" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "nếu jewel là Normal" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–30" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Cái jewel, rồi [[Orb of Alteration]] cỡ một vài trăm cái và một
+  [[Regal Orb]]. Item level bạn chọn quan trọng ngang với currency: xem phần
+  xác suất.
+odds: >-
+  Ở item level 50 tới 67, pool prefix của jewel này chứa bốn notable và pool
+  suffix chứa hai. Một lần roll prefix ra Burning Bright hoặc Cremator 10.2%
+  số lần, và một lần roll suffix ra Widespread Destruction 7.2% số lần, theo
+  phép tính của chúng tôi từ weight. Cả hai trên một jewel Magic: khoảng
+  0.74%, 1 trên 136 jewel hai modifier.
+
+
+  Cũng cặp đó trên jewel item level 84 thành khoảng 1 trên 620: nhiều notable
+  hơn và ba tier của mọi bonus cho small passive cùng chia cuộc xổ số.
+steps:
+  - title: "Đối chiếu danh sách với hình dáng"
+    do: >-
+      Tra từng notable bạn muốn dưới enchantment Fire Damage trong danh sách
+      modifier và ghi lại **phía** của nó. Ví dụ này muốn Burning Bright hoặc
+      Cremator (prefix) và Widespread Destruction (suffix).
+    why: >-
+      Một jewel Large có hai ô prefix và hai ô suffix, và mọi notable suffix
+      của mọi enchantment Large nằm trong một group. Vậy nên một kế hoạch có
+      thể chứa hai notable prefix và một notable suffix, và không hơn ở phía
+      nào. Một danh sách có hai notable suffix thì không làm ra được.
+    check: >-
+      Item level cao nhất trong các notable của bạn chọn ra dải. Cả ba ở đây
+      cần 50 trở xuống, nên 50 tới 67 là đúng.
+    state:
+      rarity: normal
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+  - title: "Alteration tới notable đầu tiên"
+    do: >-
+      Dùng một [[Orb of Transmutation]] rồi [[Orb of Alteration]] tới khi một
+      phía ra một notable trong danh sách.
+    why: >-
+      Một phần tư số lần roll prefix và một phần mười số lần roll suffix trên
+      jewel này là một notable nào đó, nên chuyện này tới nhanh. Jewel Magic
+      là giai đoạn duy nhất mà bạn vứt được một notable sai với giá một
+      Alteration.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2 to All Attributes" }
+  - title: "Roll tiếp để ra cả hai"
+    do: >-
+      Tiếp tục tới khi prefix **và** suffix đều là notable trong danh sách.
+      Dùng một [[Orb of Augmentation]] mỗi khi một phía đã đúng còn phía kia
+      trống.
+    why: >-
+      Hai trong ba notable mà jewel có thể có được quyết định ngay ở đây,
+      bằng thứ currency rẻ nhất. Cái thứ ba chỉ có thể là prefix, và nó sẽ
+      phải đến từ một orb mỗi lần thêm một modifier.
+    fail: >-
+      Hết ngân sách khi mới có một notable: Regal jewel đó. Một notable do
+      bạn chọn trên jewel Large 8 passive có hai socket đã đáng một chỗ trên
+      tree rồi.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "1 Added Passive Skill is Widespread Destruction" }
+  - title: "Regal Orb: một lần roll không thể trừ đi"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Nó giữ cả hai notable và thêm một modifier. Nếu đó là suffix, nó không
+      thể là notable, vì group notable suffix đã có chủ: nó là một bonus cho
+      small passive, như ở đây. Nếu đó là prefix, nó là notable khoảng một
+      trên năm lần, còn không thì là một bonus cho small passive. Không thứ
+      gì bạn đã roll bị đặt vào rủi ro.
+    check: >-
+      Kết quả duy nhất cần nhìn lại lần nữa là một **notable thứ ba bạn không
+      chọn**. Bạn không buộc phải lấy nó, nhưng nó chiếm một chỗ trong
+      cluster.
+    state:
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "1 Added Passive Skill is Widespread Destruction" }
+        - { text: "Added Small Passive Skills also grant: +3% to Fire Resistance" }
+  - title: "Gắn vào socket và đếm điểm"
+    do: >-
+      Đặt jewel vào một cluster socket cỡ Large. Xem hai notable và hai jewel
+      socket nằm ở đâu, và đếm những gì bạn phải lấy để tới những cái bạn
+      muốn. Tháo nó ra lại nếu bạn chưa sẵn sàng tiêu điểm.
+    why: >-
+      Các trang tra cứu mô tả notable được đặt ở các vị trí cố định theo thứ
+      tự của chúng trong danh sách modifier. Chúng tôi chưa kiểm chứng các
+      luật đó, và bạn cũng không cần chúng: tree cho bạn thấy kết quả. Theo
+      chính các trang đó, tháo một Cluster Jewel sẽ hoàn lại số điểm đã tiêu
+      bên trong nó.
+variations: >-
+  **Prefix trống.** Jewel hoàn chỉnh còn một ô prefix trống. Một
+  [[Exalted Orb]] vào đó thêm một prefix: ra notable khoảng một trên năm lần,
+  ra cái còn lại mà bạn đã nêu tên khoảng một trên mười chín lần. Ví dụ ba
+  notable nói về việc chủ đích làm điều đó.
+
+
+  **Một notable level 68 hoặc level 75.** Sadist cần 68; Corrosive Elements
+  và Master of Fire cần 75. Chỉ dời dải lên 68 tới 74 hoặc 75 tới 83 nếu một
+  trong số chúng nằm trong danh sách của bạn, và hãy tính rằng những cái còn
+  lại sẽ hiếm đi.
+mistakes:
+  - "Lên kế hoạch hai notable suffix. Chúng chung một group; một jewel Large chứa một cái."
+  - "Dừng ở một notable trên jewel Magic rồi mong Regal Orb cấp đúng cái thứ hai."
+  - "Roll kiểu này ở item level 84. Ở đó cặp này là khoảng 1 trên 620 so với 1 trên 136."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các notable của enchantment Fire Damage cùng phía, level, weight và group của chúng. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Jewel socket và giới hạn notable theo kích cỡ, vị trí của notable, và việc hoàn điểm khi tháo ra. Một phần là nội dung cộng đồng không rõ đã bao lâu." }

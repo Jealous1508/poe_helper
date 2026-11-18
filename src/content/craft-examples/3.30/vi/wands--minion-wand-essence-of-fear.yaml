@@ -1,0 +1,145 @@
+category: wands
+title: "Một cây wand minion từ Essence of Fear"
+level: 2
+summary: "Trên Convening Wand, một Essence of Fear đảm bảo minion damage. Lặp lại tới khi có chỗ cho bench thêm minion attack and cast speed."
+goal: >-
+  Một cây wand cho những map đầu tiên của build minion: minion damage được
+  đảm bảo, minion attack and cast speed từ bench, và bất cứ thứ gì khác pool
+  minion đưa tới dọc đường. Bài học là khác biệt giữa **một cây wand có
+  modifier minion và một wand minion.** Essence of Fear đặt minion damage
+  lên bất kỳ wand nào. Chỉ ba base roll được phần còn lại, và lần craft này
+  cho thấy "phần còn lại" đáng giá bao nhiêu.
+base: "Convening Wand"
+itemLevel: 72
+baseWhy: >-
+  Convening Wand là một trong ba base roll từ pool minion, và nó dùng được
+  từ level 50; Convoking Wand là thứ y hệt từ level 72 với implicit lớn hơn,
+  và là một base Atlas. Implicit ở đây là 20–24% increased minion damage.
+
+
+  Item level 72 mở Tier 2 của "Minions have increased Attack and Cast
+  Speed" (20–22%) và vượt xa mốc 60 mà "+1 to Level of all Minion
+  Skill Gems" cần.
+methods: [essence, bench]
+result:
+  implicits: ["Minions deal 22% increased Damage"]
+  prefixes:
+    - { text: "Minions deal 58% increased Damage", how: essence }
+    - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+  suffixes:
+    - { text: "22% increased Cast Speed" }
+    - { text: "Minions have 15% increased Attack Speed / Minions have 14% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Fear]]", amount: "5–10", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Một nắm Essence và 4 [[Chaos Orb]]. Essence bậc Screaming là thứ map đỏ
+  cho bạn trong 3.30.
+odds: >-
+  Minion damage là chắc chắn. Thứ thay đổi là những gì đi kèm nó. Theo phép
+  tính của chúng tôi ở item level 72, khi một kết quả có ba suffix thì một
+  trong số đó là "Minions have increased Attack and Cast Speed" khoảng 3
+  trên 10 lần; với hai suffix, 2 trên 10. Hybrid minion damage và Mana là
+  khoảng 1 trên 8 lần roll prefix khác. "+1 to Level of all Minion Skill
+  Gems" hiếm hơn 1 trên 150 và không đáng chờ.
+
+
+  Vì bench bán minion attack and cast speed, mục tiêu thật sự khá khiêm tốn:
+  **một ô suffix trống**, hoặc suffix minion speed tự nhiên. Phần lớn kết
+  quả đều đạt.
+steps:
+  - title: "Essence đầu tiên"
+    do: >-
+      Dùng một [[Screaming Essence of Fear]] lên Convening Wand trắng.
+    why: >-
+      Trên wand, Fear đảm bảo "Minions deal #% increased Damage": 50–66% ở
+      bậc Screaming, 67–82% ở Shrieking, 83–94% ở Deafening. Nếu roll tự
+      nhiên, từ 70% trở lên là 1 trên 200 lần roll prefix trên base này.
+      Item thành Rare quanh nó và nhận được thêm Essence khác.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "+112 to maximum Mana" }
+      suffixes:
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "Minions have 84% increased Critical Strike Chance" }
+        - { text: "34% increased Projectile Speed" }
+  - title: "Đọc nó như một wand minion"
+    do: >-
+      Giữ Alt và xếp từng dòng vào ba chồng. **Minion:** bất cứ thứ gì bắt
+      đầu bằng "Minions". **Của bạn:** cast speed, Mana, Intelligence,
+      những thứ giúp nhân vật đứng summon. **Không của ai:** mọi thứ về
+      attack và spell damage.
+    why: >-
+      Pool của wand minion là pool wand thường cộng thêm các modifier
+      minion, nên phần lớn những gì roll ra là cho người khác. Kết quả ở
+      trên có ba suffix và không cái nào là minion speed: accuracy, minion
+      critical strike chance, thứ ít build minion dùng, và Projectile Speed.
+      Khi phía suffix đã đầy, bench không còn chỗ nào để đi. Nó trượt.
+    check: >-
+      Giữ một kết quả khi còn một ô suffix trống **hoặc** "Minions have
+      increased Attack and Cast Speed" đã roll ra. Một prefix minion thứ hai
+      là phần thưởng thêm.
+    fail: >-
+      Dùng một Essence nữa lên chính cây wand đó. Minion damage lần nào cũng
+      quay lại.
+  - title: "Lặp lại tới khi có chỗ"
+    do: >-
+      Dùng Essence tới khi một kết quả qua được bước kiểm.
+    why: >-
+      Mỗi lần thử là độc lập. Bạn không chờ thứ gì hiếm, chỉ chờ một kết quả
+      chừa cho bench một ô.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+      suffixes:
+        - { text: "22% increased Cast Speed" }
+  - title: "Bench minion speed"
+    do: >-
+      Ở [[Crafting Bench]], craft **Minions have 14–15% increased
+      Attack Speed and 14–15% increased Cast Speed**, 4 [[Chaos Orb]]. Nếu
+      suffix minion speed tự nhiên đã roll ra, hãy bench thứ gì đó cho bản
+      thân thay vào: +65–74 to maximum Mana vào một prefix trống, 4 Chaos
+      Orb.
+    why: >-
+      Minion speed của bench cùng group với suffix tự nhiên, nên chỉ có được
+      một trong hai. Nó yếu hơn một roll tốt (17–19% ở Tier 3) và là thứ
+      chắc chắn. Prefix hybrid roll ra ở đây khác group với minion damage
+      của Essence và cộng thêm vào nó.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+      suffixes:
+        - { text: "22% increased Cast Speed" }
+        - { text: "Minions have 15% increased Attack Speed / Minions have 14% increased Cast Speed", how: crafted }
+variations: >-
+  **Trên wand thường.** Cũng Essence đó và cũng craft bench đó dùng được
+  trên bất kỳ wand nào, và đó là giải pháp tạm chấp nhận được. Nó không bao
+  giờ roll được prefix hybrid, suffix speed tự nhiên hay gem level của
+  minion, và implicit của nó sẽ là Spell Damage. Hãy dùng base minion ngay
+  khi bạn có một cây.
+
+
+  **Một Bound Fossil.** Từ Delve, "more Minion, Aura and Curse modifiers"
+  làm mọi modifier minion trên base này dễ ra gấp mười. Nó là công cụ cho
+  một cây wand có vài modifier minion cùng lúc, trong khi Essence đảm bảo
+  đúng một cái.
+
+
+  **Một suffix tiện ích.** Nhiều build minion gắn một offering hoặc một
+  curse trong wand và bench "Trigger a Socketed Spell when you Use a Skill"
+  (3 Chaos Orb). Nó dùng mất ô bench, nên khi đó minion speed phải roll ra
+  tự nhiên.
+mistakes:
+  - "Giữ minion critical strike chance hoặc multiplier vì dòng đó ghi \"Minions\". Trừ khi minion của build có crit, chúng là đồ lấp chỗ."
+  - "Bench minion damage. Nó cùng group với cái của Essence và bench sẽ từ chối; chỗ của bench trên cây wand này là một suffix."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp sẽ gỡ nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool minion, các tier của Essence of Fear trên wand, group, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }

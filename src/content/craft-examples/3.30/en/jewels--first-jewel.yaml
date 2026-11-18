@@ -1,0 +1,137 @@
+category: jewels
+title: "A first jewel from a shortlist"
+level: 1
+summary: "Reroll a jewel you found with Alterations until one modifier is on your list, fill the other side, and make it Rare."
+goal: >-
+  A jewel for a melee character in the campaign or the first maps, with two
+  modifiers the character uses, made from a jewel that was lying on the
+  ground. More than the item, the point is the habit every jewel craft rests
+  on: **write the list first, then roll until the jewel is on it.**
+base: "Crimson Jewel"
+itemLevel: 30
+baseWhy: >-
+  Crimson is the colour for a character that swings a weapon and wants Life:
+  it rolls increased maximum Life more often than the other two colours and
+  has every two-handed and one-handed melee modifier. A Viridian jewel does
+  the same job for a bow, claw or dagger character and a Cobalt one for a
+  caster; only the list changes.
+
+
+  The item level is whatever you found. On a regular jewel it changes
+  nothing: every modifier below needs item level 1.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "13% increased Damage with Two Handed Weapons" }
+    - { text: "9% increased Totem Life" }
+  suffixes:
+    - { text: "+14% to Fire Resistance" }
+needs:
+  - { item: "A Magic or Rare Crimson Jewel", amount: "1", note: "any item level" }
+  - { item: "[[Orb of Scouring]] and [[Orb of Transmutation]]", amount: "1 each", note: "only if the jewel is Rare" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–3" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A dozen or two [[Orb of Alteration]]s and one [[Regal Orb]]. Nothing in
+  this craft is worth saving at this point in a league.
+odds: >-
+  The example's shortlist has five prefixes. On a Crimson jewel they are 14%
+  of all prefix weight, so one prefix roll in 7 is a hit, by our arithmetic
+  from the modifier weights. An Alteration does not always roll a prefix, so
+  allow ten to twenty.
+
+
+  The suffix list is wider: any resistance or one of three damage suffixes is
+  about 22% of suffix weight, 1 roll in 4 or 5. The Regal Orb is plain luck,
+  and the craft is built so that its result does not matter.
+steps:
+  - title: "Write the shortlist"
+    do: >-
+      Before any currency, write down what counts as a hit. For a two-handed
+      melee character in the campaign: as **prefixes**, increased maximum
+      Life, increased Damage with Two Handed Weapons, increased Global
+      Physical Damage, increased Attack Speed with Two Handed Melee Weapons,
+      or damage with your weapon type. As **suffixes**, any resistance you
+      are short of, increased Melee Damage, increased Attack Speed or
+      increased Area Damage.
+    why: >-
+      A jewel has about fifty prefixes and sixty suffixes, each in a single
+      tier and most at similar weights. One named modifier is 1 roll in 36 at
+      best. Five acceptable ones are 1 in 7. The list is what makes the
+      craft cheap.
+    check: >-
+      Every line on the list must be something a Crimson jewel can roll.
+      Open the modifier list for this category and filter by colour if you
+      are unsure.
+    state:
+      rarity: magic
+      prefixes: [{ text: "10% increased Totem Life" }]
+      suffixes: [{ text: "+13 to Dexterity" }]
+  - title: "Alterations until one side is on the list"
+    do: >-
+      If the jewel is Rare, use an [[Orb of Scouring]] and an
+      [[Orb of Transmutation]] first. Then use [[Orb of Alteration]]s one at
+      a time, holding Alt to see which line is the prefix and which the
+      suffix. Stop at the first jewel with a hit on **either** side.
+    why: >-
+      A Magic jewel has one prefix and one suffix. Rerolling two slots is
+      the cheapest roll in the game, and you only need one of them to land.
+    check: >-
+      Read the other side too. If it is also on the list, skip the next
+      step. If it is a modifier you do not use, keep going only if you have
+      Alterations to spare: at this level a jewel with one hit is already
+      worth socketing.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13% increased Damage with Two Handed Weapons" }]
+  - title: "Fill the empty side"
+    do: >-
+      If the jewel has only one modifier, use an [[Orb of Augmentation]].
+    why: >-
+      An Augmentation adds a modifier to the empty side of a Magic item and
+      never touches the one that is there. It is a free look at the suffix
+      list.
+    fail: >-
+      It added something you do not use. Nothing is lost: the prefix is
+      still there, and the next step goes ahead either way.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13% increased Damage with Two Handed Weapons" }]
+      suffixes: [{ text: "+14% to Fire Resistance" }]
+  - title: "Regal Orb, and stop"
+    do: >-
+      Use one [[Regal Orb]]. Socket the jewel.
+    why: >-
+      The Regal Orb makes the jewel Rare, keeps both modifiers and adds a
+      third at random. Here it added Totem Life, which this character does
+      not use. That is the usual result and it is fine: a jewel has no
+      penalty for an idle line.
+    check: >-
+      There is no bench step. The [[Crafting Bench]] cannot add a modifier
+      to a jewel, so what the orbs gave you is the finished item. One slot
+      is still open; leave it open until an [[Exalted Orb]] is something you
+      can spare.
+    state:
+      prefixes:
+        - { text: "13% increased Damage with Two Handed Weapons" }
+        - { text: "9% increased Totem Life" }
+      suffixes:
+        - { text: "+14% to Fire Resistance" }
+variations: >-
+  **Life first.** If the character is dying, shorten the prefix list to one
+  line, increased maximum Life (5–7%). On a Crimson jewel that is 1 prefix
+  roll in 36, so budget fifty Alterations or more, and take it on any colour
+  only if you must: Viridian and Cobalt roll it about a third less often.
+
+
+  **A caster.** Use a Cobalt jewel and swap the list: Spell Damage while
+  holding a Shield (or while Dual Wielding, or with a Staff), an elemental
+  damage prefix, and as suffixes increased Spell Damage or Cast Speed.
+mistakes:
+  - "Rolling for one exact modifier with campaign currency. The list is the craft."
+  - "Scouring a Rare jewel that already has two modifiers you use. Check what you found before you clean it."
+  - "Looking for a bench craft to finish the jewel. There is none for jewels."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Crimson Jewel pool and its weights. The odds are our arithmetic." }

@@ -1,0 +1,122 @@
+category: jewels
+title: "Corrupt jewel để miễn nhiễm Corrupted Blood"
+level: 2
+summary: "Vaal Orb là nguồn duy nhất cho implicit trên jewel. Làm vài jewel rẻ rồi corrupt hết, vì phần lớn lần thử chẳng làm gì cả."
+goal: >-
+  Một jewel có implicit corruption "Corrupted Blood cannot be inflicted on
+  you" nằm trên hai modifier bạn dùng. Bản thân lần craft chỉ là một cú click.
+  Thứ nó dạy là cách đánh cược cho đúng: **trên những item bạn chịu mất được,
+  theo số lượng, với xác suất được ghi ra trước.**
+base: "Viridian Jewel"
+itemLevel: 60
+baseWhy: >-
+  Màu nào cũng được; hãy dùng màu mà nhân vật của bạn vẫn roll jewel thông
+  thường. Riêng lần này item level có quan trọng. Dữ liệu ghi level của
+  implicit này là 33, nên theo luật thông thường, một jewel dưới item level 33
+  không nhận được nó. Từ 60 trở lên, một jewel nhận được cả 21 implicit
+  corruption.
+methods: [currency, corruption]
+result:
+  note: "Corrupted"
+  implicits: ["Corrupted Blood cannot be inflicted on you"]
+  rarity: magic
+  prefixes:
+    - { text: "6% increased maximum Life" }
+  suffixes:
+    - { text: "+13% to Cold Resistance" }
+needs:
+  - { item: "Jewel item level 33 trở lên", amount: "làm được bao nhiêu thì làm", note: "mỗi cái có một hoặc hai modifier bạn dùng" }
+  - { item: "[[Orb of Alteration]]", amount: "vài chục cho mỗi jewel" }
+  - { item: "[[Vaal Orb]]", amount: "1 cho mỗi jewel" }
+cost: >-
+  Một [[Vaal Orb]] cho mỗi lần thử và một jewel rẻ bên dưới mỗi orb. Tổng chi
+  phí do số lần thử bạn chọn quyết định, và kỳ vọng thành thật là vài chục
+  lần. Hãy so con số đó với giá một cái làm sẵn trước khi bắt đầu: implicit
+  này là thứ nhiều người chơi đi mua.
+odds: >-
+  Dữ liệu liệt kê 21 implicit corruption cho jewel, mỗi cái cùng weight. Khi
+  một jewel nhận một cái, nó là cái này 1 trên 21 lần, theo phép tính của
+  chúng tôi.
+
+
+  Một Vaal Orb cho implicit thường xuyên tới đâu thì không được công bố. Một
+  trang tra cứu cũ hơn 3.29 liệt kê bốn kết cục cho jewel: không đổi gì, một
+  implicit, roll lại thành một jewel Rare mới, hoặc một unique jewel chỉ có
+  từ Vaal. **Nếu** bốn kết cục đó có khả năng ngang nhau, điều chưa ai ngoài
+  nhà phát triển xác nhận, thì cứ khoảng 84 jewel corrupted sẽ có một cái kết
+  thúc với implicit này. Hãy coi đó là thang ước lượng, không phải lời hứa.
+steps:
+  - title: "Làm jewel cho rẻ, và làm vài cái"
+    do: >-
+      Roll các jewel Magic bằng [[Orb of Alteration]] như trong ví dụ đầu
+      tiên, dừng ở một hoặc hai modifier bạn dùng. Đừng Regal chúng, đừng
+      dùng [[Divine Orb]], và đừng dùng jewel nào mà mất đi bạn sẽ tiếc.
+    why: >-
+      Phần lớn lần thử không thay đổi gì, và có một kết cục thay cả jewel
+      bằng một cái Rare ngẫu nhiên. Mọi thứ bạn tiêu vào jewel trước Vaal Orb
+      sẽ bị tiêu lại ở mỗi lần thử.
+    check: >-
+      Giữ Alt và đọc item level: 33 trở lên, nếu không implicit bạn muốn
+      không thể xuất hiện.
+    state:
+      rarity: magic
+      prefixes: [{ text: "6% increased maximum Life" }]
+      suffixes: [{ text: "+13% to Cold Resistance" }]
+  - title: "Biết các giải thưởng khác trước khi click"
+    do: >-
+      Quyết định những implicit nào khác bạn sẽ giữ. Từ dữ liệu: "You cannot
+      be Maimed", "You cannot be Hindered", 4–5% increased Damage, 2%
+      increased Reservation Efficiency of Skills, 8–10% increased Global
+      Critical Strike Chance, 4–5% increased Area of Effect.
+    why: >-
+      Một implicit trong 21 là cái bạn tìm. Vài cái trong 20 cái còn lại đáng
+      một socket với build nào đó, và biết đó là những cái nào sẽ biến một
+      lần trượt thành jewel bạn dùng hoặc bán.
+  - title: "Vaal Orb, hết jewel này tới jewel khác"
+    do: >-
+      Dùng một [[Vaal Orb]] lên từng jewel và phân loại kết quả: một implicit
+      bạn muốn, một implicit bạn không muốn, không đổi gì, hoặc một jewel
+      không còn là cái bạn đã làm.
+    why: >-
+      Một jewel corrupted không thể bị currency thông thường thay đổi nữa.
+      Đó là lý do Vaal Orb đi sau cùng, và là lý do nó được dùng lên những
+      jewel đã hoàn thiện ở mức bạn sẵn lòng hoàn thiện chúng.
+    fail: >-
+      "Không đổi gì" là kết quả hay gặp và để lại một jewel dùng được, giờ
+      đã corrupted: gắn nó vào socket. Một jewel bị roll lại là một cái Rare
+      ngẫu nhiên; hãy đọc nó trước khi vứt đi.
+    state:
+      rarity: magic
+      note: "Corrupted"
+      implicits: ["Corrupted Blood cannot be inflicted on you"]
+      prefixes: [{ text: "6% increased maximum Life" }]
+      suffixes: [{ text: "+13% to Cold Resistance" }]
+  - title: "Dừng ở con số bạn đã đặt"
+    do: >-
+      Khi số Vaal Orb bạn dự trù đã hết, hãy dừng, dù implicit có xuất hiện
+      hay không.
+    why: >-
+      Một chuỗi lần trượt không làm orb kế tiếp dễ trúng hơn. Nếu ngân sách
+      đã hết mà implicit chưa có, số tiền còn lại nên dùng để mua một cái thì
+      hơn.
+variations: >-
+  **Một jewel tốt, corrupt có chủ đích.** Cũng orb đó trên một jewel ba
+  modifier đã hoàn thiện là một ván cược khác: bạn đang đặt một jewel bạn bỏ
+  công làm ra để đổi lấy 1 phần 21 của một kết cục mà chính xác suất của nó
+  cũng không được công bố. Chỉ làm vậy khi bạn có một cái dự phòng, và hãy
+  dùng [[Divine Orb]] trước.
+
+
+  **Một pool hẹp hơn.** Ba implicit cần item level 40 hoặc 60 trong dữ liệu.
+  Nếu luật thông thường áp dụng cho implicit, một jewel item level 33 tới 39
+  có 18 implicit khả dĩ chứ không phải 21, khiến mỗi cái dễ ra hơn một chút.
+  Chúng tôi chưa thấy ai thử nghiệm điều này.
+mistakes:
+  - "Corrupt cái jewel tốt duy nhất bạn có."
+  - "Tiêu Divine Orb hay Regal Orb vào những jewel sắp bị đem đi cược."
+  - "Dùng jewel dưới item level 33."
+  - "Vứt một lần trượt mà không đọc implicit của nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "21 implicit corruption của jewel, level của chúng và weight bằng nhau của chúng." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "Bốn kết cục liệt kê cho jewel. Phần chữ này cũ hơn 3.29 và không cho xác suất." }

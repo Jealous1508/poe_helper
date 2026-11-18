@@ -1,0 +1,150 @@
+category: flasks
+title: "Life flask đầu tiên, chặn được bleeding"
+level: 1
+summary: "Lần craft đầu tiên trong đời: roll một suffix lên life flask bạn đang mang, để bấm nó cũng chấm dứt luôn bleeding và Corrupted Blood."
+goal: >-
+  Một life flask hồi máu cho bạn và, khi bấm lúc đang bleeding, cho bạn miễn
+  nhiễm bleeding và Corrupted Blood trong vài giây. Bleeding là một trong
+  những thứ đầu tiên trong campaign giết được một nhân vật vốn đang ổn, và
+  lần craft này giải quyết nó với một nhúm orb.
+
+
+  Item không quan trọng bằng quy trình: **roll lại bằng Alteration, lấp ô
+  trống bằng Augmentation, dừng khi một dòng đã đúng.** Mọi flask bạn làm về
+  sau đều là quy trình này.
+base: "Colossal Life Flask"
+itemLevel: 33
+baseWhy: >-
+  Dùng luôn life flask đang nằm trên belt của bạn: lần craft này giống nhau
+  trên mọi cỡ. Colossal Life Flask rơi từ level 30 và hồi 1,000 life trong
+  3.5 giây. Item level hầu như không quan trọng ở đây. Tier thấp nhất của
+  suffix bleeding cần item level 8 và đã làm trọn việc; item level 32 mở
+  tier kế tiếp, vốn chỉ làm miễn nhiễm kéo dài 9–11 giây thay vì 6–8 giây
+  của tier thấp nhất.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  prefixes:
+    - { text: "49% increased Recovery rate" }
+  suffixes:
+    - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "chỉ khi flask còn trắng" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "5–10" }
+  - { item: "[[Glassblower's Bauble]]", amount: "vài cái", note: "không bắt buộc" }
+cost: >-
+  Một hai chục [[Orb of Alteration]] và vài [[Orb of Augmentation]]. Ở thời
+  điểm này của league, không thứ gì ở đây đáng để dành, và kết quả vẫn hữu
+  dụng cho tới khi bạn thay flask bằng cỡ lớn hơn.
+odds: >-
+  Ở item level 33, một lần roll suffix ra suffix bleeding khoảng 1 trên 9
+  lần, theo phép tính của chúng tôi từ weight của các modifier (11.5% pool
+  suffix). Nếu bạn dùng Augmentation mỗi khi kết quả không có suffix, mỗi
+  lần thử đều gồm một lần roll suffix, nên trung bình là khoảng chín lần
+  thử. Trung bình cũng có ngày xui: khoảng chừng một trên mười một lượt
+  craft sẽ tốn hơn hai mươi lần thử.
+steps:
+  - title: "Bắt đầu với flask bạn đang có"
+    do: >-
+      Lấy life flask ra khỏi belt, giữ Alt rồi rê chuột lên nó. Nếu nó
+      trắng, sang bước kế tiếp. Nếu nó đã là Magic, như phần lớn flask rơi
+      ra, hãy nhảy tới bước 4: Alteration dùng được lên nó ngay như vậy.
+    why: >-
+      Flask trắng (Normal) không có ô nào cả. Flask Magic có hai, một prefix
+      và một suffix, và đó là số ô nhiều nhất một flask có được.
+    state: { rarity: normal }
+  - title: "Biến nó thành Magic"
+    do: >-
+      Dùng một [[Orb of Transmutation]]. Giữ Alt và đọc xem cái gì xuất
+      hiện, và nó nằm ở ô nào.
+    why: >-
+      Transmutation mở hai ô và lấp ngẫu nhiên một hoặc cả hai. Ở đây nó cho
+      một prefix và để trống ô suffix.
+    state:
+      rarity: magic
+      prefixes: [{ text: "18% increased Charge Recovery" }]
+  - title: "Lấp ô trống trước khi roll lại"
+    do: >-
+      Ô suffix đang trống, nên dùng một [[Orb of Augmentation]].
+    why: >-
+      Augmentation thêm một modifier vào ô trống và không bao giờ đụng tới ô
+      đã đầy. Nó là một lần roll suffix gần như không tốn gì, nên hãy dùng
+      nó mỗi khi có ô trống. Lần này nó cho suffix giải shock: hữu ích,
+      nhưng không phải thứ chúng ta tới tìm.
+    state:
+      rarity: magic
+      prefixes: [{ text: "18% increased Charge Recovery" }]
+      suffixes: [{ text: "Grants Immunity to Shock for 7 seconds if used while Shocked" }]
+  - title: "Alteration tới khi suffix ghi Bleeding"
+    do: >-
+      Dùng một [[Orb of Alteration]] và đọc suffix. Không có suffix: dùng
+      một Augmentation. Sai suffix: Alteration kế tiếp. Dừng khi suffix bắt
+      đầu bằng "Grants Immunity to Bleeding".
+    why: >-
+      Alteration vứt cả hai modifier đi và roll ra cái mới. Bạn chỉ đọc một
+      dòng và kệ dòng kia, vì thế việc này nhanh.
+    check: >-
+      Tên flask kết thúc bằng "of Sealing" (6–8 giây) hoặc "of Alleviation"
+      (9–11 giây). Cái nào cũng là một suffix đã xong: miễn nhiễm chấm dứt
+      bleeding ngay lúc nó bắt đầu, còn số giây chỉ cho biết bao lâu nữa bạn
+      mới có thể bị bleeding trở lại.
+    fail: >-
+      Nếu hết orb, hãy dừng ở bất kỳ suffix giải nào dạo này bạn từng cần:
+      cùng kiểu suffix đó có cho freeze, ignite, shock và poison, và
+      "Removes Curses on use" là cái dễ ra nhất ở item level này.
+    state:
+      rarity: magic
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+  - title: "Cho nó một prefix"
+    do: >-
+      Nếu ô prefix đang trống, dùng thêm một Augmentation. Rồi dừng, bất kể
+      nó cho gì.
+    why: >-
+      Suffix là lý do của flask này, và nó an toàn: Augmentation không gỡ
+      được nó. Không prefix nào trên life flask làm hỏng nó. Nếu bạn nhận
+      được "Instant Recovery", ít hơn một chút so với một trên năm lần roll
+      prefix ở item level này, bạn có prefix mà phần lớn người chơi mong lúc
+      leveling: toàn bộ lượng hồi đến cùng lúc, đổi lại lượng hồi ít đi.
+    check: >-
+      **Đừng** dùng Alteration để cải thiện prefix. Nó sẽ roll lại cái
+      suffix bạn vừa tiêu orb để có.
+    state:
+      rarity: magic
+      prefixes: [{ text: "49% increased Recovery rate" }]
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+  - title: "Quality, khi bạn dư dả"
+    do: >-
+      Nếu bạn có [[Glassblower's Bauble]], dùng chúng lên flask tới 20%
+      quality.
+    why: >-
+      Trên life flask, quality tăng lượng hồi, theo cách game vận hành lâu
+      nay: hãy nhìn con số trên flask tăng lên. Chính mô tả của orb ghi rằng
+      nó có hiệu quả lớn hơn trên flask có item level thấp, nên một flask
+      leveling tốn ít. Bỏ qua bước này nếu Bauble khan hiếm; không có nó thì
+      lần craft vẫn xong.
+    state:
+      rarity: magic
+      prefixes: [{ text: "49% increased Recovery rate" }]
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+variations: >-
+  **Flask thứ hai cho curse.** "Removes Curses on use" có một tier duy nhất
+  với weight lớn, nên trên flask level thấp nó là suffix hữu dụng dễ ra nhất
+  trong game: 23% số lần roll suffix ở item level 33, theo phép tính của
+  chúng tôi. Sáu bước vẫn y vậy.
+
+
+  **Cũng flask đó trong map.** Lặp lại lần craft trên Divine hoặc Eternal
+  Life Flask khi bạn có chúng. Ở item level 80, tier tốt nhất, "of
+  Assuaging", cho 15–17 giây miễn nhiễm. Mọi tier có weight bằng nhau, nên
+  item level cao hơn không làm suffix khó tìm hơn.
+mistakes:
+  - "Dùng Alteration khi suffix đã đúng và chỉ thiếu prefix. Alteration roll lại cả hai ô."
+  - "Đi tìm \"of the Lizard\". Đó là suffix bleeding của utility flask; life flask không roll được nó."
+  - "Roll tiếp để có thêm số giây miễn nhiễm. Tier thấp nhất chấm dứt bleeding chắc chắn y như tier tốt nhất."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Base, tier, item level và weight, và mô tả của Glassblower's Bauble. Xác suất là phép tính của chúng tôi." }

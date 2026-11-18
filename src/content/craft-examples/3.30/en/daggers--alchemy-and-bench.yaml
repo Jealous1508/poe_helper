@@ -1,0 +1,141 @@
+category: daggers
+title: "Alchemy, read, bench: a levelling crit dagger"
+level: 1
+summary: "Make a white dagger Rare in one click, sort its lines into prefixes and suffixes, and let the bench add the physical multiplier. If the result has no room, scour and go again."
+goal: >-
+  A dagger for the second half of the campaign, made the quick way. The skill
+  this teaches is **reading a Rare item**: which lines are prefixes, which
+  are suffixes, how many slots are open on each side, and what the bench can
+  put in them. Every later craft depends on that reading.
+base: "Poignard"
+itemLevel: 44
+baseWhy: >-
+  A Poignard is worn at level 41, attacks 1.5 times per second and has the
+  dagger implicit, 40–45% increased Global Critical Strike Chance. Item level
+  44 allows attack speed of 17–19% and Critical Strike Multiplier of 25–29%.
+  Any white dagger of your level works the same way.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "Adds 37 to 71 Fire Damage" }
+    - { text: "72% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "18% increased Attack Speed" }
+    - { text: "+22% to Global Critical Strike Multiplier" }
+    - { text: "+241 to Accuracy Rating" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "2–4" }
+  - { item: "[[Orb of Scouring]]", amount: "1–3" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "for the bench" }
+cost: >-
+  A few [[Orb of Alchemy]] and [[Orb of Scouring]], and 8
+  [[Orb of Alteration]]s for the bench. Orbs of Alchemy are more common in
+  3.30 than they were, which is what makes this a sensible first route.
+odds: >-
+  At item level 44 each suffix an Orb of Alchemy rolls is attack speed,
+  Critical Strike Chance or Critical Strike Multiplier about 37% of the
+  time, by our arithmetic from the weights. A Rare has two suffixes more
+  often than not, so most results carry at least one. Needing an open prefix
+  as well, expect two to four orbs.
+
+
+  Rolling the physical multiplier itself would be another matter: a prefix
+  roll is increased Physical Damage of 65% or more about 1 time in 33.
+steps:
+  - title: "Quality, then one Orb of Alchemy"
+    do: >-
+      Bring the white Poignard to 20% quality with
+      [[Blacksmith's Whetstone]]s, then use an [[Orb of Alchemy]].
+    why: >-
+      Alchemy turns a Normal item into a Rare with four to six modifiers in
+      one step. It is a wider roll than the Alteration route: six slots you
+      do not control. That is acceptable here for one reason, which is the
+      next step but one: the bench can add the modifier that matters most.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+93 to maximum Mana" }
+        - { text: "Adds 5 to 119 Lightning Damage" }
+        - { text: "+1 to Level of Socketed Cold Gems" }
+      suffixes:
+        - { text: "+26 to Intelligence" }
+        - { text: "38% increased Mana Regeneration Rate" }
+  - title: "Sort the lines"
+    do: >-
+      Hold Alt (with Advanced Mod Descriptions on). Each line is labelled
+      Prefix or Suffix. Count each side, and count what is missing from
+      three.
+    why: >-
+      The item above has **three prefixes and two suffixes**. The prefix
+      side is full, so nothing can be added to it, by the bench or anything
+      else. One suffix slot is open.
+    check: >-
+      Two questions decide whether to keep a result. Is a **prefix slot
+      open**? Is there **attack speed or a critical strike suffix**? This
+      one fails both.
+    fail: >-
+      Use an [[Orb of Scouring]], which returns the dagger to a white item
+      with its quality intact, and another Orb of Alchemy.
+  - title: "A result worth keeping"
+    do: >-
+      Repeat until both answers are yes.
+    why: >-
+      The second try shown here has one prefix, of a kind this build does
+      not use, and three suffixes, two of them damage. The useless prefix
+      does not matter. The open prefix slots do.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 37 to 71 Fire Damage" }
+      suffixes:
+        - { text: "18% increased Attack Speed" }
+        - { text: "+22% to Global Critical Strike Multiplier" }
+        - { text: "+241 to Accuracy Rating" }
+  - title: "Bench the multiplier"
+    do: >-
+      At the [[Crafting Bench]], craft **60–79% increased Physical Damage**
+      for 8 [[Orb of Alteration]]s. If you have not found that recipe, the
+      40–59% version costs 4.
+    why: >-
+      Increased Physical Damage multiplies the dagger's own damage, quality
+      included. On the bench it is certain; from an orb at this item level
+      it is one prefix roll in 33. So the orbs were spent on finding
+      suffixes, which the bench sells one at a time, and the bench was
+      saved for the prefix it sells well.
+    check: >-
+      The bench refuses the craft if the dagger already has rolled
+      increased Physical Damage without Accuracy: same group. In that case
+      craft attack speed (8–10%, 6 Alterations) or flat Physical Damage
+      instead.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 37 to 71 Fire Damage" }
+        - { text: "72% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "18% increased Attack Speed" }
+        - { text: "+22% to Global Critical Strike Multiplier" }
+        - { text: "+241 to Accuracy Rating" }
+variations: >-
+  **Changing your mind later.** A bench modifier is removed at the bench for
+  one Orb of Scouring ("Remove Crafted Mods") and another crafted in its
+  place. The rolled modifiers stay.
+
+
+  **The implicit.** It is a range, 40–45%. A [[Blessed Orb]] rerolls it;
+  not worth one on a levelling dagger.
+
+
+  **At higher levels** the Rare route gets worse and the Magic route better,
+  because the modifiers you want become lighter and six uncontrolled slots
+  cost more to reroll. The next example aims instead of hoping.
+mistakes:
+  - "Keeping a Rare with three prefixes because one of them is decent. A full side is closed to the bench."
+  - "Scouring a dagger for a bad prefix when a prefix slot is open. One wrong prefix costs nothing; no room costs the item."
+  - "Using the bench before deciding to keep the result. An Orb of Scouring removes the craft with everything else."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orbs of Alchemy more common since Orbs of Binding were retired." }

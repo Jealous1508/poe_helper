@@ -1,0 +1,165 @@
+category: warstaves
+title: "A physical prefix every time: the Harvest reforge in place of an Essence"
+level: 2
+summary: "The data has no Essence for warstaves, so the guaranteed modifier comes from Harvest. Reforge with a Physical modifier until two physical prefixes sit together, then bench the third."
+goal: >-
+  A warstaff for your first maps with two rolled physical prefixes and a
+  benched one. On a maul this would be an Essence of Contempt craft. Here it
+  cannot be, and the replacement teaches something an Essence does not:
+  **a reforge guarantees a tag, so before you pay for one, count what carries
+  that tag.**
+base: "Ezomyte Staff"
+itemLevel: 73
+baseWhy: >-
+  The Ezomyte Staff drops from level 60 with the +25% block implicit and the
+  highest base critical strike chance in the category, 8.5%. Item level 73
+  opens Tier 2 of both percentage prefixes, which is as high as this method
+  deserves; a level 60 base works and tops out one tier lower.
+methods: [harvest, beast, bench, finishing]
+result:
+  implicits: ["+25% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+    - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+17% Chance to Block Attack Damage", how: harvest }
+    - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 per reforge", note: "plan for 15–30 reforges" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "1", note: "optional, plus three Rare beasts" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Lifeforce is the whole cost: 50 [[Vivid Crystallised Lifeforce]] per
+  reforge, the cheapest reforge there is. In 3.30 it comes from the Sacred
+  Flora that grow in maps. The bench step is 4 [[Chaos Orb]]s.
+odds: >-
+  Six families on a warstaff carry the physical tag: the three physical
+  prefixes, the two leech suffixes and the physical damage over time
+  multiplier. If the guaranteed modifier is drawn by weight among them,
+  which is how reforges are understood to work, it is a physical prefix about
+  4 times in 5 at item level 73: flat damage 38%, each percentage family 21%.
+  The remaining fifth is a leech or damage over time suffix. Our arithmetic;
+  not measured in 3.30.
+
+
+  The reforge promises a family, not a tier. Of the percentage prefixes it
+  can guarantee, fewer than one in ten is 110% or more (45% for the hybrid).
+  The other prefixes on the result are ordinary rolls, and the physical
+  families still missing are a small part of those. So one physical prefix
+  is nearly certain, and two at tiers worth keeping take a couple of dozen
+  reforges.
+steps:
+  - title: "Count what carries the tag"
+    do: >-
+      Before buying Lifeforce, open the modifier list and find every family
+      tagged physical. There are six. Three are the prefixes you want; three
+      are suffixes you do not.
+    why: >-
+      "Including a Physical modifier" is satisfied by any of the six. This
+      count is the whole value of the reforge: four fifths of the weight is
+      on the prefixes, so it is worth using. On a tag spread over twenty
+      families it would not be.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Attack Damage"] }
+  - title: "Quality, Alchemy, and the first reforge"
+    do: >-
+      Bring a white Ezomyte Staff to 20% quality and use an
+      [[Orb of Alchemy]]. At the [[Horticrafting Station]], use **Reforge a
+      Rare item with random modifiers, including a Physical modifier** (50
+      Vivid Lifeforce).
+    why: >-
+      A Harvest reforge works on a Rare item and replaces all of its
+      modifiers, like a Chaos Orb with one promise attached. The Alchemy
+      only makes the staff Rare; what it rolls is discarded.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 14 to 30 Physical Damage", how: harvest }
+        - { text: "+2 to Level of Socketed Cold Gems", how: harvest }
+      suffixes:
+        - { text: "+26 to Intelligence", how: harvest }
+        - { text: "12% reduced Enemy Stun Threshold", how: harvest }
+  - title: "Read the prefixes in two passes"
+    do: >-
+      **Families:** are there two different physical prefixes? **Tiers:** is
+      each at a tier you accept? A sensible bar for a first mapping weapon:
+      flat at adds 20 or more to 43 or more, pure percentage at 85% or more,
+      hybrid at 35% or more.
+    why: >-
+      The result above fails the first pass: one low flat prefix, and a
+      socketed gem prefix a physical build cannot use. The suffixes are not
+      read at all yet, because the next reforge replaces them.
+    check: >-
+      If the two physical prefixes are the hybrid and anything else, that is
+      the best case: the bench can add the pure percentage. Pure and flat
+      together leave the bench nothing physical to add.
+    fail: >-
+      Reforge again. Nothing is lost but 50 Lifeforce.
+  - title: "Repeat until two physical prefixes pass"
+    do: >-
+      Reforge, read, and repeat until a result passes both passes.
+    why: >-
+      Each reforge is independent, and each brings at least one modifier
+      with the physical tag.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+      suffixes:
+        - { text: "+17% Chance to Block Attack Damage", how: harvest }
+        - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+  - title: "Spend the bench on the percentage, not the speed"
+    do: >-
+      With the hybrid and flat damage rolled (as here), craft pure increased
+      Physical Damage in the open prefix: 80–99% for 4 [[Chaos Orb]]s. With
+      pure and flat rolled, the prefix side has nothing left to buy; craft
+      attack speed, 11–15% for 2 Chaos Orbs.
+    why: >-
+      The staff has no attack speed, and it is tempting to buy that first.
+      Compare the two. The bench's 80–99% is added to a hybrid of 47%, which
+      is more than half again as much physical damage. Its 11–15% attack
+      speed is 11–15% more attacks. The prefix wins by a wide margin
+      whenever the group rule allows it.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+17% Chance to Block Attack Damage", how: harvest }
+        - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+variations: >-
+  **A third prefix from a beast, in one case only.** If the kept result has
+  the pure percentage and flat damage, the bench has no physical prefix left
+  to add and goes to attack speed. Then, with a prefix slot open and **no
+  suffix you care about**, the recipe **Add a Prefix, Remove a Random
+  Suffix** ([[Farric Wolf Alpha]]) is a roll at the hybrid for the price of
+  a suffix you were not using: about 1 time in 10 by our arithmetic. Use it
+  before the bench. Do not use it on the staff shown here: its open prefix
+  is worth far more to the bench than to a random roll.
+
+
+  **The Speed reforge** (150 Vivid) guarantees attack speed outright, since
+  nothing else in a warstaff's pool has the speed tag. Here it would fix the
+  easy side and leave all three prefixes to chance; it becomes the right
+  tool once the prefixes are protected.
+
+
+  **Without Harvest.** [[Chaos Orb]]s do the same job with no promise: by our
+  arithmetic a three-prefix result has two or more physical prefixes about 1
+  time in 6. The reforge puts at least one there four times in five.
+mistakes:
+  - "Buying an Essence of Contempt for this. The data has no Essence modifier for warstaves."
+  - "Keeping a result for its suffixes. Without two physical prefixes the weapon has little to multiply."
+  - "Crafting at the bench between reforges. The next reforge removes it."
+  - "Buying attack speed when the pure percentage was available. On this staff that choice gives up about a third of its physical damage."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tags, tiers, weights and bench costs, and the absence of Essence entries for warstaves. The odds are our arithmetic." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Physical and Speed reforges and their Lifeforce costs." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest without the Sacred Grove in 3.30." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The add-a-prefix recipe and the beast it needs." }

@@ -1,0 +1,497 @@
+name: "Flask"
+short: "Năm loại flask, mỗi cái một prefix và một suffix. Những lần craft rẻ nhất trong game, và là những lần đầu tiên đáng học."
+icon: "Quicksilver Flask"
+intro: >-
+  Flask là bài toán craft nhỏ nhất trong game. Nó chỉ có thể là Magic, nên
+  có hai ô: một prefix và một suffix. Không có bản Rare để đánh cược, không
+  có gì phải bảo vệ, và roll lại toàn bộ tốn một [[Orb of Alteration]]. Nếu
+  bạn chưa từng craft thứ gì, hãy bắt đầu ở đây.
+
+
+  Nhỏ không có nghĩa là không quan trọng. Suffix quyết định flask làm gì cho
+  bạn ngoài hiệu ứng gốc của nó: chấm dứt bleeding, cho bạn miễn nhiễm
+  freeze, thêm movement speed. Prefix quyết định nó sẵn sàng thường xuyên
+  tới đâu. Năm flask mà mỗi cái làm một việc đã tính trước sẽ giữ nhân vật
+  sống qua những thứ mà năm cái ngẫu nhiên không giữ nổi.
+basics:
+  itemLevel:
+    text: >-
+      Trên flask, item level hoạt động theo một cách khác thường. Trên
+      weapon, tier tốt nhất hiếm vì weight của nó nhỏ. Trên flask, mọi tier
+      của một modifier có weight bằng nhau trong dữ liệu 3.30, nên tier tốt
+      nhất không hiếm hơn tier tệ nhất. **Item level là thứ duy nhất đứng
+      giữa bạn và tier cao nhất.** Flask item level 85 roll được mọi thứ.
+      Trên flask item level 84, suffix movement speed dừng ở 9–11%, dù bạn
+      roll bao lâu đi nữa.
+
+
+      Nửa còn lại của câu chuyện là nhiều modifier người ta muốn nhất chẳng
+      có gì tốt hơn để mà chờ. Instant recovery và gỡ curse mỗi cái chỉ có
+      một tier, và tier nào của một suffix miễn nhiễm cũng là miễn nhiễm
+      trọn vẹn. Với những cái đó, flask bạn đang cầm đã đủ cao. Thứ tăng
+      theo item level là con số: charge, duration, số giây miễn nhiễm,
+      movement speed, độ lớn của một buff.
+
+
+      Vậy nên: với một suffix giải hay một suffix miễn nhiễm, kệ item level.
+      Với một flask chạy map tốt, 68 mở tier tốt thứ nhì của mọi prefix
+      utility. Muốn thứ tốt nhất của mọi thứ thì 85.
+    breakpoints:
+      - ilvl: 8
+        unlocks: "**Bleeding đã có lời giải.** \"of Sealing\" trên life, mana hoặc hybrid flask (miễn nhiễm Bleeding và Corrupted Blood trong 6–8 giây nếu dùng lúc đang bleeding) và \"of the Lizard\" trên utility flask (miễn nhiễm suốt hiệu ứng, đổi lại 49–45% less Duration). Instant Recovery mở sớm hơn một level, ở 7."
+      - ilvl: 18
+        unlocks: "\"of Warding\": Removes Curses on use, trên life, mana và hybrid flask. Nó chỉ có một tier, nên đây đã là mức tốt nhất nó có thể đạt."
+      - ilvl: 65
+        unlocks: "Movement speed Tier 2, \"of the Lynx\" (9–11%), và 25–23% reduced Charges per use."
+      - ilvl: 68
+        unlocks: "Tier tốt thứ nhì của mọi prefix utility giờ đã mở, hai cái cuối cùng là 31–35% increased Duration và prefix Charge Recovery kèm reduced effect. **Đủ cho một flask chạy map.**"
+      - ilvl: 76
+        unlocks: "Cả năm suffix \"Immunity during Effect\" đều tới tier tốt nhất (chúng cần 72 tới 76), nhờ đó mức phạt của chúng co lại còn 39–35% less Duration."
+      - ilvl: 82
+        unlocks: "Tier 1 của mọi prefix mà life, mana hoặc hybrid flask roll được, trừ increased Charge Recovery, cái này cần 83. Trên utility flask: 28–26% reduced Charges per use, +32–35 to Maximum Charges, và tier tốt nhất của prefix increased effect (từ 80)."
+      - ilvl: 84
+        unlocks: "Tier 1 increased Duration (36–40%), Tier 1 increased Armour hoặc Evasion Rating during Effect (56–60%), và 65–60% reduced Effect of Curses."
+      - ilvl: 85
+        unlocks: "\"of the Cheetah\": 12–14% increased Movement Speed during Effect. **Modifier flask duy nhất cần 85, và cũng là mức trần.**"
+  bases:
+    text: >-
+      Có năm loại flask, và loại quyết định những modifier nào xuất hiện
+      được. Đây là bài học đầu tiên của craft flask, vì roll bao nhiêu cũng
+      không vượt qua được ranh giới đó. Life flask không bao giờ cho bạn miễn
+      nhiễm freeze suốt cả duration của nó. Granite Flask không bao giờ chấm
+      dứt bleeding ngay lúc bạn bấm. Mỗi loại có cách riêng để làm cùng một
+      việc, và có danh sách riêng.
+
+
+      Năm họ prefix là chung cho mọi flask: reduced Charges per use,
+      increased Charge Recovery, thêm Maximum Charges, nhận charge khi bạn bị
+      đánh trúng, và cơ hội nhận một charge khi critical strike. Mọi thứ
+      khác thuộc về bên này hoặc bên kia của ranh giới.
+    types:
+      - title: "Life flask"
+        pools: [life]
+        text: >-
+          Mười hai cỡ, từ Small tới Eternal. Prefix định hình lượng hồi: bao
+          nhiêu, nhanh tới đâu, bao nhiêu phần đến ngay một lúc. Suffix tác
+          động **lúc bạn dùng flask**: miễn nhiễm một ailment trong vài giây
+          nếu bạn đang dính nó, hoặc "Removes Curses on use". Chỉ life flask
+          roll được phần hồi thêm trong 10 giây, và chỉ life và hybrid flask
+          roll được các prefix Low Life và suffix cho minion.
+      - title: "Mana flask"
+        pools: [mana]
+        text: >-
+          Mười hai cỡ. Chúng roll cùng những suffix giải như life flask:
+          bleeding, chill và freeze, ignite, shock, poison, hinder và maim,
+          curse. Ba prefix là của riêng chúng hoặc chỉ chung với hybrid
+          flask: một cái giữ hiệu ứng tiếp tục chạy khi mana đã đầy, một cái
+          trả mana vào cuối hiệu ứng, và một cái đổi life lấy thêm mana.
+      - title: "Hybrid flask"
+        pools: [hybrid]
+        text: >-
+          Sáu cỡ, hồi life và mana cùng lúc. Chúng roll được gần như mọi thứ
+          mà life flask hay mana flask roll được, nên có danh sách prefix
+          dài nhất, mười bốn họ. Thứ chúng thiếu là những modifier gắn với
+          riêng một loại tài nguyên.
+      - title: "Utility flask"
+        pools: [standard]
+        text: >-
+          Mười bảy base, mỗi cái có một hiệu ứng cố định trong một số giây:
+          Quicksilver, Granite, Jade, các flask resistance và phần còn lại.
+          Chúng chỉ có tám họ prefix, tất cả xoay quanh charge, duration và
+          hiệu ứng. 21 họ suffix của chúng hoạt động **trong lúc hiệu ứng
+          còn chạy**: miễn nhiễm, tỉ lệ avoid, movement speed, Armour,
+          Evasion Rating, critical strike chance, resistance. Không suffix
+          giải kiểu "if used while" nào của life flask roll được ở đây.
+      - title: "Iron Flask"
+        pools: [iron-flask]
+        text: >-
+          Utility flask của Expedition, với implicit "Restores Ward on use".
+          Dữ liệu cho nó một pool riêng vì một lý do: nó không roll được
+          increased Armour hay increased Evasion Rating during Effect, và
+          chỉ mình nó roll được increased Ward during Effect, tối đa 28–30%
+          ở item level 78. Về mọi mặt khác nó roll như một utility flask.
+    picks:
+      - base: "Divine Life Flask"
+        for: "Nhiều life nhất mỗi lần dùng"
+        why: >-
+          2,400 life trong 3.5 giây, lượng lớn nhất trong mọi base, và chứa
+          được ba lần dùng (45 charge, mỗi lần 15). Life flask mặc định cho
+          endgame.
+      - base: "Eternal Life Flask"
+        for: "Hồi nhanh mà không cần prefix instant"
+        why: >-
+          2,080 life trong 2.0 giây. Nó nhường một chút về lượng so với
+          Divine Life Flask để hồi xong trong khoảng thời gian chỉ nhỉnh hơn
+          một nửa, nên nó ít cần các prefix instant hơn.
+      - base: "Quicksilver Flask"
+        for: "Di chuyển, từ Act 1 tới map cuối cùng"
+        why: >-
+          Rơi từ level 4, kéo dài 6.0 giây và chứa được hai lần dùng (60
+          charge, mỗi lần 30). Suffix movement speed sinh ra là để dành cho
+          flask này, và nó là lý do một flask item level 85 đáng để nhặt.
+      - base: "Granite Flask"
+        for: "Build Armour"
+        why: >-
+          6.0 giây, hai lần dùng. Chỗ quen thuộc của "increased Armour
+          during Effect", thứ mà utility flask nào cũng roll được, trừ Iron
+          Flask.
+      - base: "Bismuth Flask"
+        for: "Utility flask rẻ nhất để giữ chạy liên tục"
+        why: >-
+          Duration gốc dài nhất trong các utility flask, 8.5 giây, và chi
+          phí mỗi lần dùng thấp nhất, 15 trên 40 charge. Suffix nằm trên nó
+          hoạt động được nhiều thời gian hơn so với trên bất kỳ base nào
+          khác.
+      - base: "Eternal Mana Flask"
+        for: "Mana"
+        why: >-
+          1,800 mana trong 7.0 giây với giá 8 trên 42 charge: lượng lớn
+          nhất, và năm lần dùng trước khi cạn.
+    impact: >-
+      **Danh sách mà nó roll.** Life, mana, hybrid, utility: bốn danh sách
+      khác nhau, như ở trên. Quyết định việc cần làm trước, rồi lấy loại
+      flask làm được việc đó.
+
+
+      **Chính hiệu ứng.** Granite Flask cho gì, hay Divine Life Flask hồi
+      bao nhiêu life, là một phần của base. Prefix có thể khuếch đại nó;
+      không gì thay thế được nó.
+
+
+      **Charge và duration.** Mỗi base có ba con số: nó chứa bao nhiêu
+      charge, một lần dùng tốn bao nhiêu, và nó kéo dài bao lâu. Các prefix
+      về charge tác động lên chính những con số đó, nên cùng một prefix sẽ
+      đáng giá hơn trên một base vốn đã rẻ mỗi lần dùng.
+
+
+      **Implicit, trên số ít flask có nó.** Aquamarine, Basalt, Stibnite,
+      Sulphur Flask và Iron Flask mỗi cái làm thêm một việc khi dùng. Không
+      cái nào có con số để roll lại.
+tools:
+  - method: currency
+    note: >-
+      Ba orb làm hết mọi việc. [[Orb of Transmutation]] biến flask trắng
+      thành Magic. [[Orb of Alteration]] roll lại cả hai ô.
+      [[Orb of Augmentation]] lấp một ô trống mà không đụng tới ô đã đầy.
+      [[Regal Orb]], [[Orb of Alchemy]] và mọi thứ khác làm ra cho item Rare
+      thì không có gì để tác động: theo các trang tra cứu, flask chỉ có thể
+      là Normal, Magic hoặc Unique.
+
+
+      Thói quen cần tập là **Alteration, rồi Augmentation**. Khi một
+      Alteration để trống một ô, Augmentation là lần roll thứ hai vào ô đó
+      gần như không tốn gì, nên mỗi lần thử đều được một lần roll cho mỗi
+      phía.
+
+
+      Xác suất khá dễ chịu. Ở item level 85, life flask có mười họ suffix và
+      mỗi họ đúng 10% số lần roll suffix, theo phép tính của chúng tôi từ
+      weight. Utility flask có 21 họ suffix, mỗi họ chỉ dưới 5% một chút, và
+      tám họ prefix, mỗi họ khoảng 13%. Vì các tier có weight bằng nhau,
+      tier cao nhất của một họ năm tier là một trên năm lần roll ra họ đó.
+  - method: bench
+    note: >-
+      Bench bán năm suffix cho **mọi** flask, life, mana, hybrid hay
+      utility, mỗi cái giá 6 [[Glassblower's Bauble]]: Regenerate 3% of Life
+      per second during Effect; 15% of Damage Taken from Hits is Leeched as
+      Life during Effect; +20–30% to Item Rarity during Effect; Prevent
+      +55–45% of Reflected Damage during Effect; và 50% Chance to Avoid
+      being Stunned during Effect. Bốn cái đầu không nằm trong danh sách tự
+      nhiên của flask nào. Suffix bench cần ô suffix trống, và khi đó nó là
+      suffix duy nhất flask có.
+
+
+      Bench còn thêm **enchantment tự dùng** do bạn chọn với giá 5
+      [[Instilling Orb]] và 5 Bauble, và gỡ một enchantment với giá 3
+      [[Orb of Scouring]]. Thiếu một thứ: trong dữ liệu 3.30, lựa chọn gỡ
+      crafted modifier không liệt kê flask. Muốn bỏ một suffix bench, hãy
+      tính tới một Orb of Scouring, thứ sẽ xóa luôn cả prefix.
+
+
+      Dữ liệu xếp tất cả các công thức này dưới tên Niko. Nếu bench của bạn
+      không hiện một công thức nào đó, tức là bạn chưa tìm được nó.
+  - method: finishing
+    note: >-
+      **Quality.** [[Glassblower's Bauble]] đưa flask lên 20%. Mô tả của orb
+      ghi rằng nó có hiệu quả lớn hơn trên flask không phải unique có item
+      level thấp. Quality cải thiện thứ flask vốn đã làm: theo cách game vận
+      hành lâu nay, đó là lượng mà life hoặc mana flask hồi và thời gian mà
+      utility flask kéo dài. Hãy nhìn con số trên flask khi bạn dùng chúng.
+
+
+      **Enchantment không phải là modifier.** Nó không chiếm ô nào trong hai
+      ô. Một flask chứa được một enchantment, và cái mới thay cái cũ.
+
+
+      Một [[Instilling Orb]] "adds an enchantment to a utility flask that
+      will cause it to be used when certain conditions are met". Dữ liệu
+      game có mười lăm điều kiện, trong đó có "Used when Charges reach full",
+      "Reused at the end of this Flask's effect", "Used when you take a
+      Savage Hit", "Used when you become Frozen" và "Used when you start
+      Bleeding". Cả mười lăm có weight bằng nhau, nên nếu một orb dùng thẳng
+      lên flask chọn theo weight, cái bạn muốn là 1 trên 15. Bench bán đúng
+      cái bạn cần với giá 5 orb và 5 Bauble. Hãy dùng bench.
+
+
+      Một [[Enkindling Orb]] "adds an enchantment to a utility flask that
+      will improve it but prevent it from gaining charges during its effect".
+      Dữ liệu có năm phiên bản: 60–70% increased effect, 80–100% increased
+      Duration, 60–80% increased Charge Recovery, 35–25% reduced Charges per
+      use, hoặc +40–60 to Maximum Charges. Increased effect có weight cao
+      nhất, 250 trên tổng weight 650. Cả hai orb đều ghi "Replaces any
+      existing enchantment", nên một flask hoặc là tự dùng, hoặc là đã
+      enkindle, không bao giờ cả hai.
+
+
+      Cả hai orb đều nêu utility flask. Các mục bench cho mười lăm điều kiện
+      thì liệt kê cả life, mana và hybrid flask. Chúng tôi chưa xác nhận
+      được bên nào đúng trong game ở 3.30, nên các ví dụ ở đây chỉ enchant
+      utility flask.
+  - method: beast
+    note: >-
+      [[Blood Altar]] thêm một suffix lên flask có ô suffix trống. Từ 3.30
+      các công thức này "require any Red Beast". Mỗi công thức cần bao nhiêu
+      con thì chúng tôi chưa xác nhận được, nên hãy đọc công thức trước khi
+      lên kế hoạch quanh nó.
+
+
+      Danh sách công thức có, cho life và mana flask: of Sealing (bleeding),
+      of Convection (chill và freeze), of Damping (ignite), of Earthing
+      (shock), of the Antitoxin (poison) và of Warding (curse). Cho utility
+      flask: of the Lizard (bleeding), of the Deer (freeze và chill), of the
+      Urchin (ignite), of the Conger (shock) và of the Skunk (poison).
+
+
+      Tra những cái tên đó trong danh sách modifier thì cái nào cũng là
+      **tier thấp nhất** của họ nó: 6–8 giây miễn nhiễm trên life flask,
+      49–45% less Duration trên utility flask. "of Warding" thoát được chỉ
+      vì nó có một tier duy nhất. Suffix từ beast thì chắc chắn và yếu. Nó
+      xứng với con beast đỏ khi prefix mới là phần khó và bạn không muốn
+      roll nó hai lần.
+memoryStrands: >-
+  Không có gì chúng tôi xác nhận được cho thấy [[Memory Strands]] có trên
+  flask. Strand được mô tả là một thuộc tính của trang bị, và
+  [[Orb of Remembrance]] ghi "a normal equipment item". Hãy lên kế hoạch
+  craft flask như thể strand không tồn tại.
+
+
+  Chẳng mất bao nhiêu. Strand nâng tier, mà trên flask các tier vốn đã có
+  weight bằng nhau: ở đúng item level, tier tốt nhất của một họ năm tier là
+  một trên năm lần roll ra họ đó, và một lần trượt tốn một Alteration.
+reading:
+  intro: >-
+    Đọc một flask theo thứ tự này: **nó là loại gì, suffix làm gì, prefix
+    làm gì với charge.** Loại cho bạn biết mình đang nhìn danh sách nào.
+    Suffix là lý do flask nằm trên belt của bạn. Prefix là bạn được dùng nó
+    thường xuyên tới đâu.
+  prefixes:
+    text: >-
+      Trên **utility flask**, cả tám họ prefix đều xoay quanh ba con số:
+      charge, duration và hiệu ứng. Hiệu ứng mạnh hơn hay duration dài hơn
+      làm mỗi lần dùng tốt hơn. Mỗi lần dùng rẻ hơn, hồi charge nhanh hơn và
+      sức chứa lớn hơn làm số lần dùng dày hơn. Không cái nào vô dụng, và có
+      một cái mang cái giá mà bạn phải chủ ý trả: increased Charge Recovery
+      kèm 25% reduced effect làm flask yếu đi mỗi lần nó được dùng.
+
+
+      Trên **life hoặc mana flask**, prefix quyết định hình dạng của lượng
+      hồi: hồi hết ngay lập tức nhưng ít đi nhiều, một nửa ngay lập tức, chỉ
+      ngay lập tức khi Low Life, hoặc hồi nhiều hơn mà chậm hơn. Lựa chọn đó
+      là chuyện nhân vật của bạn chết kiểu gì, không phải chuyện tier.
+
+
+      Chỉ có một ô prefix nên quy tắc group ở trang tổng quan không có việc
+      gì để làm ở đây: hai prefix không bao giờ gặp nhau. Chính cái ô là
+      giới hạn, nên câu hỏi duy nhất là bạn muốn prefix nào nhất.
+    key:
+      - mod: "#% reduced Duration / #% increased effect"
+        why: "Chỉ utility flask. Phần increased effect là 25% ở mọi tier; tier tốt hơn chỉ thu nhỏ phần duration bị mất. Prefix mạnh nhất khi thứ bạn muốn nhiều hơn chính là hiệu ứng của flask."
+        aim: "Tier nào cũng được 25%. T1 (ilvl 80) mất 27–23% duration, T3 (ilvl 20) mất 38–33%."
+      - mod: "#% increased Duration"
+        why: "Chỉ utility flask. Hiệu ứng dài hơn mỗi lần dùng, cũng tức là suffix phủ được nhiều thời gian hơn."
+        aim: "T2, 31–35% (ilvl 68). T1 là 36–40% (ilvl 84)."
+      - mod: "#% reduced Charges per use"
+        why: "Mọi flask. Nhiều lần dùng hơn từ cùng số charge, và trên flask tự dùng khi đầy thì thời gian chờ giữa hai lần dùng ngắn hơn."
+        aim: "T2, 25–23% (ilvl 65). T1 là 28–26% (ilvl 82)."
+      - mod: "#% increased Charge Recovery"
+        why: "Mọi flask. Flask đầy lại nhanh hơn từ mọi nguồn cho charge."
+        aim: "T2, 31–45% (ilvl 63). T1 là 46–50% (ilvl 83)."
+      - mod: "+# to Maximum Charges"
+        why: "Mọi flask. Sức chứa lớn hơn: nhiều lần dùng hơn trong một trận đánh dài trước khi nó cạn."
+        aim: "T2, +28–31 (ilvl 62). T1 là +32–35 (ilvl 82)."
+      - mod: "#% increased Charge Recovery / #% reduced effect"
+        why: "Chỉ utility flask. Mức charge recovery lớn nhất hiện có, với cái giá 25% reduced effect. Miễn nhiễm thì hoặc có hoặc không, nên trên flask mang theo chỉ vì suffix miễn nhiễm, cái giá đó nhỏ hơn nghe qua. Trên flask mang theo vì độ lớn của hiệu ứng, đây là prefix duy nhất phải từ chối."
+        aim: "T2, 55–60% (ilvl 68). T1 là 61–66% (ilvl 84)."
+      - mod: "Instant Recovery / #% reduced Amount Recovered"
+        why: "Life, mana và hybrid flask. Toàn bộ lượng hồi đến ngay lúc bạn bấm, đổi lại ít đi 66%. Nó có một tier với weight 3,000, nên là prefix dễ ra nhất trên các flask này."
+        aim: "Một tier (ilvl 7)."
+      - mod: "#% of Recovery applied Instantly / #% reduced Amount Recovered / #% increased Recovery rate"
+        why: "Life, mana và hybrid flask. Một nửa ngay bây giờ và phần còn lại đến nhanh. Tier nào cũng cho 50%; tier tốt hơn mất ít lượng hồi hơn."
+        aim: "Tier nào cũng được. T1 (ilvl 79) mất 39–36%, T5 (ilvl 3) mất 55–52%."
+      - mod: "Instant Recovery when on Low Life / #% reduced Amount Recovered"
+        why: "Life và hybrid flask. Hồi ngay toàn bộ đúng lúc bạn gặp nguy, với mức phạt nhỏ nhất trong các prefix instant."
+        aim: "T2, 18–15% reduced (ilvl 63). T1 là 14–11% (ilvl 81)."
+      - mod: "#% chance to gain a Flask Charge when you deal a Critical Strike"
+        why: "Mọi flask. Chỉ đáng một ô trên build crit thường xuyên."
+        aim: "T2, 26–30% (ilvl 62). T1 là 31–35% (ilvl 80)."
+  suffixes:
+    text: >-
+      Suffix chính là việc flask làm. Có hai bộ, và chúng đáp lại cùng những
+      mối nguy theo hai cách khác nhau.
+
+
+      Life, mana và hybrid flask giải **khi dùng**: "Grants Immunity to
+      Bleeding for 6–8 seconds if used while Bleeding". Bạn phải đang dính
+      vấn đề đó ngay lúc bấm flask, và tier tốt hơn cho thêm số giây miễn
+      nhiễm sau đó. Utility flask bảo vệ bạn **trong lúc hiệu ứng còn
+      chạy**: "Immunity to Bleeding and Corrupted Blood during Effect", trả
+      bằng "less Duration". Tier nào cũng là miễn nhiễm trọn vẹn; tier tốt
+      hơn lấy đi ít duration hơn.
+
+
+      Ngoài miễn nhiễm, utility flask còn mang các suffix buff: movement
+      speed, Armour, Evasion Rating, critical strike chance, resistance,
+      reduced effect of curses. Đó là những suffix mà tier là toàn bộ giá
+      trị, và vì vậy là những suffix mà item level có ý nghĩa.
+    key:
+      - mod: "Grants Immunity to Bleeding for # seconds if used while Bleeding / Grants Immunity to Corrupted Blood for # seconds if used while affected by Corrupted Blood"
+        why: "Life, mana và hybrid flask. Lời giải chuẩn cho bleeding và Corrupted Blood, trên một flask đằng nào bạn cũng bấm."
+        aim: "Tier nào cũng giải được. T4 là 6–8 giây (ilvl 8), T1 là 15–17 giây (ilvl 80)."
+      - mod: "Removes Curses on use"
+        why: "Life, mana và hybrid flask. Một tier với weight 3,000, nên nó dễ ra và không bao giờ có bản yếu."
+        aim: "Một tier (ilvl 18)."
+      - mod: "Grants Immunity to Chill for # seconds if used while Chilled / Grants Immunity to Freeze for # seconds if used while Frozen"
+        why: "Life, mana và hybrid flask. Cùng khuôn đó cho chill và freeze. Ignite, shock và poison mỗi cái có một suffix dựng theo cùng cách."
+        aim: "Tier nào cũng giải được. T1 là 15–17 giây (ilvl 76)."
+      - mod: "Immunity to Bleeding and Corrupted Blood during Effect / #% less Duration"
+        why: "Utility flask. Miễn nhiễm chừng nào flask còn chạy, không cần đang bleeding lúc bạn bấm."
+        aim: "Tier nào cũng là miễn nhiễm trọn vẹn. T1 (ilvl 76) tốn 39–35% duration, T3 (ilvl 8) tốn 49–45%."
+      - mod: "Immunity to Freeze and Chill during Effect / #% less Duration"
+        why: "Utility flask. Ignite, poison và shock có cùng kiểu suffix với cùng mức phạt."
+        aim: "Tier nào cũng là miễn nhiễm trọn vẹn. T1 cần ilvl 72."
+      - mod: "#% increased Movement Speed during Effect"
+        why: "Utility flask. Ba tier, cách xa nhau về item level. Suffix flask duy nhất khiến người ta đi săn base."
+        aim: "T2, 9–11% (ilvl 65). T1 là 12–14% (ilvl 85)."
+      - mod: "#% increased Armour during Effect"
+        why: "Utility flask, trừ Iron Flask. Increased Evasion Rating during Effect là anh em song sinh của nó, cùng tier và cùng item level."
+        aim: "T2, 51–55% (ilvl 58). T1 là 56–60% (ilvl 84)."
+      - mod: "#% reduced Effect of Curses on you during Effect"
+        why: "Utility flask. Lời đáp của utility flask cho curse: yếu hơn việc gỡ hẳn chúng, nhưng kéo dài suốt hiệu ứng."
+        aim: "T2, 59–52% (ilvl 65). T1 là 65–60% (ilvl 84)."
+      - mod: "#% increased Critical Strike Chance during Effect"
+        why: "Utility flask. Một suffix damage cho build crit, trên một flask đằng nào cũng đang chạy."
+        aim: "T2, 44–49% (ilvl 66). T1 là 50–55% (ilvl 82)."
+      - mod: "#% additional Elemental Resistances during Effect"
+        why: "Utility flask. Bù chỗ thiếu resistance trong lúc flask đang chạy; đừng dựa vào nó để chạm cap."
+        aim: "T2, 15–17% (ilvl 41). T1 là 18–20% (ilvl 81)."
+approach:
+  principle: >-
+    **Chọn flask theo việc cần làm, rồi roll phía bạn không mua được.** Mỗi
+    flask trên belt nên trả lời một câu hỏi: cái gì giết mình, hoặc mình
+    muốn thêm cái gì. Loại flask quyết định những câu trả lời nào là khả
+    thi. Sau đó chỉ còn một suffix và một prefix, một lần trượt tốn một
+    Alteration, và sai lầm thật sự duy nhất là roll tiếp qua một flask đã
+    làm tròn việc của nó.
+  order:
+    - title: "Gọi tên việc cần làm"
+      text: >-
+        Rà qua năm vị trí flask của bạn. Phải có thứ hồi life. Phải có thứ
+        xử lý bleeding và Corrupted Blood, và thứ xử lý freeze. Chỗ còn lại
+        dành cho tốc độ, phòng thủ hoặc damage. Viết suffix bạn muốn bên
+        cạnh từng vị trí trước khi đụng tới orb nào.
+    - title: "Lấy loại flask làm được việc đó"
+      text: >-
+        Giải ngay khi bấm nút là suffix của life flask. Miễn nhiễm kéo dài
+        là suffix của utility flask. Movement speed, Armour và các buff khác
+        chỉ tồn tại trên utility flask. Nếu modifier không nằm trong danh
+        sách của loại đó, không orb nào đặt nó lên được.
+    - title: "Chỉ kiểm item level khi con số mới là điều quan trọng"
+      text: >-
+        Với suffix giải hay miễn nhiễm, có gì dùng nấy. Với movement speed,
+        Armour hay một prefix tier cao nhất, hãy giữ Alt rồi rê chuột lên
+        flask trắng trước và so với các mốc item level ở trên.
+    - title: "Roll suffix, nhận prefix"
+      text: >-
+        Một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], mỗi lần
+        đều đọc suffix. Khi kết quả có một ô trống, dùng một
+        [[Orb of Augmentation]] trước Alteration kế tiếp. Khi suffix đã
+        đúng, chấp nhận bất kỳ prefix nào không chống lại flask.
+    - title: "Hoặc roll prefix và mua suffix"
+      text: >-
+        Khi prefix mới là phần hiếm, hoặc suffix bạn muốn là một trong năm
+        cái của bench, hãy lật ngược lần craft. Roll tới khi prefix xuất
+        hiện với ô suffix **trống**, đừng dùng Augmentation, rồi thêm suffix
+        ở bench với giá 6 Bauble hoặc ở Blood Altar với giá một beast đỏ.
+    - title: "Enchant và thêm quality sau cùng"
+      text: >-
+        Cả hai đều tốn Bauble, nên chúng dành cho flask bạn sẽ giữ. Bench
+        đặt đúng điều kiện tự dùng mà bạn chọn.
+  finishing: >-
+    Khi cả hai ô đã đúng, flask nhận quality và, nếu là utility flask,
+    enchantment của nó.
+
+
+    Chọn enchantment theo cách flask được dùng. Flask bạn muốn chạy mọi lúc
+    thì lấy "Used when Charges reach full" từ bench. Flask đáp lại một mối
+    nguy thì lấy điều kiện khớp với nó: "Used when you become Frozen" trên
+    flask miễn nhiễm freeze. Flask bạn tự tay bấm vào những lúc đã chọn là
+    ứng viên cho một [[Enkindling Orb]], thứ làm flask mạnh hơn và khiến nó
+    không nhận charge trong lúc đang chạy.
+  stopping: >-
+    Một flask là xong khi suffix làm tròn việc của nó và prefix không chống
+    lại nó. Mức đó cố ý đặt thấp. Theo phép tính của chúng tôi, một họ
+    suffix chỉ định trên utility flask là khoảng 1 trên 21 lần roll suffix,
+    và một họ prefix chỉ định là khoảng 1 trên 8. Đòi cả hai cùng lúc là
+    nhân hai con số đó với nhau.
+
+
+    Dừng sớm với suffix giải và miễn nhiễm: tier tốt hơn ở đó là thêm giây
+    hay thêm duration, không phải thêm an toàn. Chỉ đẩy xa hơn ở những chỗ
+    con số chính là giá trị, trên hết là movement speed, và quyết định từ
+    trước xem 9–11% có đủ không. Nếu một flask đã ngốn vài trăm Alteration,
+    tức là mức đặt quá cao so với bản chất của một cái flask.
+special:
+  - mod: "Regenerate 3% of Life per second during Effect"
+    source: "Bench"
+    where: "Một suffix của [[Crafting Bench]] giá 6 Glassblower's Bauble, trên mọi loại flask. Không nằm trong danh sách tự nhiên nào."
+  - mod: "15% of Damage Taken from Hits is Leeched as Life during Effect"
+    source: "Bench"
+    where: "Một suffix bench giá 6 Glassblower's Bauble, trên mọi loại flask."
+  - mod: "+#% to Item Rarity during Effect"
+    source: "Bench"
+    where: "Một suffix bench, +20–30%, giá 6 Glassblower's Bauble."
+  - mod: "Prevent +#% of Reflected Damage during Effect"
+    source: "Bench"
+    where: "Một suffix bench, 55–45%, giá 6 Glassblower's Bauble."
+  - mod: "50% Chance to Avoid being Stunned during Effect"
+    source: "Bench"
+    where: "Một suffix bench giá 6 Glassblower's Bauble. Utility flask tự nhiên roll được cùng kiểu modifier này, tối đa 51–55% ở item level 80; bench là cách duy nhất để đặt nó lên life, mana hoặc hybrid flask."
+  - mod: "Used when Charges reach full, and fourteen other conditions"
+    source: "Enchantment"
+    where: "Một [[Instilling Orb]] thêm một trong mười lăm điều kiện; bench thêm đúng cái bạn chọn với giá 5 Instilling Orb và 5 Glassblower's Bauble. Không phải prefix cũng không phải suffix."
+  - mod: "Gains no Charges during Effect, with one of five improvements"
+    source: "Enchantment"
+    where: "Một [[Enkindling Orb]] trên utility flask. Nó thay thế enchantment tự dùng, và ngược lại."
+  - mod: "Removes Curses on use, and ten other fixed suffixes"
+    source: "Beast"
+    where: "Các công thức Blood Altar thêm một suffix chỉ định lên flask chưa có suffix. Beast đỏ nào cũng được trong 3.30; số con mỗi công thức cần thì chưa xác nhận được. Trừ \"Removes Curses on use\", mỗi cái đều là tier thấp nhất của họ nó."
+  - mod: "#% increased Ward during Effect"
+    source: "Chỉ Iron Flask"
+    where: "Một suffix tự nhiên chỉ tồn tại trong pool của Iron Flask: 19–21% từ item level 12, tối đa 28–30% ở 78."
+  - mod: "Unveiled versions of the five bench suffixes"
+    source: "Có trong dữ liệu"
+    where: "Danh sách modifier hiện chúng là các prefix unveil ra, trong đó có Prevent +80–60% of Reflected Damage during Effect. Chúng tôi không biết cách nào đặt được veiled modifier lên flask: item veiled rơi ra là Rare và cả hai veiled orb đều cần item Rare, thứ mà flask không bao giờ có thể là. Hãy coi như không lấy được chúng."
+mistakes:
+  - "**Roll tìm một suffix mà loại flask đó không thể có.** \"of the Lizard\" không bao giờ xuất hiện trên life flask và \"of Sealing\" không bao giờ trên Granite Flask. Kiểm loại flask trước Alteration đầu tiên."
+  - "**Lấp ô suffix trước khi lấy suffix từ bench hay beast.** Cả hai đều cần ô đó trống. Nếu kế hoạch là mua suffix, một Augmentation \"để xem ra cái gì\" là hết kế hoạch."
+  - "**Dùng Alteration khi một ô đã đúng và ô kia đang trống.** Alteration roll lại cả hai. Augmentation mới là orb thêm vào mà không đụng tới thứ đang có."
+  - "**Giữ prefix reduced effect trên flask bạn mang theo vì hiệu ứng của nó.** Con số charge recovery to và hấp dẫn. Trên Quicksilver hay Granite Flask, nó chống lại chính lý do flask có mặt ở đó."
+  - "**Săn base item level 85 cho một flask miễn nhiễm.** Tier nào của một suffix miễn nhiễm cũng là miễn nhiễm trọn vẹn. Item level 85 là dành cho movement speed."
+  - "**Câu một điều kiện tự dùng bằng Instilling Orb dùng thẳng lên flask.** Nếu orb chọn theo weight trong dữ liệu, điều kiện bạn muốn là 1 trên 15. Bench bán nó với giá 5."
+  - "**Cố biến flask thành Rare, hoặc corrupt nó.** Theo các trang tra cứu, flask là Normal, Magic hoặc Unique và không corrupt được. Orb dành cho item Rare không làm được gì ở đây."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight và giá bench được dẫn ở đây, mô tả item của Instilling Orb, Enkindling Orb và Glassblower's Bauble, và danh sách enchantment. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beastcraft flask giờ cần một beast đỏ bất kỳ; beast vàng không còn bị bắt." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Mỗi công thức flask thêm suffix nào. Trang không nói một công thức cần bao nhiêu beast." }
+  - { title: "poedb: Flasks", url: "https://poedb.tw/us/Flasks", kind: data, note: "Flask chỉ có thể là Normal, Magic hoặc Unique và không corrupt được." }

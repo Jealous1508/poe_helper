@@ -1,0 +1,135 @@
+category: tinctures
+title: "Tincture đầu tiên: ghép suffix với implicit"
+level: 1
+summary: "Chọn cái Prismatic Tincture trắng có implicit tốt nhất, rồi roll một suffix mà nhân vật attack elemental dùng được. Ba orb, không bench."
+goal: >-
+  Một tincture cho nhân vật melee elemental ở nửa sau campaign, làm từ những
+  orb đã có sẵn trong stash. Bài học là cách nhìn một cái tincture:
+  **implicit chính là item, và suffix nên đẩy cùng hướng.**
+
+
+  Đây cũng là chỗ để nói tincture được roll thế nào, trong phạm vi chúng tôi
+  xác định được. Dữ liệu cho tincture một pool prefix và một pool suffix, và
+  ba orb dành cho item Magic lo phần còn lại, y như trên flask. Trong 3.30
+  tincture có thể hơn Magic hay không thì chúng tôi chưa xác nhận được, nên
+  ví dụ này dừng ở Magic: một prefix, một suffix.
+base: "Prismatic Tincture"
+itemLevel: 45
+baseWhy: >-
+  Implicit của Prismatic Tincture là 70–100% increased Elemental Damage with
+  Melee Weapons, và nó rơi từ level 18, nên nó là tincture đầu tiên mà nhân
+  vật attack elemental dùng được. Item level hầu như không quan trọng với
+  cái đầu tiên: attack speed đã là 15–19% ở item level 1, và elemental
+  penetration là 5–7% ở 1 và 8–10% từ item level 32.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["91% increased Elemental Damage with Melee Weapons"]
+  prefixes:
+    - { text: "19% reduced Mana Burn rate" }
+  suffixes:
+    - { text: "17% increased Melee Weapon Attack Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "chỉ khi tincture còn trắng" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "vài cái" }
+  - { item: "[[Glassblower's Bauble]]", amount: "vài cái", note: "không bắt buộc" }
+cost: >-
+  Khoảng một chục [[Orb of Alteration]]. Đủ rẻ để làm lại trên base tốt hơn
+  ngay lúc bạn tìm được.
+odds: >-
+  Ở item level 45, một lần roll suffix ra attack speed khoảng 1 trên 16 lần
+  và elemental penetration khoảng 1 trên 13, theo phép tính của chúng tôi từ
+  weight của các modifier. Một trong hai cái: khoảng 1 trên 7. Nếu bạn dùng
+  Augmentation mỗi khi ô suffix trống, mỗi lần thử đều gồm một lần roll
+  suffix, nên trung bình là bảy lần thử.
+steps:
+  - title: "Chọn base trắng có implicit tốt nhất"
+    do: >-
+      Nếu bạn có hơn một Prismatic Tincture, giữ Alt rồi rê chuột lên từng
+      cái và so implicit. Giữ cái cao nhất.
+    why: >-
+      Implicit roll trong khoảng 70% tới 100%, và không orb nào trong lần
+      craft này đổi được nó. Nó là con số lớn nhất item này sẽ có, nên đáng
+      bỏ ra ba mươi giây trước khi bạn tiêu bất cứ thứ gì.
+    state:
+      rarity: normal
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+  - title: "Biến nó thành Magic"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi giữ Alt và đọc cả hai dòng.
+    why: >-
+      Kết quả đầu tiên này rất điển hình. Các prefix duy trì và các suffix
+      khi giết quái là những modifier có weight cao nhất của tincture, nên
+      chúng là thứ xuất hiện khi không có gì lái hướng.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "15% increased Cooldown Recovery Rate" }]
+      suffixes: [{ text: "Gain 13 Life per Enemy Killed with Melee Weapons" }]
+  - title: "Alteration tới khi suffix là damage"
+    do: >-
+      Dùng [[Orb of Alteration]], mỗi lần đều đọc suffix. Nếu kết quả không
+      có suffix, dùng một [[Orb of Augmentation]]. Dừng ở **increased Melee
+      Weapon Attack Speed** hoặc **Melee Weapon Damage Penetrates Elemental
+      Resistances**.
+    why: >-
+      Cả hai đều đẩy cùng hướng với implicit: nhiều cú đánh elemental hơn,
+      hoặc mỗi cú đánh elemental có sức nặng hơn. Chấp nhận hai suffix chứ
+      không phải một chính là thứ làm đây thành một lần craft bảy lần thử.
+    check: >-
+      Ở item level này attack speed ghi 15–19% và penetration ghi 5–7% hoặc
+      8–10%. Cái nào trong số đó cũng đạt.
+    fail: >-
+      Nếu sắp cạn orb, hãy giữ một suffix ít ra cũng giúp bạn chơi: flask
+      charge từ việc giết quái, hoặc life khi giết quái. Nó là một item
+      leveling.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+  - title: "Một Augmentation cho prefix"
+    do: >-
+      Nếu ô prefix đang trống, dùng một Augmentation và ra gì giữ nấy.
+    why: >-
+      Chỉ có năm họ prefix. Bốn trong số đó có ích cho tincture đầu tiên: ít
+      Mana Burn hơn, cooldown ngắn hơn, hoặc thêm effect dưới hai dạng. Họ
+      thứ năm đổi effect lấy duy trì; nó là 1 trên 14 lần roll prefix ở item
+      level này, và ngay cả cái đó cũng dùng được lúc leveling.
+    check: >-
+      Đừng dùng Alteration để cải thiện prefix. Nó roll lại cả suffix.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "19% reduced Mana Burn rate" }]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+  - title: "Dùng nó trước khi đánh bóng nó"
+    do: >-
+      Chơi vài khu vực với tincture đang bật và để ý mana của bạn. Rồi, nếu
+      bạn giữ nó, thêm quality bằng [[Glassblower's Bauble]].
+    why: >-
+      Tincture tốn mana để chạy, và bạn kham nổi bao nhiêu là điều chỉ nhân
+      vật của bạn mới cho bạn biết. Câu trả lời đó quyết định tincture kế
+      tiếp của bạn nên có prefix nào. Mô tả của Bauble có nêu tincture;
+      quality cải thiện cái gì trên tincture thì hiện trên item.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "19% reduced Mana Burn rate" }]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+variations: >-
+  **Base khác, vẫn các bước đó.** Rosethorn Tincture (critical strike
+  chance) cần "+% to Melee Weapon Critical Strike Multiplier"; Blood Sap
+  hoặc Poisonberry Tincture cần "+% to Damage over Time Multiplier with
+  Melee Weapon Attacks". Attack speed thì hợp với mọi cái.
+
+
+  **Tincture rơi ra đã là Magic.** Bỏ qua Transmutation. Alteration dùng
+  được lên nó ngay như vậy.
+mistakes:
+  - "Bắt đầu trên base trắng đầu tiên bạn thấy trong khi bạn đang có một roll implicit tốt hơn."
+  - "Giữ \"Life per Enemy Killed\" vì nó xuất hiện trước. Nó là một trong hai suffix dễ ra nhất."
+  - "Roll tìm tier cao ở level này. Những tier bạn với tới được bị item level chặn trần; hãy làm lại lần craft trên base tốt hơn về sau."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Base, implicit, tier, item level và weight, và mô tả của Glassblower's Bauble. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,534 @@
+name: "Two-Handed Axe"
+short: "Cú đánh gốc lớn nhất trong mọi loại weapon melee và gần như không có implicit. Một pool với 25 base, nơi sáu trên mười lần roll prefix là elemental."
+icon: "Vaal Axe"
+intro: >-
+  Axe hai tay có physical damage cao nhất trong mọi base melee: một cây Karui
+  Chopper vung ra 121–189 trước khi có bất kỳ modifier nào, trong khi cây maul
+  lớn nhất dừng ở 112–168. Mười bảy trong mười chín cây axe thường không có
+  implicit nào cả, nên cây weapon chỉ là các con số của base cộng sáu ô, ngoài
+  ra không còn gì khác.
+
+
+  Mục tiêu vẫn là thứ hướng dẫn về mace đã dạy: physical damage mỗi giây từ ba
+  prefix physical. Cuộc xổ số thì không giống. Trên axe, mỗi loại added
+  elemental damage có weight hơn gấp đôi so với trên mace, nên các prefix
+  physical chỉ là 30% số lần roll prefix, trong khi mace có 46%. Mọi điều
+  riêng biệt về craft axe đều bắt nguồn từ một sự thật đó: roll thường thiên
+  về weapon elemental, một cây axe physical cần công cụ gỡ các lần roll
+  elemental hoặc bỏ qua xổ số, còn các hybrid bleeding và impale của bench và
+  veiled phải gánh nhiều việc hơn.
+basics:
+  itemLevel:
+    text: >-
+      Các tier và item level của chúng chính là của mace, vì modifier là một;
+      chỉ có weight khác nhau. Item level 77 mở mọi thứ một cây axe physical
+      cần, trừ tier cuối của hai prefix phần trăm, và 83 mở nốt chỗ đó.
+
+
+      Có hai kiểu axe phải nhìn cao hơn. Axe elemental muốn item level 82 cho
+      tier cao nhất của added fire, cold hoặc lightning damage, và 86 cho
+      "increased Elemental Damage with Attack Skills" cao nhất. Axe bleed dựng
+      trên influence Elder muốn 83, nơi prefix bleed tốt nhất xuất hiện.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Tier 5 của increased Physical Damage (85–109%). Added fire, cold và lightning damage đã roll được Tier 6 ở đây, khoảng adds 45–61 to 91–106 với fire, thứ mà trên một cây axe leveling cũng đáng giá ngang vậy."
+      - ilvl: 46
+        unlocks: "Tier 4 của increased Physical Damage (110–134%) và Tier 4 của flat Physical Damage (adds 20–28 to 43–51)."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 3 của hybrid kèm Accuracy (55–64%) và Tier 2 của attack speed (23–25%). Các modifier unveil ra cũng được liệt kê ở level này. **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 73
+        unlocks: "Tier 2 của cả hai prefix phần trăm (155–169% bản thuần, 65–74% hybrid). Tier 1 của Critical Strike Chance và Critical Strike Multiplier (mỗi cái 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 của flat Physical Damage (adds 34–47 to 72–84) và Tier 1 của attack speed (26–27%). **Đủ cho phần lớn axe physical.**"
+      - ilvl: 83
+        unlocks: "\"Merciless\" (170–179%) và \"Dictator's\" (75–79% kèm Accuracy). Ngay bên dưới, ở 82: Tier 1 của từng loại added elemental damage và Tier 1 của Damage over Time Multiplier (41–45%). Với influence Elder, prefix bleed cao nhất. **Trần của một cây axe physical hoặc bleed.**"
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (87–100%). Chỉ axe elemental mới quan tâm."
+  bases:
+    text: >-
+      Có 25 axe hai tay và tất cả roll từ một pool với cùng weight. Không base
+      nào mở ra một modifier mà base khác không có được. Chúng khác nhau ở cây
+      weapon bên dưới, và ở đây độ chênh rất rộng: từ 1.05 attack mỗi giây tới
+      1.4, và từ không có implicit nào tới những implicit định hình cả một
+      build.
+    types:
+      - title: "Axe thường"
+        pools: [all]
+        text: >-
+          Mười chín base từ Stone Axe tới Void Axe. Mười bảy cái **không có
+          implicit**. Hai ngoại lệ đều đáng biết: Sundering Axe (+20% to
+          Damage over Time Multiplier for Bleeding) và Vaal Axe (25% chance to
+          Maim on Hit). Bốn base cao cấp nhất, rơi từ level 62, là Ezomyte
+          Axe, Vaal Axe, Despot Axe và Void Axe.
+      - title: "Axe Maraketh"
+        text: >-
+          Dagger Axe, Talon Axe và Fleshripper. Implicit của chúng là 50%
+          increased Critical Strike Chance, và dữ liệu game đánh dấu nó là
+          local: nó nhân vào 5% của chính weapon, cho 7.5% trước bất kỳ
+          modifier nào. Đó là critical strike chance khởi điểm cao nhất của
+          loại item này, trên mức 6% của Void Axe.
+      - title: "Cleaver Heist"
+        text: >-
+          Prime Cleaver, Honed Cleaver và Apex Cleaver, các base
+          "experimented". Hit bằng weapon có 30% hoặc 50% chance to ignore
+          enemy Physical Damage Reduction, và trên Apex Cleaver thì lúc nào
+          cũng vậy. Cả ba attack 1.35 lần mỗi giây và đánh nhẹ hơn các axe
+          thường cùng level: Apex Cleaver có damage mỗi giây gốc 134.3, so với
+          148 tới 163 trên các base thường hàng đầu.
+    picks:
+      - base: "Karui Chopper"
+        for: "Cú đánh lớn nhất và damage gốc cao nhất"
+        why: >-
+          121–189 với 1.05 attack mỗi giây là damage mỗi giây gốc 162.8, cao
+          nhất của loại item này, có từ level 58. Nó chỉ cần 43 Dexterity.
+          Không có implicit. Lựa chọn mặc định cho slam, bleeding và mọi thứ
+          scale một cú đánh lớn.
+      - base: "Vaal Axe"
+        for: "Damage gần bằng, kèm một implicit"
+        why: >-
+          104–174 với 1.15 attack mỗi giây (159.8) và 25% chance to Maim on
+          Hit. Bạn bỏ 2% damage của Karui Chopper để đổi lấy cú vung nhanh hơn
+          và một debuff miễn phí.
+      - base: "Sundering Axe"
+        for: "Build bleed"
+        why: >-
+          +20% to Damage over Time Multiplier for Bleeding nằm trên implicit,
+          chỗ craft không đụng tới được, với damage mỗi giây gốc 148.9. Nó rơi
+          từ level 60.
+      - base: "Despot Axe"
+        for: "Attack speed và axe elemental"
+        why: >-
+          1.4 attack mỗi giây là base nhanh nhất. Attack speed local nhân vào
+          con số đó, và added elemental damage không quan tâm cú đánh physical
+          nhỏ cỡ nào, nên đây là base để chọn khi các prefix sẽ là fire, cold
+          và lightning.
+      - base: "Fleshripper"
+        for: "Build critical strike"
+        why: >-
+          97–152 với 1.2 attack mỗi giây và 50% increased Critical Strike
+          Chance, local. Với một suffix Critical Strike Chance Tier 1, đó là
+          5% × 1.88, hơn 9% một chút, cao hơn mức mọi cây axe khác với tới.
+          Void Axe (6%, không implicit, 1.25 attack mỗi giây) là lựa chọn thay
+          thế trong nhóm axe thường.
+      - base: "Apex Cleaver"
+        for: "Phớt lờ armour"
+        why: >-
+          Hit bằng weapon này phớt lờ Physical Damage Reduction của enemy. Bạn
+          trả giá bằng một phần mười tới một phần sáu damage của các base hàng
+          đầu khác, nên nó dành cho những build đã tính ra rằng thứ mình được
+          từ implicit nhiều hơn thứ mình mất.
+    impact: >-
+      Base quyết định những điều mà về sau không currency nào đổi được.
+
+
+      **Con số damage mà mọi modifier local nhân lên.** Trên axe, điều này
+      quan trọng hơn ở bất cứ đâu: 135% increased Physical Damage cộng khoảng
+      210 vào cú đánh trung bình của Karui Chopper và khoảng 148 vào của
+      Ezomyte Axe.
+
+
+      **Số attack mỗi giây và critical strike chance.** Attack speed trên
+      weapon là local. Critical Strike Chance cũng vậy, và nó nhân vào 5%,
+      5.7% hoặc 6% của base, cùng với implicit Maraketh.
+
+
+      **Implicit, hoặc việc không có implicit.** Phần lớn axe không cho bạn gì
+      phía trên đường kẻ. Số ít có implicit, gồm bleed multiplier, Maim,
+      critical strike chance, phớt lờ armour, chính là lý do để chọn các base
+      đó. Không cái nào có khoảng, nên một [[Blessed Orb]] không có gì để roll
+      lại.
+
+
+      **Yêu cầu.** Axe cần Strength và Dexterity: 151 và 43 trên Karui
+      Chopper, 140 và 86 trên Despot Axe.
+
+
+      Base **không** quyết định pool. Hãy chọn nó theo cú vung, và chọn item
+      level theo tier.
+tools:
+  - method: currency
+    note: >-
+      Hãy đọc những con số này trước khi tiêu bất cứ thứ gì. Ở item level 83,
+      theo phép tính của chúng tôi từ weight, một lần roll prefix ra added
+      fire, cold hoặc lightning damage 60% số lần và ra một prefix physical
+      30% số lần (flat 14%, mỗi họ phần trăm dưới 8%). Trên mace thì hai con
+      số đó đổi chỗ cho nhau. Tier 3 trở lên của increased Physical Damage
+      thuần ở đây khoảng 1 trên 280 lần roll prefix, so với 1 trên 180 trên
+      mace, và "Merciless" là 1 trên 1,970 so với 1 trên 1,270.
+
+
+      Vậy nên [[Orb of Alteration]] là cách tốt để roll một cây axe
+      **elemental**: Tier 3 trở lên của một loại added element nào đó khoảng 1
+      trên 11 lần roll prefix. Với axe physical, chúng cho bạn một prefix tử
+      tế một cách chậm chạp và không gì hơn.
+  - method: bench
+    note: >-
+      Danh sách bench là của mace, với cùng giá. Increased Physical Damage:
+      40–59% giá 4 Orb of Alteration, 60–79% giá 8, 80–99% giá 4 Chaos Orb,
+      100–129% giá 4 Exalted Orb. Flat Physical Damage: adds 18–24 to 36–42
+      giá 4 Chaos Orb. Attack speed: 11–15% giá 2 Chaos Orb, 16–20% giá 4
+      Exalted Orb.
+
+
+      Thứ axe dùng nhiều hơn mace là các **hybrid**. Increased Physical Damage
+      kèm chance to cause Bleeding, Impale, Poison hoặc Blind: 81–85% kèm
+      13–15% giá 3 Orb of Alchemy, 86–94% kèm 16–17% giá 3 Chaos Orb, 95–105%
+      kèm 18–20% giá 8 Chaos Orb. Flat Physical Damage kèm 40% chance to cause
+      Bleeding: adds 14–16 to 18–20 giá 4 Chaos Orb. Ở phía suffix, +31–35% to
+      Physical Damage over Time Multiplier giá 4 Chaos Orb.
+
+
+      Luật group quyết định chúng vừa ở đâu. Các hybrid phần trăm cùng group
+      với increased Physical Damage thuần, nên chúng thay thế nó. Chúng khác
+      group với hybrid kèm Accuracy, thứ nằm cạnh chúng được. Hybrid flat thì
+      cùng group với flat Physical Damage.
+  - method: finishing
+    note: >-
+      20% quality từ [[Blacksmith's Whetstone]] chính là physical damage trên
+      base, và trên những base có damage cao nhất game thì nó đáng giá nhất.
+      Với axe elemental thì nó không làm gì: quality không nâng added
+      elemental damage. Weapon hai tay có tối đa sáu socket, và bench chỉnh
+      socket với link ở giá cố định.
+  - method: essence
+    note: >-
+      **Dread** là cái cần biết: nó đảm bảo increased Impale Effect, một
+      suffix mà pool tự nhiên không có, 25–29% ở bậc Screaming và 35–38% ở bậc
+      Deafening. Nó không có bậc nào yếu hơn. **Contempt** đảm bảo flat
+      Physical Damage (adds 31–42 to 65–75 ở bậc Deafening), **Zeal** đảm bảo
+      attack speed (28–30% ở bậc Deafening, cao hơn Tier 1 tự nhiên) và
+      **Loathing** đảm bảo Critical Strike Chance (35–38%).
+
+
+      Với axe elemental, **Anger**, **Hatred** và **Wrath** đảm bảo added
+      fire, cold và lightning damage. Deafening Anger cho adds 149–203 to
+      302–351, nằm giữa Tier 2 và Tier 1 tự nhiên. **Rage**, **Sorrow** và
+      **Spite** cho một prefix không tồn tại ở đâu khác: Damage Penetrates
+      15–16% của một elemental resistance ở bậc Deafening.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) trước [[Regal Orb]] trên một cây
+      axe Magic đã khó roll mới ra, như trên bất kỳ weapon nào. Nó không dùng
+      được lên fractured item, và điều đó đáng kể khi base của bạn là một món
+      đồ rơi Tier 5 fractured. **Thêm một prefix, gỡ một suffix ngẫu nhiên**
+      ([[Farric Wolf Alpha]]) trên một cây axe không có suffix là một prefix
+      ngẫu nhiên với giá của mấy con beast, nhưng hãy nhớ "ngẫu nhiên" ở đây
+      nghĩa là gì: ba trên mười lần nó là physical.
+  - method: harvest
+    note: >-
+      Hãy đếm các modifier mang tag trước khi trả tiền. **Speed** (150 Vivid
+      Lifeforce): attack speed là cái duy nhất, nên nó được đảm bảo.
+      **Critical** (150 Primal): Critical Strike Chance hoặc Multiplier.
+      **Fire**, **Cold**, **Lightning** (mỗi cái 50): mỗi tag có một modifier
+      tự nhiên, chính là prefix added damage, nên mỗi cái là một prefix
+      elemental được đảm bảo. **Chaos** (100 Vivid): prefix chaos duy nhất,
+      chỉ có một tier, adds 98–149 to 183–280, ở item level 83.
+
+
+      **Physical** (50 Vivid) thì bất kỳ cái nào trong ba prefix physical, và
+      cả một trong hai suffix leech, đều thỏa điều kiện của nó. Nó chỉ trở
+      thành một prefix physical được đảm bảo khi phía suffix đã đầy và đã
+      khóa.
+  - method: fossil
+    note: >-
+      Trên axe, câu hỏi hữu ích là một Fossil **gỡ** đi cái gì. Một
+      [[Corroded Fossil]] có dòng "No Elemental modifiers", xóa cả bốn họ
+      prefix elemental, tức 63% pool. Theo phép tính của chúng tôi ở item
+      level 77, riêng điều đó đã khiến prefix tự nhiên là physical tới 83%.
+      Một [[Jagged Fossil]] nhân modifier physical lên mười lần và đạt 81%,
+      đồng thời làm phía suffix ngập trong leech. Cả hai cùng lúc: 98%.
+
+
+      Các con số này chỉ tính pool tự nhiên. Dữ liệu có liệt kê những modifier
+      chỉ Fossil mới ra cho loại item này, trong đó có một prefix với 60%
+      chance để Bleeding do weapon này gây ra deal 100% more Damage, và bản
+      song sinh cho poison của nó. Bản xuất dữ liệu của chúng tôi không cho
+      biết Fossil nào mở cái nào hay với weight bao nhiêu, nên chúng không nằm
+      trong phép tính.
+
+
+      Một [[Serrated Fossil]] không thay đổi gì ở phía prefix: gần như mọi
+      prefix vốn đã có tag attack.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra ghép 120–139% increased Physical Damage với 21–25%
+      chance to cause Bleeding, Impale, Poison hoặc Blind. Chúng là bản mạnh
+      nhất của các hybrid bench và chung group với chúng. Những suffix unveil
+      ra đáng có: +44–48% to Physical Damage over Time Multiplier, 12–14%
+      chance to deal Double Damage, 27–30% attack speed khi có enemy Rare hoặc
+      Unique ở gần.
+
+
+      Loại item này có mười ba veiled prefix và bảy cái trong đó là một group,
+      mấy cái caster và minion damage. Một prefix bench rẻ thuộc group đó
+      (44–60% increased Fire Damage, 4 Orb of Alteration) đặt vào trước khi
+      bạn unveil sẽ loại cả bảy cái khỏi ba lựa chọn, theo luật block do cộng
+      đồng thử nghiệm. Trong sáu cái còn lại, bốn cái là các hybrid physical.
+  - method: fracture
+    note: >-
+      Trong 3.30, một cây axe fractured chủ yếu là thứ bạn nhặt được: một item
+      Tier 5 có thể rơi ra dưới dạng fractured Magic item. Đáng để dựng lên:
+      một tier cao của một trong hai prefix phần trăm, Tier 1 của flat
+      Physical Damage, hoặc một roll elemental hàng đầu cho axe elemental. Một
+      suffix stun hay life-on-kill fractured thì không phải là base, mà là một
+      ô mất vĩnh viễn. Một fractured item không nhận được influence hay
+      Imprint.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" và "Suffix Modifiers cannot be
+      changed" mỗi cái tốn 4 Divine Orb và 1 [[Sacred Orb]] trên weapon trong
+      3.30. Các bản 1 Divine Orb bảo vệ một modifier được chọn ngẫu nhiên,
+      điều mà nhà phát triển nói là chỉ chắc chắn khi phía đó có đúng một cái.
+      "Can have up to 3 Crafted Modifiers" (2 Divine Orb) rất hợp với axe, vì
+      hai trong ba thứ bạn sẽ craft, một hybrid phần trăm và flat Physical
+      Damage, là prefix ở hai group khác nhau.
+  - method: influence
+    note: >-
+      **Elder** là influence của bleed: một prefix với +51–59% to Damage over
+      Time Multiplier for Bleeding from Hits with this Weapon (item level
+      83), và một suffix chỉ có trên axe, Culling Strike against Bleeding
+      enemies kèm 30–49% increased Physical Damage. **Hunter** có Bleeding
+      you inflict deals Damage 22–25% Faster, và 66–80% chance to ignore
+      enemy Physical Damage Reduction. **Warlord** và **Redeemer** mỗi cái có
+      một prefix Gain 27–30% of Physical Damage as Extra Fire Damage hoặc
+      Extra Cold Damage. **Crusader** có Impale Effect, thứ mà Essence of
+      Dread cho dễ hơn.
+
+
+      Các prefix Warlord và Crusader với 65–69% increased Physical Damage
+      chung group với hybrid kèm Accuracy. Chúng thay thế nó; chúng không phải
+      là một prefix phần trăm thứ tư.
+  - method: corruption
+    note: >-
+      Có một corruption implicit tồn tại trên axe mà không có trên sword hay
+      mace: 20% chance to cause Bleeding on Hit kèm 30–40% increased Attack
+      Damage against Bleeding Enemies. Những cái khác: 25–30% increased Area
+      of Effect, 16–20% increased Physical Damage, 5–7% attack speed, weapon
+      range. Trên phần lớn axe không có implicit nào để mất, nên một
+      [[Vaal Orb]] lên một bản sao đã hoàn thiện bớt đau hơn một chút so với ở
+      chỗ khác.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới. Trên axe, strand hợp với các prefix elemental và các suffix hơn là với các prefix physical."
+memoryStrands: >-
+  [[Memory Strands]] nâng tier của bất cứ thứ gì được roll ra và không làm gì
+  cho việc modifier nào xuất hiện. Trên mace, điều đó hợp với các prefix
+  physical, vốn là gần nửa pool. Trên axe, những họ vừa phổ biến vừa có tier
+  cao nhất hiếm lại là các họ **elemental**: 60% số lần roll prefix, với Tier
+  1 có weight 108 trong một họ có tổng weight 9,888. Một
+  [[Orb of Remembrance]] lên một cây Despot Axe trắng, rồi tới
+  [[Orb of Alteration]], là kiểu craft strand tự nhiên của loại item này. Với
+  axe physical, strand giúp về tier nhưng bạn vẫn phải chờ con số 30% kia.
+
+
+  [[Orb of Unravelling]] có logic riêng. Theo mô hình của người chơi, vốn
+  không chính thức, cơ hội nâng một modifier tăng theo weight của các tier
+  phía trên nó. Attack speed và các suffix critical strike có weight 1,000
+  mỗi tier ở phía trên; "Merciless" có 25. Vậy nên một Unravelling ở cuối có
+  khả năng nâng một attack speed Tier 3 cao hơn hẳn so với một prefix phần
+  trăm Tier 3.
+
+
+  Phí ở đây cũng như ở mọi nơi: spam Essence trên base có strand, và Fossil
+  hay reforge Harvest, những thứ mà theo thử nghiệm của người chơi không dùng
+  strand mà cũng không hưởng lợi từ strand.
+reading:
+  intro: >-
+    Giữ Alt và hỏi trước tiên: **cây axe này là physical hay elemental, và nó
+    có biết điều đó không?** Một cây axe có một prefix physical và hai prefix
+    elemental rất hay gặp, và nó chẳng là loại nào trong hai. Rồi đếm các
+    prefix physical và tier của chúng, rồi tìm attack speed, rồi tới bất cứ
+    thứ gì build thêm vào: bleed, impale hay critical strike.
+  prefixes:
+    text: >-
+      Ba họ physical cộng dồn được vì đó là ba group: increased Physical
+      Damage thuần, hybrid kèm Accuracy Rating, và flat Physical Damage. Một
+      cây axe physical hoàn chỉnh có cả ba, hoặc có một hybrid bench hay
+      veiled thế chỗ bản thuần.
+
+
+      Đối thủ ở đây nặng ký hơn trên mace. Added fire, cold và lightning
+      damage **mỗi loại** là 20% số lần roll prefix. Đó là những con số lớn,
+      Tier 1 của lightning là adds 28–38 to 549–638, và trên một build scale
+      elemental damage thì ba cái như vậy làm nên một weapon thực thụ. Trên
+      build physical, mỗi cái là một ô mất. Hãy quyết định mình đang làm cây
+      axe nào trước lần roll đầu tiên, vì công cụ giúp loại này sẽ gỡ loại
+      kia.
+
+
+      Các modifier phần trăm local nhân damage của base và flat physical
+      damage trên weapon. Added elemental damage không được thứ gì trên weapon
+      nhân lên, trừ attack speed.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân lớn nhất, local, và trên damage gốc cao nhất game thì nó mua được nhiều nhất. Các hybrid bleeding và impale của bench và veiled chính là group này."
+        aim: "T3, 135–154% (ilvl 60), hoặc một hybrid unveil ra ở 120–139%. T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Cái phần trăm thứ hai, ở group riêng. Đây là prefix nên mong khi bạn định bench hoặc unveil một hybrid bleed hay impale, vì nó là cái nằm vừa bên cạnh."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Nâng con số mà cả hai cái phần trăm nhân lên. Phổ biến gấp đôi mỗi cái trong hai cái đó."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 cần ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Sáu trên mười lần roll prefix. Trái tim của một cây axe elemental, và là lý do một cây axe physical khó roll."
+        aim: "Cho axe elemental: T3 trở lên (ilvl 62–63). T1 cần ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Hệ số nhân elemental. Hiếm, chỉ 3% số lần roll prefix, và nó giành cùng ba ô đó với ba prefix added damage."
+        aim: "T3, 63–71% (ilvl 60). T1 là 87–100% (ilvl 86)."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Chỉ khi main skill gắn trong cây axe."
+  suffixes:
+    text: >-
+      Phía suffix có tổng weight bằng của mace và nhiều hơn một họ: mười sáu,
+      vì Strength chia chỗ với Dexterity. Attack speed vẫn là 14% số lần roll
+      suffix và vẫn lấy được từ Essence, reforge Harvest hoặc bench.
+
+
+      Thứ thay đổi theo build là suffix thứ hai và thứ ba. Axe bleed muốn
+      Damage over Time Multiplier, vốn hiếm trong pool tự nhiên (2.4% số lần
+      roll suffix), và có thể thêm Physical Damage over Time Multiplier của
+      bench hoặc bản veiled bên cạnh, vì hai cái là hai group khác nhau. Axe
+      impale muốn Impale Effect, thứ chỉ Essence of Dread hoặc influence
+      Crusader mới cho. Axe critical strike muốn hai suffix critical, vốn phổ
+      biến.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. Quan trọng nhất trên axe elemental, nơi nó là thứ duy nhất trên weapon nhân added damage lên."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Suffix bleed của pool tự nhiên. Global. Cộng dồn với Physical Damage over Time Multiplier từ bench (31–35%) hoặc từ một veiled modifier (44–48%)."
+        aim: "T3, 31–35% (ilvl 68). T1 là 41–45% (ilvl 82)."
+      - mod: "#% increased Impale Effect"
+        why: "Không có trong pool tự nhiên. Đến từ Essence of Dread hoặc một cây axe có influence Crusader."
+        aim: "25–29% từ Essence bậc Screaming; 35–38% từ bậc Deafening."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local: nó nhân vào critical strike chance của chính weapon, cùng với implicit Maraketh."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Cho build crit. Global."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Bench (8–10%) hoặc veiled (12–14%). Suffix thứ ba thường dùng cho build không crit mà cũng không bleed."
+approach:
+  principle: >-
+    **Loại các lần roll elemental khỏi cuộc xổ số, hoặc build cùng với
+    chúng.** Một cây axe physical được làm bằng những công cụ không đòi pool
+    tự nhiên phải cho ra một prefix physical: một Corroded Fossil, một
+    Essence, một base fractured, các hybrid của bench và veiled. Một cây axe
+    elemental được làm với pool đúng như nó vốn có. Những sai lầm đắt giá trên
+    item này đến từ việc roll cho loại này bằng xác suất của loại kia.
+  order:
+    - title: "Physical, bleed, impale hay elemental: chọn base cho khớp"
+      text: >-
+        Karui Chopper hoặc Vaal Axe cho physical damage thô và impale,
+        Sundering Axe cho bleed, Fleshripper cho critical strike, Despot Axe
+        cho elemental. Item level 77 cho phần lớn lần craft physical, 83 cho
+        các tier phần trăm cao nhất và prefix bleed Elder, 82 hoặc 86 cho
+        elemental.
+    - title: "Tìm modifier mà không gì khác cấp được"
+      text: >-
+        Impale Effect chỉ đến từ Essence of Dread hoặc influence Crusader.
+        Bleed multiplier của Elder chỉ đến từ một cây axe Elder. Một tier phần
+        trăm cao nhất chỉ đến từ may mắn hoặc một món fractured rơi ra.
+        Modifier đó là gì thì lần craft cũng bắt đầu từ nó, vì mọi thứ sau đó
+        đều mua được.
+    - title: "Quyết định prefix phần trăm nào bạn sẽ không roll"
+      text: >-
+        Các hybrid của bench và veiled chiếm group phần trăm thuần. Nếu một
+        trong số chúng nằm trong kế hoạch thì một bản phần trăm thuần roll ra
+        sẽ cản đường nó, và hybrid kèm Accuracy mới là roll bạn muốn. Nếu
+        không cái nào nằm trong kế hoạch thì phần trăm nào cũng được, và bench
+        lấp cái còn lại.
+    - title: "Lấy các prefix physical bằng công cụ phớt lờ con số 60%"
+      text: >-
+        Một hoặc hai cái roll ra: một Essence, hoặc một Corroded Fossil. Ba:
+        Corroded và Jagged cùng lúc. Quanh một prefix fractured: gì cũng được,
+        bao nhiêu lần tùy thích. Alteration và Chaos Orb thường thì dành cho
+        axe elemental.
+    - title: "Bảo vệ, và chọn khóa theo phía đã xong"
+      text: >-
+        Thường thì prefix xong trước và khóa là "Prefix Modifiers cannot be
+        changed". Khi suffix đến trước, từ một Essence đã cố định một cái
+        trong số đó, hãy khóa suffix và đặt một prefix veiled hoặc Harvest vào
+        phía kia. Một modifier đứng một mình có thể được bảo vệ với giá 1
+        Divine Orb.
+    - title: "Attack speed, suffix của build, rồi bench"
+      text: >-
+        Attack speed bằng bất kỳ đường đảm bảo nào. Rồi tới suffix mà build
+        lấy làm tên. Để dành bench cho ô nào còn trống, và nếu hai modifier
+        crafted sẽ hoàn thiện cây axe thì hãy trả tiền cho "Can have up to 3
+        Crafted Modifiers".
+  finishing: >-
+    Quality lên 20%, socket và link, rồi tới các con số. Một [[Divine Orb]]
+    roll lại mọi chỉ số cùng lúc, kể cả của modifier fractured và modifier
+    unveil ra, và không bao giờ đổi tier.
+
+
+    Trên một cây axe có hybrid bench, hãy đối chiếu chance nó cho với thứ
+    build cần trước khi chốt. Flat Physical Damage kèm 40% chance to cause
+    Bleeding của bench đổi damage lấy chance; hybrid phần trăm thì ngược lại.
+
+
+    Một [[Vaal Orb]] đến sau tất cả những thứ đó, hoặc không bao giờ. Trên một
+    cây axe không có implicit, một corruption implicit không thay thế cái gì,
+    nhưng orb cũng dễ roll lại cả item y như vậy, và sau đó không sửa được gì
+    nữa.
+  stopping: >-
+    **Một** prefix physical roll ra từ Tier 4 trở lên, một hybrid bench bên
+    cạnh và attack speed: một weapon cho map vàng, và trên Karui Chopper thì
+    nó đã đánh rất đau. **Hai** prefix physical roll ra cộng một hybrid bench
+    hoặc veiled: đủ cho phần lớn build. Một tier phần trăm cao nhất cạnh một
+    hybrid veiled và ba suffix tự chọn là chỗ chi phí nhân lên.
+
+
+    Hãy ngừng roll một cây axe physical ngay khi một kết quả có hai prefix
+    physical ở tier chấp nhận được và còn chỗ cho bench. Trên pool này, lần
+    thử kế tiếp dễ tệ hơn là tốt hơn. Và nếu thứ roll ra là ba prefix
+    elemental tốt trong một kế hoạch physical, hãy bán nó cho người muốn cây
+    axe đó.
+special:
+  - mod: "#% increased Impale Effect"
+    source: "Essence"
+    where: "Được đảm bảo bởi Essence of Dread, bậc Screaming trở lên: 25–29%, 30–34% hoặc 35–38%. Cũng là một suffix influence Crusader với cùng chỉ số cao nhất."
+  - mod: "#% increased Physical Damage / #% chance to cause Bleeding on Hit"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25%. Bench: 95–105% kèm 18–20% giá 8 Chaos Orb. Có các bản cho Impale, Poison và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "+#% to Physical Damage over Time Multiplier"
+    source: "Veiled / Bench"
+    where: "Suffix unveil ra, 44–48%. Bench: 31–35% giá 4 Chaos Orb. Khác group với Damage over Time Multiplier tự nhiên, nên cả hai nằm vừa trên một cây axe."
+  - mod: "+#% to Damage over Time Multiplier for Bleeding from Hits with this Weapon"
+    source: "Influence Elder"
+    where: "Một prefix Elder: 37–42% ở item level 68, 43–50% ở 75, 51–59% ở 83. Trên một cây axe Elder item level 83 trở lên, nó khoảng 1 trên 36 lần roll prefix ở bất kỳ tier nào, theo phép tính của chúng tôi."
+  - mod: "Hits with this Weapon have Culling Strike against Bleeding Enemies / #% increased Physical Damage"
+    source: "Influence Elder"
+    where: "Một suffix Elder, 30–49% increased Physical Damage, item level 68. Trong dữ liệu, nó tồn tại trên axe hai tay mà không có trên sword hay mace."
+  - mod: "Bleeding you inflict deals Damage #% Faster"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter: 18–21% ở item level 68, 22–25% ở 73."
+  - mod: "Gain #% of Physical Damage as Extra Fire Damage"
+    source: "Influence Warlord"
+    where: "Một prefix Warlord, 27–30% ở item level 78. Redeemer có bản tương tự cho Cold Damage. Hai influence trên một cây axe cần một [[Awakener's Orb]]."
+  - mod: "#% chance for Bleeding inflicted with this Weapon to deal 100% more Damage"
+    source: "Fossil"
+    where: "Một prefix chỉ Fossil mới ra, 60% chance. Nó mang tag bleed, thứ mà [[Corroded Fossil]] nhân lên; bản xuất dữ liệu của chúng tôi không nêu tên Fossil mở nó."
+  - mod: "Damage Penetrates #% Fire Resistance"
+    source: "Essence"
+    where: "Một prefix từ Essence of Rage: 15–16% ở bậc Deafening. Sorrow cho Cold và Spite cho Lightning. Các bản bench và veiled là một modifier khác: chúng penetrate mọi elemental resistance cho attack bằng weapon này, 8–10% giá 4 Chaos Orb hoặc 14–16% khi unveil."
+  - mod: "Hits with this Weapon ignore Enemy Physical Damage Reduction"
+    source: "Implicit của base"
+    where: "Implicit của Apex Cleaver; 30% và 50% chance trên Prime Cleaver và Honed Cleaver. Không craft ra được. Influence Hunter có một suffix với 66–80% chance."
+mistakes:
+  - "**Roll một cây axe physical bằng xác suất của mace.** Prefix physical là 30% pool ở đây, không phải 46%. Một phương pháp ổn trên maul sẽ lâu gấp rưỡi trên axe, đó là trước khi Fossil hay Essence đầu tiên được dùng tới."
+  - "**Bench một hybrid bleed hoặc impale lên cây axe đã roll ra increased Physical Damage thuần.** Chúng là một group. Hybrid kèm Accuracy mới là roll chừa chỗ."
+  - "**Dùng riêng Jagged Fossil rồi thắc mắc attack speed đi đâu mất.** Nó nhân hai suffix leech lên mười lần cùng với các prefix physical. Corroded Fossil lấy được cùng những prefix đó và để yên phía suffix."
+  - "**Tính một prefix physical Warlord hay Crusader là cái phần trăm thứ tư.** Nó chung group với hybrid kèm Accuracy và chiếm chỗ của hybrid đó."
+  - "**Dựng trên một món đồ rơi Tier 5 fractured chỉ vì nó fractured.** Một fracture đáng giá đúng bằng modifier nó giữ."
+  - "**Lên quality cho axe elemental rồi trông chờ thêm damage.** Quality chỉ nâng physical damage của base."
+  - "**Khóa một phía còn một ô trống rồi cho rằng không gì thêm vào đó được.** Người chơi từ lâu đã ghi nhận rằng một lần roll lại có thể lấp ô trống ở phía được bảo vệ. Hãy lấp nó hoặc chấp nhận rủi ro."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây, cùng việc implicit nào là local. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên weapon, và fractured Magic item từ đồ rơi Tier 5." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và chỉ chắc chắn khi có đúng chừng đó modifier." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: block một lựa chọn unveil bằng một modifier bench cùng group, các modifier bảo vệ, và các mốc Memory Strands. Công thức của Orb of Unravelling là một mô hình của người chơi mà chúng tôi chỉ biết qua một bản viết lại kém tin cậy của thử nghiệm đó. Một phần cũ hơn 3.30." }

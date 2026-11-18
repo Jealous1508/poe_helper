@@ -1,0 +1,136 @@
+category: bows
+title: "A first gem-level bow from an Essence of Dread"
+level: 2
+summary: "An Essence of Dread guarantees +2 to Level of Socketed Bow Gems. Repeat until a suffix slot is free, then bench a Damage over Time Multiplier."
+goal: >-
+  A bow for a damage over time build in its first maps: +2 to the level of
+  the bow skill socketed in it, and a multiplier from the bench. This is
+  the bow that breaks every habit learned on other weapons. **Its damage
+  numbers do not matter.** The skill's damage comes from the gem's level, so
+  the craft has one prefix that counts, and the rest of the item is judged
+  by what it leaves room for.
+base: "Thicket Bow"
+itemLevel: 68
+baseWhy: >-
+  For a gem-level bow the base is nearly free. The Thicket Bow is chosen for
+  its 1.5 attacks per second, the only base number such a build still uses.
+  Any bow you can equip does the job.
+
+
+  Item level 68 is past everything this craft needs: +2 to Level of
+  Socketed Bow Gems opens at 64. It also lets the third tier of the natural
+  Damage over Time Multiplier roll (16–19%), should luck offer it.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+    - { text: "Adds 64 to 121 Cold Damage" }
+  suffixes:
+    - { text: "15% increased Attack Speed" }
+    - { text: "+35 to Dexterity" }
+    - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Shrieking Essence of Dread]]", amount: "3–8", note: "Deafening gives the same +2; Screaming gives only +1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+  - { item: "[[Jeweller's Orb]] and [[Orb of Fusing]]", amount: "as needed", note: "or the bench's socket and link crafts" }
+cost: >-
+  A few Essences and 4 [[Chaos Orb]]s. The real expense of this bow is not
+  on the modifier list at all: it is the six linked sockets, because the +2
+  only applies to gems socketed in the bow.
+odds: >-
+  The +2 is certain. What you are rolling for is room: **at least one open
+  suffix slot** for the bench. Attack speed beside it is a bonus worth
+  waiting a little for: at item level 68 it is 1 suffix roll in 10, by our
+  arithmetic, so a result with two or three suffixes has it 2 or 3 times in
+  10. "+1 to Level of Socketed Gems" on the same result, which would make
+  the bow +3, is 1 other prefix roll in 49. Do not wait for it with
+  Essences. The Fossil example is the tool for that.
+steps:
+  - title: "Sockets first, on the white bow"
+    do: >-
+      Before any Essence, bring the white bow to six sockets and link as
+      many as you can afford, with [[Jeweller's Orb]]s and
+      [[Orb of Fusing]]s or the bench's fixed-price crafts.
+    why: >-
+      On this bow the links are the expensive part and the modifiers are
+      the cheap part, so settle the expensive part while a bad outcome
+      costs nothing. Sockets and links survive every reroll.
+    state: { rarity: normal }
+  - title: "The first Essence"
+    do: >-
+      Use one [[Shrieking Essence of Dread]].
+    why: >-
+      On a bow, Dread guarantees "+# to Level of Socketed Bow Gems": +1 at
+      Screaming, +2 at Shrieking and at Deafening. Rolled naturally, the +2
+      tier is about 1 prefix roll in 50. The Essence makes the bow Rare around
+      it, and can be used again on the result.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 71 to 139 Fire Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "23% increased Stun Duration on Enemies" }
+        - { text: "Gain 29 Life per Enemy Killed" }
+  - title: "Count the suffixes"
+    do: >-
+      Hold Alt and count the suffixes. **Three suffixes with no attack speed
+      and no Damage over Time Multiplier** is a failed result, like the one
+      above. Two or fewer, or three that include attack speed, is a result
+      to keep.
+    why: >-
+      The damage of this bow comes from two places only: the gem level,
+      which is done, and a multiplier, which the bench sells as a suffix. A
+      full suffix side of filler leaves the bench nowhere to put it. The
+      other prefixes do nothing for a damage over time build and can be
+      ignored, whatever they are.
+    fail: >-
+      Use another Essence on the same bow. The +2 returns every time.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 64 to 121 Cold Damage" }
+      suffixes:
+        - { text: "15% increased Attack Speed" }
+        - { text: "+35 to Dexterity" }
+  - title: "Bench the multiplier"
+    do: >-
+      At the [[Crafting Bench]], craft the Damage over Time Multiplier of
+      your skill's damage type in the open suffix: **+18–20% to Chaos, Fire,
+      Cold or Physical Damage over Time Multiplier**, 4 [[Chaos Orb]]s.
+    why: >-
+      A multiplier is worth more than the bench's other option for this bow,
+      21–30% increased Damage over Time, because it multiplies where the
+      other only adds to increases you already have. It is also a different
+      group from the natural "+#% to Damage over Time Multiplier", so if
+      that one ever rolls, both stay.
+    check: >-
+      Do not craft "+2 to Level of Socketed Support Gems" on this bow. It
+      is the same group as the bow-gem prefix and the bench will refuse it.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 64 to 121 Cold Damage" }
+      suffixes:
+        - { text: "15% increased Attack Speed" }
+        - { text: "+35 to Dexterity" }
+        - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Both a prefix and a suffix open.** The bench's "Can have up to 3 Crafted
+  Modifiers" costs 2 Divine Orbs and a suffix slot, and then allows the
+  multiplier and 21–30% increased Damage over Time together. Worth it only
+  when the suffix side has two free slots.
+
+
+  **An attack build that uses gem levels.** The same Essence serves a skill
+  that hits. Bench a damage suffix that fits it in place of the multiplier,
+  and keep in mind that such a build usually wants the flat damage
+  prefixes as well, which makes it an elemental bow with a bonus.
+mistakes:
+  - "Judging the result by the damage per second shown on the bow. That number is for attacks that hit with the weapon."
+  - "Rolling on with a good result to get a better filler prefix. Nothing on the prefix side matters here except gem levels."
+  - "Using a Screaming Essence of Dread and expecting +2. Screaming gives +1."
+  - "Leaving the skill in a body armour. The +2 applies only to gems socketed in the bow."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence of Dread tiers on bows, the gem prefixes and their groups, weights and bench costs. The odds are our arithmetic." }

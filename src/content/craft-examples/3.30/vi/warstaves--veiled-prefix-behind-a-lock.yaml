@@ -1,0 +1,235 @@
+category: warstaves
+title: "Giữ ba suffix crit, ép ra một prefix physical"
+level: 4
+summary: "Một cây rod có suffix hoàn hảo và prefix vô dụng. Khóa suffix, roll lại prefix bằng một Veiled Chaos Orb, rồi dùng một block bằng bench giá hai Alteration để lần unveil buộc phải đưa ra physical damage."
+goal: >-
+  Cứu một cây warstaff crit có phía suffix đã xong còn phía prefix thì chưa,
+  mà không đụng tới suffix. Có hai ý gánh lần craft này. Khóa có thể canh
+  phía nào cũng được, và trên weapon này suffix có thể là phía đáng canh. Và
+  một veiled modifier là một lựa chọn trong ba mà bạn thu hẹp được: **đặt
+  trước lên item một modifier bench rẻ thuộc group không mong muốn, thế là
+  group đó không thể được đưa ra.**
+base: "Eventuality Rod"
+itemLevel: 83
+baseWhy: >-
+  Lần craft này bắt đầu từ một item: một cây warstaff có attack speed và cả
+  hai suffix critical strike ở tier cao, mua hoặc nhặt được. Eventuality Rod
+  là nơi một phía suffix như vậy đáng giá nhất, với 8.3% critical strike
+  chance gốc và thêm một Power Charge trên implicit. Bất kỳ cây warstaff nào
+  từ item level 60 trở lên cũng nhận được các veiled modifier dùng ở đây.
+methods: [meta, veiled, bench]
+result:
+  implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "+164 to maximum Mana" }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "26% increased Attack Speed" }
+    - { text: "+36% to Global Critical Strike Multiplier" }
+    - { text: "34% increased Critical Strike Chance" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Orb of Alteration]]", amount: "2", note: "cho block bằng bench" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "để gỡ block sau đó" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Một lần khóa, 4 [[Divine Orb]] và một [[Sacred Orb]], cùng một
+  [[Veiled Chaos Orb]] cho mỗi lần thử. Orb này đến từ Betrayal; các
+  safehouse leader có thể rơi ra nó. Block và craft bench cuối cùng chỉ là
+  tiền lẻ.
+
+
+  Cái giá chính là phép thử. Ba suffix thuộc hai tier cao nhất thì đáng một
+  lần khóa. Attack speed kèm hai đồ lấp chỗ thì không: hãy roll lại cả cây
+  staff.
+odds: >-
+  Một lần unveil trên warstaff có thể đưa ra mười ba prefix. Bốn cái là các
+  hybrid physical, bảy cái là các phần trăm caster damage và minion damage
+  chung một group, và hai cái là penetration. Game không công bố ba lựa chọn
+  được tính weight thế nào. Nếu mọi lựa chọn có khả năng như nhau và ba cái
+  luôn khác nhau, thì một lần unveil không block sẽ hiện một hybrid physical
+  khoảng 7 trên 10 lần.
+
+
+  Khi staff có một modifier bench thuộc group caster damage, luật do cộng
+  đồng thử nghiệm là không cái nào trong bảy cái đó được đưa ra. Còn lại sáu,
+  bốn trong đó là physical, và ba cái được hiện: chỉ cần đếm là thấy ít nhất
+  một cái phải là physical. Chúng tôi chưa thấy đúng kiểu block này được thử
+  trong 3.30, nên hãy coi "chắc chắn" là "rất có khả năng" cho tới khi bạn tự
+  làm một lần.
+steps:
+  - title: "Kiểm chỗ trống ở cả hai phía"
+    do: >-
+      Đếm suffix: phải có **ba**. Đếm prefix: phải có một ô trống, vì "Suffix
+      Modifiers cannot be changed" là một prefix. Nếu một prefix là modifier
+      bench, hãy gỡ nó với giá 1
+      [[Orb of Scouring]].
+    why: >-
+      Ba suffix làm hai việc. Chúng là thứ khiến khóa đáng tiền, và khi mọi ô
+      suffix đã đầy thì veiled modifier không còn chỗ nào để đi ngoài phía
+      prefix. Khi còn một ô suffix trống thì chúng tôi chưa xác nhận được nó
+      sẽ rơi vào đâu.
+    fail: >-
+      Ba prefix roll ra: không còn chỗ cho khóa và không có cách an toàn nào
+      để tạo chỗ. Lần craft này không áp dụng được.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "+187 to maximum Mana" }
+        - { text: "Adds 112 to 221 Cold Damage" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Nó là hình ảnh phản chiếu của khóa prefix, với cùng giá. Chừng nào nó
+      còn trên staff, một lần roll lại tôn trọng nó sẽ để yên ba suffix và
+      thay các prefix, kể cả chính cái khóa.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "+187 to maximum Mana" }
+        - { text: "Adds 112 to 221 Cold Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Chọn cách roll lại theo thứ nó đảm bảo"
+    do: >-
+      So hai cách roll lại tôn trọng khóa. Một reforge Harvest **Physical**
+      giờ buộc phải đặt modifier được đảm bảo của nó ở phía prefix. Một
+      [[Veiled Chaos Orb]] đặt một veiled prefix ở đó. Hãy dùng Veiled Chaos
+      Orb.
+    why: >-
+      Reforge đảm bảo một họ và không nói gì về tier. Theo phép tính của
+      chúng tôi từ weight, prefix physical của nó là flat damage khoảng một
+      nửa số lần, là một prefix phần trăm thuộc ba tier đáy 4 trên 10 lần, và
+      là một phần trăm từ 110% trở lên (45% với hybrid) 1 trên 20 lần. Một
+      veiled modifier chỉ có một tier: hybrid physical luôn là 120–139%.
+    check: >-
+      Việc Veiled Chaos Orb và reforge Harvest tôn trọng một phía đã khóa là
+      do người chơi xác lập, không phải do nhà phát triển tuyên bố. Hãy thử
+      cặp này trên một item Rare rẻ trước nếu league này bạn chưa thấy nó
+      chạy.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "+164 to maximum Mana" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Block trước khi unveil"
+    do: >-
+      Khoan unveil. Ở bench, craft **increased Chaos Damage**, 44–60%, vào ô
+      prefix trống. Nó tốn 2 [[Orb of Alteration]].
+    why: >-
+      Craft đó thuộc group caster damage. Bảy trong mười ba prefix mà lần
+      unveil có thể đưa ra cũng vậy: các hybrid chaos, cold, fire và
+      lightning, cả hai hybrid spell damage và cái của minion. Theo thử
+      nghiệm của cộng đồng, một lần unveil không bao giờ đưa ra một group đã
+      có trên item, nên một modifier rẻ loại được cả bảy. Craft nào thuộc
+      group đó cũng được; đây là cái rẻ nhất trong dữ liệu.
+    check: >-
+      Modifier crafted đã ở trên staff, và không prefix nào là increased
+      Physical Damage thuần. Một bản phần trăm thuần roll ra cùng group với
+      các hybrid physical và sẽ block ngược lại chính chúng.
+    fail: >-
+      Veiled Chaos Orb để lại ba prefix, nên không có ô cho block: unveil
+      không cần nó và lấy hybrid physical nếu được đưa ra. Hoặc nó roll ra
+      increased Physical Damage thuần cạnh veiled prefix: giữ cái đó, và
+      unveil lấy một modifier penetration hoặc bất cứ thứ gì build dùng được.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "+164 to maximum Mana" }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Unveil lấy hybrid physical"
+    do: >-
+      Click chuột phải vào cây staff và chọn trong ba modifier được đưa ra.
+      Lấy **increased Physical Damage kèm chance to Impale**, hoặc bản
+      Bleeding, Poison hay Blind nếu nó hợp build hơn.
+    why: >-
+      Cả bốn đều là 120–139% increased Physical Damage kèm 21–25% chance cho
+      hiệu ứng thứ hai. Mức đó nằm giữa Tier 4 và Tier 3 của modifier tự
+      nhiên và cao hơn bản tốt nhất của bench, mà bạn không phải roll nó.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "+164 to maximum Mana" }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Đổi block lấy một craft thật"
+    do: >-
+      Gỡ Chaos Damage ở bench với giá 1 [[Orb of Scouring]], rồi craft flat
+      Physical Damage vào chỗ đó: adds 18–24 to 36–42 giá 4
+      [[Chaos Orb]].
+    why: >-
+      Block đã xong việc của nó. Group phần trăm giờ do modifier unveil ra
+      giữ, nên craft physical của bench còn vừa là bản flat.
+    check: >-
+      Hãy thành thật về kết quả. Một prefix mạnh, một prefix bench, và một
+      cái chết do Veiled Chaos Orb roll ra. Đó là cái giá của việc giữ ba
+      suffix hàng đầu, và nó là một weapon tốt hơn nhiều so với cây bạn bắt
+      đầu.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "+164 to maximum Mana" }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+variations: >-
+  **Hình ảnh phản chiếu.** Ba prefix tốt và suffix tệ là trường hợp hay gặp
+  hơn. Khóa prefix và dùng một reforge Harvest Speed: trên warstaff, attack
+  speed là modifier duy nhất có tag speed, nên nó được đảm bảo. Mẹo block thì
+  không chuyển sang được: mười bảy suffix mà một lần unveil có thể đưa ra rải
+  trên nhiều group, và một modifier bench loại được nhiều nhất bốn cái trong
+  đó.
+
+
+  **Harvest thay cho orb.** Khi không có Veiled Chaos Orb trong tay, reforge
+  Physical (50 Vivid Lifeforce) sau cùng cái khóa đó là bản rẻ. Hãy tính là
+  ra tier thấp, rồi bench bản phần trăm thuần hoặc flat damage cạnh bất cứ
+  thứ gì nó cho.
+
+
+  **"Cannot roll Caster Modifiers" làm block.** Đọc lên thì tưởng nó phải làm
+  được cùng việc đó. Chúng tôi chưa xác nhận được nó có ảnh hưởng tới các lựa
+  chọn unveil, nó tốn một Divine Orb so với hai Alteration, và nó là một
+  suffix trên cây staff có phía suffix đã đầy.
+mistakes:
+  - "Unveil trước rồi mới nghĩ tới bench. Block chỉ có tác dụng trước khi lựa chọn được hiện ra."
+  - "Block bằng một craft bench physical. Đó chính là group bạn muốn được đưa ra."
+  - "Khóa một phía suffix chỉ có một modifier tốt và hai đồ lấp chỗ. Roll lại cả cây staff thì rẻ hơn."
+  - "Dùng Annulment lên cái prefix chết sau đó. Nó lấy ngẫu nhiên một trong sáu modifier, và từ 3.30 không modifier \"Cannot roll\" nào lái được nó."
+  - "Để Chaos Damage lại trên staff. Nó chỉ là công cụ; cái ô đó đáng để flat Physical Damage."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các veiled modifier mà warstaff unveil ra được và group của chúng, giá bench, tier và weight. Phép đếm là của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb xử lý thế nào các veiled modifier được meta-modifier bảo vệ." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil không cần Jun; safehouse leader rơi Veiled Chaos Orb." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: một modifier crafted cùng group sẽ block một lựa chọn unveil, và các Veiled orb tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Physical và Speed cùng giá của chúng." }

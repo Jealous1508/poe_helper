@@ -1,0 +1,145 @@
+category: shields
+title: "Shield block từ một Essence yếu, với vòng lặp Scouring"
+level: 2
+summary: "Một Wailing Essence of Loathing đảm bảo increased Chance to Block, nhưng chỉ trên item trắng. Scour rồi lặp lại tới khi life roll ra bên cạnh nó, rồi bench một resistance."
+goal: >-
+  Một cái tower shield cho các map đầu, với một prefix block được đảm bảo và
+  life. Có hai điều cần học. Bốn bậc Essence yếu nhất theo một luật khác với
+  các bậc mạnh: **chúng chỉ dùng được trên item Normal**, nên mỗi lần thử lại
+  cần một [[Orb of Scouring]] trước. Và increased Chance to Block là một
+  modifier **local**, nên con số block trên base là một phần của lần craft.
+base: "Ezomyte Tower Shield"
+itemLevel: 70
+baseWhy: >-
+  Ezomyte Tower Shield có implicit life lớn nhất trong các tower shield,
+  +30–40, với 24% Chance to Block và 412–474 Armour, và dùng được ở level 64.
+  Item level 70 là thứ map trắng và map vàng thấp rơi ra; nó mở life 130–144
+  và mọi tier flat Armour. Một Wailing Essence giới hạn các modifier khác ở
+  level 75 trở xuống, điều không thay đổi gì trên một base item level 70.
+methods: [essence, currency, bench, finishing]
+result:
+  implicits: ["+34 to maximum Life"]
+  prefixes:
+    - { text: "54% increased Chance to Block", how: essence }
+    - { text: "+108 to maximum Life" }
+  suffixes:
+    - { text: "+33% to Fire Resistance" }
+    - { text: "+26% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Wailing Essence of Loathing]]", amount: "3–6" }
+  - { item: "[[Orb of Scouring]]", amount: "ít hơn số Essence một cái" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "cho bench" }
+cost: >-
+  Vài Essence yếu và chừng đó [[Orb of Scouring]]. Trong 3.30, Wailing
+  Essence không còn xuất hiện ở map đỏ, nên cuối campaign cùng map trắng và
+  map vàng là nơi để gom chúng, cũng đúng là lúc người ta cần một cái shield
+  như thế này.
+odds: >-
+  Block là chắc chắn: 52–57% increased Chance to Block. Ở item level 70, theo
+  phép tính của chúng tôi từ weight, mỗi prefix Essence roll thêm là maximum
+  Life 24% số lần, và là life từ 100 trở lên 7%. Khi một kết quả có thêm hai
+  prefix, ít nhất một cái là life 46% số lần. Vậy một kết quả có block **và**
+  chút life là khoảng cứ hai hoặc ba Essence thì được một; một kết quả có
+  life cao thì tốn nhiều hơn hẳn, và không phải thứ một Essence yếu sinh ra
+  để làm.
+steps:
+  - title: "Lên quality trên shield trắng"
+    do: >-
+      Dùng [[Armourer's Scrap]] lên Ezomyte Tower Shield trắng tới khi nó ghi
+      20% quality.
+    why: >-
+      Quality tăng Armour. Nó không làm gì cho block, và nó sống sót qua
+      scour, nên chỉ cần làm một lần.
+    state:
+      rarity: normal
+      implicits: ["+34 to maximum Life"]
+  - title: "Essence đầu tiên"
+    do: >-
+      Dùng một [[Wailing Essence of Loathing]] lên cái shield trắng.
+    why: >-
+      Item thành Rare với **52–57% increased Chance to Block** được đảm bảo.
+      Prefix này là local: nó nhân vào 24% của chính cái shield, nên 54%
+      increased block đưa Chance to Block của shield lên khoảng 37%. Các
+      modifier khác là ngẫu nhiên, và kết quả đầu tiên này không có gì khác
+      đáng có.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "55% increased Chance to Block", how: essence }
+        - { text: "+97 to Armour" }
+      suffixes:
+        - { text: "+16 to Strength" }
+        - { text: "19% increased Stun and Block Recovery" }
+        - { text: "Regenerate 27 Life per second" }
+  - title: "Đánh giá nó: life, một resistance, một ô trống"
+    do: >-
+      Đọc prefix tìm **maximum Life**. Đọc suffix tìm một **resistance**. Đếm
+      các **ô trống**. Giữ cái shield nếu nó có life và có hoặc một
+      resistance, hoặc chỗ để bench thêm một cái.
+    why: >-
+      Việc của shield là block, life và resistance. Essence đã mang block
+      tới; kết quả phải mang life tới, vì bench chỉ thêm được một modifier và
+      resistance là thứ mua rẻ hơn.
+    fail: >-
+      Không có life, như ở trên: sang bước kế. Đừng cố chữa nó bằng bench.
+      Life tốt nhất của bench trên shield là +56–70, và dùng nó ở đó thì
+      không còn cách nào thêm resistance.
+  - title: "Scour, rồi dùng Essence kế tiếp"
+    do: >-
+      Dùng một [[Orb of Scouring]] để đưa shield về Normal, rồi thêm một
+      Wailing Essence nữa. Lặp lại tới khi một kết quả đạt.
+    why: >-
+      Một Wailing Essence "upgrades a normal item to rare". Nó không dùng
+      được trên cái shield Rare theo kiểu một cái Screaming dùng được. Scour
+      gỡ mọi modifier và giữ lại base, quality và implicit của nó.
+    check: >-
+      Sau khi scour, tên item màu trắng và implicit vẫn còn đó.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "54% increased Chance to Block", how: essence }
+        - { text: "+108 to maximum Life" }
+      suffixes:
+        - { text: "+33% to Fire Resistance" }
+  - title: "Bench resistance thứ hai"
+    do: >-
+      Ở [[Crafting Bench]], craft resistance bạn thiếu nhiều nhất vào một
+      suffix trống: 21–28% giá 1 [[Orb of Alchemy]], hoặc 29–35% giá 3 Chaos
+      Orb khi bạn đã có dư.
+    why: >-
+      Mỗi element là một group riêng, nên hãy chọn cái mà shield chưa có.
+      Cùng với implicit, shield giờ cho khoảng 140 life, block gấp rưỡi base
+      của nó, và hai resistance.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "54% increased Chance to Block", how: essence }
+        - { text: "+108 to maximum Life" }
+      suffixes:
+        - { text: "+33% to Fire Resistance" }
+        - { text: "+26% to Cold Resistance", how: crafted }
+variations: >-
+  **Với Essence bậc Screaming trở lên.** Từ bậc Screaming trở lên, Essence of
+  Loathing dùng được trên item Rare, nên không cần Scouring, và block cao
+  hơn: 58–63% ở bậc Screaming, 70–75% ở Deafening. Cách đánh giá vẫn vậy.
+
+
+  **Life từ Essence, block từ bench.** Một Essence of Greed đảm bảo life thay
+  vào (85–99 ở bậc Wailing, 100–114 ở Screaming), rồi bench bán 31–40%
+  increased Chance to Block giá 9 Orb of Alteration hoặc 41–50% giá 3 Chaos
+  Orb. Cách đó dùng bench cho một prefix, nên resistance phải tự roll ra.
+
+
+  **Một base có nhiều block hơn.** Cùng prefix đó trên base 26% hoặc 27% cho
+  nhiều hơn. Trong số các base mà một nhân vật mới dùng được, Shagreen Tower
+  Shield có 26%.
+mistakes:
+  - "Cố dùng Wailing Essence lên kết quả Rare. Nó cần một item Normal; hãy scour trước."
+  - "Scour một cái shield lẽ ra bạn đã giữ. Đọc cả sáu ô trước khi dùng orb, không phải sau."
+  - "Dùng bench cho life sau một kết quả không có life. Thêm một Essence nữa còn rẻ hơn một cái shield không còn chỗ cho resistance."
+  - "So hai cái shield block chỉ bằng prefix. Dòng Chance to Block trên cùng là base nhân với prefix."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên shield và mỗi bậc dùng được trên cái gì, chỉ số block local, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Wailing Essence không còn sinh ra ở map đỏ." }

@@ -1,0 +1,482 @@
+name: "Belt"
+short: "Một pool, mười ba base và danh sách modifier ngắn nhất trong mọi loại trang bị. Life là một trên năm lần roll prefix, nên belt là item dễ craft cho tốt nhất."
+icon: "Stygian Vise"
+intro: >-
+  Belt roll từ chín họ prefix và mười hai họ suffix. Không món trang bị nào
+  khác có danh sách ngắn tới vậy, và điều đó thay đổi cảm giác khi craft trên
+  nó: những thứ bạn muốn chiếm một phần lớn của mọi lần roll. Một trên năm
+  prefix là maximum Life. Hơn một trên ba suffix là một elemental resistance.
+
+
+  Belt còn có mức Life roll ra lớn nhất trong các món trang sức: 130–144 ở
+  mức cao nhất, so với 115–129 trên amulet và 100–114 trên ring. Với build
+  life, đây là loại trang bị đầu tiên nên craft và là loại rẻ nhất để hoàn
+  thiện.
+
+
+  Thứ nó không có là sự đa dạng. Pool tự nhiên không chứa damage nào ngoài
+  một prefix attack, và không có attribute nào ngoài Strength. Những phần
+  thêm của belt đến từ các modifier flask, từ bench, và trên hết là từ base:
+  Abyssal socket của Stygian Vise là implicit giá trị nhất của loại item này.
+basics:
+  itemLevel:
+    text: >-
+      Life cần rất ít: tier cao nhất mở ở item level 64. Một chiếc belt item
+      level 72 tới 75 roll được resistance 42–45% và mọi tier Life, và là đủ
+      cho phần lớn nhân vật tới hết Atlas.
+
+
+      Trên mức đó là bạn đang mua những tier cụ thể. 84 cho resistance cao
+      nhất và cho "increased maximum Life" tốt nhất của Hunter. 85 cho flask
+      effect và Strength cao nhất. 86 chỉ dành cho Armour cao nhất và
+      "increased Elemental Damage with Attack Skills" cao nhất.
+    breakpoints:
+      - ilvl: 36
+        unlocks: "**Leveling.** Life 85–99, và resistance 24–29% trong khoảng item level 36 tới 38."
+      - ilvl: 64
+        unlocks: "Tier 1 của maximum Life, \"Fecund\" (130–144). **Life không bao giờ cần item level cao hơn mức này.**"
+      - ilvl: 72
+        unlocks: "Tier 2 của resistance (42–45%). Ở 74–75: Strength 43–50 và tier Mana cao nhất."
+      - ilvl: 80
+        unlocks: "Tier 1 của Energy Shield (48–51). Ở 78: Tier 1 của Life regeneration (96–128 mỗi giây)."
+      - ilvl: 84
+        unlocks: "Tier 1 của Fire, Cold và Lightning Resistance (46–48%), Tier 1 của increased Flask Charges gained (35–40%), và trên belt Hunter là 7–10% increased maximum Life."
+      - ilvl: 85
+        unlocks: "Tier 1 của \"Flasks applied to you have 10–12% increased Effect\" và Tier 1 của Strength (56–60)."
+      - ilvl: 86
+        unlocks: "Tier 1 của Armour (461–540) và Tier 1 của increased Elemental Damage with Attack Skills (43–50%)."
+  bases:
+    text: >-
+      Mười ba base, một pool. Belt nào cũng roll cùng những modifier với cùng
+      weight, và belt không có con số nào của riêng nó để modifier nhân lên.
+      Base chính là implicit.
+
+
+      Vì vậy lựa chọn thì đơn giản với mười hai base và mang tính quyết định
+      với một base. Mọi implicit khác đều là một modifier; implicit của
+      Stygian Vise là một socket.
+    types:
+      - title: "Belt thường"
+        pools: [all]
+        text: >-
+          Leather (+25–40 maximum Life), Heavy (+25–35 Strength), Chain
+          (+9–20 Energy Shield), Rustic Sash (12–24% increased Global
+          Physical Damage), Cloth (15–25% Stun and Block Recovery) và
+          Studded (20–30% Stun Duration on Enemies). Tất cả đều rơi trong
+          campaign.
+      - title: "Belt Atlas"
+        text: >-
+          Vanguard (+260–480 to Armour and Evasion Rating) và Crystal
+          (+60–100 Energy Shield), từ level 73. Cả hai implicit đều được tăng
+          lớn hơn nhiều trong 3.30, và giờ cả hai base đều cần một Item Tier
+          mới rơi.
+      - title: "Stygian Vise"
+        text: >-
+          "Has 1 Abyssal Socket." Socket này nhận một Abyss Jewel, vốn là một
+          item có modifier của riêng nó, nên Stygian Vise là một chiếc belt
+          có sáu ô và một jewel. Trong 3.30 nó nằm trong pool rơi thông
+          thường và cần item Tier 5, mức cao nhất.
+      - title: "Cord Belt"
+        text: >-
+          "Can be Anointed." Cùng loại enchantment từ Oil mà amulet nhận,
+          trên một món trang bị thứ hai. Mới vào pool rơi thông thường trong
+          3.30, với một yêu cầu Item Tier mà patch notes không nêu.
+      - title: "Belt Heist"
+        text: >-
+          Micro-Distillery ("Can't use Flask in Fifth Slot" và "Flasks
+          applied to you have 30% increased Effect"), Mechalarm (kích hoạt
+          một cỗ máy taunt khi bạn dùng flask) và Mechanical (một socket
+          thường). Chúng rơi từ level 68 tới 70.
+    picks:
+      - base: "Stygian Vise"
+        for: "Gần như mọi build endgame"
+        why: >-
+          Abyssal socket đáng giá hơn bất kỳ implicit modifier nào, vì jewel
+          trong đó mang được vài modifier và có thể thay mà không đụng tới
+          belt. Hãy craft chiếc belt tốt nhất của bạn trên base này khi bạn
+          có một cái.
+      - base: "Leather Belt"
+        for: "Life, từ campaign trở đi"
+        why: >-
+          +25–40 maximum Life phía trên vạch kẻ, trên một base rơi từ level
+          10. Có một prefix Life bên dưới thì đây là chiếc belt tiêu chuẩn
+          cho tới khi một Stygian Vise xuất hiện.
+      - base: "Heavy Belt"
+        for: "Strength"
+        why: >-
+          +25–35 Strength. Cùng một suffix Strength roll ra, một mình chiếc
+          belt có thể cấp gần 100 Strength.
+      - base: "Vanguard Belt"
+        for: "Build Armour và Evasion"
+        why: >-
+          +260–480 cho cả hai, ngang tầm một prefix Armour cao, mà không tốn
+          ô nào.
+      - base: "Crystal Belt"
+        for: "Build Energy Shield"
+        why: >-
+          +60–100 Energy Shield ở implicit, nhiều hơn prefix Energy Shield
+          cao nhất (48–51) nằm bên dưới nó.
+      - base: "Micro-Distillery Belt"
+        for: "Build sống nhờ bốn flask"
+        why: >-
+          30% increased flask effect gấp hai lần rưỡi prefix tốt nhất cho
+          việc đó. Cái giá là vị trí flask thứ năm.
+    impact: >-
+      **Implicit**, và cùng với nó là lựa chọn thật sự duy nhất. Một
+      [[Blessed Orb]] roll lại con số nếu có con số; Vanguard Belt và Crystal
+      Belt cũ nhận các chỉ số 3.30 lớn hơn của chúng bằng cách đó.
+
+
+      **Belt có socket hay không.** Abyss Jewel của Stygian Vise được craft
+      riêng và thay được, nên socket không bao giờ lỗi thời.
+
+
+      **Nó có anoint được hay không.** Chỉ Cord Belt.
+
+
+      Thứ base **không** quyết định: pool, weight, hay bất kỳ con số nào phía
+      dưới vạch kẻ. Trên belt không có gì là local.
+tools:
+  - method: currency
+    note: >-
+      Roll thường ở đây hiệu quả hơn bất cứ đâu. Ở item level 84, một lần
+      roll prefix ra maximum Life 1 trên 5 lần, ra từ 100 trở lên khoảng 1
+      trên 17, và ra tier cao nhất 1 trên 50, theo phép tính của chúng tôi từ
+      weight. Một lần roll suffix ra Fire, Cold hoặc Lightning Resistance 36%
+      số lần.
+
+
+      Nhờ vậy [[Orb of Alteration]] là một cách thật sự để tới Tier 1 của
+      Life, còn [[Orb of Alchemy]] hoặc [[Chaos Orb]] là cách hợp lý để có
+      một chiếc belt dùng được, điều không đúng với phần lớn item.
+
+
+      Prefix hiếm là flask effect: tier cao nhất của nó là khoảng 1 trên 206
+      lần roll prefix ở item level 85 trở lên. Các modifier stun là đồ lấp
+      chỗ của phía suffix, gần một phần tư mọi lần roll suffix.
+  - method: bench
+    note: >-
+      Bench của belt mạnh đúng ở chỗ pool mỏng.
+      **Suffix:** một resistance 29–35% giá 3 Chaos Orb (21–28% giá 1 Orb of
+      Alchemy), bậc cao nhất cao hơn mức ring và amulet được nhận; một cặp
+      resistance 17–20% giá 3 Chaos Orb; một element cùng Chaos 13–15%; hai
+      attribute 21–25 giá 4 Chaos Orb, cách rẻ để đưa Dexterity hoặc
+      Intelligence lên belt; Cooldown Recovery Rate 6–8% giá 2 Chaos Orb hoặc
+      9–12% giá 4 Exalted Orb; Flask Effect Duration 11–15% giá 4
+      Glassblower's Bauble.
+
+
+      **Prefix:** maximum Life 41–55 giá 2 Orb of Alchemy; 12–14% increased
+      Damage giá 4 Chaos Orb, 15–17% giá 4 Exalted Orb; flask effect 8–10%
+      kèm 20% reduced Flask Charges gained giá 2 Chaos Orb; các hybrid
+      Armour, Evasion hoặc Energy Shield 214–285 giá 4 Chaos Orb; 24–32%
+      increased Elemental Damage with Attack Skills giá 4 Orb of Alchemy.
+
+
+      Về group: flask effect của bench cùng group với bản roll ra. Các hybrid
+      Armour của nó cùng group với Armour roll ra.
+  - method: finishing
+    note: >-
+      Quality đến từ **Catalyst**, tối đa 20%, mỗi lúc một loại:
+      [[Fertile Catalyst]] cho Life và Mana, [[Prismatic Catalyst]] cho
+      resistance, [[Tempering Catalyst]] cho các chỉ số phòng thủ,
+      [[Intrinsic Catalyst]] cho Strength. Trong 3.30 chúng chỉ đến từ
+      Ultimatum. Các nguồn của chúng tôi không cho biết các lần craft về sau
+      làm gì với quality, nên hãy thêm nó sau cùng.
+
+
+      Trên Stygian Vise, Abyss Jewel là một phần của việc hoàn thiện: nó là
+      một item riêng, được trình bày ở loại item của riêng nó. Cord Belt có
+      thể được anoint bằng Oil, việc đó thêm một enchantment và không dùng ô
+      nào trong sáu ô.
+  - method: essence
+    note: >-
+      Trên belt, và trong các món trang sức thì chỉ trên belt, ba Essence
+      elemental cho **resistance**: Anger cho fire, Hatred cho cold, Wrath
+      cho lightning, 36–41% ở bậc Screaming, 42–45% ở Shrieking và 46–48% ở
+      Deafening, tức Tier 1. Envy cho Chaos Resistance tối đa 31–35%.
+
+
+      Những cái khác thêm thứ pool thiếu. **Sorrow** và **Spite:** tối đa
+      51–58 Dexterity hoặc Intelligence. **Doubt:** flat Evasion. **Anguish,
+      Suffering, Torment:** 43–60% chance to avoid being Ignited, Frozen hoặc
+      Shocked. **Fear:** Life của minion. **Zeal:** Trap and Mine Throwing
+      Speed.
+
+
+      Ba cái yếu hơn roll: Energy Shield của Woe chạm đỉnh ở 38–43 so với
+      48–51, Greed cho flask Life recovery chứ không phải Life, còn Contempt
+      cho reflected damage.
+  - method: harvest
+    note: >-
+      Danh sách ngắn khiến vài reforge thành chắc chắn mà không cần khóa gì
+      cả. **Fire, Cold hoặc Lightning** (50 Lifeforce): trên belt chỉ có
+      resistance của element đó mang tag, nên reforge luôn cho nó. **Chaos**
+      (100 Vivid): luôn là Chaos Resistance, vốn là một suffix weight 250 nếu
+      không có reforge. **Attack** (75 Wild): luôn là "increased Elemental
+      Damage with Attack Skills". Tier thì mỗi lần một ngẫu nhiên.
+
+
+      **Life** (75 Wild) là ngoại lệ. Maximum Life, flask Life recovery và
+      Life regeneration đều mang tag đó. Khi suffix đã khóa, nó ra maximum
+      Life khoảng ba trên bốn lần.
+  - method: fossil
+    note: >-
+      Một [[Pristine Fossil]] loại bỏ các prefix Armour và Energy Shield, 38%
+      số lần roll prefix, và nhân Life lên mười lần. Một
+      [[Prismatic Fossil]] nhân các modifier Elemental lên sáu lần trong dữ
+      liệu 3.30, mà trên belt điều đó nghĩa là các resistance. Cùng nhau,
+      chúng khiến Life chiếm khoảng một nửa số lần roll prefix và resistance
+      chiếm khoảng một nửa số lần roll suffix.
+
+
+      Các modifier chỉ có từ Fossil của belt gồm 20–30% increased Fire, Cold,
+      Lightning, Chaos hoặc Global Physical Damage dưới dạng prefix, 25–30%
+      increased Elemental Damage và "15–20% chance to gain Onslaught when
+      you use a Flask" dưới dạng suffix.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng số beast nó tốn trên một
+      chiếc belt Magic có prefix flask effect cao nhất, và trên một chiếc
+      belt Hunter Magic có "increased maximum Life". Với Life thường thì
+      không cần: lần roll đó quá dễ lặp lại.
+
+
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]])
+      hợp với chiếc belt có suffix là đồ lấp chỗ stun, mà đó là tình trạng
+      hay gặp.
+  - method: veiled
+    note: >-
+      Các modifier unveil ra của belt: flask effect 15–18% kèm 33% reduced
+      Flask Charges gained, bản lớn nhất hiện có; các hybrid Armour, Evasion
+      hoặc Energy Shield 365–400; Cooldown Recovery Rate 13–16%; một element
+      cùng Chaos Resistance 16–20%; hai attribute 31–35.
+  - method: influence
+    note: >-
+      **Hunter** và **Elder:** "increased maximum Life" dưới dạng prefix,
+      7–10% ở item level 84 với Hunter và 8–10% ở 75 với Elder, và 10–12%
+      increased Attributes dưới dạng suffix. **Shaper** và **Crusader:**
+      16–20% Cooldown Recovery Rate ở item level 84. **Elder** và
+      **Warlord:** 16–18% to all Elemental Resistances. Mọi danh sách trừ của
+      Hunter còn có một suffix 31–35% damage trong lúc có bất kỳ flask effect
+      nào.
+  - method: meta
+    note: >-
+      Một lần khóa đầy đủ tốn 4 Divine Orb và 8 Exalted Orb. Trên belt,
+      prefix hiếm khi đáng giá đó, vì Life quá dễ roll lại; ngoại lệ là một
+      phía prefix có flask effect hoặc một modifier Life influence. Một phía
+      đã đầy cũng có tác dụng như một block: khi belt đã có ba suffix, thứ gì
+      thêm vào cũng phải là prefix.
+  - method: fracture
+    note: >-
+      Một prefix Life Tier 1 đã fractured là điểm xuất phát thường gặp cho
+      một chiếc belt đắt tiền, vì sau đó mọi Essence đều có thể được đánh giá
+      chỉ bằng suffix của nó. Nó loại bỏ khả năng có influence.
+  - method: corruption
+    note: >-
+      Các implicit corruption của belt gồm 6–10% increased maximum Life,
+      8–10% increased maximum Energy Shield và 8–10% increased Area of
+      Effect. Một implicit corruption trên Stygian Vise có làm nó mất Abyssal
+      socket hay không là điều các nguồn của chúng tôi không ngã ngũ; hãy thử
+      trên một cái rẻ trước khi đem một chiếc belt tốt ra liều.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: các lần roll Life và resistance của belt đúng là kiểu mà strand cải thiện."
+memoryStrands: >-
+  Các modifier tốt của belt đều phổ biến và nhiều tier: mười tier Life, tám
+  của mỗi resistance, mười của Strength. [[Memory Strands]] không làm gì cho
+  việc một modifier xuất hiện thường xuyên tới đâu, nhưng làm rất nhiều cho
+  việc nó tới ở tier nào, nên belt là chỗ hợp tự nhiên với chúng.
+
+
+  Lần craft hợp nhất là lần rẻ nhất: một [[Orb of Remembrance]] lên chiếc
+  belt trắng, [[Orb of Alteration]] để tìm Life, một [[Regal Orb]] và
+  [[Exalted Orb]]. Mấy orb đó mỗi cái tiêu nhiều nhất 8 và 16 strand theo
+  bảng data-mine. Một [[Orb of Alchemy]] hoặc [[Chaos Orb]] có thể tiêu tới
+  50, nên kiểu "roll cả chiếc belt", vốn hợp với loại trang bị này, lại là
+  kiểu sai trên một base có strand.
+
+
+  Đừng ghép strand với Essence, mỗi cái tiêu tới 80, hay với Fossil và
+  reforge Harvest, những thứ không dùng strand theo thử nghiệm của người
+  chơi.
+reading:
+  intro: >-
+    Belt đọc rất nhanh. **Có Life không, và bao nhiêu? Trong các suffix có
+    mấy cái là resistance hoặc Strength?** Rồi nhìn thêm một lượt tìm bất cứ
+    thứ gì có chữ "Flask", và liếc qua base xem có Abyssal socket không. Một
+    chiếc belt có Life trên 100 và hai suffix tốt đã hơn phần lớn rồi.
+  prefixes:
+    text: >-
+      Chín họ. Life, Mana, Energy Shield và Armour chiếm 80% mọi lần roll
+      prefix, và với build life chỉ cái đầu là đáng kể. Phần còn lại là hai
+      modifier flask recovery, reflected damage, một prefix attack damage và
+      flask effect.
+
+
+      Vì phía này quá nhỏ, prefix thứ hai và thứ ba mà bạn thật sự muốn thì
+      khó tìm bằng roll và dễ tìm ở bench: increased Damage, flask effect,
+      một hybrid phòng thủ. Hãy tính là roll Life rồi craft hoặc slam mấy cái
+      còn lại.
+
+
+      Hai prefix flask recovery, Life và Mana, là một group: một chiếc belt
+      có một trong hai hoặc không có cái nào.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Mức Life roll ra lớn nhất trên trang sức và là một trên năm lần roll prefix. Lý do belt là món dễ."
+        aim: "T3, 100–114 (ilvl 44). T1 là 130–144 (ilvl 64)."
+      - mod: "Flasks applied to you have #% increased Effect"
+        why: "Nâng mọi flask bạn uống. Weight 250 mỗi tier, prefix hiếm nhất ở đây; bản bench và bản veiled lớn hơn nhưng tốn flask charge."
+        aim: "T2, 7–9% (ilvl 65). T1 là 10–12% (ilvl 85)."
+      - mod: "+# to Armour"
+        why: "Một con số flat lớn cho build Armour, và phổ biến."
+        aim: "T3, 323–400 (ilvl 71). T1 là 461–540 (ilvl 86)."
+      - mod: "+# to maximum Energy Shield"
+        why: "Life của build Energy Shield. Gần một trên bốn lần roll prefix."
+        aim: "T2, 44–47 (ilvl 74). T1 là 48–51 (ilvl 80)."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Modifier damage duy nhất trong pool tự nhiên. Reforge Attack của Harvest luôn cho nó."
+        aim: "T3, 31–36% (ilvl 60). T1 là 43–50% (ilvl 86)."
+  suffixes:
+    text: >-
+      Mười hai họ. Ba resistance mỗi cái 12%, Strength và Life regeneration
+      mỗi cái 14%, và ba modifier stun cộng lại chiếm một phần tư phía này mà
+      hầu như không giúp được ai.
+
+
+      Vậy nên một suffix ngẫu nhiên hữu ích khoảng một nửa số lần, thế là
+      rộng rãi. Việc phải làm ở phía này là tier, không phải kiểu modifier:
+      bench đạt 29–35% của một resistance, một lần roll Tier 1 hoặc một
+      Deafening Essence đạt 46–48%.
+
+
+      Strength là attribute duy nhất pool có. Dexterity và Intelligence trên
+      belt đến từ một Essence, một cặp của bench hoặc một cặp veiled.
+    key:
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Một phần ba phía suffix, và được đảm bảo bởi Essence hoặc reforge Harvest tương ứng."
+        aim: "T2, 42–45% (ilvl 72). T1 là 46–48% (ilvl 84)."
+      - mod: "+# to Strength"
+        why: "Life và yêu cầu cho build Strength; belt roll nó nhiều hơn ring hay amulet một tier."
+        aim: "T3, 43–50 (ilvl 74). T1 là 56–60 (ilvl 85)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Khan hiếm nếu roll, chắc chắn nếu từ một reforge Chaos hoặc một Essence of Envy."
+        aim: "T3, 21–25% (ilvl 56). T1 là 31–35% (ilvl 81)."
+      - mod: "#% increased Flask Charges gained"
+        why: "Giữ cho flask chạy suốt một map. Chung group với reduced Flask Charges used."
+        aim: "T2, 29–34% (ilvl 70). T1 là 35–40% (ilvl 84)."
+      - mod: "#% increased Flask Effect Duration"
+        why: "Cùng mục đích đó từ đầu bên kia. Bench bán 11–15%."
+        aim: "T2, 22–27% (ilvl 66). T1 là 28–33% (ilvl 82)."
+      - mod: "Regenerate # Life per second"
+        why: "Cho build sống nhờ regeneration; đồ lấp chỗ với số còn lại. Trên belt nó lên cao hơn một tier so với những chỗ khác."
+        aim: "T2, 64–96 (ilvl 74). T1 là 96–128 (ilvl 78)."
+approach:
+  principle: >-
+    **Trên belt, modifier phổ biến chính là modifier tốt, nên cứ mạnh tay roll
+    và dồn việc lên kế hoạch cho base và cho một phần thêm hiếm.** Life và
+    resistance rồi sẽ tới. Thứ không tự tới là một Stygian Vise, một prefix
+    flask effect hoặc một modifier Life influence, và đó là những thứ phân
+    biệt một chiếc belt tốt với chiếc tốt nhất.
+  order:
+    - title: "Lấy base trước"
+      text: >-
+        Một Stygian Vise nếu bạn có, còn không thì implicit mà build của bạn
+        dùng: Leather cho Life, Heavy cho Strength, Vanguard hoặc Crystal cho
+        phòng thủ. Item level 72 tới 75, trừ khi kế hoạch gọi tên một tier
+        cao hơn.
+    - title: "Quyết định belt có phần thêm hiếm hay không"
+      text: >-
+        Phần lớn belt thì không, và chỉ là Life, resistance cùng một craft
+        bench. Nếu chiếc của bạn có (flask effect, Life của Hunter, Cooldown
+        Recovery), modifier đó định thứ tự cho mọi thứ khác.
+    - title: "Roll phần phổ biến bằng công cụ rẻ nhất mà được việc"
+      text: >-
+        Alteration cho một Life Tier 1 đơn lẻ. Một Essence cho một resistance
+        cao nhất được đảm bảo. Pristine Fossil và Prismatic Fossil cho Life
+        và resistance trong một lần roll. Cái nào cũng đủ rẻ để lặp lại tới
+        khi belt ra đúng.
+    - title: "Dùng các reforge chắc chắn để hoàn thiện một phía"
+      text: >-
+        Một resistance còn thiếu, Chaos Resistance hay prefix attack, cái nào
+        cũng gọi tên được bằng một reforge Harvest trên belt. Chúng roll lại
+        cả item trừ khi một phía đã khóa, nên chúng là cách để bắt đầu một
+        chiếc belt hoặc hoàn thiện một chiếc đã khóa, không phải để vá một
+        chiếc chưa khóa.
+    - title: "Thêm phần thêm hiếm ở chỗ một phía đầy ép nó vào"
+      text: >-
+        Khi belt đã có ba suffix, một Exalted Orb hoặc một Exalted Orb của
+        Conqueror buộc phải thêm một prefix. Trên một pool nhỏ cỡ này, điều
+        đó biến một cú cầu may thành một cú có cơ hội tử tế.
+    - title: "Bench sau cùng"
+      text: >-
+        Bench của belt đủ tốt để ô cuối không bao giờ bị phí: một resistance
+        35%, increased Damage, flask effect, Cooldown Recovery.
+  finishing: >-
+    Ô dành cho bench, rồi tới Catalyst: [[Fertile Catalyst]] trên một chiếc
+    belt Life cộng thêm tối đa một phần năm vào hiệu quả của Life roll ra.
+    Một [[Divine Orb]] khi Life đang ở đáy tier của nó; trên belt, riêng con
+    số đó đã là phần lớn item.
+
+
+    Rồi tới những phần không nằm trên belt: một Abyss Jewel cho Stygian Vise,
+    một lần anoint cho Cord Belt.
+  stopping: >-
+    Life từ 100 trở lên, hai suffix ở Tier 3 trở lên (một resistance 36%,
+    Strength 43), và một craft bench: chiếc belt đó dùng được suốt cả Atlas
+    và tốn rất ít. Life Tier 1 cùng ba suffix tốt là bước kế tiếp và vẫn rẻ
+    nếu so với các loại trang bị khác.
+
+
+    Chi phí chỉ nhân lên khi bạn thêm phần thêm hiếm. Trước khi trả tiền cho
+    nó, hãy so với cùng số currency đó tiêu vào một Stygian Vise và một jewel
+    tốt, thường là bước nâng cấp lớn hơn.
+special:
+  - mod: "Has 1 Abyssal Socket"
+    source: "Implicit của base"
+    where: "Stygian Vise. Trong 3.30 nó rơi trong pool thông thường và chỉ trên item Tier 5. Dòng mô tả của Hollow Fossil là \"Has an Abyssal socket\"; nó có dùng được trên belt hay không thì chưa xác nhận được, nên hãy coi base là nguồn duy nhất."
+  - mod: "#% increased maximum Life"
+    source: "Influence Hunter / Elder"
+    where: "Một prefix: 7–10% trên belt Hunter ở item level 84, 8–10% trên belt Elder ở 75. Cũng là một implicit corruption 6–10%."
+  - mod: "#% increased Cooldown Recovery Rate"
+    source: "Influence / Veiled / Bench"
+    where: "16–20% dưới dạng suffix Shaper hoặc Crusader ở item level 84; 13–16% khi unveil; 9–12% từ [[Crafting Bench]] giá 4 Exalted Orb."
+  - mod: "Flasks applied to you have #% increased Effect / #% reduced Flask Charges gained"
+    source: "Veiled / Bench"
+    where: "15–18% kèm 33% reduced charges khi unveil; 11–14% kèm 33% giá 4 Exalted Orb hoặc 8–10% kèm 20% giá 2 Chaos Orb ở bench. Cùng group với flask effect roll ra."
+  - mod: "+# to Dexterity / +# to Intelligence"
+    source: "Essence / Bench / Veiled"
+    where: "Không có trong pool tự nhiên của belt. Tối đa 51–58 từ một Essence of Sorrow hoặc Spite; 21–25 cho hai attribute từ bench; 31–35 cho hai attribute khi unveil."
+  - mod: "#% chance to Avoid being Ignited / Frozen / Shocked"
+    source: "Essence"
+    where: "Từ 43–46% tới 56–60% từ một Essence of Anguish, Suffering hoặc Torment. Một cách dùng các Essence đó chỉ có trên belt."
+  - mod: "You are affected by Delirium Fog"
+    source: "Essence corrupted"
+    where: "Modifier duy nhất của [[Essence of Trickery]] mới, một prefix của belt có required level 85. Dữ liệu đánh dấu nó là Essence chỉ có từ corruption, như Horror và Insanity; cách lấy nó thì chưa xác nhận được."
+  - mod: "10% increased Movement Speed during any Flask Effect"
+    source: "Essence corrupted"
+    where: "Một suffix từ [[Essence of Insanity]]. Ba cái còn lại trên belt: \"Gain Alchemist's Genius when you use a Flask\" (Horror), +50% Chaos Resistance during any Flask Effect (Delirium), 5% elemental penetration during any Flask Effect (Hysteria). Tất cả đến từ việc corrupt một monster Essence bằng [[Remnant of Corruption]]."
+  - mod: "Equipped Magic Flasks have 30% increased effect on you if no Flasks are Adjacent to them"
+    source: "Essence"
+    where: "Một prefix từ [[Essence of Desolation]]. Dữ liệu cho thấy Essence đó chỉ dùng được trên item Normal và ghìm các modifier khác của belt ở level 15 trở xuống, nên đừng trông chờ nhiều thứ khác trên belt. Các nguồn của chúng tôi không nói tới cách tìm nó."
+  - mod: "#% chance to gain Onslaught when you use a Flask"
+    source: "Fossil"
+    where: "15–20%, một suffix chỉ roll ra trong lần craft bằng Fossil."
+  - mod: "Can be Anointed"
+    source: "Implicit của base"
+    where: "Cord Belt. Anoint là một enchantment được thêm bằng Oil, không phải một trong sáu modifier."
+mistakes:
+  - "**Craft chiếc belt tốt nhất trên sai base.** Mọi thứ trên trang này tốn y như vậy trên một Stygian Vise, và chỉ có một base cho ra thành phẩm có Abyssal socket."
+  - "**Trông chờ Life từ Essence of Greed.** Trên belt nó cho flask Life recovery. Life thì roll; nó là một trên năm prefix."
+  - "**Khóa một prefix Life thường.** Life Tier 1 là khoảng 1 trên 50 lần roll prefix. Một lần khóa tốn 4 Divine Orb và 8 Exalted Orb."
+  - "**Dùng reforge Life rồi trông chờ maximum Life.** Ba modifier của belt dùng chung tag đó. Fire, Cold, Lightning, Chaos và Attack mới là những cái chắc chắn."
+  - "**Bench flask effect lên chiếc belt đã roll ra nó.** Cùng group. Hãy craft thứ khác và giữ bản roll ra, bản không tốn flask charge."
+  - "**Roll bằng Chaos Orb một chiếc belt có Memory Strands.** Một Chaos Orb có thể tiêu tới 50 strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tier, Stygian Vise và Cord Belt trong pool rơi thông thường, các implicit Atlas lớn hơn, và giá 3.30 của các modifier bảo vệ." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum là nguồn Catalyst duy nhất." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge elemental, Chaos, Attack và Life." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

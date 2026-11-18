@@ -1,0 +1,240 @@
+category: claws
+title: "Một cây claw crit physical không cần xổ số prefix"
+level: 5
+summary: "Fracture cái prefix physical duy nhất không gì thay được, roll bộ ba suffix quanh nó, rồi ép ra một prefix physical veiled và bench cái thứ ba. Sáu modifier thực thụ, và chỉ còn suffix là phó mặc cho may rủi."
+goal: >-
+  Một cây claw có ba prefix physical và đủ cả ba suffix damage. Mọi công cụ ở
+  đây đều đã xuất hiện trong một ví dụ dễ hơn. Điều khiến đây là ví dụ khó
+  nhất là một quyết định được đưa ra trước khi tiêu bất kỳ currency nào:
+  **fracture modifier nào.** Câu trả lời hiển nhiên là cái tốt nhất,
+  "Merciless". Phép tính lại nói khác.
+base: "Imperial Claw"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 là mốc thấp nhất mà hybrid cao nhất, "Dictator's" (75–79%
+  increased Physical Damage kèm Accuracy Rating), có thể tồn tại. Imperial
+  Claw có damage mỗi giây gốc cao nhất; hãy lấy Vaal Claw vì 8% critical
+  strike chance của nó nếu build đang thiếu crit. Base không được có
+  influence: một [[Fracturing Orb]] từ chối item có influence.
+methods: [fracture, fossil, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["Grants 46 Life per Enemy Hit"]
+  prefixes:
+    - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+    - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+    - { text: "Adds 16 to 29 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "26% increased Attack Speed", how: fossil }
+    - { text: "34% increased Critical Strike Chance", how: fossil }
+    - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "Một Imperial Claw fractured \"Dictator's\" hoặc \"Emperor's\"", amount: "1", note: "mua, nhặt được, hoặc làm ra ở giai đoạn 1" }
+  - { item: "[[Deft Fossil]] và [[Shuddering Fossil]]", amount: "vài chục mỗi loại" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi cặp" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "craft bench cuối cùng" }
+cost: >-
+  Trước hết là base fractured: trong 3.30, fractured item đến từ đồ rơi Tier
+  5, một [[Fracturing Orb]] hoặc một [[Fractured Fossil]], và hiếm hơn trước.
+  Rồi tới Fossil tính bằng chục cho suffix, và một lần khóa gồm 4
+  [[Divine Orb]] và một [[Sacred Orb]], đôi khi hai lần. Chúng tôi không đưa
+  ra con số tổng; giai đoạn suffix có thể kéo rất dài.
+odds: >-
+  **Giai đoạn 2.** Với một Deft Fossil và một Shuddering Fossil, khi một kết
+  quả có ba suffix thì chúng là attack speed và cả hai suffix critical strike
+  khoảng hai trên ba lần. Khi đó cả ba cùng từ Tier 3 trở lên là khoảng 1
+  trên 18 kết quả như vậy, và cả ba cùng từ Tier 2 trở lên khoảng 1 trên 60,
+  theo phép tính của chúng tôi từ weight. Không phải kết quả nào cũng có ba
+  suffix.
+
+
+  **Giai đoạn 3.** Veiled prefix là chắc chắn một khi phía suffix đã đầy và
+  đã khóa. Bạn có block được trước khi unveil hay không thì tùy vào việc còn
+  một ô prefix trống, mà đó là may rủi.
+
+
+  **Thứ đã tránh được.** Quanh một "Merciless" fractured, hybrid từ Tier 3
+  trở lên là khoảng 1 trên 81 lần roll prefix, ngay cả khi có một Jagged
+  Fossil trong Resonator.
+steps:
+  - title: "Giai đoạn 1: fracture cái prefix không có gì thay thế"
+    do: >-
+      Kiếm một Imperial Claw item level 83 có **hybrid** đã fractured:
+      "Dictator's" (75–79%) hoặc "Emperor's" (65–74%). Để tự làm, hãy roll
+      ra hybrid trên một cây claw Magic, đưa nó lên Rare với đúng bốn
+      modifier rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Hãy nhìn xem thứ gì thay được từng prefix physical. Increased Physical
+      Damage thuần có hai nguồn chắc chắn: veiled prefix (120–139%) và bench
+      (100–129%). Flat Physical Damage có bench. Hybrid thì không có gì:
+      không craft bench, không bản veiled, không Essence, chỉ có các hybrid
+      influence, mà một cây claw có influence thì không fracture được. Thêm
+      nữa, bản thuần chung group với các bản veiled và bench, nên một
+      "Merciless" fractured sẽ chặn cả hai và phó mặc hybrid cho một cuộc xổ
+      số.
+
+
+      Cái giá của con đường chắc chắn nằm ở con số. "Merciless" cùng một
+      hybrid roll ra 55–64% cho tổng khoảng 235% increased Physical Damage;
+      cây claw này tổng khoảng 205%.
+    check: >-
+      Fracturing Orb chọn ngẫu nhiên một modifier trong bốn cái trở lên. Với
+      đúng bốn cái, đó là một phần tư cơ hội; thêm modifier thứ năm thì
+      thành một phần năm.
+    fail: >-
+      Modifier sai sẽ bị fractured vĩnh viễn và cây claw không fracture lại
+      được nữa. Vì lý do đó phần lớn người chơi mua base này.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "+36 to Intelligence" }
+        - { text: "Gain 61 Life per Enemy Killed" }
+  - title: "Giai đoạn 2: bộ ba suffix, và không gì khác"
+    do: >-
+      Roll lại bằng một [[Deft Fossil]] và một [[Shuddering Fossil]] trong
+      một Resonator hai socket tới khi cây claw có **attack speed, Critical
+      Strike Chance và Critical Strike Multiplier ở các tier bạn đã đặt**,
+      và tổng cộng **không quá hai prefix**.
+    why: >-
+      Suffix là phần duy nhất của item này buộc phải roll, nên chúng được
+      dùng công cụ đưa chúng lên 92% số lần roll suffix. Đừng bận tâm prefix
+      là gì: giai đoạn 3 sẽ thay chúng. Nhưng hãy đếm chúng. Khóa ở giai
+      đoạn 3 là một prefix, và bên cạnh cái fractured thì còn chỗ cho một
+      cái nữa.
+    check: >-
+      Chốt ngưỡng tier trước Fossil đầu tiên và ghi nó ra. Tier 2 trở lên
+      trên cả ba đắt gấp khoảng ba lần so với Tier 3 trở lên.
+    fail: >-
+      Ba suffix tốt và ba prefix: không có cách an toàn nào để mở một ô. Một
+      [[Orb of Annulment]] gỡ ngẫu nhiên một trong năm modifier không
+      fractured, và ba trên năm lần đó là một suffix. Cứ roll lại tiếp.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "Adds 62 to 124 Cold Damage", how: fossil }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 3: khóa suffix, Veiled Chaos Orb"
+    do: >-
+      Craft **Suffix Modifiers Cannot Be Changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]), rồi dùng một [[Veiled Chaos Orb]].
+    why: >-
+      Ba suffix, đã khóa, không thể đổi mà cũng không thể thêm vào. Hybrid
+      fractured cũng không đổi được. Orb roll lại phần còn lại, tức một hoặc
+      hai ô prefix, và veiled modifier được đảm bảo của nó buộc phải là một
+      trong số đó.
+    check: >-
+      Hybrid và suffix không suy suyển, có một "Veiled Prefix" trên cây claw,
+      khóa đã biến mất. Xem prefix thứ ba có còn trống không.
+    fail: >-
+      Việc orb này tôn trọng khóa là do người chơi thử nghiệm, không phải
+      thông tin chính thức. Fracture thì kiểu gì cũng giữ; chính suffix mới
+      phụ thuộc vào điều đó. Hãy thử trên một cây claw rẻ nếu đã có bản
+      patch ra sau khi bài này được viết.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix", how: veiled }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 4: block, rồi unveil physical damage thuần"
+    do: >-
+      Nếu còn một prefix trống, hãy craft 25–34% increased Fire Damage vào
+      đó (4 Orb of Alteration) **trước khi** unveil. Rồi unveil và lấy hybrid
+      physical mà build của bạn dùng: 120–139% increased Physical Damage kèm
+      21–25% chance to Bleed, Impale, Poison hoặc Blind.
+    why: >-
+      Fractured modifier là hybrid kèm Accuracy, một group khác với
+      increased Physical Damage thuần, nên các prefix physical veiled vẫn
+      được đưa ra. Craft Fire Damage loại bảy lựa chọn caster và minion khỏi
+      mười ba cái, theo luật do người chơi thử nghiệm rằng một group đã có
+      trên item thì không được đưa ra; trong sáu cái còn lại, bốn cái là
+      physical.
+    fail: >-
+      Không còn prefix trống: unveil mà không block và mong một trong ba cái
+      được đưa ra là physical. Nếu không cái nào là physical, giá của một
+      lần thử nữa là thêm một lần khóa và thêm một orb.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 5: prefix thứ ba từ bench"
+    do: >-
+      Gỡ craft Fire Damage (1 Orb of Scouring) rồi craft **adds
+      13–17 to 26–30 Physical Damage** (4 [[Chaos Orb]]).
+    why: >-
+      Flat Physical Damage là group physical thứ ba, và cả hai cái phần trăm
+      đều nhân nó lên. Bản của bench thấp hơn hẳn tier tự nhiên cao nhất
+      (22–29 to 45–52); đó là dòng khiêm tốn duy nhất trên item, và là cái
+      giá của việc chưa từng phải roll một prefix nào.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "Adds 16 to 29 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Hoàn thiện"
+    do: >-
+      20% quality, socket và link, rồi một [[Divine Orb]] nếu hybrid
+      fractured hoặc veiled prefix nằm thấp trong khoảng của nó.
+    why: >-
+      Một Divine Orb roll lại mọi chỉ số cùng lúc, kể cả những cái
+      fractured, và không đổi tier nào. Trên một item có sáu dòng đều cần,
+      khả năng nó hạ dòng này cũng ngang khả năng nó nâng dòng khác, nên chỉ
+      dùng khi có lý do rõ ràng.
+variations: >-
+  **Con đường "Merciless".** Trần cao hơn, kế hoạch khác: fracture prefix
+  thuần, thêm một [[Jagged Fossil]] vào Resonator để hybrid chiếm khoảng một
+  phần tư số lần roll prefix, và chấp nhận rằng giờ cả hai phía đều là xổ số
+  trên cùng một lần roll lại. Bộ ba suffix tụt xuống 86% số lần roll suffix,
+  vì Jagged Fossil cũng nhân hai suffix leech lên. Trên con đường đó giai
+  đoạn 3 không còn tồn tại: các prefix physical veiled đã bị fracture block.
+
+
+  **Một flat Physical Damage roll ra.** Nếu Veiled Chaos Orb tình cờ roll nó
+  thành prefix thứ ba, cây claw đã đầy và tốt hơn cây trong ví dụ. Khi đó
+  cũng không còn ô nào cho craft block, nên lần unveil là ba lựa chọn từ cả
+  mười ba cái.
+
+
+  **Nhìn trước.** Một [[Hinekora's Lock]] cho thấy currency kế tiếp sẽ làm
+  gì. Fracturing Orb ở giai đoạn 1 là cú nhấp duy nhất ở đây quyết định một
+  item đắt tiền sống hay chết.
+mistakes:
+  - "Fracture \"Merciless\" vì nó là modifier tốt nhất. Nó cũng là cái duy nhất trong ba cái có hai thứ thay thế chắc chắn."
+  - "Giữ một kết quả giai đoạn 2 có ba prefix. Khóa cần một ô prefix."
+  - "Unveil trước khi block trong khi còn một ô trống."
+  - "Dùng một Annulment để dọn dẹp. Từ 3.30 không gì lái được nó, và ba trong năm modifier nó có thể trúng là suffix của bạn."
+  - "Đặt influence lên base trước. Một item có influence thì không fracture được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Group của modifier, weight, tier, hệ số nhân của Fossil, veiled modifier, giá bench và dòng mô tả của Fracturing Orb và Veiled Chaos Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb tôn trọng một phía đã khóa, và cách block khi unveil. Một phần cũ hơn 3.30." }

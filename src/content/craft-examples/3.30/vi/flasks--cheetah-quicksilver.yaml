@@ -1,0 +1,171 @@
+category: flasks
+title: "Quicksilver Flask of the Cheetah, và khi nào thì dừng"
+level: 3
+summary: "Modifier flask duy nhất cần item level 85. Roll ra nó, tính xem mỗi đòi hỏi thêm đặt lên prefix tốn bao nhiêu, rồi hoàn thiện bằng một enchantment đã tính trước."
+goal: >-
+  Flask di chuyển tốt nhất mà game cho phép: một Quicksilver Flask với
+  12–14% increased Movement Speed during Effect, một prefix có ích, và một
+  enchantment chọn có chủ ý. Craft flask khó tới mức này là hết, và cái khó
+  không nằm ở orb. Nó nằm ở chỗ **quyết định từ trước thế nào thì tính là
+  xong**, vì mỗi điều kiện thêm đều nhân hóa đơn lên, và flask không cho bạn
+  cách nào giữ một ô trong khi roll lại ô kia.
+base: "Quicksilver Flask"
+itemLevel: 85
+baseWhy: >-
+  Quicksilver Flask kéo dài 6.0 giây và chứa được hai lần dùng (60 charge,
+  mỗi lần 30). "of the Cheetah" cần đúng item level 85, yêu cầu cao nhất
+  trong mọi modifier flask. Ở 84 suffix dừng ở 9–11%. Item lấy level từ con
+  monster làm rơi nó, nên flask item level 85 đến từ monster Rare hoặc
+  Unique trong khu vực level 83, monster Magic trong khu vực level 84, hoặc
+  bất cứ con gì trong khu vực level 85. Giữ Alt rồi rê chuột lên flask trước
+  orb đầu tiên.
+methods: [currency, bench, finishing]
+result:
+  rarity: magic
+  note: "Enchantment: Used when Charges reach full"
+  prefixes:
+    - { text: "24% reduced Charges per use" }
+  suffixes:
+    - { text: "13% increased Movement Speed during Effect" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "40–80" }
+  - { item: "[[Instilling Orb]]", amount: "5", note: "cho bench" }
+  - { item: "[[Glassblower's Bauble]]", amount: "5 cho bench", note: "thêm nữa cho quality" }
+cost: >-
+  Alteration, và nhiều hơn bất kỳ flask nào khác đòi. Không thứ gì trong lần
+  craft này tự nó đắt; thứ bạn đang tiêu là số lần thử. Bước bench là 5
+  [[Instilling Orb]] và 5 [[Glassblower's Bauble]].
+odds: >-
+  **Suffix.** Ở item level 85, pool suffix của utility flask có tổng weight
+  62,250 và "of the Cheetah" có weight 1,000: một trên 62 lần roll suffix,
+  theo phép tính của chúng tôi. Với một Augmentation trên mỗi kết quả thiếu
+  suffix, mỗi lần thử có đúng một lần roll suffix, nên trung bình là 62 lần
+  thử. Khoảng một trên bảy lượt craft sẽ vượt quá 124.
+
+
+  **Prefix.** Một lần roll prefix, tám họ, và bạn không roll lại nó được mà
+  không roll lại luôn suffix. Nên bất cứ điều gì bạn đòi ở prefix đều nhân
+  cả lần craft lên. Prefix nào cũng được trừ cái reduced effect: 87% số lần
+  roll prefix, tổng cộng khoảng 72 lần thử. Loại thêm cả cái critical
+  strike: 74%, khoảng 84 lần thử. Chỉ prefix increased effect: 13%, khoảng
+  470 lần thử. Chỉ tier tốt nhất của nó: 4.4%, khoảng 1,400.
+steps:
+  - title: "Kiểm item level, rồi viết mức ra giấy"
+    do: >-
+      Giữ Alt: flask phải ghi item level 85. Rồi quyết định, trước mọi orb,
+      bạn sẽ giữ cái gì. Mức trong ví dụ này: suffix là "of the Cheetah";
+      prefix là bất cứ thứ gì trừ increased Charge Recovery kèm 25% reduced
+      effect, và, trên nhân vật không crit, bất cứ thứ gì trừ cơ hội nhận
+      một charge khi Critical Strike.
+    why: >-
+      Nhìn phần xác suất ở trên. "Prefix hữu ích nào cũng được" và "chỉ
+      increased effect" nhìn lướt qua thì là cùng một flask, mà số lần thử
+      chênh nhau sáu lần. Nếu mức không được chốt từ trước, nó sẽ nhích dần
+      lên ngay lúc suffix xuất hiện, và Alteration bay đi là ở chỗ đó.
+    state: { rarity: normal }
+  - title: "Roll, chỉ đọc suffix"
+    do: >-
+      Một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Sau mỗi
+      cái, đọc suffix. Không có suffix: dùng một [[Orb of Augmentation]].
+      Không phải movement speed: Alteration kế tiếp.
+    why: >-
+      Suffix là nửa hiếm, nên nó là dòng duy nhất đáng để bạn chú ý cho tới
+      khi nó xuất hiện. Kết quả bên dưới là kiểu thử thách mức đã đặt: tier
+      tốt nhất của increased Duration cùng với tier thứ nhì của movement
+      speed.
+    check: >-
+      Một kết quả như thế này là một flask tốt. Nếu bạn đã quyết định 9–11%
+      là đủ thì bạn xong rồi, với khoảng một nửa số lần thử. Ví dụ này đi
+      tiếp, để cho thấy ba phần trăm cuối cùng tốn bao nhiêu.
+    state:
+      rarity: magic
+      prefixes: [{ text: "38% increased Duration" }]
+      suffixes: [{ text: "10% increased Movement Speed during Effect" }]
+  - title: "Dừng ở Cheetah"
+    do: >-
+      Tiếp tục tới khi suffix ghi 12–14% increased Movement Speed during
+      Effect. Rồi cất Alteration đi.
+    why: >-
+      Từ lúc này Alteration là orb sai. Nó roll lại cả hai ô, mà bạn vừa trả
+      trung bình 62 lần thử cho một trong hai ô đó.
+    state:
+      rarity: magic
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "Một lần roll cho prefix"
+    do: >-
+      Nếu ô prefix đang trống, dùng một Augmentation. So kết quả với mức ở
+      bước 1, và không so với gì khác.
+    why: >-
+      Reduced Charges per use đạt mức: trên flask chứa được hai lần dùng, nó
+      kéo giãn số charge và rút ngắn thời gian chờ trước lần dùng kế tiếp.
+      Nó không phải prefix 25% increased effect, và phần xác suất ở trên đã
+      cho biết cố chờ cái đó tốn bao nhiêu.
+    fail: >-
+      Prefix reduced effect xuất hiện. Có ba lựa chọn, nói cho thật. Bắt đầu
+      lại, trung bình 62 lần thử. Dùng một [[Orb of Annulment]], thứ gỡ ngẫu
+      nhiên một trong hai modifier, tức một nửa số lần là gỡ suffix. Hoặc
+      dùng flask như nó đang có và craft cái khác khi một base item level 85
+      thứ hai xuất hiện.
+    state:
+      rarity: magic
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "Enchantment đã tính trước"
+    do: >-
+      Quyết định bạn dùng flask này thế nào, rồi enchant nó. Với flask chạy
+      mỗi khi chạy được: ở [[Crafting Bench]], **Used when Charges reach
+      full**, giá 5 [[Instilling Orb]] và 5 [[Glassblower's Bauble]].
+    why: >-
+      Một flask chứa được một enchantment. Cái tự dùng không làm mất chút
+      sức mạnh nào và bớt cho bạn một phím bấm suốt phần còn lại của league.
+      Lựa chọn kia là một [[Enkindling Orb]], mô tả bên dưới, và hai cái
+      không kết hợp được: mỗi cái đều "replaces any existing enchantment".
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "Quality"
+    do: >-
+      Đưa flask lên 20% quality bằng Glassblower's Bauble.
+    why: >-
+      Trên utility flask, quality kéo dài hiệu ứng, theo cách game vận hành
+      lâu nay. Mô tả của Bauble ghi rằng nó có hiệu quả lớn hơn trên flask
+      có item level thấp, nên một flask item level 85 tốn nhiều Bauble hơn
+      những cái bạn làm lúc leveling.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+variations: >-
+  **Chấp nhận 9–11%.** "of the Lynx" chỉ cần item level 65, và trên flask
+  item level 85 thì hai tier cộng lại là 1 trên 31 lần roll suffix. Nếu
+  flask dùng để chạy map chứ không phải để đua, đây là mức hợp lý, và bạn
+  nên đặt nó ở bước 1, đừng để tới bước 2 mới phát hiện ra.
+
+
+  **Một Enkindling Orb thay vào.** Nó cho một trong năm cải thiện, cái nào
+  cũng kèm "Gains no Charges during Effect": 60–70% increased effect,
+  80–100% increased Duration, 60–80% increased Charge Recovery, 35–25%
+  reduced Charges per use, hoặc +40–60 to Maximum Charges. Trong dữ liệu
+  game, increased effect có weight 250 trên tổng 650, nên khoảng 2 trên 5
+  orb nếu orb chọn theo weight. Nó hợp với flask bạn tự tay bấm trước một
+  đoạn chạy nước rút, và không hợp với flask cần đầy lại trong lúc đang
+  chạy.
+
+
+  **Cùng phép tính đó trên flask khác.** Tier Armour hoặc Evasion tốt nhất
+  (item level 84) là 1 trên 83 lần roll suffix. Tier tốt nhất của một suffix
+  "Immunity during Effect" là 1 trên 62, còn tier bất kỳ của nó là 1 trên
+  21, vì thế không ai nên đuổi theo tier trên một suffix miễn nhiễm.
+mistakes:
+  - "Roll trên flask item level 84. Suffix dừng ở 9–11% và bao nhiêu Alteration cũng không đổi được điều đó."
+  - "Nâng mức sau khi suffix xuất hiện. \"Chỉ increased effect\" biến khoảng 72 lần thử thành khoảng 470."
+  - "Dùng Alteration để sửa prefix. Nó roll lại cả suffix."
+  - "Dùng Orb of Annulment để xóa một prefix bạn chỉ đơn giản là không thích. Nó gỡ ngẫu nhiên một trong hai modifier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight, giá bench của enchantment, và mô tả cùng các enchantment của Enkindling Orb. Xác suất là phép tính của chúng tôi." }

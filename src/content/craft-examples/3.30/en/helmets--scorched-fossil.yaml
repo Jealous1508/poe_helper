@@ -1,0 +1,175 @@
+category: helmets
+title: "A Fossil-only suffix: nearby enemies lose fire resistance"
+level: 3
+summary: "\"Enemies within 6 metres have -9% to Fire Resistance\" is not in any helmet's natural pool. A Scorched Fossil opens it, and changes two other things you have to plan for."
+goal: >-
+  A helmet for a fire build with the nearby-enemy suffix, a life prefix and
+  resistances. The lesson is the **Fossil-only modifier**: a line that no
+  Chaos Orb, Essence or Alteration can produce, and how to read what the
+  Fossil does to the rest of the item while it is in the Resonator.
+base: "Royal Burgonet"
+itemLevel: 73
+baseWhy: >-
+  The data gives the nearby-enemy suffixes no item level requirement, so the
+  item level here is for everything else: 64 opens Tier 1 maximum Life and 72
+  opens Tier 2 resistances. Past that you would be paying for one more tier of
+  resistance that this method rarely lands.
+
+
+  A pure Armour base keeps the prefix pool friendly: no mana prefix, and
+  maximum Life is more than a quarter of prefix rolls. Use the Evasion or
+  Energy Shield base your build wears; the Fossil works the same on all of
+  them.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+118 to maximum Life", how: fossil }
+    - { text: "+164 to Armour", how: fossil }
+  suffixes:
+    - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+    - { text: "+43% to Fire Resistance", how: fossil }
+    - { text: "+18% to Cold and Lightning Resistances", how: crafted }
+needs:
+  - { item: "[[Scorched Fossil]]", amount: "dozens" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "to make the base Rare" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  Fossils and Resonators, one of each per attempt. In 3.30 Delve is reached
+  through the maps that always spawn Sulphite, so this is a craft for someone
+  who delves or buys from those who do. Everything else is small.
+odds: >-
+  We cannot give a figure for the suffix itself. The data lists it with a
+  weight of 2,000, twice a normal tier, but it does not say how the Fossil's
+  multiplier applies to Fossil-only modifiers or which of them join the pool,
+  so any number would be invented. Budget in dozens of Fossils and expect a
+  wide spread.
+
+
+  What we can compute is the rest. With a [[Scorched Fossil]], Fire
+  Resistance becomes about 59% of the natural suffix weight on this base, by
+  our arithmetic, and Cold Resistance cannot roll at all. The prefixes are
+  untouched by the Fossil: one prefix roll in four is maximum Life, one in 12
+  is life of 100 or more.
+steps:
+  - title: "Prepare the base"
+    do: >-
+      Bring a white item level 73 Royal Burgonet to 20% quality, then make it
+      Rare with an [[Orb of Alchemy]].
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, like a Chaos Orb. What the
+      Alchemy rolls does not matter; the first Fossil replaces all of it.
+    state:
+      prefixes: [{ text: "+92 to maximum Life" }]
+      suffixes:
+        - { text: "+31% to Cold Resistance" }
+        - { text: "+280 to Accuracy Rating" }
+        - { text: "24% increased Stun and Block Recovery" }
+  - title: "Know what the Fossil changes before you use it"
+    do: >-
+      Read the Fossil: "More Fire modifiers, No Cold modifiers". Then look at
+      a helmet's modifier list for those two tags.
+    why: >-
+      Three things happen at once. **The Fossil-only suffixes become
+      possible**, and by long-standing player knowledge the fire one answers
+      to this Fossil. **Fire Resistance gets ten times its weight**, because
+      it is the only natural helmet modifier with the fire tag. **Cold
+      Resistance is removed**, because "no" is a weight of zero. No helmet
+      prefix has either tag, so the prefix side rolls as if no Fossil were
+      there.
+    check: >-
+      Consequence for the plan: fire resistance will usually come free, cold
+      resistance never will, and life is up to ordinary luck. So the bench
+      slot is already spoken for: it covers cold.
+  - title: "Socket the Fossil and use the Resonator"
+    do: >-
+      Place a [[Scorched Fossil]] in a [[Primitive Chaotic Resonator]] and
+      use it on the helmet.
+    why: >-
+      One Fossil, one socket. A second Fossil would change more tags; the
+      variations say when that helps.
+    state:
+      prefixes:
+        - { text: "72% increased Armour", how: fossil }
+        - { text: "+15% to Item Rarity", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "+29 to Strength", how: fossil }
+        - { text: "Regenerate 41.5 Life per second", how: fossil }
+  - title: "Read the result with two questions"
+    do: >-
+      **Is the suffix there?** Look for "Enemies within 6 metres have -9% to
+      Fire Resistance". **Can the helmet still get life?** Either a maximum
+      Life prefix rolled, or a prefix slot is open.
+    why: >-
+      The result above fails the first question, which is the only one that
+      costs Fossils to fix. It shows the Fossil's fingerprint all the same:
+      fire resistance arrived unasked.
+    check: >-
+      If the suffix is there, count suffixes before you celebrate. You want
+      one slot left for the bench, or a third suffix you are glad to have.
+    fail: >-
+      No suffix: use the next Fossil. Suffix present but three prefixes and
+      no life: your call. The suffix is the expensive part, and the next
+      example rebuilds a prefix side without touching the suffixes.
+  - title: "Repeat until both answers are yes"
+    do: >-
+      Keep going, one Fossil and one Resonator at a time.
+    why: >-
+      Each attempt is independent. Set the bar before you start and do not
+      raise it mid-run: the suffix, plus life of 100 or more or an open
+      prefix.
+    state:
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "+164 to Armour", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance", how: fossil }
+  - title: "Bench what the Fossil took away"
+    do: >-
+      At the [[Crafting Bench]], craft **+17–20% to Cold and Lightning
+      Resistances** for 3 [[Chaos Orb]]s in the open suffix.
+    why: >-
+      The Fossil made cold resistance impossible, so it was always going to
+      come from the bench. The double-resistance craft covers cold and adds
+      lightning for the same slot. If life is what is missing and a prefix is
+      open, craft maximum Life instead, 56–70 for 4 Orbs of Alchemy, and find
+      cold resistance on another item.
+    state:
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "+164 to Armour", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+18% to Cold and Lightning Resistances", how: crafted }
+variations: >-
+  **Other elements.** The data lists the same suffix for Cold, Lightning and
+  Chaos Resistance, and "take 9% increased Physical Damage". Swap the Fossil
+  for the matching one and read its "no" line the same way: a
+  [[Frigid Fossil]] removes fire modifiers, a [[Metallic Fossil]] physical
+  ones, an [[Aberrant Fossil]] lightning ones.
+
+
+  **A second Fossil.** In a two-socket Resonator a [[Pristine Fossil]]
+  beside the Scorched one makes maximum Life nearly certain as a prefix. It
+  also multiplies Life Regeneration, which competes with your suffix for the
+  same three slots. On an Energy Shield base a [[Dense Fossil]] does the
+  equivalent for defence prefixes and removes life.
+
+
+  **The influence route.** A Warlord helmet of item level 85 can roll the
+  same line as an ordinary suffix, weight 250. It costs you both Eldritch
+  implicits, which this helmet can still take.
+mistakes:
+  - "Using Chaos Orbs or Essences and waiting for the suffix. It only exists during a Fossil craft."
+  - "Planning to roll cold resistance on a Scorched helmet. The Fossil sets its weight to zero."
+  - "Crafting at the bench between Fossils. The next Resonator removes it."
+  - "Buying a base with [[Memory Strands]] for this. Fossils neither use nor spend strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil-only suffixes and their weights, the Fossil multipliers, tiers and bench costs. The odds are our arithmetic; the data does not name the Fossil that opens each suffix." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player knowledge on Fossils and strands. Partly older than 3.30." }

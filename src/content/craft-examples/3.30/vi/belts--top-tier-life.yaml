@@ -1,0 +1,148 @@
+category: belts
+title: "Life tier cao nhất bằng Alteration"
+level: 2
+summary: "Trên belt, tier Life tốt nhất nằm trong tầm với của Alteration thường. Roll nó trên một chiếc belt Magic, quyết định trước tier nào thì ngừng tìm, rồi Regal và bench một resistance 35%."
+goal: >-
+  Một chiếc belt chạy map có Life từ 100 trở lên, hai suffix hữu ích và một
+  resistance mạnh từ bench. Lần craft này là quy trình Alteration, Regal,
+  bench bình thường. Điều nó dạy là **đặt tier dừng bằng phép tính**, vì đây
+  là một trong số ít item mà tier cao nhất đủ rẻ để là một lựa chọn thật sự.
+base: "Leather Belt"
+itemLevel: 72
+baseWhy: >-
+  Item level 64 mở tier Life cao nhất, 130–144; 72 thêm resistance 42–45% cho
+  những gì các orb khác roll ra. Leather Belt đặt thêm 25–40 Life phía trên
+  vạch kẻ. Hãy làm y hệt trên một Stygian Vise nếu bạn có: pool giống hệt và
+  Abyssal socket là implicit tốt hơn.
+methods: [currency, bench]
+result:
+  implicits: ["+34 to maximum Life"]
+  prefixes:
+    - { text: "+121 to maximum Life" }
+  suffixes:
+    - { text: "+38% to Lightning Resistance" }
+    - { text: "+41 to Strength" }
+    - { text: "+32% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–80", note: "tùy tier bạn dừng" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Alteration, một [[Regal Orb]] và 3 [[Chaos Orb]] cho bench. Số Alteration
+  là do bạn chọn, và xác suất bên dưới là cách để chọn nó.
+odds: >-
+  Ở item level 72, theo phép tính của chúng tôi từ weight của modifier, một
+  lần roll prefix ra maximum Life:
+
+
+  **từ 100 trở lên** (ba tier cao nhất): khoảng 1 trên 15.
+
+
+  **từ 115 trở lên** (hai tier cao nhất): khoảng 1 trên 22.
+
+
+  **130–144** (tier cao nhất): khoảng 1 trên 45.
+
+
+  Alteration không phải lúc nào cũng roll ra prefix, nên hãy nhân với một số
+  đâu đó giữa một và hai để ra số orb. Bước từ "từ 100 trở lên" lên tier cao
+  nhất làm số Alteration tăng gấp ba để đổi lấy khoảng 30 Life.
+steps:
+  - title: "Chọn tier kết thúc cuộc tìm kiếm"
+    do: >-
+      Trước orb đầu tiên, chọn một vạch: 100, 115 hoặc 130. Viết nó ra nếu
+      cần.
+    why: >-
+      Cả mười tier Life có weight như nhau, nên mỗi tier cao hơn mà bạn nhất
+      quyết đòi sẽ loại đi một phần ba hoặc một nửa số kết quả chấp nhận
+      được. Có một con số chốt từ trước thì bạn dừng khi chạm nó. Không có
+      thì lần trúng nào trông cũng như một lý do để thử lấy tier kế tiếp.
+  - title: "Roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]] cho
+      tới khi prefix là maximum Life ở vạch của bạn trở lên. Tên của chúng:
+      "Virile" (100–114), "Athlete's" (115–129), "Fecund" (130–144).
+    why: >-
+      Mỗi lần roll hai ô, và bạn đọc một. Life chiếm một phần năm số lần roll
+      prefix của pool này, vì thế một phương pháp đơn giản cỡ này vẫn với tới
+      đỉnh của nó. Cùng quy trình đó với prefix tốt nhất của một cây mace sẽ
+      tốn hơn một nghìn.
+    check: >-
+      Tên tier, khi đang giữ Alt. Tạm thời bỏ qua suffix.
+    state:
+      rarity: magic
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+  - title: "Augment suffix"
+    do: >-
+      Nếu chiếc belt Magic chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Trên belt, một suffix ngẫu nhiên là resistance hoặc Strength khoảng một
+      nửa số lần, và phía suffix chưa có gì đáng bảo vệ. Trên một item có
+      phía suffix chật chội và giá trị, bạn sẽ để trống ô đó; ở đây lần roll
+      miễn phí là lựa chọn tốt hơn.
+    state:
+      rarity: magic
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes: [{ text: "+38% to Lightning Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]]. Đọc modifier mới và phía của nó.
+    why: >-
+      Rare mở bốn ô còn lại. Regal Orb thêm gì thì Life vẫn ở lại. Prefix nó
+      thêm thường là Mana, Energy Shield hoặc Armour và không làm bạn mất gì;
+      suffix thì hữu ích khoảng một nửa số lần.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+41 to Strength" }
+  - title: "Bench resistance"
+    do: >-
+      Ở [[Crafting Bench]], craft 29–35% của elemental resistance bạn cần
+      nhất, giá 3 [[Chaos Orb]].
+    why: >-
+      Bench của belt bán bậc cao nhất của resistance đơn cao hơn so với bench
+      của ring và amulet, 29–35% so với 21–28%. Nhờ vậy belt là chỗ đúng để
+      mua resistance mà ring của bạn không tìm ra.
+    check: >-
+      Một element khác với cái belt đã roll ra. Nếu còn trống hai ô suffix
+      thì bước này lấp một ô; ô kia có thể đợi một
+      [[Exalted Orb]].
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+41 to Strength" }
+        - { text: "+32% to Fire Resistance", how: crafted }
+variations: >-
+  **Thay vào đó, một Essence cho suffix.** Một Screaming Essence of Anger,
+  Hatred hoặc Wrath dùng lên chiếc belt trắng đảm bảo 36–41% của resistance
+  đó, Shrieking 42–45%, Deafening 46–48%. Khi đó Life phải tự xuất hiện trong
+  các lần roll khác của Essence, một trên năm prefix ở tier bất kỳ. Đây là
+  đường tốt hơn khi với bạn tier resistance quan trọng hơn tier Life.
+
+
+  **Hai prefix còn trống.** Bench có các prefix tốt cho belt, 12–14%
+  increased Damage hoặc 8–10% flask effect, nhưng mỗi item một modifier bench
+  nghĩa là phải chọn giữa một trong hai cái đó và resistance. Một Exalted Orb
+  lấp một ô một cách ngẫu nhiên.
+
+
+  **Trên base có Memory Strands.** Mỗi Alteration tiêu nhiều nhất 8 strand
+  theo bảng data-mine, và strand loại các tier thấp khỏi bất cứ thứ gì được
+  roll ra. Với mười tier Life, đó đúng là sự trợ giúp mà lần craft này cần.
+  Hãy dùng [[Orb of Remembrance]] lên chiếc belt trắng trước.
+mistakes:
+  - "Roll vượt quá vạch của chính mình. \"Athlete's\" là mục tiêu cho tới khi nó xuất hiện."
+  - "Bench Life lên chiếc belt còn một prefix trống. Belt đã có Life rồi, và Life của bench cùng group."
+  - "Dùng cách này trên một chiếc belt item level 60 rồi chờ \"Fecund\". Tier cao nhất cần 64."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight, giá bench và các modifier Essence trên belt. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

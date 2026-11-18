@@ -1,0 +1,158 @@
+category: two-hand-axes
+title: "Một cây axe leveling từ một Orb of Alchemy và bench"
+level: 1
+summary: "Biến một cây axe trắng thành Rare chỉ bằng một cú bấm, đếm xem mỗi phía ra cái gì, rồi để bench lấp ô còn trống."
+goal: >-
+  Một weapon cho nửa sau campaign chỉ với hai cú bấm. Item gần như chỉ là sản
+  phẩm phụ. Thứ bạn đang học là **đọc một item Rare như sáu ô**: mấy prefix,
+  mấy suffix, cái nào đang làm được việc, và phía nào còn chỗ. Mọi lần craft
+  về sau đều bắt đầu bằng phép đếm đó.
+base: "Jasper Chopper"
+itemLevel: 37
+baseWhy: >-
+  Jasper Chopper dùng được ở level 37 và đánh 58–91, cú vung lớn nhất trong
+  các cây axe quanh level đó. Nó không có implicit, như phần lớn axe. Item
+  level 36 mở Tier 5 của flat Physical Damage và 35 mở Tier 5 của increased
+  Physical Damage, nên bất cứ cây nào rơi ở những khu vực mà bạn mặc được nó
+  đều đủ cao. Giữ Alt để kiểm.
+
+
+  Bất kỳ cây axe trắng nào ngang level của bạn cũng được. Phương pháp vẫn y
+  vậy trên một cây Labrys ở level 49 hay một cây Karui Chopper ở 58.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 47 to 99 Fire Damage" }
+    - { text: "Adds 18 to 37 Physical Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+26 to Strength" }
+    - { text: "+164 to Accuracy Rating" }
+    - { text: "9% reduced Enemy Stun Threshold" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "1–3" }
+  - { item: "[[Orb of Scouring]]", amount: "0–2", note: "hoặc một cây axe trắng thứ hai" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "cho bench" }
+cost: >-
+  Một tới ba [[Orb of Alchemy]], thứ mà trong 3.30 phổ biến hơn trước, và 8
+  [[Orb of Alteration]] ở bench. Nếu bạn không có
+  [[Orb of Scouring]], một lần thử hỏng chỉ làm bạn mất cây axe trắng, không
+  mất gì khác.
+odds: >-
+  Ở item level 37, theo phép tính của chúng tôi từ weight của các modifier, 94
+  trên 100 lần roll prefix trên axe cộng thẳng damage: 57 là added fire, cold
+  hoặc lightning damage và 37 là một trong ba prefix physical. Phần còn lại là
+  level của socketed gem và phần trăm elemental.
+
+
+  Vậy nên gần như mọi prefix mà một Orb of Alchemy cho bạn đều hữu dụng ở
+  giai đoạn này. Thứ thay đổi là nó cho **bao nhiêu** prefix, và dữ liệu không
+  cho chúng tôi biết tỉ lệ chia đó. Hãy tính là sẽ giữ lần thử đầu tiên hoặc
+  thứ hai.
+steps:
+  - title: "Quality trước"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] lên cây axe trắng tới khi nó hiện 20%
+      quality.
+    why: >-
+      Quality nâng physical damage của base, và các modifier physical bạn sắp
+      roll nhân lên kết quả đó. Làm trước có nghĩa là bạn đánh giá mọi lần thử
+      bằng con số thật của nó.
+    state: { rarity: normal }
+  - title: "Một Orb of Alchemy"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên cây axe.
+    why: >-
+      Nó biến item thành Rare với bốn tới sáu modifier ngẫu nhiên. Trang tổng
+      quan cảnh báo rằng đường này roll nhiều ô cùng lúc, và với một weapon
+      chạy map thì lời cảnh báo đó đúng. Trên một cây axe leveling thì không,
+      vì pool prefix ở level này gần như không có gì ngoài damage.
+    state:
+      prefixes:
+        - { text: "+1 to Level of Socketed Melee Gems" }
+      suffixes:
+        - { text: "+15 to Dexterity" }
+        - { text: "17% increased Stun Duration on Enemies" }
+        - { text: "Gain 9 Life per Enemy Killed" }
+  - title: "Đếm hai phía"
+    do: >-
+      Giữ Alt. Mỗi dòng đều được đánh dấu prefix hoặc suffix. Đếm prefix và
+      ghi nhận cái nào trong số đó cộng damage: bất cứ thứ gì ghi "Adds …
+      Damage" hoặc "increased Physical Damage". Rồi đếm suffix.
+    why: >-
+      Một item Rare chứa ba cái mỗi loại. Phép đếm cho bạn biết hai điều: kết
+      quả này có đáng giữ không, và bench còn thêm được vào phía nào.
+    check: >-
+      Giữ cây axe nếu **ít nhất hai prefix cộng damage**. Kết quả ở trên không
+      đạt: nó có một prefix, và cái đó chỉ có ý nghĩa với một gem gắn trong
+      cây axe.
+    fail: >-
+      Dùng một [[Orb of Scouring]] để đưa cây axe về Normal, quality còn
+      nguyên, rồi lại một Orb of Alchemy. Không có Orb of Scouring thì dùng
+      cây axe trắng kế tiếp bạn nhặt được.
+  - title: "Làm lại, tới khi hai prefix là damage"
+    do: >-
+      Lặp lại Orb of Alchemy và phép đếm.
+    why: >-
+      Mỗi lần thử là độc lập. Bạn không chờ một modifier cụ thể nào, chỉ chờ
+      phía prefix được lấp gần đầy, và gần như thứ gì lấp vào đó cũng là
+      damage.
+    check: >-
+      Đừng cố chờ prefix physical. Ở level này, added fire damage cỡ adds
+      45–61 to 91–106 đáng giá với cú vung gần ngang increased Physical Damage
+      tốt nhất mà cây axe này roll được, và attack nào cũng dùng được nó.
+    state:
+      prefixes:
+        - { text: "Adds 47 to 99 Fire Damage" }
+        - { text: "Adds 18 to 37 Physical Damage" }
+      suffixes:
+        - { text: "+26 to Strength" }
+        - { text: "+164 to Accuracy Rating" }
+        - { text: "9% reduced Enemy Stun Threshold" }
+  - title: "Bench ô còn trống"
+    do: >-
+      Ở [[Crafting Bench]], craft **một** modifier vào một ô còn trống. Có một
+      prefix trống và chưa roll ra "increased Physical Damage" (trường hợp ở
+      đây): 60–79% increased Physical Damage giá 8
+      [[Orb of Alteration]]. Có một prefix trống và modifier đó đã roll ra
+      rồi: flat Physical Damage, adds 11–15 to 23–27 giá 2 Orb of Alchemy. Có
+      ba prefix và một suffix trống: 8–10% increased Attack Speed giá 6 Orb of
+      Alteration.
+    why: >-
+      Bench chỉ làm việc ở chỗ còn trống, và nó sẽ không thêm một modifier mà
+      group của nó đã có trên item. Đó là lý do bạn đếm trước. Ở đây phía
+      prefix còn một ô và phía suffix không còn ô nào, nên lựa chọn đã được
+      định sẵn cho bạn.
+    fail: >-
+      Nếu bench không liệt kê một craft, tức là bạn chưa tìm được công thức
+      ấy. Hãy lấy thứ gần nhất mà bench đang có cho phía đó.
+    state:
+      prefixes:
+        - { text: "Adds 47 to 99 Fire Damage" }
+        - { text: "Adds 18 to 37 Physical Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+26 to Strength" }
+        - { text: "+164 to Accuracy Rating" }
+        - { text: "9% reduced Enemy Stun Threshold" }
+variations: >-
+  **Khi nào thì thôi làm kiểu này.** Quanh item level 60, các tier tốt trở nên
+  nhẹ còn các tier tệ vẫn nặng: Tier 3 trở lên của increased Physical Damage
+  là một trên vài trăm lần roll prefix. Từ đó trở đi, một Orb of Alchemy cho
+  bạn một item đầy các tier thấp, và những ví dụ kế tiếp dùng các công cụ biết
+  nhắm.
+
+
+  **Nếu bạn thích roll từng ô một hơn.** Ví dụ đầu tiên của hướng dẫn về mace
+  làm lần craft này bằng Orb of Alteration và một Regal Orb. Nó tốn nhiều cú
+  bấm hơn và cho bạn quyền quyết định một prefix. Trên axe ở level này, Orb of
+  Alchemy là món hời hơn, vì cách weight được phân trong pool.
+mistakes:
+  - "Giữ một kết quả có một prefix damage chỉ vì suffix trông gọn gàng. Suffix không vung cây axe."
+  - "Scour một kết quả có hai prefix damage chỉ vì không cái nào là physical. Khi đang leveling, damage nào cũng là damage."
+  - "Chỉ đọc con số mà không đọc phía. Phía suffix đầy nghĩa là bench không cho bạn attack speed được, dù bạn muốn nó tới đâu."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orb of Alchemy phổ biến hơn khi Orb of Binding không còn nữa." }

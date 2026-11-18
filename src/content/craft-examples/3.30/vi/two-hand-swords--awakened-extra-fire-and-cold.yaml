@@ -1,0 +1,242 @@
+category: two-hand-swords
+title: "Hai influence trên một cây blade: extra fire và extra cold"
+level: 5
+summary: "Roll một prefix influence trên mỗi cây trong hai cây sword, ghép chúng bằng một Awakener's Orb, đóng phía prefix lại trước khi bất cứ thứ gì kịp thêm vào đó, rồi reforge suffix sau một cái khóa."
+goal: >-
+  Một cây Exquisite Blade có Gain 27–30% of Physical Damage as Extra Fire
+  Damage và chừng đó nữa dưới dạng Extra Cold Damage, với một phần trăm
+  physical crafted làm prefix thứ ba và các suffix critical roll ra sau một
+  cái khóa. Hai prefix extra damage thuộc hai influence khác nhau và không
+  thể roll trên cùng một cây sword. Lần craft này là một chuỗi quyết định đưa
+  ra bằng phép tính, và nó có ba chỗ có thể phải dừng giữa chừng. Mỗi chỗ đều
+  được đánh dấu.
+base: "Exquisite Blade"
+itemLevel: 84
+baseWhy: >-
+  +50% to Global Critical Strike Multiplier dưới dạng implicit, trên một cây
+  sword mà damage sắp được nâng hơn một nửa nhờ hai prefix được critical
+  strike nhân lên. Tier cao nhất của cả hai prefix extra damage cần item
+  level 78. Base không được là fractured: fractured item không nhận được
+  influence.
+methods: [influence, currency, meta, harvest, bench, finishing]
+result:
+  note: "Warlord and Redeemer"
+  implicits: ["+50% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+    - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+    - { text: "118% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "22% increased Attack Speed", how: harvest }
+needs:
+  - { item: "Một cây Exquisite Blade có influence Redeemer, item level 78+", amount: "1", note: "cây sword bạn giữ" }
+  - { item: "Một cây sword hai tay có influence Warlord, item level 78+", amount: "1", note: "base nào cũng được; nó sẽ bị phá hủy" }
+  - { item: "[[Orb of Alteration]]", amount: "vài trăm", note: "cho hai prefix" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "6", note: "2 cho craft multi-modifier, 4 cho khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "cho phần trăm physical crafted" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+cost: >-
+  Hai base có influence, [[Orb of Alteration]] tính bằng hàng trăm cho mỗi
+  cây, một [[Awakener's Orb]], rồi một hóa đơn cố định ở bench: 6
+  [[Divine Orb]], một [[Sacred Orb]] và 4 [[Exalted Orb]] cho một lần reforge
+  có bảo vệ duy nhất. Lần reforge thứ hai tốn lại chỗ Divine Orb và Sacred
+  Orb đó, và không phải lúc nào cũng làm được. Chúng tôi không đưa ra tổng
+  số.
+odds: >-
+  **Hai prefix.** Theo phép tính của chúng tôi ở item level 84, trên sword
+  Warlord, một lần roll prefix ra Extra Fire ở tier cao nhất khoảng 1 trên
+  139 lần, và từ 21% trở lên khoảng 1 trên 70. Các con số của Redeemer cho
+  Extra Cold giống vậy, chỉ lệch một hai lần roll. Mỗi cái là một cuộc săn
+  Alteration riêng.
+
+
+  **Awakener's Orb** giữ một modifier influence từ mỗi item theo các trang
+  tra cứu, và roll lại phần còn lại. Đưa cho nó hai cây sword, mỗi cây có
+  đúng một modifier influence, thì cả hai đều sống sót. Có bao nhiêu modifier
+  khác tới, và ở phía nào, là chuyện may rủi.
+
+
+  **Lần reforge.** Suffix critical được đảm bảo là Tier 1 hoặc 2 một trên ba
+  lần, nếu tier được bốc theo weight. Vậy nên lần reforge có bảo vệ đầu tiên
+  cho một kết quả đáng dừng lại có lẽ một phần ba số lần, và bạn có thử lại
+  được hay không thì tùy vào việc nó để lại bao nhiêu suffix.
+steps:
+  - title: "Quyết định bằng phép tính: một influence hay hai"
+    do: >-
+      So hai cách đặt Extra Fire và Extra Cold lên một cây sword. Riêng
+      **Shaper** đã có cả hai prefix: mỗi cái 18–20% ở tier cao nhất, weight
+      1,000 mỗi tier. **Warlord** có Fire và **Redeemer** có Cold: mỗi cái
+      27–30%, weight 400 mỗi tier, và ghép chúng cần một
+      [[Awakener's Orb]].
+    why: >-
+      Cây sword Shaper tổng cộng 36–40% và không cần ghép. Cây sword ghép
+      tổng cộng 54–60% và tốn thêm một base thứ hai, hai cuộc săn Alteration
+      mà mỗi cuộc dài hơn gấp đôi cuộc của Shaper, cùng cái orb. Đó là toàn
+      bộ cuộc đổi chác.
+      Ví dụ này lấy con số lớn hơn; phần Biến thể mô tả con số nhỏ hơn.
+  - title: "Giai đoạn 1: một prefix trên mỗi cây trong hai cây sword Magic"
+    do: >-
+      Trên cây Exquisite Blade Redeemer: [[Orb of Transmutation]], rồi
+      [[Orb of Alteration]] tới khi prefix là **Gain 27–30% of Physical
+      Damage as Extra Cold Damage**. Trên cây sword Warlord, làm y vậy cho
+      **Extra Fire Damage**. Để làm một base có influence, dùng một
+      [[Redeemer's Exalted Orb]] hoặc một [[Warlord's Exalted Orb]] lên một
+      cây sword Rare không có influence, rồi một [[Orb of Scouring]], thứ xưa
+      nay vẫn để influence nguyên chỗ.
+    why: >-
+      Một item Magic dò hai ô với giá rẻ, và ở đây nó có ưu điểm thứ hai: nó
+      chứa nhiều nhất hai modifier, nên dễ thấy rằng chỉ một trong số đó là
+      modifier influence. Cây sword Warlord có thể là bất kỳ sword hai tay
+      nào item level 78 trở lên, vì nó sẽ bị phá hủy.
+    check: >-
+      Trên mỗi cây sword, hãy đọc modifier còn lại. Nếu suffix cũng là một
+      modifier influence, như Culling Strike hay Movement Speed, thì
+      Awakener's Orb có hai cái để chọn. Dùng thêm một Alteration.
+    state:
+      rarity: magic
+      note: "Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+  - title: "Giai đoạn 2: Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên cây sword Warlord, rồi lên cây Exquisite
+      Blade. Cây đầu bị phá hủy. Cây thứ hai thành một item Rare có cả hai
+      influence.
+    why: >-
+      Mô tả của orb: "Destroys an item, applying its influence to another
+      of the same item class. The second item is reforged as a rare item
+      with both influence types and new modifiers". Các trang tra cứu bổ sung
+      rằng một modifier influence từ mỗi item sống sót. Khi mỗi cây chỉ có
+      một cái, không còn gì để phải chọn.
+    check: >-
+      Cả hai prefix extra damage đã nằm trên cây blade. Giờ đếm phần còn lại:
+      ô prefix thứ ba có trống không, và có bao nhiêu suffix đi kèm.
+    fail: >-
+      **Chỗ đầu tiên có thể phải dừng giữa chừng.** Nếu ba suffix tới, phía đó không
+      còn chỗ cho modifier bench nào và kế hoạch bên dưới không bắt đầu được.
+      Cây sword vẫn có cả hai prefix; hãy bench một phần trăm physical nếu
+      còn một prefix trống rồi dùng nó. Một [[Orb of Annulment]] sẽ gỡ ngẫu
+      nhiên một trong năm hoặc sáu modifier, hai trong số đó là lý do cây
+      sword tồn tại.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+  - title: "Giai đoạn 3: đóng phía prefix, rồi khóa nó"
+    do: >-
+      Ở [[Crafting Bench]], theo thứ tự này: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]], một suffix). **100–129% increased
+      Physical Damage** (4 [[Exalted Orb]], prefix thứ ba). **Prefix
+      Modifiers cannot be changed** (4 Divine Orb và 1 [[Sacred Orb]], một
+      suffix).
+    why: >-
+      Khóa bảo vệ thứ đang có ở phía prefix. Người chơi từ lâu đã ghi nhận
+      rằng một lần roll lại vẫn có thể thêm một modifier vào ô trống ở đó, và
+      pool sẽ lấp nó bằng elemental damage sáu trên mười lần. Vậy nên ô đó
+      được lấp trước, bằng chính modifier đằng nào bạn cũng muốn đặt vào, và
+      khóa khi đó che ba prefix mà không để ngỏ cánh cửa nào. Việc đó cần ba
+      modifier crafted cùng lúc, và đó chính là thứ craft đầu tiên cho phép.
+    check: >-
+      Ba prefix, một cái crafted. Ba suffix, hai cái crafted. Nếu prefix thứ
+      ba đã được Awakener's Orb lấp sẵn, hãy bỏ qua hai craft đầu và chỉ đặt
+      riêng cái khóa.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+        - { text: "118% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Giai đoạn 4: reforge kèm một modifier Critical"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Critical modifier**: 150
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      Reforge thay phía suffix, kể cả hai suffix crafted, và để lại ba
+      prefix, trong đó có cái crafted. Một suffix mới buộc phải mang tag
+      critical. Hãy đếm tag đó trên **chính cây sword này** trước khi tin nó:
+      Warlord và Redeemer không thêm modifier critical nào, nên nó vẫn là
+      Critical Strike Chance hoặc Multiplier. Reforge Speed thì không an toàn
+      ở đây. Movement Speed của Redeemer mang tag speed.
+    check: >-
+      Nhận một suffix critical Tier 1 hoặc 2 đi kèm hoặc một suffix hữu dụng
+      thứ hai, hoặc các ô trống. Kết quả minh họa có Multiplier ở Tier
+      1 và attack speed bên cạnh, tốt hơn mức đặt ra.
+    fail: >-
+      **Chỗ thứ hai có thể phải dừng giữa chừng.** Muốn reforge lại thì bạn phải khóa
+      lại, và vì prefix crafted vẫn còn trên cây sword, một modifier crafted
+      thứ hai cần craft multi-modifier trước. Tức là hai ô suffix. Nếu
+      reforge để lại hai hoặc ba suffix thì không có lần thử thứ hai: bạn giữ
+      thứ đã roll ra. Còn chuyện reforge có tôn trọng khóa hay không thì vốn
+      là do người chơi thử nghiệm, không chính thức.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+        - { text: "118% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+  - title: "Suffix cuối cùng, và các chỉ số"
+    do: >-
+      Còn một ô suffix trống và modifier crafted duy nhất của cây sword là
+      phần trăm physical. Một [[Exalted Orb]] lấp ô đó ngẫu nhiên. Rồi 20%
+      quality, link, và một [[Divine Orb]] nếu hai roll extra damage đang nằm
+      ở 27%.
+    why: >-
+      **Chỗ thứ ba có thể phải dừng giữa chừng**, và là chỗ nhẹ nhất. Trên cây sword
+      này, pool suffix gồm cả modifier của hai influence, và khi attack speed
+      cùng Multiplier đã có chỗ thì khoảng một trên mười Exalted Orb thêm
+      Critical Strike Chance. Không gì bị gỡ, nên trường hợp xấu nhất là một
+      suffix lấp chỗ trên một cây sword đã hoàn thiện. Một Divine Orb roll
+      lại mọi chỉ số cùng lúc và có thể hạ những cái bạn đã ưng.
+variations: >-
+  **Bản Shaper.** Một cây sword có influence Shaper, Alteration tới khi một
+  trong hai prefix extra damage xuất hiện (cái nào trong hai cũng được, ở bất
+  kỳ tier nào, là khoảng 1 trên 10 lần roll prefix; ở 18–20%, khoảng 1 trên
+  30), rồi một Imprint và một Regal Orb như trong hướng dẫn về mace. Prefix
+  extra thứ hai phải được roll ra bên cạnh cái đầu, điều mà một Regal Orb
+  hoặc một Exalted Orb làm được khoảng một trên hai mươi lần khi nó thêm một
+  prefix. Phần lớn sword làm theo cách này kết thúc với một prefix extra
+  damage và một phần trăm crafted, và đó là một cây sword tốt với một phần
+  nhỏ chi phí.
+
+
+  **Nếu Awakener's Orb đã lấp prefix thứ ba.** Khi đó chỉ riêng khóa đã bảo
+  vệ một phía đầy, bench rảnh cho một suffix sau đó, và mỗi lần reforge thêm
+  chỉ cần một ô suffix trống. Còn prefix thứ ba là gì thì bạn không được
+  chọn.
+
+
+  **Trên axe.** Axe Warlord và axe Redeemer có cùng hai prefix đó, và một cây
+  Karui Chopper có nhiều physical damage hơn để hưởng lợi. Thứ axe thiếu là
+  phương án Shaper và implicit multiplier.
+mistakes:
+  - "Ghép một cây sword mang hai modifier influence. Awakener's Orb giữ một cái từ mỗi item và bạn không được chọn cái nào."
+  - "Khóa prefix khi ô thứ ba còn trống. Hãy đóng nó trước; craft multi-modifier là 2 Divine Orb, so với một prefix phí trên cây sword đắt nhất bạn có."
+  - "Dùng reforge Speed vì nó từng hiệu quả trên một weapon không có influence. Hãy đếm tag trên chính item trước mặt bạn."
+  - "Tính một prefix Warlord có 65–69% increased Physical Damage kèm attack speed là thêm một họ phần trăm. Nó thuộc group của hybrid kèm Accuracy."
+  - "Bắt đầu từ một cây blade fractured. Nó không nhận được influence nào trong hai."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier influence trên sword hai tay, tag, tier và weight của chúng, giá bench, cùng mô tả trong game của Awakener's Orb và các Exalted Orb influence. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Một modifier influence từ mỗi item được giữ lại. Không được nêu trong mô tả của chính orb." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Critical và giá của nó." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured item không thể được thêm influence." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

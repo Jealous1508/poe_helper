@@ -1,0 +1,154 @@
+category: body-armours
+title: "Life từ một Essence, rồi đọc phần còn lại"
+level: 2
+summary: "Một Essence of Greed đảm bảo life. Lặp lại tới khi năm ô còn lại có thứ để bạn làm tiếp, rồi dùng bench cho chỗ thiếu."
+goal: >-
+  Một cái áo giáp cho những map đầu tiên, với life từ 130 trở lên mà không
+  lần roll nào lấy đi được, và đủ thứ bên cạnh để đáng mặc. Đây là lần craft
+  đầu tiên có một ô **bỏ qua xổ số**, và là lần đầu tiên bạn đánh giá cả một
+  item Rare. Kỹ năng cần luyện chính là sự đánh giá đó: đếm cái gì hữu dụng
+  và cái gì còn trống, riêng từng phía.
+base: "Astral Plate"
+itemLevel: 78
+baseWhy: >-
+  Astral Plate là cái plate duy nhất có implicit, +8–12% to all Elemental
+  Resistances, tức một suffix resistance mà bạn không phải roll. Nó cần level
+  62 và 180 Strength. Item level 78 mở flat Armour tốt nhất (401–500),
+  resistance 42–45% và Armour phần trăm 80–91%. Essence cho cùng lượng life ở
+  mọi item level, nên một base thấp hơn chỉ khiến bạn mất tier ở các modifier
+  khác.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["+10% to all Elemental Resistances"]
+  prefixes:
+    - { text: "+141 to maximum Life", how: essence }
+    - { text: "+342 to Armour" }
+    - { text: "66% increased Armour", how: crafted }
+  suffixes:
+    - { text: "+38% to Cold Resistance" }
+    - { text: "+44 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Greed]]", amount: "5–10", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Chaos Orb]]", amount: "2–3", note: "cho bench" }
+cost: >-
+  Essence là toàn bộ chi phí, và bậc Screaming là thứ map đỏ đưa cho bạn
+  trong 3.30. Bước bench là 2 hoặc 3 [[Chaos Orb]].
+odds: >-
+  Life là chắc chắn. Với phần còn lại, ở item level 78 trên một cái plate và
+  theo phép tính của chúng tôi từ weight: mỗi prefix Essence roll thêm là
+  flat Armour 36% số lần, một trong hai prefix Armour phần trăm 39%, và một
+  prefix phí (reflect damage, hoặc hybrid nhỏ Armour kèm Life) 25%. Mỗi
+  suffix là một elemental resistance 42% số lần, và một kết quả có hai suffix
+  thì có ít nhất một resistance 70% số lần.
+
+
+  Một kết quả có bao nhiêu modifier thì dữ liệu không cho chúng tôi biết, nên
+  chúng tôi không đưa ra một con số gộp nào. Các con số theo từng ô đã nói
+  đủ: một kết quả không có gì để làm tiếp là ngoại lệ. Hãy tính là một nắm
+  Essence, không phải hàng chục.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa một Astral Plate trắng lên 20% quality bằng [[Armourer's Scrap]].
+      Dùng một [[Screaming Essence of Greed]] lên nó.
+    why: >-
+      Essence biến item thành Rare với **+130–144 to maximum Life** được đảm
+      bảo, và lấp các ô còn lại ngẫu nhiên. Từ bậc Screaming trở lên, Essence
+      còn dùng được trên item đã là Rare, và chính điều đó cho bạn lặp lại
+      trên cùng một base.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+137 to maximum Life", how: essence }
+        - { text: "Reflects 38 Physical Damage to Melee Attackers" }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "Regenerate 41 Life per second" }
+  - title: "Đếm từng phía: hữu dụng, và còn trống"
+    do: >-
+      Giữ Alt và xem item từng phía một. **Prefix:** life là một. Bên cạnh nó
+      có prefix defence nào không, hay một ô trống? **Suffix:** có mấy cái là
+      resistance từ 30% trở lên, và có ô nào trống không?
+    why: >-
+      Kết quả ở trên hỏng ở cả hai phía. Prefix thứ hai của nó là reflect
+      damage, thứ chẳng làm được gì. Ba suffix đã đầy mà không cái nào là
+      resistance, nên bench không còn chỗ để thêm một cái.
+
+
+      Một ngưỡng hợp lý cho cái áo giáp chạy map đầu tiên: life, **thêm một
+      thứ bạn muốn ở phía nào cũng được, và một ô trống** ở phía bạn còn
+      thiếu thứ gì đó.
+    check: >-
+      Đếm ô, đừng chỉ đếm modifier. Một cái áo giáp có life, một resistance
+      và bốn ô trống là một vị thế tốt hơn cái có sáu modifier mà chỉ hai cái
+      tốt.
+    fail: >-
+      Dưới ngưỡng: dùng thêm một Essence lên chính item đó. Không mất gì
+      ngoài cái Essence.
+  - title: "Lặp lại tới khi một kết quả vượt ngưỡng"
+    do: >-
+      Dùng Essence hết cái này tới cái khác, đếm mỗi kết quả theo cùng cách,
+      tới khi có một cái đạt.
+    why: >-
+      Mỗi lần dùng là một lần roll mới cho mọi thứ trừ life. Chỉ số của life
+      cũng roll lại, trong khoảng 130–144.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+141 to maximum Life", how: essence }
+        - { text: "+342 to Armour" }
+      suffixes:
+        - { text: "+38% to Cold Resistance" }
+        - { text: "+44 to Strength" }
+  - title: "Chọn đúng một modifier bench"
+    do: >-
+      Item giờ có một prefix trống và một suffix trống, mà bench chỉ lấp được
+      một. **Nếu resistance của bạn chưa cap**, craft resistance bạn thiếu:
+      29–35% giá 3 [[Chaos Orb]]. **Nếu đã cap**, craft prefix defence mà
+      item chưa roll ra: ở đây đó là 56–74% increased Armour giá 2 Chaos Orb.
+    why: >-
+      Prefix roll ra là flat Armour, nên increased Armour của bench thuộc
+      group khác và nằm vừa. Nếu Essence đã roll ra increased Armour thì
+      bench sẽ từ chối bản của chính nó và bạn sẽ craft +250–320 flat Armour
+      thay vào. Hai cái nhân lẫn nhau: 342 flat Armour được cộng vào 711–782
+      của base trước, rồi phần trăm áp lên tổng đó.
+    check: >-
+      Dòng Armour ở đầu item tăng lên khi bạn craft. Nếu không tăng thì bạn
+      đã craft vào sai group và lẽ ra bench phải từ chối.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+141 to maximum Life", how: essence }
+        - { text: "+342 to Armour" }
+        - { text: "66% increased Armour", how: crafted }
+      suffixes:
+        - { text: "+38% to Cold Resistance" }
+        - { text: "+44 to Strength" }
+variations: >-
+  **Essence mạnh hơn.** Shrieking Greed cho +145–159 và Deafening cho
+  +160–174. Phương pháp không đổi. Deafening ngang với tier tự nhiên tốt thứ
+  nhì; tier tốt nhất, 175–189, chỉ đến từ một lần roll ở item level 86.
+
+
+  **Base khác.** Trên base evasion, các bước y hệt và một suffix Suppression
+  nhập vào danh sách những thứ đáng giữ. Với áo giáp Energy Shield, điểm neo
+  là một Essence of Woe: +50–61 Energy Shield ở bậc Screaming, +88–95 ở
+  Deafening.
+
+
+  **Suffix trống mà bạn chưa lấp.** Một [[Exalted Orb]] sẽ thêm một modifier
+  ngẫu nhiên vào một trong các ô trống. Trên một cái áo giáp ở tầm này, hiếm
+  khi nó đáng một cái. Ví dụ kế tiếp cho thấy một cách rẻ hơn để làm trên
+  riêng một phía.
+mistakes:
+  - "Giữ một kết quả vì nó có sáu modifier. Sáu modifier làng nhàng không để lại gì cho bench sửa."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Chỉ đánh giá theo suffix. Ba resistance với một phía prefix bỏ phí là cái áo giáp tệ hơn life, Armour và một resistance."
+  - "Dùng cách này trên base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên body armour, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

@@ -1,0 +1,208 @@
+category: sceptres
+title: "One gem level, a 1 Divine lock and an Imprint"
+level: 4
+summary: "The new one-prefix lock is certain only on an item with exactly one prefix. An Imprint of the Magic sceptre is what gets you back to that state after every failed reforge."
+goal: >-
+  A caster sceptre built around a gem-level prefix that took hundreds of
+  Alterations, with the rest rerolled as often as needed and the gem level
+  never at risk. It uses a 3.30 addition, **"1 Prefix Modifier cannot be
+  changed"** for 1 Divine Orb, in the only situation where it is safe, and
+  shows how to keep returning to that situation.
+base: "Void Sceptre"
+itemLevel: 84
+baseWhy: >-
+  40% increased Elemental Damage, and item level 84 so that the reforges
+  can reach every tier of Spell Damage and cast speed. The gem-level prefix
+  itself needs only item level 2; if all you wanted was the gem level, a
+  low base would roll it far more easily. This sceptre is meant to be an
+  endgame weapon, so the long Alteration roll is the price.
+methods: [currency, beast, meta, harvest, bench]
+result:
+  implicits: ["40% increased Elemental Damage"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Spell Skill Gems" }
+    - { text: "76% increased Spell Damage", how: harvest }
+    - { text: "Adds 38 to 71 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "26% increased Cast Speed", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "several hundred" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Divine Orb]]", amount: "1 per attempt" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 per attempt" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "final bench craft" }
+cost: >-
+  Per attempt: one set of beasts for the [[Imprint]], one [[Regal Orb]], one
+  [[Divine Orb]] and 75 Lifeforce. The same attempt with the full lock
+  would be 4 Divine Orbs and a [[Sacred Orb]], with no beasts. In 3.30 only
+  red beasts are captured, so which is cheaper depends on your Menagerie.
+odds: >-
+  **The gem level.** At item level 84 a named element's gem level is 1
+  prefix roll in 350, by our arithmetic from the weights. Several hundred
+  Alterations is normal.
+
+
+  **Each reforge.** The Caster reforge guarantees one modifier with the
+  caster tag. With the gem level's group taken, by weight that modifier is
+  cast speed or Spell Critical Strike Chance about 1 time in 3, added
+  damage to spells 4 times in 10, and Spell Damage 1 time in 5. The other
+  slots are an ordinary roll from a pool that is 44% attack modifiers on
+  the prefix side. Expect several attempts, and decide the number before
+  you start.
+steps:
+  - title: "Roll the gem level on a Magic sceptre"
+    do: >-
+      Transmutation, then [[Orb of Alteration]]s until the prefix is **"+1
+      to Level of all Fire Spell Skill Gems"** (or Cold, Lightning or
+      Physical). A suffix beside it is fine. Do not use an Augmentation.
+    why: >-
+      A Magic item has one prefix at most. That is the whole point: this
+      prefix will be the only one on the item when the lock goes on, and a
+      lock that protects "1 prefix" then has no choice to make.
+    state:
+      rarity: magic
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+      suffixes: [{ text: "+33 to Strength" }]
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item**
+      ([[Craicic Croaker]] and three Rare beasts).
+    why: >-
+      The Imprint stores this exact Magic sceptre. Whatever the next steps
+      do, using it puts the sceptre back here: one prefix, the right one.
+      It is both the undo for a bad reforge and the reset that makes the
+      cheap lock usable again.
+    check: >-
+      The Imprint is its own item in your inventory. Keep it until you
+      accept a result.
+  - title: "Regal Orb, and count the prefixes"
+    do: >-
+      Use a [[Regal Orb]]. Then count prefixes.
+    why: >-
+      The Harvest craft reforges a Rare item, so the sceptre must be Rare.
+      The Regal Orb adds one modifier, and it may be a prefix. One prefix:
+      go on. **Two prefixes:** the 1 Divine Orb lock would now protect one
+      of them at random, with no indicator, as the developers have stated.
+    fail: >-
+      Two prefixes. Either use the Imprint, make a new one, and try the
+      Regal Orb again; or craft "2 Prefix Modifiers cannot be changed" (2
+      Divine Orbs), which is certain with exactly two.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "18% increased Cast Speed" }
+  - title: "The one-prefix lock"
+    do: >-
+      At the [[Crafting Bench]], craft **1 Prefix Modifier cannot be
+      changed** for 1 [[Divine Orb]]. It is a suffix and needs an open
+      suffix slot.
+    why: >-
+      "In the case where there is exactly one prefix modifier on the item,
+      then you will know for certain which modifier will be protected" is
+      the developers' own description. That is this sceptre.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "18% increased Cast Speed" }
+        - { text: "1 Prefix Modifier cannot be changed", how: crafted }
+  - title: "Caster reforge"
+    do: >-
+      At the [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]).
+    why: >-
+      Everything except the protected prefix is replaced, the lock
+      included, and at least one of the new modifiers carries the caster
+      tag. The lock's wording protects one prefix and nothing more, so
+      expect the reforge to fill the other prefix slots too, which is what
+      you want here.
+    check: >-
+      **First, is the gem level still there?** That Harvest reforges respect
+      a locked side is player-tested for the full lock; for the new partial
+      locks nothing is documented. The Imprint makes the test free: if the
+      gem level is gone, restore the sceptre and use the full lock from
+      then on.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems" }
+        - { text: "Adds 71 to 143 Cold Damage", how: harvest }
+        - { text: "+152 to maximum Mana", how: harvest }
+      suffixes:
+        - { text: "88% increased Spell Critical Strike Chance", how: harvest }
+        - { text: "24% increased Attack Speed", how: harvest }
+  - title: "Judge, and reset if it fails"
+    do: >-
+      Keep the result when it has a Spell Damage prefix of 70% or more, or
+      an open prefix for the bench, **and** cast speed or Spell Critical
+      Strike Chance at a tier you accept. Otherwise use the Imprint, make a
+      new Imprint, and repeat from step 3.
+    why: >-
+      The result above fails: two prefixes no caster can use, and the
+      prefix side is full. Crafting the 1 Divine Orb lock on it now would
+      protect one of three prefixes at random. The Imprint is what turns a
+      one-shot lock into a loop.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems" }
+        - { text: "76% increased Spell Damage", how: harvest }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Bench the third prefix"
+    do: >-
+      Craft **adds 34–45 to 67–78 Fire Damage to Spells** (4
+      [[Chaos Orb]]s) in the open prefix.
+    why: >-
+      Spell Damage rolled, so the bench's own damage percentages are
+      closed: same group. Added damage to spells is the third group a
+      caster's prefixes can hold. Had the reforge left Spell Damage out,
+      the bench's 55–66% (4 Exalted Orbs) would have gone here instead.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems" }
+        - { text: "76% increased Spell Damage", how: harvest }
+        - { text: "Adds 38 to 71 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+variations: >-
+  **Without beasts.** Use the full lock, 4 Divine Orbs and a Sacred Orb,
+  on every attempt. It is certain with any number of prefixes, so no reset
+  is needed. Under it a reforge is understood to leave the prefix side
+  exactly as it is, empty slots included, so you then fill the other two
+  with the bench and Exalted Orbs.
+
+
+  **Keeping attack modifiers out of the reforge** would take "Cannot roll
+  Attack Modifiers" as a second bench modifier, and that needs "Can have up
+  to 3 Crafted Modifiers" as a third: 4 Divine Orbs per attempt in total.
+  At that price the loop has lost its advantage.
+
+
+  **Two gem levels.** Faceted and Aetheric Fossils with the element's own
+  Fossil make a typed gem level a common roll, but Fossils and the partial
+  locks are an untested pair. The dependable version of that plan starts
+  from a fractured prefix.
+mistakes:
+  - "Crafting the 1 Divine Orb lock on a sceptre with two or three prefixes."
+  - "Augmenting or Regal-ing before the Imprint. An Imprint stores a Magic item only."
+  - "Forgetting to make a new Imprint after using one."
+  - "Trying to save a failed result with an Orb of Annulment. Nothing steers it in 3.30, and the gem level is one of its targets."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tags, tiers and bench costs, including the three prefix-lock crafts. The odds are our arithmetic." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The partial locks choose at random with no indicator, and are certain with exactly that many modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The new partial locks and the cost of the full one; only red beasts are captured." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and its beasts." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Caster reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect the full lock. Partly older than 3.30." }

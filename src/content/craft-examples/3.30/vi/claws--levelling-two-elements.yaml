@@ -1,0 +1,132 @@
+category: claws
+title: "Một cây claw leveling với hai element"
+level: 1
+summary: "Roll ra kiểu prefix mà claw cho không, rồi để bench thêm một element thứ hai bên cạnh."
+goal: >-
+  Một cây claw cho đoạn giữa campaign, cộng thêm nhiều damage hơn cả cú đánh
+  gốc của chính nó. Ý cần mang về: **nhìn xem pool roll ra thứ gì nhiều nhất
+  rồi dựng trên đó.** Trên claw, đó là added elemental damage, một nửa mọi
+  lần roll prefix, và ba element là ba group cộng dồn được.
+base: "Fright Claw"
+itemLevel: 35
+baseWhy: >-
+  Fright Claw đeo được từ level 34 và đánh 12–46 với 1.5 attack mỗi giây.
+  Item level 33 mở added Fire Damage 24–33 to 49–57, và 34 mở các tier Cold
+  và Lightning tương ứng, nên một base item level 34 hoặc 35 có added damage
+  tốt nhất mà một cây claw ở level này roll được. Giữ Alt để kiểm.
+
+
+  Cây claw trắng nào ngang level của bạn cũng dùng được. Implicit, 20 Life
+  per Enemy Hit, đi kèm sẵn với base.
+methods: [currency, bench]
+result:
+  implicits: ["Grants 20 Life per Enemy Hit"]
+  prefixes:
+    - { text: "Adds 27 to 53 Fire Damage" }
+    - { text: "Adds 24 to 45 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "+142 to Accuracy Rating" }
+    - { text: "12% increased Critical Strike Chance" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "khoảng 10" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Khoảng mười [[Orb of Alteration]], một [[Regal Orb]] và hai
+  [[Orb of Alchemy]] cho bench. Đủ rẻ để cứ mười level lại làm lại một lần.
+odds: >-
+  Ở item level 35, một lần roll prefix ra added Fire, Cold hoặc Lightning
+  Damage trong 49% số lần, và ra một trong hai tier tốt nhất của chúng ở
+  level này khoảng 1 trên 5 lần, theo phép tính của chúng tôi từ weight của
+  modifier. Không phải Alteration nào cũng roll ra prefix, nên hãy tính
+  khoảng mười cái.
+
+
+  So với đường physical: một lần roll prefix ra increased Physical Damage từ
+  65% trở lên khoảng 1 trên 26 lần. Vì thế cây claw này là elemental.
+steps:
+  - title: "Transmutation, rồi Alteration tới khi ra một prefix elemental"
+    do: >-
+      Dùng một [[Orb of Transmutation]] lên cây claw trắng, rồi tới
+      [[Orb of Alteration]]. Dừng khi prefix là **added Fire, Cold hoặc
+      Lightning Damage ở một trong hai tier cao nhất mà item level này cho
+      phép**. Với Fire, đó là adds 17–24 to 35–41 trở lên.
+    why: >-
+      Added damage được cộng vào mọi cú đánh, và ở level này nó lớn hơn cả
+      12–46 của chính cây claw. Element nào trong ba cái cũng được, nhờ vậy
+      cơ hội của bạn tăng gấp ba; build không quan tâm damage thuộc element
+      nào.
+    check: >-
+      Giữ Alt và đọc dòng đó: nó ghi "Adds ... Fire Damage" (hoặc Cold, hoặc
+      Lightning), phía sau không có "to Spells", và được đánh dấu là prefix.
+    state:
+      rarity: magic
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+  - title: "Augment ô trống"
+    do: >-
+      Nếu chưa có suffix, hãy dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó thêm một modifier vào ô trống và không đụng được tới prefix. Ở item
+      level này, khoảng hai trên năm lần roll suffix là attack speed hoặc một
+      modifier critical strike, nên đây là một lần thử miễn phí để ra thứ gì
+      đó tốt.
+    state:
+      rarity: magic
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+      suffixes: [{ text: "+142 to Accuracy Rating" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]]. Đọc xem nó thêm cái gì và ở phía nào.
+    why: >-
+      Cây claw thành Rare, giữ cả hai modifier và có thêm cái thứ ba. Chính
+      nhờ Rare mà bench có một ô prefix trống để làm việc.
+    check: >-
+      Đếm prefix. Nếu Regal Orb thêm một cái, hãy ghi nhớ group của nó:
+      element bạn đã có rồi thì không bench thêm lần nữa được.
+    state:
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+      suffixes:
+        - { text: "+142 to Accuracy Rating" }
+        - { text: "12% increased Critical Strike Chance" }
+  - title: "Bench một element khác"
+    do: >-
+      Ở [[Crafting Bench]], craft added damage của một element mà cây claw
+      **chưa** có: adds 22–27 to 42–49 Cold Damage giá 2
+      [[Orb of Alchemy]], hoặc 11–12 to 19–23 giá 4 Orb of Transmutation.
+    why: >-
+      Mỗi element là một group riêng, nên Cold Damage của bench nằm cạnh được
+      Fire Damage roll ra. Bench sẽ từ chối một prefix Fire Damage thứ hai.
+      Hai element ở đây cộng thêm nhiều hơn một cái phần trăm physical làng
+      nhàng.
+    fail: >-
+      Nếu bench của bạn chưa có công thức này, hãy craft 8–10% increased
+      Attack Speed (6 Orb of Alteration) vào một suffix thay thế, rồi quay
+      lại khi bạn đã tìm được nó.
+    state:
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 27 to 53 Fire Damage" }
+        - { text: "Adds 24 to 45 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "+142 to Accuracy Rating" }
+        - { text: "12% increased Critical Strike Chance" }
+variations: >-
+  **Nếu Augmentation hoặc Regal Orb cho attack speed,** cứ giữ kế hoạch:
+  bench vẫn dành cho element thứ hai.
+
+
+  **Với build physical** thì vẫn các bước đó nhưng đổi vai: roll bất kỳ added
+  damage nào hoặc attack speed, rồi bench increased Physical Damage, 60–79%
+  giá 8 Orb of Alteration.
+mistakes:
+  - "Roll để tìm đúng một element định sẵn. Cả ba cộng cùng một kiểu damage; hãy nhận cái tốt đầu tiên."
+  - "Bench đúng element bạn đã roll ra. Cùng group: bench sẽ không cho."
+  - "Giữ nhầm \"Adds ... Fire Damage to Spells\". Claw không roll ra nó một cách tự nhiên, nhưng một Essence có thể đặt nó lên, và nó không giúp gì cho attack."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

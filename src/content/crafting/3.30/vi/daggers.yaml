@@ -1,0 +1,454 @@
+name: "Dagger"
+short: "Những weapon attack một tay dựng trên critical strike. Mười ba base craft được với crit gốc cao nhất trong mọi weapon melee, một dòng Heist sinh ra cho poison, và một base hoàn toàn không phải là base để craft."
+icon: "Ambusher"
+intro: >-
+  Dagger chính là weapon của critical strike. Critical strike chance gốc của
+  nó chạy từ 8% tới 9%, trong khi claw dừng ở 8%, và các base thường còn thêm
+  40–45% increased Global Critical Strike Chance dưới dạng implicit trước khi
+  roll bất kỳ modifier nào. Thứ bạn craft là phần còn lại của một weapon
+  crit: physical damage hoặc added damage ở prefix, và attack speed, Critical
+  Strike Chance cùng Critical Strike Multiplier ở suffix.
+
+
+  Còn có một kiểu dagger thứ hai chẳng liên quan gì tới crit. Ba base Heist
+  khiến mọi loại damage mà weapon gây ra đều poison được, và pool có sẵn các
+  suffix chaos và damage-over-time để đi cùng. Hãy quyết định bạn đang dựng
+  kiểu nào trong hai kiểu trước khi đọc tiếp.
+basics:
+  itemLevel:
+    text: >-
+      Như trên mọi weapon attack, item level 77 là đủ cho gần như mọi thứ:
+      Tier 1 của attack speed và của flat Physical Damage mở ở đó, Tier 1 của
+      cả hai suffix critical strike mở ở 73. Tier cuối của hai prefix
+      physical phần trăm cần 83.
+
+
+      Dagger poison có những con số riêng: 78 cho suffix Chaos Damage over
+      Time Multiplier cao nhất, và 83 cho prefix Elder cao nhất, cái nhân
+      poison từ weapon lên.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Tier 5 của increased Physical Damage (85–109%) và Tier 5 của hybrid kèm Accuracy."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 2 của attack speed (23–25%). Các modifier unveil ra cũng cần 60. **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 73
+        unlocks: "Tier 2 của increased Physical Damage (155–169%). Tier 1 của Critical Strike Chance và Tier 1 của Critical Strike Multiplier (cả hai 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 của attack speed (26–27%) và Tier 1 của flat Physical Damage (adds 22–29 to 45–52). **Đủ cho một cây dagger crit.**"
+      - ilvl: 78
+        unlocks: "Tier 1 của Chaos Damage over Time Multiplier (+34–38%), một suffix mà claw không có."
+      - ilvl: 83
+        unlocks: "\"Merciless\" (170–179%) và hybrid cao nhất (75–79%); tier duy nhất của added Chaos Damage; và, với influence Elder, +51–59% to Damage over Time Multiplier for Poison inflicted with the weapon."
+  bases:
+    text: >-
+      Dữ liệu liệt kê 14 dagger trong hai pool. Mười ba cây chung pool
+      standard và là base craft bình thường; chúng chia thành ba dòng với ba
+      implicit khác nhau. Cây thứ mười bốn có một pool riêng mà bên trong
+      không có gì.
+    types:
+      - title: "Dagger crit"
+        pools: [standard]
+        text: >-
+          Bảy base từ Glass Shank tới Ambusher, mỗi cái có 40–45% increased
+          Global Critical Strike Chance. Implicit này là global: nó áp dụng
+          cho mọi thứ nhân vật làm, kể cả spell. Nó là một khoảng, nên một
+          [[Blessed Orb]] roll lại được nó. Pool standard còn chứa cả các
+          dagger Maraketh và Heist mô tả ngay sau đây; cả mười ba cây roll
+          cùng các modifier với cùng weight.
+      - title: "Dagger Maraketh"
+        text: >-
+          Prong Dagger, Trisula và Sai. Implicit là chance to Block Attack
+          Damage, 4% trên hai cây đầu và 6% trên Sai. Chúng không có implicit
+          crit, và Sai có damage mỗi giây gốc cao nhất của loại item này.
+      - title: "Dagger Heist"
+        text: >-
+          Hollowpoint, Pressurised và Pneumatic Dagger. Implicit: "All
+          Damage from Hits with This Weapon can Poison". Bình thường chỉ
+          physical damage và chaos damage mới poison được; trên các cây này,
+          added Fire, Cold và Lightning Damage cũng poison được. Điều đó thay
+          đổi việc prefix nào đáng có, và nó chính là lý do để dựng một cây
+          dagger poison.
+      - title: "Ethereal Blade"
+        pools: [ethereal-blade]
+        text: >-
+          Một cây dagger level 1 với 4–8 physical damage, không có implicit,
+          và một pool mà trong dữ liệu 3.30 không có prefix hay suffix nào
+          roll được. Dữ liệu xếp nó ngoài domain item thông thường. Chúng tôi
+          không tìm thấy nó dưới dạng đồ rơi và nó không phải thứ để craft
+          lên; nó được liệt kê vì dữ liệu có liệt kê nó.
+    picks:
+      - base: "Ambusher"
+        for: "Dagger crit mặc định"
+        why: >-
+          19–74 với 1.5 attack mỗi giây, nhanh nhất trong các base hàng đầu,
+          kèm 8.3% crit gốc và implicit 40–45%. Damage mỗi giây gốc cao nhất
+          của dòng crit (69.7).
+      - base: "Gutting Knife"
+        for: "Nhiều critical strike chance nhất"
+        why: >-
+          9% critical strike chance gốc, cao nhất trên một cây dagger thường,
+          cộng thêm implicit crit ở trên. 19–76 với 1.4. Mọi modifier
+          Critical Strike Chance bạn có đều nhân vào 9% đó.
+      - base: "Sai"
+        for: "Damage thô và block"
+        why: >-
+          22–88 với 1.35 là damage mỗi giây gốc cao nhất trong mọi dagger
+          (74.2), kèm 6% Chance to Block Attack Damage. Nó bỏ implicit crit,
+          nên hợp với build đã cap crit sẵn hoặc không dùng crit.
+      - base: "Pneumatic Dagger"
+        for: "Poison"
+        why: >-
+          Base Heist cao cấp nhất: mọi loại damage nó gây ra đều poison
+          được. 20–79 với 1.4 kèm 8.8% crit gốc, gần bằng Ambusher về con số
+          thô.
+      - base: "Poignard"
+        for: "Leveling"
+        why: >-
+          Đeo được từ level 41, với 1.5 attack mỗi giây và implicit crit.
+          Base đưa một nhân vật crit từ giữa campaign tới những map đầu
+          tiên.
+    impact: >-
+      **Implicit quyết định build.** Crit global, block, hoặc poison từ mọi
+      loại damage. Không cách craft thông thường nào đổi được nó là cái nào;
+      một [[Blessed Orb]] roll lại mức 40–45% ở chỗ có khoảng, còn một
+      [[Vaal Orb]] có thể thay implicit bằng một corruption implicit và đóng
+      item lại.
+
+
+      **Critical strike chance gốc,** 8% tới 9%. Đó là con số mà mọi
+      increased Critical Strike Chance trên nhân vật nhân lên, nên một điểm
+      của nó đáng giá hơn vẻ ngoài.
+
+
+      **Damage và tốc độ.** Increased Physical Damage local và attack speed
+      nhân vào base. Added damage được tính một lần cho mỗi cú đánh, nên nó
+      có lợi cho các base 1.5.
+
+
+      **Pool trên cả mười ba cây đều như nhau.** Hãy lấy base vì implicit và
+      các con số, đừng bao giờ vì thứ nó có thể roll ra.
+tools:
+  - method: currency
+    note: >-
+      Cuộc xổ số prefix của dagger là của claw với nhiều rác hơn. Ở item
+      level 83, theo phép tính của chúng tôi: added Fire, Cold và Lightning
+      Damage cộng lại 44%, maximum Mana 16%, flat Physical Damage 10%, hai
+      prefix physical phần trăm mỗi cái 5.5%, và sáu prefix "Level of
+      Socketed Gems" cộng lại 16%. Các họ physical chiếm 21% số lần roll
+      prefix. Tier 3 trở lên của increased Physical Damage thuần là khoảng 1
+      trên 390 lần roll prefix.
+
+
+      Suffix: attack speed 14%, Intelligence 14%, Critical Strike Chance và
+      Critical Strike Multiplier mỗi cái 9%. Vậy nên [[Orb of Alteration]]
+      là cách hợp lý để có một suffix tốt và là cách tồi để có một prefix
+      physical. Một [[Orb of Alchemy]], vốn phổ biến hơn trong 3.30, là một
+      lần roll mở đầu ổn vì sau đó bench thêm được hệ số nhân.
+  - method: bench
+    note: >-
+      Bench là thứ biến một item Rare trung bình thành một cây dagger đúng
+      nghĩa. Increased Physical Damage: 40–59% giá 4 Orb of Alteration,
+      60–79% giá 8, 80–99% giá 4 Chaos Orb, 100–129% giá 4 Exalted Orb. Kèm
+      thêm chance to Poison, Bleed, Impale hoặc Blind: 86–94% và 16–17% giá
+      3 Chaos Orb, 95–105% và 18–20% giá 8. Flat Physical Damage: 13–17 to
+      26–30 giá 4 Chaos Orb.
+
+
+      Suffix: attack speed 11–15% giá 2 Chaos Orb; Critical Strike Chance
+      25–27% hoặc Critical Strike Multiplier 25–28% giá 4 Chaos Orb; Chaos,
+      Physical, Fire hoặc Cold Damage over Time Multiplier 18–20% giá 4
+      Chaos Orb.
+
+
+      Các craft physical của bench, cả bản thuần lẫn bản hybrid kèm ailment,
+      đều chung một group với increased Physical Damage thuần roll ra.
+      Hybrid kèm Accuracy roll ra là một group khác và nhận được một cái
+      phần trăm của bench bên cạnh.
+  - method: finishing
+    note: >-
+      Quality lên 20% bằng [[Blacksmith's Whetstone]] trước khi đánh giá một
+      cây dagger physical. Tối đa ba socket. Nếu implicit crit roll ra 40%,
+      một [[Blessed Orb]] là cải thiện rẻ tiền trên cây dagger bạn định
+      giữ.
+  - method: essence
+    note: >-
+      Cùng một bảng như trên claw. **Zeal:** attack speed, 28–30% ở bậc
+      Deafening, cao hơn Tier 1 tự nhiên. **Loathing:** Critical Strike
+      Chance, 35–38% ở bậc Deafening. **Contempt:** flat Physical Damage,
+      20–26 to 40–47 ở bậc Deafening. **Envy:** added Chaos Damage, 53–79 to
+      101–131 ở bậc Deafening, một modifier chỉ có một tier tự nhiên ở item
+      level 83.
+      **Greed:** life leech, 4.1–4.4% ở bậc Deafening.
+
+
+      Vì Essence roll lại mọi thứ không fractured, nó ghép rất tự nhiên với
+      một prefix fractured: mỗi lần dùng đều có hai modifier chắc chắn. Theo
+      thử nghiệm của cộng đồng, nó phớt lờ các khóa của bench, nên nó không
+      ghép được với mấy cái đó.
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) trước Regal Orb trên bất kỳ cây
+      dagger Magic nào mà prefix đã tốn công thật sự. **Thêm một suffix, gỡ
+      một prefix ngẫu nhiên** ([[Farric Lynx Alpha]]) là một suffix miễn phí
+      trên cây dagger không có prefix, và một phần ba pool suffix là attack
+      speed hoặc crit.
+  - method: harvest
+    note: >-
+      **Critical** (150 Primal Lifeforce) là reforge của dagger: tag này có
+      đúng hai modifier tự nhiên mang nó, Critical Strike Chance và Critical
+      Strike Multiplier, đều là suffix, đều là thứ cần, có weight bằng nhau
+      ở mọi tier. **Speed** (150 Vivid) đảm bảo attack speed, modifier duy
+      nhất mang tag. **Physical** (50 Vivid) có năm modifier mang tag và rơi
+      vào một prefix trong 84% số lần, tính theo weight.
+
+
+      **Chaos** (100 Vivid) trông có vẻ hợp với dagger poison nhưng không
+      phải vậy: modifier mang tag có weight nặng nhất của nó là "+2 to Level
+      of Socketed Chaos Gems".
+  - method: fossil
+    note: >-
+      Một [[Corroded Fossil]] xóa mọi modifier Elemental: ba prefix added
+      damage và ba trong số các prefix socketed gem. Các họ physical đi từ
+      21% số lần roll prefix lên 47% mà không cần nhân thứ gì lên. Một
+      [[Jagged Fossil]] đưa chúng lên khoảng 73%. Một
+      [[Deft Fossil]] đi cùng một [[Shuddering Fossil]] đưa attack speed và
+      hai suffix crit lên khoảng 91% số lần roll suffix.
+
+
+      Một [[Aberrant Fossil]] là cái bẫy ở phía prefix: nó nhân các modifier
+      Chaos lên, và trên dagger thì cái nặng weight nhất trong số đó lại là
+      prefix socketed Chaos gems. Ở phía suffix, nó nâng Chaos Damage over
+      Time Multiplier từ dưới 2% số lần roll lên khoảng 14%.
+  - method: veiled
+    note: >-
+      Mười ba veiled prefix, trong đó bốn cái là physical: 120–139%
+      increased Physical Damage kèm 21–25% chance to Poison, Bleed, Impale
+      hoặc Blind. Bảy cái khác chung một group với các craft bench về
+      elemental damage và spell damage, nên một craft bench rẻ tiền đặt
+      trước khi unveil sẽ loại cả bảy cái khỏi các lựa chọn, theo luật do
+      người chơi thử nghiệm rằng một group đã có trên item thì không được
+      đưa ra. Bản poison là prefix đầu tiên hợp lẽ của một cây dagger
+      poison.
+
+
+      Các suffix veiled đáng biết: +24–28% to Chaos hoặc Physical Damage
+      over Time Multiplier, 6–7% chance to deal Double Damage, 18–22% attack
+      speed kèm Dexterity và Intelligence.
+  - method: fracture
+    note: >-
+      Một prefix physical fractured biến Essence thành kiểu một công đôi
+      việc: mỗi lần dùng, cả cái fractured lẫn modifier của Essence đều chắc
+      chắn. Fractured item hiếm hơn trong 3.30; đồ rơi Magic Tier 5 là nguồn
+      mới cần để mắt tới. Theo các trang tra cứu, một cây dagger fractured
+      không nhận được influence, nên nó bị loại khỏi lựa chọn cho một cây
+      dagger poison Elder.
+  - method: meta
+    note: >-
+      4 Divine Orb và 1 [[Sacred Orb]] cho một lần khóa đầy đủ. Các bản một
+      và hai modifier chỉ chắc chắn khi phía đó có đúng chừng ấy modifier.
+
+
+      "Cannot roll Caster Modifiers" không có gì để loại khỏi pool tự nhiên
+      của dagger. "Cannot roll Attack Modifiers" loại gần như toàn bộ pool
+      và để lại các prefix socketed gem cùng maximum Mana. Không cái nào là
+      công cụ cho dagger, và từ 3.30 không cái nào ngăn được Orb of
+      Annulment gỡ một modifier thuộc loại của nó.
+  - method: influence
+    note: >-
+      **Elder** là influence của poison: prefix "+51–59% to Damage over
+      Time Multiplier for Poison inflicted with this Weapon" ở item level
+      83. Các prefix khác của nó là ba bản increased Physical Damage, tất cả
+      nằm trong group physical thuần, và cùng multiplier đó cho Bleeding.
+      **Hunter** thêm "Poisons you inflict deal Damage 13–15% Faster" và
+      90–94% increased Chaos Damage over Time. **Crusader** và
+      **Warlord** thêm các hybrid physical kèm Critical Strike Chance và
+      Critical Strike Multiplier, chung group với hybrid kèm Accuracy.
+  - method: lock
+    note: >-
+      Dagger giao cho [[Hinekora's Lock]] việc rõ ràng nhất của nó trong
+      nhóm weapon này: nhìn trước một Exalted Orb influence trước khi nó đặt
+      một modifier vĩnh viễn vào prefix trống cuối cùng.
+  - method: corruption
+    note: >-
+      Corruption thay thế implicit crit, nên ở đây nó là một đánh đổi thật
+      sự. Những kết quả đáng giá: +25–30% to Global Critical Strike
+      Multiplier, 5–7% increased Attack Speed, và với poison là 50–60%
+      increased Damage over Time.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới."
+memoryStrands: >-
+  Trên dagger, suffix là chỗ dùng strand tốt hơn. Attack speed và hai suffix
+  crit có các tier weight đều nhau, nên tier thấp cũng dễ ra như tier cao;
+  strand, thứ loại các tier thấp khỏi bất cứ thứ gì được roll ra, sửa đúng
+  điều đó trên một item mà ba suffix đều quan trọng. Một
+  [[Orb of Remembrance]] lên cây dagger trắng item level 77, rồi
+  [[Orb of Alteration]] để tìm một suffix và một [[Regal Orb]], tiêu strand
+  nhiều nhất tám và mười sáu cái mỗi lần, theo bảng data-mine.
+
+
+  Với các prefix physical, vấn đề là tìm cho ra họ modifier, việc mà strand
+  không giúp được. Còn Essence, bạn đồng hành tự nhiên của một cây dagger
+  fractured, có thể tiêu tới 80 strand trong một lần dùng: đừng ghép hai thứ
+  đó với nhau.
+reading:
+  intro: >-
+    Đọc implicit trước: nó cho bạn biết đây là dagger crit, dagger poison
+    hay dagger block, và từ đó biết những dòng nào bên dưới có giá trị. Rồi
+    đếm các prefix damage thuộc **một** loại, và đếm xem trong attack speed,
+    Critical Strike Chance và Critical Strike Multiplier có mấy cái.
+  prefixes:
+    text: >-
+      Một cây dagger physical muốn ba group physical: increased Physical
+      Damage thuần, hybrid kèm Accuracy, và flat Physical Damage. Cộng lại
+      chúng là một phần năm pool. Cây dagger hoàn chỉnh thường gặp có một
+      trong hai cái phần trăm roll ra hoặc unveil ra, và bench cho một ô
+      khác.
+
+
+      Một cây dagger poison trên base Heist dùng được bất kỳ added damage
+      nào, vì tất cả đều poison được, và muốn có một nguồn chance to Poison:
+      hybrid physical của veiled hoặc của bench mang theo một cái.
+
+
+      Những thứ cản đường: maximum Mana, và sáu prefix nâng level của gem
+      gắn trong dagger. Mấy cái đó chỉ tốt khi main skill gắn trong ba
+      socket của weapon.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân local. Hiếm ở các tier dùng được; bản veiled 120–139% và bản 100–129% của bench là những nguồn đáng tin."
+        aim: "T4, 110–134% (ilvl 46), hoặc veiled. T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Một cái phần trăm thứ hai ở group riêng của nó. Không gì thay được nó, và một cái phần trăm của bench nằm vừa bên cạnh."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Con số mà các cái phần trăm nhân lên. Dễ ra gấp đôi so với từng cái phần trăm."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65). T1 cần ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Cho build elemental, và trên dagger Heist thì cho poison, nơi element nào cũng poison được."
+        aim: "T3 (Cold adds 54–74 to 108–126, ilvl 63)."
+      - mod: "Adds # to # Chaos Damage"
+        why: "Một tier tự nhiên ở item level 83 và dưới 1% số lần roll prefix. Essence of Envy là nguồn thực tế."
+      - mod: "+# to Level of Socketed Chaos / Cold / Fire / Lightning Gems"
+        why: "Bốn prefix kiểu này cộng thêm hai cái nữa cho gem melee và cho mọi gem: 16% số lần roll prefix. Phí, trừ khi main skill gắn trong dagger."
+  suffixes:
+    text: >-
+      Attack speed, Critical Strike Chance, Critical Strike Multiplier: 14%,
+      9% và 9% số lần roll suffix, mọi tier có weight như nhau. Khi crit gốc
+      và implicit đã có sẵn, multiplier thường đem lại nhiều nhất, rồi tới
+      speed, rồi tới chance.
+
+
+      Bench cấp được một trong ba cái, nên hai cái phải roll. Dagger poison
+      và bleed đổi cặp crit lấy các multiplier damage-over-time: bản chung,
+      và Chaos Damage over Time Multiplier, vốn là một group khác, nên cả
+      hai nằm vừa trên một item.
+
+
+      Intelligence là đồ lấp chỗ lớn nhất, ở mức 14%. Có ích cho yêu cầu của
+      chính cây dagger, nhưng không bao giờ là lý do để giữ một item.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global. Trên một weapon đã có crit chance cao, đây là suffix damage lớn nhất."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "#% increased Attack Speed"
+        why: "Local, chỉ trên cây dagger. Một Essence of Zeal chốt nó ở mức lên tới 28–30%."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Nhân vào 8–9% của base cho các attack bằng cây dagger này, song song với implicit global."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Chaos Damage over Time Multiplier"
+        why: "Suffix của poison. Các tier cao nhất rất nhẹ (weight 50 và 100); bench bán 18–20% và bản veiled là 24–28%."
+        aim: "Veiled 24–28%, hoặc T3 (ilvl 36). T1 là 34–38% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Áp dụng cho mọi damage over time và nằm ở group riêng, bên cạnh bản Chaos."
+        aim: "T3, 16–19% (ilvl 68)."
+approach:
+  principle: >-
+    **Hãy để bench hoặc một veiled prefix gánh hệ số nhân physical, và dành
+    các lần roll của bạn cho suffix.** Phía prefix của dagger là chỗ tệ nhất
+    trong nhóm weapon này để đánh cược, còn phía suffix của nó là chỗ tốt
+    nhất: các tier weight đều nhau, ba họ đều cần, và hai reforge nhắm thẳng
+    vào chúng.
+  order:
+    - title: "Crit hay poison, rồi tới base"
+      text: >-
+        Implicit không craft được, nên đây là quyết định đầu tiên. Ambusher
+        hoặc Gutting Knife cho crit, Pneumatic Dagger cho poison, Sai khi
+        build không dùng tới implicit nào trong hai cái đó.
+    - title: "Gọi tên nguồn prefix trước khi roll bất cứ thứ gì"
+      text: >-
+        Cái phần trăm của bench (rẻ, chắc chắn, 60–129%), veiled prefix
+        (chắc chắn, 120–139%, cần Betrayal), một base fractured (mạnh, đắt),
+        hoặc roll lại bằng Fossil. Mỗi cái kéo theo một lộ trình khác nhau;
+        chọn muộn là phí cái lộ trình bạn đã bắt đầu.
+    - title: "Roll cặp suffix"
+      text: >-
+        Một reforge Critical, một Essence of Zeal hoặc Loathing, hoặc Deft
+        Fossil cùng Shuddering Fossil. Hai trong ba suffix damage từ Tier 3
+        trở lên là mục tiêu thực tế; cái thứ ba đến từ bench nếu prefix chưa
+        dùng mất bench.
+    - title: "Cố ý giữ một ô prefix trống"
+      text: >-
+        Craft bench, craft block trước khi unveil, một lần khóa, một orb
+        influence: mọi bước mạnh trên dagger đều cần một prefix trống ở một
+        lúc nào đó. Một kết quả có ba prefix ngẫu nhiên thường tệ hơn một
+        kết quả chỉ có một prefix tốt.
+    - title: "Hoàn thiện"
+      text: >-
+        Craft bench đã tính, quality, roll của implicit, socket.
+  finishing: >-
+    Quality trước tiên trên một cây dagger physical. Một [[Blessed Orb]] lên
+    implicit nếu nó nằm ở đáy khoảng 40–45%. Một [[Divine Orb]] sau cùng, và
+    chỉ khi multiplier hoặc prefix phần trăm roll thấp.
+  stopping: >-
+    Một cây dagger có cái phần trăm physical từ bench hoặc veiled, flat
+    Physical Damage hoặc một prefix damage thứ hai, và hai trong ba suffix
+    damage từ Tier 3 trở lên là đã xong với phần lớn nhân vật. Suffix thứ ba
+    và một cái phần trăm roll ra Tier 1 hoặc Tier 2 là những bước đắt tiền,
+    và cái sau chính là chỗ base fractured vào cuộc.
+
+
+    Hãy cắt lỗ khi một item Rare có ba prefix sai loại và không có gì được
+    bảo vệ: scour nó. Một base và một Orb of Alchemy rẻ hơn bất kỳ nỗ lực
+    sửa chữa nào.
+special:
+  - mod: "All Damage from Hits with This Weapon can Poison"
+    source: "Implicit của base"
+    where: "Implicit của ba cây dagger Heist: Hollowpoint, Pressurised và Pneumatic. Không craft ra được."
+  - mod: "#% increased Physical Damage / #% chance to Poison on Hit"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25%. Bench: 95–105% kèm 18–20% giá 8 Chaos Orb, hoặc 86–94% kèm 16–17% giá 3. Cũng có bản kèm Bleeding, Impale hoặc Blind. Cùng group với increased Physical Damage thuần."
+  - mod: "+#% to Damage over Time Multiplier for Poison inflicted with this Weapon"
+    source: "Influence Elder"
+    where: "Một prefix Elder, 51–59% ở item level 83 (43–50% ở 75). Được thêm bằng một [[Elder's Exalted Orb]] hoặc roll ra trên dagger có influence Elder."
+  - mod: "Poisons you inflict deal Damage #% Faster"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter, 13–15% ở item level 73."
+  - mod: "+#% to Chaos Damage over Time Multiplier"
+    source: "Tự nhiên / Veiled / Bench"
+    where: "Roll tự nhiên trên dagger tới mức 34–38%, nhưng các tier cao nhất rất nhẹ. Unveil: 24–28%. Bench: 18–20% giá 4 Chaos Orb. Tất cả là một group."
+  - mod: "Adds # to # Chaos Damage"
+    source: "Essence"
+    where: "Một Essence of Envy từ bậc Screaming trở lên: 53–79 to 101–131 ở bậc Deafening."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% từ [[Crafting Bench]] giá 8 Chaos Orb; 6–7% khi unveil."
+  - mod: "#% increased Physical Damage / +#% to Global Critical Strike Multiplier"
+    source: "Influence Warlord"
+    where: "Một prefix Warlord, 65–69% kèm 10–15% ở item level 80, weight 50. Nó chiếm group của hybrid kèm Accuracy."
+mistakes:
+  - "**Chọn base theo damage mỗi giây rồi mất implicit bạn cần.** Sai không có implicit crit; Pneumatic Dagger cũng không có implicit crit."
+  - "**Roll Alteration để tìm một prefix physical.** Tier 3 trở lên là 1 trên 390 lần roll prefix. Bench bán 60–79% giá 8 Alteration."
+  - "**Giữ một prefix socketed gem vì nó trông hiếm.** Mỗi kiểu chiếm 3% số lần roll prefix và không làm được gì trừ khi main skill nằm trong dagger."
+  - "**Một Aberrant Fossil để tìm prefix chaos.** Nó chủ yếu nhân \"+2 to Level of Socketed Chaos Gems\" lên."
+  - "**Fracture một base bạn định biến thành Elder.** Theo các trang tra cứu, một fractured item không thể được gắn influence."
+  - "**Craft trên một Ethereal Blade.** Dữ liệu không cho nó pool modifier nào."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, Essence, veiled modifier, modifier influence và giá bench được dẫn ở đây. Các tỉ lệ và xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá của các modifier bảo vệ, thay đổi của các modifier \"Cannot roll\" trước Annulment, và fractured item đến từ đâu." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Critical, Speed, Physical và Chaos." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các công thức thêm-và-gỡ." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Cách block khi unveil và hành vi của Essence với khóa, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

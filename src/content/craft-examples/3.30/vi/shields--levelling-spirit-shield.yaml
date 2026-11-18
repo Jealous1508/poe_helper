@@ -1,0 +1,150 @@
+category: shields
+title: "Spirit shield đầu tiên của caster: roll Spell Damage, bench phần còn lại"
+level: 1
+summary: "Alteration để lấy một prefix increased Spell Damage trên spirit shield trắng, một Regal Orb, rồi bench cho life hoặc cast speed."
+goal: >-
+  Một món off-hand cho caster ở nửa sau campaign, với một prefix Spell Damage
+  chồng lên implicit Spell Damage của base. Điều cần mang theo là chuyện
+  riêng của shield: **nhóm của base quyết định item có thể là gì.** Chỉ
+  spirit shield mới roll được prefix này, và bench không bán nó với bất cứ
+  giá nào.
+base: "Chiming Spirit Shield"
+itemLevel: 50
+baseWhy: >-
+  Chiming Spirit Shield dùng được ở level 49 và có implicit Spell Damage lớn
+  hơn, 10–15%. Item level 46 là mốc đầu tiên mà Spell Damage 55–69%
+  ("Occultist's") roll được, nên 46 trở lên là thứ cần tìm: giữ Alt rồi rê
+  chuột lên item.
+
+
+  Bất kỳ spirit shield trắng nào ngang level của bạn cũng được. Kite shield
+  hay spiked shield thì không, dù cả hai đều yêu cầu Intelligence: pool của
+  chúng có spell critical strike mà không có Spell Damage.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["12% increased Spell Damage"]
+  prefixes:
+    - { text: "47% increased Spell Damage" }
+    - { text: "+43 to maximum Mana" }
+    - { text: "+48 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+27 to Intelligence" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Vài chục [[Orb of Alteration]], một [[Regal Orb]] và hai
+  [[Orb of Alchemy]] cho bench. Tất cả đều rơi trong campaign.
+odds: >-
+  Ở item level 50, một lần roll prefix ra increased Spell Damage từ 40% trở
+  lên khoảng 1 trên 20 lần, theo phép tính của chúng tôi từ weight của
+  modifier, và ra Spell Damage cỡ nào cũng được 1 trên 8 lần. Một Alteration
+  không phải lúc nào cũng roll ra prefix, nên 40% tốn vài chục cái. Nếu các
+  spell của bạn đều cùng một element, prefix "increased Fire, Cold or
+  Lightning Damage" tương ứng làm cùng việc đó và thêm một chút vào cơ hội
+  của bạn.
+steps:
+  - title: "Kiểm nhóm base, rồi item level"
+    do: >-
+      Hãy chắc rằng base trắng là một **spirit shield** và item level của nó
+      từ 46 trở lên. Nếu nó có implicit Spell Damage, ghi nhận con số.
+    why: >-
+      Shield chia thành các nhóm với pool modifier khác nhau. Spell Damage
+      dưới dạng prefix chỉ tồn tại trên base chỉ yêu cầu Intelligence.
+      Implicit tách biệt khỏi sáu ô modifier, nên prefix bạn sắp roll sẽ cộng
+      thêm vào nó.
+    state:
+      rarity: normal
+      implicits: ["12% increased Spell Damage"]
+  - title: "Tìm nó ở bench trước"
+    do: >-
+      Mở [[Crafting Bench]] với cái shield và đọc danh sách prefix.
+    why: >-
+      Nó có life, Energy Shield, Mana và block. Nó không có Spell Damage. Vậy
+      là kế hoạch đã rõ: modifier bạn không mua được là cái phải roll, còn
+      những cái mua được thì chờ tới cuối.
+  - title: "Biến nó thành Magic và roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]] từng cái
+      một. Dừng khi prefix là **increased Spell Damage từ 40% trở lên**:
+      "Professor's" (40–54%) hoặc "Occultist's" (55–69%).
+    why: >-
+      Item Magic có một prefix và một suffix. Mỗi orb bạn chỉ đọc một dòng,
+      và suffix thì chưa quan trọng.
+    check: >-
+      "increased Spell Damage" tăng mọi spell. "increased Fire Damage" cùng
+      các bản Cold và Lightning của nó chỉ tăng một element. Chúng cùng
+      group, nên shield sẽ giữ một trong số đó và không hơn.
+    fail: >-
+      Thiếu Alteration: nhận 30–39% ("Scholar's"). Cùng với implicit, đó vẫn
+      là hơn 40% increased Spell Damage từ một item.
+    state:
+      rarity: magic
+      implicits: ["12% increased Spell Damage"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+  - title: "Lấp suffix trống"
+    do: >-
+      Nếu chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó thêm vào ô trống và để yên prefix. Suffix của spirit shield dễ chịu
+      với caster: resistance, Intelligence, mana regeneration và Spell
+      Critical Strike Chance đều phổ biến.
+    state:
+      rarity: magic
+      implicits: ["12% increased Spell Damage"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+      suffixes: [{ text: "+27 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]] và đọc xem modifier mới nằm ở phía nào.
+    why: >-
+      Item thành Rare, giữ cả hai modifier và được thêm một cái. Ở đây nó
+      thêm maximum Mana, một prefix. Vậy còn trống một ô prefix và hai ô
+      suffix.
+    state:
+      implicits: ["12% increased Spell Damage"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "+43 to maximum Mana" }
+      suffixes: [{ text: "+27 to Intelligence" }]
+  - title: "Một modifier bench, chọn theo ô nào còn trống"
+    do: >-
+      **Còn một ô prefix trống:** craft maximum Life, +41–55 giá 2
+      [[Orb of Alchemy]]. **Prefix đã đầy:** craft một suffix thay vào, 6–9%
+      increased Cast Speed giá 6 Orb of Alteration, hoặc resistance bạn
+      thiếu, 21–28% giá 1 Orb of Alchemy.
+    why: >-
+      Một item nhận một modifier bench. Shield của caster là món gear dễ bị
+      quên life nhất, nên life đi trước khi còn chỗ. Cast speed là lựa chọn
+      thứ hai tốt: không shield nào roll ra nó một cách tự nhiên, còn bench
+      thì trao tận tay.
+    fail: >-
+      Bench chỉ liệt kê những công thức bạn đã tìm được. Hãy lấy bậc life
+      hoặc resistance tốt nhất mà nó có hiện.
+    state:
+      implicits: ["12% increased Spell Damage"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "+43 to maximum Mana" }
+        - { text: "+48 to maximum Life", how: crafted }
+      suffixes: [{ text: "+27 to Intelligence" }]
+variations: >-
+  **Cho summoner.** Ba spirit shield, Bone, Ivory và Fossilised, roll
+  "Minions deal increased Damage" theo cùng cách, và ở đó nó phổ biến hơn
+  nhiều ở các tier thấp. Vẫn sáu bước đó trên một Ivory Spirit Shield là ra
+  một cái shield minion leveling.
+
+
+  **Cho nhân vật block.** Dùng một tower shield và roll tìm life hoặc
+  increased Chance to Block cũng bằng Alteration. Ví dụ kế tiếp làm việc đó
+  bằng một Essence.
+mistakes:
+  - "Nhặt một kite shield vì nó yêu cầu Intelligence. Pool của nó không có prefix Spell Damage."
+  - "Roll để tìm cast speed. Nó hoàn toàn không có trong pool, và nó là một craft bench rẻ."
+  - "Dùng bench trước Regal Orb. Bạn chưa biết phía nào sẽ còn chỗ."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool của từng nhóm shield, tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,141 @@
+category: rings
+title: "Finish a ring you found"
+level: 1
+summary: "Read a Rare ring off the ground, count its open slots, and let the bench add the one thing it lacks. The craft you will repeat most in a campaign."
+goal: >-
+  A ring that covers a resistance gap and carries Life, made from a drop and
+  a couple of common orbs. The ring is the excuse. The skill is **reading an
+  item as six slots**: how many prefixes, how many suffixes, which slots are
+  open, and what the bench is allowed to put in them.
+base: "Two-Stone Ring"
+itemLevel: 38
+baseWhy: >-
+  A Two-Stone Ring has 12–16% to two elemental resistances as its implicit,
+  the largest amount of resistance a ring base gives, and it drops from level
+  20 in three versions. Any Rare ring you pick up works the same way; a
+  Two-Stone, a Sapphire, a Topaz or a Ruby is simply the most likely to be
+  worth the trouble.
+
+
+  The item level only limits what the ring rolled. The bench does not care.
+methods: [bench, currency]
+result:
+  implicits: ["+14% to Fire and Lightning Resistances"]
+  prefixes:
+    - { text: "+33 to maximum Mana" }
+    - { text: "+24 to Evasion Rating" }
+    - { text: "+48 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+26% to Cold Resistance" }
+    - { text: "+19 to Strength" }
+needs:
+  - { item: "A Rare ring from the ground", amount: "1", note: "or a white one and an Orb of Alchemy" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench's best Life; 6 Orbs of Transmutation buy the tier below" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "later, to change the craft" }
+cost: >-
+  Two [[Orb of Alchemy]] at most. This is the cheapest useful craft in the
+  game, which is why it is worth doing on every ring you wear for more than
+  an hour.
+odds: >-
+  None to quote. The bench gives exactly what its list says, every time. The
+  only luck is in the ring you found, and the steps below are how you judge
+  that luck before paying anything.
+steps:
+  - title: "Identify it and count"
+    do: >-
+      Hold Alt over the ring. Count the lines marked as prefixes and the
+      lines marked as suffixes. A Rare item has room for three of each.
+    why: >-
+      The bench adds one modifier, and it must go into an **open** slot on
+      the right side. Life is a prefix. Resistances and attributes are
+      suffixes. Until you have counted, you do not know which crafts are even
+      possible.
+    check: >-
+      This ring has two prefixes and two suffixes: one slot open on each
+      side. If Advanced Mod Descriptions are off, turn them on in the
+      options, or Alt will not show which side a line is on.
+    state:
+      implicits: ["+14% to Fire and Lightning Resistances"]
+      prefixes:
+        - { text: "+33 to maximum Mana" }
+        - { text: "+24 to Evasion Rating" }
+      suffixes:
+        - { text: "+26% to Cold Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Decide whether it deserves a craft"
+    do: >-
+      Ask two things. Does the ring already have **at least two** modifiers
+      you need, counting the implicit? And is there an open slot on the side
+      where your gap is?
+    why: >-
+      The bench adds one line. It cannot rescue a ring with nothing on it.
+      This one has fire and lightning resistance above the line and cold
+      resistance below it, which is all three elements on one ring.
+    fail: >-
+      Nothing you need, or no open slot where you need one: leave it. If you
+      have a white ring of a base you like, an [[Orb of Alchemy]] makes it
+      Rare with four to six random modifiers and you can read that instead.
+  - title: "Find the gap"
+    do: >-
+      Open the character sheet. If a resistance is still below the cap, the
+      gap is a suffix. If all three are fine, the gap is Life, a prefix.
+    why: >-
+      One bench modifier per item means choosing. Resistances come first
+      because being under the cap costs more than 50 Life does. Here the ring
+      itself closes the resistances, so the craft goes to Life.
+  - title: "Craft it"
+    do: >-
+      At the [[Crafting Bench]], choose **+41–55 to maximum Life** for 2
+      [[Orb of Alchemy]]. The cheaper tiers are +26–40 for 6 Orbs of
+      Transmutation and +15–25 for 1 Orb of Alteration.
+    why: >-
+      The prefix side has an open slot and no Life modifier, so the bench
+      allows it. Had the ring rolled Life already, it would refuse: two
+      modifiers of one group cannot share an item.
+    check: >-
+      The new line is marked as crafted. The ring now has three prefixes and
+      two suffixes.
+    fail: >-
+      The craft is missing from the list: you have not found that recipe
+      yet. Take the highest Life tier you do have.
+    state:
+      implicits: ["+14% to Fire and Lightning Resistances"]
+      prefixes:
+        - { text: "+33 to maximum Mana" }
+        - { text: "+24 to Evasion Rating" }
+        - { text: "+48 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+26% to Cold Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Rewrite it when the character changes"
+    do: >-
+      When new gear moves your resistances, go back to the bench. "Remove
+      Crafted Mods" costs 1 [[Orb of Scouring]]. Then craft what is short
+      now.
+    why: >-
+      The crafted line is the only one you can change without rerolling the
+      ring, so treat it as adjustable. It is the reason an old ring survives
+      three gear changes.
+variations: >-
+  **The same element twice.** This ring rolled Cold Resistance, so the bench
+  will not add Cold Resistance. It **will** add "+13–16% to Fire and Cold
+  Resistances" for 1 Orb of Alchemy, because a pair of resistances is a
+  different group from a single one. When one element is far behind, that is
+  how a ring carries it twice, or three times with a Two-Stone implicit.
+
+
+  **Both slots matter.** If the ring has open slots on both sides and you
+  need both Life and a resistance, you still get one craft. Take the
+  resistance, and look for Life on the other ring.
+
+
+  **Later.** The next example rolls the ring instead of waiting for one to
+  drop.
+mistakes:
+  - "Crafting before counting. A resistance cannot go on a ring with three suffixes, however much room the prefixes have."
+  - "Trying to bench a modifier the ring already rolled. Same group, and the bench refuses."
+  - "Spending Chaos Orbs to reroll a campaign ring. A new one drops in the next zone; the bench is the only currency a levelling ring deserves."
+  - "Forgetting the second ring. Read the resistances with both rings on before choosing either craft."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Two-Stone Ring implicit, the tiers shown on the ring, and every bench option and cost." }

@@ -1,0 +1,208 @@
+category: belts
+title: "Khóa prefix hiếm, roll lại suffix bằng Veiled Chaos Orb"
+level: 4
+summary: "Một chiếc belt có Life cao nhất và một prefix flask effect cao nhất thì đáng bảo vệ. Khóa prefix, để một Veiled Chaos Orb dựng lại phía suffix kèm một veiled modifier trong đó, unveil, rồi bench ô cuối."
+goal: >-
+  Hoàn thiện một chiếc belt có phía prefix hiếm và phía suffix toàn đồ lấp
+  chỗ, mà không đem prefix ra đánh cược. Có hai điều được dạy ở đây. Một là
+  **khi nào prefix của belt mới đáng một lần khóa**, mà chuyện đó hiếm. Hai
+  là Veiled Chaos Orb thêm gì vào một lần roll lại có khóa: một suffix bạn
+  được chọn trong ba cái.
+base: "Stygian Vise"
+itemLevel: 85
+baseWhy: >-
+  Lần craft này bắt đầu từ một item: một chiếc belt có ba prefix bạn muốn
+  giữ. Ba cái trong ví dụ có cả tier flask effect cao nhất, thứ cần item
+  level 85 và là khoảng 1 trên 206 lần roll prefix. Trên Stygian Vise, một
+  base chỉ rơi trên item Tier 5 trong 3.30, phía prefix đó không phải thứ bạn
+  roll lại được trong một buổi tối.
+methods: [meta, veiled, bench]
+result:
+  implicits: ["Has 1 Abyssal Socket"]
+  prefixes:
+    - { text: "+136 to maximum Life" }
+    - { text: "Flasks applied to you have 11% increased Effect" }
+    - { text: "+412 to Armour" }
+  suffixes:
+    - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+    - { text: "+39% to Fire Resistance" }
+    - { text: "+33% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần thử" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "chỉ khi phải gỡ một suffix bench trước" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho craft bench cuối cùng" }
+cost: >-
+  Cái khóa, 4 [[Divine Orb]] và 8 [[Exalted Orb]] trên trang sức trong 3.30,
+  và một [[Veiled Chaos Orb]], cả hai đều bị tiêu mất ở mỗi lần thử. Veiled
+  Chaos Orb đến từ Betrayal: các leader của safehouse có thể rơi chúng.
+
+
+  Hãy đặt cái giá đó cạnh các prefix. Riêng Life Tier 1 là khoảng 1 trên 50
+  lần roll prefix trên belt và **không** đáng giá này. Life cùng flask effect
+  cao nhất, hoặc cùng một modifier Life influence, thì đáng.
+odds: >-
+  Suffix veiled là chắc chắn: phía prefix đã đầy, nên veiled modifier mà orb
+  buộc phải kèm theo chỉ còn phía suffix để rơi vào. Thứ bạn biến nó thành
+  được là một lựa chọn ba cái từ một danh sách mười cái. Dữ liệu không cho
+  weight của lựa chọn đó, nên chúng tôi không đặt được con số cho bất kỳ
+  phương án nào. Ba trong mười cái là một resistance ghép với Chaos
+  Resistance và ba cái là các cặp attribute; phần lớn các lần rút đều có thứ
+  gì đó dùng được.
+
+
+  Các suffix khác là một lần roll belt thường: mỗi cái là elemental
+  resistance 36% số lần và là đồ lấp chỗ stun 24% số lần.
+steps:
+  - title: "Kiểm xem prefix có đáng không và còn ô suffix trống không"
+    do: >-
+      Ba prefix, tất cả đều giữ. Ít nhất **một ô suffix trống**, vì
+      "Prefix Modifiers cannot be changed" tự nó là một suffix. Nếu một trong
+      các suffix là modifier bench, hãy gỡ nó với giá 1 [[Orb of Scouring]].
+    why: >-
+      Ba prefix quan trọng không chỉ vì giá trị. Khi phía đó đã đầy, không gì
+      thêm vào nó được, dù luật của một lần roll lại có khóa hóa ra là thế
+      nào, và veiled modifier buộc phải là suffix.
+    fail: >-
+      Ba suffix roll ra: không craft được khóa. Một
+      [[Orb of Annulment]] sẽ mở được một ô và một nửa số lần sẽ trúng
+      prefix. Đừng dùng nó.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "17% increased Stun and Block Recovery" }
+        - { text: "+22 to Strength" }
+  - title: "Craft khóa"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 8 [[Exalted Orb]].
+    why: >-
+      Bản đầy đủ bảo vệ cả ba. Các bản một và hai modifier rẻ hơn và chọn
+      ngẫu nhiên thứ chúng bảo vệ mà không có gì cho bạn thấy; trên một phía
+      có ba cái, đó là đem chính thứ bạn đang trả tiền để giữ ra đánh cược.
+    check: >-
+      Khóa hiện trong các suffix dưới dạng một dòng crafted. Đừng dùng thứ gì
+      khác lên belt trước bước kế.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "17% increased Stun and Block Recovery" }
+        - { text: "+22 to Strength" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Dùng một [[Veiled Chaos Orb]] lên belt.
+    why: >-
+      Dòng mô tả của nó là "Reforges a rare item with new random modifiers
+      including a random Veiled modifier". Khi prefix đã khóa, thứ nó reforge
+      là phía suffix, kể cả cái khóa. Kết quả có một suffix veiled và từ
+      không tới hai suffix thường.
+    check: >-
+      Ba prefix y nguyên như trước. Một dòng ghi "Veiled" trong các suffix.
+    fail: >-
+      Việc Veiled Chaos Orb tôn trọng khóa là theo thử nghiệm của người chơi,
+      không phải từ nhà phát triển, dù một ghi chú hotfix của 3.30 có nhắc
+      tới một veiled modifier "protected by fracturing or metamods". Nếu sau
+      một bản patch bạn còn nghi ngờ, hãy thử trên một chiếc belt rẻ trước.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "Veiled Suffix", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+  - title: "Nhìn trước khi unveil"
+    do: >-
+      Đọc các suffix thường trước. Rồi click chuột phải vào belt và nhìn ba
+      lựa chọn. Khoan chọn.
+    why: >-
+      Theo thử nghiệm của cộng đồng, các lựa chọn không bao giờ chứa một
+      group đã có trên item. Trên belt, điều đó thường có lợi cho bạn: nếu
+      Strength nằm trong các suffix thường, hai cặp attribute có chứa
+      Strength chung group với nó và không thể được đưa ra, nhờ vậy lần rút
+      còn nhiều chỗ hơn cho một cặp resistance hoặc Cooldown Recovery.
+    check: >-
+      Mười suffix có thể ra: 13–16% Cooldown Recovery Rate; +16–20% cho
+      Fire, Cold hoặc Lightning cùng Chaos Resistance; +31–35 cho hai
+      attribute, có ba kiểu ghép cặp; 14–16% Trap Throwing Speed; hồi 200
+      Energy Shield mỗi giây khi ở gần enemy Rare hoặc Unique; Critical
+      Strike Chance lucky khi đang Focused.
+  - title: "Unveil"
+    do: >-
+      Chọn modifier lấp khoảng trống lớn nhất. Với phần lớn belt, đó là một
+      resistance ghép với Chaos Resistance.
+    why: >-
+      Chaos Resistance là một suffix weight 250 nếu roll thường. Cặp unveil
+      ra cho 16–20% của nó cùng một elemental resistance, trong một ô, và nó
+      khác group với mọi resistance đơn, nên nó nằm cạnh bất cứ thứ gì khác
+      đã roll ra.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+  - title: "Đánh giá, rồi bench"
+    do: >-
+      Nếu phía suffix có modifier unveil ra, một thứ hữu ích bên cạnh nó,
+      hoặc một ô trống, hãy ngừng roll lại và craft suffix cuối: 29–35% của
+      một resistance giá 3 [[Chaos Orb]]. Nếu không, quay lại bước 2 và trả
+      tiền lần nữa.
+    why: >-
+      Trên belt, một suffix trống không phải là thất bại, vì resistance của
+      bench mạnh. Lần khóa thứ hai là thêm 4 Divine Orb và 8 Exalted Orb; chỉ
+      tiêu nó cho một kết quả có ba suffix chết.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+        - { text: "+33% to Lightning Resistance", how: crafted }
+variations: >-
+  **Một resistance đích danh thay vì một cái veiled.** Khi prefix đã khóa,
+  một reforge Harvest kèm một modifier Fire, Cold hoặc Lightning (50
+  Lifeforce) luôn cho resistance đó trên belt, và reforge kèm một modifier
+  Chaos (100 Vivid) luôn cho Chaos Resistance. Không có lựa chọn ba cái,
+  nhưng bạn gọi tên được suffix.
+
+
+  **Thay bằng Scour.** Khi prefix đã khóa, một [[Orb of Scouring]] được ghi
+  nhận là chỉ gỡ suffix và cái khóa. Ba ô suffix trống, một trong số đó cho
+  bench: rẻ hơn một Veiled Chaos Orb và không có gì được đảm bảo.
+
+
+  **Thử lại trên một chiếc belt veiled.** Từ bản hotfix ngày 17 tháng 11,
+  Veiled Chaos Orb dùng được lên item đã có sẵn một veiled modifier, trừ khi
+  modifier đó là fractured hoặc được một meta-modifier bảo vệ. Vậy nên lần
+  thử thứ hai không đòi phải unveil trước.
+mistakes:
+  - "Khóa mỗi Life. Life Tier 1 trên belt là một việc ngắn với Alteration; khóa còn đắt hơn roll lại nó."
+  - "Unveil mà không đọc các suffix khác. Lựa chọn nên lấp khoảng trống mà chúng để lại."
+  - "Bench một suffix trước Veiled Chaos Orb. Orb roll lại nó cùng với phần còn lại, mà đằng nào ô dành cho bench cũng đã bị khóa chiếm."
+  - "Dùng Essence lên belt đã khóa. Essence được ghi nhận là phớt lờ khóa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier unveil ra của belt, tier, weight, giá bench và dòng mô tả trong game của Veiled Chaos Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ; yêu cầu Item Tier của Stygian Vise." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb trên item đã có sẵn một veiled modifier." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil bằng click chuột phải; các leader của safehouse có thể rơi Veiled Chaos Orb." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá của các reforge được nhắc tới như phương án thay thế." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb, reforge Harvest và Orb of Scouring tôn trọng một phía đã khóa, và các lựa chọn unveil bỏ qua những group đã có trên item. Một phần cũ hơn 3.30." }

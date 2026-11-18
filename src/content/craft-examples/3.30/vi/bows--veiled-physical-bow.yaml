@@ -1,0 +1,206 @@
+category: bows
+title: "Bow physical mà không roll physical: một prefix veiled dưới khóa suffix"
+level: 4
+summary: "Dựng suffix bằng một Essence, khóa chúng, rồi dùng một Veiled Chaos Orb mà cái khóa ép vào phía prefix. Unveil ra 120–139% increased Physical Damage."
+goal: >-
+  Một cây bow physical có một prefix phần trăm mạnh, attack speed và flat
+  Physical Damage, làm ra mà không hề roll phần trăm. Trên bow, lần roll đó
+  là ván cược tồi, nên lần craft này đi vòng qua nó. Bài học là công dụng
+  thứ hai của khóa: không chỉ để giữ an toàn một phía, mà còn để **ép một
+  công cụ vào phía kia.** Veiled Chaos Orb đặt veiled modifier của nó ở bất
+  cứ đâu. Khóa suffix lại thì chỗ duy nhất còn lại là một prefix.
+base: "Citadel Bow"
+itemLevel: 75
+baseWhy: >-
+  Bow physical là kiểu duy nhất mà damage của base chính là lần craft.
+  36–144 với 1.25 attack mỗi giây của Citadel Bow là physical damage mỗi
+  giây cao nhất của loại item này, và nó có 6% critical strike chance.
+  Modifier unveil ra chỉ cần item level 60. Item level 75 là vì suffix: Tier
+  1 của Critical Strike Chance và Multiplier mở ở 73.
+methods: [essence, meta, veiled, bench, finishing]
+result:
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 113 to 229 Fire Damage" }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "16% increased Attack Speed", how: essence }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+    - { text: "+352 to Accuracy Rating" }
+needs:
+  - { item: "[[Shrieking Essence of Zeal]]", amount: "5–15" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+cost: >-
+  Mỗi lần thử lấy prefix là một lần khóa, 4 [[Divine Orb]] và 1
+  [[Sacred Orb]], cộng một [[Veiled Chaos Orb]]. Các orb đó đến từ
+  Betrayal: leader của safehouse có thể rơi chúng. Một lần thử thường là đủ,
+  và đó là lý do để làm theo cách này. Các Essence trước đó thì rẻ.
+odds: >-
+  **Vì sao không cứ roll nó.** Ở item level 75, một lần roll prefix ra
+  increased Physical Damage thuần từ 110% trở lên khoảng 1 trên 150 lần,
+  theo phép tính của chúng tôi từ weight. Các prefix elemental chiếm hai
+  trên ba lần roll.
+
+
+  **Đường veiled.** Dưới khóa suffix, veiled modifier của Veiled Chaos Orb
+  lần nào cũng là một prefix. Unveil đưa ra ba lựa chọn trong số bảy prefix
+  veiled mà bow có, và bốn trong bảy cái đó là các hybrid physical (Impale,
+  Bleeding, Poison, Blind). Dữ liệu không cho weight của các lựa chọn. Nếu
+  bảy cái có khả năng ngang nhau thì bạn sẽ được đưa ít nhất một hybrid
+  physical trong 34 trên 35 lần.
+
+
+  Orb này còn roll tới hai prefix thường bên cạnh cái veiled. Những cái đó
+  là may rủi, và trên bow điều đó phần lớn nghĩa là một element.
+steps:
+  - title: "Giai đoạn 1: suffix từ một Essence of Zeal"
+    do: >-
+      Đưa một cây Citadel Bow trắng lên 20% quality và sáu socket. Dùng
+      [[Shrieking Essence of Zeal]] tới khi suffix là attack speed cộng
+      **ít nhất một cái nữa bạn muốn** (Critical Strike Chance hoặc
+      Multiplier cho build crit), và bow có **nhiều nhất hai
+      prefix**.
+    why: >-
+      Zeal đảm bảo attack speed, 15–16% ở bậc Shrieking, gần với mức 17–19%
+      của tier tự nhiên cao nhất và cao hơn hẳn mức 8–10% rẻ của bench. Đây
+      là giai đoạn lặp lại thì rẻ, nên phần ngẫu nhiên của lần craft được
+      tiêu ở đây. Các prefix nó roll ra không quan trọng. Số lượng của chúng
+      thì có: khóa là một prefix và cần một ô trống.
+    check: >-
+      Quality được lên ngay bây giờ vì đây là bow physical: mọi phần trăm
+      bạn thêm về sau đều nhân vào damage gốc đã tính cả quality.
+    state:
+      prefixes:
+        - { text: "Adds 16 to 302 Lightning Damage" }
+        - { text: "Adds 68 to 137 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Giai đoạn 2: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Hai việc cùng lúc. Nó giữ ba suffix qua bước kế tiếp, và nó đóng phía
+      suffix lại với veiled modifier. Nó nằm trong một ô prefix và bị lần
+      roll lại tiêu mất.
+    check: >-
+      **Đừng** bench increased Physical Damage vào bất kỳ lúc nào trước khi
+      unveil. Theo thử nghiệm của cộng đồng, ba lựa chọn không bao giờ gồm
+      một group đã có trên item, mà các hybrid physical veiled lại chung
+      group với increased Physical Damage của bench.
+    state:
+      prefixes:
+        - { text: "Adds 16 to 302 Lightning Damage" }
+        - { text: "Adds 68 to 137 Fire Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Giai đoạn 3: Veiled Chaos Orb"
+    do: >-
+      Dùng một [[Veiled Chaos Orb]] lên bow.
+    why: >-
+      Mô tả của nó là "Reforges a rare item with new random modifiers
+      including a random Veiled modifier". Khi suffix được bảo vệ, reforge
+      chỉ thay được prefix, trong đó có cả cái khóa, và veiled modifier buộc
+      phải là một trong các prefix mới.
+    check: >-
+      Ba suffix không đổi, khóa đã biến mất, và có một dòng ghi "Veiled
+      Prefix". Đếm các prefix còn lại: một ô trống là điều bạn mong.
+    fail: >-
+      Việc các Veiled orb tôn trọng khóa là do người chơi ghi nhận, không
+      phải do nhà phát triển tuyên bố. Sau bất kỳ bản patch nào, hãy thử
+      trên một item Rare rẻ trước.
+    state:
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Giai đoạn 4: unveil"
+    do: >-
+      Chuột phải vào bow và chọn trong ba phương án. Lấy
+      **120–139% increased Physical Damage** kèm vế phụ mà build của bạn
+      dùng: chance to Impale, to cause Bleeding, to Poison hoặc to Blind.
+    why: >-
+      Modifier unveil ra là một modifier bình thường, mạnh hơn bản sao ở
+      bench (95–105%), và nó thuộc group increased Physical Damage thuần.
+      120–139% nằm vắt qua Tier 4 và Tier 3 tự nhiên, cho một modifier mà
+      bạn không đủ sức roll.
+    fail: >-
+      Không cái nào trong ba là hybrid physical. Lấy cái tốt nhất trong
+      những gì được đưa ra, rồi lặp lại giai đoạn 2 và 3: kể từ bản hotfix
+      ngày 17 tháng 11, Veiled Chaos Orb dùng được trên item đã có sẵn một
+      veiled modifier hoặc modifier đã unveil, miễn là modifier đó không
+      được bảo vệ.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Giai đoạn 5: bench flat Physical Damage"
+    do: >-
+      Ở prefix trống, craft **adds 18–24 to 36–42 Physical Damage** giá
+      4 [[Chaos Orb]].
+    why: >-
+      Flat Physical Damage khác group với cả hai họ phần trăm, và nó nâng
+      con số mà phần trăm veiled nhân lên. Prefix fire đi kèm Veiled Chaos
+      Orb không phải thứ build này cần, nhưng nó là damage và nó ở lại.
+    check: >-
+      Nếu Veiled Chaos Orb đã lấp cả ba prefix thì không có gì để bench. Cây
+      bow vẫn là bow physical có một phần trăm mạnh, và bạn dừng ở đây.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+variations: >-
+  **Bản bench, với một phần mười chi phí.** Bỏ qua giai đoạn 2 tới 4 và
+  bench thẳng hybrid: 95–105% increased Physical Damage kèm 18–20% chance to
+  Impale, Bleed, Poison hoặc Blind, 8 Chaos Orb. Nó không để lại ô bench nào
+  cho flat Physical Damage, nên hãy dùng một Essence of Contempt ở giai đoạn
+  1 thay cho Zeal và nhận attack speed ra sao thì ra. Đó là cây bow physical
+  bình dân thành thật.
+
+
+  **Xa hơn nữa.** Một cây bow có hybrid Accuracy roll ra bên cạnh phần trăm
+  veiled thì có cả hai họ phần trăm. Hybrid hiếm ngang với bản thuần, nên
+  cây bow đó bắt đầu từ một base fractured, như trong ví dụ khó nhất của
+  mace hai tay.
+
+
+  **Một Veiled Exalted Orb** thêm một veiled modifier và gỡ một cái ngẫu
+  nhiên. Dưới cùng cái khóa đó, theo cùng luật do người chơi thử nghiệm ấy,
+  nó chỉ gỡ được một prefix, khiến nó thành một bản nhẹ tay hơn của lần
+  craft này khi bow đã có sẵn một hai prefix đáng giữ và bạn chấp nhận rủi
+  ro cho chúng. Các orb đó rơi ở đâu trong 3.30 thì chúng tôi chưa xác nhận
+  được.
+mistakes:
+  - "Bench increased Physical Damage \"tạm thời\" trước khi unveil. Nó block đúng cái lựa chọn mà bạn unveil để tìm."
+  - "Dùng Veiled Chaos Orb mà không có khóa. Veiled modifier có thể rơi vào phía suffix, và cả cây bow bị roll lại."
+  - "Khóa khi bow có ba prefix. Khóa suffix là một prefix và sẽ không vừa."
+  - "Dùng Essence sau khi khóa. Essence được ghi nhận là phớt lờ các modifier bảo vệ."
+  - "Trông chờ một weapon hàng đỉnh. Đây là một cây bow physical tầm trung mạnh; prefix thứ hai và thứ ba của nó là một craft bench và bất cứ thứ gì orb roll ra."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier unveil và modifier bench trên bow cùng group của chúng, các tier của Essence of Zeal, weight, giá bench và mô tả trong game của Veiled Chaos Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên weapon." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb trên item đã có sẵn một veiled modifier." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil không cần Jun; leader của safehouse có thể rơi Veiled Chaos Orb." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb tôn trọng một phía đã khóa, và một group đã có trên item thì không được đưa ra khi unveil. Một phần cũ hơn 3.30." }

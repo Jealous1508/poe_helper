@@ -1,0 +1,220 @@
+category: staves
+title: "Khóa gem level, reforge suffix bằng tag Caster"
+level: 4
+summary: "Một cây staff có +4 và suffix tệ. Bảo vệ prefix, rồi dùng đúng cái reforge Harvest mà tag của nó, chỉ riêng ở phía suffix, nghĩa là cast speed hoặc spell crit và không gì khác."
+goal: >-
+  Biến một cây staff có những prefix gem level mà bạn sẽ không roll ra lại
+  lần nữa thành một cây hoàn chỉnh, mà không đem chúng ra đánh cược. Đây là
+  lần craft staff đầu tiên bạn **trả tiền để bảo vệ công sức**. Thứ nó thêm
+  vào ý đó là một cách chọn reforge: một tag vô dụng trên cả cây staff trở
+  nên chính xác một khi một phía không đổi được.
+base: "Eclipse Staff"
+itemLevel: 84
+baseWhy: >-
+  Lần craft này bắt đầu từ một item, không phải từ một base: cái kết may mắn
+  của ví dụ Fossil, hoặc một cây staff bạn mua vì prefix của nó. Item level
+  84 quan trọng vì những gì reforge cho được. Cast speed tốt nhất (44–49%)
+  cần 83; trên cây staff level 77, cùng reforge đó chỉ lên được tới tier thấp
+  hơn một bậc.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["100% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+4 to Level of all Fire Spell Skill Gems" }
+    - { text: "+1 to Level of all Spell Skill Gems" }
+    - { text: "Adds 68 to 140 Fire Damage to Spells" }
+  suffixes:
+    - { text: "40% increased Cast Speed", how: harvest }
+    - { text: "+16% Chance to Block Spell Damage", how: harvest }
+    - { text: "108% increased Spell Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 mỗi lần thử" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "chỉ khi phải gỡ một modifier bench trước" }
+  - { item: "[[Chaos Orb]]", amount: "3–4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Khóa: 4 [[Divine Orb]] và 1 [[Sacred Orb]] trên weapon trong 3.30, và mỗi
+  lần reforge đều tiêu mất nó. Lifeforce chỉ là tiền lẻ khi đặt cạnh. Hãy
+  tính hai ba lần thử và chốt giới hạn trước lần đầu tiên.
+
+
+  Cái giá đó chính là phép thử xem có nên làm việc này hay không. Một kết quả
+  Fossil có +3 của element và "all Spell Skill Gems" xuất hiện khoảng một lần
+  trong sáu kết quả ba prefix, và thêm Fossil thì roll lại luôn suffix, không
+  tốn gì thêm. +4 cùng "all Spell Skill Gems" là khoảng 1 trên 50. Hãy khóa
+  loại thứ hai, đừng khóa loại thứ nhất.
+odds: >-
+  Khi prefix đã khóa, reforge Caster buộc phải đặt modifier được đảm bảo của
+  nó ở phía suffix, và chỉ có hai họ suffix mang tag caster. Theo weight, đó
+  là cast speed 7 trên 13 lần và Spell Critical Strike Chance 6 trên 13 lần.
+  Nếu tier cũng được bốc theo weight, đúng như cách người ta vẫn hiểu về
+  reforge, thì mỗi tier có khả năng như nhau: cast speed từ 32% trở lên là
+  khoảng 23% số lần thử, và spell crit từ 105% trở lên là 23% nữa. Đó là phép
+  tính của chúng tôi dựa trên weight bằng nhau giữa các tier, và chưa được đo
+  trong 3.30.
+
+
+  Suffix nào thêm nữa cũng thuần là may rủi từ cả pool, mà một phần ba pool
+  đó là modifier attack.
+steps:
+  - title: "Đếm các ô suffix"
+    do: >-
+      Đếm suffix. "Prefix Modifiers cannot be changed" tự nó là một suffix,
+      nên cây staff cần **một ô suffix trống** để nhận nó. Nếu một trong ba
+      suffix là modifier bench, hãy gỡ nó ở bench với giá 1
+      [[Orb of Scouring]].
+    why: >-
+      Meta-modifier chiếm một ô thật. Đây cũng là điều cần nhớ sau mỗi lần
+      reforge: một kết quả có ba suffix không còn chỗ cho một khóa nữa.
+    fail: >-
+      Ba suffix roll ra và không có gì để gỡ: không có cách an toàn nào để mở
+      một ô. Một [[Orb of Annulment]] lấy ngẫu nhiên một trong sáu modifier.
+      Trước 3.30, "Cannot roll Caster Modifiers" hẳn đã giữ nó tránh xa các
+      prefix caster; giờ thì không còn, và đằng nào nó cũng cần một ô suffix
+      trống. Hãy dùng cây staff như nó đang có.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "38% chance to Ignite" }
+        - { text: "+41 to Strength" }
+  - title: "Craft khóa"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Chừng nào nó còn trên staff, một lần roll lại tôn trọng nó sẽ để yên cả
+      ba prefix. Hãy dùng bản đầy đủ khi có ba prefix. Các bản cho một và hai
+      prefix rẻ hơn, nhưng nhà phát triển đã nói game chọn ngẫu nhiên prefix
+      nào được giữ và không cho bạn thấy.
+    check: >-
+      Modifier hiện trong các suffix dưới dạng crafted. Đừng dùng currency
+      nào khác lên cây staff cho tới lần reforge.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "38% chance to Ignite" }
+        - { text: "+41 to Strength" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Chọn reforge theo phía còn đổi được"
+    do: >-
+      Mở danh sách modifier và đếm, **chỉ trong các suffix**, những họ mang
+      từng tag. Speed: cast speed và attack speed. Critical: Spell Critical
+      Strike Chance, Global Critical Strike Multiplier và Critical Strike
+      Chance chỉ dành cho attack. Caster: cast speed và Spell Critical Strike
+      Chance. Chọn **Caster**.
+    why: >-
+      Trên cả cây staff, tag caster nằm trên mười ba họ và một reforge Caster
+      gần như không hứa gì. Khi prefix đã khóa, mười một họ trong đó không
+      đụng tới được. Hai họ còn lại đều là suffix mà một caster đánh bằng hit
+      muốn. Một reforge Speed thì sẽ cho attack speed 9 trên 16 lần, vì
+      attack speed có nhiều tier hơn.
+  - title: "Reforge kèm một modifier Caster"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]).
+    why: >-
+      Reforge thay mọi modifier nó được phép đụng tới: các suffix, kể cả cái
+      khóa, vốn bị tiêu mất. Một trong các suffix mới buộc phải mang tag
+      caster.
+    check: >-
+      Ba prefix không đổi, khóa đã biến mất, và cast speed hoặc Spell
+      Critical Strike Chance nằm trong các suffix. Đọc tier của nó.
+    fail: >-
+      Việc reforge Harvest tôn trọng khóa là do người chơi xác lập, không
+      phải do nhà phát triển tuyên bố. Nếu sau một bản patch bạn có chút nghi
+      ngờ nào, hãy thử khóa và một lần reforge trên một item Rare rẻ trước.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "40% increased Cast Speed", how: harvest }
+        - { text: "+16% Chance to Block Spell Damage", how: harvest }
+  - title: "Đánh giá theo giới hạn bạn đã đặt"
+    do: >-
+      Nhận kết quả khi suffix được đảm bảo ở tier bạn đã định (32% cast speed
+      hoặc 105% spell crit là Tier 3) **và** còn một ô suffix trống. Nếu
+      không, quay lại bước 2 và trả tiền lần nữa, nếu vẫn còn ô cho khóa.
+    why: >-
+      Mỗi lần thử thêm tốn trọn một lần khóa. Một ô trống đáng giá hơn một
+      suffix thứ ba làng nhàng, vì bench lấp nó bằng nửa còn lại của cặp đôi.
+    check: >-
+      Một kết quả có ba suffix bạn không muốn là hết đường với phương pháp
+      này. Rủi ro đó nằm trong mọi lần thử; đó là một lý do để dừng ở "tốt"
+      chứ đừng đuổi theo "tốt nhất".
+  - title: "Bench nửa còn lại của cặp đôi"
+    do: >-
+      Nếu reforge cho cast speed, craft Spell Critical Strike Chance, 90–120%
+      giá 3 [[Chaos Orb]], hoặc Global Critical Strike Multiplier, 25–28% giá
+      4. Nếu nó cho spell crit, craft cast speed: 21–26% giá 2 Chaos Orb,
+      hoặc 27–32% giá 4 Exalted Orb.
+    why: >-
+      Bench là thứ chắc chắn, nên nó nhận phần modifier mà reforge không cho.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "40% increased Cast Speed", how: harvest }
+        - { text: "+16% Chance to Block Spell Damage", how: harvest }
+        - { text: "108% increased Spell Critical Strike Chance", how: crafted }
+variations: >-
+  **"Cannot roll Attack Modifiers", và vì sao ở đây nó nằm yên trên kệ.** Nó
+  sẽ dọn cái một phần ba attack khỏi các lần roll suffix còn lại và làm cho
+  một reforge Speed chắc chắn cho cast speed. Nhưng nó là một suffix, khóa là
+  một suffix, và giữ cả hai thì cần "Can have up to 3 Crafted Modifiers", cái
+  thứ ba: ba ô suffix trống và 7 Divine Orb cùng một Sacred Orb cho mỗi lần
+  thử. Dọn trống phía suffix trước thì tốn thêm một lần khóa và một Orb of
+  Scouring. Theo phép tính của chúng tôi, tính trên mỗi kết quả tốt thì cách
+  đó đắt hơn khóa trơn kèm một reforge Caster. Nó chỉ đáng đồng Divine Orb
+  của mình trên cây staff có phía suffix vốn đã trống.
+
+
+  **Bản chắc chắn.** Khi prefix đã khóa, một [[Orb of Scouring]] được ghi
+  nhận là chỉ gỡ suffix và cái khóa. Rồi craft "Can have up to 3 Crafted
+  Modifiers" (2 Divine Orb), cast speed 27–32% (4 Exalted Orb) và Spell
+  Critical Strike Chance 90–120% (3 Chaos Orb). Không có ván cược nào, và
+  cũng không có Tier 1.
+
+
+  **Hai prefix và ô thứ ba trống.** "2 Prefix Modifiers cannot be changed"
+  tốn 2 Divine Orb và không tốn Sacred Orb nào. Nhà phát triển đã nói bản một
+  prefix là chắc chắn khi cây staff có đúng một prefix; theo cùng lập luận
+  đó, bản hai prefix không có gì để lựa khi có đúng hai. Chúng tôi chưa thấy
+  cái nào trong hai được thử với từng kiểu roll lại, và một lần reforge có
+  thể thêm prefix thứ ba, sau đó chỉ khóa đầy đủ mới lại là chắc chắn. Hãy
+  thử trên một item Rare rẻ trước.
+
+
+  **Một suffix veiled.** Một [[Veiled Chaos Orb]] dùng lên cây staff đã khóa
+  sẽ roll lại suffix và có một veiled modifier trong số đó, theo cùng luật do
+  người chơi thử nghiệm ấy. Unveil để lấy 26–31% cast speed kèm Arcane Surge,
+  44–48% damage over time multiplier, hoặc 12–14% chance to deal Double
+  Damage.
+mistakes:
+  - "Khóa những prefix mà một tá Fossil sẽ cho bạn lại. Khóa là dành cho +4 và cho \"+2 to all\"."
+  - "Dùng Essence of Misery lên cây staff đã khóa để lấy cast speed được đảm bảo. Essence được ghi nhận là phớt lờ các modifier bảo vệ và sẽ roll lại prefix."
+  - "Chọn reforge Speed. Hơn một nửa số lần, modifier được đảm bảo của nó là attack speed."
+  - "Dùng Annulment để dọn một suffix, tin rằng một modifier \"Cannot roll\" sẽ lái nó. Từ 3.30, mấy cái đó chỉ ngăn modifier được thêm vào."
+  - "Quên rằng lần khóa kế tiếp cần một ô. Ba suffix sau một lần reforge nghĩa là không còn lần thử nào nữa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Giá bench, tier, weight và tag trên từng modifier. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ, và thứ mà \"Cannot roll Attack/Caster Modifiers\" không còn bảo vệ khỏi." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết; khi có đúng một prefix thì biết được cái nào được bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Caster, Speed và Critical cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest, các Veiled orb và Orb of Scouring tôn trọng một phía đã khóa; Essence thì không. Một phần cũ hơn 3.30." }

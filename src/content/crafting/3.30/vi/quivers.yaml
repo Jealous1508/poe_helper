@@ -1,0 +1,474 @@
+name: "Quiver"
+short: "Trang sức của build bow. Một pool, một phía prefix nhỏ nơi Life dễ ra, và một phía suffix chật chội nơi additional arrow ẩn mình."
+icon: "Spike-Point Arrow Quiver"
+intro: >-
+  Quiver nằm ở off-hand của mọi build bow, nhưng nó được craft như một chiếc
+  ring: không socket, không quality, không damage gốc. Base chính là implicit
+  của nó, ngoài ra không còn gì. Mọi thứ bạn craft đều là global, nên không
+  có gì để nhân lên và không có gì để đánh giá ngoài sáu modifier.
+
+
+  Điều làm loại item này khác biệt là hai phía lệch nhau tới mức nào. Phía
+  prefix chỉ có bảy modifier và cái hay ra nhất là maximum Life. Phía suffix
+  có mười bảy, và ba cái mà một build bow chịu trả tiền, additional arrow,
+  critical strike multiplier và attack speed, lại nằm trong số hiếm hơn.
+  Quiver ngược với weapon: suffix mới là phía khó.
+basics:
+  itemLevel:
+    text: >-
+      Life xong từ sớm: tier cao nhất của nó chỉ cần item level 64. Thứ item
+      level mua được trên quiver là damage và các suffix hàng đầu. **Item
+      level 77 là đủ cho một lần craft bình thường**: mọi prefix flat damage,
+      attack speed, critical strike multiplier và additional arrow đều đã mở
+      ở mức cao nhất. Những bậc cuối thì hẹp. Item level 85 mở tier cao nhất
+      của critical strike chance, còn 86 mở tier cao nhất của increased
+      Damage with Bow Skills, thứ mà một Essence cũng cấp được.
+    breakpoints:
+      - ilvl: 36
+        unlocks: "**Leveling.** Tier 4 của maximum Life (+85–99). Ở đây Life đã mở sẵn bảy tier."
+      - ilvl: 64
+        unlocks: "Tier 1 của maximum Life, \"Fecund\" (+130–144). Tier 2 của flat Physical, Fire và Lightning Damage to Attacks. **Đủ cho một quiver Life kèm resistance.**"
+      - ilvl: 70
+        unlocks: "\"Bow Attacks fire an additional Arrow\". Dưới mốc này modifier đó hoàn toàn không roll ra được."
+      - ilvl: 74
+        unlocks: "Tier 1 của Critical Strike Multiplier with Bows (35–38%). Tier 2 của Critical Strike Chance with Bows (35–38%) đã mở từ 72."
+      - ilvl: 77
+        unlocks: "Tier 1 của cả bốn prefix flat damage (Physical, Fire và Lightning ở 76, Cold ở 77) và Tier 1 của attack speed (14–16%, ở 76). **Đủ cho mọi thứ, trừ tier cuối của bốn modifier.**"
+      - ilvl: 82
+        unlocks: "Tier 1 của Damage over Time Multiplier with Attack Skills (24–26%) và Tier 2 của increased Damage with Bow Skills (37–42%, từ 81)."
+      - ilvl: 85
+        unlocks: "Tier 1 của Critical Strike Chance with Bows (39–44%). Tier 1 của các elemental resistance (46–48%) đã mở từ 84."
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Damage with Bow Skills, \"Impaling\" (43–50%). **Trần.** Một Deafening Essence of Woe cho cùng khoảng đó."
+  bases:
+    text: >-
+      Có mười bốn quiver rơi được, và xét về craft thì chúng là một kiểu duy
+      nhất: tất cả roll từ cùng một pool với cùng weight. Quiver không có
+      damage, không có defence và không có yêu cầu attribute, nên khác biệt
+      duy nhất giữa hai base là implicit.
+    types:
+      - title: "Quiver thường"
+        pools: [all]
+        text: >-
+          Mười ba base từ Serrated Arrow Quiver (level 4) tới Primal Arrow
+          Quiver (level 66). Mỗi cái có một implicit, và phần lớn implicit
+          có khoảng mà một [[Blessed Orb]] roll lại được: 20–30% increased
+          Critical Strike Chance with Bows trên Spike-Point, 20–30%
+          increased Elemental Damage with Attack Skills trên Primal, 8–10%
+          increased Attack Speed trên Broadhead.
+      - title: "Artillery Quiver"
+        text: >-
+          Base Atlas duy nhất, rơi từ level 74. Trong 3.30 implicit của nó là
+          "Attack Skills have +1 to maximum number of Summoned Totems", khiến
+          nó thành base cho build ballista và vô dụng với mọi người khác.
+          Trong 3.30, base Atlas cần một Item Tier mới rơi; base này cần tier
+          nào thì chúng tôi chưa xác nhận được. Nó roll cùng bộ modifier như
+          mọi quiver khác.
+      - title: "Bản legacy"
+        text: >-
+          Tám quiver còn tồn tại ở một dạng cũ hơn, được đánh dấu legacy
+          trong dữ liệu game, mang implicit mà base đó từng có: ví dụ một
+          Broadhead Arrow Quiver có added Physical Damage thay cho attack
+          speed. Chúng tôi hiểu dấu đó nghĩa là chúng không còn rơi nữa, nên
+          chúng không có trong bảng bên dưới. Nếu bạn có một cái, nó craft y
+          hệt bản hiện tại: cùng pool, khác implicit.
+    picks:
+      - base: "Spike-Point Arrow Quiver"
+        for: "Build critical strike"
+        why: >-
+          20–30% increased Critical Strike Chance with Bows trên implicit.
+          Gần bằng một suffix Tier 5 (20–24%) mà không chiếm ô suffix nào, ở
+          đúng phía khan hiếm ô.
+      - base: "Primal Arrow Quiver"
+        for: "Build bow elemental"
+        why: >-
+          20–30% increased Elemental Damage with Attack Skills. Không quiver
+          nào roll modifier đó ra dưới dạng prefix: nguồn duy nhất còn lại là
+          bench, ở mức 24–32%. Với base này bạn có được cả hai.
+      - base: "Heavy Arrow Quiver"
+        for: "Build bow physical"
+        why: >-
+          Adds 12–15 to 24–27 Physical Damage to Attacks, cỡ một prefix Tier
+          3 (adds 11–16 to 23–26), và nó cộng dồn với bản roll ra.
+      - base: "Broadhead Arrow Quiver"
+        for: "Build nào còn chưa chắc chắn"
+        why: >-
+          8–10% increased Attack Speed. Attack speed chiếm 3% số lần roll
+          suffix, nên lấy phần attack speed đầu tiên từ base sẽ để dành các ô
+          suffix cho thứ khác.
+      - base: "Vile Arrow Quiver"
+        for: "Build physical scale chaos"
+        why: >-
+          Gain 10–15% of Physical Damage as Extra Chaos Damage. Không gì
+          trong pool modifier của quiver làm được điều này.
+      - base: "Artillery Quiver"
+        for: "Build ballista totem"
+        why: >-
+          Thêm một totem cho attack skill, kể từ 3.30. Nếu build của bạn
+          summon ballista thì implicit này đáng giá hơn bất kỳ explicit
+          modifier nào trên item.
+    impact: >-
+      Trên quiver, base quyết định đúng một điều: **implicit.** Không có
+      damage gốc để modifier nhân lên, không có attack speed, không có yêu
+      cầu nào, và base nào cũng roll từ cùng một pool.
+
+
+      Vậy nên hãy chọn implicit như một modifier thứ bảy mà craft không lấy
+      đi được. Một [[Blessed Orb]] roll lại con số của nó bên trong khoảng.
+      Corruption có thể thay nó bằng một implicit corruption, và đó là cách
+      duy nhất để nó thay đổi.
+
+
+      Vì base không tốn thêm gì khác, không có lý do gì để craft trên sai
+      base. Hãy quyết định build là gì, critical strike, elemental, physical
+      hay damage over time, trước khi nhặt item trắng lên.
+tools:
+  - method: currency
+    note: >-
+      Phía prefix thì dễ chịu. Ở item level 84, maximum Life chiếm 38% mọi
+      lần roll prefix, theo phép tính của chúng tôi từ weight, và mười tier
+      của nó có weight như nhau, nên khoảng một trên chín lần roll prefix là
+      +100 Life trở lên. Increased Damage with Bow Skills chiếm thêm 19%.
+
+
+      Phía suffix thì không. Critical Strike Multiplier with Bows chiếm 8% số
+      lần roll suffix, attack speed 3.4%, còn additional arrow 0.34%: một
+      trên 293 lần roll suffix. [[Orb of Alteration]] là cách tốt để có Life
+      và một suffix tử tế, và là cách chậm để có additional arrow.
+  - method: bench
+    note: >-
+      Bench hào phóng với suffix của quiver và keo kiệt với prefix. Suffix:
+      7–12% increased Attack Speed giá 2 Chaos Orb; 22–27% increased Global
+      Critical Strike Chance giá 1 Chaos Orb; bất kỳ elemental resistance nào
+      ở mức 29–35% giá 3 Chaos Orb, hoặc hai cái cùng lúc ở mức 17–20%; 5–6%
+      increased Attack and Cast Speed giá 3 Chaos Orb, thứ khác group với
+      attack speed nên nằm cạnh nó được.
+
+
+      Prefix: maximum Life chỉ có +41–55 (2 Orb of Alchemy), so với +130–144
+      roll ra. Flat damage thì nhỏ: adds 19–23 to 37–42 Fire hoặc Cold giá 2
+      Orb of Alchemy, adds 5–7 to 8–10 Physical giá 2 Chaos Orb. Prefix bench
+      duy nhất đáng để lên kế hoạch xoay quanh là 24–32% increased Elemental
+      Damage with Attack Skills (4 Orb of Alchemy), vì pool tự nhiên không có
+      nó.
+
+
+      **Bench không bán Critical Strike Multiplier trên quiver.** Cái đó
+      phải roll ra hoặc đến từ một Essence.
+  - method: finishing
+    note: >-
+      Quiver không có socket và không nhận quality, nên hoàn thiện chỉ gồm
+      hai orb chỉnh chỉ số: một [[Divine Orb]] cho sáu modifier và một
+      [[Blessed Orb]] cho implicit. Phần lớn implicit của quiver có khoảng
+      rộng, nên Blessed Orb xứng đáng có chỗ ở đây.
+  - method: essence
+    note: >-
+      Essence phủ được cả hai phía của quiver. **Woe** đảm bảo increased
+      Damage with Bow Skills: 31–36% ở bậc Screaming, 37–42% ở Shrieking,
+      43–50% ở Deafening, tức đúng khoảng của Tier 1 tự nhiên.
+      **Scorn** đảm bảo Global Critical Strike Multiplier, 25–29% ở
+      Screaming và 35–41% ở Deafening: suffix damage duy nhất bench không
+      bán. **Loathing** cho Global Critical Strike Chance (39–42% ở
+      Deafening) và **Zeal** cho attack speed (13–15% ở Deafening, thấp hơn
+      Tier 1 tự nhiên một chút).
+
+
+      Với build elemental, **Anguish**, **Suffering** và **Torment** cho
+      Fire, Cold và Lightning Damage to Attacks, và các bản Deafening của
+      chúng cao hơn Tier 1 tự nhiên. Lưu ý rằng trên quiver, Anger, Hatred và
+      Wrath cho resistance chứ không cho damage.
+
+
+      Hai Essence chỉ có từ corruption cho những prefix không tìm được ở đâu
+      khác: [[Essence of Insanity]] (Projectiles Pierce 2 additional Targets)
+      và [[Essence of Hysteria]] (Gain 15% of Physical Damage as Extra Fire
+      Damage).
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) quan trọng khi một quiver Magic đang
+      có additional arrow: suffix đó đã ngốn hàng trăm Alteration, và không
+      nên để một [[Regal Orb]] phung phí nó.
+
+
+      Hãy cẩn thận với hai công thức thêm-và-gỡ. **Thêm một prefix, gỡ một
+      suffix ngẫu nhiên** ([[Farric Wolf Alpha]]) gỡ ở đúng phía mà quiver
+      không chịu nổi mất mát. **Thêm một suffix, gỡ một prefix ngẫu
+      nhiên** ([[Farric Lynx Alpha]]) mới là cái hữu ích, trên một quiver
+      Rare có phía prefix đang trống.
+  - method: harvest
+    note: >-
+      Hãy đếm số modifier mang tag trước khi trả tiền. **Critical** (150
+      Primal) thì tốt: chỉ hai suffix critical strike mang tag đó.
+      **Speed** (150 Vivid) ra attack speed hoặc Projectile Speed, và
+      Projectile Speed dễ ra gấp đôi. **Chaos** (100 Vivid) gần như lúc nào
+      cũng là Chaos Resistance.
+
+
+      **Life** (75 Wild) là cái cần nhớ. Maximum Life là prefix duy nhất mang
+      tag life, nhưng hai suffix cũng có tag đó (life leech và life on kill).
+      Trên một quiver chưa khóa, reforge này đảm bảo được rất ít. Khi suffix
+      đã khóa, chỉ prefix mới thỏa được điều kiện của nó, và lúc đó nó là một
+      lần roll Life được đảm bảo.
+
+
+      Các reforge theo element thì kém ở đây: mỗi suffix resistance mang tag
+      của element tương ứng, nên "một modifier Fire" thường là Fire
+      Resistance hơn là fire damage.
+  - method: fossil
+    note: >-
+      Một [[Deft Fossil]] ("more Critical, no Attribute") sinh ra là để dành
+      cho item này. Nó nhân hai suffix critical strike lên mười lần và xóa
+      Dexterity, suffix hay ra nhất. Ở item level 75, điều đó đưa cặp này từ
+      18% số lần roll suffix lên 72%, theo phép tính của chúng tôi. Một
+      [[Pristine Fossil]] làm điều tương tự cho Life ở phía prefix, với một
+      cái giá ở phía suffix mà ví dụ làm mẫu có đo.
+
+
+      Quiver có các modifier chỉ có từ Fossil của riêng nó, trong đó có
+      30–40% increased Damage with Ailments, 3–5% chance to gain a Frenzy
+      Charge when you Hit a Rare or Unique Enemy, và Damage Penetrates 3–5%
+      Elemental Resistances. Dữ liệu không cho biết Fossil nào đưa modifier
+      nào vào, và các tỉ lệ của chúng tôi bỏ chúng ra ngoài.
+  - method: veiled
+    note: >-
+      Các modifier unveil ra trên quiver thì khiêm tốn. Suffix hữu ích là
+      7–8% increased Attack and Cast Speed, cộng dồn được với attack speed.
+      Các hybrid critical strike (20–22% Global Critical Strike Chance kèm
+      27–30% increased Elemental Damage if you've dealt a Critical Strike
+      Recently) chung group với Critical Strike Chance roll ra. Prefix Life
+      veiled là +55–60 kèm mana regeneration, thấp xa so với Life roll tự
+      nhiên. Quiver hiếm khi đáng một veiled orb.
+  - method: corruption
+    note: >-
+      Quiver có vài implicit corruption thuộc hàng tốt nhất game: Bow Attacks
+      fire an additional Arrow, Arrows Chain +1 times, Point Blank, và Gain
+      8–12% of Physical Damage as Extra Cold, Fire hoặc Lightning Damage. Một
+      [[Vaal Orb]] chỉ thỉnh thoảng mới thay implicit của base bằng một
+      trong số này, và xác suất không được công bố. Đó là bước cuối cùng,
+      trên một quiver mà bạn chịu mất được.
+  - method: fracture
+    note: >-
+      Modifier nên fracture trên quiver là additional arrow, vì không gì nhắm
+      được vào nó: không Essence nào cho nó, không tag Harvest nào tách riêng
+      được nó, và nó là 1 trên khoảng 300 lần roll suffix. Khi nó đã bị
+      khóa, cứ thoải mái dùng Essence lên phần còn lại.
+  - method: meta
+    note: >-
+      Về khóa, quiver được tính chung với armour: "Suffix Modifiers cannot be
+      changed" và "Prefix Modifiers cannot be changed" mỗi cái tốn 4 Divine
+      Orb và 4 [[Blessed Orb]] trong 3.30. Trên item này, khóa thường dùng
+      là khóa **suffix**, mà tự nó là một prefix, nên quiver cần một ô
+      prefix trống để nhận nó.
+  - method: influence
+    note: >-
+      Influence thêm các prefix "extra damage": Gain 11–15% of Physical
+      Damage as Extra Cold (Shaper hoặc Redeemer), Fire (Warlord) hoặc
+      Lightning (Crusader), tất cả từ item level 75. Hunter thêm +21–25% to
+      Chaos, Fire hoặc Physical Damage over Time Multiplier with Attack
+      Skills, ở một group khác với Damage over Time Multiplier tự nhiên.
+      Elder thêm 3–5% chance to gain a Frenzy Charge when you Hit a Rare or
+      Unique Enemy. Một quiver có influence thì không fracture được.
+
+
+      Eldritch implicit không tồn tại cho quiver: Ember và Ichor chỉ dùng
+      được trên body armour, boots, gloves và helmet.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: prefix Life là một trường hợp mẫu mực cho chúng."
+memoryStrands: >-
+  Life trên quiver có mười tier với weight như nhau, nên một lần roll Life
+  thường có khả năng ra +3–9 ngang với +130–144. [[Memory Strands]] loại các
+  tier đáy khỏi bất cứ thứ gì được roll ra, đúng là vấn đề của prefix này, và
+  của Dexterity, các resistance và Critical Strike Chance, vốn được dựng theo
+  cùng một kiểu.
+
+
+  Chỗ hợp là một lần craft dùng orb nhỏ. Đặt strand lên một quiver trắng
+  bằng [[Orb of Remembrance]], roll nó bằng [[Orb of Alteration]] (mỗi cái
+  nhiều nhất 8 strand, theo bảng data-mine), và kết thúc bằng một
+  [[Regal Orb]] hoặc [[Exalted Orb]]. Phía prefix đủ nhỏ để một Exalted Orb
+  vào một prefix trống là ván cược hợp lý, và có strand thì nó rơi vào tier
+  tốt hơn.
+
+
+  Strand không giúp gì cho additional arrow: nó chỉ có một tier, và strand
+  không bao giờ làm một modifier dễ ra hơn. Và một Essence có thể tiêu tới 80
+  strand một lúc, nên hãy để base có strand tránh xa các lần craft Essence.
+reading:
+  intro: >-
+    Đọc một quiver theo thứ tự này: **implicit, suffix, rồi Life.** Implicit
+    cho bạn biết quiver dành cho build nào. Suffix cho bạn biết nó có đáng gì
+    không. Life cho bạn biết bạn có đeo nó được không. Hai prefix còn lại là
+    phần dễ và đến sau cùng.
+  prefixes:
+    text: >-
+      Bảy modifier, và đó là cả phía này: maximum Life, increased Damage with
+      Bow Skills, và flat Physical, Fire, Cold, Lightning và Chaos Damage to
+      Attacks. Đó là bảy group khác nhau, nên ba cái bất kỳ đều nằm chung
+      được.
+
+
+      Life là cái bench không thay được. Increased Damage with Bow Skills hợp
+      với mọi build bow. Prefix flat damage bạn muốn là cái khớp với damage
+      của bạn, còn ba cái kia là đồ thừa. Vì pool nhỏ cỡ này, phía prefix là
+      chỗ duy nhất trên mọi item mà một [[Exalted Orb]] vào một ô trống có
+      xác suất tử tế, và là nơi block một group bằng bench thay đổi xác suất
+      đó rất nhiều.
+
+
+      Không gì trên quiver là local. Mọi modifier ở đây tác động lên nhân
+      vật, nên con số ghi sao thì nghĩa vậy.
+    key:
+      - mod: "+# to maximum Life"
+        why: "38% số lần roll prefix, và bản của bench chưa bằng một nửa một tier tốt. Đây là prefix nên roll."
+        aim: "T3, +100–114 (ilvl 44). T1 là +130–144 và chỉ cần ilvl 64."
+      - mod: "#% increased Damage with Bow Skills"
+        why: "Damage cho mọi build bow, bất kể loại damage. Một Essence of Woe đảm bảo nó."
+        aim: "T3, 31–36% (ilvl 60). T1 là 43–50% (ilvl 86)."
+      - mod: "Adds # to # Physical Damage to Attacks"
+        why: "Cho bow physical, nơi các modifier của chính cây bow và build nhân nó lên. Chỉ hay ra bằng một nửa Life."
+        aim: "T2, adds 14–19 to 28–33 (ilvl 64). T1 cần ilvl 76."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Attacks"
+        why: "Cho build elemental. Mỗi cái là một group riêng, nên hai ba cái nằm chung được, và mỗi cái chiếm 8% số lần roll prefix."
+        aim: "T2 (ilvl 64–65). T1 cần ilvl 76–77."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Không có trong pool tự nhiên. Nó đến từ bench hoặc từ implicit của Primal Arrow Quiver."
+        aim: "Bench: 24–32% giá 4 Orb of Alchemy."
+  suffixes:
+    text: >-
+      Phía suffix chật chội và phần lớn là phòng thủ. Ở item level 84,
+      Dexterity và ba elemental resistance cộng lại chiếm 45% số lần roll
+      suffix, còn stun duration, accuracy, Projectile Speed và life hoặc mana
+      on kill lấy thêm 28%. Không cái nào có hại, và một resistance thường là
+      đúng thứ nhân vật cần. Nhưng điều đó nghĩa là các suffix damage là
+      thiểu số: hai modifier critical strike cộng lại 16%, attack speed 3.4%,
+      additional arrow 0.34%.
+
+
+      Có hai luật về group đáng kể. Global Critical Strike Chance của bench
+      cùng group với Critical Strike Chance with Bows roll ra, nên không thêm
+      được bên cạnh nó. "Attack and Cast Speed" của bench và của bản veiled
+      thì khác group với attack speed, nên thêm được.
+    key:
+      - mod: "Bow Attacks fire an additional Arrow"
+        why: "Thêm một mũi tên cho mỗi attack. Một tier, weight 250, và không công cụ nào nhắm được vào nó."
+        aim: "Cần ilvl 70. Khoảng 1 trên 300 lần roll suffix."
+      - mod: "+#% to Critical Strike Multiplier with Bows"
+        why: "Suffix damage cho build critical strike, và là cái bench không bán."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 74)."
+      - mod: "#% increased Critical Strike Chance with Bows"
+        why: "Bảy tier với weight bằng nhau. Bản Global của bench (22–27%) là món thay thế tạm ổn."
+        aim: "T3, 30–34% (ilvl 58). T1 là 39–44% (ilvl 85)."
+      - mod: "#% increased Attack Speed"
+        why: "Hiếm khi roll ra, rẻ khi mua: 7–12% của bench chồng lên khoảng của Tier 2."
+        aim: "Bench, hoặc T2 11–13% (ilvl 22). T1 là 14–16% (ilvl 76)."
+      - mod: "+#% to Damage over Time Multiplier with Attack Skills"
+        why: "Cho build bow bleed, poison và ignite. Weight 300 mỗi tier, nên hiếm ở mọi level."
+        aim: "T2, 20–23% (ilvl 76). T1 là 24–26% (ilvl 82)."
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Đồ lấp chỗ nhưng giải quyết một vấn đề thật. Bench cho 29–35%, nên đừng bao giờ roll lại để tìm một cái."
+approach:
+  principle: >-
+    **Roll thứ bench không bán được.** Trên quiver đó là ba thứ: maximum Life
+    ở phía prefix, cùng Critical Strike Multiplier và additional arrow ở phía
+    suffix. Attack speed, critical strike chance, resistance và elemental
+    damage đều có một nguồn rẻ và chắc chắn. Hãy quyết định quiver của bạn
+    cần cái nào trong ba cái đó, rồi dành phần ngẫu nhiên của lần craft cho
+    chúng.
+  order:
+    - title: "Chọn implicit"
+      text: >-
+        Base không vướng bất kỳ cân nhắc nào khác, nên đây là câu hỏi về
+        build và chỉ về build. Item level 77 đủ cho một lần craft bình
+        thường; chỉ lên 85 hoặc 86 vì tier cuối của critical strike chance
+        hoặc của bow damage.
+    - title: "Quyết định bạn roll bao nhiêu phần của phía suffix"
+      text: >-
+        **Không phần nào:** bạn muốn Life và resistance. Roll Life, bench
+        một suffix. **Critical Strike Multiplier:** một Essence of Scorn,
+        hoặc một Deft Fossil cho cả hai suffix critical strike.
+        **Additional arrow:** Alteration và một Imprint, hoặc một base
+        fractured. Mỗi nấc lên tốn gấp vài lần nấc trước.
+    - title: "Lấy các suffix hiếm trước"
+      text: >-
+        Chúng là phần không có nguồn chắc chắn, nên chúng đến khi item còn
+        rẻ và bỏ đi không tiếc. Ở giai đoạn này hãy lờ hẳn prefix đi: mọi
+        thứ ở phía prefix đều dựng lại được.
+    - title: "Khóa suffix nếu chúng đáng, rồi lấy Life"
+      text: >-
+        Khi suffix đã khóa, một reforge Life của Harvest chỉ có prefix Life
+        mới thỏa được. Không khóa thì Life đến từ cuộc xổ số, nơi nó vốn là
+        prefix hay ra nhất. Hãy khóa khi làm lại các suffix đó tốn hơn 4
+        Divine Orb và 4 Blessed Orb.
+    - title: "Lấp các prefix cuối từ một pool nhỏ"
+      text: >-
+        Bảy họ, trong đó Life đã có chỗ. Một Exalted Orb vào một prefix
+        trống, khi suffix đã đầy để nó buộc phải rơi vào đó, có ít kết quả
+        xấu, và một modifier bench đặt trước sẽ loại thêm một cái nữa.
+    - title: "Bench sau cùng, rồi tới các orb chỉnh chỉ số"
+      text: >-
+        Một ô được chừa cho bench: attack speed hoặc một resistance nếu còn
+        suffix trống, Elemental Damage with Attack Skills nếu còn prefix
+        trống.
+  finishing: >-
+    Một [[Divine Orb]] khi Life hoặc các modifier critical strike nằm thấp
+    trong khoảng của chúng, và một hai [[Blessed Orb]] cho implicit, thứ mà
+    trên phần lớn quiver có khoảng rộng mười điểm. Không có quality, socket
+    hay link nào phải nghĩ tới.
+
+
+    Corruption là tùy chọn và không quay lại được. Một [[Vaal Orb]] có thể
+    biến implicit thành một additional arrow, và nó cũng có thể roll lại cả
+    cây quiver. Hãy dùng nó trên một quiver mà mất cũng không tiếc.
+  stopping: >-
+    Một quiver có **+100 Life, một prefix damage và một suffix bench** là đã
+    xong cho phần lớn game, và nó chỉ tốn một nắm Alteration. Thêm
+    **Critical Strike Multiplier** là nó gánh một build critical strike qua
+    map đỏ. Additional arrow là chỗ giá nhân lên, và với nhiều build, một
+    suffix damage thứ hai còn có ích hơn.
+
+
+    Hãy dừng khi các suffix bạn roll ra đúng là những cái bạn nhắm từ đầu.
+    Đừng cứ roll lại một quiver để có tier Life cao hơn: chênh lệch giữa Tier
+    3 và Tier 1 là ba mươi Life.
+special:
+  - mod: "#% increased Elemental Damage with Attack Skills"
+    source: "Bench / implicit của base"
+    where: "Không phải prefix tự nhiên trên quiver. 24–32% từ [[Crafting Bench]] giá 4 Orb of Alchemy, và 20–30% dưới dạng implicit của Primal Arrow Quiver."
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Essence"
+    where: "Một Essence of Scorn: 25–29% ở bậc Screaming, 30–34% ở Shrieking, 35–41% ở Deafening. Bench không có critical strike multiplier cho quiver."
+  - mod: "Projectiles Pierce 2 additional Targets"
+    source: "Essence"
+    where: "Một prefix từ [[Essence of Insanity]], thứ chỉ có được bằng cách corrupt một monster Essence với [[Remnant of Corruption]]."
+  - mod: "Gain #% of Physical Damage as Extra Fire / Cold / Lightning Damage"
+    source: "Influence / Essence / corruption"
+    where: "11–15% dưới dạng prefix influence từ item level 75: Cold trên Shaper hoặc Redeemer, Fire trên Warlord, Lightning trên Crusader. Một [[Essence of Hysteria]] cho 15% as Extra Fire Damage. Một implicit corruption cho 8–12%."
+  - mod: "+#% to Chaos / Fire / Physical Damage over Time Multiplier with Attack Skills"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter, 21–25% ở item level 80. Nó khác group với Damage over Time Multiplier with Attack Skills tự nhiên, nên cả hai có thể cùng nằm trên một quiver."
+  - mod: "#% increased Attack and Cast Speed"
+    source: "Bench / Veiled"
+    where: "5–6% từ bench giá 3 Chaos Orb, 7–8% khi unveil. Khác group với increased Attack Speed, nên nó là tốc độ cộng thêm chứ không phải đồ thay thế."
+  - mod: "#% chance to gain a Frenzy Charge when you Hit a Rare or Unique Enemy"
+    source: "Influence Elder / Fossil"
+    where: "3–5%, dưới dạng suffix Elder từ item level 75 hoặc dưới dạng suffix chỉ có từ Fossil."
+  - mod: "Bow Attacks fire an additional Arrow (implicit)"
+    source: "Corruption"
+    where: "Một [[Vaal Orb]] có thể thay implicit của base bằng nó, đưa additional arrow ra ngoài sáu ô. Arrows Chain +1 times và Point Blank cũng đến theo cách đó."
+  - mod: "Attack Skills have +1 to maximum number of Summoned Totems"
+    source: "Implicit của base"
+    where: "Implicit của Artillery Quiver kể từ 3.30. Không craft ra được: bạn chọn nó bằng cách chọn base."
+mistakes:
+  - "**Dùng beast \"thêm một prefix\" lên quiver có suffix tốt.** Nó gỡ một suffix ngẫu nhiên, mà trên item này suffix là phần bạn không dựng lại được."
+  - "**Roll lại để tìm một resistance hoặc attack speed.** Bench bán 29–35% resistance và 7–12% attack speed với giá vài Chaos Orb."
+  - "**Bench Life.** Bench cho +41–55. Một lần roll prefix cho +100 trở lên khoảng một trên chín lần."
+  - "**Bench Global Critical Strike Chance cạnh Critical Strike Chance with Bows đã roll ra.** Chúng là một group; bench sẽ từ chối."
+  - "**Trông chờ một reforge Life của Harvest cho prefix Life trên quiver chưa khóa.** Life leech và life on kill mang cùng tag đó."
+  - "**Craft quiver crit trên base attack speed, hoặc ngược lại.** Implicit là thứ duy nhất base cho bạn, và chọn đúng nó thì không tốn gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, implicit, modifier, tier, weight, Essence và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên quiver, và implicit mới của Artillery Quiver." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Life, Critical, Speed và Chaos." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và hai công thức thêm-và-gỡ." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

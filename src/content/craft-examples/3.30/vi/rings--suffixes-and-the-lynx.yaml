@@ -1,0 +1,156 @@
+category: rings
+title: "Ba suffix bằng Alteration và Lynx"
+level: 3
+summary: "Roll một resistance cao, element nào cũng được, biến ring thành Rare, rồi dùng công thức beast đổi một prefix lấy một suffix khi phía prefix không giữ thứ gì bạn muốn."
+goal: >-
+  Một chiếc ring có ba suffix hữu ích, một trong số đó là resistance từ 42%
+  trở lên, và Life từ bench. Có hai ý làm nên việc này. Giá trị của ring nằm
+  ở phía suffix còn Life của nó thì mua được, nên **phía prefix là thứ để đem
+  ra tiêu**. Và một công thức gỡ "một prefix ngẫu nhiên" thì chẳng còn ngẫu
+  nhiên khi ring có một prefix, hoặc không có cái nào.
+base: "Two-Stone Ring"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 mở tier resistance cao nhất, 46–48%; ở 72 thì cùng lần craft
+  này chạm đỉnh ở 42–45%, còn lại y hệt. Implicit của Two-Stone thêm hai
+  resistance nữa phía trên vạch kẻ. Vermillion Ring hoặc Amethyst Ring cũng
+  là base tốt ngang vậy nếu resistance của bạn đã gần xong.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+15% to Fire and Lightning Resistances"]
+  prefixes:
+    - { text: "+52 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+44% to Fire Resistance" }
+    - { text: "+47 to Strength" }
+    - { text: "+38% to Cold Resistance", how: beast }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Farric Lynx Alpha]]", amount: "1–2", note: "cộng ba beast Rare cho mỗi lần" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Vài chục Alteration, một [[Regal Orb]], và một hoặc hai bộ beast. Trong
+  3.30 chỉ beast đỏ mới bị bắt, nên beast là phần cần kiểm trước khi bắt đầu.
+  Bước bench tốn 2 [[Orb of Alchemy]].
+odds: >-
+  Ở item level 84, một lần roll suffix ra một elemental resistance từ 42% trở
+  lên, element nào trong ba cũng tính, khoảng 1 trên 17 lần theo phép tính
+  của chúng tôi. Nhất quyết đòi một element thì thành 1 trên 52. Đó là toàn
+  bộ lý do lần craft này nhận bất cứ element nào tới.
+
+
+  Lynx thêm một suffix ngẫu nhiên. Khi ring đã có một resistance và một
+  attribute, khoảng bốn trên mười thứ nó có thể thêm là một resistance khác
+  hoặc một attribute; phần còn lại là hồi phục và đồ lấp chỗ.
+steps:
+  - title: "Roll một resistance cao"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]] cho
+      tới khi **suffix** là Fire, Cold hoặc Lightning Resistance từ 42% trở
+      lên. Đừng quan tâm là cái nào.
+    why: >-
+      Bench bán 21–28% của bất kỳ resistance nào. Một cái roll ra ở tier này
+      gần gấp đôi mức đó, nên đây là phần đáng roll. Element thì đổi được về
+      sau; tier thì không.
+    check: >-
+      Nhìn cả prefix nữa, và xếp nó vào một trong hai loại. **Life từ 70 trở
+      lên:** bạn đang có một chiếc ring tốt hơn thứ lần craft này làm ra. Bỏ
+      qua Lynx, dùng Regal Orb rồi bench một suffix. **Bất cứ thứ gì khác,
+      hoặc không có gì:** cứ tiếp tục.
+    state:
+      rarity: magic
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+41 to maximum Mana" }]
+      suffixes: [{ text: "+44% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Các công thức ở bước kế chỉ dùng được trên item Rare. Regal Orb thêm gì
+      thì kế hoạch vẫn đứng vững: một suffix là một trong ba cái bạn muốn,
+      còn một prefix thì đằng nào cũng sắp bị gỡ.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+41 to maximum Mana" }]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+  - title: "Đếm prefix trước khi dùng beast"
+    do: >-
+      Giữ Alt. Ring phải còn một ô suffix trống, và các prefix của nó phải là
+      những cái bạn chịu mất. Ở đây: một prefix là Mana, và hai suffix.
+    why: >-
+      Công thức thêm một suffix và gỡ một prefix ngẫu nhiên. Khi chỉ có một
+      prefix thì chẳng có gì ngẫu nhiên: Mana ra đi. Khi không có prefix nào
+      thì không có gì để gỡ, và theo kinh nghiệm lâu năm của người chơi, khi
+      đó chỉ còn lại phần được.
+    fail: >-
+      Hai prefix và một trong số đó là Life tốt: đừng dùng công thức này. Đó
+      sẽ là một lần tung đồng xu với Life. Bench một suffix rồi dừng.
+  - title: "Thêm một suffix, gỡ một prefix ngẫu nhiên"
+    do: >-
+      Ở [[Menagerie]], dùng **Add a Suffix, Remove a Random Prefix** lên
+      ring. Nó cần một [[Farric Lynx Alpha]] và ba beast Rare khác.
+    why: >-
+      Một suffix ngẫu nhiên trên ring rất hay là một attribute hoặc một
+      elemental resistance, mà thứ bạn đem ra trả là một lần roll Mana. Không
+      orb nào làm được cuộc đổi chác đó: một Exalted Orb có thể rơi vào phía
+      prefix, còn một Annulment có thể lấy mất resistance.
+    check: >-
+      Ba suffix, không prefix. Nếu suffix mới vô dụng và bạn còn dư beast,
+      công thức này vẫn không lặp lại được trên một phía suffix đã đầy; hãy
+      chấp nhận nó. Nếu Regal Orb đã thêm một prefix thì giờ ring sẽ có hai
+      suffix và còn chỗ cho một lần dùng nữa.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+        - { text: "+38% to Cold Resistance", how: beast }
+  - title: "Bench Life"
+    do: >-
+      Ở [[Crafting Bench]], craft +41–55 to maximum Life giá 2
+      [[Orb of Alchemy]].
+    why: >-
+      Phía prefix đang trống, nên craft Life nào cũng được phép. Đây là kế
+      hoạch ngay từ đầu: tiêu prefix để dựng suffix, rồi mua prefix duy nhất
+      quan trọng.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+52 to maximum Life", how: crafted }]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+        - { text: "+38% to Cold Resistance", how: beast }
+variations: >-
+  **Sai element.** Horticrafting Station bán các lần đổi biến một elemental
+  resistance thành cái khác. Từ 3.30 mỗi lần tốn 300 Lifeforce thuộc hai loại
+  khác nhau. Nếu ring cho bạn fire mà bạn cần lightning thì đó là cách sửa,
+  và đó là lý do bước 1 nhận resistance cao đầu tiên nó thấy.
+
+
+  **Life roll ra thay vì Life của bench.** Khi ring đã có ba suffix, một
+  [[Exalted Orb]] chỉ có thể thêm một prefix, và khoảng 1 trên 7 prefix là
+  Life. Hãy dùng nó **trước** bench: Life của bench cùng group với Life roll
+  ra và sẽ block nó. Nếu Exalted Orb trượt, hãy bench Life bên cạnh thứ nó đã
+  thêm.
+
+
+  **Trên base có Memory Strands.** Lần craft này toàn là Alteration, một
+  Regal Orb và nhiều nhất một Exalted Orb, những orb tiêu ít strand nhất, và
+  resistance có tám tier để strand phát huy. Hãy dùng
+  [[Orb of Remembrance]] lên chiếc ring trắng trước. Công thức beast có đụng
+  tới strand hay không thì chưa rõ.
+mistakes:
+  - "Roll tìm đúng một element đã chọn. Việc đó làm số Alteration tăng gấp ba, trong khi một lần đổi ở Harvest biến element thành chuyện nhỏ."
+  - "Dùng Lynx lên chiếc ring có prefix Life bạn muốn giữ. Với hai prefix thì đó là tung đồng xu; với một thì chắc chắn mất."
+  - "Bench Life trước một Exalted Orb. Một modifier Life crafted chặn không cho cái roll ra xuất hiện."
+  - "Dùng Augmentation lên chiếc ring Magic để lấp prefix. Công thức sắp gỡ một prefix; một ô trống thì không tốn gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức thêm suffix và beast nó cần trong 3.30." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá đổi resistance trong 3.30; beast vàng không còn bị bắt nữa." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

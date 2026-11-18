@@ -1,0 +1,192 @@
+category: one-hand-maces
+title: "Veiled Chaos Orbs: a reroll with one choice in it"
+level: 3
+summary: "Each Veiled Chaos Orb rerolls the mace and adds a veiled modifier. Read the rest first, block the wrong answers at the bench, then unveil a physical percentage."
+goal: >-
+  A mapping mace built around an unveiled prefix: 120–139% increased
+  Physical Damage with a chance to Impale, Bleed, Poison or Blind. It is the
+  percentage you **choose** instead of roll. The lessons are how unveiling
+  works, how a throwaway bench craft narrows the three offers, and how to
+  decide whether a reroll is worth unveiling at all.
+base: "Nightmare Mace"
+itemLevel: 75
+baseWhy: >-
+  38–80 at 1.4 attacks per second, the fastest ordinary endgame mace.
+  Unveiled modifiers need item level 60. Item level 75 also allows Tier 2 of
+  everything physical that might roll beside the veil, and on a mace
+  something physical rolls beside it often: that is why this tool works
+  here without a lock, where on an axe it would need one.
+methods: [currency, veiled, bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 20 to 40 Physical Damage" }
+  suffixes:
+    - { text: "+44 to Strength" }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Veiled Chaos Orb]]", amount: "3–8" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Orb of Alteration]]", amount: "4 per block" }
+  - { item: "[[Orb of Scouring]]", amount: "1 per block", note: "to remove it at the bench" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the final bench craft" }
+cost: >-
+  The [[Veiled Chaos Orb]]s. Safehouse leaders in Betrayal have a chance to
+  drop them, and reference pages list Aisling's Research bench as a second
+  source. Everything else is small change.
+odds: >-
+  The data does not say how often the veil lands on the prefix side, or how
+  the three offers are drawn, so we give no single figure. What can be
+  counted: a veiled prefix on a mace has thirteen possible outcomes and
+  four of them are the physical percentage. Seven of the other nine share
+  one group. With that group blocked six outcomes remain, four of them
+  wanted, so three different offers must contain one. That relies on two
+  rules players have tested and the developers have not stated.
+
+
+  Beside the veil, each other prefix the orb rolls is flat Physical Damage
+  about 22% of the time and the Accuracy hybrid about 12%, by our arithmetic
+  at item level 75.
+steps:
+  - title: "Prepare a Rare mace"
+    do: >-
+      Take a white Nightmare Mace to 20% quality and use an
+      [[Orb of Alchemy]].
+    why: >-
+      A Veiled Chaos Orb reforges a Rare item. What the Alchemy rolls is
+      irrelevant; it only makes the mace Rare.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 41 to 74 Fire Damage" }
+      suffixes:
+        - { text: "+29 to Strength" }
+        - { text: "+266 to Accuracy Rating" }
+  - title: "Use a Veiled Chaos Orb and do not unveil yet"
+    do: >-
+      Use one [[Veiled Chaos Orb]]. The mace gets new modifiers, one of
+      them shown only as "Veiled". Hold Alt and read everything else
+      first.
+    why: >-
+      Unveiling is a decision, and it is cheaper to make after you know
+      what the rest of the item is. Three questions: is the veil a prefix
+      or a suffix? Did pure increased Physical Damage roll beside it? Is
+      there an open prefix slot?
+    check: >-
+      The result shown is the one to hope for: a veiled prefix, flat
+      Physical Damage beside it, one prefix slot open, and no pure
+      percentage on the item.
+    fail: >-
+      If the rest of the item is poor, use another Veiled Chaos Orb
+      without unveiling. Since the 17 November hotfix the orb works on an
+      item that already has a veiled modifier.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 20 to 40 Physical Damage" }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Block the group you do not want"
+    do: >-
+      With a prefix slot open, craft **25–34% increased Fire Damage** at
+      the [[Crafting Bench]] for 4 [[Orb of Alteration]]s.
+    why: >-
+      Unveiling offers three modifiers, and by player testing it never
+      offers one whose group is already on the item. Seven of the thirteen
+      prefixes a veil can become belong to a single group: the percentages
+      for spell, minion, chaos and single-element damage. This worthless
+      craft is in that group. With it on the mace, only six outcomes are
+      left: the four physical percentages and two kinds of penetration.
+    fail: >-
+      No open prefix: unveil without the block. Four of thirteen outcomes
+      are still the ones you want.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 20 to 40 Physical Damage" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Unveil"
+    do: >-
+      Right-click the mace and pick from the three offers: increased
+      Physical Damage with a chance to **Impale**, to cause **Bleeding**,
+      to **Poison** or to **Blind**. All four give 120–139%; take the
+      second line your build uses.
+    why: >-
+      You no longer need Jun for this. The unveiled modifier is an ordinary
+      one, stronger than the bench's copy at 95–105%, and it does not use
+      the bench slot. 120–139% sits between natural Tier 4 and Tier 3;
+      a rolled percentage of Tier 4 or better is about 1 prefix roll in 88
+      on a mace.
+    check: >-
+      If none of the three is a physical percentage, the veil was a miss.
+      Take the least bad offer or use another Veiled Chaos Orb.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 20 to 40 Physical Damage" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Take the block off and spend the bench properly"
+    do: >-
+      At the bench, remove the crafted modifier for 1 [[Orb of Scouring]].
+      Then craft what the mace lacks: here **11–15% increased Attack
+      Speed** for 2 [[Chaos Orb]]s.
+    why: >-
+      The block was only ever a way to steer the unveil. Attack speed is
+      the suffix every mace wants and this one has none. The third prefix
+      stays open for an [[Exalted Orb]] later; the bench cannot fill it
+      with physical damage, because its percentage shares a group with the
+      unveiled one and its flat damage with the rolled one.
+    check: >-
+      Remove the block with the bench's "Remove Crafted Mods", never with
+      an Orb of Scouring on the item itself.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 20 to 40 Physical Damage" }
+      suffixes:
+        - { text: "+44 to Strength" }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **The veil is a suffix.** Unveil it without a block and look for 6–7%
+  chance to deal Double Damage, or 12–15% attack speed while a Rare or
+  Unique enemy is within 6 metres. That attack speed is its own group, so
+  the bench's ordinary attack speed still fits beside it. A crit build
+  looks for +36–40% Critical Strike Multiplier under the same condition.
+
+
+  **Pure increased Physical Damage rolled beside a veiled prefix.** The
+  four physical unveils will not be offered: same group. If the rolled tier
+  is good you already have your percentage; unveil for penetration or
+  ignore the veil. If it is poor, reroll.
+
+
+  **A veiled mace from the Syndicate.** Syndicate members drop Rare items
+  that already carry a veil. Read one exactly as in step 2 and go on from
+  there; the orb is only needed when the rest of the item is not worth
+  unveiling.
+
+
+  **Memory Strands.** By the data-mined table a Veiled Chaos Orb can spend
+  up to 80 strands. Do not use one on a strand base.
+mistakes:
+  - "Unveiling the moment the veil appears. Read the rest of the item first; half of what decides the unveil is already on it."
+  - "Forgetting the block when a prefix slot is open. Four Alterations remove seven wrong outcomes."
+  - "Leaving the block on. It is a prefix slot and the item's one bench modifier."
+  - "Unveiling a prefix when the mace already rolled pure increased Physical Damage and expecting the physical choices."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The unveiled modifiers and their groups, weights, tiers and bench costs. The odds are our arithmetic." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun; Safehouse leaders can drop Veiled Chaos Orbs." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs on items that already have a veiled modifier." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: a group already on the item is not offered at the unveil. Partly older than 3.30." }
+  - { title: "poedb: Immortal Syndicate", url: "https://poedb.tw/us/Immortal_Syndicate", kind: data, note: "Syndicate members drop veiled items; Aisling's Research bench." }

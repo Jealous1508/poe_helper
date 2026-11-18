@@ -1,0 +1,206 @@
+category: bows
+title: "A physical bow without rolling physical: a veiled prefix under a suffix lock"
+level: 4
+summary: "Build the suffixes with an Essence, lock them, and use a Veiled Chaos Orb that the lock forces onto the prefix side. Unveil 120–139% increased Physical Damage."
+goal: >-
+  A physical bow with a strong percentage prefix, attack speed and flat
+  Physical Damage, made without ever rolling the percentage. On a bow that
+  roll is a poor bet, so this craft goes round it. The lesson is a second
+  use for the lock: not only to keep one side safe, but to **force a tool
+  onto the other side.** A Veiled Chaos Orb puts its veiled modifier
+  anywhere. Lock the suffixes and the only place left is a prefix.
+base: "Citadel Bow"
+itemLevel: 75
+baseWhy: >-
+  A physical bow is the one kind where the base's damage is the craft. The
+  Citadel Bow's 36–144 at 1.25 attacks per second is the highest physical
+  damage per second in the category, and it has 6% critical strike chance.
+  The unveiled modifier needs only item level 60. Item level 75 is for the
+  suffixes: Tier 1 Critical Strike Chance and Multiplier open at 73.
+methods: [essence, meta, veiled, bench, finishing]
+result:
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 113 to 229 Fire Damage" }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "16% increased Attack Speed", how: essence }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+    - { text: "+352 to Accuracy Rating" }
+needs:
+  - { item: "[[Shrieking Essence of Zeal]]", amount: "5–15" }
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+cost: >-
+  Each attempt at the prefix is a lock, 4 [[Divine Orb]]s and 1
+  [[Sacred Orb]], plus a [[Veiled Chaos Orb]]. Those orbs come from
+  Betrayal: safehouse leaders can drop them. One attempt is usually enough,
+  which is the reason to do it this way. The Essences before it are cheap.
+odds: >-
+  **Why not just roll it.** At item level 75, one prefix roll is pure
+  increased Physical Damage of 110% or more about 1 time in 150, by our
+  arithmetic from the weights. The elemental prefixes take two rolls in
+  three.
+
+
+  **The veiled route.** Under the suffix lock, the Veiled Chaos Orb's veiled
+  modifier is a prefix every time. Unveiling offers three choices out of
+  the seven veiled prefixes a bow has, and four of those seven are the
+  physical hybrids (Impale, Bleeding, Poison, Blind). The data does not
+  give the weights of the choices. If the seven were equally likely you
+  would be offered at least one physical hybrid 34 times in 35.
+
+
+  The orb also rolls up to two ordinary prefixes beside the veiled one.
+  Those are luck, and on a bow that mostly means an element.
+steps:
+  - title: "Stage 1: suffixes from an Essence of Zeal"
+    do: >-
+      Take a white Citadel Bow to 20% quality and six sockets. Use
+      [[Shrieking Essence of Zeal]]s until the suffixes are attack speed
+      plus **at least one more you want** (Critical Strike Chance or
+      Multiplier for a crit build), and the bow has **at most two
+      prefixes**.
+    why: >-
+      Zeal guarantees attack speed, 15–16% at Shrieking, close to the 17–19%
+      of the best natural tier and well above the bench's cheap 8–10%. This
+      is the stage that is cheap to repeat, so it is where the random part
+      of the craft is spent. The prefixes it rolls do not matter. Their
+      number does: the lock is a prefix and needs a free slot.
+    check: >-
+      Quality goes on now because this is a physical bow: every percentage
+      you add later multiplies the base damage with quality included.
+    state:
+      prefixes:
+        - { text: "Adds 16 to 302 Lightning Damage" }
+        - { text: "Adds 68 to 137 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Stage 2: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      Two jobs at once. It keeps the three suffixes through the next step,
+      and it closes the suffix side to the veiled modifier. It sits in a
+      prefix slot and is used up by the reroll.
+    check: >-
+      Do **not** bench increased Physical Damage at any point before the
+      unveil. By community testing the three choices never include a group
+      that is already on the item, and the veiled physical hybrids share a
+      group with the bench's increased Physical Damage.
+    state:
+      prefixes:
+        - { text: "Adds 16 to 302 Lightning Damage" }
+        - { text: "Adds 68 to 137 Fire Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Stage 3: the Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the bow.
+    why: >-
+      Its text is "Reforges a rare item with new random modifiers including
+      a random Veiled modifier". With the suffixes protected, the reforge
+      can only replace the prefixes, the lock among them, and the veiled
+      modifier has to be one of the new prefixes.
+    check: >-
+      Three suffixes unchanged, the lock gone, and a line reading "Veiled
+      Prefix". Count the other prefixes: one open slot is what you hope
+      for.
+    fail: >-
+      That Veiled orbs respect the lock is reported by players, not stated
+      by the developers. After any patch, test on a cheap Rare first.
+    state:
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Stage 4: unveil"
+    do: >-
+      Right-click the bow and choose from the three options. Take
+      **120–139% increased Physical Damage** with the rider your build uses:
+      chance to Impale, to cause Bleeding, to Poison or to Blind.
+    why: >-
+      The unveiled modifier is a normal modifier, stronger than its bench
+      copy (95–105%), and it is in the pure increased Physical Damage group.
+      120–139% sits across natural Tier 4 and Tier 3, for a modifier you
+      could not afford to roll.
+    fail: >-
+      None of the three is a physical hybrid. Take the best of what is
+      offered, then repeat stages 2 and 3: since the 17 November hotfix a
+      Veiled Chaos Orb works on an item that already has a veiled or
+      unveiled modifier, as long as that modifier is not protected.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+  - title: "Stage 5: bench the flat Physical Damage"
+    do: >-
+      In the open prefix, craft **adds 18–24 to 36–42 Physical Damage** for
+      4 [[Chaos Orb]]s.
+    why: >-
+      Flat Physical Damage is a different group from both percentage
+      families, and it raises the number the veiled percentage multiplies.
+      The fire prefix that came with the Veiled Chaos Orb is not what this
+      build asked for, but it is damage and it stays.
+    check: >-
+      If the Veiled Chaos Orb filled all three prefixes there is nothing to
+      bench. The bow is still a physical bow with a strong percentage, and
+      you stop here.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 113 to 229 Fire Damage" }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+352 to Accuracy Rating" }
+variations: >-
+  **The bench version, for a tenth of the cost.** Skip stages 2 to 4 and
+  bench the hybrid directly: 95–105% increased Physical Damage with an
+  18–20% chance to Impale, Bleed, Poison or Blind, 8 Chaos Orbs. It leaves
+  no bench slot for flat Physical Damage, so use an Essence of Contempt in
+  stage 1 instead of Zeal and take attack speed as it comes. That is the
+  honest budget physical bow.
+
+
+  **Further up.** A bow with a rolled Accuracy hybrid beside the veiled
+  percentage has both percentage families. The hybrid is as rare as the
+  pure one, so that bow starts from a fractured base, as in the hardest
+  two-handed mace example.
+
+
+  **A Veiled Exalted Orb** adds a veiled modifier and removes a random one.
+  Under the same lock, by the same player-tested rule, it can only remove a
+  prefix, which makes it a gentler version of this craft when the bow
+  already has a prefix or two worth keeping and you accept the risk to them.
+  Where those orbs drop in 3.30 we could not confirm.
+mistakes:
+  - "Benching increased Physical Damage \"for now\" before the unveil. It blocks the very option you are unveiling for."
+  - "Using the Veiled Chaos Orb without the lock. The veiled modifier may land on the suffix side, and the whole bow is rerolled."
+  - "Locking with three prefixes on the bow. The suffix lock is a prefix and will not fit."
+  - "Using an Essence after the lock. Essences are reported to ignore the protection modifiers."
+  - "Expecting a top-tier weapon. This is a strong mid-range physical bow; its second and third prefixes are a bench craft and whatever the orb rolled."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The unveiled and bench modifiers on bows and their groups, the Essence of Zeal tiers, weights, bench costs and the in-game text of the Veiled Chaos Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on weapons." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs on items that already have a veiled modifier." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun; safehouse leaders can drop Veiled Chaos Orbs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs respect a locked side, and a group already on the item is not offered when unveiling. Partly older than 3.30." }

@@ -1,0 +1,158 @@
+category: body-armours
+title: "A levelling chest: roll the life, buy the resistance"
+level: 1
+summary: "Your first chest craft: Alterations for a life prefix, a Regal Orb, and the bench for the resistance your character is missing."
+goal: >-
+  A chest for the middle of the campaign with real life on it and the
+  resistance you lack, made from currency that drops on the way. The idea to
+  take away is how to split a craft between luck and the bench: **roll the
+  modifier the bench sells worst, and buy the other one.**
+base: "Bronze Plate"
+itemLevel: 38
+baseWhy: >-
+  A Bronze Plate can be worn at level 37 and has 373–429 Armour. Item level
+  36 is the first at which life of 85–99 ("Rotund") can roll, so anything
+  from 36 up will do: hold Alt over the item to see its item level.
+
+
+  Any white body armour of your own level works the same way, whatever its
+  defence. If you have the choice, take one whose sockets and links already
+  suit your skill. They are not modifiers, and nothing in this craft changes
+  them.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "+78 to maximum Life" }
+    - { text: "+88 to Armour" }
+  suffixes:
+    - { text: "+21% to Lightning Resistance" }
+    - { text: "+25% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Armourer's Scrap]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "for the bench" }
+cost: >-
+  A handful of [[Orb of Alteration]]s, one [[Regal Orb]] and one
+  [[Orb of Alchemy]] for the bench. Nothing in it is worth saving at this
+  stage of a league.
+odds: >-
+  At item level 38 on a plate, one prefix roll is maximum Life of 55 or more
+  about 1 time in 8, by our arithmetic from the modifier weights, and life of
+  any size nearly 1 time in 3. An Alteration does not always roll a prefix, so
+  expect ten to twenty. The Regal Orb is plain luck, and the craft is built so
+  that its result barely matters.
+steps:
+  - title: "Quality on the white base"
+    do: >-
+      Use [[Armourer's Scrap]]s on the white chest until it reads 20%
+      quality.
+    why: >-
+      Quality multiplies the Armour on the base. The item text says the
+      scraps have a greater effect on low item levels, so this is the
+      cheapest moment to do it.
+    state: { rarity: normal }
+  - title: "Compare the bench with the lottery"
+    do: >-
+      Open the [[Crafting Bench]] and read two lines before spending
+      anything: what it charges for **maximum Life** and what it charges for
+      **a resistance**.
+    why: >-
+      The life ranks you can afford here are +41–55 for 2 Orbs of Alchemy and
+      +56–70 for 4, where a rolled prefix at this item level reaches 85–99.
+      The resistance is 21–28% for a single Orb of Alchemy, where a rolled
+      suffix reaches 24–29%. The bench nearly matches the lottery on the
+      resistance and falls well short on life. So the life is the one to
+      roll, and the resistance is the one to buy.
+    check: >-
+      The bench only lists recipes you have found. If the 21–28% rank is
+      missing, the 16–20% rank costs 1 Orb of Transmutation and the reasoning
+      is the same.
+  - title: "Make it Magic and roll the life"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Hold Alt and read the **prefix** after each. Stop at maximum
+      Life of **55 or more**: the names are "Stout" (55–69), "Robust"
+      (70–84) or "Rotund" (85–99).
+    why: >-
+      A Magic item has one prefix and one suffix, so an Alteration is the
+      cheapest way to ask for one modifier. Life is always a prefix; ignore
+      the suffix completely for now.
+    check: >-
+      The line reads "+# to maximum Life" on its own. A line that pairs
+      Armour with a small amount of Life is a different, weaker modifier.
+    fail: >-
+      Running low on Alterations: accept life of 40 or more. It is still
+      more than the bench's cheap ranks give.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+78 to maximum Life" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the item has no suffix, use an [[Orb of Augmentation]]. If it has
+      one, skip this step.
+    why: >-
+      An Augmentation adds to an empty slot and never touches what is there.
+      About half of all suffix rolls at this item level are an elemental
+      resistance, so this is a cheap ticket for one.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+78 to maximum Life" }]
+      suffixes: [{ text: "+21% to Lightning Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The item becomes Rare, keeps both modifiers and gains a third at
+      random. Rare is what opens the other slots to the bench.
+    check: >-
+      Read the new modifier and note its side. Here it is flat Armour, a
+      prefix, which leaves two suffix slots open.
+    state:
+      prefixes:
+        - { text: "+78 to maximum Life" }
+        - { text: "+88 to Armour" }
+      suffixes: [{ text: "+21% to Lightning Resistance" }]
+  - title: "Buy the resistance"
+    do: >-
+      At the [[Crafting Bench]], craft the resistance your character is
+      shortest of: 21–28% for 1 [[Orb of Alchemy]]. Pick an element the item
+      does **not** already have.
+    why: >-
+      An item holds one bench modifier, and each resistance is its own
+      group, so the bench will refuse an element that is already rolled.
+      After a Regal Orb a chest has at most two suffixes, so there is always
+      room for this one.
+    fail: >-
+      If the Regal Orb and the Augmentation already covered your
+      resistances, spend the bench on a prefix instead: 41–50% increased
+      Armour for 1 Orb of Alchemy fits beside flat Armour, because the two
+      are different groups.
+    state:
+      prefixes:
+        - { text: "+78 to maximum Life" }
+        - { text: "+88 to Armour" }
+      suffixes:
+        - { text: "+21% to Lightning Resistance" }
+        - { text: "+25% to Fire Resistance", how: crafted }
+variations: >-
+  **A low Essence instead of Alterations.** A [[Weeping Essence of Greed]]
+  on the white chest makes it Rare with +70–84 maximum Life guaranteed, and
+  the bench finishes it the same way. The four weakest Essences only work on
+  a Normal item, and in 3.30 the Weeping ones no longer drop in yellow or red
+  maps, so the campaign is where to spend them.
+
+
+  **An evasion or energy shield base.** The same six steps. Only the
+  defence prefix changes, and a robe can also roll maximum Mana where the
+  plate rolled Armour.
+mistakes:
+  - "Rolling Alterations for the resistance. The bench sells nearly the best one this item level allows for a single Orb of Alchemy."
+  - "Using the bench while the item is still Magic. The Regal Orb may add the very thing you just paid for."
+  - "Throwing away a base with good links because its modifiers are bad. Links survive every step here; modifiers are what you are replacing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where the weak Essences drop in 3.30." }

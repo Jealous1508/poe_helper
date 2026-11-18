@@ -1,0 +1,547 @@
+name: "Ring"
+short: "Hai vị trí đeo, ba pool và 43 base. Life ở một phía, resistance và attribute ở phía kia, còn damage thì đến từ những chỗ roll thường không với tới."
+icon: "Vermillion Ring"
+intro: >-
+  Ring là món trang bị khiến một nhân vật đủ chuẩn. Phần resistance và
+  attribute nào mà các trang bị còn lại không cấp được thì hai chiếc ring
+  được trông chờ sẽ lo, cộng thêm Life. Việc đó dễ craft: các modifier đều
+  phổ biến, và bench bán phần lớn trong số đó.
+
+
+  Điều bất ngờ là những thứ ring không roll ra được. Pool tự nhiên **hoàn
+  toàn không có modifier critical strike nào**, không có Chaos Damage, và có
+  một suffix Attack Speed hiếm tới mức coi như không tồn tại. Mọi modifier
+  damage đáng có trên ring đều đến từ Essence, bench, influence hoặc một base
+  đặc biệt. Vậy nên một chiếc ring được lên kế hoạch theo hai nửa: nửa bạn
+  roll, và nửa bạn đi lấy.
+
+
+  Bạn đeo hai chiếc, và danh sách base dài nhất trong mọi loại trang sức, có
+  cả những base thay đổi số prefix và suffix mà ring có.
+basics:
+  itemLevel:
+    text: >-
+      Life trên ring thì rẻ: tier cao nhất, 100–114, chỉ cần item level 44.
+      Item level mà bạn trả tiền là vì **suffix**. Resistance đạt 36–41% ở
+      60, 42–45% ở 72 và 46–48% ở 84; attribute cao nhất cần 82.
+
+
+      Item level 72 tới 75 là đủ cho một chiếc ring bạn sẽ đeo lâu dài. Lên
+      84 để có resistance cao nhất, và lên 80 trở lên cho bất cứ thứ gì có
+      influence: phần lớn modifier influence của ring có tier tốt nhất ở đó.
+    breakpoints:
+      - ilvl: 30
+        unlocks: "**Leveling.** Life 70–84 và suffix Cast Speed cao nhất (13–16%)."
+      - ilvl: 44
+        unlocks: "Tier 1 của maximum Life, \"Virile\" (100–114), và Tier 1 của added Physical Damage to Attacks (6–9 to 13–15)."
+      - ilvl: 60
+        unlocks: "Tier 1 của all Elemental Resistances (15–16%) và Tier 3 của resistance đơn (36–41%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 72
+        unlocks: "Tier 2 của resistance (42–45%). Ở 74: Tier 2 của attribute (43–50) và Tier 1 của Energy Shield (44–47)."
+      - ilvl: 76
+        unlocks: "Chỉ trên Unset Ring: +3 to Level of Socketed Gems."
+      - ilvl: 81
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (37–42%), Tier 1 của Chaos Resistance (31–35%), và trên Bone Ring hoặc Gloam Ring là Tier 1 của minion damage (37–42%). Ở 82: Tier 1 của attribute (51–55)."
+      - ilvl: 84
+        unlocks: "Tier 1 của Fire, Cold và Lightning Resistance (46–48%). **Trần của một chiếc ring thường.**"
+  bases:
+    text: >-
+      Có 43 base ring. Bốn mươi cái roll từ một pool; Unset Ring và hai ring
+      minion mỗi loại thêm các modifier của riêng mình. Ring không có con số
+      nào để modifier nhân lên, nên với phần lớn base, lựa chọn chính là
+      implicit.
+
+
+      Sáu base Heist thì khác hẳn về bản chất. Chúng thay đổi số prefix và
+      suffix mà ring giữ được, và điều đó thay đổi cả những gì một lần craft
+      trên chúng có thể thử.
+    types:
+      - title: "Ring thường"
+        pools: [standard]
+        text: >-
+          Các ring resistance: Sapphire, Topaz và Ruby (20–30% cho một
+          element), Two-Stone (12–16% cho hai element, có ba phiên bản),
+          Prismatic (8–10% cho cả ba), Amethyst (13–19% Chaos Resistance, bị
+          giảm trong 3.30). Coral có 20–30 Life, Paua 20–30 Mana, Diamond
+          20–30% Global Critical Strike Chance, Moonstone 7–10% Cast Speed,
+          Gold 6–15% Item Rarity, Iron 1–4 added Physical Damage to Attacks.
+
+
+          Mọi kiểu ring khác ở dưới, trừ Unset Ring và các ring minion, đều
+          dùng chung pool này.
+      - title: "Ring Atlas"
+        text: >-
+          Vermillion (5–7% increased maximum Life), Cerulean (8–10% maximum
+          Mana), Opal (15–25% Elemental Damage), Iolite (17–23% Chaos
+          Damage) và Steel (adds 3–4 to 10–14 Physical Damage to Attacks).
+          Chúng rơi từ level 78 tới 80, và trong 3.30 chỉ trên item roll ra
+          Item Tier đủ cao: patch notes nói Tier 3 trở lên đối với Steel
+          Ring.
+      - title: "Ring Heist: những base đổi số ô"
+        text: >-
+          Sáu base, nằm trong pool rơi thông thường từ 3.30 với một yêu cầu
+          Item Tier. **Cogwork:** hai prefix, bốn suffix, suffix mạnh hơn
+          25%. **Geodesic:** bốn và hai, prefix mạnh hơn 25%.
+          **Helical:** một prefix, bốn suffix, suffix mạnh hơn 50%.
+          **Manifold:** bốn prefix, một suffix, prefix mạnh hơn 50%.
+          **Ratcheting:** không prefix, sáu suffix. **Composite:** sáu
+          prefix, không suffix.
+
+
+          Chúng roll từ pool thường. Thứ thay đổi là bàn cờ, và kéo theo đó
+          là bench: khóa prefix là một suffix còn khóa suffix là một prefix,
+          nên Ratcheting Ring không bao giờ khóa được suffix và Composite
+          Ring không bao giờ khóa được prefix. Đó là suy luận của chúng tôi
+          từ số ô.
+      - title: "Ring trái-phải"
+        text: >-
+          Dusk, Penumbra, Tenebrous và ba Shadowed Ring có implicit giúp bạn
+          ở một vị trí đeo ring và hại bạn ở vị trí kia: 15% Skill Effect
+          Duration, 30% Effect of Curses on you, 30% Duration of Ailments on
+          you, hoặc 25% damage của một element nhận vào thành element khác.
+          Hãy chọn vị trí trước khi craft. Dữ liệu không cho biết chúng rơi ở
+          đâu.
+      - title: "Ring theo loại damage"
+        text: >-
+          Cryonic, Enthalpic, Synaptic, Organic và Fugitive Ring ghi
+          "Cannot roll Modifiers of Non-Cold Damage Types" (hoặc Fire,
+          Lightning, Physical, Chaos) và thêm +2% vào maximum resistance đó,
+          hoặc 3% additional Physical Damage Reduction trên Organic. Theo câu
+          chữ thì dòng đầu loại bỏ một phần pool. Dữ liệu game liệt kê chúng
+          trong pool thường mà không có bộ lọc đó, nên xác suất trên trang
+          này không thể hiện nó; hãy thử trước khi tiêu tiền. Formless Ring
+          có 5–7% Global Defences, còn Nameless Ring có 50% reduced Effect of
+          Curses on you kèm Elemental Ailments dài hơn 50%.
+      - title: "Unset Ring"
+        pools: [unset-ring]
+        text: >-
+          "Has 1 Socket": chỗ cho thêm một gem. Pool của nó thêm một prefix,
+          "+1 to +3 to Level of Socketed Gems", và khi dùng
+          [[Faceted Fossil]] thì thêm ba suffix cộng một level cho gem
+          Strength, Dexterity hoặc Intelligence gắn trong socket.
+      - title: "Ring minion"
+        pools: [minion]
+        text: >-
+          Bone Ring (minions have +10–15% to all Elemental Resistances) và
+          Gloam Ring (minion nhận 15% reduced damage ở vị trí bên trái và 15%
+          increased ở bên phải). Chỉ hai base này roll được "Minions deal
+          increased Damage" dưới dạng prefix cùng bốn suffix minion: Attack
+          and Cast Speed, maximum Life, Movement Speed và Elemental
+          Resistances.
+    picks:
+      - base: "Vermillion Ring"
+        for: "Build life"
+        why: >-
+          5–7% increased maximum Life phía trên vạch kẻ. Đó là phần trăm của
+          toàn bộ lượng Life của bạn, trong khi mọi modifier Life mà ring
+          roll được đều là một con số flat.
+      - base: "Two-Stone Ring"
+        for: "Cap resistance"
+        why: >-
+          12–16% cho hai element là tối đa 32% resistance ngay trong
+          implicit, nhiều hơn mức 30% của bất kỳ ring một element nào, và nó
+          rơi từ level 20. Hãy chọn phiên bản phủ hai resistance thấp nhất
+          của bạn.
+      - base: "Amethyst Ring"
+        for: "Chaos Resistance"
+        why: >-
+          13–19% Chaos Resistance ở chỗ craft không gỡ được. Suffix Chaos
+          Resistance có weight 250 mỗi tier và không Essence nào cho nó trên
+          ring, nên implicit là nguồn đáng tin.
+      - base: "Opal Ring"
+        for: "Elemental damage đủ mọi kiểu"
+        why: >-
+          15–25% increased Elemental Damage, cho cả attack lẫn spell. Steel
+          Ring là bản tương ứng cho attack physical, còn Iolite Ring là cho
+          chaos.
+      - base: "Bone Ring"
+        for: "Build minion"
+        why: >-
+          Không phải vì implicit mà vì pool: minion damage lên tới 37–42% và
+          bốn suffix minion mà không ring nào khác roll ra.
+      - base: "Helical Ring"
+        for: "Một chiếc ring gần như toàn suffix"
+        why: >-
+          Một prefix và bốn suffix mạnh hơn 50%. Theo câu chữ của implicit,
+          một resistance 46–48% thành khoảng 70%. Bạn trả giá bằng hai ô
+          prefix, và prefix duy nhất còn lại là chỗ của Life.
+    impact: >-
+      **Implicit.** Trên ring nó thường đáng giá bằng cả một suffix: hai
+      resistance của Two-Stone, Chaos Resistance của Amethyst. Một
+      [[Blessed Orb]] roll lại con số của nó, và ngoài corruption ra không gì
+      khác thay đổi được nó.
+
+
+      **Pool.** Chỉ với Unset Ring và hai ring minion.
+
+
+      **Số ô.** Chỉ với sáu ring Heist, nơi nó quyết định phía nào của ring
+      tồn tại.
+
+
+      **Ngón tay nào.** Chỉ với các ring trái-phải.
+
+
+      Và một điều mà không base nào tự quyết định một mình: bạn đeo **hai**
+      chiếc. Hãy lên kế hoạch cho cả cặp cùng lúc. Hai chiếc ring cùng sửa
+      một resistance là phí mất một chiếc.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 84, một lần roll prefix ra maximum Life khoảng 1 trên 7
+      lần, và ra tier cao nhất 1 trên 59, theo phép tính của chúng tôi từ
+      weight. Mana và Energy Shield cộng lại chiếm 39% số lần roll prefix.
+
+
+      Ở phía suffix, một trên bốn lần roll là một attribute và một trên bốn
+      là một elemental resistance. Một resistance từ 42% trở lên, element nào
+      cũng được, là khoảng 1 trên 17 lần roll suffix; đúng element bạn gọi
+      tên thì 1 trên 52.
+
+
+      Vậy nên một prefix Life hoặc một resistance tốt là việc ngắn với
+      [[Orb of Alteration]]. Suffix Attack Speed tự nhiên là 1 trên 207 lần
+      roll, còn added elemental damage ở tier cao nhất là 1 trên 1,185: hãy
+      để mấy thứ đó cho công cụ khác.
+  - method: bench
+    note: >-
+      Phần lớn damage của ring đến từ bench của ring. **Prefix:** maximum
+      Life 41–55 giá 2 Orb of Alchemy; 12–14% increased Damage giá 4 Chaos
+      Orb hoặc 15–17% giá 4 Exalted Orb; "Non-Channelling Skills have −7 to
+      −6 to Total Mana Cost" giá 4 Chaos Orb.
+
+
+      **Suffix:** một resistance 21–28% hoặc một cặp 13–16% giá 1 Orb of
+      Alchemy; một element cùng Chaos 13–15% giá 3 Chaos Orb; một attribute
+      26–30 giá 2 Chaos Orb; 3–5% Attack Speed giá 2 Orb of Alchemy; +1 to
+      Minimum Endurance, Frenzy hoặc Power Charges giá 4 Exalted Orb;
+      "Minions have 11–15% increased maximum Life" giá 4 Orb of
+      Augmentation.
+
+
+      Những group cần biết: một cặp resistance là group riêng của nó và nằm
+      cạnh một resistance đơn của một trong hai element đó được. Life của
+      bench cùng group với Life roll ra. Không có bán trên ring: Cast Speed,
+      và Critical Strike Multiplier đứng riêng.
+  - method: finishing
+    note: >-
+      Quality đến từ **Catalyst**, tối đa 20%, mỗi lúc một loại:
+      [[Prismatic Catalyst]] cho ring resistance, [[Fertile Catalyst]]
+      cho Life và Mana, [[Intrinsic Catalyst]] cho attribute,
+      [[Turbulent Catalyst]] cho elemental damage. Trong 3.30 chúng chỉ đến
+      từ Ultimatum. Các nguồn của chúng tôi không cho biết các lần craft về
+      sau làm gì với quality, nên hãy thêm nó sau cùng.
+
+
+      Ring không có socket, ngoại lệ là một socket của Unset Ring.
+  - method: essence
+    note: >-
+      Trên ring, Essence cấp những thứ pool thiếu. **Scorn:** Critical
+      Strike Multiplier, 15–17% ở bậc Screaming và 21–25% ở Deafening.
+      **Loathing:** Critical Strike Chance, tối đa 24–26%. **Envy:** 31–34%
+      increased Chaos Damage. **Dread:** flat Armour, 201–300 ở bậc
+      Deafening. Cả bốn cái đó đều không roll ra được trên ring.
+
+
+      Những cái khác vượt tier tự nhiên cao nhất. **Anger, Hatred, Wrath:**
+      31–34% increased Fire, Cold hoặc Lightning Damage so với 19–22%.
+      **Anguish, Suffering, Torment:** added elemental damage to attacks
+      ngang hoặc trên Tier 1, một tier có weight tự nhiên là 50.
+      **Contempt:** adds 10–11 to 16–17 Physical Damage. **Rage, Sorrow,
+      Spite:** 51–58 của một attribute. **Fear** cho Movement Speed của
+      minion trên mọi ring.
+
+
+      Thứ chúng **không** cho: Life hay resistance. Ở đây Greed là Life
+      regeneration còn Anger là fire damage. Mấy thứ đó thì bạn roll hoặc
+      bench.
+  - method: beast
+    note: >-
+      **Thêm một suffix, gỡ một prefix ngẫu nhiên** ([[Farric Lynx Alpha]])
+      chính là công thức của ring. Giá trị của ring nằm ở suffix, còn prefix
+      của nó thường là Life từ bench, nên ring hay ở đúng tình trạng mà công
+      thức này cần: có suffix đáng có, không có prefix nào đáng giữ.
+
+
+      Một **Imprint** ([[Craicic Croaker]]) đáng tiền trên một Unset Ring
+      Magic có +3 to Level of Socketed Gems, khoảng 1 trên 246 lần roll
+      prefix, và trên bất kỳ ring Magic có influence nào mang một curse on
+      hit.
+  - method: harvest
+    note: >-
+      **Đổi resistance** biến một elemental resistance thành cái khác. Trong
+      3.30 mỗi lần tốn 300 Lifeforce thuộc hai loại khác nhau. Vì thế một lần
+      craft ring có thể nhận một resistance hàng đầu sai element.
+
+
+      **Life** (75 Wild) chỉ ra maximum Life khoảng 1 trên 3 lần trên một
+      chiếc ring không khóa, vì regeneration, recoup và Life on kill dùng
+      chung tag đó. Khi ba suffix đã khóa, maximum Life là prefix life duy
+      nhất trong pool thường.
+
+
+      **Caster** (75 Primal) luôn cho Cast Speed trên ring thường không có
+      influence, vì đó là modifier caster duy nhất nó có. Trên ring có
+      influence, các suffix curse on hit cũng mang tag đó, và người ta tìm
+      chúng bằng cách này. **Critical** (150 Primal) không có gì để cho một
+      chiếc ring thường; trên ring Shaper, Crusader, Elder hoặc Warlord, nó
+      chỉ có thể cho suffix critical của influence đó.
+  - method: fossil
+    note: >-
+      Một [[Pristine Fossil]] loại bỏ Energy Shield và Evasion, vốn chiếm 30%
+      số lần roll prefix, và nhân Life lên mười lần: maximum Life thành từ
+      56% tới 71% số lần roll prefix, theo phép tính của chúng tôi. Con số
+      thấp hơn có tính cả các prefix chỉ có từ Fossil của ring, năm kiểu
+      leech 0.2% damage mang tag life và không đáng gì.
+
+
+      Một [[Bound Fossil]] trên Bone Ring khiến minion damage chiếm khoảng
+      một phần ba số lần roll prefix và các modifier minion chiếm ba phần tư
+      số lần roll suffix. Một [[Faceted Fossil]] trên Unset Ring khiến prefix
+      socketed gem chiếm hơn một phần tư số lần roll prefix.
+  - method: veiled
+    note: >-
+      Các modifier unveil ra của ring: +55–60 Life kèm Mana regeneration
+      (group Life); +31–35 cho hai attribute; +16–20% cho một element và
+      Chaos Resistance; +1 to Minimum Endurance, Frenzy hoặc Power Charges
+      kèm 3–4% chance nhận một charge on kill; added damage của hai element.
+      Các hybrid Chaos resistance là lý do thường gặp để dùng
+      [[Veiled Chaos Orb]] lên ring.
+  - method: influence
+    note: >-
+      Influence là nơi các modifier critical strike của ring trú ngụ. Shaper
+      và Crusader: 21–25% Global Critical Strike Chance. Elder: 17–20%
+      Critical Strike Multiplier; Warlord: 20–22%.
+
+
+      Mỗi danh sách Conqueror còn có một suffix curse on hit, với weight 200:
+      Crusader có Conductivity, Warlord có Flammability và Vulnerability,
+      Redeemer có Frostbite, Hunter có Despair và Elemental Weakness. Và một
+      prefix damage 22–25%: Warlord là Melee Damage, Redeemer là Projectile
+      Attack Damage hoặc minion damage, Crusader là Spell Damage.
+  - method: meta
+    note: >-
+      Một lần khóa đầy đủ trên ring tốn 4 Divine Orb và 8 Exalted Orb trong
+      3.30. Vì Life của ring quá dễ còn suffix của ring thì quá đa dạng, cái
+      khóa đáng đồng tiền ở đây là "Suffix Modifiers cannot be changed", trên
+      chiếc ring có suffix chứa thứ gì đó từ influence.
+  - method: fracture
+    note: >-
+      Một resistance hàng đầu đã fractured, hoặc một prefix added damage cỡ
+      Essence đã fractured, tạo ra một chiếc ring bạn có thể ném Essence vào
+      mãi mãi. Ring có influence thì không fracture được, nên đường này và
+      đường curse on hit không gặp nhau.
+  - method: corruption
+    note: >-
+      Các implicit corruption của ring gồm +1 to Maximum Endurance, Frenzy
+      hoặc Power Charges, 15–25% increased Damage, +15–20% Critical Strike
+      Multiplier, "Cannot be Ignited" và "Cannot be Poisoned". Corruption
+      thay thế implicit của base.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: ring là loại trang sức hợp với strand nhất."
+memoryStrands: >-
+  Gần như mọi thứ một chiếc ring thường muốn đều có nhiều tier: tám của Life,
+  tám của mỗi resistance, chín của mỗi attribute. Đó là tình huống mà
+  [[Memory Strands]] sinh ra để giải quyết, vì strand nâng tier của bất cứ
+  thứ gì được roll ra và không thay đổi gì khác.
+
+
+  Cách dùng hợp là cách đơn giản. Một [[Orb of Remembrance]] lên chiếc ring
+  trắng item level 84, rồi [[Orb of Alteration]] để tìm một resistance, một
+  [[Regal Orb]], và [[Exalted Orb]] vào các ô trống: mỗi Alteration tiêu
+  nhiều nhất 8 strand, còn Regal Orb và Exalted Orb nhiều nhất 16, theo bảng
+  data-mine, và game hiện chi phí trước mỗi lần dùng.
+
+
+  Strand bị phí trên nửa đi lấy của ring. Một Essence có thể tiêu tới 80 và
+  tự đặt con số của nó. Modifier bench, một curse on hit và gem level của
+  Unset Ring có chỉ số cố định hoặc chỉ một tier.
+reading:
+  intro: >-
+    Đọc ring từ dưới lên. **Trong ba suffix có mấy cái là resistance hoặc
+    attribute bạn cần, và ở tier nào?** Đó là thứ bạn không mua được ở mức
+    đầy đủ. Rồi kiểm xem có prefix nào là Life, hoặc có ô prefix nào còn
+    trống cho nó. Sau cùng, tìm cái modifier mà roll thường không cho.
+  prefixes:
+    text: >-
+      Mười họ trong pool thường, và với phần lớn build chỉ một họ là quan
+      trọng: Life, 13.5% số lần roll. Mana và Energy Shield là hai họ lớn
+      nhất và cộng lại chiếm bốn trên mười lần roll.
+
+
+      Vì Life phổ biến và tier cao nhất của nó cần item level 44, phía prefix
+      là phía dễ của ring. Đó cũng là nơi bench đặt các craft ring hay nhất
+      của nó, increased Damage và giảm mana cost, và mấy cái đó chỉ phải
+      tranh ba ô với Life nếu ring roll ra đồ bỏ ở các ô kia.
+
+
+      Các prefix added elemental damage trông có vẻ phổ biến với 5.5% mỗi
+      cái, nhưng ba tier cao nhất của chúng có weight 50, 100 và 100. Hãy
+      dùng Essence cho mấy cái đó.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Prefix duy nhất mà gần như ring nào cũng nên có. Mức 41–55 của bench bằng khoảng một nửa một lần roll hàng đầu."
+        aim: "T3, 70–84 (ilvl 30). T1 là 100–114 (ilvl 44)."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Prefix ring của build attack, với weight 300 mỗi tier."
+        aim: "T2, 31–36% (ilvl 60). T1 là 37–42% (ilvl 81)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Attacks"
+        why: "Mạnh ở mức cao nhất và ở đó thì gần như không roll ra nổi. Một Essence bậc Shrieking cho thẳng các con số Tier 1."
+        aim: "T4 bằng roll (ilvl 44–45). Tier 1 trở lên từ một Essence."
+      - mod: "+# to maximum Energy Shield"
+        why: "Cho build Energy Shield, và phổ biến: gần một trên năm lần roll prefix."
+        aim: "T2, 38–43 (ilvl 68). T1 là 44–47 (ilvl 74)."
+      - mod: "Minions deal #% increased Damage"
+        why: "Chỉ Bone Ring và Gloam Ring. Lý do các base đó tồn tại."
+        aim: "T2, 31–36% (ilvl 60). T1 là 37–42% (ilvl 81)."
+      - mod: "+# to Level of Socketed Gems"
+        why: "Chỉ Unset Ring. Nâng level viên gem duy nhất trong socket của ring."
+        aim: "T2, +2 (ilvl 50). T1 là +3 (ilvl 76), weight 250."
+  suffixes:
+    text: >-
+      Hai mươi lăm họ, và một nửa mọi lần roll là một attribute đơn hoặc một
+      elemental resistance đơn. Đó là ring đang làm đúng việc của nó. Cái khó
+      là lấy được **đúng** cái mình cần ở một tier mà bench không sánh nổi:
+      resistance của bench là 21–28%, một lần roll Tier 2 là 42–45%.
+
+
+      Phần còn lại của phía này là các modifier hồi phục nhỏ và đồ lấp chỗ.
+      Không cái nào trong đó cộng nhiều damage: increased Fire, Cold hoặc
+      Lightning Damage dừng ở 19–22%, Cast Speed ở 13–16%.
+
+
+      Ở đây group có lợi cho bạn. Một resistance đơn, một cặp resistance và
+      "all Elemental Resistances" là ba group khác nhau, nên một chiếc ring
+      có thể mang fire resistance tới ba lần.
+    key:
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Thứ mà ring sinh ra để làm. Một lần đổi ở Harvest thay element về sau, nên cái nào trong ba cái cũng đáng giữ nếu ở tier cao."
+        aim: "T2, 42–45% (ilvl 72). T1 là 46–48% (ilvl 84)."
+      - mod: "+# to Strength / Dexterity / Intelligence"
+        why: "Yêu cầu của gem và trang bị. Một Essence cho 51–58, cao hơn lần roll tốt nhất."
+        aim: "T2, 43–50 (ilvl 74). T1 là 51–55 (ilvl 82)."
+      - mod: "+#% to all Elemental Resistances"
+        why: "Ba resistance trong một ô, và tier cao nhất mở sớm."
+        aim: "T1, 15–16% (ilvl 60)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Khan hiếm ở mọi nơi. Trên ring, nó được roll ra với weight 250, craft dưới dạng hybrid, hoặc lấy từ implicit của Amethyst."
+        aim: "T3, 21–25% (ilvl 56). T1 là 31–35% (ilvl 81)."
+      - mod: "#% of Damage taken Recouped as Life"
+        why: "Một suffix phòng thủ mà ít loại trang bị khác roll ra."
+        aim: "T2, 10–12% (ilvl 68). T1 là 13–15% (ilvl 79)."
+      - mod: "Minions have +#% to all Elemental Resistances"
+        why: "Chỉ Bone Ring và Gloam Ring, cùng với ba suffix minion khác. Ở đó mỗi cái chiếm 6–7% số lần roll suffix."
+        aim: "T1, 27–30% (ilvl 61)."
+approach:
+  principle: >-
+    **Roll suffix, đi lấy damage, mua Life.** Resistance và attribute của
+    ring đáng để roll vì các bản của bench chỉ mạnh bằng một nửa. Modifier
+    damage hoặc tiện ích duy nhất của nó phải đi lấy từ Essence, bench hoặc
+    influence, vì pool không chứa nó. Life đi sau cùng vì đó là thứ dễ nhất
+    trên item.
+  order:
+    - title: "Đọc nhân vật, rồi chọn cặp ring"
+      text: >-
+        Cộng resistance và attribute của bạn khi chưa có ring. Khoảng trống
+        là phần hai chiếc ring phải cùng nhau bù. Hãy chọn những implicit
+        gánh các phần lớn nhất: một Two-Stone, một Amethyst, hay một
+        Vermillion nếu khoảng trống vốn đã nhỏ.
+    - title: "Quyết định ring đi lấy thứ gì"
+      text: >-
+        Thường là mỗi ring một thứ: một multiplier từ Scorn, một prefix
+        bench increased Damage, một curse on hit từ influence, minion damage
+        từ pool của Bone Ring. Điều này quyết định base và việc nó có cần
+        influence hay không.
+    - title: "Nếu modifier đi lấy đến từ một lần roll lại, hãy làm việc đó trước"
+      text: >-
+        Một Essence hoặc một reforge Harvest thay cả chiếc ring. Mọi thứ roll
+        ra trước đó đều mất, nên modifier Essence hoặc suffix influence đi
+        trước, còn phần còn lại được đánh giá xoay quanh nó.
+    - title: "Lấy suffix"
+      text: >-
+        Alteration để tìm một resistance cao, một Regal Orb, và công thức
+        Lynx khi phía prefix còn trống. Hãy nhận element sai nếu ở tier cao:
+        một lần đổi ở Harvest sửa được element, còn không gì rẻ sửa được
+        tier.
+    - title: "Chỉ bảo vệ phía suffix có influence hoặc cỡ Essence"
+      text: >-
+        Ba resistance thường không đáng 4 Divine Orb và 8 Exalted Orb. Một
+        curse on hit bên cạnh hai suffix tốt thì đáng.
+    - title: "Life và bench sau cùng"
+      text: >-
+        Nếu ring chưa có Life, mức 41–55 của bench vào một prefix. Nếu nó đã
+        roll ra Life, ô dành cho bench được rảnh cho increased Damage, mana
+        cost hoặc resistance còn thiếu.
+  finishing: >-
+    Kiểm cả cặp cùng lúc trên bảng nhân vật, khi đang đeo cả hai ring, và
+    dùng ô dành cho bench của mỗi chiếc cho thứ gì còn thiếu. Rồi tới
+    Catalyst: [[Prismatic Catalyst]] trên một chiếc ring resistance có thể là
+    khác biệt giữa cap và chưa cap.
+
+
+    Một [[Divine Orb]] hiếm khi đáng dùng trên ring, trừ khi một resistance
+    đang ở sát đáy tier của nó và chính nó đang giữ bạn khỏi mức cap.
+  stopping: >-
+    Hai suffix bạn cần ở Tier 3 trở lên (một resistance 36%, một attribute
+    38), Life kiểu nào cũng được, và ô dành cho bench đã dùng: đó là một
+    chiếc ring dùng được cho cả Atlas. Suffix tốt thứ ba và modifier damage
+    đi lấy biến nó thành một chiếc ring tốt. Tier 1 trên cả ba suffix là chỗ
+    chi phí nhân lên mà nhân vật hầu như không nhận ra.
+
+
+    Hãy dừng khi cả hai ring cùng nhau cap resistance và đáp ứng attribute
+    của bạn. Qua điểm đó, mọi cải thiện thêm cho ring đều là damage, và nên
+    được so giá với cùng lượng damage đó từ một loại trang bị khác.
+special:
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Essence / Influence"
+    where: "Không có trong pool tự nhiên của ring. 21–25% từ một Deafening Essence of Scorn; 17–20% dưới dạng suffix Elder và 20–22% dưới dạng suffix Warlord ở item level 80."
+  - mod: "#% increased Global Critical Strike Chance"
+    source: "Essence / Influence / Base"
+    where: "Tối đa 24–26% từ một Essence of Loathing; 21–25% dưới dạng suffix Shaper hoặc Crusader. Diamond Ring có 20–30% làm implicit."
+  - mod: "Curse Enemies with Despair on Hit"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter ở item level 80, weight 200. Các danh sách Conqueror khác có Conductivity, Flammability, Vulnerability, Frostbite và Elemental Weakness. Trên ring có influence, reforge Caster của Harvest là cách thường dùng để với tới chúng."
+  - mod: "#% increased Damage"
+    source: "Bench / Corruption"
+    where: "Một prefix bench: 12–14% giá 4 Chaos Orb, 15–17% giá 4 Exalted Orb. 15–25% dưới dạng implicit corruption."
+  - mod: "Non-Channelling Skills have -# to Total Mana Cost"
+    source: "Bench"
+    where: "Một prefix bench, −7 to −6 giá 4 Chaos Orb. Trên hai chiếc ring, nó xóa phần lớn cost của một skill rẻ."
+  - mod: "+# to Minimum Endurance / Frenzy / Power Charges"
+    source: "Bench / Veiled"
+    where: "Một suffix bench giá 4 Exalted Orb; bản unveil ra thêm 3–4% chance nhận charge đó on kill. Còn +1 to **Maximum** charges thì chỉ là implicit corruption."
+  - mod: "#% increased Chaos Damage"
+    source: "Essence / Bench / Base"
+    where: "31–34% từ một Deafening Essence of Envy; 13–16% từ bench; 17–23% làm implicit của Iolite Ring."
+  - mod: "+# to Armour"
+    source: "Essence"
+    where: "Từ 80–120 tới 201–300 từ một Essence of Dread. Flat Armour không có trong pool tự nhiên của ring."
+  - mod: "Gain 10% of Physical Damage as Extra Fire Damage"
+    source: "Essence corrupted"
+    where: "Một prefix từ [[Essence of Hysteria]]. Ba cái còn lại trên ring: +12–15% Damage over Time Multiplier (Delirium), 4 to 7 Added Cold Damage per Frenzy Charge (Horror), +60% of Reflected Damage prevented (Insanity). Tất cả đến từ việc corrupt một monster Essence bằng [[Remnant of Corruption]]."
+  - mod: "#% increased Attack Speed"
+    source: "Roll hiếm / Bench"
+    where: "5–7% trong pool tự nhiên với weight 500, khoảng 1 trên 207 lần roll suffix. Bench bán 3–5% giá 2 Orb of Alchemy."
+  - mod: "+# to Level of Socketed Gems"
+    source: "Pool của Unset Ring"
+    where: "Chỉ trên Unset Ring: +1 tới +3, mức cuối từ item level 76."
+  - mod: "+1 Suffix Modifier allowed / 50% increased Suffix Modifier magnitudes"
+    source: "Implicit của base"
+    where: "Helical Ring. Các ring Heist khác dời ô theo kiểu khác. Không craft ra được: bạn chọn nó bằng cách chọn base."
+mistakes:
+  - "**Craft từng chiếc ring một.** Hai chiếc là một kế hoạch. Hãy đọc resistance khi đang đeo cả hai trước khi bench chiếc nào."
+  - "**Roll tìm modifier critical strike trên ring thường.** Chúng không có trong pool. Hãy dùng Scorn, Loathing, hoặc một influence."
+  - "**Trông chờ Life hoặc resistance từ Essence.** Trên ring, Greed cho regeneration còn Anger cho fire damage."
+  - "**Bench đúng resistance mà ring đã roll ra.** Cùng group: bench từ chối. Cặp resistance là group khác và nằm vừa."
+  - "**Từ chối một resistance 46% vì sai element.** Một lần đổi ở Harvest thay element với giá 300 Lifeforce thuộc hai loại."
+  - "**Khóa ba resistance thường.** Roll lại chúng rẻ hơn nhiều so với 4 Divine Orb và 8 Exalted Orb."
+  - "**Đeo ring trái-phải vào sai ngón.** Implicit của nó giúp ở một vị trí và hại ở vị trí kia."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tier và các ring Heist trong pool rơi thông thường; thay đổi của Amethyst Ring; giá đổi resistance; giá 3.30 của các modifier bảo vệ." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum là nguồn Catalyst duy nhất." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm suffix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Life, Caster và Critical." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

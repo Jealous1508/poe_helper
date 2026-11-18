@@ -1,0 +1,170 @@
+category: boots
+title: "Movement speed and life from two Fossils"
+level: 3
+summary: "One Fossil adds what you want, the other removes what you do not. Together they leave a boots prefix pool with almost nothing in it but movement speed and life."
+goal: >-
+  Evasion boots with movement speed and maximum Life as their two rolled
+  prefixes, at tiers you choose to accept. The suffixes will be poor, and
+  the example says why in advance. The lesson is **reading two Fossils
+  together**: each has a "more" line and a "no" line, and the craft is
+  designed from all four.
+base: "Slink Boots"
+itemLevel: 86
+baseWhy: >-
+  Item level 86 is the only one at which 35% movement speed exists. The
+  Fossils do nothing for tiers, so the base has to allow the tier you hope
+  for. If 30% is enough for you, any base from item level 55 works the same
+  way and costs far less.
+
+
+  Slink Boots are in the pure Evasion pool, which matters for the next
+  example: it rolls spell suppression at full weight. Velour Boots are the
+  same pool with more Evasion and a higher requirement.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "30% increased Movement Speed", how: fossil }
+    - { text: "+104 to maximum Life", how: fossil }
+  suffixes:
+    - { text: "Regenerate 58.2 Life per second", how: fossil }
+    - { text: "+31 to Dexterity", how: fossil }
+    - { text: "+33% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Shuddering Fossil]]", amount: "10–20" }
+  - { item: "[[Pristine Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the two-socket size" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  A pair of Fossils and a two-socket Resonator per attempt, all from Delve.
+  In 3.30 Delve is reached through the maps that always spawn Sulphite. The
+  item level 86 base is the other real cost.
+odds: >-
+  With both Fossils on this base, by our arithmetic from the weights, a
+  prefix roll is maximum Life 56% of the time and movement speed 43%.
+  Everything else is 1%. A result with two or three prefixes has both
+  almost every time.
+
+
+  The tiers are untouched. Movement speed, when it rolls, is 30% or 35%
+  about three times in ten, and life is 85 or more one time in three. So
+  roughly one result in ten has both at those tiers. That last figure
+  assumes both prefixes rolled, and is a guide, not a measurement.
+steps:
+  - title: "Design the pool from four lines"
+    do: >-
+      Read both Fossils. [[Shuddering Fossil]]: more Speed modifiers, no
+      Mana modifiers. [[Pristine Fossil]]: more Life modifiers, no Defence
+      modifiers. Then go down the boots prefix list and apply all four.
+    why: >-
+      "More" is ten times the weight in the data and "no" is zero. Movement
+      speed has the speed tag: ten times. Maximum Life has the life tag: ten
+      times. Every defence prefix has the defences tag: gone. The mana
+      prefix: gone. The small defence-and-life hybrids carry both a "more"
+      and a "no" tag, and zero wins. What is left is movement speed, life
+      and Item Rarity, and Item Rarity kept its ordinary weight.
+    check: >-
+      Do the same for the suffixes, so that the result does not surprise
+      you. Life Regeneration has the life tag and becomes about 60% of
+      suffix rolls. This craft makes prefixes. Its suffixes are a known
+      loss.
+  - title: "Prepare the base"
+    do: >-
+      Bring white item level 86 Slink Boots to 20% quality and make them
+      Rare with an [[Orb of Alchemy]].
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. The Alchemy result is
+      replaced by the first attempt.
+    state:
+      prefixes:
+        - { text: "+78 to Evasion Rating" }
+        - { text: "+14% to Item Rarity" }
+      suffixes:
+        - { text: "+34% to Lightning Resistance" }
+        - { text: "21% increased Stun and Block Recovery" }
+  - title: "Both Fossils in one Resonator"
+    do: >-
+      Put one Shuddering and one Pristine Fossil in a
+      [[Potent Chaotic Resonator]] and use it on the boots.
+    why: >-
+      The two effects have to act on the same reroll. Used one after the
+      other, the second would simply undo the first.
+    state:
+      prefixes:
+        - { text: "15% increased Movement Speed", how: fossil }
+        - { text: "+47 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 12.4 Life per second", how: fossil }
+        - { text: "+26% to Lightning Resistance", how: fossil }
+  - title: "Read the tiers, and only the prefixes"
+    do: >-
+      Both prefixes will usually be there. The question is their tier. Set
+      the bar before you start: for example **30% or 35% movement speed, and
+      life of 85 or more**.
+    why: >-
+      The result above shows what the Fossils cannot do. It has the right
+      two modifiers, at 15% and 47. Every tier of movement speed and of life
+      got the same multiplier, so the low ones are as common as before.
+    check: >-
+      Decide in advance whether 30% is a pass. Holding out for 35% roughly
+      doubles the Fossils.
+    fail: >-
+      Next pair of Fossils. Nothing is lost but the pair.
+  - title: "Repeat until the bar is met"
+    do: >-
+      Keep going until both prefixes pass.
+    why: >-
+      Each attempt is independent. This result has 30% and 104 life, a
+      regeneration suffix as predicted, and an open slot on each side.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+  - title: "Bench a resistance and wear them, or go on"
+    do: >-
+      At the [[Crafting Bench]], craft **+29–35% to a resistance** for 3
+      [[Chaos Orb]]s in the open suffix.
+    why: >-
+      That makes boots you can use today. The prefix side is the half of a
+      pair of boots that is hard to buy cheaply, and it is done. The next
+      example takes exactly this item and rebuilds the suffix side without
+      risking it.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+variations: >-
+  **Shuddering alone.** With one Fossil, movement speed is about two prefix
+  rolls in three on Evasion boots and the defence prefixes stay in the pool.
+  Right for an Evasion or Energy Shield build that wants its third prefix to
+  be defence, not life. On boots with Energy Shield it also removes the mana
+  prefix, which is a quarter of their pool.
+
+
+  **An Essence of Zeal instead.** A Deafening one fixes movement speed at
+  32% on every attempt and leaves life to ordinary luck, about one prefix
+  roll in four or five. Better when 32% is your target; the Fossils are
+  better when you want life just as much and can accept a wait for the
+  tier.
+
+
+  **Alterations instead.** For movement speed alone, Alterations on a Magic
+  base let you stop at the exact tier, 35% being 1 prefix roll in 40. They
+  give no help with life.
+mistakes:
+  - "Using the two Fossils one after the other in single-socket Resonators. Each reroll replaces the last."
+  - "Expecting good suffixes. The Pristine Fossil turns most of them into Life Regeneration, and removes Recharge Rate on bases that have it."
+  - "Using an item level 85 base and waiting for 35%. It cannot roll."
+  - "Paying for a base with [[Memory Strands]]. Fossils ignore strands, by player testing, so the tiers get no help from them."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil multipliers, the tags on each boots modifier, tiers and weights. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Fossils do not use Memory Strands. Partly older than 3.30." }

@@ -1,0 +1,195 @@
+category: wands
+title: "Một cây wand spell gem với ba Fossil"
+level: 3
+summary: "Aetheric, Faceted và Scorched Fossil cộng dồn trên một prefix mang cả ba tag, đưa \"+1 to Level of all Fire Spell Skill Gems\" từ 1 trên 317 lần roll xuống 1 trên 5, và tiện đường dọn luôn phía suffix."
+goal: >-
+  Một cây wand của caster fire có "+1 to Level of all Fire Spell Skill Gems",
+  flat fire damage to spells, cast speed và Spell Critical Strike Chance,
+  cùng Spell Damage từ bench. Vẫn ba Fossil đó với một Fossil element khác
+  thì ra bản cold hoặc lightning. Bài học là
+  **cộng dồn**: khi một modifier mang nhiều tag, mỗi Fossil gọi tên một
+  trong số đó lại nhân nó thêm lần nữa, và bạn đếm được kết quả trước khi đi
+  delve tìm dù chỉ một Fossil.
+base: "Prophecy Wand"
+itemLevel: 84
+baseWhy: >-
+  Implicit của Prophecy Wand là 36–40% increased Spell Damage, lớn nhất
+  trong mọi wand. Bản thân prefix gem roll được từ item level 2, nên một
+  base thấp hơn vẫn ra cùng prefix đó. Item level 84 là vì những gì đi kèm
+  nó: Aetheric Fossil nhân mọi modifier caster, kể cả các tier cao nhất, và
+  ở 84 thì tất cả đều roll được.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["38% increased Spell Damage"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+    - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+    - { text: "49% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Cast Speed", how: fossil }
+    - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "4–10" }
+  - { item: "[[Faceted Fossil]]", amount: "4–10" }
+  - { item: "[[Scorched Fossil]]", amount: "4–10", note: "Frigid cho spell cold, Metallic cho lightning" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "một mỗi lần thử", note: "cỡ có ba socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Ba Fossil và một Resonator ba socket cho mỗi lần thử, từ Delve. Faceted
+  Fossil thường là cái định giá. Thường thì một nắm lần thử là đủ, khiến
+  cách này rẻ hơn nhiều so với hàng trăm Alteration mà cùng prefix đó ngốn
+  trên một wand Magic.
+odds: >-
+  Mọi con số là phép tính của chúng tôi từ weight ở item level 84, và chúng
+  bỏ ra ngoài các modifier chỉ có từ Fossil (xem đoạn cuối).
+
+
+  **Một lần roll prefix ra "+1 to Level of all Fire Spell Skill Gems":** không
+  Fossil, 1 trên 317. Chỉ Aetheric, 1 trên 136. Aetheric và Faceted, 1 trên
+  18. Cả ba, 1 trên 4.6. Prefix này có các tag caster, gem và fire, nên
+  weight 250 của nó được nhân với mười tới ba lần, trong khi pool quanh nó
+  lớn lên chậm hơn.
+
+
+  **Kết quả trọn vẹn.** Với cả ba Fossil, một kết quả có hai prefix sẽ có
+  prefix gem trong 54% số lần, và kết quả có ba prefix là 73%, theo mô phỏng
+  của chúng tôi trên cùng các weight đó. Bạn đồng hành hay gặp nhất là flat
+  Fire Damage to Spells, một nửa mọi lần roll prefix.
+
+
+  **Suffix.** Cast speed chiếm 38% số lần roll suffix và Spell Critical
+  Strike Chance 29%. Một kết quả có ba suffix sẽ có cả hai khoảng 2 trên 3
+  lần. Cái giá của Scorched Fossil nằm ở đây: chance to Ignite, một suffix
+  fire, chiếm 12% số lần roll suffix.
+
+
+  **Fossil thứ ba tốn cái gì.** "+1 to Level of all Spell Skill Gems"
+  không có tag fire. Với hai Fossil nó là 1 trên 89 lần roll prefix; thêm
+  Scorched thì thành 1 trên 229, vì các modifier fire chen nó ra. Ba Fossil
+  là dành cho prefix theo element. Với prefix kia thì chúng là bộ sai.
+
+
+  **Những gì các con số bỏ sót.** Dữ liệu liệt kê những modifier wand chỉ có
+  từ Fossil mà các Fossil này cũng sẽ nhân lên, như "Socketed Skills deal
+  40% more Spell Damage" (tag caster và gem). Nó không cho biết chính xác
+  khi nào modifier chỉ có từ Fossil gia nhập pool, nên công cụ tính bỏ qua
+  chúng và các tỉ lệ thật thấp hơn phần nào.
+steps:
+  - title: "Đưa wand lên Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên Prophecy Wand trắng.
+    why: >-
+      Chaotic Resonator roll lại item Rare. Alchemy cho gì không quan trọng,
+      và thường nó là bức tranh rõ về vấn đề: một nửa là modifier attack.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+118 to maximum Mana" }
+        - { text: "Adds 62 to 129 Fire Damage" }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "13% increased Attack Speed" }
+  - title: "Đếm tag trên modifier bạn muốn"
+    do: >-
+      Trong danh sách modifier của wand trên trang này, tìm "+1 to Level of
+      all Fire Spell Skill Gems" và đọc tag của nó: **elemental, fire,
+      caster, gem.** Rồi với từng tag có thể, tìm một Fossil có dòng "more"
+      gọi tên nó.
+    why: >-
+      Hệ số nhân của Fossil cộng dồn. "More Caster" ([[Aetheric Fossil]]),
+      "more Gem" ([[Faceted Fossil]]) và "more Fire" ([[Scorched Fossil]])
+      mỗi cái nhân prefix này lên mười, tổng cộng một nghìn. Phần lớn pool
+      có một trong các tag đó hoặc không có cái nào, nên nó lớn lên mười lần
+      hoặc không lớn chút nào. Chênh lệch đó chính là lần craft.
+    check: >-
+      Đọc cả các dòng "no" và "fewer" nữa. Aetheric cắt modifier attack còn
+      khoảng một phần bảy, đúng thứ một wand caster muốn. Scorched loại mọi
+      modifier Cold, vô hại với build fire.
+  - title: "Gắn Fossil rồi dùng Resonator"
+    do: >-
+      Đặt ba Fossil vào một [[Powerful Chaotic Resonator]] rồi dùng nó lên
+      wand.
+    why: >-
+      Cả hai phía được roll lại với các weight đã đổi. Ở phía suffix,
+      Aetheric Fossil lo phần việc: hai suffix caster, cast speed và Spell
+      Critical Strike Chance, đi từ 18% số lần roll suffix lên 67%.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "Adds 44 to 86 Fire Damage to Spells", how: fossil }
+        - { text: "58% increased Spell Damage", how: fossil }
+      suffixes:
+        - { text: "27% chance to Ignite", how: fossil }
+        - { text: "22% increased Cast Speed", how: fossil }
+  - title: "Đánh giá kết quả: prefix gem, rồi chỗ trống, rồi suffix"
+    do: >-
+      **Trước tiên:** "+1 to Level of all Fire Spell Skill Gems" có đó
+      không? **Rồi:** còn một ô prefix trống không, hoặc prefix thứ ba có
+      phải cái bạn muốn không? **Rồi:** cast speed hoặc Spell Critical
+      Strike Chance có nằm trong các suffix không?
+    why: >-
+      Kết quả ở trên là một wand caster hoàn toàn ổn mà vẫn là thất bại: nó
+      không có prefix gem, thứ duy nhất khiến lần craft này tồn tại. Các
+      phép thử còn lại xếp theo thứ tự đó vì bench sửa được một suffix thiếu
+      nhưng không sửa được một ô prefix bị lấp bằng thứ sai.
+    fail: >-
+      Không có prefix gem: dùng một bộ Fossil nữa. Không mất gì ngoài
+      Fossil.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "27% increased Cast Speed", how: fossil }
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Bench ô trống"
+    do: >-
+      Còn một prefix trống: craft **45–54% increased Spell Damage** giá 4
+      [[Chaos Orb]], hoặc 55–66% giá 4 Exalted Orb nếu cây wand xứng đáng.
+      Nếu prefix đã đầy và còn một suffix trống, craft cast speed (14–17%
+      giá 2 Chaos Orb) hoặc Spell Critical Strike Chance (60–69% giá 3 Chaos
+      Orb), tùy cái nào đang thiếu.
+    why: >-
+      Spell Damage khác group với cả prefix gem lẫn flat damage to spells,
+      nên nó nằm vừa cạnh chúng. Đừng craft "+2 to Level of Socketed Support
+      Gems": nó chung group với prefix gem.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+        - { text: "49% increased Spell Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Cast Speed", how: fossil }
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+variations: >-
+  **Các element khác.** Một [[Frigid Fossil]] thay cho Scorched nhắm vào "+1
+  to Level of all Cold Spell Skill Gems", và một [[Metallic Fossil]] nhắm
+  vào bản Lightning. Một [[Aberrant Fossil]] ("more Chaos, no Lightning")
+  làm điều đó cho spell Chaos. Với spell Physical, Fossil tương ứng là
+  Jagged, có dòng "no Chaos" không làm caster mất gì.
+
+
+  **Chỉ hai Fossil.** Aetheric và Faceted trong một Resonator hai socket làm
+  bất kỳ cái nào trong năm prefix gem theo element thành 1 trên 4 lần roll
+  prefix, và cái bạn muốn thành 1 trên 18. Dùng cách này khi bạn vẫn vui nếu
+  cây wand hợp với một nhân vật khác, hoặc khi bạn đang nhắm "+1 to Level of
+  all Spell Skill Gems", nơi Fossil element gây hại.
+
+
+  **Suffix thứ ba.** Suffix trống là mục tiêu tồi cho một
+  [[Exalted Orb]]. Khi cast speed và Spell Critical Strike Chance đã nằm
+  trên wand, khoảng 1 trên 11 suffix được thêm là Critical Strike Multiplier
+  và một phần ba là modifier attack. Cứ để nó trống tới khi bạn dùng được
+  "Can have up to 3 Crafted Modifiers", như trong ví dụ kế tiếp.
+mistakes:
+  - "Thêm Fossil element khi mục tiêu là \"+1 to Level of all Spell Skill Gems\". Prefix đó không có tag element, và các modifier khác của element ấy đẩy nó ra."
+  - "Giữ một kết quả không có prefix gem vì phần còn lại tốt. Một Essence of Woe cùng bench làm ra cây wand đó với giá rẻ hơn nhiều."
+  - "Bench flat Fire Damage to Spells cạnh flat Cold Damage to Spells roll ra. Cả ba element của modifier đó là một group."
+  - "Trông chờ [[Memory Strands]] giúp được. Fossil không dùng chúng, theo thử nghiệm của người chơi, và prefix gem chỉ có một tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân của Fossil, tag và group của mọi modifier wand, weight và giá bench. Xác suất là phép tính của chúng tôi và bỏ ra ngoài các modifier chỉ có từ Fossil." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

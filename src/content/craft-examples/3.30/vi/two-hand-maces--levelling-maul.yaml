@@ -1,0 +1,145 @@
+category: two-hand-maces
+title: "Một cây maul leveling từ Alteration và bench"
+level: 1
+summary: "Lần craft đầu tiên của bạn: roll một prefix physical lên cây maul trắng, biến nó thành Rare, rồi để bench thêm phần còn thiếu."
+goal: >-
+  Một weapon cho nửa sau campaign, đánh đau hơn hẳn bất cứ thứ gì nhặt dưới
+  đất, làm từ currency bạn đã có sẵn. Hơn cả item, cái chính là quy trình:
+  **roll một modifier, giữ nó, đắp thêm vào nó.** Mọi lần craft trên trang
+  này đều là quy trình đó với công cụ tốt hơn.
+base: "Totemic Maul"
+itemLevel: 36
+baseWhy: >-
+  Totemic Maul mặc được ở level 36 và có cú đánh lớn nhất trong các cây maul
+  quanh level đó, 57–85. Item level 35 là mốc đầu tiên mà Tier 5 của
+  increased Physical Damage (85–109%) roll được, nên hãy kiểm xem cây bạn
+  nhặt hay mua có ít nhất mức đó không: giữ Alt rồi rê chuột lên nó.
+
+
+  Bất kỳ cây maul trắng nào ngang level của bạn cũng làm y như vậy được. Đừng
+  dùng cây đã là Magic hay Rare, trừ khi bạn có một [[Orb of Scouring]] để
+  dọn sạch nó.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["30% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "74% increased Physical Damage" }
+    - { text: "Adds 33 to 61 Cold Damage" }
+  suffixes:
+    - { text: "+24 to Strength" }
+    - { text: "9% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–30", note: "cộng thêm 6 cho bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Vài chục [[Orb of Alteration]] và một [[Regal Orb]]. Ở thời điểm này của
+  league, không thứ gì ở đây đáng để dành. Craft ở bench tốn thêm 6
+  Alteration.
+odds: >-
+  Ở item level 36, một lần roll prefix ra increased Physical Damage từ 65%
+  trở lên khoảng 1 trên 15 lần, theo phép tính của chúng tôi từ weight của
+  các modifier. Không phải Alteration nào cũng roll ra prefix, nên hãy tính
+  20 tới 30 cái. Regal Orb và Augmentation thuần là may rủi, và lần craft này
+  được dựng sao cho kết quả của chúng không quan trọng mấy.
+steps:
+  - title: "Quality trước, khi nó còn rẻ"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] lên cây maul trắng tới khi nó hiện 20%
+      quality.
+    why: >-
+      Quality cộng vào physical damage của base, và mọi modifier local bạn
+      roll về sau đều nhân lên kết quả đó. Làm trước cũng có nghĩa là bạn
+      đánh giá item hoàn chỉnh bằng con số thật của nó.
+    state: { rarity: normal, implicits: ["30% increased Stun Duration on Enemies"] }
+  - title: "Biến nó thành Magic rồi roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], từng
+      cái một. Giữ Alt và đọc prefix sau mỗi cái. Dừng khi nó là
+      **increased Physical Damage từ 65% trở lên**: tên của nó là "Wicked"
+      (65–84%) hoặc "Vicious" (85–109%).
+    why: >-
+      Item Magic có một prefix và một suffix. Roll hai ô thì rẻ, và bạn chỉ
+      cần một trong hai ra đúng. Increased Physical Damage là modifier bench
+      thay thế kém nhất ở level này, nên nó là cái phải roll.
+    check: >-
+      Dòng prefix ghi "increased Physical Damage" và không kèm gì khác, với
+      con số từ 65 trở lên. Kệ suffix.
+    fail: >-
+      Nếu sắp cạn orb, hãy hạ mức xuống thành increased Physical Damage nào
+      cũng được. Một roll 50% vẫn ăn đứt weapon trắng một khoảng xa.
+    state:
+      rarity: magic
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "74% increased Physical Damage" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu item chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã có
+      rồi thì bỏ qua bước này.
+    why: >-
+      Augmentation thêm một modifier vào ô trống trên item Magic và không bao
+      giờ đụng tới thứ đang có. Nó là một lần roll miễn phí cầu attack speed,
+      một trong những suffix dễ ra hơn cả trên mace.
+    state:
+      rarity: magic
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "74% increased Physical Damage" }]
+      suffixes: [{ text: "+24 to Strength" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Nó biến item thành Rare, giữ cả hai modifier, và thêm ngẫu nhiên cái
+      thứ ba. Rare là thứ mở các ô còn lại cho bench.
+    check: >-
+      Đọc xem cái gì được thêm và nó nằm phía nào. Điều đó quyết định bước
+      tiếp theo. Ở đây nó thêm cold damage, một prefix build không dùng.
+    state:
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "74% increased Physical Damage" }
+        - { text: "Adds 33 to 61 Cold Damage" }
+      suffixes: [{ text: "+24 to Strength" }]
+  - title: "Để bench thêm mảnh còn thiếu"
+    do: >-
+      Ở [[Crafting Bench]], thêm **một** modifier. Nếu item chưa có attack
+      speed, craft 8–10% increased Attack Speed (6 Orb of Alteration). Nếu
+      Regal Orb hoặc Augmentation đã cho bạn attack speed rồi, hãy craft flat
+      Physical Damage thay vào: adds 9–12 to 18–21 giá 4 Orb of
+      Transmutation.
+    why: >-
+      Một item chứa được một modifier bench, nên hãy tiêu nó vào thứ tốt nhất
+      mà item còn thiếu. Ở đây bench không thêm được increased Physical
+      Damage, vì cái đã roll ra cùng group với nó; flat Physical Damage và
+      attack speed thuộc group khác nên vừa.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Hãy craft lựa chọn physical hoặc speed tốt nhất mà bench đang có
+      rồi đi tiếp.
+    state:
+      implicits: ["30% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "74% increased Physical Damage" }
+        - { text: "Adds 33 to 61 Cold Damage" }
+      suffixes:
+        - { text: "+24 to Strength" }
+        - { text: "9% increased Attack Speed", how: crafted }
+variations: >-
+  **Bắt đầu từ một Essence.** Nếu bạn có một Essence of Contempt bậc thấp,
+  hãy dùng nó lên cây maul trắng thay cho bước 2 tới 4: nó biến item thành
+  Rare với flat Physical Damage được đảm bảo, rồi bench thêm increased
+  Physical Damage (40–59% giá 4 Orb of Alteration). Trong 3.30, Essence yếu
+  chỉ rơi trong campaign và map trắng, nên đây chính là lúc tiêu chúng.
+
+
+  **Lên cao hơn.** Cũng năm bước đó làm ra một weapon chạy map trên base
+  level 60, nơi Tier 3 (135–154%) roll được. Ví dụ kế tiếp chỉ một cách tốt
+  hơn.
+mistakes:
+  - "Dùng bench khi item còn là Magic, rồi mới Regal Orb. Vẫn được, nhưng bạn đã tiêu lượt craft trước khi biết item cần gì."
+  - "Roll để tìm suffix. Attack speed có ở bench với giá 6 Alteration; một prefix tốt thì không."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

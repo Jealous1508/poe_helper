@@ -1,0 +1,31 @@
+---
+import { assetPath } from '../../i18n';
+import type { CraftBase } from '../../lib/crafting';
+
+interface Props {
+  base: CraftBase;
+  /** Height of one inventory cell in px. A 2x4 weapon is four of these tall. */
+  cell?: number;
+  /** Cap the rendered height, for rows that must stay short. */
+  max?: number;
+  eager?: boolean;
+}
+const { base, cell = 26, max, eager = false } = Astro.props;
+const [w, h] = base.size;
+let height = h * cell;
+let width = w * cell;
+if (max && height > max) {
+  width = Math.round((width * max) / height);
+  height = max;
+}
+---
+{base.icon ? (
+  <img class="base-icon" src={assetPath(base.icon.file)} alt="" width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+) : (
+  <span class="base-icon base-icon--none" style={`width:${width}px;height:${height}px`}></span>
+)}
+
+<style>
+  .base-icon { flex: none; display: block; object-fit: contain; }
+  .base-icon--none { border: 1px dashed var(--border-strong); border-radius: 3px; }
+</style>

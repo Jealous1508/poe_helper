@@ -1,0 +1,292 @@
+category: body-armours
+title: "Two influences on one chest: explosions and increased maximum Life"
+level: 5
+summary: "A Crusader prefix and a Hunter prefix joined with an Awakener's Orb, then a suffix side rebuilt under a lock with a Harvest reforge chosen by counting tags."
+goal: >-
+  A chest with the two strongest influence prefixes a body armour can hold:
+  enemies that explode when killed (Crusader) and 9–12% increased maximum
+  Life (Hunter), with a critical strike suffix that only influence gives.
+  This is the other road for a body armour: no Eldritch implicits, no
+  Eldritch orbs, every protection paid for. The lesson is how an expert
+  removes choices from random tools before using them, and where the
+  arithmetic says to stop.
+base: "Astral Plate"
+itemLevel: 86
+baseWhy: >-
+  Both top tiers need item level 85: the 21–30% explosion and the 9–12%
+  life. 86 adds the option of top-tier rolled life later. The Astral Plate is
+  the right base **because** this chest is influenced: it can never take an
+  Eldritch Ember, so its implicit, +8–12% to all Elemental Resistances, is
+  safe for good. The donor item in stage 1 can be any body armour at all.
+methods: [influence, currency, meta, harvest, bench]
+result:
+  note: "Crusader and Hunter"
+  implicits: ["+11% to all Elemental Resistances"]
+  prefixes:
+    - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+    - { text: "11% increased maximum Life", how: influence }
+    - { text: "+79 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+    - { text: "+43% to Lightning Resistance", how: harvest }
+needs:
+  - { item: "A Hunter-influenced Astral Plate, item level 85 or higher", amount: "1" }
+  - { item: "A Crusader-influenced body armour of any base, item level 85 or higher", amount: "1", note: "item level 75 is enough for the lower explosion tier" }
+  - { item: "[[Orb of Alteration]]", amount: "many hundreds" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Blessed Orb]]", amount: "4 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Three things dominate. The Alterations for the explosion, which run to
+  hundreds on a good day. The [[Awakener's Orb]]. And the locks: 4
+  [[Divine Orb]]s and 4 [[Blessed Orb]]s for every attempt at the suffixes,
+  because an influenced chest has no cheaper way to protect a side.
+
+
+  We give no total. The first two are one-off costs with long tails, and the
+  third depends on where you set the bar.
+odds: >-
+  **The explosion.** On a Magic Crusader plate at item level 86, by our
+  arithmetic from the weights, one prefix roll is the explosion about 1 time
+  in 385, and its top tier 1 time in 1,925. An Alteration does not always
+  roll a prefix, so the real count is higher.
+
+
+  **The life.** On a Magic Hunter plate, one prefix roll is 9–12% increased
+  maximum Life 1 time in 96; either tier, 1 in 48.
+
+
+  **The suffix.** With the prefixes locked, a Critical reforge must give one
+  of only three modifiers. If it picks by weight, which is how reforges are
+  understood to work, it is the attack version 40% of the time, and its top
+  tier 20%. Not measured in 3.30.
+
+
+  **What can go wrong** is listed under each step. The step with no remedy
+  is the [[Awakener's Orb]] filling every slot around the two prefixes.
+steps:
+  - title: "Plan: what the influence closes"
+    do: >-
+      Before buying anything, accept three consequences. An influenced chest
+      takes **no Eldritch implicits** and no Eldritch orbs. It cannot be
+      **fractured**. And both modifiers you are building around are
+      **prefixes**, which leaves one prefix slot for everything else.
+    why: >-
+      Those three facts write the plan. No fracture and no Eldritch orbs
+      means the only protection is the bench lock. Two prefixes taken means
+      flat life will be the third, from the bench if not from luck. And
+      because the valuable side is the prefix side, all the rerolling
+      happens on the suffixes.
+  - title: "Stage 1: the explosion, alone, on the donor"
+    do: >-
+      Take any Crusader-influenced body armour of item level 85 or higher.
+      As a Magic item, use [[Orb of Alteration]]s until its prefix is
+      "Enemies you Kill have a #% chance to Explode". It must be the **only
+      Crusader modifier** on the item.
+    why: >-
+      The donor is destroyed, so its base does not matter: the orb's text
+      asks only for "the same item class". By reference pages the Awakener's
+      Orb keeps one influenced modifier from each item. If each item has
+      exactly one, the orb has no choice to make. That is the whole trick:
+      **remove the choice before the random tool is used.**
+    check: >-
+      Read the suffix. A Crusader suffix beside the explosion gives the orb
+      two candidates. Use more Alterations until the explosion stands with
+      no other Crusader modifier.
+    fail: >-
+      No influenced base to hand: a [[Crusader's Exalted Orb]] gives a Rare
+      chest the influence and one random Crusader modifier. Influence
+      belongs to the item and not to a modifier, so by long-standing player
+      experience an [[Orb of Scouring]] then leaves a Normal Crusader base
+      to roll on. Where influenced bases drop in 3.30 we could not confirm.
+  - title: "Stage 2: the life, alone, on the Astral Plate"
+    do: >-
+      On the Hunter-influenced Astral Plate, as a Magic item, use
+      Alterations until the prefix is **9–12% increased maximum Life**. Again
+      it must be the only Hunter modifier on the item.
+    why: >-
+      This item survives, so this is where the base and the item level
+      matter. The Hunter prefix is far easier than the explosion: at the top
+      tier, about 20 times as likely per roll.
+    check: >-
+      Alt shows the tier: the 9–12% roll needs item level 85, the 5–8% one
+      68. Decide now which you accept; it cannot be upgraded later.
+    state:
+      rarity: magic
+      note: "Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "11% increased maximum Life", how: influence }
+  - title: "Stage 3: the Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the donor first, then on the Astral
+      Plate. The first item is the one destroyed.
+    why: >-
+      The orb's text: it "destroys an item, applying its influence to
+      another of the same item class", and the second item "is reforged as a
+      rare item with both influence types and new modifiers". The two
+      influenced prefixes come through; everything else is new and random.
+    check: >-
+      Both prefixes are on the result. The orb's text sets no rarity for
+      either item and crafters have long used it on Magic ones. We could
+      not re-test that in 3.30. If it refuses, a [[Regal Orb]] on each item
+      first is the answer, provided it does not add a second modifier of
+      that influence.
+    state:
+      note: "Crusader and Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Regenerate 71 Life per second" }
+  - title: "Read the result: is there a suffix slot for the lock?"
+    do: >-
+      Count the suffixes. The lock is itself a suffix, so the item needs
+      **one open suffix slot**. Two suffixes, as here, is the good case.
+    why: >-
+      Everything from here protects the two prefixes, and the only
+      protection available takes a suffix slot.
+    fail: >-
+      **Three suffixes and an open prefix:** the beast recipe "Add a Prefix,
+      Remove a Random Suffix" ([[Farric Wolf Alpha]]) opens a suffix slot
+      and can only remove from the suffix side. It spends the third prefix
+      on a random modifier, about 1 in 4 of them life.
+
+
+      **Three suffixes and three prefixes:** only an [[Orb of Annulment]]
+      opens a slot, and it removes one of six modifiers at random: a suffix
+      half the time, one of the two influenced prefixes a third of the time.
+      This is the one place a [[Hinekora's Lock]] earns its price, because
+      it shows the result before you commit. Without one, most crafters keep
+      the chest as it is and bench nothing.
+  - title: "Stage 4: lock the prefixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s on a body armour.
+    why: >-
+      The full lock closes the prefix side: a reforge that respects it
+      neither changes a prefix nor adds one, so the third slot stays free
+      for the bench.
+
+
+      There is a cheaper candidate, and an expert weighs it. "2 Prefix
+      Modifiers cannot be changed" costs 2 Divine Orbs. The developers have
+      said the smaller locks pick their modifiers at random with no
+      indicator, which is harmless on an item with exactly two prefixes.
+      What we could not confirm is whether a reforge may then add a third
+      prefix of its own. Try it on a cheap item before trusting it with this
+      one. With three prefixes on the item, only the full lock is safe.
+    state:
+      note: "Crusader and Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Regenerate 71 Life per second" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Stage 5: a reforge chosen by counting tags"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Repeat stage 4 and this step until
+      "Attacks have +#% to Critical Strike Chance" is on the item.
+    why: >-
+      Count what the reforge may choose. No natural modifier on a body
+      armour has the critical tag. With the prefixes locked, the guaranteed
+      modifier must be a suffix with that tag, and on a Crusader and Hunter
+      chest there are exactly three: the Hunter's attack version, the
+      Hunter's spell version, and the Crusader's Power Charge on Critical
+      Strike. A reforge that sounds vague is, on this item, a three-way
+      draw.
+
+
+      **Should you block the spell version?** "Cannot roll Caster Modifiers"
+      (1 Divine Orb) removes it from the draw, and Harvest reforges have
+      respected that modifier since 3.27. But it needs "Can have up to 3
+      Crafted Modifiers" (2 Divine Orbs) to sit beside the lock, and three
+      empty suffix slots. Do the sum for the top tier: unblocked, 1 attempt
+      in 5 at 4 Divine Orbs and 4 Blessed Orbs each, about 20 and 20.
+      Blocked, 1 attempt in 3 at 7 and 4 each, about 21 and 12. The block
+      buys almost nothing here. Run that sum every time before paying for
+      one.
+    check: >-
+      Both prefixes unchanged, the lock gone, and the critical suffix
+      present. Then the other suffixes: a resistance is a bonus.
+    fail: >-
+      The spell version or the Power Charge: lock and reforge again. Set a
+      number of attempts before the first, and stop at it. That reforges
+      respect the lock is player-tested, not stated by the developers; if in
+      doubt after a patch, test on a cheap item.
+    state:
+      note: "Crusader and Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+        - { text: "+43% to Lightning Resistance", how: harvest }
+  - title: "Stage 6: the third prefix, from the bench"
+    do: >-
+      Craft **+71–85 to maximum Life** in the open prefix, 4 [[Chaos Orb]]s.
+      Then quality, sockets and links, and a [[Divine Orb]] if the two
+      influenced prefixes rolled low.
+    why: >-
+      Flat life and increased life are different groups and multiply each
+      other. The bench's 5–8% increased maximum Life with Mana would **not**
+      fit: it shares a group with the Hunter prefix. The third suffix slot
+      is open; with every prefix slot full, an [[Exalted Orb]] there can
+      only add a suffix and risks nothing already on the item.
+    state:
+      note: "Crusader and Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+        - { text: "+79 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+        - { text: "+43% to Lightning Resistance", how: harvest }
+variations: >-
+  **Elder in place of Hunter.** The Elder has the same 9–12% life prefix and
+  the same attack critical suffix. The tag count in stage 5 changes with it:
+  an Elder and Crusader chest has no spell version in the draw at all.
+
+
+  **A caster's chest.** The Hunter and the Shaper both give "+1.1–1.5% to
+  Spell Critical Strike Chance". The method is the same with "Cannot roll
+  Attack Modifiers" as the block to price.
+
+
+  **A resistance instead of the critical suffix.** A Fire, Cold or Lightning
+  reforge under the lock can only land on that resistance, at 50 Lifeforce.
+  It is the cheap way to finish a chest whose build does not crit.
+
+
+  **Elevated modifiers.** An [[Orb of Dominance]] removes one influenced
+  modifier and upgrades another, and works on body armours. On a chest with
+  exactly two it would destroy one of them. Their values are not in our
+  data, and we do not teach a route we cannot check.
+mistakes:
+  - "Leaving a second modifier of the same influence on either item before the Awakener's Orb. The orb then chooses, and may keep the wrong one."
+  - "Using the Astral Plate as the donor. The donor is destroyed; the second item you click is the one that survives."
+  - "Reaching for an Essence or an ordinary Chaos Orb after the Awakener's Orb. Either rerolls the two prefixes the whole craft exists for."
+  - "Benching the life-and-mana prefix. It is the same group as the Hunter's increased maximum Life."
+  - "Paying for a block without doing the sum. Here it costs three more Divine Orbs per attempt and saves fewer than it costs."
+  - "Planning Eldritch implicits for later. An influenced chest never takes them."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The influence modifiers, their item levels, weights and tags, the bench costs, and the in-game text of the Awakener's Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers; conqueror Exalted Orbs." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges that guarantee a modifier type respect the Cannot roll modifiers." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "That the result keeps one influenced modifier from each item. Not re-tested by us in 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical and element reforges and their Lifeforce costs." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The add-a-prefix recipe used to open a suffix slot." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

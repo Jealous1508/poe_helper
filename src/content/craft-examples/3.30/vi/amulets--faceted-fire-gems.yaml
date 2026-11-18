@@ -1,0 +1,169 @@
+category: amulets
+title: "+1 gem Fire bằng hai Fossil"
+level: 3
+summary: "Một Faceted Fossil và một Scorched Fossil trong cùng một Resonator biến một prefix 1 trên 400 thành khoảng 1 trên 8. Roll lại tới khi nó ra, rồi bench Life."
+goal: >-
+  Một chiếc amulet có "+1 to Level of all Fire Skill Gems", fire damage quanh
+  nó, và Life từ bench. Bài học là **chuyện gì xảy ra khi hai Fossil cùng
+  đồng ý về một modifier.** Mỗi cái nhân tag của riêng nó lên mười lần, và
+  một modifier mang cả hai tag thì được nhân hai lần.
+base: "Lapis Amulet"
+itemLevel: 75
+baseWhy: >-
+  Item level 75 là mốc thấp nhất mà một prefix gem level roll được, và cũng
+  là mốc tốt nhất cho lần craft này: mỗi tier cao hơn của mọi prefix khác là
+  thêm một vé chống lại bạn. Intelligence của Lapis Amulet hợp với caster;
+  hãy lấy implicit mà build của bạn đang thiếu.
+methods: [fossil, bench]
+result:
+  implicits: ["+26 to Intelligence"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+    - { text: "25% increased Fire Damage", how: fossil }
+    - { text: "+47 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+38% to Fire Resistance", how: fossil }
+    - { text: "24% increased Fire Damage", how: fossil }
+needs:
+  - { item: "[[Faceted Fossil]]", amount: "5–15" }
+  - { item: "[[Scorched Fossil]]", amount: "5–15" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ có hai socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "3", note: "một cái để biến amulet thành Rare, hai cái cho bench" }
+cost: >-
+  Mỗi loại Fossil một cái và một Resonator hai socket cho mỗi lần thử, tất cả
+  đến từ Delve. Trong 3.30, đường vào Delve là qua các map luôn spawn
+  Sulphite, nên đây là lần craft dành cho người chơi Delve hoặc mua từ người
+  chơi Delve. Bước bench tốn 2 [[Orb of Alchemy]].
+odds: >-
+  Với cả hai Fossil, ở item level 75 một lần roll prefix ra "+1 to Level of
+  all Fire Skill Gems" từ 12% tới 15% số lần, theo phép tính của chúng tôi.
+  Có khoảng đó là vì công cụ tính của trang bỏ các modifier chỉ có từ Fossil
+  của amulet ra khỏi pool, còn chúng tôi tính thêm cả trường hợp có chúng;
+  con số thật cho một lần roll hẳn nằm giữa hai mức. Không có Fossil thì cùng
+  prefix đó là 1 trên 391 lần roll.
+
+
+  Một kết quả có một tới ba prefix, nên hãy tính là gem level ra ở xấp xỉ một
+  trên bốn hoặc năm lần thử. Mô hình này nhân một modifier một lần cho mỗi
+  tag khớp, đúng như cách các công cụ của cộng đồng làm; hãy coi con số là
+  gần đúng, không phải chính xác.
+steps:
+  - title: "Biến amulet thành Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên chiếc amulet trắng. Nó roll ra gì không
+      quan trọng.
+    why: >-
+      Một Chaotic Resonator roll lại item Rare, như Chaos Orb vẫn làm. Amulet
+      chỉ cần là Rare để cái đầu tiên dùng được.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes: [{ text: "+33 to maximum Mana" }]
+      suffixes:
+        - { text: "+24 to Dexterity" }
+        - { text: "+19% to Cold Resistance" }
+        - { text: "Gain 3 Life per Enemy Hit with Attacks" }
+  - title: "Nạp cả hai Fossil và dùng Resonator"
+    do: >-
+      Đặt một [[Faceted Fossil]] và một [[Scorched Fossil]] vào một
+      [[Potent Chaotic Resonator]], rồi dùng Resonator lên amulet.
+    why: >-
+      Faceted ghi "More Gem modifiers". Scorched ghi "More Fire modifiers, No
+      Cold modifiers". Trong dữ liệu 3.30, "more" là weight gấp mười lần. Gem
+      level Fire mang cả tag gem lẫn tag fire, nên nó đi từ 200 vé lên
+      20,000. Các gem level theo loại khác chỉ nhận hệ số nhân thứ nhất, và
+      mọi thứ mang tag cold, kể cả gem level Cold, đều biến mất.
+
+
+      Bạn cần một Resonator có hai socket. Theo cách game vẫn chạy từ lâu thì
+      đó là cỡ Potent; chính item hiện rõ nó chứa được bao nhiêu Fossil.
+    check: >-
+      Amulet có các modifier mới và phần lớn đều nhắc tới fire. Đó là
+      Scorched Fossil tác động lên cả pool, không chỉ lên gem level.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "Adds 14 to 29 Fire Damage to Attacks", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "20% increased Fire Damage", how: fossil }
+  - title: "Đọc kết quả"
+    do: >-
+      Giữ Alt và tìm prefix **"+1 to Level of all Fire Skill
+      Gems"**. Nếu không có, nạp một cặp khác và làm lại.
+    why: >-
+      Lần thử ở trên cho thấy cái giá của Scorched Fossil: nó nhân luôn cả
+      added Fire Damage to Attacks, và prefix đó phổ biến gấp khoảng hai lần
+      gem level. Caster không dùng được nó. Không làm gì được với chuyện đó
+      ngoài thử thêm lần nữa.
+    check: >-
+      Trong kết quả đó có hai modifier khác nhau cùng ghi "increased Fire
+      Damage", và cả hai đều là thật. Một cái là prefix chỉ roll ra trong lần
+      craft bằng Fossil, cái kia là suffix thông thường. Chúng thuộc hai
+      group khác nhau và cộng dồn được.
+    fail: >-
+      Không có gì để sửa. Một lần thử Fossil roll lại cả item, nên một lần
+      trượt tốn một cặp Fossil và một Resonator.
+  - title: "Dừng khi gem level ra mà bên cạnh còn chỗ"
+    do: >-
+      Giữ kết quả nào có gem level **và** ít nhất một ô prefix trống, hoặc có
+      gem level cùng Life đã roll ra sẵn.
+    why: >-
+      Life là thứ còn lại mà chiếc amulet này cần, và Life là prefix. Ba
+      prefix mà không có Life thì không còn chỗ cho nó. Đây là lý do duy nhất
+      để vứt một kết quả đã có gem level, và nếu quanh nó là hai prefix fire
+      thì bạn vẫn có thể quyết định giữ.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+  - title: "Bench Life"
+    do: >-
+      Ở [[Crafting Bench]], craft +41–55 to maximum Life giá 2
+      [[Orb of Alchemy]].
+    why: >-
+      Bench là thứ chắc chắn, nên nó lấp khoảng trống bạn không nhắm tới
+      được. Một ô suffix vẫn để trống cho một [[Exalted Orb]] khi bạn dư ra
+      được một cái.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+        - { text: "+47 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+variations: >-
+  **Các loại gem khác.** Đổi Fossil thứ hai: [[Frigid Fossil]] cho Cold,
+  [[Metallic Fossil]] cho Lightning, [[Jagged Fossil]] cho Physical,
+  [[Aberrant Fossil]] cho Chaos. Mỗi cái cũng loại bỏ một tag, nên hãy đọc
+  dòng mô tả của nó trước. Cặp Physical là yếu nhất, khoảng 1 trên 10 lần
+  roll prefix, vì added Physical Damage to Attacks là một họ nặng weight và
+  cũng được nhân lên.
+
+
+  **Chaos có đường thứ hai.** Một reforge Harvest đảm bảo một modifier Chaos
+  tốn 100 Vivid Lifeforce và, trên amulet, chỉ có hai modifier để chọn. Nếu
+  việc chọn dựa theo weight thì nó ra gem level khoảng 1 trên 8.5 lần. Không
+  Fossil, không Delve.
+
+
+  **Chỉ riêng Faceted Fossil.** Một Fossil trong
+  [[Primitive Chaotic Resonator]] khiến mỗi gem level theo loại chiếm khoảng
+  2% số lần roll prefix, và bất kỳ cái nào trong năm cái chiếm khoảng 10%.
+  Dùng nó khi bạn chấp nhận được hơn một loại.
+mistakes:
+  - "Dùng item level cao hơn \"cho chắc\". Trên 75, gem level không tốt lên mà xác suất của nó còn tệ đi một chút."
+  - "Tưởng Scorched Fossil là Fossil cho gem. Nó nhân mọi modifier fire trên amulet, dù bạn muốn hay không."
+  - "Trông chờ đúng y con số của công cụ tính. Các modifier chỉ có từ Fossil gia nhập pool trong lần craft bằng Fossil; vì lý do đó chúng tôi đưa ra một khoảng."
+  - "Đặt [[Memory Strands]] lên base trước. Fossil không dùng strand, theo thử nghiệm của người chơi, và gem level chỉ có một tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag, tier và weight, cùng giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Đường vào Delve trong 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá của reforge Chaos được nhắc tới như một phương án thay thế." }

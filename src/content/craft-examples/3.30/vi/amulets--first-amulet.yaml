@@ -1,0 +1,145 @@
+category: amulets
+title: "Amulet đầu tiên: roll Life, mua resistance"
+level: 1
+summary: "Chọn base theo attribute bạn đang thiếu, roll một prefix Life bằng Alteration, rồi để bench thêm resistance bạn còn thiếu."
+goal: >-
+  Một chiếc amulet cho đoạn giữa campaign với Life roll ra tử tế, một
+  attribute đằng nào bạn cũng cần, và một resistance do bạn chọn. Ý cần mang
+  về là **nửa nào để roll và nửa nào để mua.** Ở level này một prefix Life
+  roll ra là 55 tới 99; bench bán cao nhất 41–55. Một resistance roll ra là
+  18–29%; bench bán 21–28% giá một Orb of Alchemy. Vậy nên bạn roll Life và
+  mua resistance, không bao giờ làm ngược lại.
+base: "Jade Amulet"
+itemLevel: 36
+baseWhy: >-
+  Trên amulet, base chính là implicit và không gì khác, nên hãy chọn nó theo
+  một khoảng trống. Jade Amulet cho +20–30 Dexterity, thứ mà nhân vật
+  Strength hoặc Intelligence thường thiếu cho các gem xanh lá. Hãy lấy Amber
+  Amulet cho Strength hoặc Lapis Amulet cho Intelligence nếu đó mới là khoảng
+  trống của bạn.
+
+
+  Item level 36 là mốc đầu tiên mà Life 85–99 roll được. Giữ Alt rồi rê chuột
+  lên amulet để xem item level của nó. Amulet trắng nào từ Act 4 trở đi cũng
+  được; cái đã là Magic hoặc Rare thì cần một [[Orb of Scouring]] trước.
+methods: [currency, bench]
+result:
+  implicits: ["+24 to Dexterity"]
+  prefixes:
+    - { text: "+74 to maximum Life" }
+  suffixes:
+    - { text: "+16 to Intelligence" }
+    - { text: "+21% to Lightning Resistance" }
+    - { text: "+24% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "cho bench; 1 Orb of Transmutation mua được một resistance nhỏ hơn" }
+cost: >-
+  Vài chục [[Orb of Alteration]], một [[Regal Orb]] và một
+  [[Orb of Alchemy]] cho bench. Ở thời điểm này của league, không thứ gì ở
+  đây đáng để dành.
+odds: >-
+  Ở item level 36, một lần roll prefix ra maximum Life từ 55 trở lên khoảng 1
+  trên 15 lần, theo phép tính của chúng tôi từ weight của modifier; Life cỡ
+  nào cũng tính thì khoảng 1 trên 6. Alteration không phải lúc nào cũng roll
+  ra prefix, nên hãy tính là tốn 20 tới 40 cái. Augmentation và Regal Orb
+  thuần là may rủi, và lần craft này được dựng sao cho kết quả của chúng hầu
+  như không quan trọng.
+steps:
+  - title: "Biến nó thành Magic và roll tìm Life"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi dùng [[Orb of Alteration]] từng
+      cái một. Giữ Alt và đọc **prefix** sau mỗi cái. Dừng ở **maximum Life
+      từ 55 trở lên**: tên của chúng là "Stout" (55–69), "Robust" (70–84)
+      hoặc "Rotund" (85–99).
+    why: >-
+      Amulet Magic có một prefix và một suffix. Life luôn là prefix, là
+      prefix hữu ích phổ biến nhất, và là modifier bench thay thế kém nhất:
+      craft Life tốt nhất của bench dừng ở đúng chỗ các lần roll này bắt đầu.
+    check: >-
+      Dòng prefix ghi "to maximum Life" và con số từ 55 trở lên. Bỏ qua hẳn
+      suffix.
+    fail: >-
+      Sắp hết Alteration: nhận bất kỳ Life nào từ 40 trở lên. Nó vẫn hơn các
+      bản rẻ của bench, và chiếc amulet kế tiếp chỉ cách vài zone.
+    state:
+      rarity: magic
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu amulet chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã có
+      thì bỏ qua bước này.
+    why: >-
+      Augmentation thêm vào một ô trống và không bao giờ đụng tới thứ đang
+      có. Một nửa mọi suffix của amulet là một attribute hoặc một resistance,
+      nên đây là một lần roll miễn phí để ra thứ gì đó hữu ích.
+    state:
+      rarity: magic
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes: [{ text: "+16 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Amulet thành Rare, giữ cả hai modifier và nhận thêm cái thứ ba ngẫu
+      nhiên. Chính Rare mới mở các ô còn lại cho bench.
+    check: >-
+      Đọc xem cái gì được thêm vào và **nó nằm ở phía nào**. Ở đây đó là một
+      resistance, tức một suffix. Amulet giờ có một prefix và hai suffix, nên
+      còn trống hai ô prefix và một ô suffix.
+    state:
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes:
+        - { text: "+16 to Intelligence" }
+        - { text: "+21% to Lightning Resistance" }
+  - title: "Mua resistance bạn thiếu"
+    do: >-
+      Mở bảng nhân vật và tìm elemental resistance thấp nhất của bạn. Ở
+      [[Crafting Bench]], craft đúng cái đó: 21–28% giá 1
+      [[Orb of Alchemy]], hoặc 16–20% giá 1 Orb of Transmutation.
+    why: >-
+      Một item chỉ giữ được một modifier bench, nên hãy dành nó cho khoảng
+      trống lớn nhất. Bench sẽ không thêm resistance mà amulet đã roll ra, vì
+      hai cái là một group; nó sẽ thêm một element khác, hoặc một cặp như
+      "Fire and Cold Resistances", vốn là một group riêng.
+    fail: >-
+      Bench không liệt kê craft đó: bạn chưa tìm ra công thức ấy. Hãy lấy
+      resistance tốt nhất mà nó có. Lúc nào cũng còn chỗ cho nó: sau các bước
+      này amulet có nhiều nhất hai suffix.
+    state:
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes:
+        - { text: "+16 to Intelligence" }
+        - { text: "+21% to Lightning Resistance" }
+        - { text: "+24% to Fire Resistance", how: crafted }
+  - title: "Đổi craft khi nhân vật thay đổi"
+    do: >-
+      Về sau, khi một món trang bị mới làm resistance của bạn xê dịch, hãy
+      quay lại bench: "Remove Crafted Mods" tốn 1 [[Orb of Scouring]] và giải
+      phóng ô đó cho một craft khác.
+    why: >-
+      Modifier bench là dòng duy nhất trên amulet mà bạn viết lại được. Vì
+      thế nó nên giữ thứ dễ thay đổi nhất, tức là một resistance.
+variations: >-
+  **Bạn cần attribute hơn resistance.** Bench bán 15–20 của một attribute đơn
+  giá 1 Orb of Augmentation và 21–25 giá 2 Orb of Alchemy. Trên Jade Amulet,
+  một suffix Dexterity craft ra sẽ cộng thêm lên trên implicit: implicit và
+  modifier explicit không bao giờ tranh nhau một group.
+
+
+  **Trong map.** Cũng năm bước đó trên một chiếc amulet item level 54 sẽ với
+  tới tier Life cao nhất, 115–129. Ngoài ra lần craft không có gì thay đổi.
+mistakes:
+  - "Roll tìm resistance rồi bench Life. Ở level này resistance của bench gần ngang một lần roll; Life của nó thì chỉ bằng một nửa."
+  - "Dùng bench khi amulet vẫn còn Magic. Làm vậy vẫn được, nhưng bạn đã chọn craft trước khi Regal Orb cho bạn thấy còn thiếu gì."
+  - "Chọn base vì vẻ ngoài. Implicit là thứ duy nhất base cho bạn; một attribute bạn không cần là một dòng trống rỗng."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

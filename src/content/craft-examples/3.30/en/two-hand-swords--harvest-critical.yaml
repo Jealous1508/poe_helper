@@ -1,0 +1,164 @@
+category: two-hand-swords
+title: "A first crit sword from one Harvest reforge"
+level: 2
+summary: "The Critical reforge has only two possible answers on a sword and you want both. Reforge until the guaranteed suffix is strong and the prefixes add damage, then bench the other critical modifier."
+goal: >-
+  A sword for early maps with a rolled critical suffix, a crafted one beside
+  it and two damage prefixes. The lesson is **counting a tag before you pay
+  for it**. A Harvest reforge promises "a modifier of this type", and how
+  much that promise is worth depends entirely on how many modifiers of that
+  type the item can roll.
+base: "Ezomyte Blade"
+itemLevel: 73
+baseWhy: >-
+  The Ezomyte Blade has 6.5% critical strike chance, the highest in the
+  category, and +25% to Global Critical Strike Multiplier as its implicit. It
+  drops from level 61. Item level 73 is where both critical suffixes reach
+  Tier 1 (35–38%); below it the reforge can only give lower tiers.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+    - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+  suffixes:
+    - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "+36 to Dexterity", how: harvest }
+    - { text: "26% increased Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge", note: "allow five to ten reforges" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Lifeforce, 150 Primal a try, which in 3.30 you collect from the Sacred
+  Flora that grow in your maps. The bench craft is 4 [[Chaos Orb]]s. Nothing
+  is protected and nothing is precious: this is a craft to repeat until it
+  works.
+odds: >-
+  Every reforge gives Critical Strike Chance or Critical Strike Multiplier.
+  All six tiers of each weigh the same, so if the guaranteed modifier is
+  drawn by weight, which is how reforges are understood to work, it is 25%
+  or more half the time and 30% or more a third of the time.
+
+
+  The prefixes are rolled fresh each time. At item level 73, by our
+  arithmetic, 94 prefix rolls in 100 add damage and about one in five does
+  so at a tier worth keeping. Put together, roughly one reforge in five or
+  six is a keeper.
+steps:
+  - title: "Count the tag"
+    do: >-
+      Open the sword's modifier list and count what carries each tag the
+      Horticrafting Station offers. **Critical:** Critical Strike Chance and
+      Critical Strike Multiplier, both suffixes, nothing else. **Attack:**
+      almost every prefix and half the suffixes. **Physical:** three
+      prefixes and two leech suffixes.
+    why: >-
+      A reforge "including a Critical modifier" must therefore produce one
+      of two modifiers, and a crit sword wants both. The Attack reforge is
+      cheaper and guarantees nothing you could name. The rule for every
+      Harvest reforge is in that comparison: the fewer modifiers share the
+      tag, the more the guarantee is worth.
+  - title: "Make the sword Rare"
+    do: >-
+      Take a white item level 73 Ezomyte Blade to 20% quality and use an
+      [[Orb of Alchemy]].
+    why: >-
+      The reforge works on Rare items. What the Orb of Alchemy rolls is
+      about to be replaced.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 61 to 119 Cold Damage" }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Reforge with a Critical modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Critical modifier**: 150
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      Everything on the sword is replaced, like a Chaos Orb, except that one
+      of the new modifiers is certain to be a critical suffix.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "+1 to Level of Socketed Gems", how: harvest }
+      suffixes:
+        - { text: "17% increased Critical Strike Chance", how: harvest }
+        - { text: "+251 to Accuracy Rating", how: harvest }
+        - { text: "11% increased Attack Speed", how: harvest }
+  - title: "Judge three things"
+    do: >-
+      Keep the result only if all three hold. The critical suffix is **25% or
+      more**. **Two prefixes add damage**, and one of them is a middle tier
+      or better: added elemental damage of Tier 4 or higher, flat Physical
+      Damage of adds 20 or more, or a physical percentage of 110% or 45%
+      with Accuracy. And **one suffix slot is open** for the bench.
+    why: >-
+      The result above fails all three. Deciding the bar beforehand is what
+      keeps a cheap craft cheap: without one, every result looks nearly good
+      enough to stop on or nearly bad enough to justify one more try.
+    check: >-
+      A crit sword does not care which kind of damage it multiplies at this
+      stage. Do not reject fire damage because you imagined a physical
+      sword.
+    fail: >-
+      Reforge again. Each attempt is independent and costs only Lifeforce.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+        - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+36 to Dexterity", how: harvest }
+  - title: "Bench the other critical modifier"
+    do: >-
+      If the reforge gave Multiplier, as here, craft **25–27% increased
+      Critical Strike Chance** at the [[Crafting Bench]]: 4 [[Chaos Orb]]s.
+      If it gave Chance, craft **+25–28% to Global Critical Strike
+      Multiplier**, also 4 Chaos Orbs. If it gave both, craft attack speed,
+      11–15% for 2 Chaos Orbs.
+    why: >-
+      Chance is local and multiplies the blade's 6.5%: 26% makes it about
+      8.2%. Multiplier is global and adds to the implicit. The bench sells
+      whichever the reforge did not give, so the reforge only ever had to
+      deliver one.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+        - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+36 to Dexterity", how: harvest }
+        - { text: "26% increased Critical Strike Chance", how: crafted }
+variations: >-
+  **An Essence of Loathing instead.** It guarantees Critical Strike Chance at
+  a fixed strength: 25–29% at Screaming, 30–34% at Shrieking, 35–38% at
+  Deafening. Choose it when you want that exact number and own the Essences;
+  choose the reforge when Lifeforce is what you have, or when Multiplier
+  would do as well.
+
+
+  **The open prefix.** The finished sword has one prefix slot empty. An
+  [[Exalted Orb]] fills it at random when you can spare one, and nine times
+  in ten that is some kind of damage.
+
+
+  **On an influenced sword, count again.** Shaper and Elder swords each have
+  a Critical Strike Chance suffix with a rider that carries the critical tag
+  too. The guarantee is then one of three modifiers, two of them in the same
+  group.
+mistakes:
+  - "Paying for the Attack reforge because it is cheaper. On a sword it guarantees almost nothing."
+  - "Benching before the reforge. A reforge replaces a bench modifier like any other."
+  - "Keeping a result with a 12% critical suffix because the prefixes are good. The suffix was the half you paid to guarantee; the tier is still a roll."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The tags on every modifier, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical and Attack reforges and their Lifeforce costs." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest in 3.30: Sacred Flora grow in the map." }

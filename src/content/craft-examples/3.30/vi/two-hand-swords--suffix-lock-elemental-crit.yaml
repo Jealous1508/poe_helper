@@ -1,0 +1,220 @@
+category: two-hand-swords
+title: "Một cây sword crit elemental: khóa suffix, reforge prefix"
+level: 4
+summary: "Trên cây sword này, ba suffix là phía khan hiếm. Dựng chúng bằng hai Fossil, bảo vệ chúng bằng một meta-modifier, rồi để một reforge Lightning của Harvest lấp phía prefix, nơi gần như lần roll nào cũng hữu dụng."
+goal: >-
+  Một cây Banishing Blade có attack speed, Critical Strike Chance và Critical
+  Strike Multiplier, cùng added elemental damage ở các prefix. Hướng dẫn về
+  mace khóa prefix và roll lại suffix. Đây là hình ảnh phản chiếu của nó, và
+  điểm mấu chốt là **vì sao ở đây tấm gương lại đúng**: bạn bảo vệ phía mà
+  bạn không thể có được lần thứ hai, và trên một cây sword crit elemental,
+  phía đó là suffix.
+base: "Banishing Blade"
+itemLevel: 84
+baseWhy: >-
+  "Attack Critical Strikes ignore Enemy Monster Elemental Resistances", 6.5%
+  critical strike chance và 1.4 attack mỗi giây. Physical damage thấp của nó
+  không quan trọng với một cây sword có prefix là added elemental damage.
+  Item level 82 mở Tier 1 của từng element và 77 hoàn tất các tier suffix; 84
+  bao trọn cả hai và còn dư.
+methods: [fossil, meta, harvest, bench]
+result:
+  implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+  prefixes:
+    - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+    - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+    - { text: "Adds 66 to 119 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed", how: fossil }
+    - { text: "33% increased Critical Strike Chance", how: fossil }
+    - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "vài chục" }
+  - { item: "[[Shuddering Fossil]]", amount: "vài chục" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ chứa được hai Fossil" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "50 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Hai giai đoạn, hai loại chi phí. Giai đoạn suffix được đếm bằng cặp Fossil
+  từ Delve, và nó dài. Giai đoạn prefix được đếm bằng số lần khóa: mỗi lần 4
+  [[Divine Orb]] và 1 [[Sacred Orb]], kèm 50 Lifeforce gần như không đáng kể
+  khi đặt cạnh. Hãy đặt số lần khóa trước khi bắt đầu.
+odds: >-
+  **Suffix.** Với cả hai Fossil, theo phép tính của chúng tôi trên pool tự
+  nhiên, 88% số lần roll suffix là attack speed hoặc một suffix critical, và
+  một kết quả có ba suffix là đúng ba cái đó khoảng một nửa số lần. Không có
+  Fossil thì là một trên 90 lần. Tier thì không được giúp gì: mọi tier của
+  các suffix này có weight như nhau, nên cả ba từ Tier 3 trở lên là khoảng 1
+  trên 12 trong số đó. Gộp lại, đại khái một trên 24 kết quả ba suffix. Các
+  suffix chỉ Fossil mới ra không nằm trong những con số này.
+
+
+  **Prefix.** Mọi lần reforge Lightning đều cho added lightning damage. Nếu
+  tier của nó được bốc theo weight, nó là Tier 4 trở lên khoảng một trên bốn
+  lần và Tier 3 trở lên khoảng một trên bảy. Mỗi prefix thêm vào là fire hoặc
+  cold damage một nửa số lần. Đây là phép tính của chúng tôi; chưa được đo
+  trong 3.30.
+steps:
+  - title: "Xem phía nào khan hiếm"
+    do: >-
+      Viết sáu modifier ra. Prefix: ba cái bất kỳ trong bốn họ elemental,
+      cộng lại là 63% số lần roll prefix. Suffix: ba modifier cụ thể, 14%,
+      10% và 10% số lần roll suffix.
+    why: >-
+      Một phía prefix bạn chấp nhận được sẽ xuất hiện sau vài lần roll lại.
+      Một phía suffix có đủ cả ba thì không hề tự xuất hiện nhờ may mắn. Thứ
+      bạn dựng trước sẽ nằm yên trong khi phần còn lại được roll lại quanh
+      nó, nên hãy dựng phía khan hiếm trước và tính chuyện bảo vệ nó.
+  - title: "Giai đoạn 1: ba suffix bằng hai Fossil"
+    do: >-
+      Biến một cây Banishing Blade trắng item level 84 thành Rare bằng một
+      [[Orb of Alchemy]]. Rồi dùng một [[Deft Fossil]] và một
+      [[Shuddering Fossil]] cùng nhau trong một [[Potent Chaotic Resonator]],
+      lặp đi lặp lại, tới khi cây sword có **attack speed từ 20% trở lên,
+      cùng Critical Strike Chance và Multiplier mỗi cái từ 25% trở lên**.
+    why: >-
+      Deft là "More Critical modifiers, No Attribute modifiers"; Shuddering
+      là "More Speed modifiers, No Mana modifiers". Critical và speed là các
+      tag do đúng ba suffix bạn muốn mang và không prefix nào mang. Hai nửa
+      "No" còn gỡ cả Strength, Dexterity và các suffix mana. Không Fossil nào
+      đụng tới pool prefix, và thế cũng ổn: prefix sắp bị thay.
+    check: >-
+      Kệ những gì roll ra ở prefix, với một ngoại lệ ở bước kế tiếp.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 9 to 161 Lightning Damage", how: fossil }
+        - { text: "41% increased Physical Damage / +88 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Kiểm xem còn chỗ cho khóa không"
+    do: >-
+      Đếm prefix. "Suffix Modifiers cannot be changed" tự nó là một prefix,
+      nên cây sword cần **một ô prefix trống**. Và xác nhận rằng cả ba ô
+      suffix đều đã được lấp.
+    why: >-
+      Cả hai phép đếm đều quan trọng. Một item có ba prefix thì không nhận
+      được khóa. Một item còn một ô suffix trống thì nhận được, nhưng khi đó
+      reforge có chỗ ở phía suffix để đặt một modifier mới, và người chơi từ
+      lâu đã ghi nhận rằng nó có thể làm vậy.
+    fail: >-
+      Ba suffix tốt và ba prefix: tiếp tục dùng Fossil tới khi một kết quả có
+      các suffix đó và nhiều nhất hai prefix. Đừng dùng
+      [[Orb of Annulment]]; nó gỡ ngẫu nhiên một trong sáu cái, và một nửa số
+      đó là thứ bạn vừa dựng.
+  - title: "Giai đoạn 2: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Chừng nào nó còn trên cây sword, một lần roll lại tôn trọng nó sẽ để ba
+      suffix y nguyên. Hãy dùng bản đầy đủ. Các bản 1 và 2 Divine Orb bảo vệ
+      những modifier được chọn ngẫu nhiên, và nhà phát triển nói điều đó chỉ
+      chắc chắn khi phía đó có đúng chừng đó cái.
+    check: >-
+      Đừng dùng Fossil hay Essence nào lên cây sword đã khóa. Essence được
+      ghi nhận là phớt lờ khóa, còn Fossil đối xử với khóa ra sao trong 3.30
+      thì chúng tôi chưa xác nhận được.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 9 to 161 Lightning Damage", how: fossil }
+        - { text: "41% increased Physical Damage / +88 to Accuracy Rating", how: fossil }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 3: reforge kèm một modifier Lightning"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Lightning modifier**: 50
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      Trên sword có một modifier tự nhiên mang tag lightning: added lightning
+      damage, một prefix. Khi suffix đã khóa và phía đó đã đầy, reforge thay
+      các prefix, kể cả cái khóa, và một trong các prefix mới buộc phải là
+      cái đó. Chọn Lightning thay vì Fire hay Cold vì roll của nó lớn nhất ở
+      mọi tier. Các ô prefix khác roll từ một pool mà một nửa phần còn lại là
+      fire hoặc cold damage.
+    check: >-
+      Suffix không đổi, khóa đã biến mất, có lightning damage. Việc reforge
+      Harvest tôn trọng khóa là do người chơi thử nghiệm, không chính thức;
+      sau bất kỳ bản patch nào, hãy thử trên một cây sword rẻ trước.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+        - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Đánh giá theo số lần khóa bạn đã đặt"
+    do: >-
+      Nhận khi roll lightning là Tier 4 trở lên (con số lớn hơn của nó từ 281
+      trở lên) và cây sword có **hoặc một prefix elemental thứ hai, hoặc một
+      ô prefix trống**. Nếu không thì khóa rồi reforge lại.
+    why: >-
+      Mỗi lần thử thêm là 4 Divine Orb và một Sacred Orb nữa. Kết quả minh
+      họa, lightning Tier 3 với fire Tier 4 và còn một ô trống, là tốt hơn
+      mức đặt ra và nên nhận ngay.
+    fail: >-
+      Một kết quả có ba prefix bạn không muốn thì không còn chỗ cho một cái
+      khóa mới. Đó là cách giai đoạn này kết thúc tồi: bạn giữ suffix và sống
+      chung với prefix. Đó là lý do nên nhận một kết quả tử tế còn một ô
+      trống thay vì hy vọng một kết quả đầy đủ.
+  - title: "Bench element thứ ba"
+    do: >-
+      Craft **adds 60–72 to 110–128 Cold Damage** vào prefix trống: 4
+      [[Chaos Orb]].
+    why: >-
+      Cold là element chưa có trên cây sword. Bench cũng bán penetration
+      elemental resistance cho attack bằng weapon này, và trên base này nó sẽ
+      bị phí ở mọi critical strike: implicit vốn đã phớt lờ resistance.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+        - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+        - { text: "Adds 66 to 119 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+variations: >-
+  **Một cây sword crit physical.** Trên Exquisite Blade, cùng cái khóa đó với
+  reforge **Physical** (50 Vivid Lifeforce) hoạt động theo cùng nguyên tắc:
+  hai suffix leech bình thường vẫn thỏa tag đó không thể được thêm vào một
+  phía suffix đã đầy và đã khóa, nên modifier được đảm bảo là một trong ba
+  prefix physical. Đó là một giai đoạn khó hơn cái ở trên. Các tier thấp của
+  những prefix đó nặng weight và các ô khác là elemental sáu trên mười lần,
+  nên hãy tính là nhiều lần khóa hơn cho một kết quả yếu hơn.
+
+
+  **Một veiled prefix.** Một [[Veiled Chaos Orb]] dùng lên cây sword đã khóa
+  sẽ roll lại các prefix và có một cái veiled trong số đó, theo cùng luật do
+  người chơi thử nghiệm ấy. Với sword elemental, lần unveil không có mấy thứ
+  để cho trên base này; với sword physical, đó là đường tới một hybrid
+  120–139%.
+
+
+  **Suffix từ strand.** Ví dụ Memory Strands làm phía suffix từng modifier
+  một bằng orb rẻ. Lấp chậm hơn, dễ chịu hơn về tier.
+mistakes:
+  - "Dựng prefix trước vì weapon vẫn được craft như vậy. Trên cây sword này, prefix là phần bạn có lại được vào ngày mai."
+  - "Khóa khi còn một ô suffix trống. Lấp đầy phía đó, rồi mới khóa."
+  - "Đuổi theo một element roll ra thứ ba bằng cách khóa đi khóa lại. Bench bán một cái giá 4 Chaos Orb."
+  - "Bench penetration lên Banishing Blade."
+  - "Dùng reforge Speed hoặc Critical lên cây sword đã khóa. Các tag đó nằm ở phía suffix, vốn đã đầy và được bảo vệ. Game làm gì với một lời đảm bảo mà nó không có ô nào để đặt thì cũng không phải thứ bạn trả tiền khóa để có."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân và mô tả của Fossil, tag của modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi trên pool tự nhiên." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ; cách vào Delve." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Lightning và Physical cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest và các Veiled orb tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

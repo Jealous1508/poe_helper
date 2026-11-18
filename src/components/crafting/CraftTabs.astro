@@ -1,0 +1,57 @@
+---
+import { pagePath, t, type Locale } from '../../i18n';
+
+/** Guide / Examples / Modifiers: the three pages of one category. */
+interface Props {
+  locale: Locale;
+  league: string;
+  category: string;
+  current: 'guide' | 'examples' | 'modifiers';
+  examples: number;
+}
+const { locale, league, category, current, examples } = Astro.props;
+const tabs = [
+  { id: 'guide', href: pagePath(locale, league, 'crafting', category) },
+  { id: 'examples', href: pagePath(locale, league, 'crafting', category, 'examples'), count: examples },
+  { id: 'modifiers', href: pagePath(locale, league, 'crafting', category, 'modifiers') },
+] as const;
+---
+<nav class="ctabs" aria-label={t(locale, 'craft.tabs')}>
+  <div class="container ctabs__inner">
+    <a class="ctabs__back" href={pagePath(locale, league, 'crafting')}>← {t(locale, 'craft.all')}</a>
+    {tabs.map((tab) => (
+      <a href={tab.href} class:list={['ctabs__tab', { 'is-current': current === tab.id }]} aria-current={current === tab.id ? 'page' : undefined}>
+        {t(locale, `craft.tab.${tab.id}`)}
+        {'count' in tab && <span class="ctabs__n">{tab.count}</span>}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .ctabs { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: var(--header-h); z-index: 10; }
+  .ctabs__inner { display: flex; align-items: stretch; gap: 0.25rem; min-height: 2.9rem; overflow-x: auto; overflow-y: hidden; }
+  .ctabs__tab { margin-bottom: 0 !important; }
+  .ctabs__back { display: inline-flex; align-items: center; margin-right: auto; padding-right: 1rem; font-size: 0.86rem; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+  .ctabs__back:hover { color: var(--accent); }
+  .ctabs__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .ctabs__tab:hover { color: var(--text); }
+  .ctabs__tab.is-current { color: var(--text); border-bottom-color: var(--accent); }
+  .ctabs__n { font-size: 0.72rem; font-variant-numeric: tabular-nums; padding: 0.05rem 0.4rem; border: 1px solid var(--border-strong); border-radius: 999px; }
+  @media (max-width: 720px) {
+    .ctabs { position: static; }
+    .ctabs__tab { padding: 0 0.65rem; }
+  }
+</style>

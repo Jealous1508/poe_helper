@@ -1,0 +1,228 @@
+category: boots
+title: "Tailwind and Elusive on one pair: an Awakener's Orb plan"
+level: 5
+summary: "Two influence modifiers that never share a pool, joined by an orb that rerolls everything else. All the skill is in what you feed the orb; after it, you play the hand you are dealt."
+goal: >-
+  Two-Toned Boots with the Hunter suffix "You have Tailwind if you have dealt
+  a Critical Strike Recently" and the Redeemer prefix "chance to gain Elusive
+  on Critical Strike", plus movement speed and life. This is the best-known
+  double-influence item in the game and an honest picture of what the top of
+  crafting is like: **two long searches, one orb you control completely, and
+  an ending you do not control at all.**
+base: "Two-Toned Boots"
+itemLevel: 84
+baseWhy: >-
+  Both modifiers need item level 75. An influenced pair cannot take Eldritch
+  implicits, so nothing is lost by using an Atlas base, and the Two-Toned
+  implicit of +16–20% to two resistances stays on the finished boots. The
+  example uses the Evasion-and-Energy-Shield version. The Armour-and-Evasion
+  one has a smaller prefix pool and better odds in stage 2; take whichever
+  defence your build wears.
+
+
+  Item level 84 is for the resistances the last stage may roll. The boots
+  must start with **no influence and nothing fractured**.
+methods: [influence, currency, bench, lock, finishing]
+result:
+  note: "Hunter and Redeemer"
+  implicits: ["+18% to Cold and Lightning Resistances"]
+  prefixes:
+    - { text: "9% chance to gain Elusive on Critical Strike", how: influence }
+    - { text: "23% increased Movement Speed", how: crafted }
+    - { text: "+96 to maximum Life" }
+  suffixes:
+    - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+    - { text: "+41% to Fire Resistance" }
+    - { text: "+12% to Item Rarity" }
+needs:
+  - { item: "White Two-Toned Boots, item level 75+", amount: "1", note: "the pair you will keep" }
+  - { item: "Any boots of item level 75+", amount: "1", note: "the donor, destroyed in stage 3" }
+  - { item: "[[Redeemer's Exalted Orb]] and [[Hunter's Exalted Orb]]", amount: "1 of each" }
+  - { item: "[[Orb of Alchemy]] and [[Orb of Scouring]]", amount: "2 of each" }
+  - { item: "[[Orb of Alteration]]", amount: "well over a thousand" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+  - { item: "[[Exalted Orb]]", amount: "1–2" }
+  - { item: "[[Hinekora's Lock]]", amount: "0–2", note: "optional; see stage 5" }
+cost: >-
+  Two conqueror Exalted Orbs, an [[Awakener's Orb]], and Alterations in a
+  quantity most players never spend on one item: the Tailwind search alone
+  averages several hundred suffix rolls. Then whatever the ending asks for.
+
+
+  We give no total, and no promise. A complete attempt can end with both
+  modifiers on boots that are otherwise poor, and the only way to try again
+  is to start both searches over.
+odds: >-
+  **Stage 2.** On a Hunter-influenced Magic pair at item level 84, one
+  suffix roll in about 607 is Tailwind: its weight is 100, against 55,600
+  for the natural suffixes and 5,000 for the other Hunter ones. On the
+  Redeemer pair, one prefix roll in about 207 is Elusive on this version of
+  the base, and one in 155 on the Armour-and-Evasion version. Our arithmetic
+  from the weights; an Alteration does not always roll the side you need.
+
+
+  **Stage 3.** The Awakener's Orb keeps one influenced modifier from each
+  item according to reference pages, and gives new random modifiers for the
+  rest. Nothing is published about how many.
+
+
+  **Stage 5.** With the suffixes full and movement speed crafted, an Exalted
+  Orb adds maximum Life about 1 time in 5, life of 85 or more 1 time in 16,
+  and mana 1 time in 4.
+steps:
+  - title: "Stage 1: two influenced white bases"
+    do: >-
+      Make the Two-Toned Boots Rare with an [[Orb of Alchemy]], use the
+      [[Redeemer's Exalted Orb]] on them, then an [[Orb of Scouring]]. Do the
+      same to the donor boots with the [[Hunter's Exalted Orb]].
+    why: >-
+      A conqueror's Exalted Orb "adds influence and a new modifier to a rare
+      item". The modifier is not wanted; the influence is. Scouring removes
+      the modifiers, and by long-standing behaviour the influence stays
+      with the base. You now have two white boots, each rolling from one
+      conqueror's table.
+    check: >-
+      Which pair gets which influence is decided here and cannot be
+      changed. Redeemer on the pair you keep, Hunter on the donor, or the
+      other way round: stage 3 works either way, as long as the pair you
+      keep is the **second** one the Awakener's Orb touches.
+    state:
+      rarity: normal
+      note: "Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+  - title: "Stage 2: each modifier alone on a Magic item"
+    do: >-
+      Use an [[Orb of Transmutation]] and then [[Orb of Alteration]]s on the
+      Redeemer pair until its prefix is "chance to gain Elusive on Critical
+      Strike". Do the same on the Hunter donor until its suffix is
+      Tailwind. In both cases the other slot must be **empty or not an
+      influence modifier**.
+    why: >-
+      This is the step you control, and the whole plan rests on it. If each
+      item carries exactly one influenced modifier, the Awakener's Orb has
+      no choice about which one to keep. A donor with Tailwind and a Hunter
+      prefix beside it gives the orb two candidates, and you a coin flip
+      you did not need.
+    check: >-
+      Read the other slot's name. "Hunter's", "of the Hunt", "Redeemer's"
+      and "of Redemption" are the influence names. Anything else is
+      natural and harmless.
+    fail: >-
+      There is no failing here, only length. Tailwind is the long one. Set
+      a budget in Alterations, and if it runs out you still own two
+      influenced bases that hold their value.
+    state:
+      rarity: magic
+      note: "Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes: [{ text: "9% chance to gain Elusive on Critical Strike", how: influence }]
+  - title: "Stage 3: the Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the **donor** first, then on the
+      Two-Toned Boots.
+    why: >-
+      Its text: "Destroys an item, applying its influence to another of the
+      same item class. The second item is reforged as a rare item with both
+      influence types and new modifiers." The first item is the one
+      destroyed. The second keeps its base and its implicit and comes out
+      Rare with Tailwind, Elusive and whatever else the reforge rolled.
+    check: >-
+      The orb's text does not restrict rarity. If it refuses a Magic item
+      in 3.30, use a [[Regal Orb]] on each first, after making an
+      [[Imprint]], so that a Regal Orb which adds a second influence
+      modifier can be undone.
+    fail: >-
+      One of the two is missing: stage 2 was not clean. There is no
+      repair. This is the reason for the rule about the other slot.
+    state:
+      note: "Hunter and Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes: [{ text: "9% chance to gain Elusive on Critical Strike", how: influence }]
+      suffixes:
+        - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+        - { text: "+41% to Fire Resistance" }
+        - { text: "+12% to Item Rarity" }
+  - title: "Stage 4: read the hand, and do not improve it with an Annulment"
+    do: >-
+      Count the open slots and name the junk. Here: two open prefixes, no
+      open suffix, one junk suffix (Item Rarity). Leave the junk where it
+      is.
+    why: >-
+      Nothing protects both key modifiers at once. Tailwind is a suffix and
+      Elusive a prefix, so either bench lock leaves one of them exposed,
+      and Eldritch orbs do not work on influenced items. An
+      [[Orb of Annulment]] would choose among four modifiers, two of which
+      are the reason the boots exist. A junk suffix costs one slot. A lost
+      Tailwind costs the item.
+    check: >-
+      A different hand changes the ending. With an open **suffix** and two
+      open prefixes, craft "Can have up to 3 Crafted Modifiers" (2 Divine
+      Orbs) and then both movement speed and life at the bench. With a
+      junk **prefix**, you have one open prefix: it goes to movement
+      speed.
+  - title: "Stage 5: bench movement speed, then force a prefix"
+    do: >-
+      At the [[Crafting Bench]], craft **20–24% increased Movement Speed**
+      for 4 [[Chaos Orb]]s. Then use an [[Exalted Orb]].
+    why: >-
+      Movement speed goes on first because boots need it and the bench is
+      the only certain source left. The suffixes are full, so the Exalted
+      Orb can only add a prefix, and with movement speed already there its
+      group is closed. Life is the best thing it can add, one time in
+      five.
+    check: >-
+      If you own a [[Hinekora's Lock]], this is where it earns its price.
+      It shows what the Exalted Orb would add before you commit. The slot
+      is permanent in practice: a mana prefix here can only be removed by
+      the same Annulment that threatens Tailwind and Elusive.
+    fail: >-
+      Mana, a defence prefix or Item Rarity. The boots are finished all the
+      same. Do not chase it.
+    state:
+      note: "Hunter and Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes:
+        - { text: "9% chance to gain Elusive on Critical Strike", how: influence }
+        - { text: "23% increased Movement Speed", how: crafted }
+        - { text: "+96 to maximum Life" }
+      suffixes:
+        - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+        - { text: "+41% to Fire Resistance" }
+        - { text: "+12% to Item Rarity" }
+  - title: "Finish: the implicit and the values"
+    do: >-
+      A [[Blessed Orb]] if the implicit rolled near 16%. Quality and
+      sockets. A [[Divine Orb]] only if Elusive sits at 5% or 6%.
+    why: >-
+      Elusive's chance, 5–10%, is the one value on the boots worth a Divine
+      Orb, and the orb rerolls every other value with it. Tailwind and the
+      crafted movement speed tier have nothing to gain.
+variations: >-
+  **One influence only.** Tailwind alone, on a Hunter pair that never meets
+  an Awakener's Orb, is a far cheaper item. With a single key modifier, a
+  bench lock on its side protects it: lock the suffixes, and a Harvest
+  reforge "including a Speed modifier" places movement speed among the
+  prefixes.
+
+
+  **An Orb of Dominance.** On an item with two influenced modifiers it
+  removes one and upgrades the other. Here that would trade Tailwind for
+  Elusive or the reverse, which is the opposite of the plan.
+
+
+  **Why not Eldritch implicits as well.** The Embers and Ichors refuse
+  influenced items. A pair with movement speed and action speed from the
+  Searing Exarch is the other road to fast boots, on a different item.
+mistakes:
+  - "Awakening a donor that carries two Hunter modifiers. The orb keeps one, and not necessarily yours."
+  - "Using the orb on the Two-Toned Boots first. The first item is the one destroyed."
+  - "Annulling a junk modifier off the awakened boots. Count how many of the candidates you cannot afford to lose."
+  - "Crafting a prefix lock and scouring. It wipes the suffixes, Tailwind included."
+  - "Starting without a budget for the Tailwind search. One in 607 is an average, and averages have bad days."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Hunter and Redeemer modifiers on boots and their weights, bench costs, and the in-game text of the Awakener's Orb, the conqueror Exalted Orbs, the Orb of Dominance and Hinekora's Lock. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Conqueror bosses drop their Exalted Orbs; the Two-Toned Boots implicit; the cost of the protection modifiers." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "The orb keeps one influenced modifier from each item." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge named in the variations." }

@@ -1,0 +1,213 @@
+category: one-hand-swords
+title: "An elemental Spiritblade: Essence first, lock second"
+level: 4
+summary: "An Essence of Wrath fixes one elemental prefix while you roll for two more. Then the prefixes are locked and a Critical reforge rebuilds the suffixes. The order cannot be reversed."
+goal: >-
+  An elemental sword for a build that crits: three added elemental damages,
+  two critical strike suffixes and attack speed. The tools are an Essence, a
+  protection modifier and a Harvest reforge, and the craft is about how they
+  treat each other. **An Essence ignores the lock; a Harvest reforge
+  respects it.** So everything the Essence does has to be finished before
+  the lock goes on, and everything after it has to be done with a tool the
+  lock holds against.
+base: "Anarchic Spiritblade"
+itemLevel: 83
+baseWhy: >-
+  The Anarchic Spiritblade has 1.6 attacks per second and 6.5% critical
+  strike chance, which no ordinary sword combines. Its implicit converts the
+  weapon's own physical damage to a random element, which costs an elemental
+  build nothing. It is a one-hand sword, so it uses that pool: elemental
+  prefixes are 60% of rolls, not the 72% of a thrusting sword, and that is
+  the price of the base.
+
+
+  Item level 82 is needed for Tier 1 of the added elemental damages. A
+  Jewelled Foil of the same item level is the alternative: lower critical
+  strike chance, a better pool, and +25% Critical Strike Multiplier on the
+  implicit.
+methods: [essence, meta, harvest, bench]
+result:
+  implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+  prefixes:
+    - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+    - { text: "Adds 62 to 124 Fire Damage" }
+    - { text: "Adds 47 to 92 Cold Damage" }
+  suffixes:
+    - { text: "36% increased Critical Strike Chance", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "18% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Deafening Essence of Wrath]]", amount: "20–40", note: "Shrieking is one tier lower and far cheaper" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "for the top attack speed craft; 2 Chaos Orbs buy the tier below" }
+cost: >-
+  Essences for the first stage and locks for the second: 4 [[Divine Orb]]s
+  and 1 [[Sacred Orb]] on a weapon in 3.30, spent by every reforge. The
+  Lifeforce is small beside either. Set a number of locks you are willing to
+  pay before you craft the first.
+odds: >-
+  **Stage 1.** With lightning fixed by the Essence, each further prefix roll
+  on this pool is added Fire or Cold Damage about half the time, by our
+  arithmetic at item level 83, and one of those at Tier 3 or better about 1
+  time in 13. When a result has three prefixes, they are lightning, fire and
+  cold about 1 time in 6, and one of the two rolled ones is Tier 4 or better
+  in roughly half of those. Not every result has three prefixes. A few
+  dozen Essences is a realistic budget.
+
+
+  **Stage 2.** The Critical reforge always gives Critical Strike Chance or
+  Critical Strike Multiplier. If the tier is drawn by weight, 1 reforge in 6
+  gives Tier 1 of whichever comes and 1 in 3 gives Tier 2 or better. Each
+  other suffix the reforge rolls is the second critical modifier or attack
+  speed about a quarter of the time. Our arithmetic; not measured in 3.30.
+steps:
+  - title: "Stage 1: Essences of Wrath until the prefixes are done"
+    do: >-
+      Use [[Deafening Essence of Wrath]] on the Spiritblade, again and
+      again. Read only the prefixes. Stop when all three are elemental: the
+      Essence's lightning, plus two of added Fire Damage, added Cold Damage
+      and increased Elemental Damage with Attack Skills, with at least one
+      of the rolled ones at Tier 4 or better.
+    why: >-
+      The Essence guarantees adds 13–19 to 266–310 Lightning Damage,
+      between natural Tier 2 and Tier 1, on every use. Nothing else in the
+      game fixes the tier of an elemental prefix. The result below is one
+      to turn down: the suffixes are tempting and the second prefix is a
+      physical percentage this weapon cannot use.
+    check: >-
+      Fire and cold are different groups from the Essence's lightning, so
+      all three sit together. Attack speed among the suffixes is no reason
+      to keep a result: stage 2 replaces the suffixes.
+    fail: >-
+      Another Essence. The lightning comes back every time.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "71% increased Physical Damage" }
+      suffixes:
+        - { text: "25% increased Attack Speed" }
+        - { text: "+46 to Dexterity" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Accept a result with room for the lock"
+    do: >-
+      When the prefixes pass, count the suffixes. You need **at most two**.
+      If the passing result has three, the choice is another Essence or
+      stopping here with the suffixes as they are.
+    why: >-
+      "Prefix Modifiers cannot be changed" is a suffix and takes a slot.
+      This is the last moment an Essence can be used: once the prefixes are
+      worth protecting, an Essence is the one tool that will destroy them
+      whatever is crafted on the item.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "Gain 31 Life per Enemy Killed" }
+  - title: "Stage 2: lock the prefixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      Know exactly what you have bought. Harvest reforges, Veiled orbs and
+      an Orb of Scouring are reported by players to leave a locked side
+      alone. Essences are reported to ignore the lock. For Fossils we could
+      not confirm either way in 3.30. None of this is stated by the
+      developers, so on a new patch test it on a cheap item first.
+    check: >-
+      The lock shows as a crafted suffix. Put the Essences away.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "Gain 31 Life per Enemy Killed" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge with a Critical modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Accept when the sword has two of
+      the three suffixes it wants at tiers you set in advance, **and an
+      open slot or the third**. Otherwise lock again and repeat.
+    why: >-
+      Two modifiers on a sword carry the critical tag, and this build wants
+      both, so the guarantee can only land on something useful. The Speed
+      reforge (150 Vivid) would guarantee attack speed instead. Critical is
+      slightly the better choice: after it, the suffixes still wanted are
+      attack speed and the other critical modifier, about a quarter of what
+      the remaining slots can roll; after a Speed reforge the two critical
+      modifiers are a little over a fifth.
+    check: >-
+      Prefixes unchanged, lock gone, a critical strike suffix present.
+      Then count: two wanted suffixes and an empty slot is the result to
+      take.
+    fail: >-
+      One wanted suffix, or three suffixes with a filler: each further
+      attempt is a full lock. Stop at the number you set.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "36% increased Critical Strike Chance", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Bench the third suffix"
+    do: >-
+      Craft whichever of the three is missing. Attack speed: 16–20% for 4
+      [[Exalted Orb]]s, or 11–15% for 2 Chaos Orbs. Critical Strike Chance
+      25–27% or Critical Strike Multiplier 25–28%: 4 Chaos Orbs.
+    why: >-
+      Six wanted modifiers and one bench slot. The plan was to let the
+      bench supply whichever suffix the reforge did not, so nothing was
+      spent chasing a third roll.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "36% increased Critical Strike Chance", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "18% increased Attack Speed", how: crafted }
+variations: >-
+  **Lock the other side.** If stage 1 happens to produce three good
+  suffixes and poor prefixes, turn the craft round: "Suffix Modifiers cannot
+  be changed" is a prefix, and a Harvest Fire, Cold or Lightning reforge (50
+  Lifeforce) then rerolls only the prefixes and always includes that
+  element. It needs an open prefix slot for the lock.
+
+
+  **On a Jewelled Foil.** Stage 1 goes faster: each further prefix is fire
+  or cold 63% of the time, not 50%. The same Essences work on a thrusting
+  sword and give the same modifiers.
+
+
+  **Cheaper.** [[Shrieking Essence of Wrath]] gives adds 13–17 to 247–286,
+  exactly natural Tier 2. On a sword that will not be mirrored, that is the
+  sensible Essence.
+mistakes:
+  - "Using an Essence on the locked sword to \"improve the lightning\". It ignores the lock, by community testing, and rerolls all three prefixes."
+  - "Keeping an Essence result for its suffixes. This plan replaces the suffixes; only the prefixes are being rolled for in stage 1."
+  - "Locking with three suffixes on the item. There is no slot for the lock."
+  - "Paying for a third lock to turn a 30% multiplier into a 35% one. Those Divine Orbs would have bought more damage elsewhere on the character."
+  - "Using Essences on a base with [[Memory Strands]]: each can spend up to 80, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence tiers for both sword classes, the one-hand sword pool, tags, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical, Speed and element reforges and their costs." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essences reported to ignore the protection modifiers." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

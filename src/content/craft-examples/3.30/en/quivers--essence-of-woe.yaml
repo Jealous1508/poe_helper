@@ -1,0 +1,136 @@
+category: quivers
+title: "Bow damage from an Essence, Life from the lottery"
+level: 2
+summary: "An Essence of Woe guarantees increased Damage with Bow Skills. Repeat until a good Life roll lands beside it, then bench the suffix."
+goal: >-
+  A mapping quiver with the two prefixes every bow build wants: bow damage,
+  guaranteed, and a Life roll of +100 or more. The lesson is how an Essence
+  changes what the lottery is *about*. With one prefix fixed, the only
+  question each attempt asks is "did Life come with it", and on a quiver
+  Life is the most likely answer.
+base: "Broadhead Arrow Quiver"
+itemLevel: 75
+baseWhy: >-
+  The Broadhead's implicit is 8–10% increased Attack Speed, which suits any
+  bow build and covers the one suffix that is rare to roll. Take a
+  Spike-Point or a Primal Arrow Quiver if you already know the build is
+  critical strikes or elemental.
+
+
+  Item level 75 is more than Life needs (its top tier opens at 64) and
+  enough for good suffix tiers. Nothing in this craft asks for more.
+methods: [essence, bench]
+result:
+  implicits: ["9% increased Attack Speed"]
+  prefixes:
+    - { text: "34% increased Damage with Bow Skills", how: essence }
+    - { text: "+118 to maximum Life" }
+  suffixes:
+    - { text: "+38% to Lightning Resistance" }
+    - { text: "+29 to Dexterity" }
+    - { text: "10% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Woe]]", amount: "5–10", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Essences are the whole cost, and Screaming ones are what red maps hand you
+  in 3.30. The bench step is 2 [[Chaos Orb]]s.
+odds: >-
+  With bow damage already on the item, each further prefix the Essence rolls
+  is maximum Life half the time at item level 75, and Life of +100 or more
+  about 1 time in 7, by our arithmetic from the weights. A result has one or
+  two prefixes besides the Essence's, so a handful of Essences is the usual
+  price. The suffixes are random every time and do not need to be good:
+  the bench fills one, and a resistance or Dexterity in the others is
+  welcome.
+steps:
+  - title: "The first Essence"
+    do: >-
+      Use one [[Screaming Essence of Woe]] on the white quiver.
+    why: >-
+      On a quiver, Woe guarantees increased Damage with Bow Skills: 31–36% at
+      Screaming, the same range as natural Tier 3. The item becomes Rare
+      with that prefix and three to five random modifiers. From Screaming
+      upwards an Essence also works on an item that is already Rare, so you
+      can use the next one on the same quiver.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "Adds 23 to 44 Fire Damage to Attacks" }
+      suffixes:
+        - { text: "+33 to Dexterity" }
+        - { text: "22% increased Stun Duration on Enemies" }
+  - title: "Read the prefixes for Life"
+    do: >-
+      Hold Alt. One prefix is the Essence's. Look at the others: is one of
+      them **maximum Life**, and is it "Virile" (+100–114), "Athlete's"
+      (+115–129) or "Fecund" (+130–144)?
+    why: >-
+      The quiver above failed: its second prefix is fire damage and there is
+      no Life at all. Life is the prefix you cannot buy afterwards. The
+      bench's version is +41–55.
+    check: >-
+      Keep the quiver when Life is +100 or more. Then count the suffixes:
+      you want at least one open slot, or three suffixes you can live with.
+    fail: >-
+      No Life, or a low tier: use another Essence on the same quiver.
+      Nothing is lost but the Essence.
+  - title: "Repeat until Life lands"
+    do: >-
+      Use Essences one after another, reading the prefixes each time.
+    why: >-
+      Every attempt is independent, and the bow damage comes back every
+      time. You are only waiting for one common modifier at a decent tier.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+29 to Dexterity" }
+  - title: "Bench what the quiver lacks"
+    do: >-
+      **A suffix slot is open** (as here): craft 7–12% increased Attack Speed
+      for 2 [[Chaos Orb]]s, or a resistance at 29–35% for 3 Chaos Orbs if
+      the character needs it more. **The suffixes are full but a prefix is
+      open:** craft the flat damage that matches your build, or 24–32%
+      increased Elemental Damage with Attack Skills for 4 Orbs of Alchemy.
+    why: >-
+      One bench modifier, spent on the best thing missing. Attack speed from
+      the bench is a different group from the implicit's, which is not one
+      of the six slots, so the two add up.
+    check: >-
+      Six slots, five of them used, nothing harmful. An open prefix on a
+      finished quiver can take an [[Exalted Orb]] later: with Life and bow
+      damage in place, every prefix it can add is flat damage of some kind.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+29 to Dexterity" }
+        - { text: "10% increased Attack Speed", how: crafted }
+variations: >-
+  **Better Essences.** Shrieking Woe gives 37–42% and Deafening 43–50%.
+  Rolled naturally, those ranges need item level 81 and 86. The method is
+  identical; only the guaranteed number changes.
+
+
+  **A critical strike build.** Use an Essence of Scorn instead. It guarantees
+  Global Critical Strike Multiplier (25–29% at Screaming, 35–41% at
+  Deafening), the one damage suffix the bench does not sell for quivers.
+  Life then has to come from the plain lottery, where it is 4 prefix rolls in
+  10, and the bench adds attack speed or a damage prefix.
+mistakes:
+  - "Keeping a result for its suffixes when it has no Life. Resistances and attack speed are on the bench. Life at this size is not."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using this on a base with [[Memory Strands]]. One Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on quivers, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

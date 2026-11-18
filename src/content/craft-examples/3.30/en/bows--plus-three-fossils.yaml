@@ -1,0 +1,183 @@
+category: bows
+title: "A +3 bow with three Fossils"
+level: 3
+summary: "One Fossil to raise the gem prefixes and two to delete everything else on the prefix side. A craft designed from the tags, not from a recipe."
+goal: >-
+  A bow with both gem prefixes, "+2 to Level of Socketed Bow Gems" and "+1
+  to Level of Socketed Gems", for +3 to the skill socketed in it. An Essence
+  can guarantee the first and never the second. The lesson is the half of a
+  Fossil most people skip: **the "no" line.** Two of the three Fossils here
+  are chosen for what they remove, and once you can read a pool by its tags
+  you can design a set like this for any item.
+base: "Thicket Bow"
+itemLevel: 82
+baseWhy: >-
+  The gem prefixes need only item level 64, so any base from there up makes
+  the same +3. Item level 82 is chosen for the suffix side: it opens the top
+  tier of "+#% to Damage over Time Multiplier" (24–26%). The Thicket Bow has
+  the fastest attacks, and no implicit to lose if you corrupt it later.
+
+
+  Do not use item level 83 or higher without reading the odds below: at 83
+  one more prefix joins the pool.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+    - { text: "+1 to Level of Socketed Gems", how: fossil }
+  suffixes:
+    - { text: "17% increased Attack Speed", how: fossil }
+    - { text: "+46 to Dexterity", how: fossil }
+    - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Faceted Fossil]]", amount: "5–15" }
+  - { item: "[[Corroded Fossil]]", amount: "5–15" }
+  - { item: "[[Metallic Fossil]]", amount: "5–15" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt", note: "the size with three sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Three Fossils and a three-socket Resonator per attempt, all from Delve.
+  The Faceted Fossil is usually the scarce one. In 3.30 Delve is reached
+  through the maps that always spawn Sulphite. Link the bow's sockets before
+  you start: on a gem-level bow they are part of the cost.
+odds: >-
+  Start from the prefix pool of an ordinary bow at item level 82, by weight:
+  64% flat elemental damage, 27% physical prefixes, 3% Elemental Damage
+  with Attack Skills, and the two gem prefixes at under 6% together.
+
+
+  **Corroded** ("no Elemental modifiers") sets the first and third of those
+  to zero. **Metallic** ("no Physical modifiers") sets the second to zero.
+  **Faceted** ("more Gem modifiers") multiplies what is left by ten, though
+  by then it hardly needs to. By our arithmetic the natural prefix pool
+  that remains is **only the gem prefixes**: +2 to Level of Socketed Bow
+  Gems, +1 to Level of Socketed Bow Gems and +1 to Level of Socketed Gems,
+  a third each.
+
+
+  The two bow-gem tiers are one group. So a result with two prefixes is
+  always one of them plus "+1 to Level of Socketed Gems": **+3 half the
+  time and +2 the other half.** A result with one prefix is +2, +1 or +1.
+
+
+  At item level 83 and above, flat Chaos Damage joins the pool at about 2%
+  of prefix rolls: neither Fossil removes it.
+
+
+  **What the figures leave out.** The data lists Fossil-only prefixes for
+  bows that this set would not remove, among them "Socketed Skills deal 20%
+  more Attack Damage" and a Poison modifier. The data does not say exactly
+  when Fossil-only modifiers join the pool, so the calculator ignores them.
+  If they join here, the gem prefixes are a smaller share than a third
+  each, and a result can hold a third prefix.
+steps:
+  - title: "Sockets, then make the bow Rare"
+    do: >-
+      Bring the white bow to six sockets with the links you need. Then use
+      an [[Orb of Alchemy]].
+    why: >-
+      Sockets and links are kept through every reroll, so do the expensive
+      part while the bow is worth nothing. A Chaotic Resonator needs a Rare
+      item; what the Alchemy rolls is irrelevant.
+    state:
+      prefixes:
+        - { text: "Adds 118 to 241 Fire Damage" }
+        - { text: "Adds 21 to 398 Lightning Damage" }
+      suffixes:
+        - { text: "+47 to Dexterity" }
+        - { text: "27% increased Critical Strike Chance" }
+  - title: "Read the tags before you spend a Fossil"
+    do: >-
+      Open the bow's modifier list on this site and look at the tags of the
+      prefixes. The flat elemental prefixes and Elemental Damage with Attack
+      Skills carry **elemental**. Increased Physical Damage, its hybrid and
+      flat Physical Damage carry **physical**. The two gem prefixes carry
+      **gem** and neither of the others.
+    why: >-
+      This is the whole design. Two tags cover everything you do not want,
+      and each has a Fossil whose "no" line removes it. The Fossil that
+      adds weight to what you do want is almost an extra. The usual
+      instinct, adding Fossils for more of the good modifier, would leave
+      the 94% of the pool that is elemental and physical still in play.
+  - title: "Socket the three Fossils and use the Resonator"
+    do: >-
+      Place a [[Faceted Fossil]], a [[Corroded Fossil]] and a
+      [[Metallic Fossil]] in a [[Powerful Chaotic Resonator]], and use it on
+      the bow.
+    why: >-
+      The bow is rerolled with the changed weights. The suffix side is
+      nearly untouched: Metallic removes the two leech suffixes, which
+      carry the physical tag, and nothing else moves.
+    state:
+      prefixes:
+        - { text: "+1 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "+512 to Accuracy Rating", how: fossil }
+        - { text: "Gain 61 Life per Enemy Killed", how: fossil }
+        - { text: "38% increased Projectile Speed", how: fossil }
+  - title: "Check the total, then the suffix room"
+    do: >-
+      **First:** is it +3, meaning "+2 to Level of Socketed Bow Gems" and
+      "+1 to Level of Socketed Gems" together? **Second:** is at least one
+      suffix slot open, or is attack speed among the suffixes?
+    why: >-
+      The result above is +2 with three filler suffixes: it fails both. A
+      +3 with a full suffix side of filler has the gem levels and nowhere
+      to put a multiplier, which is acceptable only if you mean to rebuild
+      the suffixes afterwards under a prefix lock.
+    fail: >-
+      Use another set of Fossils on the same bow. Every attempt is
+      independent.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "17% increased Attack Speed", how: fossil }
+        - { text: "+46 to Dexterity", how: fossil }
+  - title: "Bench the multiplier"
+    do: >-
+      In the open suffix, craft **+18–20% to Chaos, Fire, Cold or Physical
+      Damage over Time Multiplier** for 4 [[Chaos Orb]]s, whichever your
+      skill uses.
+    why: >-
+      The third prefix slot is still empty and should stay that way for
+      now. With both gem groups on the bow, everything else its natural
+      pool can add there is an elemental or physical prefix, which does
+      nothing for this bow. The variations say what the slot is for.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "17% increased Attack Speed", how: fossil }
+        - { text: "+46 to Dexterity", how: fossil }
+        - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Using the empty prefix.** "Can have up to 3 Crafted Modifiers" (2 Divine
+  Orbs, a suffix) lets the bench add 21–30% increased Damage over Time in
+  the third prefix as well as the multiplier. It needs two free suffix
+  slots, so decide before you craft the multiplier.
+
+
+  **A fourth Fossil for the suffixes.** In a four-socket Resonator, a
+  [[Shuddering Fossil]] ("more Speed, no Mana") raises attack speed and
+  Projectile Speed tenfold. It makes attack speed common and Projectile
+  Speed equally so.
+
+
+  **A fourth gem level.** The data lists a Fossil-only suffix, "+1 to Level
+  of Socketed Dexterity Gems", under the Faceted Fossil. If it appears on a
+  +3 bow whose skill is a Dexterity gem, that is +4. We cannot give its
+  chance, for the reason in the odds.
+mistakes:
+  - "Using a Faceted Fossil alone. It takes the gem prefixes from under 6% to 37% of prefix rolls; the other 63% is still elemental and physical."
+  - "Swapping the Metallic Fossil for a Jagged one because \"physical is fine\". Jagged multiplies physical prefixes by ten and buries the gem prefixes."
+  - "Slamming the open prefix. Almost everything a bow's natural pool can add there is wasted on a gem-level bow."
+  - "Expecting [[Memory Strands]] to help. Fossils do not use them, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil multipliers, the tags on every bow prefix, weights and bench costs. The odds are our arithmetic and leave out Fossil-only modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

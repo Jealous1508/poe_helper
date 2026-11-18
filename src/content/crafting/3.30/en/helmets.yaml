@@ -1,0 +1,524 @@
+name: "Helmets"
+short: "Life, resistances and one modifier that defines the build. Seven pools, and almost everything special comes from outside the natural pool."
+icon: "Hubris Circlet"
+intro: >-
+  A helmet does two jobs. The ordinary one is defence: maximum Life or Energy
+  Shield in the prefixes, resistances in the suffixes. The second is the
+  reason crafters care about the slot: a helmet can lower the resistance of
+  enemies standing near you, raise the level of the gems socketed in it, or
+  make your auras cheaper to reserve.
+
+
+  The data shows something that surprises people coming from weapons. **None
+  of those special modifiers is in the natural pool.** Plain rolling on a
+  helmet gives life, mana, defences, attributes and resistances, and nothing
+  else of note. The rest comes from Fossils, Essences, veiled modifiers,
+  influence and the two Eldritch implicits. So crafting a helmet is mostly a
+  question of choosing which of those doors to open, and then filling the
+  ordinary slots around it.
+basics:
+  itemLevel:
+    text: >-
+      Helmets ask for less item level than weapons. The best maximum Life,
+      130–144, is open at item level 64. What the higher levels add is the
+      last tier of resistances and of the percentage defence prefix at 84, and
+      a handful of suffixes at 85.
+
+
+      One thing works differently from weapons. On a helmet nearly every tier
+      of every modifier has the same weight, 1,000. The top tier is exactly as
+      likely as the bottom one, and a higher item level only adds a tier on
+      top: it never removes the weak ones. A level 84 helmet rolls "+3 to 9
+      maximum Life" as often as "+130 to 144".
+
+
+      **Item level 72 to 75 is enough for an ordinary helmet.** Go to 84 or 85
+      when you are paying for the result anyway. The Fossil-only suffixes need
+      no item level at all.
+    breakpoints:
+      - ilvl: 44
+        unlocks: "**Levelling.** Tier 3 maximum Life (100–114) and Tier 4 of the percentage defence prefix (56–67%)."
+      - ilvl: 51
+        unlocks: "Tier 1 of the flat defence prefix: +151–200 Armour or Evasion Rating, +50–61 Energy Shield."
+      - ilvl: 64
+        unlocks: "Tier 1 maximum Life, \"Fecund\" (130–144). With Tier 3 resistances (36–41%, item level 60) this is **enough for a life-and-resistance helmet**."
+      - ilvl: 72
+        unlocks: "Tier 2 resistances (42–45%) and Tier 2 of the percentage defence prefix (80–91%)."
+      - ilvl: 75
+        unlocks: "\"+2 to Level of all Minion Skill Gems\", and the top tier of many influence modifiers."
+      - ilvl: 78
+        unlocks: "Tier 1 of the defence-with-Stun-Recovery prefix (39–42%) and Tier 1 Life Regeneration (96–128 per second)."
+      - ilvl: 84
+        unlocks: "Tier 1 resistances (46–48%) and Tier 1 percentage defence (92–100%). **The ceiling for most helmets.**"
+      - ilvl: 85
+        unlocks: "Tier 1 spell suppression (13–14%), Intelligence (56–60) and Energy Shield Recharge Rate (36–38%), and the influence modifiers that affect enemies within 6 metres."
+  bases:
+    text: >-
+      There are 94 helmets in seven pools. The pool is set by which defence
+      the base has, and it decides more than the defence prefixes: several
+      suffixes are tied to an attribute and roll only where that attribute's
+      defence is present. Pick the pool before you pick the base.
+    types:
+      - title: "One defence: Armour, Evasion or Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          Each of these rolls defence prefixes for its own defence only, and
+          its attribute's suffixes at full weight. **Armour** helmets roll
+          Strength and increased Life Regeneration rate. **Evasion** helmets
+          roll Dexterity and chance to Suppress Spell Damage. **Energy
+          Shield** helmets roll Energy Shield Recharge Rate. Intelligence
+          rolls on every helmet.
+
+
+          Energy Shield helmets also roll maximum Mana as a prefix, and it is
+          their most common one: 22% of prefix rolls, against 18% for life.
+          Armour and Evasion helmets have no mana prefix, and life is a
+          quarter of their prefix rolls.
+      - title: "Two defences"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Hybrid bases roll the hybrid version of each defence prefix, and the
+          attribute suffixes of both parents at half weight each. An
+          Armour-and-Evasion helmet can roll spell suppression, at 500 a tier
+          where a pure Evasion helmet has 1,000. Any base with Energy Shield
+          in it rolls the mana prefix at full weight.
+      - title: "Runic helmets (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Helm, Runic Crest and Runic Crown, the Expedition bases. They
+          have Ward in place of the other defences, need all three attributes,
+          and roll Ward prefixes and "faster Restoration of Ward". With no
+          attribute defence they roll no Strength or Dexterity, no spell
+          suppression, no Life Regeneration rate and no Energy Shield Recharge
+          Rate.
+      - title: "Bone Helmet"
+        text: >-
+          The Atlas base of this slot. It sits in the Armour-and-Energy-Shield
+          pool with lower defences than its neighbours, and its implicit is
+          "Minions deal 20–30% increased Damage" since 3.30. It only drops
+          when an item rolls a high enough Item Tier.
+      - title: "Crowns and masks with an implicit"
+        text: >-
+          Three families of Ritual bases, each in three sizes. Gale, Winter
+          and Blizzard Crown add Cold Damage and make your hits treat Cold
+          Resistance as 10% higher. Sorrow, Atonement and Penitent Mask give
+          +2% to +4% maximum Chaos Resistance, at the price of being Crushed.
+          Imp, Demon and Archdemon Crown give +1 or +2 to the level of
+          socketed skill gems and take the same from socketed support gems.
+          All have lower defences than an ordinary base of their level, and
+          they roll from the ordinary pool of their defence type.
+    picks:
+      - base: "Giantslayer Helmet"
+        for: "The most Armour"
+        why: >-
+          582–669 Armour, the highest in the category, for level 84 and 224
+          Strength. Every Armour prefix and all quality multiply that number.
+      - base: "Lich's Circlet"
+        for: "The most Energy Shield"
+        why: >-
+          117–134 Energy Shield at level 84 and 224 Intelligence. The older
+          favourite, Hubris Circlet, has 80–92, so the percentage prefixes
+          and quality multiply a number about 45% larger here.
+      - base: "Majestic Pelt"
+        for: "Evasion and spell suppression"
+        why: >-
+          582–669 Evasion Rating, and the pure Evasion pool rolls spell
+          suppression at twice the weight of any hybrid base.
+      - base: "Eternal Burgonet"
+        for: "Armour without the Strength"
+        why: >-
+          373–429 Armour for 138 Strength at level 69. The top base asks for
+          224, which many characters do not have to spare.
+      - base: "Bone Helmet"
+        for: "Minion builds"
+        why: >-
+          20–30% increased Minion Damage on the implicit, before any
+          modifier. An Essence of Fear adds the same kind of modifier again as
+          a prefix.
+      - base: "Archdemon Crown"
+        for: "Gems that need no supports"
+        why: >-
+          "+2 to Level of Socketed Skill Gems, -2 to Level of Socketed Support
+          Gems". For auras and other gems you socket alone, that is two free
+          levels.
+    impact: >-
+      The base decides four things before any currency is spent.
+
+
+      **The defence numbers.** The percentage prefixes and quality are local:
+      they multiply the base's own Armour, Evasion or Energy Shield. Each base
+      also drops with a roll inside its range, and a [[Sacred Orb]] rerolls
+      that.
+
+
+      **The pool.** Which defence prefixes exist, and whether the item can
+      roll Strength, Dexterity, spell suppression or the mana prefix at all.
+
+
+      **The implicit, if there is one.** Most helmets have none. Where one
+      exists, a [[Blessed Orb]] rerolls its value. Note what the text of every
+      Eldritch Ember and Ichor says: it "replaces any existing implicit
+      modifiers" other than the opposite Eldritch implicit. A Bone Helmet
+      given an Eldritch implicit is no longer a Bone Helmet in the way that
+      matters.
+
+
+      **The requirement.** 224 of an attribute for the top bases. The suffix
+      "32% reduced Attribute Requirements" exists, and costs a slot.
+tools:
+  - method: currency
+    note: >-
+      On an Armour helmet at item level 84, by our arithmetic from the
+      weights, one prefix roll in four is maximum Life, one in 13 is life of
+      100 or more, and one in 39 is the top tier. On an Energy Shield helmet
+      the mana prefix dilutes that: one in 18 for 100 or more. One suffix roll
+      in 25 is a given resistance at 36% or better.
+
+
+      Those are friendly numbers. [[Orb of Alteration]]s will find **one**
+      good ordinary modifier quickly. What plain currency cannot do is roll
+      any of the modifiers that make a helmet special.
+  - method: bench
+    note: >-
+      The bench covers the ordinary jobs cheaply. Maximum Life: 56–70 for 4
+      Orbs of Alchemy, 41–55 for 2. One resistance: 29–35% for 3 Chaos Orbs,
+      21–28% for 1 Orb of Alchemy, 16–20% for 1 Orb of Transmutation. Two
+      resistances at once: 17–20% each for 3 Chaos Orbs. Percentage defence:
+      56–74% for 2 Chaos Orbs. Spell suppression: 5–6% for 4 Chaos Orbs.
+
+
+      It also sells the helmet-only prefixes in their weaker form, for 4
+      Chaos Orbs each: "+1 to Level of Socketed AoE Gems" with 8–10% Area of
+      Effect, the same for Projectile gems with one extra pierce, for Melee
+      gems with +0.2 metres of strike range, and "+1 to maximum number of
+      Raised Zombies and Skeletons".
+
+
+      One group rule to know. The bench hybrid "18–21% increased defence, +14
+      to 16 maximum Life" (2 Chaos Orbs) shares a group with the rolled
+      flat-defence-and-life prefix, not with plain life. It fits beside a
+      rolled life prefix and beside a rolled percentage defence prefix.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) earns its beasts on a Magic helmet
+      that took many Alterations, such as Tier 1 life or Tier 1 suppression
+      alone: it turns the [[Regal Orb]] into something you can retry.
+
+
+      The add-and-remove recipes are safe only when the side that loses a
+      modifier is empty. A Rare helmet with good suffixes and no prefixes
+      at all is rare, so on helmets these two see less use than on weapons.
+      Check the count on both sides before you spend the beasts.
+  - method: finishing
+    note: >-
+      20% quality with [[Armourer's Scrap]]s raises the base defence that
+      every local prefix multiplies. A helmet has up to four sockets. For
+      resistances that landed on the wrong element, Harvest swaps one for
+      another: 300 Lifeforce of two different colours in 3.30.
+  - method: essence
+    note: >-
+      Essences matter on a helmet for what the pool lacks, not for life.
+      **Greed** gives 91–105 maximum Life at Deafening, which is below
+      natural Tier 3; use it while levelling and not after.
+
+
+      The ones worth owning: **Loathing** gives increased Mana Reservation
+      Efficiency, 5–6% at Screaming, 7–8% at Shrieking, 9–10% at Deafening.
+      **Fear** gives increased Minion Damage as a prefix, 22–24% up to
+      28–30%. **Envy** guarantees Chaos Resistance, 31–35% at Deafening, a
+      suffix that is otherwise one roll in fifty. **Woe**, **Dread** and
+      **Doubt** guarantee the flat defence prefix near its top tier.
+
+
+      The corrupted Essences put socketed-gem modifiers on a helmet:
+      [[Essence of Horror]] "Socketed Gems deal 30% more Elemental Damage",
+      [[Essence of Delirium]] "+2 to Level of Socketed Aura Gems".
+  - method: fossil
+    note: >-
+      This is where the nearby-enemy modifiers live. The data lists, as
+      Fossil-only suffixes with no item level requirement: "Enemies within 6
+      metres have -9% to Fire Resistance", the same for Cold, Lightning and
+      Chaos, and "take 9% increased Physical Damage". By long-standing player
+      knowledge each needs the Fossil of its own type: a
+      [[Scorched Fossil]] for fire, [[Frigid Fossil]] for cold,
+      [[Metallic Fossil]] for lightning, [[Aberrant Fossil]] for chaos,
+      [[Jagged Fossil]] for physical.
+
+
+      The tag Fossils also reshape the ordinary pool. A [[Pristine Fossil]]
+      makes maximum Life nearly certain as a prefix but floods the suffixes
+      with life regeneration. A [[Dense Fossil]] turns nearly every prefix
+      roll into a defence prefix and removes life entirely.
+  - method: eldritch
+    note: >-
+      A helmet takes one Searing Exarch and one Eater of Worlds implicit, and
+      their pools are strong here. From the Exarch: increased Cast Speed (8%
+      at Lesser, 11% at Exceptional), Area of Effect, Spell Critical Strike
+      Chance, effect of one named curse. From the Eater: increased Spell
+      Damage or Attack Damage (14–16% at Lesser, 23–25% at Exceptional),
+      Mana Reservation Efficiency (7% to 10%), elemental penetration.
+
+
+      By our arithmetic from the weights, a Lesser Ember gives cast speed
+      about 1 time in 17. Each implicit also exists in stronger versions that
+      work only while a Unique enemy, or a pinnacle Atlas boss, is in your
+      presence; those start at Greater and Grand.
+
+
+      Two costs. An Ember or Ichor replaces the base's own implicit, and an
+      influenced helmet cannot take either.
+  - method: harvest
+    note: >-
+      Count the tagged modifiers before you pay. On a helmet the only natural
+      modifier with the chaos tag is Chaos Resistance, so "reforge including a
+      Chaos modifier" (100 Vivid Lifeforce) guarantees it. Fire, Cold and
+      Lightning (50 each) do the same for one resistance.
+
+
+      **Life** (75 Wild) is weaker than it sounds: maximum Life has the tag,
+      and so do Life Regeneration and the flat-defence-and-life prefix.
+      **Defence** (75 Primal) guarantees one of the defence prefixes, or on a
+      base with Energy Shield possibly the recharge rate suffix, which
+      carries the same tag.
+  - method: veiled
+    note: >-
+      The unveiled helmet prefixes are the strong version of the bench ones:
+      "+2 to Level of Socketed AoE Gems" with 8–10% Area of Effect, the same
+      for Projectile and Melee gems, and +55 to 60 maximum Life with mana
+      regeneration. On the suffix side, a resistance paired with Chaos
+      Resistance at 16–20% each.
+  - method: influence
+    note: >-
+      Each conqueror carries one nearby-enemy suffix at item level 85:
+      Warlord fire, Redeemer cold, Crusader lightning, Hunter chaos, all "-9%
+      to Resistance", weight 250. Elder has "9% increased Physical Damage
+      taken" and Shaper "6% increased Elemental Damage taken". Redeemer also
+      has 7–10% Mana Reservation Efficiency, Warlord "+1 to Maximum Power
+      Charges", Elder 23–25% Minion Damage.
+
+
+      Most of this can be had without influence, from a Fossil or an Essence.
+      Influence is for stacking two of them, and it costs you both Eldritch
+      implicits.
+  - method: meta
+    note: >-
+      On armour the locks cost 4 Divine Orbs and 4 [[Blessed Orb]]s in 3.30.
+      A helmet often does not need them: with one Eldritch implicit stronger
+      than the other, an [[Eldritch Chaos Orb]] already rerolls one side
+      only. Pay for a lock when the reroll must be something Eldritch
+      currency cannot do, such as a Veiled Chaos Orb or a Harvest reforge.
+  - method: corruption
+    note: >-
+      The corruption implicits include "+2 to Level of Socketed" gems of a
+      dozen kinds (AoE, Aura, Curse, Minion, Projectile and more), "+1 to
+      Maximum Power Charges" and 4–6% increased maximum Life. A corruption
+      implicit takes the place of the helmet's own. Assume Eldritch implicits
+      go with it, as they long have; we could not confirm that for 3.30.
+  - method: strands
+    note: "Helmets are a good home for strands, for a reason the Memory Strands section below explains."
+memoryStrands: >-
+  Because every tier on a helmet weighs the same, the trouble with rolling is
+  never that the top tier is rare. It is that there are ten tiers of life and
+  eight of each resistance, and the bottom ones turn up as often as the top.
+  [[Memory Strands]] remove low tiers from whatever is rolled, which is
+  exactly that problem. The player-measured breakpoints are for a 13-tier
+  modifier and nothing is published for shorter ones, so take the size of the
+  effect as unknown and its direction as certain.
+
+
+  Spend them on cheap orbs: [[Orb of Alteration]]s at up to 8 strands each, a
+  [[Regal Orb]] or an Eldritch Exalted Orb at up to 16. An Essence can spend
+  80 and an Eldritch Chaos Orb 60, by the data-mined table. Fossils and
+  Harvest reforges do not touch strands at all, by player testing, so a
+  Fossil-first helmet gains nothing from a strand base.
+
+
+  One open question matters for this slot. A 2025 player thread suggests an
+  item with strands cannot take Eldritch implicits; we could not confirm it
+  either way. Try a Lesser Ember before you build a plan on both.
+reading:
+  intro: >-
+    Hold Alt and read a helmet in three passes. **Life or Energy Shield:** is
+    it there, and at what tier? **Resistances:** how many, and are any at 36%
+    or more? **The special modifier:** is there one, and is there still room
+    for one? A helmet that passes the first two is a good ordinary helmet. The
+    third is what makes it worth crafting on.
+  prefixes:
+    text: >-
+      Three slots, and two things compete for them: life and defence.
+
+
+      The defence prefixes come as a set of three that stack, because they are
+      three groups: flat defence, percentage defence, and percentage defence
+      with Stun and Block Recovery. An Energy Shield build wants all three and
+      has no slot left for life. A life build wants maximum Life and takes one
+      or two defence prefixes as they come.
+
+
+      A fourth family, flat defence with a little life, is its own group and
+      low on both numbers. It is filler. So is the mana prefix for most
+      builds, and it is the most common prefix on any base with Energy
+      Shield. Item Rarity and "Reflects Physical Damage" are the two rolls
+      that are plainly wasted.
+    key:
+      - mod: "+# to maximum Life"
+        why: "The largest single source of life on the item. Ten tiers at equal weight, so the tier is what you are rolling for."
+        aim: "T3, 100–114 (ilvl 44). T1 is 130–144 (ilvl 64)."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local: it multiplies the base's defence and the flat prefix. Each pool has its own version and only that one."
+        aim: "T3, 68–79% (ilvl 60). T1 is 92–100% (ilvl 84)."
+      - mod: "+# to Armour, Evasion Rating or maximum Energy Shield"
+        why: "Raises the number the percentages multiply. The Energy Shield version is worth the most, because the base number is small."
+        aim: "T2 or T1, both open by ilvl 51."
+      - mod: "#% increased defence / #% increased Stun and Block Recovery"
+        why: "A second percentage in a different group, so it sits beside the first. Wanted by Energy Shield builds, ignorable by others."
+        aim: "T2, 33–38% (ilvl 60). T1 is 39–42% (ilvl 78)."
+      - mod: "+# to maximum Mana"
+        why: "Only on bases with Energy Shield. Useful to mana-hungry builds, and the most common thing to push life off those bases."
+      - mod: "+# to Level of all Minion Skill Gems"
+        why: "The one special prefix in the natural pool, and nearly unobtainable by rolling: +1 has a weight of 250 and +2 a weight of 25, against 1,000 for a tier of anything else."
+  suffixes:
+    text: >-
+      The suffix side is resistances and whatever your pool adds. Fire, Cold
+      and Lightning Resistance are about a tenth of suffix rolls each, eight
+      tiers apiece. Chaos Resistance is in the pool at a quarter of the
+      weight, about one suffix roll in fifty.
+
+
+      After resistances, the useful suffixes depend on the base: spell
+      suppression on anything with Evasion, an attribute you are short of,
+      Life Regeneration on a Righteous Fire style of build. Stun and Block
+      Recovery, Light Radius with Accuracy, reduced Attribute Requirements
+      and Item Rarity fill the rest of the pool.
+
+
+      If the helmet is to carry a Fossil, Essence or influence suffix, that
+      is one of the three slots gone. Plan the resistances around it.
+    key:
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "What the slot is for on most characters. Equal weights across eight tiers."
+        aim: "T3, 36–41% (ilvl 60). T1 is 46–48% (ilvl 84)."
+      - mod: "+#% to Chaos Resistance"
+        why: "A quarter of the weight of the others, so buy it: an Essence of Envy or a Harvest reforge guarantees it."
+        aim: "T3, 21–25% (ilvl 56). T1 is 31–35% (ilvl 81)."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Only on bases with Evasion, and at half weight on hybrids. Builds that cap suppression need it on several pieces."
+        aim: "T3, 9–10% (ilvl 68). T1 is 13–14% (ilvl 85)."
+      - mod: "+# to Strength, Dexterity or Intelligence"
+        why: "Solves a requirement without spending a passive point. Strength and Dexterity roll only on bases with their defence; Intelligence rolls everywhere."
+      - mod: "Regenerate # Life per second"
+        why: "Common, and strong at the top: 96–128 per second at Tier 1. Filler for most builds, a real modifier for a few."
+      - mod: "#% increased Energy Shield Recharge Rate"
+        why: "Only on bases with Energy Shield. The defensive suffix of that pool."
+approach:
+  principle: >-
+    **A helmet is five ordinary slots around one special modifier.** Name the
+    special modifier first, because its source decides everything else: which
+    tool rerolls the item, whether the helmet can have Eldritch implicits, and
+    which side has a slot fewer. Life and resistances can always be bought
+    afterwards.
+  order:
+    - title: "Choose the pool, the base, then the item level"
+      text: >-
+        The pool by your defence and by the suffixes you need from it. The
+        base by its number and its requirement. Item level 72 to 75 for an
+        ordinary helmet, 84 or 85 for the best tiers.
+    - title: "Name the one special modifier and where it comes from"
+      text: >-
+        Lower resistance on nearby enemies: a Fossil, or influence.
+        Reservation: an Essence of Loathing or an Eater implicit. Gem levels:
+        a veiled prefix or the bench. Minion damage: an Essence of Fear. If
+        the answer is "none", you are crafting a life-and-resistance helmet,
+        and Alterations and the bench will do it.
+    - title: "Decide between Eldritch implicits and influence"
+      text: >-
+        You cannot have both. Eldritch implicits are two extra modifiers and
+        the cheapest way to work on one side. Influence is for a modifier
+        that exists nowhere else, or for two nearby-enemy modifiers on one
+        helmet. A special base keeps its implicit only on the path without
+        Embers and Ichors.
+    - title: "Get the special modifier first"
+      text: >-
+        While the item is still cheap to reroll. A Fossil or Essence rerolls
+        everything, so nothing else is worth having yet.
+    - title: "Protect its side, then work on the other"
+      text: >-
+        Make the Eldritch implicit of the **other** side the stronger one,
+        and Eldritch Chaos Orbs reroll only that side. Use a bench lock only
+        for a tool that needs it.
+    - title: "Fill, keeping one slot for the bench"
+      text: >-
+        Life if it is missing, otherwise the resistance your character
+        lacks. The bench cannot give a top tier, so give it the slot where a
+        middle tier hurts least.
+    - title: "Final implicits last"
+      text: >-
+        The cheap implicits you used to steer the Eldritch orbs are not the
+        ones you keep. Replace them at the end, when no more rerolls are
+        coming.
+  finishing: >-
+    Quality to 20%, sockets and links, and the last open slot at the bench.
+    Then the numbers: a [[Divine Orb]] rerolls every explicit value together,
+    a [[Blessed Orb]] the implicits, a [[Sacred Orb]] the base defence.
+
+
+    If the resistances are right in total but wrong in element, swap one at
+    the [[Horticrafting Station]] before you think about rerolling.
+  stopping: >-
+    A helmet with life of 100 or more and two resistances at 36% or more is
+    finished for most of the game, and Alterations plus the bench will make
+    one. Add the special modifier and it is finished for nearly all of it.
+
+
+    The cost climbs where you ask for the special modifier **and** three good
+    slots on the same side. Before a reroll, ask what the helmet would sell
+    for as it is. If the answer is more than the attempt costs, stop.
+special:
+  - mod: "Enemies within 6 metres have -9% to Fire, Cold, Lightning or Chaos Resistance"
+    source: "Fossil / Influence"
+    where: "A Fossil-only suffix with no item level requirement, opened by the Fossil of that type by long-standing player knowledge. Also a conqueror suffix at item level 85: Warlord fire, Redeemer cold, Crusader lightning, Hunter chaos."
+  - mod: "Enemies within 6 metres take 9% increased Physical Damage"
+    source: "Fossil / Elder influence"
+    where: "The physical member of the same family. Fossil-only, or an Elder suffix at item level 85."
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Essence / Eldritch / Influence"
+    where: "An Essence of Loathing, 9–10% at Deafening. An Eater of Worlds implicit, 7% at Lesser to 10% at Exceptional. A Redeemer suffix, 7–10% at item level 75. The data also lists a Fossil-only version at 10%."
+  - mod: "Minions deal #% increased Damage"
+    source: "Essence / Base implicit"
+    where: "A prefix from an Essence of Fear, 28–30% at Deafening. The implicit of the Bone Helmet, 20–30%. An Elder prefix, 23–25% at item level 83."
+  - mod: "+2 to Level of Socketed AoE, Projectile or Melee Gems"
+    source: "Veiled / Bench"
+    where: "Three unveiled prefixes, each with a second line. The [[Crafting Bench]] sells +1 versions for 4 Chaos Orbs. Get a veiled modifier from a Betrayal drop, a [[Veiled Chaos Orb]] or a [[Veiled Exalted Orb]]."
+  - mod: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons"
+    source: "Bench / Veiled"
+    where: "A bench prefix for 4 Chaos Orbs. The unveiled version adds 8–10% minion life."
+  - mod: "Socketed Gems deal 30% more Elemental Damage"
+    source: "Corrupted Essence"
+    where: "The helmet suffix of an [[Essence of Horror]], which comes only from corrupting an Essence monster with a [[Remnant of Corruption]]. Essence of Delirium gives \"+2 to Level of Socketed Aura Gems\" the same way."
+  - mod: "+1 to Maximum Power Charges"
+    source: "Warlord influence / Corruption"
+    where: "A Warlord prefix at item level 75, weight 125. Also one of the corruption implicits."
+  - mod: "#% increased Cast Speed, Spell Damage, Area of Effect"
+    source: "Eldritch implicit"
+    where: "Searing Exarch and Eater of Worlds implicits, added with Embers and Ichors to a helmet with no influence. The full list is in the modifier list."
+  - mod: "+# to Level of Socketed Skill Gems / -# to Level of Socketed Support Gems"
+    source: "Base implicit"
+    where: "The implicit of the Imp, Demon and Archdemon Crown. Chosen with the base, and lost if you add an Eldritch implicit."
+  - mod: "+6 to Level of Socketed Gems while there is a single Gem Socketed in this Item"
+    source: "Essence"
+    where: "Listed in the data for an [[Essence of Desolation]], which works on Normal items only and holds every other modifier to level 15 or lower. We could not confirm how the Essence is obtained in 3.30."
+mistakes:
+  - "**Rolling for a modifier the pool does not have.** No number of Chaos Orbs puts \"-9% to Fire Resistance\" or reservation efficiency on a helmet. Check the source first."
+  - "**Putting an Ember on a Bone Helmet or an Archdemon Crown.** By the Ember's own text it replaces the implicit you chose the base for."
+  - "**Using an Essence of Greed on an endgame helmet.** Deafening gives 91–105 life. Natural Tier 3 is 100–114 and needs only item level 44."
+  - "**Clicking an Eldritch Chaos Orb without checking which implicit is stronger.** It rerolls prefixes under the Exarch and suffixes under the Eater. The wrong one erases the side you meant to keep."
+  - "**Paying for a lock where dominance would do.** 4 Divine Orbs and 4 Blessed Orbs buy one protected reroll. An Eldritch Chaos Orb protects the other side for nothing."
+  - "**Choosing an Energy Shield base for a life build without counting the mana prefix.** On those bases mana is the most common prefix and life drops from a quarter of prefix rolls to under a fifth."
+  - "**Adding influence to a helmet you meant to give Eldritch implicits.** The two exclude each other, and influence does not come off."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, Essence, bench cost and implicit quoted here, and the in-game text of the Eldritch Embers and Ichors. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on armour, the Bone Helmet implicit, Item Tiers for special bases, the Harvest resistance swap." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: which Eldritch implicit is dominant, and what the protection modifiers hold against. Partly older than 3.30." }

@@ -1,0 +1,642 @@
+name: "Body Armour"
+short: "Life và defence roll lớn nhất trong game, sáu socket và thêm hai implicit. Bảy pool: base quyết định defence nào và suffix nào có thể tồn tại."
+icon: "Astral Plate"
+intro: >-
+  Body armour là món đóng góp nhiều nhất cho khả năng sống sót của nhân vật.
+  Nó roll maximum Life lớn nhất trong mọi loại trang bị (tới +189), các con
+  số defence lớn hơn hẳn mọi món khác, và nó chứa sáu socket nơi main skill
+  của bạn nằm.
+
+
+  Nó cũng là một item khác thường để craft, vì hai lý do. **Ở đây không có gì
+  hiếm theo weight:** gần như mọi tier của mọi modifier đều có cùng weight,
+  nên không có modifier độc đắc nào để săn. Cái khó là có được sáu modifier
+  hữu dụng ở tier tốt trên cùng một item. Và **loại trang bị này có những
+  công cụ tốt nhất để làm từng nửa một:** Eldritch currency chỉ roll lại
+  prefix hoặc chỉ roll lại suffix, với giá một orb. Nắm được điều đó thì một
+  cái áo giáp không còn là một ván cược sáu ô cùng lúc nữa mà thành hai ván
+  cược nhỏ.
+basics:
+  itemLevel:
+    text: >-
+      Đây là loại trang bị mà item level cao nhất xứng với giá của nó.
+      Maximum Life có mười ba tier và tier tốt nhất, "Prime" (175–189), cần
+      item level 86, yêu cầu cao nhất của mọi modifier thông thường trong
+      game. Tier cuối của defence phần trăm, của Spell Suppression và của
+      Physical Damage Reduction cũng nằm ở 86.
+
+
+      Với một cái áo giáp chạy map bình thường, item level 73 tới 78 là đủ:
+      nó mở life 145–159, flat defence cao nhất và resistance tốt thứ nhì.
+      Item level 84 mở mọi thứ trừ bốn tier cuối kia. Lên 86 khi bạn chủ đích
+      build xoay quanh một trong số đó.
+
+
+      Có một điều các con số che mất. Vì mọi tier có weight như nhau, item
+      level cao hơn không làm các lần roll thấp hiếm đi. Nó thêm các tier tốt
+      hơn lên trên và để nguyên mọi tier yếu trong cuộc xổ số.
+    breakpoints:
+      - ilvl: 44
+        unlocks: "**Cuối campaign.** Life tới 100–114, resistance tới 24–29%, và defence phần trăm 56–67%."
+      - ilvl: 60
+        unlocks: "Defence phần trăm 68–79%, flat Armour hoặc Evasion 201–300, resistance 36–41%. Life 115–129 đã mở từ 54."
+      - ilvl: 73
+        unlocks: "Life 145–159 (\"Vigorous\"). Defence phần trăm 80–91% và resistance 42–45% có từ 72. **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 79
+        unlocks: "Tier cao nhất của mọi flat defence: +401–500 Armour hoặc Evasion (từ 77), +91–100 Energy Shield (từ 75), và tier flat cao nhất của các base hai defence (79). Thêm vào đó là hybrid cao nhất của defence phần trăm kèm Stun and Block Recovery (78), Suppression 17–19% và Physical Damage Reduction 7% (77)."
+      - ilvl: 81
+        unlocks: "Life 160–174 (\"Rapturous\") và Chaos Resistance 31–35%."
+      - ilvl: 84
+        unlocks: "Resistance 46–48% và defence phần trăm 92–100%. **Đủ cho mọi thứ, trừ tier cuối của bốn modifier.**"
+      - ilvl: 86
+        unlocks: "Life 175–189 (\"Prime\"), defence phần trăm 101–110%, Suppression 20–22%, Physical Damage Reduction 8%, Energy Shield Recharge bắt đầu nhanh hơn 59–66%. **Mức trần.**"
+  bases:
+    text: >-
+      Có 122 body armour chia trong bảy pool, và khác với một loại weapon,
+      pool ở đây không phải chuyện tiểu tiết. Base nào cũng roll maximum
+      Life, ba elemental resistance, Chaos Resistance, life regeneration và
+      Stun and Block Recovery. Mọi thứ khác tùy vào những attribute mà base
+      yêu cầu.
+
+
+      **Prefix defence chỉ tồn tại cho đúng defence của base.** Một cái plate
+      không roll được Evasion, một cái robe không roll được Armour. **Ba
+      suffix giá trị gắn với một attribute:** Physical Damage Reduction với
+      base Strength, Spell Suppression với base Dexterity, faster Energy
+      Shield Recharge với base Intelligence. Và base nào yêu cầu Intelligence
+      cũng roll maximum Mana dưới dạng prefix.
+    types:
+      - title: "Armour (Strength)"
+        pools: [str]
+        text: >-
+          Hai mươi cái plate, từ Plate Vest tới Royal Plate. Prefix: flat
+          Armour, increased Armour, increased Armour kèm Stun and Block
+          Recovery, và một hybrid nhỏ Armour kèm Life. Suffix riêng của
+          chúng: additional Physical Damage Reduction (tới 8%) và Strength.
+
+
+          Không có prefix Mana nên pool prefix gọn, nhờ vậy life dễ tìm: 29%
+          số lần roll prefix. Theo dữ liệu, gần như cái plate nào cũng bị trừ
+          5% movement speed, so với 3% trên các kiểu khác.
+      - title: "Evasion (Dexterity)"
+        pools: [dex]
+        text: >-
+          Hai mươi cái leather và garb, từ Shabby Jerkin tới Syndicate's
+          Garb. Pool prefix y hệt các plate, chỉ thay Armour bằng Evasion.
+          Suffix kéo người ta tới đây là **+% chance to Suppress Spell
+          Damage**, tới 20–22%, thứ mà không base Strength hay Intelligence
+          nào roll được.
+      - title: "Energy Shield (Intelligence)"
+        pools: [int]
+        text: >-
+          Hai mươi cái robe, vestment và regalia, từ Simple Robe tới Twilight
+          Regalia. Flat và increased Energy Shield, hybrid kèm Stun and Block
+          Recovery, và hai hybrid nhỏ của Energy Shield kèm Life hoặc kèm
+          Mana. Suffix riêng của chúng: faster start of Energy Shield
+          Recharge và Intelligence.
+
+
+          Maximum Mana là một prefix ở đây và chiếm một phần năm mọi lần roll
+          prefix, nên mỗi prefix bạn muốn đều hiếm hơn so với trên plate:
+          flat Energy Shield là 18% số lần roll prefix, life là 21%.
+      - title: "Base hai defence"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Sáu mươi base chia ba nhóm: brigandine, lamellar và doublet (Armour
+          và Evasion); chainmail, ringmail và hauberk (Armour và Energy
+          Shield); jacket, coat, raiment và garb (Evasion và Energy Shield).
+          Prefix defence của chúng là dạng gộp, ví dụ "increased Armour and
+          Evasion", nên một prefix nâng cả hai con số.
+
+
+          Ở phía suffix, một base hybrid roll những gì cả hai pool gốc roll,
+          mỗi cái ở nửa weight. Một base Armour và Evasion có thể mang
+          Physical Damage Reduction **và** Suppression; hai nhóm còn lại ghép
+          một trong hai cái đó với Energy Shield Recharge. Hai nhóm có
+          Intelligence cũng roll prefix Mana.
+      - title: "Base ba attribute"
+        pools: [str_dex_int]
+        text: >-
+          Chỉ có hai base: Grasping Mail và Sacrificial Garb. Chúng roll
+          "increased Armour, Evasion and Energy Shield", mà tier tốt nhất cần
+          item level 85, và mọi họ flat defence của mọi pool khác ở khoảng
+          một phần sáu weight thông thường. Cả ba attribute và cả ba suffix
+          gắn với attribute đều có thể xuất hiện.
+
+
+          Sacrificial Garb có implicit "+1 to Level of all Vaal Skill Gems"
+          và là lý do để tới đây. Grasping Mail không có implicit và có
+          khoảng hai phần ba defence của Garb.
+      - title: "Các base level 73, 78 và 84"
+        text: >-
+          Mỗi kiểu trong sáu kiểu chính kết thúc bằng ba base rơi từ level
+          73, 78 và 84, ví dụ Titan Plate, Legion Plate và Royal Plate. Chúng
+          roll cùng pool với phần còn lại của kiểu mình nhưng có defence cao
+          hơn hẳn: một Royal Plate có Armour gấp rưỡi một Glorious Plate. Cái
+          giá nằm ở yêu cầu: nhân vật level 84 và 293 của một attribute cho
+          các base thuần cao nhất, 173 mỗi attribute cho các base hybrid cao
+          nhất.
+    picks:
+      - base: "Royal Plate"
+        for: "Armour nhiều nhất"
+        why: >-
+          1,183–1,360 Armour trên base trước mọi modifier, cao nhất trong dữ
+          liệu. Cần level 84 và 293 Strength. Legion Plate (1,018–1,171,
+          level 78) là bậc ngay dưới.
+      - base: "Astral Plate"
+        for: "Resistance trên implicit, cho áo giáp sẽ mang influence"
+        why: >-
+          Cái plate duy nhất có implicit: +8–12% to all Elemental
+          Resistances, trên một base 711–782 Armour chỉ cần level 62. Đọc ghi
+          chú về Eldritch trước khi chọn nó: một Ember hoặc Ichor sẽ thay
+          implicit này, nên nó đáng giá trên áo giáp có influence và áo giáp
+          rẻ tiền, chứ không đáng khi dùng Eldritch implicit.
+      - base: "Syndicate's Garb"
+        for: "Evasion nhiều nhất, có Suppression trong pool"
+        why: >-
+          1,205–1,386 Evasion và pool Dexterity, pool thuần duy nhất roll
+          được Suppression. Cần level 84 và 293 Dexterity.
+      - base: "Assassin's Garb"
+        for: "Movement speed"
+        why: >-
+          Body armour duy nhất trong dữ liệu có implicit movement, 3%
+          increased Movement Speed, và là một trong hai cái không bị trừ
+          movement speed trên base (cái kia là Glorious Plate). 737–811
+          Evasion.
+      - base: "Twilight Regalia"
+        for: "Energy Shield nhiều nhất"
+        why: >-
+          262–302 Energy Shield trên base, so với 171–197 trên một Vaal
+          Regalia. Flat Energy Shield thì nhỏ khi đặt cạnh con số đó, nên ở
+          đây base quan trọng hơn ở mọi kiểu khác. Cần level 84 và 293
+          Intelligence.
+      - base: "Conquest Lamellar"
+        for: "Hai defence, có cả Physical Damage Reduction lẫn Suppression"
+        why: >-
+          723–831 cho cả Armour lẫn Evasion, với yêu cầu 173 Strength và 173
+          Dexterity. Hai base hybrid cao nhất còn lại có cùng con số: Sacred
+          Chainmail (Armour 723–831, Energy Shield 145–167) và Necrotic
+          Armour (Evasion 723–831, Energy Shield 145–167).
+    impact: >-
+      Base quyết định năm điều trước khi bạn dùng orb đầu tiên.
+
+
+      **Con số defence mà mọi thứ nhân lên.** Flat defence được cộng vào
+      base, rồi increased defence và quality nhân tổng đó lên. 100% increased
+      Armour đáng khoảng 1,270 Armour trên Royal Plate và khoảng 750 trên
+      Astral Plate. Con số của base tự nó là một lần roll trong khoảng được
+      hiển thị, và một [[Sacred Orb]] roll lại nó.
+
+
+      **Pool.** Defence nào roll được, và Suppression, Physical Damage
+      Reduction, Energy Shield Recharge hay Mana có tồn tại trên item hay
+      không.
+
+
+      **Implicit.** Chỉ năm base có. Một [[Blessed Orb]] roll lại chỉ số của
+      nó; một Eldritch Ember hoặc Ichor thay thế nó.
+
+
+      **Yêu cầu.** Tới level 84 và 293 của một attribute. Suffix "32% reduced
+      Attribute Requirements" có tồn tại, và nó tốn một ô.
+
+
+      **Mức trừ movement speed**, 5% trên phần lớn plate và base Armour và
+      Energy Shield, 3% trên phần lớn base khác, không có trên hai base.
+tools:
+  - method: currency
+    note: >-
+      Gần như mọi tier của mọi modifier trên body armour đều có weight 1,000.
+      Chaos Resistance, với 250, là ngoại lệ đáng kể. Nên cuộc xổ số ở đây
+      phẳng: ở item level 86 trên một cái plate, một lần roll prefix ra
+      maximum Life 29% số lần, và ra "Prime" chỉ 2.2% số lần, tức 1 trên 46
+      theo phép tính của chúng tôi. Life từ 145 trở lên là 1 trên 15.
+
+
+      Vì vậy [[Orb of Alteration]] là cách tốt để có *chút* life hoặc *chút*
+      Suppression, và là cách chậm để có tier tốt nhất. Ba prefix tốt cùng
+      lúc từ [[Chaos Orb]] thì không phải là kế hoạch.
+  - method: bench
+    note: >-
+      Bench bán một bản tầm trung của gần như mọi thứ, với giá rẻ. Theo dữ
+      liệu 3.30: **+71–85 maximum Life** giá 4 Chaos Orb (56–70 giá 4 Orb of
+      Alchemy). **56–74% increased Armour**, Evasion, Energy Shield hoặc một
+      tổ hợp hai defence giá 2 Chaos Orb. **+250–320 Armour hoặc Evasion**,
+      hoặc +56–69 Energy Shield, giá 2 Chaos Orb. **Một resistance, 29–35%**,
+      giá 3 Chaos Orb (21–28% giá 1 Orb of Alchemy); hai resistance, mỗi cái
+      17–20%, giá 3 Chaos Orb. **Suppression 8–10%** hoặc **3% Physical
+      Damage Reduction** giá 4 Chaos Orb. Một attribute, 26–30, giá 2 Chaos
+      Orb.
+
+
+      Hai luật quyết định cái gì vừa. Increased defence của bench cùng group
+      với bản roll ra, và flat defence của nó cùng group với flat defence
+      roll ra. Vậy nên hãy bench cái nào trong hai cái mà item **chưa** roll
+      ra. Còn hybrid của bench, 18–21% increased defence kèm +17–19 Life giá
+      2 Chaos Orb, cùng group với hybrid defence kèm Life roll ra và không
+      cùng group với cái nào khác: nó nằm vừa cạnh life thuần và cạnh cả hai
+      prefix defence thuần.
+  - method: finishing
+    note: >-
+      Quality từ [[Armourer's Scrap]] nhân dòng defence lên, nên hãy đưa nó
+      lên 20% trước khi đánh giá một cái áo giáp. Body armour có tối đa sáu
+      socket. Socket và link không phải modifier: không lần roll lại, Essence
+      hay Fossil nào đụng tới chúng, nên có thể làm vào bất cứ lúc nào, trên
+      một base bạn chắc chắn giữ. Dùng [[Jeweller's Orb]] và
+      [[Orb of Fusing]], hoặc bench với giá cố định.
+
+
+      Một [[Sacred Orb]] roll lại con số defence của chính base trong khoảng
+      của nó, 1,183 tới 1,360 trên Royal Plate. Dùng nó khi một cái áo giáp
+      đã hoàn thiện đang nằm gần đáy. Horticrafting Station còn liệt kê các
+      enchant thay cho quality trên body armour, giá 3,250 Lifeforce theo
+      bảng tra cứu; chúng tôi chưa kiểm tra 3.30 cung cấp những cái nào.
+  - method: essence
+    note: >-
+      **Greed** là Essence của loại trang bị này: maximum Life, được đảm bảo.
+      Screaming cho 130–144, Shrieking 145–159, Deafening 160–174. Đó là
+      khoảng của tier tự nhiên tốt thứ nhì; "Prime" chỉ đến từ một lần roll.
+      **Dread**, **Doubt** và **Woe** đảm bảo flat Armour (390–475 ở bậc
+      Deafening), flat Evasion (390–475) và flat Energy Shield (88–95), mỗi
+      cái thấp hơn tier tự nhiên tốt nhất một chút.
+
+
+      Ở phía suffix, **Anger, Hatred và Wrath** cho một resistance với chỉ số
+      tự nhiên, 46–48% ở bậc Deafening. **Envy** cho Chaos Resistance, 31–35%
+      ở bậc Deafening, và là đường thực tế để tới một modifier chỉ chiếm 2.6%
+      số lần roll suffix. **Rage, Sorrow và Spite** cho 51–58 của một
+      attribute, cao hơn mức tối đa tự nhiên là 55.
+
+
+      Ba cái cho thứ pool tự nhiên không có: **Loathing**, 9–10% increased
+      Mana Reservation Efficiency ở bậc Deafening; **Scorn**, increased Stun
+      Threshold; và [[Essence of Hysteria]], thứ chỉ có được qua corruption,
+      25% increased Area of Effect.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng một con beast khi cái áo
+      giáp Magic đang giữ thứ đã mất nhiều thời gian mới roll ra: Suppression
+      tier cao nhất, hoặc life từ 160 trở lên ở item level 86. Hai công thức
+      thêm-và-gỡ ([[Farric Wolf Alpha]] cho prefix,
+      [[Farric Lynx Alpha]] cho suffix) dành cho áo giáp Rare mà phía bị gỡ
+      đang trống hoặc vô giá trị. Trên loại trang bị này, Eldritch currency
+      thường làm cùng việc đó với ít rủi ro hơn.
+  - method: eldritch
+    note: >-
+      Công cụ định hình loại trang bị này. Có hai điều cần biết trước khi
+      dùng cái đầu tiên.
+
+
+      **Một Ember hoặc Ichor thay implicit của chính base.** Dòng chữ trên
+      item nói vậy: nó thay "any existing implicit modifiers" ngoại trừ
+      Eldritch implicit của phe còn lại. Một Astral Plate mất resistance, một
+      Assassin's Garb mất movement speed.
+
+
+      **Các implicit này mạnh.** Dữ liệu liệt kê sáu bậc cho mỗi cái. Từ
+      Eater of Worlds: all Elemental Resistances từ 5–6% tới 15–16%, 10–12%
+      Physical Damage from Hits taken as một element, increased Armour hoặc
+      Evasion từ 17–18% tới 27–28%, increased maximum Energy Shield từ 6–7%
+      tới 16–17%, Life Recovery rate 7–12%. Từ Searing Exarch: Damage taken
+      Recouped as Life từ 8–9% tới 18–19%, +1% to all maximum Resistances
+      (+2% ở hai bậc cao nhất), +1% tới +3% cho một maximum resistance, aura
+      effect từ 9–10% tới 19–20%. Ember và Ichor có bốn bậc, nên
+      [[Orb of Conflict]] là đường để lên hai bậc trên cùng. Dữ liệu còn
+      chứa các bản mạnh hơn chỉ có tác dụng khi ở gần một enemy Unique hoặc
+      một pinnacle boss.
+
+
+      Rồi tới các orb. Khi Eater dominant, một [[Eldritch Chaos Orb]] **chỉ
+      roll lại suffix**; khi Exarch dominant, chỉ roll lại prefix. Đó là việc
+      mà một modifier bảo vệ làm trên các item khác với giá 4 Divine Orb và 4
+      Blessed Orb mỗi lần thử.
+
+
+      Không dùng được cho áo giáp có influence. Còn một cái áo giáp
+      fractured, hay một cái có Memory Strands, có nhận Eldritch implicit hay
+      không thì chúng tôi chưa xác nhận được cho 3.30: hãy thử bằng một
+      Lesser Ember trước.
+  - method: fossil
+    note: >-
+      Hai Fossil chia đôi loại trang bị này. Một [[Pristine Fossil]] ("more
+      Life, no Defence") loại bỏ mọi prefix defence, và trên một cái plate ở
+      item level 86 thì life chiếm 97% số lần roll prefix: "Prime" đi từ 1
+      trên 46 lần roll thành 1 trên 13, theo phép tính của chúng tôi. Nó cũng
+      khiến life regeneration chiếm 70% số lần roll suffix, và đó là cái giá.
+
+
+      Một [[Dense Fossil]] ("more Defence, no Life") thì ngược lại và là công
+      cụ cho áo giáp Energy Shield: trên một cái robe, 83% số lần roll prefix
+      trở thành một trong ba họ Energy Shield cộng dồn được, và life không
+      thể xuất hiện.
+
+
+      Danh sách modifier chỉ Fossil mới có của loại trang bị này gồm +1 to
+      Level of Socketed Strength, Dexterity hoặc Intelligence Gems,
+      "Regenerate 1% of Life per second", giảm flat Physical Damage taken
+      from Hits, 20–25% increased effect of Non-Curse Auras, và một Abyssal
+      Socket, thứ mà một [[Hollow Fossil]] ép ra. Các con số của chúng tôi
+      không tính những modifier thêm này, nên hãy đọc chúng là gần đúng,
+      không phải chính xác.
+  - method: harvest
+    note: >-
+      Đếm tag trong pool tự nhiên là các reforge tự phân loại.
+
+
+      **Fire, Cold hoặc Lightning** (50 Lifeforce): resistance tương ứng là
+      modifier duy nhất mang tag đó, nên reforge đảm bảo nó, ở một tier ngẫu
+      nhiên. **Chaos** (100 Vivid) đảm bảo Chaos Resistance theo cùng cách.
+
+
+      **Life** (75 Wild) yếu hơn nghe tên: maximum Life, hybrid defence kèm
+      Life và life regeneration đều mang tag này, và trên plate thì maximum
+      Life chưa tới một nửa số weight đó. **Defence** (75 Primal) được thỏa
+      bởi bất kỳ prefix defence nào, và trên base Intelligence thì cả suffix
+      Recharge nữa.
+
+
+      Không gì trong pool tự nhiên mang tag speed hay critical. Hai reforge
+      đó chỉ có nghĩa trên áo giáp có influence. Một resistance có thể đổi
+      sang element khác với giá 300 Lifeforce thuộc hai loại.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra đáng biết: 24–28% increased defence kèm +23–26
+      Life, cùng group với hybrid defence kèm Life; **9–10% increased maximum
+      Life kèm 9–10% increased maximum Mana**, mà bản bench của nó là 5–8%
+      giá 6 Chaos Orb; 8–9% Chance to Block Attack Damage hoặc 9–10% cho
+      spell; 30–35% chance to Avoid Elemental Ailments and Stun. Suffix: hai
+      attribute cùng lúc, mỗi cái 31–35, hoặc một element kèm Chaos
+      Resistance, mỗi cái 16–20%.
+  - method: fracture
+    note: >-
+      Vì không modifier nào hiếm theo weight, hãy fracture cái mà bạn ngán
+      phải roll lần hai nhất: Suppression tier cao nhất (1 trên 58 lần roll
+      suffix ở item level 86) hoặc life "Prime". Một fractured modifier là
+      lớp bảo vệ duy nhất trụ được qua một Essence. Một cái áo giáp fractured
+      thì không thêm influence được.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" và bản song sinh cho suffix tốn 4
+      Divine Orb và 4 Blessed Orb trên body armour trong 3.30, cho mỗi lần
+      thử. Trên áo giáp không có influence, một Eldritch Chaos Orb làm một
+      phía với giá thấp hơn nhiều, nên khóa thuộc về áo giáp có influence,
+      thứ không nhận được Eldritch implicit. Essence được ghi nhận là phớt lờ
+      chúng.
+  - method: influence
+    note: >-
+      Mỗi influence thêm những modifier không tồn tại ở đâu khác, và đóng cửa
+      với Eldritch implicit. Những cái người ta build áo giáp xoay quanh:
+      **Crusader**, enemy bạn giết phát nổ (11–20% ở item level 75, 21–30% ở
+      85, tier cao nhất có weight 25). **Elder hoặc Hunter**, 9–12% increased
+      maximum Life (item level 85). **Hunter**, thêm một Curse (82). **Elder
+      hoặc Hunter**, attack có +1.1–1.5% to Critical Strike Chance; **Shaper
+      hoặc Hunter**, y vậy cho spell (84). **Redeemer**, 21–25% increased
+      effect of Non-Curse Auras (80). **Warlord**, +16–18% to all Elemental
+      Resistances (75). Influence nào cũng có một prefix nhận 13–15% Physical
+      Damage from Hits dưới dạng một element, hoặc dưới dạng Chaos trên
+      Hunter.
+
+
+      Một [[Orb of Dominance]] dùng được trên body armour và tạo ra modifier
+      Elevated; chỉ số của chúng không có trong dữ liệu của chúng tôi.
+  - method: corruption
+    note: >-
+      Các corruption implicit của loại trang bị này: +1 to Level of Socketed
+      Gems, hoặc +2 cho một loại (Area, Aura, Curse, Duration, Minion,
+      Projectile, Trap or Mine, Warcry); 4–6% increased maximum Life hoặc
+      Energy Shield; +1% to all maximum Resistances (item level 80); "You
+      take 50% reduced Extra Damage from Critical Strikes"; 40–50% increased
+      Damage. Một corruption implicit thay thế implicit. Một [[Vaal Orb]] làm
+      gì với một cặp Eldritch implicit thì chúng tôi chưa xác nhận được cho
+      3.30: hãy coi như nó có thể lấy mất chúng.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: một cuộc xổ số phẳng là nơi strand phát huy nhiều nhất."
+memoryStrands: >-
+  Trên body armour, các tier yếu phổ biến đúng bằng các tier mạnh: mười ba
+  tier life, mỗi tier một vé. [[Memory Strands]] loại các tier thấp khỏi bất
+  cứ thứ gì được roll ra, nên ở đây chúng đáng giá hơn so với trên một item
+  mà modifier tốt chỉ đơn giản là hiếm. Theo mô hình do người chơi thử nghiệm
+  ở trang tổng quan, một base có từ 62 strand trở lên chỉ roll bốn tier cao
+  nhất của một modifier mười ba tier: life từ 130 trở lên, mỗi lần life xuất
+  hiện.
+
+
+  Những kiểu craft hợp với áo giáp có strand là kiểu dùng orb rẻ. Đặt strand
+  lên một base trắng bằng [[Orb of Remembrance]], roll life hoặc Suppression
+  bằng [[Orb of Alteration]] (mỗi cái nhiều nhất 8 strand, theo bảng
+  data-mine), rồi một [[Regal Orb]] và các [[Exalted Orb]] (nhiều nhất 16).
+
+
+  Thứ làm phí strand: một Essence có thể tiêu tới 80, và một Eldritch Chaos
+  Orb tới 60 theo cùng bảng đó, nên hai công cụ chủ lực của loại trang bị này
+  lại là hai thứ tệ nhất để dùng trên base có strand. Dense Fossil, Pristine
+  Fossil và reforge Harvest thì hoàn toàn không dùng strand, theo thử nghiệm
+  của người chơi.
+
+
+  Có một câu hỏi còn bỏ ngỏ quan trọng ở đây hơn bất cứ đâu: một thread của
+  người chơi năm 2025 ngụ ý rằng item có strand không nhận được Eldritch
+  implicit. Chúng tôi chưa xác nhận được là đúng hay sai. Hãy thử một Lesser
+  Ember trên base trước khi lên kế hoạch craft xoay quanh cả hai.
+reading:
+  intro: >-
+    Giữ Alt và hỏi ba câu theo thứ tự này. **Các prefix cho bao nhiêu life,
+    hoặc Energy Shield?** **Dòng defence trên cùng ghi bao nhiêu, và có mấy
+    prefix đang nuôi nó?** **Suffix nào làm được việc mà phần gear còn lại
+    của bạn không làm được?** Một resistance đáng giá ít hơn vẻ ngoài, vì
+    bench có bán.
+  prefixes:
+    text: >-
+      Ba ô, bốn thứ đáng có. Maximum Life là một. Ba cái còn lại là các
+      prefix defence, và chúng cộng dồn được vì là ba group khác nhau:
+      **flat** defence, **increased** defence, và **increased defence kèm
+      Stun and Block Recovery**. Cả ba đều là local. Flat được cộng vào base
+      trước, rồi cả hai cái phần trăm và quality nhân tổng đó lên.
+
+
+      Vậy nên cái áo giáp nào cũng đứng trước cùng một lựa chọn. Build life
+      lấy life và hai prefix defence. Build thuần Energy Shield lấy cả ba
+      prefix defence và không lấy life. Không bao giờ đủ chỗ cho cả bốn.
+
+
+      Những thứ giành các ô đó thì ít và quen mặt: "Reflects Physical Damage
+      to Melee Attackers", 9% số lần roll prefix trên plate và không đáng gì;
+      các hybrid nhỏ defence kèm Life; và, trên mọi base có Intelligence,
+      maximum Mana.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Lần roll life lớn nhất trong mọi loại trang bị, và chiếm 21–31% số lần roll prefix tùy pool. Dễ có, khó có cao: mười ba tier với weight bằng nhau."
+        aim: "T3, 145–159 (ilvl 73). T1 là 175–189 (ilvl 86)."
+      - mod: "+# to Armour"
+        why: "Đại diện cho mọi prefix flat defence: Evasion có cùng con số, base hai defence roll cả hai cùng lúc. Nó được cộng vào base trước khi bất cứ thứ gì nhân lên, nên nó đáng giá nhất trên base có con số thấp và khi nằm cạnh một cái phần trăm cao."
+        aim: "T2, 301–400 (ilvl 69). T1 là 401–500 (ilvl 77)."
+      - mod: "+# to maximum Energy Shield"
+        why: "Prefix flat của robe. Nhỏ khi đặt cạnh 262–302 của Twilight Regalia, lớn khi đặt cạnh một cái robe leveling: lý do base quan trọng nhất với Energy Shield."
+        aim: "T2, 77–90 (ilvl 69). T1 là 91–100 (ilvl 75)."
+      - mod: "#% increased Armour"
+        why: "Đại diện cho prefix increased của mọi pool. Nhân base cộng flat. Cùng group với 56–74% của bench, nên chỉ được một trong hai."
+        aim: "T3, 80–91% (ilvl 72). T1 là 101–110% (ilvl 86)."
+      - mod: "#% increased Armour / #% increased Stun and Block Recovery"
+        why: "Cái phần trăm thứ hai ở một group khác, nên nó nằm cạnh cái đầu được. Con số chưa bằng một nửa, và các tier mở sớm."
+        aim: "T2, 33–38% (ilvl 60). T1 là 39–42% (ilvl 78)."
+      - mod: "+# to Armour / +# to maximum Life"
+        why: "Một hybrid với con số nhỏ ở cả hai nửa: cao nhất là +97–144 Armour và +34–38 Life. Thường là một ô mà life thuần hay defence thuần lẽ ra đã dùng tốt hơn. Cùng group với các prefix defence kèm Life của bench và veiled."
+      - mod: "+# to maximum Mana"
+        why: "Chỉ có trên base yêu cầu Intelligence. Được những build tiêu hoặc reserve nhiều mana cần tới, và là prefix phí hay gặp nhất trên robe với mọi người còn lại."
+      - mod: "Reflects # Physical Damage to Melee Attackers"
+        why: "Prefix chết trên mọi base. Cả bốn tier của nó đều đã mở ở item level 35, nên nó luôn có mặt trong cuộc xổ số."
+  suffixes:
+    text: >-
+      Phía suffix là nơi một cái áo giáp lấp các chỗ thiếu. Resistance chiếm
+      41% mọi lần roll suffix tính gộp ba element, life regeneration là
+      suffix phổ biến nhất với 19%, một attribute là 15%, Stun and Block
+      Recovery 10%.
+
+
+      Chia suffix thành hai loại. **Mua được:** một resistance hoặc một
+      attribute, thứ mà bench, một Essence hay một reforge Harvest sẽ cấp
+      theo yêu cầu. **Không mua được ở mức đầy đủ:** Suppression, Physical
+      Damage Reduction, Chaos Resistance cao. Bench bán Suppression ở 8–10%
+      trong khi tier cao nhất là 20–22%. Đó là những suffix cần roll,
+      fracture hoặc bảo vệ; resistance là thứ bạn lấp vào xung quanh chúng.
+    key:
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Chỉ có trên base yêu cầu Dexterity. Với nhân vật evasion, áo giáp là một phần lớn của việc đạt đủ Suppression, và bản bench chưa bằng một nửa tier cao nhất."
+        aim: "T2, 17–19% (ilvl 77). T1 là 20–22% (ilvl 86)."
+      - mod: "+#% to Fire Resistance"
+        why: "Đại diện cho cả ba element. Phổ biến, và được đảm bảo bởi một Essence hoặc một reforge Harvest, nên không bao giờ là lý do để giữ một cái áo giáp."
+        aim: "T3, 36–41% (ilvl 60). T1 là 46–48% (ilvl 84)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Một phần tư weight của các resistance khác. Bench chỉ bán nó ghép với một element, ở 13–15%."
+        aim: "T2, 26–30% (ilvl 65). T1 là 31–35% (ilvl 81)."
+      - mod: "#% additional Physical Damage Reduction"
+        why: "Chỉ có trên base yêu cầu Strength. Mức giảm damage flat, có tác dụng với đúng những cú đánh mà Armour xử lý kém nhất. Bench bán 3%."
+        aim: "T2, 7% (ilvl 77). T1 là 8% (ilvl 86)."
+      - mod: "#% faster start of Energy Shield Recharge"
+        why: "Chỉ có trên base yêu cầu Intelligence. Với build dựa vào Recharge, không gì khác trên áo giáp thay được nó."
+        aim: "T2, 51–58% (ilvl 77). T1 là 59–66% (ilvl 86)."
+      - mod: "Regenerate # Life per second"
+        why: "Suffix phổ biến nhất, với mười một tier. Sức mạnh thật với build sống nhờ regeneration, tới 152–176 mỗi giây; đồ lấp chỗ với phần lớn build khác."
+      - mod: "+# to Strength"
+        why: "Đại diện cho attribute của base. Hữu ích khi nó gánh yêu cầu của gem hoặc gear, và đủ phổ biến để tự đến mà không cần gọi."
+approach:
+  principle: >-
+    **Làm từng phía một.** Prefix quyết định áo giáp chịu được bao nhiêu đòn;
+    suffix vá những gì phần gear còn lại của bạn thiếu. Một Essence hoặc một
+    Fossil chốt prefix khi suffix còn vô giá trị, rồi các Eldritch orb roll
+    lại suffix mà không đụng tới prefix, và bench lấp ô cuối cùng. Bạn không
+    bao giờ phải roll cả sáu cùng lúc, nên đừng cố.
+  order:
+    - title: "Quyết định áo giáp dùng để làm gì, rồi lấy base roll được thứ đó"
+      text: >-
+        Life và Armour, Evasion và Suppression, hay thuần Energy Shield. Câu
+        trả lời chọn ra pool, và pool thì về sau không đổi được. Rồi chọn
+        base trong pool theo con số defence của nó và những yêu cầu bạn đáp
+        ứng nổi.
+    - title: "Chọn item level theo đúng một tier bạn quan tâm"
+      text: >-
+        84 bao gần hết mọi thứ. Chỉ trả tiền cho 86 nếu kế hoạch cần life
+        "Prime", Suppression 20–22%, Physical Damage Reduction 8% hoặc tier
+        cuối của defence phần trăm. Một Essence of Greed cho cùng lượng life
+        ở mọi item level.
+    - title: "Chọn giữa Eldritch implicit và influence"
+      text: >-
+        Trước khi tiêu bất cứ thứ gì, vì hai cái loại trừ nhau. Nếu không có
+        modifier influence nào là thiết yếu với build, áo giáp sẽ nhận
+        implicit. Lựa chọn đó cũng định luôn base: dưới Eldritch implicit thì
+        implicit của base bị mất.
+    - title: "Prefix trước, với một điểm neo"
+      text: >-
+        Một Essence of Greed cho life, một Essence of Woe hoặc một Dense
+        Fossil cho Energy Shield. Lặp lại tới khi hai trong ba prefix là cái
+        bạn muốn, hoặc một cái là vậy và còn một ô trống. Khoan nhìn suffix:
+        đằng nào lần roll lại kế tiếp cũng thay chúng.
+    - title: "Rồi tới suffix, riêng một mình"
+      text: >-
+        Thêm hai implicit sao cho Eater of Worlds dominant, rồi roll lại
+        suffix bằng Eldritch Chaos Orb. Dừng khi có hai suffix bạn muốn và
+        một ô trống. Từ lúc này, một Essence, một Fossil hay một Chaos Orb
+        thường sẽ phá hỏng prefix: cất chúng đi.
+    - title: "Kết thúc bằng bench"
+      text: >-
+        Một modifier bench, dùng cho chỗ thiếu lớn nhất: một resistance còn
+        thiếu, hoặc prefix defence mà item chưa roll ra.
+    - title: "Socket, link và quality lúc nào tiện thì làm"
+      text: >-
+        Chúng sống sót qua mọi thứ ở trên. Nhiều người chơi link base trước,
+        để một cái áo giáp ra đẹp là mặc được ngay.
+  finishing: >-
+    Quality lên 20%, sáu socket, số link mà skill của bạn cần. Rồi tới các
+    con số: một [[Sacred Orb]] nếu defence gốc của base roll thấp trong
+    khoảng của nó, một [[Divine Orb]] nếu những modifier quan trọng đang nằm
+    ở đáy tier, một [[Blessed Orb]] cho implicit của base mà bạn đã giữ.
+
+
+    Corruption đến sau tất cả những thứ đó, hoặc không làm. Trên loại trang
+    bị này, phần thưởng thường là +1 to Level of Socketed Gems hoặc 4–6%
+    increased maximum Life, còn rủi ro là cả cái áo giáp.
+  stopping: >-
+    Life từ 130 trở lên, một prefix defence ở tier tầm trung và hai
+    resistance đã là một cái áo giáp thực thụ cho map vàng và map đỏ. Đó là
+    một giai đoạn Essence và, nhiều nhất, vài chục Eldritch Chaos Orb.
+
+
+    Chi phí nhân lên ở ba chỗ: prefix tốt thứ ba, tier cuối của bất cứ thứ
+    gì, và một lần roll Suppression hoặc Chaos Resistance tier cao nhất có
+    thêm hai suffix tốt bên cạnh. Hãy quyết định trước khi bắt đầu là bạn
+    đang trả tiền cho cái nào trong số đó. Khi các Eldritch orb đã cho bạn
+    hai suffix bạn muốn và một ô trống, hãy ngừng roll: bench sẽ hoàn thiện
+    nó một cách chắc chắn.
+special:
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Essence"
+    where: "Một Essence of Loathing trên body armour: 5–6% ở bậc Screaming, 7–8% ở Shrieking, 9–10% ở Deafening. Một suffix mà pool tự nhiên không có."
+  - mod: "#% increased Area of Effect"
+    source: "Essence corrupted"
+    where: "25%, từ một [[Essence of Hysteria]], thứ chỉ có được bằng cách corrupt một monster Essence bằng [[Remnant of Corruption]]. Ba Essence corrupted còn lại cho: 25% reduced Chaos Damage taken over time (Delirium), Onslaught trong 6 giây when Hit (Insanity), và reduced Extra Damage from Critical Strikes per Endurance Charge (Horror)."
+  - mod: "Enemies you Kill have a #% chance to Explode, dealing a tenth of their maximum Life as Physical Damage"
+    source: "Influence Crusader"
+    where: "Một prefix Crusader: 11–20% từ item level 75 (weight 100), 21–30% từ item level 85 (weight 25). Trên một cái plate Magic có influence Crusader ở item level 86, tier nào cũng tính thì khoảng 1 trên 385 lần roll prefix, theo phép tính của chúng tôi."
+  - mod: "#% increased maximum Life"
+    source: "Influence Elder hoặc Hunter"
+    where: "Một prefix, 9–12% từ item level 85 và 5–8% từ 68. Nó khác group với flat maximum Life, nên cả hai cùng nằm vừa. Prefix veiled kèm Life và Mana, cùng bản bench của nó, chung group với nó và block nó."
+  - mod: "You can apply an additional Curse"
+    source: "Influence Hunter"
+    where: "Một prefix Hunter từ item level 82, với weight 250."
+  - mod: "#% of Physical Damage from Hits taken as Fire Damage"
+    source: "Influence / implicit Eater of Worlds"
+    where: "13–15% dưới dạng prefix Elder hoặc Warlord (Cold trên Shaper và Redeemer, Lightning trên Shaper và Crusader, Chaos trên Hunter). 10–12% dưới dạng implicit Eater of Worlds, thứ không cần influence."
+  - mod: "Attacks have +#% to Critical Strike Chance"
+    source: "Influence Elder hoặc Hunter"
+    where: "Một suffix, +1.1–1.5% từ item level 84. Bản cho spell là một suffix Shaper hoặc Hunter. Khi prefix đã khóa, một reforge Critical của Harvest hầu như không thể rơi vào cái gì khác."
+  - mod: "+#% to all maximum Resistances"
+    source: "Implicit Searing Exarch / Corruption"
+    where: "+1% dưới dạng implicit Searing Exarch, +2% ở hai bậc cao nhất của nó. +1% dưới dạng corruption implicit trên áo giáp từ item level 80 trở lên."
+  - mod: "+# to Level of Socketed Gems"
+    source: "Corruption / Influence / Fossil"
+    where: "+1 cho mọi gem gắn trong socket, hoặc +2 cho một loại, dưới dạng corruption implicit. +1 to Level of Socketed Skill Gems dưới dạng prefix Shaper hoặc Warlord, +1 to Socketed Support Gems trên Elder hoặc Redeemer (item level 80). +1 to Socketed Strength, Dexterity hoặc Intelligence Gems dưới dạng suffix chỉ Fossil mới có."
+  - mod: "Has 1 Abyssal Socket"
+    source: "Fossil"
+    where: "Được ép ra bởi một [[Hollow Fossil]] trong Resonator. Nó chiếm một suffix."
+  - mod: "#% increased effect of Non-Curse Auras from your Skills"
+    source: "Influence Redeemer / Fossil / implicit Searing Exarch"
+    where: "21–25% dưới dạng suffix Redeemer (item level 80), 20–25% dưới dạng suffix chỉ Fossil mới có, và từ 9–10% tới 19–20% dưới dạng implicit Searing Exarch."
+  - mod: "+1 to Level of all Vaal Skill Gems"
+    source: "Implicit của base"
+    where: "Implicit của Sacrificial Garb. Bạn chọn nó bằng cách chọn base, và bạn mất nó khi dùng một Eldritch Ember hoặc Ichor."
+mistakes:
+  - "**Chọn base trước khi chọn pool.** Suppression không roll được trên plate, Physical Damage Reduction không roll được trên robe. Không currency nào sửa được điều đó về sau."
+  - "**Dùng Essence sau khi suffix đã đúng.** Một Essence roll lại mọi thứ không fractured, và được ghi nhận là phớt lờ các modifier bảo vệ. Essence đi trước, Eldritch orb đi sau."
+  - "**Dùng Ember lên Astral Plate mà không biết cái giá.** Chính dòng chữ của Ember nói nó thay implicit của base."
+  - "**Trả tiền khóa prefix trên áo giáp không có influence.** 4 Divine Orb và 4 Blessed Orb mỗi lần thử chỉ mua được thứ mà một Eldritch Chaos Orb tự nó đã làm."
+  - "**Bench increased defence lên áo giáp đã roll ra nó.** Cùng một group. Hãy bench flat defence, hoặc life."
+  - "**Mua item level 85 để lấy life \"Prime\".** Nó cần 86. Trên áo giáp không có influence, item level 85 không mở thêm gì so với 84, ngoại trừ trên hai base ba attribute."
+  - "**Roll để tìm một resistance.** Bench bán 29–35% giá 3 Chaos Orb. Hãy roll suffix mà bench không sánh được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, implicit và giá bench được dẫn ở đây, cùng dòng chữ trong game của Eldritch currency. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên armour." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge, việc đổi resistance và các enchant của body armour." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các công thức thêm-và-gỡ." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Implicit nào là dominant, các modifier bảo vệ trụ được trước những gì, và các mốc của Memory Strands. Do người chơi thử nghiệm và một phần cũ hơn 3.30." }

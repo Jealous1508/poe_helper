@@ -1,0 +1,155 @@
+category: one-hand-swords
+title: "Một cây foil leveling nhận lấy thứ pool cho"
+level: 1
+summary: "Trên thrusting sword, hai trên ba lần roll prefix là added elemental damage. Roll một cái, để Regal Orb thử cái thứ hai, rồi bench cái thứ ba."
+goal: >-
+  Một weapon nhanh cho đoạn giữa campaign với ba loại added elemental damage,
+  làm từ vài Alteration. Ý cần mang về là **nhìn weight trước khi chọn mục
+  tiêu**. Thrusting sword được dựng để roll elemental damage. Nhắm vào thứ
+  pool phát không tiếc tay thì lần craft đầu tiên tốn một nắm orb; nhắm ngược
+  lại nó thì chừng đó orb chẳng mua được gì.
+base: "Elegant Foil"
+itemLevel: 32
+baseWhy: >-
+  Elegant Foil dùng được ở level 30 và attack 1.6 lần mỗi giây, nhanh ngang
+  bất kỳ cây sword nào trong game. Damage của chính nó thì nhỏ, 18–33, và đó
+  chính là điểm mấu chốt: added elemental damage được áp trên mọi cú đánh,
+  nên tốc độ quan trọng còn physical damage của base thì gần như không. Item
+  level 31 là mốc đầu tiên mà tier lightning "Crackling" (adds 3 to 57–67)
+  roll được.
+
+
+  Bất kỳ cây foil hay rapier trắng nào ngang level của bạn cũng được, miễn nó
+  là thrusting sword. Kiểm item level bằng Alt.
+methods: [currency, bench]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 21 to 38 Fire Damage" }
+    - { text: "Adds 3 to 63 Lightning Damage" }
+    - { text: "Adds 12 to 21 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "+19 to Dexterity" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "5", note: "1 để bắt đầu, 4 cho bench" }
+  - { item: "[[Orb of Alteration]]", amount: "5–10" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Một nắm [[Orb of Alteration]], một [[Regal Orb]] và năm
+  [[Orb of Transmutation]]. Nó đủ rẻ để cứ mười level làm lại một lần trên
+  base mới.
+odds: >-
+  Ở item level 32 trên thrusting sword, theo phép tính của chúng tôi từ
+  weight của các modifier, 67% số lần roll prefix là added Fire, Cold hoặc
+  Lightning Damage, và khoảng 1 trên 3 lần roll prefix ra một trong hai tier
+  cao nhất mà item level đó cho phép của một element nào đó. Không phải
+  Alteration nào cũng roll ra prefix, nên hãy tính năm tới mười cái.
+
+
+  Khi Regal Orb thêm một prefix, hơn một nửa số lần một chút đó là element
+  thứ hai. Lần craft không phụ thuộc vào điều đó.
+steps:
+  - title: "Bỏ qua whetstone"
+    do: >-
+      Lấy một cây Elegant Foil trắng và để nguyên như vậy. Đừng tiêu
+      [[Blacksmith's Whetstone]] vào nó.
+    why: >-
+      Quality nâng damage **physical** của weapon. Damage mà cây foil này gây
+      ra đến từ các prefix added elemental, thứ quality không đụng tới. Trên
+      weapon physical, quality là bước đầu tiên; ở đây nó chỉ phí whetstone.
+    state:
+      rarity: normal
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+  - title: "Biến nó thành Magic rồi roll một element"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], giữ
+      Alt mà đọc prefix. Dừng ở cái **Adds # to # Fire, Cold hoặc Lightning
+      Damage** đầu tiên thuộc hai tier cao nhất đang có. Với fire, tên của
+      chúng là "Burning" (adds 17–24 to 35–41) và "Smoking"; với cold là
+      "Frigid" (16–21 to 31–37) và "Icy"; với lightning là "Crackling" (3 to
+      57–67) và "Snapping".
+    why: >-
+      Cây foil đánh 18–33. Một prefix cộng 21 to 38 làm mỗi cú đánh tăng hơn
+      gấp đôi, và bạn được roll ba cái khác nhau, vì fire, cold và lightning
+      là ba group riêng. Khi còn leveling, element nào ra trước không quan
+      trọng.
+    check: >-
+      Dòng prefix bắt đầu bằng "Adds" và nêu tên một element. Nếu nó ghi
+      "increased Physical Damage" thì roll lại: trên một base nhỏ thế này,
+      phần trăm của rất ít vẫn là rất ít.
+    state:
+      rarity: magic
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes: [{ text: "Adds 21 to 38 Fire Damage" }]
+  - title: "Lấp suffix"
+    do: >-
+      Nếu chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó thêm một modifier vào ô trống và để yên prefix. Attack speed là
+      suffix đáng mong, khoảng 1 trên 6 lần roll suffix ở item level này. Ở
+      đây nó cho Dexterity, thứ mà đằng nào foil cũng cần rất nhiều.
+    state:
+      rarity: magic
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes: [{ text: "Adds 21 to 38 Fire Damage" }]
+      suffixes: [{ text: "+19 to Dexterity" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Cây foil thành Rare, giữ cả hai modifier và có thêm cái thứ ba. Trên
+      pool này Regal Orb đang làm việc cho bạn: phần lớn thứ nó có thể thêm ở
+      dạng prefix là một element khác, và nó không thể thêm fire lần nữa vì
+      group đó đã bị chiếm.
+    check: >-
+      Đọc xem cái gì được thêm và ghi nhận cây foil giờ có những element nào.
+      Bước bench sẽ lấp một element còn thiếu.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 21 to 38 Fire Damage" }
+        - { text: "Adds 3 to 63 Lightning Damage" }
+      suffixes: [{ text: "+19 to Dexterity" }]
+  - title: "Bench element bạn còn thiếu"
+    do: >-
+      Ở [[Crafting Bench]], craft added damage của một element mà cây foil
+      **chưa** có. Cold hoặc fire: adds 11–12 to 19–23 giá 4
+      [[Orb of Transmutation]]. Lightning: adds 1–3 to 27–37 với cùng giá.
+    why: >-
+      Bench từ chối một element đã có sẵn, vì nó cùng group với cái roll ra.
+      Element khác là group khác. Khi cả ba ô prefix đều chứa damage, bench
+      không còn gì tốt hơn để thêm: thêm 16 damage mỗi cú đánh ở đây đáng giá
+      hơn 8–10% attack speed, mà lại tốn ít hơn.
+    fail: >-
+      Nếu Regal Orb đã lấp prefix thứ ba bằng thứ khác, hãy craft 8–10%
+      attack speed vào một suffix thay vào (6 Orb of Alteration).
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 21 to 38 Fire Damage" }
+        - { text: "Adds 3 to 63 Lightning Damage" }
+        - { text: "Adds 12 to 21 Cold Damage", how: crafted }
+      suffixes: [{ text: "+19 to Dexterity" }]
+variations: >-
+  **Trên one-hand sword.** Cũng các bước đó dùng được trên một cây sword
+  thường, với tỉ lệ kém hơn một chút: ở item level này pool của nó có khoảng
+  55% prefix elemental so với 67%. Thrusting sword còn mang +25% Critical
+  Strike Multiplier trên implicit; one-hand sword thì mang Accuracy.
+
+
+  **Một build physical.** Khi đó đây là sai lần craft và gần như sai cả
+  class. Hãy dùng ví dụ leveling của axe hoặc mace, nơi flat Physical Damage
+  được roll còn phần trăm thì mua ở bench.
+
+
+  **Cứ mỗi mười level.** Các tier added damage leo rất nhanh: tới item level
+  52, cùng prefix đó cho adds 46–62 to 93–107 fire. Làm lại cây foil trên
+  base mới hơn thì rẻ hơn là cố cải thiện một cây cũ.
+mistakes:
+  - "Roll tìm một prefix physical trên cây foil leveling. Pool chống lại điều đó và base có rất ít physical damage để nhân."
+  - "Bench element mà cây foil đã roll ra. Bench sẽ từ chối; hãy chọn cái khác."
+  - "Dùng Regal Orb trước khi prefix ra đúng. Alteration chỉ dùng được trên item Magic."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool của thrusting sword cùng weight của nó, tier, item level và giá bench. Xác suất là phép tính của chúng tôi." }

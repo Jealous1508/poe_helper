@@ -1,0 +1,145 @@
+category: amulets
+title: "A first amulet: roll the Life, buy the resistance"
+level: 1
+summary: "Pick the base for the attribute you are short of, roll a Life prefix with Alterations, and let the bench add the resistance you are missing."
+goal: >-
+  An amulet for the middle of the campaign with a real Life roll, an attribute
+  you needed anyway, and one resistance chosen by you. The idea to take away is
+  **which half to roll and which half to buy.** At this level a rolled Life
+  prefix is 55 to 99; the bench sells 41–55 at best. A rolled resistance is
+  18–29%; the bench sells 21–28% for one Orb of Alchemy. So you roll the Life
+  and buy the resistance, never the other way round.
+base: "Jade Amulet"
+itemLevel: 36
+baseWhy: >-
+  On an amulet the base is the implicit and nothing else, so choose it for a
+  gap. A Jade Amulet gives +20–30 Dexterity, which is what a Strength or
+  Intelligence character usually lacks for its green gems. Take an Amber
+  Amulet for Strength or a Lapis Amulet for Intelligence if that is your gap.
+
+
+  Item level 36 is the first at which Life of 85–99 can roll. Hold Alt over
+  the amulet to see its item level. Any white amulet from Act 4 onwards will
+  do; one already Magic or Rare needs an [[Orb of Scouring]] first.
+methods: [currency, bench]
+result:
+  implicits: ["+24 to Dexterity"]
+  prefixes:
+    - { text: "+74 to maximum Life" }
+  suffixes:
+    - { text: "+16 to Intelligence" }
+    - { text: "+21% to Lightning Resistance" }
+    - { text: "+24% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "for the bench; 1 Orb of Transmutation buys a smaller resistance" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s, one [[Regal Orb]] and one
+  [[Orb of Alchemy]] for the bench. Nothing here is worth saving at this point
+  in a league.
+odds: >-
+  At item level 36, one prefix roll is maximum Life of 55 or more about 1 time
+  in 15, by our arithmetic from the modifier weights; Life of any size is
+  about 1 in 6. An Alteration does not always roll a prefix, so expect 20 to
+  40 of them. The Augmentation and the Regal Orb are plain luck, and the craft
+  is built so that their result barely matters.
+steps:
+  - title: "Make it Magic and roll for Life"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Hold Alt and read the **prefix** after each. Stop at **maximum
+      Life of 55 or more**: the names are "Stout" (55–69), "Robust" (70–84)
+      or "Rotund" (85–99).
+    why: >-
+      A Magic amulet has one prefix and one suffix. Life is always a prefix,
+      it is the most common useful one, and it is the modifier the bench
+      replaces worst: its best Life craft stops where these rolls begin.
+    check: >-
+      The prefix line says "to maximum Life" and the number is 55 or higher.
+      Ignore the suffix completely.
+    fail: >-
+      Running low on Alterations: take any Life of 40 or more. It still
+      beats the bench's cheap versions, and the next amulet is a few zones
+      away.
+    state:
+      rarity: magic
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the amulet has no suffix, use an [[Orb of Augmentation]]. If it has
+      one, skip this step.
+    why: >-
+      An Augmentation adds to an empty slot and never touches what is there.
+      Half of all amulet suffixes are an attribute or a resistance, so this
+      is a free roll at something useful.
+    state:
+      rarity: magic
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes: [{ text: "+16 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The amulet becomes Rare, keeps both modifiers and gains a third at
+      random. Rare is what opens the remaining slots to the bench.
+    check: >-
+      Read what was added and **which side it is on**. Here it is a
+      resistance, a suffix. The amulet now has one prefix and two suffixes,
+      so two prefix slots and one suffix slot are open.
+    state:
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes:
+        - { text: "+16 to Intelligence" }
+        - { text: "+21% to Lightning Resistance" }
+  - title: "Buy the resistance you lack"
+    do: >-
+      Open your character sheet and find your lowest elemental resistance.
+      At the [[Crafting Bench]], craft that one: 21–28% for 1
+      [[Orb of Alchemy]], or 16–20% for 1 Orb of Transmutation.
+    why: >-
+      An item holds one bench modifier, so spend it on the largest gap. The
+      bench will not add a resistance the amulet already rolled, because the
+      two are one group; it will add a different element, or a pair such as
+      "Fire and Cold Resistances", which is a group of its own.
+    fail: >-
+      The bench does not list the craft: you have not found that recipe yet.
+      Take the best resistance it does offer. There is always room for it:
+      after these steps the amulet has at most two suffixes.
+    state:
+      implicits: ["+24 to Dexterity"]
+      prefixes: [{ text: "+74 to maximum Life" }]
+      suffixes:
+        - { text: "+16 to Intelligence" }
+        - { text: "+21% to Lightning Resistance" }
+        - { text: "+24% to Fire Resistance", how: crafted }
+  - title: "Change the craft when the character changes"
+    do: >-
+      Later, when a new piece of gear shifts your resistances, return to the
+      bench: "Remove Crafted Mods" costs 1 [[Orb of Scouring]] and frees the
+      slot for a different craft.
+    why: >-
+      The bench modifier is the one line on the amulet you can rewrite. That
+      is why it should hold the thing most likely to change, which is a
+      resistance.
+variations: >-
+  **You need the attribute more than the resistance.** The bench sells 15–20
+  of a single attribute for 1 Orb of Augmentation and 21–25 for 2 Orbs of
+  Alchemy. On a Jade Amulet a crafted Dexterity suffix sits on top of the
+  implicit: an implicit and an explicit modifier never compete for a group.
+
+
+  **In maps.** The same five steps on an item level 54 amulet reach the top
+  Life tier, 115–129. Nothing else about the craft changes.
+mistakes:
+  - "Rolling for a resistance and benching the Life. At this level the bench's resistance is nearly as good as a roll; its Life is half of one."
+  - "Using the bench while the amulet is still Magic. It works, but you chose the craft before the Regal Orb showed you what was missing."
+  - "Picking the base for looks. The implicit is the only thing the base gives you; an attribute you do not need is an empty line."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

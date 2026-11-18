@@ -1,0 +1,252 @@
+category: bows
+title: "Bow elemental hàng đỉnh quanh additional arrows fractured"
+level: 5
+summary: "Fracture cái suffix mà không gì nhắm được vào, dựng lại ba prefix elemental bằng Essence bao nhiêu lần cũng được, rồi khóa chúng và reforge lấy một suffix critical strike."
+goal: >-
+  Một cây bow elemental có "Bow Attacks fire 2 additional Arrows" thành vĩnh
+  viễn, ba prefix flat elemental và các suffix của một build critical
+  strike. Kế hoạch weapon hàng đỉnh thông thường thì fracture một prefix. Kế
+  hoạch này fracture một suffix, và lý do chính là toàn bộ bài học: **hãy
+  fracture thứ không công cụ nào nhắm được vào, chứ không phải thứ giá trị
+  nhất.** Trên bow elemental, một Essence làm lại bất kỳ prefix nào theo yêu
+  cầu. Không gì trong game làm lại được hai additional arrow.
+base: "Thicket Bow"
+itemLevel: 86
+baseWhy: >-
+  "Bow Attacks fire 2 additional Arrows" chỉ tồn tại ở item level 86. Chỉ
+  một modifier đó định ra item level; các tier flat elemental cao nhất đã mở
+  từ 82. 1.5 attack mỗi giây của Thicket Bow là base nhanh nhất, và flat
+  elemental damage được gây ra một lần mỗi attack. Hãy lấy Spine Bow vì 6.5%
+  critical strike chance của nó nếu build dựa vào crit nhiều hơn tốc độ.
+
+
+  Base phải **không có influence**: [[Fracturing Orb]] từ chối item có
+  influence.
+methods: [fracture, essence, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  prefixes:
+    - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+    - { text: "Adds 96 to 187 Fire Damage" }
+    - { text: "Adds 108 to 214 Cold Damage" }
+  suffixes:
+    - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+    - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "12% increased Attack Speed", how: crafted }
+needs:
+  - { item: "Một cây bow có \"Bow Attacks fire 2 additional Arrows\" fractured, item level 86", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Deafening Essence of Wrath]]", amount: "vài chục tới vài trăm" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "cho attack speed của bench" }
+cost: >-
+  Base fractured là phần lớn nhất và trong những tuần đầu có thể hoàn toàn
+  không có ai bán: hai additional arrow là một trên 601 lần roll suffix trên
+  bow item level 86, rồi một [[Fracturing Orb]] chọn trúng nó một trên bốn
+  lần. Giai đoạn 2 được đếm bằng Deafening Essence và có đuôi dài, xui thì
+  kéo rất lâu. Giai đoạn 3 được đếm bằng số lần khóa, mỗi lần 4
+  [[Divine Orb]] và một [[Sacred Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Một bản có **một** additional arrow, thứ
+  phổ biến gấp mười và chỉ cần item level 70, đi theo cùng kế hoạch với một
+  phần nhỏ của giá, và là cái phần lớn người chơi nên làm.
+odds: >-
+  Mọi con số là phép tính của chúng tôi từ weight ở item level 86.
+
+
+  **Giai đoạn 1.** "of Many" có weight 100 trong một pool suffix 60,100: 1
+  trên 601 lần roll suffix. "of Splintering", một arrow, có weight 1,000.
+
+
+  **Giai đoạn 2.** Khi Lightning đã được Essence cố định, mỗi lần roll
+  prefix khác là Fire hoặc Cold trong 53% số lần. Khi một kết quả có ba
+  prefix, hai cái còn lại là Fire **và** Cold, cả hai từ Tier 4 trở lên,
+  khoảng 1 trên 69 lần; cả hai từ Tier 3 trở lên, 1 trên 227; cả hai từ Tier
+  5 trở lên, 1 trên 33. Không phải kết quả nào cũng có ba prefix, nên số lần
+  thật sẽ cao hơn. Ít nhất một trong hai cái từ Tier 4 trở lên là khoảng 1
+  trên 4 kết quả khi có hai prefix khác roll ra.
+
+
+  **Giai đoạn 3.** Reforge Critical lần nào cũng cho Critical Strike Chance
+  hoặc Critical Strike Multiplier, chia đều nhau. Nếu tier được bốc theo
+  weight, modifier được đảm bảo sẽ từ 30% trở lên một trên ba lần. Chưa được
+  đo trong 3.30.
+steps:
+  - title: "Giai đoạn 1: additional arrows fractured"
+    do: >-
+      Mua hoặc tìm một cây bow item level 86 có **"Bow Attacks fire 2
+      additional Arrows" fractured**. Còn nếu tự làm: roll "of Many" lên
+      một cây bow Magic, đưa nó thành Rare với **đúng bốn** modifier, rồi
+      dùng một [[Fracturing Orb]].
+    why: >-
+      Với từng modifier bạn muốn, hãy hỏi: cái gì nhắm được vào nó? Flat
+      Lightning Damage: một Essence of Wrath, lần nào cũng được. Fire và
+      Cold: cuộc xổ số, nơi mỗi cái chiếm một phần tư số lần roll prefix.
+      Một suffix critical strike: một reforge Harvest. Attack speed: một
+      Essence hoặc bench. Additional arrows: không gì cả. Tag duy nhất của
+      nó là "attack", thứ mà hơn hai phần năm pool suffix cùng mang. Đó là
+      modifier cần fracture, vì một khi nó đã vĩnh viễn, mọi ô khác đều roll
+      lại được mà không phải sợ.
+    check: >-
+      Fracturing Orb cần ít nhất bốn modifier và chọn **ngẫu
+      nhiên**. Đúng bốn thì là 1 trên 4. Đừng thêm cái thứ năm.
+    fail: >-
+      Nó fracture nhầm thứ khác. Bow giữ "of Many" dưới dạng một suffix
+      thường bên cạnh một sai modifier bị khóa vĩnh viễn, và không fracture
+      lại được nữa. Nó vẫn là một cây bow đáng hoàn thiện theo đường khóa
+      prefix; nó không còn là base cho kế hoạch này.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 31 to 64 Physical Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+48 to Dexterity" }
+        - { text: "Gain 91 Life per Enemy Killed" }
+  - title: "Giai đoạn 2: ba element, bằng Essence"
+    do: >-
+      Dùng [[Deafening Essence of Wrath]] tới khi bow có **Fire và Cold
+      bên cạnh Lightning, ở tier bạn đã đặt từ trước**, và **nhiều nhất
+      hai suffix**. Một ngưỡng hợp lý là Tier 4 trở lên cho cả hai: "Adds
+      85–115 to 172–200 Fire Damage" và "Adds 77–104 to 154–178 Cold
+      Damage" hoặc cao hơn.
+    why: >-
+      Wrath đảm bảo adds 25–34 to 494–575 Lightning Damage ở bậc Deafening,
+      nằm giữa Tier 2 và Tier 1 tự nhiên. Essence roll lại mọi thứ không
+      fractured, nên arrow ở lại và giai đoạn này lặp lại được bao nhiêu lần
+      tùy ngân sách cho phép. Sự tự do đó chính là thứ mà fracture mua được.
+      Hãy dùng Essence của element mà build của bạn coi trọng nhất, vì đó là
+      prefix duy nhất có tier được đảm bảo.
+    check: >-
+      Giữ Alt và đọc cả ba prefix, rồi đếm suffix. Khóa prefix ở giai đoạn 3
+      là một suffix: với arrow và hai suffix nữa thì không còn ô nào cho nó.
+    fail: >-
+      Không có gì để sửa. Dùng Essence kế tiếp. Hãy quyết định trước bạn sẽ
+      tiêu bao nhiêu cái, và khi chạm con số đó, hạ ngưỡng xuống "một
+      trong Fire hoặc Cold ở Tier 4, cái kia ở tier nào cũng được".
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+402 to Accuracy Rating" }
+  - title: "Giai đoạn 3: khóa prefix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Hai trong ba prefix đến từ may mắn và không fractured. Từ đây trở đi
+      chúng đáng giá hơn cái khóa. Essence giờ bị cấm: theo ghi nhận của
+      người chơi, chúng phớt lờ khóa.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Giai đoạn 3, tiếp theo: reforge kèm một modifier Critical"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Lặp lại khóa và reforge tới khi
+      suffix critical strike từ 30% trở lên và **còn một ô suffix
+      trống**.
+    why: >-
+      Trên bow chỉ hai suffix mang tag critical, Critical Strike Chance và
+      Critical Strike Multiplier, và build crit muốn cái nào cũng được. Bản
+      thân việc chọn tag cũng là phép tính: bench bán cả hai suffix crit ở
+      khoảng bảy phần mười tier cao nhất của chúng (25–28% so với 35–38%),
+      nhưng bán attack speed tệ hơn. Vậy sao không reforge lấy attack speed?
+      Vì tag Speed chung với Projectile Speed ở weight ngang nhau, và một
+      nửa số lần khóa sẽ thành phí. Reforge lấy cái tag sạch, còn bench lấy
+      attack speed.
+    check: >-
+      Prefix không đổi, arrow vẫn còn đó, một suffix crit, và một ô trống.
+      Một kết quả có suffix crit mà không có gì khác là lý tưởng.
+    fail: >-
+      Tier thấp, hoặc không có ô trống: khóa và reforge lần nữa, mỗi lần 4
+      Divine Orb và một Sacred Orb. Hãy chốt số lần thử từ trước.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Giai đoạn 4: bench attack speed"
+    do: >-
+      Ở ô suffix trống, craft **11–13% increased Attack Speed**, 4
+      [[Exalted Orb]].
+    why: >-
+      Attack speed là local và nhân cả ba element cùng lúc. Bậc cao nhất của
+      bench thấp hơn roll tốt nhất hai tier, và đó là cái giá của việc đã
+      chọn tag Harvest sạch ở giai đoạn 3. Nó vẫn là cách dùng đúng cho
+      modifier bench duy nhất: không gì khác bench đưa cho một cây bow đã
+      đầy lại đáng giá bằng.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "12% increased Attack Speed", how: crafted }
+  - title: "Hoàn thiện: socket, rồi một Divine Orb"
+    do: >-
+      Sáu socket và số link skill cần, nếu chưa làm trên base trắng. Rồi một
+      [[Divine Orb]] nếu các roll elemental thấp.
+    why: >-
+      Các tier flat elemental có khoảng rất rộng: riêng Lightning của
+      Essence đã chạy từ 494 tới 575 ở đầu trên. Divine Orb roll lại mọi chỉ
+      số cùng lúc, kể cả những cái crafted và fractured, và không bao giờ
+      đổi tier. Trên cây bow này, con số roll bên trong tier đáng giá gần
+      bằng một tier.
+variations: >-
+  **Fracture một prefix thay vào.** Kế hoạch quen thuộc thì fracture một
+  element flat Tier 1 ("Vapourising", 1 trên 434 lần roll prefix) rồi roll
+  suffix dưới khóa. Nó kết thúc với một prefix hàng đầu được đảm bảo và chỉ
+  có arrow nếu may mắn cho, trong khi kế hoạch này kết thúc với arrow được
+  đảm bảo và prefix tốt tới đâu tùy ngân sách Essence của bạn. Hãy chọn theo
+  thứ build cần hơn: damage single-target, hay clear.
+
+
+  **Prefix thứ ba từ bench.** Nếu giai đoạn 2 cho Lightning và một element
+  tốt còn prefix thứ ba **trống**, vậy là dùng được: bench thêm element còn
+  thiếu ở mức adds 60–72 to 110–128 (4 Chaos Orb). Khi đó bow không còn ô
+  bench cho attack speed, nên reforge ở giai đoạn 3 phải cấp cả phía suffix.
+
+
+  **Một Prismatic Fossil cho giai đoạn 2.** Khi Lightning và Fire đã nằm
+  trên bow, một Prismatic Fossil sẽ làm Cold chiếm 70% số lần roll prefix
+  còn lại, so với 37% khi không có trợ giúp. Nhưng Fossil không đảm bảo
+  element nào cả, trong khi Essence đảm bảo một cái ở tier cao, và ba ô
+  trống đáng giá ít hơn một ô chắc chắn cộng hai ô trống.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] lên Fracturing Orb ở giai đoạn 1
+  là chỗ duy nhất mà nhìn trước một bước có thể cứu được item.
+mistakes:
+  - "Fracture một prefix flat elemental theo thói quen. Trên cây bow này, Essence làm ra prefix đó bất cứ khi nào bạn cần."
+  - "Giữ một kết quả Essence có ba suffix. Khóa prefix cần một ô suffix, và một Annulment để mở ô có thể lấy mất một prefix thay vào."
+  - "Reforge với tag Speed để đuổi theo attack speed roll ra. Projectile Speed mang cùng tag đó ở cùng weight."
+  - "Dùng Essence sau khi khóa, hoặc Fossil: với Fossil, chúng tôi chưa xác nhận được rằng khóa còn giữ trong 3.30."
+  - "Làm bản hai arrow trong khi một arrow là đủ. Một arrow phổ biến gấp mười và cần item level 70, không phải 86."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, Essence of Wrath trên bow, tag, giá bench và mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Critical và Speed cùng giá của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest và Essence, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

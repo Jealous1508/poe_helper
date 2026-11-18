@@ -1,0 +1,137 @@
+category: tinctures
+title: "A first tincture: match the suffix to the implicit"
+level: 1
+summary: "Pick the white Prismatic Tincture with the best implicit, then roll a suffix an elemental attacker uses. Three orbs, no bench."
+goal: >-
+  A tincture for an elemental melee character in the second half of the
+  campaign, made from the orbs already in your stash. The lesson is how to
+  look at one: **the implicit is the item, and the suffix should push the
+  same way.**
+
+
+  It is also the place to say how a tincture is rolled, as far as we can
+  establish it. The data gives tinctures a prefix pool and a suffix pool, and
+  the three orbs for Magic items do the rest, exactly as on a flask. Whether
+  a tincture can be more than Magic in 3.30 we could not confirm, so this
+  example stops at Magic: one prefix, one suffix.
+base: "Prismatic Tincture"
+itemLevel: 45
+baseWhy: >-
+  The Prismatic Tincture's implicit is 70–100% increased Elemental Damage
+  with Melee Weapons, and it drops from level 18, so it is the first
+  tincture an elemental attacker can use. Item level barely matters for a
+  first one: attack speed is already 15–19% at item level 1, and elemental
+  penetration is 5–7% at 1 and 8–10% from item level 32.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["91% increased Elemental Damage with Melee Weapons"]
+  prefixes:
+    - { text: "19% reduced Mana Burn rate" }
+  suffixes:
+    - { text: "17% increased Melee Weapon Attack Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "only if the tincture is white" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "a few" }
+  - { item: "[[Glassblower's Bauble]]", amount: "a few", note: "optional" }
+cost: >-
+  A dozen or so [[Orb of Alteration]]s. Cheap enough to do again on a better
+  base the moment you find one.
+odds: >-
+  At item level 45, one suffix roll is attack speed about 1 time in 16 and
+  elemental penetration about 1 in 13, by our arithmetic from the modifier
+  weights. Either of the two: about 1 in 7. If you use an Augmentation
+  whenever the suffix slot is empty, every attempt includes one suffix roll,
+  so seven attempts on average.
+steps:
+  - title: "Choose the white base with the best implicit"
+    do: >-
+      If you have more than one Prismatic Tincture, hold Alt over each and
+      compare the implicit. Keep the highest.
+    why: >-
+      The implicit rolls between 70% and 100%, and no orb in this craft
+      changes it. It is the largest number the item will ever have, so it is
+      worth thirty seconds before you spend anything.
+    state:
+      rarity: normal
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+  - title: "Make it Magic"
+    do: >-
+      Use one [[Orb of Transmutation]], then hold Alt and read both lines.
+    why: >-
+      This first result is typical. The upkeep prefixes and the on-kill
+      suffixes are the heaviest modifiers a tincture has, so they are what
+      turns up when nothing is steering.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "15% increased Cooldown Recovery Rate" }]
+      suffixes: [{ text: "Gain 13 Life per Enemy Killed with Melee Weapons" }]
+  - title: "Alterations until the suffix is damage"
+    do: >-
+      Use [[Orb of Alteration]]s, reading the suffix each time. If a result
+      has no suffix, use an [[Orb of Augmentation]]. Stop on **increased
+      Melee Weapon Attack Speed** or **Melee Weapon Damage Penetrates
+      Elemental Resistances**.
+    why: >-
+      Both push the same way as the implicit: more elemental hits, or
+      elemental hits that count for more. Accepting two suffixes and not one
+      is what makes this a seven-attempt craft.
+    check: >-
+      At this item level attack speed reads 15–19% and penetration 5–7% or
+      8–10%. Any of those passes.
+    fail: >-
+      If you run low, keep a suffix that at least helps you play: flask
+      charges from kills, or life per kill. It is a levelling item.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+  - title: "One Augmentation for the prefix"
+    do: >-
+      If the prefix slot is empty, use an Augmentation and keep what comes.
+    why: >-
+      There are only five prefix families. Four of them help a first
+      tincture: less Mana Burn, a shorter cooldown, or more effect in two
+      forms. The fifth trades effect away for upkeep; it is 1 prefix roll in
+      14 at this item level, and even that one is usable while levelling.
+    check: >-
+      Do not use an Alteration to improve the prefix. It rerolls the suffix
+      as well.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "19% reduced Mana Burn rate" }]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+  - title: "Use it before you polish it"
+    do: >-
+      Play a few zones with the tincture switched on and watch your mana.
+      Then, if you are keeping it, add quality with
+      [[Glassblower's Bauble]]s.
+    why: >-
+      A tincture costs mana to run, and how much you can afford is something
+      only your character can tell you. That answer decides which prefix
+      your next tincture should have. The Bauble's text names tinctures; what
+      quality improves on one is shown on the item.
+    state:
+      rarity: magic
+      implicits: ["91% increased Elemental Damage with Melee Weapons"]
+      prefixes: [{ text: "19% reduced Mana Burn rate" }]
+      suffixes: [{ text: "17% increased Melee Weapon Attack Speed" }]
+variations: >-
+  **Other bases, same steps.** A Rosethorn Tincture (critical strike chance)
+  wants "+% to Melee Weapon Critical Strike Multiplier"; a Blood Sap or
+  Poisonberry Tincture wants "+% to Damage over Time Multiplier with Melee
+  Weapon Attacks". Attack speed suits every one of them.
+
+
+  **A tincture that dropped Magic.** Skip the Transmutation. Alterations
+  work on it as it is.
+mistakes:
+  - "Starting on the first white base you find when you own a better implicit roll."
+  - "Keeping \"Life per Enemy Killed\" because it appeared first. It is one of the two most common suffixes."
+  - "Rolling for a high tier at this level. The tiers you can reach are capped by item level; do the craft again on a better base later."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bases, implicits, tiers, item levels and weights, and the text of the Glassblower's Bauble. The odds are our arithmetic." }

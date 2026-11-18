@@ -1,0 +1,207 @@
+category: wands
+title: "Một prefix roll ra, một Imprint, và ba modifier bench"
+level: 4
+summary: "Roll một prefix spell gem trên wand Magic, bảo vệ nó bằng một Imprint qua Regal Orb, rồi để \"Can have up to 3 Crafted Modifiers\" dựng phần còn lại của wand từ bench."
+goal: >-
+  Một cây wand caster có "+1 to Level of all Lightning Spell Skill Gems" roll
+  ra, Spell Damage và flat lightning damage to spells craft, cùng cast speed
+  bên cạnh. Chỉ hai modifier trên đó đến từ may rủi. Bài học là cách riêng
+  của wand để bảo vệ công sức: **giữ cho item nhỏ.** Một wand Magic có một
+  modifier có thể được một Imprint lưu lại nguyên vẹn, và một wand Rare có
+  hai modifier thì còn bốn ô để bench lấp bằng đúng thứ bạn chọn.
+  Meta-modifier làm được điều đó tốn 2 Divine Orb và một ô suffix, và lần
+  craft này là chuyện tiêu chúng cho khéo.
+base: "Profane Wand"
+itemLevel: 84
+baseWhy: >-
+  Implicit của Profane Wand là 14% increased Cast Speed, cộng vào bất cứ
+  cast speed nào các suffix đang có. Prefix gem roll được ở mọi item level.
+  Item level 84 chỉ quan trọng ở đúng một khoảnh khắc, Regal Orb, thứ có thể
+  thêm tier cao nhất của cast speed (từ 83) hoặc của Spell Critical Strike
+  Chance.
+
+
+  Hãy dùng element của spell bạn chơi. Ví dụ này là Lightning; các prefix
+  Fire và Cold có cùng weight.
+methods: [currency, beast, meta, bench, finishing]
+result:
+  implicits: ["14% increased Cast Speed"]
+  prefixes:
+    - { text: "+1 to Level of all Lightning Spell Skill Gems" }
+    - { text: "61% increased Spell Damage", how: crafted }
+    - { text: "Adds 7 to 120 Lightning Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "26% increased Cast Speed" }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "300–600" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng ba beast Rare cho mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "2", note: "cho craft multi-modifier" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "cho Spell Damage tốt nhất của bench; 4 Chaos Orb cho bậc bên dưới" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho flat damage to spells" }
+cost: >-
+  Alteration số lượng lớn cho prefix, rồi tới beast: một [[Craicic Croaker]]
+  và ba beast Rare khác cho mỗi Regal Orb mà bạn muốn có thể rút lại. Trong
+  3.30 chỉ bắt được beast đỏ, nên hãy đếm Menagerie của bạn trước. Giai đoạn
+  bench có giá cố định: 2 [[Divine Orb]], 4 [[Exalted Orb]] và 4
+  [[Chaos Orb]], với một bản rẻ hơn ở 2 Divine Orb và 8 Chaos Orb.
+odds: >-
+  **Prefix.** "+1 to Level of all Lightning Spell Skill Gems" có weight 250
+  trong một pool prefix 79,166: 1 trên 317 lần roll prefix, theo phép tính
+  của chúng tôi. Một Alteration không phải lúc nào cũng roll ra prefix, nên
+  vài trăm cái là ngân sách thành thật, và một chuỗi xui thì dài hơn. Ba
+  Fossil tới được cùng prefix đó nhanh hơn (xem ví dụ trước) nhưng trên item
+  Rare, nơi không làm Imprint được.
+
+
+  **Regal Orb.** Nó thêm một modifier từ cả pool. Khoảng một nửa những gì nó
+  thêm được là suffix. Một trên 8 lần thêm là cast speed, Spell Critical
+  Strike Chance hoặc Critical Strike Multiplier. Khoảng 1 trên 30 là một
+  prefix đáng giữ (phần lớn là hybrid Spell Damage và Mana). Phần còn lại là
+  một prefix chiếm mất ô mà bench cần, hoặc một suffix lấp chỗ.
+steps:
+  - title: "Alteration tới khi ra prefix gem, một mình"
+    do: >-
+      Dùng một [[Orb of Transmutation]] lên wand trắng, rồi
+      [[Orb of Alteration]] tới khi prefix là **"+1 to Level of all
+      Lightning Spell Skill Gems"** ("Thunderhand's"). Nếu nó đi kèm một
+      suffix bạn không muốn, cứ tiếp tục tới khi nó ra một mình hoặc kèm
+      cast speed, Spell Critical Strike Chance hay Critical Strike
+      Multiplier.
+    why: >-
+      Không gì đảm bảo một prefix gem: không Essence, không craft bench,
+      không tag Harvest. Trên item Magic, việc tìm chỉ tốn Alteration, và
+      kết quả đủ nhỏ để lưu lại. Bất cứ thứ gì nằm trên wand Magic đều được
+      mang theo vào mọi lần thử về sau, nên một suffix lấp chỗ bây giờ là
+      một suffix lấp chỗ mãi mãi.
+    check: >-
+      Đọc element. Cả năm prefix gem trông giống nhau, và bốn trong số đó là
+      cho build của người khác.
+    state:
+      rarity: magic
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+  - title: "Imprint"
+    do: >-
+      Ở [[Menagerie]], dùng **Create an Imprint of a Magic Item** lên
+      wand: một [[Craicic Croaker]] và ba beast Rare khác.
+    why: >-
+      Imprint là một bản sao lưu. Dùng về sau, nó trả wand về đúng trạng
+      thái Magic này. Nó là lớp bảo vệ duy nhất lần craft này cần cho tới
+      giai đoạn bench, và nó chỉ dùng được trên item Magic, đó là lý do wand
+      được giữ ở Magic lâu tới vậy.
+    check: >-
+      Imprint là một item trong inventory của bạn. Khoan dùng nó.
+  - title: "Regal Orb, và đánh giá theo ô"
+    do: >-
+      Dùng một [[Regal Orb]]. **Giữ** kết quả nếu nó thêm cast speed, Spell
+      Critical Strike Chance hoặc Critical Strike Multiplier. **Giữ** nó,
+      kém vui hơn, nếu nó thêm bất kỳ suffix nào khác không phải modifier
+      attack. **Rút lại** nếu nó thêm một prefix, trừ khi prefix đó là
+      hybrid Spell Damage và Mana hoặc Spell Damage từ 70% trở lên.
+    why: >-
+      Hãy đếm những gì giai đoạn bench cần: hai ô prefix cho damage craft và
+      một ô suffix cho meta-modifier. Một Regal Orb thêm prefix chỉ để lại
+      một ô cho damage craft. Một Regal Orb thêm suffix không tốn thứ gì kế
+      hoạch cần, nên kể cả một cái nhạt nhẽo cũng chấp nhận được.
+    fail: >-
+      Dùng [[Imprint]] lên wand để đưa nó về Magic, làm một Imprint mới bằng
+      một Croaker khác, rồi dùng một Regal Orb khác. Mỗi lần thử tốn một
+      Regal Orb và một bộ beast.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+      suffixes: [{ text: "26% increased Cast Speed" }]
+  - title: "Craft multi-modifier"
+    do: >-
+      Ở [[Crafting Bench]], craft **Can have up to 3 Crafted
+      Modifiers**: 2 [[Divine Orb]]. Nó là một suffix.
+    why: >-
+      Bình thường một item chứa một modifier bench. Cái này cho nó chứa ba,
+      tính cả chính nó, nên nó mua được hai cái thật với giá một ô suffix.
+      Điều đó chỉ có lời khi có ít nhất hai ô trống mà nó lấp được bằng thứ
+      tốt, và trên cây wand này thì đúng là thế cờ đó: hai prefix trống và
+      hai prefix caster tốt nhất của bench ở hai group khác nhau.
+    check: >-
+      Từ đây trở đi, không roll lại dưới bất kỳ hình thức nào: không Chaos
+      Orb, không Essence, không Fossil. Cái nào cũng sẽ gỡ các modifier
+      crafted cùng mọi thứ khác. Cái Imprint chưa dùng giờ chỉ còn là nút
+      hoàn tác cho cả cây wand.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+      suffixes:
+        - { text: "26% increased Cast Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Craft hai prefix"
+    do: >-
+      Craft **55–66% increased Spell Damage** (4 [[Exalted Orb]]; hoặc
+      45–54% giá 4 Chaos Orb), rồi **adds 3–10 to 117–123 Lightning Damage
+      to Spells** (4 [[Chaos Orb]]).
+    why: >-
+      Luật về group chọn ra hai cái này. Spell Damage và craft increased
+      Lightning Damage là một group, nên chỉ một trong hai lên được; hai
+      hybrid Spell Damage của bench cũng thuộc group đó. Flat damage to
+      spells là một group riêng. Prefix gem là group thứ ba. Vậy ba prefix
+      là ba group, và không cái nào bị từ chối.
+    check: >-
+      Ba prefix, hai trong số đó là crafted, và một suffix roll ra nằm cạnh
+      meta-modifier. Vẫn còn một ô suffix trống.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes:
+        - { text: "+1 to Level of all Lightning Spell Skill Gems" }
+        - { text: "61% increased Spell Damage", how: crafted }
+        - { text: "Adds 7 to 120 Lightning Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "26% increased Cast Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Suffix cuối cùng: quyết định, đừng trôi dạt"
+    do: >-
+      Suffix trống có thể cứ để trống, hoặc nhận một [[Exalted Orb]]. Hãy
+      quyết định bên nào trước khi nhìn vào tab currency của bạn.
+    why: >-
+      Khi cast speed đã trên wand, một suffix được thêm là Spell Critical
+      Strike Chance hoặc Critical Strike Multiplier khoảng 1 trên 6 lần,
+      theo phép tính của chúng tôi, và là modifier attack 1 trên 3 lần. Ba ô
+      crafted đã dùng hết, nên không thêm được "Cannot roll Attack
+      Modifiers" để cải thiện xác suất đó. Một Exalted Orb trơn ở đây là một
+      ván cược nhỏ trên item đã hoàn thiện; nó không làm wand tệ đi được,
+      chỉ có thể không cải thiện được nó.
+variations: >-
+  **Một suffix craft thay cho flat damage.** Với build không đánh hit, như
+  damage over time, hãy thay craft flat damage bằng +18–20% cho một Damage
+  over Time Multiplier (4 Chaos Orb, một suffix). Khi đó cả hai ô suffix đều
+  là crafted và một prefix để trống. Build damage over time cũng không dùng
+  tới Spell Critical Strike Chance, nên Regal Orb của nó chỉ được đánh giá
+  theo cast speed.
+
+
+  **Với "Cannot roll Attack Modifiers".** Nếu bạn thà đánh cược trên hai ô
+  trống hơn là craft hai modifier chắc chắn, hãy dùng ô bench duy nhất theo
+  cách khác: craft "Cannot roll Attack Modifiers" (1 Divine Orb)
+  **thay cho** multi-modifier, thêm bằng Exalted Orb trong lúc nó loại một
+  phần ba pool, rồi thay nó bằng một craft thật. Đó là cây wand rủi ro hơn.
+  Kể từ 3.30, modifier này không còn lái được Orb of Annulment nữa, nên một
+  lần thêm xấu không gỡ đi an toàn được.
+
+
+  **Memory Strands.** Chúng không giúp gì cho prefix gem, vốn chỉ có một
+  tier. Một base có strand thì có cải thiện thứ Regal Orb thêm vào, và một
+  Regal Orb tiêu nhiều nhất 16 strand theo bảng data-mine, nên với lần craft
+  này đó là một khoản lợi nhỏ nhưng thật, nếu các Alteration trước đó (tới 8
+  mỗi cái) còn để lại strand nào.
+mistakes:
+  - "Dùng Regal Orb trước Imprint. Không làm được Imprint từ một item Rare."
+  - "Augment wand Magic \"để xem thử\". Khi đó một suffix xấu sẽ đi theo qua mọi lần thử."
+  - "Craft multi-modifier lên wand chỉ có một ô trống. Nó tốn 2 Divine Orb và một suffix để thêm đúng một craft."
+  - "Craft increased Lightning Damage làm prefix thứ hai. Nó cùng group với Spell Damage; bench sẽ từ chối, và flat damage to spells mới là cái vừa."
+  - "Bench \"+2 to Level of Socketed Support Gems\" ở bất kỳ giai đoạn nào. Nó chung group với prefix gem."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, group, tier và giá bench, kể cả các meta-modifier. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Thay đổi đối với \"Cannot roll Attack Modifiers\", và việc chỉ bắt được beast đỏ." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các beast nó cần trong 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

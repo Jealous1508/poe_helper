@@ -1,0 +1,127 @@
+category: sceptres
+title: "The bench on a sceptre you found"
+level: 1
+summary: "No rolling at all: take a Rare sceptre off the ground, work out which slot is open, and put the right bench modifier in it."
+goal: >-
+  A better weapon in two minutes, from a Rare sceptre that dropped with a
+  slot free. It is the craft every player does first without calling it
+  one, and it is usually done wrong. The lesson: **a slot is open on one
+  side or the other, and the bench can only use the side that is open**,
+  with a modifier whose group the item does not already hold.
+base: "Crystal Sceptre"
+itemLevel: 44
+baseWhy: >-
+  Nothing is chosen here; this is the sceptre that dropped. A Crystal
+  Sceptre is a lucky one, with 30% increased Elemental Damage where its
+  neighbours have 18–22%. The method is the same for any Rare weapon with
+  fewer than six modifiers. If it has six, the bench has nowhere to work.
+methods: [bench]
+result:
+  implicits: ["30% increased Elemental Damage"]
+  prefixes:
+    - { text: "44% increased Spell Damage" }
+    - { text: "+73 to maximum Mana" }
+    - { text: "Adds 26 to 50 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "14% increased Cast Speed" }
+    - { text: "+29 to Strength" }
+    - { text: "27% increased Mana Regeneration Rate" }
+needs:
+  - { item: "A Rare sceptre with five modifiers or fewer", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Two [[Orb of Alchemy]] for the craft shown, or four Orbs of Transmutation
+  for its lower rank. Nothing can go wrong that the bench cannot undo for
+  one [[Orb of Scouring]].
+odds: >-
+  None. The bench gives exactly the modifier shown, at the price shown,
+  every time. That certainty is the reason every craft on this site keeps a
+  slot for it.
+steps:
+  - title: "Sort the lines into prefixes and suffixes"
+    do: >-
+      Turn on Advanced Mod Descriptions in the options, hold Alt over the
+      sceptre and read the label on each line.
+    why: >-
+      The sceptre in this example has five modifiers. Spell Damage and
+      maximum Mana are prefixes. Cast speed, Strength and Mana Regeneration
+      are suffixes. So the suffix side is full, three of three, and the
+      prefix side has **one slot open**.
+    check: >-
+      Count twice. "It has five modifiers, so one more fits" is true, and
+      useless until you know on which side.
+    state:
+      implicits: ["30% increased Elemental Damage"]
+      prefixes:
+        - { text: "44% increased Spell Damage" }
+        - { text: "+73 to maximum Mana" }
+      suffixes:
+        - { text: "14% increased Cast Speed" }
+        - { text: "+29 to Strength" }
+        - { text: "27% increased Mana Regeneration Rate" }
+  - title: "Look only at bench crafts for the open side"
+    do: >-
+      At the [[Crafting Bench]], ignore every suffix craft. More cast speed
+      is not on offer for this item, however much the build wants it.
+    why: >-
+      A bench modifier is a prefix or a suffix like any other and needs a
+      slot on its own side. The open slot here is a prefix, so the question
+      becomes: which prefix?
+  - title: "Rule out the group you already have"
+    do: >-
+      Skip increased Spell Damage and increased Fire, Cold and Lightning
+      Damage. On this sceptre the bench will not apply them.
+    why: >-
+      They all belong to one group with the Spell Damage the sceptre
+      rolled, and an item holds one modifier per group. On a caster weapon
+      this is the rule that trips people: the bench's Fire Damage looks
+      like a different thing and is not.
+  - title: "Craft from another group"
+    do: >-
+      Craft **adds 23–31 to 46–54 Fire Damage to Spells** for 2
+      [[Orb of Alchemy]] (or Cold or Lightning, to match your spell). The
+      lower rank, 13–18 to 25–30, costs 4 Orbs of Transmutation.
+    why: >-
+      Added damage to spells is its own group. The rolled Spell Damage
+      multiplies it, and so does the implicit, since the damage is
+      elemental.
+    state:
+      implicits: ["30% increased Elemental Damage"]
+      prefixes:
+        - { text: "44% increased Spell Damage" }
+        - { text: "+73 to maximum Mana" }
+        - { text: "Adds 26 to 50 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "14% increased Cast Speed" }
+        - { text: "+29 to Strength" }
+        - { text: "27% increased Mana Regeneration Rate" }
+  - title: "Change it when the build changes"
+    do: >-
+      To replace the craft later, choose "Remove Crafted Mods" at the bench
+      (1 [[Orb of Scouring]]) and craft something else.
+    why: >-
+      Only the bench modifier is removed; the five rolled ones stay. This
+      is also why the bench comes last in every longer craft: it can
+      always be redone, and nothing else can.
+variations: >-
+  **An attack sceptre.** The same five steps. With a prefix open, added Fire
+  or Cold Damage (22–27 to 42–49 for 2 Orbs of Alchemy) or increased
+  Elemental Damage with Attack Skills (24–32% for 4). With a suffix open,
+  attack speed (8–10% for 6 Orbs of Alteration).
+
+
+  **If the open slot had been a suffix.** For a caster: cast speed, 10–13%
+  for 6 Orbs of Alteration, unless the item already has it; then Spell
+  Critical Strike Chance or Critical Strike Multiplier.
+
+
+  **Recipes you have not found.** The bench only lists what you have
+  unlocked from recipe objects in maps. A missing craft is a missing recipe,
+  not a rule.
+mistakes:
+  - "Counting modifiers without sorting them. An open suffix cannot take a prefix craft."
+  - "Assuming a refused craft is a missing recipe when it is the group rule, or the reverse."
+  - "Using a Scouring Orb on the item itself to \"clear the craft\". That wipes everything. Removing a bench modifier is done at the bench."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Modifier groups, tiers, and bench crafts with their costs, including \"Remove Crafted Mods\"." }

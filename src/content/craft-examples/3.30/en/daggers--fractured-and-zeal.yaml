@@ -1,0 +1,176 @@
+category: daggers
+title: "A fractured prefix and Essences of Zeal"
+level: 4
+summary: "A fractured physical prefix survives everything. An Essence guarantees attack speed above Tier 1. Use them together and two of the six lines are certain on every roll."
+goal: >-
+  A crit dagger with a high physical percentage that can never be lost,
+  attack speed better than the natural pool offers, and a critical strike
+  suffix beside it. This is a craft about **what kind of protection to use**.
+  A bench lock is paid on every attempt and Essences are reported to ignore
+  it. A fracture is paid once and nothing ignores it.
+base: "Ambusher"
+itemLevel: 77
+baseWhy: >-
+  The craft starts from a fractured dagger, so the base is whatever that
+  dagger is; an Ambusher is the one to look for. The fractured modifier here
+  is "Tyrannical", Tier 2 increased Physical Damage (155–169%), which needs
+  item level 73. Item level matters little beyond that, because the Essence
+  sets the attack speed whatever the item level allows.
+methods: [fracture, currency, essence, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "161% increased Physical Damage", how: fractured }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Attack Speed", how: essence }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+    - { text: "+303 to Accuracy Rating" }
+needs:
+  - { item: "A dagger with increased Physical Damage fractured", amount: "1", note: "Tier 3 or better; see step 1" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "only if the base is Magic" }
+  - { item: "[[Shrieking Essence of Zeal]]", amount: "10–15", note: "Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  The fractured base is the expense. After that each attempt is one Essence
+  and nothing else, which is the argument for a fracture: the same loop with
+  a bench lock would be 4 [[Divine Orb]]s and a [[Sacred Orb]] per attempt,
+  and by community testing the Essence would reroll the locked side anyway.
+odds: >-
+  The fractured prefix and the attack speed are certain every time. Beyond
+  them, at item level 77 and by our arithmetic from the weights: each
+  further suffix is Critical Strike Chance or Critical Strike Multiplier
+  about 1 time in 4, and one of them at 25% or more about 1 time in 8. Each
+  further prefix is flat Physical Damage or the hybrid with Accuracy about 1
+  time in 6.
+
+
+  A result does not always have a second suffix or leave a prefix open, so
+  count on ten or more Essences for a result that passes step 4.
+steps:
+  - title: "The fractured base, and where one comes from in 3.30"
+    do: >-
+      Find, buy or make a dagger with **increased Physical Damage
+      fractured**, at Tier 3 (135–154%) or better. Three sources. Tier 5
+      items can drop as fractured Magic items: identify Tier 5 daggers. A
+      [[Fracturing Orb]] fractures one random modifier on a Rare with at
+      least four. A [[Fractured Fossil]] does the same during a Fossil
+      reroll.
+    why: >-
+      On a dagger this prefix is the one line you could not afford to roll
+      twice: Tier 3 or better is about 1 prefix roll in 390. Most of the
+      league mechanics that used to drop fractured items no longer do, so
+      treat a good one as the scarce part of the plan.
+    check: >-
+      With a Fracturing Orb, use it on **exactly four** modifiers: the
+      choice is random, one in four at best, and it works once per item.
+    state:
+      rarity: magic
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "161% increased Physical Damage", how: fractured }]
+      suffixes: [{ text: "+20 to Dexterity" }]
+  - title: "Make it Rare"
+    do: >-
+      If the dagger is Magic, use a [[Regal Orb]]. If it is already Rare,
+      skip this.
+    why: >-
+      An Essence "upgrades a normal item to rare or reforges a rare item".
+      A Magic item is neither. What the Regal Orb adds is irrelevant; the
+      first Essence replaces it.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "161% increased Physical Damage", how: fractured }]
+      suffixes:
+        - { text: "+20 to Dexterity" }
+        - { text: "Gain 14 Mana per Enemy Killed" }
+  - title: "Essence of Zeal"
+    do: >-
+      Use a [[Shrieking Essence of Zeal]] on the dagger.
+    why: >-
+      It rerolls every modifier that is not fractured and guarantees attack
+      speed: 26–27% at Shrieking, the same as natural Tier 1, and 28–30% at
+      Deafening, which no natural tier reaches. The fractured prefix is not
+      a modifier the Essence can touch. So each use starts from two
+      finished lines and rolls for the rest.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+        - { text: "+133 to maximum Mana" }
+        - { text: "Adds 77 to 158 Fire Damage" }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+44 to Intelligence" }
+  - title: "Judge the other four slots"
+    do: >-
+      Keep the result when it has **a critical strike suffix of 25% or
+      more** and **at least one open prefix**. Flat Physical Damage or the
+      Accuracy hybrid as a rolled prefix is a bonus.
+    why: >-
+      The result above has neither: no crit, and a full prefix side with
+      two modifiers a physical build cannot use. The open prefix matters
+      because the bench's flat Physical Damage belongs there.
+    fail: >-
+      Another Essence. Nothing is at risk: the fracture holds and the
+      attack speed returns.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+303 to Accuracy Rating" }
+  - title: "Bench what fits beside a fractured percentage"
+    do: >-
+      Craft **adds 13–17 to 26–30 Physical Damage** (4 [[Chaos Orb]]s) in
+      an open prefix. If the Essence already rolled flat Physical Damage and
+      a suffix is open, craft Critical Strike Chance or Multiplier there
+      instead (4 Chaos Orbs).
+    why: >-
+      The fractured modifier occupies the pure physical group permanently.
+      The bench's own percentage, with or without an ailment attached, and
+      every veiled physical prefix are closed to this dagger for good. Flat
+      Physical Damage is the physical craft that remains.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+303 to Accuracy Rating" }
+variations: >-
+  **Essence of Loathing** guarantees Critical Strike Chance, 35–38% at
+  Deafening, and leaves attack speed to a suffix roll that is 1 in 6 or to
+  the bench. Zeal is usually the better pick because its Deafening version
+  is the only way past 27%.
+
+
+  **The third prefix.** The finished dagger has an open prefix. An
+  [[Exalted Orb]] there adds a prefix for certain, since the suffix side is
+  full; about 1 time in 15 it is the Accuracy hybrid, and far more often it
+  is elemental damage or Mana. Decide whether the slot is worth the orb.
+
+
+  **A lock instead of a fracture.** If the percentage prefix is rolled, not
+  fractured, do not use Essences at all: by community testing they ignore
+  "Prefixes Cannot Be Changed". Lock, and reroll the suffixes with a
+  Critical or Speed reforge, which respects the lock.
+mistakes:
+  - "Using an Essence on a Magic fractured dagger. It will not apply; make the item Rare first."
+  - "Planning a veiled or bench physical percentage beside the fractured one. One group, already taken."
+  - "Using a Fracturing Orb on a Rare with five or six modifiers."
+  - "Putting this on a base with [[Memory Strands]]. An Essence can spend up to 80 of them."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on daggers, modifier groups, weights, bench costs, and the item text of Essences and the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Tier 5 items dropping as fractured Magic items; other sources of fractured items removed; the cost of a lock." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Community-tested: Essences ignore the protection modifiers." }

@@ -1,0 +1,145 @@
+category: sceptres
+title: "An elemental attack sceptre from an Essence of Wrath"
+level: 2
+summary: "Three sources of elemental attack damage that stack: the base's implicit, added damage fixed by an Essence, and a multiplier from the bench."
+goal: >-
+  A sceptre for an elemental attack build in its first maps. The Essence
+  guarantees one added-damage prefix, a second element is rolled beside it,
+  and the bench adds the multiplier. The lesson is how an attack sceptre's
+  damage is **layered from different groups**, and how to judge an Essence
+  result on a weapon where a third of the pool belongs to casters.
+base: "Void Sceptre"
+itemLevel: 75
+baseWhy: >-
+  40% increased Elemental Damage on the implicit, the most a sceptre has,
+  and it multiplies everything this craft adds. Item level 75 allows added
+  Cold Damage of 68–92 to 136–157 and attack speed of 23–25%; the top tiers
+  of added damage need 82 and are too light to count on from an Essence
+  roll. A Karui Sceptre is the choice if you prefer 1.5 attacks per second
+  to 14 points of implicit.
+methods: [essence, bench]
+result:
+  implicits: ["40% increased Elemental Damage"]
+  prefixes:
+    - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+    - { text: "Adds 57 to 115 Cold Damage" }
+    - { text: "29% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "+35 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Wrath]]", amount: "10–15", note: "Anger for Fire, Hatred for Cold" }
+  - { item: "[[Orb of Alchemy]]", amount: "4", note: "for the bench" }
+cost: >-
+  Essences, ten or more. Screaming is what red maps free in 3.30; Shrieking
+  and Deafening raise the guaranteed line and change nothing else. The bench
+  craft is 4 [[Orb of Alchemy]].
+odds: >-
+  The Lightning Damage is certain. At item level 75, by our arithmetic from
+  the weights, each further prefix the Essence rolls is added Fire or Cold
+  Damage about 1 time in 6, and each suffix is attack speed about 1 time in
+  9. About a third of the prefix weight is caster modifiers, which is why
+  many results look like the first one below.
+
+
+  Expect ten or more Essences for a second element with attack speed or an
+  open suffix, and stop sooner if a good one appears.
+steps:
+  - title: "Essence on the white sceptre"
+    do: >-
+      Use a [[Screaming Essence of Wrath]] on a white Void Sceptre.
+    why: >-
+      It makes the sceptre Rare with "Adds 10–14 to 197–229 Lightning
+      Damage" guaranteed, the same numbers as the natural Tier 3. Shrieking
+      matches Tier 2 and Deafening (13–19 to 266–310) sits just under Tier
+      1, which itself needs item level 82 and is about 1 prefix roll in
+      1,200. For the top of this prefix the Essence is the realistic
+      source.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "61% increased Spell Damage" }
+        - { text: "+1 to Level of all Cold Spell Skill Gems" }
+      suffixes:
+        - { text: "23% increased Cast Speed" }
+        - { text: "+31 to Intelligence" }
+  - title: "Cross out the caster lines, then judge"
+    do: >-
+      Read each line and ask whether an **attack** uses it. Then check for
+      three things: a second added-damage prefix (Fire or Cold, without "to
+      Spells"); attack speed; and a slot open for the bench.
+    why: >-
+      The result above would be a fine start for a caster and has nothing
+      for you beyond the Essence line: Spell Damage, a spell gem level and
+      cast speed do not touch an attack. A sceptre shows results like this
+      often. Seeing through them quickly is the skill.
+    check: >-
+      Keep the sceptre when it has a second added-damage prefix of Tier 5 or
+      better (for Cold, adds 31–42 to 62–71) **and** either attack speed or
+      an open suffix, with one prefix open if you can get it.
+    fail: >-
+      Another Essence on the same sceptre. The Lightning Damage returns
+      every time.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "Adds 57 to 115 Cold Damage" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+35 to Strength" }
+  - title: "Count the layers before choosing the bench craft"
+    do: >-
+      List what the sceptre has. Added Lightning and Cold Damage: two
+      prefixes in two groups. One increase: the implicit's 40% increased
+      Elemental Damage. One prefix slot open.
+    why: >-
+      Added damage is what gets multiplied; "increased" modifiers do the
+      multiplying, and all of them add together: the implicit, a bench
+      craft, the passive tree. Two added-damage prefixes with an increase
+      beside them is the balanced shape for a new character. One that
+      already has several hundred percent increased damage from its tree
+      gains more from a third element.
+  - title: "Bench the increase"
+    do: >-
+      At the [[Crafting Bench]], craft **24–32% increased Elemental Damage
+      with Attack Skills** for 4 [[Orb of Alchemy]] in the open prefix.
+    why: >-
+      It is its own group, so it fits beside any added damage, and the
+      natural version is under 2% of prefix rolls. If the Essence result had
+      no attack speed and no open prefix, the bench goes to attack speed
+      instead (11–15%, 2 Chaos Orbs): speed multiplies every hit of added
+      damage and has no substitute.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "Adds 57 to 115 Cold Damage" }
+        - { text: "29% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+35 to Strength" }
+variations: >-
+  **A third element instead.** If your build converts or scales one element
+  only, bench added damage of that element where the rolled prefix is not
+  already it: 35–41 to 63–73 Fire or Cold for 4 Chaos Orbs.
+
+
+  **Essence of Zeal** fixes attack speed, 23–25% at Screaming, and leaves
+  both damage prefixes to luck. On a sceptre, with casters' modifiers in the
+  way, fixing a prefix is the better use.
+
+
+  **Keeping the caster half out.** The harder sceptre examples do this with
+  a Fossil or a meta-modifier. An Essence has no such option; it pays for
+  that with volume.
+mistakes:
+  - "Keeping a result for its Spell Damage or cast speed. They are another build's modifiers."
+  - "Reading \"Adds ... Lightning Damage to Spells\" as a second element. For an attack it is nothing."
+  - "Crafting at the bench between Essences."
+  - "Using Essences on a base with [[Memory Strands]]: up to 80 strands each by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on sceptres, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

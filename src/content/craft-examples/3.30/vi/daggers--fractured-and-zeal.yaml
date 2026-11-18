@@ -1,0 +1,179 @@
+category: daggers
+title: "Một prefix fractured và các Essence of Zeal"
+level: 4
+summary: "Một prefix physical fractured sống sót qua mọi thứ. Một Essence đảm bảo attack speed cao hơn Tier 1. Dùng chung hai thứ và hai trong sáu dòng là chắc chắn ở mọi lần roll."
+goal: >-
+  Một cây dagger crit có cái phần trăm physical cao không bao giờ mất được,
+  attack speed tốt hơn mức pool tự nhiên cho, và một suffix critical strike
+  bên cạnh. Đây là lần craft về chuyện **dùng kiểu bảo vệ nào**. Khóa của
+  bench phải trả tiền ở mỗi lần thử, và Essence được ghi nhận là phớt lờ nó.
+  Fracture thì trả một lần và không gì phớt lờ được nó.
+base: "Ambusher"
+itemLevel: 77
+baseWhy: >-
+  Lần craft này bắt đầu từ một cây dagger fractured, nên base là bất cứ cây
+  dagger nào bạn có được; Ambusher là cây nên tìm. Fractured modifier ở đây
+  là "Tyrannical", Tier 2 của increased Physical Damage (155–169%), cần item
+  level 73. Ngoài mốc đó item level ít quan trọng, vì Essence định attack
+  speed bất kể item level cho phép mức nào.
+methods: [fracture, currency, essence, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "161% increased Physical Damage", how: fractured }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Attack Speed", how: essence }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+    - { text: "+303 to Accuracy Rating" }
+needs:
+  - { item: "Một cây dagger có increased Physical Damage đã fractured", amount: "1", note: "Tier 3 trở lên; xem bước 1" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "chỉ khi base là Magic" }
+  - { item: "[[Shrieking Essence of Zeal]]", amount: "10–15", note: "Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Base fractured là khoản tốn kém. Sau đó mỗi lần thử là một Essence và không
+  gì khác, và đó chính là lý lẽ ủng hộ fracture: cùng vòng lặp đó với khóa
+  của bench sẽ là 4 [[Divine Orb]] và một [[Sacred Orb]] cho mỗi lần thử,
+  mà theo thử nghiệm của cộng đồng thì đằng nào Essence cũng roll lại phía đã
+  khóa.
+odds: >-
+  Prefix fractured và attack speed lần nào cũng chắc chắn. Ngoài hai thứ đó,
+  ở item level 77 và theo phép tính của chúng tôi từ weight: mỗi suffix thêm
+  là Critical Strike Chance hoặc Critical Strike Multiplier khoảng 1 trên 4
+  lần, và là một trong hai cái đó ở mức 25% trở lên khoảng 1 trên 8 lần. Mỗi
+  prefix thêm là flat Physical Damage hoặc hybrid kèm Accuracy khoảng 1 trên
+  6 lần.
+
+
+  Không phải kết quả nào cũng có suffix thứ hai hoặc chừa lại một prefix
+  trống, nên hãy tính mười Essence trở lên để có một kết quả qua được bước 4.
+steps:
+  - title: "Base fractured, và nó đến từ đâu trong 3.30"
+    do: >-
+      Tìm, mua hoặc tự làm một cây dagger có **increased Physical Damage
+      đã fractured**, từ Tier 3 (135–154%) trở lên. Có ba nguồn. Item Tier 5
+      có thể rơi ra dưới dạng fractured Magic item: hãy identify các dagger
+      Tier 5. Một [[Fracturing Orb]] fracture một modifier ngẫu nhiên trên
+      item Rare có ít nhất bốn modifier. Một [[Fractured Fossil]] làm điều
+      tương tự trong một lần roll lại bằng Fossil.
+    why: >-
+      Trên dagger, prefix này là cái dòng bạn không đủ sức roll tới hai lần:
+      Tier 3 trở lên là khoảng 1 trên 390 lần roll prefix. Phần lớn các
+      league mechanic từng rơi fractured item giờ không còn rơi nữa, nên hãy
+      coi một cái tốt là phần khan hiếm của kế hoạch.
+    check: >-
+      Với Fracturing Orb, hãy dùng nó trên **đúng bốn** modifier: lựa chọn
+      là ngẫu nhiên, tốt nhất là một trên bốn, và nó chỉ dùng được một lần
+      cho mỗi item.
+    state:
+      rarity: magic
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "161% increased Physical Damage", how: fractured }]
+      suffixes: [{ text: "+20 to Dexterity" }]
+  - title: "Đưa nó lên Rare"
+    do: >-
+      Nếu cây dagger là Magic, dùng một [[Regal Orb]]. Nếu nó đã là Rare thì
+      bỏ qua bước này.
+    why: >-
+      Một Essence "upgrades a normal item to rare or reforges a rare item".
+      Item Magic không thuộc trường hợp nào trong hai. Regal Orb thêm cái gì
+      cũng không quan trọng; Essence đầu tiên sẽ thay nó.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "161% increased Physical Damage", how: fractured }]
+      suffixes:
+        - { text: "+20 to Dexterity" }
+        - { text: "Gain 14 Mana per Enemy Killed" }
+  - title: "Essence of Zeal"
+    do: >-
+      Dùng một [[Shrieking Essence of Zeal]] lên cây dagger.
+    why: >-
+      Nó roll lại mọi modifier không fractured và đảm bảo attack speed:
+      26–27% ở bậc Shrieking, bằng Tier 1 tự nhiên, và 28–30% ở bậc
+      Deafening, mức mà không tier tự nhiên nào với tới. Prefix fractured
+      không phải là modifier Essence đụng tới được. Vậy nên mỗi lần dùng đều
+      bắt đầu từ hai dòng đã xong và roll cho phần còn lại.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+        - { text: "+133 to maximum Mana" }
+        - { text: "Adds 77 to 158 Fire Damage" }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+44 to Intelligence" }
+  - title: "Đánh giá bốn ô còn lại"
+    do: >-
+      Giữ kết quả khi nó có **một suffix critical strike từ 25% trở
+      lên** và **ít nhất một prefix trống**. Flat Physical Damage hoặc
+      hybrid kèm Accuracy dưới dạng prefix roll ra là phần thưởng thêm.
+    why: >-
+      Kết quả ở trên không có cái nào: không crit, và phía prefix đã đầy với
+      hai modifier mà một build physical không dùng được. Prefix trống quan
+      trọng vì flat Physical Damage của bench thuộc về chỗ đó.
+    fail: >-
+      Thêm một Essence nữa. Không có gì bị đe dọa: fracture vẫn giữ và
+      attack speed quay lại.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+303 to Accuracy Rating" }
+  - title: "Bench thứ nằm vừa cạnh một cái phần trăm fractured"
+    do: >-
+      Craft **adds 13–17 to 26–30 Physical Damage** (4 [[Chaos Orb]]) vào
+      một prefix trống. Nếu Essence đã roll ra flat Physical Damage và còn
+      một suffix trống, thay vào đó hãy craft Critical Strike Chance hoặc
+      Multiplier vào đó (4 Chaos Orb).
+    why: >-
+      Fractured modifier chiếm group physical thuần vĩnh viễn. Cái phần trăm
+      của chính bench, dù có kèm ailment hay không, và mọi prefix physical
+      veiled đều đóng cửa vĩnh viễn với cây dagger này. Flat Physical Damage
+      là craft physical còn lại.
+    state:
+      note: "Fractured"
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "161% increased Physical Damage", how: fractured }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+        - { text: "+303 to Accuracy Rating" }
+variations: >-
+  **Essence of Loathing** đảm bảo Critical Strike Chance, 35–38% ở bậc
+  Deafening, và phó mặc attack speed cho một lần roll suffix có tỉ lệ 1 trên
+  6 hoặc cho bench. Zeal thường là lựa chọn tốt hơn vì bản Deafening của nó
+  là cách duy nhất vượt qua 27%.
+
+
+  **Prefix thứ ba.** Cây dagger hoàn chỉnh còn một prefix trống. Một
+  [[Exalted Orb]] vào đó chắc chắn thêm một prefix, vì phía suffix đã đầy;
+  khoảng 1 trên 15 lần nó là hybrid kèm Accuracy, còn nhiều lần hơn hẳn nó
+  là elemental damage hoặc Mana. Hãy tự quyết xem cái ô đó có đáng một orb
+  không.
+
+
+  **Khóa thay cho fracture.** Nếu prefix phần trăm là roll ra chứ không phải
+  fractured, đừng dùng Essence chút nào: theo thử nghiệm của cộng đồng, chúng
+  phớt lờ "Prefixes Cannot Be Changed". Hãy khóa, rồi roll lại suffix bằng
+  một reforge Critical hoặc Speed, thứ tôn trọng khóa.
+mistakes:
+  - "Dùng Essence lên một cây dagger Magic fractured. Nó sẽ không dùng được; hãy đưa item lên Rare trước."
+  - "Tính tới một cái phần trăm physical veiled hoặc bench bên cạnh cái fractured. Một group, và đã có chủ."
+  - "Dùng Fracturing Orb trên một item Rare có năm hoặc sáu modifier."
+  - "Làm việc này trên một base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên dagger, group của modifier, weight, giá bench, và dòng mô tả item của Essence và Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tier 5 rơi ra dưới dạng fractured Magic item; các nguồn fractured item khác bị gỡ; giá của một lần khóa." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Cộng đồng thử nghiệm: Essence phớt lờ các modifier bảo vệ." }

@@ -1,0 +1,151 @@
+category: bows
+title: "Một cây bow leveling với hai element"
+level: 1
+summary: "Roll một prefix flat elemental bằng Alteration, đưa bow lên Rare, rồi mua element thứ hai từ bench. Pool lo phần lớn công việc."
+goal: >-
+  Một cây bow cho đoạn giữa campaign có hai loại added elemental damage, làm
+  từ currency bạn đang mang sẵn. Nó dạy câu hỏi đầu tiên của loại item này,
+  **mình đang làm cây bow nào**, bằng cách đưa ra đáp án dễ nhất. Gần hai
+  trên ba lần roll prefix trên bow là flat elemental damage, nên trong lúc
+  leveling, bow elemental là cây mà game trao cho bạn. Cứ nhận lấy.
+base: "Royal Bow"
+itemLevel: 34
+baseWhy: >-
+  Royal Bow dùng được từ level 28, đánh 1.45 lần mỗi giây, và implicit của
+  nó là 20–24% increased Elemental Damage with Attack Skills, đúng là thứ mà
+  lần craft này cộng thêm vào. Item level 34 mở tier thứ sáu của cả ba
+  prefix flat elemental. Giữ Alt rồi rê chuột lên cây bow trắng để kiểm.
+
+
+  Bow trắng nào cỡ level của bạn cũng được. Ở đây một cây nhanh tốt hơn một
+  cây đánh đau: added elemental damage được gây ra một lần mỗi attack, nên
+  càng nhiều attack thì càng nhiều damage đó.
+methods: [currency, bench]
+result:
+  implicits: ["22% increased Elemental Damage with Attack Skills"]
+  prefixes:
+    - { text: "Adds 52 to 98 Fire Damage" }
+    - { text: "Adds 41 to 79 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "12% increased Attack Speed" }
+    - { text: "+24 to Dexterity" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "5–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Một nắm [[Orb of Alteration]], một [[Regal Orb]] và 2
+  [[Orb of Alchemy]] cho bench. Đây là lần craft weapon hữu ích mà rẻ nhất
+  game, vì modifier bạn đang roll tìm là cái hay ra nhất.
+odds: >-
+  Ở item level 34, một trên 4 lần roll prefix là flat Fire, Cold hoặc
+  Lightning Damage từ tier thứ bảy trở lên, theo phép tính của chúng tôi từ
+  weight của modifier, và 64% là một prefix elemental ở tier nào đó. Một
+  Alteration không phải lúc nào cũng roll ra prefix, nên hãy dự trù năm tới
+  mười lăm cái. Suffix và Regal Orb là may rủi, và lần craft không phụ thuộc
+  vào chúng.
+steps:
+  - title: "Gọi tên cây bow, rồi đưa nó lên Magic"
+    do: >-
+      Quyết định rằng đây là một cây bow **elemental**. Rồi dùng một
+      [[Orb of Transmutation]] lên cây Royal Bow trắng.
+    why: >-
+      Bow có thể được dựng cho physical damage, cho elemental damage hoặc
+      cho gem level, và ba kiểu đó muốn những prefix khác nhau. Nói rõ kiểu
+      nào trước orb đầu tiên sẽ cho bạn biết cần giữ gì và roll lại gì. Với
+      một implicit elemental và một pool hai phần ba là elemental, cây này
+      thì dễ.
+    state: { rarity: normal, implicits: ["22% increased Elemental Damage with Attack Skills"] }
+  - title: "Alteration cho tới khi prefix là một element"
+    do: >-
+      Dùng từng [[Orb of Alteration]] một và giữ Alt để đọc prefix. Dừng ở
+      **"Adds … Fire Damage", "Cold Damage" hoặc "Lightning
+      Damage"** thuộc một trong hai tier cao nhất mà item level này cho
+      phép. Với Fire, đó là "Flaming" (adds 45–61 to 91–106) và "Burning"
+      (adds 32–44 to 65–76); các tier của Cold và Lightning có cỡ tương
+      đương.
+    why: >-
+      Cái nào trong ba element cũng được, vì vậy bước này nhanh. Một prefix
+      physical ở đây đáng giá ít hơn nhiều: physical damage của chính cây
+      bow này thì nhỏ, và implicit không giúp gì cho nó.
+    check: >-
+      Dòng đó phải ghi "Adds X to Y Fire Damage", "Cold Damage" hoặc
+      "Lightning Damage" và không có gì theo sau. "to Spells" không xuất
+      hiện trên prefix tự nhiên của bow, nhưng "Physical Damage" thì có, và
+      đó không phải cái cần tìm.
+    fail: >-
+      Thiếu Alteration: nhận bất kỳ prefix elemental nào. Kể cả cái thấp
+      cũng hơn một cây bow trắng.
+    state:
+      rarity: magic
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu bow chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó thêm vào ô trống và để yên prefix. Ở item level này, một trên sáu
+      lần roll suffix là attack speed, thứ tốt nhất có thể rơi vào đó.
+    state:
+      rarity: magic
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+      suffixes: [{ text: "12% increased Attack Speed" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Bow thành Rare, giữ cả hai modifier và được thêm cái thứ ba.
+    check: >-
+      Đọc xem nó rơi vào phía nào. Nếu nó thêm một element thứ hai thì tốt:
+      bench sẽ thêm cái thứ ba. Ở đây nó thêm Dexterity, một suffix, và còn
+      hai ô prefix trống.
+    state:
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+      suffixes:
+        - { text: "12% increased Attack Speed" }
+        - { text: "+24 to Dexterity" }
+  - title: "Bench một element khác"
+    do: >-
+      Ở [[Crafting Bench]], craft flat damage của một element mà bow
+      **chưa có**. Bow đã roll ra Fire, nên craft Cold: adds 38–46 to
+      73–85 giá 2 [[Orb of Alchemy]], hoặc adds 19–21 to 32–41 giá 4 Orb of
+      Transmutation.
+    why: >-
+      Fire, Cold và Lightning Damage là ba group riêng, nên chúng nằm cạnh
+      nhau được. Fire Damage của bench cùng group với Fire Damage roll ra và
+      sẽ bị từ chối. Mỗi item một modifier bench: hãy dành nó cho element
+      thứ hai, vốn là nhiều damage hơn hẳn so với 8–10% attack speed của
+      bench.
+    fail: >-
+      Nếu công thức đó chưa mở, hãy craft bất kỳ element khác nào mà bench
+      có.
+    state:
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 52 to 98 Fire Damage" }
+        - { text: "Adds 41 to 79 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "12% increased Attack Speed" }
+        - { text: "+24 to Dexterity" }
+variations: >-
+  **Alteration cho ra một prefix physical bạn ưng.** Vậy thì bạn đang làm
+  một cây bow physical, và base đúng là cây có cú đánh lớn, không phải cây
+  này. Hãy theo ví dụ leveling của mace hai tay: các modifier và các craft
+  bench trên bow đều giống vậy.
+
+
+  **Bắt đầu từ một Essence.** Một Essence of Anger, Hatred hoặc Wrath bậc
+  thấp dùng lên bow trắng đưa nó thành Rare với Fire, Cold hoặc Lightning
+  Damage được đảm bảo, và bench thêm element thứ hai. Trong 3.30, các
+  Essence yếu chỉ rơi ở campaign và map trắng, nên đây là lúc dùng chúng.
+mistakes:
+  - "Bench đúng element mà bow đã roll ra. Chúng là một group; bench sẽ từ chối."
+  - "Giữ một cây bow chậm vì nó hiện cú đánh lớn hơn. Added elemental damage không quan tâm tới damage của chính cây bow, chỉ quan tâm nó đánh thường xuyên tới đâu."
+  - "Tiêu whetstone trước. Quality chỉ nâng physical damage, vốn là phần nhỏ của cây bow này."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

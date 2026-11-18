@@ -1,0 +1,549 @@
+name: "Amulets"
+short: "One pool, nineteen bases and the longest modifier list of any slot. The rarest prize is a prefix, +1 to gem levels; the crowded side is the suffixes."
+icon: "Onyx Amulet"
+intro: >-
+  An amulet can roll more kinds of modifier than any other piece of equipment:
+  19 prefix families and 25 suffix families in the 3.30 data. It is the one
+  slot that can raise the level of every skill gem you use, and one of the few
+  that rolls Critical Strike Multiplier and Damage over Time Multiplier.
+
+
+  That width is the problem you are crafting against. With 25 families
+  sharing three suffix slots, nothing you want turns up often, so an amulet is
+  made by choosing **one** modifier that matters most and getting it with a
+  tool that targets it. Life, attributes and resistances fill the rest, and
+  those the bench or plain rolling will supply.
+
+
+  Nothing on an amulet is local. There are no sockets, no quality from
+  Whetstones or Scraps, and no base numbers for a modifier to multiply.
+basics:
+  itemLevel:
+    text: >-
+      Most of an amulet opens early. Tier 1 maximum Life needs only item level
+      54, and the best Critical Strike Chance and Multiplier need 72 and 74.
+      The gate that matters is **75**: below it the gem level prefixes cannot
+      roll at all. A level 75 amulet is enough for almost every craft on this
+      page.
+
+
+      Go higher only for a named tier: 82 for the top attributes and Damage
+      over Time Multiplier, 84 for the top single resistances, 86 for the top
+      "increased Elemental Damage with Attack Skills".
+
+
+      A higher item level is not free. Every tier it unlocks is another
+      ticket in the lottery, so a rare modifier becomes slightly rarer: one
+      prefix roll in 391 is a given "+1 to Level of all … Skill Gems" at item
+      level 75, and one in 443 at 86, by our arithmetic from the weights.
+    breakpoints:
+      - ilvl: 36
+        unlocks: "**Levelling.** Tier 3 maximum Life (85–99). Resistances of 24–29% open between item level 36 and 38."
+      - ilvl: 54
+        unlocks: "Tier 1 maximum Life, \"Athlete's\" (115–129). Life never needs more item level than this on an amulet."
+      - ilvl: 64
+        unlocks: "Tier 1 increased Fire, Cold or Lightning Damage (23–26%)."
+      - ilvl: 74
+        unlocks: "Tier 1 Critical Strike Multiplier (35–38%). Tier 1 Critical Strike Chance (35–38%) opens at 72."
+      - ilvl: 75
+        unlocks: "**+1 to Level of all Fire, Cold, Lightning, Physical or Chaos Skill Gems, and +1 to Level of all Skill Gems.** The item level most amulets should be crafted at."
+      - ilvl: 82
+        unlocks: "Tier 1 Strength, Dexterity or Intelligence (51–55) and Tier 1 Damage over Time Multiplier (24–26%)."
+      - ilvl: 84
+        unlocks: "Tier 1 Fire, Cold and Lightning Resistance (46–48%). At 85: Tier 1 all Attributes (33–35) and all Elemental Resistances (17–18%)."
+      - ilvl: 86
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (43–50%). Nothing else on an amulet needs 86."
+  bases:
+    text: >-
+      There are 19 amulet bases and one pool: every amulet rolls the same
+      modifiers with the same weights. An amulet has no damage, defence or
+      speed of its own, so the base is the implicit and nothing more. You are
+      choosing which line sits above the six slots, where no currency will
+      remove it.
+
+
+      Three bases break that rule by changing the item itself: the two Heist
+      amulets with fewer slots, and the one that carries every influence.
+    types:
+      - title: "Ordinary amulets"
+        pools: [all]
+        text: >-
+          Attributes: Amber, Jade and Lapis (+20–30 to Strength, Dexterity or
+          Intelligence), Agate, Citrine and Turquoise (+16–24 to two of them)
+          and Onyx (+10–16 to all three). Recovery: Coral (2–4 Life per
+          second) and Paua (20–30% Mana Regeneration). Gold has 12–20% Item
+          Rarity.
+
+
+          The data also holds a Pearlescent Amulet (+8–10% to all Elemental
+          Resistances) and an Unset Amulet with one socket. It does not say
+          where they drop, and neither do the patch notes.
+      - title: "Atlas amulets"
+        text: >-
+          Marble (regenerate 1.4–2% of Life per second), Seaglass (20–30%
+          faster start of Energy Shield Recharge) and Blue Pearl (48–56% Mana
+          Regeneration). They drop from level 74 to 77. In 3.30 special bases
+          only drop when an item rolls a high enough Item Tier; the patch
+          notes give the number for a few bases and these are not among them.
+      - title: "Heist amulets: Simplex and Focused"
+        text: >-
+          Both read "100% increased Explicit Modifier magnitudes" and pay for
+          it in slots. A **Simplex Amulet** allows one prefix and two
+          suffixes. A **Focused Amulet** allows two prefixes and one suffix.
+          Three modifiers, each counted double by the wording of the
+          implicit.
+
+
+          Until 3.30 these came only from Heist. They are now in the normal
+          drop pool, with an Item Tier requirement the patch notes do not
+          state.
+      - title: "Astrolabe Amulet"
+        text: >-
+          "Has Elder, Shaper and all Conqueror Influences." All six influenced
+          modifier lists are open on one item, with no [[Awakener's Orb]]
+          needed. It is influenced, so it cannot be fractured. Also in the
+          normal drop pool since 3.30.
+      - title: "Talisman"
+        text: >-
+          The Greatwolf Talisman is in the amulet class and rolls from the
+          same pool. The data shows no implicit for it. One beast recipe
+          exists only for talismans: it fractures a random modifier on a Rare
+          talisman with at least four. Our sources do not say where the base
+          comes from in 3.30.
+    picks:
+      - base: "Onyx Amulet"
+        for: "Any build short of attributes"
+        why: >-
+          +10–16 to all three attributes. It is the default because gem and
+          gear requirements are the gap an amulet most often has to close,
+          and closing it in the implicit keeps a suffix free.
+      - base: "Jade Amulet"
+        for: "One missing attribute"
+        why: >-
+          +20–30 Dexterity, nearly double what an Onyx gives to any single
+          attribute. Amber does the same for Strength and Lapis for
+          Intelligence. Drops from level 7, so it is also the first amulet
+          worth crafting.
+      - base: "Marble Amulet"
+        for: "Life builds that need nothing else from the implicit"
+        why: >-
+          1.4–2% of Life regenerated per second scales with your Life pool,
+          where every other recovery implicit is a flat number.
+      - base: "Simplex Amulet"
+        for: "One prefix that is worth two"
+        why: >-
+          One prefix and two suffixes at double magnitude. The obvious use is
+          a gem level prefix, which by the wording of the implicit counts
+          twice. You give up two prefix slots, which on an amulet usually
+          means giving up Life.
+      - base: "Focused Amulet"
+        for: "Two prefixes and one suffix that carry the build"
+        why: >-
+          The mirror of the Simplex: two prefixes and one suffix, doubled.
+          Better than the Simplex when you want Life as well as a gem level,
+          worse when your damage is in the suffixes.
+      - base: "Astrolabe Amulet"
+        for: "A modifier that exists only with an influence"
+        why: >-
+          Every influence at once on a base you can find on the ground. The
+          cost is a larger lottery: all six influenced lists are added to the
+          ordinary one, so each wanted modifier is a smaller share.
+    impact: >-
+      **The implicit, and on an amulet that is the whole base.** A
+      [[Blessed Orb]] rerolls its number; corruption can replace it; nothing
+      else touches it. Judge an attribute implicit by what it frees: 30
+      Dexterity above the line is a Dexterity suffix you no longer need below
+      it.
+
+
+      **How many slots there are.** Only on the Simplex and Focused Amulets,
+      where three modifiers must do the work of six.
+
+
+      **Which influenced lists are open.** Only on the Astrolabe.
+
+
+      What the base does **not** decide is the pool or any number. There is
+      nothing local here, so the same modifier is worth the same on every
+      amulet.
+tools:
+  - method: currency
+    note: >-
+      At item level 84 a prefix roll is maximum Life 1 time in 10, and Life
+      of 85 or more about 1 in 29, by our arithmetic from the weights. Mana,
+      Energy Shield, Armour, Evasion and Item Rarity together are 56% of
+      prefix rolls. A given typed gem level is 1 in 437; "+1 to Level of all
+      Skill Gems" is 1 in 1,746.
+
+
+      On the suffix side no family reaches 8%. Attributes are 27% of rolls
+      between them, resistances 25%, and each damage suffix is small:
+      Critical Strike Multiplier 4.8%, Cast Speed 3.2%, Damage over Time
+      Multiplier 1.2%.
+
+
+      So [[Orb of Alteration]]s find a Life prefix quickly and one chosen
+      suffix slowly. They are the long road to a gem level.
+  - method: bench
+    note: >-
+      The amulet bench is wide and cheap. **Prefixes:** maximum Life 41–55
+      for 2 Orbs of Alchemy; Energy Shield +26–30 or 13–15% for 2 Chaos
+      Orbs; "Non-Channelling Skills have −7 to −6 to Total Mana Cost" for 4
+      Chaos Orbs; 31–36% increased Damage while Leeching for 3 Chaos Orbs
+      (37–43% for 4 Exalted Orbs).
+
+
+      **Suffixes:** one resistance 21–28% or a pair 13–16% for 1 Orb of
+      Alchemy; all Elemental Resistances 9–12% for 1 Chaos Orb; an attribute
+      26–30 for 2 Chaos Orbs; Critical Strike Chance 22–27% for 1 Chaos Orb;
+      Attack and Cast Speed 5–6% for 3 Chaos Orbs; +1 to Minimum Endurance,
+      Frenzy or Power Charges for 4 Exalted Orbs.
+
+
+      Two things are **not** sold here: Critical Strike Multiplier and Damage
+      over Time Multiplier. Plan to roll those, or to take the multiplier
+      from an Essence.
+
+
+      Groups to know: a resistance pair is its own group, so it sits beside a
+      single resistance. The attribute pairs are not: "Strength and
+      Dexterity" shares a group with Strength, so the bench refuses it on an
+      amulet that rolled Strength.
+  - method: finishing
+    note: >-
+      Quality on an amulet comes from **Catalysts**. Each one strengthens one
+      kind of modifier by up to 20% and replaces any other Catalyst on the
+      item: [[Fertile Catalyst]] for Life and Mana,
+      [[Prismatic Catalyst]] for resistances, [[Intrinsic Catalyst]] for
+      attributes, [[Unstable Catalyst]] for critical modifiers,
+      [[Turbulent Catalyst]] for elemental damage. In 3.30 they come only
+      from Ultimatum. Our sources do not say what later crafting does to
+      that quality, so add it when the modifiers are final.
+
+
+      An amulet can also be anointed with Oils. That adds an enchantment,
+      not one of the six modifiers, so it changes nothing on this page.
+  - method: essence
+    note: >-
+      On an amulet most Essences fill a **suffix**, and several beat the
+      natural top tier. **Scorn:** Critical Strike Multiplier, 35–41% at
+      Deafening against 35–38% for Tier 1. **Loathing:** Critical Strike
+      Chance, 39–42%. **Anger, Hatred, Wrath:** 31–34% increased Fire, Cold
+      or Lightning Damage, where the natural suffix stops at 26%.
+      **Rage, Sorrow, Spite:** 51–58 of one attribute. **Zeal:** Cast Speed,
+      17–20%.
+
+
+      **Envy** gives 31–34% increased Chaos Damage, a suffix the natural pool
+      does not have. **Fear** gives minion Movement Speed, also missing from
+      it.
+
+
+      Two warnings from the data. **No Essence gives maximum Life on an
+      amulet:** Greed gives Life regeneration here. And an Essence is not
+      always the best version: Woe gives 18–19% Energy Shield where Tier 1
+      is 20–22%.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) earns its beasts on an amulet more
+      than anywhere, because the hardest Magic roll in the category, a gem
+      level prefix, is the one a bad [[Regal Orb]] would waste.
+
+
+      **Add a prefix, remove a random suffix** ([[Farric Wolf Alpha]]) and
+      **add a suffix, remove a random prefix** ([[Farric Lynx Alpha]]) are
+      safe when the side that loses a modifier holds nothing you want.
+      Never use the Lynx on an amulet whose only prefix is a gem level.
+
+
+      The recipes that put an Aspect skill on an item exist in 3.30; our
+      sources list them without saying which slot the modifier takes.
+  - method: harvest
+    note: >-
+      Count the tagged modifiers before you pay. **Chaos** (100 Vivid) is
+      the famous one: on an amulet only two natural modifiers carry the
+      chaos tag, Chaos Resistance and "+1 to Level of all Chaos Skill Gems".
+      If the guaranteed modifier is drawn by weight, which is how reforges
+      are understood to work, that is the gem level about 1 time in 8.5 at
+      item level 81 or more.
+
+
+      The same reforge for Fire, Cold or Lightning is about 1 in 75, and
+      for Physical 1 in 65, because those tags are shared with added damage,
+      resistances and leech.
+
+
+      **Critical** (150 Primal) always gives Critical Strike Chance or
+      Multiplier: they are the only two. **Speed** (150 Vivid) always gives
+      Cast Speed. **Life** (75 Wild) is mostly suffixes, unless the suffix
+      side is locked: maximum Life is the only prefix with the life tag.
+  - method: fossil
+    note: >-
+      A [[Faceted Fossil]] multiplies Gem modifiers by ten. Alone it makes
+      some gem level about 1 prefix roll in 10. Paired with the Fossil of
+      an element the two multiply: Faceted with [[Scorched Fossil]] makes
+      "+1 to Level of all Fire Skill Gems" roughly 1 prefix roll in 8, by
+      our arithmetic, against 1 in 437 without Fossils.
+
+
+      A [[Deft Fossil]] removes every attribute suffix and makes Critical
+      Strike Chance and Multiplier more than half of all suffix rolls.
+
+
+      Fossil-only modifiers on an amulet include 20–30% increased Fire,
+      Cold, Lightning, Chaos or Global Physical Damage as a **prefix**, and
+      "Damage Penetrates 3–5% Elemental Resistances".
+  - method: veiled
+    note: >-
+      The unveiled modifiers worth knowing: 7–8% Attack and Cast Speed; +1
+      to Minimum Endurance, Frenzy or Power Charges with a 3–4% chance to
+      gain that charge on kill; +31–35 to two attributes; +16–20% to one
+      elemental resistance and Chaos Resistance. The prefix with +55–60
+      Life and Mana regeneration is in the Life group, so it replaces a
+      Life roll and does not stack with one.
+  - method: fracture
+    note: >-
+      The modifier to fracture on an amulet is "+1 to Level of all Skill
+      Gems": weight 50, no Fossil or reforge that singles it out, and in a
+      different group from the typed gem levels, so a second +1 can be
+      added beside it. An Astrolabe Amulet cannot be fractured.
+  - method: influence
+    note: >-
+      What crafters take from each list. **Hunter:** +16–20% to Chaos,
+      Cold, Fire or Physical Damage over Time Multiplier, which is a
+      different group from the natural Damage over Time Multiplier and sits
+      beside it. **Shaper** and **Redeemer:** increased Mana Reservation
+      Efficiency of Skills. **Crusader, Warlord, Redeemer:** 8–10%
+      penetration of one element as a prefix, and 9–12% of one attribute.
+      **Elder:** 7–13% Attack Speed.
+  - method: meta
+    note: >-
+      A full lock on an amulet costs 4 Divine Orbs and 8 Exalted Orbs in
+      3.30. Its best use here is not defence but aim: with three suffixes
+      locked, a Harvest reforge has to place its guaranteed modifier among
+      the prefixes, where maximum Life is the only life modifier and the
+      Chaos gem level the only chaos one.
+  - method: corruption
+    note: >-
+      The corruption implicits that pay: "You can apply an additional
+      Curse", +1% to all maximum Resistances, +1 to Minimum Endurance,
+      Frenzy or Power Charges, and 20–30% increased effect of one aura. The
+      corruption replaces the base's own implicit.
+  - method: strands
+    note: "See the Memory Strands section below: on an amulet they help the modifiers with many tiers and do nothing for the ones with a single tier."
+memoryStrands: >-
+  [[Memory Strands]] raise the tier of whatever is rolled. On an amulet that
+  splits the modifier list in two. Attributes have nine tiers, single
+  resistances eight, Life nine, and for all of those a strand base turns an
+  ordinary roll into a high one. The gem level prefixes have **one** tier:
+  strands do nothing for them, and nothing makes them more likely to appear.
+
+
+  The fitting use is finishing. On an amulet whose hard modifier is done and
+  whose remaining slots are open, an [[Exalted Orb]] spends at most 16 strands
+  by the data-mined table, and whatever it adds arrives at a good tier. The
+  kind of modifier is still random.
+
+
+  The wasteful uses are the common amulet crafts: Essences can spend up to 80
+  strands each, and Fossils and Harvest reforges do not use strands at all by
+  player testing. Since strands go on with an [[Orb of Remembrance]] and only
+  on a Normal item, decide before the first orb.
+reading:
+  intro: >-
+    Hold Alt and read the prefixes for three things, in this order: **a gem
+    level, Life, and whatever your build multiplies** (Spell Damage, added
+    damage, Energy Shield). Then count how many of the three suffixes you
+    would have chosen. Most Rare amulets fail at the first line and the
+    count is one.
+  prefixes:
+    text: >-
+      Nineteen families, and more than half the weight is defensive stats
+      that most builds do not want from this slot. Life is one roll in ten.
+      That is the easy part of the side: Tier 1 needs item level 54 and all
+      nine tiers weigh the same.
+
+
+      The gem levels are the hard part. The five typed ones (Fire, Cold,
+      Lightning, Physical, Chaos) share **one group**, so an amulet holds
+      only one of them. "+1 to Level of all Skill Gems" is a different group
+      and can sit beside a typed one. That pair is the most valuable prefix
+      side in the category.
+
+
+      The bench's and the veiled "Life and Mana regeneration" hybrids are in
+      the Life group. They block a Life roll and are blocked by one.
+    key:
+      - mod: "+# to Level of all Fire / Cold / Lightning / Physical / Chaos Skill Gems"
+        why: "One gem level for every skill of that type, on top of the gem's own. Usually the largest single modifier a spell or damage over time build can wear."
+        aim: "One tier only, item level 75. Weight 200 each."
+      - mod: "+# to Level of all Skill Gems"
+        why: "The same for every skill gem you use, whatever its type. A separate group, so it stacks with a typed gem level."
+        aim: "One tier only, item level 75. Weight 50."
+      - mod: "+# to maximum Life"
+        why: "Common, and the one prefix every life build keeps. The bench version is half the size."
+        aim: "T3, 85–99 (ilvl 36). T1 is 115–129 (ilvl 54)."
+      - mod: "#% increased Spell Damage"
+        why: "A plain multiplier for casters, and only on the prefix side of this slot."
+        aim: "T2, 18–22% (ilvl 56). T1 is 23–26% (ilvl 76)."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "The attack build's equivalent, with a low weight of 300 per tier."
+        aim: "T3, 31–36% (ilvl 60). T1 is 43–50% (ilvl 86)."
+      - mod: "+# to maximum Energy Shield"
+        why: "For Energy Shield builds: this and the percentage version are both prefixes here, and they are different groups."
+        aim: "T2, 44–47 (ilvl 74). T1 is 48–51 (ilvl 80)."
+  suffixes:
+    text: >-
+      Twenty-five families for three slots. Half of all suffix rolls are an
+      attribute or a resistance, which is useful and never exciting. The
+      modifiers that add damage are each a few percent of the side, and the
+      bench does not sell the two best of them.
+
+
+      So read an amulet's suffixes as "how many did I get for free". One
+      damage suffix at a good tier is a kept amulet. Two is a find. For the
+      third, remember what the bench can add: Critical Strike Chance, any
+      resistance, any attribute.
+
+
+      Nothing here is local, and few pairs conflict. The one to remember:
+      the natural Damage over Time Multiplier and the Hunter, Shaper and
+      Elder versions for a single damage type are different groups.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "The crit build's multiplier. Not on the bench for this slot, so it is rolled or taken from an Essence of Scorn."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 74); Deafening Scorn gives 35–41%."
+      - mod: "#% increased Global Critical Strike Chance"
+        why: "The partner of the multiplier. The bench sells 22–27%, so it is the one to craft when the multiplier rolled."
+        aim: "T2, 30–34% (ilvl 58). T1 is 35–38% (ilvl 72)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "The same job for ailment and damage over time builds, at a weight of 300 per tier. No Essence, no bench craft."
+        aim: "T3, 16–19% (ilvl 68). T1 is 24–26% (ilvl 82)."
+      - mod: "+# to all Attributes"
+        why: "Three requirements solved by one suffix, and Strength and Intelligence also give Life and Mana."
+        aim: "T3, 25–28 (ilvl 66). T1 is 33–35 (ilvl 85)."
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Never wrong. The bench's 21–28% is about two thirds of a good roll."
+        aim: "T2, 42–45% (ilvl 72). T1 is 46–48% (ilvl 84)."
+      - mod: "#% increased Cast Speed"
+        why: "Cheap to reach: the top tier needs only item level 40. Zeal guarantees it."
+        aim: "T1, 17–20% (ilvl 40)."
+      - mod: "#% increased Fire / Cold / Lightning Damage"
+        why: "A generic multiplier for one element. The Essence version is a third larger than the natural one."
+        aim: "T1, 23–26% (ilvl 64). Deafening Anger, Hatred or Wrath: 31–34%."
+approach:
+  principle: >-
+    **Name the one modifier this amulet exists for, find its side, and get it
+    with the tool that aims at it.** On a mace the hard side is always the
+    prefixes. On an amulet it can be either: a gem level is a prefix, a
+    multiplier is a suffix. Everything else, Life included, is common or for
+    sale.
+  order:
+    - title: "Choose the implicit for a gap and the item level for the hard tier"
+      text: >-
+        The implicit should solve something that would otherwise cost a
+        suffix: an attribute, usually. Item level 75 opens gem levels and
+        both critical tiers; pay for 82 to 86 only when the plan names a
+        tier that needs it.
+    - title: "Name the key modifier and its side"
+      text: >-
+        A gem level: prefix. Critical Strike Multiplier, Damage over Time
+        Multiplier, Cast Speed, elemental or Chaos Damage: suffix. This
+        decides every later step, because it tells you which side must
+        never be rerolled again.
+    - title: "Get it with the tool that aims"
+      text: >-
+        A suffix an Essence gives: the Essence. A typed gem level: Faceted
+        Fossil with the element's Fossil, or the Chaos reforge. "+1 to Level
+        of all Skill Gems": Alterations and an Imprint, or a fractured base.
+        Alterations alone are for Life and for a single common suffix.
+    - title: "Judge what came with it"
+      text: >-
+        Keep a result that has the key modifier and either Life or an open
+        prefix. An open slot is not a failure on an amulet; it is where the
+        bench goes.
+    - title: "Use a lock to aim, not only to protect"
+      text: >-
+        When three suffixes are right and the prefixes are not, lock the
+        suffixes and reforge with Life or Chaos: the guaranteed modifier has
+        nowhere to go but the prefix side. That is 4 Divine Orbs and 8
+        Exalted Orbs, so the suffixes must be worth it.
+    - title: "Bench the last slot"
+      text: >-
+        Life if the amulet has none, otherwise the suffix the build is
+        missing. One bench modifier, chosen when you can see the gap.
+  finishing: >-
+    Catalysts when the modifiers are final, matched to the one or two lines
+    that matter most: [[Fertile Catalyst]] for a Life amulet,
+    [[Unstable Catalyst]] for a crit one. Then a [[Divine Orb]] if the key
+    modifier is low in its range, and a [[Blessed Orb]] if the implicit is.
+    Gem level prefixes have nothing to reroll.
+
+
+    Anointing with Oils adds an enchantment on top and can wait until you are
+    sure you are keeping the amulet.
+  stopping: >-
+    The key modifier, Life (70 or more rolled, or the bench's 41–55), and one
+    resistance or attribute is an amulet for the whole Atlas. A second damage
+    suffix makes it a good one. The third, and Tier 1 on anything, is where
+    the cost multiplies.
+
+
+    Stop rolling the moment the key modifier arrives with an open slot.
+    Rerolling a gem level because the suffixes beside it were poor throws
+    away the rare half to improve the common half; the bench, an Exalted Orb
+    or a lock can still fix the suffixes.
+special:
+  - mod: "+# to Level of all Skill Gems"
+    source: "Rare roll"
+    where: "In the natural pool from item level 75 at a weight of 50: about 1 prefix roll in 1,565. A [[Faceted Fossil]] makes it roughly 1 in 200 by our arithmetic. Most finished amulets with it started from a fractured base."
+  - mod: "#% increased Chaos Damage"
+    source: "Essence / Fossil / Bench"
+    where: "31–34% as a suffix from a Deafening Essence of Envy. 20–30% as a Fossil-only prefix. 13–16% from the [[Crafting Bench]] for 3 Orbs of Alchemy. The natural pool has none."
+  - mod: "+# to Minimum Endurance / Frenzy / Power Charges"
+    source: "Bench / Veiled / Corruption"
+    where: "A bench suffix for 4 Exalted Orbs. The unveiled version adds a 3–4% chance to gain that charge on kill. Also a corruption implicit."
+  - mod: "#% increased Attack and Cast Speed"
+    source: "Bench / Veiled"
+    where: "5–6% from the bench for 3 Chaos Orbs; 7–8% unveiled, from a veiled drop, a [[Veiled Chaos Orb]] or a [[Veiled Exalted Orb]]."
+  - mod: "+#% to Chaos / Cold / Fire / Physical Damage over Time Multiplier"
+    source: "Hunter influence"
+    where: "16–20% at item level 80 on a Hunter amulet. Shaper has the Cold and Fire versions, Elder the Chaos and Physical ones. All sit beside the natural Damage over Time Multiplier."
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Shaper / Redeemer influence"
+    where: "6–10% as a Shaper suffix at item level 82, 7–10% as a Redeemer suffix at 75. The conqueror lists also hold 40–60% for single named auras."
+  - mod: "#% increased Fire / Cold / Lightning Damage (prefix)"
+    source: "Fossil"
+    where: "20–30%, a prefix that only rolls during a Fossil craft. It is a different group from the suffix of the same name, so both fit on one amulet."
+  - mod: "Minions have #% increased Movement Speed"
+    source: "Essence / Bench / Fossil"
+    where: "28–30% from a Deafening Essence of Fear, 18–22% from the bench for 2 Orbs of Alchemy, 15–30% as a Fossil-only suffix."
+  - mod: "#% chance to Crush on Hit"
+    source: "Corrupted Essence"
+    where: "15–25% from an [[Essence of Horror]]. The other three: 6–7% Chance to Block Spell Damage (Delirium), 150% increased total Recovery per second from Life Leech (Hysteria), 10% chance to Recover 10% of Mana when you use a Skill (Insanity). All come from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "You can apply an additional Curse"
+    source: "Corruption"
+    where: "A corruption implicit from a [[Vaal Orb]]. It replaces the base's implicit and closes the item to further crafting."
+  - mod: "100% increased Explicit Modifier magnitudes"
+    source: "Base implicit"
+    where: "The Simplex and Focused Amulets. Not craftable: you choose it by choosing the base, and you pay with three of the six slots."
+  - mod: "Has Elder, Shaper and all Conqueror Influences"
+    source: "Base implicit"
+    where: "The Astrolabe Amulet. Every influenced modifier in the list can roll on it."
+mistakes:
+  - "**Crafting a gem level amulet below item level 75.** The prefix does not exist there. Check before the first orb."
+  - "**Rerolling a gem level because the rest was bad.** The rest can be repaired; the gem level is the part you could not afford twice."
+  - "**Expecting Life from an Essence of Greed.** On an amulet it gives Life regeneration. Life is rolled, crafted at the bench, or forced with a locked suffix side."
+  - "**Planning to bench Critical Strike Multiplier.** The amulet bench does not have it. Roll the multiplier or use Scorn, and bench the Critical Strike Chance."
+  - "**Using the Lynx recipe on an amulet with one good prefix.** It removes a random prefix, and with one prefix that is not random."
+  - "**Spending a full lock on average suffixes.** Four Divine Orbs and 8 Exalted Orbs buy a lot of Essences."
+  - "**Putting Catalysts on before the modifiers are final.** They are scarce in 3.30 and our sources do not say that later crafting leaves the quality alone."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, Essence, Fossil multiplier and bench cost quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tiers and the special bases added to the normal drop pool; the 3.30 cost of the protection modifiers." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum as the only source of Catalysts; the beast recipe that fractures a talisman modifier." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint, add-a-prefix and add-a-suffix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Chaos, Critical, Speed and Life reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of Harvest reforges on an item with a locked side. Partly older than 3.30." }

@@ -1,0 +1,155 @@
+category: one-hand-axes
+title: "Một cặp leveling: roll flat damage, mua phần trăm"
+level: 1
+summary: "Hai cây axe rẻ cho nhân vật dual wield. Alteration tìm flat Physical Damage, bench thêm phần trăm, và bạn làm vậy hai lần."
+goal: >-
+  Một cặp axe cho nửa sau campaign, mỗi cây có flat Physical Damage và một
+  prefix phần trăm để nhân nó lên. Ý cần mang về là **nửa nào thì roll, nửa
+  nào thì mua**. Trên axe, cuộc xổ số cho flat Physical Damage khá thường
+  xuyên còn một prefix phần trăm tốt thì gần như không bao giờ, và bench bán
+  phần trăm với giá một nắm Alteration. Vậy nên bạn roll cái dễ ra và mua
+  cái hiếm.
+base: "War Axe"
+itemLevel: 46
+baseWhy: >-
+  War Axe dùng được ở level 45 và có 35–65 physical damage với 1.3 attack mỗi
+  giây. Item level 46 là mốc đầu tiên mà Tier 4 của flat Physical Damage
+  (adds 13–18 to 27–31) roll được. Giữ Alt rồi rê chuột lên cây axe để xem
+  item level của nó.
+
+
+  Hai cây axe trắng nào ngang level của bạn cũng làm được y việc đó, và chúng
+  không cần phải cùng một base. Hãy lấy cây tốt nhất bạn dùng được cho mỗi
+  tay.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 12 to 24 Physical Damage" }
+    - { text: "Adds 27 to 53 Fire Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "23% increased Stun Duration on Enemies" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái mỗi cây axe", note: "lên 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "2" }
+  - { item: "[[Orb of Alteration]]", amount: "30–50 cho cả cặp", note: "cộng thêm 8 mỗi cây axe cho bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "2" }
+  - { item: "[[Regal Orb]]", amount: "2" }
+cost: >-
+  Vài chục [[Orb of Alteration]] và hai [[Regal Orb]] cho cả hai cây axe.
+  Craft ở bench là 8 Alteration mỗi cây. Ở thời điểm này của league, không
+  thứ gì ở đây đáng để dành.
+odds: >-
+  Ở item level 46, một lần roll prefix ra flat Physical Damage từ 8–12 to
+  17–20 trở lên khoảng 1 trên 13 lần, theo phép tính của chúng tôi từ weight
+  của các modifier. Một prefix phần trăm tốt thì hiếm hơn nhiều: từ 110% trở
+  lên là khoảng 1 trên 180 lần roll prefix. Không phải Alteration nào cũng
+  roll ra prefix, nên hãy tính 15 tới 25 cái cho mỗi cây axe.
+
+
+  Regal Orb thuần là may rủi, và lần craft này được dựng sao cho kết quả của
+  nó không quyết định điều gì.
+steps:
+  - title: "Quality cho cả hai cây axe"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] lên từng cây axe trắng tới khi nó hiện
+      20% quality.
+    why: >-
+      Quality nâng physical damage của base, và cả flat damage lẫn phần trăm
+      bạn sắp thêm đều dựng trên đó. Nó rẻ nhất trên item trắng.
+    state: { rarity: normal }
+  - title: "Roll flat Physical Damage"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], từng
+      cái một. Giữ Alt và đọc prefix. Dừng khi nó ghi **Adds # to # Physical
+      Damage** với ít nhất 8–12 to 17–20: tên của nó là "Honed", "Gleaming"
+      (11–14 to 21–25) hoặc "Annealed" (13–18 to 27–31).
+    why: >-
+      War Axe đánh 35–65. Cộng 12 to 24 vào mọi cú đánh là thêm khoảng một
+      phần ba damage trước khi có gì nhân nó lên, và đó là prefix physical
+      duy nhất mà axe roll ra đủ thường để nhắm tới.
+    check: >-
+      Prefix ghi "Adds … Physical Damage", không phải Fire, Cold hay
+      Lightning. Ba trên năm lần roll prefix trên axe là elemental, nên bạn
+      sẽ thấy nhiều cái như vậy trước.
+    fail: >-
+      Nếu sắp cạn Alteration, hãy nhận flat Physical Damage nào cũng được.
+      Nếu một Alteration lại cho ra **increased Physical Damage từ 65% trở
+      lên** thì giữ cái đó: xem phần biến thể.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Adds 12 to 24 Physical Damage" }]
+  - title: "Lấp suffix, rồi Regal"
+    do: >-
+      Nếu cây axe Magic chưa có suffix, dùng một [[Orb of Augmentation]]. Rồi
+      dùng một [[Regal Orb]].
+    why: >-
+      Augmentation là một lần roll miễn phí cầu attack speed. Regal Orb biến
+      cây axe thành Rare, giữ cả hai modifier và thêm cái thứ ba; Rare là thứ
+      mở các ô còn lại cho bench. Trong ví dụ này Augmentation cho một suffix
+      stun và Regal Orb thêm fire damage, thứ mà axe hay thêm nhất. Cả hai
+      đều không quan trọng mấy. Khi bạn còn đang leveling, fire damage trên
+      một cú đánh vẫn là damage.
+    check: >-
+      Đếm prefix sau Regal Orb. Bước kế cần một ô prefix trống, và với hai
+      prefix trên item thì bạn có đúng một ô.
+    state:
+      prefixes:
+        - { text: "Adds 12 to 24 Physical Damage" }
+        - { text: "Adds 27 to 53 Fire Damage" }
+      suffixes: [{ text: "23% increased Stun Duration on Enemies" }]
+  - title: "Mua phần trăm ở bench"
+    do: >-
+      Ở [[Crafting Bench]], craft **60–79% increased Physical Damage** giá 8
+      Orb of Alteration. Nếu bạn chỉ có công thức thấp hơn thì 40–59% tốn 4.
+    why: >-
+      Increased Physical Damage trên weapon là local: nó nhân damage của
+      chính cây axe **và** flat damage bạn đã roll. Tự roll ra 65% trở lên sẽ
+      tốn khoảng gấp đôi số Alteration mà flat damage đã tốn, còn bench trao
+      nó với giá tám cái.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Hãy craft lựa chọn physical tốt nhất mà bench đang có. Nếu Regal
+      Orb không chừa lại prefix trống nào, hãy craft 8–10% attack speed vào
+      một suffix (6 Orb of Alteration) thay vào.
+    state:
+      prefixes:
+        - { text: "Adds 12 to 24 Physical Damage" }
+        - { text: "Adds 27 to 53 Fire Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes: [{ text: "23% increased Stun Duration on Enemies" }]
+  - title: "Giờ làm cây thứ hai"
+    do: >-
+      Lặp lại bước 2 tới 4 trên cây axe kia. Đừng dừng ở một cây.
+    why: >-
+      Với hai weapon, phần lớn attack luân phiên giữa chúng: một cú vung tay
+      phải, cú kế tay trái. Một cây axe đã craft đi cạnh một cây trắng nghĩa
+      là cứ hai cú đánh thì một cú là của cây axe trắng. Cặp mạnh ngang mức
+      trung bình của nó, nên hai cây axe vừa phải ăn đứt một cây tốt.
+    check: >-
+      Cả hai cây axe đều hiện flat Physical Damage và một prefix phần trăm
+      bench. Nếu một cây rõ ràng yếu hơn, đó là cây cần thay kế tiếp.
+variations: >-
+  **Nếu Alteration cho ra phần trăm trước.** Increased Physical Damage từ 65%
+  trở lên là cú roll hiếm hơn; hãy giữ nó. Bench không thêm được một prefix
+  phần trăm thứ hai cạnh nó, vì chúng chung group, nên hãy craft flat
+  Physical Damage thay vào: adds 7–11 to 16–19 giá 2 Orb of Alchemy. Ngoại lệ
+  là hybrid cho thêm Accuracy Rating: nó thuộc group khác, và prefix phần
+  trăm của bench nằm vừa cạnh nó.
+
+
+  **Đi với shield.** Khi đó chỉ có một cây axe và nó thực hiện mọi cú đánh.
+  Hãy làm một cây, và tiêu số Alteration của cây thứ hai vào một mức đòi hỏi
+  cao hơn cho flat damage.
+
+
+  **Về sau.** Cũng các bước đó trên một cây axe item level 60 làm ra một cặp
+  cho map trắng. Từ đó, bước cải thiện rẻ không phải là một cú roll tốt hơn
+  mà là một nguồn tốt hơn cho phần trăm, điều mà các ví dụ kế tiếp nói tới.
+mistakes:
+  - "Craft một cây axe rồi để một cây trắng ở tay kia. Một nửa số cú đánh của bạn đến từ nó."
+  - "Roll Alteration để tìm phần trăm. Nó có ở bench với giá tám cái."
+  - "Dùng Regal Orb lên một cây axe Magic có prefix elemental chỉ vì suffix là attack speed. Attack speed cũng có ở bench; prefix physical mới là thứ bạn tìm đến."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

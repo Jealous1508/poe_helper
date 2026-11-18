@@ -1,0 +1,154 @@
+category: staves
+title: "Một cây staff leveling: gem level từ Alteration, spell damage từ bench"
+level: 1
+summary: "Roll một prefix gem level lên cây staff trắng, biến nó thành Rare, rồi để bench thêm damage. Lần craft đầu tiên cho mọi caster."
+goal: >-
+  Một cây staff cho đoạn giữa campaign, cộng hai hoặc ba level cho spell
+  chính của bạn, làm từ currency bạn đang mang sẵn. Ý cần mang theo chính là
+  ý mà cả loại item này dựa vào: **bench bán spell damage, và nó không bán
+  gem level.** Vậy nên bạn roll gem level và mua phần còn lại.
+base: "Royal Staff"
+itemLevel: 35
+baseWhy: >-
+  Royal Staff cầm được ở level 28 với 51 Strength và 51 Intelligence. Item
+  level 35 là mốc đầu tiên mà "+3 to Level of all Fire Spell Skill Gems" (và
+  bản tương tự cho bốn element còn lại) roll được; dưới mốc đó prefix dừng ở
+  +2. Giữ Alt rồi rê chuột lên cây staff để xem item level của nó.
+
+
+  Bất kỳ cây staff trắng nào ngang level của bạn cũng làm y như vậy được, vì
+  mọi staff đều roll từ một pool. Hãy kiểm xem bạn có đủ Strength cho nó
+  không: staff nào cũng cần Strength nhiều ngang Intelligence.
+methods: [currency, bench]
+result:
+  implicits: ["+20% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+3 to Level of all Fire Spell Skill Gems" }
+    - { text: "+52 to maximum Mana" }
+    - { text: "72% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "31% increased Mana Regeneration Rate" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–40", note: "cộng thêm 8 cho bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Vài chục [[Orb of Alteration]] và một [[Regal Orb]]. Craft ở bench tốn thêm
+  8 Alteration. Ở thời điểm này của league, không thứ gì ở đây đáng để dành,
+  và không cần [[Blacksmith's Whetstone]] nào: quality nâng physical damage
+  của staff, thứ mà spell không dùng.
+odds: >-
+  Ở item level 35, một lần roll prefix ra prefix gem level cho element của
+  bạn (+2 hoặc +3) khoảng 1 trên 33 lần, theo phép tính của chúng tôi từ
+  weight của các modifier, và ra "+1 to Level of all Spell Skill Gems" khoảng
+  1 trên 67. Nhận cái nào cũng được thì là khoảng 1 trên 22 lần roll prefix.
+  Không phải Alteration nào cũng roll ra prefix, nên hãy tính ba mươi tới bốn
+  mươi cái. Thứ Augmentation và Regal Orb thêm vào là may rủi, và lần craft
+  này được dựng sao cho điều đó gần như không quan trọng.
+steps:
+  - title: "Kiểm cây staff trước khi tiêu tiền vào nó"
+    do: >-
+      Nhặt hoặc mua một cây staff trắng. Giữ Alt: item level phải từ 35 trở
+      lên. Đọc các yêu cầu và chắc rằng bạn đủ cả Strength lẫn Intelligence.
+    why: >-
+      Item level quyết định +3 có roll được hay không, và về sau không
+      currency nào nâng được nó. Yêu cầu Strength hay làm caster bất ngờ vì
+      không món nào khác họ mặc đòi nó.
+    state: { rarity: normal, implicits: ["+20% Chance to Block Spell Damage"] }
+  - title: "Biến nó thành Magic rồi roll gem level"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], từng
+      cái một. Giữ Alt và đọc prefix sau mỗi cái. Dừng khi nó là **"+# to
+      Level of all Fire Spell Skill Gems"** (dùng element của skill bạn:
+      Cold, Lightning, Chaos hay Physical đều làm y như vậy) hoặc **"+1 to
+      Level of all Spell Skill Gems"**.
+    why: >-
+      Item Magic có một prefix và một suffix, nên mỗi Alteration là một lần
+      ngó rẻ tiền vào một prefix. Gem level là modifier phải roll vì bench
+      không có công thức nào cho chúng. Thêm level thì nâng damage của chính
+      spell gem, và mọi phần trăm bạn thêm về sau đều nhân lên con số đó.
+    check: >-
+      Prefix gọi tên element của bạn hoặc ghi "all Spell Skill Gems". Một
+      prefix cho element khác không giúp gì cho bạn; cứ roll tiếp. Kệ suffix.
+    fail: >-
+      Nếu Alteration sắp cạn, hãy nhận +2 của element bạn dùng rồi đi tiếp.
+      Nó vẫn là họ đó, thấp hơn một bậc, và vẫn đáng giá hơn thứ bench bán.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+3 to Level of all Fire Spell Skill Gems" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu cây staff chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã
+      có rồi thì bỏ qua bước này.
+    why: >-
+      Augmentation thêm một modifier vào ô trống trên item Magic và không bao
+      giờ đụng tới thứ đang có. Nó là một lần roll miễn phí cầu cast speed,
+      một trong những suffix dễ ra hơn cả trên staff.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+3 to Level of all Fire Spell Skill Gems" }]
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Nó biến cây staff thành Rare, giữ cả hai modifier, và thêm ngẫu nhiên
+      cái thứ ba. Rare là thứ mở các ô còn lại cho bench.
+    check: >-
+      Đọc xem cái gì được thêm và nó nằm phía nào. Ở đây nó thêm maximum
+      Mana, prefix phổ biến nhất trên staff. Nếu nó thêm increased Fire, Cold
+      hoặc Lightning Damage hay spell damage thì hãy ghi nhớ: điều đó thay
+      đổi bước tiếp theo.
+    state:
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems" }
+        - { text: "+52 to maximum Mana" }
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+  - title: "Mua spell damage"
+    do: >-
+      Ở [[Crafting Bench]], craft increased Spell Damage vào prefix trống:
+      61–78% giá 8 Orb of Alteration, hoặc 44–60% giá 4. **Nếu Regal Orb đã
+      thêm một phần trăm damage rồi,** bench sẽ từ chối, nên hãy craft cast
+      speed thay vào: 15–20% giá 6 Orb of Alteration.
+    why: >-
+      Một item chứa được một modifier bench, nên nó dành cho thứ tốt nhất mà
+      cây staff còn thiếu. Spell damage và ba phần trăm elemental là một
+      group, và một cây staff nhận một cái trong số đó. Gem level là group
+      khác, vì vậy spell damage của bench nằm vừa cạnh prefix bạn đã roll.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Hãy craft spell damage hoặc cast speed tốt nhất mà bench đang có.
+    state:
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems" }
+        - { text: "+52 to maximum Mana" }
+        - { text: "72% increased Spell Damage", how: crafted }
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+variations: >-
+  **Prefix gem nào tốt hơn.** Với main skill, +3 của element nó ăn đứt +1 cho
+  mọi spell. "All Spell Skill Gems" có chỗ đứng về sau, khi một cây staff
+  mang được cả hai: chúng thuộc hai group khác nhau và cộng vào nhau.
+
+
+  **Một Essence of Woe yếu.** Dùng lên cây staff trắng, nó tạo ra một item
+  Rare có spell damage được đảm bảo, 35–52% ở bậc Muttering và 53–69% ở bậc
+  Weeping. Đó là modifier bench vốn đã bán, và sau đó bench không thêm được
+  gem level. Nó chỉ là đường tắt đúng khi bạn không dư Alteration nào.
+
+
+  **Về sau trong campaign.** Cũng năm bước đó ở item level 55 trở lên có thể
+  ra "+2 to Level of all Spell Skill Gems". Ở đó nó là một roll hiếm, khoảng
+  1 trên 334 prefix, nên thấy nó thì lấy, còn đừng ngồi chờ nó.
+mistakes:
+  - "Dùng Whetstone lên staff của caster. Quality là physical damage trên base và spell phớt lờ nó."
+  - "Dừng ở một prefix gem của sai element vì nó trông hiếm. Nó hiếm thật, và nó không giúp gì cho skill của bạn."
+  - "Roll để tìm suffix. Cast speed có ở bench với giá 6 Alteration; gem level thì hoàn toàn không có ở bench."
+  - "Craft spell damage khi cây staff còn là Magic, rồi mới dùng Regal Orb. Vẫn được, nhưng lượt craft đã tiêu trước khi bạn biết cây staff cần gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }

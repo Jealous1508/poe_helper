@@ -1,0 +1,285 @@
+category: warstaves
+title: "Một cây rod crit không đánh cược ở prefix: hybrid fractured, unveil có block, bench"
+level: 5
+summary: "Fracture đúng cái prefix physical mà không gì khác cấp được, roll thoải mái ba suffix crit bằng hai Fossil, rồi khóa chúng và ép các prefix còn lại bằng một veiled modifier và bench."
+goal: >-
+  Một cây warstaff crit có ba prefix physical cùng attack speed, Critical
+  Strike Chance và Critical Strike Multiplier đều là roll ra, theo một kế
+  hoạch mà ở đoạn đắt tiền gần như không gì bị phó mặc cho may rủi. Các công
+  cụ đều đã được giới thiệu từ trước. Việc phải làm là **thứ tự**: xác định
+  modifier nào chỉ roll mới có và biến cái đó thành vĩnh viễn, đánh cược phần
+  rẻ khi không thứ gì có giá trị có thể mất, và để lại sau cùng những bước mà
+  bạn ép được kết quả.
+base: "Eventuality Rod"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 là mức thấp nhất mà hybrid cao nhất, "Dictator's" (75–79% kèm
+  Accuracy), tồn tại được. Eventuality Rod có damage mỗi giây gốc cao nhất
+  trong mọi warstaff, 8.3% critical strike chance gốc và +1 to Maximum Power
+  Charges, vì vậy các suffix crit đáng roll trên nó. Một cây Judgement Staff
+  hoặc Ezomyte Staff nhận cùng kế hoạch đó, đổi lại có block. Base phải
+  **không có influence**: Fracturing Orb từ chối item có influence.
+methods: [fracture, fossil, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+  prefixes:
+    - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "23% increased Attack Speed", how: fossil }
+    - { text: "32% increased Critical Strike Chance", how: fossil }
+    - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "Một cây Eventuality Rod có \"Dictator's\" hoặc \"Emperor's\" fractured, item level 83+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Shuddering Fossil]]", amount: "vài chục" }
+  - { item: "[[Deft Fossil]]", amount: "vài chục" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "Resonator nào có hai socket cũng được" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Orb of Alteration]]", amount: "2", note: "cho block bằng bench" }
+  - { item: "[[Orb of Scouring]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Base fractured chiếm phần lớn chi phí, và trong 3.30 fractured item hiếm
+  hơn trước: đồ rơi Tier 5, một [[Fracturing Orb]] hoặc một
+  [[Fractured Fossil]]. Giai đoạn 2 được đếm bằng số cặp Fossil. Giai đoạn 3
+  là một lần khóa, 4 [[Divine Orb]] và một [[Sacred Orb]], cùng một
+  [[Veiled Chaos Orb]], thường chỉ một lần.
+
+
+  Chúng tôi không đưa ra tổng số. Giá trong tuần đầu league biến động quá
+  nhanh, và giai đoạn 2 có đuôi dài, xui thì kéo rất lâu.
+odds: >-
+  **Giai đoạn 2.** Với một Shuddering Fossil và một Deft Fossil trên rod,
+  theo phép tính của chúng tôi từ weight, một lần roll suffix ra attack speed
+  35% số lần và mỗi suffix crit trong hai cái 23%. Một kết quả có ba suffix
+  chứa cả ba họ khoảng 1 trên 3 lần, và cả ba ở Tier 3 trở lên (20% attack
+  speed, 25% cho mỗi suffix crit) khoảng 1 trên 35 lần. Không phải kết quả
+  nào cũng có ba suffix, và kết quả còn phải chừa một ô prefix trống, nên hãy
+  tính nhiều chục cặp.
+
+
+  **Giai đoạn 3.** Block để lại sáu prefix mà một lần unveil có thể đưa ra,
+  bốn trong đó là physical, và ba cái được hiện. Cứ đếm thì một cái phải là
+  physical; luật đứng sau điều đó là do cộng đồng thử nghiệm, và chúng tôi
+  chưa thấy kiểu block này được thử trong 3.30. Rủi ro thật sự là Veiled
+  Chaos Orb roll ra hai prefix khác và không để lại ô nào cho block.
+steps:
+  - title: "Hỏi từng prefix: còn gì khác cấp được nó?"
+    do: >-
+      Liệt kê ba group prefix physical và mọi nguồn của từng cái. **Phần trăm
+      thuần:** roll, bench (100–129%), và các hybrid veiled (120–139%).
+      **Flat:** roll và bench (adds 18–24 to 36–42). **Hybrid kèm
+      Accuracy:** roll, và không gì khác. Hãy fracture hybrid.
+    why: >-
+      Một fracture được tiêu đáng nhất vào thứ không có cách nào khác để có.
+      Lựa chọn quen thuộc là "Merciless", con số lớn nhất. Nhưng khi bản phần
+      trăm thuần đã fractured, các phần trăm physical của bench và của pool
+      veiled bị chính group của chúng block, còn hybrid thì vẫn phải roll ra
+      rồi bảo vệ qua mọi bước sau đó. Khi hybrid đã fractured, cả hai group
+      còn lại đều có một nguồn bạn ép được.
+    check: >-
+      Đi đường này thì trần thấp hơn, và bạn nên biết thấp hơn bao nhiêu.
+      "Dictator's" cùng một unveil 120–139% là khoảng 195–218% increased
+      Physical Damage. "Merciless" cùng một hybrid Tier 3 roll ra là khoảng
+      225–243%. Kế hoạch này bỏ đi chừng một phần mười số phần trăm để đổi
+      lấy việc gỡ được hai giai đoạn đánh cược.
+  - title: "Giai đoạn 1: hybrid fractured"
+    do: >-
+      Mua hoặc tìm một cây rod item level 83 trở lên có **"Dictator's"
+      fractured** (75–79%); "Emperor's" (65–74%) phổ biến gấp đôi và tốt gần
+      bằng. Còn nếu tự làm: roll prefix đó, đưa cây rod thành Rare với đúng
+      bốn modifier, rồi dùng một [[Fracturing Orb]].
+    why: >-
+      "Dictator's" có weight 25 trong một pool prefix khoảng 53,000: 1 trên
+      2,119 lần roll prefix. Sau đó Fracturing Orb chọn ngẫu nhiên một trong
+      bốn modifier. Đây chính là bước khiến phần lớn người chơi chọn mua
+      base.
+    fail: >-
+      Nó fracture nhầm thứ khác. Cây rod có sai modifier bị khóa vĩnh viễn,
+      và không fracture lại được nữa.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Giai đoạn 2: roll suffix khi không gì có thể mất"
+    do: >-
+      Dùng một [[Shuddering Fossil]] và một [[Deft Fossil]] cùng nhau trong
+      một [[Potent Chaotic Resonator]], hết lần này tới lần khác, tới khi cây
+      rod có **attack speed, Critical Strike Chance và Global Critical Strike
+      Multiplier**, mỗi cái ở tier bạn đặt, và **không quá hai
+      prefix**. Kệ prefix còn lại là gì.
+    why: >-
+      Thứ có giá trị duy nhất trên cây rod đã fractured, nên những lần roll
+      lại này tốn Fossil mà không đem gì ra đánh cược. Shuddering là "more
+      Speed, no Mana"; Deft là "more Critical, no Attribute". Hai cái hợp
+      lại, ba suffix cần lấy chiếm bốn phần năm mọi lần roll suffix. Không
+      cần Jagged Fossil: các prefix roll ra ở đây sẽ bị vứt đi ở giai đoạn 3.
+    check: >-
+      Ba suffix, đủ cả ba họ, tier đạt mức bạn đặt. Rồi đếm prefix: cái
+      fractured và nhiều nhất một cái khác, vì khóa ở giai đoạn 3 là một
+      prefix và cần một ô.
+    fail: >-
+      Hai suffix tốt cộng một đồ lấp chỗ là kiểu suýt trúng hay gặp. Đừng
+      chấp nhận nó: giai đoạn 3 cần phía suffix đầy những thứ bạn muốn, và
+      thêm một cặp Fossil rẻ hơn nhiều so với những gì theo sau.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "+2 to Level of Socketed Lightning Gems", how: fossil }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 3: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Từ đây suffix là công sức cần bảo vệ. Khóa nằm trong ô prefix trống và
+      bị lần roll lại kế tiếp tiêu mất.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "+2 to Level of Socketed Lightning Gems", how: fossil }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Dùng một [[Veiled Chaos Orb]] lên cây rod.
+    why: >-
+      Nó roll lại những gì nó được phép: hai prefix không fractured cũng
+      không được bảo vệ, kể cả cái khóa. Một trong các prefix mới là veiled.
+      Khi cả ba ô suffix đã đầy và đã khóa, phía prefix là chỗ duy nhất nó có
+      thể đi.
+    check: >-
+      Hybrid fractured và ba suffix không đổi, "Veiled Prefix" đã ở trên cây
+      rod, và còn một ô prefix trống.
+    fail: >-
+      Orb roll ra thêm một prefix mới thứ hai và phía prefix đã đầy. Không có
+      ô cho block lẫn cho bench: unveil không có block và lấy một hybrid
+      physical nếu được đưa ra. Nếu prefix dư ra là flat Physical Damage thì
+      kết cục đó tốt ngang cái đã định.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix" }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Block, rồi unveil"
+    do: >-
+      Craft **increased Chaos Damage**, 44–60% giá 2 [[Orb of Alteration]],
+      vào prefix trống. Rồi click chuột phải vào cây rod và chọn **increased
+      Physical Damage kèm chance to Impale** (hoặc bản Bleeding, Poison hay
+      Blind).
+    why: >-
+      Bảy trong mười ba prefix mà một lần unveil có thể đưa ra trên warstaff
+      là các phần trăm caster damage và minion damage nằm trong một group, và
+      theo thử nghiệm của cộng đồng, một lần unveil không bao giờ đưa ra một
+      group đã có trên item. Một craft rẻ thuộc group đó để lại bốn hybrid
+      physical và hai modifier penetration, và ba lựa chọn được hiện. Ví dụ
+      trước đi qua bước này cùng những điểm chưa chắc chắn của nó.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Giai đoạn 4: bench nhận prefix cuối cùng"
+    do: >-
+      Gỡ Chaos Damage với giá 1 [[Orb of Scouring]] và craft flat Physical
+      Damage vào chỗ đó: adds 18–24 to 36–42 giá 4
+      [[Chaos Orb]].
+    why: >-
+      Group phần trăm thuần do modifier unveil ra giữ, còn group hybrid do
+      fracture giữ. Flat damage là group thứ ba, và bench bán nó.
+    check: >-
+      Sáu trên sáu ô, và ba group prefix physical khác nhau, không cái nào bị
+      phó mặc cho một lần roll về cuối.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Hoàn thiện: quality, link, chỉ số"
+    do: >-
+      20% quality và sáu socket link nếu chưa làm. Rồi một [[Divine Orb]]
+      nếu những con số quan trọng đang thấp trong khoảng của chúng.
+    why: >-
+      Một Divine Orb roll lại mọi chỉ số cùng lúc, kể cả prefix fractured, và
+      không bao giờ đổi tier. Nó có thể hạ xuống cũng như nâng lên.
+variations: >-
+  **Cái trần cao hơn.** Fracture "Merciless" thay vào, dùng Jagged Fossil và
+  Shuddering Fossil tới khi hybrid ra ở Tier 3 trở lên, khoảng 1 trên 33 bộ
+  khi cả hai prefix trống đều roll, rồi khóa prefix và dùng một reforge
+  Harvest Speed, thứ đảm bảo attack speed trên warstaff. Nếu tier của nó được
+  bốc theo weight, 23% trở lên là 2 trên 9 lần reforge. Nhiều damage hơn ở
+  cuối, và có hai giai đoạn may rủi ở chỗ mà kế hoạch này không có cái nào:
+  mỗi lần reforge hỏng là thêm một lần khóa, và các suffix crit bị bỏ lại cho
+  một modifier bench.
+
+
+  **Không có Veiled Chaos Orb.** Bench cấp được cả hai prefix còn lại,
+  100–129% increased Physical Damage (4 Exalted Orb) và flat damage. Hai
+  modifier bench thì cần "Can have up to 3 Crafted Modifiers", vốn là một
+  suffix, nên bản đó chấp nhận hai suffix roll ra ở giai đoạn 2 và phải có
+  một kết quả giai đoạn 2 không có prefix lạc nào chắn đường.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Ở đây, chỗ nó có thể đáng tiền là Fracturing Orb ở
+  giai đoạn 1: một lần nhìn xem nó sẽ chọn modifier nào. Bất kỳ thay đổi nào
+  trên cây rod đều kết thúc việc thấy trước, nên một đáp án sai vẫn tốn một
+  Lock.
+
+
+  **Với Memory Strands.** Fossil không dùng strand theo thử nghiệm của người
+  chơi, và một Veiled Chaos Orb có thể tiêu tới 80. Một
+  [[Orb of Unravelling]] ở tận cuối có thể nâng một suffix lên một tier; nó
+  bỏ qua modifier bench, và nó thành công thường xuyên tới đâu là một mô hình
+  của người chơi, không phải con số được công bố.
+mistakes:
+  - "Fracture \"Merciless\" theo thói quen rồi mới phát hiện cả bench lẫn unveil đều từ chối thêm một phần trăm. Hãy quyết định lộ trình trước khi fracture."
+  - "Chấp nhận hai suffix tốt ở giai đoạn 2. Một suffix lấp chỗ sẽ bị khóa chung với mấy cái kia và ở lại luôn."
+  - "Giữ một kết quả giai đoạn 2 có ba prefix. Khóa suffix là một prefix và không có chỗ nào để đặt."
+  - "Unveil trước khi block đã ở trên cây rod."
+  - "Dùng Fracturing Orb lên cây rod có năm hay sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Đặt influence lên base trước. Item có influence thì không fracture được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Group, weight, tier, veiled modifier, hệ số nhân của Fossil, giá bench và mô tả trong game của Fracturing Orb. Xác suất và phép đếm là của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb và các modifier được bảo vệ bằng fracture hoặc meta-modifier." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed dùng trong lộ trình thay thế." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb tôn trọng một phía đã khóa, và một modifier crafted cùng group sẽ block một lựa chọn unveil. Một phần cũ hơn 3.30." }

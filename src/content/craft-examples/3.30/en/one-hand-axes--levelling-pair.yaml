@@ -1,0 +1,156 @@
+category: one-hand-axes
+title: "A levelling pair: roll the flat damage, buy the percentage"
+level: 1
+summary: "Two cheap axes for a dual-wielding character. Alterations find flat Physical Damage, the bench adds the percentage, and you do it twice."
+goal: >-
+  A pair of axes for the second half of the campaign, each with flat Physical
+  Damage and a percentage to multiply it. The idea to take away is **which
+  half to roll and which half to buy**. On an axe the lottery gives flat
+  Physical Damage fairly often and a good percentage almost never, and the
+  bench sells the percentage for a handful of Alterations. So you roll the
+  common one and buy the rare one.
+base: "War Axe"
+itemLevel: 46
+baseWhy: >-
+  A War Axe can be used at level 45 and has 35–65 physical damage at 1.3
+  attacks per second. Item level 46 is the first at which Tier 4 flat
+  Physical Damage (adds 13–18 to 27–31) can roll. Hold Alt over the axe to
+  see its item level.
+
+
+  Any two white axes of your level do the same job, and they do not have to
+  be the same base. Take the best one you can equip for each hand.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 12 to 24 Physical Damage" }
+    - { text: "Adds 27 to 53 Fire Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "23% increased Stun Duration on Enemies" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few per axe", note: "to 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "2" }
+  - { item: "[[Orb of Alteration]]", amount: "30–50 for the pair", note: "plus 8 per axe for the bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "2" }
+  - { item: "[[Regal Orb]]", amount: "2" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s and two [[Regal Orb]]s for both axes.
+  The bench craft is 8 Alterations each. Nothing here is worth saving at this
+  point in a league.
+odds: >-
+  At item level 46, one prefix roll is flat Physical Damage of 8–12 to 17–20
+  or better about 1 time in 13, by our arithmetic from the modifier weights.
+  A good percentage is much rarer: 110% or more is about 1 prefix roll in
+  180. An Alteration does not always roll a prefix, so expect 15 to 25 of
+  them per axe.
+
+
+  The Regal Orb is plain luck, and the craft is built so that its result
+  does not decide anything.
+steps:
+  - title: "Quality on both axes"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s on each white axe until it reads 20%
+      quality.
+    why: >-
+      Quality raises the base's physical damage, and both the flat damage
+      and the percentage you are about to add build on it. It is cheapest on
+      a white item.
+    state: { rarity: normal }
+  - title: "Roll flat Physical Damage"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Hold Alt and read the prefix. Stop when it says **Adds # to #
+      Physical Damage** with at least 8–12 to 17–20: the names are "Honed",
+      "Gleaming" (11–14 to 21–25) or "Annealed" (13–18 to 27–31).
+    why: >-
+      A War Axe hits for 35–65. Adding 12 to 24 to every hit is about a
+      third more damage before anything multiplies it, and it is the one
+      physical prefix an axe rolls often enough to aim for.
+    check: >-
+      The prefix reads "Adds … Physical Damage", not Fire, Cold or
+      Lightning. Three prefix rolls in five on an axe are elemental, so you
+      will see many of those first.
+    fail: >-
+      If you run low on Alterations, accept any flat Physical Damage. If an
+      Alteration shows **increased Physical Damage of 65% or more**
+      instead, keep that: see the variations.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Adds 12 to 24 Physical Damage" }]
+  - title: "Fill the suffix, then Regal"
+    do: >-
+      If the Magic axe has no suffix, use an [[Orb of Augmentation]]. Then
+      use one [[Regal Orb]].
+    why: >-
+      The Augmentation is a free roll at attack speed. The Regal Orb makes
+      the axe Rare, keeps both modifiers and adds a third; Rare is what
+      opens the remaining slots to the bench. In this example the
+      Augmentation gave a stun suffix and the Regal Orb added fire damage,
+      which is what an axe adds most often. Neither matters much. While you
+      are levelling, fire damage on a hit is still damage.
+    check: >-
+      Count the prefixes after the Regal Orb. The next step needs one open
+      prefix slot, and with two prefixes on the item you have exactly one.
+    state:
+      prefixes:
+        - { text: "Adds 12 to 24 Physical Damage" }
+        - { text: "Adds 27 to 53 Fire Damage" }
+      suffixes: [{ text: "23% increased Stun Duration on Enemies" }]
+  - title: "Buy the percentage at the bench"
+    do: >-
+      At the [[Crafting Bench]], craft **60–79% increased Physical Damage**
+      for 8 Orbs of Alteration. If you only have the lower recipe, 40–59%
+      costs 4.
+    why: >-
+      Increased Physical Damage on a weapon is local: it multiplies the
+      axe's own damage **and** the flat damage you rolled. Rolling 65% or
+      more yourself would take about twice as many Alterations as the flat
+      damage did, and the bench hands it over for eight.
+    fail: >-
+      If the bench does not list the craft, you have not found the recipe
+      yet. Craft the best physical option it offers. If the Regal Orb left
+      no open prefix, craft 8–10% attack speed in a suffix (6 Orbs of
+      Alteration) instead.
+    state:
+      prefixes:
+        - { text: "Adds 12 to 24 Physical Damage" }
+        - { text: "Adds 27 to 53 Fire Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes: [{ text: "23% increased Stun Duration on Enemies" }]
+  - title: "Now make the second one"
+    do: >-
+      Repeat steps 2 to 4 on the other axe. Do not stop at one.
+    why: >-
+      With two weapons most attacks alternate between them: one swing with
+      the right hand, the next with the left. A crafted axe beside a white
+      one means every second hit is a white axe's hit. The pair is as strong
+      as its average, so two modest axes beat one good one.
+    check: >-
+      Both axes show flat Physical Damage and a bench percentage. If one is
+      clearly weaker, that is the one to replace next.
+variations: >-
+  **If the Alterations show a percentage first.** Increased Physical Damage
+  of 65% or more is the rarer roll; keep it. The bench cannot add a second
+  percentage beside it, because they share a group, so craft flat Physical
+  Damage instead: adds 7–11 to 16–19 for 2 Orbs of Alchemy. The exception is
+  the hybrid that also gives Accuracy Rating: it is a different group, and
+  the bench percentage fits beside it.
+
+
+  **With a shield.** Then there is only one axe and it makes every hit. Make
+  one, and spend the second axe's Alterations on a higher bar for the flat
+  damage.
+
+
+  **Later.** The same steps on an item level 60 axe make a pair for white
+  maps. From there the cheap improvement is not a better roll but a better
+  source for the percentage, which the next examples cover.
+mistakes:
+  - "Crafting one axe and leaving a white one in the other hand. Half your hits come from it."
+  - "Rolling Alterations for the percentage. It is on the bench for eight of them."
+  - "Using a Regal Orb on a Magic axe with an elemental prefix because the suffix was attack speed. Attack speed is on the bench too; the physical prefix is the part you came for."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

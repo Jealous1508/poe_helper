@@ -1,0 +1,226 @@
+category: helmets
+title: "Giữ ba suffix, ép ra một prefix veiled"
+level: 4
+summary: "Phía suffix đã xong còn prefix là đồ bỏ. Khóa suffix lại, và một Veiled Chaos Orb không còn chỗ nào để đặt veiled modifier của nó ngoài phía prefix."
+goal: >-
+  Thêm "+2 to Level of Socketed AoE Gems" lên một cái helmet có ba suffix mà
+  bạn không chịu đem ra đánh cược. Đây là lần craft helmet đầu tiên bạn **trả
+  tiền để bảo vệ công sức**, nên phần lớn nội dung là một phép so sánh: khóa
+  bench mua được gì mà lớp bảo vệ miễn phí của Eldritch currency không mua
+  được, và mỗi lần nó tốn bao nhiêu.
+base: "Royal Burgonet"
+itemLevel: 73
+baseWhy: >-
+  Lần craft này bắt đầu từ một item, không phải từ một base: kết quả của ví
+  dụ Scorched Fossil vào một ngày prefix ra tệ, hoặc bất kỳ cái helmet Rare
+  nào có ba suffix đáng giữ. Các modifier unveil ra trong dữ liệu đều đòi
+  item level 60, nên gần như helmet nào cũng đủ điều kiện.
+
+
+  Cái helmet phải **không có influence**, vì bước 2 dùng một Eldritch
+  implicit.
+methods: [eldritch, meta, veiled, bench]
+result:
+  implicits: ["8% increased Cast Speed"]
+  prefixes:
+    - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+    - { text: "+97 to maximum Life" }
+    - { text: "63% increased Armour", how: crafted }
+  suffixes:
+    - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+    - { text: "+43% to Fire Resistance" }
+    - { text: "+44% to Lightning Resistance" }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "1" }
+  - { item: "[[Eldritch Orb of Annulment]]", amount: "1", note: "chỉ khi cả ba ô prefix đều đầy" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho craft bench cuối cùng" }
+cost: >-
+  Mỗi lần thử là một lần khóa, 4 [[Divine Orb]] và 4 [[Blessed Orb]] trên
+  armour trong 3.30, cộng một [[Veiled Chaos Orb]]. Khóa bị lần roll lại tiêu
+  mất. Hãy tính là sẽ cần hơn một lần thử, và chốt con số trước lần đầu tiên.
+
+
+  Cái giá đó chính là phép thử cho toàn bộ ý tưởng. Nếu các suffix này làm
+  lại được với giá thấp hơn một lần khóa thì đừng khóa chúng.
+odds: >-
+  Bản thân prefix veiled là chắc chắn một khi suffix đã khóa và đầy: không
+  còn ô nào khác cho nó. Thứ bạn unveil ra thì không. Game đưa ra ba lựa chọn
+  và không công bố weight nào. Dữ liệu liệt kê khoảng chín prefix unveil ra
+  mà một cái helmet Strength có thể hiện, nên **nếu** ba cái được rút đều
+  nhau thì một cái cụ thể sẽ được đưa ra khoảng một trên ba lần. Hãy coi đó
+  là một chỉ dẫn sơ bộ, không phải một phép đo.
+
+
+  Một hai prefix còn lại mà orb roll ra là may rủi thông thường: một trên bốn
+  là maximum Life trên base này, theo phép tính của chúng tôi.
+steps:
+  - title: "Chọn khóa thay vì phương án miễn phí, một cách có chủ đích"
+    do: >-
+      Hãy hỏi bạn cần gì từ phía prefix. **Prefix nào tử tế cũng được:** bỏ
+      qua ví dụ này. Cho cái helmet một implicit Searing Exarch và dùng
+      [[Eldritch Chaos Orb]], thứ chỉ roll lại prefix chừng nào Exarch còn là
+      implicit mạnh hơn. Không tốn lần khóa nào. **Một prefix veiled cụ
+      thể:** đọc tiếp.
+    why: >-
+      Eldritch Chaos Orb bảo vệ một phía mà không tốn gì nhưng chỉ roll được
+      những gì pool tự nhiên chứa. Các prefix gem level không nằm trong đó.
+      Cách duy nhất để đặt một veiled modifier lên item đã hoàn thiện mà
+      không đem suffix ra đánh cược là một lần khóa và một Veiled orb.
+    state:
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "Reflects 7 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Mở một ô prefix mà không đụng tới suffix"
+    do: >-
+      "Suffix Modifiers cannot be changed" tự nó là một **prefix**, nên nó
+      cần một ô prefix trống. Cái helmet này không có ô nào. Dùng một
+      [[Lesser Eldritch Ember]] lên nó, rồi một
+      [[Eldritch Orb of Annulment]].
+    why: >-
+      Một Orb of Annulment thường gỡ ngẫu nhiên một trong sáu modifier và sẽ
+      trúng suffix một nửa số lần. Bản Eldritch gỡ một prefix khi implicit
+      Searing Exarch là cái mạnh hơn trong hai cái, và ở đây nó là cái duy
+      nhất. Cả ba prefix đều là đồ bỏ, nên mất cái nào cũng được.
+    check: >-
+      Trước khi dùng orb: cái helmet hiện một implicit Searing Exarch và
+      không có implicit Eater of Worlds nào ở bậc bằng hoặc cao hơn. Nếu nó
+      đã mang sẵn một implicit Ichor, hãy dùng một Ember cao hơn nó một bậc.
+    fail: >-
+      Nếu đã có sẵn một ô prefix trống thì bỏ qua Ember và Annulment. Chúng
+      chỉ có mặt để dọn chỗ.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Craft khóa"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]] và 4 [[Blessed Orb]].
+    why: >-
+      Hãy dùng bản đầy đủ. "2 Suffix Modifiers cannot be changed" tốn 2
+      Divine Orb, nhưng nhà phát triển đã nói game chọn ngẫu nhiên hai cái
+      nào và không cho bạn thấy. Với ba suffix bạn muốn giữ, đó là một trên
+      ba khả năng mất đúng cái bạn tìm tới đây vì nó.
+    check: >-
+      Khóa hiện trong số các prefix dưới dạng một modifier crafted. Đừng dùng
+      bất kỳ currency nào khác lên cái helmet giữa bước này và bước kế.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "+41 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Dùng một [[Veiled Chaos Orb]] lên cái helmet.
+    why: >-
+      Dòng chữ của nó là "Reforges a rare item with new random modifiers
+      including a random Veiled modifier". Khi suffix đã khóa, lần reforge
+      thay các prefix, kể cả cái khóa nằm trong đó. Phía suffix đã đầy và
+      đóng băng, nên veiled modifier rơi vào làm prefix.
+    check: >-
+      Ba suffix không đổi, khóa đã biến mất, và một prefix ghi "Veiled".
+    fail: >-
+      Việc các Veiled orb tôn trọng khóa là do người chơi xác lập, không phải
+      do nhà phát triển tuyên bố. Nếu sau một bản patch bạn có chút nghi ngờ
+      nào, hãy thử cả chuỗi này trên một cái helmet vô giá trị trước. Một lần
+      khóa đắt hơn một lần thử nghiệm rất nhiều.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Life" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Unveil, và biết trước lựa chọn thứ hai của mình"
+    do: >-
+      Click chuột phải vào cái helmet và chọn trong ba modifier được đưa ra.
+      Không cần ghé Jun. Lấy "+2 to Level of Socketed AoE Gems" nếu nó có ở
+      đó. Nếu không, lấy lựa chọn thứ hai mà bạn đã chốt **trước khi** nhìn,
+      rồi đánh giá cái helmet sau đó: đủ tốt, hoặc quay lại bước 3 cho một
+      lần khóa nữa và một orb nữa.
+    why: >-
+      Những lựa chọn thứ hai thật thà trên helmet là +55 to 60 maximum Life
+      kèm mana regeneration, hoặc prefix defence 24–28% mang theo +19 to 22
+      life. Quyết định từ trước giúp bạn khỏi tự thuyết phục mình chọn một
+      cái thứ ba khi cửa sổ đang mở.
+    check: >-
+      Theo thử nghiệm của cộng đồng, các lựa chọn không bao giờ chứa một
+      group đã có trên item. Ở đây orb tình cờ roll ra maximum Life, điều đó
+      loại prefix life veiled khỏi lượt rút và để lại ít đáp án sai hơn.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+        - { text: "+97 to maximum Life" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Bench prefix cuối cùng"
+    do: >-
+      Craft **56–74% increased Armour** giá 2 [[Chaos Orb]] vào prefix trống,
+      hoặc maximum Life (56–70 giá 4 Orb of Alchemy) nếu orb không roll ra
+      cái nào.
+    why: >-
+      Khóa đã mất, nên ô bench duy nhất của item lại rảnh. Nó dành cho cái
+      nào trong life và defence mà lần roll lại không cấp.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+        - { text: "+97 to maximum Life" }
+        - { text: "63% increased Armour", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+variations: >-
+  **Một Veiled Exalted Orb thay vào đó.** Nó "removes a random modifier and
+  adds a random Veiled modifier". Khi suffix đã khóa nó chỉ gỡ được một
+  prefix, và nó để yên các prefix còn lại. Tốt hơn khi đã có một prefix tốt;
+  orb này rơi ở đâu trong 3.30 thì chúng tôi chưa xác nhận được.
+
+
+  **Một prefix thường được đảm bảo thay vào đó.** Với cùng cái khóa đó, một
+  reforge Harvest "kèm một modifier Life" (75 Wild Lifeforce) buộc phải đặt
+  modifier life của nó vào các prefix. Trên base này đó là maximum Life hoặc
+  hybrid Armour kèm life.
+
+
+  **Các loại gem khác.** Cùng ô đó unveil ra thành +2 to Socketed Projectile
+  Gems kèm thêm một pierce, hoặc +2 to Socketed Melee Gems kèm +0.2 mét
+  strike range. Bench bán các bản +1 của cả ba giá 4 Chaos Orb, không cần
+  khóa và không cần may.
+mistakes:
+  - "Khóa những suffix không đáng 4 Divine Orb và 4 Blessed Orb. Hai resistance thì không đáng; một suffix chỉ Fossil mới có kèm hai resistance cao thì có thể."
+  - "Dùng một Orb of Annulment thường để dọn chỗ cho khóa. Nó không hề biết bạn quan tâm tới phía nào."
+  - "Dùng Essence lên cái helmet đã khóa. Essence được ghi nhận là phớt lờ các modifier bảo vệ và sẽ roll lại tất cả."
+  - "Unveil vội vàng. Lựa chọn là vĩnh viễn, và đường quay lại duy nhất là một lần khóa nữa và một orb nữa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier unveil ra trên helmet, giá bench, cùng dòng chữ in-game của các Veiled orb và Eldritch orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên armour." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil không cần Jun." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Life và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb và reforge Harvest tôn trọng một phía đã khóa; Eldritch implicit nào là dominant. Một phần cũ hơn 3.30." }

@@ -1,0 +1,144 @@
+category: wands
+title: "Một cây wand caster leveling từ Alteration và bench"
+level: 1
+summary: "Roll Spell Damage trên một wand trắng, đưa nó lên Rare, rồi bench cast speed. Một lần craft đầu tay còn dạy luôn dòng nào trên wand là dành cho caster."
+goal: >-
+  Một cây wand cho caster spell ở đoạn giữa campaign, với increased Spell
+  Damage roll ra và cast speed mua về. Nếp làm vẫn là nếp quen: roll một
+  modifier, giữ nó, thêm vào nó. Cái riêng của wand là cách đọc. Một nửa
+  những gì nó roll ra là cho attack, và hai trong số các modifier đó trông
+  gần giống những cái bạn muốn. **Học cách phân biệt "to Spells" với anh em
+  sinh đôi của nó** là bạn đánh giá được mọi cây wand rơi ra.
+base: "Sage Wand"
+itemLevel: 35
+baseWhy: >-
+  Với caster, base là implicit của nó và không gì hơn: spell không dùng
+  damage hay attack speed của wand. Sage Wand dùng được từ level 30 và có
+  17–21% increased Spell Damage. Item level 35 mở tier thứ năm của Spell
+  Damage (40–54%). Giữ Alt rồi rê chuột lên cây wand trắng để kiểm.
+
+
+  Wand trắng nào có implicit Spell Damage cũng được. Tránh Somatic Wand và
+  Blasting Wand: implicit của chúng cấm mọi modifier caster.
+methods: [currency, bench]
+result:
+  implicits: ["19% increased Spell Damage"]
+  prefixes:
+    - { text: "36% increased Spell Damage" }
+    - { text: "+74 to maximum Mana" }
+  suffixes:
+    - { text: "+25 to Intelligence" }
+    - { text: "12% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–30", note: "cộng thêm 6 cho bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Vài chục [[Orb of Alteration]] và một [[Regal Orb]]. Craft bench tốn thêm
+  6 Alteration. Không cần whetstone: quality nâng physical damage, thứ mà
+  caster không bao giờ dùng.
+odds: >-
+  Ở item level 35, một lần roll prefix ra increased Spell Damage từ 30% trở
+  lên khoảng 1 trên 18 lần, theo phép tính của chúng tôi từ weight của
+  modifier. Tính cả hybrid của Spell Damage với Mana từ 19% trở lên thì là 1
+  trên 11. Một Alteration không phải lúc nào cũng roll ra prefix, nên hãy dự
+  trù hai mươi tới ba mươi cái. Một phần ba mọi lần roll prefix ở level này
+  là modifier attack: hãy chờ sẽ thấy rất nhiều và roll lại hết.
+steps:
+  - title: "Đưa nó lên Magic và roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi từng [[Orb of Alteration]] một.
+      Giữ Alt và đọc prefix sau mỗi cái. Dừng ở **increased Spell Damage từ
+      30% trở lên**: "Scholar's" (30–39%) hoặc "Professor's" (40–54%).
+      Hybrid "Wizard's" hoặc "Warlock's" (19–30% Spell Damage kèm Mana) cũng
+      đáng giữ.
+    why: >-
+      Spell Damage có tác dụng với mọi spell, bất kể element, nên nó là
+      prefix đầu tiên đúng đắn khi bạn chưa chắc mười level nữa mình sẽ cast
+      gì. Bản của bench là 25–34% giá 4 Alteration, nên một cái 30–39% trở
+      lên roll ra thì đáng công tìm.
+    check: >-
+      Đọc đúng từng chữ. **"Adds 14 to 28 Fire Damage"** là modifier attack:
+      nó cộng vào các hit đánh bằng chính cây wand. **"Adds 14 to 28
+      Fire Damage to Spells"** mới là cái của caster. Tương tự, "increased
+      Physical Damage" và "increased Elemental Damage with Attack Skills" là
+      cho attack. Roll lại tất cả những cái đó.
+    fail: >-
+      Thiếu Alteration: nhận "Adept's" (20–29%), hoặc flat damage "to
+      Spells" của element bạn cast.
+    state:
+      rarity: magic
+      implicits: ["19% increased Spell Damage"]
+      prefixes: [{ text: "36% increased Spell Damage" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu wand chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Một lần roll miễn phí tìm cast speed, suffix hay ra nhất trên wand, và
+      nó không đụng được tới prefix. Phần lớn các kết quả khác đều vô hại.
+    state:
+      rarity: magic
+      implicits: ["19% increased Spell Damage"]
+      prefixes: [{ text: "36% increased Spell Damage" }]
+      suffixes: [{ text: "+25 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Wand thành Rare, giữ cả hai modifier và nhận thêm cái thứ ba. Chính
+      Rare là thứ cho bench thêm vào nó.
+    check: >-
+      Đọc dòng mới và xem nó ở phía nào. Ở đây nó thêm maximum Mana, một
+      prefix mà caster dùng được. Vẫn còn một ô prefix và hai ô suffix
+      trống.
+    state:
+      implicits: ["19% increased Spell Damage"]
+      prefixes:
+        - { text: "36% increased Spell Damage" }
+        - { text: "+74 to maximum Mana" }
+      suffixes: [{ text: "+25 to Intelligence" }]
+  - title: "Bench thứ còn thiếu"
+    do: >-
+      Ở [[Crafting Bench]], thêm **một** modifier. Nếu wand chưa có cast
+      speed: 10–13% increased Cast Speed, 6 Orb of Alteration. Nếu nó đã
+      roll ra cast speed: flat damage to spells của element bạn dùng vào một
+      prefix trống, ví dụ adds 13–18 to 25–30 Fire Damage to Spells giá 4
+      Orb of Transmutation.
+    why: >-
+      Mỗi item một modifier bench, dành cho khoảng trống lớn hơn. Ở đây
+      bench không thêm được Spell Damage, cũng không thêm được increased
+      Fire, Cold hoặc Lightning Damage: trên wand, tất cả những cái đó là
+      một group với Spell Damage đã roll ra. Cast speed và flat damage to
+      spells là các group khác và nằm vừa.
+    fail: >-
+      Nếu bench không liệt kê craft này thì bạn chưa tìm ra công thức đó.
+      Hãy lấy lựa chọn caster tốt nhất mà nó hiện.
+    state:
+      implicits: ["19% increased Spell Damage"]
+      prefixes:
+        - { text: "36% increased Spell Damage" }
+        - { text: "+74 to maximum Mana" }
+      suffixes:
+        - { text: "+25 to Intelligence" }
+        - { text: "12% increased Cast Speed", how: crafted }
+variations: >-
+  **Bắt đầu từ một Essence.** Một Essence of Woe bậc thấp dùng lên wand
+  trắng đưa nó thành Rare với Spell Damage được đảm bảo (20–29% ở Muttering,
+  30–39% ở Weeping, 40–54% ở Wailing), và bench thêm cast speed. Trong 3.30,
+  các Essence yếu chỉ rơi ở campaign và map trắng, nên đây là lúc tiêu
+  chúng.
+
+
+  **Một gem level xuất hiện.** "+1 to Level of all Fire Spell Skill Gems" và
+  bốn anh em của nó roll được từ item level 2. Nếu một Alteration cho ra cái
+  ứng với loại spell bạn cast, hãy giữ nó thay vì bất kỳ roll Spell Damage
+  nào ở level này, và bench Spell Damage (25–34%) bên cạnh: prefix gem là
+  một group khác.
+mistakes:
+  - "Giữ \"Adds Fire Damage\" không có \"to Spells\" trên wand caster. Nó không giúp gì cho spell."
+  - "Bench increased Fire Damage cạnh Spell Damage roll ra. Một group; bench sẽ từ chối."
+  - "Chọn cây wand có damage mỗi giây cao hơn. Spell không bao giờ dùng tới nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, group, weight, các tier Essence và giá bench. Xác suất là phép tính của chúng tôi." }

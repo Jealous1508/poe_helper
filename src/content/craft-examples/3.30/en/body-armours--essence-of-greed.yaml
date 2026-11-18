@@ -1,0 +1,158 @@
+category: body-armours
+title: "Life from an Essence, then read the rest"
+level: 2
+summary: "An Essence of Greed guarantees the life. Repeat it until the other five slots hold something you can build on, then spend the bench on the gap."
+goal: >-
+  A chest for your first maps with 130 or more life that no roll can take
+  away, and enough beside it to be worth wearing. It is the first craft where
+  one slot **skips the lottery**, and the first where you judge a whole Rare
+  item. The skill to practise is that judgement: count what is useful and
+  what is open, on each side separately.
+base: "Astral Plate"
+itemLevel: 78
+baseWhy: >-
+  The Astral Plate is the only plate with an implicit, +8–12% to all
+  Elemental Resistances, which is a resistance suffix you do not have to
+  roll. It needs level 62 and 180 Strength. Item level 78 opens the best flat
+  Armour (401–500), resistances of 42–45% and percentage Armour of 80–91%.
+  The Essence gives the same life on any item level, so a lower base only
+  costs you tiers on the other modifiers.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["+10% to all Elemental Resistances"]
+  prefixes:
+    - { text: "+141 to maximum Life", how: essence }
+    - { text: "+342 to Armour" }
+    - { text: "66% increased Armour", how: crafted }
+  suffixes:
+    - { text: "+38% to Cold Resistance" }
+    - { text: "+44 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Greed]]", amount: "5–10", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "2–3", note: "for the bench" }
+cost: >-
+  The Essences are the whole cost, and Screaming ones are what red maps hand
+  you in 3.30. The bench step is 2 or 3 [[Chaos Orb]]s.
+odds: >-
+  The life is certain. For the rest, at item level 78 on a plate and by our
+  arithmetic from the weights: each further prefix the Essence rolls is flat
+  Armour 36% of the time, one of the two percentage Armour prefixes 39%, and
+  a wasted prefix (reflected damage, or the small Armour-with-Life hybrid)
+  25%. Each suffix is an elemental resistance 42% of the time, and a result
+  with two suffixes has at least one resistance 70% of the time.
+
+
+  How many modifiers a result has is not something the data tells us, so we
+  give no single figure. The per-slot numbers say enough: a result with
+  nothing to build on is the exception. Plan on a handful of Essences, not
+  dozens.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Bring a white Astral Plate to 20% quality with [[Armourer's Scrap]]s.
+      Use one [[Screaming Essence of Greed]] on it.
+    why: >-
+      The Essence makes the item Rare with **+130–144 to maximum Life**
+      guaranteed, and fills the other slots at random. From Screaming upwards
+      an Essence also works on an item that is already Rare, which is what
+      lets you repeat it on the same base.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+137 to maximum Life", how: essence }
+        - { text: "Reflects 38 Physical Damage to Melee Attackers" }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "Regenerate 41 Life per second" }
+  - title: "Count each side: useful, and open"
+    do: >-
+      Hold Alt and go through the item one side at a time. **Prefixes:** the
+      life is one. Is there a defence prefix beside it, or an empty slot?
+      **Suffixes:** how many are resistances of 30% or more, and is a slot
+      empty?
+    why: >-
+      The result above fails on both sides. Its second prefix is reflected
+      damage, which does nothing. Its three suffixes are full and none is a
+      resistance, so the bench has nowhere to add one.
+
+
+      A sensible bar for a first mapping chest: the life, **one more thing
+      you want on either side, and one open slot** on the side where you
+      still lack something.
+    check: >-
+      Count slots, not just modifiers. A chest with life, one resistance and
+      four empty slots is a better position than one with six modifiers of
+      which two are good.
+    fail: >-
+      Below the bar: use another Essence on the same item. Nothing is lost
+      but the Essence.
+  - title: "Repeat until a result clears the bar"
+    do: >-
+      Use Essences one after another, counting each result the same way,
+      until one passes.
+    why: >-
+      Each use is a fresh roll of everything except the life. The value of
+      the life rerolls too, inside 130–144.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+141 to maximum Life", how: essence }
+        - { text: "+342 to Armour" }
+      suffixes:
+        - { text: "+38% to Cold Resistance" }
+        - { text: "+44 to Strength" }
+  - title: "Choose the one bench modifier"
+    do: >-
+      The item now has an open prefix and an open suffix, and the bench fills
+      only one. **If your resistances are not capped**, craft the resistance
+      you lack: 29–35% for 3 [[Chaos Orb]]s. **If they are**, craft the
+      defence prefix the item did not roll: here that is 56–74% increased
+      Armour for 2 Chaos Orbs.
+    why: >-
+      The rolled prefix is flat Armour, so the bench's increased Armour is a
+      different group and fits. Had the Essence rolled increased Armour, the
+      bench would refuse its own copy and you would craft +250–320 flat
+      Armour instead. The two multiply each other: 342 flat Armour is added
+      to the base's 711–782 first, and the percentage then applies to the
+      sum.
+    check: >-
+      The Armour line at the top of the item goes up when you craft. If it
+      does not, you crafted into the wrong group and the bench should have
+      refused.
+    state:
+      implicits: ["+10% to all Elemental Resistances"]
+      prefixes:
+        - { text: "+141 to maximum Life", how: essence }
+        - { text: "+342 to Armour" }
+        - { text: "66% increased Armour", how: crafted }
+      suffixes:
+        - { text: "+38% to Cold Resistance" }
+        - { text: "+44 to Strength" }
+variations: >-
+  **Stronger Essences.** Shrieking Greed gives +145–159 and Deafening
+  +160–174. The method does not change. Deafening equals the second-best
+  natural tier; the best, 175–189, only comes from a roll at item level 86.
+
+
+  **Other bases.** On an evasion base the steps are identical and a
+  Suppression suffix joins the things worth keeping. For an Energy Shield
+  chest the anchor is an Essence of Woe: +50–61 Energy Shield at Screaming,
+  +88–95 at Deafening.
+
+
+  **The open suffix you did not fill.** An [[Exalted Orb]] would add a
+  random modifier to one of the open slots. On a chest at this level it is
+  rarely worth one. The next example shows a cheaper way to work on a single
+  side.
+mistakes:
+  - "Keeping a result because it has six modifiers. Six mediocre modifiers leave nothing for the bench to fix."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Judging by the suffixes alone. Three resistances with a wasted prefix side is a worse chest than life, Armour and one resistance."
+  - "Using this on a base with [[Memory Strands]]. One Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on body armours, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

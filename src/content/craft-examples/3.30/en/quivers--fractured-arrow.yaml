@@ -1,0 +1,278 @@
+category: quivers
+title: "A top-tier quiver around a fractured additional arrow"
+level: 5
+summary: "The full plan: fracture the one suffix nothing can aim at, fix the second with an Essence, lock the suffixes for a guaranteed Life roll, then use a bench block so that an Exalted Orb has almost nowhere bad to land."
+goal: >-
+  A quiver with the additional arrow made permanent, top Critical Strike
+  Multiplier, a third damage suffix, high Life and two damage prefixes. Each
+  stage uses the cheapest tool that is *certain* for that slot, and the
+  order follows from one question asked five times: **what can aim at this
+  modifier?** For the arrow the answer is nothing, so it is fractured. For
+  everything after it there is an answer, and the plan is the list of them.
+base: "Spike-Point Arrow Quiver"
+itemLevel: 86
+baseWhy: >-
+  Item level 86 opens the last tier of increased Damage with Bow Skills
+  (43–50%) and, from 85, of Critical Strike Chance with Bows (39–44%). The
+  arrow itself only needs 70, so an item level 77 base makes the same
+  quiver one tier lower in two places, for much less.
+
+
+  The base must have **no influence**: a [[Fracturing Orb]] refuses
+  influenced items. Choose the implicit for the build. This example is an
+  elemental critical strike build on a Spike-Point; a Primal Arrow Quiver
+  is the other sensible choice.
+methods: [fracture, essence, meta, harvest, bench, currency, finishing]
+result:
+  note: "Fractured"
+  implicits: ["28% increased Critical Strike Chance with Bows"]
+  prefixes:
+    - { text: "+136 to maximum Life", how: harvest }
+    - { text: "45% increased Damage with Bow Skills" }
+    - { text: "30% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+    - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+    - { text: "33% increased Critical Strike Chance with Bows" }
+needs:
+  - { item: "A quiver with \"Bow Attacks fire an additional Arrow\" fractured, item level 86", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Deafening Essence of Scorn]]", amount: "dozens" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Blessed Orb]]", amount: "4 per lock" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per reforge" }
+  - { item: "[[Exalted Orb]]", amount: "1–2" }
+  - { item: "[[Orb of Transmutation]]", amount: "4", note: "for the block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the block" }
+  - { item: "[[Orb of Alchemy]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  The fractured base is most of it. In 3.30 fractured items are rarer than
+  they were: they come from Tier 5 drops, a [[Fracturing Orb]] or a
+  [[Fractured Fossil]], and the arrow is one suffix roll in about 300 before
+  any of that. After the base, the cost is counted in Deafening Essences
+  for stage 2 and in locks for stage 3, each lock being 4 [[Divine Orb]]s
+  and 4 [[Blessed Orb]]s. Stage 4 is cheap by comparison.
+
+
+  We give no total. Prices in the first week of a league move too fast, and
+  stages 2 and 3 both have long tails.
+odds: >-
+  All figures are our arithmetic from the weights at item level 86, per
+  single modifier rolled.
+
+
+  **Stage 1.** The arrow has a weight of 250 in a suffix pool of 76,350: 1
+  suffix roll in 305. A Fracturing Orb on a Rare with exactly four modifiers
+  picks it 1 time in 4.
+
+
+  **Stage 2.** The Essence fixes the second suffix every time. The third is
+  the question: when the result has a third suffix, it is Critical Strike
+  Chance with Bows at 30% or more about 1 time in 24, and at any tier about
+  1 in 10. A result with no third suffix is as good, because the bench can
+  fill it, and that is the outcome to expect to stop on.
+
+
+  **Stage 3.** Every Life reforge gives Life. If its tier is drawn by
+  weight, 3 in 10 give +100 or more, 2 in 10 give +115 or more. Not measured
+  in 3.30.
+
+
+  **Stage 4.** With Life on the item and flat Physical Damage blocked, an
+  added prefix is bow damage 48% of the time, flat Fire, Cold or Lightning
+  51%, flat Chaos 1%. For an elemental build that is 99 useful outcomes in
+  100. Without the block it is 73.
+steps:
+  - title: "Stage 1: the fractured arrow"
+    do: >-
+      Buy or find an item level 86 quiver with **"Bow Attacks fire an
+      additional Arrow" fractured**. To make one instead: roll "of
+      Splintering" on a Magic quiver with Alterations, bring the item to a
+      Rare with **exactly four** modifiers using a [[Regal Orb]] and one or
+      two [[Exalted Orb]]s, and use a [[Fracturing Orb]].
+    why: >-
+      Go down the toolbox with the arrow in mind. No Essence gives it. It
+      has no tag of its own for a Harvest reforge or a Fossil to pick out:
+      its only tag is "attack", shared with a third of the suffix pool. The
+      bench does not sell it. A modifier that nothing can aim at is the one
+      to make permanent, because every other stage can then reroll freely.
+    check: >-
+      The Fracturing Orb needs at least four modifiers and picks one **at
+      random**. With exactly four it is 1 in 4. Do not add a fifth first.
+    fail: >-
+      It fractured something else. The quiver still has the arrow as an
+      ordinary suffix, with the wrong modifier locked beside it for ever,
+      and it cannot be fractured again or returned to an [[Imprint]]. This
+      is the step that makes most players buy the base.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "Adds 16 to 31 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+44 to Dexterity" }
+        - { text: "+33% to Cold Resistance" }
+  - title: "Stage 2: an Essence for the second suffix"
+    do: >-
+      Use [[Deafening Essence of Scorn]]s until the third suffix is
+      **Critical Strike Chance with Bows at 30% or more, attack speed, or
+      empty**. Ignore the prefixes completely.
+    why: >-
+      Scorn guarantees Global Critical Strike Multiplier, 35–41% at
+      Deafening, which is above the 35–38% of the natural tier and is the
+      one damage suffix the bench does not sell. An Essence rerolls
+      everything that is not fractured, so the arrow stays and the
+      multiplier comes back every time. That leaves one suffix slot to
+      luck, and an empty slot counts as a win.
+    check: >-
+      Read the third suffix with Alt held. "of Penetrating" is 30–34%,
+      "of Incision" 35–38%, "of Rending" 39–44%. The prefixes do not matter:
+      stage 3 replaces them.
+    fail: >-
+      A filler third suffix: use the next Essence. A resistance your
+      character needs is a reasonable place to stop early.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "Adds 28 to 57 Fire Damage to Attacks" }
+        - { text: "+47 to maximum Life" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Open a prefix slot if the Essence filled all three"
+    do: >-
+      Stage 3 needs one open **prefix** for the lock. If the Essence result
+      you want to keep has three prefixes, it is not usable yet: keep
+      rolling stage 2 until a result passes the suffix test with at most
+      two prefixes.
+    why: >-
+      An [[Orb of Annulment]] to clear a prefix would risk the multiplier
+      and the third suffix, which are not fractured. Waiting for a result
+      with room costs Essences, not suffixes.
+  - title: "Stage 3: lock the suffixes, reforge for Life"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** at the bench (4
+      [[Divine Orb]]s and 4 [[Blessed Orb]]s). Then, at the
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]). Repeat both until Life is +115 or
+      more and the prefix side has **exactly one other prefix or none**.
+    why: >-
+      The lock protects the two suffixes that are not fractured. With the
+      suffix side closed, the life tag can only be satisfied by maximum
+      Life, so the reforge is a guaranteed Life roll. You want open prefix
+      slots here more than a lucky second prefix, because stage 4 fills
+      them on better terms than this reforge does.
+    check: >-
+      Suffixes unchanged, Life tier, number of prefixes. Life alone is the
+      ideal result.
+    fail: >-
+      Low Life, or three prefixes: lock and reforge again. Each repeat is
+      another 4 Divine Orbs and 4 Blessed Orbs, so fix the number of
+      attempts before you begin.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Stage 4: block one group, then an Exalted Orb"
+    do: >-
+      At the bench, craft the cheapest **flat Physical Damage to Attacks**
+      (adds 3–5 to 6–8, 4 [[Orb of Transmutation]]s). Then use one
+      [[Exalted Orb]].
+    why: >-
+      All three suffix slots are full, so the Exalted Orb must add a prefix.
+      The prefix side of a quiver has seven families. Life is on the item,
+      and the bench modifier takes the Physical Damage group out of the
+      lottery while it sits there. What is left is bow damage, the three
+      elements and Chaos: for an elemental build, nothing but wanted
+      outcomes, and bow damage is nearly half of them. The block exists
+      only to shape this one roll.
+    check: >-
+      A physical build blocks nothing and takes the Exalted Orb as it
+      comes: bow damage and flat Physical Damage are then 62% of outcomes
+      between them.
+    fail: >-
+      Flat Chaos Damage, 1 time in 100. It can only be removed by an
+      Annulment, which could take Life instead. Leave it.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+        - { text: "Adds 4 to 7 Physical Damage to Attacks", how: crafted }
+        - { text: "45% increased Damage with Bow Skills" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Swap the block for the real bench modifier"
+    do: >-
+      Remove the crafted modifier at the bench (1 [[Orb of Scouring]]) and
+      craft **24–32% increased Elemental Damage with Attack Skills** in its
+      place, 4 [[Orb of Alchemy]]s.
+    why: >-
+      The block has done its job. The slot it held now takes the one prefix
+      a quiver cannot roll by itself, so all six slots end up doing work.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+        - { text: "45% increased Damage with Bow Skills" }
+        - { text: "30% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Finish: the two value orbs"
+    do: >-
+      A [[Divine Orb]] if Life, the multiplier or bow damage sit low in
+      their ranges. [[Blessed Orb]]s until the implicit is near 30%.
+    why: >-
+      A Divine Orb rerolls every number at once and can lower the good ones,
+      so use it when the important values are poor and the others are not
+      perfect. The implicit has ten points of range and the Blessed Orb
+      costs little.
+variations: >-
+  **Without the fracture.** At item level 77, an Alteration-rolled arrow
+  kept through a [[Regal Orb]] with an [[Imprint]], then stages 3 and 4 as
+  written, makes a quiver with the arrow and good prefixes for a small part
+  of the cost. It has no Essence stage, because an Essence would reroll the
+  arrow, so the second and third suffix are whatever the Regal Orb and an
+  Exalted Orb give.
+
+
+  **With influence instead.** A quiver cannot be both fractured and
+  influenced. The influenced route trades the certain arrow for a prefix
+  such as Gain 11–15% of Physical Damage as Extra Cold Damage. It is a
+  different quiver for a different build, and the arrow on it has to be
+  rolled.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next currency
+  before you commit. The two places it could pay are the Fracturing Orb in
+  stage 1 and the Exalted Orb in stage 4.
+
+
+  **Memory Strands.** The Essences of stage 2 would burn them, up to 80
+  each by the data-mined table, so a strand base is wasted here.
+mistakes:
+  - "Using a Fracturing Orb on a quiver with five or six modifiers. One in four becomes one in five or six."
+  - "Putting influence on the base first. An influenced item cannot be fractured."
+  - "Benching the real prefix before the Exalted Orb. A bench modifier blocks only its own group, and Elemental Damage with Attack Skills is not in the natural pool, so it would block nothing and use the slot."
+  - "Leaving the block on. Adds 3–5 to 6–8 Physical Damage is there to shape one roll, not to be worn."
+  - "Using an Essence after stage 3. It ignores the lock by player reports and rerolls the Life you paid for."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, the Essence modifiers on quivers, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges and Essences. Partly older than 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

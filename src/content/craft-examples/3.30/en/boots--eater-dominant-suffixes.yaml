@@ -1,0 +1,221 @@
+category: boots
+title: "Rebuild the suffixes without a lock: the Eater of Worlds protects the prefixes"
+level: 4
+summary: "Boots with finished prefixes and poor suffixes. One Ichor decides that every Eldritch orb you use works on suffixes only, and the same trick reversed adds the last prefix."
+goal: >-
+  Turn boots with 30% movement speed, high life and junk suffixes into a
+  finished pair with spell suppression and two resistances, without ever
+  putting the prefixes at risk. On a weapon this would need a bench lock on
+  every attempt. On armour **the stronger Eldritch implicit is the lock**,
+  and this example is about using it, checking it, and knowing what it does
+  not cover.
+base: "Slink Boots"
+itemLevel: 86
+baseWhy: >-
+  This craft starts from an item: the boots from the two-Fossil example, or
+  any Rare pair whose prefixes you want to keep. Item level 85 opens Tier 1
+  spell suppression and 84 the top resistances, which is what the suffix
+  rolls are for.
+
+
+  The boots must have **no influence**, and should have no implicit you care
+  about: an Atlas base would lose its implicit to the first Ichor.
+methods: [eldritch, bench, finishing]
+result:
+  implicits: ["8% increased Movement Speed", "25% chance to Avoid Elemental Ailments"]
+  prefixes:
+    - { text: "30% increased Movement Speed", how: fossil }
+    - { text: "+104 to maximum Life", how: fossil }
+    - { text: "74% increased Evasion Rating", how: eldritch }
+  suffixes:
+    - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+    - { text: "+44% to Cold Resistance", how: eldritch }
+    - { text: "+33% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Greater Eldritch Ichor]]", amount: "1", note: "to make the Eater the stronger implicit" }
+  - { item: "[[Eldritch Chaos Orb]]", amount: "dozens" }
+  - { item: "[[Exceptional Eldritch Ember]]", amount: "about 25", note: "for the final Exarch implicit" }
+  - { item: "[[Eldritch Exalted Orb]]", amount: "1" }
+  - { item: "[[Exceptional Eldritch Ichor]]", amount: "as many as you care to spend", note: "for the final Eater implicit" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  [[Eldritch Chaos Orb]]s, by the dozen. Set that against the alternative: a
+  bench lock on boots is 4 Divine Orbs and 4 Blessed Orbs for every single
+  suffix reroll. The final implicits are a separate bill, paid in
+  Exceptional Embers and Ichors.
+odds: >-
+  Per suffix rolled on this base at item level 86, by our arithmetic from
+  the weights: spell suppression of 9% or more is 1 in 19, and each
+  elemental resistance at 36% or more is 1 in 19. Counting suppression and
+  all three resistances as wanted, about one suffix roll in five is good.
+
+
+  The plan needs two good suffixes on one result, and a reroll gives one to
+  three suffixes. We have not computed that exactly; expect dozens of orbs.
+  The Exceptional Ember at the end gives the movement speed implicit about 1
+  time in 26.
+steps:
+  - title: "See the lock you are not paying for"
+    do: >-
+      Read the [[Eldritch Chaos Orb]]: "If The Searing Exarch is dominant,
+      reroll prefix modifiers. If The Eater of Worlds is dominant, reroll
+      suffix modifiers." By player testing, the dominant one is whichever
+      implicit has the higher strength.
+    why: >-
+      That one sentence replaces "Prefix Modifiers cannot be changed" for an
+      ordinary reroll. The orb cannot touch the other side at all, the
+      protection is not consumed, and it costs one Ichor to set up.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Make the Eater the stronger implicit"
+    do: >-
+      Use one [[Greater Eldritch Ichor]] on the boots. Add no Ember. If the
+      boots already have a Searing Exarch implicit, the Ichor must be a
+      higher strength than it.
+    why: >-
+      Which Eater implicit appears does not matter yet. Its strength does.
+      Greater against nothing, or against Lesser, leaves no doubt about
+      which side is stronger.
+    check: >-
+      Before every Eldritch orb from here on, look at the two implicits and
+      confirm the Eater one is the stronger. It takes a second, and the
+      mistake it prevents is the loss of 30% movement speed and the life.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Eldritch Chaos Orbs, to a rule"
+    do: >-
+      Use Eldritch Chaos Orbs one at a time. Keep the result when it has
+      **two suffixes you want and the third slot empty**, or three you
+      want. Wanted here: suppression of 9% or more, and any resistance your
+      character needs at 36% or more.
+    why: >-
+      Each orb rerolls all the suffixes, the bench resistance included, and
+      leaves the prefixes exactly as they are. The rule stops at two because
+      the bench supplies a third for certain; waiting for three rolled ones
+      multiplies the orbs for ten points of resistance.
+    check: >-
+      The result shown fails: one wanted suffix and two that are not.
+    fail: >-
+      Next orb. Do not reach for an [[Eldritch Orb of Annulment]] to tidy a
+      result with two good suffixes and one bad: it removes one suffix at
+      random, and two times in three that is a good one.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+9% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+17% to Fire Resistance", how: eldritch }
+        - { text: "+41 to Dexterity", how: eldritch }
+  - title: "The result that passes, and the bench"
+    do: >-
+      When the rule is met, stop. At the [[Crafting Bench]], craft the
+      resistance you are missing in the empty suffix, **+29–35%** for 3
+      [[Chaos Orb]]s.
+    why: >-
+      Two rolled suffixes and a certain third. The bench goes on only now,
+      because any earlier craft would have been rerolled with the rest.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Reverse the lock to add the last prefix"
+    do: >-
+      Use [[Exceptional Eldritch Ember]]s until the Exarch implicit is "8%
+      increased Movement Speed". The Exarch is now the stronger implicit.
+      Use one [[Eldritch Exalted Orb]].
+    why: >-
+      Two jobs in one. The Ember is the implicit you want to keep, and
+      being stronger than the Greater Ichor it turns the Eldritch orbs
+      round: the Exalted Orb now adds a **prefix**, and the finished
+      suffixes are the protected side. With movement speed and life already
+      there, five prefix rolls in six on this base are a defence prefix, by
+      our arithmetic.
+    check: >-
+      From this moment an Eldritch Chaos Orb would reroll the prefixes. Put
+      them away.
+    fail: >-
+      The Exalted Orb added Item Rarity or the small Evasion-and-life
+      hybrid. Leave it. Removing it would mean an Eldritch Annulment on the
+      prefix side, a two-in-three chance of hitting movement speed or
+      life.
+    state:
+      implicits: ["8% increased Movement Speed", "6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+        - { text: "74% increased Evasion Rating", how: eldritch }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "The Eater implicit you keep"
+    do: >-
+      Use [[Exceptional Eldritch Ichor]]s until the Eater implicit is one
+      you want. For boots that is usually chance to Avoid Elemental
+      Ailments (24–26% at this strength) or Cooldown Recovery Rate (8%).
+    why: >-
+      An Ichor replaces only the Eater implicit. Which side is stronger no
+      longer matters, because no Eldritch orb will be used again. The
+      ailment implicit is the rarer of the two, about 1 Ichor in 50 for the
+      always-on form by our arithmetic, so decide how long you will chase
+      it.
+    state:
+      implicits: ["8% increased Movement Speed", "25% chance to Avoid Elemental Ailments"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+        - { text: "74% increased Evasion Rating", how: eldritch }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+variations: >-
+  **When the bench lock is still right.** Dominance protects a side from
+  Eldritch orbs and from nothing else. A Harvest reforge with a guaranteed
+  resistance, a Veiled Chaos Orb, an Orb of Scouring: each rerolls or wipes
+  the whole item unless "Prefix Modifiers cannot be changed" is on it, at 4
+  Divine Orbs and 4 Blessed Orbs a time. Pay that when the suffix you need
+  is one that only those tools give.
+
+
+  **One good suffix and an empty slot.** An Eldritch Exalted Orb under the
+  stronger Eater implicit adds one suffix and rerolls nothing. Worth it when
+  the first two suffixes are already right and you would rather gamble the
+  third than bench it.
+
+
+  **On Memory Strands.** By the data-mined table an Eldritch Chaos Orb can
+  spend up to 60 strands a use, so strands do not last through this stage.
+  Whether a strand item accepts the Ichor at all we could not confirm.
+mistakes:
+  - "Adding the strong Ember first. With the Exarch stronger, the first Eldritch Chaos Orb rerolls movement speed and life."
+  - "Using an Orb of Conflict in the middle of the craft. It raises one implicit and lowers the other, and can hand the lock to the wrong side."
+  - "Treating dominance as protection from everything. Essences, Fossils, Chaos Orbs and Harvest reforges ignore it."
+  - "Benching the third suffix before the rerolls are over."
+  - "Annulling a suffix when two of the three are good."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The in-game text of the Eldritch orbs, Embers and Ichors, the Eldritch implicits of boots and their weights, tiers and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The cost of the bench locks this method avoids." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: the stronger Eldritch implicit decides which side the Eldritch orbs work on. Partly older than 3.30." }

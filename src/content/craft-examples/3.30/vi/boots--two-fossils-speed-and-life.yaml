@@ -1,0 +1,169 @@
+category: boots
+title: "Movement speed và life từ hai Fossil"
+level: 3
+summary: "Một Fossil thêm thứ bạn muốn, cái kia loại thứ bạn không muốn. Gộp lại chúng để lại một pool prefix của boots gần như không còn gì ngoài movement speed và life."
+goal: >-
+  Boots Evasion có movement speed và maximum Life là hai prefix roll ra, ở
+  các tier do bạn chọn chấp nhận. Suffix sẽ tệ, và ví dụ nói trước vì sao.
+  Bài học là **đọc hai Fossil cùng nhau**: mỗi cái có một dòng "more" và một
+  dòng "no", và lần craft được thiết kế từ cả bốn dòng.
+base: "Slink Boots"
+itemLevel: 86
+baseWhy: >-
+  Item level 86 là mức duy nhất mà 35% movement speed tồn tại. Fossil không
+  giúp gì về tier, nên base phải cho phép cái tier bạn hy vọng. Nếu 30% là đủ
+  với bạn, bất kỳ base nào từ item level 55 cũng hoạt động theo cùng cách và
+  rẻ hơn nhiều.
+
+
+  Slink Boots nằm trong pool thuần Evasion, điều quan trọng cho ví dụ kế
+  tiếp: nó roll spell suppression ở weight đầy đủ. Velour Boots là cùng pool
+  đó với nhiều Evasion hơn và yêu cầu cao hơn.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "30% increased Movement Speed", how: fossil }
+    - { text: "+104 to maximum Life", how: fossil }
+  suffixes:
+    - { text: "Regenerate 58.2 Life per second", how: fossil }
+    - { text: "+31 to Dexterity", how: fossil }
+    - { text: "+33% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Shuddering Fossil]]", amount: "10–20" }
+  - { item: "[[Pristine Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ có hai socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Mỗi lần thử một cặp Fossil và một Resonator hai socket, tất cả đều từ
+  Delve. Trong 3.30, đường vào Delve là qua các map luôn spawn Sulphite. Base
+  item level 86 là khoản chi phí thật sự còn lại.
+odds: >-
+  Với cả hai Fossil trên base này, theo phép tính của chúng tôi từ weight,
+  một lần roll prefix là maximum Life 56% số lần và movement speed 43%. Mọi
+  thứ khác là 1%. Một kết quả có hai hoặc ba prefix gần như lần nào cũng có
+  cả hai.
+
+
+  Tier thì không bị đụng tới. Movement speed, khi roll ra, là 30% hoặc 35%
+  khoảng ba trên mười lần, và life là từ 85 trở lên một trên ba lần. Vậy nên
+  cứ khoảng mười kết quả thì một cái có cả hai ở các tier đó. Con số cuối
+  này giả định cả hai prefix đều đã roll ra, và là một chỉ dẫn, không phải
+  một phép đo.
+steps:
+  - title: "Thiết kế pool từ bốn dòng"
+    do: >-
+      Đọc cả hai Fossil. [[Shuddering Fossil]]: more Speed modifiers, no
+      Mana modifiers. [[Pristine Fossil]]: more Life modifiers, no Defence
+      modifiers. Rồi đi dọc danh sách prefix của boots và áp cả bốn.
+    why: >-
+      Trong dữ liệu, "more" là gấp mười weight và "no" là bằng không.
+      Movement speed mang tag speed: gấp mười. Maximum Life mang tag life:
+      gấp mười. Mọi prefix defence mang tag defences: biến mất. Prefix mana:
+      biến mất. Các hybrid nhỏ defence kèm life mang cả một tag "more" lẫn
+      một tag "no", và số không thắng. Thứ còn lại là movement speed, life
+      và Item Rarity, và Item Rarity giữ weight bình thường của nó.
+    check: >-
+      Hãy làm y vậy với suffix, để kết quả không làm bạn bất ngờ. Life
+      Regeneration mang tag life và trở thành khoảng 60% số lần roll suffix.
+      Lần craft này làm ra prefix. Suffix của nó là một khoản mất đã biết
+      trước.
+  - title: "Chuẩn bị base"
+    do: >-
+      Đưa một đôi Slink Boots trắng item level 86 lên 20% quality và biến
+      chúng thành Rare bằng một [[Orb of Alchemy]].
+    why: >-
+      Một Chaotic Resonator roll lại item Rare. Kết quả của Alchemy bị lần
+      thử đầu tiên thay thế.
+    state:
+      prefixes:
+        - { text: "+78 to Evasion Rating" }
+        - { text: "+14% to Item Rarity" }
+      suffixes:
+        - { text: "+34% to Lightning Resistance" }
+        - { text: "21% increased Stun and Block Recovery" }
+  - title: "Cả hai Fossil trong một Resonator"
+    do: >-
+      Đặt một Shuddering Fossil và một Pristine Fossil vào một
+      [[Potent Chaotic Resonator]] và dùng nó lên đôi boots.
+    why: >-
+      Hai hiệu ứng phải tác động lên cùng một lần roll lại. Dùng cái này sau
+      cái kia thì cái thứ hai đơn giản là xóa mất cái đầu.
+    state:
+      prefixes:
+        - { text: "15% increased Movement Speed", how: fossil }
+        - { text: "+47 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 12.4 Life per second", how: fossil }
+        - { text: "+26% to Lightning Resistance", how: fossil }
+  - title: "Đọc tier, và chỉ đọc prefix"
+    do: >-
+      Cả hai prefix thường sẽ có mặt. Câu hỏi là tier của chúng. Hãy đặt mức
+      chuẩn trước khi bắt đầu: ví dụ **30% hoặc 35% movement speed, và life
+      từ 85 trở lên**.
+    why: >-
+      Kết quả ở trên cho thấy điều Fossil không làm được. Nó có đúng hai
+      modifier cần, ở 15% và 47. Mọi tier của movement speed và của life đều
+      nhận cùng một hệ số nhân, nên các tier thấp vẫn phổ biến như trước.
+    check: >-
+      Hãy quyết định từ trước 30% có phải là đạt không. Cố chờ 35% làm số
+      Fossil tăng khoảng gấp đôi.
+    fail: >-
+      Cặp Fossil kế tiếp. Không mất gì ngoài cặp đó.
+  - title: "Lặp lại tới khi đạt mức chuẩn"
+    do: >-
+      Cứ tiếp tục tới khi cả hai prefix đạt.
+    why: >-
+      Mỗi lần thử độc lập với nhau. Kết quả này có 30% và 104 life, một
+      suffix regeneration đúng như dự đoán, và mỗi phía còn một ô trống.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+  - title: "Bench một resistance rồi mang, hoặc làm tiếp"
+    do: >-
+      Ở [[Crafting Bench]], craft **+29–35% cho một resistance** giá 3
+      [[Chaos Orb]] vào suffix trống.
+    why: >-
+      Vậy là có một đôi boots bạn dùng được ngay hôm nay. Phía prefix là nửa
+      khó mua rẻ của một đôi boots, và nó đã xong. Ví dụ kế tiếp lấy đúng
+      item này và dựng lại phía suffix mà không đem nó ra đánh cược.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+variations: >-
+  **Chỉ Shuddering.** Với một Fossil, movement speed là khoảng hai trên ba
+  lần roll prefix trên boots Evasion và các prefix defence ở lại trong pool.
+  Hợp với build Evasion hoặc Energy Shield muốn prefix thứ ba là defence chứ
+  không phải life. Trên boots có Energy Shield, nó còn loại prefix mana, thứ
+  chiếm một phần tư pool của chúng.
+
+
+  **Một Essence of Zeal thay vào đó.** Một cái Deafening cố định movement
+  speed ở 32% trong mọi lần thử và để life cho vận may thông thường, khoảng
+  một trên bốn hoặc năm lần roll prefix. Tốt hơn khi 32% là mục tiêu của
+  bạn; Fossil tốt hơn khi bạn muốn life nhiều ngang vậy và chấp nhận chờ
+  tier.
+
+
+  **Alteration thay vào đó.** Chỉ riêng movement speed thì Alteration trên
+  base Magic cho bạn dừng ở đúng tier mình muốn, với 35% là 1 trên 40 lần
+  roll prefix. Chúng không giúp gì về life.
+mistakes:
+  - "Dùng hai Fossil lần lượt trong các Resonator một socket. Mỗi lần roll lại thay lần trước."
+  - "Trông chờ suffix tốt. Pristine Fossil biến phần lớn chúng thành Life Regeneration, và loại Recharge Rate trên các base có nó."
+  - "Dùng một base item level 85 rồi chờ 35%. Nó không roll ra được."
+  - "Trả tiền cho một base có [[Memory Strands]]. Fossil phớt lờ strand, theo thử nghiệm của người chơi, nên tier không được chúng giúp gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân của Fossil, tag trên từng modifier của boots, tier và weight. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Đường vào Delve trong 3.30." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: Fossil không dùng Memory Strands. Một phần cũ hơn 3.30." }

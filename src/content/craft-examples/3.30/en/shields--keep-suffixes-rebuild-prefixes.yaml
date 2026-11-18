@@ -1,0 +1,212 @@
+category: shields
+title: "Keep a rare suffix side, rebuild the prefixes"
+level: 4
+summary: "A shield with +2% to all maximum Resistances and worthless prefixes. Lock the suffixes, reforge for a Life modifier, and understand why the obvious tool for life is the one you may not use."
+goal: >-
+  Turn a tower shield with a suffix side worth protecting and a prefix side
+  worth nothing into a finished item. On a chest this job costs an Eldritch
+  Chaos Orb. A shield cannot take Eldritch implicits, so here it is the
+  first craft where you **pay for a protection modifier**, and the whole
+  example is about what that modifier covers, what it does not, and whether
+  the item deserves it.
+base: "Colossal Tower Shield"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from an item you found or bought: a Rare Colossal Tower
+  Shield (522–601 Armour, 23% block) whose suffixes are "+2% to all maximum
+  Resistances", a high resistance and Physical Damage Reduction. The first
+  of those needs item level 81 and is the reason the shield is worth
+  anything. Item level 84 changes nothing for the prefixes you are about to
+  roll: shield life stops at 145–159, which needs only 73.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["+15 to maximum Life"]
+  prefixes:
+    - { text: "+133 to maximum Life", how: harvest }
+    - { text: "+178 to Armour", how: harvest }
+    - { text: "46% increased Chance to Block", how: crafted }
+  suffixes:
+    - { text: "+2% to all maximum Resistances" }
+    - { text: "+44% to Fire Resistance" }
+    - { text: "7% additional Physical Damage Reduction" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Blessed Orb]]", amount: "4 per attempt" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per attempt" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the final bench craft" }
+cost: >-
+  The lock: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s on a shield in 3.30,
+  used up by every reforge. The Lifeforce is nothing beside it. Expect to
+  pay for the lock three or four times at the bar set below, and decide the
+  limit before the first.
+odds: >-
+  With the suffixes locked, the Life reforge must put a modifier with the
+  life tag among the prefixes, and a tower shield has two: maximum Life and
+  the small Armour-with-Life hybrid. If the reforge picks by weight, which is
+  how reforges are understood to work, the guaranteed modifier is maximum
+  Life 79% of the time; life of 100 or more 29%, of 130 or more 14%, and the
+  top tier 7%. That is our arithmetic on equal tier weights at item level
+  84, not a measurement.
+
+
+  The other prefixes the reforge rolls are ordinary luck. The lock holding
+  at all is player-tested, not documented.
+steps:
+  - title: "Price the side you want to keep"
+    do: >-
+      Read the suffixes and ask what it would cost to roll them again.
+      Then read the prefixes and ask what the shield is worth as it stands
+      with one bench craft.
+    why: >-
+      "+2% to all maximum Resistances" weighs 125 where a resistance weighs
+      1,000: about 1 suffix roll in 600 on this shield, by our arithmetic.
+      With a 44% resistance and 7% Physical Damage Reduction beside it,
+      this suffix side would cost far more than a few locks to see again.
+      That is the test, and this item passes it.
+
+
+      Now the baseline. Without any lock, the bench puts +56–70 maximum Life
+      in the open prefix for 4 Orbs of Alchemy and the shield is usable.
+      Everything below has to beat that by enough to justify its price.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "Reflects 29 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Rule out the tools that would break it"
+    do: >-
+      Before choosing a method, strike three off the list: an Essence of
+      Greed, the beast recipe that adds a prefix, and the cheaper locks.
+    why: >-
+      **An Essence of Greed** is the natural way to put life on a shield,
+      and it is exactly what you may not use: Essences reroll both sides and
+      are reported to ignore protection modifiers.
+
+
+      **"Add a Prefix, Remove a Random Suffix"** removes one of the three
+      suffixes you are here to keep.
+
+
+      **"1 Suffix Modifier cannot be changed" and "2 Suffix Modifiers
+      cannot be changed"** cost 1 and 2 Divine Orbs, but the developers have
+      said the game picks which suffixes at random and shows no indicator.
+      With three suffixes that all matter, only the full lock is safe.
+  - title: "Check for an open prefix, then craft the lock"
+    do: >-
+      "Suffix Modifiers cannot be changed" is itself a **prefix**, so the
+      shield needs an open prefix slot. With one free, craft it at the
+      [[Crafting Bench]]: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s.
+    why: >-
+      While it is on the item, a reroll that respects it leaves the three
+      suffixes exactly as they are.
+    fail: >-
+      Three prefixes and none of them a bench modifier: there is no slot for
+      the lock, and the only way to make one is an [[Orb of Annulment]],
+      which removes one of six modifiers at random and hits a suffix half
+      the time. Do not. Sell the shield to someone, or use it.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "Reflects 29 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Reforge with a Life modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]).
+    why: >-
+      The reforge replaces everything it is allowed to touch: the two poor
+      prefixes and the lock itself, which is spent. It must include a
+      modifier with the life tag. On an unlocked tower shield that could be
+      life regeneration, a suffix. With the suffixes closed, only the two
+      life prefixes are left. **The lock does not just protect a side; it
+      narrows what the reforge can choose.**
+    check: >-
+      All three suffixes unchanged, the lock gone, and a life prefix
+      present. Read its tier: "Vigorous" is 145–159, "Fecund" 130–144,
+      "Athlete's" 115–129, "Virile" 100–114.
+    fail: >-
+      If a suffix has changed, the lock did not hold, which would mean the
+      player-tested rule no longer applies. Stop, and test on a cheap shield
+      before spending more.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "+133 to maximum Life", how: harvest }
+        - { text: "+178 to Armour", how: harvest }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Judge against the limit you set"
+    do: >-
+      Keep the result if the life is at the tier you decided on in advance.
+      A sensible bar: **100 or more, with a prefix slot open or filled with
+      something useful.** Otherwise go back to the lock and pay again.
+    why: >-
+      Each repeat is another 4 Divine Orbs and 4 Blessed Orbs. The bar of
+      100 life is met about 3 attempts in 10 from the guaranteed modifier
+      alone, and it already beats the bench baseline by a wide margin. The
+      top tier is 1 attempt in 14: chasing it turns a sound craft into an
+      expensive one.
+    check: >-
+      An open prefix is worth more than a mediocre third one. The bench
+      fills it with block.
+  - title: "Bench the block"
+    do: >-
+      In the open prefix, craft **41–50% increased Chance to Block** for 3
+      [[Chaos Orb]]s.
+    why: >-
+      Block is the one defensive prefix the reforge did not bring and the
+      bench sells at a useful size. It is local: on the Colossal's 23%, a
+      46% increase makes about 34%.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "+133 to maximum Life", how: harvest }
+        - { text: "+178 to Armour", how: harvest }
+        - { text: "46% increased Chance to Block", how: crafted }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+variations: >-
+  **A Defence reforge** (75 Primal Lifeforce) under the same lock guarantees
+  an Armour prefix instead. Use it when the bench is going to supply the
+  life.
+
+
+  **Scour, then build.** With the suffixes locked, an [[Orb of Scouring]]
+  is reported to remove only the prefixes and the lock. With the suffix
+  side full, every [[Exalted Orb]] must then add a prefix, at ordinary
+  weights: life is 1 in 5. One lock instead of several, and no guarantee.
+
+
+  **The mirror case.** Three good prefixes and poor suffixes: "Prefix
+  Modifiers cannot be changed" is a suffix, at the same price, and the
+  reforge to use is the one whose tag fits fewest suffixes. On a tower
+  shield the Critical reforge can only be reduced Extra Damage from Critical
+  Strikes; the Chaos reforge is Chaos Resistance or, 1 time in 5, maximum
+  Chaos Resistance.
+mistakes:
+  - "Using an Essence on the locked shield. It is the natural tool for life and the one tool reported to ignore the lock."
+  - "Locking a suffix side that is merely good. Three ordinary resistances can be rolled again for less than one lock."
+  - "Crafting the cheap one- or two-suffix lock with three suffixes to keep. Which ones it protects is random and not shown."
+  - "Benching into the open prefix before the lock. The lock needs that slot, and an item holds one bench modifier."
+  - "Raising the bar after each near miss. Set the tier and the number of attempts first."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, the tags on each modifier and the bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on shields." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life, Defence, Critical and Chaos reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Orb of Scouring respect a locked side; Essences do not. Partly older than 3.30." }

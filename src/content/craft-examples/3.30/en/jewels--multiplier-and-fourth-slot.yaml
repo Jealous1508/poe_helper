@@ -1,0 +1,176 @@
+category: jewels
+title: "A critical strike multiplier jewel, and the fourth slot"
+level: 4
+summary: "The full plan for a top melee jewel: a rare Magic pair, an Imprint for the Regal Orb, one Exalted Orb, and the discipline to leave a bad fourth modifier alone."
+goal: >-
+  A Rare jewel with two critical strike multipliers and Life, and the best
+  fourth modifier one orb will give it. Nothing here is a new tool. What makes
+  it the hardest jewel example is the price of each stage, and the last
+  decision: on an item where **nothing can be locked and nothing can be added
+  for certain**, knowing which gamble is free and which three are not.
+base: "Crimson Jewel"
+itemLevel: 80
+baseWhy: >-
+  The multipliers for melee weapons roll only on Crimson and Viridian, and
+  Crimson rolls Life more often and has the smaller pool. Item level is
+  irrelevant to the modifiers. The example is for two-handed weapons; the
+  one-handed and dual wielding multipliers are in the same group and work
+  the same way.
+methods: [currency, beast, finishing]
+result:
+  prefixes:
+    - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+    - { text: "6% increased maximum Life" }
+  suffixes:
+    - { text: "+14% to Melee Critical Strike Multiplier" }
+    - { text: "+13 to Dexterity" }
+needs:
+  - { item: "A Crimson Jewel", amount: "1", note: "any item level" }
+  - { item: "[[Orb of Alteration]]", amount: "thousands", note: "see the odds" }
+  - { item: "[[Orb of Augmentation]]", amount: "50–100" }
+  - { item: "[[Craicic Croaker]]", amount: "about 10", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "about 10" }
+  - { item: "[[Exalted Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "1–2" }
+cost: >-
+  The Magic pair is most of it: Alterations in the thousands, or the price of
+  buying that Magic jewel from someone who rolled it. Then around ten
+  Imprints, one [[Exalted Orb]] and a [[Divine Orb]] or two.
+
+
+  We give no total. What the arithmetic does say is why finished multiplier
+  jewels cost what they do, and that making one is only worth it when you
+  can also sell the near misses.
+odds: >-
+  **Stage 1.** The two-handed multiplier prefix is 1.40% of Crimson's prefix
+  weight. Either multiplier suffix is 2.71% of its suffix weight. Both on
+  one Magic jewel: about 0.038%, 1 two-modifier jewel in 2,600, by our
+  arithmetic.
+
+
+  **Stage 2.** The Regal Orb is a hit about 1 time in 9: five listed
+  prefixes are 14.6% of the remaining prefix weight and three listed
+  suffixes 6.9% of the remaining suffix weight, taking the two sides as
+  equally likely, which is our assumption.
+
+
+  **Stage 3.** With one suffix slot left, the Exalted Orb adds a listed
+  suffix about 1 time in 14, and the third multiplier specifically 1 time
+  in 73.
+steps:
+  - title: "Stage 1: the Magic pair"
+    do: >-
+      Use [[Orb of Alteration]]s, and an [[Orb of Augmentation]] whenever one
+      side is right and the other empty, until the jewel has **+% to
+      Critical Strike Multiplier with Two Handed Melee Weapons** as its
+      prefix and **+% to Melee Critical Strike Multiplier** or **+% to
+      Global Critical Strike Multiplier** as its suffix.
+    why: >-
+      The three multipliers are three different groups, so they stack, and
+      each weighs 250 in a pool of about 18,000. Two of them on one Magic
+      jewel is the scarce thing in this craft. Everything after it is done
+      to avoid ever rolling it twice.
+    check: >-
+      A prefix multiplier with any listed suffix, or a suffix multiplier
+      with Life, is already a jewel worth selling or using. Put those aside
+      as you go; they pay for the Alterations.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }]
+      suffixes: [{ text: "+14% to Melee Critical Strike Multiplier" }]
+  - title: "Stage 2: Imprint, then the Regal Orb"
+    do: >-
+      Make an Imprint of the Magic jewel with a [[Craicic Croaker]]. Use a
+      [[Regal Orb]]. Keep the result if the third modifier is the other
+      suffix multiplier, increased Attack Speed, increased Melee Damage, or
+      as a prefix: increased maximum Life, Damage with Two Handed Weapons,
+      Global Physical Damage, damage with your weapon type, or Attack Speed
+      with Two Handed Melee Weapons. Otherwise use the Imprint, make a new
+      one and repeat.
+    why: >-
+      A jewel that took thousands of Alterations is exactly the case an
+      Imprint exists for. Each retry costs a Regal Orb and a set of beasts
+      in place of the whole of stage 1.
+    check: >-
+      Note which side the Regal Orb filled. If it added a prefix, as here,
+      the last open slot is a suffix and the Exalted Orb can only add a
+      suffix.
+    fail: >-
+      Out of Croakers before a hit: Regal once more without a net and
+      accept what comes. Two multipliers and an idle line is still a good
+      jewel.
+    state:
+      prefixes:
+        - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+        - { text: "6% increased maximum Life" }
+      suffixes:
+        - { text: "+14% to Melee Critical Strike Multiplier" }
+  - title: "Stage 3: one Exalted Orb"
+    do: >-
+      Keep the unused [[Imprint]] in your stash. Use one [[Exalted Orb]] on
+      the jewel.
+    why: >-
+      This is the one free roll on a jewel. No jewel modifier is harmful, so
+      the worst an added modifier can do is nothing. Here it missed, as it
+      does 13 times in 14: it added Dexterity.
+    state:
+      prefixes:
+        - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+        - { text: "6% increased maximum Life" }
+      suffixes:
+        - { text: "+14% to Melee Critical Strike Multiplier" }
+        - { text: "+13 to Dexterity" }
+  - title: "Stage 4: leave the fourth modifier alone"
+    do: >-
+      Do nothing to the idle line. Go to the last step.
+    why: >-
+      Every way of removing it is a worse bet than the one you just took.
+      An [[Orb of Annulment]] removes one of four modifiers at random: 1
+      time in 4 it takes the Dexterity, 3 times in 4 it takes a modifier
+      you spent thousands of Alterations on. Even when it works, the slot is
+      merely open again, and the next Exalted Orb misses 13 times in 14.
+      The bench's "Reroll a random modifier" for 8 [[Chaos Orb]]s has the
+      same 1 in 4 aim. And with both prefixes filled there is no room for
+      the beast recipe that adds a prefix and removes a suffix.
+    check: >-
+      The Imprint changes the downside, not the odds. While you hold it, the
+      worst case of a failed Annulment is going back to the Magic pair and
+      to stage 2, at about nine more Regal attempts. If that price is
+      acceptable to you and you are set on a fourth hit, this is the only
+      way the gamble is defensible. Without the Imprint it is not.
+  - title: "Finish: values"
+    do: >-
+      Look at the rolls: 15–18% and 12–15% on the multipliers, 5–7% on Life.
+      If the multipliers are near the bottom of their ranges, use a
+      [[Divine Orb]].
+    why: >-
+      A jewel modifier has one tier, so the roll is the only difference
+      between this jewel and the best one with the same lines. A Divine Orb
+      rerolls every value at once and can lower them too; use it when the
+      lines that matter are low and stop when they are not.
+variations: >-
+  **Three multipliers.** If stage 2 adds the other suffix multiplier, the
+  jewel has all three and an open prefix. The Exalted Orb then rolls a
+  prefix, and a listed one about 1 time in 7. That jewel is several times
+  rarer than the one shown: the Regal Orb finds the third multiplier about
+  1 time in 150.
+
+
+  **For spells.** A Cobalt jewel has no weapon-type multiplier prefix. The
+  pair there is a multiplier with Fire, Cold or Lightning Skills as the
+  prefix (weight 200 to 250) and Critical Strike Multiplier for Spell
+  Damage or the global one as the suffix.
+
+
+  **Corrupting it.** A [[Vaal Orb]] on a jewel this expensive is only
+  sensible on a spare. See the corruption example for the odds.
+mistakes:
+  - "Using the Regal Orb on the Magic pair without an Imprint."
+  - "Annulling a four-modifier jewel to clear one idle line. Three of the four things it can remove are the jewel."
+  - "Treating the fourth slot as a problem. Three chosen modifiers and one idle one is what a finished jewel looks like."
+  - "Using a Divine Orb before the modifiers are final, or after corrupting, when it no longer works."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Crimson Jewel pool, weights and groups, and the bench reroll options and their costs. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the add-and-remove recipes." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "The bench option that rerolls one random modifier of a Rare item." }

@@ -1,0 +1,196 @@
+category: staves
+title: "Two gem-level prefixes with three Fossils"
+level: 3
+summary: "Faceted, Aetheric and an element Fossil in one Resonator turn the fire gem-level prefix from 2% of prefix rolls into 59%, and bring cast speed along on the other side."
+goal: >-
+  A staff with both gem-level prefixes on it: the one for your element at +3
+  or better, and "all Spell Skill Gems" at any step. Not both at the top;
+  this method rarely reaches that. The lesson is how **Fossil multipliers
+  stack on a modifier that carries several tags**, and how to read which
+  modifier in the list that will be.
+base: "Eclipse Staff"
+itemLevel: 84
+baseWhy: >-
+  The Eclipse Staff has 100% increased Global Critical Strike Chance, the
+  implicit a crit caster wants; use an Imperial Staff for block. The gem
+  levels need only item level 77. Item level 84 is for what comes later: the
+  best cast speed needs 83 and the best spell damage 84, and a staff with two
+  gem-level prefixes is one you will go on improving.
+methods: [fossil, bench]
+result:
+  implicits: ["100% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+3 to Level of all Fire Spell Skill Gems", how: fossil }
+    - { text: "+1 to Level of all Spell Skill Gems", how: fossil }
+    - { text: "Adds 68 to 140 Fire Damage to Spells", how: fossil }
+  suffixes:
+    - { text: "29% increased Cast Speed", how: fossil }
+    - { text: "38% chance to Ignite", how: fossil }
+    - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Faceted Fossil]]", amount: "15–30" }
+  - { item: "[[Aetheric Fossil]]", amount: "15–30" }
+  - { item: "[[Scorched Fossil]]", amount: "15–30", note: "or the Fossil of your element" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt", note: "any Resonator with three sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Three Fossils and a three-socket Resonator per attempt, all from Delve. In
+  3.30 Delve is reached through the maps that always spawn Sulphite, so this
+  is a craft for someone who delves or buys from those who do. The Faceted
+  Fossil is the one to count: the plan does not work without it.
+odds: >-
+  With the three Fossils, by our arithmetic from the weights, one prefix roll
+  is the fire gem-level prefix 59% of the time, at +3 or better 31% of the
+  time, and at +4 about 1 time in 29. "All Spell Skill Gems" is 3% of the
+  first prefix roll and 13% of the next one once the fire prefix has landed,
+  because that prefix takes its whole group out of the pool.
+
+
+  **When a result has three prefixes, it has +3 fire or better together
+  with "all Spell Skill Gems" about 1 time in 6.** With two prefixes it is
+  about 1 in 20. Both top steps at once, +4 and +2, is about 1 three-prefix
+  result in 250.
+
+
+  These figures leave out the Fossil-only modifiers that join the pool in a
+  Fossil craft, so the true shares are somewhat lower. Treat them as close,
+  not exact.
+steps:
+  - title: "Read the tags, then choose the Fossils"
+    do: >-
+      Open the modifier list and look at the tags of the prefix you want.
+      "+# to Level of all Fire Spell Skill Gems" carries **fire**, **caster**
+      and **gem**. Take one Fossil for each: [[Scorched Fossil]] (more Fire),
+      [[Aetheric Fossil]] (more Caster, fewer Attack) and [[Faceted Fossil]]
+      (more Gem).
+    why: >-
+      In the 3.30 data "more" is ten times the weight, and a modifier is
+      multiplied once for every Fossil whose tag it carries. The fire gem
+      prefix gets all three: a thousand times its weight. "All Spell Skill
+      Gems" (caster, gem) gets a hundred. Spell damage (caster) gets ten.
+      Attack prefixes are cut to 15% by the Aetheric Fossil. The pool has
+      been turned inside out.
+    state: { rarity: normal, implicits: ["100% increased Global Critical Strike Chance"] }
+  - title: "Make the staff Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white staff. No quality is needed.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, like a Chaos Orb. What the
+      Alchemy rolls does not matter; it will be replaced.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 106 to 211 Cold Damage" }
+        - { text: "+166 to maximum Mana" }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+348 to Accuracy Rating" }
+  - title: "Socket all three and use the Resonator"
+    do: >-
+      Place the three Fossils in a [[Powerful Chaotic Resonator]] and use it
+      on the staff. Three Fossils need a Resonator with three sockets; check
+      the one in your hand before you buy a stack.
+    why: >-
+      The effects only combine inside one Resonator. Used one after another,
+      each Fossil would be its own reroll and undo the last.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+2 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 51 to 104 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "23% increased Cast Speed", how: fossil }
+        - { text: "29% chance to Ignite", how: fossil }
+        - { text: "96% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Read the result in three passes"
+    do: >-
+      **First, the element prefix:** is it there, and at +3 or +4? **Second,
+      "all Spell Skill Gems":** is it there at any step? **Third, the
+      suffixes:** is there cast speed, and is a slot open for the bench?
+    why: >-
+      The result above fails the first pass: the fire prefix came at +2. It
+      also shows what the Fossils do to the other side. Cast speed and Spell
+      Critical Strike Chance carry the caster tag and are ten times as
+      likely; chance to Ignite carries fire. With two suffixes on the staff,
+      cast speed is among them about 6 times in 10.
+    check: >-
+      Set the bar before you start and keep to it. A sensible one: +3 of the
+      element with "all Spell Skill Gems" at any step. Keep any result with
+      +4, whatever else it has.
+    fail: >-
+      Use another Resonator and three more Fossils on the same staff. Each
+      attempt is independent.
+  - title: "Repeat until the first two passes are met"
+    do: >-
+      Keep going until a result has both gem-level prefixes at your bar.
+    why: >-
+      The third prefix will usually be fire damage added to spells, which
+      carries two of the three tags and is useful to a fire caster. The
+      Fossils help with which families appear and hardly at all with their
+      top steps: within the fire prefix, +4 is still one seventeenth of the
+      weight.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "+1 to Level of all Spell Skill Gems", how: fossil }
+        - { text: "Adds 68 to 140 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "29% increased Cast Speed", how: fossil }
+        - { text: "38% chance to Ignite", how: fossil }
+  - title: "Bench the open slot"
+    do: >-
+      Craft what the staff lacks at the [[Crafting Bench]]. With cast speed
+      present and a suffix open: Global Critical Strike Multiplier 25–28% for
+      4 [[Chaos Orb]]s, or Spell Critical Strike Chance 90–120% for 3. With
+      no cast speed: cast speed, 21–26% for 2 Chaos Orbs. With a prefix open
+      and no damage percentage: spell damage.
+    why: >-
+      The bench is certain, so it goes last, when you can see the gap. It
+      cannot add a gem level here: its Socketed Support Gems craft is the
+      same group as the element prefix.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "+1 to Level of all Spell Skill Gems", how: fossil }
+        - { text: "Adds 68 to 140 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "29% increased Cast Speed", how: fossil }
+        - { text: "38% chance to Ignite", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Other elements.** Swap the Scorched Fossil for [[Frigid Fossil]] (cold),
+  [[Metallic Fossil]] (lightning), [[Aberrant Fossil]] (chaos) or
+  [[Jagged Fossil]] (physical). Each removes one other type: Frigid removes
+  fire, Metallic removes physical, Aberrant removes lightning, Jagged removes
+  chaos. None of that hurts a build of a single element.
+
+
+  **Two Fossils, for "all Spell Skill Gems" alone.** Faceted and Aetheric
+  without an element Fossil make "+2 to Level of all Spell Skill Gems" about
+  1 prefix roll in 57, the best odds any tool gives for it. No element is
+  favoured without its Fossil, so this is for making a base to fracture or
+  sell, not for finishing a staff.
+
+
+  **A fourth Fossil.** A [[Sanctified Fossil]] makes "high level modifiers
+  more common". That is the one thing this craft lacks, but the data does
+  not say by how much, so we cannot put a number on it.
+
+
+  **When the prefixes are right and the suffixes are not.** If the prefixes
+  are the common kind, +3 and +1, more Fossils are the cheap fix: this craft
+  rerolls both sides at once. If they are +4 or "+2 to all", stop and read
+  the next example.
+mistakes:
+  - "Leaving out the Faceted Fossil to save money. Without it the fire prefix is multiplied a hundred times instead of a thousand, and fire damage added to spells overtakes it."
+  - "Expecting +4. The Fossils multiply the whole family, bottom step included."
+  - "Using the Fossils one at a time in small Resonators. Each use is a full reroll."
+  - "Keeping a +2 element result because the suffixes are good. The suffixes are what this craft gives away for nothing."
+  - "Using Fossils on a base with [[Memory Strands]] and expecting better tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, modifier tags, tiers and weights. The odds are our arithmetic and leave out Fossil-only modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

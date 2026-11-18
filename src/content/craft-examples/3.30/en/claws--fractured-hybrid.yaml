@@ -1,0 +1,239 @@
+category: claws
+title: "A physical crit claw with no prefix lottery"
+level: 5
+summary: "Fracture the one physical prefix nothing else can replace, roll the suffix trio around it, then force a veiled physical prefix and bench the third. Six real modifiers, and only the suffixes are left to chance."
+goal: >-
+  A claw with three physical prefixes and all three damage suffixes. Every
+  tool here appears in an easier example. What makes this the hardest one is
+  a decision taken before any currency is spent: **which modifier to
+  fracture.** The obvious answer is the best one, "Merciless". The arithmetic
+  says otherwise.
+base: "Imperial Claw"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 is the lowest at which the top hybrid, "Dictator's" (75–79%
+  increased Physical Damage with Accuracy Rating), can exist. The Imperial
+  Claw has the highest base damage per second; take a Vaal Claw for its 8%
+  critical strike chance if the build is short of crit. The base must have
+  no influence: a [[Fracturing Orb]] refuses influenced items.
+methods: [fracture, fossil, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["Grants 46 Life per Enemy Hit"]
+  prefixes:
+    - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+    - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+    - { text: "Adds 16 to 29 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "26% increased Attack Speed", how: fossil }
+    - { text: "34% increased Critical Strike Chance", how: fossil }
+    - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "A fractured \"Dictator's\" or \"Emperor's\" Imperial Claw", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Deft Fossil]] and [[Shuddering Fossil]]", amount: "dozens of each" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per pair" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per lock" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "final bench craft" }
+cost: >-
+  The fractured base first: in 3.30 fractured items come from Tier 5 drops,
+  a [[Fracturing Orb]] or a [[Fractured Fossil]], and are rarer than they
+  were. Then Fossils by the dozen for the suffixes, and one lock of 4
+  [[Divine Orb]]s and a [[Sacred Orb]], sometimes two. We give no total; the
+  suffix stage has a long tail.
+odds: >-
+  **Stage 2.** With a Deft and a Shuddering Fossil, when a result has three
+  suffixes they are attack speed and both critical strike suffixes about two
+  times in three. All three at Tier 3 or better is then about 1 such result
+  in 18, and all three at Tier 2 or better about 1 in 60, by our arithmetic
+  from the weights. Not every result has three suffixes.
+
+
+  **Stage 3.** The veiled prefix is certain once the suffix side is full and
+  locked. Whether you can block before unveiling depends on a prefix slot
+  being open, which is luck.
+
+
+  **What was avoided.** Around a fractured "Merciless", the hybrid at Tier 3
+  or better is about 1 prefix roll in 81 even with a Jagged Fossil in the
+  Resonator.
+steps:
+  - title: "Stage 1: fracture the prefix that has no substitute"
+    do: >-
+      Get an item level 83 Imperial Claw with the **hybrid** fractured:
+      "Dictator's" (75–79%) or "Emperor's" (65–74%). To make one, roll the
+      hybrid on a Magic claw, bring it to a Rare with exactly four modifiers
+      and use a [[Fracturing Orb]].
+    why: >-
+      Look at what can replace each physical prefix. Pure increased Physical
+      Damage has two certain sources: the veiled prefix (120–139%) and the
+      bench (100–129%). Flat Physical Damage has the bench. The hybrid has
+      nothing: no bench craft, no veiled version, no Essence, only the
+      influenced hybrids, and an influenced claw cannot be fractured. And the pure
+      one shares its group with the veiled and bench versions, so a
+      fractured "Merciless" would shut both out and leave the hybrid to a
+      lottery.
+
+
+      The price of the certain route is in the numbers. "Merciless" with a
+      rolled hybrid of 55–64% totals about 235% increased Physical Damage;
+      this claw totals about 205%.
+    check: >-
+      The Fracturing Orb picks one modifier at random from four or more.
+      With exactly four that is one chance in four; a fifth modifier makes
+      it one in five.
+    fail: >-
+      The wrong modifier is fractured for good and the claw cannot be
+      fractured again. Most players buy this base for that reason.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "+36 to Intelligence" }
+        - { text: "Gain 61 Life per Enemy Killed" }
+  - title: "Stage 2: the suffix trio, and nothing else"
+    do: >-
+      Reroll with a [[Deft Fossil]] and a [[Shuddering Fossil]] in a
+      two-socket Resonator until the claw has **attack speed, Critical
+      Strike Chance and Critical Strike Multiplier at the tiers you set**,
+      and **no more than two prefixes** in all.
+    why: >-
+      The suffixes are the only part of this item that must be rolled, so
+      they get the tool that makes them 92% of suffix rolls. Ignore what the
+      prefixes are: stage 3 replaces them. Count them, though. The lock in
+      stage 3 is a prefix, and beside the fractured one there is room for
+      one more.
+    check: >-
+      Decide the tier bar before the first Fossil and write it down. Tier 2
+      or better on all three is roughly three times as expensive as Tier 3
+      or better.
+    fail: >-
+      Three good suffixes and three prefixes: there is no safe way to open
+      a slot. An [[Orb of Annulment]] removes one of the five modifiers that
+      are not fractured at random, a suffix three times in five. Keep
+      rerolling.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "Adds 62 to 124 Cold Damage", how: fossil }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 3: lock the suffixes, Veiled Chaos Orb"
+    do: >-
+      Craft **Suffix Modifiers Cannot Be Changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]), then use a [[Veiled Chaos Orb]].
+    why: >-
+      Three suffixes, locked, cannot change or be added to. The fractured
+      hybrid cannot change either. The orb rerolls what is left, one or two
+      prefix slots, and its guaranteed veiled modifier has to be one of
+      them.
+    check: >-
+      Hybrid and suffixes untouched, a "Veiled Prefix" on the claw, the lock
+      gone. Look for an open third prefix.
+    fail: >-
+      That the orb respects the lock is player-tested, not official. The
+      fracture holds regardless; it is the suffixes that depend on it. Test
+      on a cheap claw if a patch has landed since this was written.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix", how: veiled }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 4: block, then unveil pure physical damage"
+    do: >-
+      If a prefix is open, craft 25–34% increased Fire Damage there (4 Orbs
+      of Alteration) **before** unveiling. Then unveil and take the physical
+      hybrid your build uses: 120–139% increased Physical Damage with a
+      21–25% chance to Bleed, Impale, Poison or Blind.
+    why: >-
+      The fractured modifier is the Accuracy hybrid, a different group from
+      pure increased Physical Damage, so the veiled physical prefixes are
+      still on offer. The Fire Damage craft takes seven caster and minion
+      choices out of the thirteen, by the player-tested rule that a group
+      on the item is not offered; of the six left, four are physical.
+    fail: >-
+      No open prefix: unveil without the block and hope one of the three
+      offered is physical. If none is, the cost of another attempt is
+      another lock and another orb.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 5: the third prefix from the bench"
+    do: >-
+      Remove the Fire Damage craft (1 Orb of Scouring) and craft **adds
+      13–17 to 26–30 Physical Damage** (4 [[Chaos Orb]]s).
+    why: >-
+      Flat Physical Damage is the third physical group, and both
+      percentages multiply it. The bench's version is well under the
+      natural top tier (22–29 to 45–52); it is the one modest line on the
+      item, and the price of never having rolled a prefix.
+    state:
+      note: "Fractured"
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +186 to Accuracy Rating", how: fractured }
+        - { text: "133% increased Physical Damage / 24% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "Adds 16 to 29 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed", how: fossil }
+        - { text: "34% increased Critical Strike Chance", how: fossil }
+        - { text: "+35% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Finish"
+    do: >-
+      20% quality, sockets and links, then a [[Divine Orb]] if the fractured
+      hybrid or the veiled prefix sits low in its range.
+    why: >-
+      A Divine Orb rerolls every value at once, fractured ones included,
+      and changes no tier. On an item with six wanted lines it is as likely
+      to lower one as to raise another, so use it for a clear reason only.
+variations: >-
+  **The "Merciless" route.** Higher ceiling, different plan: fracture the
+  pure prefix, add a [[Jagged Fossil]] to the Resonator so that the hybrid
+  is about a quarter of prefix rolls, and accept that both sides are now
+  lotteries on the same reroll. The suffix trio drops to 86% of suffix
+  rolls, because the Jagged Fossil also multiplies the two leech suffixes.
+  Stage 3 no longer exists on that route: the veiled physical prefixes are
+  blocked by the fracture.
+
+
+  **A rolled flat Physical Damage.** If the Veiled Chaos Orb happens to roll
+  it as the third prefix, the claw is full and better than the one shown.
+  There is then no slot for the blocking craft either, so the unveil is
+  three choices from all thirteen.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows what the next currency will do.
+  The Fracturing Orb in stage 1 is the single click here that decides
+  whether an expensive item lives.
+mistakes:
+  - "Fracturing \"Merciless\" because it is the best modifier. It is also the only one of the three with two certain substitutes."
+  - "Keeping a stage 2 result with three prefixes. The lock needs a prefix slot."
+  - "Unveiling before blocking when a slot was open."
+  - "Using an Annulment to tidy up. Since 3.30 nothing steers it, and three of the five modifiers it can hit are your suffixes."
+  - "Putting influence on the base first. An influenced item cannot be fractured."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Modifier groups, weights, tiers, Fossil multipliers, veiled modifiers, bench costs and the text of the Fracturing Orb and Veiled Chaos Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs respect a locked side, and the unveil block. Partly older than 3.30." }

@@ -1,0 +1,177 @@
+category: body-armours
+title: "Áo giáp Energy Shield bằng Dense Fossil"
+level: 3
+summary: "Dense Fossil loại life khỏi cuộc xổ số và nhân mọi prefix defence lên mười lần. Trên một cái robe, điều đó nghĩa là ba prefix Energy Shield cộng dồn trong một lần roll lại."
+goal: >-
+  Một cái áo giáp cho build sống nhờ Energy Shield, với cả ba ô prefix nuôi
+  dòng Energy Shield. Có hai bài học. Một base khác nghĩa là một **pool
+  khác** với một vấn đề khác: trên robe, life và mana không phải trợ giúp,
+  chúng là đối thủ. Và Fossil là công cụ khi bạn muốn vài modifier chung một
+  tag và muốn một tag khác biến mất.
+base: "Vaal Regalia"
+itemLevel: 84
+baseWhy: >-
+  Vaal Regalia có 171–197 Energy Shield và cần level 68 cùng 194
+  Intelligence. Item level 84 mở mọi prefix Energy Shield trừ tier cuối của
+  bản phần trăm (101–110%, item level 86): flat tới +91–100, phần trăm tới
+  92–100%, hybrid kèm Stun and Block Recovery tới 39–42%.
+
+
+  Twilight Regalia có Energy Shield trên base gấp rưỡi và là item tốt hơn khi
+  bạn đáp ứng được level 84 và 293 Intelligence. Cách craft thì y hệt.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+84 to maximum Energy Shield", how: fossil }
+    - { text: "95% increased Energy Shield", how: fossil }
+    - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+  suffixes:
+    - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+    - { text: "+29 to Intelligence", how: fossil }
+    - { text: "+33% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Dense Fossil]]", amount: "15–40" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "mỗi Fossil một cái" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "để biến base thành Rare" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Một Fossil và một Resonator mỗi lần thử, cả hai từ Delve. Trong 3.30, đường
+  vào Delve là qua các map luôn sinh Sulphite, nên đây là kiểu craft cho
+  người chơi Delve hoặc mua lại từ người chơi Delve.
+odds: >-
+  Với một Dense Fossil ở item level 84, theo phép tính của chúng tôi từ
+  weight, 82% số lần roll prefix là một trong ba prefix Energy Shield cộng
+  dồn được: flat 38%, phần trăm 24%, hybrid kèm Stun and Block Recovery 21%.
+  **Khi một kết quả có ba prefix, chúng là đúng ba cái đó, mỗi loại một cái,
+  36% số lần.** Với một Chaos Orb thường, con số tương ứng là khoảng 2%.
+
+
+  Fossil không giúp gì về tier. Mỗi cái trong ba cái ở tier thứ ba trở lên
+  của nó khoảng 1 trên 10 lần roll. Nên "ba prefix Energy Shield" tốn một nắm
+  Fossil, còn "ba cái tốt" tốn hàng chục. Các con số của chúng tôi không tính
+  vài modifier chỉ Fossil mới thêm được, nên hãy coi chúng là gần đúng.
+steps:
+  - title: "Chuẩn bị base"
+    do: >-
+      Đưa một Vaal Regalia trắng item level 84 lên 20% quality bằng
+      [[Armourer's Scrap]]. Biến nó thành Rare bằng một [[Orb of Alchemy]].
+    why: >-
+      Chaotic Resonator roll lại một item Rare, nên base chỉ cần là Rare để
+      cái đầu tiên dùng được. Những gì Alchemy cho ra đều bị bỏ đi. Kết quả
+      bên dưới cho thấy vấn đề thường gặp của robe: trong hai prefix của nó,
+      một là mana và một là life.
+    state:
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+112 to maximum Life" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+35 to Intelligence" }
+  - title: "Biết Fossil loại bỏ cái gì trước khi dùng"
+    do: >-
+      Đọc Fossil: "More Defence modifiers, No Life modifiers". Rồi nhìn danh
+      sách prefix của robe và phân loại theo tag.
+    why: >-
+      "More" là mười lần weight trong dữ liệu 3.30 và "No" là bằng không. Mọi
+      prefix Energy Shield đều mang tag defences. Maximum Life mang tag life
+      và biến mất. Hybrid nhỏ Energy Shield kèm Life mang cả hai và cũng biến
+      mất. Maximum Mana không mang cái nào: nó ở lại, với khoảng một phần năm
+      tỉ trọng trước đó.
+
+
+      Điều tương tự xảy ra ở phía suffix: faster start of Energy Shield
+      Recharge có tag defences và thành một nửa mọi lần roll suffix, còn life
+      regeneration thì biến mất.
+    check: >-
+      Đây chỉ là Fossil đúng nếu bạn **không** muốn life trên áo giáp. Một
+      build trộn life và Energy Shield thì cần Essence.
+  - title: "Gắn Fossil vào và dùng Resonator"
+    do: >-
+      Đặt một [[Dense Fossil]] vào một [[Primitive Chaotic Resonator]] rồi
+      dùng nó lên cái regalia.
+    why: >-
+      Resonator roll lại mọi modifier với weight của Fossil được áp vào. Kết
+      quả đầu tiên ở đây có hai prefix Energy Shield ở tier thấp: đúng họ,
+      nhưng chưa đúng con số.
+    state:
+      prefixes:
+        - { text: "+41 to maximum Energy Shield", how: fossil }
+        - { text: "31% increased Energy Shield / 12% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "38% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+31% to Fire Resistance", how: fossil }
+  - title: "Đánh giá theo dòng Energy Shield, không theo tên"
+    do: >-
+      Sau mỗi Fossil, đọc con số **Energy Shield** ở đầu item. Đặt một con số
+      trước khi bắt đầu và giữ kết quả đầu tiên đạt tới nó.
+    why: >-
+      Cả ba prefix đều là local, nên dòng trên cùng đã gồm chúng. Flat Energy
+      Shield được cộng vào base, rồi cả hai cái phần trăm và quality được
+      cộng lại với nhau và nhân tổng đó lên. Với base roll ra 185 và các
+      prefix hoàn thiện bên dưới: 185 + 84 = 269, nhân (1 + 0.95 + 0.36 +
+      0.20), được khoảng 675. Kết quả đầu tiên ở trên đạt khoảng 340. Một con
+      số là so được chúng; ba cái tên tier thì không.
+    check: >-
+      Đếm cả suffix nữa. Một suffix trống là thứ đáng có, vì bench sẽ lấp nó.
+    fail: >-
+      Dưới con số đó: thêm một Fossil và Resonator lên chính item đó. Mỗi lần
+      thử độc lập với nhau, và chưa có gì trên item đáng bảo vệ.
+  - title: "Lặp lại tới khi đạt con số"
+    do: >-
+      Cứ tiếp tục tới khi một kết quả có lượng Energy Shield bạn đã đặt.
+    why: >-
+      Bạn đang chờ ba họ và các tier chấp nhận được cùng lúc. Fossil cho các
+      họ một cách hào phóng và để tier lại cho may rủi.
+    state:
+      prefixes:
+        - { text: "+84 to maximum Energy Shield", how: fossil }
+        - { text: "95% increased Energy Shield", how: fossil }
+        - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+29 to Intelligence", how: fossil }
+  - title: "Bench suffix trống"
+    do: >-
+      Ở [[Crafting Bench]], craft resistance bạn thiếu: 29–35% giá 3
+      [[Chaos Orb]].
+    why: >-
+      Cả ba prefix đã có chủ, nên modifier bench duy nhất dành cho phía
+      suffix. Nếu Recharge không roll ra mà build cần nó, bench bán 21–25%
+      giá 4 Chaos Orb, thấp hơn hẳn các tier roll ra.
+    state:
+      prefixes:
+        - { text: "+84 to maximum Energy Shield", how: fossil }
+        - { text: "95% increased Energy Shield", how: fossil }
+        - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+29 to Intelligence", how: fossil }
+        - { text: "+33% to Lightning Resistance", how: crafted }
+variations: >-
+  **Một Fossil thứ hai cho suffix.** Một [[Prismatic Fossil]] đặt cạnh cái
+  Dense nâng mọi modifier Elemental, lên sáu lần theo dữ liệu. Trên robe,
+  điều đó khiến ba resistance gộp lại chiếm khoảng 70% số lần roll suffix. Nó
+  cần một Resonator có hai socket.
+
+
+  **Eldritch Chaos Orb sau đó.** Kết quả của lần craft này đúng là điểm xuất
+  phát của ví dụ Eldritch: prefix đã xong, suffix còn chỗ để cải thiện. Cho
+  áo giáp các implicit của nó với Eater of Worlds dominant rồi roll lại riêng
+  phía suffix. Một implicit Eater là increased maximum Energy Shield, 6–7% ở
+  bậc thấp nhất và 16–17% ở bậc cao nhất, là một phần thưởng nữa.
+
+
+  **Hình ảnh đối xứng.** Một [[Pristine Fossil]] làm điều ngược lại trên áo
+  giáp life: không có prefix defence nào cả, và life là gần như mọi lần roll
+  prefix. Nó tìm ra một tier life cao nhanh chóng và để hai ô prefix còn lại
+  cho bench.
+mistakes:
+  - "Dùng Dense Fossil trên áo giáp lẽ ra phải có life. Dòng thứ hai của Fossil không phải chữ in nhỏ."
+  - "Coi ba prefix Energy Shield là thành công ở bất kỳ tier nào. Ba tier đáy cộng lại ít hơn hai cái tốt và một craft bench."
+  - "Đánh giá trước khi lên quality. Quality được cộng vào cùng hệ số nhân với hai cái phần trăm."
+  - "Mong [[Memory Strands]] nâng tier ở đây. Fossil không dùng strand, theo thử nghiệm của người chơi."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các hệ số nhân weight của Fossil, tag trên từng modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

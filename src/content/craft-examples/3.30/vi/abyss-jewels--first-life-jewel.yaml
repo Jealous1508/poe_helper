@@ -1,0 +1,121 @@
+category: abyss-jewels
+title: "Abyss Jewel đầu tiên: flat Life và một suffix damage"
+level: 1
+summary: "Kiểm eye và item level, roll một jewel Magic tới +26 Life trở lên, thêm một suffix rồi biến nó thành Rare."
+goal: >-
+  Một Abyss Jewel cho caster ở nửa sau campaign, có flat Life và flat spell
+  damage. Lần craft này đơn giản hết mức. Thứ nó dạy là thói quen duy nhất mà
+  jewel thường không cần: **đọc item level và tier trước khi tiêu bất cứ thứ
+  gì**, vì trên Abyss Jewel cả hai quyết định một lần roll có thể ra gì.
+base: "Hypnotic Eye Jewel"
+itemLevel: 45
+baseWhy: >-
+  Hypnotic Eye là eye của caster: suffix của nó thêm flat damage cho spell.
+  Với bow thì dùng Searching Eye, với minion thì Ghastly Eye; các bước y như
+  nhau. Tránh Murderous Eye trừ khi bạn muốn các prefix weapon của nó, vì
+  trên đó Life chỉ hay ra bằng khoảng một nửa.
+
+
+  Item level 35 là mốc đầu tiên mà Life roll được +26–30. Ví dụ này dùng 45,
+  một jewel từ các act giữa. Giữ Alt rồi rê chuột lên cái của bạn để đọc.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "+28 to maximum Life" }
+  suffixes:
+    - { text: "Adds 13 to 17 Fire Damage to Spells" }
+    - { text: "+13 to Intelligence" }
+needs:
+  - { item: "Một Hypnotic Eye Jewel", amount: "1", note: "item level 35 trở lên" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "chỉ khi jewel là Rare" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "chỉ khi nó chưa phải Magic" }
+  - { item: "[[Orb of Alteration]]", amount: "10–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–3" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Khoảng một chục [[Orb of Alteration]] và một [[Regal Orb]]. Currency của
+  campaign.
+odds: >-
+  Trên Hypnotic Eye ở item level 45, maximum Life chiếm 25.6% tổng weight
+  prefix, và tier tốt hơn của nó, +26–30, là 12.8%: 1 trên 8 lần roll prefix,
+  theo phép tính của chúng tôi từ weight của các modifier. Không phải
+  Alteration nào cũng roll ra prefix, nên hãy tính mười tới mười lăm cái.
+
+
+  Năm suffix "Adds damage to Spells" gộp lại chiếm 37% weight suffix và mỗi
+  cái riêng lẻ 7.4%. Regal Orb thuần là may rủi.
+steps:
+  - title: "Đọc jewel trước khi đụng vào nó"
+    do: >-
+      Giữ Alt. Kiểm ba điều: base là **Hypnotic** Eye Jewel, item level là
+      **35 trở lên**, và jewel đang là Normal, Magic hay Rare.
+    why: >-
+      Eye quyết định những modifier damage nào có tồn tại cho jewel này.
+      Item level quyết định tier tốt nhất của từng cái: dưới 35, Life dừng ở
+      +21–25 dù bạn dùng bao nhiêu orb.
+    check: >-
+      Nếu jewel đã là Rare, hãy đọc nó trước. Hai dòng bạn dùng được đáng giá
+      hơn một khởi đầu sạch.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+22 to maximum Mana" }]
+      suffixes: [{ text: "+13 to Strength" }]
+  - title: "Alteration tới khi Life từ +26 trở lên"
+    do: >-
+      Biến jewel thành Magic nếu nó chưa phải ([[Orb of Scouring]] rồi
+      [[Orb of Transmutation]] với cái Rare). Dùng [[Orb of Alteration]] tới
+      khi prefix ghi **+26 to maximum Life trở lên**. Khi bật Advanced Mod
+      Descriptions, tier này có tên "Healthy".
+    why: >-
+      Life là prefix hay gặp nhất trên eye này, nên bạn có thể khắt khe về
+      tier của nó. Hai tier mà một jewel level 45 roll được có khả năng ngang
+      nhau, và tier tốt hơn cao hơn năm điểm trên cùng một ô.
+    fail: >-
+      Thiếu Alteration: chấp nhận +21–25. Vẫn là cùng một dòng.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+28 to maximum Life" }]
+  - title: "Lấp suffix"
+    do: >-
+      Nếu suffix còn trống, dùng một [[Orb of Augmentation]]. Bạn đang mong
+      "Adds … Damage to Spells" thuộc loại skill của bạn gây ra.
+    why: >-
+      Hơn một phần ba weight suffix của eye này ở level này là flat spell
+      damage, nên lần roll miễn phí này khá ngon. Augmentation không bao giờ
+      đụng tới prefix.
+    check: >-
+      Ở đây cũng đọc cả tier. Ở item level 45, fire damage to spells có thể
+      là "adds 8–10 to 12–14" hoặc "adds 12–14 to 16–18".
+    state:
+      rarity: magic
+      prefixes: [{ text: "+28 to maximum Life" }]
+      suffixes: [{ text: "Adds 13 to 17 Fire Damage to Spells" }]
+  - title: "Regal Orb, rồi gắn vào socket"
+    do: >-
+      Dùng một [[Regal Orb]]. Đặt jewel vào một jewel socket trên tree, hoặc
+      vào một Abyssal socket nếu món trang bị nào của bạn có.
+    why: >-
+      Modifier thứ ba là ngẫu nhiên và hai cái đầu được giữ. Không có bước
+      bench: [[Crafting Bench]] không thêm được modifier vào Abyss Jewel.
+    state:
+      prefixes:
+        - { text: "+28 to maximum Life" }
+      suffixes:
+        - { text: "Adds 13 to 17 Fire Damage to Spells" }
+        - { text: "+13 to Intelligence" }
+variations: >-
+  **Trong map.** Cũng bốn bước đó trên jewel item level 74 trở lên nhắm tới
+  +31–35 Life, và từ 77 thì tier cao nhất của các suffix elemental "to Spells"
+  roll được. Hãy nâng mức theo item level, đừng nâng trước.
+
+
+  **Cast speed và critical strike.** Các suffix đó có một tier duy nhất, cần
+  item level 50. Một jewel level 45 không roll được chúng, thêm một lý do nữa
+  để đọc item level trước.
+mistakes:
+  - "Roll một jewel dưới item level 35 rồi chờ +26 Life không thể nào ra."
+  - "Dùng Murderous Eye làm jewel Life. Life chiếm 9.5% số lần roll prefix của nó, so với khoảng gấp đôi trên các eye khác."
+  - "Giữ một suffix spell damage thuộc loại skill của bạn không gây ra."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool, tier, item level và weight của Hypnotic Eye Jewel. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,321 @@
+name: "Tinctures"
+short: "Ten bases, one pool, and no tool but the three orbs you use on a flask. The implicit does the work; the two slots tune it."
+icon: "Prismatic Tincture"
+intro: >-
+  A tincture is the flask's close relative. You roll it with the same three
+  orbs, [[Glassblower's Bauble]]s add its quality, and it has a prefix side
+  and a suffix side of its own. What it does is different: every line on a
+  tincture, from the implicit down, applies to attacks with **melee
+  weapons**, and where a flask has charges a tincture has a cooldown and a
+  running cost called Mana Burn.
+
+
+  This guide is short on purpose. The 3.30 data has ten tincture bases, five
+  prefix families and twelve suffix families, and no bench modifier, Essence,
+  beast recipe or special modifier for them. One thing we could not confirm
+  is the rarity rules for tinctures in 3.30. Everything here treats a
+  tincture as the overview does, as a Magic item with one prefix and one
+  suffix, and uses only the orbs that work on a Magic item.
+basics:
+  itemLevel:
+    text: >-
+      Every prefix family and nine of the twelve suffix families have a tier
+      at item level 1, so a tincture found in the campaign can already roll
+      the modifier you want, in its weakest form. Item level adds tiers on
+      top.
+
+
+      As on flasks, all tiers of a modifier weigh the same in the 3.30 data.
+      The best tier is no rarer than the worst; item level is the only thing
+      that keeps it out. That has a pleasant consequence: a higher item
+      level makes "second-best or better" *easier*, because every roll of the
+      best tier also counts.
+
+
+      Item level 73 puts every modifier within one tier of its best. The top
+      tiers are spread from 77 to 85, and five of them need the full 85:
+      increased effect, attack speed, critical strike multiplier, elemental
+      penetration and flask charges from kills.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "A first tier of all five prefix families and of nine suffix families, including 15–19% increased Melee Weapon Attack Speed, which has only three tiers."
+      - ilvl: 45
+        unlocks: "The last three suffix families have appeared: Mana per Enemy Killed (from 38), a chance to ignore Physical Damage Reduction (from 40) and Mana per Enemy Hit (from 45)."
+      - ilvl: 58
+        unlocks: "Tier 2 of both upkeep prefixes: 23–27% increased Cooldown Recovery Rate and 23–21% reduced Mana Burn rate."
+      - ilvl: 65
+        unlocks: "Tier 2 attack speed, 20–24%, and Tier 2 increased effect, 17–19% (from 64)."
+      - ilvl: 73
+        unlocks: "Tier 2 critical strike multiplier (+24–28%) and elemental penetration (14–16%). **Every modifier is now within one tier of its best.**"
+      - ilvl: 80
+        unlocks: "Tier 1 reduced Mana Burn rate (26–24%) and Tier 1 chance to ignore Physical Damage Reduction (50–60%)."
+      - ilvl: 84
+        unlocks: "Tier 1 Damage over Time Multiplier (+29–33%), and the best tier of the two trade-off prefixes. Tier 1 Cooldown Recovery Rate (28–32%) is open from 82."
+      - ilvl: 85
+        unlocks: "Tier 1 increased effect (20–22%), attack speed (25–29%), critical strike multiplier (+29–33%) and elemental penetration (17–19%). **The ceiling.**"
+  bases:
+    text: >-
+      The data has ten tinctures, and all of them roll from one pool with the
+      same weights. No base unlocks a modifier that another cannot have. A
+      tincture base **is** its implicit, and the implicit is most of what the
+      item does.
+
+
+      Eight of the ten names appear in the data a second time, at drop level
+      1 and with no implicit. We do not know what those entries are. The base
+      table shows them, and nothing in this guide relies on them.
+    types:
+      - title: "One pool for every tincture"
+        pools: [all]
+        text: >-
+          Five prefix families and twelve suffix families, identical on every
+          base. Choosing between bases is choosing an implicit, never a list
+          of modifiers.
+      - title: "Damage: Prismatic and Rosethorn"
+        text: >-
+          Both drop from level 18. The Prismatic Tincture gives 70–100%
+          increased Elemental Damage with Melee Weapons, the Rosethorn
+          100–150% increased Critical Strike Chance with Melee Weapons. These
+          two fit the widest range of builds.
+      - title: "Ailments: five bases"
+        text: >-
+          Each adds a chance to inflict one ailment with melee weapons and
+          strengthens it. Ashbark (ignite), Borealwood (freeze and chill) and
+          Fulgurite (shock) drop from level 32; Blood Sap (bleeding) and
+          Poisonberry (poison) from 45. The damaging three, ignite, bleeding
+          and poison, carry 60–90% increased damage with that ailment.
+      - title: "Stun, Blind and Rage"
+        text: >-
+          Ironwood (from level 18) lengthens stuns and lowers the enemy's
+          stun threshold by 40%. Sporebloom (52) blinds on hit. Oakbranch
+          (60), the last to appear, has the one implicit with no range: Gain 3
+          Rage on Melee Weapon Hit.
+    picks:
+      - base: "Rosethorn Tincture"
+        for: "Critical strike builds"
+        why: >-
+          The implicit runs from 100% to 150%, the widest range on any
+          tincture, so two white Rosethorns can be far apart before a single
+          orb is used. Pick the high one.
+      - base: "Prismatic Tincture"
+        for: "Elemental attacks"
+        why: >-
+          70–100% increased Elemental Damage with Melee Weapons, from level
+          18. The first tincture an elemental attacker can use and one that
+          never stops being useful.
+      - base: "Poisonberry Tincture"
+        for: "Poison"
+        why: >-
+          A 20% chance to poison and 60–90% increased poison damage on the
+          implicit. The Blood Sap Tincture is the same item for bleeding.
+      - base: "Oakbranch Tincture"
+        for: "Rage"
+        why: >-
+          Gain 3 Rage on Melee Weapon Hit is a fixed number, so every
+          Oakbranch is the same and there is no implicit roll to check.
+    impact: >-
+      **The implicit, and its roll.** Nine of the ten implicits have a range,
+      and no orb in this guide changes where your tincture sits in it. A
+      [[Blessed Orb]] rerolls implicit values on equipment; whether it works
+      on a tincture we could not confirm. So compare white bases and start
+      from the best roll you have.
+
+
+      **The upkeep numbers.** The game data export gives each base two more
+      numbers that the table here does not show: how often it applies Mana
+      Burn (every 0.5 to 0.9 seconds, depending on the base) and how long its
+      cooldown is (6 to 10 seconds). The prefixes work on exactly these, so
+      read them on the item before you decide which prefix you need.
+
+
+      **Not the pool.** What a tincture can roll is the same on all ten.
+tools:
+  - method: currency
+    note: >-
+      An [[Orb of Transmutation]] makes a white tincture Magic, an
+      [[Orb of Alteration]] rerolls it, and an [[Orb of Augmentation]] fills
+      an empty slot. That is the flask routine, and it is the whole toolbox
+      as far as we can establish. If your tincture accepts a [[Regal Orb]] or
+      an [[Orb of Alchemy]], that is outside what we verified, and the
+      examples do not use them.
+
+
+      The prefix side is small. At item level 85, by our arithmetic from the
+      weights, one prefix roll is reduced Mana Burn rate a third of the time,
+      increased Cooldown Recovery Rate 27%, plain increased effect 20%, and
+      each of the two trade-off prefixes 10%. The suffix side has twelve
+      families. Life per kill and mana per kill are the heaviest at 12.7%
+      each; the damage suffixes people roll for are about 8% each.
+  - method: bench
+    note: >-
+      Nothing to buy. The 3.30 bench data has no modifier for tinctures. The
+      only entries that list them are the bench's three general reroll
+      options, and two of those need a Rare item. Plan every tincture
+      without a bench step.
+  - method: finishing
+    note: >-
+      The [[Glassblower's Bauble]] reads "Improves the quality of a flask or
+      tincture", to a maximum of 20%. What quality improves on a tincture is
+      shown on the item; our data does not say, so we do not either. The
+      Instilling and Enkindling Orbs both name utility flasks and are not
+      tincture tools by their own text.
+memoryStrands: >-
+  Nothing we could confirm puts [[Memory Strands]] on a tincture. Strands
+  are described as a property of equipment, and the [[Orb of Remembrance]]
+  reads "a normal equipment item". Plan as if they did not exist.
+
+
+  As with flasks, little is lost: the tiers of a tincture modifier already
+  weigh the same, and a miss costs one Alteration.
+reading:
+  intro: >-
+    Read the implicit first: it says what the tincture is for. Then the
+    suffix: does it push the same way as the implicit? Then the prefix: is
+    it power or upkeep, and which of the two did this character need?
+  prefixes:
+    text: >-
+      Five families in three groups. Two are **upkeep**: reduced Mana Burn
+      rate, and increased Cooldown Recovery Rate. Three are about **effect**
+      and share one group: plain increased effect; 35% increased effect paid
+      for with a faster Mana Burn; and the reverse, less effect in exchange
+      for half the Mana Burn rate.
+
+
+      With one prefix slot you get one of the five. So the question is not
+      about tiers. It is which problem you have: the tincture is not strong
+      enough, or you cannot keep it switched on.
+
+
+      What "effect" multiplies, and what one stack of Mana Burn costs you,
+      are rules stated in the game. Our data holds the modifier ranges, not
+      those rules, so read them on the item and in the game's help text.
+    key:
+      - mod: "#% increased effect"
+        why: "More of what the tincture does, at no cost. The plain choice when your mana already keeps up."
+        aim: "T2, 17–19% (ilvl 64). T1 is 20–22% (ilvl 85)."
+      - mod: "#% increased effect / #% increased Mana Burn rate"
+        why: "35% at every tier, far more than the plain prefix, paid for with a faster Mana Burn. A better tier only lowers the price."
+        aim: "Any tier for the 35%. T1 (ilvl 84) burns 37–41% faster, T3 (ilvl 1) 47–51%."
+      - mod: "#% reduced Mana Burn rate"
+        why: "The most common prefix, a third of all prefix rolls. For a character whose mana gives out before the fight does."
+        aim: "T2, 23–21% (ilvl 58). T1 is 26–24% (ilvl 80)."
+      - mod: "#% increased Cooldown Recovery Rate"
+        why: "Shortens the wait before the tincture can be switched on again."
+        aim: "T2, 23–27% (ilvl 58). T1 is 28–32% (ilvl 82)."
+      - mod: "#% reduced effect / #% reduced Mana Burn rate"
+        why: "Half the Mana Burn rate for 21% to 35% less effect, depending on the tier. Rarely what you rolled for; keep it only when upkeep is the whole problem."
+        aim: "T1 (ilvl 84) loses 25–21% effect, T3 (ilvl 1) loses 35–31%."
+  suffixes:
+    text: >-
+      Twelve families of three sorts. **Damage:** attack speed, critical
+      strike multiplier, Damage over Time Multiplier, elemental penetration,
+      a chance to ignore Physical Damage Reduction, and damage against
+      enemies on Low Life. **Sustain:** life and mana per kill, life and mana
+      per hit, flask charges from kills. And longer elemental ailments, in a
+      sort of its own.
+
+
+      The sustain suffixes are the heavy ones. Life per kill and mana per
+      kill weigh 1,000 a tier where critical strike multiplier, penetration
+      and Damage over Time Multiplier weigh 500. A tincture left to chance
+      rolls sustain; it has to be pushed towards damage.
+
+
+      Match the suffix to the implicit: penetration on a Prismatic Tincture,
+      critical strike multiplier on a Rosethorn, Damage over Time Multiplier
+      on a Blood Sap or a Poisonberry. Attack speed fits all of them.
+    key:
+      - mod: "#% increased Melee Weapon Attack Speed"
+        why: "Useful to every build that swings a melee weapon, and its lowest tier is already 15–19% at item level 1."
+        aim: "T2, 20–24% (ilvl 65). T1 is 25–29% (ilvl 85)."
+      - mod: "+#% to Melee Weapon Critical Strike Multiplier"
+        why: "The partner of the Rosethorn Tincture's critical strike chance."
+        aim: "T2, +24–28% (ilvl 73). T1 is +29–33% (ilvl 85)."
+      - mod: "Melee Weapon Damage Penetrates #% Elemental Resistances"
+        why: "For elemental attacks. The natural suffix for a Prismatic Tincture."
+        aim: "T2, 14–16% (ilvl 73). T1 is 17–19% (ilvl 85)."
+      - mod: "+#% to Damage over Time Multiplier with Melee Weapon Attacks"
+        why: "For bleeding, poison and ignite builds, on the tincture that causes the ailment."
+        aim: "T2, +24–28% (ilvl 70). T1 is +29–33% (ilvl 84)."
+      - mod: "Melee Weapon Hits have #% chance to ignore Enemy Physical Damage Reduction"
+        why: "For physical builds. Three tiers and a light weight: under 5% of suffix rolls."
+        aim: "T2, 40–49% (ilvl 62). T1 is 50–60% (ilvl 80)."
+      - mod: "Gain # Mana per Enemy Killed with Melee Weapons"
+        why: "Mana back while you clear. One of the two most common suffixes."
+        aim: "T2, 6–8 (ilvl 68). T1 is 9–11 (ilvl 82)."
+      - mod: "Gain # Life per Enemy Killed with Melee Weapons"
+        why: "The other most common suffix. Fine on a levelling tincture, usually a wasted slot on a damage one."
+        aim: "T2, 21–25 (ilvl 62). T1 is 26–30 (ilvl 80)."
+      - mod: "#% increased Flask Charges gained from Kills with Melee Weapons"
+        why: "Keeps the flasks beside the tincture filled while mapping."
+        aim: "T2, 21–25% (ilvl 72). T1 is 26–30% (ilvl 85)."
+approach:
+  principle: >-
+    **The implicit is the tincture; the two slots tune it.** Choose the base
+    for what you want your melee hits to do, and check its implicit roll
+    while it is still white. Then give it a suffix that pushes the same way,
+    and a prefix that answers one question: more power, or easier upkeep.
+  order:
+    - title: "Choose the base by its implicit"
+      text: >-
+        Every tincture rolls the same modifiers, so nothing else
+        distinguishes the bases for a crafter. Elemental damage, critical
+        strikes, an ailment, stun, blind or Rage: take the one your build
+        already does.
+    - title: "Check the implicit roll before the first orb"
+      text: >-
+        Hold Alt over the white bases you have and compare. A Rosethorn at
+        145% and one at 105% cost the same Alterations and are not the same
+        item.
+    - title: "Take the item level for the tier you will accept"
+      text: >-
+        Any item level for a first tincture. 73 for the second-best tier of
+        everything. 85 when you want the best, or want the second-best to
+        come easily.
+    - title: "Read the suffix first"
+      text: >-
+        The suffix side has twelve families and the prefix side five, so the
+        suffix is the rarer half. Read it first after each
+        [[Orb of Alteration]], and use an [[Orb of Augmentation]] on an
+        empty slot only when the half that is already there passes.
+    - title: "Read the prefix as power or upkeep"
+      text: >-
+        Know which you need before you roll, and name the one prefix you
+        would refuse. For most damage tinctures that is the reduced effect
+        one.
+    - title: "Quality last"
+      text: >-
+        [[Glassblower's Bauble]]s, on a tincture you are keeping.
+  finishing: >-
+    Quality to 20% with [[Glassblower's Bauble]]s is the only finishing step
+    the data supports. There is no bench craft to add and no enchantment for
+    tinctures in the 3.30 data.
+  stopping: >-
+    A tincture is finished when the suffix belongs to the same build as the
+    implicit and the prefix is not one that works against you. By our
+    arithmetic at item level 85, a named damage suffix such as critical
+    strike multiplier is about 1 suffix roll in 13 at any tier, 1 in 31 at
+    its best two, and 1 in 63 at its best. Every demand on the prefix
+    multiplies that.
+
+
+    There is no way to keep one slot and reroll the other, so the only
+    lever you have is the bar. Set it before you start. If the build works
+    with the second-best tier, and it almost always does, that is the bar.
+special:
+  - mod: "The base implicit, for example Gain 3 Rage on Melee Weapon Hit"
+    source: "Base"
+    where: "Each of the ten bases has its own. It cannot be rolled, added or replaced by anything in this guide: you choose it by choosing the base."
+  - mod: "Bench, Essence, beast, veiled, influence and Fossil modifiers"
+    source: "None in the data"
+    where: "The 3.30 game data lists no modifier of any of these kinds for tinctures. If the game has one, we have not been able to verify it, and nothing here depends on it."
+mistakes:
+  - "**Crafting on a low implicit roll.** The Rosethorn's implicit runs from 100% to 150%, and no Alteration moves it. The white base with the high roll is worth finding first."
+  - "**Keeping a sustain suffix on a damage tincture because it turned up early.** Life and mana per kill are the most common suffixes. Seeing one is not luck."
+  - "**Rolling for a best tier on an item level 84 base.** Five of them need 85."
+  - "**Taking 35% increased effect without looking at your mana.** It comes with a Mana Burn rate 37% to 51% faster, depending on the tier."
+  - "**Looking for a bench craft.** There is none for tinctures in the 3.30 data."
+  - "**Assuming flask tools carry over.** The Instilling and Enkindling Orbs name utility flasks, and the Blood Altar's flask recipes are for flasks."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, implicit, modifier, tier and weight quoted here, the bench options that list tinctures, the cooldown and Mana Burn interval of each base, and the text of the Glassblower's Bauble. The odds are our arithmetic from its weights." }

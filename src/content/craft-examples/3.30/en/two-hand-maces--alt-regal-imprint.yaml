@@ -1,0 +1,167 @@
+category: two-hand-maces
+title: "Alt, Imprint, Regal: one strong prefix that cannot be lost"
+level: 3
+summary: "Roll a high percentage prefix on a Magic mace, save it with a beast Imprint, and retry the Regal Orb until it adds something you want."
+goal: >-
+  An endgame mace built around one strong rolled percentage prefix, with a
+  second useful modifier beside it and every other slot still open. The
+  lesson is **the Imprint**: a way to make a Regal Orb repeatable, so that the
+  hard part of the craft is done once.
+base: "Imperial Maul"
+itemLevel: 83
+baseWhy: >-
+  The Imperial Maul has the highest base damage per second and a Strength
+  implicit. Item level 83 opens the last tier of both percentage prefixes.
+  This craft does not aim for that tier, but an Alteration can land on it,
+  and at 83 you get to keep it when it does.
+methods: [currency, beast, bench, finishing]
+result:
+  implicits: ["10% increased Strength"]
+  prefixes:
+    - { text: "148% increased Physical Damage" }
+    - { text: "Adds 29 to 57 Physical Damage" }
+    - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+  suffixes:
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "1", note: "optional, plus three Rare beasts" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Alterations in bulk, and beasts. The Imprint is what makes this affordable:
+  without it every bad Regal Orb would send you back to the Alterations. In
+  3.30 only red beasts are captured, so count your Menagerie before you
+  start.
+odds: >-
+  At item level 83 one prefix roll is Tier 3 or better of a percentage
+  prefix, pure or hybrid, about 1 time in 90 by our arithmetic. An Alteration
+  does not always roll a prefix, so the true count is higher: a few hundred
+  is a realistic budget and a bad run is longer.
+
+
+  The Regal Orb adds one random modifier. Roughly a third of what it can add
+  is useful here: another physical prefix, attack speed, or a critical
+  strike suffix. So expect about three Imprints.
+steps:
+  - title: "Quality, Transmutation, and Alterations to the prefix"
+    do: >-
+      Take a white item level 83 Imperial Maul to 20% quality. Use an
+      [[Orb of Transmutation]], then [[Orb of Alteration]]s until the prefix
+      is **Tier 3 or better** of increased Physical Damage (135% or more) or
+      of the hybrid with Accuracy (55% or more).
+    why: >-
+      A Magic item keeps the search small: two slots, and you only read one.
+      Tier 3 is where the weights stop being reasonable to push past with
+      plain Alterations. Tier 1 is about seven times rarer.
+    check: >-
+      Hold Alt and read the tier, not just the number. If the prefix is
+      right, look at the suffix: you want it **empty**.
+    state:
+      rarity: magic
+      implicits: ["10% increased Strength"]
+      prefixes: [{ text: "148% increased Physical Damage" }]
+      suffixes: [{ text: "+214 to Accuracy Rating" }]
+  - title: "Clear the suffix if there is one"
+    do: >-
+      If the Magic item also has a suffix you do not want, use one
+      [[Orb of Annulment]] only if you can afford to lose the prefix half the
+      time. The cheaper answer is to keep using Alterations until the good
+      prefix appears **alone**, or with a suffix you would keep.
+    why: >-
+      Whatever is on the Magic item is carried into the Rare one and into
+      every Imprint of it. A junk suffix here is a junk suffix for the rest
+      of the craft. Do not use an Augmentation: an empty suffix slot is
+      worth more than a random one.
+    state:
+      rarity: magic
+      implicits: ["10% increased Strength"]
+      prefixes: [{ text: "148% increased Physical Damage" }]
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use the recipe **Create an Imprint of a Magic
+      Item** on the mace. It needs a [[Craicic Croaker]] and three other
+      Rare beasts.
+    why: >-
+      The Imprint is a saved copy of the item as it is now. Whatever happens
+      next, using the Imprint returns the mace to this state. It only works
+      on Magic items, which is why it comes before the Regal Orb.
+    check: >-
+      The Imprint appears in your inventory as its own item. Do not use it
+      yet.
+  - title: "Regal Orb, and judge"
+    do: >-
+      Use a [[Regal Orb]] on the mace. Read the modifier it added.
+    why: >-
+      The item becomes Rare with the prefix intact and one new modifier.
+      **Keep** it if the new modifier is the other percentage prefix, flat
+      Physical Damage, attack speed, or a critical strike suffix your build
+      uses.
+    fail: >-
+      Anything else: use the [[Imprint]] on the mace to return it to the
+      Magic state, make a new Imprint with another Croaker, and use another
+      Regal Orb. Each attempt costs one Regal Orb and one set of beasts.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+  - title: "A free third prefix"
+    do: >-
+      While the item has no suffixes, use the beast recipe **Add a Prefix,
+      Remove a Random Suffix** ([[Farric Wolf Alpha]]).
+    why: >-
+      With nothing on the suffix side there is nothing to remove, so by
+      long-standing player experience this is a prefix for the price of the
+      beasts. It is a random prefix. On this item about one roll in five is
+      the hybrid; the example shows the more likely outcome, an elemental
+      one.
+    check: >-
+      Do this **before** the bench step. Once a bench suffix is on the item,
+      the recipe has something to remove.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+        - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+  - title: "Bench the attack speed"
+    do: >-
+      At the [[Crafting Bench]], craft 11–15% increased Attack Speed for 2
+      [[Chaos Orb]]s, or 16–20% for 4 Exalted Orbs if the weapon has earned
+      it.
+    why: >-
+      Attack speed is the suffix every mace wants and the bench always has
+      it. Two suffix slots stay open for later: an [[Exalted Orb]] when you
+      can spare one, or the suffix methods in the harder examples.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+        - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+      suffixes:
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **On a base with Memory Strands.** This is the craft that suits them. An
+  Alteration spends at most 8 strands and a Regal Orb at most 16, by the
+  data-mined table, and strands raise the tier of whatever is rolled. Use an
+  [[Orb of Remembrance]] on the white maul first, and watch the cost the game
+  shows before each orb.
+
+
+  **If the hybrid rolled first.** Then the bench can add pure increased
+  Physical Damage, 100–129% for 4 Exalted Orbs, as the second percentage
+  prefix. That is a stronger position than the one shown: bench the prefix,
+  and get attack speed from an [[Exalted Orb]] or a later craft.
+mistakes:
+  - "Using the Regal Orb before the Imprint. An Imprint cannot be made of a Rare item."
+  - "Augmenting the Magic item \"to see\". If the suffix is bad it is now part of every attempt."
+  - "Using the add-a-prefix beast after the bench. It removes a random suffix, and the bench modifier is a suffix."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes, and the beasts they need in 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

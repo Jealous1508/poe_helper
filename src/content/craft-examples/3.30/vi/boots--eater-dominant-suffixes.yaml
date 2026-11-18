@@ -1,0 +1,218 @@
+category: boots
+title: "Dựng lại suffix mà không cần khóa: Eater of Worlds bảo vệ prefix"
+level: 4
+summary: "Boots có prefix đã xong và suffix tệ. Một Ichor quyết định rằng mọi Eldritch orb bạn dùng chỉ tác động lên suffix, và cùng mẹo đó đảo ngược lại thêm prefix cuối cùng."
+goal: >-
+  Biến một đôi boots có 30% movement speed, life cao và suffix đồ bỏ thành
+  một đôi hoàn chỉnh có spell suppression và hai resistance, mà không lúc nào
+  đặt prefix vào rủi ro. Trên weapon, việc này cần một cái khóa bench ở mỗi
+  lần thử. Trên armour, **Eldritch implicit mạnh hơn chính là cái khóa**, và
+  ví dụ này nói về việc dùng nó, kiểm nó, và biết nó không che được những gì.
+base: "Slink Boots"
+itemLevel: 86
+baseWhy: >-
+  Lần craft này bắt đầu từ một item: đôi boots từ ví dụ hai Fossil, hoặc bất
+  kỳ đôi Rare nào có prefix bạn muốn giữ. Item level 85 mở spell suppression
+  Tier 1 và 84 mở các resistance cao nhất, những thứ mà các lần roll suffix
+  nhắm tới.
+
+
+  Đôi boots phải **không có influence**, và không nên có implicit nào bạn
+  tiếc: một base Atlas sẽ mất implicit của nó vào tay Ichor đầu tiên.
+methods: [eldritch, bench, finishing]
+result:
+  implicits: ["8% increased Movement Speed", "25% chance to Avoid Elemental Ailments"]
+  prefixes:
+    - { text: "30% increased Movement Speed", how: fossil }
+    - { text: "+104 to maximum Life", how: fossil }
+    - { text: "74% increased Evasion Rating", how: eldritch }
+  suffixes:
+    - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+    - { text: "+44% to Cold Resistance", how: eldritch }
+    - { text: "+33% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Greater Eldritch Ichor]]", amount: "1", note: "để Eater thành implicit mạnh hơn" }
+  - { item: "[[Eldritch Chaos Orb]]", amount: "hàng chục" }
+  - { item: "[[Exceptional Eldritch Ember]]", amount: "khoảng 25", note: "cho implicit Exarch cuối cùng" }
+  - { item: "[[Eldritch Exalted Orb]]", amount: "1" }
+  - { item: "[[Exceptional Eldritch Ichor]]", amount: "bao nhiêu tùy bạn chịu chi", note: "cho implicit Eater cuối cùng" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  [[Eldritch Chaos Orb]], tính bằng chục. Hãy đặt nó cạnh phương án kia: một
+  cái khóa bench trên boots là 4 Divine Orb và 4 Blessed Orb cho từng lần
+  roll lại suffix. Các implicit cuối cùng là một hóa đơn riêng, trả bằng
+  Exceptional Ember và Ichor.
+odds: >-
+  Tính cho mỗi suffix roll ra trên base này ở item level 86, theo phép tính
+  của chúng tôi từ weight: spell suppression từ 9% trở lên là 1 trên 19, và
+  mỗi elemental resistance từ 36% trở lên là 1 trên 19. Nếu tính suppression
+  và cả ba resistance là thứ muốn có, khoảng một trên năm lần roll suffix là
+  tốt.
+
+
+  Kế hoạch cần hai suffix tốt trên cùng một kết quả, và một lần roll lại cho
+  từ một tới ba suffix. Chúng tôi chưa tính chính xác điều đó; hãy lường
+  trước hàng chục orb. Exceptional Ember ở cuối cho implicit movement speed
+  khoảng 1 trên 26 lần.
+steps:
+  - title: "Nhìn ra cái khóa mà bạn không phải trả tiền"
+    do: >-
+      Đọc [[Eldritch Chaos Orb]]: "If The Searing Exarch is dominant,
+      reroll prefix modifiers. If The Eater of Worlds is dominant, reroll
+      suffix modifiers." Theo thử nghiệm của người chơi, cái dominant là
+      implicit nào có bậc cao hơn.
+    why: >-
+      Một câu đó thay cho "Prefix Modifiers cannot be changed" với một lần
+      roll lại thông thường. Orb hoàn toàn không đụng được tới phía bên kia,
+      lớp bảo vệ không bị tiêu mất, và dựng nó lên chỉ tốn một Ichor.
+    state:
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Để Eater là implicit mạnh hơn"
+    do: >-
+      Dùng một [[Greater Eldritch Ichor]] lên đôi boots. Không thêm Ember
+      nào. Nếu đôi boots đã có sẵn một implicit Searing Exarch, Ichor phải ở
+      bậc cao hơn nó.
+    why: >-
+      Implicit Eater nào xuất hiện thì chưa quan trọng. Bậc của nó mới quan
+      trọng. Greater so với không có gì, hoặc so với Lesser, không để lại
+      nghi ngờ nào về chuyện phía nào mạnh hơn.
+    check: >-
+      Từ đây trở đi, trước mỗi Eldritch orb, hãy nhìn hai implicit và xác
+      nhận cái Eater là cái mạnh hơn. Việc đó mất một giây, và sai lầm mà nó
+      ngăn được là mất 30% movement speed cùng life.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "Regenerate 58.2 Life per second", how: fossil }
+        - { text: "+31 to Dexterity", how: fossil }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Eldritch Chaos Orb, theo một luật"
+    do: >-
+      Dùng Eldritch Chaos Orb từng cái một. Giữ kết quả khi nó có **hai
+      suffix bạn muốn và ô thứ ba còn trống**, hoặc ba cái bạn muốn. Thứ
+      muốn có ở đây: suppression từ 9% trở lên, và bất kỳ resistance nào nhân
+      vật của bạn cần ở mức 36% trở lên.
+    why: >-
+      Mỗi orb roll lại mọi suffix, kể cả resistance của bench, và để prefix
+      y nguyên. Luật dừng ở hai vì bench cấp cái thứ ba một cách chắc chắn;
+      chờ ba cái roll ra sẽ nhân số orb lên để đổi lấy mười điểm resistance.
+    check: >-
+      Kết quả hiện ở đây trượt: một suffix muốn có và hai cái không.
+    fail: >-
+      Orb kế tiếp. Đừng với lấy một [[Eldritch Orb of Annulment]] để dọn một
+      kết quả có hai suffix tốt và một cái tệ: nó gỡ ngẫu nhiên một suffix,
+      và hai trên ba lần đó là một cái tốt.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+9% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+17% to Fire Resistance", how: eldritch }
+        - { text: "+41 to Dexterity", how: eldritch }
+  - title: "Kết quả đạt, và bench"
+    do: >-
+      Khi luật đã thỏa, hãy dừng. Ở [[Crafting Bench]], craft resistance bạn
+      còn thiếu vào suffix trống, **+29–35%** giá 3
+      [[Chaos Orb]].
+    why: >-
+      Hai suffix roll ra và một cái thứ ba chắc chắn. Tới giờ mới dùng bench,
+      vì bất kỳ craft nào sớm hơn cũng đã bị roll lại cùng phần còn lại.
+    state:
+      implicits: ["6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Đảo ngược cái khóa để thêm prefix cuối cùng"
+    do: >-
+      Dùng [[Exceptional Eldritch Ember]] tới khi implicit Exarch là "8%
+      increased Movement Speed". Giờ Exarch là implicit mạnh hơn. Dùng một
+      [[Eldritch Exalted Orb]].
+    why: >-
+      Hai việc trong một. Ember là implicit bạn muốn giữ, và vì mạnh hơn
+      Greater Ichor nên nó xoay chiều các Eldritch orb: Exalted Orb giờ thêm
+      một **prefix**, và các suffix đã xong là phía được bảo vệ. Khi movement
+      speed và life đã có sẵn, năm trên sáu lần roll prefix trên base này là
+      một prefix defence, theo phép tính của chúng tôi.
+    check: >-
+      Kể từ lúc này một Eldritch Chaos Orb sẽ roll lại prefix. Hãy cất chúng
+      đi.
+    fail: >-
+      Exalted Orb thêm Item Rarity hoặc hybrid nhỏ Evasion kèm life. Cứ để
+      đó. Gỡ nó nghĩa là dùng một Eldritch Annulment trên phía prefix, tức
+      hai trên ba khả năng trúng movement speed hoặc life.
+    state:
+      implicits: ["8% increased Movement Speed", "6% increased Cooldown Recovery Rate"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+        - { text: "74% increased Evasion Rating", how: eldritch }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+  - title: "Implicit Eater mà bạn giữ"
+    do: >-
+      Dùng [[Exceptional Eldritch Ichor]] tới khi implicit Eater là cái bạn
+      muốn. Với boots, đó thường là chance to Avoid Elemental Ailments
+      (24–26% ở bậc này) hoặc Cooldown Recovery Rate (8%).
+    why: >-
+      Một Ichor chỉ thay implicit Eater. Phía nào mạnh hơn không còn quan
+      trọng nữa, vì sẽ không còn Eldritch orb nào được dùng. Implicit ailment
+      là cái hiếm hơn trong hai cái, khoảng 1 trên 50 Ichor cho dạng luôn có
+      tác dụng theo phép tính của chúng tôi, nên hãy quyết định bạn sẽ đuổi
+      theo nó bao lâu.
+    state:
+      implicits: ["8% increased Movement Speed", "25% chance to Avoid Elemental Ailments"]
+      prefixes:
+        - { text: "30% increased Movement Speed", how: fossil }
+        - { text: "+104 to maximum Life", how: fossil }
+        - { text: "74% increased Evasion Rating", how: eldritch }
+      suffixes:
+        - { text: "+12% chance to Suppress Spell Damage", how: eldritch }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+33% to Fire Resistance", how: crafted }
+variations: >-
+  **Khi khóa bench vẫn là lựa chọn đúng.** Dominance bảo vệ một phía trước
+  Eldritch orb, ngoài ra không trước thứ gì khác. Một reforge Harvest với
+  resistance được đảm bảo, một Veiled Chaos Orb, một Orb of Scouring: mỗi cái
+  roll lại hoặc xóa trắng cả item trừ khi "Prefix Modifiers cannot be
+  changed" đang ở trên đó, với giá 4 Divine Orb và 4 Blessed Orb mỗi lần. Hãy
+  trả cái giá đó khi suffix bạn cần là thứ chỉ những công cụ ấy mới cho.
+
+
+  **Một suffix tốt và một ô trống.** Một Eldritch Exalted Orb dưới implicit
+  Eater mạnh hơn thêm một suffix và không roll lại gì. Đáng làm khi hai
+  suffix đầu đã đúng và bạn thà đánh cược cái thứ ba còn hơn bench nó.
+
+
+  **Về Memory Strands.** Theo bảng data-mine, một Eldritch Chaos Orb có thể
+  tiêu tới 60 strand mỗi lần dùng, nên strand không trụ nổi qua giai đoạn
+  này. Còn một item có strand có nhận Ichor hay không thì chúng tôi chưa xác
+  nhận được.
+mistakes:
+  - "Thêm cái Ember mạnh trước. Khi Exarch mạnh hơn, Eldritch Chaos Orb đầu tiên roll lại movement speed và life."
+  - "Dùng một Orb of Conflict giữa lần craft. Nó nâng một implicit và hạ cái kia, và có thể trao cái khóa cho nhầm phía."
+  - "Coi dominance là lớp bảo vệ trước mọi thứ. Essence, Fossil, Chaos Orb và reforge Harvest phớt lờ nó."
+  - "Bench suffix thứ ba trước khi các lần roll lại kết thúc."
+  - "Annul một suffix khi hai trong ba cái là tốt."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Dòng chữ in-game của các Eldritch orb, Ember và Ichor, các Eldritch implicit của boots và weight của chúng, tier và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá của các khóa bench mà phương pháp này tránh." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: Eldritch implicit mạnh hơn quyết định các Eldritch orb tác động lên phía nào. Một phần cũ hơn 3.30." }

@@ -1,0 +1,459 @@
+name: "Jewels"
+short: "Crimson, Viridian and Cobalt jewels: four slots, one tier of everything, and a pool that the colour decides."
+icon: "Cobalt Jewel"
+intro: >-
+  A jewel is not worn. It goes into a socket on the passive tree, a character
+  has room for several, and so a jewel is a small item you make many of.
+  Almost nothing from the equipment guides carries over.
+
+
+  A Rare jewel has **two** prefixes and **two** suffixes, not three and three.
+  It has no implicit to choose, no quality and no sockets. No Essence works on
+  it, and the bench cannot add a modifier to it. Every modifier has exactly
+  one tier, so there is no ladder to climb either. What is left is the lottery
+  in its plainest form: about fifty prefixes and sixty suffixes per colour,
+  most of them with similar weights, and one question. Which two, three or
+  four of them can you get onto the same jewel?
+basics:
+  itemLevel:
+    text: >-
+      Item level gates nothing you roll on a regular jewel. In the 3.30 data
+      every prefix and suffix of the Crimson, Viridian and Cobalt jewels has a
+      single tier, and every one of them needs item level 1. A jewel from the
+      middle of the campaign (they start dropping at level 20) rolls the same
+      7% maximum Life as one from the hardest map. Never pay for item level
+      on a jewel you mean to roll.
+
+
+      The few gates that do exist sit at the edges: three corruption
+      implicits, and the unveiled modifiers.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "**Everything you roll.** All prefixes and suffixes, each in its only tier, and 17 of the 21 corruption implicits."
+      - ilvl: 33
+        unlocks: "The corruption implicit \"Corrupted Blood cannot be inflicted on you\". The data gives it a level of 33, so by the usual rule a jewel below that cannot receive it."
+      - ilvl: 40
+        unlocks: "The corruption implicits \"You cannot be Maimed\" and \"You cannot be Hindered\"."
+      - ilvl: 60
+        unlocks: "The corruption implicit \"You cannot be Cursed with Silence\". **From here a jewel can receive all 21.**"
+      - ilvl: 68
+        unlocks: "The 30 unveiled modifiers the data lists for jewels. We could not confirm how a veiled modifier reaches a jewel in 3.30, so read this as a line in the data, not as a plan."
+  bases:
+    text: >-
+      There are four bases and each is its own pool. None has stats, an
+      implicit or a requirement, and any jewel fits any jewel socket. The
+      game's own help text says it in one line: the colour of a jewel affects
+      which modifiers it is likely to have and has no effect on where you can
+      socket it. So the colour is the whole of the base lesson. It decides
+      what can roll, and how heavily.
+
+
+      The pattern is easier to remember than the list. A modifier belongs to
+      **one colour**, to **two colours**, or to **all three**, and where the
+      three share a modifier they often weigh it differently.
+    types:
+      - title: "Crimson Jewel (Strength)"
+        pools: [crimson-jewel]
+        text: >-
+          The melee and armour jewel: 48 prefixes and 58 suffixes. It shares
+          the whole melee set with Viridian: damage and attack speed with
+          one-handed or two-handed weapons, while dual wielding or holding a
+          shield, with axes and with swords, and the melee critical strike
+          modifiers. Among the three colours only Crimson rolls increased
+          Armour, damage and attack speed with maces, sceptres and staves,
+          Life leech and Life gained per hit.
+
+
+          It weighs increased maximum Life at 500 where the other two weigh
+          it at 350. By our arithmetic that is 1 prefix roll in 36 here,
+          against 1 in 56 on Viridian and 1 in 52 on Cobalt. Crimson cannot
+          roll anything for spells, minions, traps, mines, bows, claws,
+          daggers or wands, nor the Chaos and Cold Damage over Time
+          Multipliers.
+      - title: "Viridian Jewel (Dexterity)"
+        pools: [viridian-jewel]
+        text: >-
+          52 prefixes and 62 suffixes, the widest of the three. It has the
+          melee set it shares with Crimson, and alone has bows, claws and
+          daggers, increased Evasion Rating, Global Accuracy Rating, Mana
+          leech and Mana gained per hit. With Cobalt it shares traps, mines,
+          and the Chaos and Cold Damage over Time Multipliers.
+
+
+          Poison and projectiles lean this way: increased Damage with Poison
+          and Projectile Speed weigh 500 here and 250 to 300 on the other
+          colours. No spell, minion, wand, Armour or Energy Shield modifiers.
+      - title: "Cobalt Jewel (Intelligence)"
+        pools: [cobalt-jewel]
+        text: >-
+          The caster and minion jewel: 47 prefixes and 61 suffixes. Only
+          Cobalt rolls Spell Damage in any form, Cast Speed, spell critical
+          strike chance and multiplier, minion damage, life and resistances,
+          the wand modifiers and the three Energy Shield prefixes. It shares
+          traps, mines and the Chaos and Cold Damage over Time Multipliers
+          with Viridian, and staff block with Crimson.
+
+
+          It cannot roll damage by weapon type, the one-handed and two-handed
+          modifiers, or any melee critical strike modifier. A few attack
+          modifiers are open to every colour and so appear here too: Attack
+          Speed, and attack speed while dual wielding or holding a shield.
+      - title: "Mycelium Core"
+        pools: [mycelium-core]
+        text: >-
+          A base added in 3.30 and known so far as the base of the unique
+          Putrid Seed. The data also gives it an ordinary pool, and an odd
+          one. It rolls every modifier that belongs to a **single** colour,
+          so Armour, Evasion and Energy Shield, bows, wands and maces, Spell
+          Damage and Life leech can all appear on the same jewel. It rolls
+          nothing that exactly two colours share: no melee set, no traps or
+          mines, no staff block, no Chaos or Cold Damage over Time
+          Multiplier.
+
+
+          Its pool is the largest (22,550 prefix weight against 17,850 on
+          Crimson), so each single modifier is rarer on it. We could not
+          confirm from the patch notes how a Normal, Magic or Rare Mycelium
+          Core is obtained, or whether one is. Check that before planning a
+          craft around it.
+    picks:
+      - base: "Crimson Jewel"
+        for: "Life, melee and armour"
+        why: >-
+          Increased maximum Life at weight 500 of 17,850, the best odds of
+          the three colours, and the smallest pool, so each melee modifier is
+          a little more likely here than its twin on Viridian: 2.80% of
+          prefix rolls against 2.56% for increased Damage with Two Handed
+          Weapons.
+      - base: "Viridian Jewel"
+        for: "Bows, claws, daggers, poison"
+        why: >-
+          The only colour with bow, claw and dagger modifiers, at 2.56% of
+          prefix rolls each for damage and for attack speed. Increased Damage
+          with Poison and Projectile Damage are both at weight 500, about 1
+          suffix roll in 39.
+      - base: "Cobalt Jewel"
+        for: "Spells, minions, Energy Shield"
+        why: >-
+          Spell Damage twice over: a prefix tied to how you hold your weapons
+          (while holding a Shield, while Dual Wielding, while wielding a
+          Staff, 2.74% each) and the plain suffix (2.65%). They are different
+          groups, so both fit on one jewel. Minion damage and the Energy
+          Shield prefixes exist nowhere else.
+    impact: >-
+      One thing only: **the pool**. A jewel has no implicit, no base numbers
+      for a local modifier to multiply, no requirement and no item level
+      gate. Two jewels of one colour are the same base in every respect.
+
+
+      So the choice is made by elimination. List the modifiers you want.
+      Cross out every colour that cannot roll one of them. Among what is
+      left, take the colour that weighs your hardest modifier highest. A
+      jewel with Life and Spell Damage has to be Cobalt, because Crimson
+      cannot roll Spell Damage at all, even though Crimson rolls Life more
+      often.
+tools:
+  - method: currency
+    note: >-
+      The whole craft, more than on any other item.
+      [[Orb of Transmutation]] and [[Orb of Alteration]]s roll a Magic jewel
+      with one prefix and one suffix. An [[Orb of Augmentation]] fills an
+      empty side. A [[Regal Orb]] adds the third modifier and an
+      [[Exalted Orb]] the fourth.
+
+
+      Because the pool is flat, the arithmetic is simple and unforgiving. By
+      our arithmetic from the weights, most single modifiers are 1.3% to 2.8%
+      of a prefix or suffix roll: 1 roll in 36 to 1 in 77. The scarce ones,
+      such as the maximum resistances and Chaos Resistance, are 1 in 180 to
+      1 in 300. A named pair on one Magic jewel is two of those chances
+      multiplied.
+
+
+      That is why a jewel craft starts from a **shortlist** and not from a
+      wish. Five acceptable prefixes at 2.8% each are 14% together, 1 roll
+      in 7.
+
+
+      [[Orb of Alchemy]] and [[Chaos Orb]]s roll up to four modifiers at once
+      from the same flat pool, and you cannot stop when one of them is right.
+      On jewels they are a way to sort through many cheap results, not a way
+      to build one.
+  - method: bench
+    note: >-
+      The bench cannot add a modifier to a jewel. The 3.30 data lists no
+      bench modifier for jewels at all, which also means no blocking and no
+      protection modifiers: nothing can lock one side of a jewel.
+
+
+      Three options do work, all unlocked by default. **Reroll a random
+      modifier on a Rare item** costs 8 [[Chaos Orb]]s. **Reroll 3 random
+      modifiers on a Rare item** costs 3. **Reroll the Rarity of a non-Unique
+      item** costs 1 [[Orb of Chance]], which is much rarer in 3.30 than it
+      was.
+
+
+      The first is the one to understand. By its wording, one of the jewel's
+      modifiers is picked at random and replaced. On a jewel with two good
+      modifiers and one bad one that is a 1 in 3 chance of hitting the bad
+      one, the same odds as an [[Orb of Annulment]], paid in Chaos Orbs, with
+      the replacement rolled in the same click. We have not confirmed whether
+      the replacement always lands on the side it came from.
+  - method: beast
+    note: >-
+      The **Imprint** ([[Craicic Croaker]]) is the one protection a jewel
+      can have. It saves a Magic jewel before the [[Regal Orb]]; the recipe
+      says "a Magic Item" and names no class. It earns its beasts when the
+      Magic jewel was expensive to roll, and only then.
+
+
+      The two trading recipes, **add a prefix, remove a random suffix**
+      ([[Farric Wolf Alpha]]) and **add a suffix, remove a random prefix**
+      ([[Farric Lynx Alpha]]), behave differently on an item with two slots a
+      side. The removal is one of at most two, and it is certain when the bad
+      modifier is alone on its side. The side being added to needs an open
+      slot.
+  - method: finishing
+    note: >-
+      No quality, no sockets, no links. What is left is the
+      [[Divine Orb]], and on jewels it matters more than usual: with one tier
+      per modifier, the roll inside the range is the only thing that
+      separates two jewels with the same modifiers. 5% and 7% increased
+      maximum Life are the same line. Across six sockets the difference is
+      12% Life.
+  - method: corruption
+    note: >-
+      A [[Vaal Orb]] is the only way to give a jewel an implicit. The data
+      lists 21 corruption implicits for jewels, all with the same weight.
+      The one players corrupt for is "Corrupted Blood cannot be inflicted on
+      you". "You cannot be Maimed", "You cannot be Hindered", 4–5% increased
+      Damage and 2% increased Reservation Efficiency of Skills are the other
+      useful ones.
+
+
+      By our arithmetic, when a jewel does receive an implicit it is any
+      given one 1 time in 21. How often a Vaal Orb gives an implicit at all
+      is not published. A reference page older than 3.29 lists four outcomes
+      for a jewel: nothing, an implicit, a reroll into a new Rare jewel, or a
+      Vaal-only unique jewel.
+  - method: fossil
+    note: >-
+      The data carries a Fossil-only pool for jewels: seven prefixes, among
+      them Damage Penetrates 1% Elemental Resistances, 4–6% increased Global
+      Defences and Regenerate 0.3% of Life per second, and eleven suffixes,
+      among them 15–20% increased Damage with Ailments and 13–19% increased
+      Chaos Damage. That such a pool exists suggests Resonators accept
+      jewels, but we could not confirm it in 3.30. Try one Fossil before
+      buying a stack. None of our examples depends on it.
+  - method: harvest
+    note: >-
+      We could not confirm that the reforges at the
+      [[Horticrafting Station]] accept jewels in 3.30. If they do, read the
+      tags before paying: on a Crimson jewel five modifiers carry the life
+      tag (maximum Life, Totem Life, Life leech, Life gained per hit, Damage
+      taken Recouped as Life), so "including a Life modifier" would be
+      increased maximum Life about one time in four, not every time.
+  - method: veiled
+    note: >-
+      The data lists 30 modifiers that can be unveiled on a jewel, all at
+      item level 68: +0.1 metres to Melee Strike Range, 3–5% of Physical
+      Damage Converted to Fire Damage and 1–2% increased Attributes are
+      three of them. The two Veiled orbs say "a rare item" and name no
+      class, and we could not confirm that either works on a jewel in 3.30.
+      Do not plan around these until you have seen one unveiled.
+memoryStrands: >-
+  [[Memory Strands]] raise the tier of whatever is rolled, and a regular
+  jewel has no tiers to raise: every modifier it can roll exists in one tier
+  only. The text of the strand orbs also speaks of "equipment" items, and a
+  jewel is socketed, not equipped, so we would not expect to see a jewel
+  with strands at all.
+
+
+  Either way the conclusion is the same. There is nothing on a jewel for
+  strands to improve. Spend them on a weapon.
+reading:
+  intro: >-
+    Hold Alt over a jewel and count: **how many of its modifiers does this
+    character actually use?** That number, from one to four, is the jewel.
+    There are no tiers to read, so the only second question is where each
+    roll sits inside its range.
+  prefixes:
+    text: >-
+      Prefixes hold the conditional damage: by weapon type, by how you hold
+      your weapons, by element. They also hold increased maximum Life, the
+      Energy Shield modifiers, mana and reservation.
+
+
+      The logic to learn is the groups, because several families that look
+      different are one group and can never sit together. Damage with a
+      weapon type (axes, bows, claws, daggers, maces or sceptres, staves,
+      swords, wands) is one group. Damage with One Handed Weapons, with Two
+      Handed Weapons, while Dual Wielding and while holding a Shield is
+      another. The attack and cast speed modifiers split the same two ways.
+      The three "Spell Damage while…" prefixes are one group.
+
+
+      Pairs from **different** groups stack. Damage with Swords and Damage
+      with Two Handed Weapons can be the two prefixes of a two-handed sword
+      build, and that pairing of a narrow modifier with a broad one is the
+      pattern of every good damage jewel.
+    key:
+      - mod: "#% increased maximum Life"
+        why: "The one prefix almost every build accepts, and the reason Crimson is the default colour for a defensive jewel."
+        aim: "5–7%, its only tier. 7% is the top of the roll."
+      - mod: "#% increased Damage with Two Handed Weapons"
+        why: "The broad half of a melee pair. Its group also holds One Handed Weapons, Dual Wielding and holding a Shield, so take the one that describes your character and expect only one of them."
+        aim: "12–14%. Crimson and Viridian only."
+      - mod: "#% increased Damage with Swords"
+        why: "The narrow half: one line per weapon type, all one group. Higher numbers than the broad half, and it stacks with it."
+        aim: "14–16%. Which colours roll it depends on the weapon."
+      - mod: "#% increased Spell Damage while holding a Shield"
+        why: "The caster's conditional prefix, with twins for Dual Wielding and for a Staff. Stacks with the plain Spell Damage suffix."
+        aim: "14–16%. Cobalt only."
+      - mod: "#% increased Fire Damage"
+        why: "Stands for the elemental and physical prefixes: Fire, Cold, Lightning and Global Physical Damage are four separate groups that every colour can roll."
+        aim: "14–16% (Chaos Damage is 9–13%)."
+      - mod: "+#% to Critical Strike Multiplier with Two Handed Melee Weapons"
+        why: "The highest multiplier on a jewel, with twins for One Handed Melee Weapons and Dual Wielding in the same group. Weight 250, so about 1 prefix roll in 71 on Crimson."
+        aim: "15–18%."
+      - mod: "#% increased maximum Energy Shield"
+        why: "The Energy Shield builder's answer to maximum Life."
+        aim: "6–8%. Cobalt only."
+      - mod: "Minions deal #% increased Damage"
+        why: "The minion prefix. It shares a group with four damage suffixes, so it cannot sit beside increased Spell Damage or increased Damage."
+        aim: "14–16%. Cobalt only."
+  suffixes:
+    text: >-
+      Suffixes hold the broad damage modifiers, the global critical strike
+      pair, the damage over time multipliers, attributes and resistances.
+
+
+      Two things to know. First, the suffix side is where a jewel repairs a
+      character: 12–15% to one resistance, 10–12% to two, 8–10% to all
+      three, or 12–16 of an attribute, each a common roll.
+
+
+      Second, one group here reaches across to the prefix side. Increased
+      Damage, Melee Damage, Projectile Damage and Spell Damage are suffixes;
+      Trap Damage, Mine Damage and Minions deal increased Damage are
+      prefixes; the data puts all seven in a single group. A jewel holds one
+      of them, whichever side it is on. The four specific Damage over Time
+      Multipliers (Fire, Cold, Chaos, Physical) are likewise one group, with
+      the plain Damage over Time Multiplier in a group of its own beside
+      them.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Works for every critical strike build and stacks with the narrower multipliers on both sides."
+        aim: "9–12%."
+      - mod: "+#% to Melee Critical Strike Multiplier"
+        why: "The suffix multiplier for melee; Cobalt has the same thing for spells. A different group from the global one, so both fit."
+        aim: "12–15%. Crimson and Viridian only."
+      - mod: "#% increased Spell Damage"
+        why: "The plain caster suffix, beside Melee Damage and Projectile Damage in the group that also blocks the minion, trap and mine prefixes."
+        aim: "10–12%. Cobalt only."
+      - mod: "#% increased Attack Speed"
+        why: "Unconditional speed. Cast Speed is its Cobalt twin, and Attack and Cast Speed a third, separate group."
+        aim: "3–5% (Cast Speed 2–4%)."
+      - mod: "#% increased Area Damage"
+        why: "A second broad damage suffix in its own group, so it sits beside Melee, Projectile or Spell Damage."
+        aim: "10–12%."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "The specific multiplier for an ignite build. Fire and Physical roll on every colour; Chaos and Cold only on Viridian and Cobalt."
+        aim: "6–8% (the plain multiplier is 4–6%)."
+      - mod: "+#% to all Elemental Resistances"
+        why: "The repair suffix. Worth a slot on any jewel that frees a suffix on your gear for something better."
+        aim: "8–10%."
+approach:
+  principle: >-
+    **A jewel is a shortlist, not a target.** With one tier per modifier and
+    a flat pool, you cannot aim at a single line the way you aim at a weapon
+    prefix. Decide in advance which modifiers count as a hit, on each side,
+    and stop the moment the jewel holds as many hits as you set out to pay
+    for. The longer the shortlist, the cheaper the jewel.
+  order:
+    - title: "Write the shortlist for this character"
+      text: >-
+        Prefixes in one column, suffixes in the other, every modifier the
+        build really uses. Then mark the groups: two lines of one group are
+        one chance, not two.
+    - title: "Pick the colour by elimination"
+      text: >-
+        Drop every colour that cannot roll something you require. Of the
+        rest, take the one that weighs your scarcest modifier highest. Item
+        level does not enter into it.
+    - title: "Decide how many hits you are paying for"
+      text: >-
+        One hit and a filler is a campaign jewel. Two hits is a working
+        jewel. Three is a good one. Four is rare and costs accordingly: with
+        a shortlist of ordinary length, each extra hit multiplies the cost
+        by about seven to ten.
+    - title: "Roll the Magic jewel one side at a time"
+      text: >-
+        Alterations until one side shows a hit. If the other side is empty,
+        an Augmentation is a free look at it. A Magic jewel with a hit on
+        **both** sides is the real prize of this stage, and the patient part
+        of the craft.
+    - title: "Regal, with a net if the jewel earned one"
+      text: >-
+        A Regal Orb adds one modifier and may add a bad one. If the Magic
+        jewel took a few dozen Alterations, just Regal it. If it took
+        hundreds, make an Imprint first.
+    - title: "Take the fourth slot as a free roll, once"
+      text: >-
+        An Exalted Orb on a jewel with three hits can only help: a bad
+        fourth modifier costs you nothing but the slot. Trying to remove it
+        afterwards is where good jewels are lost.
+  finishing: >-
+    A [[Divine Orb]] when the modifiers are right and the rolls are low; on
+    a jewel that is the whole of finishing. Use it before any corruption,
+    because a corrupted jewel can no longer be changed.
+
+
+    A [[Vaal Orb]] is optional and final. It is worth it on a jewel you can
+    replace, or on one where an implicit such as immunity to Corrupted Blood
+    is the point.
+  stopping: >-
+    Two hits on a Magic jewel is a real item on day two. Three hits on a
+    Rare jewel is good at any stage of a league. Past that, the honest
+    comparison is with the market: a four-hit jewel is exactly the kind of
+    item it is cheaper to buy than to make, unless your shortlist is unusual.
+
+
+    Stop when the next orb costs more than the modifier it might add is
+    worth to you. And never spend to remove a harmless modifier from a jewel
+    that already does its job.
+special:
+  - mod: "Corrupted Blood cannot be inflicted on you"
+    source: "Corruption"
+    where: "A corruption implicit from a [[Vaal Orb]], one of 21 with equal weight. The data gives it a level of 33, so use a jewel of item level 33 or higher."
+  - mod: "You cannot be Maimed"
+    source: "Corruption"
+    where: "A corruption implicit, level 40 in the data. \"You cannot be Hindered\" is its twin at the same level, and \"You cannot be Cursed with Silence\" needs 60."
+  - mod: "#% increased Reservation Efficiency of Skills"
+    source: "Corruption"
+    where: "2% as a corruption implicit. The 2–3% increased Mana Reservation Efficiency of Skills that every colour rolls as a prefix is a different modifier."
+  - mod: "Damage Penetrates #% Elemental Resistances"
+    source: "Corruption / Fossil"
+    where: "1% as a corruption implicit, and 1% as a prefix in the Fossil-only pool. Fossils on jewels could not be confirmed in 3.30."
+  - mod: "#% increased Damage with Ailments"
+    source: "Fossil"
+    where: "15–20% as a suffix in the Fossil-only pool of the data. Unconfirmed in 3.30, as above."
+  - mod: "+0.1 metres to Melee Strike Range"
+    source: "Veiled"
+    where: "One of 30 unveiled modifiers the data lists for jewels at item level 68. We could not confirm a way to put a veiled modifier on a jewel in 3.30."
+mistakes:
+  - "**Rolling the wrong colour.** A Crimson jewel will never show Spell Damage and a Cobalt one will never show Damage with Axes. Check the modifier list for your colour before the first Alteration."
+  - "**Chasing one named modifier.** A single line is 1 roll in 36 at best and often 1 in 70. A shortlist of five is 1 in 7."
+  - "**Counting two modifiers of one group as two chances to stack.** Damage with Swords and Damage with Axes cannot share a jewel. Neither can increased Spell Damage and Minions deal increased Damage."
+  - "**Looking for the bench to finish the jewel.** It cannot add a modifier to a jewel, so there is no certain last slot. Plan as if every slot is rolled, because it is."
+  - "**Removing a bad fourth modifier.** An Annulment on a four-modifier jewel removes a good one 3 times in 4."
+  - "**Paying for item level.** Every modifier a jewel rolls needs item level 1."
+  - "**Corrupting before the Divine Orb.** Once corrupted, the rolls are fixed for good."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, weight, group, tag, corruption implicit and bench option quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The Mycelium Core base, and the changes to the Orb of Chance." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "The two bench options that reroll one or three random modifiers of a Rare item." }
+  - { title: "poedb: Jewels", url: "https://poedb.tw/us/Jewels", kind: data, note: "The in-game help text on jewel colours, and the list of unveiled jewel modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and the two add-and-remove recipes, with the beasts they need." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "The four corruption outcomes listed for jewels. The text is older than 3.29." }

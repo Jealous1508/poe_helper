@@ -1,0 +1,232 @@
+category: rings
+title: "Hai influence trên một chiếc ring bằng Awakener's Orb"
+level: 5
+summary: "Chuẩn bị hai chiếc ring, mỗi chiếc mang đúng một modifier influence, gộp chúng bằng một Awakener's Orb, rồi khóa kết quả và dựng lại prefix."
+goal: >-
+  Một chiếc ring có curse on hit từ một influence và Critical Strike
+  Multiplier từ một influence khác: hai suffix mà không pool của một chiếc
+  ring đơn nào chứa cùng lúc. Awakener's Orb là công cụ duy nhất nối được hai
+  influence, và nó roll lại mọi thứ nó không giữ. Toàn bộ lần craft được sắp
+  xếp quanh một câu về cách nó hoạt động: **nó giữ một modifier influence từ
+  mỗi chiếc ring.** Hãy cho nó đúng một cái để chọn ở mỗi bên, và ván cược
+  thành một kế hoạch.
+base: "Vermillion Ring"
+itemLevel: 84
+baseWhy: >-
+  Cần hai chiếc ring, cả hai item level 80 trở lên để có tier cao nhất của
+  từng suffix influence. Chiếc **thứ hai** là chiếc bạn giữ, nên nó nhận base
+  tốt: một Vermillion Ring vì 5–7% maximum Life của nó. Chiếc đầu bị orb phá
+  hủy và có thể là bất kỳ ring nào.
+
+
+  Không chiếc nào được là fractured item, và mỗi chiếc cần có influence của
+  nó trước khi bạn bắt đầu: từ Exalted Orb tương ứng, hoặc rơi ra sẵn như
+  vậy.
+methods: [influence, harvest, meta, bench]
+result:
+  note: "Hunter and Warlord"
+  implicits: ["6% increased maximum Life"]
+  prefixes:
+    - { text: "+97 to maximum Life", how: harvest }
+    - { text: "16% increased Damage", how: crafted }
+  suffixes:
+    - { text: "Curse Enemies with Despair on Hit", how: influence }
+    - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+    - { text: "+40% to Lightning Resistance" }
+needs:
+  - { item: "Một chiếc ring có influence Hunter, item level 80+", amount: "1", note: "base nào cũng được; nó bị phá hủy" }
+  - { item: "Một Vermillion Ring có influence Warlord, item level 80+", amount: "1", note: "chiếc ring bạn giữ" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "2,000–4,000", note: "các reforge Caster và Critical" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần khóa, cộng 4 cho bench" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần reforge Life" }
+cost: >-
+  [[Awakener's Orb]] và các lần khóa. Chuẩn bị hai chiếc ring tốn hai Exalted
+  Orb của Conqueror, nếu bạn phải tự thêm influence, và vài nghìn Lifeforce.
+  Sau khi gộp, mỗi lần thử với phía prefix là 4 [[Divine Orb]] và 8
+  [[Exalted Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Điều nói được là tiền an toàn ở đâu: mọi
+  thứ trước Awakener's Orb đều rẻ và lặp lại được, còn mọi thứ sau nó được
+  một cái khóa bảo vệ. Chính orb là khoảnh khắc duy nhất không có lần thử
+  lại.
+odds: >-
+  **Ring Hunter.** Một reforge Caster cho Despair on Hit khoảng 1 trên 14
+  lần: ba modifier caster trong pool, Cast Speed ở 2,400 và hai curse mỗi cái
+  200.
+
+
+  **Ring Warlord.** Ring thường không có modifier critical nào và danh sách
+  Warlord có một cái, nên một reforge Critical luôn cho Critical Strike
+  Multiplier của Warlord. Ba tier của nó có weight như nhau: một trên ba lần
+  thử ra tier cao nhất, 20–22%.
+
+
+  Cả hai con số là phép tính của chúng tôi từ weight, và giả định rằng
+  modifier được đảm bảo được rút theo weight.
+
+
+  **Lần gộp.** Việc orb giữ một modifier influence từ mỗi chiếc ring là theo
+  các trang tra cứu, không phải từ dòng mô tả của item. Khi mỗi chiếc ring
+  chỉ có một cái thì nó không có gì để chọn. Những thứ nó roll ra quanh chúng
+  thì không đoán trước được: bạn có thể nhận ba prefix và không còn chỗ cho
+  khóa.
+steps:
+  - title: "Ring một: curse, và không gì khác từ Hunter"
+    do: >-
+      Trên ring Hunter, dùng craft Harvest **Reforge a Rare item with
+      random modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]) tới khi nó có "Curse Enemies with
+      Despair on Hit" và **không có modifier Hunter nào khác**.
+    why: >-
+      Chiếc ring này tồn tại để mang một modifier vào lần gộp. Các modifier
+      khác của nó sẽ bị phá hủy cùng nó, nên cứ bỏ qua chúng. Điều quan trọng
+      là curse phải là dòng influence duy nhất: một modifier Hunter thứ hai
+      sẽ cho orb một lựa chọn, và nó sẽ chọn ngẫu nhiên.
+    check: >-
+      Giữ Alt. Modifier influence được đặt tên theo influence của chúng ("of
+      the Hunt", "Hunter's"). Đúng một dòng như vậy.
+    fail: >-
+      Curse ra cùng một modifier Hunter thứ hai: reforge lại. Chỉ tốn
+      Lifeforce thôi.
+  - title: "Ring hai: Critical Strike Multiplier của Warlord, đứng một mình"
+    do: >-
+      Trên Vermillion Ring Warlord, dùng **Reforge a Rare item with random
+      modifiers, including a Critical modifier** (150 Primal) tới khi
+      multiplier ở tier bạn muốn và là modifier Warlord **duy nhất**.
+    why: >-
+      Không ring nào roll ra modifier critical nếu không có influence, nên
+      trên chiếc ring này tag Critical chỉ vào đúng một họ. Reforge không thể
+      trượt; bạn chỉ đang chọn tier, 14–16%, 17–19% hoặc 20–22%.
+    check: >-
+      Một dòng "of the Conquest", không dòng nào bắt đầu bằng "Warlord's".
+      Các modifier khác không liên quan: orb sẽ roll lại chúng.
+    state:
+      note: "Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+33 to maximum Energy Shield", how: harvest }
+      suffixes:
+        - { text: "+21% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+29 to Intelligence", how: harvest }
+  - title: "Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên ring Hunter, rồi lên Vermillion Ring. Chiếc
+      đầu bị phá hủy; chiếc thứ hai thành một chiếc ring Rare có cả hai
+      influence.
+    why: >-
+      Dòng mô tả của item: "Destroys an item, applying its influence to
+      another of the same item class. The second item is reforged as a rare
+      item with both influence types and new modifiers." Theo các trang tra
+      cứu, kết quả giữ một modifier influence từ mỗi chiếc ring. Thứ tự click
+      quyết định base nào sống sót.
+    check: >-
+      Cả hai suffix đều có trên kết quả. Rồi đếm: mấy suffix, mấy prefix?
+    fail: >-
+      Nếu thiếu một trong hai, tức luật được ghi nhận đã không đúng, và không
+      có cách nào cứu; trên thực tế chiếc ring lại là ring một influence.
+      Chúng tôi không thử được điều này trong 3.30. Trước khi tiêu orb, hãy
+      tìm một ghi nhận gần đây cho thấy nó vẫn hoạt động theo cách này.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+52 to maximum Mana" }
+        - { text: "Adds 5 to 11 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+  - title: "Đọc các ô trước khi đụng vào bất cứ thứ gì"
+    do: >-
+      Bạn cần **một ô prefix trống**, cho khóa. Ba suffix là trường hợp tốt
+      nhất; hai suffix và ô thứ ba còn trống thì vẫn làm được.
+    why: >-
+      Mọi thứ có giá trị giờ nằm ở phía suffix và không gì bảo vệ nó. Nước đi
+      an toàn duy nhất kế tiếp là khóa, mà khóa là một prefix.
+    fail: >-
+      Ba prefix: không có ô nào cho khóa. Một
+      [[Orb of Annulment]] sẽ mở được một ô, và sẽ lấy mất suffix cũng thường
+      xuyên như prefix. Đây là chỗ duy nhất trong lần craft mà một
+      [[Hinekora's Lock]] đáng đồng tiền: nó cho thấy Annulment sẽ gỡ
+      modifier nào trước khi bạn chốt. Không có nó thì dừng ở đây và dùng
+      ring với các prefix nó đang có.
+  - title: "Khóa suffix và reforge tìm Life"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** (4 [[Divine Orb]] và 8
+      [[Exalted Orb]]), rồi dùng reforge Harvest kèm một modifier Life (75
+      [[Wild Crystallised Lifeforce]]). Lặp lại cả hai tới khi phía prefix có
+      maximum Life ở tier bạn chấp nhận và vẫn còn trống một ô.
+    why: >-
+      Không suffix influence nào tìm lại được nếu không làm lại từ đầu, nên
+      chúng được khóa trước mọi lần roll lại. Khi phía suffix đã đóng,
+      modifier Life buộc phải là prefix. Trên chiếc ring này có hai prefix
+      mang tag life, maximum Life với weight 8,000 và Life gained on hit của
+      Hunter ở 1,000, nên tám trên chín lần thử cho maximum Life.
+    check: >-
+      Cả ba suffix y nguyên như trước. Life nằm trong các prefix. Nếu phía
+      suffix chỉ có hai modifier, hãy kiểm xem nó vẫn còn hai: việc reforge
+      không thêm gì vào một phía đã khóa là thử nghiệm của người chơi, không
+      phải luật được công bố.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+97 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+  - title: "Bench, và để dành ô cuối cho một quyết định"
+    do: >-
+      Craft 15–17% increased Damage giá 4 [[Exalted Orb]]. Còn lại một ô
+      prefix.
+    why: >-
+      Khi phía suffix đã đầy, thứ gì thêm vào lúc này cũng phải là prefix.
+      Một Exalted Orb vào ô cuối không còn roll ra Life được nữa, vì Life đã
+      có rồi, nên quá nửa số lần nó sẽ là Mana, Energy Shield hoặc Evasion.
+      Để trống ô đó là một kết thúc hợp lý.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+97 to maximum Life", how: harvest }
+        - { text: "16% increased Damage", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+variations: >-
+  **Các cặp khác.** Hai influence bất kỳ đều lên kế hoạch được theo cùng
+  cách, miễn là mỗi modifier bạn muốn có thể được tách riêng trên chiếc ring
+  của nó. Một curse từ Crusader, Redeemer hoặc Warlord thay cho Despair.
+  Multiplier của Elder, 17–20%, thay cho của Warlord. Một prefix từ bên này
+  và một suffix từ bên kia cũng được, và khi đó khóa ở bước 5 phải được chọn
+  cho phía nào giữ nhiều hơn.
+
+
+  **Cả hai modifier bạn muốn nằm trong một danh sách.** Warlord có
+  Vulnerability on hit và multiplier trong cùng một influence. Chiếc ring đó
+  không cần Awakener's Orb, chỉ cần một cuộc tìm kiếm dài hơn bằng reforge,
+  và không có cách nào giữ cái thứ nhất trong khi tìm cái thứ hai.
+
+
+  **Memory Strands.** Bảng data-mine ghi Awakener's Orb tiêu tới 100 strand,
+  cao nhất trong mọi currency. Strand trên chiếc ring nào cũng bị lần craft
+  này làm phí.
+mistakes:
+  - "Gộp những chiếc ring mà mỗi chiếc có hơn một modifier influence. Orb giữ một cái từ mỗi chiếc, và bạn sẽ không được hỏi là cái nào."
+  - "Click các ring sai thứ tự. Chiếc ring đầu bị phá hủy, và base cũng đi theo nó."
+  - "Trau chuốt hai chiếc ring trước khi gộp. Mọi thứ trừ hai modifier được giữ đều bị roll lại."
+  - "Dùng Annulment lên chiếc ring đã gộp để mở một prefix. Một nửa mục tiêu của nó là những suffix mà cả lần craft nhắm tới."
+  - "Bắt đầu khi trong tay chưa có đủ tiền cho ít nhất hai lần khóa. Lần gộp để lại chiếc ring với các prefix ngẫu nhiên, và không có cách an toàn nào xử lý chúng ngoài một lần khóa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier influence của ring, weight và tag, giá bench và dòng mô tả trong game của Awakener's Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Việc kết quả giữ một modifier influence từ mỗi item. Một trang tra cứu, không phải tuyên bố chính thức." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ; các boss Conqueror rơi Exalted Orb của chúng." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Caster, Critical và Life cùng giá Lifeforce của chúng." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

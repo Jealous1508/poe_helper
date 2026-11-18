@@ -1,0 +1,457 @@
+name: "Jewel"
+short: "Crimson, Viridian và Cobalt Jewel: bốn ô, mỗi thứ đúng một tier, và một pool do màu quyết định."
+icon: "Cobalt Jewel"
+intro: >-
+  Jewel không phải thứ để mặc. Nó nằm trong một socket trên passive tree, một
+  nhân vật có chỗ cho vài cái, nên jewel là món item nhỏ mà bạn làm nhiều cái.
+  Gần như không gì từ các hướng dẫn về trang bị còn áp dụng ở đây.
+
+
+  Một jewel Rare có **hai** prefix và **hai** suffix, không phải ba và ba. Nó
+  không có implicit để chọn, không quality, không socket. Không Essence nào
+  dùng được trên nó, và bench không thêm được modifier vào nó. Mỗi modifier có
+  đúng một tier, nên cũng chẳng có bậc thang nào để leo. Thứ còn lại là cuộc
+  xổ số ở dạng trần trụi nhất: khoảng năm mươi prefix và sáu mươi suffix mỗi
+  màu, phần lớn có weight ngang nhau, và một câu hỏi. Bạn đưa được hai, ba hay
+  bốn cái nào trong số đó lên cùng một jewel?
+basics:
+  itemLevel:
+    text: >-
+      Item level không chặn thứ gì bạn roll trên một jewel thường. Trong dữ
+      liệu 3.30, mọi prefix và suffix của Crimson, Viridian và Cobalt Jewel
+      đều chỉ có một tier, và cái nào cũng cần item level 1. Một jewel từ giữa
+      campaign (chúng bắt đầu rơi từ level 20) roll ra cùng mức 7% maximum
+      Life như một cái từ map khó nhất. Đừng bao giờ trả tiền cho item level
+      trên một jewel bạn định roll.
+
+
+      Vài mốc chặn có tồn tại thì nằm ở rìa: ba implicit corruption, và các
+      modifier unveil ra.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "**Mọi thứ bạn roll.** Tất cả prefix và suffix, mỗi cái ở tier duy nhất của nó, và 17 trong 21 implicit corruption."
+      - ilvl: 33
+        unlocks: "Implicit corruption \"Corrupted Blood cannot be inflicted on you\". Dữ liệu ghi level của nó là 33, nên theo luật thông thường, một jewel dưới mức đó không nhận được nó."
+      - ilvl: 40
+        unlocks: "Các implicit corruption \"You cannot be Maimed\" và \"You cannot be Hindered\"."
+      - ilvl: 60
+        unlocks: "Implicit corruption \"You cannot be Cursed with Silence\". **Từ đây một jewel nhận được cả 21 cái.**"
+      - ilvl: 68
+        unlocks: "30 modifier unveil ra mà dữ liệu liệt kê cho jewel. Chúng tôi chưa xác nhận được một veiled modifier tới được jewel bằng cách nào trong 3.30, nên hãy đọc đây như một dòng trong dữ liệu, không phải một kế hoạch."
+  bases:
+    text: >-
+      Có bốn base và mỗi cái là một pool riêng. Không cái nào có chỉ số,
+      implicit hay yêu cầu, và jewel nào cũng vừa mọi jewel socket. Dòng trợ
+      giúp của chính game nói gọn trong một câu: màu của jewel ảnh hưởng tới
+      việc nó dễ có những modifier nào và không ảnh hưởng gì tới chỗ bạn gắn
+      được nó. Vậy nên màu là toàn bộ bài học về base. Nó quyết định cái gì
+      roll được, và với weight nặng nhẹ ra sao.
+
+
+      Quy luật thì dễ nhớ hơn danh sách. Một modifier thuộc về **một màu**,
+      **hai màu**, hoặc **cả ba**, và ở chỗ cả ba cùng có một modifier thì
+      chúng thường đặt weight cho nó khác nhau.
+    types:
+      - title: "Crimson Jewel (Strength)"
+        pools: [crimson-jewel]
+        text: >-
+          Jewel của melee và armour: 48 prefix và 58 suffix. Nó chung trọn bộ
+          melee với Viridian: damage và attack speed với weapon một tay hoặc
+          hai tay, khi dual wield hoặc cầm shield, với axe và với sword, cùng
+          các modifier critical strike của melee. Trong ba màu, chỉ Crimson
+          roll được increased Armour, damage và attack speed với mace, sceptre
+          và staff, Life leech và Life gained per hit.
+
+
+          Nó đặt weight 500 cho increased maximum Life, trong khi hai màu kia
+          đặt 350. Theo phép tính của chúng tôi, đó là 1 trên 36 lần roll
+          prefix ở đây, so với 1 trên 56 trên Viridian và 1 trên 52 trên
+          Cobalt. Crimson không roll được bất cứ thứ gì cho spell, minion,
+          trap, mine, bow, claw, dagger hay wand, cũng không roll được Chaos
+          và Cold Damage over Time Multiplier.
+      - title: "Viridian Jewel (Dexterity)"
+        pools: [viridian-jewel]
+        text: >-
+          52 prefix và 62 suffix, rộng nhất trong ba màu. Nó có bộ melee chung
+          với Crimson, và chỉ riêng nó có bow, claw và dagger, increased
+          Evasion Rating, Global Accuracy Rating, Mana leech và Mana gained
+          per hit. Với Cobalt, nó chung trap, mine, cùng Chaos và Cold Damage
+          over Time Multiplier.
+
+
+          Poison và projectile nghiêng về phía này: increased Damage with
+          Poison và Projectile Speed có weight 500 ở đây và 250 tới 300 trên
+          các màu khác. Không có modifier spell, minion, wand, Armour hay
+          Energy Shield nào.
+      - title: "Cobalt Jewel (Intelligence)"
+        pools: [cobalt-jewel]
+        text: >-
+          Jewel của caster và minion: 47 prefix và 61 suffix. Chỉ Cobalt roll
+          được Spell Damage ở mọi dạng, Cast Speed, critical strike chance và
+          multiplier của spell, damage, life và resistance của minion, các
+          modifier wand và ba prefix Energy Shield. Nó chung trap, mine cùng
+          Chaos và Cold Damage over Time Multiplier với Viridian, và chung
+          staff block với Crimson.
+
+
+          Nó không roll được damage theo loại weapon, các modifier một tay và
+          hai tay, hay bất kỳ modifier critical strike nào của melee. Vài
+          modifier attack mở cho mọi màu nên cũng xuất hiện ở đây: Attack
+          Speed, và attack speed khi dual wield hoặc cầm shield.
+      - title: "Mycelium Core"
+        pools: [mycelium-core]
+        text: >-
+          Một base được thêm trong 3.30 và tới giờ mới được biết đến như base
+          của unique Putrid Seed. Dữ liệu cũng cho nó một pool bình thường, mà
+          lại là một pool kỳ quặc. Nó roll mọi modifier thuộc về **một** màu
+          duy nhất, nên Armour, Evasion và Energy Shield, bow, wand và mace,
+          Spell Damage và Life leech đều có thể xuất hiện trên cùng một jewel.
+          Nó không roll thứ gì mà đúng hai màu dùng chung: không bộ melee,
+          không trap hay mine, không staff block, không Chaos hay Cold Damage
+          over Time Multiplier.
+
+
+          Pool của nó lớn nhất (weight prefix 22,550 so với 17,850 trên
+          Crimson), nên từng modifier riêng lẻ hiếm hơn trên nó. Từ patch
+          notes, chúng tôi chưa xác nhận được một Mycelium Core Normal, Magic
+          hay Rare kiếm bằng cách nào, hay có kiếm được hay không. Hãy kiểm
+          điều đó trước khi lên kế hoạch craft quanh nó.
+    picks:
+      - base: "Crimson Jewel"
+        for: "Life, melee và armour"
+        why: >-
+          Increased maximum Life ở weight 500 trên 17,850, tỉ lệ tốt nhất
+          trong ba màu, và pool nhỏ nhất, nên mỗi modifier melee dễ ra ở đây
+          hơn một chút so với bản song sinh của nó trên Viridian: 2.80% số lần
+          roll prefix so với 2.56% cho increased Damage with Two Handed
+          Weapons.
+      - base: "Viridian Jewel"
+        for: "Bow, claw, dagger, poison"
+        why: >-
+          Màu duy nhất có modifier bow, claw và dagger, mỗi cái 2.56% số lần
+          roll prefix cho damage và cho attack speed. Increased Damage with
+          Poison và Projectile Damage đều ở weight 500, khoảng 1 trên 39 lần
+          roll suffix.
+      - base: "Cobalt Jewel"
+        for: "Spell, minion, Energy Shield"
+        why: >-
+          Spell Damage tới hai lần: một prefix gắn với cách bạn cầm weapon
+          (while holding a Shield, while Dual Wielding, while wielding a
+          Staff, mỗi cái 2.74%) và suffix thuần (2.65%). Chúng thuộc group
+          khác nhau, nên cả hai vừa trên một jewel. Damage của minion và các
+          prefix Energy Shield không tồn tại ở đâu khác.
+    impact: >-
+      Chỉ một điều: **pool**. Jewel không có implicit, không có con số gốc để
+      modifier local nhân lên, không yêu cầu và không có mốc item level nào
+      chặn. Hai jewel cùng màu là cùng một base về mọi mặt.
+
+
+      Vậy nên việc chọn là phép loại trừ. Liệt kê các modifier bạn muốn. Gạch
+      mọi màu không roll được một cái trong số đó. Trong những màu còn lại,
+      lấy màu đặt weight cao nhất cho modifier khó nhất của bạn. Một jewel có
+      Life và Spell Damage buộc phải là Cobalt, vì Crimson hoàn toàn không
+      roll được Spell Damage, dù Crimson roll ra Life thường xuyên hơn.
+tools:
+  - method: currency
+    note: >-
+      Toàn bộ lần craft, hơn bất kỳ item nào khác.
+      [[Orb of Transmutation]] và [[Orb of Alteration]] roll một jewel Magic
+      có một prefix và một suffix. Một [[Orb of Augmentation]] lấp phía còn
+      trống. Một [[Regal Orb]] thêm modifier thứ ba và một
+      [[Exalted Orb]] thêm cái thứ tư.
+
+
+      Vì pool phẳng, phép tính đơn giản mà không nương tay. Theo phép tính của
+      chúng tôi từ weight, phần lớn modifier riêng lẻ chiếm 1.3% tới 2.8% một
+      lần roll prefix hoặc suffix: 1 trên 36 tới 1 trên 77 lần roll. Những cái
+      hiếm, như maximum resistance và Chaos Resistance, là 1 trên 180 tới 1
+      trên 300. Một cặp chỉ đích danh trên một jewel Magic là hai xác suất đó
+      nhân với nhau.
+
+
+      Đó là lý do một lần craft jewel bắt đầu từ một **danh sách ngắn** chứ
+      không từ một điều ước. Năm prefix chấp nhận được, mỗi cái 2.8%, gộp lại
+      là 14%, 1 trên 7 lần roll.
+
+
+      [[Orb of Alchemy]] và [[Chaos Orb]] roll tới bốn modifier cùng lúc từ
+      cùng cái pool phẳng đó, và bạn không dừng lại được khi một cái trong số
+      chúng đã đúng. Trên jewel, chúng là cách sàng qua nhiều kết quả rẻ,
+      không phải cách dựng nên một cái.
+  - method: bench
+    note: >-
+      Bench không thêm được modifier vào jewel. Dữ liệu 3.30 không liệt kê
+      modifier bench nào cho jewel cả, cũng có nghĩa là không block và không
+      modifier bảo vệ: không gì khóa được một phía của jewel.
+
+
+      Có ba lựa chọn dùng được, cả ba đều mở sẵn. **Reroll a random modifier
+      on a Rare item** giá 8 [[Chaos Orb]]. **Reroll 3 random modifiers on a
+      Rare item** giá 3. **Reroll the Rarity of a non-Unique item** giá 1
+      [[Orb of Chance]], thứ trong 3.30 hiếm hơn trước nhiều.
+
+
+      Cái đầu tiên là cái cần hiểu. Theo lời văn của nó, một modifier của
+      jewel được chọn ngẫu nhiên và bị thay thế. Trên một jewel có hai
+      modifier tốt và một cái tệ, đó là 1 trên 3 cơ hội trúng cái tệ, cùng tỉ
+      lệ với một [[Orb of Annulment]], trả bằng Chaos Orb, với cái thay thế
+      được roll ngay trong cùng cú click. Chúng tôi chưa xác nhận được cái
+      thay thế có luôn rơi vào đúng phía của cái cũ hay không.
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) là sự bảo vệ duy nhất một jewel có
+      được. Nó lưu lại một jewel Magic trước [[Regal Orb]]; công thức ghi "a
+      Magic Item" và không nêu tên class nào. Nó đáng số beast bỏ ra khi jewel
+      Magic tốn kém mới roll được, và chỉ khi đó.
+
+
+      Hai công thức đổi chác, **thêm một prefix, gỡ một suffix ngẫu nhiên**
+      ([[Farric Wolf Alpha]]) và **thêm một suffix, gỡ một prefix ngẫu nhiên**
+      ([[Farric Lynx Alpha]]), hoạt động khác đi trên một item mỗi phía hai ô.
+      Cái bị gỡ là một trong nhiều nhất hai cái, và là chắc chắn khi modifier
+      tệ nằm một mình ở phía của nó. Phía được thêm cần có một ô trống.
+  - method: finishing
+    note: >-
+      Không quality, không socket, không link. Thứ còn lại là
+      [[Divine Orb]], và trên jewel nó quan trọng hơn thường lệ: mỗi modifier
+      chỉ một tier, nên roll trong khoảng là thứ duy nhất phân biệt hai jewel
+      có cùng modifier. 5% và 7% increased maximum Life là cùng một dòng. Qua
+      sáu socket, chênh lệch là 12% Life.
+  - method: corruption
+    note: >-
+      Một [[Vaal Orb]] là cách duy nhất cho jewel một implicit. Dữ liệu liệt
+      kê 21 implicit corruption cho jewel, tất cả cùng weight. Cái người chơi
+      corrupt để tìm là "Corrupted Blood cannot be inflicted on you". "You
+      cannot be Maimed", "You cannot be Hindered", 4–5% increased Damage và 2%
+      increased Reservation Efficiency of Skills là những cái hữu ích còn lại.
+
+
+      Theo phép tính của chúng tôi, khi một jewel có nhận implicit thì đó là
+      một cái cụ thể bất kỳ 1 trên 21 lần. Một Vaal Orb cho implicit thường
+      xuyên tới đâu thì không được công bố. Một trang tra cứu cũ hơn 3.29 liệt
+      kê bốn kết cục cho jewel: không có gì, một implicit, roll lại thành một
+      jewel Rare mới, hoặc một unique jewel chỉ có từ Vaal.
+  - method: fossil
+    note: >-
+      Dữ liệu có một pool chỉ dành cho Fossil trên jewel: bảy prefix, trong đó
+      có Damage Penetrates 1% Elemental Resistances, 4–6% increased Global
+      Defences và Regenerate 0.3% of Life per second, và mười một suffix,
+      trong đó có 15–20% increased Damage with Ailments và 13–19% increased
+      Chaos Damage. Việc một pool như vậy tồn tại gợi ý rằng Resonator nhận
+      jewel, nhưng chúng tôi chưa xác nhận được điều đó trong 3.30. Hãy thử
+      một Fossil trước khi mua cả stack. Không ví dụ nào của chúng tôi phụ
+      thuộc vào nó.
+  - method: harvest
+    note: >-
+      Chúng tôi chưa xác nhận được các reforge ở
+      [[Horticrafting Station]] có nhận jewel trong 3.30 hay không. Nếu có,
+      hãy đọc tag trước khi trả tiền: trên Crimson Jewel, năm modifier mang
+      tag life (maximum Life, Totem Life, Life leech, Life gained per hit,
+      Damage taken Recouped as Life), nên "including a Life modifier" sẽ là
+      increased maximum Life khoảng một trên bốn lần, không phải lần nào cũng
+      ra.
+  - method: veiled
+    note: >-
+      Dữ liệu liệt kê 30 modifier có thể unveil trên jewel, tất cả ở item
+      level 68: +0.1 metres to Melee Strike Range, 3–5% of Physical Damage
+      Converted to Fire Damage và 1–2% increased Attributes là ba trong số đó.
+      Hai orb Veiled ghi "a rare item" và không nêu tên class nào, và chúng
+      tôi chưa xác nhận được cái nào trong hai dùng được trên jewel trong
+      3.30. Đừng lên kế hoạch quanh chúng cho tới khi bạn đã thấy một cái được
+      unveil.
+memoryStrands: >-
+  [[Memory Strands]] nâng tier của bất cứ thứ gì được roll ra, mà jewel thường
+  thì không có tier nào để nâng: mọi modifier nó roll được chỉ tồn tại ở một
+  tier. Lời văn của các orb strand cũng nói tới item "equipment", mà jewel là
+  thứ gắn vào socket chứ không phải mặc lên người, nên chúng tôi không trông
+  đợi sẽ thấy một jewel có strand nào cả.
+
+
+  Đằng nào thì kết luận cũng như nhau. Trên jewel không có gì để strand cải
+  thiện. Hãy tiêu chúng vào một weapon.
+reading:
+  intro: >-
+    Giữ Alt rồi rê chuột lên một jewel và đếm: **nhân vật này thực sự dùng mấy
+    modifier của nó?** Con số đó, từ một tới bốn, chính là jewel. Không có
+    tier nào để đọc, nên câu hỏi thứ hai duy nhất là mỗi roll nằm ở đâu trong
+    khoảng của nó.
+  prefixes:
+    text: >-
+      Prefix giữ damage có điều kiện: theo loại weapon, theo cách bạn cầm
+      weapon, theo element. Chúng cũng giữ increased maximum Life, các
+      modifier Energy Shield, mana và reservation.
+
+
+      Logic cần học là các group, vì vài họ trông khác nhau lại là một group
+      và không bao giờ nằm cạnh nhau được. Damage với một loại weapon (axe,
+      bow, claw, dagger, mace hoặc sceptre, staff, sword, wand) là một group.
+      Damage with One Handed Weapons, with Two Handed Weapons, while Dual
+      Wielding và while holding a Shield là một group khác. Các modifier
+      attack speed và cast speed cũng chia theo đúng hai kiểu đó. Ba prefix
+      "Spell Damage while…" là một group.
+
+
+      Các cặp từ group **khác nhau** thì cộng dồn. Damage with Swords và
+      Damage with Two Handed Weapons có thể là hai prefix của một build sword
+      hai tay, và kiểu ghép một modifier hẹp với một modifier rộng đó là
+      khuôn mẫu của mọi jewel damage tốt.
+    key:
+      - mod: "#% increased maximum Life"
+        why: "Prefix duy nhất gần như build nào cũng nhận, và là lý do Crimson là màu mặc định cho một jewel phòng thủ."
+        aim: "5–7%, tier duy nhất của nó. 7% là đỉnh của roll."
+      - mod: "#% increased Damage with Two Handed Weapons"
+        why: "Nửa rộng của một cặp melee. Group của nó còn chứa One Handed Weapons, Dual Wielding và holding a Shield, nên hãy lấy cái mô tả đúng nhân vật của bạn và chỉ trông đợi một cái trong số đó."
+        aim: "12–14%. Chỉ Crimson và Viridian."
+      - mod: "#% increased Damage with Swords"
+        why: "Nửa hẹp: mỗi loại weapon một dòng, tất cả một group. Con số cao hơn nửa rộng, và nó cộng dồn với nửa đó."
+        aim: "14–16%. Màu nào roll được nó thì tùy vào weapon."
+      - mod: "#% increased Spell Damage while holding a Shield"
+        why: "Prefix có điều kiện của caster, có bản song sinh cho Dual Wielding và cho Staff. Cộng dồn với suffix Spell Damage thuần."
+        aim: "14–16%. Chỉ Cobalt."
+      - mod: "#% increased Fire Damage"
+        why: "Đại diện cho các prefix elemental và physical: Fire, Cold, Lightning và Global Physical Damage là bốn group riêng mà màu nào cũng roll được."
+        aim: "14–16% (Chaos Damage là 9–13%)."
+      - mod: "+#% to Critical Strike Multiplier with Two Handed Melee Weapons"
+        why: "Multiplier cao nhất trên jewel, có bản song sinh cho One Handed Melee Weapons và Dual Wielding trong cùng group. Weight 250, tức khoảng 1 trên 71 lần roll prefix trên Crimson."
+        aim: "15–18%."
+      - mod: "#% increased maximum Energy Shield"
+        why: "Câu trả lời của dân build Energy Shield cho maximum Life."
+        aim: "6–8%. Chỉ Cobalt."
+      - mod: "Minions deal #% increased Damage"
+        why: "Prefix của minion. Nó chung group với bốn suffix damage, nên không nằm cạnh increased Spell Damage hay increased Damage được."
+        aim: "14–16%. Chỉ Cobalt."
+  suffixes:
+    text: >-
+      Suffix giữ các modifier damage rộng, cặp critical strike global, các
+      damage over time multiplier, attribute và resistance.
+
+
+      Có hai điều cần biết. Một, phía suffix là nơi jewel vá cho nhân vật:
+      12–15% cho một resistance, 10–12% cho hai, 8–10% cho cả ba, hoặc 12–16
+      một attribute, cái nào cũng là roll hay gặp.
+
+
+      Hai, có một group ở đây vắt sang cả phía prefix. Increased Damage, Melee
+      Damage, Projectile Damage và Spell Damage là suffix; Trap Damage, Mine
+      Damage và Minions deal increased Damage là prefix; dữ liệu xếp cả bảy
+      vào một group duy nhất. Một jewel chứa được một cái trong số đó, bất kể
+      nó ở phía nào. Bốn Damage over Time Multiplier riêng (Fire, Cold, Chaos,
+      Physical) cũng là một group như vậy, còn Damage over Time Multiplier
+      thuần nằm trong một group riêng bên cạnh chúng.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Hợp với mọi build critical strike và cộng dồn với các multiplier hẹp hơn ở cả hai phía."
+        aim: "9–12%."
+      - mod: "+#% to Melee Critical Strike Multiplier"
+        why: "Multiplier phía suffix cho melee; Cobalt có thứ tương tự cho spell. Khác group với bản global, nên cả hai cùng vừa."
+        aim: "12–15%. Chỉ Crimson và Viridian."
+      - mod: "#% increased Spell Damage"
+        why: "Suffix thuần của caster, bên cạnh Melee Damage và Projectile Damage trong cái group cũng chặn luôn các prefix minion, trap và mine."
+        aim: "10–12%. Chỉ Cobalt."
+      - mod: "#% increased Attack Speed"
+        why: "Speed không điều kiện. Cast Speed là bản song sinh của nó trên Cobalt, còn Attack and Cast Speed là một group thứ ba, riêng biệt."
+        aim: "3–5% (Cast Speed 2–4%)."
+      - mod: "#% increased Area Damage"
+        why: "Một suffix damage rộng thứ hai, ở group riêng, nên nó nằm được cạnh Melee, Projectile hoặc Spell Damage."
+        aim: "10–12%."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "Multiplier riêng cho build ignite. Fire và Physical roll trên mọi màu; Chaos và Cold chỉ trên Viridian và Cobalt."
+        aim: "6–8% (multiplier thuần là 4–6%)."
+      - mod: "+#% to all Elemental Resistances"
+        why: "Suffix để vá. Đáng một ô trên bất kỳ jewel nào giải phóng được một suffix trên trang bị của bạn cho thứ tốt hơn."
+        aim: "8–10%."
+approach:
+  principle: >-
+    **Jewel là một danh sách ngắn, không phải một mục tiêu.** Với mỗi modifier
+    một tier và một pool phẳng, bạn không thể nhắm vào một dòng duy nhất như
+    cách nhắm một prefix của weapon. Hãy quyết định trước modifier nào tính là
+    trúng, ở từng phía, và dừng ngay lúc jewel có đủ số dòng trúng mà bạn định
+    trả tiền. Danh sách ngắn càng dài, jewel càng rẻ.
+  order:
+    - title: "Viết danh sách ngắn cho nhân vật này"
+      text: >-
+        Prefix một cột, suffix cột kia, mọi modifier build thực sự dùng. Rồi
+        đánh dấu các group: hai dòng cùng một group là một cơ hội, không phải
+        hai.
+    - title: "Chọn màu bằng phép loại trừ"
+      text: >-
+        Bỏ mọi màu không roll được thứ bạn bắt buộc phải có. Trong số còn lại,
+        lấy màu đặt weight cao nhất cho modifier hiếm nhất của bạn. Item level
+        không dính dáng gì ở đây.
+    - title: "Quyết định bạn trả tiền cho mấy dòng trúng"
+      text: >-
+        Một dòng trúng và một đồ lấp chỗ là jewel cho campaign. Hai dòng trúng
+        là một jewel dùng được. Ba là một cái tốt. Bốn thì hiếm và giá tương
+        xứng: với một danh sách ngắn dài cỡ thông thường, mỗi dòng trúng thêm
+        nhân chi phí lên khoảng bảy tới mười lần.
+    - title: "Roll jewel Magic từng phía một"
+      text: >-
+        Alteration tới khi một phía ra dòng trúng. Nếu phía kia trống, một
+        Augmentation là một lần ngó miễn phí vào nó. Một jewel Magic trúng ở
+        **cả hai** phía mới là phần thưởng thật của giai đoạn này, và là phần
+        cần kiên nhẫn của lần craft.
+    - title: "Regal, kèm lưới an toàn nếu jewel xứng đáng"
+      text: >-
+        Một Regal Orb thêm một modifier và có thể thêm một cái tệ. Nếu jewel
+        Magic tốn vài chục Alteration, cứ Regal luôn. Nếu nó tốn hàng trăm,
+        hãy làm một Imprint trước.
+    - title: "Lấy ô thứ tư như một lần roll miễn phí, một lần thôi"
+      text: >-
+        Một Exalted Orb trên jewel có ba dòng trúng chỉ có thể giúp: một
+        modifier thứ tư tệ không làm bạn mất gì ngoài cái ô. Cố gỡ nó sau đó
+        mới là chỗ người ta đánh mất jewel tốt.
+  finishing: >-
+    Một [[Divine Orb]] khi modifier đã đúng mà roll còn thấp; trên jewel, hoàn
+    thiện chỉ có vậy. Dùng nó trước mọi corruption, vì jewel corrupted thì
+    không đổi được nữa.
+
+
+    Một [[Vaal Orb]] là tùy chọn và không quay lại được. Nó đáng trên một
+    jewel bạn thay thế được, hoặc trên cái mà một implicit như miễn nhiễm
+    Corrupted Blood chính là mục đích.
+  stopping: >-
+    Hai dòng trúng trên một jewel Magic là một item thực thụ vào ngày thứ hai.
+    Ba dòng trúng trên một jewel Rare là tốt ở bất kỳ giai đoạn nào của
+    league. Qua mức đó, phép so sánh thành thật là với thị trường: một jewel
+    bốn dòng trúng đúng là kiểu item mua thì rẻ hơn làm, trừ khi danh sách
+    ngắn của bạn khác thường.
+
+
+    Hãy dừng khi orb kế tiếp tốn nhiều hơn giá trị của modifier nó có thể thêm
+    đối với bạn. Và đừng bao giờ tiêu tiền để gỡ một modifier vô hại khỏi
+    jewel đã làm tròn việc của nó.
+special:
+  - mod: "Corrupted Blood cannot be inflicted on you"
+    source: "Corruption"
+    where: "Một implicit corruption từ [[Vaal Orb]], một trong 21 cái cùng weight. Dữ liệu ghi level của nó là 33, nên hãy dùng jewel item level 33 trở lên."
+  - mod: "You cannot be Maimed"
+    source: "Corruption"
+    where: "Một implicit corruption, level 40 trong dữ liệu. \"You cannot be Hindered\" là bản song sinh ở cùng level, còn \"You cannot be Cursed with Silence\" cần 60."
+  - mod: "#% increased Reservation Efficiency of Skills"
+    source: "Corruption"
+    where: "2% dưới dạng implicit corruption. 2–3% increased Mana Reservation Efficiency of Skills mà màu nào cũng roll ra làm prefix là một modifier khác."
+  - mod: "Damage Penetrates #% Elemental Resistances"
+    source: "Corruption / Fossil"
+    where: "1% dưới dạng implicit corruption, và 1% dưới dạng prefix trong pool chỉ dành cho Fossil. Fossil trên jewel thì chưa xác nhận được trong 3.30."
+  - mod: "#% increased Damage with Ailments"
+    source: "Fossil"
+    where: "15–20% dưới dạng suffix trong pool chỉ dành cho Fossil của dữ liệu. Chưa xác nhận trong 3.30, như trên."
+  - mod: "+0.1 metres to Melee Strike Range"
+    source: "Veiled"
+    where: "Một trong 30 modifier unveil ra mà dữ liệu liệt kê cho jewel ở item level 68. Chúng tôi chưa xác nhận được cách nào đặt một veiled modifier lên jewel trong 3.30."
+mistakes:
+  - "**Roll sai màu.** Một Crimson Jewel sẽ không bao giờ ra Spell Damage và một Cobalt Jewel sẽ không bao giờ ra Damage with Axes. Kiểm danh sách modifier cho màu của bạn trước Alteration đầu tiên."
+  - "**Đuổi theo một modifier chỉ đích danh.** Một dòng duy nhất là 1 trên 36 lần roll là cùng, và thường là 1 trên 70. Một danh sách ngắn năm cái là 1 trên 7."
+  - "**Tính hai modifier cùng group là hai cơ hội để cộng dồn.** Damage with Swords và Damage with Axes không thể chung một jewel. Increased Spell Damage và Minions deal increased Damage cũng vậy."
+  - "**Trông vào bench để hoàn thiện jewel.** Nó không thêm được modifier vào jewel, nên không có ô cuối chắc chắn nào. Hãy lên kế hoạch như thể ô nào cũng phải roll, vì đúng là vậy."
+  - "**Gỡ một modifier thứ tư tệ.** Một Annulment trên jewel bốn modifier gỡ mất cái tốt 3 trên 4 lần."
+  - "**Trả tiền cho item level.** Mọi modifier jewel roll được đều cần item level 1."
+  - "**Corrupt trước Divine Orb.** Một khi đã corrupted, các roll bị chốt vĩnh viễn."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, weight, group, tag, implicit corruption và lựa chọn bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Base Mycelium Core, và các thay đổi của Orb of Chance." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Hai lựa chọn bench roll lại một hoặc ba modifier ngẫu nhiên của item Rare." }
+  - { title: "poedb: Jewels", url: "https://poedb.tw/us/Jewels", kind: data, note: "Dòng trợ giúp trong game về màu jewel, và danh sách các modifier unveil ra của jewel." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Imprint và hai công thức thêm-và-gỡ, cùng các beast chúng cần." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "Bốn kết cục corruption liệt kê cho jewel. Phần chữ này cũ hơn 3.29." }

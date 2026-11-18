@@ -1,0 +1,129 @@
+category: boots
+title: "Đôi boots movement speed đầu tiên của bạn"
+level: 1
+summary: "Roll một modifier trên một đôi trắng tới khi nó là movement speed, biến đôi boots thành Rare quanh nó, và bench life. Lần craft mà phần lớn người chơi làm đầu tiên, và có lý do chính đáng."
+goal: >-
+  Boots có 20% movement speed cho đoạn giữa campaign, khi đôi bạn đang mang
+  nhiều khả năng chỉ có 10% hoặc không có gì. Boots nhanh hơn rút ngắn mọi
+  zone từ đây tới hết game. Ý cần mang theo là **đường Magic: khi một
+  modifier quan trọng hơn mọi cái khác, hãy roll chỉ để tìm riêng cái đó và
+  dừng ngay khi có nó.**
+base: "Reinforced Greaves"
+itemLevel: 33
+baseWhy: >-
+  Đôi boots trắng nào bạn mang được cũng dùng được; Reinforced Greaves là một
+  base Armour cho level 33. Điều quan trọng là item level, vì nó chặn trần
+  movement speed: 15% từ item level 15, 20% từ 30, 25% từ 40, 30% từ 55. Giữ
+  Alt rồi rê chuột lên đôi boots trắng để xem nó.
+
+
+  Hãy ưu tiên boots không có Energy Shield cho việc này. Trên những đôi có,
+  một phần tư số lần roll prefix là mana và cuộc tìm kiếm lâu hơn.
+methods: [currency, bench]
+result:
+  prefixes:
+    - { text: "20% increased Movement Speed" }
+    - { text: "+34 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+22% to Fire Resistance" }
+    - { text: "+19 to Strength" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "cộng 6 cho bench" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Vài chục [[Orb of Alteration]] và một [[Regal Orb]]. Bước bench là 6 Orb of
+  Transmutation. Ở giai đoạn này của một league, không có gì ở đây đáng để
+  dành.
+odds: >-
+  Ở item level 33, một trên 23 lần roll prefix là 20% movement speed và một
+  trên 12 là từ 15% trở lên, theo phép tính của chúng tôi từ weight của
+  modifier. Một Alteration không phải lúc nào cũng roll ra prefix, nên số orb
+  cao hơn thế: hãy tính 20 tới 40 cho mức 20%.
+steps:
+  - title: "Biến đôi boots thành Magic và roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]] lên đôi boots trắng, rồi
+      [[Orb of Alteration]] từng cái một. Giữ Alt và đọc prefix sau mỗi cái.
+      Dừng ở **20% increased Movement Speed**, tên là "Stallion's".
+    why: >-
+      Một item Magic có một prefix và một suffix. Movement speed là prefix,
+      nên mỗi orb bạn chỉ đọc một dòng, và không gì khác trên item làm bạn
+      phân tâm được. Suffix lúc này chưa quan trọng.
+    check: >-
+      Dòng chữ ghi "increased Movement Speed" và con số là 20. Một lần roll
+      15% ("Sprinter's") thấp hơn một tier: chỉ nhận nó nếu Alteration sắp
+      hết.
+    fail: >-
+      Hết Alteration mà chưa có movement speed: bench bán 10–14% giá 3 Orb of
+      Augmentation, trên bất kỳ đôi boots nào còn một prefix trống. Dùng cái
+      đó rồi thử lại khi bạn có thêm orb.
+    state:
+      rarity: magic
+      prefixes: [{ text: "20% increased Movement Speed" }]
+  - title: "Lấp suffix trống"
+    do: >-
+      Nếu đôi boots không có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó thêm một modifier vào ô trống và không thể đụng tới movement speed.
+      Trên boots, từ một phần ba số lần roll suffix trở lên là một elemental
+      resistance, nên đây là một cơ hội rẻ để có thứ gì đó hữu ích.
+    state:
+      rarity: magic
+      prefixes: [{ text: "20% increased Movement Speed" }]
+      suffixes: [{ text: "+22% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Đôi boots thành Rare, cả hai modifier ở lại, và một cái nữa được thêm
+      ngẫu nhiên. Rare là thứ mở các ô còn lại cho bench.
+    check: >-
+      Đọc xem cái gì được thêm và nó nằm ở phía nào. Ở đây là Strength, một
+      suffix, nên cả hai ô prefix còn lại vẫn trống.
+    state:
+      prefixes: [{ text: "20% increased Movement Speed" }]
+      suffixes:
+        - { text: "+22% to Fire Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Bench life"
+    do: >-
+      Ở [[Crafting Bench]], craft **+26–40 to maximum Life** giá 6 Orb of
+      Transmutation. Nếu Regal Orb đã thêm life rồi, thay vào đó hãy craft
+      một resistance vào một suffix trống: +16–20% giá 1 Orb of
+      Transmutation, +21–28% giá 1 Orb of Alchemy.
+    why: >-
+      Mỗi item một modifier bench, dùng cho thứ hữu ích nhất mà đôi boots còn
+      thiếu. Bench cũng liệt kê movement speed, và ở đây nó sẽ bị từ chối:
+      cái roll ra cùng group.
+    state:
+      prefixes:
+        - { text: "20% increased Movement Speed" }
+        - { text: "+34 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+22% to Fire Resistance" }
+        - { text: "+19 to Strength" }
+variations: >-
+  **Boots bạn nhặt được.** Một đôi Rare có suffix tốt, không có movement
+  speed và còn một prefix trống thì chỉ cần bench là sửa được: 10–14% giá 3
+  Orb of Augmentation, 15–19% giá 2 Chaos Orb. Kiểm xem có prefix trống
+  trước đã.
+
+
+  **Về sau.** Cùng bốn bước đó trên base item level 55 dừng ở 30%, và trên
+  base item level 86 dừng ở 35%. Từ map trở đi, craft life ở mức 56–70 giá 4
+  Orb of Alchemy.
+
+
+  **Một Essence of Zeal bậc thấp.** Một cái Wailing biến boots trắng thành
+  Rare với 20% movement speed được đảm bảo. Trong 3.30, các Essence yếu thôi
+  không xuất hiện ở map cao hơn nữa, nên hãy dùng chúng khi bạn nhặt được.
+mistakes:
+  - "Dừng ở 10% vì nó ghi movement speed. Hãy đọc con số; các tier là 10, 15, 20, 25, 30 và 35."
+  - "Roll tìm luôn cả một suffix tốt. Suffix chỉ là một Augmentation hoặc một craft bench; prefix mới là toàn bộ lý do của đám Alteration."
+  - "Dùng bench khi đôi boots còn là Magic, rồi mới dùng Regal Orb. Vẫn được, nhưng bạn đã tiêu craft trước khi biết đôi boots cần gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier movement speed và item level, weight, Essence of Zeal trên boots và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }

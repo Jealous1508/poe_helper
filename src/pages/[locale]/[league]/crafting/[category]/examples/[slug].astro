@@ -1,0 +1,226 @@
+---
+import Base from '../../../../../../layouts/Base.astro';
+import Rich from '../../../../../../components/Rich.astro';
+import ItemCard from '../../../../../../components/crafting/ItemCard.astro';
+import Level from '../../../../../../components/crafting/Level.astro';
+import Sources from '../../../../../../components/crafting/Sources.astro';
+import { getLeague, leagues } from '../../../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../../../i18n';
+import { examplesOf, getCraftData, getCrafting, slotsOf } from '../../../../../../lib/crafting';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      (getCrafting(league.id, 'en')?.examples ?? []).map((example) => ({
+        params: { locale, league: league.id, category: example.category, slug: example.slug },
+      })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, category, slug } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const crafting = getCrafting(league.id, locale)!;
+const guide = crafting.guides.find((entry) => entry.id === category)!;
+const examples = examplesOf(crafting, guide.id);
+const position = examples.findIndex((entry) => entry.slug === slug);
+const example = examples[position];
+const data = getCraftData(guide.id);
+const base = data.bases.find((entry) => entry.name === example.base)!;
+const slots = slotsOf(guide.group);
+const methods = new Map(crafting.overview.methods.map((method) => [method.id, method]));
+const howHref = pagePath(locale, league.id, 'crafting', 'how-it-works');
+const listHref = pagePath(locale, league.id, 'crafting', guide.id, 'examples');
+const previous = examples[position - 1];
+const next = examples[position + 1];
+---
+<Base locale={locale} league={league} title={example.title} description={example.summary} section="crafting" isFallback={example.isFallback === true}>
+  <div class="container head">
+    <a class="back" href={listHref}>← {guide.name}: {t(locale, 'craft.tab.examples')}</a>
+    <div class="head__meta">
+      <Level level={example.level} locale={locale} />
+      <span class="muted">{t(locale, 'craft.example.n', { n: position + 1, total: examples.length })}</span>
+    </div>
+    <h1>{example.title}</h1>
+    <p class="lede">{example.summary}</p>
+  </div>
+
+  <div class="container top">
+    <div class="top__text">
+      <h2>{t(locale, 'craft.example.goal')}</h2>
+      <Rich text={example.goal} league={league.id} where={example.where} />
+      <h3>{t(locale, 'craft.example.base')}</h3>
+      <Rich text={example.baseWhy} league={league.id} where={example.where} />
+      <dl class="facts">
+        <div>
+          <dt>{t(locale, 'craft.example.cost')}</dt>
+          <dd><Rich text={example.cost} league={league.id} where={example.where} /></dd>
+        </div>
+        <div>
+          <dt>{t(locale, 'craft.example.odds')}</dt>
+          <dd><Rich text={example.odds} league={league.id} where={example.where} /></dd>
+        </div>
+      </dl>
+    </div>
+    <aside class="top__item">
+      <ItemCard state={example.result} base={base} itemLevel={example.itemLevel} slots={slots} locale={locale} caption={t(locale, 'craft.example.result')} />
+      <div class="methods">
+        <span class="methods__label">{t(locale, 'craft.example.methods')}</span>
+        {example.methods.map((id) => <a href={`${howHref}#method-${id}`}>{methods.get(id)!.name}</a>)}
+      </div>
+    </aside>
+  </div>
+
+  <section class="container needs" data-reveal>
+    <h2>{t(locale, 'craft.example.needs')}</h2>
+    <ul>
+      {example.needs.map((need) => (
+        <li>
+          <span class="needs__amount">{need.amount}</span>
+          <span><Rich text={need.item} league={league.id} where={example.where} inline />{need.note && <small>{need.note}</small>}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container steps">
+    <h2>{t(locale, 'craft.example.steps', { count: example.steps.length })}</h2>
+    <ol>
+      {example.steps.map((step, index) => (
+        <li class="step" id={`step-${index + 1}`} data-reveal>
+          <span class="step__n" aria-hidden="true">{index + 1}</span>
+          <div class="step__body">
+            <h3>{step.title}</h3>
+            <div class="step__grid">
+              <div class="step__text">
+                <div class="part" data-part="do">
+                  <h4>{t(locale, 'craft.step.do')}</h4>
+                  <Rich text={step.do} league={league.id} where={example.where} />
+                </div>
+                <div class="part" data-part="why">
+                  <h4>{t(locale, 'craft.step.why')}</h4>
+                  <Rich text={step.why} league={league.id} where={example.where} />
+                </div>
+                {step.check && (
+                  <div class="part" data-part="check">
+                    <h4>{t(locale, 'craft.step.check')}</h4>
+                    <Rich text={step.check} league={league.id} where={example.where} />
+                  </div>
+                )}
+                {step.fail && (
+                  <div class="part" data-part="fail">
+                    <h4>{t(locale, 'craft.step.fail')}</h4>
+                    <Rich text={step.fail} league={league.id} where={example.where} />
+                  </div>
+                )}
+              </div>
+              {step.state && (
+                <ItemCard state={step.state} base={base} slots={slots} locale={locale} compact caption={t(locale, 'craft.step.state')} />
+              )}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <div class="container tail">
+    {example.variations && (
+      <section data-reveal>
+        <h2>{t(locale, 'craft.example.variations')}</h2>
+        <Rich text={example.variations} league={league.id} where={example.where} />
+      </section>
+    )}
+    {example.mistakes.length > 0 && (
+      <section data-reveal>
+        <h2>{t(locale, 'craft.section.mistakes')}</h2>
+        <ul class="mistakes">
+          {example.mistakes.map((item) => <li><Rich text={item} league={league.id} where={example.where} inline /></li>)}
+        </ul>
+      </section>
+    )}
+    <nav class="pager" aria-label={t(locale, 'craft.tab.examples')}>
+      {previous ? (
+        <a href={pagePath(locale, league.id, 'crafting', guide.id, 'examples', previous.slug)}><span>← {t(locale, 'craft.example.easier')}</span><strong>{previous.title}</strong></a>
+      ) : <span></span>}
+      {next ? (
+        <a class="pager__next" href={pagePath(locale, league.id, 'crafting', guide.id, 'examples', next.slug)}><span>{t(locale, 'craft.example.harder')} →</span><strong>{next.title}</strong></a>
+      ) : <span></span>}
+    </nav>
+    <Sources sources={example.sources} league={league.id} locale={locale} where={example.where} verified={example.verified} />
+  </div>
+</Base>
+
+<style>
+  .head { padding-top: 1.75rem; padding-bottom: 1.5rem; }
+  .back { font-size: 0.88rem; font-weight: 500; text-decoration: none; color: var(--text-muted); }
+  .back:hover { color: var(--accent); }
+  .head__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.1rem; margin-top: 1.4rem; font-size: 0.84rem; }
+  .head h1 { margin: 0.6rem 0 0.7rem; max-width: 24ch; }
+
+  .top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 27rem); gap: 3rem; align-items: start; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+  .top h2 { font-size: 1.35rem; margin-bottom: 0.6rem; }
+  .top h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+  .facts { margin: 1.5rem 0 0; display: grid; gap: 0; }
+  .facts div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; padding: 0.75rem 0 0.2rem; border-top: 1px solid var(--border); }
+  .facts dt { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); padding-top: 0.2rem; }
+  .facts dd { margin: 0; font-size: 0.95rem; }
+  .top__item { position: sticky; top: calc(var(--header-h) + 1rem); }
+  .methods { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; margin-top: 0.9rem; font-size: 0.86rem; }
+  .methods__label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); }
+  .methods a { text-decoration: none; font-weight: 500; }
+  .methods a:hover { text-decoration: underline; }
+
+  .needs { padding-top: 2.75rem; }
+  .needs h2, .steps h2, .tail h2 { padding-bottom: 0.55rem; border-bottom: 2px solid var(--text); margin-bottom: 1rem; }
+  .needs ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0 2rem; }
+  .needs li { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.8rem; align-items: baseline; margin: 0; padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 0.94rem; }
+  .needs__amount { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+  .needs small { display: block; color: var(--text-muted); font-size: 0.82rem; }
+
+  /* The craft itself: one line down the page, a numbered stop per step, and
+     beside each stop the item as it stands once the step is done. */
+  .steps { padding-top: 2.75rem; }
+  .steps ol { list-style: none; margin: 0; padding: 0; }
+  .step { position: relative; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 0 1.25rem; margin: 0; padding-bottom: 2.25rem; scroll-margin-top: calc(var(--header-h) + 1rem); }
+  .step::before { content: ''; position: absolute; left: 1.18rem; top: 2.4rem; bottom: 0; width: 1px; background: var(--border-strong); }
+  .step:last-child::before { display: none; }
+  .step__n { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700; }
+  .step h3 { font-size: 1.3rem; margin: 0.35rem 0 0.9rem; }
+  .step__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 22rem); gap: 2rem; align-items: start; }
+  .step__text { display: grid; gap: 0.9rem; max-width: var(--measure); }
+  .part { --part: var(--accent); padding-left: 0.9rem; border-left: 2px solid var(--part); }
+  .part[data-part='why'] { --part: var(--text-muted); }
+  .part[data-part='check'] { --part: var(--buff); }
+  .part[data-part='fail'] { --part: var(--nerf); }
+  .part h4 { font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--part); margin: 0 0 0.25rem; }
+  .part :global(.rich > :last-child) { margin-bottom: 0; }
+  .part :global(.rich) { font-size: 0.96rem; }
+
+  .tail section { padding-top: 2.25rem; }
+  .tail section > :global(.rich) { max-width: var(--measure); }
+  .mistakes { max-width: var(--measure); }
+  .mistakes li { margin: 0.6em 0; }
+  .mistakes li::marker { color: var(--nerf); }
+  .pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+  .pager a { display: grid; gap: 0.2rem; text-decoration: none; }
+  .pager a span { font-size: 0.8rem; color: var(--text-muted); }
+  .pager a strong { font-family: var(--font-display); font-size: 1.05rem; }
+  .pager__next { text-align: right; }
+  .tail :global(.craft-sources) { margin-top: 2.75rem; }
+
+  @media (max-width: 960px) {
+    .top { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+    .top__item { position: static; grid-row: 1; }
+    .step__grid { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+  }
+  @media (max-width: 560px) {
+    .step { grid-template-columns: 1.9rem minmax(0, 1fr); gap: 0 0.8rem; }
+    .step::before { left: 0.93rem; top: 1.9rem; }
+    .step__n { width: 1.9rem; height: 1.9rem; font-size: 0.85rem; }
+    .step h3 { font-size: 1.15rem; margin-top: 0.15rem; }
+    .facts div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+  }
+</style>

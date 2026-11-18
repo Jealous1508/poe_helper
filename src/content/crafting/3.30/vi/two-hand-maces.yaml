@@ -1,0 +1,416 @@
+name: "Two-Handed Mace"
+short: "Những weapon physical chậm nhất và đánh đau nhất. Một pool, 25 base, và một kiểu craft mà ba prefix quyết định tất cả."
+icon: "Karui Maul"
+intro: >-
+  Một cây mace hai tay là phần lớn damage của một build slam, gói trong một
+  item. Thứ bạn craft là **physical damage mỗi giây**: damage của chính base,
+  cộng flat physical damage, nhân với increased physical damage và với attack
+  speed. Gần như tất cả nằm trong ba ô prefix, và cả ba prefix tốt đều hiếm ở
+  các tier cao nhất.
+
+
+  Nhờ vậy đây là loại item gọn gàng nhất để học craft. Mục tiêu lúc nào cũng
+  như nhau, base nào cũng roll cùng một bộ modifier, và phía suffix thì cứ
+  trả tiền là có, một khi prefix đã xong.
+basics:
+  itemLevel:
+    text: >-
+      Với một cây mace physical, không gì trên item level 83 còn quan trọng,
+      và phần lớn thứ bạn muốn đã mở ở 77. Khoảng cách giữa hai mốc là một
+      tier của increased Physical Damage, tức thêm khoảng 10% của modifier đó
+      với giá gấp nhiều lần. Hãy craft những cây mace đầu tiên ở 77. Lên 83
+      khi bạn chủ đích săn tier cao nhất.
+
+
+      Build elemental là ngoại lệ: "increased Elemental Damage with Attack
+      Skills" tốt nhất cần item level 86.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Tier 5 của increased Physical Damage (85–109%) và Tier 5 của hybrid kèm Accuracy."
+      - ilvl: 46
+        unlocks: "Tier 4 của increased Physical Damage (110–134%). Đủ cho đoạn cuối campaign."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 3 của hybrid (55–64%), và Tier 2 của attack speed (23–25%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 73
+        unlocks: "Tier 2 của increased Physical Damage (155–169%) và Tier 2 của hybrid (65–74%). Tier 1 của Critical Strike Chance và Tier 1 của Critical Strike Multiplier (cả hai 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 của flat Physical Damage (adds 34–47 to 72–84) và Tier 1 của attack speed (26–27%). **Đủ cho mọi thứ, trừ tier cuối của hai prefix phần trăm.**"
+      - ilvl: 83
+        unlocks: "Tier 1 của increased Physical Damage, \"Merciless\" (170–179%), và Tier 1 của hybrid, \"Dictator's\" (75–79% kèm Accuracy). **Trần của một cây mace physical.**"
+  bases:
+    text: >-
+      Có 25 mace hai tay, và xét về craft thì chúng là một kiểu duy nhất: cây
+      nào cũng roll từ cùng một pool, với cùng weight. Không base nào mở ra
+      một modifier mà base khác không có được. Cái khác nhau là cây weapon
+      bên dưới: damage mỗi cú đánh, số attack mỗi giây, critical strike
+      chance và implicit.
+    types:
+      - title: "Maul thường"
+        pools: [all]
+        text: >-
+          Mười chín base từ Driftwood Maul tới Terror Maul. Phần lớn mang một
+          implicit stun (30% hoặc 45% increased Stun Duration). Bốn base cao
+          cấp nhất, rơi từ level 61, mỗi cái có thứ tốt hơn: Piledriver (20%
+          reduced Enemy Stun Threshold), Meatgrinder (5% chance to deal
+          Double Damage), Imperial Maul (10% increased Strength) và Terror
+          Maul (25% chance to double Stun Duration, và 6% critical strike
+          chance gốc).
+      - title: "Maul Maraketh"
+        text: >-
+          Morning Star, Solar Maul và Coronal Maul. Implicit của chúng là
+          increased Area of Effect, 15% trên hai cây đầu và 20% trên Coronal
+          Maul. Với build slam, đó là implicit hữu dụng nhất của loại item
+          này.
+      - title: "Maul Heist"
+        text: >-
+          Blunt Force Condenser, Crushing Force Magnifier và Impact Force
+          Propagator. Implicit của chúng là "Warcries Exert 1 additional
+          Attack" (2 trên Propagator). Damage của chúng thấp hơn base thường
+          cùng level, nên chúng dành cho build sống nhờ exerted attack, ngoài
+          ra không dành cho ai khác.
+    picks:
+      - base: "Karui Maul"
+        for: "Cú đánh đơn lớn nhất"
+        why: >-
+          112–168 physical damage với đúng một attack mỗi giây: damage mỗi cú
+          đánh cao nhất trong mọi base ở đây, có từ level 57. Lựa chọn đúng
+          khi skill của bạn có attack time riêng, hoặc khi bạn đánh một phát
+          và muốn phát đó ra trò.
+      - base: "Imperial Maul"
+        for: "Base endgame toàn diện nhất"
+        why: >-
+          102–153 với 1.1 attack mỗi giây là damage mỗi giây gốc cao nhất của
+          loại item này (140.3), và implicit là 10% increased Strength, thứ
+          mà một build Strength biến thành life và damage.
+      - base: "Coronal Maul"
+        for: "Slam và mọi thứ clear bằng area"
+        why: >-
+          20% increased Area of Effect nằm trên implicit, chỗ craft không
+          đụng tới được, với damage mỗi giây gốc 136.3. Đổi lại bạn bỏ khoảng
+          3% damage so với Imperial Maul.
+      - base: "Piledriver"
+        for: "Attack speed"
+        why: >-
+          1.35 attack mỗi giây là base nhanh nhất. Attack speed local nhân
+          vào con số đó, nên cùng một suffix sẽ cho nhiều attack hơn ở đây so
+          với mọi cây maul khác. Cú đánh thì nhỏ nhất trong các base hàng
+          đầu.
+      - base: "Terror Maul"
+        for: "Build critical strike"
+        why: >-
+          6% critical strike chance gốc, trong khi gần như mọi cây maul khác
+          có 5%. Tức nhiều hơn một phần năm số critical strike trước khi tính
+          bất kỳ modifier nào, và increased Critical Strike Chance còn nhân
+          nó lên.
+    impact: >-
+      Base quyết định bốn điều mà về sau không currency nào đổi được.
+
+
+      **Con số damage mà mọi modifier local nhân lên.** 170% increased
+      Physical Damage trên Karui Maul và trên Driftwood Maul là cùng một
+      modifier nhưng là hai cây weapon hoàn toàn khác nhau.
+
+
+      **Số attack mỗi giây và critical strike chance.** Attack speed trên
+      weapon là local: nó nhân vào tốc độ của chính base. Các modifier
+      critical strike chance nhân vào 5% hoặc 6% của base.
+
+
+      **Implicit.** Một [[Blessed Orb]] roll lại con số của nó nếu nó có
+      khoảng; không gì trong craft thông thường đổi được nó là modifier nào.
+
+
+      **Yêu cầu Strength**, 212 tới 220 trên các base hàng đầu.
+
+
+      Thứ base *không* quyết định ở đây là pool. Vậy nên hãy chọn base theo
+      cây weapon bạn muốn vung, và chọn item level theo những tier bạn định
+      roll.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 83, ba prefix physical cộng lại chiếm 46% mọi lần roll
+      prefix, theo phép tính của chúng tôi từ weight, nhưng các tier cao nhất
+      của chúng chỉ là một lát mỏng trong đó. Một lần roll prefix ra Tier 3
+      trở lên của increased Physical Damage thuần khoảng 1 trên 180 lần, và
+      hybrid cũng cỡ đó. Tier 1 của một trong hai là khoảng 1 trên 630. Flat
+      Physical Damage dễ chịu hơn nhiều: Tier 3 trở lên khoảng 1 trên 26.
+
+
+      Vậy nên [[Orb of Alteration]] là cách ổn để có **một** prefix physical
+      tử tế, và là cách tồi để có cái tốt nhất. Ba prefix tốt chỉ bằng roll
+      thường thì không phải là kế hoạch.
+  - method: bench
+    note: >-
+      Bench bán mọi mảnh ghép của một cây mace ở dạng yếu hơn, và giá trong
+      dữ liệu 3.30 chỉ chát ở bậc cao nhất. Increased Physical Damage: 40–59%
+      giá 4 Orb of Alteration, 60–79% giá 8, 80–99% giá 4 Chaos Orb, 100–129%
+      giá 4 Exalted Orb. Flat Physical Damage: adds 18–24 to 36–42 giá 4
+      Chaos Orb. Attack speed: 8–10% giá 6 Orb of Alteration, 11–15% giá 2
+      Chaos Orb, 16–20% giá 4 Exalted Orb. Critical Strike Chance 25–27% hoặc
+      Critical Strike Multiplier 25–28% giá 4 Chaos Orb. 8–10% chance to deal
+      Double Damage giá 8 Chaos Orb.
+
+
+      Một luật quyết định bạn được bench cái gì. Increased Physical Damage
+      của bench cùng group với bản roll ra, nên hai cái không thể cùng tồn
+      tại. Nó **không** cùng group với hybrid kèm Accuracy. Một cây mace đã
+      roll ra hybrid vẫn nhận thêm được bản phần trăm thuần của bench.
+  - method: finishing
+    note: >-
+      Đưa cây mace lên 20% quality bằng [[Blacksmith's Whetstone]] trước khi
+      đánh giá damage của nó: quality chính là physical damage trên base.
+      Weapon hai tay có tối đa sáu socket, và bench chỉnh socket với link ở
+      giá cố định khi [[Orb of Fusing]] không chịu hợp tác.
+  - method: essence
+    note: >-
+      Có ba Essence đáng kể trên mace hai tay. **Zeal** đảm bảo attack speed,
+      và bậc Deafening cho 28–30%, cao hơn mức 26–27% của Tier 1 tự nhiên.
+      **Contempt** đảm bảo flat Physical Damage; Deafening cho adds 31–42 to
+      65–75, thấp hơn Tier 1 tự nhiên một chút. **Loathing** đảm bảo Critical
+      Strike Chance, 35–38% ở bậc Deafening.
+
+
+      [[Deafening Essence of Dread]] cho 35–38% increased Impale Effect, một
+      modifier mà pool tự nhiên không có.
+  - method: beast
+    note: >-
+      Hai công thức. Một **Imprint** ([[Craicic Croaker]]) trên cây mace
+      Magic có prefix mạnh cho bạn thử một [[Regal Orb]] rồi quay lại nếu
+      modifier được thêm vào là đồ bỏ. **Thêm một prefix, gỡ một suffix ngẫu
+      nhiên** ([[Farric Wolf Alpha]]) dành cho cây mace Rare còn một prefix
+      trống và có những suffix bạn không quan tâm, mà trên item này đó là
+      tình trạng hay gặp.
+  - method: fossil
+    note: >-
+      Một [[Jagged Fossil]] nhân mọi modifier Physical lên mười lần. Trên
+      mace, nó biến 46% prefix physical thành khoảng 90%, theo phép tính của
+      chúng tôi: flat Physical 43%, mỗi họ trong hai họ phần trăm 23%. Nó
+      cũng nâng hai suffix leech, vì chúng mang tag physical.
+
+
+      Các tỉ lệ đó chỉ tính pool tự nhiên. Modifier chỉ có từ Fossil không
+      nằm trong đó, vì dữ liệu game không cho biết Fossil nào thêm modifier
+      nào.
+
+
+      Nó không giúp gì về tier. Tier 1 của increased Physical Damage thuần đi
+      từ khoảng 1 trên 1,270 lần roll prefix thành khoảng 1 trên 650. Fossil
+      kiếm cho bạn ba prefix physical; nó không kiếm cho bạn ba cái tốt.
+  - method: harvest
+    note: >-
+      Trên item này, reforge **Speed** (150 Vivid Lifeforce) gần như là một
+      suffix attack speed được đảm bảo: attack speed là modifier duy nhất
+      trong pool tự nhiên mang tag speed. Reforge **Critical** (150 Primal)
+      đảm bảo Critical Strike Chance hoặc Critical Strike Multiplier.
+
+
+      Reforge **Physical** (50 Vivid) yếu hơn nghe tên. Bất kỳ cái nào trong
+      ba prefix physical, và cả một trong hai suffix leech, đều thỏa điều
+      kiện của nó.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra ghép 120–139% increased Physical Damage với 21–25%
+      chance to Impale, Bleed, Poison hoặc Blind. Chúng cùng group với
+      increased Physical Damage thuần, nên chúng thay thế nó chứ không cộng
+      dồn với nó. Ở phía suffix: 12–14% chance to deal Double Damage, và
+      27–30% attack speed khi có enemy Rare hoặc Unique ở gần.
+  - method: fracture
+    note: >-
+      Một cây mace có tier cao của increased Physical Damage đã fractured là
+      điểm xuất phát chuẩn cho một weapon hàng đỉnh, vì prefix đó là cái bạn
+      không đủ sức roll tới hai lần. Khi nó đã bị khóa, cứ việc ném Essence
+      và Fossil vào item tới khi hai prefix còn lại ra.
+  - method: meta
+    note: >-
+      "Prefixes Cannot Be Changed" trên weapon tốn 4 Divine Orb và 1
+      [[Sacred Orb]] trong 3.30, cho mỗi lần thử. Nó đáng tiền khi ba prefix
+      đã xong còn suffix thì chưa, và chỉ khi đó.
+  - method: influence
+    note: >-
+      Mỗi influence thêm các modifier cho weapon; bảng đầy đủ nằm trong danh
+      sách modifier. Những cái dân craft hay với tới: suffix Shaper với
+      20–21% attack speed và 4–6% chance to deal Double Damage, suffix Elder
+      với 16–20% increased Area of Effect, và prefix Warlord với 65–69%
+      increased Physical Damage và 10–15% increased Area of Effect. Một cây
+      mace có influence thì không fracture được.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: loại item này là một trong những chỗ dùng strand đáng giá hơn cả."
+memoryStrands: >-
+  Mace có một vấn đề khác thường: những modifier nó muốn thì dễ ra, chỉ có
+  tier cao nhất của chúng là hiếm. Ba prefix physical chiếm gần một nửa mọi
+  lần roll prefix; "Merciless" có weight 25 trong một họ có tổng weight
+  3,775. Đó đúng là vấn đề mà [[Memory Strands]] giải quyết, vì strand nâng
+  tier của bất cứ thứ gì được roll ra và không làm gì khác.
+
+
+  Cách dùng hợp nhất là cách rẻ. Đặt strand lên một base trắng item level 83
+  bằng [[Orb of Remembrance]], rồi craft bằng
+  [[Orb of Alteration]], mỗi cái tiêu nhiều nhất 8 strand theo bảng
+  data-mine, và kết thúc bằng một [[Regal Orb]] hoặc
+  [[Exalted Orb]]. Game hiện chi phí của từng orb trước khi bạn dùng.
+
+
+  Đừng ghép base có strand với kiểu spam Essence: một Essence có thể tiêu tới
+  80. Và nếu kế hoạch là [[Jagged Fossil]] thì một base thường làm được y
+  việc đó, vì theo thử nghiệm của người chơi, Fossil không dùng strand.
+reading:
+  intro: >-
+    Giữ Alt trên bất kỳ cây mace nào và hỏi một câu trước tiên: **trong ba
+    prefix có mấy cái là physical, và ở tier nào?** Câu trả lời đó là phần
+    lớn damage của weapon. Rồi nhìn sang suffix tìm attack speed. Sau đó mới
+    tới những thứ khác.
+  prefixes:
+    text: >-
+      Phía prefix là nơi một cây mace thành hay bại. Có ba họ modifier cộng
+      physical damage và chúng cộng dồn được, vì đó là ba group khác nhau:
+      increased Physical Damage thuần, hybrid của increased Physical Damage
+      với Accuracy Rating, và flat added Physical Damage. Một weapon hoàn
+      chỉnh có cả ba.
+
+
+      Mọi thứ khác ở phía prefix đều là đối thủ giành những ô đó. Ba loại
+      added elemental damage cộng lại chiếm 39% số lần roll prefix và không
+      đáng gì với một build physical. "+1 to Level of Socketed Gems" và "+2
+      to Level of Socketed Melee Gems" chỉ có ý nghĩa nếu main skill của bạn
+      gắn trong weapon.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân lớn nhất trên item. Nó là local, nên nó nhân damage của base và mọi flat physical damage trên weapon."
+        aim: "T3, 135–154% (ilvl 60). T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Nguồn thứ hai của cùng hệ số nhân đó nhưng ở một group khác, nên nó nằm cạnh cái đầu được. Con số nhỏ hơn, độ hiếm như nhau."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Nâng con số mà hai cái phần trăm nhân lên. Dễ roll nhất trong ba cái, và là cái bench thay thế kém nhất."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 cần ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Chỉ build scale element đó mới cần. Trên mace physical, mỗi cái là một prefix phí, và gộp lại chúng là thứ hay roll ra nhất."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Mạnh khi main skill nằm trong socket của weapon, còn không thì chẳng liên quan."
+  suffixes:
+    text: >-
+      Phía suffix thì dễ tính. Attack speed là suffix duy nhất cây mace nào
+      cũng muốn, nó chiếm 14% số lần roll suffix, và Essence, reforge Harvest
+      hay bench, cái nào cũng cấp được nó. Sau đó suffix tùy vào build:
+      critical strike chance và multiplier cho build crit, chance to deal
+      Double Damage của bench cho mọi người còn lại.
+
+
+      Một nửa pool suffix tự nhiên chỉ là đồ lấp chỗ với một weapon chạy map:
+      Strength, Accuracy, hai modifier stun, life và mana on kill. Không cái
+      nào có hại. Cái nào cũng là một ô lẽ ra đã là damage.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local, nên nó nhân vào số attack mỗi giây của base. Suffix duy nhất lúc nào cũng đúng."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Cho build crit. Global: nó tác động lên nhân vật, không chỉ riêng weapon này."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Nhân vào 5% hoặc 6% của base. Chỉ dành cho build crit."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Không có trong pool tự nhiên. Bench bán 8–10% và bản veiled là 12–14%. Suffix thứ ba mặc định cho build không crit."
+      - mod: "+# to Strength"
+        why: "Đồ lấp chỗ hữu ích trên nhân vật Strength, và đủ phổ biến để tự nó xuất hiện."
+approach:
+  principle: >-
+    **Prefix chính là cây weapon.** Lấy các prefix physical trước, bằng công
+    cụ tốt nhất bạn kham nổi, khi item còn rẻ và bỏ đi không tiếc. Mọi thứ ở
+    phía suffix đều có thể được đảm bảo sau đó bằng Essence, reforge Harvest
+    hoặc bench, nên đừng bao giờ bỏ một prefix tốt để giữ một suffix.
+  order:
+    - title: "Chọn base theo cú vung, chọn item level theo tier"
+      text: >-
+        Pool trên mọi cây maul đều như nhau, nên chọn base là câu hỏi về
+        build của bạn: một cú đánh lớn, tốc độ, area hay crit. Item level 77
+        mở mọi thứ trừ tier cuối của hai prefix phần trăm; 83 mở nốt chỗ đó.
+    - title: "Quyết định bạn kham nổi mấy prefix roll"
+      text: >-
+        Hãy thành thật ở đây, vì nó quyết định phương pháp. **Một** prefix
+        roll và hai cái từ nguồn khác: Alteration và một Regal Orb. **Hai:**
+        một Essence of Contempt, hoặc một Jagged Fossil. **Ba, ở tier cao:**
+        bắt đầu từ một base fractured.
+    - title: "Roll prefix khó nhất trước"
+      text: >-
+        Đó luôn là một prefix phần trăm, thuần hoặc hybrid: các tier tốt của
+        chúng có weight 25 tới 100, trong khi của flat Physical Damage là 200
+        tới 600. Dừng ở tier bạn đã định từ trước. "Thử thêm một lần nữa để
+        ra tier cao hơn" chính là cách ngân sách bốc hơi.
+    - title: "Lấp các prefix còn lại"
+      text: >-
+        Nếu bạn roll ra hybrid, increased Physical Damage thuần của bench nằm
+        vừa cạnh nó. Nếu bạn roll ra bản thuần, thì flat Physical Damage của
+        bench vừa. Khi item Rare còn một prefix trống và có những suffix bạn
+        không cần, công thức beast "thêm một prefix" là một lần roll miễn phí
+        cho cái thứ ba.
+    - title: "Chỉ bảo vệ prefix nếu chúng đáng"
+      text: >-
+        Ba prefix tốt đáng giá hơn 4 Divine Orb và một Sacred Orb; hai cái
+        trung bình thì không. Nếu khóa, hãy khóa khi phía prefix đã đầy, rồi
+        roll lại suffix bằng công cụ tôn trọng khóa.
+    - title: "Attack speed, rồi thêm một suffix, rồi bench"
+      text: >-
+        Attack speed trước, bằng bất kỳ đường đảm bảo nào bạn có. Chừa một ô
+        cho bench và đặt modifier damage thứ ba của build vào đó.
+  finishing: >-
+    Quality lên 20% nếu chưa có, socket và link, rồi nhìn con số bên trong
+    từng tier. Một [[Divine Orb]] roll lại tất cả cùng lúc, nên hãy dùng khi
+    modifier quan trọng đang gần đáy khoảng của nó còn mấy cái kia thì chưa ở
+    đỉnh.
+
+
+    Nếu bạn chưa dùng ô dành cho bench thì dùng ngay bây giờ. Một ô trống
+    trên weapon đã hoàn thiện là lỗi tự mình gây ra phổ biến nhất trong
+    craft.
+  stopping: >-
+    Một cây mace có **một** prefix physical roll ra từ Tier 3 trở lên, một
+    prefix bench bên cạnh và attack speed đã là một weapon thực thụ cho map
+    vàng và map đỏ đầu. **Hai** prefix physical roll ra cộng cái thứ ba từ
+    bench gánh phần lớn build qua mọi thứ còn lại. Prefix roll thứ ba và Tier
+    1 là chỗ chi phí nhân lên.
+
+
+    Hãy dừng khi bước kế tiếp tốn nhiều hơn giá trị phần cải thiện đối với
+    bạn, và hãy chốt con số đó trước khi bắt đầu. Nếu một bước hỏng và item
+    giờ tệ hơn món bạn có thể mua bằng số tiền còn lại, hãy mua món đó.
+special:
+  - mod: "#% increased Impale Effect"
+    source: "Essence"
+    where: "Được đảm bảo bởi Essence of Dread trên mace hai tay: 35–38% ở bậc Deafening. Cùng modifier này cũng tồn tại dưới dạng một suffix influence Crusader."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "8–10% từ [[Crafting Bench]] giá 8 Chaos Orb. 12–14% dưới dạng suffix unveil ra, từ một veiled item rơi được, một [[Veiled Chaos Orb]] hoặc một [[Veiled Exalted Orb]]."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25% chance. Bench: 95–105% kèm 18–20%, giá 8 Chaos Orb. Có các bản cho Bleeding, Poison và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "Hits can't be Evaded"
+    source: "Bench"
+    where: "Một prefix bench giá 4 Exalted Orb. Nó tốn một ô prefix, mà trên mace đó là phía đắt, nên nó dành cho build không còn lời giải nào khác cho accuracy."
+  - mod: "#% increased Attack Speed / #% chance to deal Double Damage"
+    source: "Influence Shaper"
+    where: "Một suffix Shaper, 20–21% attack speed kèm 4–6% chance, trên mace có influence Shaper từ item level 75 trở lên."
+  - mod: "#% increased Physical Damage / #% increased Area of Effect"
+    source: "Influence Warlord"
+    where: "Một prefix Warlord, 65–69% kèm 10–15%, item level 80, với weight 50. Nó chung group với hybrid kèm Accuracy, nên nó thế chỗ prefix đó: bạn đổi Accuracy lấy area, chứ không có thêm nguồn damage thứ tư."
+  - mod: "Socketed Skills deal 20% more Attack Damage"
+    source: "Fossil / influence Shaper"
+    where: "Roll ra khi dùng đúng Fossil, hoặc dưới dạng prefix Shaper ở item level 83. Chỉ hữu ích khi main skill gắn trong weapon."
+  - mod: "Warcries Exert # additional Attacks"
+    source: "Implicit của base"
+    where: "Implicit của ba cây maul Heist. Không craft ra được: bạn chọn nó bằng cách chọn base."
+mistakes:
+  - "**Craft trên sai item level.** Một base level 82 không bao giờ roll ra \"Merciless\" được. Kiểm item level trước orb đầu tiên, không phải sau orb thứ một trăm."
+  - "**Giữ một suffix với giá là một prefix.** Attack speed có thể mua bằng ba cách khác nhau. Một prefix phần trăm Tier 2 thì không."
+  - "**Bench increased Physical Damage thuần lên cây mace đã roll ra nó.** Chúng là một group, nên bench sẽ từ chối. Flat Physical Damage của bench mới là cái vừa."
+  - "**Dùng bench trước một lần roll lại.** Essence hay Chaos Orb gỡ modifier bench cùng với mọi thứ khác."
+  - "**Khóa hai prefix trung bình.** Với giá 4 Divine Orb và một Sacred Orb mỗi lần thử, khóa còn đắt hơn roll lại mấy prefix đó."
+  - "**Đánh giá weapon trước khi lên quality.** 20% quality là một phần lớn damage của base và gần như không tốn gì."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên weapon." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Speed, Critical và Physical." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

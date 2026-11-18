@@ -1,0 +1,134 @@
+category: amulets
+title: "Amulet critical strike từ Essence of Scorn"
+level: 2
+summary: "Bench của amulet không bán Critical Strike Multiplier. Essence of Scorn đảm bảo nó; lặp lại tới khi Life roll ra bên cạnh, rồi bench Critical Strike Chance."
+goal: >-
+  Một chiếc amulet chạy map cho build crit: Critical Strike Multiplier,
+  Critical Strike Chance và Life. Bài học là **cách chia một lần craft giữa
+  Essence và bench.** Giao cho Essence modifier mà bench không làm được, giao
+  cho bench cái nó làm được, và để việc lặp lại tìm ra cái thứ ba.
+base: "Onyx Amulet"
+itemLevel: 75
+baseWhy: >-
+  +10–16 to all Attributes của Onyx Amulet là implicit hay tiết kiệm được một
+  suffix nhất. Item level 75 là nhiều hơn mức lần craft này cần: Tier 1 của
+  Life mở ở 54, còn Essence tự đặt con số của nó. Amulet nào từ map cũng
+  được, miễn là item level từ 54 trở lên.
+methods: [essence, bench]
+result:
+  implicits: ["+13 to all Attributes"]
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "+47 to maximum Mana" }
+  suffixes:
+    - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+    - { text: "+33% to Cold Resistance" }
+    - { text: "24% increased Global Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Scorn]]", amount: "10–20", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "1", note: "cho bench" }
+cost: >-
+  Essence là toàn bộ chi phí. Scorn không có bản yếu: Screaming là bậc thấp
+  nhất tồn tại, và nó đã dùng được lên item Rare, nên mọi cái bạn có đều dùng
+  được lên cùng một chiếc amulet. Bước bench tốn 1 [[Chaos Orb]].
+odds: >-
+  Khi multiplier đã được Essence cố định, mỗi prefix mà Essence roll ra là
+  maximum Life từ 70 trở lên khoảng 1 trên 20 lần, theo phép tính của chúng
+  tôi ở item level 75. Một kết quả có từ một tới ba prefix, nên xấp xỉ một
+  trên mười Essence là đạt. Hãy tính là tốn mười tới hai mươi cái, và dừng
+  sớm nếu ra một cái tốt.
+steps:
+  - title: "Essence đầu tiên"
+    do: >-
+      Dùng một [[Screaming Essence of Scorn]] lên amulet. Amulet có thể là
+      Normal hoặc đã là Rare.
+    why: >-
+      Essence biến item thành Rare và **đảm bảo** Critical Strike
+      Multiplier: 25–29% ở bậc Screaming, 30–34% ở Shrieking, 35–41% ở
+      Deafening. Tier 1 của modifier tự nhiên là 35–38%, nên Essence tốt nhất
+      thắng lần roll tốt nhất. Mọi thứ khác trên amulet đều ngẫu nhiên.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+47 to maximum Mana" }
+        - { text: "22% increased Armour" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+        - { text: "+29 to Strength" }
+  - title: "Đọc prefix trước"
+    do: >-
+      Giữ Alt. Có prefix **maximum Life** từ 70 trở lên không? Rồi đếm
+      suffix: trong ba ô có ít nhất một ô còn trống không?
+    why: >-
+      Chiếc amulet ở trên trượt hai lần. Không có Life, và cả ba ô suffix đều
+      đã bị chiếm, nên bench không có chỗ nào để đặt Critical Strike Chance.
+      Life là phép thử vì không Essence nào cho nó trên amulet, còn bản của
+      bench là 41–55.
+    check: >-
+      Đạt: Life từ 70 trở lên **và** một suffix trống. Cũng đạt: một prefix
+      trống và một suffix trống cùng các suffix tốt, nếu bạn chịu chấp nhận
+      Life của bench.
+    fail: >-
+      Dùng thêm một Essence lên chính chiếc amulet đó. Không mất gì ngoài
+      Essence.
+  - title: "Lặp lại tới khi đạt"
+    do: >-
+      Dùng Essence hết cái này tới cái khác, mỗi lần đều đọc lại amulet.
+    why: >-
+      Mỗi lần dùng là một lần roll mới cho mọi thứ trừ multiplier, thứ lần
+      nào cũng quay lại. Bạn chỉ đang chờ mỗi Life.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "+47 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+  - title: "Bench Critical Strike Chance"
+    do: >-
+      Ở [[Crafting Bench]], craft 22–27% increased Global Critical Strike
+      Chance giá 1 [[Chaos Orb]].
+    why: >-
+      Bench có chance mà không có multiplier, và đó chính là lý do Essence
+      nhận phần multiplier. Nếu Essence tình cờ roll ra cả Critical Strike
+      Chance thì bench sẽ từ chối craft này, vì hai cái là một group; trường
+      hợp đó hãy craft một resistance.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "+47 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+        - { text: "24% increased Global Critical Strike Chance", how: crafted }
+variations: >-
+  **Build khác, cùng phương pháp.** Đổi Essence và giữ nguyên các bước. Anger,
+  Hatred và Wrath cho increased Fire, Cold hoặc Lightning Damage, 23–26% ở
+  bậc Screaming và 31–34% ở Deafening. Envy cho increased Chaos Damage, thứ
+  amulet hoàn toàn không roll ra được. Zeal cho Cast Speed. Trường hợp nào
+  cũng hãy xem danh sách của bench trước, rồi giao cho Essence modifier mà
+  bench thiếu hoặc bán yếu nhất.
+
+
+  **Loathing thay vì Scorn.** Loathing đảm bảo Critical Strike Chance,
+  39–42% ở bậc Deafening. Với chiếc amulet này thì đó là làm ngược: nó cố
+  định modifier mà bench lẽ ra làm được, và phó mặc multiplier cho một lần
+  roll chỉ ra 1 trên 20 suffix.
+
+
+  **Giữ chiếc amulet này để dành.** Nếu một kết quả có ba suffix bạn không
+  đời nào chịu bỏ và prefix tệ, đừng roll lại nó. Ví dụ về khóa ở phía dưới
+  dựng lại phía prefix mà không đụng tới chúng.
+mistakes:
+  - "Giữ một kết quả có ba suffix đã đầy mà không có Critical Strike Chance. Không còn chỗ cho bench."
+  - "Craft ở bench giữa các lần dùng Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Dùng Essence of Greed để lấy Life. Trên amulet, Greed cho Life regeneration."
+  - "Làm việc này trên base có [[Memory Strands]]: một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên amulet, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

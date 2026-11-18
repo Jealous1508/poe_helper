@@ -1,0 +1,245 @@
+category: amulets
+title: "Hai gem level: một +1 fractured và cái thứ hai bị ép ra"
+level: 5
+summary: "Kế hoạch đầy đủ cho một amulet +2 Chaos: fracture cái gem level không gì nhắm tới được, dựng suffix bằng Essence, rồi khóa chúng và bắt một reforge Chaos cho gem level thứ hai."
+goal: >-
+  Một chiếc amulet có cả "+1 to Level of all Skill Gems" lẫn "+1 to Level of
+  all Chaos Skill Gems", increased Chaos Damage và Damage over Time
+  Multiplier ở phía dưới, và Life từ bench. Không bước nào ở đây dùng công cụ
+  mới. Thứ khiến nó là chiếc amulet khó nhất trên trang này là **quyết định
+  modifier nào nhận kiểu bảo vệ nào**, và làm các giai đoạn theo thứ tự duy
+  nhất mà giai đoạn nào cũng sống sót qua giai đoạn kế tiếp.
+base: "Turquoise Amulet"
+itemLevel: 84
+baseWhy: >-
+  Item level từ 82 trở lên cho Tier 1 của Damage over Time Multiplier; ví dụ
+  dùng 84. Các gem level chỉ cần 75. Base phải **không có influence**:
+  [[Fracturing Orb]] từ chối item có influence, tức loại luôn Astrolabe
+  Amulet. Turquoise cho Dexterity và Intelligence, thứ một build chaos thường
+  thiếu; amulet thường nào cũng được.
+methods: [fracture, essence, meta, harvest, bench]
+result:
+  note: "Fractured"
+  implicits: ["+21 to Dexterity and Intelligence"]
+  prefixes:
+    - { text: "+1 to Level of all Skill Gems", how: fractured }
+    - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+    - { text: "+52 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "33% increased Chaos Damage", how: essence }
+    - { text: "+21% to Damage over Time Multiplier" }
+    - { text: "+41 to Intelligence" }
+needs:
+  - { item: "Một amulet có \"+1 to Level of all Skill Gems\" đã fractured, item level 82+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Deafening Essence of Envy]]", amount: "50–150" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 mỗi lần reforge" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Ba hóa đơn, xếp theo độ lớn. Base fractured: trong 3.30, fractured item đến
+  từ đồ rơi Tier 5, một [[Fracturing Orb]] hoặc một [[Fractured Fossil]], và
+  riêng modifier này là prefix hiếm nhất của loại item này. Rồi tới Deafening
+  Essence of Envy, ít nhất cũng tính bằng chục. Rồi một hoặc hai lần khóa,
+  mỗi lần 4 [[Divine Orb]] và 8 [[Exalted Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Giá trong tuần đầu của league chạy quá
+  nhanh, và giai đoạn Essence có một cái đuôi dài.
+odds: >-
+  **Giai đoạn 2.** Essence đảm bảo Chaos Damage. Bên cạnh nó bạn đang chờ
+  Damage over Time Multiplier, thứ có weight 300 mỗi tier trong một pool
+  suffix khoảng 124,000: 1 trên 138 lần roll suffix ra từ 16% trở lên, theo
+  phép tính của chúng tôi. Mỗi Essence roll thêm một hoặc hai suffix, nên khá
+  nhất thì khoảng một trên 70 Essence ra được nó, và thường còn tệ hơn. Đây
+  là giai đoạn quyết định ngân sách.
+
+
+  **Giai đoạn 3.** Gem level Chaos là prefix duy nhất mang tag chaos, nên khi
+  suffix đã khóa thì lần reforge nào cũng cho nó, nếu reforge chọn modifier
+  được đảm bảo theo đúng cách người chơi xưa nay vẫn thấy. Thứ bạn không kiểm
+  soát được là có prefix thứ ba roll ra cùng nó hay không.
+
+
+  **Tự làm base.** Khoảng 1 trên 1,750 lần roll prefix cho gem level, rồi một
+  Fracturing Orb một phần tư, không có đường lui.
+steps:
+  - title: "Giai đoạn 1: gem level fractured"
+    do: >-
+      Mua hoặc tìm một chiếc amulet có **"+1 to Level of all Skill Gems" đã
+      fractured**. Muốn tự làm: roll prefix đó trên một amulet Magic, đưa
+      item lên Rare với **đúng bốn** modifier, rồi dùng một
+      [[Fracturing Orb]].
+    why: >-
+      Hãy chọn thứ để fracture bằng cách hỏi modifier nào không công cụ về
+      sau nào đem lại được. Gem level Chaos thì ép ra được, như giai đoạn 3
+      cho thấy. Cái này thì không: nó có weight 50, không có tag riêng nào để
+      một reforge gọi tên, và mọi Essence lẫn reforge trong hai giai đoạn kế
+      sẽ xóa sạch nó. Vậy nên nó là cái phải vĩnh viễn.
+    check: >-
+      Fracturing Orb chọn ngẫu nhiên một modifier trong số những cái có trên
+      item. Với bốn cái thì là một phần tư. Đừng thêm cái thứ năm trước đó.
+    fail: >-
+      Nó fracture thứ khác. Amulet không fracture lại được, và Imprint không
+      dùng được lên fractured item, nên không có cách nào làm lại. Đây là lý
+      do phần lớn mọi người mua base.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+19 to maximum Energy Shield" }
+      suffixes:
+        - { text: "+27 to Strength" }
+        - { text: "+18% to Cold Resistance" }
+  - title: "Giai đoạn 2: suffix trước, bằng Essence"
+    do: >-
+      Dùng [[Deafening Essence of Envy]] lên amulet, hết lần này tới lần
+      khác, tới khi các suffix là **Chaos Damage của Essence, Damage over
+      Time Multiplier từ 16% trở lên, và một suffix thứ ba bạn chấp nhận
+      được**, và amulet có **nhiều nhất hai prefix**.
+    why: >-
+      Suffix đi trước prefix vì một lý do: Essence được ghi nhận là phớt lờ
+      khóa. Nếu phía prefix được làm xong trước, Essence đầu tiên sẽ phá mọi
+      thứ trên đó không phải fractured. Làm theo thứ tự này thì giai đoạn
+      Essence không có gì để mất ngoài chính nó.
+
+
+      Chọn Envy vì increased Chaos Damage không tồn tại ở đâu trong pool tự
+      nhiên của amulet, và mức 31–34% của nó ở bậc Deafening là một suffix
+      bạn không thể có bằng bất kỳ lần roll nào.
+    check: >-
+      Đếm prefix trên bất kỳ kết quả nào bạn định giữ. Giai đoạn 3 cần một ô
+      prefix trống cho khóa, mà gem level fractured đã chiếm sẵn một ô.
+    fail: >-
+      Không có gì để sửa: prefix fractured sống sót qua mọi Essence. Dùng cái
+      kế tiếp. Nếu cạn ngân sách, một kết quả có Chaos Damage và hai suffix
+      xoàng vẫn là một chiếc amulet +1 đáng hoàn thiện; nhảy sang giai đoạn
+      3.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+52 to maximum Mana" }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Giai đoạn 3a: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 8 [[Exalted Orb]].
+    why: >-
+      Damage over Time Multiplier không phải fractured và tốn trọn giai đoạn
+      2 mới tìm ra. Từ đây trở đi, không gì được đụng tới phía suffix.
+    check: >-
+      Ba suffix, tất cả đều giữ. Khóa hiện ra dưới dạng một prefix crafted.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+52 to maximum Mana" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Giai đoạn 3b: reforge Chaos"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Chaos modifier** (100
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Trên amulet có hai modifier tự nhiên mang tag chaos: Chaos Resistance,
+      một suffix, và "+1 to Level of all Chaos Skill Gems", một prefix. Phía
+      suffix đã đầy và đã khóa. Modifier được đảm bảo chỉ còn một chỗ để nằm.
+      Prefix fractured ở lại, còn Mana và cái khóa bị thay.
+
+
+      Hai gem level cùng nằm trên amulet được vì chúng thuộc hai group khác
+      nhau. Một gem level **theo loại** thứ hai thì không vào chung được.
+    check: >-
+      Suffix không đổi, khóa đã biến mất, cả hai gem level đều có mặt. Rồi
+      đếm prefix: hai là kết quả bạn muốn, ba nghĩa là reforge đã roll thêm
+      một cái.
+    fail: >-
+      Một prefix thứ ba bạn không muốn, và không còn chỗ cho Life: lựa chọn
+      là nhận chiếc amulet không có Life, hoặc khóa rồi reforge lần nữa. Gem
+      level thứ hai lần nào cũng quay lại; chỉ có prefix thứ ba thay đổi. Mỗi
+      lần lặp lại là trọn một lần khóa.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Giai đoạn 4: một modifier bench"
+    do: >-
+      Craft +41–55 to maximum Life ở bench giá 2 [[Orb of Alchemy]].
+    why: >-
+      Còn trống một ô, nên một craft đơn giản là lấp xong. "Can have up to 3
+      Crafted Modifiers" ở đây sẽ là sai lầm: nó là suffix, phía suffix đã
+      đầy, và kể cả có chỗ thì nó cũng tốn một ô mà chẳng được gì khi chỉ có
+      một ô trống.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+        - { text: "+52 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Hoàn thiện: Catalyst và chỉ số"
+    do: >-
+      Thêm Catalyst lúc này, khi không còn gì thay đổi nữa, rồi một
+      [[Divine Orb]] nếu Damage over Time Multiplier đang ở đáy khoảng của
+      nó.
+    why: >-
+      Divine Orb roll lại mọi con số cùng lúc và không bao giờ đổi tier hay
+      gem level. Trong 3.30, Catalyst chỉ đến từ Ultimatum; hãy chọn loại
+      khớp với modifier bạn muốn lớn hơn nhất.
+variations: >-
+  **Không có fracture.** Bỏ giai đoạn 1 và làm giai đoạn 2 tới 4 trên bất kỳ
+  amulet nào: kết quả là một chiếc amulet +1 Chaos với cùng các suffix đó,
+  chỉ tốn một phần nhỏ chi phí. Đó là bản mà phần lớn build nên làm.
+
+
+  **Các loại gem khác.** Chỉ Chaos mới ép ra được theo cách này. Một reforge
+  Fire, Cold hoặc Lightning dưới cùng cái khóa đó cũng có thể cho added
+  damage của element đó cho attack, vốn là một prefix mang cùng tag và có
+  weight gấp hai mươi lần. Với các loại đó, hãy fracture gem level theo loại,
+  hoặc bằng lòng với một cái.
+
+
+  **Một amulet Hunter.** Influence Hunter thêm "+16–20% to Chaos Damage over
+  Time Multiplier", khác group với multiplier tự nhiên, và không prefix nào
+  của nó mang tag chaos, nên giai đoạn 3 vẫn chạy được. Nhưng item có
+  influence thì không fracture được: đi đường đó thì phải bỏ gem level thứ
+  nhất.
+
+
+  **Nhìn trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Chỗ duy nhất nó có thể đáng tiền ở đây là
+  Fracturing Orb.
+mistakes:
+  - "Làm xong prefix trước suffix. Các Essence dựng phía suffix phớt lờ khóa và sẽ xóa sạch chúng."
+  - "Fracture gem level Chaos. Đó là modifier duy nhất mà kế hoạch tạo ra được theo ý muốn; fracture phải dành cho cái mà kế hoạch không tạo ra được."
+  - "Giữ một kết quả giai đoạn 2 có ba prefix. Khóa cần một ô prefix, và một Annulment để mở ô có thể trúng multiplier."
+  - "Craft \"Can have up to 3 Crafted Modifiers\" khi chỉ còn trống một ô. Nó chiếm luôn cái ô mà lẽ ra nó phải giúp lấp."
+  - "Dùng base có influence hoặc base Astrolabe. Cả hai đều không fracture được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, group và tag, các modifier Essence, giá bench và dòng mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ trên trang sức." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum là nguồn Catalyst duy nhất." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Chaos và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa, còn Essence thì không. Một phần cũ hơn 3.30." }

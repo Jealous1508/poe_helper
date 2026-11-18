@@ -1,0 +1,183 @@
+category: shields
+title: "Shield của caster bằng Aetheric Fossil"
+level: 3
+summary: "Aetheric Fossil nhân mọi modifier caster lên mười lần. Trên spirit shield, đó là Spell Damage ở phía prefix và spell critical strike ở phía suffix, trong cùng một lần roll lại."
+goal: >-
+  Một món off-hand endgame cho caster: một prefix Spell Damage ở tier mà
+  Alteration hiếm khi tới được, Spell Critical Strike Chance, và cast speed
+  từ bench. Bài học là **đọc tag trước khi chọn Fossil**. Trên pool này, một
+  tag nằm trên đúng hai modifier bạn muốn, ở cả hai phía của item, và gần như
+  không nằm trên thứ gì bạn không muốn. Nó cũng bỏ sót một modifier mà có thể
+  bạn đã tưởng nó bao luôn.
+base: "Harmonic Spirit Shield"
+itemLevel: 84
+baseWhy: >-
+  Harmonic Spirit Shield có implicit Spell Damage lớn hơn, 10–15%, với 58–66
+  Energy Shield và 23% block, và dùng được ở level 65. Item level 84 là mốc
+  thấp nhất mà tier cao nhất của Spell Damage, 100–109%, roll được. Phương
+  pháp này hiếm khi tới được tier đó, nhưng ở 84 thì khi nó đến bạn giữ được.
+  Nó phải là spirit shield: không nhóm nào khác có prefix này.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["13% increased Spell Damage"]
+  prefixes:
+    - { text: "76% increased Spell Damage", how: fossil }
+    - { text: "+118 to maximum Life", how: fossil }
+  suffixes:
+    - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+    - { text: "+37% to Cold Resistance", how: fossil }
+    - { text: "8% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "30–60" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "mỗi Fossil một cái" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "để biến base thành Rare" }
+  - { item: "[[Orb of Alteration]]", amount: "6", note: "cho bench" }
+cost: >-
+  Một Fossil và một Resonator mỗi lần thử, cả hai từ Delve, nơi mà trong 3.30
+  đường vào là qua các map luôn sinh Sulphite. Bước bench là 6
+  [[Orb of Alteration]].
+odds: >-
+  Với một Aetheric Fossil ở item level 84, theo phép tính của chúng tôi từ
+  weight: một lần roll prefix là increased Spell Damage 49% số lần, từ 55%
+  trở lên 1 trên 8 lần, và từ 70% trở lên 1 trên 24 lần. Không có Fossil, con
+  số cuối là khoảng 1 trên 120. Một lần roll suffix là Spell Critical Strike
+  Chance 42% số lần, và từ 70% trở lên 1 trên 5 lần.
+
+
+  Fossil nhân cả họ Spell Damage, kể cả các tier thấp, nên nó giúp tier cao
+  nhất chỉ đúng bằng mức nó giúp phần còn lại: 100–109% vẫn là khoảng 1 trên
+  420 lần roll prefix. Ngưỡng trong ví dụ này, Spell Damage từ 70% trở lên
+  kèm một suffix spell critical strike mạnh bên cạnh, là chuyện của vài chục
+  Fossil. Các con số của chúng tôi không tính vài modifier chỉ Fossil mới
+  thêm được.
+steps:
+  - title: "Phân loại pool theo tag"
+    do: >-
+      Trước khi mua Fossil, đọc Fossil ("More Caster modifiers, Fewer Attack
+      modifiers") rồi đối chiếu với danh sách modifier của spirit shield.
+    why: >-
+      Ba thứ trên spirit shield mang tag caster. **Increased Spell Damage**
+      và các prefix **"+1 to Level of all ... Spell Skill Gems"**, cùng
+      **Spell Critical Strike Chance** trong số các suffix. Mỗi cái được mười
+      vé cho mỗi vé nó từng có.
+
+
+      Increased Fire, Cold và Lightning Damage thì **không** mang tag đó. Tag
+      của chúng là element tương ứng và "elemental". Chúng còn cùng group với
+      Spell Damage, nên dưới Fossil này chúng hiếm đi và Spell Damage chiếm
+      chỗ của chúng. Một build scale một element thì cần một
+      [[Scorched Fossil]] hoặc cái tương ứng cho Cold hay Lightning.
+    check: >-
+      Không gì trên pool này mang tag attack, nên dòng thứ hai của Fossil
+      không làm bạn mất gì.
+  - title: "Biến base thành Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên cái shield trắng.
+    why: >-
+      Chaotic Resonator roll lại một item Rare. Những gì Alchemy roll ra đều
+      bị bỏ đi. Nó được đưa ra ở đây vì nó điển hình cho pool này khi không
+      có trợ giúp: mana, một prefix chết, và những suffix không làm gì cho
+      spell.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "+46 to maximum Mana" }
+        - { text: "Reflects 33 Physical Damage to Melee Attackers" }
+      suffixes:
+        - { text: "+24% to Lightning Resistance" }
+        - { text: "36% increased Mana Regeneration Rate" }
+  - title: "Fossil đầu tiên"
+    do: >-
+      Đặt một [[Aetheric Fossil]] vào một [[Primitive Chaotic Resonator]] rồi
+      dùng nó lên cái shield.
+    why: >-
+      Kết quả cho thấy Fossil làm được gì và không làm được gì. Modifier
+      caster có thể đến ở cả hai phía cùng lúc, như ở đây. Tier của chúng là
+      thứ cuộc xổ số cho, và ở đây chúng thấp.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "33% increased Spell Damage", how: fossil }
+        - { text: "+52 to maximum Energy Shield", how: fossil }
+      suffixes:
+        - { text: "58% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Đặt ngưỡng theo tier, và chừa chỗ cho bench"
+    do: >-
+      Quyết định bạn giữ cái gì: **Spell Damage từ 70% trở lên**
+      ("Incanter's", "Glyphic" hoặc "Runic"), **Spell Critical Strike Chance
+      từ 70% trở lên**, và **một ô trống**. Đối chiếu mỗi kết quả với đúng
+      những điều đó, không gì khác.
+    why: >-
+      Kết quả đầu tiên có đúng tên nhưng hỏng ở mọi con số. Giữ nó sẽ là lỗi
+      phổ biến nhất với Fossil. Ô trống nằm trong ngưỡng vì bench hoàn thiện
+      cái shield: cast speed nếu còn một suffix trống, life nếu còn một
+      prefix trống.
+    check: >-
+      Đừng chờ cast speed roll ra. Nó hoàn toàn không có trong pool tự nhiên
+      của shield; bench bán 6–9%.
+    fail: >-
+      Dưới ngưỡng: thêm một Fossil và Resonator. Không gì trên item đáng bảo
+      vệ cho tới khi một kết quả đạt.
+  - title: "Lặp lại tới khi một kết quả đạt"
+    do: >-
+      Dùng Fossil từng cái một, đánh giá mỗi kết quả theo ngưỡng.
+    why: >-
+      Mỗi cái là một lần roll lại độc lập cho cả sáu ô. Nếu một kết quả có
+      Spell Damage và một phía suffix đầy mà vô dụng thì nó vẫn hỏng: phương
+      pháp này không có cách nào giữ một phía.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "76% increased Spell Damage", how: fossil }
+        - { text: "+118 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+37% to Cold Resistance", how: fossil }
+  - title: "Bench cast speed"
+    do: >-
+      Ở [[Crafting Bench]], craft 6–9% increased Cast Speed vào suffix trống
+      với giá 6 [[Orb of Alteration]].
+    why: >-
+      Cast speed là suffix caster mà pool tự nhiên không có còn bench thì có.
+      Nếu suffix đã đầy và còn một prefix trống thì craft sẽ là +56–70
+      maximum Life giá 4 Orb of Alchemy.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "76% increased Spell Damage", how: fossil }
+        - { text: "+118 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+37% to Cold Resistance", how: fossil }
+        - { text: "8% increased Cast Speed", how: crafted }
+variations: >-
+  **Harvest thay cho Fossil.** Một reforge Critical (150 Primal Lifeforce)
+  chỉ có thể là Spell Critical Strike Chance trên spirit shield, và một
+  reforge Caster (75 Primal) là Spell Damage khoảng một nửa số lần. Mỗi cái
+  đảm bảo một modifier và để phần còn lại của item cho một lần roll không
+  được chỉnh weight. Fossil không đảm bảo gì và làm nghiêng mọi lần roll. Với
+  hai modifier mong muốn ở hai phía đối nhau, Fossil là công cụ tốt hơn.
+
+
+  **Tier cao nhất.** Với Spell Damage từ 85% trở lên, con đường Magic mới là
+  con đường thật thà: Alteration trên một base trắng tới khi prefix xuất
+  hiện, một [[Imprint]] từ một [[Craicic Croaker]], rồi một [[Regal Orb]] có
+  thể thử lại. Ở item level 84, tier đó là khoảng 1 trên 430 lần roll prefix,
+  và một base có [[Memory Strands]] đáng dùng cho việc này.
+
+
+  **Shield minion.** Trên Bone, Ivory hoặc Fossilised Spirit Shield, một
+  [[Bound Fossil]] đóng cùng vai trò: minion damage thành 57% số lần roll
+  prefix và bốn trên năm lần roll suffix là modifier minion. Minion damage
+  cùng group với Spell Damage, nên cái shield đó giữ một trong hai.
+mistakes:
+  - "Giữ kết quả đầu tiên có đúng tên. Fossil làm Spell Damage phổ biến; nó không làm 70% phổ biến."
+  - "Dùng Aetheric Fossil cho build fire, cold hoặc lightning muốn prefix damage của riêng nó. Mấy cái đó không mang tag caster và mất chỗ vào tay Spell Damage."
+  - "Thử cách này trên kite shield hoặc spiked shield. Fossil chỉ nhân một modifier ở nơi pool có nó."
+  - "Nhận một item đầy mà không còn suffix trống. Cast speed chỉ đến từ bench, và thêm một Fossil nữa còn rẻ hơn một cái shield không có nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các hệ số nhân weight của Fossil, tag trên từng modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Critical và Caster cùng giá của chúng, cho phần biến thể." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint, cho phần biến thể." }

@@ -1,0 +1,182 @@
+category: gloves
+title: "Two more modifiers above the line: Eldritch implicits"
+level: 3
+summary: "Finished gloves have six modifiers. An Ember and an Ichor add a seventh and an eighth without touching the six, and the arithmetic says which strength to stop at."
+goal: >-
+  Add attack speed from the Searing Exarch and spell suppression from the
+  Eater of Worlds to gloves that are already crafted. Nothing below the line
+  changes in this example. The lesson is how **Eldritch implicits are
+  rolled, what each strength buys, and what the stronger of the two will
+  later do to your Eldritch orbs**.
+base: "Slink Gloves"
+itemLevel: 76
+baseWhy: >-
+  The pair from the Essence of Zeal example, or any Rare gloves you mean to
+  keep. Three conditions, all from the text of the currency or the fact
+  sheet behind this guide.
+
+
+  **No influence.** Embers and Ichors refuse Shaper, Elder and conqueror
+  items. **No implicit you want to keep.** Each "replaces any existing
+  implicit modifiers" other than the opposite Eldritch one, which is why this
+  example is not on Spiked Gloves. **No Memory Strands, to be safe.** One
+  player thread suggests items with strands cannot take these implicits; we
+  could not confirm it.
+methods: [eldritch, finishing]
+result:
+  implicits: ["9% increased Attack Speed", "+6% chance to Suppress Spell Damage"]
+  prefixes:
+    - { text: "+108 to maximum Life" }
+    - { text: "+134 to Evasion Rating" }
+  suffixes:
+    - { text: "12% increased Attack Speed", how: essence }
+    - { text: "+10% chance to Suppress Spell Damage" }
+    - { text: "+31% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "about 20" }
+  - { item: "[[Lesser Eldritch Ichor]]", amount: "about 20" }
+  - { item: "[[Greater Eldritch Ember]] and [[Greater Eldritch Ichor]]", amount: "about 30 of each", note: "optional, for step 4" }
+cost: >-
+  Counted in Embers and Ichors, and decided by the strength you choose. The
+  Lesser ones are the cheapest Eldritch currency there is. Each strength
+  above them needs more attempts for about one more point of the modifier.
+odds: >-
+  These figures assume each Ember or Ichor picks by weight among the
+  implicits its strength allows, which is our reading of the weights in the
+  data; the game publishes nothing on it.
+
+
+  A **Lesser** Ember gives attack speed about 1 time in 19. A **Greater**
+  one gives the always-on version about 1 time in 28, because Greater also
+  opens a second form of every implicit that works only near a Unique enemy.
+  **Grand and Exceptional** open a third form for pinnacle bosses: 1 in 32.
+  Suppression from the Eater has the same weight and the same three
+  figures.
+steps:
+  - title: "Know what an Ember does before you use one"
+    do: >-
+      Read the currency. An Eldritch Ember "adds a Searing Exarch implicit
+      modifier", an Ichor an Eater of Worlds one, to a body armour, boots,
+      gloves or helmet. The item holds one of each. Using another Ember
+      replaces the Exarch implicit with a new random one and leaves
+      everything else alone.
+    why: >-
+      That last property is what makes implicits the safest roll in
+      crafting. The six modifiers below the line are never at risk, so you
+      can do this to a finished item, and you can retry as often as you
+      have currency.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Lesser Embers until attack speed"
+    do: >-
+      Use [[Lesser Eldritch Ember]]s one at a time until the implicit reads
+      "8% increased Attack Speed".
+    why: >-
+      Gloves have about thirty Exarch implicits. Attack speed carries a
+      weight of 1,000 out of 18,700 at this strength, so expect it roughly
+      once in 19 Embers. It is a separate modifier from the Essence's attack
+      speed below the line: implicits and explicits do not share groups, and
+      the two add up.
+    check: >-
+      Other results worth stopping for, if they suit you better: increased
+      Critical Strike Chance for Attacks, one of the Damage over Time
+      Multipliers, "Non-Vaal Strike Skills target 1 additional nearby
+      Enemy".
+    state:
+      implicits: ["8% increased Attack Speed"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Lesser Ichors until suppression"
+    do: >-
+      Use [[Lesser Eldritch Ichor]]s until the second implicit reads "+5%
+      chance to Suppress Spell Damage".
+    why: >-
+      An Ichor replaces only the Eater implicit, so the attack speed you
+      just rolled is safe. Suppression has the same weight in the Eater's
+      list as attack speed has in the Exarch's.
+    state:
+      implicits: ["8% increased Attack Speed", "+5% chance to Suppress Spell Damage"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Decide how far to climb, by the numbers"
+    do: >-
+      Compare what each strength gives. Attack speed: 8% Lesser, 9%
+      Greater, 10% Grand, 11% Exceptional. Suppression: 5%, 6%, 7%, 8%. A
+      stronger Ember does not upgrade the implicit you have. It rolls a new
+      random one, so climbing means finding attack speed again at worse
+      odds.
+    why: >-
+      One point per strength, for a rarer currency and more attempts each
+      time. Lesser to Greater is the step most players should take and stop
+      at. The example does that: 9% and 6%.
+    check: >-
+      From Greater upwards you will also see the conditional forms. Attack
+      speed near a Unique enemy is 13% at Greater and 15% at Exceptional;
+      near a pinnacle boss, 18% at Grand and 19% at Exceptional. For a boss
+      killer those are the better implicit, and counting them, attack speed
+      in any form is back to about 1 Ember in 19.
+    state:
+      implicits: ["9% increased Attack Speed", "+6% chance to Suppress Spell Damage"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Note which implicit is stronger"
+    do: >-
+      Look at the strengths of the two implicits and remember them. Here
+      both are Greater.
+    why: >-
+      The stronger implicit decides what three orbs do. Under a stronger
+      Exarch implicit, an [[Eldritch Chaos Orb]] rerolls prefixes, an
+      [[Eldritch Exalted Orb]] adds a prefix and an
+      [[Eldritch Orb of Annulment]] removes one. Under a stronger Eater
+      implicit they do the same to suffixes. On finished gloves this is a
+      warning: do not use one of them here. On unfinished gloves it is the
+      cheapest protection in the game, and the harder examples are built on
+      it.
+variations: >-
+  **An Orb of Conflict.** It "unpredictably" raises one of the two implicits
+  a strength and lowers the other, and needs both to be present. The data
+  holds two strengths above Exceptional that no Ember gives directly, so
+  this is how the very top is reached. It can as easily move the wrong
+  way, and we have no odds for it.
+
+
+  **Values.** Attack speed and suppression implicits are fixed numbers at
+  each strength. Implicits with a range, such as 28–30% Critical Strike
+  Chance for Attacks at Exceptional, reroll inside it with a
+  [[Blessed Orb]].
+
+
+  **Instead of a suffix.** If the gloves have no room for attack speed below
+  the line, the Exarch implicit is a fourth source of it after the Essence,
+  the bench and natural rolls.
+mistakes:
+  - "Using an Ember on an Atlas base to add to its implicit. It replaces it."
+  - "Climbing to Exceptional for one implicit and running out for the other. Two Greater implicits beat one Exceptional and one empty."
+  - "Using an Eldritch Chaos Orb on finished gloves to see what it does. It rerolls a whole side."
+  - "Expecting an influenced pair to take an Ember. The currency refuses it, and influence cannot be removed."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Eldritch implicits of gloves, their six strengths and weights, and the in-game text of the Embers, Ichors, Eldritch orbs and the Orb of Conflict. The odds are our arithmetic." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: the stronger implicit decides which side the Eldritch orbs work on. Partly older than 3.30." }
+  - { title: "Player thread on Memory Strands and Eldritch implicits", url: "https://www.pathofexile.com/forum/view-thread/3818485", kind: thread, note: "The one report that items with strands refuse Eldritch implicits. Not confirmed." }

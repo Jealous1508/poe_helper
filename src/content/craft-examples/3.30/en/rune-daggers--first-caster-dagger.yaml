@@ -1,0 +1,126 @@
+category: rune-daggers
+title: "A caster's first rune dagger"
+level: 1
+summary: "Roll Spell Damage with Alterations, make the dagger Rare, and learn why the bench will not sell you more damage of the same kind."
+goal: >-
+  A weapon for a spellcaster in the second half of the campaign: Spell Damage
+  from a roll, added damage to spells from the bench. The lesson is the rule
+  that governs every caster weapon: **one modifier per group, and most damage
+  crafts for casters are the same group.**
+base: "Golden Kris"
+itemLevel: 48
+baseWhy: >-
+  A Golden Kris is worn at level 47 and has the large rune dagger implicit,
+  60–65% increased Global Critical Strike Chance. If your spells do not
+  crit, a Boot Blade (level 44) or Royal Skean (level 50) is the same craft
+  with lower Intelligence needs. Item level 46 opens Spell Damage of 55–69%,
+  so 46 or more gives the Alterations their best tier at this level.
+methods: [currency, bench]
+result:
+  implicits: ["62% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "47% increased Spell Damage" }
+    - { text: "Adds 25 to 49 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "+24 to Intelligence" }
+    - { text: "15% increased Cast Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s, one [[Regal Orb]] and 2
+  [[Orb of Alchemy]]. No Whetstones: quality raises the dagger's physical
+  damage, and a spell does not use it.
+odds: >-
+  At this item level one prefix roll is Spell Damage of 40% or more about 1
+  time in 23, and of 30% or more about 1 time in 15, by our arithmetic from
+  the weights. An Alteration does not always roll a prefix. More than half
+  of what you see on the way will be attack modifiers; they are the larger
+  part of this pool.
+steps:
+  - title: "Transmutation, then Alterations to Spell Damage"
+    do: >-
+      Use an [[Orb of Transmutation]] on the white dagger, then
+      [[Orb of Alteration]]s until the prefix is **increased Spell Damage
+      of 40% or more**. If the supply runs low, accept 30%.
+    why: >-
+      Spell Damage is the caster's plain multiplier and, at this level, the
+      prefix where a roll beats the bench by the widest margin. Its
+      siblings are easy to mistake for it. "Adds 24 to 49 Fire Damage"
+      without the words "to Spells" is an attack modifier, and so is
+      increased Physical Damage.
+    check: >-
+      The line reads "% increased Spell Damage" and nothing else. The
+      version with "+ to maximum Mana" attached is a different, smaller
+      modifier; keep rolling unless you are out of orbs.
+    state:
+      rarity: magic
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+  - title: "Augment, then Regal"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]]. Then a
+      [[Regal Orb]].
+    why: >-
+      Both only add. The Augmentation fills the empty suffix, the Regal Orb
+      makes the dagger Rare with a third modifier. Each is a free look at
+      cast speed, which is about one suffix roll in twelve.
+    check: >-
+      Sort the three lines into prefixes and suffixes, and note any attack
+      modifier: it is a dead slot, not a reason to start over at this
+      level.
+    state:
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+      suffixes:
+        - { text: "+24 to Intelligence" }
+        - { text: "15% increased Cast Speed" }
+  - title: "Ask the bench for more Spell Damage, and be refused"
+    do: >-
+      At the [[Crafting Bench]], look at the prefix crafts. Increased Spell
+      Damage, Fire Damage, Cold Damage, Lightning Damage and Chaos Damage
+      are all unavailable on this dagger.
+    why: >-
+      They share one group with the Spell Damage you rolled, and an item
+      holds one modifier of a group. This surprises everyone once. The
+      bench's Fire Damage is not "a different modifier" in the sense that
+      matters.
+  - title: "Bench a modifier from another group"
+    do: >-
+      Craft **adds 23–31 to 46–54 Fire Damage to Spells** (2
+      [[Orb of Alchemy]]), or Cold or Lightning to match your spell. If the
+      dagger has no cast speed, 10–13% increased Cast Speed (6 Orbs of
+      Alteration) is the alternative.
+    why: >-
+      Added damage to spells is its own group and stacks with Spell Damage,
+      which multiplies it. One bench modifier per item: take the added
+      damage if a roll already gave cast speed, as here, and cast speed if
+      it did not.
+    state:
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "Adds 25 to 49 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "+24 to Intelligence" }
+        - { text: "15% increased Cast Speed" }
+variations: >-
+  **If the hybrid rolled.** "% increased Spell Damage / + to maximum Mana" is
+  not in the Spell Damage group, so the bench *will* add its own Spell
+  Damage beside it: 35–44% for 8 Orbs of Alteration. Two modest Spell Damage
+  lines can beat one good one.
+
+
+  **A gem level instead.** For a weapon that carries a character through
+  the whole campaign, the next example rolls "+1 to Level of all ... Spell
+  Skill Gems" on a much lower base.
+mistakes:
+  - "Stopping on \"Adds ... Fire Damage\" without \"to Spells\". It is the attack version."
+  - "Buying Whetstones for it. Nothing a caster uses is affected by quality."
+  - "Trying to bench Fire Damage onto rolled Spell Damage and assuming the recipe is missing. It is the group rule."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, modifier groups and bench costs. The odds are our arithmetic." }

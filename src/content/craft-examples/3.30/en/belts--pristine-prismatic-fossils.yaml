@@ -1,0 +1,183 @@
+category: belts
+title: "Life and resistances from two Fossils"
+level: 3
+summary: "A Pristine Fossil removes the prefixes you do not want and multiplies Life. A Prismatic Fossil multiplies the resistances. Together they roll the belt most characters are looking for."
+goal: >-
+  A belt with Life over 100 and two elemental resistances, all rolled in one
+  go, with the bench free for something extra. The lesson is using two
+  Fossils for **two different sides of the item**: one cleans up the
+  prefixes, the other steers the suffixes, and neither gets in the other's
+  way.
+base: "Leather Belt"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 opens the top resistance tier, 46–48%; every Life tier is
+  open from 64. A Leather Belt is the example because anyone can find one.
+  If you own a Stygian Vise, use that: same pool, same steps, and the result
+  has an Abyssal socket.
+methods: [fossil, bench]
+result:
+  implicits: ["+36 to maximum Life"]
+  prefixes:
+    - { text: "+118 to maximum Life", how: fossil }
+    - { text: "22% increased Cold Damage", how: fossil }
+    - { text: "13% increased Damage", how: crafted }
+  suffixes:
+    - { text: "+43% to Fire Resistance", how: fossil }
+    - { text: "+37% to Lightning Resistance", how: fossil }
+    - { text: "Regenerate 58.6 Life per second", how: fossil }
+needs:
+  - { item: "[[Pristine Fossil]]", amount: "8–20" }
+  - { item: "[[Prismatic Fossil]]", amount: "8–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the size with two sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "to make the belt Rare" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  One of each Fossil and a two-socket Resonator per attempt, all from Delve.
+  In 3.30 Delve is reached through the maps that always spawn Sulphite. The
+  bench step is 4 [[Chaos Orb]]s.
+odds: >-
+  With both Fossils at item level 84, by our arithmetic:
+
+
+  **A prefix roll is maximum Life between 51% and 64% of the time**, and
+  Life of 100 or more between 15% and 19%.
+
+
+  **A suffix roll is an elemental resistance between 45% and 54% of the
+  time.** Life regeneration is most of the rest, about three in ten.
+
+
+  Each figure is a range because the site's calculator leaves the belt's
+  Fossil-only modifiers out of the pool and we also counted them in; the
+  truth for a single roll should lie between. Without Fossils the same
+  numbers are 20% for Life and 36% for a resistance.
+
+
+  Per attempt, roughly: Life of 100 or more on one belt in three, two
+  resistances of any size on four in ten, both together on about one in
+  eight. Asking for both resistances at 36% or more as well turns that into
+  dozens of attempts, because nothing here improves a tier: three of the
+  eight resistance tiers are that high with or without the Fossils.
+steps:
+  - title: "Make the belt Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white belt. Ignore the result.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. The belt only needs to be
+      Rare for the first one to work.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+46 to maximum Energy Shield" }
+        - { text: "+288 to Armour" }
+      suffixes:
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+34 to Strength" }
+  - title: "Load both Fossils and use the Resonator"
+    do: >-
+      Put one [[Pristine Fossil]] and one [[Prismatic Fossil]] in a
+      [[Potent Chaotic Resonator]] and use it on the belt.
+    why: >-
+      Pristine reads "More Life modifiers, No Defence modifiers". On a belt
+      the Defence modifiers are Armour and Energy Shield, 38% of all prefix
+      rolls and exactly the ones a life build does not want; they are gone.
+      Life gets ten tickets for every one it had.
+
+
+      Prismatic reads "More Elemental modifiers". In the 3.30 data its
+      multiplier is six, not ten, and on a belt's suffix side the elemental
+      modifiers are the three resistances.
+
+
+      You need a Resonator with two sockets. By long-standing behaviour that
+      is the Potent size; the item shows how many Fossils it holds.
+    check: >-
+      No Armour and no Energy Shield anywhere on the result. If either
+      appears, the Pristine Fossil was not in the Resonator.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "27% increased Flask Life Recovery rate", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "Regenerate 41.3 Life per second", how: fossil }
+        - { text: "+33% to Fire Resistance", how: fossil }
+  - title: "Read the result in two passes"
+    do: >-
+      **Prefixes:** is there maximum Life of 100 or more? **Suffixes:** are
+      there two elemental resistances, at tiers you decided on beforehand?
+    why: >-
+      The belt above passes neither, and it shows the two ways this craft
+      misses. "More Life modifiers" also multiplies flask Life recovery and
+      Life regeneration, which carry the life tag. And "increased Fire
+      Damage" is a prefix that only rolls during a Fossil craft; the
+      Prismatic Fossil multiplies it along with the resistances.
+    check: >-
+      Count open slots as well. One open slot on either side is where the
+      bench will go.
+    fail: >-
+      Load another pair. A miss costs two Fossils and a Resonator and leaves
+      nothing to repair.
+  - title: "Repeat until both passes are met"
+    do: >-
+      Keep going until one result has the Life and both resistances.
+    why: >-
+      The Fossils make each of the three things you want likely, and you
+      are waiting for all three at once. If the Fossils run short, lower the
+      bar to Life and one good resistance with a suffix slot open: the bench
+      sells the second at 29–35%.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "22% increased Cold Damage", how: fossil }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+37% to Lightning Resistance", how: fossil }
+        - { text: "Regenerate 58.6 Life per second", how: fossil }
+  - title: "Bench the open slot"
+    do: >-
+      Here the open slot is a prefix: craft 12–14% increased Damage for 4
+      [[Chaos Orb]]s. With an open suffix instead, craft the third
+      resistance, 29–35% for 3 Chaos Orbs.
+    why: >-
+      The bench goes last, when you can see which side has room. The two
+      Fossils did the part the bench cannot do at full strength, which is
+      Life and high resistances.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "22% increased Cold Damage", how: fossil }
+        - { text: "13% increased Damage", how: crafted }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+37% to Lightning Resistance", how: fossil }
+        - { text: "Regenerate 58.6 Life per second", how: fossil }
+variations: >-
+  **The Pristine Fossil alone.** In a [[Primitive Chaotic Resonator]] it
+  makes Life about two thirds of prefix rolls, the best this side can be.
+  The suffix side fills with Life regeneration and only about one suffix in
+  seven is a resistance, so use it when the resistances will come from the
+  bench or you want the regeneration.
+
+
+  **Resistances without Delve.** On a belt a Harvest reforge that includes a
+  Fire, Cold or Lightning modifier (50 Lifeforce) always gives that
+  resistance: it is the only modifier with the tag. That reforge does
+  nothing for Life.
+
+
+  **When the prefixes are right and the suffixes are filler.** Keep the belt.
+  The next example rebuilds the suffix side under a lock.
+mistakes:
+  - "Using these Fossils on an Energy Shield or Armour belt. The Pristine Fossil removes exactly those prefixes."
+  - "Expecting ten times the resistances. The Prismatic Fossil's multiplier is six in the 3.30 data."
+  - "Keeping Life of 60 because the resistances were good. A third of Life rolls are over 100; another attempt is cheap."
+  - "Putting [[Memory Strands]] on the base first. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, tags, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The cost of the elemental reforges mentioned as an alternative." }

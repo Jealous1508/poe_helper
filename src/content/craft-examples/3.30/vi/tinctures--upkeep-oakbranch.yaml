@@ -1,0 +1,140 @@
+category: tinctures
+title: "Một tincture bật suốt được: cả hai ô cho duy trì"
+level: 2
+summary: "Các modifier duy trì là những cái dễ ra, nên đây là lần craft mà đòi cùng lúc một prefix và một suffix vẫn còn rẻ."
+goal: >-
+  Một Oakbranch Tincture dựng để bật mãi: ít Mana Burn hơn ở prefix, mana
+  trả về mỗi lần giết quái ở suffix. Tincture đầu tiên nhận prefix nào cũng
+  được. Cái này đòi **cả hai ô cùng lúc**, và bài học là vì sao điều đó ở
+  đây thì kham nổi mà ở chỗ khác lại đắt: bạn đang đòi những modifier có
+  weight cao nhất ở mỗi phía.
+base: "Oakbranch Tincture"
+itemLevel: 82
+baseWhy: >-
+  Implicit của Oakbranch Tincture là "Gain 3 Rage on Melee Weapon Hit": một
+  con số cố định, nên không có roll implicit nào để so và cái trắng nào cũng
+  được. Nó là tincture xuất hiện sau cùng, từ level 60. Một nhân vật Rage
+  muốn nó chạy càng lâu càng tốt, vì thế duy trì là thứ cần craft. Item
+  level 82 mở tier tốt nhất của cả hai mục tiêu: 26–24% reduced Mana Burn
+  rate (cần 80) và 9–11 Mana per Enemy Killed (cần 82).
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+  prefixes:
+    - { text: "24% reduced Mana Burn rate" }
+  suffixes:
+    - { text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "40–80" }
+  - { item: "[[Orb of Augmentation]]", amount: "5–10" }
+  - { item: "[[Glassblower's Bauble]]", amount: "tới 20%" }
+cost: >-
+  Vài chục [[Orb of Alteration]]. Không có bước bench và không có beast: dữ
+  liệu 3.30 không cho tincture thứ gì ngoài ba orb.
+odds: >-
+  Ở item level 82, theo phép tính của chúng tôi từ weight, một lần roll
+  prefix ra reduced Mana Burn rate từ 21% trở lên khoảng 1 trên 5 lần
+  (18.9%): nó là họ prefix có weight cao nhất, và đó là hai tier tốt nhất
+  trong bốn tier của nó. Một lần roll suffix ra Mana per Enemy Killed, ở
+  tier bất kỳ, khoảng 1 trên 7 lần (14.4%).
+
+
+  Bạn cần cả hai trên cùng một kết quả, nên nhân lại: khoảng 1 trên 37 lần
+  thử. Đòi từ 6 mana trở lên, tức hai tier tốt nhất, thì là khoảng 1 trên
+  74. Để so sánh, riêng một suffix damage tier tốt nhất đã là 1 trên 63 lần
+  roll suffix ở item level 85.
+steps:
+  - title: "Đặt cả hai mức"
+    do: >-
+      Trước orb đầu tiên, hãy viết ra thế nào là đạt. Prefix: reduced Mana
+      Burn rate, từ 21% trở lên. Suffix: Gain Mana per Enemy Killed with
+      Melee Weapons, tier nào cũng được.
+    why: >-
+      Mana Burn, đúng như tên gọi, được trả bằng mana, và nó là lý do
+      tincture tắt. Prefix làm chi phí đó chậm lại và suffix trả lại một
+      phần trong lúc bạn clear. Với hai mức, mỗi Alteration được chấm trên
+      hai dòng, và bạn cần một quy tắc áp dụng được trong một giây.
+    state:
+      rarity: normal
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+  - title: "Transmutation, rồi Alteration, đọc cả hai dòng"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Sau
+      mỗi cái, so prefix với mức của nó và suffix với mức của nó.
+    why: >-
+      Kết quả bên dưới là kiểu khiến người ta dừng quá sớm: tier tốt nhất
+      của hai modifier tốt. Không cái nào nằm trong danh sách. Cooldown ngắn
+      hơn giúp sau khi tincture đã tắt, mà mục tiêu bạn đặt ra là không để
+      nó tắt.
+    check: >-
+      Chấm theo mức, không chấm theo tier. Một modifier tier tốt nhất mà làm
+      sai việc là một lần trượt.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "30% increased Cooldown Recovery Rate" }]
+      suffixes: [{ text: "Gain 28 Life per Enemy Killed with Melee Weapons" }]
+  - title: "Chỉ Augmentation khi nửa bạn đang có đạt mức"
+    do: >-
+      Khi một Alteration cho một modifier và nó đạt mức của mình, dùng một
+      [[Orb of Augmentation]] lên ô trống. Khi modifier duy nhất đó không
+      đạt, đừng dùng Augmentation: dùng Alteration kế tiếp.
+    why: >-
+      Augmentation là một lần roll cho nửa còn thiếu. Nó chỉ đáng dùng khi
+      nửa bạn đang cầm là nửa bạn sẽ giữ. Ở đây Alteration cho riêng prefix,
+      và nó đạt.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+  - title: "Nửa còn lại"
+    do: >-
+      Dùng Augmentation và đọc suffix.
+    why: >-
+      Một lần roll suffix, khoảng 1 trên 7 là đạt. Lần này nó đạt.
+    fail: >-
+      Sáu trên bảy lần thì không. Giờ tincture có hai modifier và một cái
+      sai, nên nó quay về bước 2: Alteration roll lại cả hai. Đừng tiếc cái
+      prefix. Nó là 1 trên 5 lần roll.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+      suffixes: [{ text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }]
+  - title: "Quality"
+    do: >-
+      Đưa tincture lên 20% quality bằng [[Glassblower's Bauble]].
+    why: >-
+      Mô tả của Bauble có bao gồm tincture, tối đa 20%. Đây là bước hoàn
+      thiện duy nhất dữ liệu cho item này, nên nó dành cho cái bạn sẽ giữ.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+      suffixes: [{ text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }]
+variations: >-
+  **Duy trì gói trong một prefix.** "Reduced effect kèm 50% reduced Mana
+  Burn rate" cắt chi phí mạnh gấp đôi tier thuần tốt nhất và lấy theo 21%
+  tới 35% effect của tincture. Reduced effect làm gì với một dòng flat "Gain
+  3 Rage" thì chúng tôi không xác định được từ dữ liệu, nên hãy thử trên
+  chính nhân vật của bạn trước khi dựa vào nó.
+
+
+  **Boss, không phải pack.** Mana khi giết quái không trả gì trong một trận
+  chỉ có một kẻ địch. "Gain Mana per Enemy Hit with Melee Weapons" thì có,
+  và nó hiếm hơn bốn lần: 3.6% số lần roll suffix ở item level này, với 1
+  tới 2 mana mỗi hit.
+
+
+  **Nếu mana chưa bao giờ là vấn đề.** Vậy thì đây là lần craft sai. Hãy đặt
+  một suffix damage lên tincture và lấy increased effect thuần ở prefix, như
+  trong ví dụ kế tiếp.
+mistakes:
+  - "Giữ hai modifier tier tốt nhất nhưng làm việc khác với việc bạn đã viết ra."
+  - "Dùng Augmentation lên một kết quả mà modifier duy nhất của nó đã không đạt. Nó không sửa được nửa đang có."
+  - "Dùng Alteration để đuổi theo tier suffix tốt hơn khi cả hai nửa đã đạt. Nó roll lại cả prefix."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Base, implicit, tier, item level và weight, và mô tả của Glassblower's Bauble. Xác suất là phép tính của chúng tôi." }

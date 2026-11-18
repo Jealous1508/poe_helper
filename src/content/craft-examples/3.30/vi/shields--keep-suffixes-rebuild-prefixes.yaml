@@ -1,0 +1,209 @@
+category: shields
+title: "Giữ một phía suffix hiếm, dựng lại prefix"
+level: 4
+summary: "Một cái shield có +2% to all maximum Resistances và các prefix vô giá trị. Khóa suffix, reforge lấy một modifier Life, và hiểu vì sao công cụ hiển nhiên cho life lại là cái bạn không được dùng."
+goal: >-
+  Biến một cái tower shield có phía suffix đáng bảo vệ và phía prefix không
+  đáng gì thành một item hoàn chỉnh. Trên áo giáp, việc này tốn một Eldritch
+  Chaos Orb. Shield không nhận được Eldritch implicit, nên ở đây đây là lần
+  craft đầu tiên bạn **trả tiền cho một modifier bảo vệ**, và toàn bộ ví dụ
+  xoay quanh việc modifier đó che được gì, không che được gì, và item có xứng
+  với nó không.
+base: "Colossal Tower Shield"
+itemLevel: 84
+baseWhy: >-
+  Lần craft này bắt đầu từ một item bạn nhặt được hoặc mua: một Colossal
+  Tower Shield Rare (522–601 Armour, 23% block) có các suffix là "+2% to all
+  maximum Resistances", một resistance cao và Physical Damage Reduction. Cái
+  đầu tiên trong số đó cần item level 81 và là lý do cái shield có giá trị.
+  Item level 84 không thay đổi gì với các prefix bạn sắp roll: life của
+  shield dừng ở 145–159, chỉ cần 73.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["+15 to maximum Life"]
+  prefixes:
+    - { text: "+133 to maximum Life", how: harvest }
+    - { text: "+178 to Armour", how: harvest }
+    - { text: "46% increased Chance to Block", how: crafted }
+  suffixes:
+    - { text: "+2% to all maximum Resistances" }
+    - { text: "+44% to Fire Resistance" }
+    - { text: "7% additional Physical Damage Reduction" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần thử" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho craft bench cuối cùng" }
+cost: >-
+  Khóa: 4 [[Divine Orb]] và 4 [[Blessed Orb]] trên shield trong 3.30, và mỗi
+  lần reforge đều tiêu mất nó. Lifeforce chẳng là gì khi đặt cạnh. Hãy tính
+  là sẽ trả tiền khóa ba hoặc bốn lần với ngưỡng đặt bên dưới, và chốt giới
+  hạn trước lần đầu tiên.
+odds: >-
+  Khi suffix đã khóa, reforge Life buộc phải đặt một modifier mang tag life
+  vào phía prefix, và tower shield có hai cái: maximum Life và hybrid nhỏ
+  Armour kèm Life. Nếu reforge chọn theo weight, đúng như cách người ta vẫn
+  hiểu về reforge, thì modifier được đảm bảo là maximum Life 79% số lần; life
+  từ 100 trở lên 29%, từ 130 trở lên 14%, và tier cao nhất 7%. Đó là phép
+  tính của chúng tôi dựa trên weight bằng nhau giữa các tier ở item level 84,
+  không phải một phép đo.
+
+
+  Các prefix khác mà reforge roll ra là may rủi thông thường. Bản thân việc
+  khóa trụ được là do người chơi thử nghiệm, không phải điều được ghi thành
+  tài liệu.
+steps:
+  - title: "Định giá phía bạn muốn giữ"
+    do: >-
+      Đọc suffix và hỏi roll lại chúng thì tốn bao nhiêu. Rồi đọc prefix và
+      hỏi cái shield đáng giá bao nhiêu ở hiện trạng cộng một craft bench.
+    why: >-
+      "+2% to all maximum Resistances" có weight 125 trong khi một resistance
+      có weight 1,000: khoảng 1 trên 600 lần roll suffix trên cái shield này,
+      theo phép tính của chúng tôi. Với một resistance 44% và 7% Physical
+      Damage Reduction bên cạnh, phía suffix này sẽ tốn hơn nhiều so với vài
+      lần khóa mới thấy lại được. Đó là phép thử, và item này vượt qua.
+
+
+      Giờ tới mốc so sánh. Không cần khóa gì, bench đặt +56–70 maximum Life
+      vào prefix trống với giá 4 Orb of Alchemy và cái shield dùng được. Mọi
+      thứ bên dưới phải hơn mốc đó đủ nhiều để xứng với giá của nó.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "Reflects 29 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Loại những công cụ sẽ phá hỏng nó"
+    do: >-
+      Trước khi chọn phương pháp, gạch ba thứ khỏi danh sách: Essence of
+      Greed, công thức beast thêm một prefix, và các khóa rẻ hơn.
+    why: >-
+      **Essence of Greed** là cách tự nhiên để đặt life lên shield, và nó
+      đúng là thứ bạn không được dùng: Essence roll lại cả hai phía và được
+      ghi nhận là phớt lờ các modifier bảo vệ.
+
+
+      **"Add a Prefix, Remove a Random Suffix"** gỡ một trong ba suffix mà
+      bạn tới đây để giữ.
+
+
+      **"1 Suffix Modifier cannot be changed" và "2 Suffix Modifiers cannot
+      be changed"** tốn 1 và 2 Divine Orb, nhưng nhà phát triển đã nói game
+      chọn ngẫu nhiên suffix nào được bảo vệ và không có gì báo cho bạn biết.
+      Với ba suffix đều quan trọng, chỉ khóa đầy đủ mới an toàn.
+  - title: "Kiểm xem còn prefix trống không, rồi craft khóa"
+    do: >-
+      "Suffix Modifiers cannot be changed" tự nó là một **prefix**, nên
+      shield cần một ô prefix trống. Khi có một ô trống, craft nó ở
+      [[Crafting Bench]]: 4 [[Divine Orb]] và 4 [[Blessed Orb]].
+    why: >-
+      Chừng nào nó còn trên item, một lần roll lại tôn trọng nó sẽ để ba
+      suffix y nguyên.
+    fail: >-
+      Ba prefix mà không cái nào là modifier bench: không có ô cho khóa, và
+      cách duy nhất để tạo ra một ô là [[Orb of Annulment]], thứ gỡ ngẫu
+      nhiên một trong sáu modifier và một nửa số lần sẽ trúng suffix. Đừng
+      làm. Bán cái shield cho ai đó, hoặc dùng nó.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "Reflects 29 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Reforge kèm một modifier Life"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]).
+    why: >-
+      Reforge thay mọi thứ nó được phép đụng tới: hai prefix tệ và chính cái
+      khóa, vốn bị tiêu mất. Nó buộc phải gồm một modifier mang tag life.
+      Trên tower shield không khóa, đó có thể là life regeneration, một
+      suffix. Khi suffix đã đóng, chỉ còn lại hai prefix life. **Khóa không
+      chỉ bảo vệ một phía; nó còn thu hẹp những gì reforge có thể chọn.**
+    check: >-
+      Cả ba suffix không đổi, khóa đã biến mất, và có một prefix life. Đọc
+      tier của nó: "Vigorous" là 145–159, "Fecund" 130–144, "Athlete's"
+      115–129, "Virile" 100–114.
+    fail: >-
+      Nếu một suffix đã đổi thì khóa đã không trụ được, và điều đó có nghĩa
+      là luật do người chơi thử nghiệm không còn đúng nữa. Dừng lại, và thử
+      trên một cái shield rẻ trước khi tiêu thêm.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "+133 to maximum Life", how: harvest }
+        - { text: "+178 to Armour", how: harvest }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+  - title: "Đánh giá theo giới hạn bạn đã đặt"
+    do: >-
+      Giữ kết quả nếu life ở tier bạn đã quyết từ trước. Một ngưỡng hợp lý:
+      **từ 100 trở lên, với một ô prefix còn trống hoặc đã được lấp bằng thứ
+      hữu dụng.** Nếu không, quay lại bước khóa và trả tiền lần nữa.
+    why: >-
+      Mỗi lần lặp lại là thêm 4 Divine Orb và 4 Blessed Orb. Ngưỡng 100 life
+      đạt được khoảng 3 trên 10 lần thử chỉ tính riêng modifier được đảm bảo,
+      và nó đã hơn mốc so sánh của bench một khoảng xa. Tier cao nhất là 1
+      trên 14 lần thử: đuổi theo nó sẽ biến một lần craft hợp lý thành một
+      lần craft đắt đỏ.
+    check: >-
+      Một prefix trống đáng giá hơn một prefix thứ ba làng nhàng. Bench lấp
+      nó bằng block.
+  - title: "Bench block"
+    do: >-
+      Ở prefix trống, craft **41–50% increased Chance to Block** giá 3
+      [[Chaos Orb]].
+    why: >-
+      Block là prefix phòng thủ duy nhất mà reforge chưa mang tới còn bench
+      thì bán ở mức hữu dụng. Nó là local: trên 23% của Colossal, mức tăng
+      46% cho ra khoảng 34%.
+    state:
+      implicits: ["+15 to maximum Life"]
+      prefixes:
+        - { text: "+133 to maximum Life", how: harvest }
+        - { text: "+178 to Armour", how: harvest }
+        - { text: "46% increased Chance to Block", how: crafted }
+      suffixes:
+        - { text: "+2% to all maximum Resistances" }
+        - { text: "+44% to Fire Resistance" }
+        - { text: "7% additional Physical Damage Reduction" }
+variations: >-
+  **Một reforge Defence** (75 Primal Lifeforce) dưới cùng lớp khóa đó thì đảm
+  bảo một prefix Armour thay vào. Dùng nó khi bench sẽ là thứ cấp life.
+
+
+  **Scour, rồi dựng.** Khi suffix đã khóa, một [[Orb of Scouring]] được ghi
+  nhận là chỉ gỡ prefix và cái khóa. Khi phía suffix đã đầy, mỗi
+  [[Exalted Orb]] sau đó buộc phải thêm một prefix, theo weight thông thường:
+  life là 1 trên 5. Một lần khóa thay vì vài lần, và không có gì đảm bảo.
+
+
+  **Trường hợp đối xứng.** Ba prefix tốt và suffix tệ: "Prefix Modifiers
+  cannot be changed" là một suffix, cùng giá, và reforge nên dùng là cái có
+  tag khớp với ít suffix nhất. Trên tower shield, reforge Critical chỉ có thể
+  là reduced Extra Damage from Critical Strikes; reforge Chaos là Chaos
+  Resistance hoặc, 1 trên 5 lần, maximum Chaos Resistance.
+mistakes:
+  - "Dùng Essence lên cái shield đã khóa. Nó là công cụ tự nhiên cho life và cũng là công cụ duy nhất được ghi nhận là phớt lờ khóa."
+  - "Khóa một phía suffix chỉ ở mức tốt. Ba resistance thông thường có thể roll lại với giá thấp hơn một lần khóa."
+  - "Craft khóa rẻ cho một hoặc hai suffix khi có ba suffix cần giữ. Nó bảo vệ cái nào là ngẫu nhiên và không được hiển thị."
+  - "Bench vào prefix trống trước khi khóa. Khóa cần ô đó, và một item giữ một modifier bench."
+  - "Nâng ngưỡng sau mỗi lần suýt được. Hãy đặt tier và số lần thử trước."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, tag trên từng modifier và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên shield." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Life, Defence, Critical và Chaos cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest và Orb of Scouring tôn trọng một phía đã khóa; Essence thì không. Một phần cũ hơn 3.30." }

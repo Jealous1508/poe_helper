@@ -1,0 +1,483 @@
+name: "Sceptres"
+short: "The elemental one-hander: a caster weapon and an elemental attack weapon sharing one pool, on bases with up to 40% increased Elemental Damage built in."
+icon: "Void Sceptre"
+intro: >-
+  A sceptre is two weapons in one pool. For a **spellcaster** it carries
+  Spell Damage, levels of spell gems, added damage to spells, cast speed and
+  spell crit. For an **elemental attacker** it carries added Fire, Cold and
+  Lightning Damage, increased Elemental Damage with Attack Skills and attack
+  speed. The implicit, increased Elemental Damage, serves both.
+
+
+  That double pool is the first thing to understand, because whichever of
+  the two you are building, the other one's modifiers are in your way: about
+  44% of the prefix weight is attack modifiers and 35% is caster modifiers.
+  The physical-weapon logic of multiplying a base does not apply to either
+  build in the usual way. A caster uses nothing local at all. An elemental
+  attacker uses the base's attack speed and crit, but its damage comes from
+  what is added, not from the base's physical numbers.
+basics:
+  itemLevel:
+    text: >-
+      The two builds need different item levels. A **caster** sceptre tops
+      out at 84, where the best tier of Spell Damage and of Fire, Cold and
+      Lightning Damage opens; 76 covers most of what a mapping weapon uses.
+      An **attack** sceptre wants 77 for attack speed, 82 for the top added
+      elemental damage, and 86 only for the last tier of Elemental Damage
+      with Attack Skills.
+
+
+      The gem-level prefixes for one damage type have a single tier at item
+      level 2. As on rune daggers, a low base makes them easier to roll,
+      not weaker.
+    breakpoints:
+      - ilvl: 46
+        unlocks: "Tier 4 of Spell Damage and of Fire, Cold and Lightning Damage (all 55–69%). **Levelling.**"
+      - ilvl: 55
+        unlocks: "\"+1 to Level of all Spell Skill Gems\" (weight 50). Tier 3 cast speed (21–24%)."
+      - ilvl: 64
+        unlocks: "Tier 2 Spell Damage and Tier 2 elemental damage (85–99%). Tier 2 Fire and Cold Damage over Time Multiplier (+29–33%)."
+      - ilvl: 74
+        unlocks: "Tier 1 added damage to spells (Fire: adds 62–84 to 124–146). Tier 2 added Fire and Lightning Damage for attacks."
+      - ilvl: 77
+        unlocks: "Tier 1 attack speed (26–27%). Tier 1 Spell Critical Strike Chance opened at 76 and both crit suffixes at 73. **Enough for most sceptres of either kind.**"
+      - ilvl: 82
+        unlocks: "Tier 1 added Fire, Cold and Lightning Damage for attacks (Lightning: adds 15–21 to 296–344)."
+      - ilvl: 84
+        unlocks: "Tier 1 Spell Damage and Tier 1 Fire, Cold and Lightning Damage (100–109%); Tier 1 cast speed (29–32%) opened at 83. **The caster ceiling.**"
+      - ilvl: 86
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (51–59%). **The attack ceiling.**"
+  bases:
+    text: >-
+      Twenty-eight sceptres, one pool, the same weights on all of them. The
+      base decides the implicit and, for attackers, the speed and crit.
+      Every sceptre needs Strength and Intelligence.
+    types:
+      - title: "Ordinary sceptres"
+        pools: [all]
+        text: >-
+          Twenty-two bases with increased Elemental Damage as the implicit.
+          The value is fixed per base and does not rise evenly with level:
+          10% on the Driftwood Sceptre, 30% on the Crystal Sceptre at level
+          41, 40% on the Opal Sceptre at 60 and the Void Sceptre at 68. This
+          pool also holds the Maraketh and Heist sceptres below.
+      - title: "Maraketh sceptres"
+        text: >-
+          Horned, Stag and Sambar Sceptre. Implicit: "Damage Penetrates 4%
+          Elemental Resistances", 6% on the Sambar Sceptre. Penetration is
+          worth more than increased damage to a build that already has a
+          lot of increases.
+      - title: "Heist sceptres"
+        text: >-
+          Oscillating, Stabilising and Alternating Sceptre. Each grants a
+          keystone as its implicit: Elemental Overload, Elemental
+          Equilibrium and Secrets of Suffering. They attack 1.45 times per
+          second. Take one only when the build is designed around that
+          keystone.
+    picks:
+      - base: "Void Sceptre"
+        for: "The default endgame sceptre"
+        why: >-
+          40% increased Elemental Damage, the highest implicit, on a base
+          that drops from level 68 and so is easy to find at high item
+          levels. 7.3% base crit and 1.25 attacks per second for attackers.
+          Needs 122 Intelligence and 104 Strength.
+      - base: "Opal Sceptre"
+        for: "The same implicit, earlier"
+        why: >-
+          40% increased Elemental Damage from level 60, with 8% base
+          critical strike chance, the highest on a sceptre. The better of
+          the two for a crit attacker; heavier on Intelligence (131).
+      - base: "Sambar Sceptre"
+        for: "Penetration"
+        why: >-
+          Damage Penetrates 6% Elemental Resistances, where crafting can
+          only add penetration through an Essence or influence. 1.3
+          attacks per second.
+      - base: "Karui Sceptre"
+        for: "Fast elemental attacks"
+        why: >-
+          1.5 attacks per second, as fast as a sceptre gets, with a 26%
+          implicit. Added elemental damage counts once per hit, so speed
+          multiplies it.
+      - base: "Crystal Sceptre"
+        for: "Levelling"
+        why: >-
+          30% increased Elemental Damage at level 41, far above its
+          neighbours (the Lead Sceptre three levels later has 22%). The
+          sceptre to pick up and craft in the middle of the campaign.
+    impact: >-
+      **The implicit**, which is most of the decision. Increased Elemental
+      Damage from 10% to 40%, penetration, or a keystone. It is a fixed
+      number on ordinary sceptres, so there is nothing to reroll; a
+      [[Vaal Orb]] can replace it with a corruption implicit and closes the
+      item.
+
+
+      **For attackers: speed and crit.** Attack speed is local and
+      multiplies the base's 1.2 to 1.5 attacks per second. Critical Strike
+      Chance multiplies its 7% to 8%. The base's physical damage matters
+      little to an elemental build.
+
+
+      **For casters: nothing else.** Damage, speed, crit and quality of the
+      base do not reach a spell.
+
+
+      **Not the pool.** Every sceptre rolls the same modifiers.
+tools:
+  - method: currency
+    note: >-
+      At item level 84, by our arithmetic from the weights, the prefix
+      lottery is: attack modifiers 44% (added elemental damage for attacks
+      23%, the physical families 17%), caster modifiers 35% (added damage
+      to spells 20%, Spell Damage 9%, the Mana hybrid 4%, gem levels 1.1%),
+      maximum Mana 12%, and the three elemental damage prefixes 9%.
+
+
+      Those elemental prefixes are the sceptre's own, and their top is the
+      lightest thing here: Tier 1 Fire Damage has a weight of 12, 1 prefix
+      roll in 7,284. Tier 3 or better of one element is 1 in 433; Tier 3 or
+      better of Spell Damage is 1 in 127. A named gem level is 1 in 350.
+      [[Orb of Alteration]]s are for the middle tiers of this item and for
+      one modifier at a time.
+  - method: bench
+    note: >-
+      Both builds are served. **Casters:** Spell Damage or Fire, Cold or
+      Lightning Damage at 35–44% for 8 Orbs of Alteration, 45–54% for 4
+      Chaos Orbs (Spell Damage 55–66% for 4 Exalted Orbs); with a chance
+      to Ignite, Freeze or Shock, 51–60% for 8 Chaos Orbs. Added Fire Damage
+      to Spells 34–45 to 67–78 for 4 Chaos Orbs. Cast speed 14–17% for 2
+      Chaos Orbs. Spell crit 60–69% for 3. **Attackers:** added Fire or Cold
+      Damage 35–41 to 63–73 for 4 Chaos Orbs; Elemental Damage with Attack
+      Skills 24–32% for 4 Orbs of Alchemy; attack speed 11–15% for 2 Chaos
+      Orbs. **Both:** Critical Strike Multiplier 25–28% for 4 Chaos Orbs.
+
+
+      Groups: rolled Spell Damage, rolled Fire, Cold and Lightning Damage,
+      and every bench craft of those kinds are **one group**. A sceptre has
+      one of them. The Mana hybrid, added damage to spells, each element of
+      added attack damage, and Elemental Damage with Attack Skills are each
+      a group of their own.
+  - method: finishing
+    note: >-
+      Quality raises physical damage only, so it is skipped by casters and
+      nearly irrelevant to elemental attackers. Three sockets at most. The
+      implicit is a fixed value on ordinary sceptres; a [[Blessed Orb]]
+      has nothing to do.
+  - method: essence
+    note: >-
+      Sceptres have a full Essence table. For casters: **Woe** gives Spell
+      Damage, 83–94% at Deafening, between natural Tier 3 and Tier 2.
+      **Scorn** gives Spell Critical Strike Chance, 110–119% at Deafening,
+      above natural Tier 1. **Misery** gives cast speed, 29–32% at
+      Deafening, equal to Tier 1 without needing item level 83.
+      **Anguish, Suffering and Torment** give added Fire, Cold and
+      Lightning Damage to Spells at Tier 1 values.
+
+
+      For attackers: **Anger, Hatred and Wrath** give added Fire, Cold and
+      Lightning Damage (Deafening Wrath: 13–19 to 266–310), and **Zeal**
+      attack speed, 28–30% at Deafening.
+
+
+      For both: **Rage, Sorrow and Spite** give "Damage Penetrates 8% Fire,
+      Cold or Lightning Resistance" at Deafening, a prefix the natural pool
+      does not have.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) for any Magic sceptre with a gem
+      level or a high damage prefix. It also has a second use here: an
+      Imprint returns the sceptre to a state with exactly one prefix, which
+      is the state in which the 1 Divine Orb lock is certain.
+  - method: harvest
+    note: >-
+      **Caster** (75 Primal Lifeforce): the guaranteed modifier is a caster
+      prefix about two times in three, and cast speed or Spell Critical
+      Strike Chance otherwise. **Speed** (150 Vivid) has two carriers on a
+      sceptre, attack speed and cast speed, at 9 to 8. **Critical** (150
+      Primal) has three: attack crit, spell crit and the multiplier.
+      **Fire, Cold, Lightning** (50 each) are crowded: five or six kinds
+      of modifier carry each element's tag.
+
+
+      Since 3.27 these reforges respect "Cannot roll Attack Modifiers" and
+      "Cannot roll Caster Modifiers", which removes the other build's half
+      from whatever they roll.
+  - method: fossil
+    note: >-
+      One Fossil per build. An [[Aetheric Fossil]] (more Caster, fewer
+      Attack) makes about 92% of prefix rolls caster modifiers and cast
+      speed plus spell crit 76% of suffix rolls. A [[Serrated Fossil]] is
+      its mirror for attackers, and with a [[Prismatic Fossil]] beside it
+      added elemental damage for attacks is about 78% of prefix rolls.
+
+
+      Note what the Aetheric Fossil does to the sceptre's own prefixes:
+      increased Fire, Cold and Lightning Damage have no caster tag, so they
+      are not multiplied and become rare by comparison. A caster who wants
+      one of those uses the element's Fossil instead, or the bench. The
+      figures follow the model of one multiplication per matching tag;
+      treat them as close.
+  - method: veiled
+    note: >-
+      Unveiled prefixes for sceptre users: 70–79% Fire, Cold or Lightning
+      Damage with a 21–23% chance to Ignite, Freeze or Shock; 70–79% Spell
+      Damage with Mana Regeneration; 60–69% Spell Damage with 5% of
+      Non-Chaos Damage as extra Chaos Damage; and for attackers 14–16%
+      elemental penetration for attacks with the weapon. The damage ones
+      share the Spell Damage group. Suffixes: +24–28% to Fire or Cold
+      Damage over Time Multiplier, 18–22% cast speed with Arcane Surge.
+  - method: fracture
+    note: >-
+      Worth fracturing: a gem level, or a Tier 1 or 2 elemental damage
+      prefix, whose weights (12 and 40) put them out of reach of repeated
+      rolling. A fractured sceptre cannot take influence, by reference
+      pages.
+  - method: meta
+    note: >-
+      On a sceptre both "Cannot roll" modifiers have a job, one per build.
+      **"Cannot roll Attack Modifiers"** removes 44% of the prefix weight
+      and a third of the suffix weight for a caster.
+      **"Cannot roll Caster Modifiers"** removes 35% of the prefix weight
+      for an attacker, and cast speed and spell crit from the suffixes.
+      Each is 1 Divine Orb and a suffix, and each only limits what can be
+      **added**, by an Exalted Orb or a reforge.
+
+
+      Since 3.30 neither stops an [[Orb of Annulment]] from removing a
+      modifier of its kind. Any technique that relied on that is dead.
+
+
+      The partial locks, new in 3.30, suit this item: "1 Prefix Modifier
+      cannot be changed" costs 1 Divine Orb and is certain when the
+      sceptre has exactly one prefix; the full lock is 4 Divine Orbs and 1
+      [[Sacred Orb]].
+  - method: influence
+    note: >-
+      Penetration is the theme. Hunter: "Attacks with this Weapon Penetrate
+      10–12% Elemental Resistances" and "Damage Penetrates 6% Elemental
+      Resistances". Crusader, Warlord and Redeemer: 13–15% penetration of
+      one element for attacks with the weapon, 8% for all damage, and added
+      damage to spells with 4% penetration. Also Warlord's 90–94% increased
+      Burning Damage, Hunter's "Ignites you inflict deal Damage 13–15%
+      Faster", Redeemer's "Spells have a 6–7% chance to deal Double
+      Damage", and one aura's effect at 34–40% per influence. The aura
+      suffixes all share a group: one per item. An [[Awakener's Orb]]
+      joins two influences on one sceptre.
+  - method: corruption
+    note: >-
+      Corruption implicits for sceptres include "+1 to Level of all Fire,
+      Cold or Lightning Spell Skill Gems", a third gem level in place of
+      the elemental damage; 15–20% increased Area of Effect; 14–18% cast
+      speed; and a 10–15% chance for enemies you kill to explode.
+  - method: strands
+    note: "See the Memory Strands section below."
+memoryStrands: >-
+  The sceptre is a good home for strands, for one reason: its damage
+  prefixes are common families with almost empty tops. Spell Damage is 9% of
+  prefix rolls, and Tiers 1 to 3 are 690 of its 8,190 weight. Each elemental
+  damage prefix is 3%, with 202 of 2,702 in its top three. Strands, which
+  remove low tiers from whatever is rolled, act on exactly that.
+
+
+  The route is the cheap one: an [[Orb of Remembrance]] on a white item
+  level 84 base, [[Orb of Alteration]]s until the damage prefix lands (at
+  most 8 strands each by the data-mined table), then a [[Regal Orb]]. Watch
+  the cost the game shows on each orb.
+
+
+  They do nothing for a gem level, which has no tiers, and a Fossil or
+  Harvest craft neither uses nor spends them, by player testing. One Essence
+  can spend up to 80.
+reading:
+  intro: >-
+    Decide which sceptre you are looking at, caster or attack, and cross out
+    the other build's lines. Added damage with "to Spells" is a caster line;
+    without it, an attack line. Spell Damage, cast speed and Spell Critical
+    Strike Chance are caster lines; attack speed, plain Critical Strike
+    Chance and Accuracy are attack lines. Increased Fire, Cold or Lightning
+    Damage, the implicit and Critical Strike Multiplier serve both.
+  prefixes:
+    text: >-
+      **A caster** fills three slots from four kinds of prefix. Gem levels:
+      "+1 to Level of all Spell Skill Gems" and one of the four typed ones
+      (Fire, Cold, Lightning, Physical; sceptres have no Chaos version) are
+      different groups and stack. One modifier from the Spell Damage group,
+      which on a sceptre includes increased Fire, Cold and Lightning
+      Damage. The Mana hybrid, in its own group. Added damage to spells,
+      one element.
+
+
+      **An attacker** stacks added Fire, Cold and Lightning Damage, three
+      groups, and Elemental Damage with Attack Skills, a fourth. A single
+      element's increased damage prefix works for attacks too, and is the
+      one prefix both builds compete for.
+
+
+      Maximum Mana, 12%, is in everyone's way.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Every spell gains a level. Weight 50; its own group, so it stacks with a typed gem level."
+        aim: "One tier, +1 (ilvl 55)."
+      - mod: "+# to Level of all Fire / Cold / Lightning / Physical Spell Skill Gems"
+        why: "One group for the four. About 1 prefix roll in 350 each at item level 84, and far likelier on a low base."
+        aim: "One tier, +1 (ilvl 2)."
+      - mod: "#% increased Spell Damage"
+        why: "The caster's multiplier. Same group as the elemental damage prefixes below and as every bench damage craft."
+        aim: "T3, 70–84% (ilvl 58), or a Deafening Essence of Woe. T1 is 100–109% (ilvl 84)."
+      - mod: "#% increased Fire / Cold / Lightning Damage"
+        why: "As large as Spell Damage, and it counts for attacks and for damage over time as well as spells. A third as common as Spell Damage, with a far lighter top."
+        aim: "T3, 70–84% (ilvl 58), or the veiled 70–79%. T1 is 100–109% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "A second Spell Damage in a separate group."
+        aim: "T2, 37–43% (ilvl 58)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Spells"
+        why: "Flat damage for spells; one element per item. An Essence gives Tier 1 values."
+        aim: "T3 (Fire adds 38–51 to 77–88, ilvl 51)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "The attacker's damage. Three groups; a finished attack sceptre has two or three of them."
+        aim: "T3 (Lightning adds 10–14 to 197–229, ilvl 63). T1 needs ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Multiplies all added elemental damage on the character. 2% of prefix rolls; the bench sells 24–32%."
+        aim: "The bench, or T3, 37–42% (ilvl 60). T1 is 51–59% (ilvl 86)."
+  suffixes:
+    text: >-
+      Caster: cast speed (10% of rolls), Spell Critical Strike Chance (7%),
+      Critical Strike Multiplier (7%). Attacker: attack speed (11%),
+      Critical Strike Chance (7%) and the same multiplier. Every one of
+      them has evenly weighted tiers.
+
+
+      Damage-over-time builds have Fire and Cold Damage over Time
+      Multiplier here, very light at the top, plus the general multiplier
+      in a separate group. Chance to Ignite, Freeze and Shock are sceptre
+      suffixes that few builds need from a weapon.
+
+
+      Strength and Intelligence are the filler, and on an item that needs
+      over a hundred of each they are not always unwelcome.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "The caster's speed. An Essence of Misery fixes it at up to Tier 1 values."
+        aim: "T2, 25–28% (ilvl 72). T1 is 29–32% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "For crit casters. A Deafening Essence of Scorn gives 110–119%, above any natural tier."
+        aim: "T2, 80–89% (ilvl 59). T1 is 90–109% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "The one damage suffix both builds use. It has neither the caster nor the attack tag, so the aimed tools of either build pass it by; plan to bench it."
+        aim: "T2, 30–34% (ilvl 59), or the bench's 25–28%."
+      - mod: "#% increased Attack Speed"
+        why: "Local. The attacker's first suffix, and the most common suffix in the pool."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "The attack version: it applies to attacks with the sceptre and does nothing for spells."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "For ignite and burning builds. Weight 35 at Tier 1; the veiled 24–28% and the bench's 18–20% are the practical sources."
+        aim: "Veiled, or T3, 24–28% (ilvl 36)."
+approach:
+  principle: >-
+    **Pick one of the two builds and turn the other half of the pool off.**
+    Every strong sceptre craft begins by removing the modifiers that belong
+    to the build you are not making: a Fossil for full rerolls, a "Cannot
+    roll" modifier for additions and reforges. Then the caster rule applies,
+    gem levels before damage because the bench sells damage, or the
+    attacker's, added damage in two or three elements and the bench for the
+    multiplier.
+  order:
+    - title: "Caster or attacker, then the implicit"
+      text: >-
+        The 40% bases for most builds of either kind; Sambar for
+        penetration; a Heist base only for its keystone. Attackers look at
+        speed and crit as well.
+    - title: "Item level for the tiers you will actually roll"
+      text: >-
+        77 covers most sceptres. 84 for a caster chasing Tier 1 damage, 82
+        for an attacker chasing Tier 1 added damage. A low base on purpose
+        for a gem level on a levelling weapon.
+    - title: "Name the hard modifier and its tool"
+      text: >-
+        A gem level: Fossils by tag, or a low base. A high elemental damage
+        prefix: a strand base with Alterations, or accept the veiled 70–79%.
+        Spell crit above Tier 1, cast speed at Tier 1 values, penetration:
+        an Essence. Added attack damage at high tiers: Serrated and
+        Prismatic Fossils.
+    - title: "Protect by counting prefixes"
+      text: >-
+        One prefix worth keeping: the 1 Divine Orb lock is certain. Two:
+        the 2 Divine Orb lock. Three: the full lock. An Imprint of the
+        Magic item returns you to the one-prefix state after a failure.
+    - title: "Fill the rest with the other half switched off"
+      text: >-
+        Exalted Orbs and reforges under "Cannot roll Attack Modifiers" or
+        "Cannot roll Caster Modifiers". Recount the pool after every
+        modifier you add.
+    - title: "Bench the multiplier or the missing damage line"
+      text: >-
+        Critical Strike Multiplier for crit builds of either kind;
+        Elemental Damage with Attack Skills for attackers who rolled their
+        suffixes; a damage prefix for casters who rolled gem levels.
+  finishing: >-
+    The bench craft, then a [[Divine Orb]] if the main damage prefix sits
+    low in its tier. No quality for casters. If the sceptre is one of two
+    weapons, or sits beside a shield, check the character's Strength and
+    Intelligence before spending on anything else: a sceptre you cannot
+    equip is the most common finishing error in this category.
+  stopping: >-
+    A caster sceptre with one gem level, a damage prefix of 55% or more from
+    any source, cast speed and one more useful suffix is ready for red maps.
+    So is an attack sceptre with two added-damage prefixes at Tier 3 or
+    better, the bench's Elemental Damage with Attack Skills, attack speed
+    and one crit suffix.
+
+
+    The steps beyond are the second gem level, a Tier 1 or 2 elemental
+    damage prefix, and three rolled suffixes. Each costs as much as the
+    whole item below it. When a paid attempt has failed twice, price the
+    next one against simply buying the upgrade.
+special:
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Influence"
+    where: "8% from a Deafening Essence of Rage (Fire), Sorrow (Cold) or Spite (Lightning); 6% at Screaming. The same 8% exists as a Warlord, Redeemer or Crusader prefix at item level 78."
+  - mod: "#% increased Spell Critical Strike Chance (above Tier 1)"
+    source: "Essence"
+    where: "110–119% from a [[Deafening Essence of Scorn]]. The natural top tier is 90–109%."
+  - mod: "+# to Level of all Fire / Cold / Lightning Spell Skill Gems (implicit)"
+    source: "Corruption"
+    where: "A corruption implicit from a [[Vaal Orb]], replacing the elemental damage implicit. Stacks with both gem-level prefixes."
+  - mod: "#% increased Fire Damage / #% chance to Ignite"
+    source: "Veiled / Bench"
+    where: "Unveiled: 70–79% with 21–23%. Bench: 51–60% with 18–20% for 8 Chaos Orbs. Cold with Freeze and Lightning with Shock likewise. Spell Damage group."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Veiled / Bench / Hunter influence"
+    where: "14–16% unveiled; 11–13% from the bench for 4 Exalted Orbs; 10–12% as a Hunter prefix at item level 78, which is a different group from the other two."
+  - mod: "#% increased Burning Damage"
+    source: "Warlord influence"
+    where: "A Warlord prefix, 90–94% at item level 78, weight 100. It takes the Spell Damage group."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Redeemer influence"
+    where: "A Redeemer suffix, 6–7% at item level 80."
+  - mod: "Zealotry / Wrath / Anger / Hatred / Malevolence has #% increased Aura Effect"
+    source: "Influence"
+    where: "34–40% at item level 80: Zealotry and Wrath with Crusader, Anger with Warlord, Hatred with Redeemer, Malevolence with Hunter. All five share one group, so a sceptre holds one."
+  - mod: "Elemental Overload / Elemental Equilibrium / Secrets of Suffering"
+    source: "Base implicit"
+    where: "The keystone implicits of the three Heist sceptres. Chosen with the base."
+mistakes:
+  - "**Building half of each.** Spell Damage with attack speed is not a hybrid weapon; it is two wasted slots for whichever build equips it."
+  - "**Benching Fire Damage beside rolled Spell Damage**, or the reverse. One group."
+  - "**An Aetheric Fossil for a Fire Damage prefix.** That prefix has no caster tag; the Fossil makes it rarer."
+  - "**Expecting two aura effects.** All the aura suffixes share a group, so even two influences give one."
+  - "**\"Cannot roll Caster Modifiers\" as an Annulment shield.** Removed in 3.30. It only limits what is added."
+  - "**Crafting the 1 Divine Orb lock on a sceptre with two or three prefixes.** The game picks which one it protects and does not tell you."
+  - "**Ignoring the requirements.** Over 100 Strength and over 100 Intelligence on the top bases."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, group, tag, tier, weight, Essence, Fossil multiplier, influence modifier and bench cost quoted here. The shares and odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 protection modifier costs, the partial locks, and \"Cannot roll\" modifiers no longer preventing removal." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "When the one- and two-modifier locks are certain." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges respect the \"Cannot roll\" modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

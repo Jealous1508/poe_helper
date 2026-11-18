@@ -1,0 +1,146 @@
+category: abyss-jewels
+title: "Một Ghastly Eye cho minion, kèm Imprint"
+level: 3
+summary: "Roll flat damage của minion và speed của minion trên một Ghastly Eye Magic, lưu nó bằng Imprint của beast, rồi lặp lại Regal Orb tới khi dòng thứ ba là cái build dùng."
+goal: >-
+  Một jewel minion ba dòng mà không dòng nào nằm không. Imprint là lưới an
+  toàn duy nhất của mọi jewel, và Ghastly Eye là nơi nó sinh lời nhất: pool
+  của eye này đặc modifier minion tới mức một Regal Orb có cơ hội thật sự
+  thêm được cái thứ ba. Bài học là **đặt mức cho Regal Orb khớp với số beast
+  bạn có.**
+base: "Ghastly Eye Jewel"
+itemLevel: 83
+baseWhy: >-
+  Ghastly Eye là eye thông thường duy nhất có modifier minion. Item level 83
+  là mức thấp nhất mà Tier 1 của "Minions deal additional Physical Damage"
+  roll được, và nó cũng bao luôn Tier 1 của Life (82). Lần craft bên dưới
+  chấp nhận tier thấp hơn thế; item level được chọn như vậy để một roll may
+  mắn không bị chặn trần.
+methods: [currency, beast]
+result:
+  prefixes:
+    - { text: "Minions deal 19 to 25 additional Physical Damage" }
+    - { text: "+29 to maximum Life" }
+  suffixes:
+    - { text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }
+needs:
+  - { item: "Một Ghastly Eye Jewel", amount: "1", note: "item level 83 trở lên" }
+  - { item: "[[Orb of Alteration]]", amount: "250–500" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Craicic Croaker]]", amount: "1 cho mỗi lần thử Regal", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 cho mỗi lần thử" }
+cost: >-
+  Vài trăm [[Orb of Alteration]] cho jewel Magic, rồi một Croaker và một
+  [[Regal Orb]] cho mỗi lần thử, khoảng sáu lần thử trong một lượt trung bình.
+  Trong 3.30 chỉ beast đỏ mới bắt được, nên hãy kiểm [[Menagerie]] trước.
+odds: >-
+  **Jewel Magic.** Ở item level 83, một lần roll prefix ra physical damage
+  của minion từ Tier 3 trở lên 3.15% số lần, hoặc Life từ +31 trở lên 3.85%:
+  gộp lại 7%, 1 trên 14. Một lần roll suffix ra attack speed và cast speed
+  của minion (3.6%) hoặc "Minions deal increased Damage if you've used a
+  Minion Skill Recently" (2.3%): 5.9%, 1 trên 17. Cả hai: khoảng 0.41%, 1
+  trên 240 jewel hai modifier, theo phép tính của chúng tôi.
+
+
+  **Regal Orb**, với mức đặt như ở bước 4: khoảng 17%, 1 trên 6 lần thử, nếu
+  prefix và suffix có khả năng được thêm ngang nhau. Giả định đó là của chúng
+  tôi.
+steps:
+  - title: "Roll jewel Magic tới hai dòng trúng ở đúng tier"
+    do: >-
+      Dùng [[Orb of Alteration]] và [[Orb of Augmentation]] tới khi
+      **prefix** là "Minions deal additional Physical Damage" từ Tier 3 trở
+      lên (14–17 to 20–23 hoặc cao hơn) hoặc Life từ +31 trở lên, và
+      **suffix** là attack speed và cast speed của minion hoặc suffix damage
+      của minion.
+    why: >-
+      Hãy dùng loại damage mà minion của bạn gây ra; năm loại là năm group
+      với cùng weight, còn con số và item level của chúng chỉ khác nhau chút
+      ít. Jewel Magic chứa gì thì thứ đó nằm trong mọi Imprint của nó, nên cả
+      hai phía phải đúng trước khi bạn lưu bất cứ thứ gì.
+    check: >-
+      Giữ Alt và đọc tier của prefix damage. Tier 6 của cùng dòng đó là "2–3
+      to 5–8", bằng một phần năm Tier 2.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Minions deal 19 to 25 additional Physical Damage" }]
+      suffixes: [{ text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }]
+  - title: "Imprint"
+    do: >-
+      Trong [[Menagerie]], dùng **Create an Imprint of a Magic Item** lên
+      jewel: một [[Craicic Croaker]] và ba beast Rare khác.
+    why: >-
+      Jewel Magic đã tốn một hai trăm Alteration. Một Regal Orb sắp thêm một
+      dòng ngẫu nhiên vào nó, và sau đó không gì trên jewel khóa được hay gỡ
+      được một cách chắc chắn. Imprint cho bạn roll lại lần đó.
+    check: >-
+      [[Imprint]] nằm trong inventory của bạn như một item riêng cho tới khi
+      bạn dùng nó.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Minions deal 19 to 25 additional Physical Damage" }]
+      suffixes: [{ text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }]
+  - title: "Đếm beast và đặt mức cho Regal Orb"
+    do: >-
+      Trước Regal Orb, hãy ghi ra bạn sẽ chấp nhận gì làm dòng thứ ba. Với
+      sáu Croaker trở lên: Life từ +26 trở lên ở phía prefix; ở phía suffix,
+      Life của minion, damage của minion, Taunt của minion, hoặc bất kỳ
+      resistance nào của chính bạn. Với hai hoặc ba Croaker: thêm vào mọi thứ
+      vô hại mà bạn không phiền, như attribute.
+    why: >-
+      Mức quyết định số lần thử. Với danh sách đầu, cứ khoảng sáu Regal Orb
+      thì một cái đạt. Đòi đúng một dòng, như Life từ +31 trở lên, sẽ là
+      khoảng 1 trên 50, tức nhiều Croaker hơn giá trị của jewel.
+  - title: "Regal Orb, đánh giá, lặp lại"
+    do: >-
+      Dùng một [[Regal Orb]]. Nếu dòng mới đạt mức, dừng. Nếu không, dùng
+      Imprint để đưa jewel về trạng thái Magic, làm một Imprint mới bằng một
+      Croaker khác, rồi dùng một Regal Orb khác.
+    why: >-
+      Pool suffix của Ghastly Eye nhỏ nhất trong năm cái, 22,100, và khoảng
+      một nửa trong đó là modifier minion. Đó là lý do Regal Orb thành công ở
+      đây thường xuyên hơn trên bất kỳ jewel nào khác.
+    fail: >-
+      Hết beast: Regal Orb cuối cùng được giữ nguyên, bất kể nó thêm gì. Hai
+      dòng bạn đã roll vẫn còn đó.
+    state:
+      prefixes:
+        - { text: "Minions deal 19 to 25 additional Physical Damage" }
+        - { text: "+29 to maximum Life" }
+      suffixes:
+        - { text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }
+  - title: "Suffix trống, và các con số"
+    do: >-
+      Còn một ô suffix trống: một [[Exalted Orb]] vào đó là một lần roll miễn
+      phí, bất cứ khi nào bạn dư ra được một cái. Rồi nhìn con số bên trong
+      từng tier, và dùng một [[Divine Orb]] nếu prefix damage nằm ở đáy
+      khoảng của nó.
+    why: >-
+      Không dòng nào trên Abyss Jewel có hại, nên cái thứ tư chỉ có thể giúp.
+      Một Divine Orb roll lại mọi chỉ số cùng lúc mà không đổi tier nào.
+variations: >-
+  **Một loại damage thứ hai.** "Minions deal additional Fire Damage" và
+  "additional Physical Damage" là hai group khác nhau, nên một build có minion
+  scale hai loại có thể lấy cả hai prefix và không lấy Life. Năm prefix damage
+  của minion gộp lại chiếm 42% số lần roll prefix.
+
+
+  **Một lưu ý về group.** "Minions Regenerate Life per second" (một prefix) và
+  "Minions Regenerate % of Life per second" (một suffix) là một group. Một
+  jewel có cái này hoặc cái kia.
+
+
+  **Không có beast.** Regal jewel Magic khi không có gì che chắn và chấp nhận
+  kết quả. Theo cùng phép tính đó, bạn giữ được một jewel ba dòng khoảng một
+  trên sáu lần, và những lần còn lại là một jewel hai dòng với dòng thứ ba
+  nằm không.
+mistakes:
+  - "Đặt cho Regal Orb một mức cần nhiều Croaker hơn số bạn có."
+  - "Lưu một jewel Magic có prefix damage ở tier thấp. Khi đó mọi lần thử đều dựng trên nó."
+  - "Tìm suffix critical strike trên Ghastly Eye. Nó không có cái nào."
+  - "Dùng Regal Orb trước Imprint. Không làm được Imprint của một item Rare."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool, tier, item level, weight và các group của Ghastly Eye Jewel. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và beast nó cần." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beast vàng không còn được bắt nữa." }

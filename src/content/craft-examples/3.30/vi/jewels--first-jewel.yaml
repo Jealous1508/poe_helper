@@ -1,0 +1,138 @@
+category: jewels
+title: "Jewel đầu tiên từ một danh sách ngắn"
+level: 1
+summary: "Roll lại một jewel bạn nhặt được bằng Alteration tới khi một modifier nằm trong danh sách của bạn, lấp phía còn lại, rồi biến nó thành Rare."
+goal: >-
+  Một jewel cho nhân vật melee trong campaign hoặc những map đầu, có hai
+  modifier nhân vật dùng được, làm từ một jewel nằm dưới đất. Hơn cả item, cái
+  chính là thói quen mà mọi lần craft jewel dựa vào: **viết danh sách trước,
+  rồi roll tới khi jewel nằm trong danh sách.**
+base: "Crimson Jewel"
+itemLevel: 30
+baseWhy: >-
+  Crimson là màu cho nhân vật vung weapon và muốn Life: nó roll ra increased
+  maximum Life thường xuyên hơn hai màu kia và có mọi modifier melee hai tay
+  lẫn một tay. Một Viridian Jewel làm đúng việc đó cho nhân vật dùng bow, claw
+  hoặc dagger, và một Cobalt Jewel cho caster; chỉ có danh sách là đổi.
+
+
+  Item level là mức nào bạn nhặt được cũng xong. Trên jewel thường nó không
+  thay đổi gì: mọi modifier bên dưới đều cần item level 1.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "13% increased Damage with Two Handed Weapons" }
+    - { text: "9% increased Totem Life" }
+  suffixes:
+    - { text: "+14% to Fire Resistance" }
+needs:
+  - { item: "Một Crimson Jewel Magic hoặc Rare", amount: "1", note: "item level nào cũng được" }
+  - { item: "[[Orb of Scouring]] và [[Orb of Transmutation]]", amount: "mỗi thứ 1", note: "chỉ khi jewel là Rare" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–3" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Một hai chục [[Orb of Alteration]] và một [[Regal Orb]]. Ở thời điểm này của
+  league, không thứ gì trong lần craft này đáng để dành.
+odds: >-
+  Danh sách ngắn của ví dụ có năm prefix. Trên Crimson Jewel, chúng chiếm 14%
+  tổng weight prefix, nên cứ 7 lần roll prefix thì một lần trúng, theo phép
+  tính của chúng tôi từ weight của các modifier. Không phải Alteration nào
+  cũng roll ra prefix, nên hãy tính mười tới hai mươi cái.
+
+
+  Danh sách suffix rộng hơn: bất kỳ resistance nào hoặc một trong ba suffix
+  damage chiếm khoảng 22% weight suffix, 1 trên 4 hoặc 5 lần roll. Regal Orb
+  thuần là may rủi, và lần craft này được dựng sao cho kết quả của nó không
+  quan trọng.
+steps:
+  - title: "Viết danh sách ngắn"
+    do: >-
+      Trước khi đụng tới currency, hãy ghi ra cái gì tính là trúng. Với một
+      nhân vật melee hai tay trong campaign: ở phía **prefix**, increased
+      maximum Life, increased Damage with Two Handed Weapons, increased Global
+      Physical Damage, increased Attack Speed with Two Handed Melee Weapons,
+      hoặc damage với loại weapon của bạn. Ở phía **suffix**, bất kỳ
+      resistance nào bạn đang thiếu, increased Melee Damage, increased Attack
+      Speed hoặc increased Area Damage.
+    why: >-
+      Một jewel có khoảng năm mươi prefix và sáu mươi suffix, mỗi cái một
+      tier duy nhất và phần lớn có weight ngang nhau. Một modifier chỉ đích
+      danh là 1 trên 36 lần roll là cùng. Năm cái chấp nhận được là 1 trên 7.
+      Chính danh sách làm cho lần craft rẻ.
+    check: >-
+      Mọi dòng trong danh sách phải là thứ một Crimson Jewel roll được. Nếu
+      không chắc, hãy mở danh sách modifier của loại item này và lọc theo
+      màu.
+    state:
+      rarity: magic
+      prefixes: [{ text: "10% increased Totem Life" }]
+      suffixes: [{ text: "+13 to Dexterity" }]
+  - title: "Alteration tới khi một phía nằm trong danh sách"
+    do: >-
+      Nếu jewel là Rare, dùng một [[Orb of Scouring]] và một
+      [[Orb of Transmutation]] trước. Rồi dùng [[Orb of Alteration]], từng cái
+      một, giữ Alt để thấy dòng nào là prefix và dòng nào là suffix. Dừng ở
+      jewel đầu tiên trúng ở **một trong hai** phía.
+    why: >-
+      Một jewel Magic có một prefix và một suffix. Roll lại hai ô là kiểu
+      roll rẻ nhất trong game, và bạn chỉ cần một trong hai ra đúng.
+    check: >-
+      Đọc cả phía kia nữa. Nếu nó cũng nằm trong danh sách, bỏ qua bước kế
+      tiếp. Nếu nó là modifier bạn không dùng, chỉ roll tiếp khi bạn dư
+      Alteration: ở level này, một jewel có một dòng trúng đã đáng gắn vào
+      socket rồi.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13% increased Damage with Two Handed Weapons" }]
+  - title: "Lấp phía còn trống"
+    do: >-
+      Nếu jewel chỉ có một modifier, dùng một [[Orb of Augmentation]].
+    why: >-
+      Augmentation thêm một modifier vào phía còn trống của item Magic và
+      không bao giờ đụng tới cái đang có. Nó là một lần ngó miễn phí vào danh
+      sách suffix.
+    fail: >-
+      Nó thêm thứ bạn không dùng. Không mất gì cả: prefix vẫn còn đó, và bước
+      kế tiếp cứ thế mà làm, kết quả nào cũng vậy.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13% increased Damage with Two Handed Weapons" }]
+      suffixes: [{ text: "+14% to Fire Resistance" }]
+  - title: "Regal Orb, rồi dừng"
+    do: >-
+      Dùng một [[Regal Orb]]. Gắn jewel vào socket.
+    why: >-
+      Regal Orb biến jewel thành Rare, giữ cả hai modifier và thêm ngẫu nhiên
+      cái thứ ba. Ở đây nó thêm Totem Life, thứ nhân vật này không dùng. Đó
+      là kết quả thường gặp và không sao cả: jewel không bị phạt gì vì một
+      dòng nằm không.
+    check: >-
+      Không có bước bench. [[Crafting Bench]] không thêm được modifier vào
+      jewel, nên thứ các orb cho bạn chính là item hoàn chỉnh. Vẫn còn một ô
+      trống; cứ để trống tới khi [[Exalted Orb]] là thứ bạn dư ra được.
+    state:
+      prefixes:
+        - { text: "13% increased Damage with Two Handed Weapons" }
+        - { text: "9% increased Totem Life" }
+      suffixes:
+        - { text: "+14% to Fire Resistance" }
+variations: >-
+  **Life trước.** Nếu nhân vật cứ chết, hãy rút danh sách prefix xuống còn một
+  dòng, increased maximum Life (5–7%). Trên Crimson Jewel, đó là 1 trên 36 lần
+  roll prefix, nên hãy dự trù năm mươi Alteration trở lên, và chỉ lấy nó trên
+  màu khác khi bắt buộc: Viridian và Cobalt roll ra nó ít hơn khoảng một phần
+  ba.
+
+
+  **Một caster.** Dùng Cobalt Jewel và đổi danh sách: Spell Damage while
+  holding a Shield (hoặc while Dual Wielding, hoặc với Staff), một prefix
+  damage elemental, và ở phía suffix là increased Spell Damage hoặc Cast
+  Speed.
+mistakes:
+  - "Roll tìm đúng một modifier bằng currency của campaign. Danh sách chính là lần craft."
+  - "Scouring một jewel Rare đã có sẵn hai modifier bạn dùng. Kiểm thứ bạn nhặt được trước khi dọn sạch nó."
+  - "Tìm một craft bench để hoàn thiện jewel. Jewel không có cái nào."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool của Crimson Jewel và weight của nó. Xác suất là phép tính của chúng tôi." }

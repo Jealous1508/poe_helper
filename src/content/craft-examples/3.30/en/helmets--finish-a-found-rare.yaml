@@ -1,0 +1,132 @@
+category: helmets
+title: "Finish a Rare you found: count the slots, bench the gap"
+level: 1
+summary: "No rolling at all. Sort a dropped helmet into prefixes and suffixes, find the open slot, and let the bench put a resistance in it."
+goal: >-
+  A helmet for the campaign and the first maps, made from one you picked up.
+  This is the cheapest craft there is, and it teaches the idea every other
+  example depends on: **an item has three prefix slots and three suffix slots,
+  and an open slot is something you can fill on purpose.**
+base: "Reaver Helmet"
+itemLevel: 42
+baseWhy: >-
+  The base is whatever dropped: here a Rare Reaver Helmet, an Armour base you
+  can wear at level 40. What makes a dropped helmet worth finishing is not its
+  name. It needs a maximum Life prefix, and at least one slot still open.
+
+
+  Item level matters little for this craft, because you are not rolling
+  anything. The bench offers the same modifiers on every helmet.
+methods: [bench, finishing]
+result:
+  prefixes:
+    - { text: "+76 to maximum Life" }
+    - { text: "+58 to Armour" }
+  suffixes:
+    - { text: "+27% to Cold Resistance" }
+    - { text: "+21 to Strength" }
+    - { text: "+24% to Fire Resistance", how: crafted }
+needs:
+  - { item: "A Rare helmet with maximum Life and an open slot", amount: "1", note: "picked up, identified" }
+  - { item: "[[Armourer's Scrap]]", amount: "a few", note: "optional, for quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "for the bench" }
+cost: >-
+  One [[Orb of Alchemy]] at the bench, or one [[Orb of Transmutation]] for the
+  smaller version. The helmet itself was free.
+odds: >-
+  Nothing here is rolled, so nothing can fail. The only chance involved is
+  finding the helmet, and Rare helmets with life and an open slot drop all
+  through the campaign once you start looking at them.
+steps:
+  - title: "Turn on the tier display and look at the helmet"
+    do: >-
+      In the game options, turn on Advanced Mod Descriptions. Identify the
+      Rare helmet, hold Alt over it, and read each modifier's label: it says
+      **Prefix** or **Suffix**, the tier, and the range.
+    why: >-
+      Without that label a Rare item is a list of six lines. With it, the
+      list splits into the two sides, and you can count.
+    check: >-
+      This one has two prefixes, maximum Life and Armour, and two suffixes,
+      Cold Resistance and Strength. Four modifiers out of a possible six.
+    state:
+      prefixes:
+        - { text: "+76 to maximum Life" }
+        - { text: "+58 to Armour" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+21 to Strength" }
+  - title: "Count what is open"
+    do: >-
+      Three slots a side, minus what is there. This helmet has **one open
+      prefix and one open suffix**.
+    why: >-
+      The bench adds a modifier to an open slot of the right side and to
+      nothing else. A resistance is a suffix, so it needs an open suffix.
+      Maximum Life is a prefix, so it needs an open prefix. A helmet with
+      three suffixes already cannot take a resistance from the bench,
+      whatever else is wrong with it.
+    fail: >-
+      Three prefixes and three suffixes: the item is full, and the bench has
+      nothing to offer it. Wear it as it is or leave it.
+  - title: "Decide what the helmet lacks"
+    do: >-
+      An item holds **one** bench modifier. Choose it by asking what your
+      character is short of. Open your character sheet: whichever of Fire,
+      Cold or Lightning Resistance is lowest is the answer for most players
+      in the campaign.
+    why: >-
+      The helmet already has life, so the open prefix has no urgent use. It
+      has Cold Resistance, so crafting more cold would be refused: a second
+      modifier of the same group cannot go on the item. Fire or Lightning
+      fits.
+  - title: "Quality, if you have the Scraps"
+    do: >-
+      Use [[Armourer's Scrap]]s on the helmet up to 20% quality.
+    why: >-
+      Quality raises the helmet's own Armour. It is a small gain on a
+      campaign item, so do not go looking for Scraps; use the ones in your
+      stash.
+  - title: "Craft the resistance"
+    do: >-
+      At the [[Crafting Bench]] in your hideout, choose **+21–28% to Fire
+      Resistance** for 1 [[Orb of Alchemy]]. If you have no Alchemy to spare,
+      +16–20% costs 1 [[Orb of Transmutation]].
+    why: >-
+      The bench shows the price before you click and always gives what it
+      says. It is the only certain thing in crafting, so this one step is
+      worth more than any number of lucky drops.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Recipes are objects you find near bosses as you play. Craft the
+      best resistance it does offer.
+    state:
+      prefixes:
+        - { text: "+76 to maximum Life" }
+        - { text: "+58 to Armour" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+21 to Strength" }
+        - { text: "+24% to Fire Resistance", how: crafted }
+variations: >-
+  **The helmet has resistances and no life.** Then the gap is a prefix:
+  craft maximum Life, 26–40 for 6 Orbs of Transmutation or 41–55 for 2 Orbs
+  of Alchemy. It needs an open prefix.
+
+
+  **Your needs change.** A bench modifier comes off again at the bench for
+  one [[Orb of Scouring]], and only the bench modifier is removed. When a new
+  ring fixes your fire resistance, swap the helmet's craft for the next
+  gap.
+
+
+  **A Magic helmet.** The bench works on Magic items too, but a Magic item
+  has one slot a side. The next examples show what to do with those.
+mistakes:
+  - "Picking helmets by their rarity colour. A Rare with three bad prefixes is worse for this than a Rare with one good one and two open."
+  - "Crafting a resistance the helmet already has. Same group, so the bench refuses, and you learn nothing about why."
+  - "Reaching for a Chaos Orb because one line is bad. It rerolls all of them, the good life prefix included."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The tiers shown on the helmet and the bench costs." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Bench recipes are found as objects near bosses." }

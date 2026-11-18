@@ -1,0 +1,163 @@
+category: one-hand-swords
+title: "Một cây foil elemental từ reforge Harvest"
+level: 2
+summary: "Reforge Fire luôn đặt added Fire Damage lên sword. Lặp lại tới khi tier tốt và có element thứ hai nằm cạnh, rồi bench attack speed."
+goal: >-
+  Một cây foil cho những map đầu tiên với hai loại added elemental damage,
+  một trong số đó được đảm bảo ở mọi lần thử. Đây là lần craft đầu tiên mà
+  công cụ nhắm theo **tag**, và nó dạy câu hỏi cần đặt ra với bất kỳ công cụ
+  nào như vậy: trên item này có bao nhiêu modifier mang tag đó? Ở đây câu trả
+  lời là một, tức không thể tốt hơn. Nó cũng dạy điều công cụ không làm: nó
+  chọn modifier còn tier thì để cho may rủi.
+base: "Jewelled Foil"
+itemLevel: 75
+baseWhy: >-
+  Jewelled Foil attack 1.6 lần mỗi giây và là thrusting sword, nên pool của
+  nó nghiêng về elemental và implicit là +25% Critical Strike Multiplier.
+  Item level 75 mở Tier 2 của added Fire, Cold và Lightning Damage. Tier cao
+  nhất cần 82, và reforge rơi vào đó quá hiếm để đáng trả tiền.
+methods: [currency, harvest, bench]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+    - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+  suffixes:
+    - { text: "27% increased Critical Strike Chance", how: harvest }
+    - { text: "13% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "50 mỗi lần reforge", note: "hãy tính mười lần trở lên" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Lifeforce và gần như không gì khác: 50 [[Wild Crystallised Lifeforce]] mỗi
+  lần thử, từ Sacred Flora mọc trong map ở 3.30. Bước bench là 2
+  [[Chaos Orb]].
+odds: >-
+  Reforge Fire nào cũng cho added Fire Damage. Tier của nó thì ngẫu nhiên.
+  Nếu modifier được đảm bảo được bốc theo weight trong số các tier item level
+  cho phép, đúng như cách người ta vẫn hiểu về reforge, thì ở item level 75
+  khoảng 1 trên 4 lần reforge cho "Incinerating" (adds 46–62 to 93–107) trở
+  lên, 1 trên 7 cho Tier 3 trở lên, và 1 trên 23 cho Tier 2. Đó là phép tính
+  của chúng tôi, và chưa được đo trong 3.30.
+
+
+  Khi fire đã có trên item, mỗi prefix khác mà reforge roll ra là added Cold
+  hoặc Lightning Damage 64% số lần trên thrusting sword. Đòi một tier fire
+  tử tế **và** một element thứ hai thì hãy tính cỡ mười lần reforge.
+steps:
+  - title: "Biến cây foil thành Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên một cây Jewelled Foil trắng. Bỏ qua
+      whetstone.
+    why: >-
+      Reforge dùng được trên item Rare, và Alchemy roll ra gì không quan
+      trọng vì reforge thay hết tất cả. Quality chỉ nâng physical damage, mà
+      damage của cây foil này sẽ là elemental.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 35 to 67 Cold Damage" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "26% increased Stun Duration on Enemies" }
+  - title: "Đếm tag, rồi reforge"
+    do: >-
+      Mở danh sách modifier của thrusting sword và tìm tag fire. Có một
+      modifier tự nhiên mang nó: Adds # to # Fire Damage. Rồi, ở
+      [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Fire modifier** giá 50
+      [[Wild Crystallised Lifeforce]].
+    why: >-
+      "Including a Fire modifier" hứa một modifier mang tag đó. Khi chỉ một
+      modifier có tag, lời hứa là chính xác. Cũng reforge đó với tag Attack
+      sẽ gần như chẳng hứa được gì trên sword, vì gần như mọi thứ trên sword
+      đều là modifier attack.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 19 to 37 Fire Damage", how: harvest }
+        - { text: "62% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+241 to Accuracy Rating", how: harvest }
+        - { text: "22% increased Critical Strike Chance", how: harvest }
+  - title: "Đọc tier, rồi tới hàng xóm"
+    do: >-
+      Giữ Alt. **Trước tiên** là prefix fire: nó có phải "Incinerating"
+      (46–62 to 93–107) trở lên không? **Rồi** tới các prefix khác: có cái
+      nào là added Cold hoặc Lightning Damage không? **Sau cùng**: có attack
+      speed chưa, hay còn một suffix trống để bench đặt nó vào?
+    why: >-
+      Kết quả ở trên cho thấy giới hạn của công cụ. Fire đến, đúng như đã
+      hứa, ở Tier 7 trên mười, và prefix thứ hai là một prefix phần trăm
+      physical mà một cây foil elemental không dùng được. Reforge chọn họ
+      modifier và không chọn gì khác.
+    check: >-
+      Hãy đặt mức trước khi bắt đầu và giữ đúng nó. Cho cây foil chạy map đầu
+      tiên: fire từ 46–62 to 93–107 trở lên, element thứ hai nào cũng được,
+      và còn chỗ cho attack speed.
+    fail: >-
+      Reforge lại. Không mất gì ngoài 50 Lifeforce.
+  - title: "Lặp lại tới khi qua"
+    do: >-
+      Cứ reforge tiếp tới khi một kết quả đạt cả ba điều kiểm tra.
+    why: >-
+      Prefix fire lần nào cũng quay lại ở một tier mới, và phần còn lại của
+      item được roll mới hoàn toàn. Trên pool này phần còn lại đứng về phía
+      bạn: bảy trên mười lần roll prefix là elemental trước khi tính fire.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+        - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "27% increased Critical Strike Chance", how: harvest }
+  - title: "Bench thứ còn thiếu"
+    do: >-
+      Ở [[Crafting Bench]], craft **11–15% increased Attack Speed** giá 2
+      [[Chaos Orb]]. Nếu cây foil đã roll ra attack speed rồi, hãy craft vào
+      prefix trống thay vào: một element thứ ba (adds 35–41 to 63–73 Cold
+      hoặc Fire giá 4 Chaos Orb) hoặc 24–32% increased Elemental Damage with
+      Attack Skills giá 4 Orb of Alchemy.
+    why: >-
+      Attack speed là local và nhân mọi thứ cây foil này làm, nên nó đi trước
+      một element thứ ba. Các craft elemental của bench thấp hơn hẳn thứ roll
+      ra; chúng dành cho một ô mà nếu không thì sẽ bỏ trống.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+        - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "27% increased Critical Strike Chance", how: harvest }
+        - { text: "13% increased Attack Speed", how: crafted }
+variations: >-
+  **Cold hoặc lightning.** Reforge Cold tốn 50 Vivid Lifeforce và reforge
+  Lightning tốn 50 Primal. Mỗi cái có đúng một modifier tự nhiên đứng sau tag
+  của nó, nên chúng hoạt động y như vậy. Hãy dùng element mà build của bạn
+  scale, hoặc màu nào bạn có nhiều nhất.
+
+
+  **Thay bằng một Essence.** Một [[Shrieking Essence of Wrath]] (hoặc Anger,
+  hoặc Hatred) làm được điều reforge không làm được: nó cố định tier. Bậc
+  Shrieking lần nào cũng cho mức tương đương Tier 2 tự nhiên, kết quả mà 1
+  trên 23 lần reforge mới đạt. Lifeforce là đường rẻ tới một prefix tử tế;
+  Essence là đường tới một prefix do bạn chọn.
+
+
+  **Trên one-hand sword.** Reforge cũng chính xác y như vậy, nhưng element
+  thứ hai đến ít hơn: 51% số lần roll prefix tiếp theo, không phải 64%.
+
+
+  **Memory Strands** không thay đổi gì ở đây. Theo thử nghiệm của người chơi,
+  reforge Harvest không tiêu strand mà cũng không hưởng lợi từ chúng.
+mistakes:
+  - "Dừng ở lần reforge đầu tiên vì \"nó có fire\". Lúc nào nó cũng có fire. Hãy đọc tier."
+  - "Dùng reforge Attack hoặc Elemental cho đỡ phải nghĩ. Hãy đếm số modifier mang tag: càng ít thì công cụ càng tốt."
+  - "Craft ở bench giữa các lần reforge. Lần reforge kế tiếp sẽ gỡ nó."
+  - "Giữ một cây foil có ba suffix đã lấp mà không có attack speed. Bench không còn chỗ nào để đặt nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag trên mọi modifier, cả hai pool của sword, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge element và giá Lifeforce của chúng." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest chuyển vào trong map ở 3.30." }

@@ -1,0 +1,235 @@
+category: rings
+title: "Curse on hit từ một chiếc ring Hunter"
+level: 4
+summary: "Tìm \"Curse Enemies with Despair on Hit\" bằng một reforge Harvest chỉ có ba modifier để chọn, rồi khóa suffix và ép ra Life ở phía trên chúng."
+goal: >-
+  Một chiếc ring có influence Hunter, curse Despair trên mọi cú hit, với
+  resistance bên cạnh curse và Life roll ra ở phía trên. Hai giai đoạn, giai
+  đoạn nào cũng có khả năng thật sự là hỏng: **tìm một suffix weight 200 bằng
+  tag của nó**, rồi **bảo vệ nó** trong khi phía kia được dựng lại. Lần craft
+  này chủ yếu là chuyện biết khi nào giai đoạn hai đáng trả tiền.
+base: "Vermillion Ring"
+itemLevel: 84
+baseWhy: >-
+  Suffix Despair cần item level 80 và một chiếc ring có influence Hunter. Ví
+  dụ dùng 84 để các resistance bên cạnh nó chạm được tier cao nhất.
+  Vermillion Ring thêm 5–7% maximum Life ở implicit; base ring nào cũng nhận
+  influence tốt như nhau.
+
+
+  Ring không được là fractured item: theo các trang tra cứu, fractured item
+  không nhận được influence.
+methods: [influence, harvest, meta, bench]
+result:
+  note: "Hunter"
+  implicits: ["6% increased maximum Life"]
+  prefixes:
+    - { text: "+104 to maximum Life", how: harvest }
+    - { text: "+44 to maximum Mana", how: harvest }
+    - { text: "13% increased Damage", how: crafted }
+  suffixes:
+    - { text: "Curse Enemies with Despair on Hit", how: harvest }
+    - { text: "+43% to Cold Resistance", how: harvest }
+    - { text: "+35 to Dexterity", how: harvest }
+needs:
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1", note: "hoặc một chiếc ring đã có sẵn influence Hunter" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 mỗi lần reforge Caster", note: "hãy tính là 15–30 lần reforge" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần khóa" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần reforge Life" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Giai đoạn đầu rẻ: một [[Hunter's Exalted Orb]] và Lifeforce cỡ vài nghìn.
+  Giai đoạn hai là cái khóa, 4 [[Divine Orb]] và 8
+  [[Exalted Orb]] mỗi lần thử trên trang sức trong 3.30.
+
+
+  Bạn có thể dừng giữa hai giai đoạn. Một chiếc ring có curse, hai resistance
+  và 41–55 Life của bench là đã xong và dùng được, mà không tốn đồng nào của
+  hóa đơn thứ hai.
+odds: >-
+  **Giai đoạn 1.** Trên ring Hunter có ba modifier mang tag caster: Cast
+  Speed, với weight 2,400, và hai suffix curse, Despair và Elemental
+  Weakness, mỗi cái 200. Nếu modifier được đảm bảo được rút theo weight, đúng
+  như cách người ta vẫn hiểu về reforge, thì một reforge Caster cho Despair
+  khoảng 1 trên 14 lần, và một trong hai curse 1 trên 7. Phép tính của chúng
+  tôi; chưa được đo trong 3.30.
+
+
+  **Giai đoạn 2.** Khi suffix đã khóa, reforge Life buộc phải cho một prefix
+  mang tag life. Trên ring Hunter có hai cái: maximum Life, weight 8,000, và
+  "Gain Life per Enemy Hit with Attacks", weight 1,000. Vậy nên tám trên chín
+  lần thử cho maximum Life, và ba trong tám tier của nó là từ 70 trở lên.
+steps:
+  - title: "Cho ring influence"
+    do: >-
+      Biến ring thành Rare bằng một [[Orb of Alchemy]] nếu nó chưa phải Rare,
+      kiểm xem còn một ô trống, rồi dùng một [[Hunter's Exalted Orb]].
+    why: >-
+      Dòng mô tả của orb là "Adds Hunter influence and a new Hunter modifier
+      to a rare item", và nó chỉ dùng được trên item chưa có influence. Từ
+      lúc này các modifier Hunter nằm trong pool của ring cho mọi lần roll về
+      sau. Modifier nó thêm vào lúc này không quan trọng.
+    check: >-
+      Ring hiện biểu tượng Hunter. Nếu ngay từ đầu bạn đã có sẵn một chiếc
+      ring Hunter thì bỏ qua bước này.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+38 to maximum Energy Shield" }
+        - { text: "Exerted Attacks deal 26% increased Damage", how: influence }
+      suffixes:
+        - { text: "+31 to Dexterity" }
+        - { text: "+36% to Fire Resistance" }
+  - title: "Giai đoạn 1: reforge kèm một modifier Caster"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]). Đọc suffix.
+    why: >-
+      Pool thường của ring có một modifier caster là Cast Speed. Danh sách
+      Hunter thêm hai cái, cả hai đều là curse on hit. Vậy nên reforge có ba
+      đáp án khả dĩ, và hai trong số đó là thứ bạn tìm. Roll thường thì
+      suffix Despair là 1 trên hơn 500 lần roll suffix.
+    check: >-
+      Phần lớn kết quả trông như cái bên dưới: Cast Speed. Đó là kết quả được
+      trông đợi 6 trên 7 lần, không phải dấu hiệu có gì sai.
+    fail: >-
+      Reforge lại. Mỗi lần thử là độc lập và chỉ tốn Lifeforce.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+72 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "14% increased Cast Speed", how: harvest }
+        - { text: "+27 to Strength", how: harvest }
+  - title: "Dừng khi curse ra cùng bạn đồng hành"
+    do: >-
+      Giữ kết quả nào có **Despair on Hit và ít nhất một suffix khác bạn
+      cần**. Nếu ô suffix thứ ba còn trống thì càng tốt.
+    why: >-
+      Reforge roll cả chiếc ring mỗi lần, nên curse tới cùng những hàng xóm
+      ngẫu nhiên. Vì reforge ở đây rẻ, bạn đủ sức chờ một curse đi kèm một
+      resistance. Bạn không đủ sức chờ một chiếc ring hoàn hảo: ba suffix
+      đích danh cùng lúc sẽ tốn hàng trăm lần thử.
+    check: >-
+      Đọc prefix sau cùng. Chúng quyết định giai đoạn 2 tốn bao nhiêu, chứ
+      không quyết định giai đoạn 1 có thành công hay không.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+41 to maximum Mana", how: harvest }
+        - { text: "+58 to Evasion Rating", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Quyết định: bench Life, hay trả tiền cho khóa"
+    do: >-
+      Nếu còn một ô prefix trống, bạn có thể craft +41–55 Life ở bench ngay
+      bây giờ là xong. Chỉ đi tiếp sang giai đoạn 2 nếu với bạn các suffix
+      đáng 4 Divine Orb và 8 Exalted Orb **và** bạn muốn Life roll ra.
+    why: >-
+      Đây là ngã rẽ cần thành thật. Khóa mua phần chênh giữa 50 Life và
+      khoảng 100, trên một chiếc ring mà giá trị vốn đã nằm ở curse. Nhiều
+      chiếc ring curse hoàn thiện vẫn mang Life của bench.
+  - title: "Giai đoạn 2: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 8 [[Exalted Orb]]. Nó là prefix, nên phải còn một ô
+      prefix trống.
+    why: >-
+      Curse tốn trung bình mười bốn lần reforge. Không việc gì làm với phía
+      prefix được phép chạm tới nó. Hãy dùng khóa đầy đủ, không phải các bản
+      một hoặc hai modifier: mấy bản đó chọn ngẫu nhiên thứ chúng bảo vệ và
+      không cho bạn thấy.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+41 to maximum Mana", how: harvest }
+        - { text: "+58 to Evasion Rating", how: harvest }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Reforge kèm một modifier Life"
+    do: >-
+      Dùng **Reforge a Rare item with random modifiers, including a Life
+      modifier** (75 [[Wild Crystallised Lifeforce]]).
+    why: >-
+      Phía suffix đã đầy và đã khóa, nên modifier Life buộc phải là prefix.
+      Trên ring thường, đó chỉ có thể là maximum Life. Danh sách Hunter thêm
+      một prefix nữa mang tag life, Life nhận được mỗi lần hit enemy bằng
+      attack, và đó chính là lần trượt một trên chín.
+    check: >-
+      Suffix không bị đụng tới, khóa đã biến mất, maximum Life nằm trong các
+      prefix.
+    fail: >-
+      Ra Life on hit thay vì maximum Life, hoặc ra tier thấp: khóa rồi
+      reforge lần nữa nếu còn một ô prefix trống, hoặc chấp nhận rồi bench.
+      Hãy đặt số lần khóa bạn chịu trả trước lần đầu tiên.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+104 to maximum Life", how: harvest }
+        - { text: "+44 to maximum Mana", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Bench prefix cuối cùng"
+    do: >-
+      Craft 12–14% increased Damage giá 4 [[Chaos Orb]], hoặc 15–17% giá 4
+      Exalted Orb.
+    why: >-
+      Phía suffix đã đầy, nên bench chỉ làm được với prefix, và increased
+      Damage là prefix tốt nhất mà bench của ring bán một khi Life đã roll
+      ra.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+104 to maximum Life", how: harvest }
+        - { text: "+44 to maximum Mana", how: harvest }
+        - { text: "13% increased Damage", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+variations: >-
+  **Các curse khác.** Phương pháp y hệt trên bất kỳ ring Conqueror nào; chỉ
+  có danh sách thay đổi. Crusader có Conductivity, Redeemer có Frostbite,
+  Warlord có Flammability và Vulnerability. Hãy đếm các modifier caster trong
+  danh sách của influence đó trước khi bắt đầu: ring Shaper và Crusader còn
+  có "reduced Effect of Curses on you", thứ mang tag caster với weight từ
+  1,000 trở lên và khiến curse ở đó khó trúng hơn nhiều.
+
+
+  **Một suffix critical strike theo cùng cách.** Ring thường không có
+  modifier critical nào, nên trên ring Elder hoặc Warlord, một reforge
+  Critical (150 Primal) chỉ có thể cho Critical Strike Multiplier của
+  influence đó. Ví dụ kế tiếp dùng đúng điều này.
+
+
+  **Đường Imprint.** Trên một chiếc ring Hunter trắng, Alteration và một
+  Imprint từ beast hoạt động như với bất kỳ prefix hiếm nào, nhưng curse là
+  khoảng 1 trên 530 lần roll suffix. Reforge là công cụ tốt hơn hẳn.
+mistakes:
+  - "Fracture ring trước để giữ một resistance. Fractured item không nhận được influence."
+  - "Nhận ngay curse đầu tiên xuất hiện cùng hai suffix chết. Reforge tốn Lifeforce; cái khóa theo sau tốn Divine Orb. Hãy kén chọn ở giai đoạn rẻ."
+  - "Dùng khóa một modifier để tiết kiệm Divine Orb. Với ba suffix, game chọn cái nó bảo vệ và không báo cho bạn."
+  - "Trả tiền cho giai đoạn 2 khi Life của bench là đủ. Hãy quyết định ở ngã rẽ, không phải sau lần khóa đầu tiên."
+  - "Dùng Essence lên ring đã khóa. Essence được ghi nhận là phớt lờ khóa và sẽ gỡ mất curse."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier ring Hunter, weight, tag, giá bench và dòng mô tả trong game của Hunter's Exalted Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên trang sức; các boss Conqueror rơi Exalted Orb của chúng." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Caster, Life và Critical cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa; Essence thì không. Một phần cũ hơn 3.30." }

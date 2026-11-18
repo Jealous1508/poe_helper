@@ -1,0 +1,374 @@
+name: "Cluster Jewels"
+short: "Jewels that add passives to the tree. The enchantment and size are fixed, the notables are what you roll, and the best item level is the lowest that fits."
+icon: "Large Cluster Jewel"
+intro: >-
+  A cluster jewel goes into one of the outer sockets of the passive tree and
+  grows a small tree of its own: a ring of small passives, up to three
+  notables, and on the larger sizes more jewel sockets. It is the most
+  rule-bound item in the game, and most of the rules are fixed before you
+  spend an orb.
+
+
+  Three things are printed above the line and **cannot be crafted**: how
+  many passives the jewel adds, what its small passives grant (the
+  enchantment), and how many jewel sockets it has. Below the line it is a
+  jewel like any other, with **two** prefixes and **two** suffixes, no
+  quality, no Essence and no bench modifier. What you roll there are the
+  **notables**, each of which is an ordinary prefix or suffix reading "1
+  Added Passive Skill is …", and small bonuses to the small passives.
+basics:
+  itemLevel:
+    text: >-
+      Item level gates a cluster jewel twice. A notable needs item level 1,
+      50, 68 or 75, and the jewel cannot roll one above its own level. The
+      bonuses to small passives come in tiers at 1, 68 and 84 (with two more,
+      at 73 and 78, on Small jewels).
+
+
+      The unusual part is that **higher is not better**. Everything the item
+      level unlocks joins the same lottery as the notable you want. On a
+      Small Life jewel, by our arithmetic from the weights, one prefix roll
+      in 10 is a given level-1 notable at item level 50 to 67, and one in 20
+      at item level 84. So the rule for a cluster jewel is the reverse of
+      the rule for a weapon: **use the lowest item level that allows every
+      notable on your list.** Go to 84 only when you want what 84 adds.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "The first 72 notables, the lowest tier of every small-passive bonus, and \"Added Small Passive Skills have 25% increased Effect\"."
+      - ilvl: 50
+        unlocks: "106 more notables. **Item level 50 to 67 is the cleanest bracket**: 178 notables can roll and the small-passive bonuses are still at their lowest and least crowded."
+      - ilvl: 68
+        unlocks: "88 more notables, and the second tier of every small-passive bonus, which adds weight to both sides of the lottery."
+      - ilvl: 73
+        unlocks: "Small Cluster Jewels only: a third tier of the small-passive bonuses."
+      - ilvl: 75
+        unlocks: "The last 25 notables, the scarcest ones. **75 to 83 is the bracket for those.**"
+      - ilvl: 78
+        unlocks: "Small Cluster Jewels only: a fourth tier of the small-passive bonuses."
+      - ilvl: 84
+        unlocks: "\"Added Small Passive Skills have 35% increased Effect\" and the top tier of every small-passive bonus. Worth having only if those are what you are after: they make every notable less likely."
+  bases:
+    text: >-
+      Three sizes. The size decides how many passives the jewel adds, how
+      many notables it can hold, whether it has jewel sockets of its own,
+      and which enchantments exist for it. The data lists 17 enchantments
+      for Large jewels, 21 for Medium (two of them under a legacy tag) and
+      17 for Small, with almost no overlap between the sizes.
+
+
+      The **enchantment** is the real base. It reads "Added Small Passive
+      Skills grant: …", it decides what each small passive gives, and it
+      decides which notables the jewel can roll at all: every notable is
+      tied to one or a few enchantments. No currency in this guide changes
+      it. Neither does anything change the passive count. You choose both by
+      choosing which jewel to pick up or buy.
+    types:
+      - title: "Large and Medium Cluster Jewels"
+        pools: [standard]
+        text: >-
+          One pool for the general small-passive bonuses, in three tiers
+          (item level 1, 68 and 84), and very different rules for notables.
+
+
+          A **Large** jewel adds 8 to 12 passives and has two jewel sockets
+          among them. Its enchantments are the broad damage types: Fire,
+          Cold, Lightning, Physical, Chaos, Elemental, Spell, Minion and
+          Attack Damage, and damage by weapon. It is the only size with
+          **suffix** notables. All 17 of them share a single group in the
+          data, so a Large jewel holds at most one, beside up to two prefix
+          notables: three in all.
+
+
+          A **Medium** jewel adds 4 to 6 passives and has one jewel socket.
+          Its enchantments are narrower: damage over time by type, critical
+          strike chance, minion life, totems, traps and mines, brands,
+          flasks and others. Every one of its notables is a prefix, so it
+          holds at most two.
+      - title: "Small Cluster Jewel"
+        pools: [small-cluster-jewel]
+        text: >-
+          Adds 2 or 3 passives and has no socket of its own. Its
+          enchantments are defensive or utility: Life, Energy Shield, Mana,
+          Armour, Evasion, the resistances, attributes, block, spell
+          suppression, reservation efficiency. It holds **one** notable,
+          always a prefix.
+
+
+          It has its own pool because its small-passive bonuses go higher:
+          five tiers where the larger sizes have three. At item level 84 a
+          Small jewel can roll "+14–16 to Maximum Life" per small passive,
+          against "+8–10" on a Large or Medium one.
+    picks:
+      - base: "Large Cluster Jewel"
+        for: "A build's main damage notables"
+        why: >-
+          Up to three notables and two more jewel sockets from one socket on
+          the tree. Its notable pools are small, from three to about ten prefix
+          notables per enchantment, so a given notable is common: on a
+          Minion Damage jewel of item level 50 to 67, Renewal is 1 prefix
+          roll in 11.
+      - base: "Medium Cluster Jewel"
+        for: "Two specialised notables"
+        why: >-
+          Narrow enchantments with large notable pools: 18 notables on the
+          Burning Damage jewel. Sockets into a Large jewel's socket, and its
+          own socket takes a Small one.
+      - base: "Small Cluster Jewel"
+        for: "One defensive notable, and strong small passives"
+        why: >-
+          The cheapest cluster craft there is: one notable, and nothing you
+          add afterwards can displace it. More than half of all prefix rolls
+          on a Life jewel of item level 50 to 67 are a notable.
+    impact: >-
+      Before any currency, the jewel you hold has already decided four
+      things for good.
+
+
+      **The enchantment**, and with it the list of notables that can appear.
+      Read that list in the modifier list, under your enchantment, before
+      you buy the jewel.
+
+
+      **The number of passives.** Fewer is usually better: a jewel with fewer
+      passives has fewer small ones between you and the notables. Players
+      look for 8 on a Large jewel, 4 or 5 on a Medium and 2 on a Small. We
+      have not counted the points for every layout ourselves, so check
+      yours before paying a premium.
+
+
+      **The size**, which caps the notables at three, two or one.
+
+
+      **The item level**, which sets both what can roll and how crowded the
+      lottery is.
+tools:
+  - method: currency
+    note: >-
+      Unlike other jewels, cluster jewels can drop as Normal items, so the
+      start is often an [[Orb of Transmutation]], then
+      [[Orb of Alteration]]s. A Magic
+      jewel shows at most one prefix and one suffix, which on a Small or
+      Medium jewel means at most **one** notable and on a Large jewel one
+      prefix notable and one suffix notable.
+
+
+      After that the usual orbs add: a [[Regal Orb]] the third modifier, an
+      [[Exalted Orb]] the fourth. Two rules from the data make these safer
+      than on any other jewel. A Small jewel that has its notable cannot
+      roll a second one, so everything added later is a small-passive
+      bonus. And a Large jewel that has its suffix notable cannot roll
+      another suffix notable, for the same reason of group.
+
+
+      Notables are common as a kind and scarce as individuals. On the
+      Burning Damage jewel at item level 50 to 67, 59% of prefix rolls are a
+      notable of some sort, and any one level-50 notable is 4.2%.
+  - method: bench
+    note: >-
+      No bench modifier exists for cluster jewels. The three reroll options
+      for jewels apply: one random modifier of a Rare jewel for 8
+      [[Chaos Orb]]s, three for 3 Chaos Orbs, the rarity for 1
+      [[Orb of Chance]]. There is no way to block a notable or to protect
+      one side.
+  - method: beast
+    note: >-
+      The **Imprint** ([[Craicic Croaker]]) saves a Magic jewel before the
+      [[Regal Orb]], which matters on Medium and Large jewels, where the
+      Regal Orb is asked to add a second notable.
+
+
+      **Add a prefix, remove a random suffix** ([[Farric Wolf Alpha]]) has a
+      special place here. On a Small or Medium jewel a suffix is never a
+      notable, so the removal costs nothing you care about and the added
+      prefix has a high chance of being a notable. On a Large jewel the
+      same recipe can remove your suffix notable: do not use it there
+      unless the suffix side holds nothing you want.
+  - method: finishing
+    note: >-
+      There is nothing to polish: no quality, no sockets to roll, and a
+      notable has no number for a [[Divine Orb]] to change. Finishing a
+      cluster jewel means **socketing it and looking**. The reference pages
+      describe notables as placed in fixed positions, in the order of the
+      modifier list, starting from the point where the jewel joins the tree.
+      We have not verified the layout rules ourselves, so do it the direct
+      way: put the jewel in, see where each notable sits and what you must
+      allocate to reach it, and take it out again. According to the
+      reference page, unsocketing a cluster jewel refunds the points spent
+      in it, apart from a refund point for any jewel socket you allocated
+      inside it.
+  - method: harvest
+    note: >-
+      Could not be confirmed for jewels in 3.30. If the reforges at the
+      [[Horticrafting Station]] accept a cluster jewel, a reforge that
+      guarantees a tagged modifier would be a strong tool here, because
+      every notable carries tags. None of our examples relies on it.
+  - method: fossil
+    note: >-
+      The data attaches the jewels' Fossil-only pool to cluster jewels as
+      well. Whether a Resonator can be used on one in 3.30 we could not
+      confirm, and those modifiers are not what a cluster jewel is for.
+  - method: corruption
+    note: >-
+      The data lists no corruption implicits for cluster jewels. We know of
+      nothing a [[Vaal Orb]] could add to one, so there is no reason to
+      corrupt a cluster jewel you made.
+memoryStrands: >-
+  Nothing here for cluster jewels. A notable has no tiers for
+  [[Memory Strands]] to raise, the strand orbs speak of "equipment" items,
+  and on this item a higher tier of a small-passive bonus is not even
+  clearly a gain: the lottery you want is the uncrowded one.
+reading:
+  intro: >-
+    Read a cluster jewel from the top. **The enchantment:** is it the one
+    your build uses? **The passive count:** how many points will this cost?
+    **The item level:** which notables could it roll? Only then the
+    modifiers, and for those the question is simply how many of them are
+    notables you will allocate. Since 3.30 the notables on the item are
+    keywords: hover one to read what it grants.
+  prefixes:
+    text: >-
+      Prefixes are where notables live on every size. Each prefix notable is
+      its own group, so two different ones can sit together on a Medium or
+      Large jewel; a Small jewel stops at one.
+
+
+      The other prefixes change the small passives. Six of them add
+      something to each small passive: Life, Energy Shield, Mana, Armour,
+      Evasion or increased Damage. The seventh, "Added Small Passive Skills
+      have 25% (or 35%) increased Effect", multiplies what the enchantment
+      itself gives.
+
+
+      A prefix slot holding a small-passive bonus is a slot not holding a
+      notable. On a Small jewel, which can have only one notable anyway,
+      that is exactly what the second prefix is for. On a Medium or Large
+      jewel it is usually a disappointment.
+    key:
+      - mod: "1 Added Passive Skill is a notable (prefix)"
+        why: "The reason the item exists. Which notables can appear depends on the enchantment, and how often on the item level; the modifier list shows both, enchantment by enchantment."
+        aim: "The lowest item level bracket that contains it: 1–49, 50–67, 68–74 or 75–83."
+      - mod: "Added Small Passive Skills have #% increased Effect"
+        why: "Makes every small passive on the jewel give more of the enchantment. The modifier for a Small jewel taken for its small passives."
+        aim: "35% needs ilvl 84. 25% rolls at any level."
+      - mod: "Added Small Passive Skills also grant: +# to Maximum Life"
+        why: "A second bonus on every small passive. Worth most on a jewel with many small passives you actually allocate."
+        aim: "Small: +14–16 (ilvl 84), +8–10 (ilvl 73). Large and Medium: +8–10 (ilvl 84)."
+  suffixes:
+    text: >-
+      On Small and Medium jewels a suffix is never a notable. It is one of
+      eleven general bonuses to the small passives (attributes, resistances,
+      mana and life regeneration), or a bonus specific to the enchantment,
+      such as attack speed on the attack jewels or damage over time on the
+      damage over time jewels.
+
+
+      On a Large jewel one suffix can be a notable, and only one: the data
+      puts every Large suffix notable in the same group. That gives the
+      Large jewel its shape. Two prefix notables, one suffix notable, and a
+      fourth modifier that can only ever be a small-passive suffix.
+
+
+      Since 3.30 the enchantment-specific speed bonuses are all one family,
+      so a jewel has at most one of them.
+    key:
+      - mod: "1 Added Passive Skill is a notable (suffix, Large jewels only)"
+        why: "The third notable of a Large jewel. Each Large enchantment has about three to choose from, and they are all one group."
+        aim: "At most one per jewel."
+      - mod: "Added Small Passive Skills also grant: #% increased Attack Speed"
+        why: "Stands for the enchantment-specific suffixes: attack speed, cast speed, or attack and cast speed with the jewel's damage type, and on other enchantments critical strike multiplier, area of effect or damage over time."
+        aim: "1% (ilvl 1), 2% (ilvl 68) or 3% (ilvl 84) per small passive."
+      - mod: "Added Small Passive Skills also grant: +#% to all Elemental Resistances"
+        why: "The most useful general suffix: every small passive you allocate repairs all three resistances."
+        aim: "Large and Medium: 2%, 3% or 4%. Small: up to 6% (ilvl 84)."
+      - mod: "Added Small Passive Skills also grant: +# to All Attributes"
+        why: "For builds that stack attributes or are short of one."
+        aim: "Large and Medium: +2 to +4. Small: up to +6 (ilvl 84)."
+approach:
+  principle: >-
+    **Three choices before the first orb, and the item level is the one
+    people get wrong.** Enchantment and passive count cannot be changed, so
+    they are bought, not crafted. Item level cannot be changed either, and
+    here the right one is the lowest that still allows your notables,
+    because every level above it adds competitors and nothing you want.
+  order:
+    - title: "List the notables, then find the enchantment that has them"
+      text: >-
+        Open the modifier list and look up each notable. It names the
+        enchantments that can roll it, its side and its item level. All the
+        notables for one jewel must share an enchantment, and on a Large
+        jewel at most one of them may be a suffix.
+    - title: "Choose the passive count"
+      text: >-
+        The fewest passives you can find at a price you accept. This is
+        fixed on the jewel, like the enchantment.
+    - title: "Choose the item level bracket"
+      text: >-
+        Take the highest level among your notables: 1, 50, 68 or 75. Buy a
+        jewel at or just above it and below the next step that adds
+        competition: 50 to 67, 68 to 74 (68 to 72 on a Small jewel), or 75
+        to 83 (75 to 77 on a Small one).
+    - title: "Roll the Magic jewel"
+      text: >-
+        Alterations until the notable is there. On a Large jewel, a prefix
+        notable and a suffix notable together are worth waiting for: that
+        is two of three before the jewel is even Rare.
+    - title: "Add the next notable with the safest tool for the size"
+      text: >-
+        Small: there is no next notable; a Regal Orb and an Exalted Orb are
+        free rolls at small-passive bonuses. Medium: a Regal Orb, with an
+        Imprint if you are particular, and the add-a-prefix beast when the
+        Regal Orb lands on a suffix. Large: a Regal Orb for the second
+        prefix notable, with an Imprint.
+    - title: "Socket it and look"
+      text: >-
+        See where the notables sit and count the points. A third notable
+        you will not allocate is harmless only if it is not on your path.
+  finishing: >-
+    Put the jewel in the tree, check the path to each notable you mean to
+    take, and take it out if it disappoints. There is
+    no value to reroll on a notable, so a [[Divine Orb]] only matters to the
+    few small-passive bonuses that have a range.
+
+
+    An open slot on a Small jewel, or the fourth slot of a Large jewel that
+    already has its suffix notable, is a free roll for an [[Exalted Orb]]:
+    by the groups in the data it can only add a small-passive bonus.
+  stopping: >-
+    A Small jewel is finished when its notable is there. A Medium jewel with
+    one notable you need and a second you can use is a good jewel; insisting
+    on two exact ones multiplies the cost by five to ten. A Large jewel with
+    two of your notables is where most players should stop and socket it,
+    because the third exact notable is the expensive one.
+
+
+    If the next step needs more Croakers than you have, the jewel is done.
+special:
+  - mod: "Added Small Passive Skills grant: (the enchantment)"
+    source: "Fixed on the item"
+    where: "Printed above the line when the jewel drops. It decides the small passives and the list of notables. Nothing in this guide changes it: choose it by choosing the jewel."
+  - mod: "Adds # Passive Skills"
+    source: "Fixed on the item"
+    where: "8 to 12 on a Large jewel, 4 to 6 on a Medium, 2 or 3 on a Small, set when it drops. Buy the count you want."
+  - mod: "Added Passive Skills are Jewel Sockets"
+    source: "Fixed by size"
+    where: "Two on a Large jewel and one on a Medium, none on a Small, according to the reference pages. A Large jewel's sockets take Medium or Small jewels; a Medium's takes a Small one."
+  - mod: "A suffix notable"
+    source: "Large jewels only"
+    where: "Rolled like any suffix, but only the 17 Large enchantments have them, and all share one group."
+  - mod: "#% increased Damage with Ailments"
+    source: "Fossil"
+    where: "Part of the jewels' Fossil-only pool, which the data also lists under cluster jewels. Unconfirmed in 3.30."
+mistakes:
+  - "**Rolling an item level 84 jewel for low-level notables.** At 84 a level-1 or level-50 notable is about half as likely as at item level 50 to 67. Buy the low jewel."
+  - "**Rolling a jewel below the notable's level.** A level-68 notable never appears on an item level 67 jewel."
+  - "**Choosing the enchantment last.** A notable that belongs to another enchantment cannot roll, whatever you spend."
+  - "**Waiting for a second suffix notable on a Large jewel**, a third notable on a Medium or a second on a Small. The groups and the sizes forbid them."
+  - "**Using the add-a-prefix beast on a Large jewel with a suffix notable.** The suffix it removes is random."
+  - "**Ignoring the passive count.** A 12-passive Large jewel with the same notables costs more points for the same result."
+  - "**Paying for a three-notable jewel without socketing it.** Where the notables sit decides what it costs to use."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Sizes, enchantments, every notable with its side, item level, group and weights, the small-passive bonuses and the bench options. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The speed bonuses becoming one family; notables shown as keywords; cluster jewels dropping more often from Delirious monsters." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Notable and socket limits per size, where the jewels socket, the refund on unsocketing and the description of notable positions. Partly community text of unknown age." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes." }

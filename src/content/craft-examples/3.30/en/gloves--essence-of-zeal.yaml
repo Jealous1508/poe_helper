@@ -1,0 +1,152 @@
+category: gloves
+title: "Attack speed that cannot miss: an Essence of Zeal"
+level: 2
+summary: "The rarest suffix on gloves becomes the one certain thing on the item. Then a three-line table decides what the bench adds."
+goal: >-
+  Mapping gloves for an attack build: attack speed, life and a resistance.
+  This is the craft that shows **why targeted tools exist**. The modifier you
+  need most is the one the lottery gives least, so you stop asking the
+  lottery for it and ask it for the easy things instead.
+base: "Slink Gloves"
+itemLevel: 72
+baseWhy: >-
+  Slink Gloves are an Evasion base from level 70 with 242–278 Evasion Rating
+  and no implicit to worry about. The Evasion pool adds spell suppression to
+  what the Essence can roll beside its own modifier.
+
+
+  Item level 72 opens Tier 2 resistances and all of maximum Life. The attack
+  speed comes from the Essence at a fixed size, so the item level does not
+  affect it.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "+108 to maximum Life" }
+    - { text: "+134 to Evasion Rating" }
+  suffixes:
+    - { text: "12% increased Attack Speed", how: essence }
+    - { text: "+10% chance to Suppress Spell Damage" }
+    - { text: "+31% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Zeal]]", amount: "5–15", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench, or 4 Orbs of Alchemy for life" }
+cost: >-
+  Essences are the whole cost, and Screaming ones are what red maps give in
+  3.30. The bench step is 3 [[Chaos Orb]]s for a resistance or 4 Orbs of
+  Alchemy for life.
+odds: >-
+  Without the Essence, at this item level one suffix roll in 113 is attack
+  speed of 11% or more, by our arithmetic from the weights. With it, every
+  result has 11–13%.
+
+
+  What remains random is life. Each prefix the Essence rolls is maximum Life
+  about 1 time in 5, and life of 85 or more about 1 time in 15. A result with
+  an open prefix also passes, because the bench sells life. So only one
+  outcome fails: three prefixes, none of them life.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Bring white Slink Gloves to 20% quality. Use one
+      [[Screaming Essence of Zeal]] on them.
+    why: >-
+      On gloves an Essence of Zeal guarantees increased Attack Speed as a
+      suffix: 11–13% at Screaming, the same as natural Tier 2; 14–16% at
+      Shrieking, the same as Tier 1; 17–18% at Deafening, which no natural
+      roll reaches. Everything else on the item is random and gets judged
+      next.
+    state:
+      prefixes:
+        - { text: "Adds 9 to 17 Fire Damage to Attacks" }
+        - { text: "71% increased Evasion Rating" }
+        - { text: "+16% to Item Rarity" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+35 to Dexterity" }
+  - title: "Judge the prefixes with a table"
+    do: >-
+      Hold Alt and find which of three cases you are in.
+
+
+      **A. Maximum Life of 85 or more rolled.** Keep. The bench will add a
+      resistance.
+
+
+      **B. No such life, but a prefix slot is open.** Keep. The bench will
+      add life.
+
+
+      **C. Three prefixes and no life of 85 or more.** Fail.
+    why: >-
+      The table exists because the item gets one bench modifier and has two
+      possible gaps. Life is the gap that matters more, and the bench can
+      fill it only if a prefix is open. The gloves above are case C: fire
+      damage, Evasion and Item Rarity fill all three prefixes.
+    check: >-
+      Ignore the other suffixes while you judge. A second good suffix is a
+      bonus; the Essence already supplied the one that counts.
+    fail: >-
+      Case C: use the next Essence on the same gloves. From Screaming
+      upwards an Essence rerolls a Rare item, and the attack speed returns
+      every time.
+  - title: "Repeat until case A or B"
+    do: >-
+      Use Essences one at a time, reading the prefixes after each.
+    why: >-
+      Each use is independent. Do not hold out for case A with perfect
+      suffixes: you are paying an Essence a try for improvements the bench
+      sells for a few orbs.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+  - title: "Bench by the table"
+    do: >-
+      **Case A** (as here): at the [[Crafting Bench]], craft a resistance in
+      an open suffix, +29–35% for 3 [[Chaos Orb]]s. **Case B:** craft maximum
+      Life in the open prefix, +56–70 for 4 Orbs of Alchemy.
+    why: >-
+      The bench cannot add attack speed here, and you would not want it to:
+      its 7–12% is the same group as the Essence's modifier and would be
+      refused. It fills the gap the lottery left.
+    check: >-
+      Case A with no open suffix: craft a damage prefix instead if a prefix
+      is open, such as 31–36% increased Damage while Leeching for 3 Chaos
+      Orbs.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+variations: >-
+  **An Atlas base.** The same craft on Spiked Gloves or Gripped Gloves adds
+  24–30% Melee Damage or 22–28% Projectile Attack Damage from the implicit,
+  on about 60% of the defence. Choose it only if you will never put an
+  Eldritch implicit on the pair: by the text of the Embers and Ichors, the
+  first one replaces the base's implicit.
+
+
+  **Critical strikes.** An Essence of Loathing works the same way and
+  guarantees increased Global Critical Strike Chance, 18–20% at Screaming to
+  24–26% at Deafening. An item takes one Essence modifier, so it is attack
+  speed or this, with the other from the bench or an implicit.
+
+
+  **No Essences yet.** The bench's 7–12% attack speed for 2 Chaos Orbs, on
+  gloves made by any other route, is the same idea at a lower number.
+mistakes:
+  - "Keeping case C because the suffixes are good. A full prefix side with no life cannot be repaired by the bench."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using this on a base with [[Memory Strands]]. One Essence can spend up to 80 of them, by the data-mined table, and the Essence's own modifier has a fixed size that strands do not raise."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on gloves, tiers, weights and bench costs, and the in-game text of the Eldritch Embers. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps; the Atlas glove implicits." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

@@ -1,0 +1,125 @@
+category: abyss-jewels
+title: "A first Abyss jewel: flat Life and one damage suffix"
+level: 1
+summary: "Check the eye and the item level, roll a Magic jewel to +26 Life or better, add a suffix and make it Rare."
+goal: >-
+  An Abyss jewel for a caster in the second half of the campaign, with flat
+  Life and flat spell damage. The craft is the simplest there is. What it
+  teaches is the one habit regular jewels do not need: **read the item level
+  and the tier before you spend anything**, because on an Abyss jewel both
+  decide what a roll can be.
+base: "Hypnotic Eye Jewel"
+itemLevel: 45
+baseWhy: >-
+  The Hypnotic Eye is the caster's eye: its suffixes add flat damage to
+  spells. For a bow use a Searching Eye, for minions a Ghastly Eye; the steps
+  are the same. Avoid a Murderous Eye unless you want its weapon prefixes,
+  because Life is about half as common on it.
+
+
+  Item level 35 is the first at which Life can roll +26–30. The example uses
+  45, a jewel from the middle acts. Hold Alt over yours to read it.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "+28 to maximum Life" }
+  suffixes:
+    - { text: "Adds 13 to 17 Fire Damage to Spells" }
+    - { text: "+13 to Intelligence" }
+needs:
+  - { item: "A Hypnotic Eye Jewel", amount: "1", note: "item level 35 or higher" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if the jewel is Rare" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "only if it is not Magic" }
+  - { item: "[[Orb of Alteration]]", amount: "10–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–3" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  About a dozen [[Orb of Alteration]]s and one [[Regal Orb]]. Campaign
+  currency.
+odds: >-
+  On a Hypnotic Eye at item level 45, maximum Life is 25.6% of all prefix
+  weight, and its better tier, +26–30, is 12.8%: 1 prefix roll in 8, by our
+  arithmetic from the modifier weights. An Alteration does not always roll a
+  prefix, so allow ten to fifteen.
+
+
+  The five "Adds damage to Spells" suffixes are 37% of suffix weight between
+  them and any one of them 7.4%. The Regal Orb is plain luck.
+steps:
+  - title: "Read the jewel before you touch it"
+    do: >-
+      Hold Alt. Check three things: the base is a **Hypnotic** Eye Jewel,
+      the item level is **35 or higher**, and whether the jewel is Normal,
+      Magic or Rare.
+    why: >-
+      The eye decides which damage modifiers exist for this jewel at all.
+      The item level decides the best tier of each: below 35, Life stops at
+      +21–25 however many orbs you use.
+    check: >-
+      If the jewel is already Rare, read it first. Two lines you use are
+      worth more than a clean start.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+22 to maximum Mana" }]
+      suffixes: [{ text: "+13 to Strength" }]
+  - title: "Alterations until Life is +26 or more"
+    do: >-
+      Make the jewel Magic if it is not ([[Orb of Scouring]] then
+      [[Orb of Transmutation]] for a Rare one). Use [[Orb of Alteration]]s
+      until the prefix reads **+26 to maximum Life or higher**. With
+      Advanced Mod Descriptions on, the tier is named "Healthy".
+    why: >-
+      Life is the commonest prefix on this eye, so you can afford to be
+      strict about its tier. The two tiers a level 45 jewel can roll are
+      equally likely, and the better one is five points higher for the same
+      slot.
+    fail: >-
+      Short of Alterations: accept +21–25. It is the same line.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+28 to maximum Life" }]
+  - title: "Fill the suffix"
+    do: >-
+      If the suffix is empty, use an [[Orb of Augmentation]]. You are
+      hoping for "Adds … Damage to Spells" of a type your skill deals.
+    why: >-
+      More than a third of this eye's suffix weight at this level is flat
+      spell damage, so the free roll is a good one. An Augmentation never
+      touches the prefix.
+    check: >-
+      Read the tier here as well. At item level 45 fire damage to spells
+      can be "adds 8–10 to 12–14" or "adds 12–14 to 16–18".
+    state:
+      rarity: magic
+      prefixes: [{ text: "+28 to maximum Life" }]
+      suffixes: [{ text: "Adds 13 to 17 Fire Damage to Spells" }]
+  - title: "Regal Orb, and socket it"
+    do: >-
+      Use one [[Regal Orb]]. Put the jewel in a jewel socket on the tree, or
+      in an Abyssal socket if a piece of your gear has one.
+    why: >-
+      The third modifier is random and the first two are kept. There is no
+      bench step: the [[Crafting Bench]] cannot add a modifier to an Abyss
+      jewel.
+    state:
+      prefixes:
+        - { text: "+28 to maximum Life" }
+      suffixes:
+        - { text: "Adds 13 to 17 Fire Damage to Spells" }
+        - { text: "+13 to Intelligence" }
+variations: >-
+  **In maps.** The same four steps on a jewel of item level 74 or higher aim
+  at +31–35 Life, and from 77 the top tier of the elemental "to Spells"
+  suffixes can roll. Raise the bar with the item level, not before.
+
+
+  **Cast speed and critical strikes.** Those suffixes have a single tier
+  that needs item level 50. A level 45 jewel cannot roll them, which is one
+  more reason to read the item level first.
+mistakes:
+  - "Rolling a jewel below item level 35 and waiting for +26 Life that cannot come."
+  - "Using a Murderous Eye for a Life jewel. Life is 9.5% of its prefix rolls against roughly twice that on the other eyes."
+  - "Keeping a spell damage suffix of a type your skill does not deal."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Hypnotic Eye Jewel pool, tiers, item levels and weights. The odds are our arithmetic." }

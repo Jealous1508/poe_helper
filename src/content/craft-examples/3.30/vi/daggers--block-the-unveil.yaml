@@ -1,0 +1,161 @@
+category: daggers
+title: "Block khi unveil: một prefix physical từ một cây dagger veiled"
+level: 3
+summary: "Một veiled prefix đưa ra ba lựa chọn trong mười ba cái. Một craft bench giá 4 Alteration gạt bảy cái khỏi bàn, và phép tính trên những gì còn lại đảm bảo có một cái physical."
+goal: >-
+  Biến một cây dagger veiled từ Betrayal thành một weapon physical có prefix
+  120–139% increased Physical Damage, mức mà Alteration chạm tới khoảng một
+  trên 390 lần roll prefix. Bài học là **block**: dùng một modifier bench
+  không phải vì thứ nó cho mà vì cái group nó chiếm.
+base: "Gutting Knife"
+itemLevel: 70
+baseWhy: >-
+  Lần craft này bắt đầu từ một món đồ rơi: bất kỳ cây dagger Rare nào có
+  **Veiled Prefix**, item level từ 60 trở lên, mức mà các modifier unveil ra
+  cần. Gutting Knife có critical strike chance gốc cao nhất trong các dagger
+  thường. Trong 3.30, veiled item chỉ đến từ Betrayal; patch notes đã gỡ
+  chúng khỏi các phần thưởng khác.
+methods: [veiled, bench, finishing]
+result:
+  implicits: ["44% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+    - { text: "+97 to maximum Mana" }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "+34 to Intelligence" }
+needs:
+  - { item: "Một cây dagger Rare có Veiled Prefix", amount: "1", note: "từ Betrayal" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "craft block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "để gỡ nó đi" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "craft bench cuối cùng" }
+cost: >-
+  Cây dagger veiled, thứ các thành viên Syndicate rơi ra, và vài orb cho
+  bench. Đây là một trong những prefix mạnh rẻ nhất game nếu bạn chạy
+  Betrayal, và lần craft này không thể hỏng theo kiểu làm mất item.
+odds: >-
+  Class dagger có mười ba veiled prefix. Bảy cái chung một group modifier:
+  các prefix damage chaos, cold, fire, lightning, hai cái spell và một cái
+  minion. Bốn cái là các hybrid physical, chung một group thứ hai. Hai cái
+  là modifier penetration.
+
+
+  Theo thử nghiệm của người chơi, unveil không bao giờ đưa ra một group đã
+  có trên item. Khi bảy cái đã bị block, còn lại sáu, và ba lựa chọn khác
+  nhau được đưa ra: vì chỉ hai trong sáu cái không phải physical, ít nhất
+  một hybrid physical buộc phải nằm trong số đó. Đó là phép đếm từ dữ liệu,
+  dựa trên luật do người chơi thử nghiệm; đó không phải một tỉ lệ được công
+  bố.
+steps:
+  - title: "Đọc cây dagger veiled trước khi đụng vào nó"
+    do: >-
+      Giữ Alt. Xác nhận dòng veiled ghi **Veiled Prefix**, không phải Suffix.
+      Rồi kiểm hai điều: có **một ô prefix khác còn trống** không, và cây
+      dagger đã roll ra **increased Physical Damage** không kèm
+      Accuracy chưa?
+    why: >-
+      Cái block cần một prefix trống để nằm vào. Và increased Physical
+      Damage thuần roll ra cùng group với các prefix physical veiled: nếu nó
+      có trên cây dagger, thì chính chúng mới là những cái không được đưa
+      ra.
+    fail: >-
+      Phía prefix đã đầy: bạn không block được. Unveil luôn như nó đang có;
+      bốn trong mười ba lựa chọn là physical. Đã roll ra physical thuần:
+      veiled prefix của cây dagger này dành cho thứ khác, chẳng hạn các
+      modifier penetration.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Mana" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Craft cái block"
+    do: >-
+      Ở [[Crafting Bench]], craft **25–34% increased Fire Damage** giá
+      4 [[Orb of Alteration]]. Đừng unveil trước.
+    why: >-
+      Bạn không muốn Fire Damage. Bạn muốn group của nó có trên item. Trong
+      dữ liệu 3.30, chính group đó còn chứa các veiled prefix damage chaos,
+      cold, fire, lightning, spell và minion, nên một craft rẻ tiền duy nhất
+      chặn đường bảy lựa chọn cùng lúc. Craft bench nào thuộc group đó cũng
+      được; đây là cái rẻ nhất.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Unveil"
+    do: >-
+      Nhấp chuột phải vào cây dagger và chọn hybrid physical hợp với build:
+      120–139% increased Physical Damage kèm 21–25% chance to Poison, Bleed,
+      Impale hoặc Blind.
+    why: >-
+      Từ 3.26, unveil không cần ghé Jun nữa. Modifier unveil ra là một
+      modifier bình thường, không phải craft bench, nên nó không dùng ô của
+      bench, và nó mạnh hơn bản sao của bench (95–105%).
+    check: >-
+      Nếu không có lựa chọn physical nào hiện ra, thì luật block do người
+      chơi thử nghiệm không còn đúng trong bản patch hiện tại. Hãy lấy một
+      modifier penetration hoặc cái tốt nhất trong những gì được đưa ra.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Thay cái block bằng damage"
+    do: >-
+      Ở bench, gỡ modifier crafted (1 [[Orb of Scouring]]) rồi craft **adds
+      13–17 to 26–30 Physical Damage** giá 4 [[Chaos Orb]].
+    why: >-
+      Cái block đã xong việc của nó. Flat Physical Damage là một group thứ
+      ba, tách khỏi veiled prefix, và cái phần trăm veiled nhân nó lên. Cái
+      phần trăm physical của chính bench sẽ bị từ chối: cùng group với
+      prefix bạn vừa unveil.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+variations: >-
+  **Một Veiled Suffix.** Cùng ý tưởng đó nhưng phép đếm yếu hơn: mười bảy
+  veiled suffix trải ra trên nhiều group hơn, nên một craft block được nhiều
+  nhất bốn cái. Hãy block cái họ bạn ít muốn nhất rồi chọn trong những gì
+  được đưa ra.
+
+
+  **Đặt veil lên cây dagger của chính bạn.** Một [[Veiled Chaos Orb]] roll
+  lại một item Rare kèm một veiled modifier; một [[Veiled Exalted Orb]] gỡ
+  một modifier ngẫu nhiên và thêm một veiled modifier. Không cái nào cho bạn
+  chọn prefix hay suffix, và đó là điều các ví dụ khó hơn giải quyết bằng
+  một lần khóa.
+
+
+  **Ô suffix trống.** Cây dagger này vẫn còn một ô. Một [[Exalted Orb]] buộc
+  phải thêm một suffix, vì phía prefix đã đầy, và theo phép tính của chúng
+  tôi khoảng một trên bốn lần nó sẽ là Critical Strike Chance hoặc
+  Multiplier. Việc đó có thể đợi tới khi bạn dư ra được một cái.
+mistakes:
+  - "Unveil ngay tại chỗ vì cây dagger vừa rơi ra. Cái block tốn bốn Alteration và phải đi trước."
+  - "Block bằng một craft bench physical. Làm vậy là loại mất bốn lựa chọn bạn muốn."
+  - "Để nguyên Fire Damage trên cây dagger đã hoàn thiện. Nó chỉ là một công cụ; hãy thay nó ra."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mười ba veiled prefix và group modifier của chúng, cùng giá bench. Phép đếm là của chúng tôi." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil không cần Jun." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Veiled item bị gỡ khỏi các phần thưởng ngoài Betrayal." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Luật do người chơi thử nghiệm rằng một group đã có trên item thì không được đưa ra khi unveil. Một phần cũ hơn 3.30." }

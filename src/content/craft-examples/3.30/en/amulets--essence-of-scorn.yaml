@@ -1,0 +1,134 @@
+category: amulets
+title: "A critical strike amulet from an Essence of Scorn"
+level: 2
+summary: "The amulet bench does not sell Critical Strike Multiplier. An Essence of Scorn guarantees it; repeat until Life rolls beside it, then bench the Critical Strike Chance."
+goal: >-
+  A mapping amulet for a crit build: Critical Strike Multiplier, Critical
+  Strike Chance and Life. The lesson is **how to split a craft between an
+  Essence and the bench.** Give the Essence the modifier the bench cannot
+  make, give the bench the one it can, and let repetition find the third.
+base: "Onyx Amulet"
+itemLevel: 75
+baseWhy: >-
+  The Onyx Amulet's +10–16 to all Attributes is the implicit that most often
+  saves a suffix. Item level 75 is more than this craft needs: Tier 1 Life
+  opens at 54 and the Essence sets its own number. Any amulet from maps will
+  do, as long as it is item level 54 or higher.
+methods: [essence, bench]
+result:
+  implicits: ["+13 to all Attributes"]
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "+47 to maximum Mana" }
+  suffixes:
+    - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+    - { text: "+33% to Cold Resistance" }
+    - { text: "24% increased Global Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Scorn]]", amount: "10–20", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "1", note: "for the bench" }
+cost: >-
+  Essences are the whole cost. Scorn has no weak versions: Screaming is the
+  lowest that exists, and it already works on a Rare item, so every one you
+  own can be used on the same amulet. The bench step is 1 [[Chaos Orb]].
+odds: >-
+  With the multiplier fixed by the Essence, each prefix the Essence rolls is
+  maximum Life of 70 or more about 1 time in 20, by our arithmetic at item
+  level 75. A result has between one and three prefixes, so roughly one
+  Essence in ten passes. Plan on ten to twenty, and stop early if a good one
+  turns up.
+steps:
+  - title: "The first Essence"
+    do: >-
+      Use one [[Screaming Essence of Scorn]] on the amulet. It can be Normal
+      or already Rare.
+    why: >-
+      The Essence makes the item Rare and **guarantees** Critical Strike
+      Multiplier: 25–29% at Screaming, 30–34% at Shrieking, 35–41% at
+      Deafening. Tier 1 of the natural modifier is 35–38%, so the best
+      Essence beats the best roll. Everything else on the amulet is random.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+47 to maximum Mana" }
+        - { text: "22% increased Armour" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+        - { text: "+29 to Strength" }
+  - title: "Read the prefixes first"
+    do: >-
+      Hold Alt. Is there a **maximum Life** prefix of 70 or more? Then count
+      the suffixes: is at least one of the three slots open?
+    why: >-
+      The amulet above fails twice. No Life, and all three suffix slots are
+      taken, so the bench has nowhere to put Critical Strike Chance. Life is
+      the test because no Essence gives it on an amulet and the bench's
+      version is 41–55.
+    check: >-
+      Pass: Life of 70 or more **and** an open suffix. Also pass: an open
+      prefix and an open suffix with good suffixes, if you are willing to
+      settle for the bench's Life.
+    fail: >-
+      Use another Essence on the same amulet. Nothing is lost but the
+      Essence.
+  - title: "Repeat until it passes"
+    do: >-
+      Use Essences one after another, reading the amulet each time.
+    why: >-
+      Each use is a fresh roll of everything except the multiplier, which
+      comes back every time. You are only ever waiting for Life.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "+47 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+  - title: "Bench the Critical Strike Chance"
+    do: >-
+      At the [[Crafting Bench]], craft 22–27% increased Global Critical Strike
+      Chance for 1 [[Chaos Orb]].
+    why: >-
+      The bench has the chance and not the multiplier, which is exactly why
+      the Essence took the multiplier. If the Essence had happened to roll
+      Critical Strike Chance as well, the bench would refuse this craft, the
+      two being one group; craft a resistance in that case.
+    state:
+      implicits: ["+13 to all Attributes"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "+47 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Global Critical Strike Multiplier", how: essence }
+        - { text: "+33% to Cold Resistance" }
+        - { text: "24% increased Global Critical Strike Chance", how: crafted }
+variations: >-
+  **Other builds, same method.** Swap the Essence and keep the steps. Anger,
+  Hatred and Wrath give increased Fire, Cold or Lightning Damage, 23–26% at
+  Screaming and 31–34% at Deafening. Envy gives increased Chaos Damage, which
+  an amulet cannot roll at all. Zeal gives Cast Speed. In each case check the
+  bench list first and give the Essence the modifier that is missing from it
+  or weakest on it.
+
+
+  **Loathing instead of Scorn.** Loathing guarantees Critical Strike Chance,
+  39–42% at Deafening. It is the wrong way round for this amulet: it fixes
+  the modifier the bench could have made and leaves the multiplier to a roll
+  that is 1 suffix in 20.
+
+
+  **Keeping this amulet for later.** If a result has three suffixes you would
+  never give up and poor prefixes, do not reroll it. The lock example further
+  down rebuilds the prefix side without touching them.
+mistakes:
+  - "Keeping a result with three filled suffixes and no Critical Strike Chance. There is no room left for the bench."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using an Essence of Greed to get the Life. On an amulet Greed gives Life regeneration."
+  - "Doing this on a base with [[Memory Strands]]: one Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on amulets, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

@@ -1,0 +1,235 @@
+category: warstaves
+title: "Keep three crit suffixes, force a physical prefix"
+level: 4
+summary: "A rod with perfect suffixes and useless prefixes. Lock the suffixes, reroll the prefixes with a Veiled Chaos Orb, and use a two-Alteration bench block so the unveil has to offer physical damage."
+goal: >-
+  Rescue a crit warstaff whose suffix side is finished and whose prefix side
+  is not, without touching the suffixes. Two ideas carry it. A lock can
+  guard either side, and on this weapon the suffixes can be the side worth
+  guarding. And a veiled modifier is a choice of three that you can narrow:
+  **put a cheap bench modifier of an unwanted group on the item first, and
+  that group cannot be offered.**
+base: "Eventuality Rod"
+itemLevel: 83
+baseWhy: >-
+  This craft starts from an item: a warstaff with attack speed and both
+  critical strike suffixes at high tiers, bought or found. The Eventuality
+  Rod is where such a suffix side is worth most, with 8.3% base critical
+  strike chance and an extra Power Charge on the implicit. Any warstaff of
+  item level 60 or higher can take the veiled modifiers used here.
+methods: [meta, veiled, bench]
+result:
+  implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "+164 to maximum Mana" }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "26% increased Attack Speed" }
+    - { text: "+36% to Global Critical Strike Multiplier" }
+    - { text: "34% increased Critical Strike Chance" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Orb of Alteration]]", amount: "2", note: "for the bench block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the block afterwards" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  One lock, 4 [[Divine Orb]]s and a [[Sacred Orb]], and one
+  [[Veiled Chaos Orb]] per attempt. The orb comes from Betrayal; safehouse
+  leaders can drop it. The block and the final bench craft are small change.
+
+
+  The price is the test. Three suffixes of the top two tiers are worth a
+  lock. Attack speed with two fillers is not: reroll the whole staff.
+odds: >-
+  An unveil on a warstaff can offer thirteen prefixes. Four are the physical
+  hybrids, seven are caster and minion damage percentages that share one
+  group, and two are penetration. The game does not publish how the three
+  choices are weighted. If every option were equally likely and the three
+  were always different, an unblocked unveil would show a physical hybrid
+  about 7 times in 10.
+
+
+  With one bench modifier of the caster damage group on the staff, the
+  community-tested rule is that none of the seven can be offered. Six remain,
+  four of them physical, and three are shown: by plain counting at least one
+  must be physical. We have not seen this exact block tested in 3.30, so
+  treat "certain" as "very likely" until you have done it once.
+steps:
+  - title: "Check both sides for room"
+    do: >-
+      Count the suffixes: there must be **three**. Count the prefixes: there
+      must be an open slot, because "Suffix Modifiers cannot be changed" is
+      a prefix. If a prefix is a bench modifier, remove it for 1
+      [[Orb of Scouring]].
+    why: >-
+      Three suffixes do two jobs. They are what the lock is worth paying
+      for, and with every suffix slot filled the veiled modifier has nowhere
+      to go but the prefix side. With a suffix slot open we could not
+      confirm where it would land.
+    fail: >-
+      Three rolled prefixes: there is no room for the lock and no safe way
+      to make any. This craft does not apply.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "+187 to maximum Mana" }
+        - { text: "Adds 112 to 221 Cold Damage" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      It is the mirror of the prefix lock, at the same price. While it is on
+      the staff, a reroll that respects it leaves the three suffixes alone
+      and replaces the prefixes, the lock among them.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "+187 to maximum Mana" }
+        - { text: "Adds 112 to 221 Cold Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Choose the reroll by what it guarantees"
+    do: >-
+      Compare two rerolls that respect the lock. A Harvest **Physical**
+      reforge must now put its guaranteed modifier on the prefix side. A
+      [[Veiled Chaos Orb]] puts a veiled prefix there. Use the Veiled Chaos
+      Orb.
+    why: >-
+      The reforge guarantees a family and says nothing about the tier. By
+      our arithmetic from the weights, its physical prefix is flat damage
+      about half the time, a percentage prefix from the bottom three tiers 4
+      times in 10, and a percentage of 110% or more (45% for the hybrid) 1
+      time in 20. A veiled modifier has one tier: the physical hybrid is
+      always 120–139%.
+    check: >-
+      That the Veiled Chaos Orb and Harvest reforges respect a locked side
+      is established by players, not stated by the developers. Try the pair
+      on a cheap Rare first if you have not seen it work this league.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "+164 to maximum Mana" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Block before you unveil"
+    do: >-
+      Do not unveil yet. At the bench, craft **increased Chaos Damage**,
+      44–60%, in the open prefix slot. It costs 2 [[Orb of Alteration]]s.
+    why: >-
+      That craft belongs to the caster damage group. So do seven of the
+      thirteen prefixes the unveil could offer: the chaos, cold, fire and
+      lightning hybrids, both spell damage hybrids and the minion one. By
+      community testing an unveil never offers a group that is already on
+      the item, so one cheap modifier removes all seven. Any craft of that
+      group would do; this is the cheapest in the data.
+    check: >-
+      The crafted modifier is on the staff, and no prefix is pure increased
+      Physical Damage. A rolled pure percentage is the same group as the
+      physical hybrids and would block them instead.
+    fail: >-
+      The Veiled Chaos Orb left three prefixes, so there is no slot for the
+      block: unveil without it and take the physical hybrid if it is
+      offered. Or it rolled pure increased Physical Damage beside the veiled
+      prefix: keep that, and unveil a penetration modifier or whatever the
+      build can use.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "+164 to maximum Mana" }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Unveil the physical hybrid"
+    do: >-
+      Right-click the staff and choose from the three modifiers offered.
+      Take **increased Physical Damage with a chance to Impale**, or the
+      Bleeding, Poison or Blind version if that suits the build better.
+    why: >-
+      All four are 120–139% increased Physical Damage with a 21–25% chance
+      of the second effect. That sits between Tier 4 and Tier 3 of the
+      natural modifier and above the bench's best, and you did not have to
+      roll it.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "+164 to maximum Mana" }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+  - title: "Swap the block for a real craft"
+    do: >-
+      Remove the Chaos Damage at the bench for 1 [[Orb of Scouring]], then
+      craft flat Physical Damage in its place: adds 18–24 to 36–42 for 4
+      [[Chaos Orb]]s.
+    why: >-
+      The block has done its work. The percentage group is now held by the
+      unveiled modifier, so the bench's physical craft that still fits is
+      the flat one.
+    check: >-
+      Be honest about the result. One strong prefix, one bench prefix, and
+      one dead one that the Veiled Chaos Orb rolled. That is what keeping
+      three top suffixes cost, and it is a far better weapon than the one
+      you started with.
+    state:
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "+164 to maximum Mana" }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "+36% to Global Critical Strike Multiplier" }
+        - { text: "34% increased Critical Strike Chance" }
+variations: >-
+  **The mirror image.** Three good prefixes and bad suffixes is the more
+  common case. Lock the prefixes and use a Harvest Speed reforge: on a
+  warstaff attack speed is the only modifier with the speed tag, so it is
+  guaranteed. The block trick does not transfer: the seventeen suffixes an
+  unveil can offer are spread over many groups, and one bench modifier
+  removes four of them at most.
+
+
+  **Harvest instead of the orb.** With no Veiled Chaos Orb to hand, the
+  Physical reforge (50 Vivid Lifeforce) behind the same lock is the cheap
+  version. Expect a low tier, and then bench the pure percentage or the flat
+  damage beside whatever it gave.
+
+
+  **"Cannot roll Caster Modifiers" as the block.** It reads as if it should
+  do the same job. We could not confirm that it affects unveil choices, it
+  costs a Divine Orb against two Alterations, and it is a suffix on a staff
+  whose suffix side is full.
+mistakes:
+  - "Unveiling first and thinking about the bench afterwards. The block only works before the choice is shown."
+  - "Blocking with a physical bench craft. That is the group you want offered."
+  - "Locking a suffix side that is one good modifier and two fillers. Rerolling the whole staff is cheaper."
+  - "Using an Annulment on the dead prefix afterwards. It takes one of six modifiers at random, and since 3.30 no \"Cannot roll\" modifier steers it."
+  - "Leaving the Chaos Damage on the staff. It was a tool; the slot is worth flat Physical Damage."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The veiled modifiers a warstaff can unveil and their groups, bench costs, tiers and weights. The counting is ours." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "How Veiled Chaos Orbs treat veiled modifiers protected by meta-modifiers." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun; safehouse leaders drop Veiled Chaos Orbs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: a crafted modifier of the same group blocks an unveil choice, and Veiled orbs respect a locked side. Partly older than 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Physical and Speed reforges and their costs." }

@@ -1,0 +1,212 @@
+category: rune-daggers
+title: "Hai gem level: một cây dagger chaos quanh một +1 fractured"
+level: 5
+summary: "Fracture prefix hiếm nhất trong pool, nhắm ba Fossil vào gem level thứ hai theo tag của nó, khóa cả hai rồi lấy cái suffix duy nhất mà reforge Chaos cho được, sau đó khép item bằng ba modifier bench."
+goal: >-
+  Một cây rune dagger có "+1 to Level of all Spell Skill Gems" và "+1 to
+  Level of all Chaos Spell Skill Gems", increased Chaos Damage, và Chaos
+  Damage over Time Multiplier. Hai prefix gem thuộc hai group khác nhau, nên
+  chúng cộng dồn. Không bước riêng lẻ nào ở đây là lạ lùng. Lần craft này khó
+  vì **mỗi giai đoạn được chọn bằng cách đếm tag**, và vì giai đoạn đầu tiên
+  là một ván cược một trên bốn mà không công cụ nào cải thiện được.
+base: "Imperial Skean"
+itemLevel: 84
+baseWhy: >-
+  Build damage over time không crit, nên độ lớn của implicit không quan
+  trọng, còn yêu cầu Intelligence thấp hơn của Imperial Skean thì có. Build
+  crit làm bản lightning hoặc cold của weapon này sẽ lấy Platinum Kris. Item
+  level 84 giữ mọi tier mở; bản thân "+1 to Level of all Spell Skill Gems"
+  chỉ cần 55. Base phải không có influence, vì nó sẽ được fracture.
+methods: [fracture, fossil, meta, harvest, bench]
+result:
+  note: "Fractured"
+  implicits: ["42% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+    - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+    - { text: "48% increased Chaos Damage / Chaos Skills have 12% increased Skill Effect Duration", how: crafted }
+  suffixes:
+    - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "16% increased Cast Speed", how: crafted }
+needs:
+  - { item: "Một rune dagger có \"+1 to Level of all Spell Skill Gems\" đã fractured", amount: "1", note: "mua, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Faceted Fossil]], [[Aetheric Fossil]], [[Aberrant Fossil]]", amount: "5–10 mỗi loại", note: "nhiều hơn hẳn nếu bạn tự làm base" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "mỗi lần thử một cái", note: "một Resonator có ba socket" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa, cộng 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "10", note: "hai craft bench cuối cùng" }
+cost: >-
+  Base fractured gần như là toàn bộ chi phí. Tự làm nghĩa là dùng Fossil tới
+  khi prefix hiếm nhất trong pool xuất hiện, rồi một [[Fracturing Orb]] chọn
+  đúng modifier một trên bốn lần; mua nghĩa là trả tiền cho người đã làm việc
+  đó. Sau nó, giai đoạn 2 là một nắm Resonator, và giai đoạn 3 là các lần
+  khóa, mỗi lần 4 [[Divine Orb]] và một [[Sacred Orb]]. Chúng tôi không đưa
+  ra tổng: giai đoạn đầu tiên không có giới hạn trên.
+odds: >-
+  Tất cả theo phép tính của chúng tôi từ weight ở item level 84, theo mô hình
+  của cộng đồng trong đó một Fossil nhân một modifier một lần cho mỗi tag
+  khớp. Hãy coi chúng là gần đúng, không phải chính xác.
+
+
+  **Giai đoạn 1.** "+1 to Level of all Spell Skill Gems" tự nhiên là 1 trên
+  1,792 lần roll prefix, và khoảng 1 trên 87 với một Faceted cùng một
+  Aetheric Fossil. Sau đó Fracturing Orb chọn nó nhiều nhất là một trên bốn
+  lần.
+
+
+  **Giai đoạn 2.** Khi đã có fracture và dùng Faceted, Aetheric cùng Aberrant
+  Fossil với nhau, một lần roll prefix là "+1 to Level of all Chaos Spell
+  Skill Gems" 38% số lần. Tự nhiên thì nó là 1 trên 448.
+
+
+  **Giai đoạn 3.** Dưới một lần khóa prefix, reforge Chaos chỉ có một
+  modifier nó thêm được: Chaos Damage over Time Multiplier. Nếu tier của nó
+  được rút theo weight, một trên ba lần reforge cho 24% trở lên và một trên
+  bảy lần cho 29% trở lên. Chưa được đo trong 3.30.
+steps:
+  - title: "Giai đoạn 1: cái +1 to all Spell Skill Gems đã fractured"
+    do: >-
+      Mua base, hoặc tự làm: roll lại bằng một [[Faceted Fossil]] và một
+      [[Aetheric Fossil]] tới khi "+1 to Level of all Spell Skill Gems" xuất
+      hiện trên một kết quả có **đúng bốn modifier**, rồi dùng một
+      [[Fracturing Orb]].
+    why: >-
+      Prefix này có weight 50 trong một pool 89,589, và nó là modifier bạn
+      không bao giờ đủ sức tìm lần thứ hai. Nó mang tag gem và tag caster,
+      nên hai Fossil đó nhân nó hai lần. Faceted một mình thì không được: nó
+      nhân "+2 to Level of Socketed Melee Gems" nhiều hơn hẳn, và Aetheric
+      Fossil chính là thứ dìm cái đó xuống.
+    check: >-
+      Bốn modifier, không phải năm hay sáu. Fracturing Orb cần ít nhất bốn và
+      chọn ngẫu nhiên.
+    fail: >-
+      Nó fracture một modifier khác. Cây dagger đó hết đường làm base cho kế
+      hoạch này; nó không fracture lại được. Đây là bước khiến phần lớn dân
+      craft chọn mua.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "Adds 26 to 51 Cold Damage to Spells" }
+      suffixes:
+        - { text: "18% increased Cast Speed" }
+        - { text: "+41 to Intelligence" }
+  - title: "Giai đoạn 2: ba Fossil, chọn theo tag của một modifier"
+    do: >-
+      Roll lại bằng một [[Faceted Fossil]], một [[Aetheric Fossil]] và một
+      [[Aberrant Fossil]] trong Resonator ba socket tới khi dagger có **"+1
+      to Level of all Chaos Spell Skill Gems"**, với **một ô prefix trống**
+      và **không quá hai suffix**.
+    why: >-
+      Tra tag của modifier: chaos, caster, gem. Mỗi Fossil nhân một tag trong
+      số đó lên mười lần, nên prefix này được nhân ba lần chồng lên nhau
+      trong khi gần như mọi thứ khác chỉ được nhân một lần hoặc không lần
+      nào. Prefix fractured nằm ở group khác và không block gì cả. Với Fire,
+      Cold hoặc Lightning, Fossil thứ ba là Scorched, Frigid hoặc Metallic.
+    check: >-
+      Prefix trống là để dành cho Chaos Damage của bench. Suffix trống là để
+      dành cho khóa ở giai đoạn 3, vốn là một suffix. Một kết quả có gem
+      level mà có ba suffix thì không khóa được.
+    fail: >-
+      Dùng Resonator kế tiếp. Prefix fractured sống sót qua mọi lần roll lại.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+      suffixes:
+        - { text: "24% increased Cast Speed", how: fossil }
+        - { text: "77% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Giai đoạn 3: khóa prefix, reforge lấy Chaos"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]). Ở [[Horticrafting Station]], **Reforge a Rare item
+      with random modifiers, including a Chaos modifier** (100 Vivid
+      Lifeforce). Lặp lại cả hai tới khi tier của multiplier và số suffix vừa
+      ý bạn.
+    why: >-
+      Gem level thứ hai không fractured, nên nó cần khóa. Giờ hãy đếm tag
+      Chaos. Trên rune dagger, có ba modifier tự nhiên mang tag đó: prefix
+      gem Chaos, added Chaos Damage cho attack, và Chaos Damage over Time
+      Multiplier. Hai cái là prefix, mà prefix đã bị khóa. Reforge chỉ còn
+      đúng một modifier nó thêm được để giữ lời hứa.
+    check: >-
+      Cả hai gem level còn nguyên, multiplier có mặt. Rồi đếm suffix: **một**
+      thì còn chỗ cho hai suffix bench; nếu là hai, item chỉ nhận được một
+      modifier bench duy nhất.
+    fail: >-
+      Một tier thấp, 14–18%, kém hơn thứ bench bán. Khóa và reforge lần nữa,
+      hoặc chấp nhận nó và tính trước chuyện thay nó đi. Hãy chốt số lần thử
+      trước lần đầu tiên.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+      suffixes:
+        - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+  - title: "Giai đoạn 4: ba modifier bench"
+    do: >-
+      Ở bench, theo thứ tự này: **Can have up to 3 Crafted Modifiers** (2
+      Divine Orb, một suffix); **46–50% increased Chaos Damage with 11–12%
+      increased Skill Effect Duration for Chaos Skills** (8 Chaos Orb, prefix
+      thứ ba); **14–17% increased Cast Speed** (2 Chaos Orb, suffix cuối
+      cùng).
+    why: >-
+      Trên một cây dagger không có influence, chỉ bench hoặc một veiled
+      modifier mới thêm được increased Chaos Damage; pool tự nhiên có Spell
+      Damage trong group đó và không có gì cho chaos. Craft multi-modifier
+      tốn một suffix và trả lại một prefix cùng một suffix. Nó đáng tiền chỉ
+      vì reforge đã để lại hai suffix trống.
+    check: >-
+      Nếu reforge chỉ để lại một suffix trống, hãy bỏ qua craft
+      multi-modifier và đặt prefix Chaos Damage lên làm modifier bench duy
+      nhất.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+        - { text: "48% increased Chaos Damage / Chaos Skills have 12% increased Skill Effect Duration", how: crafted }
+      suffixes:
+        - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "16% increased Cast Speed", how: crafted }
+variations: >-
+  **Gem level thứ ba.** Các corruption implicit của rune dagger có "+1 to
+  Level of all Chaos Spell Skill Gems". Một [[Vaal Orb]] có thể thay implicit
+  crit bằng nó, thứ mà build này chẳng tiếc. Nó cũng có thể roll lại cả item
+  hoặc không làm gì, xác suất không được công bố, và sau đó dagger không
+  craft thêm được nữa. Một ván cược dành cho bản thứ hai, không phải cho bản
+  duy nhất.
+
+
+  **Caster crit.** Vẫn bốn giai đoạn đó với Metallic, Frigid hoặc Scorched
+  làm Fossil thứ ba. Giai đoạn 3 thay đổi: dùng reforge Caster (75 Primal
+  Lifeforce), thứ mà dưới một lần khóa prefix chỉ thêm được cast speed hoặc
+  Spell Critical Strike Chance, rồi bench Critical Strike Multiplier.
+
+
+  **Kết thúc giai đoạn 4 bằng một Exalted Orb.** Khi phía suffix đã đầy, orb
+  buộc phải thêm một prefix, và với "Cannot roll Attack Modifiers" là một
+  trong các suffix crafted thì đó không thể là prefix attack. Cái giá là ô
+  của craft cast speed. Chỉ đáng khi một prefix Spell Damage roll ra đáng giá
+  với bạn hơn Chaos Damage của bench.
+mistakes:
+  - "Faceted Fossil mà không có Aetheric. Prefix melee gem chiếm chỗ, mà nó chung group với các gem level theo element."
+  - "Giữ một kết quả giai đoạn 2 có ba suffix. Không có chỗ nào để đặt khóa."
+  - "Dùng Annulment để lấy chỗ. Từ 3.30 không gì lái được nó, và gem level chưa fractured là một trong những thứ nó có thể lấy."
+  - "Reforge lấy Chaos mà không khóa. Gem level thứ hai không fractured và bị roll lại cùng mọi thứ khác."
+  - "Craft Chaos Damage over Time Multiplier ở bench trước giai đoạn 3. Cùng group với cái reforge thêm vào, mà đằng nào reforge cũng gỡ modifier bench."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag, group và weight của modifier, hệ số nhân của Fossil, corruption implicit, giá bench và dòng mô tả của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30; giá khóa; thay đổi của Annulment." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Chaos và Caster cùng giá của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

@@ -1,0 +1,135 @@
+category: bows
+title: "Bow gem-level đầu tiên từ một Essence of Dread"
+level: 2
+summary: "Một Essence of Dread đảm bảo +2 to Level of Socketed Bow Gems. Lặp lại tới khi còn một ô suffix trống, rồi bench một Damage over Time Multiplier."
+goal: >-
+  Một cây bow cho build damage over time ở những map đầu tiên: +2 level cho
+  skill bow gắn trong nó, và một multiplier từ bench. Đây là cây bow phá mọi
+  thói quen học được trên weapon khác. **Các con số damage của nó không quan
+  trọng.** Damage của skill đến từ level của gem, nên lần craft này có một
+  prefix đáng kể, còn phần còn lại của item được đánh giá theo việc nó chừa
+  chỗ cho cái gì.
+base: "Thicket Bow"
+itemLevel: 68
+baseWhy: >-
+  Với bow gem-level, base gần như tùy ý. Thicket Bow được chọn vì 1.5 attack
+  mỗi giây của nó, con số duy nhất của base mà một build như vậy còn dùng
+  tới. Cây bow nào bạn trang bị được cũng làm được việc.
+
+
+  Item level 68 đã vượt mọi thứ lần craft này cần: +2 to Level of
+  Socketed Bow Gems mở ở 64. Nó còn cho tier thứ ba của Damage over Time
+  Multiplier tự nhiên roll được (16–19%), nếu may mắn đưa tới.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+    - { text: "Adds 64 to 121 Cold Damage" }
+  suffixes:
+    - { text: "15% increased Attack Speed" }
+    - { text: "+35 to Dexterity" }
+    - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Shrieking Essence of Dread]]", amount: "3–8", note: "Deafening cho cùng mức +2; Screaming chỉ cho +1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+  - { item: "[[Jeweller's Orb]] và [[Orb of Fusing]]", amount: "tùy nhu cầu", note: "hoặc các craft socket và link của bench" }
+cost: >-
+  Vài Essence và 4 [[Chaos Orb]]. Khoản tốn thật sự của cây bow này hoàn
+  toàn không nằm trong danh sách modifier: đó là sáu socket link với nhau,
+  vì +2 chỉ áp dụng cho gem gắn trong bow.
+odds: >-
+  +2 là chắc chắn. Thứ bạn đang roll tìm là chỗ trống: **ít nhất một ô
+  suffix trống** cho bench. Attack speed bên cạnh là phần thưởng thêm đáng
+  chờ một chút: ở item level 68 nó là 1 trên 10 lần roll suffix, theo phép
+  tính của chúng tôi, nên một kết quả có hai hoặc ba suffix sẽ có nó 2 hoặc
+  3 trên 10 lần. "+1 to Level of Socketed Gems" trên cùng kết quả đó, thứ sẽ
+  đưa bow lên +3, là 1 trên 49 lần roll prefix khác. Đừng chờ nó bằng
+  Essence. Ví dụ Fossil mới là công cụ cho việc đó.
+steps:
+  - title: "Socket trước, trên cây bow trắng"
+    do: >-
+      Trước bất kỳ Essence nào, đưa cây bow trắng lên sáu socket và link
+      nhiều nhất trong khả năng của bạn, bằng [[Jeweller's Orb]] và
+      [[Orb of Fusing]] hoặc các craft giá cố định của bench.
+    why: >-
+      Trên cây bow này link là phần đắt còn modifier là phần rẻ, nên hãy
+      giải quyết phần đắt khi một kết quả xấu chưa tốn gì. Socket và link
+      sống sót qua mọi lần roll lại.
+    state: { rarity: normal }
+  - title: "Essence đầu tiên"
+    do: >-
+      Dùng một [[Shrieking Essence of Dread]].
+    why: >-
+      Trên bow, Dread đảm bảo "+# to Level of Socketed Bow Gems": +1 ở bậc
+      Screaming, +2 ở Shrieking và ở Deafening. Nếu roll tự nhiên, tier +2
+      là khoảng 1 trên 50 lần roll prefix. Essence đưa bow thành Rare quanh
+      nó, và có thể dùng lại lên kết quả.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 71 to 139 Fire Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "23% increased Stun Duration on Enemies" }
+        - { text: "Gain 29 Life per Enemy Killed" }
+  - title: "Đếm suffix"
+    do: >-
+      Giữ Alt và đếm suffix. **Ba suffix mà không có attack speed và không
+      có Damage over Time Multiplier** là một kết quả hỏng, như cái ở
+      trên. Hai trở xuống, hoặc ba mà có attack speed, là kết quả nên giữ.
+    why: >-
+      Damage của cây bow này chỉ đến từ hai chỗ: gem level, đã xong, và một
+      multiplier, thứ bench bán dưới dạng suffix. Một phía suffix đầy đồ lấp
+      chỗ khiến bench không còn chỗ nào để đặt nó. Các prefix khác không
+      giúp gì cho build damage over time và có thể bỏ qua, bất kể chúng là
+      gì.
+    fail: >-
+      Dùng một Essence nữa lên chính cây bow đó. +2 lần nào cũng quay lại.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 64 to 121 Cold Damage" }
+      suffixes:
+        - { text: "15% increased Attack Speed" }
+        - { text: "+35 to Dexterity" }
+  - title: "Bench multiplier"
+    do: >-
+      Ở [[Crafting Bench]], craft Damage over Time Multiplier theo loại
+      damage của skill vào ô suffix trống: **+18–20% to Chaos, Fire,
+      Cold hoặc Physical Damage over Time Multiplier**, 4 [[Chaos Orb]].
+    why: >-
+      Với cây bow này, một multiplier đáng giá hơn lựa chọn còn lại của
+      bench, 21–30% increased Damage over Time, vì nó nhân lên trong khi cái
+      kia chỉ cộng vào những increase bạn đã có. Nó cũng khác group với
+      "+#% to Damage over Time Multiplier" tự nhiên, nên nếu có lúc cái đó
+      roll ra thì cả hai đều ở lại.
+    check: >-
+      Đừng craft "+2 to Level of Socketed Support Gems" lên cây bow này. Nó
+      cùng group với prefix bow-gem và bench sẽ từ chối.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: essence }
+        - { text: "Adds 64 to 121 Cold Damage" }
+      suffixes:
+        - { text: "15% increased Attack Speed" }
+        - { text: "+35 to Dexterity" }
+        - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Còn trống cả một prefix lẫn một suffix.** "Can have up to 3 Crafted
+  Modifiers" của bench tốn 2 Divine Orb và một ô suffix, rồi cho phép
+  multiplier và 21–30% increased Damage over Time đi cùng nhau. Chỉ đáng khi
+  phía suffix còn hai ô trống.
+
+
+  **Một build attack có dùng gem level.** Cũng Essence đó phục vụ được một
+  skill đánh hit. Hãy bench một suffix damage hợp với nó thay cho
+  multiplier, và nhớ rằng một build như vậy thường muốn cả các prefix flat
+  damage, điều khiến nó thành một cây bow elemental kèm bonus.
+mistakes:
+  - "Đánh giá kết quả theo damage mỗi giây hiện trên bow. Con số đó dành cho những attack đánh hit bằng weapon."
+  - "Roll tiếp khi đã có kết quả tốt để tìm một prefix lấp chỗ đẹp hơn. Ở phía prefix không gì quan trọng ngoài gem level."
+  - "Dùng một Screaming Essence of Dread rồi trông chờ +2. Screaming cho +1."
+  - "Để skill trong body armour. +2 chỉ áp dụng cho gem gắn trong bow."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier của Essence of Dread trên bow, các prefix gem và group của chúng, weight và giá bench. Xác suất là phép tính của chúng tôi." }

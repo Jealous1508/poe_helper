@@ -1,0 +1,152 @@
+category: bows
+title: "A levelling bow with two elements"
+level: 1
+summary: "Roll one flat elemental prefix with Alterations, make the bow Rare, and buy a second element from the bench. The pool does most of the work."
+goal: >-
+  A bow for the middle of the campaign with two kinds of added elemental
+  damage, made from currency you already carry. It teaches the first
+  question of this category, **which bow am I making**, by giving the
+  easiest answer. Nearly two prefix rolls in three on a bow are flat
+  elemental damage, so while you level, the elemental bow is the one the
+  game hands you. Take it.
+base: "Royal Bow"
+itemLevel: 34
+baseWhy: >-
+  The Royal Bow can be used from level 28, attacks 1.45 times a second, and
+  its implicit is 20–24% increased Elemental Damage with Attack Skills,
+  which is exactly what this craft adds to. Item level 34 opens the sixth
+  tier of all three flat elemental prefixes. Hold Alt over the white bow to
+  check.
+
+
+  Any white bow of your level works. A fast one is better than a
+  hard-hitting one here: added elemental damage is dealt once per attack,
+  so more attacks means more of it.
+methods: [currency, bench]
+result:
+  implicits: ["22% increased Elemental Damage with Attack Skills"]
+  prefixes:
+    - { text: "Adds 52 to 98 Fire Damage" }
+    - { text: "Adds 41 to 79 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "12% increased Attack Speed" }
+    - { text: "+24 to Dexterity" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "5–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  A handful of [[Orb of Alteration]]s, one [[Regal Orb]] and 2
+  [[Orb of Alchemy]]s for the bench. This is the cheapest useful weapon
+  craft in the game, because the modifier you are rolling for is the most
+  common one.
+odds: >-
+  At item level 34, one prefix roll in 4 is flat Fire, Cold or Lightning
+  Damage of the seventh tier or better, by our arithmetic from the modifier
+  weights, and 64% are an elemental prefix of some tier. An Alteration does
+  not always roll a prefix, so allow five to fifteen. The suffix and the
+  Regal Orb are luck and the craft does not depend on them.
+steps:
+  - title: "Name the bow, then make it Magic"
+    do: >-
+      Decide that this is an **elemental** bow. Then use one
+      [[Orb of Transmutation]] on the white Royal Bow.
+    why: >-
+      A bow can be built for physical damage, for elemental damage or for
+      gem levels, and the three want different prefixes. Saying which one
+      before the first orb tells you what to keep and what to reroll. With
+      an elemental implicit and a pool that is two-thirds elemental, this
+      one is easy.
+    state: { rarity: normal, implicits: ["22% increased Elemental Damage with Attack Skills"] }
+  - title: "Alterations until the prefix is an element"
+    do: >-
+      Use [[Orb of Alteration]]s one at a time and read the prefix with Alt
+      held. Stop on **"Adds … Fire Damage", "Cold Damage" or "Lightning
+      Damage"** at one of the two best tiers this item level allows. For
+      Fire those are "Flaming" (adds 45–61 to 91–106) and "Burning" (adds
+      32–44 to 65–76); the Cold and Lightning tiers are of similar size.
+    why: >-
+      Any of the three elements will do, which is why this is quick. A
+      physical prefix would be worth far less here: this bow's own physical
+      damage is small, and the implicit does nothing for it.
+    check: >-
+      The line must say "Adds X to Y Fire, Cold or Lightning Damage" with
+      nothing after it. "to Spells" does not appear on a bow's natural
+      prefixes, but "Physical Damage" does, and that is not the one.
+    fail: >-
+      Short of Alterations: accept any elemental prefix. Even a low one
+      beats a white bow.
+    state:
+      rarity: magic
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the bow has no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It adds to the empty slot and leaves the prefix alone. At this item
+      level one suffix roll in six is attack speed, the best thing that can
+      land there.
+    state:
+      rarity: magic
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+      suffixes: [{ text: "12% increased Attack Speed" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The bow becomes Rare with both modifiers kept and a third added.
+    check: >-
+      Read which side it landed on. If it added a second element, good: the
+      bench will add a third. Here it added Dexterity, a suffix, and two
+      prefix slots are open.
+    state:
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 52 to 98 Fire Damage" }]
+      suffixes:
+        - { text: "12% increased Attack Speed" }
+        - { text: "+24 to Dexterity" }
+  - title: "Bench a different element"
+    do: >-
+      At the [[Crafting Bench]], craft flat damage of an element the bow
+      **does not have**. The bow rolled Fire, so craft Cold: adds 38–46 to
+      73–85 for 2 [[Orb of Alchemy]]s, or adds 19–21 to 32–41 for 4 Orbs of
+      Transmutation.
+    why: >-
+      Fire, Cold and Lightning Damage are three separate groups, so they sit
+      side by side. The bench's Fire Damage is the same group as the rolled
+      Fire Damage and would be refused. One bench modifier per item: spend
+      it on a second element, which is far more damage than the bench's
+      8–10% attack speed.
+    fail: >-
+      If that recipe is not unlocked yet, craft whichever other element the
+      bench does offer.
+    state:
+      implicits: ["22% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 52 to 98 Fire Damage" }
+        - { text: "Adds 41 to 79 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "12% increased Attack Speed" }
+        - { text: "+24 to Dexterity" }
+variations: >-
+  **The Alterations gave a physical prefix you like.** Then you are making
+  a physical bow, and the right base is one with a big hit, not this one.
+  Follow the levelling example for two-handed maces: the modifiers and the
+  bench crafts are the same on a bow.
+
+
+  **Starting from an Essence.** A low Essence of Anger, Hatred or Wrath on a
+  white bow makes it Rare with Fire, Cold or Lightning Damage guaranteed,
+  and the bench adds a second element. In 3.30 the weak Essences only drop
+  in the campaign and white maps, so this is the time to use them.
+mistakes:
+  - "Benching the same element the bow rolled. They are one group; the bench will refuse."
+  - "Keeping a slow bow because it shows a bigger hit. Added elemental damage does not care about the bow's own damage, only about how often it attacks."
+  - "Spending whetstones first. Quality raises physical damage only, which is the small part of this bow."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

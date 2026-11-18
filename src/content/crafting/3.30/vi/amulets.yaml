@@ -1,0 +1,551 @@
+name: "Amulet"
+short: "Một pool, mười chín base và danh sách modifier dài nhất trong mọi loại trang bị. Phần thưởng hiếm nhất là một prefix, +1 gem level; phía chật chội là suffix."
+icon: "Onyx Amulet"
+intro: >-
+  Amulet roll được nhiều kiểu modifier hơn bất kỳ món trang bị nào khác: 19
+  họ prefix và 25 họ suffix trong dữ liệu 3.30. Đây là loại trang bị duy nhất
+  nâng được level của mọi skill gem bạn dùng, và là một trong số ít loại roll
+  ra Critical Strike Multiplier và Damage over Time Multiplier.
+
+
+  Chính độ rộng đó là thứ bạn phải đối đầu khi craft. Với 25 họ chia nhau ba
+  ô suffix, không thứ gì bạn muốn lại ra thường xuyên, nên một chiếc amulet
+  được làm ra bằng cách chọn **một** modifier quan trọng nhất rồi lấy nó bằng
+  công cụ nhắm đúng vào nó. Life, attribute và resistance lấp phần còn lại,
+  và mấy thứ đó thì bench hoặc roll thường sẽ cấp được.
+
+
+  Trên amulet không có gì là local. Không có socket, không có quality từ
+  Whetstone hay Scrap, và không có con số gốc nào của base để modifier nhân
+  lên.
+basics:
+  itemLevel:
+    text: >-
+      Phần lớn amulet mở ra từ sớm. Tier 1 của maximum Life chỉ cần item
+      level 54, còn Critical Strike Chance và Multiplier tốt nhất cần 72 và
+      74. Cánh cổng đáng kể là **75**: dưới mốc đó các prefix gem level hoàn
+      toàn không roll ra được. Một chiếc amulet level 75 là đủ cho gần như
+      mọi lần craft trên trang này.
+
+
+      Chỉ lên cao hơn vì một tier cụ thể: 82 cho attribute và Damage over
+      Time Multiplier cao nhất, 84 cho resistance đơn cao nhất, 86 cho
+      "increased Elemental Damage with Attack Skills" cao nhất.
+
+
+      Item level cao hơn không miễn phí. Mỗi tier nó mở ra là thêm một vé
+      trong cuộc xổ số, nên một modifier hiếm lại hiếm thêm một chút: ở item
+      level 75, 1 trên 391 lần roll prefix ra một "+1 to Level of all … Skill
+      Gems" cụ thể, còn ở 86 là 1 trên 443, theo phép tính của chúng tôi từ
+      weight.
+    breakpoints:
+      - ilvl: 36
+        unlocks: "**Leveling.** Tier 3 của maximum Life (85–99). Resistance 24–29% mở trong khoảng item level 36 tới 38."
+      - ilvl: 54
+        unlocks: "Tier 1 của maximum Life, \"Athlete's\" (115–129). Trên amulet, Life không bao giờ cần item level cao hơn mức này."
+      - ilvl: 64
+        unlocks: "Tier 1 của increased Fire, Cold hoặc Lightning Damage (23–26%)."
+      - ilvl: 74
+        unlocks: "Tier 1 của Critical Strike Multiplier (35–38%). Tier 1 của Critical Strike Chance (35–38%) mở ở 72."
+      - ilvl: 75
+        unlocks: "**+1 to Level of all Fire, Cold, Lightning, Physical hoặc Chaos Skill Gems, và +1 to Level of all Skill Gems.** Mốc item level mà phần lớn amulet nên được craft."
+      - ilvl: 82
+        unlocks: "Tier 1 của Strength, Dexterity hoặc Intelligence (51–55) và Tier 1 của Damage over Time Multiplier (24–26%)."
+      - ilvl: 84
+        unlocks: "Tier 1 của Fire, Cold và Lightning Resistance (46–48%). Ở 85: Tier 1 của all Attributes (33–35) và all Elemental Resistances (17–18%)."
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (43–50%). Không gì khác trên amulet cần tới 86."
+  bases:
+    text: >-
+      Có 19 base amulet và một pool: amulet nào cũng roll cùng những modifier
+      với cùng weight. Amulet không có damage, phòng thủ hay tốc độ của riêng
+      nó, nên base chính là implicit và không gì hơn. Bạn đang chọn dòng nào
+      sẽ nằm phía trên sáu ô, chỗ mà không currency nào gỡ được nó.
+
+
+      Ba base phá luật đó bằng cách thay đổi chính item: hai amulet Heist có
+      ít ô hơn, và một cái mang mọi influence.
+    types:
+      - title: "Amulet thường"
+        pools: [all]
+        text: >-
+          Attribute: Amber, Jade và Lapis (+20–30 Strength, Dexterity hoặc
+          Intelligence), Agate, Citrine và Turquoise (+16–24 cho hai trong số
+          đó) và Onyx (+10–16 cho cả ba). Hồi phục: Coral (2–4 Life mỗi giây)
+          và Paua (20–30% Mana Regeneration). Gold có 12–20% Item Rarity.
+
+
+          Dữ liệu còn có một Pearlescent Amulet (+8–10% to all Elemental
+          Resistances) và một Unset Amulet có một socket. Dữ liệu không cho
+          biết chúng rơi ở đâu, và patch notes cũng không.
+      - title: "Amulet Atlas"
+        text: >-
+          Marble (regenerate 1.4–2% of Life per second), Seaglass (20–30%
+          faster start of Energy Shield Recharge) và Blue Pearl (48–56% Mana
+          Regeneration). Chúng rơi từ level 74 tới 77. Trong 3.30, các base
+          đặc biệt chỉ rơi khi item roll ra Item Tier đủ cao; patch notes đưa
+          con số cho một vài base, và mấy base này không nằm trong số đó.
+      - title: "Amulet Heist: Simplex và Focused"
+        text: >-
+          Cả hai đều ghi "100% increased Explicit Modifier magnitudes" và trả
+          giá cho nó bằng ô. Một **Simplex Amulet** cho phép một prefix và hai
+          suffix. Một **Focused Amulet** cho phép hai prefix và một suffix.
+          Ba modifier, mỗi cái được tính gấp đôi theo câu chữ của implicit.
+
+
+          Trước 3.30 chúng chỉ đến từ Heist. Giờ chúng nằm trong pool rơi
+          thông thường, với một yêu cầu Item Tier mà patch notes không nêu.
+      - title: "Astrolabe Amulet"
+        text: >-
+          "Has Elder, Shaper and all Conqueror Influences." Cả sáu danh sách
+          modifier influence đều mở trên một item, không cần
+          [[Awakener's Orb]]. Nó là item có influence, nên không fracture
+          được. Cũng nằm trong pool rơi thông thường từ 3.30.
+      - title: "Talisman"
+        text: >-
+          Greatwolf Talisman thuộc class amulet và roll từ cùng pool đó. Dữ
+          liệu không cho thấy implicit nào của nó. Có một công thức beast chỉ
+          dành cho talisman: nó fracture một modifier ngẫu nhiên trên
+          talisman Rare có ít nhất bốn modifier. Các nguồn của chúng tôi
+          không cho biết base này đến từ đâu trong 3.30.
+    picks:
+      - base: "Onyx Amulet"
+        for: "Mọi build thiếu attribute"
+        why: >-
+          +10–16 cho cả ba attribute. Đây là lựa chọn mặc định vì yêu cầu của
+          gem và trang bị là khoảng trống mà amulet hay phải lấp nhất, và lấp
+          nó ngay ở implicit thì giữ được một suffix trống.
+      - base: "Jade Amulet"
+        for: "Thiếu đúng một attribute"
+        why: >-
+          +20–30 Dexterity, gần gấp đôi mức Onyx cho mỗi attribute riêng lẻ.
+          Amber làm điều tương tự cho Strength và Lapis cho Intelligence. Rơi
+          từ level 7, nên đây cũng là chiếc amulet đầu tiên đáng craft.
+      - base: "Marble Amulet"
+        for: "Build life không cần gì khác từ implicit"
+        why: >-
+          1.4–2% Life hồi mỗi giây tăng theo lượng Life của bạn, trong khi
+          mọi implicit hồi phục khác đều là một con số flat.
+      - base: "Simplex Amulet"
+        for: "Một prefix đáng giá bằng hai"
+        why: >-
+          Một prefix và hai suffix với độ lớn gấp đôi. Cách dùng hiển nhiên là
+          một prefix gem level, thứ mà theo câu chữ của implicit sẽ được tính
+          hai lần. Bạn bỏ hai ô prefix, mà trên amulet điều đó thường nghĩa
+          là bỏ Life.
+      - base: "Focused Amulet"
+        for: "Hai prefix và một suffix gánh cả build"
+        why: >-
+          Hình ảnh phản chiếu của Simplex: hai prefix và một suffix, nhân
+          đôi. Tốt hơn Simplex khi bạn muốn cả Life lẫn một gem level, kém hơn
+          khi damage của bạn nằm ở suffix.
+      - base: "Astrolabe Amulet"
+        for: "Một modifier chỉ tồn tại khi có influence"
+        why: >-
+          Mọi influence cùng lúc trên một base bạn có thể nhặt dưới đất. Cái
+          giá là một cuộc xổ số lớn hơn: cả sáu danh sách influence được cộng
+          vào danh sách thường, nên mỗi modifier bạn muốn chiếm phần nhỏ hơn.
+    impact: >-
+      **Implicit, và trên amulet thì đó là toàn bộ base.** Một
+      [[Blessed Orb]] roll lại con số của nó; corruption có thể thay nó;
+      ngoài ra không gì đụng tới nó. Hãy đánh giá một implicit attribute theo
+      thứ nó giải phóng: 30 Dexterity phía trên vạch kẻ là một suffix
+      Dexterity bạn không còn cần ở phía dưới.
+
+
+      **Có bao nhiêu ô.** Chỉ trên Simplex Amulet và Focused Amulet, nơi ba
+      modifier phải làm việc của sáu.
+
+
+      **Danh sách influence nào được mở.** Chỉ trên Astrolabe.
+
+
+      Thứ base **không** quyết định là pool hay bất kỳ con số nào. Ở đây
+      không có gì local, nên cùng một modifier có giá trị như nhau trên mọi
+      amulet.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 84, một lần roll prefix ra maximum Life 1 trên 10 lần, và
+      ra Life từ 85 trở lên khoảng 1 trên 29, theo phép tính của chúng tôi từ
+      weight. Mana, Energy Shield, Armour, Evasion và Item Rarity cộng lại
+      chiếm 56% số lần roll prefix. Một gem level theo loại cụ thể là 1 trên
+      437; "+1 to Level of all Skill Gems" là 1 trên 1,746.
+
+
+      Ở phía suffix không họ nào chạm tới 8%. Các attribute cộng lại chiếm
+      27% số lần roll, resistance 25%, và mỗi suffix damage đều nhỏ: Critical
+      Strike Multiplier 4.8%, Cast Speed 3.2%, Damage over Time Multiplier
+      1.2%.
+
+
+      Vậy nên [[Orb of Alteration]] tìm ra một prefix Life nhanh, còn một
+      suffix đã chọn thì chậm. Chúng là con đường dài để tới một gem level.
+  - method: bench
+    note: >-
+      Bench của amulet rộng và rẻ. **Prefix:** maximum Life 41–55 giá 2 Orb
+      of Alchemy; Energy Shield +26–30 hoặc 13–15% giá 2 Chaos Orb;
+      "Non-Channelling Skills have −7 to −6 to Total Mana Cost" giá 4 Chaos
+      Orb; 31–36% increased Damage while Leeching giá 3 Chaos Orb (37–43% giá
+      4 Exalted Orb).
+
+
+      **Suffix:** một resistance 21–28% hoặc một cặp 13–16% giá 1 Orb of
+      Alchemy; all Elemental Resistances 9–12% giá 1 Chaos Orb; một attribute
+      26–30 giá 2 Chaos Orb; Critical Strike Chance 22–27% giá 1 Chaos Orb;
+      Attack and Cast Speed 5–6% giá 3 Chaos Orb; +1 to Minimum Endurance,
+      Frenzy hoặc Power Charges giá 4 Exalted Orb.
+
+
+      Có hai thứ **không** được bán ở đây: Critical Strike Multiplier và
+      Damage over Time Multiplier. Hãy tính là sẽ roll chúng, hoặc lấy
+      multiplier từ một Essence.
+
+
+      Những group cần biết: một cặp resistance là group riêng của nó, nên nó
+      nằm cạnh một resistance đơn được. Các cặp attribute thì không:
+      "Strength and Dexterity" chung group với Strength, nên bench từ chối nó
+      trên chiếc amulet đã roll ra Strength.
+  - method: finishing
+    note: >-
+      Quality trên amulet đến từ **Catalyst**. Mỗi loại tăng sức một kiểu
+      modifier lên tối đa 20% và thay thế mọi Catalyst khác trên item:
+      [[Fertile Catalyst]] cho Life và Mana,
+      [[Prismatic Catalyst]] cho resistance, [[Intrinsic Catalyst]] cho
+      attribute, [[Unstable Catalyst]] cho các modifier critical,
+      [[Turbulent Catalyst]] cho elemental damage. Trong 3.30 chúng chỉ đến
+      từ Ultimatum. Các nguồn của chúng tôi không cho biết các lần craft về
+      sau làm gì với quality đó, nên hãy thêm nó khi các modifier đã chốt.
+
+
+      Amulet còn có thể được anoint bằng Oil. Việc đó thêm một enchantment,
+      không phải một trong sáu modifier, nên nó không thay đổi gì trên trang
+      này.
+  - method: essence
+    note: >-
+      Trên amulet, phần lớn Essence lấp một **suffix**, và vài cái còn vượt
+      tier tự nhiên cao nhất. **Scorn:** Critical Strike Multiplier, 35–41% ở
+      bậc Deafening so với 35–38% của Tier 1. **Loathing:** Critical Strike
+      Chance, 39–42%. **Anger, Hatred, Wrath:** 31–34% increased Fire, Cold
+      hoặc Lightning Damage, trong khi suffix tự nhiên dừng ở 26%.
+      **Rage, Sorrow, Spite:** 51–58 của một attribute. **Zeal:** Cast Speed,
+      17–20%.
+
+
+      **Envy** cho 31–34% increased Chaos Damage, một suffix mà pool tự nhiên
+      không có. **Fear** cho Movement Speed của minion, cũng là thứ pool đó
+      thiếu.
+
+
+      Hai lời cảnh báo từ dữ liệu. **Không Essence nào cho maximum Life trên
+      amulet:** ở đây Greed cho Life regeneration. Và Essence không phải lúc
+      nào cũng là bản tốt nhất: Woe cho 18–19% Energy Shield trong khi Tier 1
+      là 20–22%.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) trên amulet đáng số beast nó tốn
+      hơn ở bất cứ đâu khác, vì lần roll Magic khó nhất của loại item này,
+      một prefix gem level, chính là thứ mà một [[Regal Orb]] ra xấu sẽ làm
+      uổng.
+
+
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]])
+      và **thêm một suffix, gỡ một prefix ngẫu nhiên**
+      ([[Farric Lynx Alpha]]) an toàn khi phía mất modifier không giữ thứ gì
+      bạn muốn. Đừng bao giờ dùng Lynx lên chiếc amulet có prefix duy nhất là
+      một gem level.
+
+
+      Các công thức gắn một skill Aspect lên item có tồn tại trong 3.30; các
+      nguồn của chúng tôi liệt kê chúng mà không nói modifier đó chiếm ô nào.
+  - method: harvest
+    note: >-
+      Hãy đếm các modifier mang tag trước khi trả tiền. **Chaos** (100 Vivid)
+      là cái nổi tiếng: trên amulet chỉ có hai modifier tự nhiên mang tag
+      chaos, Chaos Resistance và "+1 to Level of all Chaos Skill Gems". Nếu
+      modifier được đảm bảo được rút theo weight, đúng như cách người ta vẫn
+      hiểu về reforge, thì đó là gem level khoảng 1 trên 8.5 lần ở item level
+      81 trở lên.
+
+
+      Cùng reforge đó cho Fire, Cold hoặc Lightning là khoảng 1 trên 75, và
+      cho Physical là 1 trên 65, vì các tag đó còn dùng chung với added
+      damage, resistance và leech.
+
+
+      **Critical** (150 Primal) luôn cho Critical Strike Chance hoặc
+      Multiplier: chỉ có hai cái đó. **Speed** (150 Vivid) luôn cho Cast
+      Speed. **Life** (75 Wild) phần lớn ra suffix, trừ khi phía suffix đã
+      khóa: maximum Life là prefix duy nhất mang tag life.
+  - method: fossil
+    note: >-
+      Một [[Faceted Fossil]] nhân các modifier Gem lên mười lần. Một mình nó
+      khiến một gem level nào đó ra khoảng 1 trên 10 lần roll prefix. Ghép
+      với Fossil của một element thì hai cái nhân với nhau: Faceted cùng
+      [[Scorched Fossil]] khiến "+1 to Level of all Fire Skill Gems" ra xấp
+      xỉ 1 trên 8 lần roll prefix, theo phép tính của chúng tôi, so với 1
+      trên 437 khi không có Fossil.
+
+
+      Một [[Deft Fossil]] loại bỏ mọi suffix attribute và khiến Critical
+      Strike Chance và Multiplier chiếm hơn một nửa mọi lần roll suffix.
+
+
+      Các modifier chỉ có từ Fossil trên amulet gồm 20–30% increased Fire,
+      Cold, Lightning, Chaos hoặc Global Physical Damage dưới dạng
+      **prefix**, và "Damage Penetrates 3–5% Elemental Resistances".
+  - method: veiled
+    note: >-
+      Các modifier unveil ra đáng biết: 7–8% Attack and Cast Speed; +1 to
+      Minimum Endurance, Frenzy hoặc Power Charges kèm 3–4% chance nhận
+      charge đó on kill; +31–35 cho hai attribute; +16–20% cho một elemental
+      resistance và Chaos Resistance. Prefix có +55–60 Life kèm Mana
+      regeneration nằm trong group Life, nên nó thay thế Life roll ra chứ
+      không cộng dồn với Life đó.
+  - method: fracture
+    note: >-
+      Modifier nên fracture trên amulet là "+1 to Level of all Skill Gems":
+      weight 50, không có Fossil hay reforge nào chọn riêng được nó, và ở một
+      group khác với các gem level theo loại, nên một cái +1 thứ hai có thể
+      được thêm vào cạnh nó. Astrolabe Amulet thì không fracture được.
+  - method: influence
+    note: >-
+      Những thứ dân craft lấy từ từng danh sách. **Hunter:** +16–20% to
+      Chaos, Cold, Fire hoặc Physical Damage over Time Multiplier, khác group
+      với Damage over Time Multiplier tự nhiên và nằm cạnh nó được.
+      **Shaper** và **Redeemer:** increased Mana Reservation Efficiency of
+      Skills. **Crusader, Warlord, Redeemer:** 8–10% penetration của một
+      element dưới dạng prefix, và 9–12% của một attribute. **Elder:** 7–13%
+      Attack Speed.
+  - method: meta
+    note: >-
+      Một lần khóa đầy đủ trên amulet tốn 4 Divine Orb và 8 Exalted Orb trong
+      3.30. Công dụng hay nhất của nó ở đây không phải để phòng thủ mà để
+      nhắm: khi ba suffix đã khóa, một reforge Harvest buộc phải đặt modifier
+      được đảm bảo của nó vào phía prefix, nơi maximum Life là modifier life
+      duy nhất và gem level Chaos là modifier chaos duy nhất.
+  - method: corruption
+    note: >-
+      Những implicit corruption đáng tiền: "You can apply an additional
+      Curse", +1% to all maximum Resistances, +1 to Minimum Endurance, Frenzy
+      hoặc Power Charges, và 20–30% increased effect của một aura. Corruption
+      thay thế implicit của chính base.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: trên amulet, strand giúp những modifier có nhiều tier và không làm gì cho những modifier chỉ có một tier."
+memoryStrands: >-
+  [[Memory Strands]] nâng tier của bất cứ thứ gì được roll ra. Trên amulet,
+  điều đó chia danh sách modifier làm hai. Attribute có chín tier, resistance
+  đơn có tám, Life có chín, và với tất cả những cái đó một base có strand
+  biến một lần roll bình thường thành một lần roll cao. Các prefix gem level
+  có **một** tier: strand không làm gì cho chúng, và không gì khiến chúng dễ
+  xuất hiện hơn.
+
+
+  Cách dùng hợp là để hoàn thiện. Trên chiếc amulet đã xong modifier khó và
+  các ô còn lại đang trống, một [[Exalted Orb]] tiêu nhiều nhất 16 strand
+  theo bảng data-mine, và thứ nó thêm vào sẽ tới ở một tier tốt. Kiểu
+  modifier thì vẫn ngẫu nhiên.
+
+
+  Những cách dùng phí phạm lại chính là các kiểu craft amulet phổ biến: mỗi
+  Essence có thể tiêu tới 80 strand, còn Fossil và reforge Harvest thì hoàn
+  toàn không dùng strand, theo thử nghiệm của người chơi. Vì strand được đặt
+  lên bằng [[Orb of Remembrance]] và chỉ lên item Normal, hãy quyết định
+  trước orb đầu tiên.
+reading:
+  intro: >-
+    Giữ Alt và đọc prefix để tìm ba thứ, theo thứ tự này: **một gem level,
+    Life, và thứ gì build của bạn nhân lên** (Spell Damage, added damage,
+    Energy Shield). Rồi đếm xem trong ba suffix có mấy cái bạn hẳn đã tự
+    chọn. Phần lớn amulet Rare trượt ngay dòng đầu, và số đếm là một.
+  prefixes:
+    text: >-
+      Mười chín họ, và hơn một nửa weight là các chỉ số phòng thủ mà phần lớn
+      build không muốn lấy từ loại trang bị này. Life là một trên mười lần
+      roll. Đó là phần dễ của phía này: Tier 1 cần item level 54 và cả chín
+      tier có weight như nhau.
+
+
+      Gem level là phần khó. Năm cái theo loại (Fire, Cold, Lightning,
+      Physical, Chaos) chung **một group**, nên một chiếc amulet chỉ giữ được
+      một trong số đó. "+1 to Level of all Skill Gems" là group khác và có
+      thể nằm cạnh một cái theo loại. Cặp đó là phía prefix giá trị nhất của
+      loại item này.
+
+
+      Hai hybrid "Life and Mana regeneration", của bench và bản veiled, nằm
+      trong group Life. Chúng block Life roll ra và cũng bị Life roll ra
+      block.
+    key:
+      - mod: "+# to Level of all Fire / Cold / Lightning / Physical / Chaos Skill Gems"
+        why: "Một gem level cho mọi skill thuộc loại đó, cộng thêm vào level của chính gem. Thường là modifier đơn lớn nhất mà một build spell hoặc damage over time có thể đeo."
+        aim: "Chỉ một tier, item level 75. Weight 200 mỗi cái."
+      - mod: "+# to Level of all Skill Gems"
+        why: "Cũng như vậy cho mọi skill gem bạn dùng, bất kể loại nào. Một group riêng, nên nó cộng dồn với một gem level theo loại."
+        aim: "Chỉ một tier, item level 75. Weight 50."
+      - mod: "+# to maximum Life"
+        why: "Phổ biến, và là prefix duy nhất mà build life nào cũng giữ. Bản bench chỉ lớn bằng một nửa."
+        aim: "T3, 85–99 (ilvl 36). T1 là 115–129 (ilvl 54)."
+      - mod: "#% increased Spell Damage"
+        why: "Một hệ số nhân đơn thuần cho caster, và chỉ có ở phía prefix của loại trang bị này."
+        aim: "T2, 18–22% (ilvl 56). T1 là 23–26% (ilvl 76)."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Thứ tương đương cho build attack, với weight thấp, 300 mỗi tier."
+        aim: "T3, 31–36% (ilvl 60). T1 là 43–50% (ilvl 86)."
+      - mod: "+# to maximum Energy Shield"
+        why: "Cho build Energy Shield: cái này và bản phần trăm đều là prefix ở đây, và chúng thuộc hai group khác nhau."
+        aim: "T2, 44–47 (ilvl 74). T1 là 48–51 (ilvl 80)."
+  suffixes:
+    text: >-
+      Hai mươi lăm họ cho ba ô. Một nửa mọi lần roll suffix là một attribute
+      hoặc một resistance, hữu ích nhưng chẳng bao giờ gây phấn khích. Các
+      modifier cộng damage mỗi cái chỉ chiếm vài phần trăm của phía này, và
+      bench không bán hai cái tốt nhất trong số đó.
+
+
+      Vậy nên hãy đọc suffix của amulet theo kiểu "mình được miễn phí mấy
+      cái". Một suffix damage ở tier tốt là một chiếc amulet đáng giữ. Hai
+      cái là một món hời. Với cái thứ ba, hãy nhớ bench thêm được gì:
+      Critical Strike Chance, bất kỳ resistance nào, bất kỳ attribute nào.
+
+
+      Ở đây không có gì local, và ít cặp nào xung đột. Điều cần nhớ: Damage
+      over Time Multiplier tự nhiên và các bản Hunter, Shaper, Elder cho một
+      loại damage riêng là những group khác nhau.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Hệ số nhân của build crit. Bench không có nó cho loại trang bị này, nên nó được roll ra hoặc lấy từ một Essence of Scorn."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 74); Deafening Scorn cho 35–41%."
+      - mod: "#% increased Global Critical Strike Chance"
+        why: "Bạn đồng hành của multiplier. Bench bán 22–27%, nên đây là cái để craft khi multiplier đã roll ra."
+        aim: "T2, 30–34% (ilvl 58). T1 là 35–38% (ilvl 72)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Cùng việc đó cho các build ailment và damage over time, với weight 300 mỗi tier. Không có Essence, không có craft bench."
+        aim: "T3, 16–19% (ilvl 68). T1 là 24–26% (ilvl 82)."
+      - mod: "+# to all Attributes"
+        why: "Ba yêu cầu được giải quyết bằng một suffix, và Strength với Intelligence còn cho Life và Mana."
+        aim: "T3, 25–28 (ilvl 66). T1 là 33–35 (ilvl 85)."
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Không bao giờ sai. Mức 21–28% của bench bằng khoảng hai phần ba một lần roll tốt."
+        aim: "T2, 42–45% (ilvl 72). T1 là 46–48% (ilvl 84)."
+      - mod: "#% increased Cast Speed"
+        why: "Dễ với tới: tier cao nhất chỉ cần item level 40. Zeal đảm bảo nó."
+        aim: "T1, 17–20% (ilvl 40)."
+      - mod: "#% increased Fire / Cold / Lightning Damage"
+        why: "Một hệ số nhân chung cho một element. Bản Essence lớn hơn bản tự nhiên một phần ba."
+        aim: "T1, 23–26% (ilvl 64). Deafening Anger, Hatred hoặc Wrath: 31–34%."
+approach:
+  principle: >-
+    **Gọi tên một modifier mà chiếc amulet này tồn tại vì nó, tìm phía của
+    nó, rồi lấy nó bằng công cụ nhắm vào nó.** Trên mace, phía khó luôn là
+    prefix. Trên amulet thì phía nào cũng có thể: gem level là prefix,
+    multiplier là suffix. Mọi thứ khác, kể cả Life, đều phổ biến hoặc có bán.
+  order:
+    - title: "Chọn implicit theo khoảng trống, chọn item level theo tier khó"
+      text: >-
+        Implicit nên giải quyết thứ mà nếu không sẽ tốn một suffix: thường là
+        một attribute. Item level 75 mở gem level và cả hai tier critical;
+        chỉ trả tiền cho 82 tới 86 khi kế hoạch gọi tên một tier cần tới nó.
+    - title: "Gọi tên modifier chủ chốt và phía của nó"
+      text: >-
+        Một gem level: prefix. Critical Strike Multiplier, Damage over Time
+        Multiplier, Cast Speed, elemental hoặc Chaos Damage: suffix. Điều này
+        quyết định mọi bước về sau, vì nó cho bạn biết phía nào không bao giờ
+        được roll lại nữa.
+    - title: "Lấy nó bằng công cụ biết nhắm"
+      text: >-
+        Một suffix mà Essence cho: dùng Essence đó. Một gem level theo loại:
+        Faceted Fossil cùng Fossil của element, hoặc reforge Chaos. "+1 to
+        Level of all Skill Gems": Alteration cùng một Imprint, hoặc một base
+        fractured. Chỉ riêng Alteration thì dành cho Life và cho một suffix
+        phổ biến duy nhất.
+    - title: "Đánh giá những thứ đi kèm"
+      text: >-
+        Giữ kết quả nào có modifier chủ chốt cùng với Life hoặc một prefix
+        trống. Trên amulet, một ô trống không phải là thất bại; đó là chỗ
+        dành cho bench.
+    - title: "Dùng khóa để nhắm, không chỉ để bảo vệ"
+      text: >-
+        Khi ba suffix đã đúng còn prefix thì chưa, hãy khóa suffix rồi
+        reforge Life hoặc Chaos: modifier được đảm bảo không còn chỗ nào để
+        đi ngoài phía prefix. Việc đó tốn 4 Divine Orb và 8 Exalted Orb, nên
+        các suffix phải đáng giá đó.
+    - title: "Bench ô cuối cùng"
+      text: >-
+        Life nếu amulet chưa có, còn không thì suffix mà build đang thiếu.
+        Một modifier bench, chọn khi bạn đã nhìn thấy khoảng trống.
+  finishing: >-
+    Catalyst khi các modifier đã chốt, chọn cho khớp với một hai dòng quan
+    trọng nhất: [[Fertile Catalyst]] cho amulet Life,
+    [[Unstable Catalyst]] cho amulet crit. Rồi một [[Divine Orb]] nếu
+    modifier chủ chốt đang thấp trong khoảng của nó, và một [[Blessed Orb]]
+    nếu implicit đang thấp. Các prefix gem level không có gì để roll lại.
+
+
+    Anoint bằng Oil thêm một enchantment lên trên, và có thể đợi tới khi bạn
+    chắc là sẽ giữ chiếc amulet.
+  stopping: >-
+    Modifier chủ chốt, Life (roll ra từ 70 trở lên, hoặc 41–55 của bench), và
+    một resistance hoặc attribute là một chiếc amulet dùng được cho cả Atlas.
+    Một suffix damage thứ hai biến nó thành một chiếc tốt. Cái thứ ba, và
+    Tier 1 trên bất cứ thứ gì, là chỗ chi phí nhân lên.
+
+
+    Dừng roll ngay khi modifier chủ chốt tới cùng một ô trống. Roll lại một
+    gem level vì các suffix bên cạnh nó tệ là vứt nửa hiếm đi để cải thiện
+    nửa phổ biến; bench, một Exalted Orb hoặc một lần khóa vẫn sửa được
+    suffix.
+special:
+  - mod: "+# to Level of all Skill Gems"
+    source: "Roll hiếm"
+    where: "Có trong pool tự nhiên từ item level 75 với weight 50: khoảng 1 trên 1,565 lần roll prefix. Một [[Faceted Fossil]] khiến nó thành xấp xỉ 1 trên 200, theo phép tính của chúng tôi. Phần lớn amulet hoàn thiện có nó đều bắt đầu từ một base fractured."
+  - mod: "#% increased Chaos Damage"
+    source: "Essence / Fossil / Bench"
+    where: "31–34% dưới dạng suffix từ một Deafening Essence of Envy. 20–30% dưới dạng prefix chỉ có từ Fossil. 13–16% từ [[Crafting Bench]] giá 3 Orb of Alchemy. Pool tự nhiên không có."
+  - mod: "+# to Minimum Endurance / Frenzy / Power Charges"
+    source: "Bench / Veiled / Corruption"
+    where: "Một suffix bench giá 4 Exalted Orb. Bản unveil ra thêm 3–4% chance nhận charge đó on kill. Cũng là một implicit corruption."
+  - mod: "#% increased Attack and Cast Speed"
+    source: "Bench / Veiled"
+    where: "5–6% từ bench giá 3 Chaos Orb; 7–8% khi unveil, từ một veiled item rơi được, một [[Veiled Chaos Orb]] hoặc một [[Veiled Exalted Orb]]."
+  - mod: "+#% to Chaos / Cold / Fire / Physical Damage over Time Multiplier"
+    source: "Influence Hunter"
+    where: "16–20% ở item level 80 trên amulet Hunter. Shaper có các bản Cold và Fire, Elder có các bản Chaos và Physical. Tất cả đều nằm cạnh Damage over Time Multiplier tự nhiên được."
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Influence Shaper / Redeemer"
+    where: "6–10% dưới dạng suffix Shaper ở item level 82, 7–10% dưới dạng suffix Redeemer ở 75. Các danh sách Conqueror còn có 40–60% cho từng aura được gọi đích danh."
+  - mod: "#% increased Fire / Cold / Lightning Damage (prefix)"
+    source: "Fossil"
+    where: "20–30%, một prefix chỉ roll ra trong lần craft bằng Fossil. Nó khác group với suffix cùng tên, nên cả hai nằm vừa trên một chiếc amulet."
+  - mod: "Minions have #% increased Movement Speed"
+    source: "Essence / Bench / Fossil"
+    where: "28–30% từ một Deafening Essence of Fear, 18–22% từ bench giá 2 Orb of Alchemy, 15–30% dưới dạng suffix chỉ có từ Fossil."
+  - mod: "#% chance to Crush on Hit"
+    source: "Essence corrupted"
+    where: "15–25% từ một [[Essence of Horror]]. Ba cái còn lại: 6–7% Chance to Block Spell Damage (Delirium), 150% increased total Recovery per second from Life Leech (Hysteria), 10% chance to Recover 10% of Mana when you use a Skill (Insanity). Tất cả đến từ việc corrupt một monster Essence bằng [[Remnant of Corruption]]."
+  - mod: "You can apply an additional Curse"
+    source: "Corruption"
+    where: "Một implicit corruption từ [[Vaal Orb]]. Nó thay thế implicit của base và đóng item lại, không craft tiếp được nữa."
+  - mod: "100% increased Explicit Modifier magnitudes"
+    source: "Implicit của base"
+    where: "Simplex Amulet và Focused Amulet. Không craft ra được: bạn chọn nó bằng cách chọn base, và bạn trả giá bằng ba trong sáu ô."
+  - mod: "Has Elder, Shaper and all Conqueror Influences"
+    source: "Implicit của base"
+    where: "Astrolabe Amulet. Mọi modifier influence trong danh sách đều roll được trên nó."
+mistakes:
+  - "**Craft amulet gem level dưới item level 75.** Ở đó prefix này không tồn tại. Kiểm trước orb đầu tiên."
+  - "**Roll lại một gem level vì phần còn lại tệ.** Phần còn lại sửa được; gem level mới là phần bạn không đủ sức trả hai lần."
+  - "**Trông chờ Life từ Essence of Greed.** Trên amulet nó cho Life regeneration. Life thì roll ra, craft ở bench, hoặc ép ra khi phía suffix đã khóa."
+  - "**Định bench Critical Strike Multiplier.** Bench của amulet không có nó. Hãy roll multiplier hoặc dùng Scorn, rồi bench Critical Strike Chance."
+  - "**Dùng công thức Lynx lên amulet có một prefix tốt.** Nó gỡ một prefix ngẫu nhiên, mà khi chỉ có một prefix thì chẳng còn gì ngẫu nhiên."
+  - "**Tốn một lần khóa đầy đủ cho những suffix trung bình.** Bốn Divine Orb và 8 Exalted Orb mua được rất nhiều Essence."
+  - "**Dùng Catalyst trước khi các modifier chốt.** Chúng khan hiếm trong 3.30, và các nguồn của chúng tôi không nói rằng các lần craft về sau để yên quality."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tier và các base đặc biệt được thêm vào pool rơi thông thường; giá 3.30 của các modifier bảo vệ." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum là nguồn Catalyst duy nhất; công thức beast fracture một modifier của talisman." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint, công thức thêm prefix và thêm suffix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Chaos, Critical, Speed và Life." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Cách reforge Harvest hoạt động trên item có một phía đã khóa, theo thử nghiệm của người chơi. Một phần cũ hơn 3.30." }

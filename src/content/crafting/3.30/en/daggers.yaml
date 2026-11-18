@@ -1,0 +1,451 @@
+name: "Daggers"
+short: "One-handed attack weapons built on critical strikes. Thirteen craftable bases with the highest base crit of any melee weapon, a Heist line made for poison, and one base that is not a crafting base at all."
+icon: "Ambusher"
+intro: >-
+  A dagger is the critical strike weapon. Its base critical strike chance
+  runs from 8% to 9%, where claws stop at 8%, and the ordinary bases add 40–45%
+  increased Global Critical Strike Chance as an implicit before any modifier
+  is rolled. What you craft is the rest of a crit weapon: physical or added
+  damage in the prefixes, and attack speed, Critical Strike Chance and
+  Critical Strike Multiplier in the suffixes.
+
+
+  There is a second kind of dagger with nothing to do with crit. The three
+  Heist bases make every kind of damage the weapon deals able to poison, and
+  the pool has the chaos and damage-over-time suffixes to go with them.
+  Decide which of the two you are building before reading further.
+basics:
+  itemLevel:
+    text: >-
+      As on every attack weapon, item level 77 is enough for nearly
+      everything: Tier 1 attack speed and flat Physical Damage open there,
+      Tier 1 of both critical strike suffixes at 73. The last tier of the
+      two percentage physical prefixes needs 83.
+
+
+      Poison daggers have their own numbers: 78 for the top Chaos Damage
+      over Time Multiplier suffix, and 83 for the top Elder prefix that
+      multiplies poison from the weapon.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Levelling.** Tier 5 increased Physical Damage (85–109%) and Tier 5 hybrid with Accuracy."
+      - ilvl: 60
+        unlocks: "Tier 3 increased Physical Damage (135–154%), Tier 2 attack speed (23–25%). The unveiled modifiers also need 60. **The first item level worth crafting for maps.**"
+      - ilvl: 73
+        unlocks: "Tier 2 increased Physical Damage (155–169%). Tier 1 Critical Strike Chance and Tier 1 Critical Strike Multiplier (both 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 attack speed (26–27%) and Tier 1 flat Physical Damage (adds 22–29 to 45–52). **Enough for a crit dagger.**"
+      - ilvl: 78
+        unlocks: "Tier 1 Chaos Damage over Time Multiplier (+34–38%), a suffix claws do not have."
+      - ilvl: 83
+        unlocks: "\"Merciless\" (170–179%) and the top hybrid (75–79%); the only tier of added Chaos Damage; and, with Elder influence, +51–59% to Damage over Time Multiplier for Poison inflicted with the weapon."
+  bases:
+    text: >-
+      The data lists 14 daggers in two pools. Thirteen share the standard
+      pool and are ordinary crafting bases; they come in three lines with
+      three different implicits. The fourteenth has a pool of its own with
+      nothing in it.
+    types:
+      - title: "Crit daggers"
+        pools: [standard]
+        text: >-
+          Seven bases from Glass Shank to Ambusher, each with 40–45%
+          increased Global Critical Strike Chance. The implicit is global:
+          it applies to everything the character does, spells included. It
+          is a range, so a [[Blessed Orb]] rerolls it. The standard pool
+          also holds the Maraketh and Heist daggers described next; all
+          thirteen roll the same modifiers with the same weights.
+      - title: "Maraketh daggers"
+        text: >-
+          Prong Dagger, Trisula and Sai. The implicit is a chance to Block
+          Attack Damage, 4% on the first two and 6% on the Sai. They have no
+          crit implicit, and the Sai has the highest base damage per second
+          in the category.
+      - title: "Heist daggers"
+        text: >-
+          Hollowpoint, Pressurised and Pneumatic Dagger. Implicit: "All
+          Damage from Hits with This Weapon can Poison". Normally only
+          physical and chaos damage can poison; on these, added Fire, Cold
+          and Lightning Damage can too. That changes which prefixes are
+          worth having, and it is the reason to build a poison dagger at
+          all.
+      - title: "Ethereal Blade"
+        pools: [ethereal-blade]
+        text: >-
+          A level 1 dagger with 4–8 physical damage, no implicit, and a pool
+          in which the 3.30 data has no rollable prefix or suffix. The data
+          files it outside the ordinary item domain. We could not find it
+          as a drop and it is not something to craft on; it is listed
+          because the data lists it.
+    picks:
+      - base: "Ambusher"
+        for: "The default crit dagger"
+        why: >-
+          19–74 at 1.5 attacks per second, the fastest of the top bases,
+          with 8.3% base crit and the 40–45% implicit. Highest base damage
+          per second of the crit line (69.7).
+      - base: "Gutting Knife"
+        for: "The most critical strike chance"
+        why: >-
+          9% base critical strike chance, the highest on an ordinary dagger,
+          with the crit implicit on top. 19–76 at 1.4. Every Critical Strike
+          Chance modifier you own multiplies that 9%.
+      - base: "Sai"
+        for: "Raw damage and block"
+        why: >-
+          22–88 at 1.35 is the highest base damage per second of any dagger
+          (74.2), with 6% Chance to Block Attack Damage. It gives up the
+          crit implicit, so it suits builds that already cap their crit or
+          do not use it.
+      - base: "Pneumatic Dagger"
+        for: "Poison"
+        why: >-
+          The top Heist base: every kind of damage it deals can poison.
+          20–79 at 1.4 with 8.8% base crit, close to an Ambusher in raw
+          numbers.
+      - base: "Poignard"
+        for: "Levelling"
+        why: >-
+          Worn at level 41 with 1.5 attacks per second and the crit
+          implicit. The base that carries a crit character from the middle
+          of the campaign to the first maps.
+    impact: >-
+      **The implicit decides the build.** Global crit, block, or universal
+      poison. No ordinary crafting changes which; a [[Blessed Orb]] rerolls
+      the 40–45% where there is a range, and a [[Vaal Orb]] can replace the
+      implicit with a corruption one and closes the item.
+
+
+      **Base critical strike chance,** 8% to 9%. It is the number every
+      increased Critical Strike Chance on the character multiplies, so one
+      point of it is worth more than it looks.
+
+
+      **Damage and speed.** Local increased Physical Damage and attack speed
+      multiply the base. Added damage counts once per hit, so it favours the
+      1.5 bases.
+
+
+      **The pool is the same on all thirteen.** Take the base for the
+      implicit and the numbers, never for what it might roll.
+tools:
+  - method: currency
+    note: >-
+      A dagger's prefix lottery is a claw's with more junk in it. At item
+      level 83, by our arithmetic: added Fire, Cold and Lightning Damage
+      44% together, maximum Mana 16%, flat Physical Damage 10%, the two
+      percentage physical prefixes 5.5% each, and six "Level of Socketed
+      Gems" prefixes 16% between them. The physical families are 21% of
+      prefix rolls. Tier 3 or better of pure increased Physical Damage is
+      about 1 prefix roll in 390.
+
+
+      Suffixes: attack speed 14%, Intelligence 14%, Critical Strike Chance
+      and Critical Strike Multiplier 9% each. So [[Orb of Alteration]]s are
+      a reasonable way to one good suffix and a poor way to a physical
+      prefix. An [[Orb of Alchemy]], more common in 3.30, is a fair first
+      roll because the bench can add the multiplier afterwards.
+  - method: bench
+    note: >-
+      The bench is what makes a dagger out of an average Rare. Increased
+      Physical Damage: 40–59% for 4 Orbs of Alteration, 60–79% for 8,
+      80–99% for 4 Chaos Orbs, 100–129% for 4 Exalted Orbs. With a chance
+      to Poison, Bleed, Impale or Blind attached: 86–94% and 16–17% for 3
+      Chaos Orbs, 95–105% and 18–20% for 8. Flat Physical Damage: 13–17 to
+      26–30 for 4 Chaos Orbs.
+
+
+      Suffixes: attack speed 11–15% for 2 Chaos Orbs; Critical Strike
+      Chance 25–27% or Critical Strike Multiplier 25–28% for 4 Chaos Orbs;
+      Chaos, Physical, Fire or Cold Damage over Time Multiplier 18–20% for 4
+      Chaos Orbs.
+
+
+      The bench's pure and hybrid-with-ailment physical crafts are all one
+      group with rolled pure increased Physical Damage. The rolled hybrid
+      with Accuracy is a different group and takes a bench percentage
+      beside it.
+  - method: finishing
+    note: >-
+      Quality to 20% with [[Blacksmith's Whetstone]]s before judging a
+      physical dagger. Three sockets at most. If the crit implicit rolled
+      40%, a [[Blessed Orb]] is a cheap improvement on a dagger you are
+      keeping.
+  - method: essence
+    note: >-
+      The same table as on claws. **Zeal:** attack speed, 28–30% at
+      Deafening, above natural Tier 1. **Loathing:** Critical Strike Chance,
+      35–38% at Deafening. **Contempt:** flat Physical Damage, 20–26 to
+      40–47 at Deafening. **Envy:** added Chaos Damage, 53–79 to 101–131 at
+      Deafening, a modifier with one natural tier at item level 83.
+      **Greed:** life leech, 4.1–4.4% at Deafening.
+
+
+      Because an Essence rerolls everything that is not fractured, it pairs
+      naturally with a fractured prefix: two modifiers are certain on every
+      use. By community testing it ignores the bench's locks, so it does
+      not pair with those.
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) before the Regal Orb on any Magic
+      dagger whose prefix took real effort. **Add a suffix, remove a random
+      prefix** ([[Farric Lynx Alpha]]) is a free suffix on a dagger with no
+      prefixes, and a third of the suffix pool is attack speed or crit.
+  - method: harvest
+    note: >-
+      **Critical** (150 Primal Lifeforce) is the dagger's reforge: the tag
+      has exactly two natural carriers, Critical Strike Chance and Critical
+      Strike Multiplier, both suffixes, both wanted, equally weighted in
+      every tier. **Speed** (150 Vivid) guarantees attack speed, the only
+      carrier. **Physical** (50 Vivid) has five carriers and lands on a
+      prefix 84% of the time by weight.
+
+
+      **Chaos** (100 Vivid) looks right for a poison dagger and is not: its
+      heaviest carrier is "+2 to Level of Socketed Chaos Gems".
+  - method: fossil
+    note: >-
+      A [[Corroded Fossil]] deletes every Elemental modifier: the three
+      added-damage prefixes and three of the socketed-gem prefixes. The
+      physical families go from 21% of prefix rolls to 47% without anything
+      being multiplied. A [[Jagged Fossil]] takes them to about 73%. A
+      [[Deft Fossil]] with a [[Shuddering Fossil]] makes attack speed and
+      the two crit suffixes about 91% of suffix rolls.
+
+
+      An [[Aberrant Fossil]] is a trap on the prefix side: it multiplies
+      Chaos modifiers, and on a dagger the heaviest of those is again the
+      socketed Chaos gems prefix. On the suffix side it lifts Chaos Damage
+      over Time Multiplier from under 2% of rolls to about 14%.
+  - method: veiled
+    note: >-
+      Thirteen veiled prefixes, four of them physical: 120–139% increased
+      Physical Damage with a 21–25% chance to Poison, Bleed, Impale or
+      Blind. Seven others share one group with the bench's elemental and
+      spell damage crafts, so one cheap bench craft placed before unveiling
+      removes all seven from the offer, by the player-tested rule that a
+      group on the item is not offered. The poison version is the natural
+      first prefix of a poison dagger.
+
+
+      Veiled suffixes worth knowing: +24–28% to Chaos or Physical Damage
+      over Time Multiplier, 6–7% chance to deal Double Damage, 18–22%
+      attack speed with Dexterity and Intelligence.
+  - method: fracture
+    note: >-
+      A fractured physical prefix turns Essences into a two-for-one: the
+      fracture and the Essence modifier are both certain on every use.
+      Fractured items are rarer in 3.30; Tier 5 Magic drops are the new
+      source to watch. A fractured dagger cannot take influence, by
+      reference pages, which rules it out for an Elder poison dagger.
+  - method: meta
+    note: >-
+      4 Divine Orbs and 1 [[Sacred Orb]] for a full lock. The one- and
+      two-modifier versions are certain only when the side holds exactly
+      that many modifiers.
+
+
+      "Cannot roll Caster Modifiers" has nothing to remove from a dagger's
+      natural pool. "Cannot roll Attack Modifiers" removes almost all of
+      it and leaves the socketed-gem prefixes and maximum Mana. Neither is
+      a dagger tool, and since 3.30 neither stops an Orb of Annulment from
+      removing a modifier of its kind.
+  - method: influence
+    note: >-
+      **Elder** is the poison influence: the prefix "+51–59% to Damage over
+      Time Multiplier for Poison inflicted with this Weapon" at item level
+      83. Its other prefixes are three versions of increased Physical
+      Damage, all in the pure physical group, and the same multiplier for
+      Bleeding. **Hunter** adds "Poisons you inflict deal Damage 13–15%
+      Faster" and 90–94% increased Chaos Damage over Time. **Crusader** and
+      **Warlord** add the physical hybrids with Critical Strike Chance and
+      Critical Strike Multiplier, which share the Accuracy hybrid's group.
+  - method: lock
+    note: >-
+      A dagger gives [[Hinekora's Lock]] its clearest job in this group of
+      weapons: looking at an influence Exalted Orb before it puts a
+      permanent modifier in the last open prefix.
+  - method: corruption
+    note: >-
+      Corruption replaces the crit implicit, so it is a real trade here.
+      The outcomes worth it: +25–30% to Global Critical Strike Multiplier,
+      5–7% increased Attack Speed, and for poison 50–60% increased Damage
+      over Time.
+  - method: strands
+    note: "See the Memory Strands section below."
+memoryStrands: >-
+  On a dagger the suffixes are the better use of strands. Attack speed and
+  the two crit suffixes have evenly weighted tiers, so a low tier is as
+  likely as a high one; strands, which remove low tiers from whatever is
+  rolled, fix exactly that on an item where three suffixes matter. An
+  [[Orb of Remembrance]] on a white item level 77 dagger, then
+  [[Orb of Alteration]]s for a suffix and a [[Regal Orb]], spends strands
+  eight and sixteen at a time at most, by the data-mined table.
+
+
+  For the physical prefixes the problem is finding the family, which strands
+  do not help. And an Essence, the natural partner of a fractured dagger, can
+  spend up to 80 strands in one use: do not combine the two.
+reading:
+  intro: >-
+    Read the implicit first: it tells you whether this is a crit dagger, a
+    poison dagger or a block dagger, and so which lines below are worth
+    anything. Then count damage prefixes of **one** kind, and count how many
+    of attack speed, Critical Strike Chance and Critical Strike Multiplier
+    are present.
+  prefixes:
+    text: >-
+      A physical dagger wants the three physical groups: pure increased
+      Physical Damage, the hybrid with Accuracy, and flat Physical Damage.
+      Together they are a fifth of the pool. The usual finished dagger has
+      one of the two percentages rolled or unveiled and the bench for
+      another slot.
+
+
+      A poison dagger on a Heist base can use any added damage, since all
+      of it can poison, and wants a source of chance to Poison: the veiled
+      or bench physical hybrid carries one.
+
+
+      What gets in the way: maximum Mana, and six prefixes that raise the
+      level of gems socketed in the dagger. Those are only good when the
+      main skill sits in the weapon's three sockets.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "The local multiplier. Rare at useful tiers; the veiled 120–139% and the bench's 100–129% are the dependable sources."
+        aim: "T4, 110–134% (ilvl 46), or veiled. T1 is 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "A second percentage in its own group. Nothing replaces it, and a bench percentage fits beside it."
+        aim: "T3, 55–64% (ilvl 60). T1 is 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "The number the percentages multiply. Twice as common as either percentage."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65). T1 needs ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "For elemental builds, and on a Heist dagger for poison, where every element can poison."
+        aim: "T3 (Cold adds 54–74 to 108–126, ilvl 63)."
+      - mod: "Adds # to # Chaos Damage"
+        why: "One natural tier at item level 83 and under 1% of prefix rolls. An Essence of Envy is the practical source."
+      - mod: "+# to Level of Socketed Chaos / Cold / Fire / Lightning Gems"
+        why: "Four prefixes of this kind plus two more for melee and for all gems: 16% of prefix rolls. Wasted unless the main skill is socketed in the dagger."
+  suffixes:
+    text: >-
+      Attack speed, Critical Strike Chance, Critical Strike Multiplier: 14%,
+      9% and 9% of suffix rolls, every tier weighted alike. With the base
+      crit and the implicit already in place, the multiplier usually gains
+      the most, then speed, then chance.
+
+
+      The bench supplies one of the three, so two must be rolled. Poison
+      and bleed daggers trade the crit pair for damage-over-time
+      multipliers: the general one, and Chaos Damage over Time Multiplier,
+      which is a different group, so both fit on one item.
+
+
+      Intelligence is the big filler at 14%. Useful for the dagger's own
+      requirement, never the reason to keep an item.
+    key:
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global. On a weapon that already has high crit chance this is the largest damage suffix."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "#% increased Attack Speed"
+        why: "Local to the dagger. An Essence of Zeal fixes it at up to 28–30%."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Multiplies the base's 8–9% for attacks with this dagger, alongside the global implicit."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Chaos Damage over Time Multiplier"
+        why: "The poison suffix. Top tiers are very light (weight 50 and 100); the bench sells 18–20% and the veiled version is 24–28%."
+        aim: "Veiled 24–28%, or T3 (ilvl 36). T1 is 34–38% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Applies to every damage over time and sits in its own group, beside the Chaos one."
+        aim: "T3, 16–19% (ilvl 68)."
+approach:
+  principle: >-
+    **Let the bench or a veiled prefix carry the physical multiplier, and
+    spend your rolls on the suffixes.** A dagger's prefix side is the worst
+    place in this weapon group to gamble, and its suffix side is the
+    best: evenly weighted tiers, three wanted families, and two reforges that
+    aim straight at them.
+  order:
+    - title: "Crit or poison, then the base"
+      text: >-
+        The implicit cannot be crafted, so this is the first decision.
+        Ambusher or Gutting Knife for crit, Pneumatic Dagger for poison, Sai
+        when the build has no use for either implicit.
+    - title: "Name the prefix source before rolling anything"
+      text: >-
+        Bench percentage (cheap, certain, 60–129%), veiled prefix (certain,
+        120–139%, needs Betrayal), a fractured base (strong, expensive), or
+        a Fossil reroll. Each implies a different route; choosing late
+        wastes whichever you started on.
+    - title: "Roll the suffix pair"
+      text: >-
+        A Critical reforge, an Essence of Zeal or Loathing, or Deft and
+        Shuddering Fossils. Two of the three damage suffixes at Tier 3 or
+        better is the working target; the third comes from the bench if
+        the prefix did not take it.
+    - title: "Keep a prefix slot open on purpose"
+      text: >-
+        The bench craft, a blocking craft before an unveil, a lock, an
+        influence orb: every strong step on a dagger needs an empty prefix
+        at some point. A result with three random prefixes is usually worse
+        than one with a single good one.
+    - title: "Finish"
+      text: >-
+        The planned bench craft, quality, the implicit's roll, sockets.
+  finishing: >-
+    Quality first on a physical dagger. A [[Blessed Orb]] on the implicit if
+    it sits at the bottom of 40–45%. A [[Divine Orb]] last, and only when
+    the multiplier or the percentage prefix rolled low.
+  stopping: >-
+    A dagger with a bench or veiled physical percentage, flat Physical
+    Damage or a second damage prefix, and two of the three damage suffixes
+    at Tier 3 or better is finished for most characters. The third suffix
+    and a rolled Tier 1 or Tier 2 percentage are the expensive steps, and
+    the second of those is where fractured bases come in.
+
+
+    Cut losses when a Rare has three prefixes of the wrong kind and nothing
+    protected: scour it. A base and an Orb of Alchemy cost less than any
+    attempt to repair it.
+special:
+  - mod: "All Damage from Hits with This Weapon can Poison"
+    source: "Base implicit"
+    where: "The implicit of the three Heist daggers: Hollowpoint, Pressurised and Pneumatic. Not craftable."
+  - mod: "#% increased Physical Damage / #% chance to Poison on Hit"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25%. Bench: 95–105% with 18–20% for 8 Chaos Orbs, or 86–94% with 16–17% for 3. Also with Bleeding, Impale or Blind. Same group as pure increased Physical Damage."
+  - mod: "+#% to Damage over Time Multiplier for Poison inflicted with this Weapon"
+    source: "Elder influence"
+    where: "An Elder prefix, 51–59% at item level 83 (43–50% at 75). Added by an [[Elder's Exalted Orb]] or rolled on an Elder-influenced dagger."
+  - mod: "Poisons you inflict deal Damage #% Faster"
+    source: "Hunter influence"
+    where: "A Hunter suffix, 13–15% at item level 73."
+  - mod: "+#% to Chaos Damage over Time Multiplier"
+    source: "Natural / Veiled / Bench"
+    where: "Rolls naturally on daggers up to 34–38%, but the top tiers are very light. Unveiled: 24–28%. Bench: 18–20% for 4 Chaos Orbs. All one group."
+  - mod: "Adds # to # Chaos Damage"
+    source: "Essence"
+    where: "An Essence of Envy from Screaming upwards: 53–79 to 101–131 at Deafening."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% from the [[Crafting Bench]] for 8 Chaos Orbs; 6–7% unveiled."
+  - mod: "#% increased Physical Damage / +#% to Global Critical Strike Multiplier"
+    source: "Warlord influence"
+    where: "A Warlord prefix, 65–69% with 10–15% at item level 80, weight 50. It takes the Accuracy hybrid's group."
+mistakes:
+  - "**Choosing the base for damage per second and losing the implicit you needed.** A Sai has no crit implicit; a Pneumatic Dagger has no crit implicit either."
+  - "**Rolling Alterations for a physical prefix.** Tier 3 or better is 1 prefix roll in 390. The bench sells 60–79% for 8 Alterations."
+  - "**Keeping a socketed-gem prefix because it looks rare.** It is 3% of prefix rolls per kind and does nothing unless the main skill is in the dagger."
+  - "**An Aberrant Fossil for chaos prefixes.** It mostly multiplies \"+2 to Level of Socketed Chaos Gems\"."
+  - "**Fracturing a base you meant to make Elder.** A fractured item cannot be given influence, by reference pages."
+  - "**Crafting on an Ethereal Blade.** The data gives it no modifier pool."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, Essence, veiled modifier, influence modifier and bench cost quoted here. The shares and odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Protection modifier costs, the change to \"Cannot roll\" modifiers against Annulment, and where fractured items come from." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Critical, Speed, Physical and Chaos reforges." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-and-remove recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested unveil blocking and Essence behaviour with locks. Partly older than 3.30." }

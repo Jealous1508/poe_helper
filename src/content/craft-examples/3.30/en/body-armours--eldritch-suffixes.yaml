@@ -1,0 +1,230 @@
+category: body-armours
+title: "Good prefixes, wrong suffixes: reroll one side with Eldritch Chaos Orbs"
+level: 3
+summary: "Give the chest two Eldritch implicits with the Eater of Worlds dominant, and an Eldritch Chaos Orb rerolls the suffixes while the prefixes stay exactly as they are."
+goal: >-
+  Finish a chest whose prefix side came out well and whose suffix side did
+  not, without rolling the prefixes again. This is the technique that sets
+  armour pieces apart from every weapon and every piece of jewellery: **one
+  side of the item can be rerolled alone**, for the price of an orb. Two
+  free implicits come with it.
+base: "Glorious Plate"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from an item, not from a white base: an Essence of Greed
+  result with three prefixes worth keeping and three suffixes that are not.
+  The Glorious Plate (776–892 Armour, level 68) suits it for one reason
+  above the others: it has **no implicit to lose**. An Eldritch Ember or
+  Ichor replaces the base's own implicit, so on an Astral Plate this craft
+  would cost the resistances the base was chosen for. Item level 84 opens
+  resistances of 46–48%.
+methods: [eldritch, bench]
+result:
+  note: "Searing Exarch and Eater of Worlds"
+  implicits:
+    - "16% increased Fire Damage"
+    - "+8% to all Elemental Resistances"
+  prefixes:
+    - { text: "+152 to maximum Life", how: essence }
+    - { text: "+367 to Armour" }
+    - { text: "87% increased Armour" }
+  suffixes:
+    - { text: "+43% to Fire Resistance", how: eldritch }
+    - { text: "+39% to Lightning Resistance", how: eldritch }
+    - { text: "+34% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "1", note: "any strength lower than the Ichor" }
+  - { item: "[[Greater Eldritch Ichor]]", amount: "1–5", note: "must be a higher strength than the Ember" }
+  - { item: "[[Eldritch Chaos Orb]]", amount: "10–30" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  [[Eldritch Chaos Orb]]s are the cost; the Ember, the Ichors and the bench
+  are small beside them. Compare it with the alternative: protecting the
+  prefixes with a bench modifier costs 4 Divine Orbs and 4 Blessed Orbs for
+  every single attempt on a body armour in 3.30.
+odds: >-
+  At item level 84 on a plate, by our arithmetic from the weights, one
+  suffix roll is an elemental resistance 43% of the time, and a resistance
+  of 36% or more 16% of the time. When a result has two suffixes, both are
+  resistances about 1 time in 7; at least one is, 7 times in 10.
+
+
+  The bar in this example, two resistances you would keep with a slot left
+  open, therefore takes somewhere between ten and thirty orbs. A bar of "any
+  two resistances" takes fewer; three top-tier resistances takes hundreds
+  and is not what this method is for.
+steps:
+  - title: "Check that the chest can take implicits"
+    do: >-
+      Look at the item's header. It must have **no influence**: no Shaper,
+      Elder or conqueror symbol. Then look at the implicit line and decide
+      whether you can live without it.
+    why: >-
+      The Ember's text refuses Shaper, Elder and conqueror items outright.
+      And it "replaces any existing implicit modifiers" other than the
+      opposite Eldritch one, so a base implicit does not survive.
+    check: >-
+      If the chest carries Memory Strands or a fractured modifier, we could
+      not confirm for 3.30 whether it accepts an Ember. The first Lesser
+      Ember is the test, and it is cheap.
+    state:
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "One Ember, of the lowest strength"
+    do: >-
+      Use a [[Lesser Eldritch Ember]] on the chest. Read the Searing Exarch
+      implicit it adds, and keep it whatever it is.
+    why: >-
+      In this craft the Ember has one job: to exist, at a lower strength than
+      the Ichor. Which implicit it gives is a bonus. Any single named one is
+      a long shot, about 1 Ember in 40 for Damage taken Recouped as Life by
+      the weights, so choosing the Exarch implicit is a project for later,
+      when the chest is finished.
+    state:
+      note: "Searing Exarch"
+      implicits: ["16% increased Fire Damage"]
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "An Ichor one strength higher"
+    do: >-
+      Use a [[Greater Eldritch Ichor]]. If the Eater of Worlds implicit is
+      one you can use, stop. If not, use another: each Ichor replaces only
+      the Eater implicit.
+    why: >-
+      The implicit of the higher strength is **dominant**, and dominance
+      decides which side the Eldritch orbs work on. With the Eater of Worlds
+      dominant, they work on suffixes.
+
+
+      Roughly a quarter of Ichor results are useful to almost any life
+      build, by the weights in the data: all Elemental Resistances, Physical
+      Damage taken as an element, increased Armour, Life Recovery rate. So
+      a few Ichors usually find one.
+    check: >-
+      Two implicit lines above the modifiers, the Eater's at the higher
+      strength. If the two are the same strength, do not go on: use a higher
+      Ichor.
+    state:
+      note: "Searing Exarch and Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "Eldritch Chaos Orb: the suffixes, and only the suffixes"
+    do: >-
+      Use an [[Eldritch Chaos Orb]]. Read the three prefixes first, to see
+      for yourself that they did not move. Then read the new suffixes.
+    why: >-
+      The orb's text: "If The Eater of Worlds is dominant, reroll suffix
+      modifiers". The prefixes are not protected by anything you paid for;
+      the orb simply does not touch that side. The first result here is a
+      miss: one low resistance and no room.
+    check: >-
+      Decide the bar before the first orb. Here: **two resistances of 36% or
+      more, with the third slot open**, or three resistances of any size.
+    fail: >-
+      Below the bar: use another orb. The prefixes are in no danger from
+      this orb, however many you use. They are in danger from an ordinary
+      [[Chaos Orb]], an Essence or a Fossil, all of which reroll both sides.
+    state:
+      note: "Searing Exarch and Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+29% to Fire Resistance", how: eldritch }
+        - { text: "32% reduced Attribute Requirements", how: eldritch }
+        - { text: "+26 to Strength", how: eldritch }
+  - title: "Stop at the bar"
+    do: >-
+      Keep using Eldritch Chaos Orbs until a result clears the bar. Then
+      stop, even if a better roll feels close.
+    why: >-
+      An open slot is part of the bar on purpose. The bench fills it with
+      exactly the resistance you are missing, which no number of orbs will
+      promise.
+    state:
+      note: "Searing Exarch and Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: eldritch }
+        - { text: "+39% to Lightning Resistance", how: eldritch }
+  - title: "Bench the third resistance"
+    do: >-
+      At the [[Crafting Bench]], craft the element that is missing: 29–35%
+      for 3 [[Chaos Orb]]s.
+    why: >-
+      Each element is its own group, so the bench offers only the one the
+      item lacks. With the implicit, the chest now carries three resistances
+      and a little of all three on top.
+    state:
+      note: "Searing Exarch and Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: eldritch }
+        - { text: "+39% to Lightning Resistance", how: eldritch }
+        - { text: "+34% to Cold Resistance", how: crafted }
+variations: >-
+  **The other way round.** A chest with three good suffixes and poor
+  prefixes: make the **Searing Exarch** dominant (the Ember of the higher
+  strength) and the same orb rerolls only the prefixes. One prefix roll in
+  22 is life of 145 or more at this item level.
+
+
+  **One slot at a time.** With the same dominance an
+  [[Eldritch Exalted Orb]] adds one modifier to that side and an
+  [[Eldritch Orb of Annulment]] removes one from it, at random among that
+  side's modifiers. A suffix side with two keepers and one bad modifier is a
+  1-in-3 Annulment, with the prefixes out of reach.
+
+
+  **The Exarch implicit, afterwards.** Once the suffixes are done, Embers
+  can be used freely to hunt a better Exarch implicit: they change nothing
+  else. Keep every Ember below the Ichor's strength, or raise both.
+mistakes:
+  - "Using an ordinary Chaos Orb out of habit. It rerolls all six slots. Only the Eldritch version respects the sides."
+  - "Applying an Ember to a base chosen for its implicit. The Astral Plate's resistances are gone with the first one."
+  - "Two implicits of the same strength. Dominance needs one to be higher."
+  - "Returning to Essences after this stage. An Essence rerolls the suffixes you just paid for."
+  - "Using a base with [[Memory Strands]] for this. An Eldritch Chaos Orb can spend up to 60 of them per use, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The in-game text of the Embers, Ichors and Eldritch Chaos Orb, the implicit lists and weights, the suffix tiers and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers that this method replaces." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "That the implicit of the higher strength is the dominant one. Player-tested." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

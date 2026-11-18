@@ -1,0 +1,223 @@
+category: staves
+title: "Lock the gem levels, reforge the suffixes with the Caster tag"
+level: 4
+summary: "A staff with +4 and bad suffixes. Protect the prefixes, then use the one Harvest reforge whose tag, on the suffix side alone, means cast speed or spell crit and nothing else."
+goal: >-
+  Turn a staff with gem-level prefixes you would not roll again into a
+  finished one, without risking them. It is the first staff craft where you
+  **pay to protect work**. What it adds to that idea is a way of choosing the
+  reforge: a tag that is useless on a whole staff becomes precise once one
+  side cannot change.
+base: "Eclipse Staff"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from an item, not from a base: the lucky end of the
+  Fossil example, or a staff you bought for its prefixes. Item level 84
+  matters for what the reforge can give. The best cast speed (44–49%) needs
+  83; on a level 77 staff the same reforge tops out one tier lower.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["100% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+4 to Level of all Fire Spell Skill Gems" }
+    - { text: "+1 to Level of all Spell Skill Gems" }
+    - { text: "Adds 68 to 140 Fire Damage to Spells" }
+  suffixes:
+    - { text: "40% increased Cast Speed", how: harvest }
+    - { text: "+16% Chance to Block Spell Damage", how: harvest }
+    - { text: "108% increased Spell Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 per attempt" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if a bench modifier has to come off first" }
+  - { item: "[[Chaos Orb]]", amount: "3–4", note: "for the final bench craft" }
+cost: >-
+  The lock: 4 [[Divine Orb]]s and 1 [[Sacred Orb]] on a weapon in 3.30, used
+  up by every reforge. The Lifeforce is small change beside it. Plan for two
+  or three attempts and decide the limit before the first.
+
+
+  That price is the test of whether to do this at all. A Fossil result with
+  +3 of the element and "all Spell Skill Gems" turns up about once in six
+  three-prefix results, and more Fossils reroll the suffixes for nothing. +4
+  with "all Spell Skill Gems" is about 1 in 50. Lock the second kind, not
+  the first.
+odds: >-
+  With the prefixes locked, the Caster reforge must put its guaranteed
+  modifier on the suffix side, and only two suffix families carry the caster
+  tag. By weight it is cast speed 7 times in 13 and Spell Critical Strike
+  Chance 6 times in 13. If the tier is drawn by weight too, which is how
+  reforges are understood to work, each tier is equally likely: cast speed at
+  32% or more is about 23% of attempts, and spell crit at 105% or more
+  another 23%. That is our arithmetic on equal tier weights and has not been
+  measured in 3.30.
+
+
+  Any further suffix is plain luck from the whole pool, and a third of that
+  pool is attack modifiers.
+steps:
+  - title: "Count the suffix slots"
+    do: >-
+      Count the suffixes. "Prefix Modifiers cannot be changed" is itself a
+      suffix, so the staff needs **one open suffix slot** to take it. If one
+      of three suffixes is a bench modifier, remove it at the bench for 1
+      [[Orb of Scouring]].
+    why: >-
+      A meta-modifier takes a real slot. This is also the thing to remember
+      after every reforge: a result with three suffixes leaves no room for
+      another lock.
+    fail: >-
+      Three rolled suffixes and nothing to remove: there is no safe way to
+      open a slot. An [[Orb of Annulment]] takes one of the six modifiers at
+      random. Before 3.30, "Cannot roll Caster Modifiers" would have kept it
+      off the caster prefixes; it no longer does, and it would need a free
+      suffix slot anyway. Use the staff as it is.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "38% chance to Ignite" }
+        - { text: "+41 to Strength" }
+  - title: "Craft the lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      While it is on the staff, a reroll that respects it leaves all three
+      prefixes alone. Use the full version when there are three prefixes.
+      The one- and two-prefix versions are cheaper, but the developers have
+      said the game picks which prefixes to keep at random and does not show
+      you.
+    check: >-
+      The modifier shows among the suffixes as crafted. Use no other
+      currency on the staff until the reforge.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "38% chance to Ignite" }
+        - { text: "+41 to Strength" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Choose the reforge by the side that can change"
+    do: >-
+      Open the modifier list and count, **among suffixes only**, the families
+      that carry each tag. Speed: cast speed and attack speed. Critical:
+      Spell Critical Strike Chance, Global Critical Strike Multiplier and
+      the attack-only Critical Strike Chance. Caster: cast speed and Spell
+      Critical Strike Chance. Choose **Caster**.
+    why: >-
+      On a whole staff the caster tag is on thirteen families and a Caster
+      reforge promises almost nothing. With the prefixes locked, eleven of
+      those cannot be touched. The two that remain are both suffixes a
+      hitting caster wants. A Speed reforge would give attack speed 9 times
+      in 16, because attack speed has more tiers.
+  - title: "Reforge with a Caster modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]).
+    why: >-
+      The reforge replaces every modifier it is allowed to touch: the
+      suffixes, the lock included, which is spent. One of the new suffixes
+      must carry the caster tag.
+    check: >-
+      The three prefixes are unchanged, the lock is gone, and cast speed or
+      Spell Critical Strike Chance is among the suffixes. Read its tier.
+    fail: >-
+      That Harvest reforges respect the lock is established by players, not
+      stated by the developers. If you have any doubt after a patch, try the
+      lock and a reforge on a cheap Rare first.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "40% increased Cast Speed", how: harvest }
+        - { text: "+16% Chance to Block Spell Damage", how: harvest }
+  - title: "Judge against the limit you set"
+    do: >-
+      Accept when the guaranteed suffix is at the tier you decided on (32%
+      cast speed or 105% spell crit is Tier 3) **and** a suffix slot is open.
+      Otherwise go back to step 2 and pay again, if there is still a slot
+      for the lock.
+    why: >-
+      Each further attempt costs a full lock. An open slot is worth more
+      than a mediocre third suffix, because the bench fills it with the
+      other half of the pair.
+    check: >-
+      A result with three suffixes you do not want is the end of the road
+      for this method. That risk is part of every attempt; it is one reason
+      to stop at "good" and not chase "best".
+  - title: "Bench the other half of the pair"
+    do: >-
+      If the reforge gave cast speed, craft Spell Critical Strike Chance,
+      90–120% for 3 [[Chaos Orb]]s, or Global Critical Strike Multiplier,
+      25–28% for 4. If it gave spell crit, craft cast speed: 21–26% for 2
+      Chaos Orbs, or 27–32% for 4 Exalted Orbs.
+    why: >-
+      The bench is certain, so it takes the modifier the reforge did not
+      give.
+    state:
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+4 to Level of all Fire Spell Skill Gems" }
+        - { text: "+1 to Level of all Spell Skill Gems" }
+        - { text: "Adds 68 to 140 Fire Damage to Spells" }
+      suffixes:
+        - { text: "40% increased Cast Speed", how: harvest }
+        - { text: "+16% Chance to Block Spell Damage", how: harvest }
+        - { text: "108% increased Spell Critical Strike Chance", how: crafted }
+variations: >-
+  **"Cannot roll Attack Modifiers", and why it stays on the shelf here.** It
+  would clear the attack third out of the other suffix rolls and make a
+  Speed reforge certain to give cast speed. But it is a suffix, the lock is a
+  suffix, and holding both needs "Can have up to 3 Crafted Modifiers", a
+  third: three empty suffix slots and 7 Divine Orbs with a Sacred Orb per
+  attempt. Emptying the suffix side first costs another lock and an Orb of
+  Scouring. By our arithmetic that is dearer per good result than the plain
+  lock with a Caster reforge. It earns its Divine Orb only on a staff whose
+  suffix side is already empty.
+
+
+  **The certain version.** With the prefixes locked, an [[Orb of Scouring]]
+  is reported to remove only the suffixes and the lock. Then craft "Can have
+  up to 3 Crafted Modifiers" (2 Divine Orbs), cast speed 27–32% (4 Exalted
+  Orbs) and Spell Critical Strike Chance 90–120% (3 Chaos Orbs). No gamble,
+  and no Tier 1.
+
+
+  **Two prefixes and an empty third slot.** "2 Prefix Modifiers cannot be
+  changed" costs 2 Divine Orbs and no Sacred Orb. The developers have said
+  the one-prefix version is certain when the staff has exactly one prefix;
+  by the same reasoning the two-prefix version has nothing to choose between
+  when there are exactly two. We have not seen either tested against each
+  kind of reroll, and a reforge may add a third prefix, after which only the
+  full lock is certain again. Try it on a cheap Rare first.
+
+
+  **A veiled suffix.** A [[Veiled Chaos Orb]] on the locked staff rerolls the
+  suffixes with a veiled modifier among them, by the same player-tested
+  rule. Unveil for 26–31% cast speed with Arcane Surge, a 44–48% damage over
+  time multiplier, or 12–14% chance to deal Double Damage.
+mistakes:
+  - "Locking prefixes a dozen Fossils would give you again. The lock is for +4 and for \"+2 to all\"."
+  - "Using an Essence of Misery on the locked staff for guaranteed cast speed. Essences are reported to ignore the protection modifiers and would reroll the prefixes."
+  - "Choosing the Speed reforge. More than half the time its guaranteed modifier is attack speed."
+  - "Using an Annulment to clear a suffix, trusting a \"Cannot roll\" modifier to steer it. Since 3.30 those only stop modifiers being added."
+  - "Forgetting that the next lock needs a slot. Three suffixes after a reforge means no further attempts."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bench costs, tiers, weights and the tags on each modifier. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers, and what \"Cannot roll Attack/Caster Modifiers\" no longer protects against." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator; with exactly one prefix the protected one is known." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Caster, Speed and Critical reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges, Veiled orbs and Orb of Scouring respect a locked side; Essences do not. Partly older than 3.30." }

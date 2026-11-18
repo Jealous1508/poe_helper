@@ -1,0 +1,412 @@
+name: "Abyss Jewel"
+short: "Eye jewel với flat Life và flat damage: năm base với năm pool, và các tier bị item level chặn mãi tới 86."
+icon: "Searching Eye Jewel"
+intro: >-
+  Abyss Jewel là jewel mang những con số flat: +36 to maximum Life ở chỗ một
+  Cobalt Jewel ghi 7% increased, và "adds 14 to 28 Cold Damage" ở chỗ một
+  jewel thường ghi 16% increased. Nó vừa jewel socket trên passive tree như
+  mọi jewel khác, và là loại jewel duy nhất vừa Abyssal socket trên trang bị,
+  như cái trên [[Stygian Vise]].
+
+
+  Nó chung khuôn với mọi jewel: một cái Rare có **hai** prefix và **hai**
+  suffix, không có implicit, không quality, không Essence, và bench không thêm
+  được modifier. Hai điều làm nó khác jewel thường, và cả hai đều là quyết
+  định bạn đưa ra trước orb đầu tiên. **Loại eye** quyết định pool gắt hơn
+  nhiều so với màu của một jewel. Và **item level có quan trọng**: phần lớn
+  modifier ở đây chia theo tier, và những cái tốt nhất cần item level 82 tới
+  86.
+basics:
+  itemLevel:
+    text: >-
+      Khác với jewel thường, Abyss Jewel bị item level chặn y như một món
+      armour. Maximum Life có bốn tier, từ +21–25 ở item level 1 tới +36–40 ở
+      82. Các modifier flat damage có ba tới sáu tier. Một nhúm suffix, trong
+      đó có attack speed và hai modifier critical strike global, chỉ có một
+      tier duy nhất và hoàn toàn không roll được dưới item level 50.
+
+
+      **Item level 77 là đủ cho một jewel dùng được**: nó mở tier cao nhất của
+      mọi suffix "Adds damage to Attacks" và của các suffix elemental "to
+      Spells", cùng tier thứ hai của Life. **83 tới 85** mở tier cao nhất của
+      Life và của các prefix flat damage. **86** chỉ cần cho ba prefix.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "Tier 3 của maximum Life (+26–30). **Mốc item level đầu tiên đáng roll trong campaign.**"
+      - ilvl: 50
+        unlocks: "Các suffix có một tier và một mốc level chặn: 3–5% increased Attack Speed, 2–4% increased Cast Speed, 8–12% increased Global Critical Strike Chance và +9–12% to Global Critical Strike Multiplier. Dưới 50 chúng không roll được."
+      - ilvl: 65
+        unlocks: "Tier cao nhất của flat Physical (61) và Chaos (64) Damage to Attacks, và của các suffix Blind, Taunt và Hinder."
+      - ilvl: 75
+        unlocks: "Tier 2 của maximum Life (+31–35, từ 74), và Tier 2 của Energy Shield, Mana, Armour và Evasion. Tier đầu của ba prefix hiếm: 2% Cooldown Recovery Rate, 3–5% Impale Effect, 2–3% of Damage taken Recouped as Mana."
+      - ilvl: 77
+        unlocks: "Tier cao nhất của flat Fire, Cold và Lightning Damage to Attacks (76–77) và to Spells (77). **Đủ cho phần lớn jewel.**"
+      - ilvl: 83
+        unlocks: "Tier 1 của maximum Life (+36–40, từ 82) và Tier 1 của Energy Shield, Mana, Armour và Evasion. Tier 1 của các prefix weapon Cold và Lightning, của các prefix spell elemental và của các prefix elemental và physical của minion."
+      - ilvl: 85
+        unlocks: "Tier 1 của các prefix weapon Fire và của các prefix Chaos của spell và minion (84), rồi của các prefix weapon Physical và Chaos và của Accuracy Rating (85). **Trần của flat damage.**"
+      - ilvl: 86
+        unlocks: "3% increased Cooldown Recovery Rate, 6–8% increased Impale Effect và 4–5% of Damage taken Recouped as Mana. Không thứ gì khác trong pool cần mức này."
+  bases:
+    text: >-
+      Năm base, năm pool. Không cái nào có implicit, chỉ số hay yêu cầu. Mỗi
+      eye được đặt tên theo đối tượng nó phục vụ, và game nói thật: modifier
+      damage của eye này hoàn toàn không xuất hiện trên eye khác. Một modifier
+      ở đây hoặc **mọi eye dùng chung** (Life, Mana, các defence,
+      regeneration, attribute, resistance, các suffix "chance to Avoid") hoặc
+      **thuộc về một hay hai eye**.
+
+
+      Kích cỡ các pool chênh nhau rất nhiều, và điều đó thay đổi tần suất xuất
+      hiện của các modifier dùng chung.
+    types:
+      - title: "Murderous Eye Jewel (melee)"
+        pools: [murderous-eye-jewel]
+        text: >-
+          Eye duy nhất có flat damage cho các loại weapon melee: Fire, Cold,
+          Lightning và Physical Damage with Axe, Claw, Dagger, Mace or
+          Sceptre, Staff và Sword Attacks, cộng Chaos Damage with Claws và
+          Daggers. Suffix của nó thêm flat damage cho mọi attack, attack
+          speed, Accuracy, Blind, và hai thứ không eye thông thường nào khác
+          có: Taunt on Hit và Unholy Might on Melee Kill.
+
+
+          Sáu loại weapon khiến pool prefix của nó lớn nhất trong bốn eye
+          thông thường, 79,270 so với khoảng 40,000 của các eye khác. Dòng của
+          mỗi weapon chỉ chiếm 3% số lần roll prefix, và maximum Life là 9.5%
+          ở đây so với 17% tới 19% trên ba eye kia.
+      - title: "Searching Eye Jewel (ranged)"
+        pools: [searching-eye-jewel]
+        text: >-
+          Flat damage with Bow Attacks và with Wand Attacks, cùng những suffix
+          attack như Murderous Eye nhưng không có Taunt hay Unholy Might. Bow
+          có weight gấp đôi: mỗi prefix bow elemental chiếm 7.7% số lần roll
+          prefix, mỗi prefix wand 3.8%. Accuracy Rating ở đây nặng gấp đôi so
+          với trên Murderous Eye. Nó chung suffix "Phasing on Kill" với
+          Hypnotic Eye.
+      - title: "Hypnotic Eye Jewel (caster)"
+        pools: [hypnotic-eye-jewel]
+        text: >-
+          Flat damage cho spell, ở hai dạng. Prefix gắn với thứ bạn cầm: Added
+          Spell Fire, Cold, Lightning, Physical hoặc Chaos Damage while Dual
+          Wielding, while holding a Shield, hoặc while wielding a Two Handed
+          Weapon, mười lăm dòng, mỗi dòng 2.8%. Suffix thì không điều kiện:
+          "Adds damage to Spells" với cùng năm loại đó, mỗi cái 8% số lần roll
+          suffix. Ngoài ra còn Cast Speed, Hinder, và các prefix "Damage over
+          Time while…" với weight gấp đôi so với trên các eye attack. Không có
+          flat damage cho attack.
+      - title: "Ghastly Eye Jewel (summoner)"
+        pools: [ghastly-eye-jewel]
+        text: >-
+          Mọi thứ cho minion và gần như không gì cho bạn. Năm prefix, "Minions
+          deal additional" Fire, Cold, Lightning, Physical hoặc Chaos Damage,
+          gộp lại chiếm 42% mọi lần roll prefix. Suffix cho minion attack
+          speed và cast speed, life, movement speed, resistance, leech,
+          regeneration, Taunt, Blind và Hinder.
+
+
+          Nó không roll được suffix critical strike nào, flat damage cho chính
+          bạn, hay các suffix "if you've Killed Recently". Pool suffix của nó
+          nhỏ nhất, 22,100, nên các suffix dùng chung (resistance, attribute)
+          dễ ra ở đây gần gấp đôi so với trên Murderous Eye.
+      - title: "Assembled Eye Jewel"
+        pools: [assembled-eye-jewel]
+        text: >-
+          Eye đặc biệt. Từ 3.30 nó "can now roll the Modifiers that every
+          Abyssal Jewel can roll", và dữ liệu đồng ý: pool của nó là bốn pool
+          kia cộng lại, weight prefix 136,546. Điều đó khiến nó là Abyss Jewel
+          duy nhất chứa được, chẳng hạn, một prefix minion bên cạnh một suffix
+          spell, và khiến từng prefix riêng lẻ hiếm hơn hai tới ba lần so với
+          trên eye gốc của nó.
+
+
+          Từ patch notes, chúng tôi chưa xác nhận được Assembled Eye Jewel rơi
+          ở đâu. Hãy coi nó là base cho một tổ hợp không eye nào khác cho bạn
+          được, không phải một jewel đa dụng.
+    picks:
+      - base: "Searching Eye Jewel"
+        for: "Attack bằng bow và wand"
+        why: >-
+          Ba prefix bow elemental gộp lại chiếm 23% số lần roll prefix, các
+          suffix elemental "to Attacks" thêm 29% số lần roll suffix nữa, và
+          hai bên cộng dồn vì chúng là group khác nhau. Maximum Life chiếm 17%
+          số lần roll prefix.
+      - base: "Murderous Eye Jewel"
+        for: "Melee, theo loại weapon"
+        why: >-
+          Nguồn duy nhất của flat damage gắn với sword, axe, mace, staff, claw
+          và dagger. Hãy trả tiền cho nó khi đã biết rõ: prefix của một weapon
+          với một loại damage là 3% số lần roll prefix là cùng.
+      - base: "Hypnotic Eye Jewel"
+        for: "Spell"
+        why: >-
+          Flat spell damage ở prefix và thêm lần nữa ở suffix. Suffix là nửa
+          dễ, 8% số lần roll cho mỗi loại damage; prefix phải khớp với cách
+          bạn cầm weapon và là 2.8%.
+      - base: "Ghastly Eye Jewel"
+        for: "Minion"
+        why: >-
+          Pool đặc nhất trong năm cái: gần một nửa mọi lần roll prefix là flat
+          damage của minion và một nửa số lần roll suffix là một modifier
+          minion. Cũng là eye rẻ nhất để roll Life kèm một resistance.
+    impact: >-
+      Hai điều, cả hai đều không đổi được. **Pool:** một eye hoặc có các
+      modifier damage của bạn hoặc không, và kích cỡ pool của nó quyết định
+      các modifier dùng chung xuất hiện thường xuyên tới đâu. **Item level:**
+      nó được chốt khi jewel rơi ra và giới hạn mọi tier trên đó.
+
+
+      Ngoài ra không còn gì. Không có implicit, và không có con số nào trên
+      base để modifier local nhân lên; mọi modifier trên Abyss Jewel đều là
+      global.
+tools:
+  - method: currency
+    note: >-
+      Vẫn bốn bước như mọi jewel: [[Orb of Alteration]] trên một jewel Magic,
+      [[Orb of Augmentation]] cho phía còn trống, [[Regal Orb]],
+      [[Exalted Orb]]. Cái thay đổi là giờ một dòng trúng có tier.
+
+
+      Ra đúng **họ** thì dễ trên đúng eye. Trên Searching Eye ở item level 84,
+      maximum Life chiếm 17.7% số lần roll prefix và một prefix bow elemental
+      bất kỳ 7.8%, theo phép tính của chúng tôi. Ra **tier** cao nhất thì
+      không dễ: Tier 1 của Life là 1 trên 85 lần roll prefix, Tier 2 trở lên 1
+      trên 28, và Tier 1 của một prefix bow 1 trên 242. Hãy quyết định tier
+      thấp nhất bạn chấp nhận trước khi bắt đầu, và ghi nó cạnh từng dòng của
+      danh sách ngắn.
+  - method: bench
+    note: >-
+      Trong dữ liệu 3.30 không tồn tại modifier bench nào cho Abyss Jewel, nên
+      không có ô cuối chắc chắn nào, không block và không modifier bảo vệ. Ba
+      lựa chọn roll lại thì dùng được: một modifier ngẫu nhiên của jewel Rare
+      giá 8 [[Chaos Orb]], ba cái giá 3 Chaos Orb, và rarity giá 1
+      [[Orb of Chance]]. Với nhiều nhất bốn modifier trên jewel, "một cái ngẫu
+      nhiên" là đúng cái cần 1 trên 3 hoặc 4 lần.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) trước [[Regal Orb]], khi jewel
+      Magic chứa hai modifier ở những tier khó roll. Tier khiến việc này đáng
+      làm thường xuyên hơn so với jewel thường: một Abyss Jewel Magic có Tier
+      1 của Life và một suffix flat damage cao nhất còn hiếm hơn bất cứ thứ gì
+      một Crimson Jewel có thể cho ra.
+  - method: finishing
+    note: >-
+      [[Divine Orb]], và ở đây nó quan trọng hơn so với trên phần lớn item
+      khác vì các khoảng rất rộng. Tier 2 của Accuracy Rating là +121 tới +240, chênh lệch bằng
+      cả một tier nằm gọn trong một tier. Lightning Damage to Attacks cao nhất
+      là "adds 1–4 to 43–48". Divine trước khi corrupt.
+  - method: corruption
+    note: >-
+      Có hai thứ khác nhau corrupt một Abyss Jewel.
+
+
+      Một [[Vaal Orb]] có thể cho nó một trong 21 implicit corruption, tất cả
+      cùng weight trong dữ liệu: "Corrupted Blood cannot be inflicted on you"
+      (level 33), "You cannot be Maimed" và "You cannot be Hindered" (40), sáu
+      cái "20–25% chance to Avoid" một ailment hoặc bị Stun, 4–5% increased
+      Damage và những cái khác. Nó cũng có thể không làm gì, hoặc roll lại
+      jewel; xác suất giữa các kết cục đó không được công bố.
+
+
+      [[Merrick's Ducat]] là mảnh duy nhất trong kiểu craft của league trước
+      tự nó dùng được trong 3.30. Lời văn của nó: "Augment a Rare Abyssal
+      Jewel with a random additional Modifier and corrupt it, even if it is
+      already at maximum Modifier count." Nó thêm chứ không roll lại, nên trên
+      một jewel đã đầy, đó là modifier thứ năm. Patch notes nói giờ nó có một
+      nguồn nằm ngoài các encounter Allflame cũ và không nêu tên nguồn đó.
+  - method: fossil
+    note: >-
+      Dữ liệu có một pool chỉ dành cho Fossil trên Abyss Jewel: tám prefix và
+      mười suffix, đáng chú ý là "Minions deal 14–16% increased Damage", một
+      prefix ở weight 2,000 mà không eye nào roll tự nhiên. Chúng tôi chưa xác
+      nhận được Fossil dùng được trên jewel trong 3.30. Hãy thử một cái trước
+      khi trông cậy vào nó.
+  - method: veiled
+    note: >-
+      Dữ liệu liệt kê 22 modifier có thể unveil trên Abyss Jewel, tất cả ở
+      item level 68: +1% to maximum Fire, Cold hoặc Lightning Resistance,
+      "Enemies Withered by you have -2% to all Resistances" và 3% increased
+      Cooldown Recovery Rate (thứ bình thường cần item level 86) nằm trong số
+      đó. Chúng tôi chưa xác nhận được một veiled modifier tới được jewel bằng
+      cách nào trong 3.30. Khoan hãy lên kế hoạch quanh chúng.
+memoryStrands: >-
+  [[Memory Strands]] nâng tier của thứ được roll ra, và Abyss Jewel là loại
+  jewel duy nhất mà điều đó có ý nghĩa: Tier 1 của Life có weight 500 so với
+  3,000 của mỗi tier trong hai tier thấp nhất.
+
+
+  Còn Abyss Jewel có mang được strand hay không lại là chuyện khác. Các orb
+  strand nói tới item "equipment", và chúng tôi chưa xác nhận được jewel có
+  được tính hay không. Nếu bạn tìm được một cái có strand, lời khuyên từ trang
+  tổng quan áp dụng nguyên vẹn: tiêu chúng vào Alteration và một Regal Orb,
+  đừng bao giờ vào Chaos Orb, và đọc chi phí game hiện ra trước mỗi cú click.
+reading:
+  intro: >-
+    Giữ Alt và hỏi ba điều theo thứ tự. **Đây có phải đúng eye cho nhân vật
+    này không?** Nếu không, các dòng damage chẳng đáng gì với bạn. **Item
+    level là bao nhiêu?** Nó cho biết jewel lẽ ra có thể thành gì. **Mỗi dòng
+    ở tier nào?** Hai Abyss Jewel có cùng bốn dòng có thể chênh nhau một nửa
+    giá trị.
+  prefixes:
+    text: >-
+      Phía prefix là flat Life và flat damage gắn với một weapon hoặc một cách
+      cầm weapon, đứng sau là các defence flat và regeneration.
+
+
+      Các prefix damage tuân theo một luật về group. Với mỗi loại damage, mọi
+      bản theo weapon là một group: "Cold Damage with Sword Attacks" và "Cold
+      Damage with Axe Attacks" không bao giờ chung một jewel được. Các loại
+      damage khác nhau là các group khác nhau: Cold with Swords và Fire with
+      Swords thì được. Các prefix spell của Hypnotic Eye hoạt động y như vậy
+      giữa "Dual Wielding", "holding a Shield" và "Two Handed Weapon".
+
+
+      Hãy đọc mọi prefix damage tới hết dòng. Một prefix cho weapon bạn không
+      dùng là một ô phí, và trên Searching Eye, cứ chín lần roll prefix thì
+      một lần là dòng wand mà nhân vật bow không dùng được.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Có trên mọi eye, và là prefix hay gặp nhất trên bốn cái trong số đó. Modifier khiến một Abyss Jewel đáng một socket với mọi build."
+        aim: "T2, +31–35 (ilvl 74). T1 là +36–40 (ilvl 82)."
+      - mod: "# to # Added Fire Damage with Bow Attacks"
+        why: "Đại diện cho các prefix weapon của Searching Eye và Murderous Eye. Phải nêu đúng weapon của bạn. Cộng dồn với suffix attack chung cùng loại damage."
+        aim: "T2, 14–15 to 23–26 (ilvl 72). T1 cần ilvl 84."
+      - mod: "# to # Added Spell Fire Damage while holding a Shield"
+        why: "Prefix có điều kiện của Hypnotic Eye. Phải khớp với thứ bạn cầm. Cộng dồn với suffix \"to Spells\"."
+        aim: "T2, 21–23 to 29–31 (ilvl 70). T1 cần ilvl 82."
+      - mod: "Minions deal # to # additional Physical Damage"
+        why: "Damage của Ghastly Eye, gồm năm loại là năm group, nên hai loại khác nhau vừa trên một jewel."
+        aim: "T2, 18–21 to 24–27 (ilvl 72). T1 cần ilvl 83."
+      - mod: "+# to maximum Energy Shield"
+        why: "Flat Energy Shield cho build không dùng Life. Armour và Evasion Rating có cùng bốn tier như vậy."
+        aim: "T2, +31–35 (ilvl 75). T1 là +36–40 (ilvl 83)."
+      - mod: "#% increased Cooldown Recovery Rate"
+        why: "Hiếm và được các build sống nhờ cooldown săn lùng. Weight 300 trên các eye attack và 100 trên hai eye kia, ở mỗi tier trong hai tier của nó."
+        aim: "2% (ilvl 75) hoặc 3% (ilvl 86)."
+  suffixes:
+    text: >-
+      Phía suffix là nơi flat damage không điều kiện nằm: "Adds damage to
+      Attacks" trên Murderous Eye và Searching Eye, "Adds damage to Spells"
+      trên Hypnotic Eye. Chúng khác group với các prefix weapon, và đó là toàn
+      bộ mẹo của một jewel damage: cùng một loại damage, một lần ở prefix và
+      một lần ở suffix.
+
+
+      Sau chúng là các suffix tiện ích một tier (attack speed hoặc cast speed,
+      cặp critical strike global, các dòng có điều kiện "Recently"), và các
+      suffix vá dùng chung: attribute, resistance và bộ "chance to Avoid".
+      Trên các eye attack và caster, mỗi suffix dùng chung chiếm khoảng 1% số
+      lần roll; trên Ghastly Eye khoảng 2%.
+    key:
+      - mod: "Adds # to # Fire Damage to Attacks"
+        why: "Đại diện cho năm suffix flat damage của các eye attack. Ba element mỗi cái gần 10% số lần roll suffix, và tier cao nhất của chúng chỉ cần ilvl 76–77."
+        aim: "T2, adds 10–12 to 21–24 (ilvl 64). T1 cần ilvl 76."
+      - mod: "Adds # to # Fire Damage to Spells"
+        why: "Bản của Hypnotic Eye, 8% số lần roll suffix cho mỗi loại damage."
+        aim: "T2, adds 20–22 to 26–30 (ilvl 66). T1 cần ilvl 77."
+      - mod: "#% increased Attack Speed"
+        why: "Một tier, và nó không tồn tại dưới item level 50. Cast Speed là bản song sinh của nó trên Hypnotic Eye và Ghastly Eye."
+        aim: "3–5% (ilvl 50). Cast Speed là 2–4%."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Một tier, trên mọi eye trừ Ghastly, với Global Critical Strike Chance bên cạnh ở cùng weight."
+        aim: "+9–12% (ilvl 50)."
+      - mod: "Minions have #% increased Attack Speed / Minions have #% increased Cast Speed"
+        why: "Suffix chung tốt nhất của Ghastly Eye: một dòng, cả hai loại speed, một tier duy nhất không có mốc level chặn."
+        aim: "Mỗi cái 4–6%."
+      - mod: "+# to Accuracy Rating"
+        why: "Một lượng flat lớn cho build attack, hay gặp gấp đôi trên Searching Eye. Khoảng bên trong một tier rất rộng."
+        aim: "T2, +121–240 (ilvl 78). T1 là +241–300 (ilvl 85)."
+      - mod: "#% chance to Gain Unholy Might for # seconds on Melee Kill"
+        why: "Chỉ có trên Murderous Eye (và Assembled)."
+        aim: "T1, 6–8% (ilvl 84). T2 là 3–5% (ilvl 60)."
+approach:
+  principle: >-
+    **Eye, item level, rồi tới tier.** Hai trong ba quyết định làm nên một
+    Abyss Jewel được đưa ra lúc bạn nhặt nó lên. Sai eye thì không roll được
+    damage của bạn và sai item level thì không roll được tier của bạn, và bao
+    nhiêu currency cũng không sửa được cái nào. Sau đó nó là một lần craft
+    jewel như mọi lần khác, với một chữ thêm vào mỗi dòng của danh sách ngắn:
+    tier thấp nhất bạn chấp nhận.
+  order:
+    - title: "Chọn eye theo thứ chỉ nó roll được"
+      text: >-
+        Bow hoặc wand: Searching. Một loại weapon melee: Murderous. Spell:
+        Hypnotic. Minion: Ghastly. Nếu bạn chỉ muốn Life và các suffix dùng
+        chung, lấy eye nào cũng được **trừ** Murderous, vì pool prefix chật
+        chội của nó giảm một nửa cơ hội ra Life.
+    - title: "Chọn item level theo tier bạn chấp nhận"
+      text: >-
+        Tra các tier trong danh sách modifier rồi đọc ra item level. 77 đủ cho
+        phần lớn kế hoạch. 82 tới 85 nếu bạn trả tiền cho tier cao nhất. Một
+        jewel thiếu một level so với một tier thì không bao giờ roll ra nó
+        được.
+    - title: "Viết danh sách ngắn với một tier cạnh mỗi dòng"
+      text: >-
+        "Life, từ 31 trở lên." "Fire Damage to Attacks, Tier 3 trở lên." Một
+        dòng trúng dưới mức đó là một lần trượt. Đặt mức chính là đặt giá: mỗi
+        tier bạn nhất định đòi sẽ giảm cơ hội còn khoảng một nửa hoặc một phần
+        ba.
+    - title: "Roll jewel Magic, prefix và suffix"
+      text: >-
+        Alteration và Augmentation tới khi cả hai phía đều trúng ở đúng tier.
+        Trên đúng eye, các họ ra liên tục; thứ bạn chờ là tier.
+    - title: "Regal, kèm Imprint nếu tier cao"
+      text: >-
+        Một jewel Magic có hai dòng tier cao nhất đáng một Croaker. Cái có hai
+        dòng trung bình thì không.
+    - title: "Exalt một lần, Divine, rồi mới corrupt"
+      text: >-
+        Ô thứ tư là một lần roll miễn phí, như trên mọi jewel. Divine Orb đi
+        trước Vaal Orb hay Ducat, không bao giờ sau.
+  finishing: >-
+    Một [[Divine Orb]] khi tier đã đúng mà con số còn thấp, chuyện thường gặp
+    trên những khoảng rộng thế này.
+
+
+    Sau đó, nếu bạn có, [[Merrick's Ducat]]: trên một jewel bốn modifier đã
+    hoàn thiện, nó thêm ngẫu nhiên cái thứ năm và corrupt jewel. Xét theo lời
+    văn của nó thì nó không gỡ gì, nên rủi ro không nằm ở jewel mà ở khả năng
+    bạn thay đổi nó về sau. Mọi việc khác phải làm xong trước.
+  stopping: >-
+    Life ở Tier 2 hoặc 3 với một suffix flat damage là jewel cho cả giai đoạn
+    đầu endgame, và trên đúng eye nó tốn vài chục Alteration. Thêm một prefix
+    damage khớp nữa là bạn có một cái tốt. Tier cao nhất trên ba dòng là chỗ
+    số Alteration lên tới hàng trăm và hàng nghìn.
+
+
+    Hãy dừng ở mức thấp hơn một tier so với mong muốn, sớm hơn bạn nghĩ là
+    nên. Bước từ Tier 2 lên Tier 1 của Life là 5 điểm Life với khoảng gấp ba
+    số Alteration.
+special:
+  - mod: "A fifth modifier on a full jewel"
+    source: "Merrick's Ducat"
+    where: "[[Merrick's Ducat]] thêm một modifier ngẫu nhiên vào Abyss Jewel Rare \"even if it is already at maximum Modifier count\" và corrupt nó. Dùng trực tiếp được trong 3.30. Giờ nó rơi ở đâu thì patch notes không nói."
+  - mod: "Corrupted Blood cannot be inflicted on you"
+    source: "Corruption"
+    where: "Một implicit corruption từ [[Vaal Orb]], một trong 21 cái cùng weight; level 33 trong dữ liệu."
+  - mod: "#% chance to Avoid being Stunned"
+    source: "Corruption / tự nhiên"
+    where: "20–25% dưới dạng implicit corruption, bên cạnh năm implicit \"Avoid\" cho ailment. Bản suffix tự nhiên là 21–24% (ilvl 50) hoặc 25–30% (ilvl 70)."
+  - mod: "Minions deal #% increased Damage"
+    source: "Fossil / Corruption"
+    where: "14–16% dưới dạng prefix trong pool chỉ dành cho Fossil (Fossil trên jewel chưa được xác nhận trong 3.30), và 4–5% dưới dạng implicit corruption."
+  - mod: "+1% to maximum Fire Resistance"
+    source: "Veiled"
+    where: "Một trong 22 modifier unveil ra mà dữ liệu liệt kê cho Abyss Jewel ở item level 68, có bản song sinh Cold và Lightning. Chúng tôi chưa xác nhận được cách nào đặt một veiled modifier lên jewel trong 3.30."
+  - mod: "Enemies Withered by you have -2% to all Resistances"
+    source: "Veiled"
+    where: "Như trên: có trong dữ liệu dưới dạng suffix unveil ra, không có đường nào tới nó đã được xác nhận."
+mistakes:
+  - "**Roll trên sai eye.** Một Ghastly Eye sẽ không bao giờ ra suffix critical strike và một Hypnotic Eye sẽ không bao giờ thêm damage cho attack."
+  - "**Roll Life trên Murderous Eye khi bạn không cần các prefix weapon của nó.** Life chiếm 9.5% số lần roll prefix của nó và 17% tới 19% trên ba eye kia."
+  - "**Bỏ qua item level.** Một jewel item level 73 không roll được +31 to maximum Life, và một cái item level 49 hoàn toàn không roll được attack speed."
+  - "**Giữ một prefix damage cho sai weapon.** \"With Wand Attacks\" chẳng làm gì cho một cây bow."
+  - "**Lên kế hoạch hai prefix weapon cùng một loại damage.** Mọi dòng \"Cold Damage with … Attacks\" là một group duy nhất."
+  - "**Corrupt trước Divine Orb.** Một Vaal Orb hay một Ducat đóng jewel lại; các con số giữ nguyên như cũ."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, tier, item level, weight, group và implicit corruption được dẫn ở đây, các lựa chọn roll lại của bench, và lời văn của Merrick's Ducat. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Merrick's Ducat dùng trực tiếp được trên Abyss Jewel; Assembled Eye Jewel roll được mọi modifier của Abyss Jewel." }
+  - { title: "poedb: Abyss Jewels", url: "https://poedb.tw/us/Abyss_Jewels", kind: data, note: "Hai prefix và hai suffix trên jewel Rare, và danh sách các modifier unveil ra của Abyss Jewel." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "Các kết cục corruption cho jewel. Phần chữ này cũ hơn 3.29." }

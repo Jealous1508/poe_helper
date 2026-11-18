@@ -1,0 +1,158 @@
+category: rings
+title: "Three suffixes with Alterations and the Lynx"
+level: 3
+summary: "Roll one high resistance of any element, make the ring Rare, and use the beast recipe that trades a prefix for a suffix while the prefix side holds nothing you want."
+goal: >-
+  A ring with three useful suffixes, one of them a resistance of 42% or more,
+  and Life from the bench. Two ideas make it work. A ring's value is on the
+  suffix side and its Life can be bought, so **the prefix side is free to
+  spend**. And a recipe that removes "a random prefix" is not random when the
+  ring has one prefix, or none.
+base: "Two-Stone Ring"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 opens the top resistance tier, 46–48%; at 72 the same craft
+  tops out at 42–45% and is otherwise identical. The Two-Stone implicit adds
+  two more resistances above the line. A Vermillion or Amethyst Ring is as
+  good a base if your resistances are nearly done.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+15% to Fire and Lightning Resistances"]
+  prefixes:
+    - { text: "+52 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+44% to Fire Resistance" }
+    - { text: "+47 to Strength" }
+    - { text: "+38% to Cold Resistance", how: beast }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Farric Lynx Alpha]]", amount: "1–2", note: "plus three Rare beasts each" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  A few dozen Alterations, one [[Regal Orb]], and one or two sets of beasts.
+  In 3.30 only red beasts are captured, so the beasts are the part to check
+  before you start. The bench step is 2 [[Orb of Alchemy]].
+odds: >-
+  At item level 84, one suffix roll is an elemental resistance of 42% or
+  more, of any of the three elements, about 1 time in 17 by our arithmetic.
+  Insisting on one element makes it 1 in 52. This is the whole reason the
+  craft takes whatever element comes.
+
+
+  The Lynx adds one random suffix. With a resistance and an attribute
+  already on the ring, about four in ten of what it can add is another
+  resistance or an attribute; the rest is recovery and filler.
+steps:
+  - title: "Roll one high resistance"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      **suffix** is Fire, Cold or Lightning Resistance of 42% or more. Do not
+      care which.
+    why: >-
+      The bench sells 21–28% of any resistance. A rolled one at this tier is
+      nearly twice that, so this is the part worth rolling. The element can
+      be changed afterwards; the tier cannot.
+    check: >-
+      Look at the prefix too, and sort it into one of two kinds. **Life of
+      70 or more:** you have a better ring than this craft makes. Skip the
+      Lynx, use the Regal Orb and bench a suffix. **Anything else, or
+      nothing:** carry on.
+    state:
+      rarity: magic
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+41 to maximum Mana" }]
+      suffixes: [{ text: "+44% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The recipes in the next step only work on a Rare item. Whatever the
+      Regal Orb adds, the plan survives: a suffix is one of the three you
+      wanted, and a prefix is about to be removed anyway.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+41 to maximum Mana" }]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+  - title: "Count the prefixes before the beast"
+    do: >-
+      Hold Alt. The ring must have a suffix slot open, and its prefixes must
+      be ones you are willing to lose. Here: one prefix, Mana, and two
+      suffixes.
+    why: >-
+      The recipe adds a suffix and removes a random prefix. With one prefix
+      there is nothing random about it: Mana goes. With no prefix there is
+      nothing to remove, which by long-standing player experience leaves
+      only the gain.
+    fail: >-
+      Two prefixes and one of them is good Life: do not use the recipe. It
+      would be a coin flip on the Life. Bench a suffix and stop.
+  - title: "Add a suffix, remove a random prefix"
+    do: >-
+      In the [[Menagerie]], use **Add a Suffix, Remove a Random Prefix** on
+      the ring. It needs a [[Farric Lynx Alpha]] and three other Rare beasts.
+    why: >-
+      A random suffix on a ring is very often an attribute or an elemental
+      resistance, and the thing you paid with was a Mana roll. No orb
+      makes that trade: an Exalted Orb could land on the prefix side, and an
+      Annulment could take the resistance.
+    check: >-
+      Three suffixes, no prefixes. If the new suffix is useless and you have
+      beasts to spare, the recipe cannot be repeated on a full suffix side;
+      accept it. If the Regal Orb had added a prefix, the ring would now
+      have two suffixes and room for one more use.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+        - { text: "+38% to Cold Resistance", how: beast }
+  - title: "Bench the Life"
+    do: >-
+      At the [[Crafting Bench]], craft +41–55 to maximum Life for 2
+      [[Orb of Alchemy]].
+    why: >-
+      The prefix side is empty, so every Life craft is allowed. This was the
+      plan from the start: spend the prefixes to build the suffixes, then
+      buy the one prefix that matters.
+    state:
+      implicits: ["+15% to Fire and Lightning Resistances"]
+      prefixes: [{ text: "+52 to maximum Life", how: crafted }]
+      suffixes:
+        - { text: "+44% to Fire Resistance" }
+        - { text: "+47 to Strength" }
+        - { text: "+38% to Cold Resistance", how: beast }
+variations: >-
+  **The wrong element.** The Horticrafting Station sells swaps that turn one
+  elemental resistance into another. Since 3.30 each costs 300 Lifeforce of
+  two different types. If the ring gave you fire and you needed lightning,
+  that is the repair, and it is why step 1 took the first high resistance it
+  saw.
+
+
+  **Rolled Life instead of bench Life.** With three suffixes on the ring, an
+  [[Exalted Orb]] can only add a prefix, and about 1 prefix in 7 is Life. Use
+  it **before** the bench: the bench's Life is the same group as rolled Life
+  and would block it. If the Exalted Orb misses, bench the Life beside
+  whatever it added.
+
+
+  **On a base with Memory Strands.** This craft is all Alterations, a Regal
+  Orb and at most an Exalted Orb, the orbs that spend the fewest strands, and
+  resistances have eight tiers for the strands to work on. Use an
+  [[Orb of Remembrance]] on the white ring first. Whether the beast recipe
+  touches strands is not known.
+mistakes:
+  - "Rolling for one named element. It triples the Alterations, and a Harvest swap makes the element a detail."
+  - "Using the Lynx on a ring with a Life prefix you wanted. With two prefixes it is a coin flip; with one it is certain loss."
+  - "Benching the Life before an Exalted Orb. A crafted Life modifier stops a rolled one from appearing."
+  - "Augmenting the Magic ring to fill the prefix. The recipe is about to remove a prefix; an empty slot costs nothing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, weights, groups and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The add-a-suffix recipe and the beast it needs in 3.30." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of resistance swaps; yellow beasts are no longer captured." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

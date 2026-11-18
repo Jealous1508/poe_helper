@@ -1,0 +1,183 @@
+category: body-armours
+title: "An Energy Shield chest with a Dense Fossil"
+level: 3
+summary: "A Dense Fossil removes life from the lottery and multiplies every defence prefix by ten. On a robe that means three stacking Energy Shield prefixes in one reroll."
+goal: >-
+  A chest for a build that lives on Energy Shield, with all three prefix
+  slots feeding the Energy Shield line. Two lessons. A different base means a
+  **different pool** with a different problem: on a robe, life and mana are
+  not help, they are the competition. And a Fossil is the tool when you want
+  several modifiers that share a tag and want another tag gone.
+base: "Vaal Regalia"
+itemLevel: 84
+baseWhy: >-
+  The Vaal Regalia has 171–197 Energy Shield and needs level 68 and 194
+  Intelligence. Item level 84 opens every Energy Shield prefix except the
+  last tier of the percentage (101–110%, item level 86): flat up to +91–100,
+  the percentage up to 92–100%, the hybrid with Stun and Block Recovery up to
+  39–42%.
+
+
+  The Twilight Regalia has half as much Energy Shield again on the base and
+  is the better item when you can meet level 84 and 293 Intelligence. The
+  craft is identical.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+84 to maximum Energy Shield", how: fossil }
+    - { text: "95% increased Energy Shield", how: fossil }
+    - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+  suffixes:
+    - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+    - { text: "+29 to Intelligence", how: fossil }
+    - { text: "+33% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Dense Fossil]]", amount: "15–40" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "to make the base Rare" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  One Fossil and one Resonator per attempt, both from Delve. In 3.30 Delve is
+  reached through the maps that always spawn Sulphite, so this is a craft for
+  someone who delves or buys from those who do.
+odds: >-
+  With a Dense Fossil at item level 84, by our arithmetic from the weights,
+  82% of prefix rolls are one of the three stacking Energy Shield prefixes:
+  flat 38%, the percentage 24%, the hybrid with Stun and Block Recovery 21%.
+  **When a result has three prefixes, they are those three, one of each,
+  36% of the time.** With a plain Chaos Orb the same figure is about 2%.
+
+
+  The Fossil does nothing for tiers. Each of the three is at its third tier
+  or better about 1 roll in 10. So "three Energy Shield prefixes" takes a
+  handful of Fossils, and "three good ones" takes dozens. Our figures leave
+  out the few modifiers that only Fossils can add, so treat them as close.
+steps:
+  - title: "Prepare the base"
+    do: >-
+      Take a white item level 84 Vaal Regalia to 20% quality with
+      [[Armourer's Scrap]]s. Make it Rare with an [[Orb of Alchemy]].
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, so the base only has to be
+      Rare for the first one to work. What the Alchemy gives is thrown away.
+      The result below shows the robe's ordinary problem: of its two
+      prefixes, one is mana and one is life.
+    state:
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+112 to maximum Life" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+35 to Intelligence" }
+  - title: "Know what the Fossil removes before you use it"
+    do: >-
+      Read the Fossil: "More Defence modifiers, No Life modifiers". Then
+      look at the robe's prefix list and sort it by tag.
+    why: >-
+      "More" is ten times the weight in the 3.30 data and "No" is zero.
+      Every Energy Shield prefix carries the defences tag. Maximum Life
+      carries the life tag and disappears. The small Energy Shield-with-Life
+      hybrid carries both and disappears too. Maximum Mana carries neither:
+      it stays, at about a fifth of its former share.
+
+
+      The same happens on the suffix side: faster start of Energy Shield
+      Recharge has the defences tag and becomes half of all suffix rolls,
+      and life regeneration is gone.
+    check: >-
+      This is the right Fossil only if you want **no** life on the chest. A
+      build that mixes life and Energy Shield wants Essences instead.
+  - title: "Socket the Fossil and use the Resonator"
+    do: >-
+      Place a [[Dense Fossil]] in a [[Primitive Chaotic Resonator]] and use
+      it on the regalia.
+    why: >-
+      The Resonator rerolls every modifier with the Fossil's weights
+      applied. The first result here has two Energy Shield prefixes at low
+      tiers: the right families, not yet the right numbers.
+    state:
+      prefixes:
+        - { text: "+41 to maximum Energy Shield", how: fossil }
+        - { text: "31% increased Energy Shield / 12% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "38% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+31% to Fire Resistance", how: fossil }
+  - title: "Judge by the Energy Shield line, not by the names"
+    do: >-
+      After each Fossil, read the item's **Energy Shield** number at the top.
+      Set a figure before you start and keep the first result that reaches
+      it.
+    why: >-
+      All three prefixes are local, so the top line already contains them.
+      Flat Energy Shield is added to the base, then both percentages and the
+      quality are added together and multiply the sum. On a base roll of 185
+      with the finished prefixes below: 185 + 84 = 269, times (1 + 0.95 +
+      0.36 + 0.20), is about 675. The first result above reaches about 340.
+      One number compares them; three tier names do not.
+    check: >-
+      Count the suffixes as well. One open suffix is worth having, because
+      the bench will fill it.
+    fail: >-
+      Under the figure: another Fossil and Resonator on the same item. Each
+      attempt is independent, and nothing on the item is worth protecting
+      yet.
+  - title: "Repeat until the figure is reached"
+    do: >-
+      Keep going until a result has the Energy Shield you set.
+    why: >-
+      You are waiting for three families and acceptable tiers at once. The
+      Fossil gives the families generously and leaves the tiers to luck.
+    state:
+      prefixes:
+        - { text: "+84 to maximum Energy Shield", how: fossil }
+        - { text: "95% increased Energy Shield", how: fossil }
+        - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+29 to Intelligence", how: fossil }
+  - title: "Bench the open suffix"
+    do: >-
+      At the [[Crafting Bench]], craft the resistance you lack: 29–35% for 3
+      [[Chaos Orb]]s.
+    why: >-
+      All three prefixes are taken, so the one bench modifier goes to the
+      suffix side. If Recharge did not roll and the build wants it, the bench
+      sells 21–25% for 4 Chaos Orbs, well under the rolled tiers.
+    state:
+      prefixes:
+        - { text: "+84 to maximum Energy Shield", how: fossil }
+        - { text: "95% increased Energy Shield", how: fossil }
+        - { text: "36% increased Energy Shield / 14% increased Stun and Block Recovery", how: fossil }
+      suffixes:
+        - { text: "47% faster start of Energy Shield Recharge", how: fossil }
+        - { text: "+29 to Intelligence", how: fossil }
+        - { text: "+33% to Lightning Resistance", how: crafted }
+variations: >-
+  **A second Fossil for the suffixes.** A [[Prismatic Fossil]] beside the
+  Dense one raises every Elemental modifier, by a factor of six in the
+  data. On a robe that makes the three resistances about 70% of suffix
+  rolls between them. It needs a Resonator with two sockets.
+
+
+  **Eldritch Chaos Orbs afterwards.** The result of this craft is exactly the
+  starting point of the Eldritch example: prefixes done, suffixes open to
+  improvement. Give the chest its implicits with the Eater of Worlds dominant
+  and reroll the suffix side alone. An Eater implicit of increased maximum
+  Energy Shield, 6–7% at the lowest strength and 16–17% at the highest, is a
+  further prize.
+
+
+  **The mirror image.** A [[Pristine Fossil]] does the opposite on a life
+  chest: no defence prefixes at all, and life as nearly every prefix roll.
+  It finds a top life tier quickly and leaves the other two prefix slots to
+  the bench.
+mistakes:
+  - "Using a Dense Fossil on a chest that should have life. The Fossil's second line is not small print."
+  - "Counting three Energy Shield prefixes as a success at any tier. Three bottom tiers add less than two good ones and a bench craft."
+  - "Judging before quality. Quality is added to the same multiplier as the two percentages."
+  - "Expecting [[Memory Strands]] to lift the tiers here. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, the tags on each modifier, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

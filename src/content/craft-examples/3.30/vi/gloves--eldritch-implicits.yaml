@@ -1,0 +1,181 @@
+category: gloves
+title: "Thêm hai modifier phía trên đường kẻ: Eldritch implicit"
+level: 3
+summary: "Gloves đã hoàn thiện có sáu modifier. Một Ember và một Ichor thêm cái thứ bảy và thứ tám mà không chạm vào sáu cái kia, và phép tính cho biết nên dừng ở bậc nào."
+goal: >-
+  Thêm attack speed từ Searing Exarch và spell suppression từ Eater of Worlds
+  lên đôi gloves đã craft xong. Trong ví dụ này không có gì dưới đường kẻ
+  thay đổi. Bài học là **Eldritch implicit được roll ra sao, mỗi bậc mua được
+  gì, và cái mạnh hơn trong hai cái về sau sẽ làm gì với các Eldritch orb của
+  bạn**.
+base: "Slink Gloves"
+itemLevel: 76
+baseWhy: >-
+  Đôi gloves từ ví dụ Essence of Zeal, hoặc bất kỳ đôi gloves Rare nào bạn
+  định giữ. Có ba điều kiện, đều lấy từ dòng chữ trên currency hoặc từ bảng
+  dữ kiện đứng sau hướng dẫn này.
+
+
+  **Không có influence.** Ember và Ichor từ chối item Shaper, Elder và
+  conqueror. **Không có implicit nào bạn muốn giữ.** Mỗi cái "replaces any
+  existing implicit modifiers" ngoại trừ implicit Eldritch của phía đối diện,
+  và đó là lý do ví dụ này không làm trên Spiked Gloves. **Không có Memory
+  Strands, cho chắc.** Một thread của người chơi gợi ý rằng item có strand
+  không nhận được các implicit này; chúng tôi chưa xác nhận được điều đó.
+methods: [eldritch, finishing]
+result:
+  implicits: ["9% increased Attack Speed", "+6% chance to Suppress Spell Damage"]
+  prefixes:
+    - { text: "+108 to maximum Life" }
+    - { text: "+134 to Evasion Rating" }
+  suffixes:
+    - { text: "12% increased Attack Speed", how: essence }
+    - { text: "+10% chance to Suppress Spell Damage" }
+    - { text: "+31% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "khoảng 20" }
+  - { item: "[[Lesser Eldritch Ichor]]", amount: "khoảng 20" }
+  - { item: "[[Greater Eldritch Ember]] và [[Greater Eldritch Ichor]]", amount: "mỗi loại khoảng 30", note: "tùy chọn, cho bước 4" }
+cost: >-
+  Tính bằng Ember và Ichor, và do bậc bạn chọn quyết định. Các bản Lesser là
+  Eldritch currency rẻ nhất hiện có. Mỗi bậc phía trên chúng cần nhiều lần
+  thử hơn để đổi lấy khoảng một điểm nữa của modifier.
+odds: >-
+  Các con số này giả định mỗi Ember hoặc Ichor chọn theo weight trong số các
+  implicit mà bậc của nó cho phép, và đó là cách chúng tôi đọc weight trong
+  dữ liệu; game không công bố gì về chuyện này.
+
+
+  Một Ember **Lesser** cho attack speed khoảng 1 trên 19 lần. Một cái
+  **Greater** cho bản luôn có tác dụng khoảng 1 trên 28 lần, vì bậc Greater
+  còn mở dạng thứ hai của mọi implicit, dạng chỉ có tác dụng khi ở gần một
+  enemy Unique. **Grand và Exceptional** mở dạng thứ ba cho pinnacle boss: 1
+  trên 32. Suppression từ Eater có cùng weight và cùng ba con số đó.
+steps:
+  - title: "Biết một Ember làm gì trước khi dùng"
+    do: >-
+      Đọc currency. Một Eldritch Ember "adds a Searing Exarch implicit
+      modifier", một Ichor thêm một implicit Eater of Worlds, lên một body
+      armour, boots, gloves hoặc helmet. Item giữ được mỗi loại một cái. Dùng
+      thêm một Ember nữa sẽ thay implicit Exarch bằng một cái ngẫu nhiên mới
+      và để yên mọi thứ khác.
+    why: >-
+      Chính đặc tính cuối cùng đó khiến implicit thành lần roll an toàn nhất
+      trong craft. Sáu modifier dưới đường kẻ không bao giờ gặp rủi ro, nên
+      bạn làm được việc này với một item đã hoàn thiện, và bạn thử lại được
+      bao nhiêu lần tùy số currency mình có.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Lesser Ember tới khi ra attack speed"
+    do: >-
+      Dùng [[Lesser Eldritch Ember]] từng cái một tới khi implicit ghi "8%
+      increased Attack Speed".
+    why: >-
+      Gloves có khoảng ba mươi implicit Exarch. Attack speed mang weight
+      1,000 trên 18,700 ở bậc này, nên hãy tính là nó ra khoảng một lần
+      trong 19 Ember. Nó là một modifier tách biệt với attack speed của
+      Essence dưới đường kẻ: implicit và explicit không chung group, và hai
+      cái cộng lại với nhau.
+    check: >-
+      Những kết quả khác đáng dừng lại, nếu chúng hợp với bạn hơn: increased
+      Critical Strike Chance for Attacks, một trong các Damage over Time
+      Multiplier, "Non-Vaal Strike Skills target 1 additional nearby
+      Enemy".
+    state:
+      implicits: ["8% increased Attack Speed"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Lesser Ichor tới khi ra suppression"
+    do: >-
+      Dùng [[Lesser Eldritch Ichor]] tới khi implicit thứ hai ghi "+5%
+      chance to Suppress Spell Damage".
+    why: >-
+      Một Ichor chỉ thay implicit Eater, nên attack speed bạn vừa roll ra
+      vẫn an toàn. Suppression có cùng weight trong danh sách của Eater như
+      attack speed có trong danh sách của Exarch.
+    state:
+      implicits: ["8% increased Attack Speed", "+5% chance to Suppress Spell Damage"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Quyết định leo tới đâu, theo con số"
+    do: >-
+      So những gì mỗi bậc cho. Attack speed: 8% ở Lesser, 9% ở Greater, 10%
+      ở Grand, 11% ở Exceptional. Suppression: 5%, 6%, 7%, 8%. Một Ember bậc
+      cao hơn không nâng cấp implicit bạn đang có. Nó roll ra một cái ngẫu
+      nhiên mới, nên leo bậc nghĩa là phải tìm lại attack speed với tỉ lệ tệ
+      hơn.
+    why: >-
+      Mỗi bậc một điểm, đổi lấy một currency hiếm hơn và nhiều lần thử hơn
+      mỗi lần. Từ Lesser lên Greater là bước mà phần lớn người chơi nên đi
+      rồi dừng lại. Ví dụ này làm đúng vậy: 9% và 6%.
+    check: >-
+      Từ bậc Greater trở lên bạn cũng sẽ thấy các dạng có điều kiện. Attack
+      speed khi ở gần một enemy Unique là 13% ở Greater và 15% ở
+      Exceptional; khi ở gần một pinnacle boss, 18% ở Grand và 19% ở
+      Exceptional. Với người chuyên giết boss, đó mới là implicit tốt hơn,
+      và nếu tính cả chúng thì attack speed ở bất kỳ dạng nào lại về khoảng
+      1 trên 19 Ember.
+    state:
+      implicits: ["9% increased Attack Speed", "+6% chance to Suppress Spell Damage"]
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+  - title: "Ghi nhớ implicit nào mạnh hơn"
+    do: >-
+      Nhìn bậc của hai implicit và nhớ lấy. Ở đây cả hai đều là Greater.
+    why: >-
+      Implicit mạnh hơn quyết định ba orb làm gì. Khi implicit Exarch mạnh
+      hơn, một [[Eldritch Chaos Orb]] roll lại prefix, một
+      [[Eldritch Exalted Orb]] thêm một prefix và một
+      [[Eldritch Orb of Annulment]] gỡ một prefix. Khi implicit Eater mạnh
+      hơn, chúng làm y vậy với suffix. Trên gloves đã hoàn thiện, đây là một
+      lời cảnh báo: đừng dùng cái nào trong số đó ở đây. Trên gloves chưa
+      hoàn thiện, nó là lớp bảo vệ rẻ nhất trong game, và các ví dụ khó hơn
+      được dựng trên nó.
+variations: >-
+  **Một Orb of Conflict.** Nó nâng một trong hai implicit lên một bậc và hạ
+  cái kia xuống một cách "unpredictably", và cần cả hai cùng có mặt. Dữ liệu
+  chứa hai bậc trên Exceptional mà không Ember nào cho trực tiếp, nên đây là
+  cách để chạm tới đỉnh cao nhất. Nó cũng dễ đi sai hướng y như vậy, và
+  chúng tôi không có xác suất cho nó.
+
+
+  **Chỉ số.** Implicit attack speed và suppression là con số cố định ở mỗi
+  bậc. Các implicit có khoảng, chẳng hạn 28–30% Critical Strike Chance for
+  Attacks ở bậc Exceptional, roll lại trong khoảng đó bằng một
+  [[Blessed Orb]].
+
+
+  **Thay cho một suffix.** Nếu gloves không còn chỗ cho attack speed dưới
+  đường kẻ, implicit Exarch là nguồn thứ tư của nó, sau Essence, bench và
+  roll tự nhiên.
+mistakes:
+  - "Dùng một Ember lên base Atlas để cộng thêm vào implicit của nó. Nó thay implicit đó."
+  - "Leo tới Exceptional cho một implicit rồi hết currency cho cái kia. Hai implicit Greater hơn một cái Exceptional và một chỗ trống."
+  - "Dùng một Eldritch Chaos Orb lên gloves đã hoàn thiện để xem nó làm gì. Nó roll lại cả một phía."
+  - "Trông chờ một đôi có influence nhận Ember. Currency từ chối nó, và influence không gỡ ra được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các Eldritch implicit của gloves, sáu bậc và weight của chúng, cùng dòng chữ in-game của Ember, Ichor, các Eldritch orb và Orb of Conflict. Xác suất là phép tính của chúng tôi." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: implicit mạnh hơn quyết định các Eldritch orb tác động lên phía nào. Một phần cũ hơn 3.30." }
+  - { title: "Thread của người chơi về Memory Strands và Eldritch implicit", url: "https://www.pathofexile.com/forum/view-thread/3818485", kind: thread, note: "Báo cáo duy nhất nói rằng item có strand từ chối Eldritch implicit. Chưa được xác nhận." }

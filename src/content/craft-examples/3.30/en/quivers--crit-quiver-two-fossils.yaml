@@ -1,0 +1,192 @@
+category: quivers
+title: "A critical strike quiver with two Fossils"
+level: 3
+summary: "A Deft Fossil for the suffixes and a Pristine Fossil for Life, in one Resonator. One Fossil per side, and the arithmetic of what the second one costs the first."
+goal: >-
+  A quiver with **both** critical strike suffixes and a Life prefix, for a
+  critical strike bow build in red maps. Two Fossils go in at once, each
+  aimed at a different side of the item. The lesson is that Fossils in one
+  Resonator are not independent: the second Fossil helps one side and takes
+  something from the other, and you can read how much from the weights
+  before spending anything.
+base: "Spike-Point Arrow Quiver"
+itemLevel: 75
+baseWhy: >-
+  The Spike-Point's implicit is 20–30% increased Critical Strike Chance with
+  Bows, the obvious base for this build. Item level 75 opens Tier 1
+  Critical Strike Multiplier with Bows (35–38%, from 74) and Tier 2
+  Critical Strike Chance with Bows (35–38%, from 72). The top tier of
+  chance needs 85, and a Fossil reroll will seldom land on it, so 75 is the
+  honest item level for this method.
+methods: [fossil, bench]
+result:
+  implicits: ["27% increased Critical Strike Chance with Bows"]
+  prefixes:
+    - { text: "+124 to maximum Life", how: fossil }
+    - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+  suffixes:
+    - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+    - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+    - { text: "9% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "10–20" }
+  - { item: "[[Pristine Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the size with two sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Two Fossils and a two-socket Resonator per attempt, all from Delve. In
+  3.30 Delve is reached through the maps that always spawn Sulphite, so this
+  is a craft for someone who delves or buys from those who do. Nothing else
+  in it costs anything.
+odds: >-
+  All figures are our arithmetic from the weights at item level 75, per
+  single modifier rolled, and they leave out the Fossil-only modifiers (see
+  the last paragraph).
+
+
+  **Suffixes.** With no Fossil, the two critical strike suffixes are 18% of
+  suffix rolls. With a [[Deft Fossil]] alone they are 72%. Add a
+  [[Pristine Fossil]] and they drop to 61%, because Pristine also
+  multiplies the two suffixes with the life tag, life on kill and life
+  leech, to 18% between them.
+
+
+  **Prefixes.** Life is 42% of prefix rolls with no Fossil and 88% with the
+  Pristine Fossil. Life of +100 or more is 1 prefix roll in 8 without it and
+  1 in 4 with it.
+
+
+  So the second Fossil trades about a sixth of the suffix hit rate for a
+  doubling on the prefix side. For a quiver that needs both, that is a good
+  trade.
+
+
+  **Whole results.** When a result has three suffixes, both critical strike
+  suffixes are on it 55% of the time with the pair of Fossils, by our
+  simulation of the same weights (72% with Deft alone, 5% with no Fossil).
+  Both of them at 30% or more is about 1 result in 16. Life of +100 or more
+  is on about 3 results in 10. Asking for all of that at once is about 1
+  result in 55, and not every result has three suffixes. A bar most people
+  can afford, both suffixes present, one of them at 30% or more, and +100
+  Life, is about 1 in 11.
+
+
+  **What the figures leave out.** The data lists two Fossil-only quiver
+  suffixes that these Fossils would also multiply: increased Vaal Skill
+  Critical Strike Chance (critical tag) and Regenerate 1% of Life per
+  second (life tag). The data does not say exactly when Fossil-only
+  modifiers join the pool, so the calculator ignores them. Expect to see
+  both, and expect the real critical strike share to be somewhat lower than
+  61%.
+steps:
+  - title: "Make the quiver Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white Spike-Point Arrow Quiver.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, like a Chaos Orb. What the
+      Alchemy rolls does not matter: the first Resonator replaces all of it.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes: [{ text: "Adds 21 to 41 Cold Damage to Attacks" }]
+      suffixes:
+        - { text: "+46 to Dexterity" }
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "+31% to Fire Resistance" }
+  - title: "Socket both Fossils and use the Resonator"
+    do: >-
+      Place one [[Deft Fossil]] and one [[Pristine Fossil]] in a
+      [[Potent Chaotic Resonator]], then use the Resonator on the quiver.
+    why: >-
+      Deft reads "More Critical modifiers, No Attribute modifiers". In the
+      3.30 data "more" is ten times the weight and "no" is zero: both
+      critical strike suffixes get ten tickets for each one they had, and
+      Dexterity, the most common suffix on a quiver, cannot roll at all.
+      Pristine reads "More Life modifiers, No Defence modifiers": Life gets
+      ten times the tickets, and a quiver has no defence modifiers to lose.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+58 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+27% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "Gain 41 Life per Enemy Killed", how: fossil }
+        - { text: "+38% to Cold Resistance", how: fossil }
+  - title: "Read the suffixes first, then Life"
+    do: >-
+      **Suffixes:** are Critical Strike Multiplier with Bows and Critical
+      Strike Chance with Bows both there, and is at least one of them at 30%
+      or more? ("of Ferocity" or "of Destruction" for multiplier;
+      "of Penetrating" or "of Incision" for chance.) **Then Life:** is it
+      +100 or more? Set this bar before the first Resonator and do not raise
+      it halfway.
+    why: >-
+      The suffixes are the hard side of a quiver, so they are judged first.
+      The result above has one critical strike suffix at a low tier, life on
+      kill where the second should be, and a low Life roll. It fails all
+      three tests.
+    check: >-
+      Count the open slots as well. One open suffix is ideal, because the
+      bench will put attack speed in it. Three suffixes are fine if two of
+      them are the pair you came for.
+    fail: >-
+      Use another pair of Fossils and another Resonator on the same quiver.
+      Each attempt is independent.
+  - title: "Know when two out of three is enough"
+    do: >-
+      If a result has both critical strike suffixes at good tiers and a
+      **bad** prefix side, stop using Fossils. Keep the quiver and rebuild
+      the prefixes with the method in the next example.
+    why: >-
+      The suffix pair is the part that is expensive to roll again. Rolling
+      past it to chase Life with the same Fossils throws away the hard
+      half to fix the easy half.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+124 to maximum Life", how: fossil }
+        - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+      suffixes:
+        - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+  - title: "Bench the open slot"
+    do: >-
+      A suffix is open: craft 7–12% increased Attack Speed at the
+      [[Crafting Bench]] for 2 [[Chaos Orb]]s.
+    why: >-
+      Attack speed is 3% of suffix rolls on a quiver and the Deft Fossil
+      makes it rarer still, so it was never going to come from the
+      Resonator. The bench is its proper source.
+    check: >-
+      Do not craft Global Critical Strike Chance here. It is the same group
+      as the rolled Critical Strike Chance with Bows and the bench will
+      refuse it.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+124 to maximum Life", how: fossil }
+        - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+      suffixes:
+        - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+        - { text: "9% increased Attack Speed", how: crafted }
+variations: >-
+  **Deft alone.** In a one-socket Resonator the critical strike pair is 72%
+  of suffix rolls and the prefixes are plain luck, where Life is still 4
+  rolls in 10. Use it when you have few Pristine Fossils, or when you
+  already plan to rebuild the prefixes.
+
+
+  **Harvest instead of Delve.** The Critical reforge (150 Primal Lifeforce)
+  guarantees one of the two critical strike suffixes and leaves the rest to
+  the ordinary pool. It is cheaper per attempt and gets both suffixes far
+  less often, because the second one is back to 9% of suffix rolls.
+mistakes:
+  - "Adding a third Fossil \"for damage\". Every extra Fossil that multiplies a prefix or a suffix tag dilutes the two you are paying for."
+  - "Keeping life on kill because it came with a Life Fossil. It is filler in a slot the critical strike pair needs."
+  - "Using Fossils on a base with [[Memory Strands]] and expecting better tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, tags, tiers and weights. The odds are our arithmetic and leave out Fossil-only modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical reforge and its cost." }

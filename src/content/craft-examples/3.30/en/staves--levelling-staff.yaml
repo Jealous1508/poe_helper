@@ -1,0 +1,159 @@
+category: staves
+title: "A levelling staff: gem levels from Alterations, spell damage from the bench"
+level: 1
+summary: "Roll one gem-level prefix on a white staff, make it Rare, and let the bench add the damage. The first craft for any spell caster."
+goal: >-
+  A staff for the middle of the campaign that adds two or three levels to
+  your main spell, made from currency you already carry. The idea to take
+  away is the one the whole category rests on: **the bench sells spell
+  damage, and it does not sell gem levels.** So you roll the gem levels and
+  buy the rest.
+base: "Royal Staff"
+itemLevel: 35
+baseWhy: >-
+  A Royal Staff can be held at level 28 with 51 Strength and 51 Intelligence.
+  Item level 35 is the first at which "+3 to Level of all Fire Spell Skill
+  Gems" (and the same for the other four elements) can roll; below it the
+  prefix stops at +2. Hold Alt over the staff to see its item level.
+
+
+  Any white staff of your level works the same way, because all staves roll
+  from one pool. Check that you have the Strength for it: every staff needs
+  as much Strength as Intelligence.
+methods: [currency, bench]
+result:
+  implicits: ["+20% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+3 to Level of all Fire Spell Skill Gems" }
+    - { text: "+52 to maximum Mana" }
+    - { text: "72% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "31% increased Mana Regeneration Rate" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–40", note: "plus 8 for the bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s and one [[Regal Orb]]. The bench craft
+  is 8 more Alterations. Nothing here is worth saving at this stage of a
+  league, and no [[Blacksmith's Whetstone]]s are needed: quality raises a
+  staff's physical damage, which a spell does not use.
+odds: >-
+  At item level 35, one prefix roll is a gem-level prefix for your element
+  (+2 or +3) about 1 time in 33, by our arithmetic from the modifier weights,
+  and "+1 to Level of all Spell Skill Gems" about 1 in 67. Accept either and
+  it is about 1 prefix roll in 22. An Alteration does not always roll a
+  prefix, so expect thirty to forty of them. What the Augmentation and the
+  Regal Orb add is luck, and the craft is built so that it hardly matters.
+steps:
+  - title: "Check the staff before you spend on it"
+    do: >-
+      Pick up or buy a white staff. Hold Alt: the item level should be 35 or
+      higher. Read the requirements and make sure you meet the Strength as
+      well as the Intelligence.
+    why: >-
+      Item level decides whether +3 can roll at all, and no currency raises
+      it afterwards. The Strength requirement catches casters out because
+      nothing else they wear asks for it.
+    state: { rarity: normal, implicits: ["+20% Chance to Block Spell Damage"] }
+  - title: "Make it Magic and roll for gem levels"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Hold Alt and read the prefix after each. Stop when it is **"+# to
+      Level of all Fire Spell Skill Gems"** (use your own skill's element:
+      Cold, Lightning, Chaos or Physical work the same way) or **"+1 to Level
+      of all Spell Skill Gems"**.
+    why: >-
+      A Magic item has one prefix and one suffix, so each Alteration is a
+      cheap look at one prefix. Gem levels are the modifier to roll because
+      the bench has no recipe for them. Extra levels raise the spell gem's
+      own damage, and every percentage you add later multiplies that.
+    check: >-
+      The prefix names your element or says "all Spell Skill Gems". A prefix
+      for another element does nothing for you; keep rolling. Ignore the
+      suffix.
+    fail: >-
+      If the Alterations run low, take +2 of your element and move on. It is
+      the same family one step down and still worth more than what the bench
+      sells.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+3 to Level of all Fire Spell Skill Gems" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the staff has no suffix, use an [[Orb of Augmentation]]. If it has
+      one already, skip this step.
+    why: >-
+      An Augmentation adds a modifier to an empty slot of a Magic item and
+      never touches what is there. It is a free roll at cast speed, one of
+      the more common suffixes on a staff.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+3 to Level of all Fire Spell Skill Gems" }]
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      It makes the staff Rare, keeps both modifiers, and adds a third at
+      random. Rare is what opens the remaining slots to the bench.
+    check: >-
+      Read what was added and which side it is on. Here it added maximum
+      Mana, the most common prefix on a staff. If it added increased Fire,
+      Cold or Lightning Damage or spell damage, note it: that changes the
+      next step.
+    state:
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems" }
+        - { text: "+52 to maximum Mana" }
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+  - title: "Buy the spell damage"
+    do: >-
+      At the [[Crafting Bench]], craft increased Spell Damage in the open
+      prefix: 61–78% for 8 Orbs of Alteration, or 44–60% for 4. **If the Regal
+      Orb already added a damage percentage,** the bench will refuse, so
+      craft cast speed instead: 15–20% for 6 Orbs of Alteration.
+    why: >-
+      An item holds one bench modifier, so it goes to the best thing the
+      staff lacks. Spell damage and the three elemental percentages are one
+      group, and a staff takes one of them. Gem levels are a different group,
+      which is why the bench's spell damage fits beside the prefix you
+      rolled.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Craft the best spell damage or cast speed it does offer.
+    state:
+      implicits: ["+20% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+3 to Level of all Fire Spell Skill Gems" }
+        - { text: "+52 to maximum Mana" }
+        - { text: "72% increased Spell Damage", how: crafted }
+      suffixes: [{ text: "31% increased Mana Regeneration Rate" }]
+variations: >-
+  **Which gem prefix is better.** For the main skill, +3 of its element beats
+  +1 to all spells. "All Spell Skill Gems" earns its place later, when a
+  staff can carry both: they are different groups and add together.
+
+
+  **A weak Essence of Woe.** Used on a white staff it makes a Rare with spell
+  damage guaranteed, 35–52% at Muttering and 53–69% at Weeping. That is the
+  modifier the bench already sells, and the bench cannot then add the gem
+  levels. It is the right shortcut only when you have no Alterations to
+  spare.
+
+
+  **Later in the campaign.** The same five steps at item level 55 or higher
+  can land "+2 to Level of all Spell Skill Gems". It is a rare roll there,
+  about 1 prefix in 334, so take it if it appears and do not wait for it.
+mistakes:
+  - "Using Whetstones on a caster's staff. Quality is physical damage on the base and a spell ignores it."
+  - "Stopping on a gem prefix for the wrong element because it looks rare. It is rare, and it does nothing for your skill."
+  - "Rolling for the suffix. Cast speed is on the bench for 6 Alterations; gem levels are not on the bench at all."
+  - "Crafting spell damage while the staff is still Magic, then using the Regal Orb. It works, but the craft is spent before you know what the staff needed."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, groups and bench costs. The odds are our arithmetic." }

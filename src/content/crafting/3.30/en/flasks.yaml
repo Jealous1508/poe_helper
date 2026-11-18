@@ -1,0 +1,502 @@
+name: "Flasks"
+short: "Five kinds of flask, one prefix and one suffix on each. The cheapest crafts in the game, and the first ones worth learning."
+icon: "Quicksilver Flask"
+intro: >-
+  A flask is the smallest crafting problem in the game. It can only ever be
+  Magic, so it has two slots: one prefix and one suffix. There is no Rare
+  version to gamble on, nothing to protect, and a full reroll costs one
+  [[Orb of Alteration]]. If you have never crafted anything, start here.
+
+
+  Small does not mean unimportant. The suffix decides what the flask does
+  for you beyond its base effect: end bleeding, make you immune to freeze,
+  add movement speed. The prefix decides how often it is ready. Five flasks
+  that each do a planned job keep a character alive through things that five
+  random ones do not.
+basics:
+  itemLevel:
+    text: >-
+      Item level works on a flask in an unusual way. On a weapon the best
+      tier is rare because its weight is small. On a flask every tier of a
+      modifier weighs the same in the 3.30 data, so the best tier is no
+      rarer than the worst. **Item level is the only thing standing between
+      you and the top tier.** A flask of item level 85 can roll everything.
+      On one of item level 84 the movement speed suffix stops at 9–11%,
+      however long you roll.
+
+
+      The other half of the story is that many of the modifiers people want
+      most have nothing better to wait for. Instant recovery and curse
+      removal have one tier each, and every tier of an immunity suffix is a
+      complete immunity. For those, the flask you are holding is high enough.
+      What climbs with item level is numbers: charges, durations, seconds of
+      immunity, movement speed, the size of a buff.
+
+
+      So: for a cure or an immunity, ignore item level. For a good mapping
+      flask, 68 opens the second-best tier of every utility prefix. For the
+      best of everything, 85.
+    breakpoints:
+      - ilvl: 8
+        unlocks: "**Bleeding has an answer.** \"of Sealing\" on a life, mana or hybrid flask (immunity to Bleeding and Corrupted Blood for 6–8 seconds if used while bleeding) and \"of the Lizard\" on a utility flask (immune for the whole effect, at 49–45% less Duration). Instant Recovery is open one level earlier, at 7."
+      - ilvl: 18
+        unlocks: "\"of Warding\": Removes Curses on use, on life, mana and hybrid flasks. It has a single tier, so this is as good as it ever gets."
+      - ilvl: 65
+        unlocks: "Tier 2 movement speed, \"of the Lynx\" (9–11%), and 25–23% reduced Charges per use."
+      - ilvl: 68
+        unlocks: "The second-best tier of every utility prefix is now open, the last two being 31–35% increased Duration and the Charge Recovery prefix with reduced effect. **Enough for a mapping flask.**"
+      - ilvl: 76
+        unlocks: "All five \"Immunity during Effect\" suffixes are at their best tier (they need 72 to 76), which shrinks their penalty to 39–35% less Duration."
+      - ilvl: 82
+        unlocks: "Tier 1 of every prefix a life, mana or hybrid flask can roll, except increased Charge Recovery, which needs 83. On utility flasks: 28–26% reduced Charges per use, +32–35 to Maximum Charges, and the best tier of the increased effect prefix (from 80)."
+      - ilvl: 84
+        unlocks: "Tier 1 increased Duration (36–40%), Tier 1 increased Armour or Evasion Rating during Effect (56–60%), and 65–60% reduced Effect of Curses."
+      - ilvl: 85
+        unlocks: "\"of the Cheetah\": 12–14% increased Movement Speed during Effect. **The only flask modifier that needs 85, and the ceiling.**"
+  bases:
+    text: >-
+      There are five kinds of flask, and the kind decides which modifiers
+      can appear at all. This is the first lesson of flask crafting, because
+      no amount of rolling crosses the line. A life flask can never make you
+      immune to freeze for its whole duration. A Granite Flask can never end
+      bleeding at the moment you press it. Each kind has its own way of doing
+      the same job, and its own list.
+
+
+      Five prefix families are shared by every flask: reduced Charges per
+      use, increased Charge Recovery, more Maximum Charges, charges when you
+      are hit, and a chance to gain a charge on a critical strike. Everything
+      else belongs to one side of the line or the other.
+    types:
+      - title: "Life flasks"
+        pools: [life]
+        text: >-
+          Twelve sizes, from Small to Eternal. The prefixes shape the
+          recovery: how much, how fast, how much of it at once. The suffixes
+          act **when you use the flask**: immunity to an ailment for some
+          seconds if you had it, or "Removes Curses on use". Only life
+          flasks roll the extra recovery over 10 seconds, and only life and
+          hybrid flasks roll the Low Life prefixes and the minion suffix.
+      - title: "Mana flasks"
+        pools: [mana]
+        text: >-
+          Twelve sizes. They roll the same cures as life flasks: bleeding,
+          chill and freeze, ignite, shock, poison, hinder and maim, curses.
+          Three prefixes are their own or shared only with hybrid flasks: one
+          that keeps the effect running when your mana is full, one that
+          delivers the mana at the end of the effect, and one that trades
+          life for more mana.
+      - title: "Hybrid flasks"
+        pools: [hybrid]
+        text: >-
+          Six sizes that restore life and mana together. They roll nearly
+          everything a life flask or a mana flask can, which gives them the
+          longest prefix list of all, fourteen families. What they miss are
+          the modifiers tied to a single resource.
+      - title: "Utility flasks"
+        pools: [standard]
+        text: >-
+          Seventeen bases, each with one fixed effect for a number of
+          seconds: Quicksilver, Granite, Jade, the resistance flasks and the
+          rest. They have only eight prefix families, all about charges,
+          duration and effect. Their 21 suffix families work **during the
+          effect**: immunities, avoidance, movement speed, Armour, Evasion
+          Rating, critical strike chance, resistances. None of the "if used
+          while" cures of a life flask can roll here.
+      - title: "Iron Flask"
+        pools: [iron-flask]
+        text: >-
+          The Expedition utility flask, with the implicit "Restores Ward on
+          use". The data gives it a pool of its own for one reason: it
+          cannot roll increased Armour or increased Evasion Rating during
+          Effect, and it alone can roll increased Ward during Effect, up to
+          28–30% at item level 78. In every other respect it rolls as a
+          utility flask.
+    picks:
+      - base: "Divine Life Flask"
+        for: "The most life per use"
+        why: >-
+          2,400 life over 3.5 seconds, the largest amount of any base, and
+          three uses in the tank (45 charges at 15 each). The default
+          endgame life flask.
+      - base: "Eternal Life Flask"
+        for: "Fast recovery without an instant prefix"
+        why: >-
+          2,080 life over 2.0 seconds. It gives up a little of the Divine
+          Life Flask's amount to deliver it in not much more than half the
+          time, so it needs the instant prefixes less.
+      - base: "Quicksilver Flask"
+        for: "Movement, from Act 1 to the last map"
+        why: >-
+          Drops from level 4, lasts 6.0 seconds and holds two uses (60
+          charges at 30 each). It is the flask the movement speed suffix
+          was made for, and the reason an item level 85 flask is worth
+          picking up.
+      - base: "Granite Flask"
+        for: "Armour builds"
+        why: >-
+          6.0 seconds, two uses. The usual home of "increased Armour during
+          Effect", which any utility flask except the Iron Flask can roll.
+      - base: "Bismuth Flask"
+        for: "The cheapest utility flask to keep running"
+        why: >-
+          The longest base duration of any utility flask, 8.5 seconds, and
+          the lowest cost per use, 15 charges of 40. A suffix on it is
+          active for more of the time than on any other base.
+      - base: "Eternal Mana Flask"
+        for: "Mana"
+        why: >-
+          1,800 mana over 7.0 seconds for 8 charges of 42: the largest
+          amount, and five uses before it is empty.
+    impact: >-
+      **The list it rolls from.** Life, mana, hybrid, utility: four
+      different lists, as above. Decide the job first, then take the kind of
+      flask that can do it.
+
+
+      **The effect itself.** What a Granite Flask grants, or how much life a
+      Divine Life Flask restores, is part of the base. A prefix can scale it;
+      nothing replaces it.
+
+
+      **Charges and duration.** Every base has three numbers: how many
+      charges it holds, how many one use costs, and how long it lasts. The
+      charge prefixes work on those numbers, so the same prefix is worth more
+      on a base that was already cheap to use.
+
+
+      **The implicit, on the few flasks that have one.** Aquamarine, Basalt,
+      Stibnite and Sulphur Flasks and the Iron Flask each do something extra
+      on use. None of them has a number to reroll.
+tools:
+  - method: currency
+    note: >-
+      Three orbs do all of it. An [[Orb of Transmutation]] makes a white
+      flask Magic. An [[Orb of Alteration]] rerolls both slots. An
+      [[Orb of Augmentation]] fills an empty slot without touching the full
+      one. A [[Regal Orb]], an [[Orb of Alchemy]] and everything else made
+      for Rare items have nothing to work on: by the reference pages a flask
+      can only be Normal, Magic or Unique.
+
+
+      The habit to build is **Alteration, then Augmentation**. When an
+      Alteration leaves a slot empty, an Augmentation is a second roll at
+      that slot for almost nothing, so every attempt gets one roll at each
+      side.
+
+
+      The odds are kind. At item level 85 a life flask has ten suffix
+      families and each is exactly 10% of suffix rolls, by our arithmetic
+      from the weights. A utility flask has 21 suffix families at just under
+      5% each, and eight prefix families at about 13% each. Because the tiers
+      weigh the same, the top tier of a five-tier family is one roll in five
+      of that family.
+  - method: bench
+    note: >-
+      The bench sells five suffixes to **any** flask, life, mana, hybrid or
+      utility, for 6 [[Glassblower's Bauble]]s each: Regenerate 3% of Life
+      per second during Effect; 15% of Damage Taken from Hits is Leeched as
+      Life during Effect; +20–30% to Item Rarity during Effect; Prevent
+      +55–45% of Reflected Damage during Effect; and 50% Chance to Avoid
+      being Stunned during Effect. The first four are not in any flask's
+      natural list. A bench suffix needs the suffix slot empty, and it is
+      then the only suffix the flask has.
+
+
+      The bench also adds the **automatic-use enchantment** of your choice
+      for 5 [[Instilling Orb]]s and 5 Baubles, and removes an enchantment
+      for 3 [[Orb of Scouring]]s. One thing is missing: in the 3.30 data the
+      option that removes a crafted modifier does not list flasks. To get rid
+      of a bench suffix, plan on an Orb of Scouring, which clears the prefix
+      too.
+
+
+      The data files all of these recipes under Niko. If your bench does not
+      show one, you have not found it yet.
+  - method: finishing
+    note: >-
+      **Quality.** [[Glassblower's Bauble]]s take a flask to 20%. The orb's
+      text says it has a greater effect on lower item level, non-unique
+      flasks. Quality improves what the flask already does: by long-standing
+      behaviour, the amount a life or mana flask recovers and the time a
+      utility flask lasts. Watch the number on the flask as you apply them.
+
+
+      **Enchantments are not modifiers.** They take neither slot. A flask
+      holds one, and a new one replaces the old.
+
+
+      An [[Instilling Orb]] "adds an enchantment to a utility flask that
+      will cause it to be used when certain conditions are met". The game
+      data has fifteen conditions, among them "Used when Charges reach full",
+      "Reused at the end of this Flask's effect", "Used when you take a
+      Savage Hit", "Used when you become Frozen" and "Used when you start
+      Bleeding". All fifteen have the same weight, so if a loose orb picks by
+      weight, the one you want is 1 in 15. The bench sells the exact one for
+      5 orbs and 5 Baubles. Use the bench.
+
+
+      An [[Enkindling Orb]] "adds an enchantment to a utility flask that
+      will improve it but prevent it from gaining charges during its effect".
+      The data has five versions: 60–70% increased effect, 80–100% increased
+      Duration, 60–80% increased Charge Recovery, 35–25% reduced Charges per
+      use, or +40–60 to Maximum Charges. Increased effect is the heaviest,
+      250 of a total weight of 650. Both orbs say "Replaces any existing
+      enchantment", so a flask is either automatic or enkindled, never both.
+
+
+      Both orbs name utility flasks. The bench entries for the fifteen
+      conditions also list life, mana and hybrid flasks. We have not
+      confirmed which holds in the game in 3.30, so the examples here enchant
+      utility flasks only.
+  - method: beast
+    note: >-
+      The [[Blood Altar]] adds one suffix to a flask whose suffix slot is
+      empty. Since 3.30 these recipes "require any Red Beast". How many each
+      one takes we could not confirm, so read the recipe before you plan
+      around it.
+
+
+      The recipe list offers, for life and mana flasks: of Sealing
+      (bleeding), of Convection (chill and freeze), of Damping (ignite), of
+      Earthing (shock), of the Antitoxin (poison) and of Warding (curses).
+      For utility flasks: of the Lizard (bleeding), of the Deer (freeze and
+      chill), of the Urchin (ignite), of the Conger (shock) and of the Skunk
+      (poison).
+
+
+      Look those names up in the modifier list and every one is the
+      **lowest tier** of its family: 6–8 seconds of immunity on a life
+      flask, 49–45% less Duration on a utility flask. "of Warding" escapes
+      only because it has a single tier. A beast suffix is certain and weak.
+      It earns its red beast when the prefix was the hard part and you do
+      not want to roll it twice.
+memoryStrands: >-
+  Nothing we could confirm puts [[Memory Strands]] on a flask. Strands are
+  described as a property of equipment, and the [[Orb of Remembrance]] reads
+  "a normal equipment item". Plan flask crafts as if strands did not exist.
+
+
+  Little is lost. Strands raise tiers, and on a flask the tiers already
+  weigh the same: at the right item level the best tier of a five-tier
+  family is one roll in five of that family, and a miss costs one
+  Alteration.
+reading:
+  intro: >-
+    Read a flask in this order: **what kind is it, what does the suffix do,
+    what does the prefix do to the charges.** The kind tells you which list
+    you are looking at. The suffix is the reason the flask is on your belt.
+    The prefix is how often you get to use it.
+  prefixes:
+    text: >-
+      On a **utility flask** all eight prefix families are about three
+      numbers: charges, duration and effect. More effect or more duration
+      makes each use better. Cheaper uses, faster recovery and a bigger tank
+      make uses more frequent. None of them is useless, and one of them has
+      a price you must mean to pay: increased Charge Recovery with 25%
+      reduced effect weakens the flask every time it is used.
+
+
+      On a **life or mana flask** the prefix decides the shape of the
+      recovery: all of it instantly for much less of it, half instantly,
+      instantly only on Low Life, or more of it and slower. That choice is
+      about how your character dies, not about tiers.
+
+
+      With one prefix slot, the group rule from the overview has nothing to
+      do here: two prefixes can never meet. The slot itself is the limit, so
+      the only question is which single prefix you want most.
+    key:
+      - mod: "#% reduced Duration / #% increased effect"
+        why: "Utility flasks only. The effect is 25% at every tier; a better tier only shrinks the duration penalty. The strongest prefix when the flask's own effect is what you want more of."
+        aim: "Any tier for the 25%. T1 (ilvl 80) loses 27–23% duration, T3 (ilvl 20) loses 38–33%."
+      - mod: "#% increased Duration"
+        why: "Utility flasks only. A longer effect per use, which is also more time covered by the suffix."
+        aim: "T2, 31–35% (ilvl 68). T1 is 36–40% (ilvl 84)."
+      - mod: "#% reduced Charges per use"
+        why: "Every flask. More uses from the same charges, and on a flask that uses itself when full, a shorter wait between uses."
+        aim: "T2, 25–23% (ilvl 65). T1 is 28–26% (ilvl 82)."
+      - mod: "#% increased Charge Recovery"
+        why: "Every flask. The flask refills faster from everything that gives charges."
+        aim: "T2, 31–45% (ilvl 63). T1 is 46–50% (ilvl 83)."
+      - mod: "+# to Maximum Charges"
+        why: "Every flask. A bigger tank: more uses in a long fight before it runs dry."
+        aim: "T2, +28–31 (ilvl 62). T1 is +32–35 (ilvl 82)."
+      - mod: "#% increased Charge Recovery / #% reduced effect"
+        why: "Utility flasks only. The largest charge recovery there is, at the price of 25% reduced effect. An immunity is all or nothing, so on a flask carried only for an immunity suffix the price is smaller than it sounds. On a flask carried for the size of its effect it is the one prefix to refuse."
+        aim: "T2, 55–60% (ilvl 68). T1 is 61–66% (ilvl 84)."
+      - mod: "Instant Recovery / #% reduced Amount Recovered"
+        why: "Life, mana and hybrid flasks. The whole recovery at the moment you press, for 66% less of it. It has one tier with a weight of 3,000, which makes it the most common prefix on these flasks."
+        aim: "One tier (ilvl 7)."
+      - mod: "#% of Recovery applied Instantly / #% reduced Amount Recovered / #% increased Recovery rate"
+        why: "Life, mana and hybrid flasks. Half now and the rest quickly. Every tier gives the 50%; a better tier loses less of the amount."
+        aim: "Any tier. T1 (ilvl 79) loses 39–36%, T5 (ilvl 3) loses 55–52%."
+      - mod: "Instant Recovery when on Low Life / #% reduced Amount Recovered"
+        why: "Life and hybrid flasks. Fully instant exactly when you are in trouble, with the smallest penalty of the instant prefixes."
+        aim: "T2, 18–15% reduced (ilvl 63). T1 is 14–11% (ilvl 81)."
+      - mod: "#% chance to gain a Flask Charge when you deal a Critical Strike"
+        why: "Every flask. Worth a slot only on a build that crits often."
+        aim: "T2, 26–30% (ilvl 62). T1 is 31–35% (ilvl 80)."
+  suffixes:
+    text: >-
+      The suffix is the job. There are two sets, and they answer the same
+      dangers in two different ways.
+
+
+      Life, mana and hybrid flasks cure **on use**: "Grants Immunity to
+      Bleeding for 6–8 seconds if used while Bleeding". You must have the
+      problem at the moment you press the flask, and a better tier gives more
+      seconds of immunity afterwards. Utility flasks protect **during the
+      effect**: "Immunity to Bleeding and Corrupted Blood during Effect",
+      paid for with "less Duration". Every tier is a complete immunity; a
+      better tier takes less duration away.
+
+
+      Beyond immunities, utility flasks carry the buff suffixes: movement
+      speed, Armour, Evasion Rating, critical strike chance, resistances,
+      reduced effect of curses. Those are the suffixes where the tier is the
+      whole value, and so the ones where item level matters.
+    key:
+      - mod: "Grants Immunity to Bleeding for # seconds if used while Bleeding / Grants Immunity to Corrupted Blood for # seconds if used while affected by Corrupted Blood"
+        why: "Life, mana and hybrid flasks. The standard answer to bleeding and Corrupted Blood, on a flask you press anyway."
+        aim: "Any tier cures. T4 is 6–8 s (ilvl 8), T1 is 15–17 s (ilvl 80)."
+      - mod: "Removes Curses on use"
+        why: "Life, mana and hybrid flasks. One tier with a weight of 3,000, so it is common and never comes in a weak version."
+        aim: "One tier (ilvl 18)."
+      - mod: "Grants Immunity to Chill for # seconds if used while Chilled / Grants Immunity to Freeze for # seconds if used while Frozen"
+        why: "Life, mana and hybrid flasks. The same pattern for chill and freeze. Ignite, shock and poison each have a suffix built the same way."
+        aim: "Any tier cures. T1 is 15–17 s (ilvl 76)."
+      - mod: "Immunity to Bleeding and Corrupted Blood during Effect / #% less Duration"
+        why: "Utility flasks. Immune for as long as the flask runs, without needing to be bleeding when you press it."
+        aim: "Any tier is full immunity. T1 (ilvl 76) costs 39–35% duration, T3 (ilvl 8) costs 49–45%."
+      - mod: "Immunity to Freeze and Chill during Effect / #% less Duration"
+        why: "Utility flasks. Ignite, poison and shock have the same suffix with the same penalty."
+        aim: "Any tier is full immunity. T1 needs ilvl 72."
+      - mod: "#% increased Movement Speed during Effect"
+        why: "Utility flasks. Three tiers, far apart in item level. The one flask suffix people hunt a base for."
+        aim: "T2, 9–11% (ilvl 65). T1 is 12–14% (ilvl 85)."
+      - mod: "#% increased Armour during Effect"
+        why: "Utility flasks, not the Iron Flask. Increased Evasion Rating during Effect is its twin, with the same tiers and item levels."
+        aim: "T2, 51–55% (ilvl 58). T1 is 56–60% (ilvl 84)."
+      - mod: "#% reduced Effect of Curses on you during Effect"
+        why: "Utility flasks. The utility flask's answer to curses: weaker than removing them, but it lasts the whole effect."
+        aim: "T2, 59–52% (ilvl 65). T1 is 65–60% (ilvl 84)."
+      - mod: "#% increased Critical Strike Chance during Effect"
+        why: "Utility flasks. A damage suffix for crit builds, on a flask that is running anyway."
+        aim: "T2, 44–49% (ilvl 66). T1 is 50–55% (ilvl 82)."
+      - mod: "#% additional Elemental Resistances during Effect"
+        why: "Utility flasks. Covers a resistance gap while the flask is up; do not rely on it to reach the cap."
+        aim: "T2, 15–17% (ilvl 41). T1 is 18–20% (ilvl 81)."
+approach:
+  principle: >-
+    **Choose the flask for the job, then roll the side you cannot buy.**
+    Each flask on your belt should answer one question: what kills me, or
+    what do I want more of. The kind of flask decides which answers are
+    possible. After that it is one suffix and one prefix, a miss costs one
+    Alteration, and the only real mistake is to keep rolling past a flask
+    that already does its job.
+  order:
+    - title: "Name the job"
+      text: >-
+        Go through your five slots. Something must restore life. Something
+        must deal with bleeding and Corrupted Blood, and something with
+        freeze. What is left goes to speed, defence or damage. Write the
+        suffix you want next to each slot before you touch an orb.
+    - title: "Take the kind of flask that can do it"
+      text: >-
+        A cure at the press of a button is a life flask suffix. An immunity
+        that lasts is a utility flask suffix. Movement speed, Armour and the
+        other buffs exist only on utility flasks. If the modifier is not on
+        that kind's list, no orb will put it there.
+    - title: "Check item level only when the number is the point"
+      text: >-
+        For a cure or an immunity, use what you have. For movement speed,
+        Armour or a top-tier prefix, hold Alt over the white flask first and
+        compare with the item levels above.
+    - title: "Roll the suffix, take the prefix"
+      text: >-
+        One [[Orb of Transmutation]], then [[Orb of Alteration]]s, reading
+        the suffix each time. When a result has an empty slot, use an
+        [[Orb of Augmentation]] before the next Alteration. Once the suffix
+        is right, accept any prefix that does not work against the flask.
+    - title: "Or roll the prefix and buy the suffix"
+      text: >-
+        When the prefix is the rare part, or the suffix you want is one of
+        the bench's five, turn the craft round. Roll until the prefix
+        appears with the suffix slot **empty**, do not use an Augmentation,
+        and add the suffix at the bench for 6 Baubles or at the Blood Altar
+        for a red beast.
+    - title: "Enchant and add quality last"
+      text: >-
+        Both cost Baubles, so they go on a flask you are keeping. The bench
+        sets the automatic-use condition you choose.
+  finishing: >-
+    Once both slots are right, the flask gets its quality and, on a utility
+    flask, its enchantment.
+
+
+    Choose the enchantment by how the flask is used. A flask you want
+    running all the time takes "Used when Charges reach full" from the
+    bench. A flask that answers one danger takes the condition that matches
+    it: "Used when you become Frozen" on a freeze immunity flask. A flask
+    you press by hand at chosen moments is the candidate for an
+    [[Enkindling Orb]], which improves the flask and stops it gaining
+    charges while it runs.
+  stopping: >-
+    A flask is finished when the suffix does its job and the prefix does
+    not work against it. That is a low bar on purpose. By our arithmetic a
+    named suffix family on a utility flask is about 1 suffix roll in 21, and
+    a named prefix family about 1 in 8. Demanding both at once multiplies
+    the two.
+
+
+    Stop early on cures and immunities: a better tier there is seconds or
+    duration, not safety. Push further only where the number is the value,
+    movement speed above all, and decide beforehand whether 9–11% would do.
+    If one flask has eaten several hundred Alterations, the bar is set too
+    high for what a flask is.
+special:
+  - mod: "Regenerate 3% of Life per second during Effect"
+    source: "Bench"
+    where: "A [[Crafting Bench]] suffix for 6 Glassblower's Baubles, on any kind of flask. Not in any natural list."
+  - mod: "15% of Damage Taken from Hits is Leeched as Life during Effect"
+    source: "Bench"
+    where: "A bench suffix for 6 Glassblower's Baubles, on any kind of flask."
+  - mod: "+#% to Item Rarity during Effect"
+    source: "Bench"
+    where: "A bench suffix, +20–30%, for 6 Glassblower's Baubles."
+  - mod: "Prevent +#% of Reflected Damage during Effect"
+    source: "Bench"
+    where: "A bench suffix, 55–45%, for 6 Glassblower's Baubles."
+  - mod: "50% Chance to Avoid being Stunned during Effect"
+    source: "Bench"
+    where: "A bench suffix for 6 Glassblower's Baubles. Utility flasks roll the same kind of modifier naturally, up to 51–55% at item level 80; the bench is the only way to put it on a life, mana or hybrid flask."
+  - mod: "Used when Charges reach full, and fourteen other conditions"
+    source: "Enchantment"
+    where: "An [[Instilling Orb]] adds one of the fifteen; the bench adds the one you choose for 5 Instilling Orbs and 5 Glassblower's Baubles. Not a prefix or a suffix."
+  - mod: "Gains no Charges during Effect, with one of five improvements"
+    source: "Enchantment"
+    where: "An [[Enkindling Orb]] on a utility flask. It replaces an automatic-use enchantment, and the reverse."
+  - mod: "Removes Curses on use, and ten other fixed suffixes"
+    source: "Beast"
+    where: "Blood Altar recipes that add a named suffix to a flask with none. Any Red Beast in 3.30; the number per recipe could not be confirmed. Apart from \"Removes Curses on use\", each is the lowest tier of its family."
+  - mod: "#% increased Ward during Effect"
+    source: "Iron Flask only"
+    where: "A natural suffix that exists only in the Iron Flask's pool: 19–21% from item level 12, up to 28–30% at 78."
+  - mod: "Unveiled versions of the five bench suffixes"
+    source: "Listed in the data"
+    where: "The modifier list shows them as unveiled prefixes, including Prevent +80–60% of Reflected Damage during Effect. We know of no way to put a veiled modifier on a flask: veiled items drop as Rares and both veiled orbs need a Rare item, which a flask can never be. Treat them as not obtainable."
+mistakes:
+  - "**Rolling for a suffix that kind of flask cannot have.** \"of the Lizard\" never appears on a life flask and \"of Sealing\" never on a Granite Flask. Check the kind before the first Alteration."
+  - "**Filling the suffix slot before a bench or beast suffix.** Both need it empty. If the plan is to buy the suffix, an Augmentation \"to see what comes\" ends the plan."
+  - "**Using an Alteration when one slot is right and the other is empty.** An Alteration rerolls both. The Augmentation is the orb that adds without touching."
+  - "**Keeping the reduced effect prefix on a flask you carry for its effect.** The charge recovery number is large and tempting. On a Quicksilver or Granite Flask it works against the reason the flask is there."
+  - "**Hunting an item level 85 base for an immunity flask.** Every tier of an immunity is the whole immunity. Item level 85 is for movement speed."
+  - "**Fishing for an automatic-use condition with loose Instilling Orbs.** If the orb picks by the weights in the data, the condition you want is 1 in 15. The bench sells it for 5."
+  - "**Trying to make a flask Rare, or to corrupt it.** By the reference pages a flask is Normal, Magic or Unique and cannot be corrupted. Orbs for Rare items do nothing here."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight and bench cost quoted here, the item text of the Instilling and Enkindling Orbs and the Glassblower's Bauble, and the list of enchantments. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Flask beastcrafting now requires any Red Beast; yellow beasts are no longer captured." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Which suffix each flask recipe adds. It does not say how many beasts a recipe takes." }
+  - { title: "poedb: Flasks", url: "https://poedb.tw/us/Flasks", kind: data, note: "Flasks are Normal, Magic or Unique only and cannot be corrupted." }

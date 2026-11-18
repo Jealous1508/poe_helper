@@ -1,0 +1,170 @@
+category: flasks
+title: "Một Granite Flask tự dùng"
+level: 2
+summary: "Roll suffix Armour bằng Alteration, rồi nhờ bench thêm enchantment kích flask mỗi lần nó đầy."
+goal: >-
+  Một flask phòng thủ cho những map đầu tiên mà bạn không bao giờ phải bấm.
+  Hai công cụ, mỗi cái làm việc nó giỏi: **Alteration tìm suffix, bench bán
+  enchantment.** Dọc đường bạn sẽ gặp prefix duy nhất mà utility flask roll
+  được nhưng lại chống lại chính nó.
+base: "Granite Flask"
+itemLevel: 68
+baseWhy: >-
+  Granite Flask kéo dài 6.0 giây và chứa được hai lần dùng (60 charge, mỗi
+  lần 30). Item level 68 là mức những map đầu tiên rơi ra. Nó mở "of the
+  Pangolin", 51–55% increased Armour during Effect (item level 58), và tier
+  tốt thứ nhì của mọi prefix utility. Tier Armour tốt nhất, 56–60%, cần item
+  level 84 và không đáng để chờ với bộ flask đầu tiên.
+methods: [currency, bench, finishing]
+result:
+  rarity: magic
+  note: "Enchantment: Used when Charges reach full"
+  prefixes:
+    - { text: "22% reduced Charges per use" }
+  suffixes:
+    - { text: "52% increased Armour during Effect" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Orb of Augmentation]]", amount: "15–30" }
+  - { item: "[[Instilling Orb]]", amount: "5", note: "cho bench" }
+  - { item: "[[Glassblower's Bauble]]", amount: "5 cho bench", note: "thêm nữa cho quality" }
+cost: >-
+  Vài chục Alteration, rồi một giá cố định ở bench: 5 [[Instilling Orb]] và
+  5 [[Glassblower's Bauble]]. Instilling Orb là phần duy nhất có thể bạn
+  phải chờ.
+odds: >-
+  Ở item level 68, một lần roll suffix ra increased Armour during Effect
+  khoảng 1 trên 21 lần, theo phép tính của chúng tôi từ weight (4.8% pool
+  suffix). Ở item level này có ba tier roll được và chúng có weight bằng
+  nhau, nên từ 46% trở lên, tức hai tier tốt hơn, là khoảng 1 trên 31. Với
+  một Augmentation trên mỗi kết quả không có suffix, mỗi lần thử gồm đúng
+  một lần roll suffix: trung bình 21 lần thử cho tier bất kỳ, 31 cho hai
+  tier tốt hơn.
+
+
+  Prefix là một lần roll giữa tám họ. Một trong số đó, khoảng 1 trên 7 lần
+  roll prefix, là cái flask này không nên giữ.
+steps:
+  - title: "Một Granite Flask trắng, item level từ 58 trở lên"
+    do: >-
+      Giữ Alt rồi rê chuột lên flask và đọc item level. Từ 58 trở lên là
+      roll được 51–55% Armour; ví dụ này dùng 68.
+    why: >-
+      Item level là cánh cổng duy nhất trên flask. Dưới 58 suffix dừng ở
+      46–50%, dưới 32 thì ở 41–45%.
+    state: { rarity: normal }
+  - title: "Transmutation, và đọc suffix trước"
+    do: >-
+      Dùng một [[Orb of Transmutation]] và giữ Alt.
+    why: >-
+      Trên utility flask, suffix là thứ bạn roll để tìm, nên nó là dòng phải
+      đọc. Kết quả đầu tiên này có suffix, và nó là cái sai.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+26 to Maximum Charges" }]
+      suffixes: [{ text: "43% chance to Avoid being Ignited during Effect" }]
+  - title: "Alteration, Augmentation, lặp lại"
+    do: >-
+      Dùng một [[Orb of Alteration]]. Nếu kết quả không có suffix, dùng một
+      [[Orb of Augmentation]]. Dừng khi suffix ghi "increased Armour during
+      Effect" từ 46% trở lên.
+    why: >-
+      Như vậy mỗi lần thử đều chứa một lần roll suffix, dù là Alteration hay
+      Augmentation đem lại. Kệ hẳn prefix cho tới khi suffix đúng.
+    check: >-
+      Tên kết thúc bằng "of the Tortoise" (46–50%) hoặc "of the Pangolin"
+      (51–55%).
+    fail: >-
+      Thiếu orb: chấp nhận cả "of the Abalone" (41–45%). Khi đó suffix
+      Armour nào cũng đạt, 1 trên 21 lần roll suffix.
+    state:
+      rarity: magic
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "Nhận một prefix, và biết cái phải từ chối"
+    do: >-
+      Nếu ô prefix đang trống, dùng một Augmentation. Giữ bất cứ thứ gì xuất
+      hiện, trừ một ngoại lệ: **increased Charge Recovery kèm 25% reduced
+      effect**.
+    why: >-
+      Bảy trong tám họ prefix làm flask kéo dài hơn, tốn ít hơn hoặc đầy lại
+      nhanh hơn. Họ thứ tám mua mức charge recovery lớn nhất hiện có bằng
+      một phần tư hiệu ứng của flask, mà hiệu ứng chính là lý do bạn mang
+      Granite Flask.
+    fail: >-
+      Nếu prefix bị từ chối xuất hiện, bạn có một lựa chọn. Quay lại bước 3,
+      tức là trung bình tốn thêm đúng chừng ấy lần thử nữa. Hoặc tạm giữ nó:
+      flask vẫn chạy, và dù sao nó cũng là flask thôi.
+    state:
+      rarity: magic
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "Enchantment, từ bench"
+    do: >-
+      Ở [[Crafting Bench]], chọn enchantment flask **Used when Charges reach
+      full**: 5 [[Instilling Orb]] và 5 [[Glassblower's Bauble]].
+    why: >-
+      Enchantment không phải prefix cũng không phải suffix, nên cả hai ô giữ
+      nguyên. Một Instilling Orb dùng thẳng lên flask cũng thêm enchantment
+      tự dùng, nhưng nó không cho bạn chọn trong mười lăm điều kiện. Bench
+      thì cho, và với giá 5 orb nó rẻ hơn ngồi câu.
+
+
+      Với điều kiện này, flask kích ngay lúc nó đầy. Từ đó trở đi, điều quan
+      trọng là nó kiếm lại số charge của một lần dùng nhanh tới đâu, vì thế
+      reduced Charges per use, increased Charge Recovery và increased
+      Duration là những prefix hợp với flask tự dùng nhất, còn sức chứa lớn
+      hơn thì hợp kém nhất.
+    check: >-
+      Enchantment hiện trên flask phía trên hai modifier, và flask tự dùng
+      ngay khi nó đầy.
+    fail: >-
+      Nếu bench không liệt kê enchantment đó, tức là bạn chưa tìm được công
+      thức ấy. Hãy tự tay dùng flask cho tới khi tìm được.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "Quality"
+    do: >-
+      Dùng Glassblower's Bauble lên flask tới 20% quality.
+    why: >-
+      Trên utility flask, quality kéo dài hiệu ứng, theo cách game vận hành
+      lâu nay, và hiệu ứng dài hơn tức là nhiều thời gian hơn được suffix
+      che phủ. Nó nằm sau cùng vì Bauble cũng là thứ bench thu: hãy tiêu
+      chúng vào flask bạn sẽ giữ.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+variations: >-
+  **Flask khác, vẫn sáu bước đó.** Jade Flask với increased Evasion Rating
+  during Effect có cùng các tier ở cùng item level. Utility flask nào cũng
+  nhận cùng enchantment đó.
+
+
+  **Một flask giải tự kích.** Roll một suffix miễn nhiễm thay vào, ví dụ
+  "Immunity to Freeze and Chill during Effect", và chọn điều kiện khớp với
+  nó: "Used when you become Frozen" hoặc "Used when you become Chilled". Khi
+  đó flask chỉ tiêu charge lúc mối nguy là thật.
+
+
+  **Mua suffix.** Nếu suffix bạn muốn là một trong năm cái của bench, như
+  "Regenerate 3% of Life per second during Effect" giá 6 Bauble, hãy lật
+  ngược lần craft: roll tìm prefix với ô suffix để trống, rồi craft suffix.
+  Ví dụ về beast cho thấy kiểu craft đó.
+
+
+  **Life flask.** Mô tả của Instilling Orb ghi "utility flask"; các mục
+  bench trong dữ liệu 3.30 thì liệt kê cả life, mana và hybrid flask. Chúng
+  tôi chưa xác nhận được bên nào đúng trong game, nên hãy thử ở bench trước
+  khi lên kế hoạch một life flask quanh nó.
+mistakes:
+  - "Enchant trước khi các modifier đã đúng. Một lần roll lại có giữ enchantment hay không là điều chúng tôi chưa kiểm chứng; làm nó sau cùng thì bạn không bao giờ cần biết."
+  - "Dùng Instilling Orb thẳng lên flask từng cái một rồi cầu may. Nếu orb chọn theo weight trong dữ liệu, điều kiện bạn muốn là 1 trên 15."
+  - "Giữ prefix reduced effect vì con số charge recovery của nó to nhất trên màn hình."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight, giá bench của enchantment và danh sách điều kiện. Xác suất là phép tính của chúng tôi." }

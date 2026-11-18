@@ -1,0 +1,184 @@
+category: warstaves
+title: "Jagged and Shuddering: physical prefixes and attack speed in one reroll"
+level: 3
+summary: "Two Fossils chosen from the warstaff's own pool: one makes 85% of prefix rolls physical, the other deletes Mana and makes half the suffix rolls attack speed."
+goal: >-
+  A warstaff with all three physical prefix families and attack speed, from
+  a single kind of reroll. Not at top tiers; Fossils do not reach those. The
+  lesson is **choosing a second Fossil from what is wrong with the pool**:
+  on a warstaff the trouble is Mana on one side and a missing speed suffix
+  on the other, and one Fossil answers both.
+base: "Judgement Staff"
+itemLevel: 77
+baseWhy: >-
+  The Judgement Staff has 1.3 attacks per second, the faster rate, so the
+  attack speed this craft lands is worth most on it. Item level 77 opens
+  Tier 1 of flat Physical Damage and of attack speed and Tier 2 of both
+  percentage prefixes. Fossil rerolls land on low and middle tiers far more
+  often than high ones, so 83 would buy a tier you will rarely see.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["+25% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "118% increased Physical Damage", how: fossil }
+    - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+    - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "21% increased Attack Speed", how: fossil }
+    - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+    - { text: "9% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Shuddering Fossil]]", amount: "20–40" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "any Resonator with two sockets" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "for the bench" }
+cost: >-
+  Two Fossils and a two-socket Resonator per attempt, from Delve. In 3.30
+  Delve is reached through the maps that always spawn Sulphite, so this is a
+  craft for someone who delves or buys from those who do.
+odds: >-
+  With both Fossils at item level 77, by our arithmetic from the weights, a
+  prefix roll is physical 85% of the time: flat damage 41%, each percentage
+  family 22%. Maximum Mana, a fifth of the prefix pool before, is gone.
+  **When a result has three prefixes, they are the three different physical
+  families about 4 times in 10.** With a Jagged Fossil alone it is 3 in 10.
+
+
+  On the other side, attack speed is half of all suffix rolls, where a
+  Jagged Fossil alone leaves it at 8%. A result with two suffixes has attack
+  speed about 3 times in 4, and at 20% or more about 1 time in 4.
+
+
+  Nothing here controls tiers. A percentage prefix at 110% or more (45% for
+  the hybrid) is on about 1 three-prefix result in 8. "All three families"
+  takes a handful of attempts; "all three at good tiers, with good attack
+  speed" takes dozens. Fossil-only modifiers are left out of these figures.
+steps:
+  - title: "Find what is wrong with the pool"
+    do: >-
+      Open the modifier list at item level 77 and read the shares. Prefixes:
+      physical 28%, maximum Mana 20%, added elemental damage 28%, socketed
+      gems 21%. Suffixes: attack speed 11%, and a long tail of filler.
+      Choose a [[Jagged Fossil]] (more Physical, no Chaos) for the first
+      problem, then look for a second Fossil that removes the largest thing
+      left: a [[Shuddering Fossil]] is "more Speed, no Mana".
+    why: >-
+      "No" is a weight of zero. Mana is the biggest single prefix family on
+      a warstaff and carries the mana tag, so this Fossil deletes it. And
+      "more Speed" multiplies attack speed by ten, the only modifier in the
+      pool with that tag. One Fossil, both sides.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Attack Damage"] }
+  - title: "Prepare the base"
+    do: >-
+      Take a white item level 77 Judgement Staff to 20% quality and use an
+      [[Orb of Alchemy]].
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. What the Alchemy gives is
+      thrown away by the first Fossils.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "+183 to maximum Mana" }
+        - { text: "Adds 52 to 98 Fire Damage" }
+      suffixes:
+        - { text: "+29 to Strength" }
+        - { text: "28% increased Stun Duration on Enemies" }
+  - title: "Both Fossils in one Resonator"
+    do: >-
+      Place a Jagged Fossil and a Shuddering Fossil in a
+      [[Potent Chaotic Resonator]] and use it on the staff. Two Fossils need
+      a Resonator with two sockets.
+    why: >-
+      The effects combine only inside one Resonator. The Jagged Fossil also
+      multiplies the two leech suffixes, which carry the physical tag; used
+      alone that crowds attack speed out. The Shuddering Fossil outweighs
+      it.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 11 to 23 Physical Damage", how: fossil }
+        - { text: "71% increased Physical Damage", how: fossil }
+      suffixes:
+        - { text: "14% increased Attack Speed", how: fossil }
+        - { text: "2.2% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+21 to Intelligence", how: fossil }
+  - title: "Read both sides against a bar set in advance"
+    do: >-
+      **Prefixes, families:** pure, hybrid and flat, one of each? **Prefixes,
+      tiers:** for a mapping weapon, pure at 110% or more, hybrid at 45% or
+      more, flat at adds 25 or more to 52 or more. **Suffixes:** attack
+      speed at 20% or more, and one slot open for the bench.
+    why: >-
+      The result above has two families at low tiers, slow attack speed and
+      no open suffix: it fails everywhere. Reading in a fixed order stops
+      you keeping a staff for the one line that happens to be good.
+    check: >-
+      The prefixes decide. A result that passes on prefixes and has weak
+      attack speed is still worth keeping: the suffix side can be redone
+      later, and the Speed reforge guarantees that modifier.
+    fail: >-
+      Use another Resonator and two more Fossils on the same staff.
+  - title: "Repeat until the prefixes pass"
+    do: >-
+      Keep going until the three families are there at your tiers.
+    why: >-
+      You are waiting for families and tiers together. The Fossils do most
+      of the first and none of the second.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+        - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Bench the open suffix"
+    do: >-
+      At the [[Crafting Bench]], craft the build's third damage suffix. For
+      a build that does not crit: 8–10% chance to deal Double Damage, 8
+      [[Chaos Orb]]s. For a crit build: Global Critical Strike Multiplier
+      25–28% or Critical Strike Chance 25–27%, 4 Chaos Orbs. If the Fossils
+      left no attack speed: attack speed, 11–15% for 2 Chaos Orbs.
+    why: >-
+      All three prefix slots hold damage, so the bench goes to the suffix
+      the staff lacks.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+        - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "9% chance to deal Double Damage", how: crafted }
+variations: >-
+  **Deft instead of Shuddering, for the crit suffixes.** A [[Deft Fossil]]
+  is "more Critical, no Attribute". With a Jagged Fossil it makes Critical
+  Strike Chance and Global Critical Strike Multiplier each about 27% of
+  suffix rolls, and leaves attack speed at 4% and Mana in the prefix pool.
+  It suits a crit staff whose attack speed will come from a later reforge.
+
+
+  **A third Fossil.** A [[Serrated Fossil]] (more Attack, fewer Caster) beside
+  the other two barely moves the prefixes, 88% physical against 85%, but
+  lifts attack speed to about 69% of suffix rolls. It needs a three-socket
+  Resonator, and is worth it only when attack speed is the thing your
+  results keep missing.
+
+
+  **A rod.** The Heist rods roll from their own pool, but it differs only in
+  the block suffixes, so every figure above holds for an Eventuality Rod.
+mistakes:
+  - "Using the Jagged Fossil alone on a warstaff. Mana stays in the pool, and the leech suffixes it multiplies push attack speed down."
+  - "Expecting top tiers. Fossils multiply a whole tag, low tiers included: the best pure percentage open at this item level is still about 1 prefix roll in 340."
+  - "Keeping three physical prefixes at the bottom tiers. Two good ones and a bench craft are a better weapon."
+  - "Using the two Fossils one after the other. Each use is a full reroll."
+  - "Using Fossils on a base with [[Memory Strands]] and expecting better tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, modifier tags, tiers and weights for both warstaff pools. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

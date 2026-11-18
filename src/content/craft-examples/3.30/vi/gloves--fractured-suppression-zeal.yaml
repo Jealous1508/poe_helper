@@ -1,0 +1,205 @@
+category: gloves
+title: "Hai suffix không thể mất: một base fractured dưới Deafening Essence"
+level: 4
+summary: "Fracture giữ một suffix vĩnh viễn, Essence trả lại cái thứ hai ở mỗi lần roll lại, và một craft multi-modifier khép item lại. Kế hoạch an toàn ở mọi bước, trừ bước đầu."
+goal: >-
+  Gloves Evasion với spell suppression Tier 1, 17–18% attack speed, life cao
+  và hai prefix damage và defence do bạn chọn. Lần craft này là chuyện
+  **chọn đúng kiểu bảo vệ**. Một cái khóa bench sẽ không có tác dụng ở đây,
+  và ví dụ cho thấy vì sao một fractured modifier thì có.
+base: "Velour Gloves"
+itemLevel: 85
+baseWhy: >-
+  Item level 85 là mức thấp nhất mà "of Nullification", +13–14% chance to
+  Suppress Spell Damage, tồn tại. Velour Gloves là base Evasion cao nhất,
+  359–413, và pool thuần Evasion roll suppression ở weight đầy đủ.
+
+
+  Base phải **fractured và không có influence**. Theo các trang tra cứu, một
+  fractured item về sau không thêm influence được, nên đôi này sẽ không bao
+  giờ có; đó là một phần của lựa chọn.
+methods: [fracture, essence, meta, bench, finishing]
+result:
+  note: "Fractured"
+  prefixes:
+    - { text: "+111 to maximum Life" }
+    - { text: "34% increased Damage while Leeching", how: crafted }
+    - { text: "20% increased Evasion Rating / +13 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+    - { text: "18% increased Attack Speed", how: essence }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "Velour Gloves có suppression Tier 1 đã fractured, item level 85+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "nếu base còn là Magic" }
+  - { item: "[[Deafening Essence of Zeal]]", amount: "hàng chục" }
+  - { item: "[[Divine Orb]]", amount: "2", note: "cho craft multi-modifier" }
+  - { item: "[[Chaos Orb]]", amount: "5", note: "cho hai prefix bench" }
+cost: >-
+  Base fractured, rồi Deafening Essence với số lượng lớn. Trong 3.30,
+  fractured item hiếm hơn trước: item rơi Tier 5, một [[Fracturing Orb]] hoặc
+  một [[Fractured Fossil]]. Phần việc ở bench lúc cuối là 2 [[Divine Orb]] và
+  5 [[Chaos Orb]], nhỏ khi đặt cạnh phần còn lại.
+odds: >-
+  **Giai đoạn 1, nếu bạn tự làm base.** Một Fracturing Orb chọn ngẫu nhiên
+  trong các modifier của một item Rare có ít nhất bốn cái. Với đúng bốn cái,
+  suppression được chọn 1 trên 4 lần. Ba trên 4 lần thì base coi như bỏ.
+
+
+  **Giai đoạn 2.** Suppression và attack speed có trên mọi kết quả. Mỗi
+  prefix mà Essence roll ra là maximum Life từ 100 trở lên khoảng 1 trên 23
+  lần, theo phép tính của chúng tôi từ weight, và kế hoạch còn muốn ô suffix
+  thứ ba để trống. Một kết quả nhận mấy modifier thì không có trong dữ liệu,
+  nên chúng tôi chỉ nói được: hàng chục Essence, và nhiều hơn nếu gặp vận
+  xấu.
+steps:
+  - title: "Giai đoạn 1: suppression fractured"
+    do: >-
+      Mua hoặc tìm một đôi Velour Gloves item level 85 có **+13–14% chance to
+      Suppress Spell Damage đã fractured**. Một item rơi Tier 5 có thể là một
+      fractured item Magic. Để tự làm: roll suppression trên gloves Magic
+      bằng Alteration (khoảng 1 trên 69 lần roll suffix), đưa item lên Rare
+      với **đúng bốn** modifier, rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Suppression Tier 1 là một lần roll suffix 1 trên 69 và sẽ mất sau mỗi
+      lần roll lại tiếp theo. Fracture khiến nó thành vĩnh viễn, nên chỉ phải
+      trả tiền cho nó một lần.
+    check: >-
+      Bốn modifier, không phải năm hay sáu: mỗi cái dư ra hạ thấp cơ hội orb
+      chọn đúng cái. Một [[Imprint]] không phải là lưới an toàn ở đây. Nó lưu
+      một item Magic, và theo dòng chữ trên item thì không dùng được lên một
+      fractured item.
+    fail: >-
+      Orb đã fracture một thứ khác. Đôi gloves giờ là một base bị khóa nhầm
+      modifier, và không fracture lại được. Đó là lý do phần lớn người chơi
+      mua base.
+    state:
+      rarity: magic
+      note: "Fractured"
+      prefixes: [{ text: "+38 to Evasion Rating" }]
+      suffixes: [{ text: "+14% chance to Suppress Spell Damage", how: fractured }]
+  - title: "Biến nó thành Rare"
+    do: >-
+      Nếu base là Magic, dùng một [[Regal Orb]].
+    why: >-
+      Một Deafening Essence "upgrades a normal item to rare or reforges a rare
+      item". Item Magic không phải cái nào trong hai, nên nó phải thành Rare
+      trước. Regal Orb thêm gì không quan trọng; Essence đầu tiên gỡ nó đi.
+    state:
+      note: "Fractured"
+      prefixes: [{ text: "+38 to Evasion Rating" }]
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+29 to Dexterity" }
+  - title: "Giai đoạn 2: hiểu vì sao là lớp bảo vệ này mà không phải cái nào khác"
+    do: >-
+      Trước khi tiêu Essence, hãy rõ ràng về thứ đang giữ suppression ở yên
+      chỗ: fracture, và chỉ fracture.
+    why: >-
+      Một Essence roll lại mọi thứ trên item không fractured, và theo thử
+      nghiệm của cộng đồng, nó phớt lờ các modifier bảo vệ của bench. "Suffix
+      Modifiers cannot be changed" sẽ tốn 4 Divine Orb và 4 Blessed Orb rồi
+      bị xóa sạch cùng với cái suffix nó được đặt ra để canh. Fracture là lớp
+      bảo vệ duy nhất mà Essence tôn trọng. Nó cũng là cái duy nhất không tốn
+      gì cho mỗi lần thử.
+  - title: "Deafening Essence of Zeal, theo một luật"
+    do: >-
+      Dùng [[Deafening Essence of Zeal]] từng cái một. Giữ kết quả khi nó có
+      **maximum Life từ 100 trở lên và ô suffix thứ ba còn trống**.
+    why: >-
+      Kết quả nào cũng có suppression fractured và 17–18% attack speed của
+      Essence, cao hơn mức 14–16% của Tier 1 tự nhiên. Life là thứ duy nhất
+      còn phó mặc cho may rủi ở phía prefix. Ô suffix trống là cần cho giai
+      đoạn cuối: "Can have up to 3 Crafted Modifiers" là một suffix.
+    check: >-
+      Một kết quả có life tốt và một suffix thứ ba **tốt**, chẳng hạn một
+      resistance cao, cũng là thứ đáng giữ. Nó đi theo đoạn kết đơn giản
+      hơn: một prefix bench và không có craft multi-modifier.
+    fail: >-
+      Life thấp, hoặc một suffix thứ ba bạn không muốn: Essence kế tiếp.
+      Không mất gì ngoài Essence. Đừng cố gỡ một suffix tệ bằng Annulment; nó
+      có thể lấy mất attack speed hoặc life thay vào đó.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "+67 to maximum Life" }
+        - { text: "Adds 2 to 33 Lightning Damage to Attacks" }
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Kết quả đạt"
+    do: >-
+      Dừng ở kết quả đầu tiên thỏa luật. Đếm các ô trống: ở đây là hai prefix
+      và một suffix.
+    why: >-
+      Ba ô trống và ba modifier bench là đoạn kết lý tưởng. Một prefix trống
+      thay vì hai cũng ổn: khi đó prefix bench thứ hai đơn giản là bị bỏ ra.
+    state:
+      note: "Fractured"
+      prefixes: [{ text: "+111 to maximum Life" }]
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+  - title: "Giai đoạn 3: ba modifier bench"
+    do: >-
+      Ở [[Crafting Bench]], theo thứ tự này: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]], suffix cuối cùng). **31–36% increased
+      Damage while Leeching** (3 [[Chaos Orb]], một prefix). **18–21%
+      increased Evasion Rating with +12 to 14 maximum Life** (2 Chaos Orb,
+      prefix còn lại).
+    why: >-
+      Craft multi-modifier tiêu ô suffix và đổi lại mua được hai prefix
+      crafted. Không prefix nào trong hai cái tồn tại ở độ lớn này trong pool
+      tự nhiên: prefix leech chỉ bench mới có, và hybrid là một group riêng,
+      nên nó nằm cạnh life roll ra được. Với build không leech, hãy đổi cái
+      đầu lấy conversion của Physical Damage (20–25%, 4 Chaos Orb) hoặc
+      Damage during any Flask Effect (24–28%, 4 Chaos Orb).
+    check: >-
+      Sáu trên sáu ô, ba trong đó là crafted, và trên đôi gloves không có gì
+      mà bạn không chọn hoặc không chủ động chấp nhận.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "+111 to maximum Life" }
+        - { text: "34% increased Damage while Leeching", how: crafted }
+        - { text: "20% increased Evasion Rating / +13 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Hoàn thiện"
+    do: >-
+      20% quality và socket. Một [[Divine Orb]] chỉ khi life roll ra gần 100
+      hoặc attack speed ở 17.
+    why: >-
+      Một Divine Orb roll lại chỉ số của mọi modifier cùng lúc, kể cả cái
+      fractured, và không bao giờ đổi tier. Trên một item có ít chỉ số roll
+      ra thế này, nó là một cải thiện rẻ hoặc một nỗi thất vọng rẻ.
+variations: >-
+  **Eldritch implicit.** Dòng chữ của Ember và Ichor chỉ cấm item có
+  influence, nên một đôi fractured lẽ ra phải nhận chúng, và attack speed từ
+  Exarch sẽ cộng dồn với của Essence. Chúng tôi chưa xác nhận được điều đó
+  cho 3.30; hãy thử bằng một Lesser Ember.
+
+
+  **Một suffix fractured khác.** Một resistance Tier 1 hoạt động theo cùng
+  cách và dễ tìm hơn. Logic không đổi: fracture một suffix khó, để Essence
+  cấp một cái khác.
+
+
+  **Critical strike.** Một Deafening Essence of Loathing thay cho Zeal cho
+  24–26% Global Critical Strike Chance trên mọi kết quả, và bench thêm 7–12%
+  attack speed bên trong craft multi-modifier.
+mistakes:
+  - "Craft một cái khóa suffix rồi dùng Essence. Essence được ghi nhận là phớt lờ khóa, nên cả khóa lẫn suffix đều mất."
+  - "Dùng Fracturing Orb lên năm hoặc sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Giữ một kết quả có ba suffix rồi cố giải phóng một ô bằng Orb of Annulment. Nó chọn trong mọi thứ không fractured."
+  - "Bỏ qua craft multi-modifier để tiết kiệm 2 Divine Orb, rồi để trống hai prefix trên đôi gloves đã tốn hàng chục Deafening Essence."
+  - "Tính thêm influence về sau. Các trang tra cứu nói một fractured item không nhận được nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, các modifier Essence trên gloves, giá bench, cùng dòng chữ in-game của Fracturing Orb, các Essence và Imprint. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essence phớt lờ các modifier bảo vệ, theo thử nghiệm của cộng đồng." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Một fractured modifier không thể bị thay đổi; một fractured item không thể được thêm influence." }

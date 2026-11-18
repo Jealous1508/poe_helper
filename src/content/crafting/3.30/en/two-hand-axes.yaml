@@ -1,0 +1,528 @@
+name: "Two-Handed Axes"
+short: "The biggest base hits of any melee class and almost no implicits. One pool of 25 bases, in which six prefix rolls in ten are elemental."
+icon: "Vaal Axe"
+intro: >-
+  A two-handed axe has the highest physical damage of any melee base: a Karui
+  Chopper swings for 121–189 before a single modifier, where the biggest maul
+  stops at 112–168. Seventeen of the nineteen ordinary axes have no implicit at
+  all, so the weapon is the base numbers and the six slots and nothing else.
+
+
+  The goal is the one the mace guide teaches, physical damage per second from
+  three physical prefixes. The lottery is not the same. On an axe each kind of
+  added elemental damage weighs more than twice what it does on a mace, so the
+  physical prefixes are 30% of prefix rolls where a mace has 46%. Everything
+  particular about crafting an axe follows from that one fact: plain rolling
+  favours elemental weapons, a physical axe needs a tool that removes the
+  elemental rolls or skips the lottery, and the bench and veiled hybrids for
+  bleeding and impale carry more of the load.
+basics:
+  itemLevel:
+    text: >-
+      The tiers and their item levels are the ones a mace uses, because the
+      modifiers are the same; only the weights differ. Item level 77 opens
+      everything a physical axe needs except the last tier of the two
+      percentage prefixes, and 83 opens those.
+
+
+      Two kinds of axe look higher. An elemental axe wants item level 82 for
+      the top tier of added fire, cold or lightning damage, and 86 for the top
+      "increased Elemental Damage with Attack Skills". A bleed axe built on
+      Elder influence wants 83, where the best bleed prefix appears.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Levelling.** Tier 5 increased Physical Damage (85–109%). Added fire, cold and lightning damage already roll their Tier 6 here, about adds 45–61 to 91–106 for fire, which on a levelling axe is worth as much."
+      - ilvl: 46
+        unlocks: "Tier 4 increased Physical Damage (110–134%) and Tier 4 flat Physical Damage (adds 20–28 to 43–51)."
+      - ilvl: 60
+        unlocks: "Tier 3 increased Physical Damage (135–154%), Tier 3 hybrid with Accuracy (55–64%) and Tier 2 attack speed (23–25%). The unveiled modifiers are listed at this level too. **The first item level worth crafting for maps.**"
+      - ilvl: 73
+        unlocks: "Tier 2 of both percentage prefixes (155–169% pure, 65–74% hybrid). Tier 1 Critical Strike Chance and Critical Strike Multiplier (35–38% each)."
+      - ilvl: 77
+        unlocks: "Tier 1 flat Physical Damage (adds 34–47 to 72–84) and Tier 1 attack speed (26–27%). **Enough for most physical axes.**"
+      - ilvl: 83
+        unlocks: "\"Merciless\" (170–179%) and \"Dictator's\" (75–79% with Accuracy). Just below, at 82: Tier 1 of each added elemental damage and Tier 1 Damage over Time Multiplier (41–45%). With Elder influence, the top bleed prefix. **The ceiling for a physical or bleed axe.**"
+      - ilvl: 86
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (87–100%). Only an elemental axe cares."
+  bases:
+    text: >-
+      There are 25 two-handed axes and all of them roll from one pool with the
+      same weights. No base unlocks a modifier another cannot have. They
+      differ in the weapon underneath, and here the spread is wide: from 1.05
+      attacks per second to 1.4, and from no implicit at all to implicits that
+      define a build.
+    types:
+      - title: "Ordinary axes"
+        pools: [all]
+        text: >-
+          Nineteen bases from Stone Axe to Void Axe. Seventeen have **no
+          implicit**. The two exceptions are both worth knowing: the Sundering
+          Axe (+20% to Damage over Time Multiplier for Bleeding) and the Vaal
+          Axe (25% chance to Maim on Hit). The four top-tier bases, dropping
+          from level 62, are the Ezomyte Axe, Vaal Axe, Despot Axe and Void
+          Axe.
+      - title: "Maraketh axes"
+        text: >-
+          Dagger Axe, Talon Axe and Fleshripper. Their implicit is 50%
+          increased Critical Strike Chance, and the game data marks it as
+          local: it multiplies the weapon's own 5%, giving 7.5% before any
+          modifier. That is the highest starting critical strike chance in
+          this category, above the Void Axe's 6%.
+      - title: "Heist cleavers"
+        text: >-
+          Prime Cleaver, Honed Cleaver and Apex Cleaver, the "experimented"
+          bases. Hits with the weapon have a 30% or 50% chance to ignore enemy
+          Physical Damage Reduction, and on the Apex Cleaver they always do.
+          All three attack 1.35 times a second and hit for less than ordinary
+          axes of their level: the Apex Cleaver has 134.3 base damage per
+          second against 148 to 163 on the ordinary top bases.
+    picks:
+      - base: "Karui Chopper"
+        for: "The biggest hit and the highest base damage"
+        why: >-
+          121–189 at 1.05 attacks per second is 162.8 base damage per second,
+          the highest in the category, from level 58. It needs only 43
+          Dexterity. No implicit. The default for slams, bleeding and anything
+          that scales one large hit.
+      - base: "Vaal Axe"
+        for: "Nearly the same damage, with an implicit"
+        why: >-
+          104–174 at 1.15 attacks per second (159.8) and a 25% chance to Maim
+          on Hit. You give up 2% of the Karui Chopper's damage for a faster
+          swing and a free debuff.
+      - base: "Sundering Axe"
+        for: "Bleed builds"
+        why: >-
+          +20% to Damage over Time Multiplier for Bleeding on the implicit,
+          where crafting cannot touch it, at 148.9 base damage per second. It
+          drops from level 60.
+      - base: "Despot Axe"
+        for: "Attack speed and elemental axes"
+        why: >-
+          1.4 attacks per second is the fastest base. Local attack speed
+          multiplies that number, and added elemental damage does not care how
+          small the physical hit is, so this is the base when the prefixes are
+          going to be fire, cold and lightning.
+      - base: "Fleshripper"
+        for: "Critical strike builds"
+        why: >-
+          97–152 at 1.2 attacks per second and 50% increased Critical Strike
+          Chance, local. With a Tier 1 Critical Strike Chance suffix that is
+          5% × 1.88, a little over 9%, more than any other axe reaches. The
+          Void Axe (6%, no implicit, 1.25 attacks per second) is the ordinary
+          alternative.
+      - base: "Apex Cleaver"
+        for: "Ignoring armour"
+        why: >-
+          Hits with the weapon ignore enemy Physical Damage Reduction. You pay
+          for it with a tenth to a sixth of the damage of the other top
+          bases, so it is for builds that have worked out they gain more from
+          the implicit than they lose.
+    impact: >-
+      The base decides what no currency will change afterwards.
+
+
+      **The damage numbers every local modifier multiplies.** On axes this
+      matters more than anywhere: 135% increased Physical Damage adds about
+      210 to a Karui Chopper's average hit and about 148 to an Ezomyte Axe's.
+
+
+      **Attacks per second and critical strike chance.** Attack speed on a
+      weapon is local. So is Critical Strike Chance, and it multiplies the
+      base's 5%, 5.7% or 6%, together with the Maraketh implicit.
+
+
+      **The implicit, or the lack of one.** Most axes give you nothing above
+      the line. The few that do, bleed multiplier, Maim, critical strike
+      chance, ignoring armour, are the reason to pick those bases. None of
+      them has a range, so a [[Blessed Orb]] has nothing to reroll.
+
+
+      **Requirements.** Axes need Strength and Dexterity: 151 and 43 on a
+      Karui Chopper, 140 and 86 on a Despot Axe.
+
+
+      The base does **not** decide the pool. Choose it for the swing, and
+      choose the item level for the tiers.
+tools:
+  - method: currency
+    note: >-
+      Read these numbers before spending anything. At item level 83, by our
+      arithmetic from the weights, one prefix roll is added fire, cold or
+      lightning damage 60% of the time and a physical prefix 30% of the time
+      (flat 14%, each percentage family under 8%). A mace has those the other
+      way round. Tier 3 or better of pure increased Physical Damage is about
+      1 prefix roll in 280 here against 1 in 180 on a mace, and "Merciless"
+      is 1 in 1,970 against 1 in 1,270.
+
+
+      So [[Orb of Alteration]]s are a good way to roll an **elemental** axe:
+      Tier 3 or better of some added element is about 1 prefix roll in 11.
+      For a physical axe they give you one decent prefix slowly and nothing
+      more.
+  - method: bench
+    note: >-
+      The bench list is the mace's, at the same prices. Increased Physical
+      Damage: 40–59% for 4 Orbs of Alteration, 60–79% for 8, 80–99% for 4
+      Chaos Orbs, 100–129% for 4 Exalted Orbs. Flat Physical Damage: adds
+      18–24 to 36–42 for 4 Chaos Orbs. Attack speed: 11–15% for 2 Chaos Orbs,
+      16–20% for 4 Exalted Orbs.
+
+
+      What an axe uses more than a mace are the **hybrids**. Increased
+      Physical Damage with a chance to cause Bleeding, Impale, Poison or
+      Blind: 81–85% with 13–15% for 3 Orbs of Alchemy, 86–94% with 16–17% for
+      3 Chaos Orbs, 95–105% with 18–20% for 8 Chaos Orbs. Flat Physical
+      Damage with a 40% chance to cause Bleeding: adds 14–16 to 18–20 for 4
+      Chaos Orbs. On the suffix side, +31–35% to Physical Damage over Time
+      Multiplier for 4 Chaos Orbs.
+
+
+      The group rule decides where they fit. The percentage hybrids are the
+      same group as pure increased Physical Damage, so they replace it. They
+      are a different group from the hybrid with Accuracy, which can sit
+      beside them. The flat hybrid is the same group as flat Physical Damage.
+  - method: finishing
+    note: >-
+      20% quality from [[Blacksmith's Whetstone]]s is physical damage on the
+      base, and on the highest-damage bases in the game it is worth the most.
+      For an elemental axe it does nothing: quality does not raise added
+      elemental damage. Two-handed weapons have up to six sockets, and the
+      bench sets sockets and links at a fixed price.
+  - method: essence
+    note: >-
+      **Dread** is the one to know: it guarantees increased Impale Effect, a
+      suffix the natural pool does not have, 25–29% at Screaming and 35–38%
+      at Deafening. It has no weaker strengths. **Contempt** guarantees flat
+      Physical Damage (adds 31–42 to 65–75 at Deafening), **Zeal** attack
+      speed (28–30% at Deafening, above natural Tier 1) and **Loathing**
+      Critical Strike Chance (35–38%).
+
+
+      For an elemental axe, **Anger**, **Hatred** and **Wrath** guarantee
+      added fire, cold and lightning damage. Deafening Anger gives adds
+      149–203 to 302–351, between natural Tier 2 and Tier 1. **Rage**,
+      **Sorrow** and **Spite** give a prefix that exists nowhere else:
+      Damage Penetrates 15–16% of one elemental resistance at Deafening.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) before the [[Regal Orb]] on a Magic
+      axe that was hard to roll, as on any weapon. It cannot be applied to a
+      fractured item, which matters when your base is a fractured Tier 5
+      drop. **Add a prefix, remove a random suffix**
+      ([[Farric Wolf Alpha]]) on an axe with no suffixes is a random prefix
+      for the price of the beasts, but remember what "random" means here:
+      three times in ten it is physical.
+  - method: harvest
+    note: >-
+      Count the tagged modifiers before paying. **Speed** (150 Vivid
+      Lifeforce): attack speed is the only one, so it is guaranteed.
+      **Critical** (150 Primal): Critical Strike Chance or Multiplier.
+      **Fire**, **Cold**, **Lightning** (50 each): one natural modifier
+      each, the added damage prefix, so each is a guaranteed elemental
+      prefix. **Chaos** (100 Vivid): the single chaos prefix, which has one
+      tier, adds 98–149 to 183–280, at item level 83.
+
+
+      **Physical** (50 Vivid) is satisfied by any of the three physical
+      prefixes and by either leech suffix. It becomes a guaranteed physical
+      prefix only when the suffix side is full and locked.
+  - method: fossil
+    note: >-
+      On an axe the useful question is what a Fossil **removes**. A
+      [[Corroded Fossil]] has "No Elemental modifiers", which deletes all
+      four elemental prefix families, 63% of the pool. By our arithmetic at
+      item level 77 that alone makes the natural prefixes 83% physical. A
+      [[Jagged Fossil]] multiplies physical modifiers by ten and reaches 81%,
+      and floods the suffixes with leech while doing it. Both together: 98%.
+
+
+      These figures cover the natural pool only. The data lists Fossil-only
+      modifiers for this class, among them a prefix with a 60% chance for
+      Bleeding inflicted with the weapon to deal 100% more Damage, and its
+      poison twin. Our export does not say which Fossil unlocks which or at
+      what weight, so they are not in the arithmetic.
+
+
+      A [[Serrated Fossil]] changes nothing on the prefix side: nearly every
+      prefix already has the attack tag.
+  - method: veiled
+    note: >-
+      The unveiled prefixes pair 120–139% increased Physical Damage with a
+      21–25% chance to cause Bleeding, Impale, Poison or Blind. They are the
+      strongest version of the bench hybrids and share their group. Unveiled
+      suffixes worth having: +44–48% to Physical Damage over Time Multiplier,
+      12–14% chance to deal Double Damage, 27–30% attack speed while a Rare
+      or Unique enemy is nearby.
+
+
+      Thirteen veiled prefixes exist for this class and seven of them are one
+      group, the caster and minion damage ones. A cheap bench prefix of that
+      group (44–60% increased Fire Damage, 4 Orbs of Alteration) placed
+      before you unveil removes all seven from the three choices, by the
+      community-tested blocking rule. Of the six left, four are the physical
+      hybrids.
+  - method: fracture
+    note: >-
+      In 3.30 a fractured axe is mostly something you find: a Tier 5 item can
+      drop as a fractured Magic item. Worth building on: a high tier of
+      either percentage prefix, Tier 1 flat Physical Damage, or a top
+      elemental roll for an elemental axe. A fractured stun or
+      life-on-kill suffix is not a base, it is a slot lost for good. A
+      fractured item cannot take influence or an Imprint.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" and "Suffix Modifiers cannot be
+      changed" cost 4 Divine Orbs and 1 [[Sacred Orb]] each on a weapon in
+      3.30. The 1 Divine Orb versions protect one modifier chosen at random,
+      which the developers say is certain only when that side holds exactly
+      one. "Can have up to 3 Crafted Modifiers" (2 Divine Orbs) suits axes
+      well, because two of the three things you would craft, a percentage
+      hybrid and flat Physical Damage, are prefixes in different groups.
+  - method: influence
+    note: >-
+      **Elder** is the bleed influence: a prefix with +51–59% to Damage over
+      Time Multiplier for Bleeding from Hits with this Weapon (item level
+      83), and a suffix found on axes only, Culling Strike against Bleeding
+      enemies with 30–49% increased Physical Damage. **Hunter** has Bleeding
+      you inflict deals Damage 22–25% Faster, and a 66–80% chance to ignore
+      enemy Physical Damage Reduction. **Warlord** and **Redeemer** each
+      have a prefix that gains 27–30% of Physical Damage as Extra Fire or
+      Cold Damage. **Crusader** has the Impale Effect that Essence of Dread
+      gives more easily.
+
+
+      The Warlord and Crusader prefixes with 65–69% increased Physical Damage
+      share the group of the hybrid with Accuracy. They replace it; they are
+      not a fourth percentage prefix.
+  - method: corruption
+    note: >-
+      One corruption implicit exists on axes and not on swords or maces: 20%
+      chance to cause Bleeding on Hit with 30–40% increased Attack Damage
+      against Bleeding Enemies. The others: 25–30% increased Area of Effect,
+      16–20% increased Physical Damage, 5–7% attack speed, weapon range.
+      On most axes there is no implicit to lose, which makes a
+      [[Vaal Orb]] on a finished copy a little less painful than elsewhere.
+  - method: strands
+    note: "See the Memory Strands section below. On an axe they fit the elemental prefixes and the suffixes better than the physical prefixes."
+memoryStrands: >-
+  [[Memory Strands]] raise the tier of whatever is rolled and do nothing for
+  which modifier appears. On a mace that fits the physical prefixes, which are
+  nearly half the pool. On an axe the families that are common with rare top
+  tiers are the **elemental** ones: 60% of prefix rolls, with Tier 1 weighing
+  108 in a family of 9,888. An [[Orb of Remembrance]] on a white Despot Axe
+  followed by [[Orb of Alteration]]s is the natural strand craft in this
+  category. For a physical axe strands help the tier but you still wait for
+  the 30%.
+
+
+  The [[Orb of Unravelling]] has its own logic. By the player model, which is
+  not official, the chance to upgrade a modifier grows with the weight of the
+  tiers above it. Attack speed and the critical strike suffixes have 1,000 a
+  tier above them; "Merciless" has 25. So an Unravelling at the end is far
+  more likely to lift a Tier 3 attack speed than a Tier 3 percentage prefix.
+
+
+  Wasted here as everywhere: Essence spam on a strand base, and Fossils or
+  Harvest reforges, which by player testing neither use strands nor benefit
+  from them.
+reading:
+  intro: >-
+    Hold Alt and ask first: **is this axe physical or elemental, and does it
+    know?** An axe with one physical prefix and two elemental ones is common
+    and is neither. Then count the physical prefixes and their tiers, then
+    look for attack speed, then at whatever the build adds: bleed, impale or
+    critical strikes.
+  prefixes:
+    text: >-
+      Three physical families stack because they are three groups: pure
+      increased Physical Damage, the hybrid with Accuracy Rating, and flat
+      Physical Damage. A finished physical axe has all three, or a bench or
+      veiled hybrid in place of the pure one.
+
+
+      The competition is heavier than on a mace. Added fire, cold and
+      lightning damage are 20% of prefix rolls **each**. They are large
+      numbers, Tier 1 lightning is adds 28–38 to 549–638, and on a build that
+      scales elemental damage three of them make a real weapon. On a physical
+      build each is a lost slot. Decide which axe you are making before the
+      first roll, because a tool that helps one removes the other.
+
+
+      Local percentages multiply the base and the flat physical damage on the
+      weapon. Added elemental damage is not multiplied by anything on the
+      weapon except attack speed.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "The largest multiplier, local, and on the highest base damage in the game it buys the most. The bench and veiled hybrids for bleeding and impale are this same group."
+        aim: "T3, 135–154% (ilvl 60), or an unveiled hybrid at 120–139%. T1 is 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "The second percentage, in its own group. It is the prefix to hope for when you plan to bench or unveil a bleed or impale hybrid, because it is the one that fits beside it."
+        aim: "T3, 55–64% (ilvl 60). T1 is 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Raises the number both percentages multiply. Twice as common as either of them."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 needs ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Six prefix rolls in ten. The heart of an elemental axe, and the reason a physical one is hard to roll."
+        aim: "For an elemental axe: T3 or better (ilvl 62–63). T1 needs ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "The elemental multiplier. Rare at 3% of prefix rolls, and it competes with the three added-damage prefixes for the same three slots."
+        aim: "T3, 63–71% (ilvl 60). T1 is 87–100% (ilvl 86)."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Only when the main skill is socketed in the axe."
+  suffixes:
+    text: >-
+      The suffix side has the same total weight as a mace's and one family
+      more: sixteen, because Strength shares its place with Dexterity. Attack
+      speed is still 14% of suffix rolls and still available from an Essence,
+      a Harvest reforge or the bench.
+
+
+      What changes with the build is the second and third suffix. A bleed axe
+      wants Damage over Time Multiplier, which is rare in the natural pool
+      (2.4% of suffix rolls), and can add the bench's or the veiled Physical
+      Damage over Time Multiplier beside it, because the two are different
+      groups. An impale axe wants the Impale Effect that only an Essence of
+      Dread or Crusader influence gives. A critical strike axe wants the two
+      critical suffixes, which are common.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. Matters most on elemental axes, where it is the only thing on the weapon that multiplies the added damage."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "The bleed suffix of the natural pool. Global. Stacks with the Physical Damage over Time Multiplier from the bench (31–35%) or a veiled modifier (44–48%)."
+        aim: "T3, 31–35% (ilvl 68). T1 is 41–45% (ilvl 82)."
+      - mod: "#% increased Impale Effect"
+        why: "Not in the natural pool. From an Essence of Dread or a Crusader-influenced axe."
+        aim: "25–29% from a Screaming Essence; 35–38% from Deafening."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local: it multiplies the weapon's own critical strike chance, together with the Maraketh implicit."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "For builds that crit. Global."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Bench (8–10%) or veiled (12–14%). The usual third suffix for a build that neither crits nor bleeds."
+approach:
+  principle: >-
+    **Take the elemental rolls out of the lottery, or build with them.** A
+    physical axe is made with tools that do not ask the natural pool for a
+    physical prefix: a Corroded Fossil, an Essence, a fractured base, the
+    bench and veiled hybrids. An elemental axe is made with the pool as it
+    is. The expensive mistakes on this item come from rolling for one kind
+    with the odds of the other.
+  order:
+    - title: "Physical, bleed, impale or elemental: choose the base to match"
+      text: >-
+        Karui Chopper or Vaal Axe for raw physical damage and impale,
+        Sundering Axe for bleed, Fleshripper for critical strikes, Despot Axe
+        for elemental. Item level 77 for most physical crafts, 83 for the
+        top percentage tiers and the Elder bleed prefix, 82 or 86 for
+        elemental.
+    - title: "Find the modifier nothing else can supply"
+      text: >-
+        Impale Effect comes only from an Essence of Dread or Crusader
+        influence. The Elder bleed multiplier only from an Elder axe. A top
+        percentage tier only from luck or a fractured drop. Whatever that
+        modifier is, the craft starts with it, because everything after can
+        be bought.
+    - title: "Decide which percentage prefix you will not roll"
+      text: >-
+        The bench and veiled hybrids occupy the pure percentage group. If one
+        of them is in the plan, a rolled pure percentage is in its way and
+        the hybrid with Accuracy is the roll you want. If neither is in the
+        plan, either percentage will do and the bench fills the other.
+    - title: "Get the physical prefixes with a tool that ignores the 60%"
+      text: >-
+        One or two rolled: an Essence, or a Corroded Fossil. Three: Corroded
+        and Jagged together. Around a fractured prefix: anything, as often as
+        you like. Plain Alterations and Chaos Orbs are for elemental axes.
+    - title: "Protect, and pick the lock by what is finished"
+      text: >-
+        Usually the prefixes are done first and the lock is "Prefix Modifiers
+        cannot be changed". When the suffixes came first, from an Essence
+        that fixed one of them, lock those instead and put a veiled or
+        Harvest prefix on the other side. A lone modifier can be protected
+        for 1 Divine Orb.
+    - title: "Attack speed, the build's suffix, then the bench"
+      text: >-
+        Attack speed by any guaranteed route. Then the suffix the build is
+        named after. Keep the bench for whichever slot is still empty, and
+        if two crafted modifiers would finish the axe, pay for "Can have up
+        to 3 Crafted Modifiers".
+  finishing: >-
+    Quality to 20%, sockets and links, then the numbers. A [[Divine Orb]]
+    rerolls every value together, fractured and unveiled ones included, and
+    never a tier.
+
+
+    On an axe with a bench hybrid, check the chance it gives against what the
+    build needs before you settle. The bench's flat Physical Damage with 40%
+    chance to cause Bleeding trades damage for chance; the percentage hybrid
+    does the opposite.
+
+
+    A [[Vaal Orb]] comes after all of that or not at all. On an axe with no
+    implicit a corruption implicit replaces nothing, but the orb can as easily
+    reroll the whole item, and nothing can be fixed afterwards.
+  stopping: >-
+    **One** rolled physical prefix of Tier 4 or better, a bench hybrid beside
+    it and attack speed: a weapon for yellow maps, and on a Karui Chopper it
+    already hits hard. **Two** rolled physical prefixes plus a bench or veiled
+    hybrid: enough for most builds. A top percentage tier beside a veiled
+    hybrid and three chosen suffixes is where the cost multiplies.
+
+
+    Stop rolling a physical axe the moment a result has two physical prefixes
+    at acceptable tiers and room for the bench. On this pool the next attempt
+    is more likely to be worse than better. And if what rolled is three good
+    elemental prefixes on a physical plan, sell it to someone who wants that
+    axe.
+special:
+  - mod: "#% increased Impale Effect"
+    source: "Essence"
+    where: "Guaranteed by an Essence of Dread, Screaming or better: 25–29%, 30–34% or 35–38%. Also a Crusader-influenced suffix with the same top value."
+  - mod: "#% increased Physical Damage / #% chance to cause Bleeding on Hit"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25%. Bench: 95–105% with 18–20% for 8 Chaos Orbs. Versions exist for Impale, Poison and Blind. All share a group with pure increased Physical Damage."
+  - mod: "+#% to Physical Damage over Time Multiplier"
+    source: "Veiled / Bench"
+    where: "Unveiled suffix, 44–48%. Bench: 31–35% for 4 Chaos Orbs. A different group from the natural Damage over Time Multiplier, so both fit on one axe."
+  - mod: "+#% to Damage over Time Multiplier for Bleeding from Hits with this Weapon"
+    source: "Elder influence"
+    where: "An Elder prefix: 37–42% at item level 68, 43–50% at 75, 51–59% at 83. On an Elder axe of item level 83 or more it is about 1 prefix roll in 36 at any tier, by our arithmetic."
+  - mod: "Hits with this Weapon have Culling Strike against Bleeding Enemies / #% increased Physical Damage"
+    source: "Elder influence"
+    where: "An Elder suffix, 30–49% increased Physical Damage, item level 68. In the data it exists on two-handed axes and not on swords or maces."
+  - mod: "Bleeding you inflict deals Damage #% Faster"
+    source: "Hunter influence"
+    where: "A Hunter suffix: 18–21% at item level 68, 22–25% at 73."
+  - mod: "Gain #% of Physical Damage as Extra Fire Damage"
+    source: "Warlord influence"
+    where: "A Warlord prefix, 27–30% at item level 78. Redeemer has the same for Cold Damage. Two influences on one axe need an [[Awakener's Orb]]."
+  - mod: "#% chance for Bleeding inflicted with this Weapon to deal 100% more Damage"
+    source: "Fossil"
+    where: "A Fossil-only prefix, 60% chance. It carries the bleed tag, which the [[Corroded Fossil]] multiplies; our data export does not name the Fossil that unlocks it."
+  - mod: "Damage Penetrates #% Fire Resistance"
+    source: "Essence"
+    where: "A prefix from an Essence of Rage: 15–16% at Deafening. Sorrow gives Cold and Spite gives Lightning. The bench and veiled versions are a different modifier: they penetrate all elemental resistances for attacks with the weapon, 8–10% for 4 Chaos Orbs or 14–16% unveiled."
+  - mod: "Hits with this Weapon ignore Enemy Physical Damage Reduction"
+    source: "Base implicit"
+    where: "The implicit of the Apex Cleaver; 30% and 50% chance on the Prime and Honed Cleavers. Not craftable. Hunter influence has a suffix with 66–80% chance."
+mistakes:
+  - "**Rolling a physical axe with mace odds.** Physical prefixes are 30% of the pool here, not 46%. A method that was fine on a maul takes half as long again on an axe before the first Fossil or Essence is used."
+  - "**Benching a bleed or impale hybrid onto an axe that rolled pure increased Physical Damage.** They are one group. The hybrid with Accuracy is the roll that leaves room."
+  - "**Using a Jagged Fossil alone and wondering where the attack speed went.** It multiplies the two leech suffixes by ten along with the physical prefixes. A Corroded Fossil gets the same prefixes and leaves the suffixes alone."
+  - "**Counting a Warlord or Crusader physical prefix as a fourth percentage.** It shares the group of the hybrid with Accuracy and takes its place."
+  - "**Building on a fractured Tier 5 drop because it is fractured.** A fracture is worth exactly as much as the modifier it holds."
+  - "**Putting quality on an elemental axe and expecting more damage.** Quality raises the base's physical damage only."
+  - "**Locking a side that still has an empty slot and assuming nothing can be added there.** Players have long reported that a reroll can fill an open slot on the protected side. Fill it or accept the risk."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, Essence, Fossil multiplier and bench cost quoted here, and which implicits are local. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on weapons, and fractured Magic items from Tier 5 drops." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random and are certain only with exactly that many modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: blocking an unveil choice with a bench modifier of the same group, the protection modifiers, and the Memory Strands breakpoints. The Orb of Unravelling formula is a player model known to us only from a low-reliability rewrite of that testing. Partly older than 3.30." }

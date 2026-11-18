@@ -1,0 +1,176 @@
+category: two-hand-swords
+title: "An elemental sword on Memory Strands"
+level: 3
+summary: "Strands on a white base, a short run of Alterations for the family that is common anyway, a Regal Orb, and one Orb of Unravelling at the end to lift what rolled a tier short."
+goal: >-
+  An Infernal Sword with three kinds of added elemental damage and attack
+  speed, most of it at tiers a plain Alteration craft would not reach. The
+  craft is a **budget**: a base holds at most 100 strands, every orb spends
+  some, and one orb at the end spends all that are left. You decide in
+  advance how many go into rolls and how many are kept for the finish.
+base: "Infernal Sword"
+itemLevel: 84
+baseWhy: >-
+  The implicit is 30% increased Elemental Damage with Attack Skills. That
+  modifier is otherwise a rare prefix, so on this base all three prefix slots
+  are free for added damage. Item level 82 opens Tier 1 of added fire, cold
+  and lightning damage. The base must be **Normal**: an Orb of Remembrance
+  works on nothing else.
+methods: [strands, currency, bench]
+result:
+  implicits: ["30% increased Elemental Damage with Attack Skills"]
+  prefixes:
+    - { text: "Adds 22 to 391 Lightning Damage" }
+    - { text: "Adds 121 to 214 Cold Damage" }
+    - { text: "Adds 66 to 119 Fire Damage", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed" }
+needs:
+  - { item: "[[Orb of Remembrance]]", amount: "a few", note: "until the strand count is high" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "5–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Unravelling]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  The two strand orbs are the cost; the rest is small currency. There is no
+  expensive step and no step that can lose the item. What can be lost is the
+  strands, by spending them on rolls you did not need.
+odds: >-
+  Strands do not change which modifier rolls. Six prefix rolls in ten are
+  added elemental damage with or without them. Without strands, by our
+  arithmetic, one prefix roll in 11 is Tier 3 or better of some element. How
+  far strands improve that is not published. Player testing gives figures
+  for a thirteen-tier modifier: 62 or more strands leave only its top four
+  tiers. **If** a ten-tier family is cut the same way, about one prefix roll
+  in three would be Tier 3 or better. The "if" is ours.
+
+
+  The Orb of Unravelling's chances below come from a player model as well,
+  and from a low-reliability source. Treat every number in this example that
+  involves strands as a guide to direction, not a measurement.
+steps:
+  - title: "Put strands on the white sword"
+    do: >-
+      Use an [[Orb of Remembrance]] on a Normal item level 84 Infernal Sword
+      and read the number of [[Memory Strands]] it now shows. If it is low,
+      use another: each one randomises the count again.
+    why: >-
+      Strands are set up before the craft and cannot be added afterwards.
+      The player-tested breakpoints say the first few strands already do a
+      lot and 62 is the last step up, so aim near or above that and do not
+      chase 100.
+    check: >-
+      Decide the budget now. A reasonable one: up to half the strands for
+      Alterations, the Augmentation and the Regal Orb, the rest for the Orb
+      of Unravelling.
+    state: { rarity: normal, implicits: ["30% increased Elemental Damage with Attack Skills"] }
+  - title: "A short run of Alterations"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s. Before
+      each one, hover it over the sword: the game shows how many strands it
+      will remove. Stop at the first prefix that is **added fire, cold or
+      lightning damage of Tier 3 or better**, or when you reach your budget.
+    why: >-
+      This is the family strands suit. It is most of the prefix pool, so you
+      are never waiting for the modifier to appear, only for a good tier of
+      it, and tier is the one thing strands improve. By the data-mined table
+      an Alteration spends at most 8 strands. A long Alteration hunt for
+      something rare would drain the base before it paid.
+    fail: >-
+      Budget spent and the prefix is elemental but Tier 4 or 5: keep it. The
+      Orb of Unravelling exists for exactly that.
+    state:
+      rarity: magic
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 22 to 391 Lightning Damage" }]
+  - title: "Augmentation, then Regal Orb"
+    do: >-
+      If the suffix is empty, use an [[Orb of Augmentation]]. Then a
+      [[Regal Orb]]. Read the strand cost before each.
+    why: >-
+      Both add a modifier while strands remain, so both roll with the low
+      tiers cut. The table lists up to 8 for the Augmentation and up to 16
+      for the Regal Orb. One suffix roll in three on a sword is attack speed
+      or a critical modifier, and the Regal Orb's prefix is another element
+      about half the time once lightning is taken.
+    check: >-
+      The sword is now Rare with three modifiers. Count the strands left.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 89 to 166 Cold Damage" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+  - title: "Orb of Unravelling, once, last"
+    do: >-
+      Use one [[Orb of Unravelling]]. It consumes every remaining strand and
+      attempts to raise the tier of each explicit modifier.
+    why: >-
+      By the player model, the chance for each modifier is the strands left,
+      times the weight of the tiers above it, divided by twice the weight of
+      its side. With 40 strands left: the Tier 4 cold damage has 1,488 of
+      weight above it, about 60%. The Tier 3 attack speed has 2,000 above
+      it, about 64%. The Tier 3 lightning damage has 528, about 21%. So the
+      orb is good at lifting middle tiers and poor at making top ones, and
+      an upgrade is usually a single tier. Here cold and attack speed went
+      up and lightning did not.
+    check: >-
+      It must come after every orb that adds a modifier, because it leaves
+      no strands for them. It skips bench modifiers, which is one reason the
+      bench comes after it.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 121 to 214 Cold Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+  - title: "Bench the third element"
+    do: >-
+      At the [[Crafting Bench]], craft **adds 60–72 to 110–128 Fire Damage**
+      in the open prefix: 4 [[Chaos Orb]]s.
+    why: >-
+      Fire is the element not yet on the sword, and each element is its own
+      group. Whether a bench craft touches strands could not be confirmed;
+      by now there are none left to touch.
+    check: >-
+      Two suffix slots are still open. They are the next upgrade, with an
+      [[Exalted Orb]] each or with the method of the next example.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 121 to 214 Cold Damage" }
+        - { text: "Adds 66 to 119 Fire Damage", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+variations: >-
+  **Exalted Orbs before the Unravelling.** An [[Exalted Orb]] spends up to 16
+  strands by the table and adds one modifier with the low tiers cut. If you
+  mean to fill the open suffixes that way, do it while strands remain and
+  keep the Unravelling for after.
+
+
+  **A crit sword the same way.** Swap the base for a Banishing Blade and aim
+  the Alterations at the suffix: attack speed and the two critical suffixes
+  are a third of suffix rolls with evenly weighted tiers, and by the model
+  the Unravelling lifts them more readily than any prefix.
+
+
+  **What not to combine with strands.** An Essence can spend 80 strands in
+  one use and a Chaos Orb 50. Fossils and Harvest reforges, by player
+  testing, ignore strands altogether. A strand base wants small orbs.
+mistakes:
+  - "Using the Orb of Unravelling in the middle. Every orb after it rolls as if the base had never had strands."
+  - "Hunting a rare modifier with Alterations on a strand base. Strands improve the tier of what appears; they do not make it appear."
+  - "Not reading the cost. The game shows the strands each orb will remove before you click, and the published ranges are wide."
+  - "Using an Orb of Remembrance on a Magic or Rare sword. It needs a Normal item."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, weights and bench costs, and the in-game text of the Orb of Remembrance and Orb of Unravelling. The arithmetic is ours." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strands spent per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested strand breakpoints. Not official. The Orb of Unravelling formula is a player model we know only from a low-reliability rewrite of that testing." }
+  - { title: "3.29.2 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3994431", kind: official, note: "The game displays the number of Memory Strands a currency will remove." }

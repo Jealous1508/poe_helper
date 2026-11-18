@@ -1,0 +1,506 @@
+name: "Staves"
+short: "Six-socket caster weapons. One pool, 16 bases, and a craft decided by two gem-level prefixes that no Essence and no bench recipe will sell you."
+icon: "Eclipse Staff"
+intro: >-
+  A staff is a caster's two-handed weapon: one item where a wand and a shield
+  would be two, with six sockets for the main skill. What makes it worth both
+  hands is its prefix side, which can raise the level of your spell gems by up
+  to six: **+2 to Level of all Spell Skill Gems** and **+4 to the spell gems
+  of one element**. Those two prefixes are the craft. Spell damage and cast
+  speed come after, and both can be bought.
+
+
+  Two things set a staff apart from every other two-hander. The damage,
+  attack speed and critical strike chance printed on the base belong to
+  attacks made with the staff, and a spell uses none of them, so the base is
+  its implicit and nothing more. And the pool is the largest of any
+  two-handed weapon, 24 prefix families and 26 suffix families, because it
+  carries a caster's modifiers and an attacker's at once. By weight, about a
+  third of what a staff can roll is attack modifiers a caster never uses.
+basics:
+  itemLevel:
+    text: >-
+      A staff has two ladders, and they end at different heights. The
+      gem-level prefixes come in two or three steps and are all open by item
+      level 77. The percentages climb further: the best cast speed needs 83
+      and the best spell damage 84.
+
+
+      Craft at 77 when the plan is gem levels with the bench filling the
+      rest. Buy 84 once if the staff is a long project, because the item
+      level can never be raised afterwards. Nothing a caster wants needs
+      more than 84.
+    breakpoints:
+      - ilvl: 2
+        unlocks: "**Levelling.** +1 to Level of all Spell Skill Gems, and +2 to the spell gems of one element (fire, cold, lightning, chaos or physical). Both can roll on a staff from the first act."
+      - ilvl: 35
+        unlocks: "+3 to the spell gems of one element (\"Lava Conjurer's\" for fire, and its four siblings). Tier 5 spell damage (70–95%)."
+      - ilvl: 55
+        unlocks: "+2 to Level of all Spell Skill Gems, \"Archon's\". Tier 3 cast speed (32–37%)."
+      - ilvl: 58
+        unlocks: "Tier 3 spell damage (121–149%) and Tier 2 of the spell damage and mana hybrid (64–76%). **The first item level worth crafting for maps.**"
+      - ilvl: 77
+        unlocks: "+4 to the spell gems of one element (\"Magmancer's\", \"Ice Shaper's\", \"Typhoon Lord's\", \"Schismatist's\", \"Stone Singer's\"). Tier 1 of both block suffixes (18–20%); Tier 1 Spell Critical Strike Chance (135–164%) is open from 76. **Enough for every gem-level modifier.**"
+      - ilvl: 79
+        unlocks: "Tier 2 spell damage (150–174%). The best damage over time multiplier for one damage type (66–75%) is open from 78."
+      - ilvl: 83
+        unlocks: "Tier 1 cast speed, \"of Finesse\" (44–49%)."
+      - ilvl: 84
+        unlocks: "Tier 1 spell damage, \"Runic\" (175–200%), and Tier 1 increased Fire, Cold or Lightning Damage. **The ceiling for a caster staff.**"
+  bases:
+    text: >-
+      There are 16 staves and one pool: every one of them rolls the same
+      modifiers with the same weights. No base unlocks a modifier another
+      cannot have. For a caster the bases differ in two things only, the
+      implicit and the attributes needed to hold the staff.
+    types:
+      - title: "Ordinary staves"
+        pools: [all]
+        text: >-
+          Ten bases from Gnarled Branch to Imperial Staff. Their implicit is
+          Chance to Block Spell Damage: +20% up to the Royal Staff, +22% from
+          the Woodful Staff to the Highborn Staff, and +25% on the Primordial
+          Staff, the Lathi and the Imperial Staff. The number is fixed, so a
+          [[Blessed Orb]] has nothing to reroll.
+      - title: "Maraketh staves"
+        text: >-
+          Crescent Staff, Moon Staff and Eclipse Staff. Their implicit is
+          increased Global Critical Strike Chance: 80% on the first two and
+          100% on the Eclipse Staff. It is global, so it applies to spells.
+          They roll from the same pool as the ordinary staves.
+      - title: "Heist staves"
+        text: >-
+          Transformer Staff, Reciprocation Staff and Battery Staff. Two
+          implicits: added maximum Energy Shield (66–80, 100–120 and
+          140–165), and "Spend Energy Shield before Mana for Costs of
+          Socketed Skills". The game tags them as experimented bases, but the
+          data puts them in the same pool as every other staff.
+    picks:
+      - base: "Eclipse Staff"
+        for: "Critical strike casters"
+        why: >-
+          100% increased Global Critical Strike Chance where crafting cannot
+          touch it. Drops from level 70 and needs 117 Strength and 117
+          Intelligence.
+      - base: "Imperial Staff"
+        for: "Block, and the default when crit is not the plan"
+        why: >-
+          +25% Chance to Block Spell Damage, the highest block implicit, at
+          113 Strength and 113 Intelligence. It also has the largest hit
+          (57–171) and the highest base critical strike chance (8.5%) for the
+          rare build that attacks with a caster staff.
+      - base: "Primordial Staff"
+        for: "The same block with lower requirements"
+        why: >-
+          The same +25% Chance to Block Spell Damage from level 58, at 99
+          Strength and 99 Intelligence. The pool is identical, so nothing is
+          lost for a caster.
+      - base: "Battery Staff"
+        for: "Energy shield builds"
+        why: >-
+          +(140–165) to maximum Energy Shield, and skills socketed in the
+          staff spend Energy Shield before Mana. Useful when the main skill
+          lives in the staff and its cost is the problem. A [[Blessed Orb]]
+          rerolls the Energy Shield number.
+    impact: >-
+      The base decides three things before any currency is spent.
+
+
+      **The implicit.** Block, critical strike chance or Energy Shield. No
+      ordinary craft changes which one you have; a [[Vaal Orb]] can replace
+      it with a corruption implicit and close the item.
+
+
+      **The requirements.** Every staff needs Strength and Intelligence in
+      equal amounts, 113 to 117 of each on the top bases. A pure Intelligence
+      caster has to find that Strength somewhere, and it is cheaper to check
+      before the craft than after.
+
+
+      **Nothing about the pool.** One pool, one set of weights.
+
+
+      What the base does *not* decide for a caster is damage. Local
+      modifiers and quality multiply the staff's physical damage, which only
+      an attack with the staff uses. A caster's staff is finished at 0%
+      quality.
+tools:
+  - method: currency
+    note: >-
+      At item level 84 the six gem-level families together are 11.5% of every
+      prefix roll, by our arithmetic from the weights, but their top steps
+      are slivers: one prefix roll is "+2 to Level of all Spell Skill Gems"
+      about 1 time in 378, and +4 to one chosen element about 1 in 756.
+      Settle for +3 or +4 of that element and it is 1 in 84.
+
+
+      A Magic item holds one prefix, so [[Orb of Alteration]]s are a
+      reasonable way to **one** gem-level prefix and no way at all to two.
+      The suffix side is kinder: every tier of cast speed weighs the same, so
+      the best one is 1 suffix roll in 92.
+  - method: bench
+    note: >-
+      The bench sells every caster percentage and no spell gem levels. Spell
+      damage: 44–60% for 4 Orbs of Alteration, 61–78% for 8, 79–95% for 4
+      Chaos Orbs, 96–115% for 4 Exalted Orbs. If the recipe is unlocked, the
+      hybrid with mana regeneration is better value: 89–105% spell damage
+      with 26–30% regeneration for 6 Chaos Orbs. Cast speed: 15–20% for 6
+      Orbs of Alteration, 21–26% for 2 Chaos Orbs, 27–32% for 4 Exalted Orbs.
+      Spell Critical Strike Chance 90–120% for 3 Chaos Orbs; Global Critical
+      Strike Multiplier 25–28% for 4.
+
+
+      Two group rules decide what the bench may add. **One caster-damage
+      percentage per staff:** spell damage, increased Fire, Cold or
+      Lightning Damage, minion damage and all their bench and veiled hybrids
+      are a single group. And the bench's only gem-level craft, **+1 or +2 to
+      Level of Socketed Support Gems** (8 Chaos Orbs, 4 Exalted Orbs), shares
+      a group with the element prefixes: it fits beside "all Spell Skill
+      Gems" and is refused beside "+3 to Fire Spell Skill Gems".
+
+
+      One craft exists for staves and nothing like it rolls naturally:
+      "Trigger a Socketed Spell when you Use a Skill, with a 8 second
+      Cooldown", a suffix for 3 Chaos Orbs.
+  - method: finishing
+    note: >-
+      Skip the [[Blacksmith's Whetstone]]s unless you attack with the staff:
+      weapon quality raises physical damage and a spell does not use it.
+      Spend on sockets instead. A staff has up to six, and with the main
+      skill in them the bench's "+# to Level of Socketed Support Gems"
+      raises five supports at once and its "+7–8% to Quality of Socketed
+      Gems" (4 Exalted Orbs) all six gems. A [[Divine Orb]] rerolls ranges;
+      gem-level prefixes are fixed numbers and do not change.
+  - method: essence
+    note: >-
+      Essences give a staff its easy modifiers and none of its hard ones.
+      **Woe** guarantees spell damage, 145–165% at Deafening. **Misery**
+      guarantees cast speed, and Deafening gives 44–49%, the Tier 1 range.
+      **Scorn** guarantees Spell Critical Strike Chance: only 80–89% and
+      90–109% at Screaming and Shrieking, which the bench matches for 3 Chaos
+      Orbs, then 165–179% at Deafening, above natural Tier 1.
+
+
+      **Rage**, **Sorrow** and **Spite** give "Damage Penetrates Fire, Cold
+      or Lightning Resistance", 15–16% at Deafening, a prefix the natural
+      pool does not have and in a group of its own. **Fear** gives minion
+      damage, 123–144% at Deafening. No Essence gives a gem level.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is worth a beast when the Magic
+      staff holds "+2 to all" or +4 of your element: hundreds of
+      Alterations saved from one bad [[Regal Orb]]. **Add a prefix, remove a
+      random suffix** ([[Farric Wolf Alpha]]) is a free prefix roll on a Rare
+      staff with nothing on the suffix side. Keep away from the opposite
+      recipe: it removes a random prefix, and on a staff that is where the
+      gem levels are.
+  - method: fossil
+    note: >-
+      The tool that aims at gem levels. A [[Faceted Fossil]] multiplies every
+      modifier with the gem tag by ten. An [[Aetheric Fossil]] multiplies
+      caster modifiers by ten and cuts attack modifiers to 15% of their
+      weight. A [[Scorched Fossil]] does ten times for fire and removes
+      cold. The element prefix carries all three tags, so the multipliers
+      stack: with the three together, "+# to Level of all Fire Spell Skill
+      Gems" is 59% of prefix rolls and its +4 step is about 1 in 29, against
+      1 in 756 with plain currency.
+
+
+      [[Frigid Fossil]] does the same for cold, [[Metallic Fossil]] for
+      lightning, [[Aberrant Fossil]] for chaos and [[Jagged Fossil]] for
+      physical spells. Each also removes one other type, so read the Fossil
+      before socketing it. Fossil-only modifiers join the pool in these
+      crafts and our arithmetic leaves them out, which makes the real shares
+      a little lower.
+  - method: harvest
+    note: >-
+      Count the tagged modifiers before trusting a reforge on a staff. The
+      **Caster** reforge (75 Primal Lifeforce) is satisfied by eleven prefix
+      families and two suffix families; the gem levels are under a fifth of
+      that weight. **Speed** (150 Vivid) has two answers, cast speed and
+      attack speed, and attack speed is the likelier one. **Critical** (150
+      Primal) has three.
+
+
+      The picture changes when the prefixes are protected. Then only the
+      suffix side can change, and on that side the caster tag means exactly
+      two modifiers: cast speed and Spell Critical Strike Chance.
+  - method: veiled
+    note: >-
+      The unveiled prefixes pair 123–138% increased Fire, Cold or Lightning
+      Damage with a 35–40% chance of the matching ailment, or 123–138% spell
+      damage with 36–40% mana regeneration, or 105–120% spell damage with
+      9–10% of Non-Chaos Damage gained as extra Chaos Damage. All of them
+      sit in the caster-damage group and take its one slot. Suffixes: 26–31%
+      cast speed with Arcane Surge on kill, 44–48% damage over time
+      multiplier for one type, 12–14% chance to deal Double Damage.
+  - method: fracture
+    note: >-
+      A staff with one gem-level prefix fractured is the standard start for
+      a top-end craft, and either prefix will do. With "+2 to Level of all
+      Spell Skill Gems" fractured, three Fossils find +4 of the element on
+      about 1 new prefix in 28. With the element prefix fractured, its whole
+      group leaves the pool, and a Faceted and an Aetheric Fossil find "+2
+      to all" on about 1 in 19. If you make the base yourself, fracture the
+      one that is cheaper to roll again, because a [[Fracturing Orb]] picks
+      at random: that is "+2 to all".
+  - method: meta
+    note: >-
+      "Prefixes Cannot Be Changed" costs 4 Divine Orbs and 1 [[Sacred Orb]]
+      on a staff, and it is a suffix: the item needs an open suffix slot to
+      take it.
+
+
+      **Cannot roll Attack Modifiers** (1 Divine Orb, also a suffix) removes
+      35% of the prefix weight and 31% of the suffix weight from anything
+      that is *added* afterwards, and a Harvest reforge that guarantees a
+      type respects it. **Cannot roll Caster Modifiers** does the reverse for
+      a build that attacks with a staff: caster modifiers are 45% of its
+      prefix weight. Since 3.30 neither one stops an [[Orb of Annulment]]
+      from removing such a modifier, so the old habit of shielding caster
+      prefixes with one of them before an Annulment no longer works.
+
+
+      Using either beside a lock needs "Can have up to 3 Crafted Modifiers"
+      as well: three crafted suffixes, so three empty suffix slots, and 7
+      Divine Orbs and a Sacred Orb per attempt.
+  - method: influence
+    note: >-
+      The full table is in the modifier list. For casters: Shaper's prefix
+      "Socketed Skills deal 20% more Spell Damage" (item level 83),
+      Redeemer's suffix "Spells have a 12–14% chance to deal Double Damage"
+      (80), Elder's prefixes adding Chaos or Physical Damage to Spells, and
+      resistance penetration prefixes from Warlord (fire), Redeemer (cold),
+      Crusader (lightning) and Hunter (all elements). An influenced staff
+      cannot be fractured.
+  - method: corruption
+    note: >-
+      The corruption implicits include +2 to Level of Socketed Fire, Cold,
+      Lightning, Chaos or Physical Gems, 70–90% increased Spell Damage and
+      22–28% increased Cast Speed. Any of them replaces the block or
+      critical strike implicit, and the staff can never be crafted again.
+  - method: strands
+    note: "See the Memory Strands section below: the short ladders of the gem-level prefixes make this an open question worth testing."
+memoryStrands: >-
+  [[Memory Strands]] raise the tier of whatever is rolled and never change
+  which modifier it is. On a staff that splits the problem in two. Getting a
+  gem-level family at all is a matter of weight, and strands do nothing for
+  it. Getting its top step is a matter of tier: "+2 to all" is one fifth of
+  its family's weight, +4 of an element about one seventeenth.
+
+
+  The breakpoints players have published were measured on long ladders of
+  thirteen tiers. Nobody has published how strands treat a ladder of two or
+  three steps. If they cut the bottom step the way they cut the bottom of a
+  long ladder, a strand base would be the best way there is to roll "+2 to
+  all" with [[Orb of Alteration]]s, which spend at most 8 strands each by the
+  data-mined table. We could not confirm it, so treat it as something to
+  test on one base, not a plan to buy ten for.
+
+
+  What is certain is where strands are wasted. The Fossil craft that this
+  category leans on does not use them, by player testing, and an Essence can
+  spend up to 80 in one click. Put strands on a white staff with an
+  [[Orb of Remembrance]] only for a craft made of Alterations, a
+  [[Regal Orb]] and [[Exalted Orb]]s.
+reading:
+  intro: >-
+    Hold Alt over a staff and read the prefixes for gem levels before
+    anything else: **is "all Spell Skill Gems" there, is the prefix for your
+    element there, and at which step?** Those two lines outweigh the rest of
+    the item. Then see which modifier holds the single caster-damage slot.
+    Then look for cast speed. The numbers on the base can be ignored.
+  prefixes:
+    text: >-
+      Three groups matter and each admits one modifier. **"All Spell Skill
+      Gems"** is a group of its own. **The element prefixes** share a group
+      with each other, with "+# to Level of Socketed Melee Gems" and with the
+      bench's Socketed Support Gems craft, so a staff carries one of those.
+      **Caster damage percentages** are the third: spell damage or one
+      element's damage, never both. The best prefix side is one from each.
+
+
+      Two more families fit beside them because their groups are their own:
+      the hybrid of spell damage with maximum Mana, and damage added to
+      spells for one element.
+
+
+      "All Spell Skill Gems" means every spell gem you have socketed
+      anywhere, not only the ones in the staff. The modifiers that say
+      "Socketed" are the ones tied to the staff's six sockets.
+
+
+      Everything else is competition. Attack prefixes are 35% of prefix
+      rolls and maximum Mana is the largest single family at 11%.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Raises every spell gem by one or two levels and stacks with the element prefix. The rarest thing a staff needs: its top step weighs 250 in a prefix pool of 94,461."
+        aim: "+1 (ilvl 2) is common. +2 needs ilvl 55."
+      - mod: "+# to Level of all Fire Spell Skill Gems"
+        why: "Up to four levels for every spell gem of one element. The same family exists for Cold, Lightning, Chaos and Physical; all five share one group, so a staff has one of them."
+        aim: "+3 (ilvl 35). +4 needs ilvl 77."
+      - mod: "#% increased Spell Damage"
+        why: "The largest percentage a staff can hold, and the usual owner of the caster-damage slot. The bench and Essence of Woe both supply it, so it is never the prefix to protect."
+        aim: "T3, 121–149% (ilvl 58). T1 is 175–200% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "A second spell damage percentage in a different group, so it sits beside the first."
+        aim: "T2, 64–76% with 54–59 Mana (ilvl 58). T1 needs ilvl 80."
+      - mod: "Adds # to # Fire Damage to Spells"
+        why: "Flat damage for spells of one element; Cold and Lightning versions share its group. The prefix a fire Fossil craft most often leaves in the third slot."
+        aim: "T2, adds 83–109 to 166–191 (ilvl 62). T1 needs ilvl 74."
+      - mod: "+# to maximum Mana"
+        why: "The most common prefix on a staff. Worth a slot only to builds that turn Mana into damage or defence."
+      - mod: "Adds # to # Physical Damage"
+        why: "Stands for all the attack prefixes: physical, elemental and chaos damage added to attacks with the staff. Wasted on a caster, and together the most likely thing to roll."
+  suffixes:
+    text: >-
+      The suffix side is forgiving for a caster who hits. Cast speed, Spell
+      Critical Strike Chance and Global Critical Strike Multiplier are each
+      6.5 to 7.6% of suffix rolls, every tier of them weighs the same, and
+      an Essence or the bench will supply any of the three.
+
+
+      Builds that deal damage over time have it harder. The multipliers for
+      one damage type weigh 50 at the top tier and 400 at the bottom, and
+      the general "Damage over Time Multiplier" is a separate group that
+      stacks with them. Both are rare enough that the bench's 31–35% or the
+      veiled 44–48% is the realistic source.
+
+
+      Attack speed is the most common suffix on a staff and worth nothing to
+      a caster. With accuracy, leech and the other attack suffixes it is 31%
+      of the side.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "The suffix every hitting caster wants. Essence of Misery guarantees it."
+        aim: "T3, 32–37% (ilvl 55). T1 is 44–49% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "For builds that crit. Not the same as \"increased Critical Strike Chance\", which is local to the staff and only counts for attacks with it."
+        aim: "T2, 120–134% (ilvl 59). T1 is 135–164% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global, so it works for spells. The natural partner of spell crit."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "The key suffix of a damage over time build, with Cold, Chaos and Physical versions in the same group. Tier 3 or better is already about 1 suffix roll in 264."
+        aim: "T3, 46–55% (ilvl 36). T1 is 66–75% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Applies to every damage type and sits in a different group, so it stacks with the typed one."
+        aim: "T3, 31–35% (ilvl 68)."
+      - mod: "+#% Chance to Block Spell Damage"
+        why: "Adds to the block implicit of an ordinary staff: 25% and 18–20% is 43–45% from one item."
+        aim: "T1, 18–20% (ilvl 77)."
+      - mod: "#% increased Attack Speed"
+        why: "The single largest suffix family on a staff. A caster reads it as an empty slot that cannot be filled."
+approach:
+  principle: >-
+    **Gem levels first, with a tool that aims at them.** They are the only
+    thing on a staff that neither an Essence nor the bench will sell you.
+    Spell damage, cast speed and spell crit each have both. So never give up
+    a gem-level prefix to keep anything else, and never start a staff from
+    its easy side.
+  order:
+    - title: "Choose the base for its implicit and the item level for the last modifier you will add"
+      text: >-
+        Block, critical strike chance or Energy Shield: that is the whole
+        choice of base. Item level 77 opens every gem-level step; 83 and 84
+        open the best cast speed and spell damage. Check the Strength
+        requirement while you are there.
+    - title: "Decide how many gem-level prefixes you are paying for"
+      text: >-
+        **One:** Alterations and a Regal Orb, with an Imprint if the roll was
+        rare. **Two:** Fossils, because a Magic item holds one prefix and no
+        Essence adds the other. **Two at the top step:** a base with one of
+        them fractured, then Fossils for the second. Never spend a fracture
+        on spell damage or cast speed: those can be bought.
+    - title: "Roll the gem levels and nothing else"
+      text: >-
+        Judge each result on its gem-level lines alone. A staff with +3 and
+        +1 and bad everything else is a success; a staff with perfect spell
+        damage and no gem levels is the thing you could have bought from the
+        bench.
+    - title: "Give the caster-damage slot to the best owner you can afford"
+      text: >-
+        One percentage fits. Check what holds the group before you craft: a
+        rolled "increased Cold Damage" on a fire staff blocks the bench's
+        spell damage. If the staff has "all Spell Skill Gems" and no element
+        prefix, the bench's Socketed Support Gems craft is the other use of a
+        free prefix.
+    - title: "Protect the prefixes only if you would not see them again"
+      text: >-
+        The Fossil craft rerolls both sides and often lands cast speed with
+        the gem levels, so for common results more Fossils are the cheaper
+        way to better suffixes. A lock is for +4, or for "+2 to all". It
+        needs an open suffix slot; count before you pay.
+    - title: "Cast speed, then the build's second suffix, then the bench"
+      text: >-
+        With the prefixes locked, the Caster reforge has only cast speed and
+        spell crit to choose from. Leave one slot for the bench and put the
+        missing damage suffix in it.
+  finishing: >-
+    Sockets and links are the finish that matters on a staff: six linked
+    sockets hold the main skill, and since 3.29 every socket is white and
+    takes any gem. Quality is not needed for a caster. Use a [[Divine Orb]]
+    only for the modifiers that have ranges: it cannot raise +3 to +4.
+
+
+    If the bench slot is unused, use it. A staff with an empty suffix and no
+    crafted modifier is unfinished.
+  stopping: >-
+    A staff with **one** gem-level prefix at +3, the bench's spell damage and
+    any cast speed is a real weapon for the campaign's end and early maps.
+    **Two** gem-level prefixes at any steps, with cast speed, carry a caster
+    through most of the Atlas. The top steps of both, and the best tiers
+    beside them, are where the cost multiplies.
+
+
+    Decide the number of gem levels you are aiming for before the first orb,
+    and stop when you have it. If a step fails and the staff is now worse
+    than one you could buy for what is left of the budget, buy that one.
+special:
+  - mod: "Damage Penetrates #% Fire Resistance"
+    source: "Essence / Fossil / Warlord influence"
+    where: "Guaranteed by an Essence of Rage: 15–16% at Deafening, 11–12% at Screaming. Sorrow gives the cold version and Spite the lightning one. A weaker 12–15% rolls only in a Fossil craft, and Warlord, Redeemer and Crusader influence add 14–15% for their element at item level 78."
+  - mod: "Minions deal #% increased Damage"
+    source: "Essence / Fossil / Bench"
+    where: "Essence of Fear: 123–144% at Deafening. Fossil-only up to 111–130% at item level 75. The [[Crafting Bench]] sells 67–81% for 4 Chaos Orbs. All of them take the caster-damage slot."
+  - mod: "Socketed Skills deal 20% more Spell Damage"
+    source: "Fossil / Shaper influence"
+    where: "A Fossil-only prefix that carries the caster and gem tags, and a Shaper prefix at item level 83. It acts on skills socketed in the staff, so it is for a main skill that lives there."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 for 8 Chaos Orbs, +2 for 4 Exalted Orbs. Same group as the element gem-level prefixes, so it fits only on a staff without one."
+  - mod: "Trigger a Socketed Spell when you Use a Skill, with a 8 second Cooldown"
+    source: "Bench"
+    where: "A bench suffix for 3 Chaos Orbs. Spells triggered this way have 150% more Cost."
+  - mod: "#% increased Spell Damage / Gain #% of Non-Chaos Damage as extra Chaos Damage"
+    source: "Veiled / Bench"
+    where: "Unveiled: 105–120% with 9–10%. Bench: 80–89% with 7–8% for 4 Exalted Orbs, or 70–79% with 5–6% for 4 Chaos Orbs. Takes the caster-damage slot."
+  - mod: "#% increased Spell Critical Strike Chance"
+    source: "Essence"
+    where: "The natural modifier stops at 135–164%. A [[Deafening Essence of Scorn]] gives 165–179%, which nothing else reaches."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Redeemer influence"
+    where: "A Redeemer suffix, 12–14% at item level 80. The staff needs Redeemer influence, from a drop or a [[Redeemer's Exalted Orb]]."
+  - mod: "+# to Level of Socketed Fire Gems"
+    source: "Corruption"
+    where: "A corruption implicit from a [[Vaal Orb]], +2, with Cold, Lightning, Chaos and Physical versions. It replaces the base's implicit and the outcome cannot be chosen."
+  - mod: "Spend Energy Shield before Mana for Costs of Socketed Skills"
+    source: "Base implicit"
+    where: "The second implicit of the three Heist staves. Not craftable: you choose it by choosing the base."
+mistakes:
+  - "**Starting from an Essence of Woe on a staff meant for gem levels.** It fixes the one prefix the bench sells and rerolls the two it does not, every time."
+  - "**Putting quality on a caster's staff, or judging it by its damage per second.** Both describe attacks with the staff."
+  - "**Benching Socketed Support Gems beside an element prefix,** or spell damage beside a rolled elemental percentage. Each pair is one group and the bench will refuse."
+  - "**Reading a Speed reforge as a cast speed reforge.** Attack speed carries the same tag and has more tiers."
+  - "**Trusting \"Cannot roll Caster Modifiers\" to make an Annulment safe.** Since 3.30 it only stops caster modifiers being added."
+  - "**Paying for a lock with no open suffix slot.** The lock is itself a suffix. On a staff with three rolled suffixes the bench will not offer it."
+  - "**Socketing the wrong element's Fossil.** Scorched removes cold modifiers, Frigid removes fire, Metallic removes physical ones, including the physical spell gems."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, group, tag, Essence, Fossil multiplier and bench cost quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers, and the change to what \"Cannot roll Attack/Caster Modifiers\" protects against." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges that guarantee a type respect the \"Cannot roll\" modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Caster, Speed and Critical reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers and of Memory Strands. Partly older than 3.30." }

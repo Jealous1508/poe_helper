@@ -1,0 +1,844 @@
+intro: >-
+  Craft trông như đánh bạc, cho tới khi bạn biết mình đang gieo những viên xúc
+  xắc nào. Một item là sáu ô, mỗi modifier có một xác suất biết trước, và mọi
+  công cụ trong game sinh ra để đổi những xác suất đó hoặc để bỏ qua chúng.
+  Phần này dạy về xúc xắc trước, rồi tới công cụ, rồi tới cách craft từng loại
+  item từ một base trống tới món hoàn chỉnh, kèm các ví dụ làm mẫu từ lần
+  craft đầu tiên tới món khó nhất.
+scope: >-
+  **Chỉ những công cụ league nào cũng có:** currency, crafting bench,
+  beastcrafting, Essence, Fossil, Harvest, Eldritch currency, influence,
+  veiled modifier, fracture, corruption, Memory Strands và Recombinator.
+  Currency thường, bench và beast gánh phần lớn các ví dụ, vì đó là những thứ
+  người chơi nào cũng có.
+
+
+  **Cố ý bỏ ra:** mọi thứ gắn với riêng một league. Tức là Wickerman và
+  Viscera của league này, vốn không đụng gì tới gear của bạn, và Allflame
+  Crafting của league trước cùng Dead Man's Sulphur và Ducat của nó, thứ mà
+  nhà phát triển đã nói là chưa vào core. Các hệ thống đã bị xóa cũng không có
+  mặt: runesmithing Kalguuran, Graft, Harbinger currency và Mirage Coin. Rog
+  và Gwennen vẫn còn, nhưng họ đưa ra kết quả cho bạn chọn chứ không để bạn
+  lên kế hoạch cho một kết quả, nên ở đây chỉ nhắc tới chứ không dạy. Hai
+  loại Exalted Orb mới được công bố ngày 18 tháng 11, Originator's và
+  Primordial, chưa có trong game và không được dùng ở bất kỳ đâu trong hướng
+  dẫn này.
+anatomy:
+  - id: slots
+    title: "Một item là sáu ô"
+    text: >-
+      Mọi modifier roll được trên một món trang bị đều hoặc là **prefix**,
+      hoặc là **suffix**, và một item có chỗ cho ba cái mỗi loại. Cả bàn cờ
+      chỉ có vậy. Craft là quyết định sáu modifier nào bạn muốn nằm trong sáu
+      ô đó, rồi đưa chúng vào theo một thứ tự không phá mất những gì bạn đã
+      có.
+
+
+      Rarity là số ô được mở ra. Item **Normal** không có ô nào. Item
+      **Magic** có một prefix và một suffix. Item **Rare** có đủ ba và ba.
+      Jewel nhỏ hơn, hai và hai; flask và tincture chỉ có thể là Magic, một
+      và một.
+
+
+      Một modifier thuộc phía nào thì không bao giờ đổi. Maximum Life luôn là
+      prefix. Resistance luôn là suffix. Vậy nên "ba modifier tốt" chưa phải
+      là kế hoạch cho tới khi bạn biết mỗi cái nằm phía nào: ba prefix tốt thì
+      vừa, cái thứ tư thì không bao giờ có chỗ.
+  - id: layers
+    title: "Ngoài sáu ô đó, trên item còn gì"
+    text: >-
+      **Base type** đi trước tiên: Karui Maul và Piledriver đều là mace hai
+      tay, nhưng khác damage, tốc độ và yêu cầu. Không currency nào biến base
+      này thành base khác.
+
+
+      **Implicit** là modifier base có sẵn từ lúc sinh ra, hiện phía trên
+      đường kẻ. Một [[Blessed Orb]] roll lại con số của nó; không gì trong
+      craft thông thường đổi được nó là modifier nào. Một số loại trang bị về
+      sau có thể nhận thêm implicit, chuyện đó nằm ở phần bộ công cụ.
+
+
+      Dưới đường kẻ là sáu ô **explicit**. Một modifier ở đó có thể là loại
+      thường, hoặc mang một trạng thái làm thay đổi những gì bạn được phép
+      làm với nó: **crafted** (do [[Crafting Bench]] đặt vào, và gỡ được cũng
+      ở đó), **fractured** (khóa vĩnh viễn), **veiled** (ẩn cho tới khi bạn
+      unveil), hoặc gắn với một **influence**. Bản thân item có thể
+      **corrupted** hoặc **mirrored**, và dính một trong hai thì không craft
+      lên nó được nữa.
+  - id: item-level
+    title: "Item level quyết định cái gì làm được"
+    text: >-
+      Item nào cũng có item level, chốt cố định lúc nó rơi ra. Đó là level
+      của con monster rơi ra nó: level của khu vực, cộng một nếu là monster
+      Magic và cộng hai nếu là Rare hoặc Unique. Nó không phải level bạn cần
+      để mặc item, và game không hiện nó trừ khi bạn hỏi: giữ Alt rồi rê
+      chuột lên item.
+
+
+      Item level là một cánh cổng. Mỗi tier của mỗi modifier có một item
+      level tối thiểu, và item thấp hơn mức đó không bao giờ roll ra được
+      tier ấy, dù bạn đổ bao nhiêu currency. Một cây mace hai tay cần item
+      level 83 để có prefix physical damage tốt nhất. Ở item level 82, prefix
+      đó chỉ lên được tới tier thấp hơn một bậc, mãi mãi.
+
+
+      Vậy nên câu hỏi đầu tiên của mọi lần craft không phải là "dùng currency
+      nào" mà là "base này đã đủ cao chưa". Hướng dẫn của từng loại item liệt
+      kê những mốc item level quan trọng với nó.
+
+
+      Không modifier thường nào cần hơn item level 86. Từ 3.30, một item Tier
+      5 có thể rơi ra kèm thêm một item level, thêm một lý do để nhìn kỹ
+      chúng trước khi đem bán.
+  - id: tiers
+    title: "Tier, và roll bên trong một tier"
+    text: >-
+      Một modifier chia thành nhiều tier. Tier 1 là tốt nhất, các tier bên
+      dưới là bản yếu hơn và có tên riêng: "Merciless" là Tier 1 của
+      increased Physical Damage trên weapon, "Tyrannical" là Tier 2. Trong
+      game, bật Advanced Mod Descriptions ở phần options rồi giữ Alt: lúc đó
+      item hiện, cho từng modifier, nó là prefix hay suffix, tier của nó, và
+      khoảng nó có thể roll.
+
+
+      Một tier là một khoảng, không phải một con số. Merciless là 170–179%.
+      Bạn nhận giá trị nào trong khoảng đó là một lần roll riêng, và một
+      [[Divine Orb]] roll lại đúng cái đó, trên mọi modifier cùng lúc, mà
+      không đổi tier nào.
+
+
+      Từ đó có hai con số, và cả hai đều đáng đọc thành tiếng mỗi khi bạn
+      nhìn một item: tier cho biết modifier *có thể* tốt tới đâu, roll cho
+      biết cái bạn đang cầm *thật sự* tốt tới đâu.
+  - id: weights
+    title: "Roll là một cuộc xổ số có weight"
+    text: >-
+      Khi currency thêm một modifier ngẫu nhiên, game bốc từ tất cả những gì
+      base đó roll được ở item level của nó, và số vé không chia đều. Mỗi
+      tier của mỗi modifier có một **weight**. Trên mace hai tay, các tier
+      thấp nhất của increased Physical Damage có weight 1,000 mỗi tier; Tier
+      1 có weight 25. Tier thấp hay ra vì chúng có nhiều vé hơn.
+
+
+      Đó là lý do spam [[Chaos Orb]] lên một item rồi cầu may hiếm khi ăn
+      thua: những modifier ai cũng muốn lại là những cái weight thấp. Đó cũng
+      là lý do mọi công cụ ngoài currency thường tồn tại. Một công cụ tốt làm
+      một trong hai việc: loại những vé bạn không muốn ra khỏi cuộc xổ số,
+      hoặc bỏ qua xổ số và trao thẳng modifier cho bạn.
+
+
+      Danh sách modifier của từng loại item cho thấy mỗi modifier chiếm bao
+      nhiêu phần của cuộc xổ số, lấy từ dữ liệu game.
+  - id: groups
+    title: "Group và tag"
+    text: >-
+      Các modifier làm cùng một việc thuộc về một **group**, và một item chỉ
+      chứa được một modifier của mỗi group. Bạn không thể có hai prefix
+      maximum Life. Luật này giúp bạn nhiều ngang với cản bạn: tự tay đặt một
+      modifier của một group lên item, bằng bench, thì cuộc xổ số không roll
+      ra group đó được nữa. Dân craft gọi việc này là **block**.
+
+
+      Những thứ trông giống nhau không phải lúc nào cũng chung một group.
+      Trên weapon, "increased Physical Damage" và "increased Physical Damage
+      with Accuracy Rating" là hai group, nên cả hai nằm chung trên một item
+      được. Cặp đó là trái tim của mọi weapon physical.
+
+
+      Mỗi modifier còn mang các **tag**: life, attack, caster, fire, defences,
+      vân vân. Bạn không bao giờ thấy chúng trên item, nhưng một nửa bộ công
+      cụ nhắm theo tag. Một Fossil ghi "more Physical modifiers" là đang thêm
+      vé cho mọi thứ có tag physical.
+  - id: local
+    title: "Local và global"
+    text: >-
+      Modifier **local** thay đổi chính item nó nằm trên. Increased Physical
+      Damage trên weapon nhân damage của riêng weapon đó; increased Armour
+      trên helmet nhân Armour của riêng helmet đó. Modifier **global** thay
+      đổi nhân vật của bạn: maximum Life, resistance, critical strike
+      multiplier.
+
+
+      Modifier local chính là lý do base quan trọng đến vậy. Chúng nhân lên
+      cái base đã có sẵn, nên cùng một prefix sẽ đáng giá hơn trên base có
+      con số gốc cao hơn để nhân. Quality cũng hoạt động y như vậy trên
+      weapon và armour, nên phải lên quality trước rồi mới đánh giá kết quả.
+  - id: plan
+    title: "Một lần craft là một kế hoạch, lập ngược từ cuối"
+    text: >-
+      Bắt đầu từ item hoàn chỉnh. Ghi ra những modifier bạn cần, và bên cạnh
+      mỗi cái ghi phía của nó. Rồi đánh dấu cái nào *khó*: một tier cao có
+      weight thấp, hoặc thứ mà roll thường không thể cho ra.
+
+
+      Modifier khó làm trước, bằng công cụ nhắm thẳng vào chúng, khi item còn
+      rẻ và bỏ đi không tiếc. Rồi bạn **bảo vệ** chúng, để bước sau không gỡ
+      mất được. Rồi bạn lấp phần còn lại bằng thứ chắc chắn: thường sẽ chừa
+      một ô cho bench, nơi luôn cho đúng cái bạn yêu cầu.
+
+
+      Mọi hướng dẫn theo loại item và mọi ví dụ trên trang này đều đi theo
+      thứ tự đó: khó trước, bảo vệ, lấp ô, hoàn thiện. Khi một lần craft
+      hỏng, gần như lần nào cũng là vì một trong bốn bước bị bỏ qua.
+methods:
+  - id: currency
+    name: "Currency cơ bản"
+    level: 1
+    icons: [orb-of-transmutation, orb-of-alteration, orb-of-augmentation, regal-orb, orb-of-alchemy, chaos-orb, exalted-orb, orb-of-annulment, orb-of-scouring]
+    summary: "Những orb thêm, roll lại và gỡ modifier ngẫu nhiên. Mọi thứ khác đều là bản tinh chỉnh của chúng."
+    text: >-
+      Hai nhóm orb làm cùng một việc ở hai rarity.
+
+
+      **Trên item Magic:** [[Orb of Transmutation]] biến item Normal thành
+      Magic. [[Orb of Alteration]] roll lại nó, cả hai ô cùng lúc.
+      [[Orb of Augmentation]] thêm một modifier nếu còn ô trống.
+      [[Regal Orb]] biến nó thành Rare, giữ nguyên những gì đang có và thêm
+      một modifier nữa.
+
+
+      **Trên item Rare:** [[Orb of Alchemy]] biến item Normal thành Rare với
+      bốn tới sáu modifier ngẫu nhiên. [[Chaos Orb]] roll lại tất cả.
+      [[Exalted Orb]] thêm một modifier vào chỗ có ô trống.
+      [[Orb of Annulment]] gỡ ngẫu nhiên một modifier, còn
+      [[Orb of Scouring]] gỡ sạch và đưa item về Normal.
+
+
+      Đường Magic là đường nên học trước. Một Alteration chỉ roll lại hai ô,
+      gần như không tốn gì, và cho bạn dừng ngay khi một modifier tốt xuất
+      hiện. Sau đó một Regal Orb dựng item Rare quanh modifier ấy. Đường Rare
+      roll tới sáu ô một lúc, tức là sáu cơ hội để thất vọng.
+    good: >-
+      Bạn cần **một** modifier cụ thể và chấp nhận được bất cứ thứ gì ra kèm
+      bên cạnh: Alteration tới khi nó xuất hiện, Augmentation, Regal, rồi
+      bench. Và cả những giờ đầu league, khi bạn chỉ có chừng này trong tay.
+    bad: >-
+      Modifier đó là tier cao nhất với weight bé tí, hoặc bạn cần ba modifier
+      tốt trên cùng một phía. Danh sách modifier cho thấy xác suất của từng
+      roll; một khi nó xuống cỡ một trên vài trăm, hãy dùng công cụ đổi được
+      xác suất.
+  - id: bench
+    name: "Crafting Bench"
+    level: 1
+    icons: []
+    summary: "Trả một giá cố định, nhận đúng modifier bạn yêu cầu. Thứ chắc chắn duy nhất trong craft."
+    text: >-
+      [[Crafting Bench]] trong hideout của bạn thêm một modifier do bạn chọn,
+      với giá cố định hiện ra trước khi bạn bấm. Một modifier bench yếu hơn
+      tier tự nhiên tốt nhất, chiếm một ô prefix hoặc suffix như mọi modifier
+      khác, và gỡ lại được ngay tại bench với giá một
+      [[Orb of Scouring]]. Một item chứa được một modifier bench, trừ khi nó
+      mang meta-modifier cho phép ba cái.
+
+
+      Bạn không có sẵn mọi công thức ngay từ đầu. Công thức là những vật thể
+      nằm gần boss trong map, và những công thức sao chép từ veiled modifier
+      cũng được mở khóa theo cách đó. Danh sách modifier của từng loại item
+      cho thấy mọi lựa chọn ở bench kèm giá, lấy từ dữ liệu game 3.30.
+
+
+      Bench còn chỉnh được socket và link, gỡ modifier của chính nó, và bán
+      ba lựa chọn roll lại: một modifier ngẫu nhiên của item Rare, ba
+      modifier, hoặc rarity của item.
+    good: >-
+      Lấp ô trống cuối cùng. Hãy lên kế hoạch mọi lần craft sao cho ô bạn làm
+      sau cùng là ô bench lấp được bằng thứ bạn muốn. Và cả **block**: một
+      modifier bench loại cả group của nó ra khỏi cuộc xổ số chừng nào nó còn
+      nằm đó.
+    bad: >-
+      Bạn muốn bản tốt nhất của một modifier. Bench chỉ cho tier tầm trung.
+      Và đừng bao giờ craft bench trước một lần roll lại: Chaos Orb hay
+      Essence quét sạch modifier bench như mọi modifier khác.
+  - id: finishing
+    name: "Quality, socket và chỉ số"
+    level: 1
+    icons: [blacksmiths-whetstone, armourers-scrap, jewellers-orb, orb-of-fusing, divine-orb, blessed-orb, sacred-orb]
+    summary: "Những phần của item không phải là modifier, và các orb roll lại con số mà không đổi những gì đang có."
+    text: >-
+      **Quality** lên tới 20% bằng [[Blacksmith's Whetstone]] trên weapon và
+      [[Armourer's Scrap]] trên armour. Nó tăng physical damage hoặc defences
+      của chính base, nên nó là một phần sức mạnh của item chứ không phải đồ
+      trang trí. Mô tả trên item ghi rằng các orb này có hiệu quả lớn hơn
+      trên item có item level thấp, nên base level cao sẽ ngốn nhiều hơn.
+
+
+      **Socket và link** đến từ [[Jeweller's Orb]] và
+      [[Orb of Fusing]], hoặc từ bench với giá cố định. Từ 3.29, mọi socket
+      mặc định là màu trắng và nhận gem nào cũng được; socket đúng màu của
+      gem cho gem đó 10% quality, và một [[Chromatic Orb]] ép ra socket có
+      màu.
+
+
+      **Chỉ số.** Một [[Divine Orb]] roll lại con số bên trong khoảng của
+      mọi explicit modifier. Một [[Blessed Orb]] làm y vậy cho implicit. Một
+      [[Sacred Orb]] roll lại chỉ số defence gốc của một món armour. Không
+      cái nào đổi việc item có những modifier nào.
+
+
+      Ring, amulet và belt thì nhận quality từ **Catalyst**. Mỗi loại làm
+      mạnh một kiểu modifier, tối đa 20%, và thay thế mọi catalyst khác đang
+      có trên item. Trong 3.30 chúng chỉ đến từ Ultimatum.
+    good: >-
+      Quality và socket: trước khi bạn đánh giá item, và làm trên base còn rẻ
+      trước các bước đắt tiền nếu link hỏng sẽ làm bạn đau. Divine Orb: sau
+      cùng, trên item bạn sẽ giữ.
+    bad: >-
+      Tiêu một Divine Orb lên item có sai modifier. Con số đẹp hơn không cứu
+      được một tier tệ.
+  - id: essence
+    name: "Essence"
+    level: 2
+    icons: [deafening-essence-of-zeal, deafening-essence-of-contempt, deafening-essence-of-greed, essence-of-horror]
+    summary: "Một lần roll lại có đảm bảo một modifier. Công cụ nhắm mục tiêu đầu tiên bạn có trong tay."
+    text: >-
+      Một Essence roll lại item thành Rare với một modifier được đảm bảo.
+      Modifier nào thì tùy vào Essence và item class: cùng một Essence cho
+      attack speed trên weapon và cho thứ khác trên ring. Danh sách modifier
+      của từng loại item có bảng đầy đủ.
+
+
+      Essence có bảy bậc mạnh yếu. Bốn bậc yếu nhất chỉ dùng được trên item
+      Normal và giới hạn các modifier còn lại ở level thấp. Từ Screaming trở
+      lên, Essence còn roll lại được cả item đã là Rare, nhờ vậy bạn mới dùng
+      liên tiếp cái này sau cái kia được. Deafening là bậc cao nhất, và
+      modifier của nó thường ngang Tier 1 hoặc hơn. Vài Essence cho những
+      modifier không tồn tại ở đâu khác.
+
+
+      Năm Essence đặc biệt, Horror, Delirium, Hysteria, Insanity và cái mới
+      là Trickery, chỉ đến từ việc corrupt một con monster Essence bằng
+      [[Remnant of Corruption]]. Trong map đỏ ở 3.30, mọi Essence bạn giải
+      phóng đều từ Screaming trở lên.
+    good: >-
+      Một modifier quan trọng hơn hẳn phần còn lại, và có Essence cho ra nó.
+      Chốt cái đó, nhìn xem cái gì roll ra bên cạnh, lặp lại tới khi phần còn
+      lại chấp nhận được, rồi hoàn thiện ở bench.
+    bad: >-
+      Item đã có thứ bạn muốn giữ. Essence roll lại mọi thứ không fractured,
+      và theo thử nghiệm của cộng đồng thì nó phớt lờ các modifier bảo vệ của
+      bench.
+  - id: beast
+    name: "Beastcrafting"
+    level: 2
+    icons: [imprint]
+    summary: "Các công thức trả bằng beast đã bắt. Nơi có Imprint, và hai craft đổi phía này lấy phía kia."
+    text: >-
+      Einhar bắt beast đỏ trong map của bạn và nhốt chúng ở
+      [[Menagerie]], nơi Blood Altar biến chúng thành craft. Mỗi công thức
+      chỉ định một con beast và cần thêm ba con beast Rare bất kỳ. Từ 3.30,
+      beast vàng hoàn toàn không còn bị bắt và không công thức nào cần tới
+      chúng.
+
+
+      Ba công thức quan trọng với gần như mọi loại item:
+
+
+      **Imprint** ([[Craicic Croaker]]): lưu một bản sao của item **Magic**.
+      Về sau dùng imprint là item quay về đúng trạng thái đã lưu. Nó biến
+      Regal Orb từ một ván cược thành một lần thử lại được.
+
+
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]])
+      và **thêm một suffix, gỡ một prefix ngẫu nhiên**
+      ([[Farric Lynx Alpha]]): chỉ dùng trên item Rare. Nếu phía bị gỡ đang
+      trống thì không có gì để gỡ, và theo kinh nghiệm lâu năm của người
+      chơi, điều đó làm craft này an toàn.
+
+
+      Beast còn thêm một suffix lên flask (beast đỏ nào cũng được trong
+      3.30), đặt một skill Aspect lên item, thêm một meta-modifier
+      ([[Wild Bristle Matron]]), và thêm một modifier lên item có influence.
+      Công thức cũ từng tách một item làm hai đã bị xóa ở 3.29.
+    good: >-
+      Một Imprint trước mọi Regal Orb trên item Magic đã roll rất vất vả mới
+      ra. Các công thức thêm-và-gỡ khi một phía đang trống hoặc vô giá trị:
+      lúc đó phần gỡ không làm bạn mất gì.
+    bad: >-
+      Phía bị mất modifier đang giữ thứ bạn cần. Việc gỡ là ngẫu nhiên.
+  - id: harvest
+    name: "Harvest"
+    level: 3
+    icons: [wild-lifeforce, vivid-lifeforce, primal-lifeforce]
+    summary: "Những lần reforge đảm bảo một modifier có tag bạn chọn, trả bằng Lifeforce."
+    text: >-
+      Sacred Flora trong map rơi Lifeforce ba màu. Ở
+      [[Horticrafting Station]] bạn tiêu nó để lấy craft. Cái quan trọng
+      nhất: **reforge một item Rare với modifier ngẫu nhiên, trong đó có một
+      modifier thuộc loại bạn chọn**: Fire, Cold, Lightning, Physical, Life,
+      Defence, Attack, Caster, Chaos, Speed hoặc Critical.
+
+
+      "Including a Speed modifier" nghĩa là kết quả sẽ có ít nhất một
+      modifier mang tag speed. Trên weapon thì đó là attack speed. Trên boots
+      thì là movement speed. Các loại rẻ tốn 50 tới 150 Lifeforce; loại hiếm
+      hơn thì tốn hơn.
+
+
+      Các craft khác reforge item theo kiểu "more likely" hoặc "less likely"
+      giữ lại cùng loại modifier, đổi resistance này sang resistance khác,
+      và, với giá rất cao, thêm một modifier thuộc một loại đồng thời gỡ một
+      modifier khác.
+
+
+      Theo thử nghiệm của cộng đồng, reforge Harvest tôn trọng các modifier
+      bảo vệ của bench, nhờ vậy nó thành cách chuẩn để lấp một phía của item
+      trong lúc phía kia đang bị khóa.
+    good: >-
+      Bạn cần một modifier là cái duy nhất, hoặc một trong số rất ít, mang
+      tag đó trên item ấy. Hãy đếm số modifier có tag đó trong danh sách
+      trước: càng ít thì cách này càng hiệu quả.
+    bad: >-
+      Tag đó được cả chục modifier trên base ấy dùng chung. Một "Attack
+      modifier" được đảm bảo trên weapon gần như chẳng đảm bảo gì.
+  - id: fossil
+    name: "Fossil và Resonator"
+    level: 3
+    icons: [jagged-fossil, pristine-fossil, primitive-chaotic-resonator]
+    summary: "Một lần roll lại với cuộc xổ số đã bị dàn xếp: vài tag được gấp mười số vé, vài tag khác không còn vé nào."
+    text: >-
+      Fossil được gắn vào Resonator, rồi Resonator được dùng lên item như một
+      Chaos Orb. Mỗi Fossil đổi weight theo tag. Trong dữ liệu 3.30, "more"
+      thường là gấp mười weight và "no" là bằng không: một
+      [[Jagged Fossil]] làm mọi modifier Physical dễ ra gấp mười lần và loại
+      hẳn modifier Chaos. Một [[Pristine Fossil]] làm y vậy với Life và loại
+      modifier Defence.
+
+
+      Resonator lớn hơn chứa được nhiều Fossil hơn, và hiệu ứng của chúng
+      cộng lại. Đây là cách bạn nói hai điều cùng lúc: thêm thứ tôi muốn, bỏ
+      hẳn thứ tôi không muốn.
+
+
+      Vài Fossil làm việc khác: thêm một corruption implicit, fracture một
+      modifier ngẫu nhiên, hoặc, với [[Sanctified Fossil]], làm modifier
+      level cao dễ ra hơn. Trên mỗi item class có một nhóm modifier chỉ roll
+      ra khi dùng đúng Fossil.
+
+
+      Fossil đến từ Delve, và chỉ từ Delve.
+    good: >-
+      Bạn muốn nhiều modifier chung một tag, hoặc muốn loại hẳn một kiểu
+      modifier cứ chiếm ô của bạn hoài.
+    bad: >-
+      Tier tốt vẫn hiếm ngay trong họ của nó. Fossil làm modifier Physical dễ
+      ra; nó không làm Tier 1 dễ ra trong số đó.
+  - id: veiled
+    name: "Veiled modifier"
+    level: 3
+    icons: [veiled-chaos-orb, veiled-exalted-orb]
+    summary: "Một modifier ẩn mà bạn unveil bằng cách chọn một trong ba. Mạnh hơn bản sao của nó ở bench."
+    text: >-
+      Một veiled modifier chỉ hiện là "Veiled". Bấm chuột phải vào item là
+      bạn được đưa ba modifier để biến nó thành; bạn không còn cần Jun cho
+      việc này nữa. Modifier sau khi unveil là modifier thường, không phải
+      modifier bench, và nó mạnh hơn bản bench bán.
+
+
+      Veiled item rơi từ Betrayal. Có hai orb đặt veiled modifier lên item
+      bạn đã có sẵn. Một [[Veiled Chaos Orb]] roll lại item Rare và kèm theo
+      một veiled modifier. Một [[Veiled Exalted Orb]] gỡ một modifier ngẫu
+      nhiên và thêm một veiled modifier.
+
+
+      Có hai luật để tận dụng. Theo thử nghiệm của cộng đồng, ba lựa chọn
+      không bao giờ chứa một group đã có trên item, nên một modifier bench
+      đặt trước sẽ **block** một lựa chọn bạn không muốn. Và từ hotfix ngày
+      17 tháng 11, Veiled Chaos Orb dùng được trên item đã có sẵn veiled
+      modifier, trừ khi modifier đó fractured hoặc đang được một
+      meta-modifier bảo vệ.
+    good: >-
+      Modifier bạn muốn chỉ tồn tại ở dạng veiled, hoặc bản veiled của nó hơn
+      hẳn thứ bench bán. Một Veiled Chaos Orb dùng khi một phía đang được bảo
+      vệ sẽ lấp phía kia và đảm bảo có một veiled modifier ở đó.
+    bad: >-
+      Bạn không chịu nổi việc mất thứ mà Veiled Exalted Orb gỡ đi. Nó lấy một
+      modifier ngẫu nhiên, trừ khi có meta-modifier bảo vệ modifier đó.
+  - id: eldritch
+    name: "Eldritch implicit"
+    level: 3
+    icons: [lesser-eldritch-ember, lesser-eldritch-ichor, eldritch-chaos-orb, orb-of-conflict]
+    summary: "Hai implicit thêm cho helmet, body armour, gloves và boots, và ba orb chỉ tác động lên một phía."
+    text: >-
+      Một **Eldritch Ember** thêm một implicit Searing Exarch và một
+      **Eldritch Ichor** thêm một implicit Eater of Worlds. Một item chứa
+      được mỗi loại một cái. Chúng có bốn bậc, từ Lesser tới Exceptional, và
+      chỉ dùng được trên body armour, boots, gloves và helmet không có
+      influence. Dùng một cái không bao giờ chạm vào sáu ô, nên bạn có thể
+      thử lại tới khi ra implicit mình muốn. Nhưng nó thay mọi implicit khác
+      trên item, trừ implicit Eldritch của phía đối diện. Kể cả implicit của
+      chính base: một đôi Two-Toned Boots mất resistance ngay khi bạn dùng
+      một Ember lên nó.
+
+
+      Implicit nào bậc cao hơn thì là **dominant**, và điều đó quyết định ba
+      orb đặc biệt làm gì. Khi Exarch dominant, một
+      [[Eldritch Chaos Orb]] chỉ roll lại prefix, một
+      [[Eldritch Exalted Orb]] thêm một prefix và một
+      [[Eldritch Orb of Annulment]] gỡ một prefix. Khi Eater dominant, chúng
+      làm y vậy với suffix. Một [[Orb of Conflict]] nâng implicit này lên và
+      hạ implicit kia xuống.
+    good: >-
+      Các món armour, luôn luôn: implicit là sức mạnh miễn phí cộng thêm
+      ngoài sáu ô. Và ba orb kia là cách rẻ nhất để làm việc trên một phía
+      của món armour trong khi phía còn lại giữ nguyên.
+    bad: >-
+      Weapon, jewellery và shield: không cái nào ở đây áp dụng cho chúng. Và
+      item có influence thì hoàn toàn không nhận được Eldritch implicit.
+  - id: corruption
+    name: "Corruption"
+    level: 3
+    icons: [vaal-orb, tainted-chaos-orb]
+    summary: "Ván cược cuối cùng, có thể thay implicit, và sau đó item đóng lại vĩnh viễn."
+    text: >-
+      Một [[Vaal Orb]] corrupt item một cách "unpredictably". Trên trang bị,
+      các kết quả người chơi ghi nhận là: không có gì thay đổi; implicit bị
+      thay bằng một corruption implicit; item bị roll lại thành một Rare mới;
+      hoặc một socket đổi. Xác suất của chúng không được công bố, và danh
+      sách này lấy từ một trang tra cứu cũ hơn 3.29, nên hãy coi nó là gần
+      đúng.
+
+
+      Item corrupted không craft lại được bằng bất kỳ cách thông thường nào.
+      Chỉ Tainted currency mới dùng được lên nó, và mỗi Tainted orb tự nó đã
+      là một lần tung đồng xu: một [[Tainted Chaos Orb]] hoặc roll lại item,
+      hoặc xóa trắng nó.
+
+
+      Những corruption implicit mà từng loại item nhận được nằm trong danh
+      sách modifier của nó.
+    good: >-
+      Item đã hoàn chỉnh, một corruption implicit sẽ làm nó tốt hơn, và bạn
+      sẵn sàng mất nó. Khi có bản sao thì corrupt bản sao, đừng corrupt bản
+      gốc.
+    bad: >-
+      Bất cứ thứ gì bạn còn định cải thiện. Corruption hoặc là bước cuối
+      cùng, hoặc là một sai lầm.
+  - id: strands
+    name: "Các orb Memory Strands"
+    level: 3
+    icons: [orb-of-remembrance, orb-of-unravelling]
+    summary: "Hai orb cho base Memory Strands, hoặc tiêu sạch chúng trong một lần để nâng tier."
+    text: >-
+      Một [[Orb of Remembrance]] đặt ngẫu nhiên số
+      [[Memory Strands]] trên item **Normal**, và đó là cách bạn đưa strand
+      lên một base do chính mình chọn. Một [[Orb of Unravelling]] tiêu hết
+      mọi strand trên item để thử nâng tier các explicit modifier của nó.
+
+
+      Strand làm gì, và cái gì tiêu chúng, có một phần riêng bên dưới.
+    good: >-
+      Remembrance: trên một base trắng bạn sắp craft bằng orb. Unravelling:
+      làm bước cuối cùng, trên item đã identify có đúng modifier nhưng chưa
+      phải tier tốt nhất.
+    bad: >-
+      Unravelling giữa chừng một lần craft: nó lấy hết số strand lẽ ra đã làm
+      đẹp các roll sau đó của bạn. Nó cũng bỏ qua modifier bench.
+  - id: fracture
+    name: "Fractured modifier"
+    level: 4
+    icons: [fracturing-orb, fractured-fossil]
+    summary: "Một modifier bị khóa vĩnh viễn. Điểm xuất phát tốt nhất có thể cho một lần craft khó."
+    text: >-
+      Một fractured modifier không thể bị gỡ hay bị đổi bởi bất cứ thứ gì.
+      Roll lại item một nghìn lần nó vẫn nằm đó. Bắt đầu từ một base đã
+      fractured sẵn modifier khó nhất, thì phần còn lại của lần craft chỉ là
+      roll lại xung quanh nó.
+
+
+      Trong 3.30, fractured item hiếm hơn trước. Chúng rơi ra dưới dạng item
+      Magic Tier 5, và phần lớn league mechanic từng rơi chúng nay không còn
+      rơi nữa. Bạn cũng có thể tự làm một cái. Một [[Fracturing Orb]]
+      fracture một modifier **ngẫu nhiên** trên item Rare có ít nhất bốn
+      modifier. Một [[Fractured Fossil]] làm y vậy trong một lần roll lại
+      bằng Fossil.
+
+
+      Giới hạn: cả hai đều không dùng được trên item có influence hay item
+      đã fractured, theo các trang tra cứu thì fractured item không thể được
+      thêm influence, và Imprint không dùng được lên fractured item.
+    good: >-
+      Modifier then chốt là một tier cao nhất có weight thấp, thứ mà nếu
+      không khóa lại thì sau mỗi lần hỏng bạn phải roll lại từ đầu. Với
+      Fracturing Orb, hãy dùng khi item có đúng bốn modifier và càng nhiều
+      cái trong đó là thứ bạn muốn càng tốt: nó chọn ngẫu nhiên, nên càng ít
+      đáp án sai càng tốt.
+    bad: >-
+      Bạn muốn item có influence, hoặc modifier đó vốn dĩ đã dễ kiếm.
+  - id: influence
+    name: "Influence"
+    level: 4
+    icons: [crusaders-exalted-orb, awakeners-orb, orb-of-dominance]
+    summary: "Sáu pool modifier thêm. Phần lớn những modifier mạnh nhất game nằm ở đây."
+    text: >-
+      Một item có thể mang một trong sáu influence: Shaper, Elder, Crusader,
+      Hunter, Redeemer hoặc Warlord. Mỗi cái thêm các modifier riêng của nó
+      vào pool của item đó, liệt kê theo từng loại item ở mục Influence. Item
+      vẫn giữ pool thường của nó, nên influence làm cuộc xổ số vừa tốt hơn
+      vừa to hơn.
+
+
+      Một item Rare chưa có influence nhận influence từ Exalted Orb tương
+      ứng, ví dụ một [[Crusader's Exalted Orb]], cái này còn thêm một
+      modifier của influence đó. Một [[Awakener's Orb]] phá hủy một item có
+      influence để đặt influence của nó lên một item khác cùng class: kết
+      quả là một Rare mới mang cả hai influence, và theo các trang tra cứu
+      thì giữ lại một modifier influence từ mỗi bên. Một
+      [[Orb of Dominance]] gỡ một modifier influence và nâng cấp một cái
+      khác, và là nguồn duy nhất của modifier **Elevated**; nó dùng được trên
+      body armour, boots, gloves và helmet.
+
+
+      Influence đóng lại vài cánh cửa: không Eldritch implicit, không
+      Fracturing Orb, không Fractured Fossil.
+    good: >-
+      Modifier bạn cần chỉ tồn tại khi có một influence. Hãy xem danh sách
+      Influence của loại item đó trước khi lên kế hoạch cho bất cứ thứ gì đắt
+      tiền.
+    bad: >-
+      Một món armour mà với bạn Eldritch implicit đáng giá hơn modifier
+      influence. Bạn không thể có cả hai.
+  - id: meta
+    name: "Meta-crafting"
+    level: 4
+    icons: [divine-orb, sacred-orb]
+    summary: "Những modifier bench không làm gì cho nhân vật mà làm tất cả cho lần craft: chúng bảo vệ một phía."
+    text: >-
+      **Prefixes Cannot Be Changed** và **Suffixes Cannot Be Changed** là
+      modifier bench. Chừng nào một trong hai còn trên item, một lần roll lại
+      sẽ để yên phía đó. Cái đầu chiếm một ô suffix và cái sau chiếm một ô
+      prefix, và lần roll lại tiêu luôn chính meta-modifier, nên lần thử nào
+      bạn cũng phải trả tiền.
+
+
+      Trong 3.30, khóa đầy đủ tốn 4 Divine Orb cộng một currency thứ hai: một
+      [[Sacred Orb]] trên weapon, 4 Blessed Orb trên armour, shield và
+      quiver, 8 Exalted Orb trên jewellery. Bốn craft mới chỉ bảo vệ một hoặc
+      hai modifier của một phía với giá 1 hoặc 2 Divine Orb, kèm một cái bẫy
+      do chính nhà phát triển nêu: game chọn ngẫu nhiên modifier nào được bảo
+      vệ và không cho bạn thấy. Chúng chỉ chắc chắn khi phía đó có đúng bằng
+      số modifier mà craft bảo vệ.
+
+
+      **Can have up to 3 Crafted Modifiers** (2 Divine Orb) cho item chứa ba
+      modifier bench, tính cả chính nó.
+      **Cannot roll Attack Modifiers** và **Cannot roll Caster Modifiers**
+      (mỗi cái 1 Divine Orb) loại một tag ra khỏi cuộc xổ số đối với các
+      modifier được thêm vào. Từ 3.30, chúng không còn ngăn một Orb of
+      Annulment gỡ modifier thuộc loại đó.
+
+
+      Khóa chịu được những gì thì một phần là do người chơi thử nghiệm, chứ
+      không có tài liệu nào ghi. Reforge Harvest, các Veiled orb và Orb of
+      Scouring được ghi nhận là tôn trọng khóa. Essence và Recombinator được
+      ghi nhận là phớt lờ khóa. Với Fossil và Awakener's Orb, trong 3.30
+      chúng tôi chưa xác nhận được theo hướng nào.
+    good: >-
+      Một phía đã xong và đáng giá hơn tiền khóa. Khóa nó lại, roll lại phía
+      kia bằng công cụ tôn trọng khóa, lặp lại tới khi ra đúng.
+    bad: >-
+      Một item rẻ. Nếu phía được bảo vệ có thể roll lại từ đầu với giá dưới 4
+      Divine Orb thì cứ roll lại.
+  - id: recombinator
+    name: "Recombinator"
+    level: 4
+    icons: [weapon-recombinator]
+    summary: "Hai item vào, một item ra, mang một phần modifier của cả hai."
+    text: >-
+      Recombinator phá hủy hai item cùng class và dựng một item từ modifier
+      của chúng. Nó là phần cố định của game từ 3.26, ở chỗ Isla tại
+      Kingsmarch. Ở một chế độ, bạn chọn những modifier mình muốn và thấy tỉ
+      lệ thành công, và thất bại có thể phá hủy item. Ở chế độ kia, kết quả
+      là ngẫu nhiên và không gì bị phá hủy.
+
+
+      3.30 làm nó yếu hơn và dễ đoán hơn. Kết quả luôn mang item level của
+      base bạn chọn. Item đầu vào có một tới ba modifier trên một phía cho ra
+      ít modifier hơn trước ở kết quả. Item corrupted bị từ chối.
+    good: >-
+      Bạn đang cầm hai item rẻ, mỗi cái có một modifier mà bạn không thể roll
+      ra cùng trên một item.
+    bad: >-
+      Một kế hoạch cần sự chắc chắn. Nó là một ván cược có hiện tỉ lệ, và từ
+      3.30 kiểu gộp kinh điển "mỗi bên một modifier tốt" hỏng thường xuyên
+      hơn.
+  - id: lock
+    name: "Hinekora's Lock"
+    level: 5
+    icons: [hinekoras-lock]
+    summary: "Xem trước kết quả của orb kế tiếp trước khi bạn chốt dùng nó."
+    text: >-
+      [[Hinekora's Lock]] cho item thấy trước kết quả của currency kế tiếp
+      dùng lên nó. Rê orb lên item là kết quả hiện ra; nếu không thích, bạn
+      làm việc khác. Bất kỳ thay đổi nào trên item cũng xóa khả năng thấy
+      trước, nên mỗi Lock là một lần nhìn.
+
+
+      Từ 3.30, tạo Imprint hay mirror item không còn bị tính là thay đổi nó.
+    good: >-
+      Chỉ một orb quyết định một item đắt tiền sống hay chết: một Annulment
+      buộc phải trúng đúng modifier, một Exalted Orb vào ô trống cuối cùng.
+    bad: >-
+      Bất cứ thứ gì lặp lại được. Một Lock đắt hơn giá trị của phần lớn item.
+memoryStrands:
+  summary: >-
+    [[Memory Strands]] là một con số từ 0 tới 100 trên một món trang bị.
+    Chừng nào item còn strand, các orb thêm hoặc roll lại modifier sẽ cho
+    tier cao hơn bình thường, và mỗi lần dùng tiêu bớt một ít strand. Chúng
+    không bao giờ đổi việc bạn nhận **modifier nào**, chỉ đổi việc những cái
+    bạn nhận tốt tới đâu.
+  text: >-
+    Strand xuất hiện từ 3.26 và là một phần của core game. Trong 3.30, item
+    có strand đến từ một trong hai nguồn: nó rơi trong map có influence
+    Originator, hoặc bạn dùng một [[Orb of Remembrance]] lên item Normal để
+    đặt ngẫu nhiên số strand của nó. Từ 3.28, item strand rơi ra thường là
+    base level cao hơn và mang nhiều strand hơn. Một
+    [[Orb of Intention]] dùng lên map như vậy sẽ tăng số strand trên đồ rơi
+    ra và giảm lượng đồ rơi.
+
+
+    Nhà phát triển chỉ mô tả hiệu ứng bằng lời: currency thêm hoặc thay
+    modifier "will consume some memory strands to make the crafted mods more
+    powerful". Các con số chính xác bên dưới đến từ data-mine và người chơi
+    thử nghiệm, và được ghi rõ như vậy.
+
+
+    **Mỗi orb tiêu bao nhiêu** nằm trong một bảng data-mine trên poedb. Bảng
+    ghi Transmutation, Augmentation và Alteration ở mức 0–8 strand; Regal và
+    Exalted Orb ở 0–16; Alchemy, Chaos và Orb of Chance ở 0–50; Veiled Chaos
+    Orb và mọi Essence ở 0–80; Awakener's Orb ở 0–100. "0–N" là mức tối đa
+    hay một lượng ngẫu nhiên thì không có tài liệu nào nói. Nhưng bạn không
+    cần phải đoán: từ 3.29.2, game hiện một currency sẽ lấy đi bao nhiêu
+    strand trước khi bạn dùng nó.
+
+
+    **Strand giúp được bao nhiêu** là do người chơi đo, không được công bố.
+    Với một modifier có 13 tier, số liệu của họ là chỉ một strand đã loại bốn
+    tier thấp nhất ra khỏi lần roll, 10 strand để lại bảy tier, 38 để lại
+    năm, và từ 62 trở lên chỉ còn bốn tier cao nhất. Hãy coi các mốc chính
+    xác là một mô hình. Cái quan trọng là hình dáng: vài strand đầu tiên làm
+    được rất nhiều, và roll không bao giờ thành Tier 1 được đảm bảo.
+  rules:
+    - "Strand nâng tier của bất cứ modifier nào được roll ra. Chúng không làm modifier bạn muốn dễ xuất hiện hơn. Một modifier tệ ở tier cao vẫn là modifier tệ."
+    - "Mọi orb thêm hoặc roll lại modifier đều tiêu strand, và những lần roll lại lớn tiêu nhiều nhất. Game hiện con số trước khi bạn bấm. Hãy đọc nó."
+    - "Theo thử nghiệm của người chơi, reforge Harvest và Fossil không dùng strand. Chúng không hưởng lợi từ strand mà cũng không tiêu strand."
+    - "Craft ở bench, Veiled Exalted Orb, Fracturing Orb, beastcraft và Recombinator có đụng tới strand hay không thì chưa xác nhận được. Không cái nào có trong bảng chi phí data-mine."
+    - "Một [[Orb of Unravelling]] lấy hết strand trong một lần và thử nâng tier các explicit modifier đang có trên item. Nó cần item đã identify và nó bỏ qua modifier bench."
+    - "Một [[Orb of Remembrance]] chỉ dùng được trên item Normal. Strand là thứ bạn chuẩn bị trước khi craft, không phải thứ bạn thêm vào một item đã xong."
+  advice: >-
+    Trước orb đầu tiên, hãy quyết định strand sẽ dồn vào các lần roll hay vào
+    một Unravelling ở cuối, vì mỗi lần roll lại đều ăn dần vào lựa chọn thứ
+    hai.
+
+
+    **Orb rẻ trước, roll lại đắt thì đừng bao giờ.** Một Alteration tiêu
+    nhiều nhất 8, một Exalted Orb nhiều nhất 16. Một Essence có thể tiêu tới
+    80. Một base nhiều strand là phí của nếu đem spam Essence hay Chaos, và
+    dùng đúng chỗ khi craft kiểu Alteration rồi Regal, hoặc khi hoàn thiện
+    bằng Exalted Orb.
+
+
+    **Làm trước những bước không dùng tới strand.** Nếu kế hoạch có một lần
+    Fossil hay reforge Harvest, hãy làm nó khi strand còn nguyên, rồi để dành
+    strand cho những orb hưởng lợi từ chúng.
+
+
+    **Đừng trả tiền cho strand bạn sẽ không dùng.** Với một lần craft toàn
+    Essence, Fossil và bench, một base thường có đúng item level làm được y
+    việc đó.
+patch:
+  - entry: meta-crafting-costs
+    note: >-
+      **Thay đổi lớn nhất với bất kỳ ai đã qua phần cơ bản.** Khóa trọn
+      prefix hoặc suffix tốn 4 Divine Orb cộng một currency thứ hai, khoảng
+      gấp đôi trước đây. Mọi guide cũ tính một bước giá "2 Divine" đều đã lạc
+      hậu. Các khóa mới cho một và hai modifier thì rẻ nhưng chọn modifier
+      ngẫu nhiên.
+  - entry: item-rule-changes
+    note: >-
+      **"Cannot roll Attack Modifiers" và "Cannot roll Caster Modifiers"
+      không còn lái được Orb of Annulment.** Chúng vẫn ngăn các modifier đó
+      được thêm vào. Những kỹ thuật dùng chúng để làm một lần Annulment an
+      toàn không còn chạy trong 3.30.
+  - entry: fractured-items-rarer
+    note: >-
+      **Base fractured khó kiếm hơn.** Chúng đến từ đồ rơi Tier 5, một
+      Fracturing Orb hoặc một Fractured Fossil. Một kế hoạch mở đầu bằng "mua
+      một base fractured" giờ tốn hơn trước.
+  - entry: item-tiers
+    note: >-
+      **Đồ Rare dưới đất giờ tự nói nó tốt cỡ nào.** Một item Tier 5 có thể
+      rơi ra kèm +1 item level hoặc dưới dạng fractured Magic item, nên nó là
+      một base để craft chứ không chỉ là thứ để identify. Trong patch notes,
+      tier gắn với việc identify; không có gì nói nó ảnh hưởng tới craft về
+      sau.
+  - entry: bestiary-yellow-beasts
+    note: >-
+      **Chỉ beast đỏ được bắt.** Suffix flask từ Blood Altar giờ tốn một
+      beast đỏ, nên bench và Alteration là cách rẻ để hoàn thiện một flask.
+  - entry: essence-changes
+    note: >-
+      **Essence bậc thấp rời khỏi map cao.** Tốt cho việc craft gear endgame
+      từ map đỏ, dở cho việc craft gear leveling về sau: tìm được Essence yếu
+      thì dùng luôn.
+  - entry: harvest-rework
+    note: >-
+      **Harvest nằm ngay trong map, không còn Sacred Grove.** Chỉ có ba kiểu
+      craft chuyển sang tốn hai màu Lifeforce: đổi resistance, đổi loại
+      damage và ván cược Divination Card. Các reforge mà hướng dẫn này dựa
+      vào vẫn tốn một màu.
+  - entry: orb-of-chance-rework
+    note: >-
+      **Các công thức bench từng tốn Orb of Chance giờ tốn Orb of
+      Alteration**, theo patch notes, còn bản thân Orb of Chance trở thành
+      một cách thật sự để nhắm một Unique. Dữ liệu game có một ngoại lệ: roll
+      lại rarity của item ở bench vẫn tốn một Orb of Chance.
+  - entry: crafting-service-tweaks
+    note: >-
+      **Recombinator, Rog và Gambler đều yếu đi một bậc.** Kết quả
+      Recombinator lấy item level của base bạn chọn, và gộp hai item ít
+      modifier thì ít thành công hơn.
+  - entry: special-base-implicits
+    note: >-
+      **Các base đặc biệt có implicit lớn hơn nhiều** và cần có Item Tier mới
+      rơi. Vì craft không đổi được implicit, việc chọn base quan trọng hơn
+      trước.
+  - entry: vendor-recipe-changes
+    note: >-
+      **Orb of Binding không còn nữa** và Orb of Alchemy xuất hiện nhiều hơn
+      để thế chỗ.
+glossary:
+  - { term: "Affix", text: "Một prefix hoặc một suffix. Tức là một explicit modifier." }
+  - { term: "Prefix trống / suffix trống (open prefix / open suffix)", text: "Một ô trống ở phía đó. \"Hai suffix trống\" nghĩa là item có một suffix và còn chỗ cho hai cái nữa." }
+  - { term: "Implicit", text: "Modifier base có sẵn từ lúc sinh ra, hiện phía trên đường kẻ. Không tính vào sáu ô." }
+  - { term: "Item level (ilvl)", text: "Level của con monster đã rơi ra item. Nó giới hạn những tier nào roll được. Giữ Alt để xem." }
+  - { term: "Tier (T1, T2…)", text: "Một bậc mạnh yếu của một modifier. T1 là tốt nhất. Mỗi tier cần một item level tối thiểu." }
+  - { term: "Roll", text: "Dùng cho hai nghĩa: việc ra được một modifier, và con số nó rơi vào bên trong khoảng của tier. Một [[Divine Orb]] chỉ đổi cái thứ hai." }
+  - { term: "Weight", text: "Số vé mà một tier của modifier có trong cuộc xổ số. Weight càng cao, càng dễ ra." }
+  - { term: "Pool", text: "Tất cả những gì một base roll được. Các kiểu base khác nhau trong cùng một loại item có thể có pool khác nhau." }
+  - { term: "Group", text: "Những modifier không thể cùng nằm trên một item." }
+  - { term: "Tag", text: "Một nhãn ẩn trên modifier, ví dụ life, attack, fire. Fossil, Harvest và vài meta-modifier nhắm theo tag." }
+  - { term: "Local / global", text: "Modifier local thay đổi chính item nó nằm trên; modifier global thay đổi nhân vật." }
+  - { term: "Reforge / reroll (roll lại)", text: "Thay các modifier của item bằng những cái ngẫu nhiên mới. Chaos Orb, Essence, Fossil và reforge Harvest đều làm việc này." }
+  - { term: "Slam", text: "Thêm một modifier ngẫu nhiên vào một ô trống, thường bằng [[Exalted Orb]]." }
+  - { term: "Block", text: "Đặt một modifier lên item, thường bằng bench, để group của nó không thể được roll ra hay được đưa ra làm lựa chọn." }
+  - { term: "Meta-modifier", text: "Một modifier bench thay đổi cách item được craft thay vì thêm sức mạnh, ví dụ Prefixes Cannot Be Changed." }
+  - { term: "Lock (khóa)", text: "Bảo vệ một phía bằng một meta-modifier." }
+  - { term: "Fill (lấp ô)", text: "Đặt bất cứ thứ gì chấp nhận được vào các ô còn lại, sau khi những ô quan trọng đã xong." }
+  - { term: "Fractured", text: "Một modifier gắn cố định vĩnh viễn vào item." }
+  - { term: "Veiled", text: "Một modifier ẩn mà bạn mở ra bằng cách chọn một trong ba." }
+  - { term: "Influence", text: "Một thuộc tính của item, thêm một pool modifier thứ hai: Shaper, Elder, Crusader, Hunter, Redeemer hoặc Warlord." }
+  - { term: "Imprint", text: "Một bản sao đã lưu của item Magic, tạo bằng beast, mà item có thể quay về." }
+  - { term: "Alt-regal", text: "Alteration tới khi item Magic ra tốt, rồi một [[Regal Orb]]. Kiểu craft cơ bản." }
+  - { term: "Divine (động từ)", text: "Dùng một [[Divine Orb]] để roll lại con số. \"Nó cần divine\" nghĩa là modifier đã đúng nhưng chỉ số còn thấp." }
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi modifier, tier, weight, base và giá bench, cùng mô tả trong game của từng currency, cho 3.30." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Phát biểu rằng các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb trên item đã có sẵn veiled modifier." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Socket trắng mặc định, công thức beast tách item bị xóa, Synthesised item không còn kiếm được." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Memory Strands ra mắt; Recombinator thành phần cố định; unveil không cần Jun." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Bảng data-mine về số strand mỗi currency tiêu. Không chính thức." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Danh sách hiện tại các craft Harvest và giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ và các mốc Memory Strands do người chơi thử nghiệm. Một phần cũ hơn 3.30; chúng tôi dùng với lưu ý đó." }

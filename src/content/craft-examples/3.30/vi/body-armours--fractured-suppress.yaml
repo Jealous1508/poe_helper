@@ -1,0 +1,256 @@
+category: body-armours
+title: "Áo giáp Suppression fractured, và mỗi kiểu bảo vệ che được những gì"
+level: 4
+summary: "Suppression tier cao nhất fractured trên một cái áo giáp evasion, life và Evasion từ Essence bậc Deafening, các suffix còn lại từ Eldritch Chaos Orb. Ba giai đoạn, ba kiểu bảo vệ khác nhau."
+goal: >-
+  Một cái áo giáp evasion có Spell Suppression từ 20% trở lên không bao giờ
+  mất được, life từ 160 trở lên, một prefix Evasion cao và resistance đã lấp
+  đủ. Mọi công cụ trong đó đều đã xuất hiện ở một ví dụ dễ hơn. Cái mới là
+  câu hỏi bạn đặt ra trước mỗi bước: **cái gì đang bảo vệ phần việc đã xong
+  của tôi khỏi orb này?** Trên body armour có ba câu trả lời, chúng che những
+  thứ khác nhau, và dùng sai cái cho một bước là mất item.
+base: "Syndicate's Garb"
+itemLevel: 86
+baseWhy: >-
+  Suppression chỉ tồn tại trên base yêu cầu Dexterity, và Syndicate's Garb có
+  Evasion nhiều nhất trong số đó: 1,205–1,386. Nó cần level 84 và 293
+  Dexterity. Item level 86 là mốc thấp nhất mà tier cao nhất của Suppression,
+  20–22%, có thể tồn tại. Base phải **không có influence**: một
+  [[Fracturing Orb]] từ chối item có influence, và giai đoạn cuối cần
+  Eldritch implicit.
+methods: [fracture, essence, eldritch, bench, finishing]
+result:
+  note: "Fractured. Searing Exarch và Eater of Worlds"
+  implicits:
+    - "8% of Damage taken Recouped as Life"
+    - "19% increased Evasion Rating"
+  prefixes:
+    - { text: "+168 to maximum Life", how: essence }
+    - { text: "+437 to Evasion Rating" }
+    - { text: "24% increased Evasion Rating / 11% increased Stun and Block Recovery" }
+  suffixes:
+    - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+    - { text: "+44% to Cold Resistance", how: eldritch }
+    - { text: "+19% to Fire and Lightning Resistances", how: crafted }
+needs:
+  - { item: "Một Syndicate's Garb có Suppression tier cao nhất fractured, item level 86", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Deafening Essence of Greed]]", amount: "10–30" }
+  - { item: "[[Lesser Eldritch Ember]]", amount: "1" }
+  - { item: "[[Greater Eldritch Ichor]]", amount: "vài cái" }
+  - { item: "[[Eldritch Chaos Orb]]", amount: "10–30" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Base fractured là khoản chi lớn nhất, dù bạn mua nó hay tự liều một
+  [[Fracturing Orb]], và trong 3.30 fractured item hiếm hơn trước. Sau đó,
+  lần craft này tính bằng Essence bậc Deafening và Eldritch Chaos Orb. Không
+  gì trong đó tốn một Divine Orb, và đó chính là ý của con đường này:
+  fracture và các Eldritch orb làm việc mà lẽ ra phải trả tiền cho modifier
+  bảo vệ để làm.
+odds: >-
+  **Giai đoạn 1, nếu bạn tự làm base.** Ở item level 86, một lần roll suffix
+  là Suppression từ 17% trở lên khoảng 1 trên 29 lần, và là tier cao nhất 1
+  trên 58, theo phép tính của chúng tôi. Sau đó Fracturing Orb chọn ngẫu
+  nhiên một modifier: 1 trên 4 trên item có đúng bốn cái.
+
+
+  **Giai đoạn 2.** Life là chắc chắn. Mỗi prefix Essence roll thêm là flat
+  Evasion hoặc Evasion phần trăm ở tier thứ ba trở lên của nó khoảng 18% số
+  lần. Khi một kết quả có thêm hai prefix, ít nhất một cái là flat Evasion
+  hoặc Evasion phần trăm ở tier nào đó 87% số lần, nên thứ phải chờ là tier.
+
+
+  **Giai đoạn 3.** Khi Suppression đã fractured, mỗi lần roll suffix còn lại
+  là một elemental resistance 45% số lần và là một cái từ 36% trở lên 17% số
+  lần.
+steps:
+  - title: "Giai đoạn 1: suffix fractured"
+    do: >-
+      Mua hoặc tìm một Syndicate's Garb item level 86 có **20–22% Suppression
+      fractured** ("of Nullification"). Muốn tự làm: roll suffix đó trên một
+      cái garb Magic bằng [[Orb of Alteration]], đưa item lên Rare với **đúng
+      bốn** modifier, rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Trên body armour không có gì hiếm theo weight, nên hãy fracture
+      modifier tốn kém nhất để roll lại. Suppression tier cao nhất là 1 trên
+      58 lần roll suffix, bench chỉ bán 8–10%, và không Essence nào cho nó.
+      Life thì ngược lại, quay về với mỗi Essence of Greed.
+    check: >-
+      Fracturing Orb cần ít nhất bốn modifier và chọn ngẫu nhiên. Bốn
+      modifier là cơ hội 1 trên 4; năm cái là 1 trên 5. Đừng thêm modifier
+      "để cải thiện item" trước.
+    fail: >-
+      Nó fracture cái khác. Item giờ mang sai modifier vĩnh viễn và không
+      fracture lại được nữa. Đây là lý do phần lớn người chơi mua base.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Reflects 44 Physical Damage to Melee Attackers" }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+19 to Dexterity" }
+  - title: "Nắm ba kiểu bảo vệ trước giai đoạn 2"
+    do: >-
+      Đọc danh sách này một lần, và quay lại với nó trước mỗi orb trong phần
+      còn lại của lần craft.
+
+
+      **Một fractured modifier** sống sót qua mọi thứ: Essence, Fossil, Chaos
+      Orb, Annulment.
+
+
+      **Thế dominant của Eldritch** nghĩa là ba Eldritch orb chỉ đụng tới một
+      phía. Nó không bảo vệ gì trước bất kỳ currency nào khác.
+
+
+      **Một lần khóa ở bench** ("Prefix Modifiers cannot be changed") được
+      ghi nhận là trụ được trước reforge Harvest, các Veiled orb và một Orb
+      of Scouring, và được ghi nhận là **không** trụ được trước Essence. Nó
+      tốn 4 Divine Orb và 4 Blessed Orb mỗi lần.
+    why: >-
+      Thứ tự các giai đoạn suy ra từ danh sách đó. Essence roll lại cả hai
+      phía và phớt lờ khóa, nên chúng phải đến khi fracture còn là thứ duy
+      nhất đáng giữ. Một khi prefix đã đúng, chỉ những công cụ để yên phía
+      prefix mới được phép dùng.
+  - title: "Giai đoạn 2: life và Evasion từ Essence"
+    do: >-
+      Dùng [[Deafening Essence of Greed]] lên cái garb, hết cái này tới cái
+      khác. Sau mỗi cái, chỉ đọc prefix. Dừng khi item có life và, bên cạnh
+      nó, **flat Evasion từ 201 trở lên, hoặc increased Evasion từ 80% trở
+      lên**.
+    why: >-
+      Mỗi Essence chốt +160–174 life và roll lại mọi thứ khác không
+      fractured. Suppression lần nào cũng không bị đụng tới. Các suffix bên
+      cạnh nó không quan trọng ở giai đoạn này: giai đoạn 3 sẽ thay chúng.
+    check: >-
+      Giữ Alt và đọc tier. Flat Evasion: "Adroit" là 201–300, "Lissome"
+      301–400, "Fugitive" 401–500. Increased Evasion: "Nightmare's" là
+      80–91%, "Mirage's" 92–100%, "Illusion's" 101–110%.
+    fail: >-
+      Không có prefix Evasion, hoặc chỉ có một cái thấp: dùng Essence kế
+      tiếp. Một prefix thứ hai tốt kèm cái thứ ba tệ, như ở đây, là một kết
+      quả nên giữ. Cái thứ ba có thể cải thiện sau, khi Searing Exarch
+      dominant, hoặc cứ để yên.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "+168 to maximum Life", how: essence }
+        - { text: "+437 to Evasion Rating" }
+        - { text: "24% increased Evasion Rating / 11% increased Stun and Block Recovery" }
+      suffixes:
+        - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+31 to Dexterity" }
+        - { text: "Regenerate 55 Life per second" }
+  - title: "Cất Essence đi, rồi thêm implicit"
+    do: >-
+      Dùng một [[Lesser Eldritch Ember]], rồi [[Greater Eldritch Ichor]] tới
+      khi implicit Eater of Worlds là cái bạn dùng được. Ichor phải ở bậc cao
+      hơn, để Eater là dominant.
+    why: >-
+      Từ đây prefix là phần việc đã xong, và lớp bảo vệ duy nhất chúng có là
+      việc các Eldritch orb không đụng tới phía của chúng.
+    check: >-
+      Việc một fractured item nhận Eldritch implicit là cách làm đã có từ
+      lâu; dòng chữ của Ember chỉ từ chối item có influence. Chúng tôi chưa
+      xác nhận lại được điều đó cho 3.30, nên hãy để cái Lesser Ember duy
+      nhất làm phép thử trước khi bạn mua phần còn lại.
+    state:
+      note: "Fractured. Searing Exarch và Eater of Worlds"
+      implicits:
+        - "8% of Damage taken Recouped as Life"
+        - "19% increased Evasion Rating"
+      prefixes:
+        - { text: "+168 to maximum Life", how: essence }
+        - { text: "+437 to Evasion Rating" }
+        - { text: "24% increased Evasion Rating / 11% increased Stun and Block Recovery" }
+      suffixes:
+        - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+31 to Dexterity" }
+        - { text: "Regenerate 55 Life per second" }
+  - title: "Giai đoạn 3: hai suffix còn lại"
+    do: >-
+      Dùng [[Eldritch Chaos Orb]] tới khi phía suffix có Suppression, **một
+      resistance từ 36% trở lên, và một ô trống**, hoặc hai resistance bạn
+      chịu giữ.
+    why: >-
+      Khi Eater dominant, orb chỉ roll lại suffix, và cái fractured được miễn
+      cả việc đó. Hai lớp bảo vệ đang cùng hoạt động: thế dominant giữ orb
+      tránh xa prefix, fracture giữ nó tránh xa Suppression.
+    check: >-
+      Sau orb đầu tiên, xác nhận cả ba prefix và Suppression không đổi. Rồi
+      chỉ đánh giá hai suffix đã thay đổi.
+    fail: >-
+      Nếu có lúc nào bạn với tay lấy một Chaos Orb thường hay một Essence ở
+      đây thì dừng lại. Cái nào cũng roll lại prefix.
+    state:
+      note: "Fractured. Searing Exarch và Eater of Worlds"
+      implicits:
+        - "8% of Damage taken Recouped as Life"
+        - "19% increased Evasion Rating"
+      prefixes:
+        - { text: "+168 to maximum Life", how: essence }
+        - { text: "+437 to Evasion Rating" }
+        - { text: "24% increased Evasion Rating / 11% increased Stun and Block Recovery" }
+      suffixes:
+        - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+  - title: "Bench suffix cuối cùng"
+    do: >-
+      Ở [[Crafting Bench]], craft hai resistance mà áo giáp còn thiếu dưới
+      dạng một modifier: 17–20% to Fire and Lightning Resistances giá 3
+      [[Chaos Orb]].
+    why: >-
+      Một resistance ghép đôi thuộc group khác với từng cái đơn, và nó lấp
+      hai chỗ thiếu bằng đúng một modifier bench mà item được phép có.
+    state:
+      note: "Fractured. Searing Exarch và Eater of Worlds"
+      implicits:
+        - "8% of Damage taken Recouped as Life"
+        - "19% increased Evasion Rating"
+      prefixes:
+        - { text: "+168 to maximum Life", how: essence }
+        - { text: "+437 to Evasion Rating" }
+        - { text: "24% increased Evasion Rating / 11% increased Stun and Block Recovery" }
+      suffixes:
+        - { text: "+21% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+44% to Cold Resistance", how: eldritch }
+        - { text: "+19% to Fire and Lightning Resistances", how: crafted }
+  - title: "Hoàn thiện: quality, link, chỉ số"
+    do: >-
+      20% quality cùng socket và link nếu chưa làm. Một [[Sacred Orb]] nếu
+      Evasion gốc của base nằm thấp trong khoảng 1,205–1,386. Một
+      [[Divine Orb]] chỉ khi những con số quan trọng nằm thấp trong tier của
+      chúng.
+    why: >-
+      Một Divine Orb roll lại mọi chỉ số cùng lúc, kể cả Suppression
+      fractured, trong tier của nó. Nó có thể hạ xuống cũng như nâng lên.
+variations: >-
+  **Không có implicit: dùng khóa.** Nếu áo giáp không thể hoặc không nên nhận
+  Eldritch implicit, giai đoạn 3 trở thành: craft "Prefix Modifiers cannot be
+  changed" (4 Divine Orb và 4 Blessed Orb), rồi một reforge Harvest cho Fire,
+  Cold hoặc Lightning (50 Lifeforce), mà trên item này chỉ có thể rơi vào
+  đúng resistance đó. Mỗi lần thử lại trả tiền khóa lần nữa. Đặt hai con
+  đường cạnh nhau là thấy rõ lý do nên chọn Eldritch orb trên áo giáp.
+
+
+  **Cải thiện prefix thứ ba.** Đảo thế dominant bằng cách dùng một Ember ở
+  bậc cao hơn Ichor, và một [[Eldritch Orb of Annulment]] sẽ gỡ ngẫu nhiên
+  một prefix: cơ hội 1 trên 3 là trúng cái yếu, và 2 trên 3 là trúng life
+  hoặc Evasion. Sau đó một [[Eldritch Exalted Orb]] thêm một cái. Phần lớn áo
+  giáp cứ để nguyên thì tốt hơn.
+
+
+  **Fracture life thay vào.** Với build không cần Suppression, life "Prime"
+  (175–189) là modifier nên fracture, rồi Essence of Doubt cấp Evasion.
+mistakes:
+  - "Dùng Fracturing Orb trên item có năm hoặc sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Craft khóa prefix trước khi dùng Essence. Essence được ghi nhận là phớt lờ nó; Divine Orb bị phí và prefix vẫn bị roll lại."
+  - "Làm suffix trước. Mỗi Essence ở giai đoạn 2 sẽ roll lại chúng."
+  - "Thêm influence cho base. Khi đó nó không fracture được mà cũng không nhận được Eldritch implicit."
+  - "Đuổi theo một prefix thứ ba hoàn hảo trên cái áo giáp mà năm modifier kia đã xong."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight, các bảng Essence và bench, cùng dòng chữ trong game của Fracturing Orb và Eldritch currency. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge theo element và giá của chúng, cho phần biến thể." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các modifier bảo vệ trụ được trước những gì, và implicit nào là dominant. Một phần cũ hơn 3.30." }

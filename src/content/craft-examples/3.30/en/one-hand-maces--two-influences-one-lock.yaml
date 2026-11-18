@@ -1,0 +1,252 @@
+category: one-hand-maces
+title: "Two influenced suffixes, one lock: the Awakener's Orb"
+level: 5
+summary: "Roll one influenced suffix on each of two maces, merge them with an Awakener's Orb, and finish the prefixes under a single suffix lock. The plan is decided by which side the two modifiers sit on."
+goal: >-
+  A mace with two influenced suffixes that no single influence offers
+  together: Redeemer's "Enemies Killed with Attack or Spell Hits Explode" for
+  clearing, and Hunter's "Hits with this Weapon have 66–80% chance to ignore
+  Enemy Physical Damage Reduction" for bosses, with physical prefixes and
+  attack speed around them. The reasoning to learn is how an end-game
+  crafter picks the pair: **both modifiers on the same side**, so that one
+  lock protects everything valuable while the other side is rebuilt as many
+  times as it takes.
+base: "Behemoth Mace"
+itemLevel: 83
+baseWhy: >-
+  The finished item keeps the base of the mace that receives the orb, so
+  that one is the Behemoth Mace: 6% attack speed on the implicit, on a
+  weapon whose suffixes will be nearly full of other things. Item level 83
+  allows every physical tier in the last stage; the two influenced suffixes
+  need 78 (Redeemer) and 71 (Hunter).
+
+
+  The second mace is destroyed. It can be any one-handed mace of item level
+  78 or more.
+methods: [influence, currency, meta, harvest, bench, lock]
+result:
+  note: "Redeemer and Hunter"
+  implicits: ["6% increased Attack Speed"]
+  prefixes:
+    - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+    - { text: "138% increased Physical Damage", how: harvest }
+    - { text: "Adds 61 to 118 Cold Damage" }
+  suffixes:
+    - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+    - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+    - { text: "18% increased Attack Speed", how: crafted }
+needs:
+  - { item: "A Hunter-influenced Behemoth Mace, item level 83+", amount: "1", note: "Normal or Magic" }
+  - { item: "A Redeemer-influenced one-handed mace, item level 78+", amount: "1", note: "any base; it is destroyed" }
+  - { item: "[[Orb of Alteration]]", amount: "several hundred", note: "for both maces" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 per reforge" }
+  - { item: "[[Exalted Orb]]", amount: "5", note: "4 for the bench, 1 for the last prefix" }
+  - { item: "[[Hinekora's Lock]]", amount: "0–1", note: "only if the merge leaves no room for the lock" }
+cost: >-
+  Two influenced bases, the Alterations to roll one suffix on each, one
+  [[Awakener's Orb]], and then locks at 4 [[Divine Orb]]s and 1
+  [[Sacred Orb]] for every attempt at the prefixes. We give no total. The
+  honest description is that this is a project for a character already
+  finished everywhere else, and that the merge in stage 3 happens once: if
+  it goes badly there is no second try without starting both maces again.
+odds: >-
+  **Stages 1 and 2.** By our arithmetic at item level 80 the exploding
+  suffix is about 1 suffix roll in 129 on a Redeemer mace, and the top tier
+  of the Hunter suffix is also about 1 in 129 on a Hunter mace (either tier:
+  1 in 65). Several hundred Alterations in all.
+
+
+  **Stage 3.** Reference pages say the Awakener's Orb keeps one influenced
+  modifier from each item, which is why each mace carries exactly one. The
+  other modifiers of the result are random and their number is not
+  something we can compute.
+
+
+  **Stage 4.** On the merged pool about 37% of prefix rolls are physical.
+  With the suffixes locked a Physical reforge should always place one
+  physical prefix: flat damage about half the time, each percentage family
+  about a quarter, if drawn by weight. Two good physical prefixes take
+  several locks. Not measured in 3.30.
+steps:
+  - title: "Plan: choose two modifiers that share a side"
+    do: >-
+      Before buying anything, write down the two influenced modifiers and
+      the side each is on. Here both are **suffixes**.
+    why: >-
+      After the merge the item is influenced twice. It cannot be fractured,
+      and the only protection left is a lock, which covers one side. Two
+      keepers on the same side are both covered by one lock while the other
+      side is rerolled freely. One on each side would leave you unable to
+      reroll anything without losing one of them. This single choice
+      decides whether the craft can be finished at all.
+  - title: "Stage 1: the exploding suffix on the mace you will sacrifice"
+    do: >-
+      On a Normal Redeemer-influenced mace of item level 78 or more (made
+      or found as in the Level 4 example), use an
+      [[Orb of Transmutation]] and then [[Orb of Alteration]]s until the
+      suffix is "Enemies Killed with Attack or Spell Hits Explode, dealing
+      5% of their Life as Fire Damage". Leave it **Magic**, with no other
+      Redeemer modifier on it.
+    why: >-
+      The merge keeps one influenced modifier from each mace. If a mace
+      has exactly one, there is no doubt about which it will be. A prefix
+      on the Magic mace is harmless unless it is a Redeemer prefix; if it
+      is, keep rolling.
+    check: >-
+      One suffix "of Redemption", and no prefix beginning "Redeemer's".
+  - title: "Stage 2: the Hunter suffix on the Behemoth Mace"
+    do: >-
+      On a Normal Hunter-influenced Behemoth Mace of item level 83, do the
+      same until the suffix is "Hits with this Weapon have #% chance to
+      ignore Enemy Physical Damage Reduction" at 66% or more. Leave it
+      Magic.
+    why: >-
+      This is the mace that survives, so its base and item level are the
+      finished item's. Both Hunter's and Redeemer's Exalted Orbs drop from
+      their conquerors in 3.30, which is why this pair of influences is the
+      one planned here.
+    check: >-
+      One suffix "of the Hunt" and no prefix beginning "Hunter's". The
+      suffix has two tiers: 50–65% and 66–80%.
+    state:
+      note: "Hunter"
+      rarity: magic
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Stage 3: the Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the Redeemer mace, then on the Behemoth
+      Mace.
+    why: >-
+      The orb destroys the first item and applies its influence to the
+      second, which is reforged as a Rare with both influences and new
+      modifiers. By reference pages it keeps one influenced modifier from
+      each, and each had only one to give. Everything else on the result
+      is a fresh roll from the pools of both influences and the ordinary
+      one.
+    check: >-
+      Both suffixes present. Then count: the next stage needs **an open
+      prefix slot** for the lock, and you would like the third suffix
+      empty too.
+    fail: >-
+      Three prefixes and no room for the lock. The only way to open a slot
+      is an [[Orb of Annulment]], which removes one modifier at random and
+      may take a keeper. This is the one place a [[Hinekora's Lock]]
+      earns its price: it shows what the Annulment would remove before you
+      commit. If it would take a keeper, do not use the Annulment. The
+      mace is then usable as it stands, with its two suffixes and whatever
+      prefixes the merge gave it, and that may be the place to stop.
+    state:
+      note: "Redeemer and Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 58 to 115 Cold Damage" }
+        - { text: "+1 to Level of Socketed Gems" }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Stage 4: lock the suffixes and reforge the prefixes"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]). Then, at the [[Horticrafting Station]], **Reforge a
+      Rare item with random modifiers, including a Physical modifier** (50
+      [[Vivid Crystallised Lifeforce]]). Repeat both until the mace has two
+      physical prefixes at tiers you set in advance.
+    why: >-
+      One lock now covers both influenced suffixes. With the suffix side
+      closed, the physical guarantee should have to land on a prefix.
+      Neither Hunter nor Redeemer adds a physical-tagged prefix to a mace,
+      so the guaranteed one is always flat damage or one of the two
+      ordinary percentages.
+    check: >-
+      Both suffixes unchanged after every reforge. If they ever are not,
+      stop: something about the lock has changed since this was written.
+    fail: >-
+      Each repeat costs a full lock. If the prefixes keep coming up
+      elemental, use an [[Orb of Scouring]] under the lock instead of a
+      reforge: it is reported to clear only the prefixes, and the bench and
+      Exalted Orbs can then fill them.
+    state:
+      note: "Redeemer and Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+  - title: "Stage 5: count the slots, then bench"
+    do: >-
+      Craft **16–20% increased Attack Speed** for 4 [[Exalted Orb]]s in the
+      third suffix. Do not craft "Can have up to 3 Crafted Modifiers".
+    why: >-
+      Two suffix slots are spoken for, so the mace has exactly one left,
+      and attack speed is the suffix it cannot do without. The
+      multi-modifier craft would take that slot, and the prefix it would
+      then allow has nothing good to hold: the bench's percentage and its
+      flat damage both share a group with what the reforge rolled.
+    state:
+      note: "Redeemer and Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+        - { text: "18% increased Attack Speed", how: crafted }
+  - title: "The last prefix"
+    do: >-
+      Use an [[Exalted Orb]] for the open prefix, then finish with quality,
+      sockets and a [[Divine Orb]] if the values are poor.
+    why: >-
+      Five slots are filled on purpose and the Exalted Orb can only add a
+      prefix. The one you hope for is the Accuracy hybrid, the only
+      physical family not yet on the mace, about 1 prefix roll in 8 on this
+      pool. The example shows a likelier result. Nothing it can add makes
+      the mace worse.
+    state:
+      note: "Redeemer and Hunter"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 43 Physical Damage", how: harvest }
+        - { text: "138% increased Physical Damage", how: harvest }
+        - { text: "Adds 61 to 118 Cold Damage" }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "Hits with this Weapon have 72% chance to ignore Enemy Physical Damage Reduction", how: influence }
+        - { text: "18% increased Attack Speed", how: crafted }
+variations: >-
+  **Other pairs on the suffix side.** Crusader's 22–25% increased Impale
+  Effect, Elder's "3% increased Area of Effect per 50 Strength" and Elder's
+  or Warlord's "33–37% increased Physical Attack Damage while Dual
+  Wielding" are all suffixes and could stand in for either modifier. The
+  rule is the same: two suffixes, or two prefixes, never one of each.
+
+
+  **One influence only.** A Shaper or Redeemer mace with the exploding
+  suffix alone is the Level 4 example and most of the benefit. The second
+  influence is what the Awakener's Orb, the second base and the risk of
+  stage 3 are paying for.
+
+
+  **Memory Strands.** By the data-mined table an Awakener's Orb can spend
+  up to 100 strands. A strand base is wasted on this craft.
+mistakes:
+  - "Choosing one influenced prefix and one influenced suffix. No lock covers both, and the item cannot be fractured."
+  - "Leaving a second influenced modifier on either Magic mace. The orb keeps one from each, and you no longer know which."
+  - "Using the orb in the wrong order. The first mace clicked is destroyed; the Behemoth Mace must be the second."
+  - "Crafting the multi-modifier meta-modifier on a mace with one free suffix. It takes the slot attack speed needs."
+  - "Using an Essence on the locked mace. Essences are reported to ignore the lock."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Redeemer and Hunter modifiers on one-handed maces, their tags and weights, bench costs, and the in-game text of the Awakener's Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Conqueror bosses drop their Exalted Orbs; the cost of the protection modifiers; Hinekora's Lock in 3.30." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "The orb keeps one influenced modifier from each item." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Physical reforge and its cost." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Orb of Scouring respect a locked side. Partly older than 3.30." }

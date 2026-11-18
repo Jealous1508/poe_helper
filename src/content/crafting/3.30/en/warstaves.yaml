@@ -1,0 +1,463 @@
+name: "Warstaves"
+short: "Two-handed attack staves: block or charges on the implicit, high base crit, a crowded prefix pool, and no Essence table in the data."
+icon: "Judgement Staff"
+intro: >-
+  A warstaff is a staff made for hitting. It is a physical two-handed weapon
+  like a maul, and what you craft is the same thing: **physical damage per
+  second**, from the base's own damage, flat physical damage, increased
+  physical damage and attack speed. Three things on the base are its own.
+  The implicit is Chance to Block Attack Damage, 20 to 25%. The base critical
+  strike chance is 7.5 to 8.5%, where a maul has 5%. And every warstaff
+  swings 1.25 or 1.3 times a second.
+
+
+  Two things make the craft different from a maul's. The prefix pool is
+  crowded: maximum Mana and six socketed-gem families roll here, so the
+  three physical prefixes are 27% of prefix rolls, not the 46% they are on a
+  two-handed mace. And the game data lists **no Essence modifier for
+  warstaves**, which takes away the first targeted tool most players reach
+  for. This guide is built on the tools that are confirmed to work.
+basics:
+  itemLevel:
+    text: >-
+      The physical tiers are the ones every two-handed weapon shares. Item
+      level 77 opens everything except the last tier of the two percentage
+      prefixes; 83 opens those. Between them lies one tier, about 10% more of
+      that modifier, at many times the rarity.
+
+
+      A warstaff adds two things to check. The best critical strike suffixes
+      are open from 73, and they matter here because the base crit is high.
+      The best block suffix needs 77. Elemental builds need 86 for the top
+      "increased Elemental Damage with Attack Skills".
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Levelling.** Tier 5 increased Physical Damage (85–109%) and Tier 5 of the hybrid with Accuracy. Tier 5 flat Physical Damage (adds 16–22 to 35–40) from 36."
+      - ilvl: 46
+        unlocks: "Tier 4 increased Physical Damage (110–134%) and Tier 4 flat Physical Damage (adds 20–28 to 43–51)."
+      - ilvl: 60
+        unlocks: "Tier 3 increased Physical Damage (135–154%), Tier 3 hybrid (55–64%), and Tier 2 attack speed (23–25%). **The first item level worth crafting for maps.**"
+      - ilvl: 73
+        unlocks: "Tier 2 increased Physical Damage (155–169%) and Tier 2 hybrid (65–74%). Tier 1 Critical Strike Chance and Tier 1 Global Critical Strike Multiplier (both 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 flat Physical Damage (adds 34–47 to 72–84), Tier 1 attack speed (26–27%) and Tier 1 Chance to Block Attack Damage (18–20%). **Enough for everything except the last tier of the two percentage prefixes.**"
+      - ilvl: 83
+        unlocks: "Tier 1 increased Physical Damage, \"Merciless\" (170–179%), and Tier 1 hybrid, \"Dictator's\" (75–79% with Accuracy). **The ceiling for a physical warstaff.**"
+  bases:
+    text: >-
+      There are 12 warstaves in two pools. Nine ordinary ones carry the block
+      implicit. Three Heist rods trade it for charges, and roll from a pool
+      of their own that differs in exactly one place.
+    types:
+      - title: "Ordinary warstaves"
+        pools: [standard]
+        text: >-
+          Nine bases from Iron Staff to Judgement Staff. The implicit is
+          Chance to Block Attack Damage: +20% up to the Vile Staff, +22% on
+          the Military, Serpentine and Foul Staff, and +25% on the three
+          top-tier bases, Ezomyte Staff, Maelström Staff and Judgement
+          Staff. The number is fixed; a [[Blessed Orb]] has nothing to
+          reroll.
+      - title: "Heist rods"
+        pools: [experimented]
+        text: >-
+          Capacity Rod, Potentiality Rod and Eventuality Rod. Their implicit
+          is "+1 to Maximum Power Charges and Maximum Endurance Charges", and
+          they have no block. Their pool is the ordinary one with two
+          weights swapped: Chance to Block Attack Damage weighs 500 a tier
+          here against 1,000 on an ordinary warstaff, and Chance to Block
+          Spell Damage weighs 1,000 against 500. Every other modifier, tier
+          and weight is the same. So a rod gives up the block implicit and
+          is also half as likely to roll attack block as a suffix.
+    picks:
+      - base: "Ezomyte Staff"
+        for: "Critical strike builds"
+        why: >-
+          8.5% base critical strike chance, the highest in the category, and
+          the highest top end of any hit (53–160 at 1.25 attacks per
+          second). Available from level 60 with the +25% block implicit.
+      - base: "Maelström Staff"
+        for: "The most damage with block"
+        why: >-
+          71–147 at 1.25 attacks per second is the highest base damage per
+          second of the ordinary warstaves (136.3), with 8.1% critical
+          strike chance and +25% block.
+      - base: "Judgement Staff"
+        for: "Attack speed"
+        why: >-
+          1.3 attacks per second, the faster of the two rates a top base has,
+          at 135.9 damage per second and 8% critical strike chance. Local
+          attack speed multiplies the base's rate, so the same suffix gives
+          more attacks here.
+      - base: "Eventuality Rod"
+        for: "Builds that run on Power or Endurance Charges"
+        why: >-
+          +1 to Maximum Power Charges and Maximum Endurance Charges on the
+          implicit, the highest base damage per second in the category
+          (138.8) and 8.3% critical strike chance. It has no block, drops
+          from Heist, and needs 117 Strength and 117 Intelligence.
+      - base: "Foul Staff"
+        for: "The end of the campaign"
+        why: >-
+          From level 55: 65–121 at 1.3 attacks per second and +22% block. The
+          best ordinary base before the three top-tier ones.
+    impact: >-
+      The base decides five things that no currency will change afterwards.
+
+
+      **The implicit.** Block on an ordinary warstaff, one more Power and
+      Endurance Charge on a rod. Neither has a range to reroll.
+
+
+      **The damage numbers that every local modifier multiplies.** Flat and
+      increased Physical Damage act on the base's own hit, and quality does
+      too.
+
+
+      **Attacks per second and critical strike chance.** 1.25 or 1.3, and
+      7.5 to 8.5%. The suffix "increased Critical Strike Chance" is local
+      and multiplies that number, which is why it is worth more here than on
+      a 5% maul.
+
+
+      **The pool.** Only for the block suffix: an ordinary warstaff rolls
+      attack block twice as often as a rod.
+
+
+      **The requirements.** Strength and Intelligence in equal amounts, 113
+      of each on the top ordinary bases. A Strength character has to find
+      the Intelligence.
+tools:
+  - method: currency
+    note: >-
+      At item level 83 the three physical prefixes together are 27% of every
+      prefix roll, by our arithmetic from the weights. Maximum Mana alone is
+      20%, the three kinds of added elemental damage 28%, and the socketed
+      gem families 21%. One prefix roll is Tier 3 or better of pure
+      increased Physical Damage about 1 time in 303, and the same for the
+      hybrid; Tier 1 of either is about 1 in 2,119. Flat Physical Damage is
+      kinder: Tier 3 or better about 1 in 44.
+
+
+      So [[Orb of Alteration]]s find flat Physical Damage readily, one decent
+      percentage prefix slowly, and the best one almost never.
+  - method: bench
+    note: >-
+      The bench sells every piece of a physical weapon in a weaker form.
+      Increased Physical Damage: 40–59% for 4 Orbs of Alteration, 60–79% for
+      8, 80–99% for 4 Chaos Orbs, 100–129% for 4 Exalted Orbs. If unlocked,
+      95–105% with an 18–20% chance to Impale, Bleed, Poison or Blind costs
+      8 Chaos Orbs and is nearly the top rank. Flat Physical Damage: adds
+      18–24 to 36–42 for 4 Chaos Orbs. Attack speed: 8–10% for 6 Orbs of
+      Alteration, 11–15% for 2 Chaos Orbs, 16–20% for 4 Exalted Orbs.
+      Critical Strike Chance 25–27% or Global Critical Strike Multiplier
+      25–28% for 4 Chaos Orbs. Chance to Block Attack Damage 11–13% for 3.
+      8–10% chance to deal Double Damage for 8.
+
+
+      The group rule is the one every physical weapon has. The bench's
+      increased Physical Damage, plain or hybrid, is the same group as the
+      rolled pure percentage and a different group from the rolled hybrid
+      with Accuracy. Its flat Physical Damage is the same group as the
+      rolled flat.
+  - method: finishing
+    note: >-
+      Take the warstaff to 20% quality with [[Blacksmith's Whetstone]]s
+      before you judge it: quality is physical damage on the base. It has up
+      to six sockets, which is what makes "+2 to Level of Socketed Melee
+      Gems" a real prefix when the main attack is socketed in the staff.
+  - method: essence
+    note: >-
+      **The 3.30 game data lists no Essence modifier for the Warstaff
+      class.** The Essence table names a modifier for staves and for the
+      other two-handed weapon classes; it has no entry for warstaves at
+      all. We could not confirm whether the game refuses an Essence on a
+      warstaff or borrows another class's modifier, and several of the
+      staff entries are caster modifiers a warstaff's own pool cannot roll.
+
+
+      For a crafter that means one thing: **do not plan around an Essence
+      here.** No craft in this guide uses one. If you want to know, use one
+      cheap Essence on a white warstaff and read the result before buying
+      more. The job an Essence does elsewhere, a reroll with one modifier
+      guaranteed, falls to a Harvest reforge.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) on a Magic warstaff with a high
+      percentage prefix makes the [[Regal Orb]] repeatable. **Add a prefix,
+      remove a random suffix** ([[Farric Wolf Alpha]]) is a free prefix roll
+      on a Rare warstaff whose suffixes are empty or worthless, and a costly
+      one on a crit staff, where the suffixes are worth keeping.
+  - method: harvest
+    note: >-
+      The reforges do the Essence's job here. **Speed** (150 Vivid
+      Lifeforce) guarantees attack speed outright: it is the only modifier
+      in a warstaff's natural pool with the speed tag. **Critical** (150
+      Primal) guarantees Critical Strike Chance or Global Critical Strike
+      Multiplier, both of which a crit warstaff wants.
+
+
+      **Physical** (50 Vivid) is satisfied by the three physical prefixes,
+      the two leech suffixes and the physical damage over time multiplier.
+      By weight about four fifths of that is prefixes, so it is the cheap
+      way to put a physical prefix on the item. It promises a family, not a
+      tier.
+  - method: fossil
+    note: >-
+      A [[Jagged Fossil]] multiplies every Physical modifier by ten and
+      turns 27% physical prefixes into about 80%. A [[Shuddering Fossil]]
+      (more Speed, no Mana) fits a warstaff unusually well: it removes
+      maximum Mana, the largest prefix family, and makes attack speed 49% of
+      suffix rolls. Together they give 85% physical prefixes and attack
+      speed in one reroll.
+
+
+      A [[Deft Fossil]] (more Critical, no Attribute) does for the two crit
+      suffixes what Shuddering does for speed. None of them helps tiers:
+      with Jagged and Shuddering, Tier 1 of pure increased Physical Damage
+      is still about 1 prefix roll in 683.
+  - method: veiled
+    note: >-
+      The unveiled prefixes pair 120–139% increased Physical Damage with a
+      21–25% chance to Impale, Bleed, Poison or Blind. They share a group
+      with pure increased Physical Damage. Of the thirteen prefixes an
+      unveil can offer on a warstaff, seven are caster and minion damage in
+      one group, which is what makes a bench block effective here: one
+      cheap crafted modifier of that group removes all seven from the
+      choices. Suffixes: 12–14% chance to deal Double Damage, 27–30% attack
+      speed or 54–60% critical strike multiplier while a Rare or Unique
+      enemy is near.
+  - method: fracture
+    note: >-
+      A warstaff with a high tier of a percentage prefix fractured is the
+      start of a top-end weapon, for the same reason as on any physical
+      two-hander: that prefix is the one you could not afford to roll twice.
+      Here it is rarer still, 1 prefix roll in 2,119 for Tier 1.
+  - method: meta
+    note: >-
+      "Prefixes Cannot Be Changed" and "Suffixes Cannot Be Changed" cost 4
+      Divine Orbs and 1 [[Sacred Orb]] each on a warstaff. On a crit staff
+      the second one is as useful as the first, because three good suffixes
+      are worth protecting.
+
+
+      The two tag blockers do little here. **Cannot roll Caster Modifiers**
+      removes nothing: no modifier in a warstaff's natural pool carries the
+      caster tag. **Cannot roll Attack Modifiers** removes every physical
+      prefix along with the rest of the attack modifiers and leaves Mana and
+      the socketed gem families. And since 3.30 neither steers an
+      [[Orb of Annulment]].
+  - method: influence
+    note: >-
+      The full table is in the modifier list. The ones crafters reach for:
+      Shaper's suffix with 20–21% attack speed and 4–6% chance to deal
+      Double Damage, Elder's suffix with 16–20% increased Area of Effect,
+      Hunter's suffix giving hits with the weapon a 66–80% chance to ignore
+      enemy Physical Damage Reduction, and extra Weapon Range from Warlord
+      (+0.3 metres) or Elder (+0.2). The Crusader and Warlord prefixes with
+      65–69% increased Physical Damage share the group of the hybrid with
+      Accuracy, so they replace it and do not stack with it. An influenced
+      warstaff cannot be fractured.
+  - method: strands
+    note: "See the Memory Strands section below: the Alteration crafts are where strands earn their keep on this weapon."
+memoryStrands: >-
+  A warstaff has the problem [[Memory Strands]] address, in a harsher form
+  than a maul. The percentage prefixes are a modest share of the pool and
+  their good tiers are a sliver of that: "Merciless" weighs 25 in a family
+  of 3,775. Strands raise the tier of whatever is rolled and do nothing for
+  which family appears, so they help with the second half of that problem
+  and not the first.
+
+
+  The use that fits is the cheap one. Put strands on a white item level 83
+  base with an [[Orb of Remembrance]], roll with [[Orb of Alteration]]s,
+  which spend at most 8 strands each by the data-mined table, and finish
+  with a [[Regal Orb]] or [[Exalted Orb]]. The game shows the cost of each
+  orb before you use it.
+
+
+  The two crafts this category leans on do not use strands at all, by player
+  testing: Fossils and Harvest reforges. An ordinary base does the same job
+  there.
+reading:
+  intro: >-
+    Hold Alt over a warstaff and count first: **how many of the three
+    prefixes are physical, and at what tier?** Then read the suffixes more
+    carefully than you would on a maul. Attack speed is always wanted, and
+    with 8% base crit the two critical strike suffixes are damage as well.
+  prefixes:
+    text: >-
+      Three families add physical damage and stack, because they are three
+      groups: pure increased Physical Damage, the hybrid with Accuracy
+      Rating, and flat added Physical Damage. A finished weapon has all
+      three.
+
+
+      What competes with them is particular to this class. Maximum Mana is
+      the single most common prefix, one roll in five. Five families of
+      socketed gem levels, Chaos, Cold, Fire, Lightning and Melee, share one
+      group and take another fifth between them. Only "+2 to Level of
+      Socketed Melee Gems" is of use to an attack build, and only when the
+      main skill is in the staff.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "The largest multiplier on the weapon. Local: it multiplies the base's hit and any flat physical damage on it."
+        aim: "T3, 135–154% (ilvl 60). T1 is 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "The same multiplier in a different group, so it sits beside the pure one. The bench cannot supply it, which makes it the percentage to hope for when rolling."
+        aim: "T3, 55–64% (ilvl 60). T1 is 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Raises the number the percentages multiply. The easiest of the three to roll, and the one the bench replaces worst."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 needs ilvl 77."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Two levels on a melee skill socketed in the staff. Common at +2 (1 prefix roll in 53), but it takes a prefix from physical damage."
+        aim: "+2 (ilvl 63)."
+      - mod: "+# to maximum Mana"
+        why: "The most common prefix on a warstaff and the first thing to design out of a craft. A Shuddering Fossil removes it."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "For builds that scale that element. On a physical warstaff each is a wasted prefix, and together they are more likely than the three physical families."
+  suffixes:
+    text: >-
+      Attack speed is one suffix roll in ten and can be guaranteed by a
+      Speed reforge. On a maul that would be the end of the suffix side. On
+      a warstaff a crit build also wants Critical Strike Chance and Global
+      Critical Strike Multiplier, three suffixes in all, and the bench can
+      supply only one modifier. That is why this guide treats good suffixes
+      as something worth a lock.
+
+
+      Block is the other suffix with a home here. Chance to Block Attack
+      Damage adds to the implicit: 25% and 18–20% is 43–45% from the weapon.
+      Rods roll it half as often.
+
+
+      The filler is stun duration, stun threshold, Accuracy, attributes,
+      mana regeneration and gain on kill: more than half the side.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local: it multiplies the base's 1.25 or 1.3 attacks per second. The only suffix every warstaff wants."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local, so it multiplies a base of 7.5–8.5%: the same suffix gives about 60% more critical strikes than on a 5% maul."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "The partner of crit chance. Global: it affects the character."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "+#% Chance to Block Attack Damage"
+        why: "Stacks with the block implicit of an ordinary warstaff. Half the weight on a Heist rod."
+        aim: "T2, 16–17% (ilvl 66). T1 is 18–20% (ilvl 77)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Not in the natural pool. The bench sells 8–10% and the veiled version is 12–14%. The default third suffix for a build that does not crit."
+      - mod: "#% increased Stun Duration on Enemies"
+        why: "Stands for the filler. With reduced Enemy Stun Threshold it is 11% of suffix rolls and no damage at all."
+approach:
+  principle: >-
+    **Prefixes first, with the suffixes counted before you start.** The
+    physical prefixes are still the weapon and still the hard side. But a
+    crit warstaff has three suffixes it wants and one bench modifier to
+    spend, so decide at the outset whether this staff crits. That answer
+    sets how much of the suffix side must be rolled, and whether a good
+    suffix side is something to protect.
+  order:
+    - title: "Choose block or charges, then the hit, then the item level"
+      text: >-
+        Ordinary warstaff or rod is a build question. Among the ordinary top
+        bases, Ezomyte is crit, Maelström is damage and Judgement is speed.
+        Item level 77 for everything but the last percentage tier; 83 for
+        that.
+    - title: "Decide whether the staff crits"
+      text: >-
+        If it does not, attack speed and the bench's Double Damage finish
+        the suffix side and all effort goes into prefixes. If it does, two
+        more suffixes need a source and the bench has one slot.
+    - title: "Get the physical prefixes with a tool that works here"
+      text: >-
+        No Essence. **One** rolled prefix: Alterations and a Regal Orb.
+        **Two, cheaply:** the Harvest Physical reforge. **Three, with attack
+        speed:** Jagged and Shuddering Fossils. **Three at high tiers:** a
+        fractured base.
+    - title: "Fill the prefix side by the group rule"
+      text: >-
+        The rolled hybrid leaves room for the bench's pure percentage; the
+        rolled pure percentage leaves room only for its flat damage. So when
+        you have a choice of what to keep, the hybrid is the better roll.
+    - title: "Attack speed, then crit"
+      text: >-
+        Behind a prefix lock, a Speed reforge gives attack speed every time
+        and a Critical reforge gives one of the two crit suffixes. Use the
+        reforge for the modifier you want at a high tier and the bench for
+        the other.
+    - title: "Protect whichever side is finished first"
+      text: >-
+        A lock is 4 Divine Orbs and a Sacred Orb whichever side it guards.
+        On this weapon either side can be the one worth it. Count the open
+        slots before paying: each lock sits on the side it does not
+        protect.
+  finishing: >-
+    Quality to 20%, sockets and links, then the numbers inside each tier. A
+    [[Divine Orb]] rerolls all of them together; use one when the important
+    modifier is low in its range and the others are not at the top of
+    theirs.
+
+
+    If the bench slot is unused, use it. On a non-crit staff that is Double
+    Damage; on a crit staff it is whichever crit suffix did not roll.
+  stopping: >-
+    A warstaff with **one** rolled physical prefix of Tier 4 or better, a
+    bench prefix beside it and attack speed is a weapon for early maps.
+    **Two** rolled physical prefixes and a benched third, with attack speed
+    at 20% or more, carry most builds through the Atlas. The third rolled
+    prefix, Tier 1, and a full crit suffix side are where the cost
+    multiplies.
+
+
+    Stop when the next step costs more than the improvement is worth to
+    you, and decide that before you start. If a step fails and the staff is
+    now worse than one you could buy for what is left, buy that one.
+special:
+  - mod: "+# to Maximum Power Charges and Maximum Endurance Charges"
+    source: "Base implicit"
+    where: "The implicit of the three Heist rods. Not craftable: you choose it by choosing the base, and you give up the block implicit for it."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "8–10% from the [[Crafting Bench]] for 8 Chaos Orbs. 12–14% as an unveiled suffix, from a veiled drop, a [[Veiled Chaos Orb]] or a [[Veiled Exalted Orb]]."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25% chance. Bench: 95–105% with 18–20%, for 8 Chaos Orbs. Versions exist for Bleeding, Poison and Blind. All share a group with pure increased Physical Damage."
+  - mod: "+#% Critical Strike Multiplier while a Rare or Unique Enemy is within # metres"
+    source: "Bench / Veiled"
+    where: "39–45% from the bench for 4 Chaos Orbs; 54–60% unveiled. A different group from Global Critical Strike Multiplier, so a crit staff can carry both."
+  - mod: "Hits can't be Evaded"
+    source: "Bench"
+    where: "A bench prefix for 4 Exalted Orbs. It costs a prefix slot, the expensive side, so it is for builds with no other answer to accuracy."
+  - mod: "#% increased Attack Speed / #% chance to deal Double Damage"
+    source: "Shaper influence"
+    where: "A Shaper suffix, 20–21% attack speed with 4–6% chance, on a Shaper-influenced warstaff of item level 75 or higher. Same group as plain attack speed."
+  - mod: "Hits with this Weapon have #% chance to ignore Enemy Physical Damage Reduction"
+    source: "Hunter influence"
+    where: "A Hunter suffix, 66–80% at item level 71."
+  - mod: "+# metres to Weapon Range"
+    source: "Warlord / Elder influence"
+    where: "A suffix: +0.3 metres from Warlord influence at item level 73, +0.2 from Elder at 85."
+  - mod: "Socketed Skills deal 20% more Attack Damage"
+    source: "Fossil / Shaper influence"
+    where: "Rolls only in a Fossil craft, or as a Shaper prefix at item level 83. Only useful when the main skill is socketed in the staff."
+  - mod: "#% chance for Bleeding inflicted with this Weapon to deal #% more Damage"
+    source: "Fossil"
+    where: "A Fossil-only prefix: 60% chance to deal 100% more Damage, with a matching one for Poison. It carries the physical and attack tags."
+mistakes:
+  - "**Buying Essences for a warstaff.** The data has no Essence modifier for the class. Test one before you plan on any."
+  - "**Using a Jagged Fossil alone.** It leaves Mana in the prefix pool and pushes attack speed down to 7% of suffix rolls by raising leech. The Shuddering Fossil beside it fixes both."
+  - "**Crafting \"Cannot roll Caster Modifiers\" to clean the pool.** There are no caster modifiers in it. That is a Divine Orb for nothing."
+  - "**Treating the suffixes as free on a crit staff.** Three are wanted and the bench supplies one."
+  - "**Benching pure increased Physical Damage onto a staff that already rolled it.** One group. The bench's flat Physical Damage is the craft that fits."
+  - "**Picking a rod for a block build.** No block implicit, and half the chance of the block suffix."
+  - "**Crafting on the wrong item level.** A level 82 base can never roll \"Merciless\"."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, tag and bench cost quoted here, and the absence of Essence entries for the Warstaff class. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers and the change to the \"Cannot roll\" modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Speed, Critical and Physical reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: a crafted modifier of the same group blocks an unveil choice. Partly older than 3.30." }

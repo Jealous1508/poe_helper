@@ -1,0 +1,173 @@
+category: jewels
+title: "Jewel critical strike multiplier, và ô thứ tư"
+level: 4
+summary: "Kế hoạch đầy đủ cho một jewel melee hàng đỉnh: một cặp Magic hiếm, một Imprint cho Regal Orb, một Exalted Orb, và kỷ luật để yên một modifier thứ tư tệ."
+goal: >-
+  Một jewel Rare có hai critical strike multiplier và Life, cùng modifier thứ
+  tư tốt nhất mà một orb cho nó được. Ở đây không có công cụ nào mới. Thứ làm
+  nó thành ví dụ jewel khó nhất là giá của từng giai đoạn, và quyết định cuối
+  cùng: trên một item mà **không gì khóa được và không gì thêm vào được một
+  cách chắc chắn**, biết ván cược nào là miễn phí và ba ván nào thì không.
+base: "Crimson Jewel"
+itemLevel: 80
+baseWhy: >-
+  Các multiplier cho weapon melee chỉ roll trên Crimson và Viridian, mà
+  Crimson roll ra Life thường xuyên hơn và có pool nhỏ hơn. Item level không
+  liên quan tới các modifier. Ví dụ này dành cho weapon hai tay; các
+  multiplier một tay và dual wield nằm trong cùng group và hoạt động y như
+  vậy.
+methods: [currency, beast, finishing]
+result:
+  prefixes:
+    - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+    - { text: "6% increased maximum Life" }
+  suffixes:
+    - { text: "+14% to Melee Critical Strike Multiplier" }
+    - { text: "+13 to Dexterity" }
+needs:
+  - { item: "Một Crimson Jewel", amount: "1", note: "item level nào cũng được" }
+  - { item: "[[Orb of Alteration]]", amount: "hàng nghìn", note: "xem phần xác suất" }
+  - { item: "[[Orb of Augmentation]]", amount: "50–100" }
+  - { item: "[[Craicic Croaker]]", amount: "khoảng 10", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "khoảng 10" }
+  - { item: "[[Exalted Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "1–2" }
+cost: >-
+  Cặp Magic là phần lớn chi phí: Alteration tính bằng nghìn, hoặc giá mua
+  jewel Magic đó từ người đã roll ra nó. Rồi khoảng mười Imprint, một
+  [[Exalted Orb]] và một hai [[Divine Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Điều phép tính có nói là vì sao jewel
+  multiplier làm sẵn lại có giá như vậy, và rằng tự làm một cái chỉ đáng khi
+  bạn cũng bán được những cái suýt trúng.
+odds: >-
+  **Giai đoạn 1.** Prefix multiplier hai tay chiếm 1.40% weight prefix của
+  Crimson. Một trong hai suffix multiplier chiếm 2.71% weight suffix của nó.
+  Cả hai trên một jewel Magic: khoảng 0.038%, 1 trên 2,600 jewel hai
+  modifier, theo phép tính của chúng tôi.
+
+
+  **Giai đoạn 2.** Regal Orb trúng khoảng 1 trên 9 lần: năm prefix trong danh
+  sách chiếm 14.6% weight prefix còn lại và ba suffix trong danh sách chiếm
+  6.9% weight suffix còn lại, coi hai phía có khả năng ngang nhau, và đó là
+  giả định của chúng tôi.
+
+
+  **Giai đoạn 3.** Khi còn một ô suffix, Exalted Orb thêm một suffix trong
+  danh sách khoảng 1 trên 14 lần, và riêng multiplier thứ ba là 1 trên 73
+  lần.
+steps:
+  - title: "Giai đoạn 1: cặp Magic"
+    do: >-
+      Dùng [[Orb of Alteration]], và một [[Orb of Augmentation]] mỗi khi một
+      phía đã đúng còn phía kia trống, tới khi jewel có **+% to Critical
+      Strike Multiplier with Two Handed Melee Weapons** làm prefix và **+% to
+      Melee Critical Strike Multiplier** hoặc **+% to Global Critical Strike
+      Multiplier** làm suffix.
+    why: >-
+      Ba multiplier là ba group khác nhau, nên chúng cộng dồn, và mỗi cái có
+      weight 250 trong một pool khoảng 18,000. Hai cái trên một jewel Magic
+      là thứ hiếm trong lần craft này. Mọi việc sau nó đều được làm để không
+      bao giờ phải roll nó lần thứ hai.
+    check: >-
+      Một prefix multiplier với bất kỳ suffix nào trong danh sách, hoặc một
+      suffix multiplier với Life, đã là jewel đáng bán hoặc đáng dùng. Hãy để
+      riêng những cái đó trong lúc làm; chúng trả tiền cho số Alteration.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }]
+      suffixes: [{ text: "+14% to Melee Critical Strike Multiplier" }]
+  - title: "Giai đoạn 2: Imprint, rồi Regal Orb"
+    do: >-
+      Làm một Imprint của jewel Magic bằng một [[Craicic Croaker]]. Dùng một
+      [[Regal Orb]]. Giữ kết quả nếu modifier thứ ba là suffix multiplier còn
+      lại, increased Attack Speed, increased Melee Damage, hoặc ở phía
+      prefix: increased maximum Life, Damage with Two Handed Weapons, Global
+      Physical Damage, damage với loại weapon của bạn, hoặc Attack Speed with
+      Two Handed Melee Weapons. Nếu không, dùng Imprint, làm một cái mới rồi
+      lặp lại.
+    why: >-
+      Một jewel tốn hàng nghìn Alteration chính là trường hợp mà Imprint sinh
+      ra để phục vụ. Mỗi lần thử lại tốn một Regal Orb và một bộ beast thay
+      cho cả giai đoạn 1.
+    check: >-
+      Để ý Regal Orb đã lấp phía nào. Nếu nó thêm một prefix, như ở đây, thì
+      ô trống cuối cùng là suffix và Exalted Orb chỉ thêm được suffix.
+    fail: >-
+      Hết Croaker trước khi trúng: Regal thêm một lần không có lưới an toàn
+      và chấp nhận thứ nó ra. Hai multiplier và một dòng nằm không vẫn là một
+      jewel tốt.
+    state:
+      prefixes:
+        - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+        - { text: "6% increased maximum Life" }
+      suffixes:
+        - { text: "+14% to Melee Critical Strike Multiplier" }
+  - title: "Giai đoạn 3: một Exalted Orb"
+    do: >-
+      Giữ cái [[Imprint]] chưa dùng trong stash. Dùng một [[Exalted Orb]] lên
+      jewel.
+    why: >-
+      Đây là lần roll miễn phí duy nhất trên jewel. Không modifier jewel nào
+      có hại, nên điều tệ nhất một modifier được thêm có thể làm là không làm
+      gì cả. Ở đây nó trượt, như 13 trên 14 lần vẫn vậy: nó thêm Dexterity.
+    state:
+      prefixes:
+        - { text: "+17% to Critical Strike Multiplier with Two Handed Melee Weapons" }
+        - { text: "6% increased maximum Life" }
+      suffixes:
+        - { text: "+14% to Melee Critical Strike Multiplier" }
+        - { text: "+13 to Dexterity" }
+  - title: "Giai đoạn 4: để yên modifier thứ tư"
+    do: >-
+      Đừng làm gì với dòng nằm không. Đi tới bước cuối.
+    why: >-
+      Mọi cách gỡ nó đều là ván cược tệ hơn ván bạn vừa chơi. Một
+      [[Orb of Annulment]] gỡ ngẫu nhiên một trong bốn modifier: 1 trên 4
+      lần nó lấy Dexterity, 3 trên 4 lần nó lấy một modifier bạn đã tiêu hàng
+      nghìn Alteration để có. Kể cả khi thành công, ô đó cũng chỉ trống trở
+      lại, và Exalted Orb kế tiếp trượt 13 trên 14 lần. "Reroll a random
+      modifier" của bench giá 8 [[Chaos Orb]] cũng nhắm trúng với tỉ lệ 1
+      trên 4 như thế. Và khi cả hai prefix đã đầy thì không còn chỗ cho công
+      thức beast thêm một prefix và gỡ một suffix.
+    check: >-
+      Imprint thay đổi phần thiệt hại, không thay đổi xác suất. Khi bạn còn
+      giữ nó, trường hợp xấu nhất của một Annulment hỏng là quay về cặp Magic
+      và về giai đoạn 2, với khoảng chín lần thử Regal nữa. Nếu cái giá đó
+      bạn chấp nhận được và bạn quyết phải có dòng trúng thứ tư, đây là cách
+      duy nhất khiến ván cược này biện minh được. Không có Imprint thì không.
+  - title: "Hoàn thiện: chỉ số"
+    do: >-
+      Nhìn các roll: 15–18% và 12–15% trên hai multiplier, 5–7% trên Life.
+      Nếu các multiplier gần đáy khoảng của chúng, dùng một [[Divine Orb]].
+    why: >-
+      Một modifier jewel có một tier, nên roll là khác biệt duy nhất giữa
+      jewel này và cái tốt nhất có cùng các dòng. Một Divine Orb roll lại mọi
+      chỉ số cùng lúc và cũng có thể hạ chúng xuống; hãy dùng khi những dòng
+      quan trọng đang thấp và dừng khi chúng hết thấp.
+variations: >-
+  **Ba multiplier.** Nếu giai đoạn 2 thêm suffix multiplier còn lại, jewel có
+  cả ba và một prefix trống. Khi đó Exalted Orb roll một prefix, và ra một
+  cái trong danh sách khoảng 1 trên 7 lần. Jewel đó hiếm hơn cái trong hình
+  nhiều lần: Regal Orb tìm ra multiplier thứ ba khoảng 1 trên 150 lần.
+
+
+  **Cho spell.** Cobalt Jewel không có prefix multiplier theo loại weapon.
+  Cặp ở đó là một multiplier with Fire, Cold hoặc Lightning Skills làm prefix
+  (weight 200 tới 250) và Critical Strike Multiplier for Spell Damage hoặc
+  bản global làm suffix.
+
+
+  **Corrupt nó.** Một [[Vaal Orb]] trên jewel đắt cỡ này chỉ hợp lý trên một
+  cái dự phòng. Xem ví dụ corruption để biết xác suất.
+mistakes:
+  - "Dùng Regal Orb lên cặp Magic mà không có Imprint."
+  - "Annul một jewel bốn modifier để dọn một dòng nằm không. Ba trong bốn thứ nó có thể gỡ chính là cái jewel."
+  - "Coi ô thứ tư là một vấn đề. Ba modifier do bạn chọn và một cái nằm không chính là dáng vẻ của một jewel hoàn chỉnh."
+  - "Dùng Divine Orb trước khi các modifier đã chốt, hoặc sau khi corrupt, lúc nó không còn tác dụng."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool, weight và các group của Crimson Jewel, cùng các lựa chọn roll lại của bench và giá của chúng. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các công thức thêm-và-gỡ." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Lựa chọn bench roll lại một modifier ngẫu nhiên của item Rare." }

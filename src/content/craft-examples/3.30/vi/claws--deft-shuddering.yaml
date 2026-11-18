@@ -1,0 +1,161 @@
+category: claws
+title: "Speed, crit và crit: một phía suffix từ hai Fossil"
+level: 3
+summary: "Một Fossil nhân hai suffix critical strike lên, cái kia nhân attack speed lên và xóa mọi modifier Mana. Đi cùng nhau, chúng biến phía khó của một cây claw crit thành kết quả thường gặp."
+goal: >-
+  Một cây claw crit elemental có attack speed, Critical Strike Chance và
+  Critical Strike Multiplier đều roll ra, điều mà bench không làm được vì nó
+  chỉ cấp một trong số đó. Bài học là **hai Fossil trong một Resonator, mỗi
+  cái được chọn vì thứ nó thêm vào và vì thứ nó loại đi.**
+base: "Imperial Claw"
+itemLevel: 77
+baseWhy: >-
+  Cây claw endgame nhanh nhất, nên added elemental damage được tung ra nhiều
+  lần nhất. Item level 77 mở Tier 1 của attack speed (26–27%); Tier 1 của cả
+  hai suffix critical strike đã mở từ 73. Ở mốc này các prefix elemental dừng
+  lại thấp hơn mức tốt nhất của chúng một hoặc hai tier, và đó là đánh đổi
+  đúng cho một lần craft bằng Fossil: các lần roll lại rơi vào tier giữa
+  nhiều hơn hẳn so với tier đỉnh.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["Grants 46 Life per Enemy Hit"]
+  prefixes:
+    - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+    - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+    - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: fossil }
+    - { text: "31% increased Critical Strike Chance", how: fossil }
+    - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "10–20" }
+  - { item: "[[Shuddering Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "một Resonator có hai socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "5", note: "một để bắt đầu, bốn cho bench" }
+cost: >-
+  Hai Fossil và một Resonator hai socket cho mỗi lần thử, tất cả đến từ
+  Delve. Trong 3.30, Sulphite đến từ những map luôn sinh ra nó, nên đây là
+  lần craft dành cho người chơi Delve hoặc mua từ người chơi Delve. Bước
+  bench tốn 4 [[Orb of Alchemy]].
+odds: >-
+  Với cả hai Fossil, theo phép tính của chúng tôi từ weight ở item level 77,
+  một lần roll suffix ra attack speed trong 40% số lần và ra mỗi suffix
+  critical strike trong 26%: 92% cho cả ba cộng lại, so với 36% khi không có
+  Fossil. **Khi một kết quả có ba suffix, chúng là đúng ba cái đó khoảng hai
+  trên ba lần.**
+
+
+  Tier thì không bị đụng tới: mỗi cái trong ba ra Tier 2 trở lên khoảng 1
+  trên 11 lần roll suffix. Ở phía prefix, khi Mana đã bị loại, 61% số lần
+  roll là added Fire, Cold hoặc Lightning Damage. Các con số này chỉ tính
+  modifier tự nhiên; Fossil còn roll được modifier riêng của chúng, nên các
+  con số sẽ thấp đi một chút.
+steps:
+  - title: "Đưa cây claw lên Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên một Imperial Claw trắng item level 77.
+      Nó roll ra cái gì không quan trọng.
+    why: >-
+      Một Chaotic Resonator roll lại một item Rare. Cây claw chỉ cần là Rare
+      để cái đầu tiên dùng được.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "+124 to maximum Mana" }
+        - { text: "Adds 17 to 33 Physical Damage" }
+      suffixes:
+        - { text: "+34 to Intelligence" }
+        - { text: "52% increased Mana Regeneration Rate" }
+  - title: "Nạp cả hai Fossil rồi roll lại"
+    do: >-
+      Đặt một [[Deft Fossil]] và một [[Shuddering Fossil]] vào một
+      [[Potent Chaotic Resonator]] rồi dùng nó lên cây claw.
+    why: >-
+      Hãy đọc cả hai nửa trong dòng mô tả của mỗi Fossil. **Deft:** more
+      Critical modifiers, no Attribute modifiers. Tức nhân cả hai suffix
+      critical strike lên mười lần và xóa Dexterity cùng Intelligence.
+      **Shuddering:** more Speed modifiers, no Mana modifiers. Tức nhân
+      attack speed lên và xóa Mana Regeneration, mana on kill, mana leech
+      và, ở phía bên kia, prefix maximum Mana, vốn là prefix rác hay gặp nhất
+      trên claw.
+    check: >-
+      Một Resonator hai socket: các cỡ khác nhau ở số Fossil chúng chứa
+      được, nên hãy nhìn số socket trên cái của bạn trước khi mua cả chồng.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 44 to 89 Cold Damage", how: fossil }
+        - { text: "Adds 14 to 29 Physical Damage", how: fossil }
+        - { text: "+2 to Level of Socketed Melee Gems", how: fossil }
+      suffixes:
+        - { text: "19% increased Attack Speed", how: fossil }
+        - { text: "+36% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Đánh giá suffix theo họ, rồi theo tier, rồi đếm prefix"
+    do: >-
+      **Họ:** attack speed, Critical Strike Chance và Critical Strike
+      Multiplier, đủ cả ba chưa? **Tier:** đặt ngưỡng trước; với một cây claw
+      chạy map, attack speed từ 20% trở lên và mỗi suffix critical strike từ
+      25% trở lên. **Prefix:** ít nhất hai prefix added elemental, và một ô
+      còn trống.
+    why: >-
+      Kết quả ở trên có hai trong ba suffix, một cái thấp, và ba prefix của
+      ba build khác nhau. Prefix trống là một phần của ngưỡng vì bench đã có
+      sẵn prefix thứ ba, mà nó không craft được lên một phía đã đầy.
+    fail: >-
+      Roll lại bằng một cặp Fossil khác. Không gì được giữ lại giữa các lần
+      thử, nên chưa có gì để bảo vệ.
+  - title: "Lặp lại tới khi phía suffix xong"
+    do: >-
+      Cứ roll lại tới khi ba suffix vượt ngưỡng của bạn. Chấp nhận hai prefix
+      elemental ở bất kỳ tier nào tạm được.
+    why: >-
+      Bộ ba suffix là thứ không bước nào về sau cho bạn được. Prefix
+      elemental ở tier giữa đủ dễ ra, đến mức khăng khăng đòi tier cao ở đây
+      sẽ nhân chi phí lên chỉ vì nửa dễ của item.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+        - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Bench hệ số nhân"
+    do: >-
+      Ở [[Crafting Bench]], craft 24–32% increased Elemental Damage with
+      Attack Skills giá 4 [[Orb of Alchemy]].
+    why: >-
+      Nó là một group riêng, nó nhân cả hai prefix added damage, và bản tự
+      nhiên chỉ chiếm 3% số lần roll prefix. Một element thứ ba từ bench
+      (35–41 to 63–73 giá 4 Chaos Orb) là phương án thay thế khi build scale
+      mạnh một element.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+        - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+        - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+variations: >-
+  **Một cây claw crit physical.** Thêm một [[Jagged Fossil]] trong một
+  Resonator ba socket: các họ physical thành khoảng ba trên bốn lần roll
+  prefix. Nó cũng nhân hai suffix leech lên, vì chúng mang tag physical, nên
+  bộ ba suffix tụt từ 92% xuống 86% số lần roll. Ví dụ khó nhất của loại item
+  này được dựng trên Resonator đó.
+
+
+  **Ba suffix tốt và prefix tệ.** Ngừng roll lại. Ví dụ kế tiếp giữ suffix và
+  thay phía prefix.
+mistakes:
+  - "Chỉ đọc nửa \"more\" của một Fossil. Ở đây phần xóa làm được nhiều việc ngang phần nhân."
+  - "Giữ một kết quả có ba prefix và không còn chỗ cho bench trong khi prefix thứ ba là rác."
+  - "Mong suffix Tier 1. Fossil làm cho các họ dễ ra; còn bên trong một họ thì tier nào cũng vẫn có khả năng như nhau."
+  - "Dùng cách này trên một base có [[Memory Strands]]. Theo thử nghiệm của người chơi, Fossil không tiêu mà cũng không dùng tới strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

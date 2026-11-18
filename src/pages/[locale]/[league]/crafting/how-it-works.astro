@@ -1,0 +1,211 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import GameImage from '../../../../components/GameImage.astro';
+import Rich from '../../../../components/Rich.astro';
+import Tag from '../../../../components/Tag.astro';
+import Level from '../../../../components/crafting/Level.astro';
+import Sources from '../../../../components/crafting/Sources.astro';
+import { getLeague, leagues } from '../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../i18n';
+import { getChangelog } from '../../../../lib/changelog';
+import { getCrafting } from '../../../../lib/crafting';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.filter((league) => getCrafting(league.id, 'en')).map((league) => ({ params: { locale, league: league.id } })),
+  );
+}
+
+const { locale: rawLocale, league: leagueId } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const crafting = getCrafting(league.id, locale)!;
+const overview = crafting.overview;
+const changelog = new Map(getChangelog(league.id, locale).entries.map((entry) => [entry.id, entry]));
+const methods = [...overview.methods].sort((a, b) => a.level - b.level);
+const toc = [
+  { id: 'anatomy', label: t(locale, 'craft.start.anatomy') },
+  { id: 'toolbox', label: t(locale, 'craft.start.toolbox') },
+  { id: 'memory-strands', label: t(locale, 'craft.section.strands') },
+  { id: 'patch', label: t(locale, 'craft.patch', { version: league.id }) },
+  { id: 'glossary', label: t(locale, 'craft.glossary') },
+];
+---
+<Base locale={locale} league={league} title={t(locale, 'craft.how.title')} description={t(locale, 'craft.how.lede')} section="crafting" isFallback={crafting.overviewIsFallback}>
+  <div class="container page-head">
+    <a class="back" href={pagePath(locale, league.id, 'crafting')}>← {t(locale, 'craft.title')}</a>
+    <h1>{t(locale, 'craft.how.title')}</h1>
+    <p class="lede">{t(locale, 'craft.how.lede')}</p>
+  </div>
+
+  <div class="container layout">
+    <aside class="side">
+      <nav class="toc" aria-label={t(locale, 'build.toc')}>
+        {toc.map((item) => <a href={`#${item.id}`}>{item.label}</a>)}
+        <a href="#sources">{t(locale, 'common.sources')}</a>
+      </nav>
+    </aside>
+
+    <article class="article">
+      <section id="anatomy">
+        <h2>{t(locale, 'craft.start.anatomy')}</h2>
+        <ol class="anatomy">
+          {overview.anatomy.map((part, index) => (
+            <li id={`anatomy-${part.id}`} data-reveal>
+              <span class="anatomy__n" aria-hidden="true">{index + 1}</span>
+              <div>
+                <h3>{part.title}</h3>
+                <Rich text={part.text} league={league.id} where={overview.where} />
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section id="toolbox">
+        <h2>{t(locale, 'craft.start.toolbox')}</h2>
+        <p class="muted note">{t(locale, 'craft.toolbox.note')}</p>
+        <div class="methods">
+          {methods.map((method) => (
+            <article class="method" id={`method-${method.id}`} data-reveal>
+              <header>
+                <div class="method__icons">
+                  {method.icons.map((id) => <GameImage id={id} size={34} where={overview.where} class="game-image--bare" />)}
+                </div>
+                <div class="method__title">
+                  <h3>{method.name}</h3>
+                  <Level level={method.level} locale={locale} />
+                </div>
+                <p class="method__summary">{method.summary}</p>
+              </header>
+              <Rich text={method.text} league={league.id} where={overview.where} />
+              <div class="method__fit">
+                <div data-fit="good">
+                  <h4>{t(locale, 'craft.method.good')}</h4>
+                  <Rich text={method.good} league={league.id} where={overview.where} />
+                </div>
+                {method.bad && (
+                  <div data-fit="bad">
+                    <h4>{t(locale, 'craft.method.bad')}</h4>
+                    <Rich text={method.bad} league={league.id} where={overview.where} />
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="memory-strands">
+        <h2>{t(locale, 'craft.section.strands')}</h2>
+        <Rich text={overview.memoryStrands.summary} league={league.id} where={overview.where} class="strands__summary" />
+        <Rich text={overview.memoryStrands.text} league={league.id} where={overview.where} />
+        <h3>{t(locale, 'craft.strands.rules')}</h3>
+        <ol class="rules">
+          {overview.memoryStrands.rules.map((rule) => <li><Rich text={rule} league={league.id} where={overview.where} inline /></li>)}
+        </ol>
+        <div class="callout">
+          <h3>{t(locale, 'craft.strands.advice')}</h3>
+          <Rich text={overview.memoryStrands.advice} league={league.id} where={overview.where} />
+        </div>
+      </section>
+
+      <section id="patch">
+        <h2>{toc[3].label}</h2>
+        <ul class="patch">
+          {overview.patch.map((change) => {
+            const entry = change.entry ? changelog.get(change.entry) : undefined;
+            return (
+              <li>
+                {entry && (
+                  <div class="patch__head">
+                    <Tag kind={entry.verdict} label={t(locale, `verdict.${entry.verdict}`)} />
+                    <a href={`${pagePath(locale, league.id, 'changelog')}#${entry.id}`}>{entry.title}</a>
+                  </div>
+                )}
+                <Rich text={change.note} league={league.id} where={overview.where} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section id="glossary">
+        <h2>{t(locale, 'craft.glossary')}</h2>
+        <dl class="glossary">
+          {overview.glossary.map((entry) => (
+            <div>
+              <dt>{entry.term}</dt>
+              <dd><Rich text={entry.text} league={league.id} where={overview.where} inline /></dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <Sources sources={overview.sources} league={league.id} locale={locale} where={overview.where} verified={overview.verified} />
+    </article>
+  </div>
+</Base>
+
+<style>
+  .back { font-size: 0.88rem; font-weight: 500; text-decoration: none; color: var(--text-muted); }
+  .back:hover { color: var(--accent); }
+  .page-head h1 { margin-top: 1.2rem; }
+  .layout { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 3rem; align-items: start; }
+  .side { position: sticky; top: calc(var(--header-h) + 1.5rem); font-size: 0.88rem; }
+  .toc { display: grid; border-top: 1px solid var(--border); padding-top: 0.8rem; }
+  .toc a { padding: 0.32rem 0; color: var(--text-muted); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+  .article { min-width: 0; }
+  .article section { padding-bottom: 3rem; scroll-margin-top: calc(var(--header-h) + 1rem); }
+  .article section > :global(.rich), .article section > p { max-width: var(--measure); }
+  .article h2 { padding-bottom: 0.55rem; border-bottom: 2px solid var(--text); margin-bottom: 1.1rem; }
+  .note { font-size: 0.92rem; }
+
+  .anatomy { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+  .anatomy li { position: relative; display: grid; grid-template-columns: 2.1rem minmax(0, 1fr); gap: 0 1rem; margin: 0; padding-bottom: 1.2rem; scroll-margin-top: calc(var(--header-h) + 1rem); }
+  .anatomy li::before { content: ''; position: absolute; left: 1.02rem; top: 2.1rem; bottom: 0; width: 1px; background: var(--border-strong); }
+  .anatomy li:last-child::before { display: none; }
+  .anatomy__n { display: inline-flex; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); font-weight: 700; font-size: 0.9rem; background: var(--bg); }
+  .anatomy h3 { margin: 0.25rem 0 0.4rem; font-size: 1.2rem; }
+
+  .methods { display: grid; gap: 1.25rem; margin-top: 1.25rem; }
+  .method { padding: 1.2rem 1.4rem 0.9rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); scroll-margin-top: calc(var(--header-h) + 1rem); }
+  .method:target { border-color: var(--accent); }
+  .method > :global(.rich) { max-width: var(--measure); }
+  .method__icons { display: flex; flex-wrap: wrap; gap: 0.3rem; min-height: 0; margin-bottom: 0.5rem; }
+  .method__title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.3rem 1rem; }
+  .method__title h3 { font-size: 1.35rem; margin: 0; }
+  .method__summary { margin: 0.35rem 0 0.9rem; color: var(--text-muted); max-width: var(--measure); }
+  .method__fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0 2rem; margin-top: 0.4rem; padding-top: 0.9rem; border-top: 1px solid var(--border); font-size: 0.93rem; }
+  .method__fit h4 { font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin: 0 0 0.3rem; }
+  .method__fit [data-fit='good'] h4 { color: var(--buff); }
+  .method__fit [data-fit='bad'] h4 { color: var(--nerf); }
+
+  .article :global(.strands__summary) { font-size: 1.06rem; }
+  .article section h3 { margin: 1.6rem 0 0.6rem; font-size: 1.2rem; }
+  .rules { max-width: var(--measure); padding-left: 1.3rem; }
+  .rules li { margin: 0.55em 0; }
+  .rules li::marker { color: var(--accent); font-weight: 700; }
+  .callout { max-width: var(--measure); margin: 1.4rem 0 0; padding: 0.2rem 0 0.2rem 1.1rem; border-left: 3px solid var(--accent); }
+  .callout h3 { font-family: var(--font-body); font-size: 0.78rem !important; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.45rem !important; }
+
+  .patch { list-style: none; padding: 0; margin: 0; max-width: var(--measure); }
+  .patch li { padding: 1rem 0; border-top: 1px solid var(--border); margin: 0; font-size: 0.96rem; }
+  .patch li:first-child { border-top: 0; padding-top: 0; }
+  .patch__head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-bottom: 0.4rem; }
+  .patch__head a { font-weight: 600; text-decoration: none; }
+  .patch__head a:hover { text-decoration: underline; }
+  .glossary { margin: 0; max-width: var(--measure); }
+  .glossary div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--border); font-size: 0.94rem; }
+  .glossary div:first-child { border-top: 0; }
+  .glossary dt { font-weight: 600; }
+  .glossary dd { margin: 0; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .side { display: none; }
+    .glossary div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+  }
+</style>

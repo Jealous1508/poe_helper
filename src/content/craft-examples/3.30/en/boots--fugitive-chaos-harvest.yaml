@@ -1,0 +1,173 @@
+category: boots
+title: "Chaos resistance twice: Fugitive Boots and a Harvest reforge"
+level: 2
+summary: "A reforge \"including a Chaos modifier\" has exactly one modifier to choose from on boots. Add it to a base that already carries chaos resistance, and bench the movement speed."
+goal: >-
+  Boots that carry 40% or more Chaos Resistance on their own, with movement
+  speed and life. Chaos Resistance is the one resistance the lottery is
+  mean with, so this craft never asks the lottery for it. The lesson is
+  **how to read a Harvest reforge: count the modifiers with the tag, and if
+  the count is one, the craft is a guarantee.**
+base: "Fugitive Boots"
+itemLevel: 82
+baseWhy: >-
+  Fugitive Boots are an Atlas base with +17–23% to Chaos Resistance on the
+  implicit, raised from 13–17% in 3.30. They only drop when an item rolls a
+  high enough Item Tier, so find a white pair or buy one.
+
+
+  Item level 81 opens the top tier of the Chaos Resistance suffix, 31–35%.
+  The base is Evasion and Energy Shield, which means mana prefixes; the plan
+  allows for that by taking movement speed from the bench.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["+21% to Chaos Resistance"]
+  prefixes:
+    - { text: "+92 to maximum Life", how: harvest }
+    - { text: "22% increased Movement Speed", how: crafted }
+  suffixes:
+    - { text: "+28% to Chaos Resistance", how: harvest }
+    - { text: "+38% to Cold Resistance", how: harvest }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "to make the base Rare" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 per reforge", note: "plan for 5 to 10 reforges" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+  - { item: "[[Blessed Orb]]", amount: "1–3", note: "optional, for the implicit" }
+cost: >-
+  The white base and a few hundred Vivid Lifeforce. In 3.30 Sacred Flora
+  grow in the map itself, so Lifeforce arrives while you play. The bench
+  step is 4 [[Chaos Orb]]s.
+odds: >-
+  Plain rolling gives Chaos Resistance on about 1 suffix roll in 35 on this
+  base, by our arithmetic. The reforge gives it every time, because it is
+  the only natural modifier on boots with the chaos tag.
+
+
+  Its **tier** is random. If the guaranteed modifier is drawn by weight among
+  the six tiers, which is how reforges are understood to work, half of the
+  results are 21% or more and a third are 26% or more. That has not been
+  measured in 3.30.
+steps:
+  - title: "Make the base Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white Fugitive Boots.
+    why: >-
+      The Harvest craft reforges a Rare item. What the Alchemy rolls does
+      not matter. The implicit is not touched by this or any later step.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes: [{ text: "+58 to maximum Mana" }]
+      suffixes:
+        - { text: "+33 to Intelligence" }
+        - { text: "+30% to Fire Resistance" }
+        - { text: "17% increased Stun and Block Recovery" }
+  - title: "Count before you pay"
+    do: >-
+      Open the boots' modifier list and look for the tag "chaos". On boots
+      one modifier has it: +% to Chaos Resistance, a suffix.
+    why: >-
+      A reforge "including a Chaos modifier" must place at least one
+      modifier with that tag. On a weapon several qualify and the guarantee
+      is loose. Here the list has one entry, so the reforge and "guaranteed
+      Chaos Resistance" are the same thing. Do this count for any Harvest
+      reforge on any item; it takes ten seconds and tells you what you are
+      buying.
+  - title: "Reforge with a Chaos modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Chaos modifier** (100
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      It rerolls the whole item like a Chaos Orb, with one suffix decided
+      in advance. The first result here is poor: the lowest but one tier of
+      Chaos Resistance, and three prefixes with no movement speed among
+      them.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes:
+        - { text: "+63 to maximum Mana", how: harvest }
+        - { text: "+52 to Evasion Rating / +25 to maximum Energy Shield", how: harvest }
+        - { text: "71% increased Evasion and Energy Shield", how: harvest }
+      suffixes:
+        - { text: "+13% to Chaos Resistance", how: harvest }
+        - { text: "Regenerate 27.3 Life per second", how: harvest }
+  - title: "Judge with two rules"
+    do: >-
+      **Suffix rule:** Chaos Resistance of 21% or more. **Prefix rule:**
+      movement speed rolled, or a prefix slot open. Both must hold.
+    why: >-
+      The prefix rule is what makes the craft cheap. On this base movement
+      speed is only 1 prefix roll in 8, because mana takes a quarter of the
+      pool. Requiring it to roll would cost many reforges. Requiring only an
+      open slot lets the bench supply it.
+    fail: >-
+      Either rule broken: reforge again. Each attempt costs 100 Lifeforce
+      and nothing else.
+  - title: "Repeat until both rules hold"
+    do: >-
+      Keep reforging. Read the Chaos Resistance tier first, then count
+      prefixes.
+    why: >-
+      This result passes: 28% Chaos Resistance, life rolled as a bonus, and
+      two prefix slots open.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes: [{ text: "+92 to maximum Life", how: harvest }]
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+  - title: "Bench the movement speed"
+    do: >-
+      At the [[Crafting Bench]], craft **20–24% increased Movement Speed**
+      for 4 [[Chaos Orb]]s. If movement speed rolled by luck, craft maximum
+      Life (56–70 for 4 Orbs of Alchemy) or a resistance instead.
+    why: >-
+      The bench's movement speed is lower than the 30% an Alteration craft
+      reaches. That is the trade this example makes: a certain Chaos
+      Resistance now, a few points of speed given up.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes:
+        - { text: "+92 to maximum Life", how: harvest }
+        - { text: "22% increased Movement Speed", how: crafted }
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+  - title: "Reroll the implicit's number"
+    do: >-
+      Use a [[Blessed Orb]] if the implicit sits near 17%.
+    why: >-
+      It rerolls only the implicit, inside 17–23%. With the suffix, these
+      boots now carry about 50% Chaos Resistance on their own.
+    state:
+      implicits: ["+21% to Chaos Resistance"]
+      prefixes:
+        - { text: "+92 to maximum Life", how: harvest }
+        - { text: "22% increased Movement Speed", how: crafted }
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+variations: >-
+  **An elemental resistance.** Boots have no damage modifiers, so the same
+  count gives the same answer for Fire (50 Wild Lifeforce), Cold (50 Vivid)
+  and Lightning (50 Primal): one tagged modifier, one guaranteed
+  resistance.
+
+
+  **An Essence of Envy.** It also guarantees Chaos Resistance, at a fixed
+  21–25% for Screaming and 31–35% for Deafening. Dearer per try than
+  Lifeforce, and the tier is certain.
+
+
+  **No Eldritch implicits on this pair.** An Ember or Ichor would replace
+  the Chaos Resistance implicit, by its own text. That is the cost of an
+  Atlas base, accepted at the start.
+mistakes:
+  - "Using the Speed reforge to get movement speed here. It guarantees the modifier at a random tier and rerolls the Chaos Resistance you came for."
+  - "Benching movement speed before the reforges are finished. The next reforge removes it."
+  - "Assuming a reforge is a guarantee without counting. The same Chaos reforge on a ring or a weapon has several modifiers to choose from."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The tags on every boots modifier, tiers, weights, the Fugitive Boots implicit and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 implicit of Fugitive Boots, and Harvest growing in the map." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The reforges and their Lifeforce costs." }

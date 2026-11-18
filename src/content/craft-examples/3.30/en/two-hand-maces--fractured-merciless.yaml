@@ -1,0 +1,224 @@
+category: two-hand-maces
+title: "A top-tier maul around a fractured \"Merciless\""
+level: 5
+summary: "The full plan for a best-in-slot physical mace: a fractured Tier 1 prefix, a Fossil for the second, a locked Harvest reforge for attack speed, and three bench modifiers to close it."
+goal: >-
+  A mace with Tier 1 increased Physical Damage that can never be lost, a high
+  hybrid prefix beside it, top attack speed, and every remaining slot filled
+  on purpose. Nothing in this craft is a new tool. What makes it the hardest
+  example is **the order**: each stage makes the next one safe, and choosing
+  the tool for each stage is done by arithmetic, not habit.
+base: "Imperial Maul"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 is the lowest at which "Merciless" (170–179%) and the top
+  hybrid can exist. The Imperial Maul has the highest base damage per second;
+  take a Coronal Maul instead if your build wants its 20% Area of Effect.
+  Since the base is fractured it must have **no influence**: the Fracturing
+  Orb refuses influenced items, and reference pages say a fractured item
+  cannot be given influence afterwards.
+methods: [fracture, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["10% increased Strength"]
+  prefixes:
+    - { text: "177% increased Physical Damage", how: fractured }
+    - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "10% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "A fractured \"Merciless\" Imperial Maul, item level 83+", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Jagged Fossil]]", amount: "dozens" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock, plus 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "12", note: "for the two final bench crafts" }
+cost: >-
+  The fractured base is most of it, and in 3.30 fractured items are rarer
+  than they were: they come from Tier 5 drops, a [[Fracturing Orb]] or a
+  [[Fractured Fossil]]. After that the cost is counted in Fossils for stage
+  2 and in locks for stage 3, each lock being 4 [[Divine Orb]]s and a
+  [[Sacred Orb]].
+
+
+  We give no total. Prices in the first week of a league move too fast, and
+  the two random stages have long tails.
+odds: >-
+  **Stage 2.** With "Merciless" fractured and a [[Jagged Fossil]] in use, a
+  prefix roll is the hybrid about 30% of the time, and the hybrid at Tier 3
+  or better about 1 time in 71, by our arithmetic. Each Fossil rolls up to
+  two prefixes, so at best about one Fossil in 36 lands it. That counts
+  the natural pool only; Fossil-only modifiers, which the data does not tie
+  to a Fossil, would lower it. The same slot with a
+  Deafening Essence of Contempt comes to about 1 in 119, on a single open
+  prefix. That comparison is why the Fossil is the tool here.
+
+
+  **Stage 3.** Every Speed reforge gives attack speed. If its tier is drawn
+  by weight, about one reforge in eight gives Tier 1 at item level 83, and
+  one in four gives Tier 2 or better. Our arithmetic; not measured in 3.30.
+steps:
+  - title: "Stage 1: the fractured prefix"
+    do: >-
+      Buy or find an item level 83 or higher Imperial Maul with **"Merciless"
+      fractured**. To make one instead: roll "Merciless" on a Magic maul,
+      bring the item to a Rare with **exactly four** modifiers, and use a
+      [[Fracturing Orb]].
+    why: >-
+      "Merciless" has a weight of 25 in a prefix pool of about 31,660: one
+      prefix roll in 1,270. It is the one modifier you could not afford to
+      roll again after every failed step, so it is the one to make
+      permanent.
+    check: >-
+      The Fracturing Orb needs at least four modifiers and picks one **at
+      random**. With exactly four it is a one-in-four chance. Do not add a
+      fifth or sixth first: each one lowers the chance.
+    fail: >-
+      It fractured something else. The item is now a base with the wrong
+      modifier locked for ever, and it cannot be fractured again. This is
+      the step that makes most players buy the base.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "14% reduced Enemy Stun Threshold" }
+  - title: "Stage 2: choose the tool by arithmetic, then roll the hybrid"
+    do: >-
+      Use [[Jagged Fossil]]s in [[Primitive Chaotic Resonator]]s until the
+      item has the **hybrid of increased Physical Damage with Accuracy at
+      Tier 3 or better** (55% or more). Flat Physical Damage beside it is a
+      bonus you do not need.
+    why: >-
+      Compare the candidates on the slot that matters. The fractured prefix
+      removes the pure percentage group from the pool. A Jagged Fossil then
+      makes the hybrid about 30% of prefix rolls, against 18% with no
+      Fossil. An Essence of Contempt would guarantee flat Physical Damage,
+      which the bench can supply anyway, and leave the hybrid to an
+      unweighted roll.
+    check: >-
+      The hybrid's tier, with Alt held. "Conqueror's" is Tier 3, "Emperor's"
+      Tier 2, "Dictator's" Tier 1. Ignore the suffixes completely; stage 3
+      replaces them.
+    fail: >-
+      Nothing to fix: the fractured prefix survives every reroll. Use the
+      next Fossil.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "3.1% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "+19 to Strength", how: fossil }
+  - title: "Open a suffix slot if the Fossil filled all three"
+    do: >-
+      Look at the suffix count. Stage 3 needs one open suffix for the lock.
+      If the Fossil left three, keep rolling stage 2 until a result has the
+      hybrid **and** at most two suffixes.
+    why: >-
+      Removing a suffix with an [[Orb of Annulment]] would risk the hybrid:
+      it removes one random modifier that is not fractured. Waiting for a
+      result with room costs Fossils, not the prefix.
+  - title: "Stage 3: lock, and reforge for attack speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** at the bench (4
+      [[Divine Orb]]s and 1 [[Sacred Orb]]). Then, at the
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150 Vivid Lifeforce). Repeat
+      both until attack speed is Tier 1 or 2 and the item has **at least two
+      open suffix slots, or one open slot and a suffix you want**.
+    why: >-
+      The lock protects the hybrid, which is not fractured. The reforge
+      replaces the suffixes and consumes the lock; attack speed is the only
+      speed modifier in the pool, so it is guaranteed. Open suffix slots
+      matter more than a second good suffix here, because the last stage
+      fills them from the bench.
+    check: >-
+      Prefixes unchanged, attack speed tier, number of suffixes. A result
+      with attack speed and nothing else is ideal.
+    fail: >-
+      Low tier, or three suffixes with no room: lock and reforge again.
+      Each repeat is another 4 Divine Orbs and a Sacred Orb, so set a number
+      of attempts before you begin and stop at it.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: harvest }
+  - title: "Stage 4: three bench modifiers"
+    do: >-
+      At the bench, in this order: **Can have up to 3 Crafted Modifiers** (2
+      Divine Orbs, a suffix); **adds 18–24 to 36–42 Physical Damage** (4
+      Chaos Orbs, the third prefix); **8–10% chance to deal Double Damage**
+      (8 Chaos Orbs, the third suffix).
+    why: >-
+      The multi-modifier craft uses a suffix slot and in return lets the
+      bench fill one prefix and one suffix more. That is a net gain of one
+      slot, and here it is the difference between an empty prefix and flat
+      Physical Damage. A crit build takes Critical Strike Multiplier in
+      place of Double Damage.
+    check: >-
+      Six of six slots used, three of them crafted. Nothing on the item is
+      there by accident.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "10% chance to deal Double Damage", how: crafted }
+  - title: "Finish: quality, links, values"
+    do: >-
+      20% quality and six linked sockets if not done. Then a [[Divine Orb]]
+      if the rolls inside the tiers are poor.
+    why: >-
+      A Divine Orb rerolls the value of every modifier at once, the
+      fractured one included, and never changes a tier. Use it when the
+      numbers that matter are low in their ranges, and accept that it can
+      also lower them.
+variations: >-
+  **Flat Physical Damage from the Fossil.** If stage 2 gives the hybrid and
+  a high tier of flat Physical Damage together, all three prefixes are
+  rolled and the bench is free for two suffixes. That is the better weapon
+  and a much rarer result; by our arithmetic it is several hundred Fossils,
+  not dozens.
+
+
+  **With Memory Strands.** Fossils and Harvest do not use strands by player
+  testing, so a strand base changes nothing in stages 2 and 3. An
+  [[Orb of Unravelling]] at the very end could raise the hybrid or the
+  attack speed by a tier; it skips bench modifiers, and how often it works
+  is a player model, not a published number.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next currency
+  before you commit. On this craft the one place it could pay is the
+  Fracturing Orb in stage 1.
+mistakes:
+  - "Using a Fracturing Orb on an item with five or six modifiers. One in four becomes one in five or six."
+  - "Putting influence on the base first. An influenced item cannot be fractured."
+  - "Using an Annulment to clear a suffix after stage 2. The hybrid is not protected and is one of the modifiers it can remove."
+  - "Crafting the flat Physical Damage before the reforge. A bench prefix would be protected by the lock, but it also occupies the slot the Fossil might have filled with a better one."
+  - "Skipping the multi-modifier craft to save 2 Divine Orbs and leaving a prefix empty on an item that cost many times that."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, Fossil multipliers, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges. Partly older than 3.30." }

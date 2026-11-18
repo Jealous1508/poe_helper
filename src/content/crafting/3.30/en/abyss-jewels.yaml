@@ -1,0 +1,417 @@
+name: "Abyss Jewels"
+short: "Eye jewels with flat Life and flat damage: five bases with five pools, and tiers that item level gates all the way to 86."
+icon: "Searching Eye Jewel"
+intro: >-
+  An Abyss jewel is a jewel with flat numbers on it: +36 to maximum Life
+  where a Cobalt jewel says 7% increased, and "adds 14 to 28 Cold Damage"
+  where a regular jewel says 16% increased. It fits a jewel socket on the
+  passive tree like any other, and it is the only kind of jewel that fits an
+  Abyssal socket on equipment, such as the one on a [[Stygian Vise]].
+
+
+  It shares the frame of every jewel: a Rare one has **two** prefixes and
+  **two** suffixes, there is no implicit, no quality, no Essence, and the
+  bench cannot add a modifier. Two things set it apart from the regular
+  jewels, and both are decisions you make before the first orb. The **type
+  of eye** decides the pool far more sharply than a jewel's colour does. And
+  **item level matters**: most modifiers here come in tiers, and the best of
+  them need item level 82 to 86.
+basics:
+  itemLevel:
+    text: >-
+      Unlike a regular jewel, an Abyss jewel is gated by item level like a
+      piece of armour. Maximum Life has four tiers, from +21–25 at item level
+      1 to +36–40 at 82. The flat damage modifiers have three to six. A
+      handful of suffixes, attack speed and the two global critical strike
+      modifiers among them, have a single tier that cannot roll at all below
+      item level 50.
+
+
+      **Item level 77 is enough for a working jewel**: it opens the top tier
+      of every "Adds damage to Attacks" suffix and of the elemental "to
+      Spells" suffixes, and the second tier of Life. **83 to 85** opens the
+      top tier of Life and of the flat damage prefixes. **86** is needed for
+      three prefixes only.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "Tier 3 maximum Life (+26–30). **The first item level worth rolling in the campaign.**"
+      - ilvl: 50
+        unlocks: "The suffixes that have one tier and a level gate: 3–5% increased Attack Speed, 2–4% increased Cast Speed, 8–12% increased Global Critical Strike Chance and +9–12% to Global Critical Strike Multiplier. Below 50 they cannot roll."
+      - ilvl: 65
+        unlocks: "The top tier of flat Physical (61) and Chaos (64) Damage to Attacks, and of the Blind, Taunt and Hinder suffixes."
+      - ilvl: 75
+        unlocks: "Tier 2 maximum Life (+31–35, from 74), and Tier 2 of Energy Shield, Mana, Armour and Evasion. The first tier of the three scarce prefixes: 2% Cooldown Recovery Rate, 3–5% Impale Effect, 2–3% of Damage taken Recouped as Mana."
+      - ilvl: 77
+        unlocks: "The top tier of flat Fire, Cold and Lightning Damage to Attacks (76–77) and to Spells (77). **Enough for most jewels.**"
+      - ilvl: 83
+        unlocks: "Tier 1 maximum Life (+36–40, from 82) and Tier 1 of Energy Shield, Mana, Armour and Evasion. Tier 1 of the Cold and Lightning weapon prefixes, of the elemental spell prefixes and of the minion elemental and physical prefixes."
+      - ilvl: 85
+        unlocks: "Tier 1 of the Fire weapon prefixes and of the Chaos spell and minion prefixes (84), then of the Physical and Chaos weapon prefixes and of Accuracy Rating (85). **The ceiling for flat damage.**"
+      - ilvl: 86
+        unlocks: "3% increased Cooldown Recovery Rate, 6–8% increased Impale Effect and 4–5% of Damage taken Recouped as Mana. Nothing else in the pool needs it."
+  bases:
+    text: >-
+      Five bases, five pools. None has an implicit, stats or a requirement.
+      Each eye is named for who it is for, and the game means it: the damage
+      modifiers of one eye do not appear on another at all. A modifier here
+      is either **shared by every eye** (Life, Mana, the defences,
+      regeneration, attributes, resistances, the "chance to Avoid" suffixes)
+      or it **belongs to one or two eyes**.
+
+
+      The size of the pools differs a great deal, and that changes how often
+      the shared modifiers appear.
+    types:
+      - title: "Murderous Eye Jewel (melee)"
+        pools: [murderous-eye-jewel]
+        text: >-
+          The only eye with flat damage for melee weapon types: Fire, Cold,
+          Lightning and Physical Damage with Axe, Claw, Dagger, Mace or
+          Sceptre, Staff and Sword Attacks, plus Chaos Damage with Claws and
+          Daggers. Its suffixes add flat damage to all attacks, attack
+          speed, Accuracy, Blind, and two things no other ordinary eye has:
+          Taunt on Hit and Unholy Might on Melee Kill.
+
+
+          Six weapon types make its prefix pool the largest of the four
+          ordinary eyes, 79,270 against about 40,000 for the others. Each
+          weapon's line is only 3% of prefix rolls, and maximum Life is 9.5%
+          here against 17% to 19% on the other three.
+      - title: "Searching Eye Jewel (ranged)"
+        pools: [searching-eye-jewel]
+        text: >-
+          Flat damage with Bow Attacks and with Wand Attacks, and the same
+          attack suffixes as the Murderous Eye without Taunt or Unholy
+          Might. Bows are weighted double: each elemental bow prefix is 7.7%
+          of prefix rolls, each wand prefix 3.8%. Accuracy Rating is twice
+          as heavy here as on the Murderous Eye. It shares the "Phasing on
+          Kill" suffix with the Hypnotic Eye.
+      - title: "Hypnotic Eye Jewel (caster)"
+        pools: [hypnotic-eye-jewel]
+        text: >-
+          Flat damage for spells, in two forms. The prefixes are tied to
+          what you hold: Added Spell Fire, Cold, Lightning, Physical or
+          Chaos Damage while Dual Wielding, while holding a Shield, or while
+          wielding a Two Handed Weapon, fifteen lines at 2.8% each. The
+          suffixes are unconditional: "Adds damage to Spells" in the same
+          five types, 8% of suffix rolls each. Also Cast Speed, Hinder, and
+          the "Damage over Time while…" prefixes at double the weight they
+          have on the attack eyes. No flat damage for attacks.
+      - title: "Ghastly Eye Jewel (summoner)"
+        pools: [ghastly-eye-jewel]
+        text: >-
+          Everything for minions and almost nothing for you. Five prefixes,
+          "Minions deal additional" Fire, Cold, Lightning, Physical or Chaos
+          Damage, are 42% of all prefix rolls between them. The suffixes
+          give minions attack and cast speed, life, movement speed,
+          resistances, leech, regeneration, Taunt, Blind and Hinder.
+
+
+          It cannot roll any critical strike suffix, flat damage for
+          yourself, or the "if you've Killed Recently" suffixes. Its suffix
+          pool is the smallest, 22,100, so the shared suffixes
+          (resistances, attributes) are nearly twice as likely here as on a
+          Murderous Eye.
+      - title: "Assembled Eye Jewel"
+        pools: [assembled-eye-jewel]
+        text: >-
+          The special eye. Since 3.30 it "can now roll the Modifiers that
+          every Abyssal Jewel can roll", and the data agrees: its pool is
+          the other four added together, 136,546 prefix weight. That makes
+          it the only Abyss jewel that can hold, say, a minion prefix beside
+          a spell suffix, and it makes every single prefix two to three
+          times rarer than on its home eye.
+
+
+          We could not confirm from the patch notes where Assembled Eye
+          Jewels drop. Treat one as a base for a combination no other eye
+          can give you, not as a general-purpose jewel.
+    picks:
+      - base: "Searching Eye Jewel"
+        for: "Bow and wand attacks"
+        why: >-
+          The three elemental bow prefixes are 23% of prefix rolls between
+          them, the elemental "to Attacks" suffixes another 29% of suffix
+          rolls, and the two stack because they are different groups.
+          Maximum Life is 17% of prefix rolls.
+      - base: "Murderous Eye Jewel"
+        for: "Melee, by weapon type"
+        why: >-
+          The only source of flat damage tied to swords, axes, maces,
+          staves, claws and daggers. Pay for it knowingly: one weapon's
+          prefix of one damage type is 3% of prefix rolls at best.
+      - base: "Hypnotic Eye Jewel"
+        for: "Spells"
+        why: >-
+          Flat spell damage as a prefix and again as a suffix. The suffix is
+          the easy half at 8% of rolls per damage type; the prefix must
+          match how you hold your weapons and is 2.8%.
+      - base: "Ghastly Eye Jewel"
+        for: "Minions"
+        why: >-
+          The densest pool of the five: nearly half of all prefix rolls are
+          flat minion damage and half of suffix rolls are a minion
+          modifier. Also the cheapest eye on which to roll Life with a
+          resistance.
+    impact: >-
+      Two things, both final. **The pool:** an eye either has your damage
+      modifiers or it does not, and the size of its pool sets how often the
+      shared ones appear. **The item level:** it is fixed when the jewel
+      drops and caps every tier on it.
+
+
+      Nothing else. There is no implicit, and no number on the base for a
+      local modifier to multiply; every modifier on an Abyss jewel is global.
+tools:
+  - method: currency
+    note: >-
+      The same four steps as any jewel: [[Orb of Alteration]]s on a Magic
+      jewel, [[Orb of Augmentation]] for an empty side, [[Regal Orb]],
+      [[Exalted Orb]]. What changes is that a hit now has a tier.
+
+
+      Getting the right **family** is easy on the right eye. On a Searching
+      Eye at item level 84, maximum Life is 17.7% of prefix rolls and any
+      one elemental bow prefix 7.8%, by our arithmetic. Getting the top
+      **tier** is not: Tier 1 Life is 1 prefix roll in 85, Tier 2 or better
+      1 in 28, and Tier 1 of a bow prefix 1 in 242. Decide the lowest tier
+      you will accept before you start, and write it next to each line of
+      the shortlist.
+  - method: bench
+    note: >-
+      No bench modifiers exist for Abyss jewels in the 3.30 data, so there
+      is no certain last slot, no blocking and no protection modifier. The
+      three reroll options do work: one random modifier of a Rare jewel for
+      8 [[Chaos Orb]]s, three for 3 Chaos Orbs, and the rarity for 1
+      [[Orb of Chance]]. With at most four modifiers on the jewel, "one at
+      random" is the right one 1 time in 3 or 4.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) before the [[Regal Orb]], when
+      the Magic jewel holds two modifiers at tiers that were hard to roll.
+      Tiers make this more often worth it than on a regular jewel: a Magic
+      Abyss jewel with Tier 1 Life and a top flat damage suffix is rarer
+      than anything a Crimson jewel can show.
+  - method: finishing
+    note: >-
+      The [[Divine Orb]], and it matters more than on most items because
+      the ranges are wide. Tier 2 Accuracy Rating is +121 to +240, a whole
+      tier's worth of difference inside one tier. The top Lightning Damage
+      to Attacks is "adds 1–4 to 43–48". Divine before you corrupt.
+  - method: corruption
+    note: >-
+      Two different things corrupt an Abyss jewel.
+
+
+      A [[Vaal Orb]] can give it one of 21 corruption implicits, all at the
+      same weight in the data: "Corrupted Blood cannot be inflicted on you"
+      (level 33), "You cannot be Maimed" and "You cannot be Hindered" (40),
+      six "20–25% chance to Avoid" an ailment or being Stunned, 4–5%
+      increased Damage and others. It can also do nothing, or reroll the
+      jewel; the odds between those are not published.
+
+
+      [[Merrick's Ducat]] is the one piece of last league's crafting that
+      works on its own in 3.30. Its text: "Augment a Rare Abyssal Jewel with
+      a random additional Modifier and corrupt it, even if it is already at
+      maximum Modifier count." It adds and does not reroll, so on a full
+      jewel it is a fifth modifier. The patch notes say it now has a source
+      outside the old Allflame encounters and do not name it.
+  - method: fossil
+    note: >-
+      The data holds a Fossil-only pool for Abyss jewels: eight prefixes
+      and ten suffixes, the notable one being "Minions deal 14–16% increased
+      Damage", a prefix at weight 2,000 that no eye rolls naturally. We
+      could not confirm that Fossils work on jewels in 3.30. Test one before
+      relying on it.
+  - method: veiled
+    note: >-
+      The data lists 22 modifiers that can be unveiled on an Abyss jewel,
+      all at item level 68: +1% to maximum Fire, Cold or Lightning
+      Resistance, "Enemies Withered by you have -2% to all Resistances" and
+      3% increased Cooldown Recovery Rate (which otherwise needs item level
+      86) are among them. We could not confirm how a veiled modifier reaches
+      a jewel in 3.30. Do not plan around them yet.
+memoryStrands: >-
+  [[Memory Strands]] raise the tier of what is rolled, and an Abyss jewel is
+  the one kind of jewel where that would mean something: Tier 1 Life weighs
+  500 against 3,000 for each of the two lowest tiers.
+
+
+  Whether an Abyss jewel can carry strands is another matter. The strand
+  orbs speak of "equipment" items, and we could not confirm that a jewel
+  counts. If you find one with strands, the advice from the overview applies
+  unchanged: spend them on Alterations and a Regal Orb, never on Chaos Orbs,
+  and read the cost the game shows before each click.
+reading:
+  intro: >-
+    Hold Alt and ask three things in order. **Is it the right eye for this
+    character?** If not, the damage lines are worth nothing to you. **What
+    is the item level?** That tells you what the jewel could have been.
+    **Which tier is each line?** Two Abyss jewels with the same four lines
+    can differ by half their value.
+  prefixes:
+    text: >-
+      The prefix side is flat Life and flat damage tied to a weapon or a
+      way of holding one, with the flat defences and regeneration behind
+      them.
+
+
+      The damage prefixes follow one rule about groups. For each damage
+      type, all the weapon versions are one group: "Cold Damage with Sword
+      Attacks" and "Cold Damage with Axe Attacks" can never share a jewel.
+      Different damage types are different groups: Cold with Swords and
+      Fire with Swords can. The Hypnotic Eye's spell prefixes work the same
+      way across "Dual Wielding", "holding a Shield" and "Two Handed
+      Weapon".
+
+
+      Read every damage prefix to the end of the line. A prefix for a
+      weapon you do not use is a wasted slot, and on the Searching Eye one
+      prefix roll in nine is a wand line that a bow character cannot use.
+    key:
+      - mod: "+# to maximum Life"
+        why: "On every eye, and the most common prefix on four of them. The modifier that makes an Abyss jewel worth a socket for any build."
+        aim: "T2, +31–35 (ilvl 74). T1 is +36–40 (ilvl 82)."
+      - mod: "# to # Added Fire Damage with Bow Attacks"
+        why: "Stands for the weapon prefixes of the Searching and Murderous Eyes. Must name your weapon. Stacks with the generic attack suffix of the same damage type."
+        aim: "T2, 14–15 to 23–26 (ilvl 72). T1 needs ilvl 84."
+      - mod: "# to # Added Spell Fire Damage while holding a Shield"
+        why: "The Hypnotic Eye's conditional prefix. Must match what you hold. Stacks with the \"to Spells\" suffix."
+        aim: "T2, 21–23 to 29–31 (ilvl 70). T1 needs ilvl 82."
+      - mod: "Minions deal # to # additional Physical Damage"
+        why: "The Ghastly Eye's damage, in five types that are five groups, so two different types fit on one jewel."
+        aim: "T2, 18–21 to 24–27 (ilvl 72). T1 needs ilvl 83."
+      - mod: "+# to maximum Energy Shield"
+        why: "Flat Energy Shield for builds that do not use Life. Armour and Evasion Rating come in the same four tiers."
+        aim: "T2, +31–35 (ilvl 75). T1 is +36–40 (ilvl 83)."
+      - mod: "#% increased Cooldown Recovery Rate"
+        why: "Scarce and sought after by builds that live on a cooldown. Weight 300 on the attack eyes and 100 on the other two, in each of its two tiers."
+        aim: "2% (ilvl 75) or 3% (ilvl 86)."
+  suffixes:
+    text: >-
+      The suffix side is where the unconditional flat damage lives: "Adds
+      damage to Attacks" on the Murderous and Searching Eyes, "Adds damage
+      to Spells" on the Hypnotic. These are a different group from the
+      weapon prefixes, which is the whole trick of a damage jewel: the same
+      damage type once as a prefix and once as a suffix.
+
+
+      Behind them come the single-tier utility suffixes (attack or cast
+      speed, the global critical strike pair, the "Recently" conditionals),
+      and the shared repairs: attributes, resistances and the "chance to
+      Avoid" set. On the attack and caster eyes each shared suffix is about
+      1% of rolls; on a Ghastly Eye about 2%.
+    key:
+      - mod: "Adds # to # Fire Damage to Attacks"
+        why: "Stands for the five flat damage suffixes of the attack eyes. Nearly 10% of suffix rolls each for the three elements, and their top tier needs only ilvl 76–77."
+        aim: "T2, adds 10–12 to 21–24 (ilvl 64). T1 needs ilvl 76."
+      - mod: "Adds # to # Fire Damage to Spells"
+        why: "The Hypnotic Eye's version, 8% of suffix rolls per damage type."
+        aim: "T2, adds 20–22 to 26–30 (ilvl 66). T1 needs ilvl 77."
+      - mod: "#% increased Attack Speed"
+        why: "One tier, and it does not exist below item level 50. Cast Speed is its twin on the Hypnotic and Ghastly Eyes."
+        aim: "3–5% (ilvl 50). Cast Speed is 2–4%."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "One tier, on every eye except the Ghastly, with Global Critical Strike Chance beside it at the same weight."
+        aim: "+9–12% (ilvl 50)."
+      - mod: "Minions have #% increased Attack Speed / Minions have #% increased Cast Speed"
+        why: "The Ghastly Eye's best general suffix: one line, both speeds, a single tier with no level gate."
+        aim: "4–6% each."
+      - mod: "+# to Accuracy Rating"
+        why: "A large flat amount for attack builds, twice as common on a Searching Eye. The range inside a tier is very wide."
+        aim: "T2, +121–240 (ilvl 78). T1 is +241–300 (ilvl 85)."
+      - mod: "#% chance to Gain Unholy Might for # seconds on Melee Kill"
+        why: "Only on the Murderous Eye (and the Assembled)."
+        aim: "T1, 6–8% (ilvl 84). T2 is 3–5% (ilvl 60)."
+approach:
+  principle: >-
+    **Eye, item level, then tiers.** Two of the three decisions that make an
+    Abyss jewel are made when you pick it up. The wrong eye cannot roll your
+    damage and the wrong item level cannot roll your tier, and no amount of
+    currency fixes either. After that it is a jewel craft like any other,
+    with one extra word on every line of the shortlist: the lowest tier you
+    will accept.
+  order:
+    - title: "Choose the eye by what only it can roll"
+      text: >-
+        Bow or wand: Searching. A melee weapon type: Murderous. Spells:
+        Hypnotic. Minions: Ghastly. If all you want is Life and shared
+        suffixes, take any eye **except** the Murderous, whose crowded
+        prefix pool halves the chance of Life.
+    - title: "Choose the item level by the tier you will accept"
+      text: >-
+        Look up the tiers in the modifier list and read off the item level.
+        77 covers most plans. 82 to 85 if you are paying for top tiers. A
+        jewel one level short of a tier can never roll it.
+    - title: "Write the shortlist with a tier beside each line"
+      text: >-
+        "Life, 31 or more." "Fire Damage to Attacks, Tier 3 or better." A
+        hit below the bar is a miss. Setting the bar is setting the price:
+        each tier you insist on roughly halves or thirds the chance.
+    - title: "Roll the Magic jewel, prefix and suffix"
+      text: >-
+        Alterations and Augmentations until both sides are hits at their
+        tiers. On the right eye the families come up constantly; you are
+        waiting for the tiers.
+    - title: "Regal, with an Imprint if the tiers were high"
+      text: >-
+        A Magic jewel with two top-tier lines is worth a Croaker. One with
+        two middling lines is not.
+    - title: "Exalt once, Divine, and only then corrupt"
+      text: >-
+        The fourth slot is a free roll, as on any jewel. The Divine Orb
+        comes before a Vaal Orb or a Ducat, never after.
+  finishing: >-
+    A [[Divine Orb]] when the tiers are right and the numbers are low, which
+    on these wide ranges is often.
+
+
+    Then, if you have one, [[Merrick's Ducat]]: on a finished four-modifier
+    jewel it adds a fifth at random and corrupts the jewel. Going by its
+    text it removes nothing, so the risk is not to the jewel but to your
+    ability to change it afterwards. Everything else must be done first.
+  stopping: >-
+    Life at Tier 2 or 3 with one flat damage suffix is a jewel for the whole
+    of the early endgame, and on the right eye it is a few dozen
+    Alterations. Add a matching damage prefix and you have a good one. Top
+    tiers on three lines is where the Alterations run into the hundreds and
+    thousands.
+
+
+    Stop a tier lower than you wanted sooner than you think you should. The
+    step from Tier 2 to Tier 1 Life is 5 points of Life for about three
+    times the Alterations.
+special:
+  - mod: "A fifth modifier on a full jewel"
+    source: "Merrick's Ducat"
+    where: "[[Merrick's Ducat]] adds one random modifier to a Rare Abyss jewel \"even if it is already at maximum Modifier count\" and corrupts it. Usable directly in 3.30. Where it drops now is not stated in the patch notes."
+  - mod: "Corrupted Blood cannot be inflicted on you"
+    source: "Corruption"
+    where: "A corruption implicit from a [[Vaal Orb]], one of 21 with equal weight; level 33 in the data."
+  - mod: "#% chance to Avoid being Stunned"
+    source: "Corruption / natural"
+    where: "20–25% as a corruption implicit, beside five \"Avoid\" implicits for ailments. The natural suffix version is 21–24% (ilvl 50) or 25–30% (ilvl 70)."
+  - mod: "Minions deal #% increased Damage"
+    source: "Fossil / Corruption"
+    where: "14–16% as a prefix in the Fossil-only pool (Fossils on jewels are unconfirmed in 3.30), and 4–5% as a corruption implicit."
+  - mod: "+1% to maximum Fire Resistance"
+    source: "Veiled"
+    where: "One of 22 unveiled modifiers the data lists for Abyss jewels at item level 68, with Cold and Lightning twins. We could not confirm a way to put a veiled modifier on a jewel in 3.30."
+  - mod: "Enemies Withered by you have -2% to all Resistances"
+    source: "Veiled"
+    where: "As above: in the data as an unveiled suffix, with no confirmed route to it."
+mistakes:
+  - "**Rolling on the wrong eye.** A Ghastly Eye will never show a critical strike suffix and a Hypnotic Eye will never add damage to attacks."
+  - "**Rolling Life on a Murderous Eye when you do not need its weapon prefixes.** Life is 9.5% of its prefix rolls and 17% to 19% on the other three."
+  - "**Ignoring the item level.** A jewel of item level 73 cannot roll +31 to maximum Life, and one of item level 49 cannot roll attack speed at all."
+  - "**Keeping a damage prefix for the wrong weapon.** \"With Wand Attacks\" does nothing for a bow."
+  - "**Planning two weapon prefixes of one damage type.** All \"Cold Damage with … Attacks\" lines are a single group."
+  - "**Corrupting before the Divine Orb.** A Vaal Orb or a Ducat closes the jewel; the numbers stay as they were."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, tier, item level, weight, group and corruption implicit quoted here, the bench reroll options, and the text of Merrick's Ducat. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Merrick's Ducat usable directly on Abyss jewels; Assembled Eye Jewels rolling every Abyss jewel modifier." }
+  - { title: "poedb: Abyss Jewels", url: "https://poedb.tw/us/Abyss_Jewels", kind: data, note: "Two prefixes and two suffixes on a Rare jewel, and the list of unveiled Abyss jewel modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "Corruption outcomes for jewels. The text is older than 3.29." }

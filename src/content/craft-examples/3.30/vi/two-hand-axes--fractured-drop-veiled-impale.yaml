@@ -1,0 +1,288 @@
+category: two-hand-axes
+title: "Từ một món đồ rơi Tier 5 fractured tới một cây axe impale hoàn chỉnh"
+level: 5
+summary: "Một prefix phần trăm fractured, một Essence cho phía suffix, một cái khóa tồn tại để bị gỡ, và một lần unveil có block: ba prefix có chủ đích, không cái nào là roll ra."
+goal: >-
+  Một cây Vaal Axe có prefix hybrid fractured, một 120–139% increased Physical
+  Damage kèm chance to Impale unveil ra, flat Physical Damage crafted, và
+  Impale Effect cùng attack speed ở phía suffix. Không công cụ nào ở đây là
+  mới. Cái khó là **ép kết quả**: bắt một orb ngẫu nhiên gỡ đúng cái modifier
+  bạn chọn cho nó, và bắt một lần unveil đưa ra thứ bạn tìm tới. Mỗi giai đoạn
+  được giai đoạn trước bảo vệ, và hai trong các lớp bảo vệ đó dựa vào những
+  luật do người chơi thử nghiệm, không phải do nhà phát triển tuyên bố. Bài
+  viết nói rõ cái nào.
+base: "Vaal Axe"
+itemLevel: 84
+baseWhy: >-
+  Lần craft này bắt đầu từ một món nhặt được. Trong 3.30, một item Tier 5 có
+  thể rơi ra dưới dạng **fractured Magic item**, và ở đây item đó là một cây
+  Vaal Axe có fractured modifier là "Emperor's", hybrid của 65–74% increased
+  Physical Damage với Accuracy Rating. Vaal Axe đánh 104–174 và thêm 25%
+  chance to Maim. Item level chỉ cần đủ cho thứ bạn còn định roll: Tier 1 của
+  attack speed cần 77.
+
+
+  Cùng kế hoạch này dùng được trên bất kỳ axe hai tay nào có fractured
+  modifier là một tier cao của hybrid đó hoặc của flat Physical Damage. Nó
+  không dùng được khi cái fractured là increased Physical Damage thuần; phần
+  Biến thể nói vì sao.
+methods: [fracture, essence, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["25% chance to Maim on Hit"]
+  prefixes:
+    - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "37% increased Impale Effect", how: essence }
+    - { text: "22% increased Attack Speed" }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+needs:
+  - { item: "Một cây axe hai tay Magic fractured từ đồ rơi Tier 5", amount: "1", note: "với một prefix hybrid hoặc flat Physical Damage ở tier cao đã fractured" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Deafening Essence of Dread]]", amount: "vài chục" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Veiled Exalted Orb]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "cho craft block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "để gỡ craft block" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Base là may mắn hoặc mua, và trong 3.30 fractured item hiếm hơn trước. Sau
+  đó Essence chiếm phần lớn: loại Deafening, dùng tới khi cả phía suffix đúng
+  cùng một lúc. Khóa là 4 [[Divine Orb]] và một
+  [[Sacred Orb]] và, nếu kế hoạch đứng vững, chỉ phải trả một lần. Chúng tôi
+  không đưa ra tổng số.
+
+
+  Có một nguyên liệu có thể khó mà tìm ra nổi. Các trang tra cứu nêu
+  Mastermind là nguồn của [[Veiled Exalted Orb]] và bench Fortification của
+  Aisling là thứ làm cùng việc đó; cả hai điều chúng tôi đều chưa xác nhận
+  được cho 3.30.
+odds: >-
+  **Giai đoạn Essence** là nơi tốn thời gian. Impale Effect thì chắc chắn.
+  Bên cạnh nó, theo phép tính của chúng tôi, một lần roll suffix ra attack
+  speed từ 20% trở lên khoảng 1 trên 21 lần, và một kết quả có nhiều nhất hai
+  suffix khác. Thêm điều kiện cả ba ô suffix đều được lấp và phía prefix còn
+  chỗ, thì một kết quả đáng giữ vào khoảng một trên mười tới hai mươi
+  Essence, với đuôi dài.
+
+
+  **Giai đoạn veiled** không còn chỗ cho may rủi nếu hai luật do người chơi
+  thử nghiệm còn đúng trong 3.30: Veiled Exalted Orb không gỡ modifier được
+  khóa bảo vệ, và unveil không bao giờ đưa ra một group đã có trên item. Khi
+  craft block đã vào chỗ, còn sáu veiled prefix khả dĩ và bốn cái là hybrid
+  physical, nên một trong ba lựa chọn buộc phải là physical. Nó có phải là
+  cái Impale hay không thì xấp xỉ năm mươi năm mươi nếu sáu cái có khả năng
+  như nhau, điều mà dữ liệu không cho chúng tôi biết.
+steps:
+  - title: "Đánh giá fracture trước mọi thứ khác"
+    do: >-
+      Giữ Alt rồi rê chuột lên món đồ rơi. Đọc fractured modifier, tier và
+      phía của nó, và item level. Hãy hỏi: mình có chịu trả tiền để roll
+      modifier này không, và phần còn lại của kế hoạch có xếp vừa quanh group
+      của nó không?
+    why: >-
+      Một fracture là vĩnh viễn theo cả hai chiều. "Emperor's" ở tier này trở
+      lên khoảng 1 trên 660 lần roll prefix trên axe, nên có nó được khóa sẵn
+      là rất đáng giá. Một suffix stun fractured thì sẽ là một ô mất mãi mãi.
+      Và group cũng quan trọng: hybrid này **không** thuộc group của veiled
+      prefix Impale, chính điều đó cho phép hai cái chung một cây axe.
+    check: >-
+      Fractured item không nhận được influence, và không dùng Imprint lên nó
+      được. Ở đây không cần cái nào.
+    state:
+      rarity: magic
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+19 to Dexterity" }
+  - title: "Giai đoạn 1: trọn phía suffix, bằng Essence"
+    do: >-
+      Đưa cây axe lên 20% quality rồi dùng một [[Regal Orb]]; Essence dùng
+      được trên item Normal và Rare, không dùng được trên item Magic. Rồi dùng
+      [[Deafening Essence of Dread]] liên tục tới khi **cả ba ô suffix đều
+      được lấp**: Impale Effect, attack speed từ 20% trở lên, và một cái thứ
+      ba bạn bằng lòng giữ. Ở phía prefix, bạn muốn fractured modifier **đứng
+      một mình**.
+    why: >-
+      Prefix fractured sống qua mọi Essence, nên giai đoạn này tốn Essence và
+      không tốn gì khác. Nó buộc phải đi trước: Essence được ghi nhận là phớt
+      lờ các modifier bảo vệ của bench, nên không gì về sau trong kế hoạch
+      sống nổi qua một cái. Phía suffix phải đầy, chứ không chỉ tốt, vì giai
+      đoạn kế tiếp dựa vào việc ở đó không còn chỗ.
+    check: >-
+      Ba suffix, không cái nào crafted. Một prefix, cái fractured.
+    fail: >-
+      Suffix đúng, nhưng có một prefix không mong muốn cạnh cái fractured:
+      hoặc tiếp tục dùng Essence, hoặc trả tiền để xử lý nó. "Suffix Modifiers
+      cannot be changed" rồi tới một [[Orb of Scouring]] được ghi nhận là lột
+      các prefix không được bảo vệ cùng cái khóa, để lại prefix fractured và
+      ba suffix. Việc đó tốn trọn một lần khóa.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Giai đoạn 2: một cái khóa có nhiệm vụ là bị gỡ"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 1 [[Sacred Orb]]. Nó là một prefix.
+    why: >-
+      Hãy nhìn xem orb kế tiếp được phép đụng tới cái gì khi modifier này đã
+      lên item. Ba suffix được bảo vệ. Prefix fractured thì không gì gỡ được.
+      Modifier duy nhất còn lại không được bảo vệ trên cây axe là chính cái
+      khóa. Cái khóa đang làm hai việc: canh giữ suffix, và đứng ra làm nạn
+      nhân.
+    check: >-
+      Prefix: cái fractured, cái khóa, và một ô trống. Đừng dùng currency nào
+      khác trước bước kế tiếp.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Giai đoạn 3: Veiled Exalted Orb"
+    do: >-
+      Dùng một [[Veiled Exalted Orb]]. Mô tả của nó: "Removes a random
+      modifier and adds a random Veiled modifier to a rare item".
+    why: >-
+      "Ngẫu nhiên" giữa một ứng viên duy nhất thì không còn là ngẫu nhiên: nó
+      gỡ cái khóa. Rồi nó thêm một veiled modifier, và khi phía suffix đã đầy
+      thì các ô trống duy nhất là prefix. Kết quả là prefix fractured, một
+      veiled prefix và một ô thứ ba trống, lần nào cũng vậy, **miễn là orb tôn
+      trọng khóa**. Người chơi đã thử nghiệm rằng nó có tôn trọng, và đây là
+      cách dùng chuẩn của orb này trước 3.30; không gì trong patch notes 3.30
+      thay đổi điều đó, và cũng không gì chính thức khẳng định điều đó.
+    check: >-
+      Một [[Hinekora's Lock]] dùng trước orb sẽ cho thấy trước kết quả. Trên
+      một cây axe đáng giá cỡ này, cái nhìn duy nhất đó chính là chỗ một Lock
+      đáng đồng tiền.
+    fail: >-
+      Nếu một suffix biến mất thì luật đã không đúng, và kế hoạch kết thúc ở
+      đây với một cây axe tốt và một veiled modifier ngẫu nhiên. Unveil nó,
+      bench thứ gì vừa, và kể cho người chơi khác biết bạn đã thấy gì.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix", how: veiled }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Giai đoạn 4: block, rồi unveil"
+    do: >-
+      **Trước khi unveil**, bench 44–60% increased Fire Damage vào prefix
+      trống: 4 [[Orb of Alteration]]. Rồi click chuột phải vào cây axe,
+      unveil, và lấy **increased Physical Damage with chance to Impale Enemies
+      on Hit with Attacks**. Nếu nó không nằm trong ba lựa chọn, hãy lấy
+      hybrid physical nào có mặt.
+    why: >-
+      Có mười ba veiled prefix cho axe hai tay. Bảy cái là modifier spell,
+      elemental, chaos và minion damage, tất cả thuộc một group, và increased
+      Fire Damage của bench cũng là group đó. Theo luật do cộng đồng thử
+      nghiệm, unveil không bao giờ đưa ra một group đã có trên item, nên một
+      craft rẻ loại được bảy đáp án sai. Còn lại sáu: bốn hybrid physical và
+      hai prefix penetration. Ba lựa chọn từ sáu cái mà chỉ có hai cái không
+      phải physical nghĩa là ít nhất một cái là physical. Cả bốn hybrid
+      physical đều mang cùng mức 120–139%; chỉ có chỉ số phụ là khác.
+    check: >-
+      Modifier unveil ra là modifier thường, không phải crafted, và nó ở lại
+      khi bạn gỡ craft block.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "52% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Giai đoạn 5: đổi modifier block lấy craft thật"
+    do: >-
+      Ở bench, gỡ modifier crafted với giá 1 [[Orb of Scouring]], rồi craft
+      **adds 18–24 to 36–42 Physical Damage** vào chỗ nó: 4
+      [[Chaos Orb]].
+    why: >-
+      Modifier block đã xong việc. Flat Physical Damage là group physical thứ
+      ba, cái duy nhất chưa có trên cây axe, và cả hai cái phần trăm đều nhân
+      nó lên. Phía suffix đã đầy, nên "Can have up to 3 Crafted Modifiers"
+      không có chỗ nào để vào và một craft là tất cả những gì bench thêm được.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Hoàn thiện: link và chỉ số"
+    do: >-
+      Sáu socket link nếu chưa làm, rồi một [[Divine Orb]] nếu các con số bên
+      trong tier còn thấp.
+    why: >-
+      Một Divine Orb roll lại giá trị của mọi modifier cùng lúc, kể cả cái
+      fractured và cái unveil ra, và không bao giờ đổi tier. Nó có thể hạ
+      xuống cũng như nâng lên, nên hãy dùng khi các phần trăm đang gần đáy
+      khoảng của chúng, còn không thì thôi.
+variations: >-
+  **Dùng Veiled Chaos Orb thay vào.** [[Veiled Chaos Orb]] là loại veiled
+  currency chúng tôi xác nhận được trong 3.30: các safehouse leader có thể rơi
+  chúng. Trên cây axe đã khóa, một cái sẽ roll lại phía prefix và có một
+  veiled modifier trong đó, và khi phía suffix đã đầy thì modifier đó là một
+  prefix. Prefix fractured vẫn ở lại. Điểm yếu: nó có thể roll thêm một prefix
+  thứ hai, ngẫu nhiên. Khi đó không còn ô trống cho craft block, lần unveil
+  đưa ra ba trong mười ba thay vì ba trong sáu, và không còn chỗ cho bench.
+  Bạn chỉ có thể khóa rồi thử lại chừng nào còn một ô prefix trống.
+
+
+  **Nếu fractured modifier là increased Physical Damage thuần.** Các hybrid
+  veiled cùng group với nó và không bao giờ nằm chung được. Hãy dùng bước
+  veiled cho một suffix thay vào, +44–48% to Physical Damage over Time
+  Multiplier hoặc 12–14% chance to deal Double Damage, và lấp prefix bằng
+  bench cùng hybrid kèm Accuracy.
+
+
+  **Khi không có ngân sách.** Lúc món đồ rơi còn là Magic, một
+  [[Orb of Alteration]] chỉ roll lại cái ô không fractured. Roll một suffix
+  bạn thích, dùng một Regal Orb, rồi bench hybrid Impale ở 95–105%. Đó là một
+  cây axe mạnh với giá của một lần craft Alteration thông thường, và đó là
+  thứ phần lớn đồ rơi fractured xứng đáng nhận.
+
+
+  **Cho bleeding.** Sundering Axe, hybrid bleeding ở lần unveil, và một giai
+  đoạn đầu khác: Essence of Zeal để lấy attack speed, vì không Essence nào cho
+  suffix bleed.
+mistakes:
+  - "Dùng Essence sau khi khóa. Essence được ghi nhận là phớt lờ các modifier bảo vệ; khóa sẽ bị phí và suffix bị roll lại."
+  - "Để trống một ô suffix trước Veiled Exalted Orb. Khi đó veiled modifier có thể rơi vào đó, trong khi toàn bộ mục đích là không để nó còn chỗ nào khác để đi."
+  - "Unveil trước craft block. Bảy trong mười ba veiled prefix vô dụng với cây axe này và một modifier bench loại được cả bảy."
+  - "Bench flat Physical Damage làm modifier block để bớt một bước. Nó không block được gì: không veiled prefix nào chung group với nó."
+  - "Chạy kế hoạch này trên một fracture không đáng. Đường Alteration trong phần Biến thể hợp với phần lớn đồ rơi hơn."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các veiled modifier và group của chúng, modifier của Essence of Dread, tier, weight, giá bench, và mô tả trong game của Veiled Exalted Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tier 5 rơi ra dưới dạng fractured Magic item, và giá 3.30 của các modifier bảo vệ." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil bằng click chuột phải, không cần Jun; Veiled Chaos Orb từ các safehouse leader." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các Veiled orb và Orb of Scouring tôn trọng một phía đã khóa; một modifier crafted cùng group block một lựa chọn unveil. Một phần cũ hơn 3.30." }
+  - { title: "poedb: Immortal Syndicate", url: "https://poedb.tw/us/Immortal_Syndicate", kind: data, note: "Ba lựa chọn mỗi lần unveil; các bench trong safehouse của Aisling." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured modifier không gỡ được; fractured item không thể được thêm influence." }

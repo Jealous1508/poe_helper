@@ -1,0 +1,147 @@
+category: daggers
+title: "Một reforge Critical và một prefix bench"
+level: 2
+summary: "Một reforge Harvest buộc phải kèm một modifier Critical. Trên dagger chỉ có hai modifier mang tag đó, và bạn muốn cả hai."
+goal: >-
+  Một cây dagger chạy map có một suffix critical strike được đảm bảo và một
+  cái phần trăm physical từ bench. Đây là lần craft đầu tiên biết **nhắm**:
+  bạn bảo reforge phải kèm tag nào, và trước khi trả tiền bạn đếm xem trên
+  item này có bao nhiêu modifier mang tag đó. Ở đây là hai. Phép đếm đó là
+  toàn bộ phương pháp.
+base: "Ambusher"
+itemLevel: 75
+baseWhy: >-
+  Cây nhanh nhất trong các dagger crit hàng đầu, với implicit 40–45% Global
+  Critical Strike Chance. Item level 73 mở tier cao nhất của cả hai suffix
+  critical strike (35–38%), nên một base từ 73 trở lên cho reforge với tới
+  được chúng; 75 đơn giản là mức mà những base như vậy thường có. Tier 1 của
+  attack speed thì cần 77 và không phải là mục tiêu.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["42% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "22% increased Attack Speed", how: harvest }
+    - { text: "+47 to Dexterity", how: harvest }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge", note: "tính trước 5–10 lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Lifeforce: 150 [[Primal Crystallised Lifeforce]] cho mỗi lần thử, từ Sacred
+  Flora trong map. Rồi 4 [[Chaos Orb]] ở bench. Không gì khác.
+odds: >-
+  Lần reforge nào cũng cho Critical Strike Chance hoặc Critical Strike
+  Multiplier: chúng là hai modifier tự nhiên duy nhất trên dagger mang tag
+  critical, và weight của chúng bằng nhau. Nếu tier của modifier được đảm bảo
+  được rút theo weight, đúng như cách người ta vẫn hiểu về reforge, thì một
+  nửa số lần thử cho 25% trở lên và một phần ba cho 30% trở lên. Đó là phép
+  tính của chúng tôi trên weight bằng nhau giữa các tier; nó chưa được đo
+  trong 3.30.
+
+
+  Phần còn lại của item là một lần roll bình thường. Mỗi suffix khác là
+  attack speed khoảng 1 trên 6 lần.
+steps:
+  - title: "Chuẩn bị một cây dagger Rare"
+    do: >-
+      Quality lên 20%, rồi một [[Orb of Alchemy]]. Bỏ qua kết quả.
+    why: >-
+      Craft Harvest này là "Reforge a Rare item": cây dagger phải là Rare
+      trước đã, và mọi thứ trên nó sắp bị thay.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 48 to 96 Fire Damage" }
+        - { text: "+2 to Level of Socketed Lightning Gems" }
+      suffixes:
+        - { text: "+45 to Intelligence" }
+        - { text: "Gain 29 Life per Enemy Killed" }
+  - title: "Đếm tag, rồi reforge"
+    do: >-
+      Ở [[Horticrafting Station]], chọn **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]).
+    why: >-
+      "Including a Critical modifier" nghĩa là kết quả sẽ có ít nhất một
+      modifier mang tag critical. Mở danh sách modifier của dagger và đếm
+      những cái mang tag: Critical Strike Chance và Critical Strike
+      Multiplier. Cả hai đều là suffix và đều là thứ cần, nên sự đảm bảo
+      không thể bị phí. Hãy so với reforge Attack, nơi gần như modifier nào
+      cũng đủ điều kiện và sự đảm bảo chẳng có nghĩa gì.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+135 to maximum Mana", how: harvest }
+        - { text: "Adds 19 to 37 Physical Damage", how: harvest }
+        - { text: "Adds 55 to 112 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "16% increased Critical Strike Chance", how: harvest }
+        - { text: "+389 to Accuracy Rating", how: harvest }
+  - title: "Đánh giá: tier, rồi tới chỗ trống"
+    do: >-
+      Giữ kết quả khi suffix critical strike **từ 25% trở lên**
+      và **còn một ô prefix trống**. Attack speed hoặc suffix critical
+      strike thứ hai bên cạnh nó là phần thưởng thêm, không phải yêu cầu.
+    why: >-
+      Kết quả ở trên có suffix được đảm bảo ở mức 16%, một tier thấp, và ba
+      prefix, nên bench không có chỗ nào để đặt hệ số nhân. Nó trượt hai
+      lần.
+    fail: >-
+      Reforge lần nữa. Mỗi lần thử là độc lập và chỉ tốn Lifeforce.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+        - { text: "+47 to Dexterity", how: harvest }
+  - title: "Bench cái phần trăm physical"
+    do: >-
+      Ở [[Crafting Bench]], craft **80–99% increased Physical Damage**
+      giá 4 [[Chaos Orb]].
+    why: >-
+      Cây dagger ở trên roll ra flat Physical Damage, thứ mà cái phần trăm
+      nhân lên; hai cái là hai group khác nhau. Phía suffix ra đầy, nhưng
+      không sao: craft bench vốn luôn dành cho một prefix.
+    check: >-
+      Nếu reforge cho increased Physical Damage thuần làm prefix, bench
+      không thêm được bản của nó. Khi đó hãy craft flat Physical Damage
+      (13–17 to 26–30, 4 Chaos Orb).
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+        - { text: "+47 to Dexterity", how: harvest }
+variations: >-
+  **Reforge Speed** (150 Vivid Lifeforce) hoạt động y như vậy với một
+  modifier mang tag: attack speed được đảm bảo, còn các suffix critical
+  strike thì phó mặc cho may rủi hoặc bench. Hãy chọn nó khi build coi trọng
+  speed hơn crit.
+
+
+  **Reforge Chaos** là cái cần tránh trên dagger. Modifier mang tag có weight
+  nặng nhất của nó là "+2 to Level of Socketed Chaos Gems", một prefix mà gần
+  như không build dagger nào muốn.
+
+
+  **Lifeforce và Memory Strands.** Theo thử nghiệm của người chơi, reforge
+  Harvest không dùng mà cũng không tiêu strand, nên ở đây một base thường
+  cũng tốt ngang một base có strand.
+mistakes:
+  - "Trả tiền cho một lần reforge mà không đếm số modifier mang tag. Sự đảm bảo chỉ tốt bằng cái modifier tệ nhất thỏa được nó."
+  - "Giữ một suffix 30% trên cây dagger có ba prefix rác. Không có prefix bench thì nó không có hệ số nhân."
+  - "Bench giữa các lần reforge. Lần reforge kế tiếp sẽ gỡ nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag trên từng modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Critical, Speed và Chaos cùng giá Lifeforce của chúng." }

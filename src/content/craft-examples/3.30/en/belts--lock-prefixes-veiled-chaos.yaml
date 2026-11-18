@@ -1,0 +1,210 @@
+category: belts
+title: "Lock rare prefixes, reroll the suffixes with a Veiled Chaos Orb"
+level: 4
+summary: "A belt with top Life and a top flask effect prefix is worth protecting. Lock the prefixes, let a Veiled Chaos Orb rebuild the suffix side with a veiled modifier in it, unveil, and bench the last slot."
+goal: >-
+  Finish a belt whose prefix side is rare and whose suffix side is filler,
+  without risking the prefixes. Two things are being taught. First, **when a
+  belt's prefixes deserve a lock at all**, which is seldom. Second, what the
+  Veiled Chaos Orb adds to a locked reroll: one suffix you get to choose from
+  three.
+base: "Stygian Vise"
+itemLevel: 85
+baseWhy: >-
+  This craft starts from an item: a belt with three prefixes you want to
+  keep. The example's three include the top flask effect tier, which needs
+  item level 85 and is about 1 prefix roll in 206. On a Stygian Vise, a base
+  that only drops on Tier 5 items in 3.30, that prefix side is not something
+  you could roll again in an evening.
+methods: [meta, veiled, bench]
+result:
+  implicits: ["Has 1 Abyssal Socket"]
+  prefixes:
+    - { text: "+136 to maximum Life" }
+    - { text: "Flasks applied to you have 11% increased Effect" }
+    - { text: "+412 to Armour" }
+  suffixes:
+    - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+    - { text: "+39% to Fire Resistance" }
+    - { text: "+33% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Exalted Orb]]", amount: "8 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if a bench suffix has to come off first" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the final bench craft" }
+cost: >-
+  The lock, 4 [[Divine Orb]]s and 8 [[Exalted Orb]]s on jewellery in 3.30,
+  and a [[Veiled Chaos Orb]], both used up by every attempt. Veiled Chaos
+  Orbs come from Betrayal: safehouse leaders can drop them.
+
+
+  Hold the price against the prefixes. Tier 1 Life alone is about 1 prefix
+  roll in 50 on a belt and is **not** worth this. Life with the top flask
+  effect, or with an influenced Life modifier, is.
+odds: >-
+  The veiled suffix is certain: the prefix side is full, so the veiled
+  modifier the orb must include has only the suffix side to land on. What you
+  can turn it into is a choice of three from a list of ten. The data gives
+  no weights for that choice, so we cannot put a number on any one option.
+  Three of the ten are a resistance paired with Chaos Resistance and three
+  are pairs of attributes; most draws contain something usable.
+
+
+  The other suffixes are a plain belt roll: each is an elemental resistance
+  36% of the time and stun filler 24% of the time.
+steps:
+  - title: "Check that the prefixes are worth it and a suffix slot is free"
+    do: >-
+      Three prefixes, all kept. At least **one open suffix slot**, because
+      "Prefix Modifiers cannot be changed" is itself a suffix. If one of the
+      suffixes is a bench modifier, remove it for 1 [[Orb of Scouring]].
+    why: >-
+      Three prefixes matter for more than value. With the side full, nothing
+      can be added to it whatever the rules of a locked reroll turn out to
+      be, and the veiled modifier has to be a suffix.
+    fail: >-
+      Three rolled suffixes: the lock cannot be crafted. An
+      [[Orb of Annulment]] would open a slot and would hit a prefix half
+      the time. Do not use it.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "17% increased Stun and Block Recovery" }
+        - { text: "+22 to Strength" }
+  - title: "Craft the lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 8 [[Exalted Orb]]s.
+    why: >-
+      The full version protects all three. The one- and two-modifier
+      versions are cheaper and choose what they protect at random with
+      nothing to show it; on a side of three that is a gamble with the very
+      thing you are paying to keep.
+    check: >-
+      The lock appears among the suffixes as a crafted line. Use nothing
+      else on the belt before the next step.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "17% increased Stun and Block Recovery" }
+        - { text: "+22 to Strength" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the belt.
+    why: >-
+      Its text is "Reforges a rare item with new random modifiers including a
+      random Veiled modifier". With the prefixes locked, what it reforges is
+      the suffix side, lock included. The result has a veiled suffix and
+      zero to two ordinary ones.
+    check: >-
+      The three prefixes exactly as before. A line reading "Veiled" among
+      the suffixes.
+    fail: >-
+      That Veiled Chaos Orbs respect the lock comes from player testing, not
+      from the developers, though a 3.30 hotfix note does speak of a veiled
+      modifier "protected by fracturing or metamods". If in doubt after a
+      patch, try it on a cheap belt first.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "Veiled Suffix", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+  - title: "Look before you unveil"
+    do: >-
+      Read the ordinary suffixes first. Then right-click the belt and look
+      at the three choices. Do not pick yet.
+    why: >-
+      By community testing the choices never include a group already on the
+      item. On a belt that often works for you: if Strength is among the
+      ordinary suffixes, the two attribute pairs containing Strength share
+      its group and cannot be offered, which leaves more room in the draw
+      for a resistance pair or Cooldown Recovery.
+    check: >-
+      The ten possible suffixes: 13–16% Cooldown Recovery Rate; +16–20% to
+      Fire, Cold or Lightning and Chaos Resistance; +31–35 to two
+      attributes, in three pairings; 14–16% Trap Throwing Speed; 200 Energy
+      Shield regenerated per second near a Rare or Unique enemy; lucky
+      Critical Strike Chance while Focused.
+  - title: "Unveil"
+    do: >-
+      Choose the modifier that fills the largest gap. For most belts that is
+      a resistance paired with Chaos Resistance.
+    why: >-
+      Chaos Resistance is a weight-250 suffix by plain rolling. The unveiled
+      pair gives 16–20% of it together with an elemental resistance, in one
+      slot, and it is a different group from every single resistance, so it
+      sits beside whatever else rolled.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+  - title: "Judge, then bench"
+    do: >-
+      If the suffix side has the unveiled modifier, something useful beside
+      it, or an open slot, stop rerolling and craft the last suffix: 29–35%
+      of a resistance for 3 [[Chaos Orb]]s. Otherwise go back to step 2 and
+      pay again.
+    why: >-
+      An open suffix is not a failure on a belt, because the bench's
+      resistance is strong. A second lock is another 4 Divine Orbs and 8
+      Exalted Orbs; spend it only on a result with three dead suffixes.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+136 to maximum Life" }
+        - { text: "Flasks applied to you have 11% increased Effect" }
+        - { text: "+412 to Armour" }
+      suffixes:
+        - { text: "+18% to Cold and Chaos Resistances", how: veiled }
+        - { text: "+39% to Fire Resistance" }
+        - { text: "+33% to Lightning Resistance", how: crafted }
+variations: >-
+  **A named resistance instead of a veiled one.** With the prefixes locked, a
+  Harvest reforge that includes a Fire, Cold or Lightning modifier (50
+  Lifeforce) always gives that resistance on a belt, and one that includes a
+  Chaos modifier (100 Vivid) always gives Chaos Resistance. No choice of
+  three, but you name the suffix.
+
+
+  **Scouring instead.** With the prefixes locked an [[Orb of Scouring]] is
+  reported to remove only the suffixes and the lock. Three empty suffix
+  slots, one of them for the bench: cheaper than a Veiled Chaos Orb and with
+  nothing guaranteed.
+
+
+  **Trying again on a veiled belt.** Since the 17 November hotfix a Veiled
+  Chaos Orb can be used on an item that already has a veiled modifier,
+  unless that modifier is fractured or protected by a meta-modifier. So a
+  second attempt does not require unveiling first.
+mistakes:
+  - "Locking Life alone. Tier 1 Life on a belt is a short Alteration job; the lock costs more than rolling it again."
+  - "Unveiling without reading the other suffixes. The choice should fill the gap they left."
+  - "Benching a suffix before the Veiled Chaos Orb. The orb rerolls it with the rest, and the bench slot is taken by the lock anyway."
+  - "Using an Essence on the locked belt. Essences are reported to ignore the lock."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The unveiled belt modifiers, tiers, weights, bench costs and the in-game text of the Veiled Chaos Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers; the Stygian Vise's Item Tier requirement." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs on items that already have a veiled modifier." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling by right-click; safehouse leaders can drop Veiled Chaos Orbs." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The costs of the reforges mentioned as alternatives." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs, Harvest reforges and Orb of Scouring respect a locked side, and unveil choices skip groups already on the item. Partly older than 3.30." }

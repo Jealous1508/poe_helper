@@ -1,0 +1,154 @@
+category: flasks
+title: "Một prefix khó, và một suffix từ Blood Altar"
+level: 2
+summary: "Roll một prefix tốt lên life flask với ô suffix để trống, rồi để một beast đỏ thêm khả năng gỡ curse một cách chắc chắn."
+goal: >-
+  Một life flask làm nút cứu nguy: hồi ngay toàn bộ khi bạn đang Low Life,
+  và gỡ curse khi bấm. Bài học là lần craft lật ngược. Tới giờ bạn roll
+  suffix và prefix ra gì nhận nấy. Ở đây **prefix mới là phần đáng roll, còn
+  suffix thì mua**, nên một trong hai cuộc xổ số biến mất.
+base: "Divine Life Flask"
+itemLevel: 82
+baseWhy: >-
+  Divine Life Flask hồi nhiều life nhất trong mọi base, 2,400 trong 3.5
+  giây, và chứa được ba lần dùng. "Instant Recovery when on Low Life" có năm
+  tier, chỉ khác nhau ở chỗ chúng lấy đi bao nhiêu trong lượng đó. Item
+  level 81 mở tier tốt nhất, 14–11% reduced Amount Recovered; tier ngay dưới
+  nó, 18–15%, cần 63. Trên flask item level 82 thì cả hai đều roll được.
+methods: [currency, beast, finishing]
+result:
+  rarity: magic
+  prefixes:
+    - { text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }
+  suffixes:
+    - { text: "Removes Curses on use", how: beast }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "Một beast đỏ trong [[Menagerie]]", amount: "ít nhất 1", note: "công thức hiện nó đòi gì" }
+  - { item: "[[Glassblower's Bauble]]", amount: "tới 20%" }
+cost: >-
+  Alteration số lượng lớn, và một beast đỏ. Từ 3.30 beast vàng hoàn toàn
+  không còn bị bắt, nên con beast nào trong [[Menagerie]] của bạn cũng có
+  chỗ dùng khác. Con này được dùng cho flask chỉ vì prefix đã tốn công thật
+  sự mới tìm ra.
+odds: >-
+  Ở item level 82, một lần roll prefix ra "Instant Recovery when on Low
+  Life" ở mức 18% reduced hoặc tốt hơn khoảng 1 trên 31 lần, theo phép tính
+  của chúng tôi từ weight; riêng tier tốt nhất là 1 trên 62.
+
+
+  Bước này đòi nhiều hơn prefix đó: ô suffix phải trống trên cùng kết quả.
+  Dữ liệu không nói một Alteration cho một modifier chứ không phải hai
+  thường xuyên tới đâu, nên chúng tôi không đưa ra được con số đầy đủ. Nếu
+  một phần tư số lần là ra riêng một prefix, một giả định phổ biến trong
+  người chơi mà chúng tôi chưa kiểm chứng, thì bước này trung bình tốn
+  khoảng 125 Alteration.
+
+
+  Bước beast không có xác suất. Công thức thêm đúng suffix nó ghi tên.
+steps:
+  - title: "Đọc công thức trước orb đầu tiên"
+    do: >-
+      Tới [[Blood Altar]] trong [[Menagerie]] và tìm công thức flask thêm
+      "of Warding". Đọc xem nó đòi gì và kiểm xem bạn có thứ đó không.
+    why: >-
+      Patch notes 3.30 ghi các công thức flask giờ "require any Red Beast".
+      Mỗi công thức cần bao nhiêu con thì chúng tôi chưa xác nhận được, và
+      roll một prefix cho một suffix bạn không trả nổi thì chẳng để làm gì.
+    fail: >-
+      Không dư beast: hãy roll suffix thay vào. "Removes Curses on use" là
+      khoảng 1 trên 10 lần roll suffix ở item level này, và biến thể đầu
+      tiên bên dưới cho biết đòi cả hai cùng lúc tốn bao nhiêu.
+    state: { rarity: normal }
+  - title: "Alteration tới khi ra prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Mỗi
+      lần đều đọc prefix. Bạn muốn "Instant Recovery when on Low Life" với
+      18% reduced Amount Recovered trở xuống: tên của chúng là "Terrified"
+      và "Panicked".
+    why: >-
+      Cả năm tier của prefix này có weight bằng nhau, nên hai tier tốt nhất
+      chiếm hai phần năm của họ. Các tier thấp hơn lấy đi 19% tới 30% lượng
+      hồi, mà trên một flask 2,400 thì đó là rất nhiều life phải bỏ.
+    check: >-
+      Khi prefix đã đúng, hãy nhìn ô suffix. Kết quả bên dưới là trường hợp
+      khó xử: tier tốt nhất của prefix, kèm một suffix giải poison mà bạn
+      không yêu cầu.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 13% reduced Amount Recovered" }]
+      suffixes: [{ text: "Grants Immunity to Poison for 13 seconds if used while Poisoned" }]
+  - title: "Lấy prefix đứng một mình"
+    do: >-
+      Nếu có suffix ra kèm prefix, hãy quyết định. Một suffix giải đằng nào
+      bạn cũng dùng, như bleeding: giữ flask, bạn xong mà không cần beast.
+      Bất cứ thứ gì khác: tiếp tục dùng Alteration tới khi prefix xuất hiện
+      với ô suffix **trống**. Đừng dùng Augmentation.
+    why: >-
+      Công thức beast thêm suffix lên flask chưa có suffix. Một ô suffix đã
+      lấp, tốt hay xấu, đều đóng cánh cửa đó, và không gì gỡ được một
+      modifier khỏi item Magic một cách an toàn.
+    fail: >-
+      Một [[Orb of Annulment]] gỡ ngẫu nhiên một modifier. Với hai cái trên
+      flask, đó là năm ăn năm thua mất đúng cái prefix bạn đang roll tìm.
+      Chỉ dùng nếu mất flask bạn cũng chỉ nhún vai.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+  - title: "Suffix, ở Blood Altar"
+    do: >-
+      Trong Menagerie, dùng công thức flask của "of Warding" lên flask.
+    why: >-
+      Công thức đặt "Removes Curses on use" vào ô trống. Không có lần roll
+      nào ở đây. Suffix này có một tier duy nhất, nên beast cho đúng thứ một
+      Alteration lẽ ra đã cho, điều không đúng với các công thức flask khác.
+    check: >-
+      Flask giờ ghi "of Warding" và cả hai ô đã được lấp.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+      suffixes: [{ text: "Removes Curses on use", how: beast }]
+  - title: "Quality"
+    do: >-
+      Đưa flask lên 20% quality bằng [[Glassblower's Bauble]].
+    why: >-
+      Quality tăng lượng mà life flask hồi, theo cách game vận hành lâu nay,
+      và prefix này vừa lấy đi một phần lượng đó.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+      suffixes: [{ text: "Removes Curses on use", how: beast }]
+variations: >-
+  **Roll cả hai thay vào.** Đòi một Alteration ra cùng lúc prefix này và
+  suffix này là 1 trên 31 nhân với 1 trên 10, khoảng 1 trên 300 theo phép
+  tính của chúng tôi. Đó là cuộc xổ số mà beast loại bỏ. Với một prefix mà
+  hai mươi Alteration bất kỳ cũng cho bạn được, nó không đáng một con beast;
+  với cái này thì đáng.
+
+
+  **Bench làm y việc đó với giá Bauble.** Năm suffix flask của nó mỗi cái
+  giá 6 [[Glassblower's Bauble]] và cũng cần ô suffix trống. Ba bước đầu
+  giống hệt; chỉ điểm dừng cuối thay đổi. Trong năm cái, "Regenerate 3% of
+  Life per second during Effect" và "50% Chance to Avoid being Stunned
+  during Effect" là hai cái bảo vệ bạn; số còn lại là item rarity, reflected
+  damage và leech từ damage nhận vào.
+
+
+  **Các suffix beast khác, và cái giá tính bằng tier.** Trên life và mana
+  flask, các công thức còn thêm of Sealing (bleeding), of Convection (chill
+  và freeze), of Damping (ignite), of Earthing (shock) và of the Antitoxin
+  (poison): mỗi cái đều là tier thấp nhất, 6–8 giây miễn nhiễm trong khi
+  tier tốt nhất là 15–17. Trên utility flask: of the Lizard, of the Deer, of
+  the Urchin, of the Conger và of the Skunk, mỗi cái là miễn nhiễm trọn vẹn
+  trong lúc hiệu ứng còn chạy với cái giá 49–45% less Duration, trong khi
+  tier tốt nhất tốn 39–35%.
+mistakes:
+  - "Dùng Augmentation \"để xem thử\". Công thức cần ô suffix trống, và Augmentation lấp nó bằng một thứ ngẫu nhiên."
+  - "Tiêu một beast đỏ vào flask có prefix dễ ra. Instant Recovery, loại thường, là 1 trên 12 lần roll prefix ở đây; hãy roll suffix cùng với nó."
+  - "Mong tier tốt nhất từ một con beast. Trừ \"of Warding\", mọi công thức flask đều cho tier thấp nhất của họ nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và các suffix bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beastcraft flask cần một beast đỏ bất kỳ; beast vàng không còn bị bắt." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Suffix mà mỗi công thức flask thêm. Số beast mỗi công thức cần không được ghi ở đó." }

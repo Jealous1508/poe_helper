@@ -1,0 +1,371 @@
+name: "Cluster Jewel"
+short: "Jewel thêm passive vào tree. Enchantment và kích cỡ là cố định, notable là thứ bạn roll, và item level tốt nhất là mức thấp nhất còn vừa."
+icon: "Large Cluster Jewel"
+intro: >-
+  Cluster Jewel nằm trong một trong các socket vòng ngoài của passive tree và
+  mọc ra một cái tree nhỏ của riêng nó: một vòng small passive, tối đa ba
+  notable, và trên các kích cỡ lớn hơn thì có thêm jewel socket. Đây là item
+  nhiều luật lệ nhất trong game, và phần lớn luật đã được chốt trước khi bạn
+  tiêu một orb nào.
+
+
+  Ba thứ được in phía trên đường kẻ và **không craft được**: jewel thêm bao
+  nhiêu passive, small passive của nó cho gì (enchantment), và nó có bao
+  nhiêu jewel socket. Dưới đường kẻ, nó là jewel như mọi jewel khác, với
+  **hai** prefix và **hai** suffix, không quality, không Essence và không
+  modifier bench. Thứ bạn roll ở đó là các **notable**, mỗi cái là một prefix
+  hoặc suffix bình thường ghi "1 Added Passive Skill is …", cùng các bonus nhỏ
+  cho small passive.
+basics:
+  itemLevel:
+    text: >-
+      Item level chặn một Cluster Jewel hai lần. Một notable cần item level 1,
+      50, 68 hoặc 75, và jewel không roll được cái nào cao hơn level của chính
+      nó. Các bonus cho small passive chia theo tier ở 1, 68 và 84 (thêm hai
+      tier nữa, ở 73 và 78, trên jewel Small).
+
+
+      Phần khác thường là **cao hơn không có nghĩa là tốt hơn**. Mọi thứ item
+      level mở ra đều nhập vào cùng cuộc xổ số với notable bạn muốn. Trên một
+      jewel Small Life, theo phép tính của chúng tôi từ weight, cứ 10 lần roll
+      prefix thì một lần là một notable level 1 cụ thể ở item level 50 tới
+      67, và cứ 20 lần thì một lần ở item level 84. Vậy nên luật cho Cluster
+      Jewel ngược với luật cho weapon: **dùng item level thấp nhất mà vẫn cho
+      phép mọi notable trong danh sách của bạn.** Chỉ lên 84 khi bạn muốn thứ
+      84 thêm vào.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "72 notable đầu tiên, tier thấp nhất của mọi bonus cho small passive, và \"Added Small Passive Skills have 25% increased Effect\"."
+      - ilvl: 50
+        unlocks: "Thêm 106 notable. **Item level 50 tới 67 là dải sạch nhất**: 178 notable roll được và các bonus cho small passive vẫn ở mức thấp nhất và ít chen chúc nhất."
+      - ilvl: 68
+        unlocks: "Thêm 88 notable, và tier thứ hai của mọi bonus cho small passive, thứ thêm weight vào cả hai phía của cuộc xổ số."
+      - ilvl: 73
+        unlocks: "Chỉ Small Cluster Jewel: tier thứ ba của các bonus cho small passive."
+      - ilvl: 75
+        unlocks: "25 notable cuối cùng, những cái hiếm nhất. **75 tới 83 là dải dành cho chúng.**"
+      - ilvl: 78
+        unlocks: "Chỉ Small Cluster Jewel: tier thứ tư của các bonus cho small passive."
+      - ilvl: 84
+        unlocks: "\"Added Small Passive Skills have 35% increased Effect\" và tier cao nhất của mọi bonus cho small passive. Chỉ đáng có nếu đó là thứ bạn nhắm tới: chúng khiến mọi notable khó ra hơn."
+  bases:
+    text: >-
+      Ba kích cỡ. Kích cỡ quyết định jewel thêm bao nhiêu passive, chứa được
+      mấy notable, có jewel socket riêng hay không, và những enchantment nào
+      tồn tại cho nó. Dữ liệu liệt kê 17 enchantment cho jewel Large, 21 cho
+      Medium (hai cái trong đó nằm dưới một tag legacy) và 17 cho Small, gần
+      như không trùng nhau giữa các kích cỡ.
+
+
+      **Enchantment** mới là base thật. Nó ghi "Added Small Passive Skills
+      grant: …", nó quyết định mỗi small passive cho gì, và nó quyết định
+      jewel roll được những notable nào: mỗi notable gắn với một hoặc vài
+      enchantment. Không currency nào trong hướng dẫn này đổi được nó. Cũng
+      không gì đổi được số passive. Bạn chọn cả hai bằng cách chọn jewel nào
+      để nhặt hoặc mua.
+    types:
+      - title: "Large và Medium Cluster Jewel"
+        pools: [standard]
+        text: >-
+          Một pool cho các bonus chung của small passive, chia ba tier (item
+          level 1, 68 và 84), còn luật về notable thì rất khác nhau.
+
+
+          Một jewel **Large** thêm 8 tới 12 passive và có hai jewel socket
+          trong số đó. Enchantment của nó là các loại damage rộng: Fire, Cold,
+          Lightning, Physical, Chaos, Elemental, Spell, Minion và Attack
+          Damage, và damage theo weapon. Đây là kích cỡ duy nhất có notable
+          **suffix**. Cả 17 cái chung một group duy nhất trong dữ liệu, nên
+          một jewel Large chứa nhiều nhất một cái, bên cạnh tối đa hai notable
+          prefix: tổng cộng ba.
+
+
+          Một jewel **Medium** thêm 4 tới 6 passive và có một jewel socket.
+          Enchantment của nó hẹp hơn: damage over time theo loại, critical
+          strike chance, life của minion, totem, trap và mine, brand, flask và
+          những thứ khác. Mọi notable của nó đều là prefix, nên nó chứa nhiều
+          nhất hai.
+      - title: "Small Cluster Jewel"
+        pools: [small-cluster-jewel]
+        text: >-
+          Thêm 2 hoặc 3 passive và không có socket riêng. Enchantment của nó
+          thiên về phòng thủ hoặc tiện ích: Life, Energy Shield, Mana, Armour,
+          Evasion, các resistance, attribute, block, spell suppression,
+          reservation efficiency. Nó chứa **một** notable, luôn là prefix.
+
+
+          Nó có pool riêng vì các bonus cho small passive của nó lên cao hơn:
+          năm tier, trong khi các kích cỡ lớn hơn có ba. Ở item level 84, một
+          jewel Small roll được "+14–16 to Maximum Life" cho mỗi small
+          passive, so với "+8–10" trên jewel Large hoặc Medium.
+    picks:
+      - base: "Large Cluster Jewel"
+        for: "Các notable damage chính của build"
+        why: >-
+          Tối đa ba notable và thêm hai jewel socket từ một socket trên tree.
+          Các pool notable của nó nhỏ, từ ba tới khoảng mười notable prefix
+          mỗi enchantment, nên một notable cụ thể thì hay ra: trên jewel
+          Minion Damage item level 50 tới 67, Renewal là 1 trên 11 lần roll
+          prefix.
+      - base: "Medium Cluster Jewel"
+        for: "Hai notable chuyên biệt"
+        why: >-
+          Enchantment hẹp với pool notable lớn: 18 notable trên jewel Burning
+          Damage. Gắn vào socket của một jewel Large, và socket của chính nó
+          nhận một jewel Small.
+      - base: "Small Cluster Jewel"
+        for: "Một notable phòng thủ, và small passive mạnh"
+        why: >-
+          Lần craft cluster rẻ nhất: một notable, và không gì bạn thêm về sau
+          đẩy nó đi được. Hơn một nửa mọi lần roll prefix trên jewel Life item
+          level 50 tới 67 là notable.
+    impact: >-
+      Trước mọi currency, cái jewel bạn đang cầm đã quyết định xong bốn điều,
+      vĩnh viễn.
+
+
+      **Enchantment**, và cùng với nó là danh sách notable có thể xuất hiện.
+      Hãy đọc danh sách đó trong danh sách modifier, dưới enchantment của bạn,
+      trước khi mua jewel.
+
+
+      **Số passive.** Ít hơn thường tốt hơn: jewel ít passive hơn thì có ít
+      small passive hơn chắn giữa bạn và các notable. Người chơi tìm 8 trên
+      jewel Large, 4 hoặc 5 trên Medium và 2 trên Small. Chúng tôi chưa tự đếm
+      số điểm cho mọi bố cục, nên hãy kiểm cái của bạn trước khi trả giá cao.
+
+
+      **Kích cỡ**, thứ giới hạn số notable ở ba, hai hoặc một.
+
+
+      **Item level**, thứ quyết định cả cái gì roll được lẫn cuộc xổ số chen
+      chúc tới đâu.
+tools:
+  - method: currency
+    note: >-
+      Khác với các jewel khác, Cluster Jewel có thể rơi ra ở dạng Normal, nên
+      điểm bắt đầu thường là một [[Orb of Transmutation]], rồi tới
+      [[Orb of Alteration]]. Một jewel Magic có nhiều nhất một prefix và một
+      suffix, tức là trên jewel Small hoặc Medium có nhiều nhất **một**
+      notable, còn trên jewel Large là một notable prefix và một notable
+      suffix.
+
+
+      Sau đó các orb quen thuộc thêm vào: một [[Regal Orb]] thêm modifier thứ
+      ba, một [[Exalted Orb]] thêm cái thứ tư. Hai luật từ dữ liệu khiến chúng
+      an toàn hơn trên bất kỳ jewel nào khác. Một jewel Small đã có notable
+      thì không roll được cái thứ hai, nên mọi thứ thêm về sau đều là bonus
+      cho small passive. Và một jewel Large đã có notable suffix thì không
+      roll được notable suffix nào nữa, cũng vì lý do group đó.
+
+
+      Notable thì hay gặp xét theo loại và hiếm xét theo từng cái. Trên jewel
+      Burning Damage ở item level 50 tới 67, 59% số lần roll prefix là một
+      notable nào đó, và một notable level 50 bất kỳ là 4.2%.
+  - method: bench
+    note: >-
+      Không tồn tại modifier bench nào cho Cluster Jewel. Ba lựa chọn roll lại
+      cho jewel thì áp dụng: một modifier ngẫu nhiên của jewel Rare giá 8
+      [[Chaos Orb]], ba cái giá 3 Chaos Orb, rarity giá 1
+      [[Orb of Chance]]. Không có cách nào block một notable hay bảo vệ một
+      phía.
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) lưu lại một jewel Magic trước
+      [[Regal Orb]], điều có ý nghĩa trên jewel Medium và Large, nơi Regal Orb
+      được trông đợi thêm notable thứ hai.
+
+
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]]) có
+      một chỗ đứng đặc biệt ở đây. Trên jewel Small hoặc Medium, suffix không
+      bao giờ là notable, nên việc gỡ không làm mất thứ gì bạn quan tâm, còn
+      prefix được thêm có khả năng cao là notable. Trên jewel Large, cũng công
+      thức đó có thể gỡ mất notable suffix của bạn: đừng dùng nó ở đó trừ khi
+      phía suffix không chứa gì bạn muốn.
+  - method: finishing
+    note: >-
+      Không có gì để đánh bóng: không quality, không socket để roll, và
+      notable không có con số nào để [[Divine Orb]] đổi. Hoàn thiện một
+      Cluster Jewel nghĩa là **gắn nó vào socket và nhìn**. Các trang tra cứu
+      mô tả notable được đặt ở các vị trí cố định, theo thứ tự của danh sách
+      modifier, bắt đầu từ điểm jewel nối vào tree. Chúng tôi chưa tự kiểm
+      chứng các luật bố cục, nên hãy làm theo cách trực tiếp: gắn jewel vào,
+      xem mỗi notable nằm ở đâu và bạn phải lấy những gì để tới nó, rồi lại
+      tháo ra. Theo trang tra cứu, tháo một Cluster Jewel sẽ hoàn lại số điểm
+      đã tiêu trong nó, ngoại trừ một refund point cho bất kỳ jewel socket nào
+      bạn đã lấy bên trong nó.
+  - method: harvest
+    note: >-
+      Chưa xác nhận được cho jewel trong 3.30. Nếu các reforge ở
+      [[Horticrafting Station]] nhận Cluster Jewel, một reforge đảm bảo
+      modifier có tag sẽ là công cụ mạnh ở đây, vì notable nào cũng mang tag.
+      Không ví dụ nào của chúng tôi dựa vào nó.
+  - method: fossil
+    note: >-
+      Dữ liệu gắn pool chỉ dành cho Fossil của jewel vào cả Cluster Jewel.
+      Resonator có dùng được trên một cái trong 3.30 hay không thì chúng tôi
+      chưa xác nhận được, và những modifier đó không phải thứ Cluster Jewel
+      sinh ra để làm.
+  - method: corruption
+    note: >-
+      Dữ liệu không liệt kê implicit corruption nào cho Cluster Jewel. Chúng
+      tôi không biết thứ gì một [[Vaal Orb]] có thể thêm vào nó, nên không có
+      lý do gì để corrupt một Cluster Jewel bạn tự làm.
+memoryStrands: >-
+  Ở đây không có gì cho Cluster Jewel. Notable không có tier để
+  [[Memory Strands]] nâng, các orb strand nói tới item "equipment", và trên
+  item này, một tier cao hơn của bonus cho small passive thậm chí còn không rõ
+  có phải là lợi hay không: cuộc xổ số bạn muốn là cuộc không chen chúc.
+reading:
+  intro: >-
+    Đọc một Cluster Jewel từ trên xuống. **Enchantment:** có phải cái build
+    của bạn dùng không? **Số passive:** cái này sẽ tốn bao nhiêu điểm? **Item
+    level:** nó roll được những notable nào? Sau đó mới tới các modifier, và
+    với chúng câu hỏi chỉ đơn giản là bao nhiêu cái trong số đó là notable bạn
+    sẽ lấy. Từ 3.30, notable trên item là keyword: rê chuột lên một cái để đọc
+    nó cho gì.
+  prefixes:
+    text: >-
+      Prefix là nơi notable nằm trên mọi kích cỡ. Mỗi notable prefix là một
+      group riêng, nên hai cái khác nhau có thể nằm cạnh nhau trên jewel
+      Medium hoặc Large; jewel Small dừng ở một.
+
+
+      Các prefix còn lại thay đổi small passive. Sáu cái trong số đó thêm một
+      thứ vào mỗi small passive: Life, Energy Shield, Mana, Armour, Evasion
+      hoặc increased Damage. Cái thứ bảy, "Added Small Passive Skills have 25%
+      (hoặc 35%) increased Effect", nhân chính thứ enchantment cho.
+
+
+      Một ô prefix chứa bonus cho small passive là một ô không chứa notable.
+      Trên jewel Small, vốn chỉ có được một notable, prefix thứ hai sinh ra
+      đúng để làm việc đó. Trên jewel Medium hoặc Large, đó thường là một nỗi
+      thất vọng.
+    key:
+      - mod: "1 Added Passive Skill is a notable (prefix)"
+        why: "Lý do item này tồn tại. Notable nào có thể xuất hiện tùy vào enchantment, còn thường xuyên tới đâu thì tùy vào item level; danh sách modifier cho thấy cả hai, theo từng enchantment."
+        aim: "Dải item level thấp nhất có chứa nó: 1–49, 50–67, 68–74 hoặc 75–83."
+      - mod: "Added Small Passive Skills have #% increased Effect"
+        why: "Khiến mọi small passive trên jewel cho nhiều hơn thứ enchantment cho. Modifier dành cho jewel Small được lấy vì small passive của nó."
+        aim: "35% cần ilvl 84. 25% roll được ở mọi level."
+      - mod: "Added Small Passive Skills also grant: +# to Maximum Life"
+        why: "Một bonus thứ hai trên mọi small passive. Đáng giá nhất trên jewel có nhiều small passive mà bạn thực sự lấy."
+        aim: "Small: +14–16 (ilvl 84), +8–10 (ilvl 73). Large và Medium: +8–10 (ilvl 84)."
+  suffixes:
+    text: >-
+      Trên jewel Small và Medium, suffix không bao giờ là notable. Nó là một
+      trong mười một bonus chung cho small passive (attribute, resistance,
+      mana regeneration và life regeneration), hoặc một bonus riêng của
+      enchantment, như attack speed trên các jewel attack hay damage over time
+      trên các jewel damage over time.
+
+
+      Trên jewel Large, một suffix có thể là notable, và chỉ một: dữ liệu xếp
+      mọi notable suffix của Large vào cùng một group. Điều đó tạo nên hình
+      dáng của jewel Large. Hai notable prefix, một notable suffix, và một
+      modifier thứ tư chỉ có thể là suffix cho small passive.
+
+
+      Từ 3.30, các bonus speed riêng của enchantment đều là một họ, nên một
+      jewel có nhiều nhất một cái trong số đó.
+    key:
+      - mod: "1 Added Passive Skill is a notable (suffix, Large jewels only)"
+        why: "Notable thứ ba của jewel Large. Mỗi enchantment của Large có khoảng ba cái để chọn, và tất cả là một group."
+        aim: "Nhiều nhất một cái mỗi jewel."
+      - mod: "Added Small Passive Skills also grant: #% increased Attack Speed"
+        why: "Đại diện cho các suffix riêng của enchantment: attack speed, cast speed, hoặc attack and cast speed với loại damage của jewel, và trên các enchantment khác là critical strike multiplier, area of effect hoặc damage over time."
+        aim: "1% (ilvl 1), 2% (ilvl 68) hoặc 3% (ilvl 84) cho mỗi small passive."
+      - mod: "Added Small Passive Skills also grant: +#% to all Elemental Resistances"
+        why: "Suffix chung hữu ích nhất: mỗi small passive bạn lấy vá cả ba resistance."
+        aim: "Large và Medium: 2%, 3% hoặc 4%. Small: tới 6% (ilvl 84)."
+      - mod: "Added Small Passive Skills also grant: +# to All Attributes"
+        why: "Cho build stack attribute hoặc đang thiếu một attribute."
+        aim: "Large và Medium: +2 tới +4. Small: tới +6 (ilvl 84)."
+approach:
+  principle: >-
+    **Ba lựa chọn trước orb đầu tiên, và item level là cái người ta hay chọn
+    sai.** Enchantment và số passive không đổi được, nên chúng là thứ để mua,
+    không phải để craft. Item level cũng không đổi được, và ở đây mức đúng là
+    mức thấp nhất còn cho phép các notable của bạn, vì mỗi level trên mức đó
+    thêm đối thủ cạnh tranh mà không thêm gì bạn muốn.
+  order:
+    - title: "Liệt kê các notable, rồi tìm enchantment có chúng"
+      text: >-
+        Mở danh sách modifier và tra từng notable. Nó nêu các enchantment roll
+        được notable đó, phía của nó và item level của nó. Mọi notable cho một
+        jewel phải chung một enchantment, và trên jewel Large nhiều nhất một
+        cái trong số đó được là suffix.
+    - title: "Chọn số passive"
+      text: >-
+        Ít passive nhất bạn tìm được ở mức giá bạn chấp nhận. Con số này cố
+        định trên jewel, như enchantment.
+    - title: "Chọn dải item level"
+      text: >-
+        Lấy level cao nhất trong các notable của bạn: 1, 50, 68 hoặc 75. Mua
+        một jewel ở đúng mức đó hoặc ngay trên, và dưới nấc kế tiếp có thêm
+        cạnh tranh: 50 tới 67, 68 tới 74 (68 tới 72 trên jewel Small), hoặc 75
+        tới 83 (75 tới 77 trên jewel Small).
+    - title: "Roll jewel Magic"
+      text: >-
+        Alteration tới khi notable xuất hiện. Trên jewel Large, một notable
+        prefix và một notable suffix cùng lúc là thứ đáng chờ: đó là hai trên
+        ba trước cả khi jewel thành Rare.
+    - title: "Thêm notable kế tiếp bằng công cụ an toàn nhất cho kích cỡ đó"
+      text: >-
+        Small: không có notable kế tiếp; một Regal Orb và một Exalted Orb là
+        những lần roll miễn phí cầu bonus cho small passive. Medium: một Regal
+        Orb, kèm Imprint nếu bạn kỹ tính, và beast thêm-một-prefix khi Regal
+        Orb rơi vào suffix. Large: một Regal Orb cho notable prefix thứ hai,
+        kèm Imprint.
+    - title: "Gắn vào socket và nhìn"
+      text: >-
+        Xem các notable nằm ở đâu và đếm số điểm. Một notable thứ ba bạn sẽ
+        không lấy chỉ vô hại nếu nó không nằm trên đường đi của bạn.
+  finishing: >-
+    Đặt jewel vào tree, kiểm đường tới từng notable bạn định lấy, và tháo ra
+    nếu nó làm bạn thất vọng. Notable không có chỉ số nào để roll lại, nên
+    [[Divine Orb]] chỉ có ý nghĩa với số ít bonus cho small passive có khoảng.
+
+
+    Một ô trống trên jewel Small, hoặc ô thứ tư của một jewel Large đã có
+    notable suffix, là một lần roll miễn phí cho [[Exalted Orb]]: theo các
+    group trong dữ liệu, nó chỉ thêm được bonus cho small passive.
+  stopping: >-
+    Một jewel Small xong khi notable của nó đã có. Một jewel Medium có một
+    notable bạn cần và cái thứ hai bạn dùng được là một jewel tốt; nhất định
+    đòi đúng hai cái sẽ nhân chi phí lên năm tới mười lần. Một jewel Large có
+    hai notable của bạn là chỗ phần lớn người chơi nên dừng và gắn vào socket,
+    vì notable thứ ba đúng ý mới là cái đắt.
+
+
+    Nếu bước kế tiếp cần nhiều Croaker hơn số bạn có, jewel đã xong.
+special:
+  - mod: "Added Small Passive Skills grant: (the enchantment)"
+    source: "Cố định trên item"
+    where: "In phía trên đường kẻ khi jewel rơi ra. Nó quyết định small passive và danh sách notable. Không gì trong hướng dẫn này đổi được nó: chọn nó bằng cách chọn jewel."
+  - mod: "Adds # Passive Skills"
+    source: "Cố định trên item"
+    where: "8 tới 12 trên jewel Large, 4 tới 6 trên Medium, 2 hoặc 3 trên Small, được chốt khi nó rơi ra. Hãy mua đúng số bạn muốn."
+  - mod: "Added Passive Skills are Jewel Sockets"
+    source: "Cố định theo kích cỡ"
+    where: "Hai trên jewel Large và một trên Medium, không có trên Small, theo các trang tra cứu. Socket của jewel Large nhận jewel Medium hoặc Small; socket của Medium nhận một jewel Small."
+  - mod: "A suffix notable"
+    source: "Chỉ jewel Large"
+    where: "Roll như mọi suffix, nhưng chỉ 17 enchantment của Large có chúng, và tất cả chung một group."
+  - mod: "#% increased Damage with Ailments"
+    source: "Fossil"
+    where: "Thuộc pool chỉ dành cho Fossil của jewel, thứ dữ liệu cũng liệt kê dưới Cluster Jewel. Chưa xác nhận trong 3.30."
+mistakes:
+  - "**Roll một jewel item level 84 để tìm notable level thấp.** Ở 84, một notable level 1 hoặc level 50 chỉ dễ ra bằng khoảng một nửa so với ở item level 50 tới 67. Hãy mua jewel level thấp."
+  - "**Roll một jewel dưới level của notable.** Một notable level 68 không bao giờ xuất hiện trên jewel item level 67."
+  - "**Chọn enchantment sau cùng.** Một notable thuộc về enchantment khác thì không roll được, dù bạn tiêu bao nhiêu."
+  - "**Chờ notable suffix thứ hai trên jewel Large**, notable thứ ba trên Medium hoặc cái thứ hai trên Small. Group và kích cỡ cấm chúng."
+  - "**Dùng beast thêm-một-prefix trên jewel Large có notable suffix.** Suffix nó gỡ là ngẫu nhiên."
+  - "**Bỏ qua số passive.** Một jewel Large 12 passive với cùng các notable tốn nhiều điểm hơn cho cùng kết quả."
+  - "**Trả tiền cho một jewel ba notable mà không gắn thử vào socket.** Notable nằm ở đâu quyết định dùng nó tốn bao nhiêu."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Kích cỡ, enchantment, mọi notable cùng phía, item level, group và weight của nó, các bonus cho small passive và các lựa chọn bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các bonus speed trở thành một họ; notable hiện dưới dạng keyword; Cluster Jewel rơi thường xuyên hơn từ monster Delirious." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Giới hạn notable và socket theo kích cỡ, chỗ gắn các jewel, việc hoàn điểm khi tháo ra và mô tả vị trí của notable. Một phần là nội dung cộng đồng không rõ đã bao lâu." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm-một-prefix." }

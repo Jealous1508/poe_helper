@@ -1,0 +1,190 @@
+category: one-hand-maces
+title: "Veiled Chaos Orb: một lần roll lại có một lựa chọn bên trong"
+level: 3
+summary: "Mỗi Veiled Chaos Orb roll lại cây mace và thêm một veiled modifier. Đọc phần còn lại trước, block các đáp án sai ở bench, rồi unveil một prefix phần trăm physical."
+goal: >-
+  Một cây mace chạy map dựng quanh một prefix unveil ra: 120–139% increased
+  Physical Damage kèm chance to Impale, Bleed, Poison hoặc Blind. Đó là cái
+  phần trăm bạn **chọn** thay vì roll. Bài học là unveil hoạt động thế nào,
+  một craft bench bỏ đi thu hẹp ba lựa chọn ra sao, và cách quyết định một
+  lần roll lại có đáng unveil hay không.
+base: "Nightmare Mace"
+itemLevel: 75
+baseWhy: >-
+  38–80 với 1.4 attack mỗi giây, cây mace endgame thường nhanh nhất. Modifier
+  unveil ra cần item level 60. Item level 75 còn cho phép Tier 2 của mọi thứ
+  physical có thể roll ra cạnh veil, và trên mace thứ gì đó physical roll ra
+  cạnh nó khá thường: đó là lý do công cụ này dùng được ở đây mà không cần
+  khóa, trong khi trên axe thì cần.
+methods: [currency, veiled, bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 20 to 40 Physical Damage" }
+  suffixes:
+    - { text: "+44 to Strength" }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Veiled Chaos Orb]]", amount: "3–8" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Orb of Alteration]]", amount: "4 mỗi lần block" }
+  - { item: "[[Orb of Scouring]]", amount: "1 mỗi lần block", note: "để gỡ nó ở bench" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho craft bench cuối cùng" }
+cost: >-
+  Các [[Veiled Chaos Orb]]. Các leader Safehouse trong Betrayal có cơ hội rơi
+  chúng, và các trang tra cứu liệt kê bench Research của Aisling là nguồn thứ
+  hai. Mọi thứ khác chỉ là tiền lẻ.
+odds: >-
+  Dữ liệu không cho biết veil rơi vào phía prefix thường xuyên tới đâu, hay
+  ba lựa chọn được bốc thế nào, nên chúng tôi không đưa ra một con số duy
+  nhất. Thứ đếm được: một prefix veiled trên mace có mười ba kết quả có thể
+  có và bốn trong đó là prefix phần trăm physical. Bảy trong chín cái còn lại
+  chung một group. Khi group đó bị block, còn lại sáu kết quả, bốn trong đó
+  là thứ bạn muốn, nên ba lựa chọn khác nhau buộc phải chứa một cái. Điều đó
+  dựa vào hai luật mà người chơi đã thử nghiệm còn nhà phát triển thì chưa
+  tuyên bố.
+
+
+  Cạnh veil, mỗi prefix khác mà orb roll ra là flat Physical Damage khoảng
+  22% số lần và hybrid Accuracy khoảng 12%, theo phép tính của chúng tôi ở
+  item level 75.
+steps:
+  - title: "Chuẩn bị một cây mace Rare"
+    do: >-
+      Đưa một cây Nightmare Mace trắng lên 20% quality rồi dùng một
+      [[Orb of Alchemy]].
+    why: >-
+      Veiled Chaos Orb reforge một item Rare. Alchemy roll ra gì không quan
+      trọng; nó chỉ biến cây mace thành Rare.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 41 to 74 Fire Damage" }
+      suffixes:
+        - { text: "+29 to Strength" }
+        - { text: "+266 to Accuracy Rating" }
+  - title: "Dùng một Veiled Chaos Orb và khoan unveil"
+    do: >-
+      Dùng một [[Veiled Chaos Orb]]. Cây mace nhận các modifier mới, một
+      trong số đó chỉ hiện là "Veiled". Giữ Alt và đọc mọi thứ khác trước.
+    why: >-
+      Unveil là một quyết định, và quyết định sau khi đã biết phần còn lại
+      của item là gì thì rẻ hơn. Ba câu hỏi: veil là prefix hay suffix?
+      Increased Physical Damage thuần có roll ra cạnh nó không? Có ô prefix
+      nào trống không?
+    check: >-
+      Kết quả trong ví dụ là cái đáng mong: một prefix veiled, flat Physical
+      Damage bên cạnh, một ô prefix trống, và không có prefix phần trăm thuần
+      nào trên item.
+    fail: >-
+      Nếu phần còn lại của item kém, hãy dùng thêm một Veiled Chaos Orb mà
+      không unveil. Từ hotfix ngày 17 tháng 11, orb này dùng được trên item
+      đã có sẵn veiled modifier.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 20 to 40 Physical Damage" }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Block group bạn không muốn"
+    do: >-
+      Khi còn một ô prefix trống, craft **25–34% increased Fire Damage** ở
+      [[Crafting Bench]] giá 4 [[Orb of Alteration]].
+    why: >-
+      Unveil đưa ra ba modifier, và theo thử nghiệm của người chơi nó không
+      bao giờ đưa ra cái có group đã nằm trên item. Bảy trong mười ba prefix
+      mà một veil có thể hóa thành thuộc về một group duy nhất: các modifier
+      phần trăm cho spell, minion, chaos và damage của từng element riêng.
+      Craft vô giá trị này nằm trong group đó. Có nó trên cây mace, chỉ còn
+      lại sáu kết quả: bốn prefix phần trăm physical và hai loại penetration.
+    fail: >-
+      Không có prefix trống: unveil không có block. Bốn trên mười ba kết quả
+      vẫn là những cái bạn muốn.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 20 to 40 Physical Damage" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Unveil"
+    do: >-
+      Bấm chuột phải vào cây mace và chọn trong ba lựa chọn: increased
+      Physical Damage kèm chance to **Impale**, to cause **Bleeding**, to
+      **Poison** hoặc to **Blind**. Cả bốn đều cho 120–139%; hãy lấy dòng thứ
+      hai mà build của bạn dùng.
+    why: >-
+      Bạn không còn cần Jun cho việc này. Modifier unveil ra là một modifier
+      thường, mạnh hơn bản của bench ở mức 95–105%, và nó không dùng ô bench.
+      120–139% nằm giữa Tier 4 và Tier 3 tự nhiên; một prefix phần trăm roll
+      ra Tier 4 trở lên là khoảng 1 trên 88 lần roll prefix trên mace.
+    check: >-
+      Nếu không cái nào trong ba là prefix phần trăm physical thì veil đã
+      trượt. Hãy lấy lựa chọn ít tệ nhất hoặc dùng thêm một Veiled Chaos Orb.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 20 to 40 Physical Damage" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "+44 to Strength" }
+  - title: "Gỡ block và tiêu bench cho đàng hoàng"
+    do: >-
+      Ở bench, gỡ modifier crafted với giá 1 [[Orb of Scouring]]. Rồi craft
+      thứ cây mace còn thiếu: ở đây là **11–15% increased Attack Speed** giá
+      2 [[Chaos Orb]].
+    why: >-
+      Block chưa bao giờ là gì khác ngoài một cách lái lần unveil. Attack
+      speed là suffix cây mace nào cũng muốn và cây này chưa có. Prefix thứ
+      ba để trống cho một [[Exalted Orb]] về sau; bench không lấp được nó
+      bằng physical damage, vì prefix phần trăm của bench chung group với cái
+      unveil ra và flat damage của bench chung group với cái roll ra.
+    check: >-
+      Gỡ block bằng mục "Remove Crafted Mods" của bench, không bao giờ bằng
+      một Orb of Scouring lên chính item.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 22% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 20 to 40 Physical Damage" }
+      suffixes:
+        - { text: "+44 to Strength" }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Veil là một suffix.** Unveil nó không cần block và tìm 6–7% chance to
+  deal Double Damage, hoặc 12–15% attack speed khi có enemy Rare hoặc Unique
+  trong vòng 6 mét. Attack speed đó là group riêng, nên attack speed thường
+  của bench vẫn vừa cạnh nó. Build crit thì tìm +36–40% Critical Strike
+  Multiplier với cùng điều kiện đó.
+
+
+  **Increased Physical Damage thuần roll ra cạnh một prefix veiled.** Bốn kết
+  quả unveil physical sẽ không được đưa ra: cùng group. Nếu tier roll ra tốt
+  thì bạn đã có phần trăm của mình rồi; unveil lấy penetration hoặc kệ cái
+  veil. Nếu nó kém thì roll lại.
+
+
+  **Một cây mace veiled từ Syndicate.** Thành viên Syndicate rơi item Rare đã
+  mang sẵn một veil. Đọc nó đúng như ở bước 2 rồi đi tiếp từ đó; chỉ cần tới
+  orb khi phần còn lại của item không đáng unveil.
+
+
+  **Memory Strands.** Theo bảng data-mine, một Veiled Chaos Orb có thể tiêu
+  tới 80 strand. Đừng dùng nó trên base strand.
+mistakes:
+  - "Unveil ngay lúc veil xuất hiện. Hãy đọc phần còn lại của item trước; một nửa những gì quyết định lần unveil đã nằm sẵn trên đó."
+  - "Quên block khi còn một ô prefix trống. Bốn Alteration gỡ bảy kết quả sai."
+  - "Để nguyên block. Nó là một ô prefix và là modifier bench duy nhất của item."
+  - "Unveil một prefix khi cây mace đã roll ra increased Physical Damage thuần mà vẫn trông chờ các lựa chọn physical."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier unveil ra và group của chúng, weight, tier và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveil không cần Jun; các leader Safehouse có thể rơi Veiled Chaos Orb." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orb trên item đã có sẵn veiled modifier." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: một group đã có trên item thì không được đưa ra khi unveil. Một phần cũ hơn 3.30." }
+  - { title: "poedb: Immortal Syndicate", url: "https://poedb.tw/us/Immortal_Syndicate", kind: data, note: "Thành viên Syndicate rơi veiled item; bench Research của Aisling." }

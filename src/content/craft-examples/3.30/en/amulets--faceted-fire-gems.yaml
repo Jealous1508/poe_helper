@@ -1,0 +1,169 @@
+category: amulets
+title: "+1 to Fire gems with two Fossils"
+level: 3
+summary: "A Faceted Fossil and a Scorched Fossil in one Resonator turn a 1-in-400 prefix into about 1 in 8. Reroll until it lands, then bench the Life."
+goal: >-
+  An amulet with "+1 to Level of all Fire Skill Gems", fire damage around it,
+  and Life from the bench. The lesson is **what happens when two Fossils agree
+  about one modifier.** Each multiplies its own tag by ten, and a modifier
+  that carries both tags is multiplied twice.
+base: "Lapis Amulet"
+itemLevel: 75
+baseWhy: >-
+  Item level 75 is the lowest at which a gem level prefix can roll, and the
+  best one for this craft: every higher tier of every other prefix is one more
+  ticket against you. The Lapis Amulet's Intelligence suits a caster; take the
+  implicit your build is short of.
+methods: [fossil, bench]
+result:
+  implicits: ["+26 to Intelligence"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+    - { text: "25% increased Fire Damage", how: fossil }
+    - { text: "+47 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+38% to Fire Resistance", how: fossil }
+    - { text: "24% increased Fire Damage", how: fossil }
+needs:
+  - { item: "[[Faceted Fossil]]", amount: "5–15" }
+  - { item: "[[Scorched Fossil]]", amount: "5–15" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the size with two sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "3", note: "one to make the amulet Rare, two for the bench" }
+cost: >-
+  One of each Fossil and one two-socket Resonator per attempt, all from
+  Delve. In 3.30 Delve is reached through the maps that always spawn
+  Sulphite, so this is a craft for someone who delves or buys from those who
+  do. The bench step is 2 [[Orb of Alchemy]].
+odds: >-
+  With both Fossils, a prefix roll is "+1 to Level of all Fire Skill Gems"
+  between 12% and 15% of the time at item level 75, by our arithmetic. The
+  range is there because the site's calculator leaves the amulet's
+  Fossil-only modifiers out of the pool and we also counted them in; the
+  truth for a single roll should lie between the two. Without Fossils the
+  same prefix is 1 roll in 391.
+
+
+  A result has one to three prefixes, so expect the gem level on roughly one
+  attempt in four or five. The model multiplies a modifier once for each
+  matching tag, which is how community tools do it; treat the figure as close,
+  not exact.
+steps:
+  - title: "Make the amulet Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white amulet. What it rolls does not
+      matter.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, as a Chaos Orb does. The
+      amulet only has to be Rare for the first one to work.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes: [{ text: "+33 to maximum Mana" }]
+      suffixes:
+        - { text: "+24 to Dexterity" }
+        - { text: "+19% to Cold Resistance" }
+        - { text: "Gain 3 Life per Enemy Hit with Attacks" }
+  - title: "Load both Fossils and use the Resonator"
+    do: >-
+      Put one [[Faceted Fossil]] and one [[Scorched Fossil]] into a
+      [[Potent Chaotic Resonator]], then use the Resonator on the amulet.
+    why: >-
+      Faceted reads "More Gem modifiers". Scorched reads "More Fire
+      modifiers, No Cold modifiers". In the 3.30 data "more" is ten times the
+      weight. The Fire gem level carries both the gem tag and the fire tag,
+      so it goes from 200 tickets to 20,000. The other typed gem levels get
+      only the first multiplier, and everything with the cold tag, the Cold
+      gem level included, disappears.
+
+
+      You need a Resonator with two sockets. By long-standing behaviour that
+      is the Potent size; the item itself shows how many Fossils it holds.
+    check: >-
+      The amulet has new modifiers and most of them mention fire. That is the
+      Scorched Fossil working on the whole pool, not just on the gem level.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "Adds 14 to 29 Fire Damage to Attacks", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "20% increased Fire Damage", how: fossil }
+  - title: "Read the result"
+    do: >-
+      Hold Alt and look for the prefix **"+1 to Level of all Fire Skill
+      Gems"**. If it is missing, load another pair and go again.
+    why: >-
+      The attempt above shows the price of the Scorched Fossil: it multiplies
+      added Fire Damage to Attacks as well, and that prefix is about twice as
+      common as the gem level. A caster has no use for it. Nothing can be
+      done about that except another attempt.
+    check: >-
+      Two different modifiers read "increased Fire Damage" in that result,
+      and both are real. One is a prefix that only rolls during a Fossil
+      craft, the other is the ordinary suffix. They are different groups and
+      stack.
+    fail: >-
+      There is nothing to repair. A Fossil attempt rerolls the whole item,
+      so a miss costs one pair of Fossils and one Resonator.
+  - title: "Stop when the gem level lands with room beside it"
+    do: >-
+      Keep a result that has the gem level **and** at least one open prefix
+      slot, or the gem level with Life already rolled.
+    why: >-
+      Life is the other thing this amulet needs, and Life is a prefix. Three
+      prefixes without Life leave no place for it. This is the only reason to
+      throw away a result that has the gem level, and with two fire prefixes
+      around it you may decide to keep it anyway.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+  - title: "Bench the Life"
+    do: >-
+      At the [[Crafting Bench]], craft +41–55 to maximum Life for 2
+      [[Orb of Alchemy]].
+    why: >-
+      The bench is certain, so it fills the gap you could not aim at. One
+      suffix slot stays open for an [[Exalted Orb]] when you can spare one.
+    state:
+      implicits: ["+26 to Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Skill Gems", how: fossil }
+        - { text: "25% increased Fire Damage", how: fossil }
+        - { text: "+47 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+variations: >-
+  **Other gem types.** Swap the second Fossil: [[Frigid Fossil]] for Cold,
+  [[Metallic Fossil]] for Lightning, [[Jagged Fossil]] for Physical,
+  [[Aberrant Fossil]] for Chaos. Each removes one tag as well, so read its
+  text first. The Physical pairing is the weakest, about 1 prefix roll in 10,
+  because added Physical Damage to Attacks is a heavy family and gets
+  multiplied too.
+
+
+  **Chaos has a second route.** A Harvest reforge that guarantees a Chaos
+  modifier costs 100 Vivid Lifeforce and, on an amulet, has only two
+  modifiers to choose from. If the choice is made by weight it is the gem
+  level about 1 time in 8.5. No Fossils, no Delve.
+
+
+  **The Faceted Fossil alone.** One Fossil in a
+  [[Primitive Chaotic Resonator]] makes each typed gem level about 2% of
+  prefix rolls and any of the five about 10%. Use it when you would accept
+  more than one type.
+mistakes:
+  - "Using a higher item level \"to be safe\". Above 75 the gem level does not improve and its odds get slightly worse."
+  - "Reading the Scorched Fossil as a gem Fossil. It multiplies every fire modifier on the amulet, wanted or not."
+  - "Expecting the calculator's figure exactly. Fossil-only modifiers join the pool during a Fossil craft; we give a range for that reason."
+  - "Putting [[Memory Strands]] on the base first. Fossils do not use strands, by player testing, and a gem level has only one tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, tags, tiers and weights, and the bench cost. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The cost of the Chaos reforge mentioned as an alternative." }

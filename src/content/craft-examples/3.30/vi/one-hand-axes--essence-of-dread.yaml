@@ -1,0 +1,146 @@
+category: one-hand-axes
+title: "Một cây axe impale: Essence cho suffix, bench cho prefix"
+level: 2
+summary: "Essence of Dread đảm bảo Impale Effect, một suffix mà pool tự nhiên không có. Rồi bench thêm một prefix phần trăm physical mang theo chance to Impale."
+goal: >-
+  Một cây axe cho build Impale với hai modifier mà roll thường không bao giờ
+  tạo ra được: **increased Impale Effect** từ một Essence, và **increased
+  Physical Damage kèm chance to Impale** của bench. Bài học là cách ghép hai
+  modifier đặc biệt với nhau: một cái cố định một suffix và để prefix cho may
+  rủi, nên bạn phải biết trước những prefix may mắn nào còn chừa chỗ cho cái
+  kia.
+base: "Siege Axe"
+itemLevel: 75
+baseWhy: >-
+  Impale được áp theo từng cú đánh, nên cây axe nhanh nhất hợp với nó: Siege
+  Axe có 1.5 attack mỗi giây. Item level 75 mở Tier 2 của flat Physical
+  Damage và của cả hai prefix phần trăm. Modifier của chính Essence không phụ
+  thuộc item level.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 17 to 35 Physical Damage" }
+    - { text: "90% increased Physical Damage / 16% chance to Impale Enemies on Hit with Attacks", how: crafted }
+  suffixes:
+    - { text: "19% increased Impale Effect", how: essence }
+    - { text: "21% increased Attack Speed" }
+    - { text: "+287 to Accuracy Rating" }
+needs:
+  - { item: "[[Shrieking Essence of Dread]]", amount: "10–20", note: "Screaming cũng được; Deafening thì tốt hơn" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Essence là toàn bộ chi phí. Dread chỉ tồn tại từ bậc Screaming trở lên;
+  trong 3.30, mọi Essence trong map đỏ đều là Screaming trở lên, nên đó là
+  nơi để gom chúng. Craft bench là 3 [[Chaos Orb]].
+odds: >-
+  Suffix thì chắc chắn. Câu hỏi nằm ở prefix. Ở item level 75, theo phép tính
+  của chúng tôi, một lần roll prefix ra flat Physical Damage 14% số lần và
+  hybrid kèm Accuracy 8%: cộng lại hơn 1 trên 5 một chút. Đó là hai prefix
+  physical vẫn để ngỏ craft bench. Increased Physical Damage thuần, thêm 8%
+  nữa, là một cú roll tốt nhưng làm đổi kế hoạch.
+
+
+  Một kết quả Essence có từ một tới ba prefix, nên đâu đó giữa một trên năm
+  và một trên hai kết quả cho ra một prefix bạn dựng tiếp lên được, và ít hơn
+  nhiều cho ra một tier tốt: flat Physical Damage từ 13–18 to 27–31 trở lên
+  là khoảng 1 trên 27 lần roll prefix. Hãy tính mười tới hai mươi Essence.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa một cây Siege Axe trắng lên 20% quality. Dùng một
+      [[Shrieking Essence of Dread]] lên nó.
+    why: >-
+      Essence biến cây axe thành Rare và đảm bảo 17–21% increased Impale
+      Effect (12–16% ở bậc Screaming, 22–25% ở bậc Deafening). Trên một cây
+      axe không có influence, Essence là nguồn duy nhất của modifier đó. Mọi
+      thứ khác trên item đều ngẫu nhiên, và từ bậc Screaming trở lên Essence
+      có thể dùng lại lên kết quả Rare.
+    state:
+      prefixes:
+        - { text: "Adds 66 to 131 Fire Damage" }
+        - { text: "Adds 12 to 213 Lightning Damage" }
+        - { text: "Adds 45 to 90 Cold Damage" }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "+38 to Dexterity" }
+  - title: "Đọc prefix với bench trong đầu"
+    do: >-
+      Giữ Alt và chỉ nhìn phía prefix. Bạn đang tìm hai điều cùng lúc: **một
+      prefix physical là flat damage hoặc hybrid Accuracy**, và **tổng cộng
+      nhiều nhất hai prefix**.
+    why: >-
+      Craft bench bạn đang để dành là một prefix, nên nó cần một ô trống. Và
+      nó cùng group với increased Physical Damage thuần, nên nó không lên
+      được một cây axe đã roll ra cái đó. Flat Physical Damage và hybrid
+      Accuracy thuộc các group khác nên nằm cạnh nó được. Kết quả ở trên
+      trượt cả hai điều: ba prefix, tất cả là elemental.
+    check: >-
+      Một mức hợp lý cho cây axe chạy map đầu tiên: flat Physical Damage từ
+      13–18 to 27–31 trở lên, hoặc hybrid từ 45% trở lên.
+    fail: >-
+      Dùng thêm một Essence lên cùng cây axe đó. Impale Effect lần nào cũng
+      quay lại; chỉ có Essence là bị tiêu.
+  - title: "Lặp lại tới khi một prefix ra mà còn chỗ bên cạnh"
+    do: >-
+      Dùng Essence hết cái này tới cái khác, mỗi lần đều đọc prefix, tới khi
+      một kết quả qua được phần kiểm tra. Chỉ liếc sang suffix khi cần phân
+      định hai kết quả ngang nhau.
+    why: >-
+      Mỗi lần dùng là một lần roll độc lập của mọi thứ trừ modifier Essence.
+      Attack speed trong các suffix là phần thêm đáng mừng, 14% số lần roll
+      suffix, nhưng đó không phải thứ bạn đang roll để tìm: prefix mới là
+      phần mà Essence of Dread không hứa được.
+    state:
+      prefixes:
+        - { text: "Adds 17 to 35 Physical Damage" }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "21% increased Attack Speed" }
+        - { text: "+287 to Accuracy Rating" }
+  - title: "Bench prefix Impale"
+    do: >-
+      Ở [[Crafting Bench]], craft **increased Physical Damage kèm chance to
+      Impale Enemies on Hit with Attacks**: 86–94% và 16–17% giá 3
+      [[Chaos Orb]]. Công thức thấp hơn cho 81–85% và 13–15% giá 3 Orb of
+      Alchemy, công thức cao hơn cho 95–105% và 18–20% giá 8 Chaos Orb.
+    why: >-
+      Một ô mua được một prefix phần trăm gần bằng Tier 5 tự nhiên và một
+      chance to Impale mà nếu không thì phải lấy từ passive tree hoặc một
+      support gem. Nó nhân flat damage bạn đã roll, vì cả hai đều là local
+      trên cây axe này.
+    check: >-
+      Dòng crafted hiện ở phía prefix. Cây axe giờ có hai modifier mà kế
+      hoạch được dựng quanh, và vẫn còn một ô prefix trống.
+    state:
+      prefixes:
+        - { text: "Adds 17 to 35 Physical Damage" }
+        - { text: "90% increased Physical Damage / 16% chance to Impale Enemies on Hit with Attacks", how: crafted }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "21% increased Attack Speed" }
+        - { text: "+287 to Accuracy Rating" }
+variations: >-
+  **Nếu increased Physical Damage thuần roll ra.** Giữ nó nếu tier tốt: đó là
+  prefix hiếm hơn. Prefix phần trăm Impale của bench sẽ bị từ chối, nên hãy
+  craft flat Physical Damage vào prefix trống (adds 13–17 to 26–30 giá 4
+  Chaos Orb) và lấy chance to Impale từ chỗ khác trong build.
+
+
+  **Cho một cặp.** Impale Effect không phải là local trên weapon, nên một cây
+  axe có suffix Essence phục vụ cả hai tay. Cây axe thứ hai có thể đến từ một
+  lần craft rẻ hơn, hoặc từ một Essence of Zeal, thứ đảm bảo attack speed.
+
+
+  **Không phải build Impale.** Cũng hai bước đó dùng được với một cặp
+  modifier đặc biệt khác: bench bán cùng mức phần trăm ấy kèm chance to cause
+  Bleeding, Poison hoặc Blind, với cùng giá.
+mistakes:
+  - "Giữ một kết quả có ba prefix chỉ vì một trong số đó là physical. Không còn chỗ cho prefix bench."
+  - "Trông chờ bench thêm prefix phần trăm của nó cạnh một bản thuần roll ra. Cùng group; chỉ hybrid Accuracy và flat damage mới chừa chỗ."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Dùng cách này trên một base có [[Memory Strands]]: một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên axe một tay, tier, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện trong map nào." }

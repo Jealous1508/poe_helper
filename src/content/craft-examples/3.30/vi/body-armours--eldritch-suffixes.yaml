@@ -1,0 +1,229 @@
+category: body-armours
+title: "Prefix tốt, suffix sai: roll lại một phía bằng Eldritch Chaos Orb"
+level: 3
+summary: "Cho áo giáp hai Eldritch implicit với Eater of Worlds dominant, và một Eldritch Chaos Orb sẽ roll lại suffix trong khi prefix giữ y nguyên."
+goal: >-
+  Hoàn thiện một cái áo giáp có phía prefix ra đẹp còn phía suffix thì không,
+  mà không phải roll lại prefix. Đây là kỹ thuật làm các món armour khác hẳn
+  mọi weapon và mọi món jewellery: **một phía của item có thể được roll lại
+  riêng**, với giá một orb. Hai implicit miễn phí đi kèm theo.
+base: "Glorious Plate"
+itemLevel: 84
+baseWhy: >-
+  Lần craft này bắt đầu từ một item, không phải từ một base trắng: một kết
+  quả Essence of Greed có ba prefix đáng giữ và ba suffix không đáng.
+  Glorious Plate (776–892 Armour, level 68) hợp với nó vì một lý do hơn hết:
+  nó **không có implicit nào để mất**. Một Eldritch Ember hoặc Ichor thay
+  implicit của chính base, nên trên Astral Plate lần craft này sẽ làm mất chỗ
+  resistance mà vì nó người ta chọn base đó. Item level 84 mở resistance
+  46–48%.
+methods: [eldritch, bench]
+result:
+  note: "Searing Exarch và Eater of Worlds"
+  implicits:
+    - "16% increased Fire Damage"
+    - "+8% to all Elemental Resistances"
+  prefixes:
+    - { text: "+152 to maximum Life", how: essence }
+    - { text: "+367 to Armour" }
+    - { text: "87% increased Armour" }
+  suffixes:
+    - { text: "+43% to Fire Resistance", how: eldritch }
+    - { text: "+39% to Lightning Resistance", how: eldritch }
+    - { text: "+34% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "1", note: "bậc nào cũng được, miễn thấp hơn Ichor" }
+  - { item: "[[Greater Eldritch Ichor]]", amount: "1–5", note: "phải ở bậc cao hơn Ember" }
+  - { item: "[[Eldritch Chaos Orb]]", amount: "10–30" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  [[Eldritch Chaos Orb]] là chi phí; Ember, các Ichor và bench thì nhỏ khi
+  đặt cạnh. Hãy so với phương án kia: bảo vệ prefix bằng một modifier bench
+  tốn 4 Divine Orb và 4 Blessed Orb cho từng lần thử một trên body armour
+  trong 3.30.
+odds: >-
+  Ở item level 84 trên một cái plate, theo phép tính của chúng tôi từ weight,
+  một lần roll suffix là một elemental resistance 43% số lần, và là một
+  resistance từ 36% trở lên 16% số lần. Khi một kết quả có hai suffix, cả hai
+  là resistance khoảng 1 trên 7 lần; ít nhất một cái là resistance thì 7 trên
+  10 lần.
+
+
+  Vì vậy ngưỡng trong ví dụ này, hai resistance bạn chịu giữ kèm một ô còn
+  trống, tốn đâu đó từ mười tới ba mươi orb. Ngưỡng "hai resistance bất kỳ"
+  thì tốn ít hơn; ba resistance tier cao nhất thì tốn hàng trăm và không phải
+  thứ phương pháp này sinh ra để làm.
+steps:
+  - title: "Kiểm xem áo giáp có nhận được implicit không"
+    do: >-
+      Nhìn phần đầu của item. Nó phải **không có influence**: không có biểu
+      tượng Shaper, Elder hay conqueror. Rồi nhìn dòng implicit và quyết định
+      xem bạn có sống thiếu nó được không.
+    why: >-
+      Dòng chữ của Ember từ chối thẳng item Shaper, Elder và conqueror. Và nó
+      "replaces any existing implicit modifiers" ngoại trừ Eldritch implicit
+      của phe còn lại, nên implicit của base không sống sót.
+    check: >-
+      Nếu áo giáp mang Memory Strands hoặc một fractured modifier thì chúng
+      tôi chưa xác nhận được cho 3.30 là nó có nhận Ember hay không. Lesser
+      Ember đầu tiên chính là phép thử, và nó rẻ.
+    state:
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "Một Ember, ở bậc thấp nhất"
+    do: >-
+      Dùng một [[Lesser Eldritch Ember]] lên áo giáp. Đọc implicit Searing
+      Exarch nó thêm vào, và giữ nó dù là cái gì.
+    why: >-
+      Trong lần craft này Ember chỉ có một việc: tồn tại, ở bậc thấp hơn
+      Ichor. Nó cho implicit nào thì là phần thưởng thêm. Muốn đúng một cái
+      cụ thể nào thì rất khó trúng, khoảng 1 trên 40 Ember cho Damage taken
+      Recouped as Life theo weight, nên chọn implicit Exarch là việc để sau,
+      khi áo giáp đã xong.
+    state:
+      note: "Searing Exarch"
+      implicits: ["16% increased Fire Damage"]
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "Một Ichor cao hơn một bậc"
+    do: >-
+      Dùng một [[Greater Eldritch Ichor]]. Nếu implicit Eater of Worlds là
+      cái bạn dùng được thì dừng. Nếu không thì dùng thêm cái nữa: mỗi Ichor
+      chỉ thay implicit Eater.
+    why: >-
+      Implicit ở bậc cao hơn là **dominant**, và việc cái nào dominant quyết
+      định các Eldritch orb tác động lên phía nào. Khi Eater of Worlds
+      dominant, chúng tác động lên suffix.
+
+
+      Khoảng một phần tư kết quả Ichor hữu ích với gần như mọi build life,
+      theo weight trong dữ liệu: all Elemental Resistances, Physical Damage
+      taken as một element, increased Armour, Life Recovery rate. Nên vài
+      Ichor thường là tìm ra một cái.
+    check: >-
+      Hai dòng implicit phía trên các modifier, cái của Eater ở bậc cao hơn.
+      Nếu hai cái cùng bậc thì đừng đi tiếp: dùng một Ichor bậc cao hơn.
+    state:
+      note: "Searing Exarch và Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "Regenerate 41 Life per second" }
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+33 to Strength" }
+  - title: "Eldritch Chaos Orb: suffix, và chỉ suffix"
+    do: >-
+      Dùng một [[Eldritch Chaos Orb]]. Đọc ba prefix trước, để tự mắt thấy
+      chúng không nhúc nhích. Rồi đọc các suffix mới.
+    why: >-
+      Dòng chữ của orb: "If The Eater of Worlds is dominant, reroll suffix
+      modifiers". Prefix không được bảo vệ bởi thứ gì bạn đã trả tiền; đơn
+      giản là orb không đụng tới phía đó. Kết quả đầu tiên ở đây là trượt:
+      một resistance thấp và không còn chỗ.
+    check: >-
+      Chốt ngưỡng trước orb đầu tiên. Ở đây: **hai resistance từ 36% trở lên,
+      với ô thứ ba còn trống**, hoặc ba resistance cỡ nào cũng được.
+    fail: >-
+      Dưới ngưỡng: dùng thêm một orb. Prefix không gặp nguy hiểm gì từ orb
+      này, dù bạn dùng bao nhiêu cái. Chúng gặp nguy hiểm từ một
+      [[Chaos Orb]] thường, một Essence hay một Fossil, tất cả đều roll lại
+      cả hai phía.
+    state:
+      note: "Searing Exarch và Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+29% to Fire Resistance", how: eldritch }
+        - { text: "32% reduced Attribute Requirements", how: eldritch }
+        - { text: "+26 to Strength", how: eldritch }
+  - title: "Dừng ở ngưỡng"
+    do: >-
+      Tiếp tục dùng Eldritch Chaos Orb tới khi một kết quả vượt ngưỡng. Rồi
+      dừng, kể cả khi cảm giác một lần roll tốt hơn đang ở rất gần.
+    why: >-
+      Ô trống nằm trong ngưỡng là có chủ đích. Bench lấp nó bằng đúng
+      resistance bạn đang thiếu, điều mà bao nhiêu orb cũng không hứa được.
+    state:
+      note: "Searing Exarch và Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: eldritch }
+        - { text: "+39% to Lightning Resistance", how: eldritch }
+  - title: "Bench resistance thứ ba"
+    do: >-
+      Ở [[Crafting Bench]], craft element còn thiếu: 29–35% giá 3
+      [[Chaos Orb]].
+    why: >-
+      Mỗi element là một group riêng, nên bench chỉ đưa ra cái mà item thiếu.
+      Cùng với implicit, áo giáp giờ mang ba resistance và thêm một chút cho
+      cả ba ở trên.
+    state:
+      note: "Searing Exarch và Eater of Worlds"
+      implicits:
+        - "16% increased Fire Damage"
+        - "+8% to all Elemental Resistances"
+      prefixes:
+        - { text: "+152 to maximum Life", how: essence }
+        - { text: "+367 to Armour" }
+        - { text: "87% increased Armour" }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: eldritch }
+        - { text: "+39% to Lightning Resistance", how: eldritch }
+        - { text: "+34% to Cold Resistance", how: crafted }
+variations: >-
+  **Chiều ngược lại.** Một cái áo giáp có ba suffix tốt và prefix tệ: cho
+  **Searing Exarch** dominant (Ember ở bậc cao hơn) và cũng orb đó sẽ chỉ
+  roll lại prefix. Ở item level này, 1 trên 22 lần roll prefix là life từ 145
+  trở lên.
+
+
+  **Từng ô một.** Vẫn với thế dominant đó, một
+  [[Eldritch Exalted Orb]] thêm một modifier vào phía ấy và một
+  [[Eldritch Orb of Annulment]] gỡ một cái khỏi đó, ngẫu nhiên trong số
+  modifier của phía ấy. Một phía suffix có hai cái đáng giữ và một modifier
+  tệ là một lần Annulment 1 trên 3, với prefix nằm ngoài tầm với.
+
+
+  **Implicit Exarch, để sau.** Khi suffix đã xong, có thể thoải mái dùng
+  Ember để săn một implicit Exarch tốt hơn: chúng không đổi thứ gì khác. Giữ
+  mọi Ember dưới bậc của Ichor, hoặc nâng cả hai.
+mistakes:
+  - "Dùng Chaos Orb thường theo thói quen. Nó roll lại cả sáu ô. Chỉ bản Eldritch mới tôn trọng các phía."
+  - "Dùng Ember lên một base được chọn vì implicit của nó. Resistance của Astral Plate biến mất ngay với cái đầu tiên."
+  - "Hai implicit cùng bậc. Muốn có dominant thì một cái phải cao hơn."
+  - "Quay lại Essence sau giai đoạn này. Một Essence roll lại những suffix bạn vừa trả tiền để có."
+  - "Dùng base có [[Memory Strands]] cho việc này. Một Eldritch Chaos Orb có thể tiêu tới 60 strand mỗi lần dùng, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Dòng chữ trong game của Ember, Ichor và Eldritch Chaos Orb, danh sách implicit và weight, các tier suffix và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ mà phương pháp này thay thế." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Rằng implicit ở bậc cao hơn là cái dominant. Do người chơi thử nghiệm." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

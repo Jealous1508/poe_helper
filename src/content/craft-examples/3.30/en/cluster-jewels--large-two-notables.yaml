@@ -1,0 +1,165 @@
+category: cluster-jewels
+title: "A Large cluster jewel: two notables on the Magic jewel"
+level: 2
+summary: "Roll a prefix notable and a suffix notable together with Alterations, then let the Regal Orb add what it will, because on this jewel it cannot take anything away."
+goal: >-
+  A Large Fire Damage cluster jewel with two chosen notables and room for a
+  third. It teaches the shape of a Large jewel, which no other item shares:
+  **two prefix notables, one suffix notable, never more**, and what that
+  shape lets you do safely.
+base: "Large Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  **Enchantment:** "Added Small Passive Skills grant: 12% increased Fire
+  Damage". **Passives:** "Adds 8 Passive Skills", the fewest a Large jewel
+  can have. **Item level:** 50 to 67. The three notables this example names
+  need item level 1 or 50; at 68 and above the same jewel can also roll
+  up to four more notables and further tiers of every small-passive bonus,
+  all of which would be in the way.
+methods: [currency, finishing]
+result:
+  implicits:
+    - "Adds 8 Passive Skills"
+    - "2 Added Passive Skills are Jewel Sockets"
+    - "Added Small Passive Skills grant: 12% increased Fire Damage"
+  prefixes:
+    - { text: "1 Added Passive Skill is Burning Bright" }
+  suffixes:
+    - { text: "1 Added Passive Skill is Widespread Destruction" }
+    - { text: "Added Small Passive Skills also grant: +3% to Fire Resistance" }
+needs:
+  - { item: "A Large Cluster Jewel with the Fire Damage enchantment", amount: "1", note: "8 passives, item level 50–67" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "if the jewel is Normal" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–30" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  The jewel, then [[Orb of Alteration]]s in the low hundreds and one
+  [[Regal Orb]]. The item level you chose matters as much as the currency:
+  see the odds.
+odds: >-
+  At item level 50 to 67 this jewel's prefix pool holds four notables and
+  its suffix pool two. A prefix roll is Burning Bright or Cremator 10.2% of
+  the time, and a suffix roll is Widespread Destruction 7.2% of the time, by
+  our arithmetic from the weights. Both on one Magic jewel: about 0.74%, 1
+  two-modifier jewel in 136.
+
+
+  The same pair on an item level 84 jewel comes to about 1 in 620: more
+  notables and three tiers of every small-passive bonus share the lottery.
+steps:
+  - title: "Check the list against the shape"
+    do: >-
+      Look up each notable you want under the Fire Damage enchantment in
+      the modifier list and note its **side**. This example wants Burning
+      Bright or Cremator (prefixes) and Widespread Destruction (a suffix).
+    why: >-
+      A Large jewel has two prefix slots and two suffix slots, and every
+      suffix notable of every Large enchantment is in one group. So a plan
+      may contain two prefix notables and one suffix notable, and no more
+      of either. A list with two suffix notables cannot be made.
+    check: >-
+      The highest item level among your notables picks the bracket. All
+      three here need 50 or less, so 50 to 67 is right.
+    state:
+      rarity: normal
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+  - title: "Alterations to the first notable"
+    do: >-
+      Use an [[Orb of Transmutation]] and then [[Orb of Alteration]]s until
+      one side shows a notable from the list.
+    why: >-
+      A quarter of prefix rolls and a tenth of suffix rolls on this jewel
+      are a notable of some kind, so this comes quickly. A Magic jewel is
+      the only stage at which you can throw away a wrong notable for the
+      price of one Alteration.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2 to All Attributes" }
+  - title: "Keep rolling for both"
+    do: >-
+      Continue until the prefix **and** the suffix are both notables from
+      the list. Use an [[Orb of Augmentation]] whenever one side is right
+      and the other empty.
+    why: >-
+      Two of the jewel's three possible notables can be decided here, on
+      the cheapest currency there is. The third can only be a prefix, and
+      it will have to come from an orb that adds one modifier at a time.
+    fail: >-
+      Budget gone with one notable: Regal that jewel. One chosen notable on
+      an 8-passive Large jewel with two sockets is already worth a place on
+      the tree.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "1 Added Passive Skill is Widespread Destruction" }
+  - title: "Regal Orb: a roll that cannot subtract"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      It keeps both notables and adds one modifier. If that is a suffix, it
+      cannot be a notable, because the suffix notable group is taken: it is
+      a small-passive bonus, as here. If it is a prefix, it is a notable
+      about one time in five, and otherwise a small-passive bonus. Nothing
+      you rolled is at risk.
+    check: >-
+      The one result to look at twice is a **third notable you did not
+      choose**. You are not obliged to allocate it, but it occupies a place
+      in the cluster.
+    state:
+      implicits:
+        - "Adds 8 Passive Skills"
+        - "2 Added Passive Skills are Jewel Sockets"
+        - "Added Small Passive Skills grant: 12% increased Fire Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "1 Added Passive Skill is Widespread Destruction" }
+        - { text: "Added Small Passive Skills also grant: +3% to Fire Resistance" }
+  - title: "Socket it and count the points"
+    do: >-
+      Put the jewel in a Large cluster socket. See where the two notables
+      and the two jewel sockets sit, and count what you must allocate to
+      reach the ones you want. Take it out again if you are not ready to
+      spend the points.
+    why: >-
+      The reference pages describe notables as placed in fixed positions by
+      their order in the modifier list. We have not verified those rules,
+      and you do not need them: the tree shows you the result. According to
+      the same pages, unsocketing a cluster jewel refunds the points spent
+      inside it.
+variations: >-
+  **The open prefix.** The finished jewel has one prefix slot free. An
+  [[Exalted Orb]] there adds a prefix: a notable about one time in five,
+  the other one you named about one time in nineteen. The three-notable
+  example is about doing that on purpose.
+
+
+  **A level-68 or level-75 notable.** Sadist needs 68; Corrosive Elements
+  and Master of Fire need 75. Move the bracket up to 68 to 74 or 75 to 83
+  only if one of them is on your list, and expect the others to become
+  rarer.
+mistakes:
+  - "Planning two suffix notables. They share a group; a Large jewel holds one."
+  - "Stopping at one notable on the Magic jewel and hoping the Regal Orb supplies the right second one."
+  - "Rolling this at item level 84. The pair is about 1 in 620 there against 1 in 136."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fire Damage enchantment's notables with their sides, levels, weights and groups. The odds are our arithmetic." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Jewel sockets and notable limits per size, notable positions, and the refund on unsocketing. Partly community text of unknown age." }

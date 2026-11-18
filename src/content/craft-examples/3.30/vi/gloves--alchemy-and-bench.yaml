@@ -1,0 +1,134 @@
+category: gloves
+title: "Gloves cho campaign từ một Orb of Alchemy và bench"
+level: 1
+summary: "Roll cả sáu ô cùng lúc, chỉ giữ kết quả nếu nó qua được một luật, và để bench thêm mảnh còn thiếu. Nếu trượt, xóa trắng rồi làm lại."
+goal: >-
+  Gloves có life và hai resistance cho nửa sau của campaign. Bản thân lần
+  craft chỉ là hai orb. Bài học là cách roll item còn lại, **đường Rare**, và
+  thói quen khiến nó hiệu quả: quyết định "đủ tốt" nghĩa là gì trước khi nhìn
+  kết quả.
+base: "Antique Gauntlets"
+itemLevel: 41
+baseWhy: >-
+  Đôi gloves trắng nào bạn mặc được cũng dùng được; Antique Gauntlets là một
+  base Armour cho level 39. Ở item level 41, maximum Life roll được tới
+  85–99, nhiều hơn mức một nhân vật campaign trông đợi ở loại trang bị này.
+
+
+  Hãy bắt đầu từ một item trắng. Một [[Orb of Alchemy]] chỉ dùng được trên
+  item Normal, và trong 3.30 chúng rơi thường hơn trước.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+  suffixes:
+    - { text: "+27% to Cold Resistance" }
+    - { text: "+19 to Dexterity" }
+    - { text: "+25% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "3–6", note: "cộng 1 cho bench" }
+  - { item: "[[Orb of Scouring]]", amount: "ít hơn số Orb of Alchemy một cái" }
+  - { item: "[[Armourer's Scrap]]", amount: "vài cái", note: "tùy chọn" }
+cost: >-
+  Vài cặp [[Orb of Alchemy]] và [[Orb of Scouring]], cùng một Alchemy nữa cho
+  bench. Tất cả đều rơi trong campaign. Nếu hết Orb of Scouring, hãy nhặt một
+  đôi trắng khác thay vào: một base mới không tốn gì.
+odds: >-
+  Ở item level 41, mỗi prefix mà một Alchemy roll ra là maximum Life khoảng 1
+  trên 5 lần, và life từ 55 trở lên khoảng 1 trên 11 lần, theo phép tính của
+  chúng tôi từ weight. Một item Rare có từ một tới ba prefix, nên một Alchemy
+  là hơn một lần thử; một kết quả nhận mấy prefix thì không có trong dữ liệu,
+  nên chúng tôi dừng ở con số cho mỗi prefix. Luật bên dưới cũng cho qua một
+  kết quả có hai resistance, và mỗi suffix roll ra là một trong ba cái đó
+  khoảng 1 trên 3 lần. Hãy tính là dùng một nhúm orb, không phải hàng chục.
+steps:
+  - title: "Đặt luật trước"
+    do: >-
+      Trước bất kỳ orb nào, hãy quyết định bạn sẽ giữ cái gì. Với gloves cho
+      campaign: **maximum Life từ 55 trở lên, hoặc hai resistance.** Một
+      trong hai, cộng ít nhất một ô còn trống ở phía bên kia.
+    why: >-
+      Một Alchemy lấp bốn tới sáu ô bằng modifier ngẫu nhiên. Không có luật,
+      kết quả nào trông cũng tốt một nửa, và bạn hoặc giữ đồ bỏ, hoặc roll
+      lại một thứ vốn ổn. Luật được dựng quanh bench: orb cho bạn nửa nào,
+      bench cấp nửa kia.
+  - title: "Orb of Alchemy, và đọc cả hai phía"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên đôi gloves trắng. Giữ Alt và chia kết
+      quả thành prefix và suffix.
+    why: >-
+      Normal thành Rare trong một bước. Kết quả đầu tiên này có hai prefix,
+      Armour và Item Rarity, và ba suffix không có gì bạn cần: không life,
+      không resistance, và phía suffix đã đầy.
+    check: >-
+      Áp luật đúng như bạn đã đặt. Cái này trượt cả hai nửa.
+    state:
+      prefixes:
+        - { text: "+47 to Armour" }
+        - { text: "+11% to Item Rarity" }
+      suffixes:
+        - { text: "+14 to Dexterity" }
+        - { text: "Gain 13 Life per Enemy Killed" }
+        - { text: "+84 to Accuracy Rating" }
+  - title: "Xóa trắng rồi roll lại"
+    do: >-
+      Dùng một [[Orb of Scouring]] để đưa đôi gloves về Normal, rồi một Orb
+      of Alchemy nữa. Lặp lại tới khi một kết quả qua được luật.
+    why: >-
+      Scouring gỡ mọi modifier và giữ lại base, quality và socket của nó. Mỗi
+      Alchemy là một lần roll mới, độc lập. Một Chaos Orb làm cả hai bước
+      trong một, nhưng đầu league thì Orb of Alchemy và Orb of Scouring mới
+      là thứ bạn có.
+    check: >-
+      Kết quả này qua nhờ life: 91, với một prefix trống và một suffix trống.
+    state:
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+19 to Dexterity" }
+  - title: "Để bench cấp nửa kia"
+    do: >-
+      **Qua nhờ life** (như ở đây): ở [[Crafting Bench]], craft một
+      resistance mà đôi gloves còn thiếu vào một suffix trống, +21–28% giá 1
+      Orb of Alchemy. **Qua nhờ hai resistance:** craft maximum Life vào một
+      prefix trống, 41–55 giá 2 Orb of Alchemy hoặc 26–40 giá 6 Orb of
+      Transmutation.
+    why: >-
+      Mỗi item một modifier bench, nên nó dành cho cái nào trong life và
+      resistance mà orb không cho. Đôi gloves đã có Cold Resistance, và một
+      modifier thứ hai cùng group đó sẽ bị từ chối; fire hoặc lightning thì
+      vừa.
+    fail: >-
+      Phía bạn cần đã đầy. Đó là lý do luật đòi một ô trống. Scour rồi làm
+      lại.
+    state:
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+19 to Dexterity" }
+        - { text: "+25% to Fire Resistance", how: crafted }
+variations: >-
+  **Attack speed cho build attack.** Bench bán 7–12% increased Attack Speed
+  giá 2 Chaos Orb. Trên gloves đã có life và một resistance, nó đáng giá hơn
+  một resistance thứ hai. Chaos Orb khan hơn Alchemy trong những ngày đầu, và
+  đó là lý do duy nhất nó không phải bước chính ở đây.
+
+
+  **So với đường Magic.** Alteration roll hai ô và cho bạn dừng ở một
+  modifier tốt; một Alchemy roll tới sáu ô và buộc bạn đánh giá chúng cùng
+  lúc. Dùng đường Magic khi một modifier cụ thể mới là điều quan trọng, và
+  dùng đường này khi vài modifier thường cái nào cũng đáng mừng, mà đó là
+  tình trạng quen thuộc của gloves campaign.
+mistakes:
+  - "Đổi luật sau khi thấy kết quả. \"Nó có 40 life và accuracy, cũng gần đủ\" chính là cách một cái stash đầy lên những đôi gloves không ai mặc."
+  - "Bench trước khi chắc là mình giữ item. Một Orb of Scouring gỡ luôn modifier bench, và cái Alchemy bạn trả cho nó mất luôn."
+  - "Scour một kết quả có các modifier tốt và một dòng tệ. Không orb thông thường nào gỡ được đúng một modifier do bạn chọn; một item Rare tốt gần hết là thứ đáng giữ."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench, cùng dòng chữ in-game của các orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orb of Alchemy phổ biến hơn trong 3.30." }

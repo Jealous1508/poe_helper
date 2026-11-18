@@ -1,0 +1,478 @@
+name: "Claw"
+short: "Những weapon attack một tay nhanh, hồi life theo từng cú đánh. Một pool, 28 base, và một phía prefix nơi elemental damage thì rẻ còn physical damage thì không."
+icon: "Imperial Claw"
+intro: >-
+  Claw là weapon attack một tay, thường đeo theo cặp, và implicit của nó cho
+  life (hoặc life và mana) mỗi lần đánh trúng. Thứ bạn craft thêm lên trên đó
+  là **damage mỗi giây trong một khung nhỏ**: cú đánh gốc thấp, tốc độ attack
+  cao, và critical strike chance gốc từ 7 tới 8%.
+
+
+  Có hai điều khiến nó khác các weapon hai tay to xác. Cuộc xổ số prefix khác
+  hẳn: một nửa là added elemental damage và chỉ một phần tư là physical, nên
+  claw elemental thì dễ còn claw physical thì khó. Và phía suffix quan trọng
+  hơn: một cây claw crit muốn attack speed, critical strike chance và
+  critical strike multiplier cùng lúc, mà bench chỉ cấp được một trong số đó.
+basics:
+  itemLevel:
+    text: >-
+      Item level 77 mở mọi thứ một cây claw cần, trừ tier cuối của các prefix
+      lớn: Tier 1 của attack speed và của flat Physical Damage đều tới ở mốc
+      đó, còn Tier 1 của cả hai suffix critical strike đã mở từ 73. Hãy craft
+      những cây claw chạy map đầu tiên ở 77.
+
+
+      Chỉ lên cao hơn khi có lý do gọi được tên: 82 cho tier cao nhất của
+      added Fire, Cold hoặc Lightning Damage, 83 cho tier cao nhất của hai
+      prefix physical phần trăm và cho added Chaos Damage, vốn chỉ có một
+      tier, và 86 cho "increased Elemental Damage with Attack Skills" tốt
+      nhất.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Tier 5 của increased Physical Damage (85–109%), và added elemental damage đáng có: Fire adds 24–33 to 49–57 từ item level 33."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 3 của hybrid (55–64%), Tier 2 của attack speed (23–25%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 73
+        unlocks: "Tier 2 của increased Physical Damage (155–169%). Tier 1 của Critical Strike Chance và Tier 1 của Critical Strike Multiplier (cả hai 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 của attack speed (26–27%) và Tier 1 của flat Physical Damage (adds 22–29 to 45–52). **Đủ cho gần như mọi cây claw.**"
+      - ilvl: 82
+        unlocks: "Tier 1 của added Fire, Cold và Lightning Damage (Cold: adds 81–111 to 163–189). Chỉ claw elemental mới quan tâm."
+      - ilvl: 83
+        unlocks: "Tier 1 của increased Physical Damage, \"Merciless\" (170–179%), Tier 1 của hybrid (75–79% kèm Accuracy), và tier duy nhất của added Chaos Damage (adds 56–87 to 105–160)."
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (51–59%). Trần của một cây claw elemental."
+  bases:
+    text: >-
+      Có 28 claw và tất cả roll từ một pool với cùng weight, nên không base
+      nào mở ra một modifier mà base khác không có được. Chúng khác nhau ở ba
+      điểm: damage được chia thế nào giữa độ lớn cú đánh và tốc độ, critical
+      strike chance gốc, và implicit.
+
+
+      Claw thường có ba dáng lặp đi lặp lại theo đà lên level: nhanh và nhẹ
+      (1.6 attack mỗi giây, 7% crit), trung bình (1.5 và 7.5%), và chậm mà
+      nặng (1.3 và 8%).
+    types:
+      - title: "Claw thường"
+        pools: [all]
+        text: >-
+          Hai mươi hai base từ Nailed Fist tới Terror Claw. Phần lớn có
+          implicit là "Grants Life per Enemy Hit", từ 3 trên cây claw đầu
+          tiên tới 50 trên Eye Gouger. Sáu cây thay vào đó có Physical Attack
+          Damage Leeched as Life, 1.6% hoặc 2%: Tiger's Paw, Prehistoric
+          Claw, Eagle Claw, Hellion's Paw, Vaal Claw và Terror Claw.
+      - title: "Claw Maraketh"
+        text: >-
+          Double Claw, Twin Claw và Gemini Claw. Implicit của chúng có hai
+          dòng: mana **và** life trên mỗi enemy đánh trúng, 14 Mana và 38
+          Life trên Gemini Claw. Nửa mana trả tiền skill cho một build đã
+          reserve gần hết mana của mình.
+      - title: "Claw Heist"
+        text: >-
+          Shadow Fangs, Malign Fangs và Void Fangs. Không có life on hit:
+          implicit thêm Chaos Damage, 46–63 to 92–113 trên Void Fangs.
+          Physical damage của chúng thấp hơn nhiều so với claw thường cùng
+          level (22–41 so với 25–65), nên chúng dành cho build poison và
+          chaos, ngoài ra không dành cho ai khác.
+    picks:
+      - base: "Imperial Claw"
+        for: "Claw endgame mặc định"
+        why: >-
+          25–65 physical damage với 1.6 attack mỗi giây là damage mỗi giây
+          gốc cao nhất trong mọi claw (72), kèm 46 Life per Enemy Hit. Tốc độ
+          còn nhân mọi thứ xảy ra "on hit", kể cả implicit.
+      - base: "Vaal Claw"
+        for: "Critical strike và cú đánh lớn"
+        why: >-
+          29–76 với 1.3 attack mỗi giây và 8% critical strike chance gốc,
+          đứng đầu loại item này ở cả hai mặt. Các modifier Critical Strike
+          Chance nhân vào 8% đó. Implicit là 2% life leech thay cho life on
+          hit.
+      - base: "Eye Gouger"
+        for: "Nhiều life mỗi cú đánh nhất"
+        why: >-
+          50 Life per Enemy Hit là implicit lớn nhất thuộc kiểu này, trên một
+          cây claw tốc độ trung bình (26–68 với 1.5, 7.5% crit) gần như không
+          mất gì về damage: damage mỗi giây gốc 70.5.
+      - base: "Gemini Claw"
+        for: "Build không dư mana"
+        why: >-
+          14 Mana và 38 Life per Enemy Hit. Craft không đặt được mana on hit
+          lên claw, nên nếu build cần nó thì base này chính là nơi nó đến.
+      - base: "Void Fangs"
+        for: "Build poison và chaos"
+        why: >-
+          Adds 46–63 to 92–113 Chaos Damage dưới dạng implicit, gần bằng tier
+          tự nhiên duy nhất của prefix đó mà không tốn ô nào. Physical damage
+          thấp, nên đừng đặt prefix physical lên nó.
+    impact: >-
+      Base quyết định bốn điều trước orb đầu tiên.
+
+
+      **Độ lớn cú đánh so với tốc độ.** Modifier local nhân vào base:
+      increased Physical Damage nhân damage của nó, attack speed nhân số
+      attack mỗi giây của nó. Added damage thì khác: nó được cộng theo từng
+      cú đánh, nên một cây claw nhanh tung ra cùng lượng added Fire Damage đó
+      nhiều lần hơn. Vì lý do đó claw elemental nghiêng về các base 1.6.
+
+
+      **Critical strike chance**, 7%, 7.5% hoặc 8%. Mọi modifier Critical
+      Strike Chance trên nhân vật đều nhân vào nó.
+
+
+      **Implicit.** Life on hit, leech, mana on hit hoặc Chaos Damage. Không
+      cách craft thông thường nào đổi được bạn có cái nào; một [[Vaal Orb]]
+      có thể thay nó bằng một corruption implicit và đóng item lại.
+
+
+      **Yêu cầu.** Claw cần cả Dexterity lẫn Intelligence, 131 và 95 trên
+      Imperial Claw.
+
+
+      Thứ base không quyết định là pool. Hãy chọn base theo build và chọn
+      item level theo tier.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 83, cuộc xổ số prefix trên claw, theo phép tính của chúng
+      tôi từ weight, là: added Cold, Fire và Lightning Damage mỗi loại 16%
+      (cộng lại 49%), maximum Mana 18%, flat Physical Damage 12%, và hai
+      prefix physical phần trăm mỗi cái 6%. Ba họ physical chiếm 24% số lần
+      roll prefix; trên mace hai tay con số đó là 46%.
+
+
+      Vậy nên [[Orb of Alteration]] cứ hai lần roll là tìm ra một prefix
+      elemental, còn một prefix physical tốt thì gần như không bao giờ: Tier
+      3 trở lên của increased Physical Damage thuần là khoảng 1 trên 344 lần
+      roll prefix, Tier 1 khoảng 1 trên 2,400. Phía suffix dễ chịu hơn.
+      Attack speed chiếm 15% số lần roll suffix và hai suffix critical strike
+      mỗi cái 10%, với mọi tier có weight như nhau.
+  - method: bench
+    note: >-
+      Bench lấp khoảng trống mà pool để lại. Increased Physical Damage:
+      40–59% giá 4 Orb of Alteration, 60–79% giá 8, 80–99% giá 4 Chaos Orb,
+      100–129% giá 4 Exalted Orb. Flat Physical Damage: adds 13–17 to 26–30
+      giá 4 Chaos Orb. Added Fire hoặc Cold Damage: 22–27 to 42–49 giá 2 Orb
+      of Alchemy, 35–41 to 63–73 giá 4 Chaos Orb. Increased Elemental Damage
+      with Attack Skills: 24–32% giá 4 Orb of Alchemy.
+
+
+      Suffix: attack speed 8–10% giá 6 Alteration, 11–15% giá 2 Chaos Orb,
+      16–20% giá 4 Exalted Orb. Critical Strike Chance 25–27% hoặc Critical
+      Strike Multiplier 25–28% giá 4 Chaos Orb. Chance to deal Double Damage
+      là 4–5% giá 8 Chaos Orb, bằng một nửa mức của weapon hai tay.
+
+
+      Luật về group đáng nhớ: increased Physical Damage thuần của bench chung
+      group với bản thuần roll ra và với mọi prefix physical veiled, và
+      **không** chung group với hybrid mang Accuracy. Một item giữ được một
+      modifier bench, nên một cây claw crit phải roll ít nhất hai trong ba
+      suffix của nó.
+  - method: finishing
+    note: >-
+      20% quality từ [[Blacksmith's Whetstone]] nâng physical damage của
+      base, nên nó quan trọng trên claw physical và không giúp gì cho added
+      elemental damage. Weapon một tay có tối đa ba socket; bench chỉnh
+      socket và link của chúng ở giá cố định.
+  - method: essence
+    note: >-
+      Trên claw, **Zeal** đảm bảo attack speed và bậc Deafening cho 28–30%,
+      cao hơn Tier 1 tự nhiên. **Loathing** đảm bảo Critical Strike Chance,
+      35–38% ở bậc Deafening. **Anger, Hatred và Wrath** đảm bảo added Fire,
+      Cold và Lightning Damage ở mức ngay dưới tier tự nhiên cao nhất
+      (Deafening Wrath: adds 13–19 to 266–310). **Contempt** đảm bảo flat
+      Physical Damage, 20–26 to 40–47 ở bậc Deafening.
+
+
+      **Envy** là cái cần nhớ: added Chaos Damage, 53–79 to 101–131 ở bậc
+      Deafening, có từ bậc Screaming trở lên. Bản tự nhiên chỉ có một tier,
+      cần item level 83 và chiếm 1% số lần roll prefix.
+      **Dread** cho increased Impale Effect (22–25%), thứ mà nếu không thì
+      cần influence Crusader. Các Essence corrupted cho những suffix không
+      tìm được ở đâu khác: Horror là 16% chance to gain a Power, Frenzy or
+      Endurance Charge on Kill.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng số beast bỏ ra trên một cây
+      claw Magic đã ngốn hàng trăm Alteration, mà trên item này điều đó nghĩa
+      là một prefix physical cao. Hai công thức thêm-và-gỡ rất hợp với claw
+      vì sau một lần craft bằng Alteration thường có một phía trống:
+      **thêm một suffix, gỡ một prefix ngẫu nhiên** ([[Farric Lynx Alpha]])
+      trên cây claw không có prefix là một lần roll miễn phí vào một pool mà
+      cứ ba suffix thì một là attack speed hoặc một modifier critical strike.
+  - method: harvest
+    note: >-
+      Hãy đếm số modifier mang từng tag trước khi trả tiền. **Speed** (150
+      Vivid Lifeforce): attack speed là modifier tự nhiên duy nhất trên claw
+      mang tag này, nên nó được đảm bảo. **Critical** (150 Primal): hai
+      modifier mang tag, Critical Strike Chance và Critical Strike
+      Multiplier, đều là suffix và có weight bằng nhau. **Physical** (50
+      Vivid): năm modifier mang tag, và tính theo weight ở item level 83 thì
+      cái được đảm bảo là một prefix trong 84% số lần và là một prefix phần
+      trăm trong 44% số lần; phần còn lại là hai suffix leech.
+
+
+      **Attack** (75 Wild) không đảm bảo được gì hữu ích: gần như mọi
+      modifier trên claw đều có tag attack.
+  - method: fossil
+    note: >-
+      Có ba tổ hợp làm được việc thật trên claw. Một [[Jagged Fossil]] đưa ba
+      họ physical lên khoảng 76% số lần roll prefix thay vì 24%. Một
+      [[Corroded Fossil]] loại mọi modifier Elemental, tức một nửa pool
+      prefix: prefix physical thành 50% mà không cần nhân thứ gì lên. Một
+      [[Deft Fossil]] đi cùng một [[Shuddering Fossil]] đưa attack speed và
+      hai suffix critical strike lên 92% số lần roll suffix, và loại mọi
+      modifier Mana, kể cả prefix rác lớn nhất.
+
+
+      Không cái nào thay đổi tier. Các tỉ lệ đó là phép tính của chúng tôi
+      trên modifier tự nhiên; Fossil còn roll được modifier riêng của chúng,
+      liệt kê ở mục Modifier chỉ có từ Fossil, mà công cụ tính không đưa vào.
+  - method: veiled
+    note: >-
+      Các prefix physical veiled là 120–139% increased Physical Damage kèm
+      21–25% chance to Blind, Bleed, Impale hoặc Poison. Chúng không có tier,
+      nên là prefix physical mạnh đáng tin nhất một cây claw có thể có. Chúng
+      chung group với increased Physical Damage thuần.
+
+
+      Trong mười ba veiled prefix của class này, bảy cái chung một group với
+      các craft bench về elemental damage và spell damage. Theo luật do người
+      chơi thử nghiệm rằng một group đã có trên item thì không bao giờ được
+      đưa ra, một craft bench giá 4 Alteration thuộc group đó, đặt trước khi
+      unveil, sẽ loại cả bảy cái khỏi các lựa chọn. Suffix veiled: 6–7%
+      chance to deal Double Damage, 18–22% attack speed kèm Dexterity và
+      Intelligence, và Critical Strike Multiplier 36–40% khi có enemy Rare
+      hoặc Unique ở gần.
+  - method: fracture
+    note: >-
+      Modifier đáng fracture trên claw physical là một prefix phần trăm cao,
+      vì không gì khác trên item khó roll tới hai lần như nó. Hãy nhớ nó đóng
+      lại những gì: một increased Physical Damage thuần đã fractured sẽ block
+      vĩnh viễn cả group của nó, kể cả các prefix physical veiled và bản của
+      bench.
+  - method: meta
+    note: >-
+      Một lần khóa đầy đủ trên weapon là 4 Divine Orb và 1 [[Sacred Orb]] cho
+      mỗi lần dùng. Trên claw người ta dùng cả hai chiều: khóa prefix để dựng
+      lại suffix, hoặc khóa ba suffix đã xong để làm phía prefix.
+
+
+      "Cannot roll Caster Modifiers" không loại được gì ở đây, vì pool tự
+      nhiên của claw không có modifier caster nào. "Cannot roll Attack
+      Modifiers" thì sẽ loại gần như tất cả. Trên claw không cái nào đáng
+      đồng Divine Orb của nó, và từ 3.30 không cái nào còn lái được Orb of
+      Annulment.
+  - method: influence
+    note: >-
+      Crusader và Warlord mỗi bên thêm một prefix hybrid physical, 65–69%
+      increased Physical Damage kèm Critical Strike Chance hoặc kèm Critical
+      Strike Multiplier. Cả hai chung group với hybrid kèm Accuracy và thế
+      chỗ nó. Elder và Warlord thêm 33–37% increased Physical Attack Damage
+      while Dual Wielding dưới dạng suffix; Hunter thêm elemental và chaos
+      penetration cho các attack bằng weapon này. Prefix của Elder "+51–59%
+      to Damage over Time Multiplier for Poison inflicted with this Weapon"
+      là thứ mà một cây claw poison được dựng xoay quanh. Một cây claw có
+      influence thì không fracture được.
+  - method: corruption
+    note: >-
+      Một corruption implicit thay thế life on hit. Những cái đáng ván cược
+      trên một cây dự phòng đã hoàn thiện: +25–30% to Global Critical Strike
+      Multiplier, 14–18% increased Critical Strike Chance, 5–7% increased
+      Attack Speed.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới."
+memoryStrands: >-
+  Strand nâng tier của bất cứ thứ gì được roll ra, nên chúng đáng tiền ở nơi
+  họ modifier thì dễ ra và chỉ phần đỉnh của nó là hiếm. Trên claw, đó là
+  added elemental damage: mỗi element chiếm 16% số lần roll prefix, và ba
+  tier cao nhất của nó là 1 trên 40 lần roll. Một cây claw trắng item level 82
+  có strand từ [[Orb of Remembrance]], craft bằng [[Orb of Alteration]] và
+  kết thúc bằng một [[Regal Orb]], là cách dùng hợp nhất: một Alteration tiêu
+  nhiều nhất 8 strand theo bảng data-mine.
+
+
+  Với claw physical thì chúng giúp được ít hơn nhiều. Vấn đề ở đó là tìm cho
+  ra được họ modifier, vốn chỉ 6% số lần roll prefix, và strand không giúp gì
+  việc đó.
+
+
+  Đừng đem base có strand ra dùng Essence, vì một Essence có thể tiêu tới 80,
+  và đừng mua base như vậy cho một lần craft bằng Fossil hay Harvest: theo
+  thử nghiệm của người chơi, hai thứ đó không dùng strand mà cũng không được
+  lợi gì từ strand.
+reading:
+  intro: >-
+    Giữ Alt rồi trả lời hai câu hỏi. **Đây là loại claw gì:** physical,
+    elemental hay chaos? Prefix sẽ nói điều đó. **Trong attack speed,
+    Critical Strike Chance và Critical Strike Multiplier, nó có mấy cái?**
+    Rồi kiểm xem các prefix có cùng phục vụ một loại damage không: một cây
+    claw có một prefix physical, một prefix cold và một prefix mana là ba
+    mảnh một phần ba của ba cây weapon khác nhau.
+  prefixes:
+    text: >-
+      Một cây claw **physical** muốn đúng ba họ như mọi weapon physical, mỗi
+      họ ở một group riêng nên cả ba đều nằm vừa: increased Physical Damage
+      thuần, hybrid kèm Accuracy Rating, và flat Physical Damage. Hai cái
+      phần trăm là local và nhân vào base lẫn flat damage. Cả ba cộng lại là
+      một phần tư pool, vì thế phía này mới là phía khó.
+
+
+      Một cây claw **elemental** muốn added Fire, Cold và Lightning Damage,
+      ba group cộng dồn thoải mái, và thêm "increased Elemental Damage with
+      Attack Skills" lên trên. Chúng là một nửa pool, nên các họ thì dễ ra
+      còn tier mới là phần phải bỏ công.
+
+
+      Maximum Mana là prefix rác: 18% số lần roll, gần như không build attack
+      nào dùng được. "+2 to Level of Socketed Melee Gems" chỉ có ý nghĩa nếu
+      main skill gắn trong ba socket của cây claw.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân lớn nhất trên claw physical, và là local. 6% số lần roll prefix, mà gần như toàn bộ nằm ở các tier đáy."
+        aim: "T4, 110–134% (ilvl 46), hoặc bản veiled 120–139%. T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Cùng hệ số nhân đó ở một group thứ hai. Bản phần trăm thuần của bench nằm vừa cạnh nó, nên trong hai cái thì roll ra cái này là may hơn."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Nâng thứ mà các cái phần trăm nhân lên. Trên một base đánh 25–65, cộng thêm 22–29 to 45–52 là gần bằng cả một cây claw thứ hai."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65). T1 cần ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Damage của claw elemental. Ba group riêng biệt, nên cả ba nằm được trên cùng một cây claw. Phí với build physical."
+        aim: "T3 (Fire adds 59–81 to 120–140, ilvl 62). T1 cần ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Nhân mọi added elemental damage trên nhân vật, không chỉ của riêng cây claw này. 3% số lần roll prefix; bench bán 24–32%."
+        aim: "T3, 37–42% (ilvl 60). T1 là 51–59% (ilvl 86)."
+      - mod: "Adds # to # Chaos Damage"
+        why: "Một tier, item level 83, 1% số lần roll prefix. Trên thực tế nó đến từ một Essence of Envy hoặc từ implicit của một cây claw Heist."
+  suffixes:
+    text: >-
+      Ba suffix làm việc chính và chúng chiếm hơn một phần ba pool: attack
+      speed (15%), Critical Strike Chance (10%) và Critical Strike Multiplier
+      (10%). Mọi tier của chúng có weight như nhau, nên một khi đã ra đúng họ
+      thì tier cao cũng dễ ra như tier thấp. Phía này dễ **bắt đầu** mà khó
+      **hoàn thiện**: một trong ba cái thì đến nhanh, cả ba trên cùng một
+      item thì không.
+
+
+      Bench cấp được đúng một trong số đó. Vậy nên kế hoạch cho một cây claw
+      crit là hai cái roll ra và một cái từ bench, hoặc một công cụ dàn xếp
+      cả phía này.
+
+
+      Phần còn lại là đồ lấp chỗ: Mana Regeneration, Accuracy, Dexterity,
+      Intelligence, life và mana on kill. "Grants Life per Enemy Hit" cộng
+      dồn với implicit và là một suffix phòng thủ thực thụ trên một cây claw
+      nhanh.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local: nhân vào số attack mỗi giây của base, và theo đó là mọi hiệu ứng on-hit."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77); một Deafening Essence of Zeal cho 28–30%."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global, nên nó tính cho cả nhân vật và cho cả hai cây claw."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Nhân vào 7–8% của base. Cái này là local, chỉ cho các attack bằng cây claw đó."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "Grants # Life per Enemy Hit"
+        why: "Cộng thêm vào implicit. Đáng một ô trên cây claw nhanh đánh trúng nhiều enemy."
+        aim: "T3, 19–22 (ilvl 60)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Cho build poison và bleed. Các bản bench và veiled dành cho một loại damage thì mạnh hơn và nằm ở group khác."
+approach:
+  principle: >-
+    **Quyết định loại damage trước, rồi để pool cho bạn biết phía nào khó.**
+    Với claw elemental, prefix thì dễ ra còn suffix mới là phần phải bỏ công.
+    Với claw physical, prefix là phần phải bỏ công, và những cái mạnh mà
+    không có tier, tức veiled và bench, đáng giá hơn một cú cầu may vào bản
+    roll ra.
+  order:
+    - title: "Loại damage, rồi base, rồi item level"
+      text: >-
+        Physical, elemental hay chaos quyết định mọi thứ sau nó, kể cả base:
+        base nhanh cho added damage, 8% của Vaal Claw cho crit, Void Fangs
+        cho chaos. Item level 77, trừ khi kế hoạch nêu tên một tier cần cao
+        hơn.
+    - title: "Tính xem bench sẽ cho bạn cái gì"
+      text: >-
+        Một modifier bench. Trên claw physical nó thường là một prefix, vì
+        phía đó thiếu roll tốt. Trên claw elemental, Elemental Damage with
+        Attack Skills của bench là prefix thứ ba hợp lẽ, và như thế cả ba
+        suffix đều phải roll.
+    - title: "Dựng phía khó bằng công cụ hợp với nó"
+      text: >-
+        Prefix physical: một Jagged Fossil hoặc Corroded Fossil, reforge
+        Physical, hoặc một veiled prefix. Bộ ba suffix: Deft Fossil và
+        Shuddering Fossil đi cùng nhau, hoặc một Essence of Zeal hay
+        Loathing để chốt một cái và câu thêm một cái nữa.
+    - title: "Bảo vệ nó nếu nó xứng đáng"
+      text: >-
+        Ba suffix tốt hoặc hai prefix physical tốt là đáng một lần khóa. Hãy
+        lấp đầy hẳn phía được khóa trước đã: một phía vừa đầy vừa khóa sẽ ép
+        bất cứ thứ gì được đảm bảo tiếp theo sang phía còn lại.
+    - title: "Lấp phía còn lại, bench sau cùng"
+      text: >-
+        Khi khóa đang bật, hãy dùng công cụ tôn trọng khóa. Rồi tới craft
+        bench bạn đã tính ở bước thứ hai, quality, socket.
+  finishing: >-
+    Lên quality trước khi đánh giá một cây claw physical. Rồi tới ô dành cho
+    bench, rồi một [[Divine Orb]] chỉ khi những modifier quan trọng roll thấp
+    trong khoảng của chúng. Claw đeo theo cặp, nên hãy hoàn thiện một cây
+    trước khi bắt đầu cây thứ hai; cây đầu sẽ cho bạn biết cây thứ hai cần
+    gì.
+  stopping: >-
+    Một cây claw elemental có hai prefix added damage từ Tier 3 trở lên,
+    Elemental Damage with Attack Skills của bench, và hai trong ba suffix
+    damage là một weapon chạy map mạnh. Một cây claw physical có prefix phần
+    trăm veiled hoặc Tier 4, flat Physical Damage và attack speed thì ngang
+    ngửa với nó.
+
+
+    Bước sau đó, tức suffix roll thứ ba hoặc cái phần trăm physical roll thứ
+    hai, tốn ngang mọi thứ trước nó cộng lại. Hãy đặt điểm dừng từ trước, và
+    khi một lần thử tốn tiền hỏng hai lần liên tiếp, hãy tính lại xem item
+    đáng bao nhiêu so với giá của lần thử kế tiếp.
+special:
+  - mod: "Adds # to # Chaos Damage"
+    source: "Essence / Implicit của base"
+    where: "Được đảm bảo bởi Essence of Envy từ bậc Screaming trở lên: 53–79 to 101–131 ở bậc Deafening. Implicit của Void Fangs là nguồn thứ hai, không chiếm ô nào. Prefix tự nhiên có một tier ở item level 83."
+  - mod: "#% increased Physical Damage / #% chance to Poison on Hit"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25% chance. Bench: 95–105% kèm 18–20% giá 8 Chaos Orb. Có các bản cho Bleeding, Impale và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% từ [[Crafting Bench]] giá 8 Chaos Orb; 6–7% khi unveil. Không có trong pool tự nhiên."
+  - mod: "#% increased Impale Effect"
+    source: "Essence / influence Crusader"
+    where: "22–25% từ một Deafening Essence of Dread, hoặc cùng khoảng đó dưới dạng suffix Crusader ở item level 75."
+  - mod: "#% chance to gain a Power, Frenzy or Endurance Charge on Kill"
+    source: "Essence"
+    where: "16%, từ một [[Essence of Horror]], thứ chỉ có được khi corrupt một monster Essence bằng [[Remnant of Corruption]]."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Veiled / Bench / influence Hunter"
+    where: "14–16% khi unveil; 11–13% từ bench giá 4 Exalted Orb; 10–12% dưới dạng prefix Hunter ở item level 78. Bản veiled và bản bench chung một group; bản Hunter là một group khác."
+  - mod: "#% increased Physical Attack Damage while Dual Wielding"
+    source: "Influence Elder / Warlord"
+    where: "Một suffix, 33–37%, ở item level 80 với influence Elder hoặc 73 với Warlord."
+  - mod: "+#% to Damage over Time Multiplier for Poison inflicted with this Weapon"
+    source: "Influence Elder"
+    where: "Một prefix, 51–59% ở item level 83, trên claw có influence Elder."
+  - mod: "Grants # Mana per Enemy Hit"
+    source: "Implicit của base"
+    where: "Chỉ có trên ba cây claw Maraketh. Bạn chọn nó bằng cách chọn base."
+mistakes:
+  - "**Trộn lẫn các loại damage.** Một cái phần trăm physical không giúp gì cho added Cold Damage. Mọi prefix nên phục vụ cùng một build."
+  - "**Roll Alteration để tìm một prefix physical cao trên claw.** Tier 3 trở lên là 1 trên 344 lần roll prefix. Một veiled prefix hoặc một Fossil tới đích với giá thấp hơn."
+  - "**Đặt prefix physical lên một cây claw Heist.** Void Fangs đánh 22–41. Implicit mới là lý do dùng nó; hãy dựng chaos và poison xoay quanh implicit đó."
+  - "**Tiêu bench vào attack speed rồi lại cần hai suffix critical strike.** Hãy tính trước bench sẽ cấp cái nào trong ba cái, rồi mới roll hai cái còn lại."
+  - "**Fracture increased Physical Damage thuần rồi lại tính tới một prefix physical veiled.** Chúng là một group. Fracture đóng cánh cửa đó vĩnh viễn."
+  - "**Trả tiền cho \"Cannot roll Caster Modifiers\" trên claw.** Trong pool tự nhiên không có gì để nó loại, và từ 3.30 nó không bảo vệ thứ gì khỏi Orb of Annulment."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, Essence, veiled modifier và giá bench được dẫn ở đây. Các tỉ lệ và xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ, và thay đổi về tác dụng của các modifier \"Cannot roll\" trước Orb of Annulment." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các công thức thêm-và-gỡ, cùng các beast của chúng." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Speed, Critical, Physical và Attack." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Luật do người chơi thử nghiệm rằng một group đã có trên item thì không được đưa ra khi unveil. Một phần cũ hơn 3.30." }

@@ -1,0 +1,37 @@
+---
+import Rich from '../Rich.astro';
+import { t, type Locale } from '../../i18n';
+
+interface Props {
+  sources: { title: string; url: string; kind: string; note?: string }[];
+  league: string;
+  locale: Locale;
+  where: string;
+  verified: string;
+}
+const { sources, league, locale, where, verified } = Astro.props;
+---
+<section id="sources" class="craft-sources">
+  <h2>{t(locale, 'common.sources')}</h2>
+  <p class="muted">{t(locale, 'craft.sources.note')} {t(locale, 'common.verified')} {verified}.</p>
+  <ul>
+    {sources.map((source) => (
+      <li>
+        <span class="craft-sources__kind">{t(locale, `build.source.${source.kind}`)}</span>
+        <span>
+          <a href={source.url} rel="noopener" target="_blank">{source.title}</a>
+          {source.note && <small><Rich text={source.note} league={league} where={where} inline /></small>}
+        </span>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .craft-sources { max-width: var(--measure); }
+  .craft-sources p { font-size: 0.9rem; }
+  ul { list-style: none; margin: 0.8rem 0 0; padding: 0; }
+  li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.75rem; padding: 0.55rem 0; border-top: 1px solid var(--border); margin: 0; font-size: 0.92rem; }
+  .craft-sources__kind { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding-top: 0.2rem; }
+  small { display: block; color: var(--text-muted); font-size: 0.84rem; margin-top: 0.15rem; }
+</style>

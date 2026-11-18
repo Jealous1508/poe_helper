@@ -1,0 +1,127 @@
+category: claws
+title: "Một cây claw chaos từ Essence of Envy"
+level: 2
+summary: "Added Chaos Damage có một tier tự nhiên gần như không bao giờ roll ra. Một Essence trao nó tận tay, trên một base mà implicit đã có sẵn nó."
+goal: >-
+  Một cây claw cho build attack poison hoặc chaos, có added Chaos Damage hai
+  lần: một từ base, một từ Essence. Bài học là **khi nào Essence là công cụ
+  hợp lý duy nhất**: modifier này có trong pool tự nhiên, nhưng chỉ là một
+  tier duy nhất với weight nhỏ và item level cao.
+base: "Void Fangs"
+itemLevel: 75
+baseWhy: >-
+  Void Fangs là cây claw Heist cao cấp nhất. Implicit của nó thêm 46–63 to
+  92–113 Chaos Damage, ở chỗ mà claw thường có life on hit. Physical damage
+  của nó thấp, 22–41, nhưng ở đây không sao vì trong lần craft này không gì
+  nhân nó lên.
+
+
+  Item level 75 cố ý thấp hơn 83, mốc mà prefix Chaos Damage tự nhiên cần.
+  Essence không quan tâm tới cánh cổng đó, nên một base rẻ hơn làm được y
+  việc đó. 75 vẫn cho phép Tier 2 của attack speed (23–25%).
+methods: [essence, bench]
+result:
+  implicits: ["Adds 54 to 101 Chaos Damage"]
+  prefixes:
+    - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+    - { text: "91% increased Physical Damage / 17% chance to Poison on Hit", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed" }
+    - { text: "+31 to Dexterity" }
+needs:
+  - { item: "[[Screaming Essence of Envy]]", amount: "5–10", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Một nắm Essence of Envy. Envy bắt đầu từ bậc Screaming, nên không có bản
+  thấp giá rẻ; đằng nào thì trong 3.30, map đỏ cũng không thả ra thứ gì yếu
+  hơn Screaming. Craft bench tốn 3 [[Chaos Orb]].
+odds: >-
+  Chaos Damage là chắc chắn. Thứ bạn roll để tìm là phía suffix: mỗi suffix
+  Essence thêm vào là attack speed khoảng 1 trên 7 lần ở item level 75, theo
+  phép tính của chúng tôi từ weight. Một kết quả thường có hai hoặc ba
+  suffix, nên hãy tính năm tới mười Essence để có attack speed từ 17% trở
+  lên, và ít hơn nếu bạn chấp nhận bản của bench.
+
+
+  Để so sánh, prefix Chaos Damage tự nhiên chiếm 1% số lần roll prefix và
+  hoàn toàn không roll được dưới item level 83.
+steps:
+  - title: "Dùng Essence lên cây claw trắng"
+    do: >-
+      Dùng một [[Screaming Essence of Envy]] lên một Void Fangs trắng.
+    why: >-
+      Cây claw thành Rare với "Adds 37–59 to 79–103 Chaos Damage" được đảm
+      bảo (Shrieking: 43–67 to 89–113; Deafening: 53–79 to 101–131). Mọi thứ
+      khác trên nó là ngẫu nhiên. Cộng với implicit, đó là hai nguồn added
+      Chaos Damage, và added damage được tính trên mọi cú đánh của một
+      weapon 1.6 attack mỗi giây.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+        - { text: "+112 to maximum Mana" }
+        - { text: "Adds 8 to 163 Lightning Damage" }
+      suffixes:
+        - { text: "+38 to Intelligence" }
+  - title: "Đọc kết quả: suffix trước, rồi đếm prefix"
+    do: >-
+      Tìm **attack speed** trong các suffix. Rồi đếm prefix: trong ba ô còn ô
+      nào trống không?
+    why: >-
+      Kết quả ở trên trượt cả hai: không có attack speed, và Essence đã lấp
+      cả ba prefix, trong đó hai cái là thứ build này không dùng được. Một
+      prefix trống quan trọng vì bench có một cái mạnh để đặt vào đó.
+    check: >-
+      Giữ cây claw khi nó có attack speed từ 17% trở lên **và** một prefix
+      trống, hoặc một prefix trống và một suffix trống.
+    fail: >-
+      Dùng thêm một Essence nữa lên chính cây claw đó. Từ bậc Screaming trở
+      lên, Essence dùng được trên item Rare, và Chaos Damage lần nào cũng
+      quay lại.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+        - { text: "+31 to Dexterity" }
+  - title: "Bench thứ cây claw còn thiếu"
+    do: >-
+      **Đã roll ra attack speed** (như ở đây): craft prefix "86–94% increased
+      Physical Damage / 16–17% chance to Poison on Hit" giá 3
+      [[Chaos Orb]]. **Không có attack speed:** thay vào đó craft 11–15%
+      increased Attack Speed giá 2 Chaos Orb vào một suffix.
+    why: >-
+      Một modifier bench, nên nó dành cho khoảng trống lớn hơn. Với build
+      poison, chance to Poison của hybrid là nửa có giá trị; nửa physical
+      nhân vào một base nhỏ và chỉ là phần thưởng thêm. Attack speed thì
+      không gì thay được trên một weapon mà toàn bộ damage đều được cộng theo
+      từng cú đánh.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+        - { text: "91% increased Physical Damage / 17% chance to Poison on Hit", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+        - { text: "+31 to Dexterity" }
+variations: >-
+  **Build damage over time** thì bench "+18–20% to Chaos Damage over Time
+  Multiplier" (4 Chaos Orb, một suffix) thay cho hybrid.
+
+
+  **Trên một cây claw thường** thì Essence đó vẫn dùng được và bạn giữ được
+  life on hit, với giá là mất nguồn Chaos Damage thứ hai.
+
+
+  **Zeal thay cho Envy** đảm bảo attack speed và phó mặc Chaos Damage cho một
+  lần roll prefix có tỉ lệ 1 trên 100 trên base item level 83 và bất khả thi
+  dưới mốc đó. Hãy chốt cái modifier không thể có bằng đường nào khác.
+mistakes:
+  - "Mua một base item level 83 cho việc này. Essence phớt lờ mốc item level mà prefix tự nhiên cần."
+  - "Craft ở bench giữa các lần dùng Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Dùng Essence lên một base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên claw, tier Chaos Damage tự nhiên, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }

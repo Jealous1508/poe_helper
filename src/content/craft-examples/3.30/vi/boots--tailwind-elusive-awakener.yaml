@@ -1,0 +1,226 @@
+category: boots
+title: "Tailwind và Elusive trên một đôi: một kế hoạch dùng Awakener's Orb"
+level: 5
+summary: "Hai modifier influence không bao giờ chung pool, được ghép bằng một orb roll lại mọi thứ khác. Toàn bộ tay nghề nằm ở thứ bạn đưa cho orb; sau nó, bạn chơi với bài được chia."
+goal: >-
+  Một đôi Two-Toned Boots có suffix Hunter "You have Tailwind if you have
+  dealt a Critical Strike Recently" và prefix Redeemer "chance to gain Elusive
+  on Critical Strike", cộng movement speed và life. Đây là item hai influence
+  nổi tiếng nhất trong game và là một bức tranh trung thực về đỉnh cao của
+  craft: **hai cuộc tìm kiếm dài, một orb bạn kiểm soát hoàn toàn, và một
+  đoạn kết bạn không kiểm soát chút nào.**
+base: "Two-Toned Boots"
+itemLevel: 84
+baseWhy: >-
+  Cả hai modifier cần item level 75. Một đôi có influence không nhận được
+  Eldritch implicit, nên dùng base Atlas không mất gì, và implicit +16–20%
+  cho hai resistance của Two-Toned ở lại trên đôi boots hoàn chỉnh. Ví dụ
+  dùng bản Evasion và Energy Shield. Bản Armour và Evasion có pool prefix nhỏ
+  hơn và tỉ lệ tốt hơn ở giai đoạn 2; hãy lấy defence nào build của bạn mặc.
+
+
+  Item level 84 là dành cho các resistance mà giai đoạn cuối có thể roll ra.
+  Đôi boots phải khởi đầu **không có influence và không có gì fractured**.
+methods: [influence, currency, bench, lock, finishing]
+result:
+  note: "Hunter and Redeemer"
+  implicits: ["+18% to Cold and Lightning Resistances"]
+  prefixes:
+    - { text: "9% chance to gain Elusive on Critical Strike", how: influence }
+    - { text: "23% increased Movement Speed", how: crafted }
+    - { text: "+96 to maximum Life" }
+  suffixes:
+    - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+    - { text: "+41% to Fire Resistance" }
+    - { text: "+12% to Item Rarity" }
+needs:
+  - { item: "Two-Toned Boots trắng, item level 75+", amount: "1", note: "đôi bạn sẽ giữ" }
+  - { item: "Bất kỳ đôi boots nào item level 75+", amount: "1", note: "item hiến, bị hủy ở giai đoạn 3" }
+  - { item: "[[Redeemer's Exalted Orb]] và [[Hunter's Exalted Orb]]", amount: "mỗi loại 1" }
+  - { item: "[[Orb of Alchemy]] và [[Orb of Scouring]]", amount: "mỗi loại 2" }
+  - { item: "[[Orb of Alteration]]", amount: "hơn hẳn một nghìn" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+  - { item: "[[Exalted Orb]]", amount: "1–2" }
+  - { item: "[[Hinekora's Lock]]", amount: "0–2", note: "tùy chọn; xem giai đoạn 5" }
+cost: >-
+  Hai Exalted Orb của conqueror, một [[Awakener's Orb]], và Alteration với số
+  lượng mà phần lớn người chơi không bao giờ tiêu cho một item: riêng cuộc
+  tìm Tailwind đã trung bình vài trăm lần roll suffix. Rồi tới bất cứ thứ gì
+  đoạn kết đòi hỏi.
+
+
+  Chúng tôi không đưa ra tổng, và không hứa gì. Một lần thử trọn vẹn có thể
+  kết thúc với cả hai modifier trên một đôi boots mà ngoài ra thì tệ, và cách
+  duy nhất để thử lại là bắt đầu lại cả hai cuộc tìm kiếm.
+odds: >-
+  **Giai đoạn 2.** Trên một đôi Magic có influence Hunter ở item level 84,
+  khoảng một trên 607 lần roll suffix là Tailwind: weight của nó là 100, so
+  với 55,600 của các suffix tự nhiên và 5,000 của các suffix Hunter khác.
+  Trên đôi Redeemer, khoảng một trên 207 lần roll prefix là Elusive trên
+  phiên bản base này, và một trên 155 trên bản Armour và Evasion. Đó là phép
+  tính của chúng tôi từ weight; một Alteration không phải lúc nào cũng roll
+  ra phía bạn cần.
+
+
+  **Giai đoạn 3.** Theo các trang tra cứu, Awakener's Orb giữ một modifier
+  influence từ mỗi item, và cho các modifier ngẫu nhiên mới ở phần còn lại.
+  Không có gì được công bố về chuyện là bao nhiêu cái.
+
+
+  **Giai đoạn 5.** Khi suffix đã đầy và movement speed đã craft, một Exalted
+  Orb thêm maximum Life khoảng 1 trên 5 lần, life từ 85 trở lên 1 trên 16
+  lần, và mana 1 trên 4 lần.
+steps:
+  - title: "Giai đoạn 1: hai base trắng có influence"
+    do: >-
+      Biến đôi Two-Toned Boots thành Rare bằng một [[Orb of Alchemy]], dùng
+      [[Redeemer's Exalted Orb]] lên chúng, rồi một [[Orb of Scouring]]. Làm
+      y vậy với đôi boots hiến bằng [[Hunter's Exalted Orb]].
+    why: >-
+      Một Exalted Orb của conqueror "adds influence and a new modifier to a
+      rare item". Modifier thì không cần; influence mới cần. Scouring gỡ các
+      modifier, và theo cách nó vẫn hoạt động lâu nay, influence ở lại với
+      base. Giờ bạn có hai đôi boots trắng, mỗi đôi roll từ bảng của một
+      conqueror.
+    check: >-
+      Đôi nào nhận influence nào được quyết định ở đây và không đổi được.
+      Redeemer trên đôi bạn giữ, Hunter trên đôi hiến, hoặc ngược lại: giai
+      đoạn 3 chạy được theo cả hai cách, miễn là đôi bạn giữ là đôi **thứ
+      hai** mà Awakener's Orb chạm vào.
+    state:
+      rarity: normal
+      note: "Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+  - title: "Giai đoạn 2: mỗi modifier một mình trên một item Magic"
+    do: >-
+      Dùng một [[Orb of Transmutation]] rồi [[Orb of Alteration]] lên đôi
+      Redeemer tới khi prefix của nó là "chance to gain Elusive on Critical
+      Strike". Làm y vậy trên đôi hiến Hunter tới khi suffix của nó là
+      Tailwind. Trong cả hai trường hợp, ô còn lại phải **trống hoặc không
+      phải một modifier influence**.
+    why: >-
+      Đây là bước bạn kiểm soát, và cả kế hoạch dựa vào nó. Nếu mỗi item mang
+      đúng một modifier influence, Awakener's Orb không có lựa chọn nào về
+      chuyện giữ cái nào. Một đôi hiến có Tailwind và một prefix Hunter bên
+      cạnh cho orb hai ứng viên, và cho bạn một lần tung đồng xu bạn không
+      cần.
+    check: >-
+      Đọc tên của ô còn lại. "Hunter's", "of the Hunt", "Redeemer's" và "of
+      Redemption" là các tên influence. Bất cứ thứ gì khác là tự nhiên và vô
+      hại.
+    fail: >-
+      Ở đây không có chuyện hỏng, chỉ có chuyện lâu. Tailwind là cái lâu. Hãy
+      đặt một ngân sách tính bằng Alteration, và nếu nó cạn thì bạn vẫn sở
+      hữu hai base có influence còn giữ giá.
+    state:
+      rarity: magic
+      note: "Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes: [{ text: "9% chance to gain Elusive on Critical Strike", how: influence }]
+  - title: "Giai đoạn 3: Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên **đôi hiến** trước, rồi lên đôi Two-Toned
+      Boots.
+    why: >-
+      Dòng chữ của nó: "Destroys an item, applying its influence to another
+      of the same item class. The second item is reforged as a rare item with
+      both influence types and new modifiers." Item thứ nhất là cái bị hủy.
+      Item thứ hai giữ base và implicit của nó và trở ra thành Rare với
+      Tailwind, Elusive và bất cứ thứ gì khác mà lần reforge roll ra.
+    check: >-
+      Dòng chữ của orb không giới hạn rarity. Nếu trong 3.30 nó từ chối item
+      Magic, hãy dùng một [[Regal Orb]] lên từng đôi trước, sau khi tạo một
+      [[Imprint]], để một Regal Orb lỡ thêm modifier influence thứ hai thì
+      hoàn tác được.
+    fail: >-
+      Thiếu một trong hai cái: giai đoạn 2 đã không sạch. Không có cách sửa.
+      Đó là lý do có cái luật về ô còn lại.
+    state:
+      note: "Hunter and Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes: [{ text: "9% chance to gain Elusive on Critical Strike", how: influence }]
+      suffixes:
+        - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+        - { text: "+41% to Fire Resistance" }
+        - { text: "+12% to Item Rarity" }
+  - title: "Giai đoạn 4: đọc bài trên tay, và đừng cải thiện nó bằng Annulment"
+    do: >-
+      Đếm các ô trống và gọi tên đồ bỏ. Ở đây: hai prefix trống, không có
+      suffix trống, một suffix đồ bỏ (Item Rarity). Để đồ bỏ ở nguyên chỗ.
+    why: >-
+      Không gì bảo vệ được cả hai modifier then chốt cùng lúc. Tailwind là
+      suffix và Elusive là prefix, nên khóa bench nào cũng để hở một trong
+      hai, và Eldritch orb không dùng được trên item có influence. Một
+      [[Orb of Annulment]] sẽ chọn trong bốn modifier, mà hai trong đó là lý
+      do đôi boots tồn tại. Một suffix đồ bỏ tốn một ô. Mất Tailwind là mất
+      cả item.
+    check: >-
+      Bài khác thì đoạn kết khác. Với một **suffix** trống và hai prefix
+      trống, craft "Can have up to 3 Crafted Modifiers" (2 Divine Orb) rồi cả
+      movement speed lẫn life ở bench. Với một **prefix** đồ bỏ, bạn còn một
+      prefix trống: nó dành cho movement speed.
+  - title: "Giai đoạn 5: bench movement speed, rồi ép ra một prefix"
+    do: >-
+      Ở [[Crafting Bench]], craft **20–24% increased Movement Speed** giá 4
+      [[Chaos Orb]]. Rồi dùng một [[Exalted Orb]].
+    why: >-
+      Movement speed lên trước vì boots cần nó và bench là nguồn chắc chắn
+      duy nhất còn lại. Suffix đã đầy, nên Exalted Orb chỉ thêm được một
+      prefix, và khi movement speed đã có sẵn thì group của nó đã đóng. Life
+      là thứ tốt nhất nó thêm được, một trên năm lần.
+    check: >-
+      Nếu bạn có một [[Hinekora's Lock]], đây là chỗ nó đáng đồng tiền. Nó
+      cho thấy Exalted Orb sẽ thêm gì trước khi bạn quyết. Trên thực tế ô
+      này là vĩnh viễn: một prefix mana ở đây chỉ gỡ được bằng chính cái
+      Annulment đang đe dọa Tailwind và Elusive.
+    fail: >-
+      Mana, một prefix defence hoặc Item Rarity. Dù vậy đôi boots vẫn là đã
+      xong. Đừng đuổi theo nó.
+    state:
+      note: "Hunter and Redeemer"
+      implicits: ["+18% to Cold and Lightning Resistances"]
+      prefixes:
+        - { text: "9% chance to gain Elusive on Critical Strike", how: influence }
+        - { text: "23% increased Movement Speed", how: crafted }
+        - { text: "+96 to maximum Life" }
+      suffixes:
+        - { text: "You have Tailwind if you have dealt a Critical Strike Recently", how: influence }
+        - { text: "+41% to Fire Resistance" }
+        - { text: "+12% to Item Rarity" }
+  - title: "Hoàn thiện: implicit và các chỉ số"
+    do: >-
+      Một [[Blessed Orb]] nếu implicit roll ra gần 16%. Quality và socket.
+      Một [[Divine Orb]] chỉ khi Elusive nằm ở 5% hoặc 6%.
+    why: >-
+      Chance của Elusive, 5–10%, là chỉ số duy nhất trên đôi boots đáng một
+      Divine Orb, và orb roll lại mọi chỉ số khác cùng với nó. Tailwind và
+      tier movement speed crafted không có gì để được thêm.
+variations: >-
+  **Chỉ một influence.** Riêng Tailwind, trên một đôi Hunter không bao giờ
+  gặp Awakener's Orb, là một item rẻ hơn nhiều. Chỉ có một modifier then
+  chốt thì một cái khóa bench ở phía của nó bảo vệ được nó: khóa suffix, và
+  một reforge Harvest "kèm một modifier Speed" đặt movement speed vào các
+  prefix.
+
+
+  **Một Orb of Dominance.** Trên item có hai modifier influence, nó gỡ một
+  cái và nâng cấp cái kia. Ở đây điều đó sẽ đổi Tailwind lấy Elusive hoặc
+  ngược lại, tức trái hẳn với kế hoạch.
+
+
+  **Vì sao không thêm cả Eldritch implicit.** Ember và Ichor từ chối item có
+  influence. Một đôi có movement speed và action speed từ Searing Exarch là
+  con đường kia để có boots nhanh, trên một item khác.
+mistakes:
+  - "Awaken một đôi hiến mang hai modifier Hunter. Orb giữ một cái, và không nhất thiết là cái của bạn."
+  - "Dùng orb lên đôi Two-Toned Boots trước. Item thứ nhất là cái bị hủy."
+  - "Annul một modifier đồ bỏ khỏi đôi boots đã awaken. Hãy đếm xem trong các ứng viên có bao nhiêu cái bạn không chịu nổi việc mất."
+  - "Craft một cái khóa prefix rồi scour. Nó xóa sạch suffix, kể cả Tailwind."
+  - "Bắt đầu mà không có ngân sách cho cuộc tìm Tailwind. Một trên 607 là con số trung bình, và trung bình thì cũng có ngày xấu."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Hunter và Redeemer trên boots và weight của chúng, giá bench, cùng dòng chữ in-game của Awakener's Orb, các Exalted Orb của conqueror, Orb of Dominance và Hinekora's Lock. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các conqueror boss rơi Exalted Orb của mình; implicit của Two-Toned Boots; giá của các modifier bảo vệ." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Orb giữ một modifier influence từ mỗi item." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed được nhắc tới trong phần biến thể." }

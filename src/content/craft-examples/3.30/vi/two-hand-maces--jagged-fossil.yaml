@@ -1,0 +1,149 @@
+category: two-hand-maces
+title: "Ba prefix physical bằng Jagged Fossil"
+level: 3
+summary: "Dàn xếp cuộc xổ số để chín trên mười lần roll prefix ra physical, rồi roll lại tới khi cả ba ô chứa đúng các họ modifier."
+goal: >-
+  Một cây mace có đủ cả ba họ prefix physical: thuần, hybrid và flat. Không
+  phải ở tier cao nhất; phương pháp này không với tới đó. Bài học là
+  **Fossil thay đổi pool** thế nào, và cách nhìn weight để biết nó làm được
+  gì và không làm được gì cho bạn.
+base: "Karui Maul"
+itemLevel: 77
+baseWhy: >-
+  Item level 77 mở Tier 1 của flat Physical Damage và của attack speed, cùng
+  Tier 2 của cả hai prefix phần trăm. Roll lại bằng Fossil rơi vào tier thấp
+  và tier giữa thường xuyên hơn hẳn tier cao, nên trả tiền cho item level 83
+  ở đây là mua một tier bạn hiếm khi thấy.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "128% increased Physical Damage", how: fossil }
+    - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+    - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "+41 to Strength", how: fossil }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "một cái mỗi Fossil" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Fossil và Resonator từ Delve, mỗi lần thử một cái mỗi loại. Trong 3.30,
+  đường vào Delve đi qua những map luôn spawn Sulphite, nên đây là lần craft
+  dành cho người có chơi Delve hoặc mua từ người chơi Delve.
+odds: >-
+  Với Jagged Fossil, theo phép tính của chúng tôi từ weight, một lần roll
+  prefix ra flat Physical Damage 43% số lần và mỗi họ phần trăm 23%. Chín
+  trên mười lần là physical. Các con số này chỉ tính pool tự nhiên: một
+  Fossil còn có thể đưa vào những modifier không công cụ nào khác roll ra
+  được, dữ liệu game không cho biết Fossil nào đưa modifier nào, nên chúng
+  không được tính. Hãy coi các tỉ lệ này là trường hợp tốt nhất.
+
+
+  **Khi một kết quả có ba prefix, hơn một nửa số lần một chút đó là ba họ
+  physical khác nhau.** Không phải kết quả nào cũng có ba prefix, và không gì
+  ở đây kiểm soát tier: Tier 4 trở lên của bản phần trăm thuần vẫn chỉ khoảng
+  1 trên 46 lần roll prefix. Vậy nên "đủ cả ba họ" tốn một nắm Fossil, còn
+  "cả ba ở tier tốt" tốn vài chục.
+steps:
+  - title: "Chuẩn bị base"
+    do: >-
+      Đưa một cây Karui Maul trắng item level 77 lên 20% quality. Biến nó
+      thành Rare bằng gì cũng được: một [[Orb of Alchemy]], hoặc Fossil đầu
+      tiên gắn trong một Alchemical Resonator.
+    why: >-
+      Chaotic Resonator roll lại item Rare, như một Chaos Orb. Item chỉ cần
+      là Rare để cái đầu tiên dùng được.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "Adds 63 to 129 Cold Damage" }]
+      suffixes:
+        - { text: "+312 to Accuracy Rating" }
+        - { text: "+29 to Strength" }
+  - title: "Gắn Fossil rồi dùng Resonator"
+    do: >-
+      Đặt một [[Jagged Fossil]] vào một [[Primitive Chaotic Resonator]], rồi
+      dùng Resonator lên cây mace.
+    why: >-
+      Mô tả của Fossil là "More Physical modifiers, No Chaos modifiers".
+      Trong dữ liệu 3.30, "more" là gấp mười weight. Mỗi prefix có tag
+      physical được mười vé cho mỗi vé nó từng có; các prefix elemental vẫn
+      giữ nguyên một vé.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 19 to 38 Physical Damage", how: fossil }
+        - { text: "29% increased Physical Damage / +66 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "+142 to Accuracy Rating", how: fossil }
+        - { text: "+17 to Strength", how: fossil }
+        - { text: "12% increased Critical Strike Chance", how: fossil }
+  - title: "Đọc kết quả qua hai lượt"
+    do: >-
+      **Lượt một, họ:** các prefix có phải là thuần, hybrid và flat, mỗi loại
+      một cái không? **Lượt hai, tier:** mỗi cái có ở tier bạn chấp nhận
+      không? Hãy đặt mức trước khi bắt đầu. Cho một weapon chạy map: thuần từ
+      110% trở lên, hybrid từ 45% trở lên, flat từ adds 25 to 52 trở lên.
+    why: >-
+      Kết quả ở trên không qua lượt nào: hai prefix, cả hai đều thấp. Tách
+      việc đánh giá làm hai giúp bạn khỏi giữ một kết quả chỉ vì nó có đúng
+      ba cái tên, ở những tier cộng lại chẳng được bao nhiêu.
+    check: >-
+      Đếm cả suffix nữa. Nếu cả ba ô đều bị lấp bằng thứ bạn không muốn, item
+      không còn chỗ cho craft bench. Điều đó chỉ chấp nhận được nếu prefix đủ
+      tốt để gánh nó.
+    fail: >-
+      Dùng thêm một Fossil và Resonator lên chính item đó. Mỗi lần thử là độc
+      lập.
+  - title: "Lặp lại tới khi qua cả hai lượt"
+    do: >-
+      Cứ tiếp tục tới khi một kết quả có ba họ ở các tier bạn đặt ra.
+    why: >-
+      Bạn đang chờ hai thứ cùng lúc: ba prefix thuộc ba họ physical khác
+      nhau, và tier chấp nhận được trên từng cái. Fossil giúp cực nhiều cho
+      thứ nhất và không giúp gì cho thứ hai.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage", how: fossil }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+        - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "+41 to Strength", how: fossil }
+  - title: "Bench attack speed"
+    do: >-
+      Ở [[Crafting Bench]], craft 11–15% increased Attack Speed giá 2
+      [[Chaos Orb]].
+    why: >-
+      Cả ba ô prefix đã dành cho damage, nên bench dành cho suffix duy nhất
+      cây mace nào cũng cần.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage", how: fossil }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+        - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "+41 to Strength", how: fossil }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Vì sao không thêm Fossil thứ hai.** Một [[Serrated Fossil]] nâng modifier
+  Attack, nhưng gần như mọi prefix trên mace vốn đã có tag attack, nên nó
+  thay đổi rất ít ở phía đó. Một [[Sanctified Fossil]] làm
+  "high level modifiers more common", đúng thứ lần craft này thiếu; dữ liệu
+  không nói là nhiều hơn bao nhiêu, nên chúng tôi không đưa ra được con số.
+
+
+  **Khi prefix đã đúng còn suffix thì đầy đồ lấp chỗ.** Đừng roll lại. Ba
+  prefix tốt là nửa đắt tiền của cây weapon, và ví dụ kế tiếp dựng lại phía
+  suffix mà không đụng tới chúng.
+mistakes:
+  - "Trông chờ Tier 1. Fossil nhân cả một tag, và các tier thấp của tag đó cũng được nhân theo."
+  - "Giữ ba prefix physical ở các tier chót. Hai cái tốt cộng một craft bench là một weapon tốt hơn."
+  - "Dùng Fossil trên base có [[Memory Strands]] rồi trông chờ tier cao hơn. Theo thử nghiệm của người chơi, Fossil không dùng strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tier và weight. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

@@ -1,0 +1,156 @@
+category: body-armours
+title: "Áo giáp leveling: roll life, mua resistance"
+level: 1
+summary: "Lần craft áo giáp đầu tiên của bạn: Alteration để lấy một prefix life, một Regal Orb, và bench cho resistance mà nhân vật của bạn đang thiếu."
+goal: >-
+  Một cái áo giáp cho giữa campaign, có lượng life ra trò và resistance bạn
+  đang thiếu, làm từ currency rơi dọc đường. Điều cần mang theo là cách chia
+  một lần craft giữa may rủi và bench: **roll modifier mà bench bán tệ nhất,
+  và mua cái còn lại.**
+base: "Bronze Plate"
+itemLevel: 38
+baseWhy: >-
+  Bronze Plate mặc được ở level 37 và có 373–429 Armour. Item level 36 là
+  mốc đầu tiên mà life 85–99 ("Rotund") roll được, nên từ 36 trở lên là dùng
+  được: giữ Alt rồi rê chuột lên item để xem item level của nó.
+
+
+  Bất kỳ body armour trắng nào ngang level của bạn cũng làm theo cùng cách,
+  bất kể defence của nó là gì. Nếu được chọn, hãy lấy cái có socket và link
+  đã hợp sẵn với skill của bạn. Chúng không phải modifier, và không gì trong
+  lần craft này thay đổi chúng.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "+78 to maximum Life" }
+    - { text: "+88 to Armour" }
+  suffixes:
+    - { text: "+21% to Lightning Resistance" }
+    - { text: "+25% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Armourer's Scrap]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "cho bench" }
+cost: >-
+  Một nắm [[Orb of Alteration]], một [[Regal Orb]] và một
+  [[Orb of Alchemy]] cho bench. Không thứ nào trong đó đáng để dành ở giai
+  đoạn này của league.
+odds: >-
+  Ở item level 38 trên một cái plate, một lần roll prefix ra maximum Life từ
+  55 trở lên khoảng 1 trên 8 lần, theo phép tính của chúng tôi từ weight của
+  modifier, và ra life cỡ nào cũng được gần 1 trên 3 lần. Một Alteration
+  không phải lúc nào cũng roll ra prefix, nên hãy tính là mười tới hai mươi
+  cái. Regal Orb thuần là may rủi, và lần craft này được dựng sao cho kết quả
+  của nó gần như không quan trọng.
+steps:
+  - title: "Lên quality trên base trắng"
+    do: >-
+      Dùng [[Armourer's Scrap]] lên cái áo giáp trắng tới khi nó ghi 20%
+      quality.
+    why: >-
+      Quality nhân Armour trên base lên. Dòng chữ trên item nói scrap có tác
+      dụng lớn hơn trên item level thấp, nên đây là lúc rẻ nhất để làm việc
+      này.
+    state: { rarity: normal }
+  - title: "So bench với cuộc xổ số"
+    do: >-
+      Mở [[Crafting Bench]] và đọc hai dòng trước khi tiêu bất cứ thứ gì: nó
+      tính bao nhiêu cho **maximum Life** và bao nhiêu cho **một
+      resistance**.
+    why: >-
+      Các bậc life bạn kham nổi ở đây là +41–55 giá 2 Orb of Alchemy và
+      +56–70 giá 4, trong khi một prefix roll ra ở item level này lên tới
+      85–99. Resistance là 21–28% giá đúng một Orb of Alchemy, trong khi một
+      suffix roll ra lên tới 24–29%. Bench gần bằng cuộc xổ số ở resistance
+      và thua xa ở life. Vậy life là cái nên roll, và resistance là cái nên
+      mua.
+    check: >-
+      Bench chỉ liệt kê những công thức bạn đã tìm được. Nếu thiếu bậc 21–28%
+      thì bậc 16–20% tốn 1 Orb of Transmutation và lập luận vẫn y vậy.
+  - title: "Biến nó thành Magic và roll life"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]] từng cái
+      một. Giữ Alt và đọc **prefix** sau mỗi cái. Dừng khi có maximum Life
+      **từ 55 trở lên**: tên của chúng là "Stout" (55–69), "Robust" (70–84)
+      hoặc "Rotund" (85–99).
+    why: >-
+      Item Magic có một prefix và một suffix, nên Alteration là cách rẻ nhất
+      để xin một modifier. Life luôn là prefix; lúc này cứ bỏ qua hẳn suffix.
+    check: >-
+      Dòng đó chỉ ghi riêng "+# to maximum Life". Dòng ghép Armour với một ít
+      Life là một modifier khác, yếu hơn.
+    fail: >-
+      Sắp cạn Alteration: nhận life từ 40 trở lên. Nó vẫn nhiều hơn các bậc
+      rẻ của bench.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+78 to maximum Life" }]
+  - title: "Lấp suffix trống"
+    do: >-
+      Nếu item chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã có
+      thì bỏ qua bước này.
+    why: >-
+      Augmentation thêm vào một ô trống và không bao giờ đụng tới thứ đang
+      có. Khoảng một nửa mọi lần roll suffix ở item level này là một
+      elemental resistance, nên đây là một tấm vé rẻ để có một cái.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+78 to maximum Life" }]
+      suffixes: [{ text: "+21% to Lightning Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Item thành Rare, giữ cả hai modifier và nhận thêm cái thứ ba ngẫu
+      nhiên. Rare là thứ mở các ô còn lại cho bench.
+    check: >-
+      Đọc modifier mới và ghi nhận nó ở phía nào. Ở đây nó là flat Armour,
+      một prefix, nên còn hai ô suffix trống.
+    state:
+      prefixes:
+        - { text: "+78 to maximum Life" }
+        - { text: "+88 to Armour" }
+      suffixes: [{ text: "+21% to Lightning Resistance" }]
+  - title: "Mua resistance"
+    do: >-
+      Ở [[Crafting Bench]], craft resistance mà nhân vật của bạn thiếu nhiều
+      nhất: 21–28% giá 1 [[Orb of Alchemy]]. Chọn một element mà item
+      **chưa** có.
+    why: >-
+      Một item giữ một modifier bench, và mỗi resistance là một group riêng,
+      nên bench sẽ từ chối element đã roll ra. Sau một Regal Orb, áo giáp có
+      nhiều nhất hai suffix, nên luôn còn chỗ cho cái này.
+    fail: >-
+      Nếu Regal Orb và Augmentation đã lo xong resistance của bạn thì dùng
+      bench cho một prefix: 41–50% increased Armour giá 1 Orb of Alchemy nằm
+      vừa cạnh flat Armour, vì hai cái thuộc hai group khác nhau.
+    state:
+      prefixes:
+        - { text: "+78 to maximum Life" }
+        - { text: "+88 to Armour" }
+      suffixes:
+        - { text: "+21% to Lightning Resistance" }
+        - { text: "+25% to Fire Resistance", how: crafted }
+variations: >-
+  **Một Essence bậc thấp thay cho Alteration.** Một
+  [[Weeping Essence of Greed]] dùng lên cái áo giáp trắng biến nó thành Rare
+  với +70–84 maximum Life được đảm bảo, và bench hoàn thiện nó theo cùng
+  cách. Bốn bậc Essence yếu nhất chỉ dùng được trên item Normal, và trong
+  3.30 bậc Weeping không còn rơi ở map vàng hay map đỏ, nên campaign là nơi
+  để tiêu chúng.
+
+
+  **Base evasion hoặc energy shield.** Vẫn sáu bước đó. Chỉ có prefix defence
+  thay đổi, và một cái robe còn có thể roll maximum Mana ở chỗ cái plate roll
+  Armour.
+mistakes:
+  - "Roll Alteration để tìm resistance. Bench bán gần như cái tốt nhất mà item level này cho phép với giá đúng một Orb of Alchemy."
+  - "Dùng bench khi item còn là Magic. Regal Orb có thể thêm đúng cái bạn vừa trả tiền mua."
+  - "Vứt một base có link đẹp vì modifier của nó tệ. Link sống sót qua mọi bước ở đây; modifier mới là thứ bạn đang thay."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các Essence yếu rơi ở đâu trong 3.30." }

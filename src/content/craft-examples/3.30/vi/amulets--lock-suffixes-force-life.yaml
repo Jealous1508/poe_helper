@@ -1,0 +1,197 @@
+category: amulets
+title: "Khóa ba suffix, ép ra một prefix Life"
+level: 4
+summary: "Không Essence nào cho Life trên amulet. Khi phía suffix đã đầy và đã khóa, một reforge Life của Harvest chỉ còn một modifier để cho: maximum Life."
+goal: >-
+  Biến một chiếc amulet có ba suffix bạn không đời nào chịu bỏ và không có gì
+  đáng giữ ở phía trên chúng thành một item hoàn chỉnh. Đây là lần craft đầu
+  tiên bạn **trả tiền để bảo vệ công sức**, và bản dành cho amulet có một
+  điểm xoay đáng học: khóa không chỉ là tấm khiên. Một phía đã đầy và đã khóa
+  khiến modifier được đảm bảo không còn chỗ nào để đi ngoài phía bên kia.
+base: "Onyx Amulet"
+itemLevel: 84
+baseWhy: >-
+  Lần craft này bắt đầu từ một item, không phải từ một base: chiếc đáng giữ
+  từ một đợt Essence of Scorn, hoặc bất kỳ amulet Rare nào mà **ba** suffix
+  của nó là lý do bạn giữ nó. Item level ở đây không quan trọng mấy, vì mọi
+  tier của Life đều mở từ 54. Ví dụ ở mức 84 vì đó là nơi resistance của nó
+  được roll ra.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["+15 to all Attributes"]
+  prefixes:
+    - { text: "+108 to maximum Life", how: harvest }
+    - { text: "+62 to maximum Mana", how: harvest }
+    - { text: "34% increased Damage while Leeching", how: crafted }
+  suffixes:
+    - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+    - { text: "36% increased Global Critical Strike Chance" }
+    - { text: "+44% to Fire Resistance" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần thử" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần thử" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "chỉ khi phải gỡ một modifier bench trước" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho craft bench cuối cùng" }
+cost: >-
+  Khóa: 4 [[Divine Orb]] và 8 [[Exalted Orb]] trên trang sức trong 3.30, và
+  lần reforge tiêu mất nó. Lifeforce chỉ là tiền lẻ khi đặt cạnh.
+
+
+  Cái giá đó chính là phép thử xem có nên làm việc này hay không. Bench bán
+  41–55 Life giá 2 Orb of Alchemy. Khóa mua phần chênh giữa mức đó và một
+  tier roll ra, ngoài ra không gì khác. Trên chiếc amulet mà suffix tốn năm
+  mươi Essence mới tìm ra, phần chênh đó đáng tiền. Trên một chiếc bình
+  thường thì không.
+odds: >-
+  Maximum Life là prefix duy nhất trong pool tự nhiên của amulet mang tag
+  life, nên một reforge Life không đụng được tới suffix buộc phải cho nó.
+  **Tier** thì ngẫu nhiên. Cả chín tier có weight như nhau, nên nếu modifier
+  được đảm bảo được rút theo weight, đúng như cách người ta vẫn hiểu về
+  reforge, thì một trên ba lần thử cho 85 trở lên và một trên chín cho tier
+  cao nhất, 115–129. Đó là phép tính của chúng tôi, và chưa được đo trong
+  3.30.
+
+
+  Reforge có thể thêm một hoặc hai prefix nữa. Mấy cái đó thuần là may rủi.
+steps:
+  - title: "Đếm cả hai phía"
+    do: >-
+      Giữ Alt. Phía suffix phải có **ba** modifier, tất cả đều là cái bạn sẽ
+      giữ. Phía prefix phải có **một ô trống**, vì "Suffix Modifiers cannot
+      be changed" tự nó là một prefix. Nếu một modifier bench đang chắn chỗ,
+      hãy gỡ nó với giá 1 [[Orb of Scouring]].
+    why: >-
+      Ba suffix quan trọng là để chắc chắn. Người chơi ghi nhận rằng reforge
+      không thêm gì vào một phía đã khóa, nhưng đó là thử nghiệm, không phải
+      luật được công bố. Khi phía đó đã đầy thật sự thì câu hỏi không còn đặt
+      ra: một modifier Life không thể là Life regeneration hay leech nếu
+      không có ô suffix nào để đặt nó vào.
+    fail: >-
+      Ba prefix roll ra và không có modifier bench nào trong số đó: cách duy
+      nhất để mở một ô là [[Orb of Annulment]], thứ chọn ngẫu nhiên một trong
+      sáu modifier và một nửa số lần sẽ lấy mất một suffix. Đừng dùng nó. Đeo
+      amulet như nó đang có.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+31 to maximum Energy Shield" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Craft khóa"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 8 [[Exalted Orb]].
+    why: >-
+      Chừng nào nó còn trên amulet, một lần roll lại tôn trọng nó sẽ để cả ba
+      suffix y nguyên. Hãy dùng bản đầy đủ. Các craft rẻ hơn bảo vệ một hoặc
+      hai modifier do game chọn ngẫu nhiên, không có gì cho thấy là cái nào,
+      mà bạn thì có ba cái cần giữ.
+    check: >-
+      Dòng đó hiện trong các prefix, được đánh dấu là crafted. Từ đây tới lần
+      reforge, đừng dùng currency nào khác lên amulet.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+31 to maximum Energy Shield" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Reforge kèm một modifier Life"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]).
+    why: >-
+      Reforge thay mọi thứ nó được phép đụng tới: hai prefix cũ và cái khóa,
+      vốn bị tiêu mất. Một modifier mới buộc phải mang tag life. Trên amulet
+      không khóa, phần nhiều đó sẽ là một suffix, vì Life regeneration, leech
+      và Life on kill có weight gần gấp đôi maximum Life. Ở đây suffix đã
+      đóng, và modifier life duy nhất còn lại chính là cái bạn muốn.
+    check: >-
+      Ba suffix không đổi, khóa đã biến mất, maximum Life nằm trong các
+      prefix. Đọc tier của nó.
+    fail: >-
+      Việc reforge Harvest tôn trọng khóa là do người chơi xác lập, không
+      phải do nhà phát triển tuyên bố. Sau bất kỳ bản patch nào đụng tới
+      craft, hãy thử trên một chiếc amulet rẻ trước khi giao phó chiếc này
+      cho nó.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+108 to maximum Life", how: harvest }
+        - { text: "+62 to maximum Mana", how: harvest }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Đánh giá tier theo giới hạn của bạn"
+    do: >-
+      Trước lần thử đầu tiên, hãy quyết định bạn nhận mức Life nào. 85 trở
+      lên là một trên ba lần thử. Nếu lần roll thấp hơn vạch của bạn, quay
+      lại bước 2 và trả tiền lần nữa; nếu không còn prefix trống cho khóa thì
+      bạn không làm được.
+    why: >-
+      Mỗi lần lặp lại là thêm 4 Divine Orb và 8 Exalted Orb để có con số đẹp
+      hơn trên một modifier. Hai lần thử hỏng đã tốn hơn giá của phần lớn
+      amulet.
+    check: >-
+      Một kết quả có Life và một prefix trống tốt hơn kết quả có Life và hai
+      prefix lấp chỗ: ô trống đó giữ được một modifier bench, và cũng chính
+      nó cho bạn khóa lần nữa.
+  - title: "Bench prefix còn trống"
+    do: >-
+      Craft prefix mà build của bạn dùng nhiều nhất. Với build attack có
+      leech: 31–36% increased Damage while Leeching, 3 [[Chaos Orb]]. Với
+      caster: "Non-Channelling Skills have −7 to −6 to Total Mana Cost", 4
+      Chaos Orb.
+    why: >-
+      Bench đi sau cùng, khi bạn đã thấy còn lại ô nào. Đừng craft Life ở
+      đây: amulet đã có nó, và Life của bench cùng group.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+108 to maximum Life", how: harvest }
+        - { text: "+62 to maximum Mana", how: harvest }
+        - { text: "34% increased Damage while Leeching", how: crafted }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+variations: >-
+  **Cùng cái khóa đó, một reforge Chaos.** "+1 to Level of all Chaos Skill
+  Gems" là prefix duy nhất trên amulet mang tag chaos. Khi ba suffix đã khóa,
+  reforge Chaos (100 Vivid Lifeforce) buộc phải cho nó. Đây là cách dùng giá
+  trị nhất của mẹo này trong loại item này, và ví dụ cuối cùng được dựng trên
+  nó. Amulet cần item level 75.
+
+
+  **Chiều ngược lại.** Khóa prefix rồi reforge kèm một modifier Critical (150
+  Primal): chỉ có hai cái là Critical Strike Chance và Multiplier, và cả hai
+  đều là suffix. Dùng nó trên chiếc amulet có một gem level và Life mà phía
+  dưới chúng không có gì.
+
+
+  **Scour thay vì reforge.** Khi suffix đã khóa, một
+  [[Orb of Scouring]] được ghi nhận là chỉ gỡ prefix và cái khóa. Bạn còn lại
+  ba suffix và ba ô prefix trống cho bench và [[Exalted Orb]]: rẻ hơn cho mỗi
+  lần thử, và không có Life được đảm bảo.
+mistakes:
+  - "Khóa những suffix không đáng tiền khóa. 41–55 Life của bench tốn 2 Orb of Alchemy."
+  - "Làm việc này khi có hai suffix và ô thứ ba còn trống. Nhiều khả năng vẫn được; với ba cái thì chắc chắn được."
+  - "Dùng Essence lên amulet đã khóa. Essence được ghi nhận là phớt lờ các modifier bảo vệ và sẽ roll lại tất cả."
+  - "Craft khóa khi cả ba ô prefix đã đầy. Bench sẽ không cho chọn nó: khóa cần một ô prefix của riêng nó."
+  - "Bench Life sau đó. Reforge đã cho Life rồi, và hai cái là một group."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Giá bench, các tier Life và tag trên mọi modifier của amulet. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên trang sức." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các bản một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Life, Chaos và Critical cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest và Orb of Scouring tôn trọng một phía đã khóa; Essence thì không. Một phần cũ hơn 3.30." }

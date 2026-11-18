@@ -1,0 +1,137 @@
+category: rings
+title: "Hoàn thiện một chiếc ring nhặt được"
+level: 1
+summary: "Đọc một chiếc ring Rare nhặt dưới đất, đếm các ô trống của nó, rồi để bench thêm đúng thứ nó thiếu. Lần craft bạn sẽ lặp lại nhiều nhất trong campaign."
+goal: >-
+  Một chiếc ring bù được một khoảng trống resistance và mang Life, làm từ một
+  món đồ rơi và vài orb phổ biến. Chiếc ring chỉ là cái cớ. Kỹ năng ở đây là
+  **đọc một item như sáu ô**: mấy prefix, mấy suffix, ô nào còn trống, và
+  bench được phép đặt gì vào đó.
+base: "Two-Stone Ring"
+itemLevel: 38
+baseWhy: >-
+  Two-Stone Ring có implicit là 12–16% cho hai elemental resistance, lượng
+  resistance lớn nhất mà một base ring cho, và nó rơi từ level 20 với ba
+  phiên bản. Chiếc ring Rare nào bạn nhặt được cũng làm theo cách này; chỉ là
+  một Two-Stone, Sapphire, Topaz hay Ruby thì dễ đáng công nhất.
+
+
+  Item level chỉ giới hạn những gì ring đã roll ra. Bench thì không quan tâm.
+methods: [bench, currency]
+result:
+  implicits: ["+14% to Fire and Lightning Resistances"]
+  prefixes:
+    - { text: "+33 to maximum Mana" }
+    - { text: "+24 to Evasion Rating" }
+    - { text: "+48 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+26% to Cold Resistance" }
+    - { text: "+19 to Strength" }
+needs:
+  - { item: "Một chiếc ring Rare nhặt dưới đất", amount: "1", note: "hoặc một chiếc trắng và một Orb of Alchemy" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho Life tốt nhất của bench; 6 Orb of Transmutation mua được tier bên dưới" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "về sau, để đổi craft" }
+cost: >-
+  Nhiều nhất hai [[Orb of Alchemy]]. Đây là lần craft hữu ích rẻ nhất trong
+  game, vì thế nó đáng làm trên mọi chiếc ring bạn đeo lâu hơn một tiếng.
+odds: >-
+  Không có gì để dẫn. Bench cho đúng thứ danh sách của nó ghi, lần nào cũng
+  vậy. May rủi duy nhất nằm ở chiếc ring bạn nhặt được, và các bước dưới đây
+  là cách bạn đánh giá vận may đó trước khi trả bất cứ thứ gì.
+steps:
+  - title: "Identify nó rồi đếm"
+    do: >-
+      Giữ Alt rồi rê chuột lên ring. Đếm các dòng được đánh dấu là prefix và
+      các dòng được đánh dấu là suffix. Một item Rare có chỗ cho ba cái mỗi
+      loại.
+    why: >-
+      Bench thêm một modifier, và nó phải vào một ô **trống** ở đúng phía.
+      Life là prefix. Resistance và attribute là suffix. Chưa đếm thì bạn
+      chưa biết craft nào làm được.
+    check: >-
+      Chiếc ring này có hai prefix và hai suffix: mỗi phía còn trống một ô.
+      Nếu Advanced Mod Descriptions đang tắt, hãy bật nó trong options, không
+      thì Alt sẽ không cho thấy một dòng nằm ở phía nào.
+    state:
+      implicits: ["+14% to Fire and Lightning Resistances"]
+      prefixes:
+        - { text: "+33 to maximum Mana" }
+        - { text: "+24 to Evasion Rating" }
+      suffixes:
+        - { text: "+26% to Cold Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Quyết định nó có đáng một lần craft không"
+    do: >-
+      Hỏi hai điều. Ring đã có **ít nhất hai** modifier bạn cần chưa, tính cả
+      implicit? Và có ô trống ở phía mà khoảng trống của bạn nằm không?
+    why: >-
+      Bench thêm một dòng. Nó không cứu nổi một chiếc ring chẳng có gì. Chiếc
+      này có fire và lightning resistance phía trên vạch kẻ và cold
+      resistance phía dưới, tức cả ba element trên một chiếc ring.
+    fail: >-
+      Không có gì bạn cần, hoặc không có ô trống ở chỗ bạn cần: bỏ nó. Nếu
+      bạn có một chiếc ring trắng thuộc base bạn thích, một
+      [[Orb of Alchemy]] biến nó thành Rare với bốn tới sáu modifier ngẫu
+      nhiên, và bạn có thể đọc chiếc đó thay thế.
+  - title: "Tìm khoảng trống"
+    do: >-
+      Mở bảng nhân vật. Nếu một resistance vẫn dưới mức cap thì khoảng trống
+      là một suffix. Nếu cả ba đều ổn thì khoảng trống là Life, một prefix.
+    why: >-
+      Mỗi item một modifier bench nghĩa là phải chọn. Resistance đi trước vì
+      ở dưới mức cap gây thiệt hơn là thiếu 50 Life. Ở đây chính chiếc ring
+      đã lo xong resistance, nên craft dành cho Life.
+  - title: "Craft nó"
+    do: >-
+      Ở [[Crafting Bench]], chọn **+41–55 to maximum Life** giá 2
+      [[Orb of Alchemy]]. Các tier rẻ hơn là +26–40 giá 6 Orb of
+      Transmutation và +15–25 giá 1 Orb of Alteration.
+    why: >-
+      Phía prefix còn một ô trống và chưa có modifier Life, nên bench cho
+      phép. Nếu ring đã roll ra Life rồi thì nó sẽ từ chối: hai modifier cùng
+      một group không thể nằm chung trên một item.
+    check: >-
+      Dòng mới được đánh dấu là crafted. Ring giờ có ba prefix và hai suffix.
+    fail: >-
+      Danh sách không có craft đó: bạn chưa tìm ra công thức ấy. Hãy lấy tier
+      Life cao nhất mà bạn đang có.
+    state:
+      implicits: ["+14% to Fire and Lightning Resistances"]
+      prefixes:
+        - { text: "+33 to maximum Mana" }
+        - { text: "+24 to Evasion Rating" }
+        - { text: "+48 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+26% to Cold Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Viết lại nó khi nhân vật thay đổi"
+    do: >-
+      Khi trang bị mới làm resistance của bạn xê dịch, hãy quay lại bench.
+      "Remove Crafted Mods" tốn 1 [[Orb of Scouring]]. Rồi craft thứ đang
+      thiếu lúc đó.
+    why: >-
+      Dòng crafted là dòng duy nhất bạn đổi được mà không phải roll lại ring,
+      nên hãy coi nó là thứ điều chỉnh được. Nhờ nó mà một chiếc ring cũ sống
+      sót qua ba lần đổi trang bị.
+variations: >-
+  **Cùng một element hai lần.** Chiếc ring này đã roll ra Cold Resistance,
+  nên bench sẽ không thêm Cold Resistance. Nhưng nó **sẽ** thêm "+13–16% to
+  Fire and Cold Resistances" giá 1 Orb of Alchemy, vì một cặp resistance khác
+  group với một resistance đơn. Khi một element tụt lại xa, đó là cách một
+  chiếc ring mang nó hai lần, hoặc ba lần nếu có implicit của Two-Stone.
+
+
+  **Cả hai ô đều quan trọng.** Nếu ring còn ô trống ở cả hai phía và bạn cần
+  cả Life lẫn một resistance, bạn vẫn chỉ được một craft. Hãy lấy resistance,
+  và tìm Life trên chiếc ring còn lại.
+
+
+  **Về sau.** Ví dụ kế tiếp tự roll chiếc ring thay vì chờ một chiếc rơi ra.
+mistakes:
+  - "Craft trước khi đếm. Một resistance không thể vào chiếc ring đã có ba suffix, dù phía prefix còn rộng bao nhiêu."
+  - "Cố bench một modifier mà ring đã roll ra. Cùng group, và bench từ chối."
+  - "Tiêu Chaos Orb để roll lại một chiếc ring campaign. Zone kế tiếp sẽ rơi chiếc mới; bench là khoản currency duy nhất mà một chiếc ring leveling đáng được nhận."
+  - "Quên chiếc ring thứ hai. Hãy đọc resistance khi đang đeo cả hai ring trước khi chọn craft cho chiếc nào."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Implicit của Two-Stone Ring, các tier hiện trên ring, và mọi lựa chọn cùng giá của bench." }

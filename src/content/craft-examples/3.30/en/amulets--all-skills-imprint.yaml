@@ -1,0 +1,158 @@
+category: amulets
+title: "+1 to all Skill Gems, held by an Imprint"
+level: 3
+summary: "The rarest prefix an amulet can roll, found with Alterations, saved with a beast Imprint, and carried through as many Regal Orbs as it takes."
+goal: >-
+  A Rare amulet with "+1 to Level of all Skill Gems", something useful beside
+  it, Life from the bench, and slots still open. No tool in the game aims at
+  this prefix well, so the craft is patience followed by **insurance**: an
+  Imprint makes sure the one roll you could never repeat is not spent on a bad
+  Regal Orb.
+base: "Onyx Amulet"
+itemLevel: 75
+baseWhy: >-
+  Item level 75 is where the prefix opens, and it is also where it is most
+  likely: one prefix roll in 1,565, against one in 1,746 at item level 84,
+  by our arithmetic. Buy a level 75 base on purpose. The Onyx implicit is the
+  safe choice for an amulet any character might end up wearing.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+14 to all Attributes"]
+  prefixes:
+    - { text: "+1 to Level of all Skill Gems" }
+    - { text: "+49 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+36 to Strength" }
+    - { text: "+41% to Fire Resistance" }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "2,000 or more" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Alterations by the thousand. This is the longest Alteration job in the
+  category and there is no way to shorten it with the same currency. After
+  that, one [[Regal Orb]] and one set of beasts per attempt at the Regal. In
+  3.30 only red beasts are captured, so count your Menagerie before you
+  start.
+odds: >-
+  One prefix roll in 1,565 at item level 75, by our arithmetic from the
+  weights: the modifier weighs 50 in a prefix pool of 78,250. An Alteration
+  does not always roll a prefix, so the count of orbs is higher than that. A
+  bad run is twice the average.
+
+
+  The Regal Orb adds one random modifier. On this amulet roughly half of what
+  it can add is worth keeping: any attribute, any resistance, Life, a damage
+  suffix. Expect two or three Imprints.
+steps:
+  - title: "Alterations until the prefix appears"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s. You are
+      looking for one word in the item's name: **"Exalter's"**. Hold Alt to
+      confirm the prefix reads "+1 to Level of all Skill Gems".
+    why: >-
+      A Magic item rolls two slots and you read one. The five typed gem
+      levels ("Vulcanist's", "Rimedweller's" and so on) are four times as
+      common each; they are a different group and not what this craft is
+      for, though any of them is worth setting aside.
+    check: >-
+      Whatever suffix came with the prefix stays. Do not try to improve it.
+    fail: >-
+      Out of Alterations: stop and come back. Nothing is lost by pausing, and
+      a typed gem level found on the way is a finished start for the Fossil
+      example's bench step.
+    state:
+      rarity: magic
+      implicits: ["+14 to all Attributes"]
+      prefixes: [{ text: "+1 to Level of all Skill Gems" }]
+      suffixes: [{ text: "+36 to Strength" }]
+  - title: "Leave the suffix alone"
+    do: >-
+      Do nothing to the Magic amulet. No [[Orb of Annulment]] to clear a dull
+      suffix, no Augmentation to fill an empty one.
+    why: >-
+      An Annulment on a Magic item with two modifiers removes the prefix
+      half the time. An Augmentation adds a random suffix that then becomes
+      part of every later attempt. A mediocre suffix costs one slot; either
+      of those orbs can cost the amulet.
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item** on the
+      amulet. It needs a [[Craicic Croaker]] and three other Rare beasts.
+    why: >-
+      The Imprint is a saved copy of the amulet as it is now. It only works
+      on a Magic item, which is why it comes before the Regal Orb and not
+      after.
+    check: >-
+      The Imprint sits in your inventory as its own item. Do not use it yet.
+  - title: "Regal Orb, and judge"
+    do: >-
+      Use a [[Regal Orb]]. Read the modifier it added and which side it is
+      on.
+    why: >-
+      The amulet becomes Rare with the gem level intact. **Keep** the result
+      if the new modifier is Life, an attribute, a resistance, or a damage
+      suffix your build uses. A Rare amulet with this prefix and one more
+      honest modifier is already worth finishing.
+    fail: >-
+      Mana on kill, Item Rarity, a defence you do not use: use the
+      [[Imprint]] on the amulet to return it to the Magic state, make a new
+      Imprint with another Croaker, and use another Regal Orb.
+    state:
+      implicits: ["+14 to all Attributes"]
+      prefixes: [{ text: "+1 to Level of all Skill Gems" }]
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Bench the Life"
+    do: >-
+      At the [[Crafting Bench]], craft +41–55 to maximum Life for 2
+      [[Orb of Alchemy]].
+    why: >-
+      Life is a prefix, the amulet has two prefix slots open, and no Essence
+      or cheap reroll could add it without removing the gem level. One prefix
+      and one suffix remain open after this.
+    check: >-
+      Do **not** use the beast recipe that adds a suffix and removes a random
+      prefix. With one rolled prefix on the amulet, the prefix it removes is
+      this one.
+    state:
+      implicits: ["+14 to all Attributes"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems" }
+        - { text: "+49 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+41% to Fire Resistance" }
+variations: >-
+  **A Faceted Fossil instead of Alterations.** By our arithmetic it makes
+  this prefix about 1 roll in 200. That is far fewer attempts, each costing a
+  Fossil and a Resonator, and each leaving a Rare item, so there is no
+  Imprint and no second look at what came with it. Alterations are slower and
+  give you the cleaner item.
+
+
+  **Filling the open slots.** An [[Exalted Orb]] adds one random modifier and
+  cannot remove anything. On a base with [[Memory Strands]] it spends at most
+  16 of them by the data-mined table and whatever it adds arrives at a higher
+  tier. Strands do nothing for the gem level itself, which has one tier.
+
+
+  **The fractured route.** The Magic amulet from step 1 is also where the
+  hardest craft in this category begins: brought to exactly four modifiers
+  and hit with a [[Fracturing Orb]], it has a one-in-four chance of locking
+  the gem level for good. An Imprint cannot be applied to a fractured item,
+  so that gamble has no insurance. The last example starts from its result.
+mistakes:
+  - "Using the Regal Orb before the Imprint. An Imprint cannot be made of a Rare item."
+  - "Annulling the suffix on the Magic amulet. Half the time the orb takes the prefix you spent two thousand Alterations on."
+  - "Rejecting every Regal result that is not a damage modifier. Each retry costs a Croaker and three Rare beasts, and in 3.30 those are red beasts only."
+  - "Crafting this at item level 84 or 86. The prefix is the same and about a tenth less likely."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, weights, groups and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the beasts it needs in 3.30." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Yellow beasts are no longer captured." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

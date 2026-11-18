@@ -1,0 +1,185 @@
+category: warstaves
+title: "Jagged và Shuddering: prefix physical và attack speed trong một lần roll lại"
+level: 3
+summary: "Hai Fossil được chọn từ chính pool của warstaff: một cái làm 85% số lần roll prefix ra physical, cái kia xóa Mana và làm một nửa số lần roll suffix ra attack speed."
+goal: >-
+  Một cây warstaff có đủ cả ba họ prefix physical và attack speed, từ một
+  kiểu roll lại duy nhất. Không phải ở tier cao nhất; Fossil không với tới
+  đó. Bài học là **chọn Fossil thứ hai dựa trên chỗ pool đang có vấn đề**:
+  trên warstaff, rắc rối là Mana ở một phía và thiếu suffix speed ở phía kia,
+  và một Fossil giải quyết cả hai.
+base: "Judgement Staff"
+itemLevel: 77
+baseWhy: >-
+  Judgement Staff có 1.3 attack mỗi giây, tốc độ nhanh hơn, nên attack speed
+  mà lần craft này mang về đáng giá nhất trên nó. Item level 77 mở Tier 1 của
+  flat Physical Damage và của attack speed, cùng Tier 2 của cả hai prefix
+  phần trăm. Roll lại bằng Fossil rơi vào tier thấp và tier giữa thường xuyên
+  hơn hẳn tier cao, nên 83 là mua một tier bạn hiếm khi thấy.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["+25% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "118% increased Physical Damage", how: fossil }
+    - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+    - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "21% increased Attack Speed", how: fossil }
+    - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+    - { text: "9% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Shuddering Fossil]]", amount: "20–40" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "Resonator nào có hai socket cũng được" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "cho bench" }
+cost: >-
+  Hai Fossil và một Resonator hai socket cho mỗi lần thử, từ Delve. Trong
+  3.30, đường vào Delve đi qua những map luôn spawn Sulphite, nên đây là lần
+  craft dành cho người có chơi Delve hoặc mua từ người chơi Delve.
+odds: >-
+  Với cả hai Fossil ở item level 77, theo phép tính của chúng tôi từ weight,
+  một lần roll prefix ra physical 85% số lần: flat damage 41%, mỗi họ phần
+  trăm 22%. Maximum Mana, trước đó là một phần năm pool prefix, đã biến mất.
+  **Khi một kết quả có ba prefix, khoảng 4 trên 10 lần đó là ba họ physical
+  khác nhau.** Chỉ dùng Jagged Fossil thì là 3 trên 10.
+
+
+  Ở phía bên kia, attack speed chiếm một nửa mọi lần roll suffix, trong khi
+  chỉ dùng Jagged Fossil thì nó còn 8%. Một kết quả có hai suffix thì có
+  attack speed khoảng 3 trên 4 lần, và có ở mức từ 20% trở lên khoảng 1 trên
+  4 lần.
+
+
+  Không gì ở đây kiểm soát tier. Một prefix phần trăm từ 110% trở lên (45%
+  với hybrid) có trên khoảng 1 trong 8 kết quả ba prefix. "Đủ cả ba họ" tốn
+  một nắm lần thử; "cả ba ở tier tốt, kèm attack speed tốt" tốn vài chục.
+  Modifier chỉ có từ Fossil không được tính trong các con số này.
+steps:
+  - title: "Tìm xem pool có vấn đề ở đâu"
+    do: >-
+      Mở danh sách modifier ở item level 77 và đọc các tỉ lệ. Prefix:
+      physical 28%, maximum Mana 20%, added elemental damage 28%, socketed
+      gem 21%. Suffix: attack speed 11%, và một cái đuôi dài toàn đồ lấp chỗ.
+      Chọn một [[Jagged Fossil]] (more Physical, no Chaos) cho vấn đề thứ
+      nhất, rồi tìm một Fossil thứ hai loại được thứ lớn nhất còn lại:
+      [[Shuddering Fossil]] là "more Speed, no Mana".
+    why: >-
+      "No" là weight bằng không. Mana là họ prefix đơn lẻ lớn nhất trên
+      warstaff và mang tag mana, nên Fossil này xóa nó. Và "more Speed" nhân
+      attack speed lên mười lần, modifier duy nhất trong pool có tag đó. Một
+      Fossil, cả hai phía.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Attack Damage"] }
+  - title: "Chuẩn bị base"
+    do: >-
+      Đưa một cây Judgement Staff trắng item level 77 lên 20% quality và dùng
+      một [[Orb of Alchemy]].
+    why: >-
+      Chaotic Resonator roll lại item Rare. Thứ Alchemy cho ra sẽ bị cặp
+      Fossil đầu tiên vứt đi.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "+183 to maximum Mana" }
+        - { text: "Adds 52 to 98 Fire Damage" }
+      suffixes:
+        - { text: "+29 to Strength" }
+        - { text: "28% increased Stun Duration on Enemies" }
+  - title: "Cả hai Fossil trong một Resonator"
+    do: >-
+      Đặt một Jagged Fossil và một Shuddering Fossil vào một
+      [[Potent Chaotic Resonator]] rồi dùng nó lên cây staff. Hai Fossil cần
+      một Resonator có hai socket.
+    why: >-
+      Các hiệu ứng chỉ kết hợp bên trong một Resonator. Jagged Fossil còn
+      nhân cả hai suffix leech, vốn mang tag physical; dùng một mình thì điều
+      đó chen attack speed ra ngoài. Shuddering Fossil át được nó.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 11 to 23 Physical Damage", how: fossil }
+        - { text: "71% increased Physical Damage", how: fossil }
+      suffixes:
+        - { text: "14% increased Attack Speed", how: fossil }
+        - { text: "2.2% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+21 to Intelligence", how: fossil }
+  - title: "Đọc cả hai phía theo mức đặt từ trước"
+    do: >-
+      **Prefix, họ:** thuần, hybrid và flat, mỗi loại một cái? **Prefix,
+      tier:** cho một weapon chạy map, thuần từ 110% trở lên, hybrid từ 45%
+      trở lên, flat từ adds 25 to 52 trở lên. **Suffix:** attack speed từ 20%
+      trở lên, và một ô trống cho bench.
+    why: >-
+      Kết quả ở trên có hai họ ở tier thấp, attack speed chậm và không còn
+      suffix trống: nó trượt ở mọi chỗ. Đọc theo một thứ tự cố định giúp bạn
+      khỏi giữ một cây staff chỉ vì một dòng tình cờ đẹp.
+    check: >-
+      Prefix là thứ quyết định. Một kết quả đạt về prefix mà attack speed yếu
+      vẫn đáng giữ: phía suffix có thể làm lại sau, và reforge Speed đảm bảo
+      modifier đó.
+    fail: >-
+      Dùng thêm một Resonator và hai Fossil nữa lên chính cây staff đó.
+  - title: "Lặp lại tới khi prefix đạt"
+    do: >-
+      Cứ tiếp tục tới khi ba họ có mặt ở các tier bạn đặt ra.
+    why: >-
+      Bạn đang chờ họ và tier cùng lúc. Fossil lo phần lớn cái thứ nhất và
+      không lo gì cho cái thứ hai.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+        - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Bench suffix còn trống"
+    do: >-
+      Ở [[Crafting Bench]], craft suffix damage thứ ba của build. Với build
+      không crit: 8–10% chance to deal Double Damage, 8
+      [[Chaos Orb]]. Với build crit: Global Critical Strike Multiplier
+      25–28% hoặc Critical Strike Chance 25–27%, 4 Chaos Orb. Nếu Fossil
+      không để lại attack speed: attack speed, 11–15% giá 2 Chaos Orb.
+    why: >-
+      Cả ba ô prefix đều chứa damage, nên bench dành cho suffix mà cây staff
+      còn thiếu.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "49% increased Physical Damage / +112 to Accuracy Rating", how: fossil }
+        - { text: "Adds 28 to 58 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "9% chance to deal Double Damage", how: crafted }
+variations: >-
+  **Deft thay cho Shuddering, để lấy suffix crit.** [[Deft Fossil]] là "more
+  Critical, no Attribute". Dùng cùng Jagged Fossil, nó làm Critical Strike
+  Chance và Global Critical Strike Multiplier mỗi cái chiếm khoảng 27% số lần
+  roll suffix, và để attack speed ở 4% cùng Mana trong pool prefix. Nó hợp
+  với cây staff crit mà attack speed sẽ đến từ một lần reforge về sau.
+
+
+  **Fossil thứ ba.** Một [[Serrated Fossil]] (more Attack, fewer Caster) đặt
+  cạnh hai cái kia gần như không xê dịch prefix, 88% physical so với 85%,
+  nhưng nâng attack speed lên khoảng 69% số lần roll suffix. Nó cần một
+  Resonator ba socket, và chỉ đáng khi attack speed là thứ các kết quả của
+  bạn cứ thiếu mãi.
+
+
+  **Một cây rod.** Rod Heist roll từ pool riêng của chúng, nhưng pool đó chỉ
+  khác ở các suffix block, nên mọi con số ở trên đều đúng với Eventuality
+  Rod.
+mistakes:
+  - "Dùng Jagged Fossil một mình trên warstaff. Mana vẫn ở trong pool, và các suffix leech nó nhân lên đẩy attack speed xuống."
+  - "Trông chờ tier cao nhất. Fossil nhân cả một tag, kể cả các tier thấp: bản phần trăm thuần tốt nhất mở được ở item level này vẫn chỉ khoảng 1 trên 340 lần roll prefix."
+  - "Giữ ba prefix physical ở các tier chót. Hai cái tốt cộng một craft bench là một weapon tốt hơn."
+  - "Dùng hai Fossil lần lượt cái này sau cái kia. Mỗi lần dùng là một lần roll lại trọn vẹn."
+  - "Dùng Fossil trên base có [[Memory Strands]] rồi trông chờ tier cao hơn. Theo thử nghiệm của người chơi, Fossil không dùng strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag của modifier, tier và weight cho cả hai pool warstaff. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

@@ -1,0 +1,170 @@
+category: flasks
+title: "A Quicksilver Flask of the Cheetah, and when to stop"
+level: 3
+summary: "The one flask modifier that needs item level 85. Roll it, count what every extra demand on the prefix costs, and finish with a planned enchantment."
+goal: >-
+  The best movement flask the game allows: a Quicksilver Flask with 12–14%
+  increased Movement Speed during Effect, a prefix that helps, and an
+  enchantment chosen on purpose. This is as hard as flask crafting gets, and
+  the difficulty is not in the orbs. It is in **deciding beforehand what
+  counts as finished**, because every extra condition multiplies the bill and
+  a flask gives you no way to keep one slot while you reroll the other.
+base: "Quicksilver Flask"
+itemLevel: 85
+baseWhy: >-
+  A Quicksilver Flask lasts 6.0 seconds and holds two uses (60 charges at 30
+  each). "of the Cheetah" needs item level 85 exactly, the highest
+  requirement of any flask modifier. At 84 the suffix stops at 9–11%. An item
+  takes its level from the monster that dropped it, so an item level 85
+  flask comes from a Rare or Unique monster in a level 83 area, a Magic one
+  in a level 84 area, or anything in a level 85 area. Hold Alt over the
+  flask before the first orb.
+methods: [currency, bench, finishing]
+result:
+  rarity: magic
+  note: "Enchantment: Used when Charges reach full"
+  prefixes:
+    - { text: "24% reduced Charges per use" }
+  suffixes:
+    - { text: "13% increased Movement Speed during Effect" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "40–80" }
+  - { item: "[[Instilling Orb]]", amount: "5", note: "for the bench" }
+  - { item: "[[Glassblower's Bauble]]", amount: "5 for the bench", note: "more for quality" }
+cost: >-
+  Alterations, and more of them than any other flask asks for. Nothing in the
+  craft is expensive by itself; what you are spending is attempts. The bench
+  step is 5 [[Instilling Orb]]s and 5 [[Glassblower's Bauble]]s.
+odds: >-
+  **The suffix.** At item level 85 a utility flask's suffix pool weighs
+  62,250 and "of the Cheetah" weighs 1,000: one suffix roll in 62, by our
+  arithmetic. With an Augmentation on every result that lacks a suffix, each
+  attempt has exactly one suffix roll, so 62 attempts on average. About one
+  run in seven goes past 124.
+
+
+  **The prefix.** One prefix roll, eight families, and you cannot reroll it
+  without rerolling the suffix. So whatever you demand of the prefix
+  multiplies the whole craft. Any prefix except the reduced effect one: 87%
+  of prefix rolls, about 72 attempts in all. Also excluding the critical
+  strike one: 74%, about 84 attempts. Only the increased effect prefix: 13%,
+  about 470 attempts. Only the best tier of it: 4.4%, about 1,400.
+steps:
+  - title: "Check the item level, then write the bar down"
+    do: >-
+      Hold Alt: the flask must read item level 85. Then decide, before any
+      orb, what you will keep. The bar in this example: the suffix is "of the
+      Cheetah"; the prefix is anything except increased Charge Recovery with
+      25% reduced effect, and, on a character that does not crit, anything
+      except the chance to gain a charge on a Critical Strike.
+    why: >-
+      Look at the odds above. "Any useful prefix" and "only increased effect"
+      are the same flask to a casual eye and differ by a factor of six in
+      attempts. If the bar is not fixed in advance, it creeps upward the
+      moment the suffix lands, and that is where the Alterations go.
+    state: { rarity: normal }
+  - title: "Roll, reading only the suffix"
+    do: >-
+      One [[Orb of Transmutation]], then [[Orb of Alteration]]s. After each,
+      read the suffix. No suffix: use an [[Orb of Augmentation]]. Not
+      movement speed: next Alteration.
+    why: >-
+      The suffix is the rare half, so it is the only line worth your
+      attention until it appears. The result below is the kind that tests the
+      bar: the best tier of increased Duration with the second tier of
+      movement speed.
+    check: >-
+      A result like this one is a good flask. If you had decided that 9–11%
+      would do, you would be finished, in about half the attempts. This
+      example goes on, to show what the last three percent cost.
+    state:
+      rarity: magic
+      prefixes: [{ text: "38% increased Duration" }]
+      suffixes: [{ text: "10% increased Movement Speed during Effect" }]
+  - title: "Stop on the Cheetah"
+    do: >-
+      Keep going until the suffix reads 12–14% increased Movement Speed
+      during Effect. Then put the Alterations away.
+    why: >-
+      From this moment an Alteration is the wrong orb. It rerolls both
+      slots, and you have just paid 62 attempts on average for one of them.
+    state:
+      rarity: magic
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "One roll for the prefix"
+    do: >-
+      If the prefix slot is empty, use one Augmentation. Compare the result
+      with the bar from step 1 and with nothing else.
+    why: >-
+      Reduced Charges per use passes: on a flask with two uses in the tank it
+      stretches the charges and shortens the wait before the next use. It is
+      not the 25% increased effect prefix, and the odds above say what
+      holding out for that one would cost.
+    fail: >-
+      The reduced effect prefix arrived. Three honest options. Start again,
+      62 attempts on average. Use an [[Orb of Annulment]], which removes one
+      of the two modifiers at random, so half the time the suffix. Or use the
+      flask as it is and craft another when a second item level 85 base
+      turns up.
+    state:
+      rarity: magic
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "The planned enchantment"
+    do: >-
+      Decide how you use this flask, then enchant it. For a flask that runs
+      whenever it can: at the [[Crafting Bench]], **Used when Charges reach
+      full**, for 5 [[Instilling Orb]]s and 5 [[Glassblower's Bauble]]s.
+    why: >-
+      A flask holds one enchantment. The automatic one costs nothing in
+      power and removes a key press for the rest of the league. The
+      alternative is an [[Enkindling Orb]], described below, and the two
+      cannot be combined: each "replaces any existing enchantment".
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+  - title: "Quality"
+    do: >-
+      Take the flask to 20% quality with Glassblower's Baubles.
+    why: >-
+      On a utility flask quality lengthens the effect, by long-standing
+      behaviour. The Bauble's text says it has a greater effect on lower item
+      level flasks, so an item level 85 flask takes more of them than the
+      ones you made while levelling.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "24% reduced Charges per use" }]
+      suffixes: [{ text: "13% increased Movement Speed during Effect" }]
+variations: >-
+  **Accepting 9–11%.** "of the Lynx" needs only item level 65, and on an
+  item level 85 flask the two tiers together are 1 suffix roll in 31. If the
+  flask is for mapping and not for a race, this is the sensible bar, and you
+  should set it in step 1, not discover it in step 2.
+
+
+  **An Enkindling Orb instead.** It gives one of five improvements, each
+  with "Gains no Charges during Effect": 60–70% increased effect, 80–100%
+  increased Duration, 60–80% increased Charge Recovery, 35–25% reduced
+  Charges per use, or +40–60 to Maximum Charges. In the game data increased
+  effect has a weight of 250 in a total of 650, so about 2 orbs in 5 if the
+  orb picks by weight. It suits a flask you press by hand before a sprint and
+  does not suit one that should refill while it runs.
+
+
+  **The same arithmetic on other flasks.** The best Armour or Evasion tier
+  (item level 84) is 1 suffix roll in 83. The best tier of an "Immunity
+  during Effect" suffix is 1 in 62, and any tier of it 1 in 21, which is why
+  nobody should chase tiers on an immunity.
+mistakes:
+  - "Rolling on an item level 84 flask. The suffix stops at 9–11% and no number of Alterations changes that."
+  - "Raising the bar after the suffix lands. \"Only increased effect\" turns about 72 attempts into about 470."
+  - "Using an Alteration to fix the prefix. It rerolls the suffix too."
+  - "Using an Orb of Annulment to clear a prefix you merely dislike. It removes one of the two modifiers at random."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, the bench cost of the enchantment, and the Enkindling Orb's text and enchantments. The odds are our arithmetic." }

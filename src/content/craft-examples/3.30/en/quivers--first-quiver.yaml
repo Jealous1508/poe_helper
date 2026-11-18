@@ -1,0 +1,143 @@
+category: quivers
+title: "A first quiver: Life, and the resistance you are missing"
+level: 1
+summary: "Roll Life on a white quiver with Alterations, make it Rare, and let the bench add a resistance. The routine every quiver craft grows from."
+goal: >-
+  A quiver for the campaign with a real Life roll and the resistance your
+  character is short of, made from currency you pick up on the way. The
+  point of it is one rule that holds for every quiver at every budget:
+  **roll the Life, buy the suffix.** The bench sells good quiver suffixes
+  for almost nothing and a poor Life prefix, so the random part of the craft
+  goes on Life.
+base: "Penetrating Arrow Quiver"
+itemLevel: 36
+baseWhy: >-
+  A quiver has no stats of its own, only an implicit, and "Arrows Pierce an
+  additional Target" is the best one for clearing packs while you level. The
+  base drops from level 25.
+
+
+  Item level 36 is the first at which Tier 4 Life (+85–99) can roll. Hold Alt
+  over the white quiver to check. Any white quiver of about your level works
+  the same way; pick the implicit you like.
+methods: [currency, bench]
+result:
+  implicits: ["Arrows Pierce an additional Target"]
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+  suffixes:
+    - { text: "+21% to Cold Resistance" }
+    - { text: "+26% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "for the bench" }
+cost: >-
+  A dozen or two [[Orb of Alteration]]s, one [[Regal Orb]] and one
+  [[Orb of Alchemy]] for the bench. A quiver takes no quality and has no
+  sockets, so there is nothing else to pay for.
+odds: >-
+  At item level 36, one prefix roll is maximum Life of +70 or more about 1
+  time in 8, by our arithmetic from the modifier weights, and Life of any
+  size 43% of the time. An Alteration does not always roll a prefix, so
+  expect ten to twenty of them. The Augmentation and the Regal Orb are plain
+  luck, and the craft is built so that neither can spoil it.
+steps:
+  - title: "Check the item level, then make it Magic"
+    do: >-
+      Hold Alt over the white quiver and read its item level. If it is 36 or
+      higher, use one [[Orb of Transmutation]].
+    why: >-
+      Item level decides which Life tiers exist for this quiver. At 30 the
+      best is +70–84; at 36 it is +85–99. No currency raises it afterwards.
+      A Magic item has one prefix and one suffix, which is all this step
+      needs.
+    state: { rarity: normal, implicits: ["Arrows Pierce an additional Target"] }
+  - title: "Alterations until the prefix is Life"
+    do: >-
+      Use [[Orb of Alteration]]s one at a time. Hold Alt and read the prefix
+      after each. Stop when it is **maximum Life of +70 or more**: the names
+      are "Robust" (+70–84) or "Rotund" (+85–99).
+    why: >-
+      Life is the most common prefix on a quiver, and its tiers all weigh
+      the same, so a good one is not rare. The bench's Life is +26–40 for 6
+      Orbs of Transmutation or +41–55 for 2 Orbs of Alchemy. A rolled
+      "Rotund" is about twice that.
+    check: >-
+      The prefix line says "to maximum Life" and the number is 70 or more.
+      Ignore the suffix for now.
+    fail: >-
+      Running low on Alterations: accept "Stout" (+55–69). It still beats
+      the best the bench offers.
+    state:
+      rarity: magic
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes: [{ text: "+91 to maximum Life" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the quiver has no suffix, use an [[Orb of Augmentation]]. If it
+      already has one, skip this step.
+    why: >-
+      An Augmentation adds to an empty slot and never touches what is there.
+      Almost half of a quiver's suffixes are a resistance or Dexterity, and
+      at this stage any of them helps.
+    state:
+      rarity: magic
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes: [{ text: "+91 to maximum Life" }]
+      suffixes: [{ text: "+21% to Cold Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The quiver becomes Rare, keeps both modifiers and gains a third at
+      random. Rare opens the remaining slots to the bench.
+    check: >-
+      Read which side the new modifier is on. Here it added flat Physical
+      Damage, a prefix. Two suffix slots are still open.
+    state:
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes: [{ text: "+21% to Cold Resistance" }]
+  - title: "Bench the resistance you lack"
+    do: >-
+      Open your character sheet and find your lowest elemental resistance.
+      At the [[Crafting Bench]], craft that resistance: +21–28% costs 1
+      [[Orb of Alchemy]], +16–20% costs 1 Orb of Transmutation.
+    why: >-
+      A quiver holds one bench modifier, so it goes on the thing the item
+      and the character both lack. The bench's resistance is a different
+      group for each element, so it fits beside the Cold Resistance that
+      rolled. It would not fit beside a rolled resistance of the same
+      element.
+    fail: >-
+      If the bench does not show the craft, you have not found that recipe
+      yet. Craft the best resistance it does offer.
+    state:
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "+21% to Cold Resistance" }
+        - { text: "+26% to Fire Resistance", how: crafted }
+variations: >-
+  **Resistances already fine.** Bench 7–12% increased Attack Speed instead,
+  for 2 [[Chaos Orb]]s. Attack speed is 3% of suffix rolls on a quiver, so
+  the bench is how nearly everyone gets it.
+
+
+  **In maps.** The same five steps on an item level 64 quiver can roll
+  "Fecund", +130–144 Life, the best tier there is. Nothing about the method
+  changes, and the bench's resistance goes up to 29–35% for 3 Chaos Orbs.
+mistakes:
+  - "Rolling for a resistance and benching Life. That is the craft backwards: the bench's Life is half of a rolled one, and its resistance is nearly as good as a rolled one."
+  - "Looking for Blacksmith's Whetstones or sockets. A quiver takes no quality and has no sockets."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

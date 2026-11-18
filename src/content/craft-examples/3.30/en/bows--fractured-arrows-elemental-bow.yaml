@@ -1,0 +1,252 @@
+category: bows
+title: "A top-tier elemental bow around fractured additional arrows"
+level: 5
+summary: "Fracture the suffix that nothing can aim at, rebuild the three elemental prefixes with Essences as often as it takes, then lock them and reforge for a critical strike suffix."
+goal: >-
+  An elemental bow with "Bow Attacks fire 2 additional Arrows" made
+  permanent, three flat elemental prefixes and the suffixes of a critical
+  strike build. The usual top-end weapon plan fractures a prefix. This one
+  fractures a suffix, and the reason is the whole lesson: **fracture what no
+  tool can aim at, not what is most valuable.** On an elemental bow an
+  Essence remakes any prefix on demand. Nothing in the game remakes two
+  additional arrows.
+base: "Thicket Bow"
+itemLevel: 86
+baseWhy: >-
+  "Bow Attacks fire 2 additional Arrows" exists only at item level 86. That
+  one modifier sets the item level; the best flat elemental tiers opened at
+  82. The Thicket Bow's 1.5 attacks per second is the fastest base, and
+  flat elemental damage is dealt once per attack. Take a Spine Bow for its
+  6.5% critical strike chance if the build leans on crits more than speed.
+
+
+  The base must have **no influence**: a [[Fracturing Orb]] refuses
+  influenced items.
+methods: [fracture, essence, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  prefixes:
+    - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+    - { text: "Adds 96 to 187 Fire Damage" }
+    - { text: "Adds 108 to 214 Cold Damage" }
+  suffixes:
+    - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+    - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "12% increased Attack Speed", how: crafted }
+needs:
+  - { item: "A bow with \"Bow Attacks fire 2 additional Arrows\" fractured, item level 86", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Deafening Essence of Wrath]]", amount: "dozens to a few hundred" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "for the bench's attack speed" }
+cost: >-
+  The fractured base is the largest part and may not be for sale at all in
+  the first weeks: two additional arrows is one suffix roll in 601 on an
+  item level 86 bow, and a [[Fracturing Orb]] then picks it one time in
+  four. Stage 2 is counted in Deafening Essences and has a long tail. Stage
+  3 is counted in locks, 4 [[Divine Orb]]s and a [[Sacred Orb]] each.
+
+
+  We give no total. A version with **one** additional arrow, which is ten
+  times as common and needs only item level 70, follows the same plan for a
+  fraction of the price, and is what most people should make.
+odds: >-
+  All figures are our arithmetic from the weights at item level 86.
+
+
+  **Stage 1.** "of Many" has a weight of 100 in a suffix pool of 60,100: 1
+  suffix roll in 601. "of Splintering", one arrow, weighs 1,000.
+
+
+  **Stage 2.** With Lightning fixed by the Essence, each other prefix roll
+  is Fire or Cold 53% of the time. When a result has three prefixes, the
+  other two are Fire **and** Cold, both at Tier 4 or better, about 1 time in
+  69; both at Tier 3 or better, 1 in 227; both at Tier 5 or better, 1 in 33.
+  Not every result has three prefixes, so the real counts are higher.
+  At least one of the two at Tier 4 or better is about 1 result in 4 when
+  two other prefixes roll.
+
+
+  **Stage 3.** The Critical reforge gives Critical Strike Chance or
+  Critical Strike Multiplier every time, in equal shares. If the tier is
+  drawn by weight, the guaranteed modifier is 30% or more one time in
+  three. Not measured in 3.30.
+steps:
+  - title: "Stage 1: the fractured arrows"
+    do: >-
+      Buy or find an item level 86 bow with **"Bow Attacks fire 2 additional
+      Arrows" fractured**. To make one: roll "of Many" on a Magic bow, bring
+      it to a Rare with **exactly four** modifiers, and use a
+      [[Fracturing Orb]].
+    why: >-
+      Ask of each modifier you want: what can aim at it? Flat Lightning
+      Damage: an Essence of Wrath, every time. Fire and Cold: the lottery,
+      where they are a quarter of prefix rolls each. A critical strike
+      suffix: a Harvest reforge. Attack speed: an Essence or the bench.
+      Additional arrows: nothing. Its only tag is "attack", which over two
+      fifths of the suffix pool shares. That is the modifier to fracture, because once it
+      is permanent every other slot can be rerolled without fear.
+    check: >-
+      A Fracturing Orb needs at least four modifiers and picks **at
+      random**. Exactly four is 1 in 4. Do not add a fifth.
+    fail: >-
+      It fractured something else. The bow keeps "of Many" as an ordinary
+      suffix beside a wrong modifier locked for ever, and it cannot be
+      fractured again. It is still a bow worth finishing by the prefix-lock
+      route; it is no longer a base for this plan.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 31 to 64 Physical Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+48 to Dexterity" }
+        - { text: "Gain 91 Life per Enemy Killed" }
+  - title: "Stage 2: three elements, by Essence"
+    do: >-
+      Use [[Deafening Essence of Wrath]]s until the bow has **Fire and Cold
+      beside the Lightning, at the tier you set in advance**, and **at most
+      two suffixes**. A sensible bar is Tier 4 or better for both: "Adds
+      85–115 to 172–200 Fire Damage" and "Adds 77–104 to 154–178 Cold
+      Damage" or higher.
+    why: >-
+      Wrath guarantees adds 25–34 to 494–575 Lightning Damage at Deafening,
+      between natural Tier 2 and Tier 1. An Essence rerolls everything that
+      is not fractured, so the arrows stay and this stage can be repeated
+      as often as the budget allows. That freedom is what the fracture
+      bought. Use the Essence of the element your build cares about most,
+      since that is the one prefix whose tier is guaranteed.
+    check: >-
+      Read all three prefixes with Alt held, then count suffixes. The
+      prefix lock in stage 3 is a suffix: with the arrows and two more
+      suffixes there is no slot for it.
+    fail: >-
+      Nothing to repair. Use the next Essence. Decide beforehand how many
+      you will spend, and when you reach that number, lower the bar to "one
+      of Fire or Cold at Tier 4, the other at any tier".
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+402 to Accuracy Rating" }
+  - title: "Stage 3: lock the prefixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      Two of the three prefixes came from luck and are not fractured. From
+      here on they are worth more than the lock. Essences are now
+      forbidden: by player reports they ignore the lock.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Stage 3, continued: reforge with a Critical modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Repeat the lock and the reforge
+      until the critical strike suffix is 30% or more and **one suffix slot
+      is open**.
+    why: >-
+      On a bow only two suffixes carry the critical tag, Critical Strike
+      Chance and Critical Strike Multiplier, and a crit build wants either.
+      The choice of tag is itself arithmetic: the bench sells both crit
+      suffixes at about seven tenths of their best tier (25–28% against
+      35–38%), but sells attack speed worse. So why not reforge for attack
+      speed? Because the Speed tag is shared with Projectile Speed in equal
+      weight, and half of all locks would be wasted. The reforge takes the
+      tag that is clean, and the bench takes attack speed.
+    check: >-
+      Prefixes unchanged, the arrows still there, a crit suffix, and a
+      free slot. A result with the crit suffix and nothing else is ideal.
+    fail: >-
+      Low tier, or no free slot: lock and reforge again, at 4 Divine Orbs
+      and a Sacred Orb each time. Fix the number of attempts in advance.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Stage 4: bench the attack speed"
+    do: >-
+      In the open suffix, craft **11–13% increased Attack Speed**, 4
+      [[Exalted Orb]]s.
+    why: >-
+      Attack speed is local and multiplies all three elements at once. The
+      bench's top rank is two tiers under the best roll, and that is the
+      price of having chosen the clean Harvest tag in stage 3. It is still
+      the right use of the one bench modifier: nothing else the bench
+      offers a full bow is worth as much.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "Adds 29 to 531 Lightning Damage", how: essence }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "Adds 108 to 214 Cold Damage" }
+      suffixes:
+        - { text: "Bow Attacks fire 2 additional Arrows", how: fractured }
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "12% increased Attack Speed", how: crafted }
+  - title: "Finish: sockets, then a Divine Orb"
+    do: >-
+      Six sockets and the links the skill needs, if not done on the white
+      base. Then a [[Divine Orb]] if the elemental rolls are low.
+    why: >-
+      The flat elemental tiers have very wide ranges: the Essence's
+      Lightning alone runs from 494 to 575 at the top end. A Divine Orb
+      rerolls every value at once, the crafted and fractured ones included,
+      and never a tier. On this bow the rolls inside the tiers are worth
+      about as much as a tier.
+variations: >-
+  **Fracture a prefix instead.** The conventional plan fractures a Tier 1
+  flat element ("Vapourising", 1 prefix roll in 434) and rolls the suffixes
+  under a lock. It ends with one guaranteed top prefix and arrows only if
+  luck gives them, where this plan ends with guaranteed arrows and
+  prefixes as good as your Essence budget. Choose by what the build needs
+  more: single-target damage, or clearing.
+
+
+  **The third prefix from the bench.** If stage 2 gives Lightning and one
+  good element with the third prefix **empty**, that is usable: the bench
+  adds the missing element at adds 60–72 to 110–128 (4 Chaos Orbs). The
+  bow then has no bench slot for attack speed, so the reforge in stage 3
+  has to supply the whole suffix side.
+
+
+  **A Prismatic Fossil for stage 2.** With Lightning and Fire on the bow, a
+  Prismatic Fossil would make Cold 70% of the remaining prefix rolls against
+  37% unassisted. But a Fossil guarantees no element at all, where the
+  Essence guarantees one at a high tier, and three open slots are worth
+  less than one certain and two open.
+
+
+  **Foresight.** A [[Hinekora's Lock]] on the Fracturing Orb in stage 1 is
+  the one place a look ahead could save the item.
+mistakes:
+  - "Fracturing a flat elemental prefix out of habit. On this bow an Essence makes that prefix whenever you ask."
+  - "Keeping an Essence result with three suffixes. The prefix lock needs a suffix slot, and an Annulment to open one can take a prefix instead."
+  - "Reforging with the Speed tag to chase rolled attack speed. Projectile Speed carries the same tag at the same weight."
+  - "Using an Essence after the lock, or a Fossil: for Fossils we could not confirm that the lock holds in 3.30."
+  - "Making the two-arrow version when one arrow would do. One arrow is ten times as common and needs item level 70, not 86."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, the Essence of Wrath on bows, tags, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical and Speed reforges and their cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges and Essences. Partly older than 3.30." }

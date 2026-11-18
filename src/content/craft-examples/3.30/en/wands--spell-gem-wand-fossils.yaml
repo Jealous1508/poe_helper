@@ -1,0 +1,198 @@
+category: wands
+title: "A spell gem wand with three Fossils"
+level: 3
+summary: "Aetheric, Faceted and Scorched Fossils stack on one prefix that carries all three tags, taking \"+1 to Level of all Fire Spell Skill Gems\" from 1 roll in 317 to 1 in 5, and clean up the suffix side on the way."
+goal: >-
+  A fire caster's wand with "+1 to Level of all Fire Spell Skill Gems",
+  flat fire damage to spells, cast speed and Spell Critical Strike Chance,
+  with Spell Damage from the bench. The same three Fossils with a different
+  element Fossil make the cold or lightning version. The lesson is
+  **stacking**: when one modifier carries several tags, each Fossil that
+  names one of them multiplies it again, and you can count the result
+  before you delve for a single Fossil.
+base: "Prophecy Wand"
+itemLevel: 84
+baseWhy: >-
+  The Prophecy Wand's implicit is 36–40% increased Spell Damage, the
+  largest on any wand. The gem prefix itself rolls from item level 2, so a
+  lower base makes the same prefix. Item level 84 is for the company it
+  keeps: an Aetheric Fossil multiplies every caster modifier, top tiers
+  included, and at 84 all of them can roll.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["38% increased Spell Damage"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+    - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+    - { text: "49% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Cast Speed", how: fossil }
+    - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "4–10" }
+  - { item: "[[Faceted Fossil]]", amount: "4–10" }
+  - { item: "[[Scorched Fossil]]", amount: "4–10", note: "Frigid for cold spells, Metallic for lightning" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt", note: "the size with three sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Three Fossils and a three-socket Resonator per attempt, from Delve. The
+  Faceted Fossil is usually the one that sets the price. A handful of
+  attempts is typical, which makes this far cheaper than the hundreds of
+  Alterations the same prefix costs on a Magic wand.
+odds: >-
+  All figures are our arithmetic from the weights at item level 84, and
+  they leave out the Fossil-only modifiers (see the last paragraph).
+
+
+  **One prefix roll being "+1 to Level of all Fire Spell Skill Gems":** no
+  Fossil, 1 in 317. Aetheric alone, 1 in 136. Aetheric and Faceted, 1 in
+  18. All three, 1 in 4.6. The prefix has the caster, gem and fire tags,
+  so its weight of 250 is multiplied by ten three times, while the pool
+  around it grows more slowly.
+
+
+  **Whole results.** With all three Fossils, a result with two prefixes has
+  the gem prefix 54% of the time and one with three prefixes 73%, by our
+  simulation of the same weights. The commonest companion is flat Fire
+  Damage to Spells, half of all prefix rolls.
+
+
+  **Suffixes.** Cast speed is 38% of suffix rolls and Spell Critical Strike
+  Chance 29%. A result with three suffixes has both about 2 times in 3.
+  The price of the Scorched Fossil is here: chance to Ignite, a fire
+  suffix, is 12% of suffix rolls.
+
+
+  **What the third Fossil costs.** "+1 to Level of all Spell Skill Gems"
+  has no fire tag. With two Fossils it is 1 prefix roll in 89; adding
+  Scorched makes it 1 in 229, because the fire modifiers crowd it out. Three
+  Fossils are for the element prefix. They are the wrong set for the other
+  one.
+
+
+  **What the figures leave out.** The data lists Fossil-only wand modifiers
+  that these Fossils would multiply as well, such as "Socketed Skills deal
+  40% more Spell Damage" (caster and gem tags). It does not say exactly
+  when Fossil-only modifiers join the pool, so the calculator ignores them
+  and the real shares are somewhat lower.
+steps:
+  - title: "Make the wand Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white Prophecy Wand.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. What the Alchemy gives is
+      irrelevant, and usually a good picture of the problem: half attack
+      modifiers.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+118 to maximum Mana" }
+        - { text: "Adds 62 to 129 Fire Damage" }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "13% increased Attack Speed" }
+  - title: "Count the tags on the modifier you want"
+    do: >-
+      In the wand's modifier list on this site, find "+1 to Level of all
+      Fire Spell Skill Gems" and read its tags: **elemental, fire, caster,
+      gem.** Then find a Fossil whose "more" line names each one you can.
+    why: >-
+      Fossil multipliers stack. "More Caster" ([[Aetheric Fossil]]), "more
+      Gem" ([[Faceted Fossil]]) and "more Fire" ([[Scorched Fossil]]) each
+      multiply this prefix by ten, a thousand in all. Most of the pool has
+      one of those tags or none, so it grows by ten or not at all. That
+      difference is the craft.
+    check: >-
+      Read the "no" and "fewer" lines too. Aetheric cuts attack modifiers
+      to about a seventh, which is what a caster wand wants. Scorched
+      removes every Cold modifier, harmless for a fire build.
+  - title: "Socket the Fossils and use the Resonator"
+    do: >-
+      Place the three Fossils in a [[Powerful Chaotic Resonator]] and use it
+      on the wand.
+    why: >-
+      Both sides are rerolled with the changed weights. On the suffix side
+      the Aetheric Fossil does the work: the two caster suffixes, cast
+      speed and Spell Critical Strike Chance, go from 18% of suffix rolls
+      to 67%.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "Adds 44 to 86 Fire Damage to Spells", how: fossil }
+        - { text: "58% increased Spell Damage", how: fossil }
+      suffixes:
+        - { text: "27% chance to Ignite", how: fossil }
+        - { text: "22% increased Cast Speed", how: fossil }
+  - title: "Judge the result: gem prefix, then room, then suffixes"
+    do: >-
+      **First:** is "+1 to Level of all Fire Spell Skill Gems" there? **Then:**
+      is a prefix slot open, or is the third prefix one you want?
+      **Then:** is cast speed or Spell Critical Strike Chance among the
+      suffixes?
+    why: >-
+      The result above is a perfectly good caster wand and still a failure:
+      it has no gem prefix, which is the only thing this craft exists for.
+      The other tests are in that order because the bench can repair a
+      missing suffix and cannot repair a prefix slot filled with the wrong
+      thing.
+    fail: >-
+      No gem prefix: use another set of Fossils. Nothing is lost but the
+      Fossils.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "27% increased Cast Speed", how: fossil }
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Bench the open slot"
+    do: >-
+      A prefix is open: craft **45–54% increased Spell Damage** for 4
+      [[Chaos Orb]]s, or 55–66% for 4 Exalted Orbs if the wand has earned
+      it. If the prefixes are full and a suffix is open, craft cast speed
+      (14–17% for 2 Chaos Orbs) or Spell Critical Strike Chance (60–69% for
+      3 Chaos Orbs), whichever is missing.
+    why: >-
+      Spell Damage is a different group from both the gem prefix and flat
+      damage to spells, so it fits beside them. Do not craft "+2 to Level of
+      Socketed Support Gems": it shares a group with the gem prefix.
+    state:
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 54 to 104 Fire Damage to Spells", how: fossil }
+        - { text: "49% increased Spell Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Cast Speed", how: fossil }
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+variations: >-
+  **Other elements.** A [[Frigid Fossil]] in place of Scorched aims at "+1
+  to Level of all Cold Spell Skill Gems", and a [[Metallic Fossil]] at the
+  Lightning one. An [[Aberrant Fossil]] ("more Chaos, no Lightning") does it
+  for Chaos spells. For Physical spells the matching Fossil is the Jagged
+  one, whose "no Chaos" line costs a caster nothing.
+
+
+  **Two Fossils only.** Aetheric and Faceted in a two-socket Resonator make
+  any one of the five element gem prefixes 1 prefix roll in 4, and the one
+  you want 1 in 18. Use it when you would be glad of the wand for another
+  character, or when you are after "+1 to Level of all Spell Skill Gems",
+  where the element Fossil hurts.
+
+
+  **The third suffix.** The open suffix is a poor target for an
+  [[Exalted Orb]]. With cast speed and Spell Critical Strike Chance already
+  on the wand, about 1 added suffix in 11 is Critical Strike Multiplier and
+  a third are attack modifiers. Leave it open until you can use "Can have
+  up to 3 Crafted Modifiers", as in the next example.
+mistakes:
+  - "Adding the element Fossil when the goal is \"+1 to Level of all Spell Skill Gems\". That prefix has no element tag, and the element's other modifiers push it out."
+  - "Keeping a result with no gem prefix because the rest is good. An Essence of Woe and the bench make that wand for much less."
+  - "Benching flat Fire Damage to Spells beside rolled flat Cold Damage to Spells. All three elements of that modifier are one group."
+  - "Expecting [[Memory Strands]] to help. Fossils do not use them, by player testing, and the gem prefix has only one tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil multipliers, the tags and groups of every wand modifier, weights and bench costs. The odds are our arithmetic and leave out Fossil-only modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

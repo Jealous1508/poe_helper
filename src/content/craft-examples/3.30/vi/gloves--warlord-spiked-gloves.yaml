@@ -1,0 +1,253 @@
+category: gloves
+title: "Spiked Gloves Warlord: ba nguồn melee damage trên một đôi"
+level: 5
+summary: "Giữ implicit Atlas bằng cách bỏ Eldritch implicit, thêm prefix Warlord mà chỉ influence mới có, và dựng lại suffix sau một cái khóa. Mỗi giai đoạn được chọn theo những gì giai đoạn trước nó đã loại bỏ."
+goal: >-
+  Một đôi Spiked Gloves giữ được implicit 24–30% Melee Damage, với prefix
+  Warlord 27–30% bên cạnh, một prefix bench 14–16%, life Tier 1 và attack
+  speed Tier 1. Các công cụ đều quen thuộc. Cái khó là **chuỗi hệ quả**: chọn
+  influence là gạt Eldritch currency và fracture khỏi bàn, và mỗi giai đoạn
+  về sau phải làm bằng những gì còn lại.
+base: "Spiked Gloves"
+itemLevel: 84
+baseWhy: >-
+  Implicit là lý do chọn base này, và nó chỉ sống sót trên một đôi không bao
+  giờ nhận Ember hay Ichor. Đằng nào một đôi có influence cũng không nhận
+  được chúng, nên influence và base Atlas thuộc về nhau: bạn không bỏ đi thứ
+  gì mà lẽ ra mình có được.
+
+
+  Prefix Warlord cần item level 73 và attack speed Tier 1 cần 76. Item level
+  84 thêm resistance Tier 1 cho các lần reforge ở giai đoạn 4. Base phải khởi
+  đầu **không có influence và không có fractured modifier**.
+methods: [influence, currency, beast, meta, harvest, bench, finishing]
+result:
+  note: "Warlord"
+  implicits: ["28% increased Melee Damage"]
+  prefixes:
+    - { text: "29% increased Melee Damage", how: influence }
+    - { text: "+118 to maximum Life" }
+    - { text: "15% increased Melee Damage / +0.1 metres to Melee Strike Range", how: crafted }
+  suffixes:
+    - { text: "15% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "+32% to Cold Resistance", how: crafted }
+needs:
+  - { item: "Spiked Gloves trắng, item level 84+", amount: "1" }
+  - { item: "[[Warlord's Exalted Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]] và [[Orb of Scouring]]", amount: "mỗi loại 1" }
+  - { item: "[[Orb of Alteration]]", amount: "vài trăm" }
+  - { item: "[[Craicic Croaker]]", amount: "1 cho mỗi lần thử Regal", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 cho mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa, cộng 2" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần khóa, cộng vài cái" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "cho prefix bench" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho resistance bench" }
+cost: >-
+  Một [[Warlord's Exalted Orb]], Alteration tính bằng trăm, vài bộ beast, rồi
+  tới phần tăng theo số lần: mỗi lần roll lại suffix ở giai đoạn 4 là một lần
+  khóa 4 [[Divine Orb]] và 4 [[Blessed Orb]]. Giai đoạn cuối thêm 2 Divine
+  Orb và 4 [[Exalted Orb]] ở bench.
+
+
+  Chúng tôi không đưa ra tổng. Số lần khóa là số lần bạn không hài lòng với
+  một tier attack speed ngẫu nhiên, và chỉ bạn biết con số đó.
+odds: >-
+  **Giai đoạn 2.** Trên base có influence, một trên 52 lần roll prefix là
+  prefix melee Warlord từ 23% trở lên, và một trên 104 là tier cao nhất,
+  27–30%. Đó là phép tính của chúng tôi, cộng weight của bảng Warlord vào
+  pool tự nhiên.
+
+
+  **Giai đoạn 4.** Reforge Speed lần nào cũng cho một modifier speed, và trên
+  gloves đó gần như luôn là attack speed. Nếu tier của nó được rút theo
+  weight, đúng như cách người ta vẫn hiểu về reforge, thì khoảng một trên bốn
+  hoặc năm lần reforge cho 14–16% và khoảng hai trên năm lần cho 11% trở lên.
+  Chưa được đo trong 3.30.
+steps:
+  - title: "Giai đoạn 0: chọn đường bằng cách đếm mỗi đường cho gì"
+    do: >-
+      Đặt hai item hoàn chỉnh cạnh nhau trên giấy. **Đường này:** implicit
+      24–30%, prefix Warlord 27–30%, prefix bench 14–16%: 65–76% increased
+      Melee Damage, và không có Eldritch implicit. **Đường kia:** Leviathan
+      Gauntlets với Armour nhiều hơn trên 60%, một implicit Exarch chẳng hạn
+      11% attack speed, một implicit Eater, và không có cái nào trong ba
+      modifier melee ngoài cái của bench.
+    why: >-
+      Damage "increased" cộng vào toàn bộ increased damage khác mà nhân vật
+      đã có; attack speed thì nhân nó lên. Thêm 70% của một loại mà bạn đã
+      có 400% là khoản lợi nhỏ hơn con số nghe ra. Hãy cho cả hai phiên bản
+      chạy qua các con số của build mình trước khi mua một Warlord orb. Ví
+      dụ này giả định chồng melee đã thắng.
+  - title: "Giai đoạn 1: biến base thành Warlord, với giá rẻ"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên đôi Spiked Gloves trắng, rồi tới
+      [[Warlord's Exalted Orb]]. Đọc modifier nó thêm vào. Trừ khi đó là
+      prefix melee ở tier cao, hãy dùng một [[Orb of Scouring]].
+    why: >-
+      Dòng chữ của orb là "Adds Warlord influence and a new Warlord modifier
+      to a rare item". Influence là thứ bạn đang mua; modifier là một tấm vé
+      xổ số. Scouring gỡ modifier, còn influence là thuộc tính của item, nên
+      theo cách nó vẫn hoạt động lâu nay, đôi gloves trở về trắng và vẫn là
+      Warlord. Từ đó trở đi lần roll nào cũng gồm cả bảng Warlord.
+    check: >-
+      Kết quả Alchemy phải có ít hơn sáu modifier, nếu không Exalted Orb
+      không có ô nào. Scour rồi dùng một Alchemy khác nếu nó đầy.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "+62 to Armour" }
+        - { text: "24% increased Spell Damage", how: influence }
+      suffixes:
+        - { text: "+38% to Fire Resistance" }
+        - { text: "+44 to Dexterity" }
+        - { text: "Gain 61 Life per Enemy Killed" }
+  - title: "Giai đoạn 2: Alteration tới prefix Warlord"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]] tới khi
+      prefix là increased Melee Damage "Warlord's" ở mức **23% trở lên**. Cứ
+      tiếp tục tới khi nó xuất hiện mà không kèm suffix nào, hoặc kèm một
+      suffix bạn sẽ giữ.
+    why: >-
+      Các prefix Warlord là một bảng nhỏ bên cạnh pool tự nhiên: weight
+      6,125 so với 46,000. Bốn trong năm họ là các loại damage, và ba trong
+      số đó là sai loại với build melee, nên hãy đọc dòng chữ, đừng chỉ đọc
+      cái tên "Warlord's".
+    check: >-
+      Suffix trống là kết cục tốt nhất. Bất cứ thứ gì nằm trên item Magic
+      đều được mang vào mỗi lần thử Regal.
+    state:
+      rarity: magic
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes: [{ text: "29% increased Melee Damage", how: influence }]
+  - title: "Giai đoạn 3: Imprint, rồi Regal để tìm life"
+    do: >-
+      Trong [[Menagerie]], tạo một [[Imprint]] của đôi gloves Magic
+      ([[Craicic Croaker]] và ba beast Rare). Dùng một [[Regal Orb]].
+      **Giữ** kết quả nếu nó thêm maximum Life từ 100 trở lên. Nếu nó thêm
+      bất kỳ prefix nào khác, dùng Imprint và thử lại.
+    why: >-
+      Phía prefix sẽ kết thúc là melee Warlord, life, và một ô chừa trống cho
+      bench. Một prefix đồ bỏ từ Regal Orb sẽ chiếm cái ô mà life cần, và
+      trên một đôi có influence thì không có Eldritch Annulment nào để gỡ nó.
+      Imprint khiến kết cục đó chỉ tốn một Regal Orb và một bộ beast.
+    check: >-
+      Nếu Regal Orb thêm một **suffix** thì không hại gì: đằng nào giai đoạn
+      4 cũng roll lại suffix. Bạn có thể dừng ở đó và lấy life từ bench lúc
+      cuối, 56–70, thay cho nguồn melee thứ ba.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+  - title: "Giai đoạn 4: khóa prefix, reforge để lấy attack speed"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]] và 4 [[Blessed Orb]]. Rồi, ở
+      [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Hãy đếm những gì đã bị loại. Eldritch orb: item có influence. Fracture:
+      item có influence. Một Essence of Zeal: được ghi nhận là phớt lờ khóa,
+      nên nó sẽ roll lại prefix Warlord. Thứ còn lại là phương pháp của dân
+      craft weapon: một cái khóa bench và một reforge Harvest, thứ tôn trọng
+      khóa theo thử nghiệm của cộng đồng. Reforge thay các suffix và tiêu
+      mất cái khóa.
+    check: >-
+      Cả hai prefix không đổi, prefix thứ ba vẫn trống, attack speed nằm
+      trong các suffix. Bạn muốn nó ở 14–16%, hoặc từ 11% trở lên nếu bạn
+      đang đếm số lần khóa, **và ít nhất một suffix trống**.
+    fail: >-
+      Attack speed thấp, hoặc ba suffix: khóa và reforge lần nữa. Hãy chốt số
+      lần thử trước lần đầu tiên.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Lần reforge đạt"
+    do: >-
+      Dừng khi attack speed ở tier của bạn và còn một ô suffix trống. Kết quả
+      lý tưởng là chỉ có mỗi attack speed.
+    why: >-
+      Ô suffix trống ở đây đáng giá hơn một suffix trung bình thứ hai: giai
+      đoạn cuối lấp chúng bằng đúng thứ bạn chọn.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "15% increased Attack Speed", how: harvest }
+  - title: "Giai đoạn 5: ba modifier bench"
+    do: >-
+      Craft **Can have up to 3 Crafted Modifiers** (2 Divine Orb, một
+      suffix). Rồi **14–16% increased Melee Damage with +0.1 metres to
+      Melee Strike Range** (4 [[Exalted Orb]], prefix trống). Rồi một
+      resistance, **+29–35%** (3 [[Chaos Orb]], suffix cuối cùng).
+    why: >-
+      Prefix melee của bench khác group với prefix Warlord, nên cả hai đều
+      vừa. Vậy là ba nguồn melee: implicit, influence, bench. Craft
+      multi-modifier tốn một ô suffix và trả lại một prefix cùng một suffix
+      do bạn chọn.
+    check: >-
+      Nếu sau giai đoạn 4 chỉ còn một suffix trống, craft multi-modifier
+      chiếm nó và resistance bị bỏ ra.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+        - { text: "15% increased Melee Damage / +0.1 metres to Melee Strike Range", how: crafted }
+      suffixes:
+        - { text: "15% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "+32% to Cold Resistance", how: crafted }
+  - title: "Hoàn thiện: implicit và các chỉ số"
+    do: >-
+      Một [[Blessed Orb]] tới khi implicit gần 30%. Quality và socket. Một
+      [[Divine Orb]] nếu prefix Warlord nằm ở 27.
+    why: >-
+      Implicit là một phần ba của cả chồng và cải thiện nó gần như không tốn
+      gì. Nó cũng là lý do của mọi ràng buộc mà lần craft này đã chấp nhận,
+      nên đừng để nó ở 24.
+variations: >-
+  **Một prefix veiled thay cho prefix bench.** Bản unveil ra là 17–20% Melee
+  Damage kèm +0.2 mét. Khi suffix đã xong và đã khóa, một
+  [[Veiled Chaos Orb]] sẽ roll lại prefix, nên nó không hợp với kế hoạch
+  này; một veiled item rơi được hoặc một Veiled Exalted Orb trên một đôi có
+  một prefix đồ bỏ thì có thể hợp.
+
+
+  **Các prefix Warlord khác.** Cùng kế hoạch đó trên Gripped Gloves lấy
+  "increased Projectile Attack Damage", và trên Fingerless Silk Gloves lấy
+  "increased Spell Damage", mỗi cái 27–30% ở tier cao nhất. "+1 to Maximum
+  Frenzy Charges" có weight 125 so với 500 cho một tier của mấy cái đó.
+
+
+  **Một modifier influence thứ hai.** Khi có hai cái, một
+  [[Orb of Dominance]] gỡ một cái và nâng cấp cái kia. Dữ liệu không chứa các
+  chỉ số đã nâng cấp, nên chúng tôi không nói gì về việc nó sẽ cho gì ở đây.
+mistakes:
+  - "Quyết định dùng influence sau khi đã bắt đầu với Eldritch implicit, hoặc ngược lại. Không cái nào hoàn tác được."
+  - "Regal mà không có Imprint. Một prefix đồ bỏ trên đôi có influence không có cách gỡ an toàn nào."
+  - "Dùng Essence of Zeal để lấy attack speed. Nó được ghi nhận là phớt lờ khóa và sẽ roll lại prefix Warlord cùng life."
+  - "Craft prefix melee của bench trước giai đoạn 4. Item giữ được một modifier bench, và cái khóa phải là nó."
+  - "Đọc thấy \"Warlord's\" rồi dừng. Spell Damage, Projectile Attack Damage và Damage over Time mang cùng cái tên đó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Warlord trên gloves và weight của chúng, tier, giá bench, cùng dòng chữ in-game của Warlord's Exalted Orb và các Ember. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Implicit của Spiked Gloves, giá của các modifier bảo vệ trên armour, và việc các conqueror boss rơi Exalted Orb của mình." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các beast của nó." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

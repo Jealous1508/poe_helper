@@ -1,0 +1,264 @@
+category: shields
+title: "Một cái shield lên kế hoạch ngược từ một modifier bị ép"
+level: 5
+summary: "Trên shield, influence Hunter chỉ có một prefix. Dựng hai prefix và ba suffix trước, và một Hunter's Exalted Orb chỉ còn đúng một thứ để thêm: increased maximum Life."
+goal: >-
+  Một cái shield block có ba prefix đều quan trọng, block, flat life và 7–10%
+  increased maximum Life, cùng một phía suffix được dựng có chủ đích. Prefix
+  cuối trong số đó đến từ một orb vốn ngẫu nhiên trên mọi item khác. Đây là
+  điều dân craft muốn nói khi bảo **ép một kết quả**: bạn không cải thiện xác
+  suất của modifier mình muốn, bạn loại bỏ mọi chỗ khác mà orb có thể rơi
+  vào. Kế hoạch được viết ngược từ bước cuối đó, và mỗi giai đoạn trước nó
+  tồn tại để dọn đường cho nó.
+base: "Pinnacle Tower Shield"
+itemLevel: 86
+baseWhy: >-
+  Pinnacle Tower Shield là cái tower shield toàn diện: 25% block, 467–537
+  Armour, +20–30 maximum Life trên implicit. 7–10% increased maximum Life của
+  Hunter cần item level 84; 86 còn mở tier cuối của increased Chance to Block
+  và 8% Physical Damage Reduction. Base phải **không có influence và không có
+  fractured modifier**: Hunter's Exalted Orb cần một item không có influence,
+  và theo các trang tra cứu thì một fractured item không thêm influence được.
+methods: [essence, meta, harvest, bench, influence]
+result:
+  note: "Hunter"
+  implicits: ["+27 to maximum Life"]
+  prefixes:
+    - { text: "73% increased Chance to Block", how: essence }
+    - { text: "+151 to maximum Life" }
+    - { text: "9% increased maximum Life", how: influence }
+  suffixes:
+    - { text: "7% additional Physical Damage Reduction", how: harvest }
+    - { text: "+45% to Fire Resistance", how: harvest }
+    - { text: "+33% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Deafening Essence of Loathing]]", amount: "hàng chục" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1" }
+cost: >-
+  Ba khoản chi thuộc ba loại khác nhau. Essence bậc Deafening với số lượng
+  lớn, vì giai đoạn 1 đòi một kết quả có hình dạng chính xác. Một hoặc nhiều
+  lần khóa, mỗi lần 4 [[Divine Orb]] và 4 [[Blessed Orb]]. Và đúng một
+  [[Hunter's Exalted Orb]], thứ các conqueror rơi ra; đó là phần duy nhất
+  không lặp lại được, vì orb cần một item không có influence.
+
+
+  Chúng tôi không đưa ra tổng. Giai đoạn Essence có thể kéo rất dài, và giá
+  một orb của conqueror vào ngày thứ năm của league không phải con số đáng in
+  ra.
+odds: >-
+  **Giai đoạn 1.** Khi block đã được Essence chốt ở item level 86, theo phép
+  tính của chúng tôi từ weight, mỗi prefix thêm là maximum Life 23% số lần và
+  là life từ 115 trở lên 1 trên 16 lần. Kết quả còn phải có **đúng hai
+  prefix**. Một kết quả có hai chứ không phải ba prefix thường xuyên tới mức
+  nào thì dữ liệu không có, nên chúng tôi không đưa ra con số cho mỗi
+  Essence; hãy tính là hàng chục.
+
+
+  **Giai đoạn 2.** Khi prefix đã khóa, một reforge Physical trên shield
+  Strength chỉ có thể là Physical Damage Reduction. Nếu tier của nó được rút
+  theo weight thì từ 7% trở lên là 2 trên 5 lần reforge.
+
+
+  **Giai đoạn 4.** Hunter có một họ prefix trên shield, với hai tier weight
+  bằng nhau. Khi ô trống duy nhất là một prefix, modifier là chắc chắn còn
+  tier của nó là một lần tung đồng xu: 7–10% hoặc 3–6%. Sự chắc chắn đó là
+  suy luận của chúng tôi từ dòng chữ của orb và danh sách modifier. Chúng tôi
+  chưa thấy ai thử nghiệm điều này trong 3.30.
+steps:
+  - title: "Viết kế hoạch ngược từ bước cuối"
+    do: >-
+      Bắt đầu từ orb cuối cùng và liệt kê những gì phải đúng vào lúc bạn dùng
+      nó. Rồi xếp các giai đoạn sao cho mỗi cái làm cho cái kế tiếp khả thi.
+    why: >-
+      Một [[Hunter's Exalted Orb]] "adds Hunter influence and a new Hunter
+      modifier to a rare item". Trên shield, prefix của Hunter là một họ,
+      increased maximum Life. Suffix của nó thì có bốn. Vậy orb chỉ chắc chắn
+      khi **không còn ô suffix nào trống và còn một ô prefix trống**.
+
+
+      Suy ngược lại. Trước orb: hai prefix, ba suffix, không có influence.
+      Vậy phía suffix phải được hoàn thiện trước, và đóng lại. Hoàn thiện
+      suffix mà không mất prefix thì cần một lần khóa, và phải là khóa đầy
+      đủ, vì ô prefix thứ ba phải vẫn trống qua lần reforge. Và trước đó nữa
+      là chính hai prefix, từ đúng cái công cụ mà về sau sẽ phá nát mọi thứ:
+      Essence. Thế là ra bốn giai đoạn theo thứ tự duy nhất chạy được.
+    check: >-
+      So với các phương án khác mà dữ liệu đưa ra. Elder cũng có increased
+      maximum Life, trong số bốn họ prefix: orb của nó sẽ rơi vào life hơn 1
+      trên 4 lần một chút. Một [[Shaper's Exalted Orb]] hoạt động y như của
+      Hunter cho một build khác: prefix shield duy nhất của Shaper là "+1 to
+      maximum number of Summoned Totems".
+  - title: "Giai đoạn 1: hai prefix, và chỉ hai"
+    do: >-
+      Dùng [[Deafening Essence of Loathing]] lên shield tới khi kết quả có
+      block, **maximum Life từ 115 trở lên, và không có prefix thứ ba**. Nó
+      còn cần nhiều nhất hai suffix, để chừa chỗ cho khóa.
+    why: >-
+      Essence chốt 70–75% increased Chance to Block, khoảng của tier tự nhiên
+      tốt thứ nhì. Life là prefix cần chờ bên cạnh nó: bench chỉ bán +56–70,
+      và sau giai đoạn 4 bench sẽ bận việc khác. Prefix thứ ba còn trống
+      không phải là khuyết điểm của kết quả. Nó là cái ô mà cả kế hoạch nhắm
+      tới.
+    check: >-
+      Đếm prefix trước khi đọc tier. Một kết quả có block, life cao và một
+      prefix thứ ba là hỏng, dù cái thứ ba tốt tới đâu.
+    fail: >-
+      Ba prefix, hoặc ba suffix: thêm một Essence. Đừng mở ô bằng
+      [[Orb of Annulment]]; khả năng nó lấy mất life cũng ngang vậy.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "22% increased Stun and Block Recovery" }
+  - title: "Giai đoạn 2: khóa đầy đủ"
+    do: >-
+      Craft **Prefix Modifiers cannot be changed** ở
+      [[Crafting Bench]]: 4 [[Divine Orb]] và 4 [[Blessed Orb]]. Từ lúc này
+      Essence được cất đi hẳn.
+    why: >-
+      Shield không có Eldritch orb, nên đây là cách duy nhất để giữ phía
+      prefix qua một lần roll lại. Item có đúng hai prefix, và bản 2 Divine
+      Orb sẽ bảo vệ cả hai; nhưng một lần reforge tôn trọng khóa đầy đủ thì
+      được hiểu là để yên cả phía prefix, kể cả ô trống, mà kế hoạch này
+      không chịu nổi một prefix thứ ba ngẫu nhiên. Hãy trả tiền cho sự chắc
+      chắn.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "22% increased Stun and Block Recovery" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Giai đoạn 2, tiếp: reforge suffix theo tag"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Physical modifier** (50
+      [[Vivid Crystallised Lifeforce]]). Lặp lại khóa và reforge tới khi phía
+      suffix có **hai modifier bạn sẽ giữ và một ô trống**.
+    why: >-
+      Đếm tag. Trên shield Strength có hai modifier là physical: prefix
+      reflect damage và Physical Damage Reduction. Khi prefix đã khóa thì chỉ
+      còn lại cái suffix, nên một reforge nghe có vẻ lỏng lẻo lại thành chính
+      xác. Reforge Critical cũng chính xác theo cùng cách, cho reduced Extra
+      Damage from Critical Strikes.
+
+
+      Ô trống là một phần của mục tiêu, như ở giai đoạn 1. Ba suffix roll ra
+      cũng đóng được phía đó, nhưng khi ấy cả ba phải tốt, và bench không còn
+      gì để sửa.
+    check: >-
+      Cả hai prefix không đổi, **vẫn đúng hai cái**, và khóa đã biến mất.
+    fail: >-
+      Một prefix thứ ba đã xuất hiện: reforge đã không coi ô trống là bị
+      khóa, và bước ép kết quả đã mất. Chúng tôi tin điều này không xảy ra,
+      dựa trên thử nghiệm của người chơi cũ hơn 3.30. Nếu được, hãy thử khóa
+      và reforge trên một cái shield rẻ có hai prefix trước.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+  - title: "Giai đoạn 3: đóng phía suffix bằng bench"
+    do: >-
+      Craft một suffix vào ô trống: resistance bạn thiếu, 29–35% giá 3
+      [[Chaos Orb]].
+    why: >-
+      Modifier bench này làm hai việc. Nó là một resistance. Và nó là một
+      **modifier chặn chỗ**: khi item có ba suffix, orb kế tiếp không thể
+      thêm cái thứ tư. Dân craft tìm tới bench để lấp một chỗ thiếu; ở đây nó
+      lấp một ô để thứ khác không lấp được.
+    check: >-
+      Đếm lại lần nữa: hai prefix, ba suffix, không có biểu tượng influence
+      trên item. Nếu bất kỳ điều nào trong ba điều đó không đúng thì đừng đi
+      tiếp.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+        - { text: "+33% to Cold Resistance", how: crafted }
+  - title: "Giai đoạn 4: Hunter's Exalted Orb"
+    do: >-
+      Dùng [[Hunter's Exalted Orb]].
+    why: >-
+      Item nhận influence Hunter và một modifier Hunter. Nó cần một ô trống ở
+      phía của chính nó. Mọi ô suffix đã có chủ, một ô prefix còn trống, và
+      prefix Hunter duy nhất mà shield có thể có là increased maximum Life.
+      Nó khác group với flat maximum Life, và hai cái nhân với nhau.
+    check: >-
+      Tier. 7–10% và 3–6% có weight bằng nhau ở item level này.
+    fail: >-
+      Ra tier thấp hơn. Không có lần thử thứ hai: orb không dùng được trên
+      item có influence. Một [[Hinekora's Lock]] dùng trước sẽ cho thấy tier
+      trước khi bạn quyết. Theo dòng chữ của nó, bất kỳ thay đổi nào trên
+      item, chẳng hạn đổi suffix bench, đều làm mất hiệu ứng thấy trước, và
+      khi đó một Lock khác sẽ nhìn lại lần nữa. Tức là mỗi lần nhìn một lần
+      tung đồng xu tốn một Lock, mà một Lock đắt hơn phần lớn shield. Gần như
+      lúc nào câu trả lời đúng cũng là nhận cái gì đến thì nhận.
+    state:
+      note: "Hunter"
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+        - { text: "9% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+        - { text: "+33% to Cold Resistance", how: crafted }
+  - title: "Hoàn thiện: suffix bench, quality, chỉ số"
+    do: >-
+      Suffix bench giờ có thể đổi lấy cái mà nhân vật cần nhất: gỡ nó ở bench
+      với giá 1 [[Orb of Scouring]] rồi craft cái khác. Sau đó là quality,
+      một [[Blessed Orb]] cho implicit life nếu nó roll thấp, và một
+      [[Divine Orb]] nếu các chỉ số đáng một cái.
+    why: >-
+      Modifier chặn chỗ đã xong việc, và modifier bench là phần duy nhất của
+      một item hoàn thiện mà vẫn chỉnh được. Một Divine Orb roll lại life của
+      Hunter trong tier của nó cùng với mọi thứ khác; nó không đổi tier.
+variations: >-
+  **Life từ Essence, block từ roll.** Deafening Essence of Greed chốt
+  +130–144 life và để increased Chance to Block cho may rủi: từ 64% trở lên
+  là khoảng 1 trên 14 prefix thêm. Vẫn kế hoạch đó, theo chiều ngược lại.
+
+
+  **Shield totem.** Thay orb cuối bằng một [[Shaper's Exalted Orb]] và prefix
+  bị ép là +1 to maximum number of Summoned Totems, chỉ cần item level 70.
+  Orb của Crusader, Warlord và Redeemer cũng bị ép theo cùng cách, mỗi cái
+  vào đúng một họ prefix của nó.
+
+
+  **Sao không fracture prefix tốt nhất trước.** Làm vậy thì giai đoạn 2 khỏi
+  cần khóa cho modifier đó, và cũng chấm dứt luôn kế hoạch: theo các trang
+  tra cứu, một fractured item không thêm influence được. Trên shield, chọn
+  giữa fracture và influence là quyết định đầu tiên của một lần craft đắt
+  tiền.
+mistakes:
+  - "Dùng Hunter's Exalted Orb khi còn một ô suffix trống. Nó có bốn suffix để chọn và sẽ lấy một trong số đó dễ dàng như lấy prefix."
+  - "Giữ một kết quả Essence có ba prefix vì cả ba đều tốt. Kế hoạch cần ô thứ ba trống."
+  - "Dùng khóa 2 Divine Orb để tiết kiệm trên item này. Nếu sau đó một lần reforge thêm prefix thứ ba thì bước ép kết quả mất luôn."
+  - "Bench suffix cuối trước lần reforge thay vì sau. Reforge sẽ gỡ nó."
+  - "Bất kỳ Essence, Chaos Orb hay Fossil nào sau giai đoạn 1. Trên shield, không gì ngoài cái khóa đứng chắn giữa mấy thứ đó và prefix."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier influence của shield và weight của chúng, các bảng Essence và bench, tag trên từng modifier, cùng dòng chữ trong game của các Exalted Orb của conqueror và Hinekora's Lock. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ; các conqueror rơi Exalted Orb của mình." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Cách các khóa một và hai modifier chọn thứ chúng bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Physical và Critical cùng giá Lifeforce của chúng." }
+  - { title: "poedb: Fractured items", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Rằng một fractured item không thêm influence được." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

@@ -1,0 +1,187 @@
+category: cluster-jewels
+title: "A Medium cluster jewel with two notables: Imprint and a beast"
+level: 3
+summary: "Both notables of a Medium jewel are prefixes, so only one fits on a Magic jewel. Save it with an Imprint, and use the add-a-prefix beast when the Regal Orb lands on the wrong side."
+goal: >-
+  A Medium Burning Damage cluster jewel with one notable the build must have
+  and a second from a short list. The difficulty is structural: **a Magic
+  jewel has one prefix, and both notables are prefixes.** The second one has
+  to be added to a Rare jewel, and this example combines the two beast
+  recipes that make that affordable.
+base: "Medium Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  **Enchantment:** "Added Small Passive Skills grant: 12% increased Burning
+  Damage". **Passives:** "Adds 4 Passive Skills", the fewest a Medium jewel
+  can have. **Item level:** 50 to 67. The five notables in this plan need
+  item level 1 or 50. At 68 the jewel gains six more notables and a second
+  tier of every small-passive bonus, and each notable you want becomes
+  about a quarter less likely.
+methods: [currency, beast]
+result:
+  implicits:
+    - "Adds 4 Passive Skills"
+    - "1 Added Passive Skill is a Jewel Socket"
+    - "Added Small Passive Skills grant: 12% increased Burning Damage"
+  prefixes:
+    - { text: "1 Added Passive Skill is Burning Bright" }
+    - { text: "1 Added Passive Skill is Cremator", how: beast }
+  suffixes:
+    - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+needs:
+  - { item: "A Medium Cluster Jewel with the Burning Damage enchantment", amount: "1", note: "4 passives, item level 50–67" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Craicic Croaker]]", amount: "about 5", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "about 5" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "about 2", note: "plus three Rare beasts each" }
+cost: >-
+  Few orbs and many beasts: about five Imprints and two Wolf recipes on an
+  average run, each with three more Rare beasts. Only red beasts are
+  captured in 3.30, so this is a craft to plan around your [[Menagerie]].
+odds: >-
+  **The first notable.** Burning Bright is 4.2% of prefix rolls on this
+  jewel at item level 50 to 67, by our arithmetic: 1 in 24.
+
+
+  **The second.** The four notables the example accepts (Blowback, Circling
+  Oblivion, Cremator, Smoking Remains) are 22% of the remaining prefix
+  weight. The Regal Orb adds a prefix about 59% of the time, taking the two
+  sides by their weights, so it is a hit about 13% of the time. The Wolf
+  recipe always adds a prefix: 22%.
+
+
+  **One full cycle** (Imprint, Regal Orb, and the Wolf if the Regal Orb
+  added a suffix): about 22%, 1 cycle in 4.5.
+steps:
+  - title: "Fix the list and its sides"
+    do: >-
+      In the modifier list, under the Burning Damage enchantment, pick the
+      notable you must have and those you would accept as the second. Here:
+      **Burning Bright**, then any of Blowback, Circling Oblivion, Cremator
+      or Smoking Remains. Your own list will differ; the arithmetic works
+      the same way.
+    why: >-
+      Every notable on a Medium jewel is a prefix. That caps the jewel at
+      two and means the suffix side holds nothing but small-passive
+      bonuses, a fact the rest of this craft leans on.
+  - title: "Alterations to the first notable"
+    do: >-
+      Use [[Orb of Alteration]]s until the prefix is Burning Bright. Ignore
+      the suffix completely.
+    why: >-
+      On this jewel 59% of prefix rolls are a notable, so you are sorting
+      through notables, not waiting for one. The suffix does not matter
+      because nothing on that side can be something you need.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item**: one
+      [[Craicic Croaker]] and three other Rare beasts.
+    why: >-
+      The next two steps each add one random prefix. If the wrong one
+      lands, the second prefix slot is full and nothing on a jewel can
+      empty it safely. The Imprint is the way back.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+  - title: "Regal Orb, and read which side it filled"
+    do: >-
+      Use a [[Regal Orb]]. Three things can happen. **A listed notable:**
+      finished. **Any other prefix:** the slot is spent; use the Imprint,
+      make a new one and repeat this step. **A suffix:** do not restore
+      anything. Go to the next step.
+    why: >-
+      A suffix leaves the second prefix slot open, which is the position
+      you want for the beast recipe. Restoring the Imprint here would throw
+      away a free second attempt.
+    state:
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+        - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+  - title: "Add a prefix, remove a random suffix"
+    do: >-
+      Use the beast recipe **Add a Prefix, Remove a Random Suffix**
+      ([[Farric Wolf Alpha]] and three other Rare beasts).
+    why: >-
+      On most items this recipe is a risk, because the suffix it removes is
+      random. On a Medium cluster jewel it is not: no suffix here is a
+      notable, so it can only remove a small-passive bonus. In exchange it
+      adds a prefix with certainty, where the Regal Orb only does so about
+      six times in ten.
+    check: >-
+      The new prefix is on your list. Here it is Cremator, and one of the
+      two suffixes is gone. The recipe's text says only that it needs a Rare
+      item. If you have no Wolf, an [[Exalted Orb]] does the same job
+      whenever both suffix slots are full, since the open prefix is then
+      the only place it can add.
+    fail: >-
+      An unlisted prefix: use the Imprint, which still returns the jewel to
+      its saved Magic state, make a new Imprint and go back to the Regal
+      Orb.
+    state:
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+        - { text: "1 Added Passive Skill is Cremator", how: beast }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+  - title: "Socket it and look"
+    do: >-
+      Put the jewel in a Medium cluster socket and check what it costs to
+      reach both notables and the jewel socket.
+    why: >-
+      Two notables on four passives leaves little that is not a notable or
+      a socket, which is why players look for the low passive counts. The
+      one open suffix slot is a free roll for an [[Exalted Orb]] whenever
+      you have one to spare: it can only add a small-passive bonus.
+variations: >-
+  **Two exact notables.** Asking for Cremator and nothing else as the
+  second makes the Wolf recipe a hit 4.4% of the time and a full cycle
+  about 1 in 23. That is five times the beasts. Decide whether the exact
+  pair is worth that before the first Imprint.
+
+
+  **No Imprint.** Regal the Magic jewel bare. About 13% of the time you
+  get a listed notable outright, about 41% of the time a suffix and one
+  Wolf attempt at 22%, and otherwise a one-notable jewel that is still
+  usable.
+
+
+  **Not on a Large jewel.** There the suffix side can hold a notable, and
+  this recipe may remove it. The Large example shows what to do instead.
+mistakes:
+  - "Restoring the Imprint when the Regal Orb added a suffix. That is the outcome that keeps the second prefix slot open."
+  - "Using the Wolf recipe on a Rare jewel whose prefixes are both filled. It has nowhere to add."
+  - "Rolling this at item level 68 or higher when every notable on the list needs 50 or less."
+  - "Caring about the suffix on the Magic jewel. On a Medium jewel it is never a notable."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Burning Damage enchantment's notables with their levels and weights; all are prefixes. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and the add-a-prefix recipe, with the beasts they need." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "A Medium jewel adds 4 to 6 passives, has one jewel socket and holds up to two notables, both prefixes." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Yellow beasts are no longer captured." }

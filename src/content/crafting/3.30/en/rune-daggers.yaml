@@ -1,0 +1,479 @@
+name: "Rune Daggers"
+short: "Caster daggers with a global crit implicit. One pool that is half attack modifiers, where the modifiers worth having are gem levels and spell damage."
+icon: "Platinum Kris"
+intro: >-
+  A rune dagger is a spellcaster's weapon that happens to be shaped like a
+  dagger. Nobody attacks with it. What it gives a caster is an implicit of
+  40% to 65% increased Global Critical Strike Chance, and a prefix and suffix
+  pool with everything a spell wants: increased Spell Damage, added damage to
+  spells, levels of spell gems, cast speed, spell critical strike chance.
+
+
+  Forget the logic of physical weapons here. Nothing on a caster weapon is
+  local: no modifier multiplies the base, quality does nothing for your
+  spells, and the base's damage numbers are irrelevant. The hard modifiers
+  are different too. They are **gem levels**, single-tier prefixes with
+  tiny weights, and the top tiers of **Spell Damage**. And the pool has a
+  problem a mace does not have: more than half of it is attack modifiers a
+  caster cannot use.
+basics:
+  itemLevel:
+    text: >-
+      A caster dagger needs more item level than an attack weapon. The top
+      tier of cast speed opens at 83 and the top tier of Spell Damage at 84,
+      so 84 is the base for a serious craft. Most of the rest is open by 76.
+
+
+      The gem-level prefixes are the exception in the other direction. "+1 to
+      Level of all Fire Spell Skill Gems" and its four siblings have one
+      tier and it needs item level 2. A low-level base does not make them
+      weaker. It makes them **easier to roll**, because the pool around
+      them is smaller.
+    breakpoints:
+      - ilvl: 2
+        unlocks: "\"+1 to Level of all Fire / Cold / Lightning / Chaos / Physical Spell Skill Gems\". One tier each, open from the start."
+      - ilvl: 46
+        unlocks: "Tier 4 Spell Damage (55–69%). **Enough for a levelling weapon.**"
+      - ilvl: 55
+        unlocks: "\"+1 to Level of all Spell Skill Gems\", the rarest prefix in the pool (weight 50). Tier 3 cast speed (21–24%)."
+      - ilvl: 64
+        unlocks: "Tier 2 Spell Damage (85–99%). Tier 2 Chaos and Cold Damage over Time Multiplier (+29–33%)."
+      - ilvl: 74
+        unlocks: "Tier 1 added damage to spells (Fire: adds 62–84 to 124–146). Tier 1 Critical Strike Multiplier has been open since 73."
+      - ilvl: 76
+        unlocks: "Tier 1 Spell Critical Strike Chance (90–109%). **Enough for most mapping weapons.**"
+      - ilvl: 78
+        unlocks: "Tier 1 Chaos and Cold Damage over Time Multiplier (+34–38%)."
+      - ilvl: 84
+        unlocks: "Tier 1 Spell Damage, \"Runic\" (100–109%); Tier 1 cast speed (29–32%) opened at 83. **The ceiling.**"
+  bases:
+    text: >-
+      Eighteen rune daggers, one pool. Every base rolls the same modifiers
+      with the same weights. Since nothing local matters to a caster, the
+      choice of base is the choice of **implicit** and of attribute
+      requirements, and nothing else.
+    types:
+      - title: "Skeans and knives"
+        pools: [all]
+        text: >-
+          Nine bases from Carving Knife to Imperial Skean with 40–45%
+          increased Global Critical Strike Chance. The lowest Intelligence
+          requirement of the three ordinary lines. This pool also holds the
+          kris, fiend and Heist bases below.
+      - title: "Kris"
+        text: >-
+          Copper, Golden and Platinum Kris: 60–65% increased Global Critical
+          Strike Chance, the largest implicit in the category. Heavy on
+          Intelligence (149 on the Platinum Kris, with 76 Dexterity).
+      - title: "Imp, Fiend and Demon Dagger"
+        text: >-
+          50–55% increased Global Critical Strike Chance, between the other
+          two lines, and as heavy on Intelligence as the kris.
+      - title: "Heist blades"
+        text: >-
+          Flickerflame, Flashfire and Infernal Blade. No crit implicit:
+          "Trigger Level 10 / 20 / 30 Flame Dash when you use a Socketed
+          Skill", and on the two higher ones 20% or 40% increased Cooldown
+          Recovery Rate of Travel Skills. For builds that want movement
+          built into the weapon and do not scale crit.
+    picks:
+      - base: "Platinum Kris"
+        for: "Crit casters"
+        why: >-
+          60–65% increased Global Critical Strike Chance, 20 points more
+          than a skean, on an implicit that costs no slot. Needs 149
+          Intelligence and 76 Dexterity, which a caster has.
+      - base: "Imperial Skean"
+        for: "Low requirements, or no crit"
+        why: >-
+          95 Dexterity and 131 Intelligence, with the 40–45% implicit. The
+          base to take when the build does not crit and the item is being
+          crafted for gem levels or damage over time, where the implicit is
+          a bonus at best.
+      - base: "Demon Dagger"
+        for: "A cheaper crit base"
+        why: >-
+          50–55% implicit. Same requirements as the Platinum Kris; it drops
+          from level 68, so it is common at high item levels where a
+          Platinum Kris of item level 84 is not always on offer.
+      - base: "Infernal Blade"
+        for: "A triggered Flame Dash"
+        why: >-
+          Triggers Level 30 Flame Dash when you use a socketed skill, with
+          40% increased Cooldown Recovery Rate of Travel Skills. You give up
+          the crit implicit for it.
+      - base: "Carving Knife"
+        for: "Rolling a gem level cheaply"
+        why: >-
+          The first rune dagger, from level 10. At item level 10 a specific
+          "+1 to Level of all ... Spell Skill Gems" prefix is about 1 prefix
+          roll in 59; at item level 84 it is 1 in 358. A levelling weapon
+          that a second character can carry for half the campaign.
+    impact: >-
+      **The implicit.** 40–45%, 50–55%, 60–65% Global Critical Strike Chance
+      or a triggered Flame Dash. The crit implicits are ranges, which a
+      [[Blessed Orb]] rerolls. Global means it works for spells, which is
+      the point.
+
+
+      **Requirements.** Dexterity and Intelligence. The high-implicit lines
+      ask for much more Intelligence.
+
+
+      **Not the damage, speed or quality.** The physical damage and attacks
+      per second on the base, and the 20% quality you could add, only matter
+      to attacks made with the dagger.
+
+
+      **Not the pool.** It is the same for all eighteen. Choose the item
+      level for the tiers and, for gem levels, consider choosing it low on
+      purpose.
+tools:
+  - method: currency
+    note: >-
+      At item level 84 the prefix lottery is, by our arithmetic from the
+      weights: attack modifiers 54% (added Fire, Cold and Lightning Damage
+      for attacks alone are 33%), maximum Mana 12%, and caster modifiers
+      34%. Inside the caster third: added damage to spells 20%, Spell
+      Damage 9%, the hybrid with Mana 4%, and all six gem-level prefixes
+      together 1.3%.
+
+
+      So an [[Orb of Alteration]] finds *a* Spell Damage prefix about 1
+      prefix roll in 11, mostly at low tiers: Tier 3 or better is 1 in 130
+      and Tier 1 is 1 in 2,240. A specific element's gem level is 1 in 358,
+      and "+1 to Level of all Spell Skill Gems" is 1 in 1,792. Plain
+      currency is for the middle of this item. The top is for tools.
+  - method: bench
+    note: >-
+      The bench sells a caster's whole weapon in a weaker form. Spell
+      Damage: 35–44% for 8 Orbs of Alteration, 45–54% for 4 Chaos Orbs,
+      55–66% for 4 Exalted Orbs; with Mana Regeneration, 51–60% for 6 Chaos
+      Orbs. Fire, Cold, Lightning or Chaos Damage at similar prices. Added
+      Fire Damage to Spells: 23–31 to 46–54 for 2 Orbs of Alchemy, 34–45 to
+      67–78 for 4 Chaos Orbs. Cast speed: 10–13% for 6 Alterations, 14–17%
+      for 2 Chaos Orbs, 18–21% for 4 Exalted Orbs. Spell Critical Strike
+      Chance 60–69% for 3 Chaos Orbs; Critical Strike Multiplier 25–28% for
+      4.
+
+
+      Know the groups, because they decide what stacks. **Every** bench
+      craft of Spell, Fire, Cold, Lightning or Chaos Damage shares one
+      group with rolled Spell Damage: one of them per item. The natural
+      hybrid of Spell Damage with maximum Mana is a different group and
+      sits beside any of them. Added damage to spells is one group for all
+      three elements. And the bench's "Level of Socketed Support Gems"
+      shares a group with the five element gem-level prefixes.
+  - method: finishing
+    note: >-
+      Quality does nothing for a caster, so skip the Whetstones unless you
+      attack with it. Sockets and links matter if you put a three-link in
+      the dagger. A [[Blessed Orb]] on the implicit is the cheap finishing
+      touch: the kris implicit runs from 60% to 65%.
+  - method: essence
+    note: >-
+      **The data has no Essence column for rune daggers.** The 3.30 export
+      lists what each Essence gives on Daggers, Sceptres, Wands and the
+      other older classes; Rune Dagger is not among them. The same export
+      files rune daggers under the Dagger category, and long-standing
+      player experience is that an Essence treats a rune dagger as a
+      dagger, which would make the dagger column apply: Woe for Spell
+      Damage, Misery for cast speed, Scorn for Spell Critical Strike
+      Chance.
+
+
+      We could not confirm that for 3.30. For a crafter it means two
+      things. No example here relies on an Essence. And before you plan
+      around one, use a single cheap Essence on a white rune dagger and
+      read what it gives.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is at its most valuable on this
+      item: a Magic dagger with a gem-level prefix took hundreds of
+      Alterations, and the Regal Orb after it adds an attack modifier more
+      often than not. **Add a prefix, remove a random suffix**
+      ([[Farric Wolf Alpha]]) is a free prefix when the suffix side is
+      empty, with the same one-in-three chance of a caster modifier as any
+      other roll.
+  - method: harvest
+    note: >-
+      **Caster** (75 Primal Lifeforce) guarantees one modifier with the
+      caster tag: by weight a prefix 70% of the time and cast speed or
+      Spell Critical Strike Chance otherwise. It does not remove the attack
+      half from the other slots. **Speed** (150 Vivid) has two carriers
+      here, attack speed and cast speed, so it is cast speed only 44% of
+      the time. **Critical** (150 Primal) has three, and two of them are
+      wanted. **Chaos** (100 Vivid) on the suffix side has exactly one:
+      Chaos Damage over Time Multiplier.
+
+
+      Since 3.27 these reforges respect "Cannot roll Attack Modifiers",
+      which is how to make a Caster reforge roll nothing but caster and
+      neutral modifiers.
+  - method: fossil
+    note: >-
+      An [[Aetheric Fossil]] is the rune dagger's Fossil: Caster modifiers
+      ten times as likely, Attack modifiers cut to 15% of their weight. By
+      our arithmetic that makes about 94% of prefix rolls caster modifiers,
+      and cast speed plus Spell Critical Strike Chance 76% of suffix rolls.
+      It does not lift Critical Strike Multiplier, which has no caster tag.
+
+
+      A [[Faceted Fossil]] multiplies Gem modifiers, and alone it is a
+      trap: its biggest beneficiary is "+2 to Level of Socketed Melee Gems",
+      which shares a group with the element gem-level prefixes and shuts
+      them out. With an Aetheric Fossil beside it the melee prefix all but
+      disappears, and each element's gem level becomes about 1 prefix roll
+      in 17. Add the element's own Fossil and it is far more common still.
+      The figures follow the community model in which a modifier is
+      multiplied once per matching tag; treat them as close, not exact.
+  - method: veiled
+    note: >-
+      Unveiled prefixes for casters: 70–79% increased Spell Damage with
+      Mana Regeneration; 60–69% Spell Damage with 5% of Non-Chaos Damage
+      gained as extra Chaos Damage; 70–79% Fire, Cold or Lightning Damage
+      with a chance to Ignite, Freeze or Shock; 60–69% Chaos Damage with
+      skill effect duration. All share the Spell Damage group. Suffixes:
+      18–22% cast speed with Arcane Surge on kill, and +24–28% to a Damage
+      over Time Multiplier of one type.
+  - method: fracture
+    note: >-
+      The modifier to fracture on a caster dagger is a gem level, and above
+      all "+1 to Level of all Spell Skill Gems". Its group is separate from
+      the element gem levels, so the two stack, and with one fractured the
+      other can be rolled with Fossils as often as it takes.
+  - method: meta
+    note: >-
+      **"Cannot roll Attack Modifiers"** (1 Divine Orb, a suffix) matters
+      more here than on any other item, because more than half of this pool
+      is attack modifiers. While it is on the dagger no attack modifier can
+      be **added**: not by an Exalted Orb, not by a reforge. With Spell
+      Damage already on the item, an Exalted Orb's prefix is a caster
+      modifier 27% of the time without it and 67% with it.
+
+
+      What it no longer does: since 3.30 it does not stop an
+      [[Orb of Annulment]] from removing a modifier of any kind. The old
+      trick of crafting "Cannot roll Caster Modifiers" so that an
+      Annulment could only hit the junk is dead. Nothing steers an
+      Annulment now.
+
+
+      A full lock on a weapon is 4 Divine Orbs and 1 [[Sacred Orb]].
+  - method: influence
+    note: >-
+      Useful to casters: Shaper's prefix "Socketed Skills deal 40% more
+      Spell Damage" for a skill socketed in the dagger; Elder's added Chaos
+      or Physical Damage to Spells; the Crusader, Warlord and Redeemer
+      prefixes that add lightning, fire or cold damage to spells with 4%
+      penetration, and their plain 8% penetration; Hunter's 6% elemental
+      penetration; Redeemer's suffix "Spells have a 6–7% chance to deal
+      Double Damage". The Shaper and Elder Spell Damage prefixes are weaker
+      than the natural one and share its group. No influence adds a gem
+      level.
+  - method: corruption
+    note: >-
+      The corruption implicits include a third gem level: "+1 to Level of
+      all Chaos, Cold, Lightning or Physical Spell Skill Gems" (the data
+      lists no Fire version for rune daggers). Also 50–60% increased Spell
+      Damage and 14–18% cast speed. Each replaces the crit implicit.
+  - method: strands
+    note: "See the Memory Strands section below."
+memoryStrands: >-
+  Strands raise tiers, and the two most wanted prefixes on this item do not
+  have tiers: a gem level is a gem level. A strand base does nothing for a
+  gem-level craft, and it does nothing for the main problem of the pool,
+  which is rolling an attack modifier at all.
+
+
+  Where they fit is Spell Damage and the suffixes. Spell Damage is 9% of
+  prefix rolls with almost all of that in its five lowest tiers, and cast
+  speed and Spell Critical Strike Chance have seven and six evenly weighted
+  tiers. An [[Orb of Remembrance]] on a white item level 84 base, then
+  [[Orb of Alteration]]s for Spell Damage and a [[Regal Orb]], spends strands
+  slowly, at most 8 and 16 a time by the data-mined table.
+
+
+  An [[Aetheric Fossil]] craft gains nothing from strands, by player
+  testing. Decide which of the two routes you are on before buying the base.
+reading:
+  intro: >-
+    First strike out every attack modifier: added damage that does not say
+    "to Spells", increased Physical Damage, attack speed, Accuracy, plain
+    Critical Strike Chance. On a rune dagger those lines are blank. Then
+    read what is left. **Gem levels first, then Spell Damage, then cast
+    speed and the crit pair.**
+  prefixes:
+    text: >-
+      Three kinds of prefix do the work, and the groups decide how they
+      combine. **Gem levels:** "+1 to Level of all Spell Skill Gems" is one
+      group and the five element versions are another, so a dagger can hold
+      one of each for +2 to the right gems. A gem level is worth more than
+      any damage percentage to most spells, and it is the rarest thing in
+      the pool. **Spell Damage:** the pure prefix, and in a separate group
+      the hybrid with maximum Mana; both fit on one item. **Added damage to
+      spells:** one element only, since all three share a group.
+
+
+      A finished caster dagger is some three of those. The usual shapes are
+      two gem levels and a damage prefix, or Spell Damage, the hybrid and
+      added damage for a build whose gems are levelled elsewhere.
+
+
+      Everything else is in the way: the six attack prefixes, and maximum
+      Mana at 12%, which only a few builds turn into damage.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Raises every spell. Weight 50 in a pool of 89,589: the hardest natural prefix on the item, and in its own group."
+        aim: "One tier, +1 (ilvl 55)."
+      - mod: "+# to Level of all Fire / Cold / Lightning / Chaos / Physical Spell Skill Gems"
+        why: "The same for one damage type. Five prefixes in one group, weights 200–250 each. Stacks with the prefix above."
+        aim: "One tier, +1 (ilvl 2)."
+      - mod: "#% increased Spell Damage"
+        why: "The caster's plain multiplier. Common as a family, rare at the top: Tiers 1 to 3 are 690 of its 8,190 weight."
+        aim: "T3, 70–84% (ilvl 58). T1 is 100–109% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "A second, smaller Spell Damage in another group. It stacks with the pure prefix and with every bench damage craft."
+        aim: "T2, 37–43% (ilvl 58). T1 is 44–49% (ilvl 80)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Spells"
+        why: "Flat damage for spells. Strong on fast-hitting spells with many casts; one element per item."
+        aim: "T3 (Fire adds 38–51 to 77–88, ilvl 51). T1 needs ilvl 74."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "The attack version. A third of all prefix rolls, and worthless to a caster. Learn to tell the two apart by the words \"to Spells\"."
+  suffixes:
+    text: >-
+      The caster's suffixes are cast speed (9% of rolls), Spell Critical
+      Strike Chance (8%) and Critical Strike Multiplier (8%), all with
+      evenly weighted tiers. Damage-over-time builds swap the crit pair for
+      multipliers: Chaos and Cold Damage over Time Multiplier roll here
+      naturally, very lightly at the top, and the general Damage over Time
+      Multiplier is a separate group that stacks with either.
+
+
+      Watch for the lookalikes. "increased Critical Strike Chance" with no
+      "Spell" in it is the attack version and applies to attacks with the
+      dagger. Attack speed is the single most common suffix and does
+      nothing for you. Over a third of the suffix pool is attack modifiers.
+
+
+      Intelligence, at 11%, is honest filler on an item that needs 149 of
+      it.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "More casts. The one suffix nearly every caster wants."
+        aim: "T2, 25–28% (ilvl 72). T1 is 29–32% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "Multiplies the spell's own base crit, alongside the global implicit."
+        aim: "T2, 80–89% (ilvl 59). T1 is 90–109% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "For crit builds. It has no caster tag, so caster-aimed tools do not find it; the bench sells 25–28%."
+        aim: "T2, 30–34% (ilvl 59), or the bench."
+      - mod: "+#% to Chaos Damage over Time Multiplier"
+        why: "The core suffix of a chaos damage-over-time dagger. Weight 50 at Tier 1; a Chaos reforge under a prefix lock is the one tool aimed straight at it."
+        aim: "T3, 24–28% (ilvl 36), which equals the veiled version. T1 is 34–38% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Applies to all damage over time and stacks with the typed multiplier."
+        aim: "T3, 16–19% (ilvl 68)."
+approach:
+  principle: >-
+    **Gem levels first, because nothing can add them later.** The bench
+    sells Spell Damage, cast speed, both crit suffixes and every
+    damage-over-time multiplier. It sells no gem level for your spells. So
+    the rolled slots of a caster dagger go to gem levels and to whatever
+    high tier you can reach, and the bench fills the rest; and every reroll
+    should be made with the attack half of the pool switched off.
+  order:
+    - title: "Decide the shape: gem levels, or damage"
+      text: >-
+        A build that scales with gem level wants +1 all and +1 of its type.
+        A build whose gems are capped elsewhere, or a budget, wants Spell
+        Damage, the hybrid and added damage. This decides the tools: gem
+        levels mean Fossils or a low-level base; damage means Alterations
+        or an Aetheric Fossil.
+    - title: "Base for the implicit, item level for the plan"
+      text: >-
+        Kris for crit, anything for damage over time. Item level 84 for an
+        endgame weapon, 76 if Tier 1 Spell Damage is not the target, and
+        deliberately low if all you want is a gem level on a levelling
+        weapon.
+    - title: "Switch off the attack half"
+      text: >-
+        Every method has a way. Full rerolls: an Aetheric Fossil. Harvest
+        reforges and Exalted Orbs: "Cannot roll Attack Modifiers". Plain
+        Alterations have no way, which is why they are for single
+        modifiers only.
+    - title: "Get the gem level, then make it safe"
+      text: >-
+        Fracture it if you can. If not, remember that an Imprint returns a
+        Magic item to a saved state, and that a lock is 4 Divine Orbs and a
+        Sacred Orb per use.
+    - title: "Fill the prefixes with damage, by group"
+      text: >-
+        One from the Spell Damage group (rolled, veiled or bench), the
+        Mana hybrid if it lands, one added-damage prefix. Check the group
+        before every bench craft.
+    - title: "Suffixes last, bench for the one that is missing"
+      text: >-
+        Cast speed and Spell Critical Strike Chance come from the same
+        caster-aimed tools. Critical Strike Multiplier does not: plan to
+        bench it.
+  finishing: >-
+    A [[Blessed Orb]] on the implicit, sockets if you use them, and a
+    [[Divine Orb]] only for a Spell Damage or cast speed roll at the bottom
+    of its tier. Gem levels have no value to reroll. Leave the Whetstones in
+    the stash.
+  stopping: >-
+    One gem level, a Spell Damage prefix of any source at 55% or more, cast
+    speed and one crit suffix is a real endgame weapon. Tier 3 Spell Damage
+    with the hybrid, added damage and two good suffixes is its equal for a
+    build that does not need gem levels.
+
+
+    The expensive steps are the second gem level and Tier 1 of anything.
+    Stop when the next step is a lottery you cannot switch the attack half
+    off for, and never repair a caster dagger with an Annulment: in 3.30 it
+    takes what it likes.
+special:
+  - mod: "+# to Level of all Spell Skill Gems"
+    source: "Natural, very rare"
+    where: "Rolls naturally from item level 55 with weight 50. In practice it comes from Faceted and Aetheric Fossils together (about 1 prefix roll in 87 by our arithmetic), from a fractured base, or from buying one."
+  - mod: "+# to Level of all Chaos / Cold / Lightning / Physical Spell Skill Gems"
+    source: "Natural / Corruption"
+    where: "As a prefix, from Alterations on a low-level base or from Fossils. As a corruption implicit from a [[Vaal Orb]], replacing the crit implicit; the data lists Chaos, Cold, Lightning and Physical for rune daggers."
+  - mod: "#% increased Spell Damage / Gain #% of Non-Chaos Damage as extra Chaos Damage"
+    source: "Veiled / Bench"
+    where: "Unveiled: 60–69% with 5%. Bench: 46–50% with 4% for 4 Exalted Orbs, 41–45% with 3% for 4 Chaos Orbs. Spell Damage group."
+  - mod: "#% increased Chaos Damage / Chaos Skills have #% increased Skill Effect Duration"
+    source: "Veiled / Bench"
+    where: "Unveiled: 60–69% with 13–15%. Bench: 46–50% with 11–12% for 8 Chaos Orbs. Spell Damage group."
+  - mod: "Trigger a Socketed Spell when you Use a Skill"
+    source: "Bench"
+    where: "A bench suffix for 3 Chaos Orbs: an 8 second cooldown, and spells triggered this way have 150% more cost."
+  - mod: "Socketed Skills deal 40% more Spell Damage"
+    source: "Shaper influence / Fossil"
+    where: "A Shaper prefix at item level 83, and in the Fossil-only list. Only for a skill socketed in the dagger's three sockets."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Redeemer influence"
+    where: "A Redeemer suffix, 6–7% at item level 80."
+  - mod: "Adds # to # Chaos Damage to Spells"
+    source: "Elder influence"
+    where: "An Elder prefix, 56–77 to 116–133 at item level 85. The natural pool has no added Chaos Damage for spells."
+  - mod: "Trigger Level # Flame Dash when you use a Socketed Skill"
+    source: "Base implicit"
+    where: "The implicit of the three Heist blades. Chosen with the base."
+mistakes:
+  - "**Reading attack lines as damage.** \"Adds 89 to 180 Fire Damage\" on a rune dagger adds nothing to a spell. It needs to say \"to Spells\"."
+  - "**Benching Fire Damage next to rolled Spell Damage.** One group. The bench will refuse; craft added damage to spells or a suffix."
+  - "**A Faceted Fossil on its own.** It mostly rolls Socketed Melee Gems, which blocks the element gem levels. Pair it with an Aetheric Fossil."
+  - "**Whetstones on a caster weapon.** Quality raises the base's physical damage, which your spells do not use."
+  - "**Crafting \"Cannot roll Caster Modifiers\" before an Annulment.** Since 3.30 that protects nothing. There is no safe Annulment on this item."
+  - "**Planning around an Essence without testing one.** The 3.30 data does not say what Essences do on rune daggers."
+  - "**Paying for item level 84 to roll a gem level.** The gem prefixes have one tier, and a smaller pool makes them likelier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, group, tag, tier, weight, Fossil multiplier and bench cost quoted here, and the absence of rune daggers from its Essence table. The shares and odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "\"Cannot roll\" modifiers no longer stop an Orb of Annulment; the cost of the protection modifiers." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges that guarantee a modifier type respect the \"Cannot roll\" modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Caster, Speed, Critical and Chaos reforges." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

@@ -1,0 +1,160 @@
+category: claws
+title: "Speed, crit and crit: a suffix side from two Fossils"
+level: 3
+summary: "One Fossil multiplies the two critical strike suffixes, the other multiplies attack speed and deletes every Mana modifier. Together they make the hard side of a crit claw the common result."
+goal: >-
+  An elemental crit claw with attack speed, Critical Strike Chance and
+  Critical Strike Multiplier all rolled, which the bench cannot do because it
+  only supplies one of them. The lesson is **two Fossils in one Resonator,
+  each chosen for what it adds and for what it removes.**
+base: "Imperial Claw"
+itemLevel: 77
+baseWhy: >-
+  The fastest endgame claw, so added elemental damage lands most often. Item
+  level 77 opens Tier 1 attack speed (26–27%); Tier 1 of both critical
+  strike suffixes has been open since 73. The elemental prefixes top out one
+  or two tiers below their best here, which is the right trade for a Fossil
+  craft: rerolls land on middle tiers far more often than on top ones.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["Grants 46 Life per Enemy Hit"]
+  prefixes:
+    - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+    - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+    - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: fossil }
+    - { text: "31% increased Critical Strike Chance", how: fossil }
+    - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "10–20" }
+  - { item: "[[Shuddering Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "a Resonator with two sockets" }
+  - { item: "[[Orb of Alchemy]]", amount: "5", note: "one to start, four for the bench" }
+cost: >-
+  Two Fossils and a two-socket Resonator per attempt, all from Delve. In 3.30
+  Sulphite comes from the maps that always spawn it, so this is a craft for
+  someone who delves or buys from those who do. The bench step is 4
+  [[Orb of Alchemy]].
+odds: >-
+  With both Fossils, by our arithmetic from the weights at item level 77, a
+  suffix roll is attack speed 40% of the time and each critical strike
+  suffix 26%: 92% for the three together, against 36% with no Fossil. **When
+  a result has three suffixes, they are exactly those three about two times
+  in three.**
+
+
+  Tiers are untouched: each of the three is Tier 2 or better about 1 suffix
+  roll in 11. On the prefix side, with Mana gone, 61% of rolls are added
+  Fire, Cold or Lightning Damage. The figures cover natural modifiers only;
+  Fossils can also roll their own, which lowers them a little.
+steps:
+  - title: "Make the claw Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on a white item level 77 Imperial Claw. What
+      it rolls does not matter.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. The claw only has to be Rare
+      for the first one to work.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "+124 to maximum Mana" }
+        - { text: "Adds 17 to 33 Physical Damage" }
+      suffixes:
+        - { text: "+34 to Intelligence" }
+        - { text: "52% increased Mana Regeneration Rate" }
+  - title: "Load both Fossils and reroll"
+    do: >-
+      Put a [[Deft Fossil]] and a [[Shuddering Fossil]] in a
+      [[Potent Chaotic Resonator]] and use it on the claw.
+    why: >-
+      Read each Fossil for both halves of its text. **Deft:** more Critical
+      modifiers, no Attribute modifiers. That multiplies both critical
+      strike suffixes by ten and deletes Dexterity and Intelligence.
+      **Shuddering:** more Speed modifiers, no Mana modifiers. That
+      multiplies attack speed and deletes Mana Regeneration, mana on kill,
+      mana leech and, on the other side, the maximum Mana prefix, which is
+      the most common junk prefix on a claw.
+    check: >-
+      A two-socket Resonator: the sizes differ in how many Fossils they
+      hold, so look at the sockets on yours before buying a stack.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 44 to 89 Cold Damage", how: fossil }
+        - { text: "Adds 14 to 29 Physical Damage", how: fossil }
+        - { text: "+2 to Level of Socketed Melee Gems", how: fossil }
+      suffixes:
+        - { text: "19% increased Attack Speed", how: fossil }
+        - { text: "+36% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Judge suffixes for families, then tiers, then count prefixes"
+    do: >-
+      **Families:** attack speed, Critical Strike Chance and Critical Strike
+      Multiplier, all three? **Tiers:** set a bar first; for a mapping claw,
+      attack speed 20% or more and each critical strike suffix 25% or more.
+      **Prefixes:** at least two added elemental prefixes, and one slot
+      open.
+    why: >-
+      The result above has two of the three suffixes, one of them low, and
+      three prefixes of three different builds. The open prefix is part of
+      the bar because the bench has the third prefix ready, and it cannot
+      be crafted onto a full side.
+    fail: >-
+      Reroll with another pair of Fossils. Nothing carries over between
+      attempts, so there is nothing to protect yet.
+  - title: "Repeat until the suffix side is done"
+    do: >-
+      Keep rerolling until the three suffixes pass your bar. Accept two
+      elemental prefixes at any reasonable tier.
+    why: >-
+      The suffix trio is what no later step can give you. Elemental
+      prefixes at middle tiers are common enough that insisting on high
+      ones here would multiply the cost for the easy half of the item.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+        - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Bench the multiplier"
+    do: >-
+      At the [[Crafting Bench]], craft 24–32% increased Elemental Damage
+      with Attack Skills for 4 [[Orb of Alchemy]].
+    why: >-
+      It is its own group, it multiplies both added-damage prefixes, and the
+      natural version is only 3% of prefix rolls. A third element from the
+      bench (35–41 to 63–73 for 4 Chaos Orbs) is the alternative when the
+      build scales one element heavily.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 63 to 128 Fire Damage", how: fossil }
+        - { text: "Adds 12 to 214 Lightning Damage", how: fossil }
+        - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+variations: >-
+  **A physical crit claw.** Add a [[Jagged Fossil]] in a three-socket
+  Resonator: the physical families become about three prefix rolls in four.
+  It also multiplies the two leech suffixes, which carry the physical tag,
+  so the suffix trio drops from 92% to 86% of rolls. The hardest example in
+  this category is built on that Resonator.
+
+
+  **Three good suffixes and bad prefixes.** Stop rerolling. The next example
+  keeps the suffixes and replaces the prefix side.
+mistakes:
+  - "Reading only the \"more\" half of a Fossil. Here the deletions do as much work as the multipliers."
+  - "Keeping a result with three prefixes and no room for the bench when the third prefix is junk."
+  - "Expecting Tier 1 suffixes. The Fossils make the families common; inside a family every tier is still equally likely."
+  - "Using this on a base with [[Memory Strands]]. Fossils neither spend nor use them, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, tags, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

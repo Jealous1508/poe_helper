@@ -1,0 +1,144 @@
+category: one-hand-maces
+title: "One weak Essence on a white mace"
+level: 2
+summary: "A Wailing Essence of Contempt makes a white mace Rare with flat Physical Damage guaranteed, and the bench adds the percentage. Two clicks, two physical prefixes."
+goal: >-
+  A mace for the end of the campaign and the first maps, with flat Physical
+  Damage from an Essence and a percentage from the bench. The lesson is how
+  the **weak Essences** differ from the strong ones: they work once, only on
+  a white item, and in 3.30 they are found only on the way up. Used at the
+  right moment they are worth a bench craft each. Kept for later they are
+  worth nothing.
+base: "Tenderizer"
+itemLevel: 60
+baseWhy: >-
+  A Tenderizer drops from level 58 with 49–62 physical damage at 1.4 attacks
+  per second, a fast base for its level. Item level 60 opens Tier 3 of both
+  percentage prefixes and Tier 2 attack speed, in case luck adds one. The
+  mace must be **Normal**: the four weakest Essence strengths cannot be used
+  on a Magic or Rare item.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "Adds 10 to 19 Physical Damage", how: essence }
+    - { text: "Adds 6 to 119 Lightning Damage" }
+    - { text: "72% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+36 to Strength" }
+    - { text: "17% increased Attack Speed" }
+needs:
+  - { item: "[[Wailing Essence of Contempt]]", amount: "1", note: "Weeping works on a lower-level mace" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "for the bench" }
+cost: >-
+  One Essence you picked up while levelling, and 8 [[Orb of Alteration]]s at
+  the bench. A second Essence and an [[Orb of Scouring]] if the first result
+  is poor and you want another go.
+odds: >-
+  The flat damage is certain. So is the bench percentage, as long as one
+  thing holds: the Essence must leave a prefix slot open and must not roll
+  pure increased Physical Damage itself. By our arithmetic at this item
+  level, each further prefix the Essence rolls is pure increased Physical
+  Damage about 1 time in 6 and the Accuracy hybrid as often. Either is a
+  better result than the one shown, not a worse one; they only change which
+  bench craft you take.
+steps:
+  - title: "Quality on the white mace"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s until the Tenderizer reads 20%
+      quality. Check that it is Normal, with a white name.
+    why: >-
+      Quality is cheapest on a white item and is part of the damage both
+      prefixes will build on.
+    state:
+      rarity: normal
+      implicits: ["10% reduced Enemy Stun Threshold"]
+  - title: "Use the Essence"
+    do: >-
+      Use one [[Wailing Essence of Contempt]] on the mace.
+    why: >-
+      It makes the mace Rare with **adds 8–12 to 17–20 Physical Damage**
+      guaranteed and the other modifiers random. That is almost exactly
+      what the bench sells for 2 Orbs of Alchemy, so the Essence is worth
+      one bench craft: it supplies the flat damage and leaves the bench
+      free for the percentage.
+
+
+      The item text says a Wailing Essence restricts the other modifiers
+      to level 75 and below. On an item level 60 mace that changes
+      nothing; nothing above 60 could roll anyway.
+    check: >-
+      Hold Alt and sort what rolled into prefixes and suffixes. Count the
+      prefixes.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 10 to 19 Physical Damage", how: essence }
+        - { text: "Adds 6 to 119 Lightning Damage" }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "17% increased Attack Speed" }
+  - title: "Choose the bench craft from what rolled"
+    do: >-
+      **No percentage rolled and a prefix is open** (as here): craft
+      60–79% increased Physical Damage for 8 [[Orb of Alteration]]s.
+      **The Accuracy hybrid rolled:** the same craft, and the mace has two
+      percentages. **Pure increased Physical Damage rolled:** the bench
+      percentage is refused, so craft attack speed in a suffix, 8–10% for
+      6 Orbs of Alteration. **Three prefixes and none of them a
+      percentage:** craft attack speed if a suffix is open.
+    why: >-
+      The bench's percentage shares a group with the rolled pure one and
+      with nothing else on this item. Its flat damage would be refused in
+      every case, because the Essence's modifier is the same group.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 10 to 19 Physical Damage", how: essence }
+        - { text: "Adds 6 to 119 Lightning Damage" }
+        - { text: "72% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "17% increased Attack Speed" }
+  - title: "If the result was poor"
+    do: >-
+      If the Essence filled all three prefixes with nothing you can use and
+      you have another Essence, use an [[Orb of Scouring]] on the mace and
+      then the second Essence. Otherwise keep what you have.
+    why: >-
+      A Wailing Essence cannot be used on the Rare mace again; that is
+      what separates it from Screaming and above. Scouring makes the mace
+      Normal, which is the only state a weak Essence accepts. Quality
+      stays through the Scouring.
+    check: >-
+      Do this before the bench step, not after. The Scouring removes the
+      bench modifier with everything else.
+variations: >-
+  **Which strength at which level.** Whispering adds 1 to 2–3, Muttering 4–5
+  to 8–9, Weeping 6–9 to 13–15, Wailing 8–12 to 17–20. Each fits the stretch
+  of the campaign where you find it. Their level caps on the other
+  modifiers, 35, 45, 60 and 75, only matter if you use one on an item above
+  that level, which is the wrong item for it.
+
+
+  **Why now and not later.** In 3.30 Weeping Essences no longer appear in
+  yellow and red maps, and Wailing ones no longer appear in red maps. Higher
+  up you will be using Screaming and better, which reroll a Rare item and
+  can be repeated. The weak ones are a levelling tool; spend them as you
+  find them.
+
+
+  **A weak Essence of Zeal.** Wailing Zeal guarantees 20–22% attack speed,
+  which is more than the bench sells at any price. If that is the Essence
+  you found, use it the same way and craft the percentage or the flat
+  damage at the bench, whichever the prefixes leave room for.
+mistakes:
+  - "Trying to use a weak Essence on a Magic or Rare mace. Scour it first, or pick a white one."
+  - "Saving weak Essences for the endgame. They do not drop there and are too small to matter there."
+  - "Benching flat Physical Damage after an Essence of Contempt. Same group as the Essence's modifier; the bench refuses."
+  - "Scouring after the bench craft. The Scouring takes the crafted modifier too."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence tiers and their level caps, the in-game text of each Essence strength, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Weeping and Wailing Essences no longer generate in higher map tiers." }

@@ -1,0 +1,216 @@
+category: sceptres
+title: "Two penetrations on one sceptre: an Awakener's Orb craft"
+level: 5
+summary: "Roll one influenced prefix on each of two sceptres, merge them with an Awakener's Orb onto a base that already penetrates, then lock the pair and build the rest."
+goal: >-
+  A lightning attack sceptre whose implicit and two of its prefixes all
+  penetrate resistance: the Sambar Sceptre's 6%, Hunter's "Attacks with this
+  Weapon Penetrate 10–12% Elemental Resistances" and Crusader's "Attacks with
+  this Weapon Penetrate 13–15% Lightning Resistance". The two prefixes need
+  two different influences, which is the one job only an
+  [[Awakener's Orb]] does. The lesson is **planning around an orb that
+  rerolls everything except what you prepared for it.**
+base: "Sambar Sceptre"
+itemLevel: 84
+baseWhy: >-
+  The implicit, "Damage Penetrates 6% Elemental Resistances", is the largest
+  on a Maraketh sceptre and stacks with both prefixes. Item level 78 opens
+  the top tier of each penetration prefix; 84 leaves room for Tier 1 added
+  Lightning Damage (82) if it ever lands. Neither sceptre may be fractured:
+  by reference pages a fractured item cannot be given influence.
+methods: [influence, currency, meta, harvest, bench]
+result:
+  note: "Hunter and Crusader"
+  implicits: ["Damage Penetrates 6% Elemental Resistances"]
+  prefixes:
+    - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+    - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+    - { text: "Adds 7 to 106 Lightning Damage", how: crafted }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1", note: "to make the first sceptre Hunter" }
+  - { item: "[[Crusader's Exalted Orb]]", amount: "1", note: "to make the second Crusader" }
+  - { item: "[[Orb of Alteration]]", amount: "a few hundred", note: "for both parents" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock, plus 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "final bench crafts" }
+cost: >-
+  Two conqueror Exalted Orbs and an [[Awakener's Orb]] are the entry fee,
+  and each can be used once on this item. Then locks: 4 [[Divine Orb]]s and
+  a [[Sacred Orb]] for every suffix reroll. The Alterations for the two
+  parents are the cheap part and the slow part.
+odds: >-
+  **The parents.** On a Hunter sceptre one prefix roll is the attack
+  penetration prefix about 1 time in 78, and its top tier 1 in 311. On a
+  Crusader sceptre the lightning one is 1 in 80, top tier 1 in 321. Our
+  arithmetic from the weights at item level 84.
+
+
+  **The merge.** By reference pages the result keeps one influenced
+  modifier from each parent. With exactly one on each, that is both of
+  yours. Everything else on the result is a fresh random roll.
+
+
+  **The suffixes.** A Speed reforge guarantees a speed modifier, and a
+  sceptre has two: attack speed 53% of the time and cast speed 47%, if the
+  choice is by weight. One reforge in eight would then give attack speed of
+  23% or more. Not measured in 3.30.
+steps:
+  - title: "Parent one: the Hunter prefix, alone, on the Sambar Sceptre"
+    do: >-
+      Use a [[Hunter's Exalted Orb]] on a Rare Sambar Sceptre of item level
+      82 or more, then an Orb of Scouring, a Transmutation and
+      [[Orb of Alteration]]s until the prefix is **"Attacks with this Weapon
+      Penetrate 10–12% Elemental Resistances"**.
+    why: >-
+      The Exalted Orb's job is the influence, not the modifier it adds.
+      Influence belongs to the item, and by long-standing behaviour it
+      stays when the item is scoured; we could not confirm that from the
+      3.30 sources, so look at the item after the Scouring. Rolling the
+      prefix on a Magic item guarantees it is the **only** influenced
+      modifier there, which is what the Awakener's Orb needs to have no
+      choice.
+    check: >-
+      The suffix, if there is one, must not be a Hunter modifier. This is
+      the sceptre that survives, so it is the one whose base and item level
+      matter.
+    state:
+      rarity: magic
+      note: "Hunter"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes: [{ text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }]
+      suffixes: [{ text: "+38 to Strength" }]
+  - title: "Parent two: the Crusader prefix, on any sceptre"
+    do: >-
+      The same with a [[Crusader's Exalted Orb]] on a second sceptre, rolled
+      to **"Attacks with this Weapon Penetrate 13–15% Lightning
+      Resistance"** and nothing else from Crusader.
+    why: >-
+      The Awakener's Orb "destroys an item, applying its influence to
+      another of the same item class". This parent is the one destroyed.
+      Its base is irrelevant, so use the cheapest sceptre of item level 78
+      or more.
+    check: >-
+      Both prefixes are different groups from each other and from the
+      veiled and bench penetration crafts, so they can share an item. A
+      second Crusader modifier on this parent would make the orb's choice
+      random.
+  - title: "The Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the Crusader sceptre, then on the Hunter
+      Sambar Sceptre.
+    why: >-
+      "The second item is reforged as a rare item with both influence types
+      and new modifiers." The Sambar Sceptre comes back Rare, with both
+      influences, both penetration prefixes if the reference pages are
+      right, and whatever else the reforge rolled. Nothing here could have
+      been protected, so nothing else was built first.
+    check: >-
+      Both prefixes present. Count the prefixes: two is ideal, because the
+      third slot is planned for the bench.
+    fail: >-
+      If Magic parents are refused, use a Regal Orb on each and check that
+      it did not add a second influenced modifier. If a prefix is missing
+      after the merge, the rule we relied on has changed: stop and
+      reassess before spending on locks.
+    state:
+      note: "Hunter and Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+      suffixes:
+        - { text: "+41 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+  - title: "Lock the prefixes, reforge for speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]), then **Reforge a Rare item with random modifiers,
+      including a Speed modifier** (150 Vivid Lifeforce). Repeat until the
+      speed modifier is attack speed at a tier you accept, with two suffix
+      slots open if you can get them.
+    why: >-
+      An influenced item cannot be fractured, so the lock is the only
+      protection there is, and it is paid on every attempt. Use the full
+      version: it is understood to leave the prefix side exactly as it is,
+      empty slot included, and the empty slot is spoken for. Speed is the
+      tag with the fewest carriers among the suffixes an attacker wants.
+      On a sceptre that is still two, and the other one is cast speed.
+    check: >-
+      Cast speed instead of attack speed is a failed attempt, however high
+      its tier.
+    fail: >-
+      Set a number of locks before the first. If it runs out, the bench
+      sells attack speed: 11–15% for 2 Chaos Orbs, 16–20% for 4 Exalted
+      Orbs.
+    state:
+      note: "Hunter and Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+  - title: "Three bench modifiers"
+    do: >-
+      With two suffix slots and one prefix slot open: **Can have up to 3
+      Crafted Modifiers** (2 Divine Orbs, a suffix); **adds 6–8 to 100–113
+      Lightning Damage** (4 [[Chaos Orb]]s, the third prefix); **+25–28% to
+      Global Critical Strike Multiplier** (4 Chaos Orbs, the last suffix).
+    why: >-
+      Penetration does nothing without damage to apply it to, and this
+      sceptre has none yet: the third prefix must be added Lightning
+      Damage. The multi-modifier craft is what lets the bench supply that
+      and a damage suffix together.
+    check: >-
+      With only one suffix slot open, craft a single modifier: the added
+      Lightning Damage.
+    state:
+      note: "Hunter and Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+        - { text: "Adds 7 to 106 Lightning Damage", how: crafted }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Is it worth two prefixes?** Be honest about the trade. This sceptre has
+  one prefix of added damage where a simpler one has two or three. Two
+  penetration prefixes pay off for a character whose damage comes mostly
+  from elsewhere, gloves, rings, the passive tree, and who fights enemies
+  with high resistances. For a character that relies on the weapon for its
+  added damage, an Essence of Wrath sceptre with three damage prefixes does
+  more.
+
+
+  **A rolled third prefix.** With the suffix side full and "Cannot roll
+  Caster Modifiers" as one of the suffixes, an Exalted Orb must add a
+  prefix and it cannot be a caster one; by our arithmetic added Lightning
+  Damage for attacks is then about 1 chance in 10. The bench's version is
+  certain and smaller.
+
+
+  **One influence only.** Hunter alone gives the elemental penetration
+  prefix without any merge. The Awakener's Orb is for the second one.
+mistakes:
+  - "A second influenced modifier on either parent. The orb then picks which one to keep."
+  - "Building suffixes before the merge. The Awakener's Orb rerolls them."
+  - "Putting the good base on the sceptre that gets destroyed. The second item you click is the one that survives."
+  - "Using a fractured sceptre as a parent. It cannot take influence, by reference pages."
+  - "Accepting cast speed from the Speed reforge because the tier is high."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Hunter and Crusader modifiers on sceptres with their groups and weights, bench costs, and the item text of the Awakener's Orb and the conqueror Exalted Orbs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Conqueror Exalted Orbs drop from the conquerors; the cost of the protection modifiers." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "One influenced modifier from each item is kept." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured items cannot be given influence." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

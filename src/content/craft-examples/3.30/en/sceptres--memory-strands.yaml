@@ -1,0 +1,164 @@
+category: sceptres
+title: "Spell Damage on a strand base"
+level: 3
+summary: "Memory Strands raise the tier of whatever is rolled. Spell Damage is a common prefix with a rare top, so put strands on the base and spend them through the cheapest orbs."
+goal: >-
+  A caster sceptre with a high tier of Spell Damage, reached with Alterations
+  on a base that carries [[Memory Strands]]. This example is as much about
+  **what is known and what is not** as about the craft: the developers have
+  described strands in words only, and the numbers players quote are
+  measurements and data-mining. The plan below is built to work whichever
+  way those turn out.
+base: "Void Sceptre"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 opens Tier 1 Spell Damage (100–109%), and strands are
+  wasted on a base that cannot reach the tiers they push towards. The Void
+  Sceptre has the 40% implicit. The base must be **Normal** when the strands
+  go on: an Orb of Remembrance only works on a Normal item.
+methods: [strands, currency, bench]
+result:
+  implicits: ["40% increased Elemental Damage"]
+  prefixes:
+    - { text: "91% increased Spell Damage" }
+    - { text: "Adds 38 to 72 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "+48 to Intelligence" }
+    - { text: "27% increased Cast Speed" }
+needs:
+  - { item: "A white item level 84 sceptre", amount: "1" }
+  - { item: "[[Orb of Remembrance]]", amount: "1–3" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "40–100" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  The [[Orb of Remembrance]] is the unusual item; the rest is Alterations,
+  a [[Regal Orb]] and 4 [[Chaos Orb]]s. A sceptre that dropped with strands
+  in an Originator-influenced map saves the orb, if it is Normal or you can
+  live with what it already has.
+odds: >-
+  What the data gives: Spell Damage is 9% of prefix rolls at item level 84,
+  about 1 in 11, and strands do not change that. Without strands, Tier 3 or
+  better is 690 of the family's 8,190 weight, so only about 1 Spell Damage
+  roll in 12 is 70% or more.
+
+
+  What players have measured, for a modifier with 13 tiers: a single strand
+  removes the lowest four tiers from the roll, and 62 or more leave only
+  the top four. Spell Damage has 8 tiers and no one has published its
+  breakpoints, so **we cannot give you a rate.** The direction is not in
+  doubt: the low tiers go first, and they are 92% of this family's weight.
+steps:
+  - title: "Put strands on the white base"
+    do: >-
+      Use an [[Orb of Remembrance]] on the Normal sceptre and read the
+      number of Memory Strands it now shows, from 0 to 100.
+    why: >-
+      The orb "randomises the number of Memory Strands on a normal
+      equipment item". It is the only way to put strands on a base you
+      chose, and it has to happen before the first Transmutation.
+    check: >-
+      A low number is not final: the item is still Normal, so another orb
+      rolls again. Whether that is worth an orb depends on how many you
+      own.
+    state: { rarity: normal, note: "Memory Strands", implicits: ["40% increased Elemental Damage"] }
+  - title: "Alterations, reading two things each time"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s. Before
+      each one, hover it over the sceptre: the game shows how many strands
+      that orb will remove. After each one, read the prefix.
+    why: >-
+      By the data-mined table an Alteration removes at most 8 strands,
+      where an Orb of Alchemy or a Chaos Orb can remove 50 and an Essence
+      80. Whether "at most 8" is a ceiling or a typical amount is not
+      documented, which is why you read the number on every orb instead of
+      trusting a table. Cheap orbs make the strands last across the many
+      rolls it takes to hit the family.
+    check: >-
+      You are waiting for the line "% increased Spell Damage", pure, at
+      **70% or more**. A lower tier while strands remain: roll on.
+    state:
+      rarity: magic
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "43% increased Spell Damage" }]
+      suffixes: [{ text: "+214 to Accuracy Rating" }]
+  - title: "Know when the strands are gone"
+    do: >-
+      Watch the strand count fall. When it reaches zero, decide again
+      whether to continue.
+    why: >-
+      Without strands the sceptre is an ordinary base: Spell Damage of 70%
+      or more is then about 1 prefix roll in 127. Continuing is not wrong,
+      but it is a different craft at a different price, and it should be a
+      decision and not a habit.
+    fail: >-
+      Strands gone, nothing kept: a Spell Damage prefix of 55–69% plus the
+      bench is still a usable weapon. Or scour the sceptre, which makes it
+      Normal again, and use another Orb of Remembrance.
+    state:
+      rarity: magic
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "91% increased Spell Damage" }]
+      suffixes: [{ text: "+48 to Intelligence" }]
+  - title: "Regal Orb while strands remain"
+    do: >-
+      Use a [[Regal Orb]]. Check its strand cost first, as before.
+    why: >-
+      The Regal Orb keeps both modifiers and adds a third, and by the same
+      table it removes at most 16 strands. Any strands still on the sceptre
+      improve the tier of what it adds; they have no better use now.
+    state:
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "91% increased Spell Damage" }]
+      suffixes:
+        - { text: "+48 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+  - title: "Bench the second prefix"
+    do: >-
+      At the [[Crafting Bench]], craft **adds 34–45 to 67–78 Fire Damage to
+      Spells** for 4 [[Chaos Orb]]s, in the element of your spell.
+    why: >-
+      Added damage to spells is a different group from Spell Damage, which
+      multiplies it. The bench modifier is a fixed range; strands have no
+      part in it. Whether crafting at the bench removes strands could not
+      be confirmed, and at this point it no longer matters.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "91% increased Spell Damage" }
+        - { text: "Adds 38 to 72 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "+48 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+variations: >-
+  **Spend them all at the end instead.** An [[Orb of Unravelling]] consumes
+  every strand to try to upgrade the tiers of the modifiers already on the
+  item, bench modifiers excepted. That suits an item whose modifiers are
+  right and whose tiers are not. Every Alteration before it eats into what
+  it has to work with, so choose one plan or the other before step 2.
+
+
+  **An elemental damage prefix.** Increased Fire, Cold or Lightning Damage
+  is a third as common as Spell Damage with an even lighter top, weight 12
+  at Tier 1. Strands suit it for the same reason; the roll count is three
+  times higher.
+
+
+  **What strands do not help.** A gem level has one tier. An Aetheric
+  Fossil or a Harvest reforge does not use strands, by player testing. For
+  those, an ordinary base is the same item for less.
+mistakes:
+  - "Using an Orb of Alchemy or an Essence on a strand base. One use can remove most of the strands."
+  - "Buying a strand base below item level 84 for a top-tier craft. Strands cannot open a tier the item level forbids."
+  - "Not reading the strand cost the game shows on the orb."
+  - "Expecting strands to find the modifier. They improve the tier of what is rolled and nothing else."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Spell Damage tiers and weights, bench costs, and the item text of the Orb of Remembrance and Orb of Unravelling." }
+  - { title: "3.29.2 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3994431", kind: official, note: "The game displays the number of Memory Strands a currency will remove." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "The data-mined table of strands removed per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested strand breakpoints for a 13-tier modifier, and that Fossils and Harvest do not use strands. Not official." }

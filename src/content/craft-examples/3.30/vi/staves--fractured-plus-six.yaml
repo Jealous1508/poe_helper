@@ -1,0 +1,255 @@
+category: staves
+title: "+6 cho spell fire: một prefix gem fractured, cái còn lại từ Fossil"
+level: 5
+summary: "Kế hoạch trọn vẹn cho một cây staff caster hàng đỉnh: dùng phép tính quyết định prefix gem level nào đem fracture, tìm cái còn lại bằng Fossil, dựng lại suffix sau một khóa, và khép lại bằng bench."
+goal: >-
+  Một cây staff có cả "+2 to Level of all Spell Skill Gems" lẫn "+4 to Level
+  of all Fire Spell Skill Gems", cast speed hàng đầu, và mọi ô còn lại đều
+  được lấp có chủ đích. Không công cụ nào ở đây là mới. Thứ làm nó thành lần
+  craft staff khó nhất là **khâu lên kế hoạch**: hai modifier mà cái nào cũng
+  khó roll thường, một orb ngẫu nhiên có thể vứt đi cả một giai đoạn, và một
+  thứ tự đặt giai đoạn rẻ lên trước orb đó.
+base: "Eclipse Staff"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 mở mọi thứ một cây staff caster roll được: +4 cần 77, cast
+  speed tốt nhất cần 83, spell damage tốt nhất cần 84. 100% increased Global
+  Critical Strike Chance của Eclipse Staff hợp với build crit mà ví dụ này
+  hoàn thiện cho; hãy lấy Imperial Staff nếu cần block. Base phải **không có
+  influence**: Fracturing Orb từ chối item có influence, và các trang tra cứu
+  nói fractured item không thể được thêm influence về sau.
+methods: [fracture, fossil, meta, harvest, bench]
+result:
+  note: "Fractured"
+  implicits: ["100% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+2 to Level of all Spell Skill Gems", how: fractured }
+    - { text: "+4 to Level of all Fire Spell Skill Gems", how: fossil }
+    - { text: "Adds 88 to 172 Fire Damage to Spells", how: fossil }
+  suffixes:
+    - { text: "46% increased Cast Speed", how: harvest }
+    - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "112% increased Spell Critical Strike Chance", how: crafted }
+needs:
+  - { item: "Một cây staff có \"+2 to Level of all Spell Skill Gems\" fractured, item level 84+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Faceted Fossil]]", amount: "vài chục" }
+  - { item: "[[Aetheric Fossil]]", amount: "vài chục" }
+  - { item: "[[Scorched Fossil]]", amount: "vài chục", note: "chỉ cho giai đoạn 2" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "một cái mỗi lần thử giai đoạn 2", note: "ba socket; giai đoạn 1 cần hai socket" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho craft bench cuối cùng" }
+cost: >-
+  Base fractured là khoản chi đơn lẻ lớn nhất, và trong 3.30 fractured item
+  hiếm hơn trước: chúng đến từ đồ rơi Tier 5, một
+  [[Fracturing Orb]] hoặc một [[Fractured Fossil]]. Sau đó lần craft được đếm
+  bằng số bộ Fossil ở giai đoạn 2 và bằng số lần khóa ở giai đoạn 3, mỗi lần
+  khóa là 4 [[Divine Orb]] và một [[Sacred Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Giá trong tuần đầu league biến động quá
+  nhanh, và hai giai đoạn ngẫu nhiên đều có đuôi dài, xui thì kéo rất lâu.
+odds: >-
+  **Giai đoạn 2.** Khi "+2 to all" đã fractured và đang dùng ba Fossil, một
+  prefix mới ra +4 fire khoảng 1 trên 28 lần, theo phép tính của chúng tôi.
+  Một bộ roll cả hai prefix trống thì trúng khoảng 1 trên 22 lần. Modifier
+  chỉ có từ Fossil không được tính trong con số đó, nên hãy tính là tệ hơn
+  một chút.
+
+
+  **Giai đoạn 3.** Sau khóa, một reforge Caster cho cast speed 7 trên 13 lần.
+  Nếu tier được bốc theo weight, tier tốt nhất là 1 trên 13 lần thử và hai
+  tier tốt nhất là 2 trên 13. Đây là phép tính của chúng tôi dựa trên weight
+  bằng nhau giữa các tier; chưa được đo trong 3.30. Với 2 trên 13, trung bình
+  là sáu bảy lần khóa, vì vậy nhiều người craft dừng ở 32% trở lên, 3 trên 13
+  lần thử.
+steps:
+  - title: "Dùng phép tính quyết định prefix gem nào đem fracture"
+    do: >-
+      Hãy tính cả hai thứ tự trước khi mua bất cứ thứ gì. **Fracture prefix
+      element trước:** nó kéo cả group của nó ra khỏi pool, và sau đó một
+      [[Faceted Fossil]] với một [[Aetheric Fossil]] ra "+2 to all" trên
+      khoảng 1 trong 19 prefix mới. **Fracture "+2 to all" trước:** sau đó ba
+      Fossil ra +4 fire trên khoảng 1 trong 28 prefix mới. Giờ hãy nhìn mỗi
+      thứ tự đòi gì ở giai đoạn *trước* khi fracture: "+2 to all" xuất hiện
+      trong khoảng 1 trên 9 kết quả ba prefix với hai Fossil; +4 fire trong
+      khoảng 1 trên 21 với ba Fossil.
+    why: >-
+      Đếm bằng Fossil thì hai thứ tự tốn gần như nhau. Khác biệt nằm ở
+      [[Fracturing Orb]]. Nó chọn ngẫu nhiên một modifier, nên khi cây staff
+      có bốn modifier thì nó trượt ba trên bốn lần, và một lần trượt là vứt
+      đi cái giai đoạn đứng trước nó. Hãy đặt giai đoạn rẻ lên trước orb. Đó
+      là "+2 to all": fracture nó, và để +4 lại cho về sau, khi không gì còn
+      xóa được nó.
+    check: >-
+      Nếu bạn mua base thì lập luận này không trói bạn. Cứ mua prefix gem
+      fractured nào rẻ hơn rồi đi theo thứ tự còn lại; một "+2 to all"
+      fractured có lợi thế là phục vụ được mọi element.
+  - title: "Giai đoạn 1: prefix fractured"
+    do: >-
+      Mua một cây staff có "+2 to Level of all Spell Skill Gems" fractured,
+      hoặc tự làm: dùng Faceted Fossil và Aetheric Fossil trong một Resonator
+      hai socket tới khi một kết quả có prefix đó trên cây staff có **đúng
+      bốn** modifier, rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Orb cần ít nhất bốn modifier và mỗi cái thêm nữa đều hạ tỉ lệ xuống.
+      Không gì trong craft thông thường gỡ một modifier một cách an toàn để
+      quay về bốn, nên hãy chờ một kết quả vốn có sẵn bốn cái.
+    fail: >-
+      Nó fracture nhầm thứ khác. Cây staff giờ có sai modifier bị khóa vĩnh
+      viễn, và không fracture lại được nữa. Hãy bắt đầu một base mới. Đây
+      chính là bước khiến phần lớn người chơi chọn mua.
+    state:
+      note: "Fractured"
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+3 to Level of all Cold Spell Skill Gems", how: fossil }
+      suffixes:
+        - { text: "33% increased Cast Speed", how: fossil }
+        - { text: "+44 to Intelligence", how: fossil }
+  - title: "Giai đoạn 2: ba Fossil để lấy +4"
+    do: >-
+      Thêm một [[Scorched Fossil]] và dùng cả ba trong một
+      [[Powerful Chaotic Resonator]] tới khi cây staff có **"+4 to Level of
+      all Fire Spell Skill Gems"**. Chưa có nó thì đừng đọc gì khác.
+    why: >-
+      Prefix fractured sống qua mọi lần roll lại, nên mỗi bộ là một lần thử
+      sạch sẽ cho cái còn lại. Prefix gem fire mang tag fire, caster và gem,
+      và được cả ba Fossil nhân lên. Prefix thứ ba thường sẽ là added fire
+      damage cho spell, thứ mà caster fire giữ lại.
+    check: >-
+      "Magmancer's", khi giữ Alt. +3 là "Lava Conjurer's" và không phải mục
+      tiêu của lần craft này; ghi nhận rồi roll tiếp.
+    fail: >-
+      Không có gì phải sửa. Dùng bộ kế tiếp.
+    state:
+      note: "Fractured"
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+4 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 88 to 172 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "22% increased Cast Speed", how: fossil }
+        - { text: "34% chance to Ignite", how: fossil }
+  - title: "Quyết định suffix của Fossil có đủ dùng không"
+    do: >-
+      Nhìn các suffix mà bộ trúng để lại. Fossil ưu tiên cast speed và Spell
+      Critical Strike Chance, nên chúng thường có mặt. Nếu cast speed đạt mức
+      bạn đặt và còn một ô trống cho bench, nhảy thẳng tới giai đoạn cuối.
+      Nếu không, hãy đếm suffix: giai đoạn 3 cần một ô trống cho khóa.
+    why: >-
+      Bạn đã có thể đòi giai đoạn 2 cho luôn cast speed tốt. Theo phép tính
+      của chúng tôi, +4 fire cùng với cast speed từ 38% trở lên là khoảng 1
+      trên 130 bộ, so với 1 trên 22 cho riêng +4. Thêm một trăm bộ ba Fossil,
+      hay một nắm lần khóa: hãy tính giá cả hai vào đúng ngày đó. Cây staff ở
+      trên có +4 với 22% cast speed và còn một ô trống, nên nó đi tiếp sang
+      giai đoạn 3.
+    fail: >-
+      +4 ra kèm ba suffix bạn không muốn. Không còn chỗ cho khóa và không có
+      cách an toàn nào để tạo chỗ: một Annulment có thể lấy mất +4. Đừng
+      bench gì cả, cứ roll tiếp giai đoạn 2, và nhận cái +4 kế tiếp đi kèm
+      một ô trống. Prefix fractured làm cho việc đó vừa túi tiền.
+  - title: "Giai đoạn 3: khóa, và một reforge Caster"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]), rồi ở [[Horticrafting Station]] **Reforge a
+      Rare item with random modifiers, including a Caster modifier** (75
+      Primal Lifeforce). Lặp lại cả hai tới khi cast speed đạt mức bạn đặt và
+      còn một ô suffix trống.
+    why: >-
+      Khóa là dành cho +4, vốn không fractured. Khi prefix đã đóng, tag
+      caster chỉ có thể rơi vào cast speed hoặc Spell Critical Strike Chance.
+      Ví dụ trước giải thích việc chọn reforge và vì sao ở đây "Cannot roll
+      Attack Modifiers" không đáng ba ô suffix của nó.
+    check: >-
+      Prefix không đổi, tier của suffix được đảm bảo, số suffix. Ra spell
+      crit thay vì cast speed không phải là thất bại: giữ nó và bench cast
+      speed.
+    fail: >-
+      Tier thấp: khóa rồi reforge lại, miễn là còn một ô trống. Ba suffix
+      không mong muốn: phương pháp tới đây là hết, và lựa chọn là giữa cây
+      staff như nó đang có với một vòng giai đoạn 2 nữa, thứ sẽ roll lại cả
+      +4. Hãy đặt số lần khóa trước khi bắt đầu và dừng đúng ở đó.
+    state:
+      note: "Fractured"
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+4 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 88 to 172 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "46% increased Cast Speed", how: harvest }
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Giai đoạn 4: bench đóng ô cuối cùng"
+    do: >-
+      Craft suffix damage còn thiếu: Spell Critical Strike Chance 90–120% giá
+      3 [[Chaos Orb]], hoặc Global Critical Strike Multiplier 25–28% giá 4,
+      hoặc cast speed nếu reforge cho spell crit.
+    why: >-
+      Cả ba prefix đều là roll ra, nên một modifier bench là tất cả những gì
+      cây staff dùng được. "Can have up to 3 Crafted Modifiers" sẽ tiêu một ô
+      suffix để mua một craft thứ hai mà phía prefix không còn chỗ chứa.
+    check: >-
+      Sáu trên sáu ô đã dùng. Hai prefix gem level, sáu level cho một spell
+      fire, và không thứ gì trên cây staff nằm đó do tình cờ.
+    state:
+      note: "Fractured"
+      implicits: ["100% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+4 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 88 to 172 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "46% increased Cast Speed", how: harvest }
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "112% increased Spell Critical Strike Chance", how: crafted }
+  - title: "Hoàn thiện: socket, link, chỉ số"
+    do: >-
+      Sáu socket link nếu chưa làm. Rồi một [[Divine Orb]], chỉ khi các
+      modifier có khoảng đang thấp trong tier của chúng.
+    why: >-
+      Một Divine Orb roll lại mọi chỉ số cùng lúc và không bao giờ đổi tier.
+      Các prefix gem level là con số cố định và không được gì từ nó; cast
+      speed và added damage thì có thể lên hoặc xuống.
+variations: >-
+  **Prefix thứ ba trống.** Nếu giai đoạn 2 để lại +4 và không có prefix thứ
+  ba, cây staff có chỗ cho một prefix bench lẫn một suffix bench. Khi đó "Can
+  have up to 3 Crafted Modifiers" (2 Divine Orb, một suffix) xứng với ô của
+  nó: có nó rồi, craft spell damage 96–115% (4 Exalted Orb) và một suffix
+  damage. Lúc này reforge ở giai đoạn 3 phải để lại hai ô suffix trống.
+
+
+  **Một phần trăm damage thay cho added fire.** Spell damage roll ra cạnh +4
+  là hiếm trong lần craft này, khoảng 1 trên 230 kết quả hai prefix, vì
+  Fossil ưu tiên những modifier có nhiều tag khớp hơn. Đừng chờ nó.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Ở đây, chỗ duy nhất nó có thể đáng tiền là
+  Fracturing Orb ở giai đoạn 1: một lần nhìn xem nó sẽ chọn modifier nào. Bất
+  kỳ thay đổi nào trên cây staff đều kết thúc việc thấy trước, nên một đáp án
+  sai vẫn tốn một Lock.
+
+
+  **Với Memory Strands.** Theo thử nghiệm của người chơi, Fossil và Harvest
+  không dùng strand, nên base có strand không thay đổi gì ở giai đoạn 2 và 3.
+  Một [[Orb of Unravelling]] ở tận cuối có thể nâng cast speed hoặc added
+  damage lên một tier; nó bỏ qua modifier bench, và nó thành công thường
+  xuyên tới đâu là một mô hình của người chơi, không phải con số được công
+  bố.
+mistakes:
+  - "Dùng Fracturing Orb lên cây staff có năm hay sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Roll +4 trước rồi đem nó ra cược với Fracturing Orb. Giai đoạn đắt đi sau orb, không phải trước."
+  - "Đặt influence lên base. Staff có influence thì không fracture được."
+  - "Dọn một suffix bằng Annulment sau giai đoạn 2. +4 không được bảo vệ, và từ 3.30 không modifier \"Cannot roll\" nào lái orb tránh khỏi nó."
+  - "Bench giữa các bộ Fossil. Bộ kế tiếp gỡ nó đi."
+  - "Dùng Essence of Misery ở giai đoạn 3. Essence được ghi nhận là phớt lờ khóa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, tag, hệ số nhân của Fossil, giá bench và mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi và không tính modifier chỉ có từ Fossil." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, giá của các modifier bảo vệ, và thay đổi đối với các modifier \"Cannot roll\"." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Caster và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest và Essence, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

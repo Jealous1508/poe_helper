@@ -1,0 +1,123 @@
+category: rune-daggers
+title: "Cây rune dagger đầu tiên của một caster"
+level: 1
+summary: "Roll Spell Damage bằng Alteration, đưa dagger lên Rare, và hiểu vì sao bench không chịu bán cho bạn thêm damage cùng loại."
+goal: >-
+  Một weapon cho caster ở nửa sau campaign: Spell Damage từ một lần roll,
+  added damage cho spell từ bench. Bài học là cái luật chi phối mọi weapon
+  caster: **mỗi group một modifier, và phần lớn craft damage cho caster là
+  cùng một group.**
+base: "Golden Kris"
+itemLevel: 48
+baseWhy: >-
+  Golden Kris đeo được ở level 47 và có implicit lớn của rune dagger, 60–65%
+  increased Global Critical Strike Chance. Nếu spell của bạn không crit, một
+  Boot Blade (level 44) hoặc Royal Skean (level 50) là cùng lần craft này với
+  yêu cầu Intelligence thấp hơn. Item level 46 mở Spell Damage 55–69%, nên từ
+  46 trở lên là Alteration có được tier tốt nhất của chúng ở level này.
+methods: [currency, bench]
+result:
+  implicits: ["62% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "47% increased Spell Damage" }
+    - { text: "Adds 25 to 49 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "+24 to Intelligence" }
+    - { text: "15% increased Cast Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Vài chục [[Orb of Alteration]], một [[Regal Orb]] và 2
+  [[Orb of Alchemy]]. Không cần Whetstone: quality nâng physical damage của
+  dagger, mà spell thì không dùng nó.
+odds: >-
+  Ở item level này, một lần roll prefix ra Spell Damage từ 40% trở lên khoảng
+  1 trên 23 lần, và từ 30% trở lên khoảng 1 trên 15 lần, theo phép tính của
+  chúng tôi từ weight. Một Alteration không phải lúc nào cũng roll ra prefix.
+  Hơn một nửa những gì bạn thấy trên đường đi sẽ là modifier attack; chúng là
+  phần lớn hơn của pool này.
+steps:
+  - title: "Transmutation, rồi Alteration tới khi ra Spell Damage"
+    do: >-
+      Dùng một [[Orb of Transmutation]] lên cây dagger trắng, rồi
+      [[Orb of Alteration]] tới khi prefix là **increased Spell Damage từ
+      40% trở lên**. Nếu nguồn orb cạn dần, hãy nhận 30%.
+    why: >-
+      Spell Damage là hệ số nhân cơ bản của caster và, ở level này, là prefix
+      mà một lần roll thắng bench với cách biệt lớn nhất. Anh em của nó rất
+      dễ bị nhìn nhầm thành nó. "Adds 24 to 49 Fire Damage" không có mấy chữ
+      "to Spells" là modifier attack, và increased Physical Damage cũng vậy.
+    check: >-
+      Dòng đó ghi "% increased Spell Damage" và không gì khác. Bản có "+ to
+      maximum Mana" đi kèm là một modifier khác, nhỏ hơn; cứ roll tiếp trừ
+      khi bạn đã hết orb.
+    state:
+      rarity: magic
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+  - title: "Augmentation, rồi Regal"
+    do: >-
+      Nếu chưa có suffix, dùng một [[Orb of Augmentation]]. Rồi một
+      [[Regal Orb]].
+    why: >-
+      Cả hai chỉ thêm. Augmentation lấp ô suffix trống, Regal Orb đưa dagger
+      lên Rare với modifier thứ ba. Mỗi cái là một lần ngó miễn phí xem có ra
+      cast speed không, thứ chiếm khoảng một trên mười hai lần roll suffix.
+    check: >-
+      Xếp ba dòng vào prefix và suffix, và ghi nhận bất kỳ modifier attack
+      nào: đó là một ô chết, không phải lý do để làm lại từ đầu ở level này.
+    state:
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+      suffixes:
+        - { text: "+24 to Intelligence" }
+        - { text: "15% increased Cast Speed" }
+  - title: "Hỏi bench thêm Spell Damage, và bị từ chối"
+    do: >-
+      Ở [[Crafting Bench]], nhìn các craft prefix. Increased Spell Damage,
+      Fire Damage, Cold Damage, Lightning Damage và Chaos Damage đều không
+      dùng được trên cây dagger này.
+    why: >-
+      Chúng chung một group với Spell Damage bạn đã roll ra, và một item chỉ
+      chứa một modifier của mỗi group. Ai cũng bị bất ngờ vì chuyện này một
+      lần. Fire Damage của bench không phải "một modifier khác" theo cái
+      nghĩa có ý nghĩa ở đây.
+  - title: "Bench một modifier từ group khác"
+    do: >-
+      Craft **adds 23–31 to 46–54 Fire Damage to Spells** (2
+      [[Orb of Alchemy]]), hoặc Cold hay Lightning cho khớp với spell của
+      bạn. Nếu dagger chưa có cast speed, 10–13% increased Cast Speed (6 Orb
+      of Alteration) là lựa chọn thay thế.
+    why: >-
+      Added damage cho spell là một group riêng và cộng dồn với Spell Damage,
+      thứ nhân nó lên. Mỗi item một modifier bench: lấy added damage nếu một
+      lần roll đã cho cast speed, như ở đây, và lấy cast speed nếu chưa.
+    state:
+      implicits: ["62% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "Adds 25 to 49 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "+24 to Intelligence" }
+        - { text: "15% increased Cast Speed" }
+variations: >-
+  **Nếu roll ra hybrid.** "% increased Spell Damage / + to maximum Mana"
+  không nằm trong group Spell Damage, nên bench *sẽ* thêm Spell Damage của
+  riêng nó bên cạnh: 35–44% giá 8 Orb of Alteration. Hai dòng Spell Damage
+  khiêm tốn có thể thắng một dòng tốt.
+
+
+  **Thay bằng một gem level.** Với một weapon gánh nhân vật qua trọn
+  campaign, ví dụ kế tiếp roll "+1 to Level of all ... Spell Skill Gems" trên
+  một base thấp hơn nhiều.
+mistakes:
+  - "Dừng ở \"Adds ... Fire Damage\" không có \"to Spells\". Đó là bản attack."
+  - "Mua Whetstone cho nó. Không thứ gì caster dùng chịu ảnh hưởng của quality."
+  - "Cố bench Fire Damage lên Spell Damage roll ra rồi cho rằng mình thiếu công thức. Đó là luật group."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight, group của modifier và giá bench. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,125 @@
+category: sceptres
+title: "Bench trên cây sceptre bạn nhặt được"
+level: 1
+summary: "Không roll gì cả: nhặt một cây sceptre Rare dưới đất lên, tìm ra ô nào đang trống, rồi đặt đúng modifier bench vào đó."
+goal: >-
+  Một weapon tốt hơn trong hai phút, từ một cây sceptre Rare rơi ra còn một ô
+  trống. Đây là lần craft mà người chơi nào cũng làm đầu tiên mà không gọi nó
+  là craft, và thường làm sai. Bài học: **một ô trống nằm ở phía này hoặc
+  phía kia, và bench chỉ dùng được phía đang trống**, với một modifier thuộc
+  group mà item chưa có.
+base: "Crystal Sceptre"
+itemLevel: 44
+baseWhy: >-
+  Ở đây không có gì được chọn; đây là cây sceptre đã rơi ra. Crystal Sceptre
+  là một cây may mắn, với 30% increased Elemental Damage trong khi hàng xóm
+  của nó có 18–22%. Phương pháp như nhau với mọi weapon Rare có ít hơn sáu
+  modifier. Nếu nó có sáu, bench không còn chỗ nào để làm việc.
+methods: [bench]
+result:
+  implicits: ["30% increased Elemental Damage"]
+  prefixes:
+    - { text: "44% increased Spell Damage" }
+    - { text: "+73 to maximum Mana" }
+    - { text: "Adds 26 to 50 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "14% increased Cast Speed" }
+    - { text: "+29 to Strength" }
+    - { text: "27% increased Mana Regeneration Rate" }
+needs:
+  - { item: "Một cây sceptre Rare có từ năm modifier trở xuống", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Hai [[Orb of Alchemy]] cho craft được minh họa ở đây, hoặc bốn Orb of
+  Transmutation cho bậc thấp hơn của nó. Không gì có thể hỏng mà bench không
+  hoàn tác được với giá một [[Orb of Scouring]].
+odds: >-
+  Không có. Bench cho đúng modifier được hiện, ở đúng giá được hiện, lần nào
+  cũng vậy. Sự chắc chắn đó là lý do mọi lần craft trên trang này đều chừa
+  một ô cho nó.
+steps:
+  - title: "Xếp các dòng vào prefix và suffix"
+    do: >-
+      Bật Advanced Mod Descriptions trong phần options, giữ Alt rồi rê chuột
+      lên sceptre và đọc nhãn trên từng dòng.
+    why: >-
+      Cây sceptre trong ví dụ này có năm modifier. Spell Damage và maximum
+      Mana là prefix. Cast speed, Strength và Mana Regeneration là suffix.
+      Vậy phía suffix đã đầy, ba trên ba, và phía prefix còn **một ô trống**.
+    check: >-
+      Đếm hai lần. "Nó có năm modifier, nên còn vừa một cái nữa" là đúng, và
+      vô dụng cho tới khi bạn biết là ở phía nào.
+    state:
+      implicits: ["30% increased Elemental Damage"]
+      prefixes:
+        - { text: "44% increased Spell Damage" }
+        - { text: "+73 to maximum Mana" }
+      suffixes:
+        - { text: "14% increased Cast Speed" }
+        - { text: "+29 to Strength" }
+        - { text: "27% increased Mana Regeneration Rate" }
+  - title: "Chỉ nhìn các craft bench cho phía đang trống"
+    do: >-
+      Ở [[Crafting Bench]], bỏ qua mọi craft suffix. Thêm cast speed không
+      phải thứ được chào bán cho item này, dù build có muốn tới đâu.
+    why: >-
+      Một modifier bench là prefix hoặc suffix như mọi modifier khác và cần
+      một ô ở đúng phía của nó. Ô trống ở đây là prefix, nên câu hỏi trở
+      thành: prefix nào?
+  - title: "Loại group bạn đã có"
+    do: >-
+      Bỏ qua increased Spell Damage và increased Fire, Cold và Lightning
+      Damage. Trên cây sceptre này bench sẽ không áp chúng lên.
+    why: >-
+      Tất cả chúng thuộc một group với Spell Damage mà sceptre đã roll ra, và
+      một item chứa mỗi group một modifier. Trên weapon caster, đây là cái
+      luật khiến người ta vấp: Fire Damage của bench trông như một thứ khác,
+      mà không phải.
+  - title: "Craft từ một group khác"
+    do: >-
+      Craft **adds 23–31 to 46–54 Fire Damage to Spells** giá 2
+      [[Orb of Alchemy]] (hoặc Cold hay Lightning, cho khớp với spell của
+      bạn). Bậc thấp hơn, 13–18 to 25–30, tốn 4 Orb of Transmutation.
+    why: >-
+      Added damage cho spell là một group riêng. Spell Damage roll ra nhân nó
+      lên, và implicit cũng vậy, vì damage này là elemental.
+    state:
+      implicits: ["30% increased Elemental Damage"]
+      prefixes:
+        - { text: "44% increased Spell Damage" }
+        - { text: "+73 to maximum Mana" }
+        - { text: "Adds 26 to 50 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "14% increased Cast Speed" }
+        - { text: "+29 to Strength" }
+        - { text: "27% increased Mana Regeneration Rate" }
+  - title: "Đổi nó khi build đổi"
+    do: >-
+      Để thay craft này về sau, chọn "Remove Crafted Mods" ở bench (1
+      [[Orb of Scouring]]) rồi craft thứ khác.
+    why: >-
+      Chỉ modifier bench bị gỡ; năm cái roll ra vẫn ở lại. Đây cũng là lý do
+      bench đi sau cùng trong mọi lần craft dài hơn: nó lúc nào cũng làm lại
+      được, còn mọi thứ khác thì không.
+variations: >-
+  **Một cây sceptre attack.** Vẫn năm bước đó. Với một prefix trống, added
+  Fire hoặc Cold Damage (22–27 to 42–49 giá 2 Orb of Alchemy) hoặc increased
+  Elemental Damage with Attack Skills (24–32% giá 4). Với một suffix trống,
+  attack speed (8–10% giá 6 Orb of Alteration).
+
+
+  **Nếu ô trống là một suffix.** Với caster: cast speed, 10–13% giá 6 Orb of
+  Alteration, trừ khi item đã có nó; khi đó là Spell Critical Strike Chance
+  hoặc Critical Strike Multiplier.
+
+
+  **Công thức bạn chưa tìm thấy.** Bench chỉ liệt kê những gì bạn đã mở khóa
+  từ các vật chứa công thức trong map. Một craft bị thiếu là một công thức bị
+  thiếu, không phải một luật.
+mistakes:
+  - "Đếm modifier mà không phân loại chúng. Một suffix trống không nhận được craft prefix."
+  - "Cho rằng một craft bị từ chối là do thiếu công thức trong khi đó là luật group, hoặc ngược lại."
+  - "Dùng Scouring Orb lên chính item để \"xóa craft\". Việc đó xóa sạch mọi thứ. Gỡ modifier bench thì làm ở bench."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Group của modifier, tier, và các craft bench cùng giá của chúng, kể cả \"Remove Crafted Mods\"." }

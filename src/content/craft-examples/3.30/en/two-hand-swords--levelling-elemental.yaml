@@ -1,0 +1,157 @@
+category: two-hand-swords
+title: "A levelling sword, and how to price a prefix"
+level: 1
+summary: "Before rolling, work out what each prefix would add to this sword's hit. On a levelling sword the answer is added elemental damage, which is also the roll the pool gives most often."
+goal: >-
+  A sword for the middle of the campaign from a handful of Alterations. The
+  item matters less than the sum you do before the first orb: **what would
+  this modifier add to this base?** A percentage is worth what it multiplies.
+  A flat amount is worth the same on any base. Compare the two and you know
+  what to roll for, here and on every weapon after.
+base: "Highland Blade"
+itemLevel: 44
+baseWhy: >-
+  A Highland Blade can be used at level 44, hits for 45–84 at 1.35 attacks a
+  second, and has +305 to Accuracy Rating as its implicit, which means you
+  can forget about accuracy while you level. Item level 43 opens Tier 5 of
+  all three kinds of added elemental damage; hold Alt to check yours is at
+  least that.
+
+
+  Any white two-handed sword of your level works. Redo the sum for its
+  numbers.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["+305 to Accuracy Rating"]
+  prefixes:
+    - { text: "Adds 13 to 229 Lightning Damage" }
+    - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+    - { text: "Adds 42 to 79 Fire Damage", how: crafted }
+  suffixes:
+    - { text: "+27 to Dexterity" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Ten to fifteen [[Orb of Alteration]]s, one [[Regal Orb]] and 2
+  [[Orb of Alchemy]]s at the bench. This is cheaper than the same craft on a
+  mace, because you are rolling for the common thing.
+odds: >-
+  At item level 44, by our arithmetic from the weights, six prefix rolls in
+  ten on a sword are added fire, cold or lightning damage, and one prefix
+  roll in five is the best or second-best tier of one of them that this item
+  level allows. An Alteration does not always roll a prefix, so allow ten to
+  fifteen.
+steps:
+  - title: "Do the sum first"
+    do: >-
+      Write down the sword's hit: 45–84, about 64 on average. Then price the
+      best prefixes this item level can roll. Increased Physical Damage tops
+      out at 85–109% here: about 62 more damage. Added lightning damage at
+      its best tier here is adds 11–14 to 208–242: about 119 on average.
+      Fire, adds 63–85 to 128–148: about 106. Cold, adds 57–77 to 114–132:
+      about 95.
+    why: >-
+      Increased Physical Damage is local. It multiplies the base, so on a
+      base of 64 even 100% is 64. Added elemental damage is the same number
+      on a Highland Blade as on the best sword in the game. Swords have lower
+      base damage than axes or mauls, so the flat prefix wins by more here
+      than it would there.
+    check: >-
+      Two honest limits to the sum. Quality raises the physical side: at 20%
+      the percentage is worth about 75, still less. And elemental damage is
+      reduced by a monster's resistance where physical damage is reduced by
+      its armour. Neither changes the answer while levelling.
+  - title: "Quality, Transmutation, Alterations"
+    do: >-
+      Bring the white sword to 20% quality, use an [[Orb of Transmutation]],
+      then [[Orb of Alteration]]s one at a time. Stop when the prefix is
+      **added fire, cold or lightning damage** whose larger number is at
+      least 91 for fire, 81 for cold or 148 for lightning.
+    why: >-
+      Those thresholds are the two best tiers this item level allows. The
+      sword still deals its own physical damage as well, which is why quality
+      is not wasted. You are rolling for the pool's most common family, so
+      this goes quickly.
+    check: >-
+      The prefix says "Adds … to … Fire, Cold or Lightning Damage" and
+      nothing about spells. Ignore the suffix.
+    fail: >-
+      Short of Alterations: accept the third-best tier. It is still more
+      than the best physical percentage would have added.
+    state:
+      rarity: magic
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes: [{ text: "Adds 13 to 229 Lightning Damage" }]
+  - title: "Augmentation"
+    do: >-
+      If the sword has no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It fills the empty slot of a Magic item and touches nothing else. One
+      suffix roll in three on a sword is attack speed or a critical strike
+      modifier. This one was not.
+    state:
+      rarity: magic
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes: [{ text: "Adds 13 to 229 Lightning Damage" }]
+      suffixes: [{ text: "+27 to Dexterity" }]
+  - title: "Regal Orb"
+    do: >-
+      Use a [[Regal Orb]] and read what it added and on which side.
+    why: >-
+      The sword becomes Rare with both modifiers kept and one more. Here it
+      added the physical hybrid with Accuracy: a second damage prefix,
+      smaller than the first for the reason step 1 gave.
+    state:
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes:
+        - { text: "Adds 13 to 229 Lightning Damage" }
+        - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+      suffixes: [{ text: "+27 to Dexterity" }]
+  - title: "Price the bench the same way"
+    do: >-
+      Do the sum for what the [[Crafting Bench]] offers this sword. A second
+      element, adds 38–46 to 73–85 fire or cold damage for 2
+      [[Orb of Alchemy]]s: about 60. Increased Physical Damage of 60–79% for
+      8 Orbs of Alteration: about 45. Attack speed of 8–10% for 6 Orbs of
+      Alteration: a tenth of everything, about 20 here. Craft the largest
+      that fits: the second element.
+    why: >-
+      Each element is its own group, so fire sits beside the rolled
+      lightning. The bench would have refused a second lightning modifier.
+      Attack speed becomes the better craft later, when the hit it
+      multiplies is bigger.
+    fail: >-
+      If the bench does not list that craft, you have not found the recipe
+      yet. The rank below, adds 19–21 to 32–41 for 4 Orbs of Transmutation,
+      is worth about 28.
+    state:
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes:
+        - { text: "Adds 13 to 229 Lightning Damage" }
+        - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+        - { text: "Adds 42 to 79 Fire Damage", how: crafted }
+      suffixes: [{ text: "+27 to Dexterity" }]
+variations: >-
+  **Why the answer changes later.** Do the same sum on an item level 83
+  Vaal Greatsword, 68–142: "Merciless" at 175% adds about 184, and the best
+  added lightning damage about 313. Flat still wins on paper. But by then
+  your passive tree, gems and other gear multiply one kind of damage and not
+  the other, and the sum has to include them. While levelling they are small
+  and the weapon is nearly everything.
+
+
+  **On an axe.** The same craft works. The gap is narrower because the base
+  hit is larger: on a level 37 Jasper Chopper the best physical percentage
+  and the best added fire damage are worth about the same.
+mistakes:
+  - "Rolling for increased Physical Damage because that is what weapon guides say. They are written for endgame bases and endgame builds."
+  - "Benching a second copy of the element you rolled. One group, one modifier: pick another element."
+  - "Keeping an \"Adds … Lightning Damage to Spells\" modifier. Swords do not roll it naturally, but if you see the words \"to Spells\" anywhere, it does nothing for attacks."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Base damage, tiers, item levels, weights and bench costs. The sums and odds are our arithmetic." }

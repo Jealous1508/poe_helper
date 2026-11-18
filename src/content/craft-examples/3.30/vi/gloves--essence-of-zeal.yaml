@@ -1,0 +1,154 @@
+category: gloves
+title: "Attack speed không thể trượt: một Essence of Zeal"
+level: 2
+summary: "Suffix hiếm nhất trên gloves trở thành thứ chắc chắn duy nhất trên item. Rồi một bảng ba dòng quyết định bench thêm gì."
+goal: >-
+  Gloves chạy map cho build attack: attack speed, life và một resistance. Đây
+  là lần craft cho thấy **vì sao có những công cụ nhắm đích**. Modifier bạn
+  cần nhất lại là cái cuộc xổ số cho ít nhất, nên bạn thôi không xin nó từ
+  cuộc xổ số nữa mà xin những thứ dễ.
+base: "Slink Gloves"
+itemLevel: 72
+baseWhy: >-
+  Slink Gloves là một base Evasion từ level 70 với 242–278 Evasion Rating và
+  không có implicit nào phải bận tâm. Pool Evasion thêm spell suppression vào
+  những gì Essence có thể roll ra bên cạnh modifier của chính nó.
+
+
+  Item level 72 mở Tier 2 của resistance và toàn bộ maximum Life. Attack
+  speed đến từ Essence ở một độ lớn cố định, nên item level không ảnh hưởng
+  tới nó.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "+108 to maximum Life" }
+    - { text: "+134 to Evasion Rating" }
+  suffixes:
+    - { text: "12% increased Attack Speed", how: essence }
+    - { text: "+10% chance to Suppress Spell Damage" }
+    - { text: "+31% to Lightning Resistance", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Zeal]]", amount: "5–15", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench, hoặc 4 Orb of Alchemy để lấy life" }
+cost: >-
+  Essence là toàn bộ chi phí, và Screaming Essence là thứ map đỏ cho trong
+  3.30. Bước bench là 3 [[Chaos Orb]] cho một resistance hoặc 4 Orb of
+  Alchemy cho life.
+odds: >-
+  Không có Essence, ở item level này một trên 113 lần roll suffix là attack
+  speed từ 11% trở lên, theo phép tính của chúng tôi từ weight. Có nó, kết
+  quả nào cũng có 11–13%.
+
+
+  Thứ còn ngẫu nhiên là life. Mỗi prefix mà Essence roll ra là maximum Life
+  khoảng 1 trên 5 lần, và life từ 85 trở lên khoảng 1 trên 15 lần. Một kết
+  quả có prefix trống cũng đạt, vì bench bán life. Vậy nên chỉ một kết cục
+  là hỏng: ba prefix, không cái nào là life.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa đôi Slink Gloves trắng lên 20% quality. Dùng một
+      [[Screaming Essence of Zeal]] lên chúng.
+    why: >-
+      Trên gloves, một Essence of Zeal đảm bảo increased Attack Speed dưới
+      dạng suffix: 11–13% ở bậc Screaming, bằng Tier 2 tự nhiên; 14–16% ở
+      Shrieking, bằng Tier 1; 17–18% ở Deafening, mức mà không lần roll tự
+      nhiên nào với tới. Mọi thứ khác trên item là ngẫu nhiên và được đánh
+      giá ở bước kế.
+    state:
+      prefixes:
+        - { text: "Adds 9 to 17 Fire Damage to Attacks" }
+        - { text: "71% increased Evasion Rating" }
+        - { text: "+16% to Item Rarity" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+35 to Dexterity" }
+  - title: "Đánh giá prefix bằng một cái bảng"
+    do: >-
+      Giữ Alt và xem bạn đang ở trường hợp nào trong ba trường hợp.
+
+
+      **A. Maximum Life từ 85 trở lên đã roll ra.** Giữ. Bench sẽ thêm một
+      resistance.
+
+
+      **B. Không có life như vậy, nhưng còn một ô prefix trống.** Giữ. Bench
+      sẽ thêm life.
+
+
+      **C. Ba prefix và không có life từ 85 trở lên.** Trượt.
+    why: >-
+      Cái bảng tồn tại vì item chỉ nhận một modifier bench mà lại có hai chỗ
+      thiếu khả dĩ. Life là chỗ thiếu quan trọng hơn, và bench chỉ lấp được
+      nó nếu còn một prefix trống. Đôi gloves ở trên là trường hợp C: fire
+      damage, Evasion và Item Rarity lấp cả ba prefix.
+    check: >-
+      Bỏ qua các suffix khác trong lúc đánh giá. Một suffix tốt thứ hai là
+      phần thưởng thêm; Essence đã cấp sẵn cái đáng kể.
+    fail: >-
+      Trường hợp C: dùng Essence kế tiếp lên cùng đôi gloves đó. Từ bậc
+      Screaming trở lên, một Essence roll lại item Rare, và attack speed quay
+      lại mỗi lần.
+  - title: "Lặp lại tới khi ra trường hợp A hoặc B"
+    do: >-
+      Dùng Essence từng cái một, đọc prefix sau mỗi cái.
+    why: >-
+      Mỗi lần dùng độc lập với nhau. Đừng cố chờ trường hợp A với suffix hoàn
+      hảo: bạn đang trả một Essence mỗi lần thử cho những cải thiện mà bench
+      bán với giá vài orb.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+  - title: "Bench theo bảng"
+    do: >-
+      **Trường hợp A** (như ở đây): ở [[Crafting Bench]], craft một
+      resistance vào một suffix trống, +29–35% giá 3 [[Chaos Orb]]. **Trường
+      hợp B:** craft maximum Life vào prefix trống, +56–70 giá 4 Orb of
+      Alchemy.
+    why: >-
+      Bench không thêm được attack speed ở đây, mà bạn cũng chẳng muốn nó
+      thêm: 7–12% của nó cùng group với modifier của Essence và sẽ bị từ
+      chối. Nó lấp chỗ thiếu mà cuộc xổ số để lại.
+    check: >-
+      Trường hợp A mà không còn suffix trống: thay vào đó hãy craft một
+      prefix damage nếu còn một prefix trống, chẳng hạn 31–36% increased
+      Damage while Leeching giá 3 Chaos Orb.
+    state:
+      prefixes:
+        - { text: "+108 to maximum Life" }
+        - { text: "+134 to Evasion Rating" }
+      suffixes:
+        - { text: "12% increased Attack Speed", how: essence }
+        - { text: "+10% chance to Suppress Spell Damage" }
+        - { text: "+31% to Lightning Resistance", how: crafted }
+variations: >-
+  **Một base Atlas.** Cùng lần craft đó trên Spiked Gloves hoặc Gripped
+  Gloves thêm 24–30% Melee Damage hoặc 22–28% Projectile Attack Damage từ
+  implicit, trên khoảng 60% defence. Chỉ chọn nó nếu bạn sẽ không bao giờ đặt
+  một Eldritch implicit lên đôi đó: theo dòng chữ của các Ember và Ichor, cái
+  đầu tiên thay implicit của base.
+
+
+  **Critical strike.** Một Essence of Loathing hoạt động theo cùng cách và
+  đảm bảo increased Global Critical Strike Chance, từ 18–20% ở bậc Screaming
+  tới 24–26% ở Deafening. Một item nhận một modifier Essence, nên hoặc là
+  attack speed hoặc là cái này, còn cái kia đến từ bench hoặc một implicit.
+
+
+  **Chưa có Essence.** 7–12% attack speed của bench giá 2 Chaos Orb, trên
+  gloves làm bằng bất kỳ đường nào khác, là cùng ý tưởng đó ở một con số thấp
+  hơn.
+mistakes:
+  - "Giữ trường hợp C vì suffix tốt. Một phía prefix đầy mà không có life thì bench không sửa được."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp gỡ nó mất."
+  - "Dùng cách này trên base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand, theo bảng data-mine, và modifier của chính Essence có độ lớn cố định mà strand không nâng được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên gloves, tier, weight và giá bench, cùng dòng chữ in-game của các Eldritch Ember. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào; implicit của các gloves Atlas." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

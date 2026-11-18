@@ -1,0 +1,153 @@
+category: flasks
+title: "A hard prefix, and a suffix from the Blood Altar"
+level: 2
+summary: "Roll a good prefix on a life flask with the suffix slot left empty, then let a red beast add curse removal with certainty."
+goal: >-
+  A panic-button life flask: fully instant when you are on Low Life, and it
+  removes curses when pressed. The lesson is the craft turned round. Until
+  now you rolled the suffix and took whatever prefix came. Here **the prefix
+  is the part worth rolling, and the suffix is bought**, so one of the two
+  lotteries disappears.
+base: "Divine Life Flask"
+itemLevel: 82
+baseWhy: >-
+  The Divine Life Flask restores the most life of any base, 2,400 over 3.5
+  seconds, and holds three uses. "Instant Recovery when on Low Life" comes in
+  five tiers that differ only in how much of that amount they take away. Item
+  level 81 opens the best, 14–11% reduced Amount Recovered; the one below it,
+  18–15%, needs 63. On a flask of item level 82 both can roll.
+methods: [currency, beast, finishing]
+result:
+  rarity: magic
+  prefixes:
+    - { text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }
+  suffixes:
+    - { text: "Removes Curses on use", how: beast }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "A red beast in the [[Menagerie]]", amount: "at least 1", note: "the recipe shows what it asks for" }
+  - { item: "[[Glassblower's Bauble]]", amount: "to 20%" }
+cost: >-
+  Alterations in bulk, and a red beast. Since 3.30 yellow beasts are not
+  captured at all, so every beast in your [[Menagerie]] has other uses. This
+  one goes into a flask only because the prefix took real effort to find.
+odds: >-
+  At item level 82, one prefix roll is "Instant Recovery when on Low Life" at
+  18% reduced or better about 1 time in 31, by our arithmetic from the
+  weights; the best tier alone is 1 in 62.
+
+
+  The step asks for more than that prefix: the suffix slot has to be empty
+  on the same result. The data does not say how often an Alteration gives
+  one modifier and not two, so we cannot give the full figure. If it were a
+  quarter of the time for a prefix alone, a common assumption among players
+  that we have not verified, the step would average about 125 Alterations.
+
+
+  The beast step has no odds. The recipe adds the suffix it names.
+steps:
+  - title: "Read the recipe before the first orb"
+    do: >-
+      Go to the [[Blood Altar]] in the [[Menagerie]] and find the flask
+      recipe that adds "of Warding". Read what it asks for and check that you
+      own it.
+    why: >-
+      The 3.30 patch notes say flask recipes now "require any Red Beast". How
+      many each recipe takes we could not confirm, and there is no point
+      rolling a prefix for a suffix you cannot pay for.
+    fail: >-
+      No beast to spare: roll the suffix instead. "Removes Curses on use" is
+      about 1 suffix roll in 10 at this item level, and the first variation
+      below says what asking for both at once costs.
+    state: { rarity: normal }
+  - title: "Alterations to the prefix"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s. Read the
+      prefix each time. You want "Instant Recovery when on Low Life" with 18%
+      reduced Amount Recovered or less: the names are "Terrified" and
+      "Panicked".
+    why: >-
+      All five tiers of this prefix weigh the same, so the two best are two
+      fifths of the family. The lower tiers take 19% to 30% of the recovery
+      away, which on a 2,400 flask is a lot of life to give up.
+    check: >-
+      When the prefix is right, look at the suffix slot. The result below is
+      the awkward one: the best tier of the prefix, with a poison cure
+      attached that you did not ask for.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 13% reduced Amount Recovered" }]
+      suffixes: [{ text: "Grants Immunity to Poison for 13 seconds if used while Poisoned" }]
+  - title: "Get the prefix alone"
+    do: >-
+      If a suffix came with the prefix, decide. A cure you would use anyway,
+      such as bleeding: keep the flask, you are finished without a beast.
+      Anything else: keep using Alterations until the prefix appears with the
+      suffix slot **empty**. Do not use an Augmentation.
+    why: >-
+      The beast recipe adds a suffix to a flask that has none. A filled
+      suffix slot, good or bad, closes that door, and nothing removes one
+      modifier from a Magic item safely.
+    fail: >-
+      An [[Orb of Annulment]] removes one modifier at random. With two on the
+      flask that is an even chance of taking the prefix you were rolling for.
+      Use one only if you would shrug at losing the flask.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+  - title: "The suffix, at the Blood Altar"
+    do: >-
+      In the Menagerie, use the flask recipe for "of Warding" on the flask.
+    why: >-
+      The recipe puts "Removes Curses on use" in the empty slot. No roll is
+      involved. This suffix has a single tier, so the beast gives exactly
+      what an Alteration would have given, which is not true of the other
+      flask recipes.
+    check: >-
+      The flask now reads "of Warding" and has both slots filled.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+      suffixes: [{ text: "Removes Curses on use", how: beast }]
+  - title: "Quality"
+    do: >-
+      Take the flask to 20% quality with [[Glassblower's Bauble]]s.
+    why: >-
+      Quality raises the amount a life flask recovers, by long-standing
+      behaviour, and this prefix has just taken some of that amount away.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Instant Recovery when on Low Life / 16% reduced Amount Recovered" }]
+      suffixes: [{ text: "Removes Curses on use", how: beast }]
+variations: >-
+  **Rolling both instead.** Asking one Alteration for this prefix and this
+  suffix together is 1 in 31 times 1 in 10, about 1 in 300 by our arithmetic.
+  That is the lottery the beast removes. For a prefix any twenty Alterations
+  would give you, it is not worth a beast; for this one it is.
+
+
+  **The bench does the same for Baubles.** Its five flask suffixes cost 6
+  [[Glassblower's Bauble]]s each and also need an empty suffix slot. The
+  first three steps are identical; only the last stop changes. Of the five,
+  "Regenerate 3% of Life per second during Effect" and "50% Chance to Avoid
+  being Stunned during Effect" are the two that protect you; the others are
+  item rarity, reflected damage and a leech from damage taken.
+
+
+  **The other beast suffixes, and their price in tiers.** On life and mana
+  flasks the recipes also add of Sealing (bleeding), of Convection (chill and
+  freeze), of Damping (ignite), of Earthing (shock) and of the Antitoxin
+  (poison): each is the lowest tier, 6–8 seconds of immunity where the best
+  is 15–17. On utility flasks: of the Lizard, of the Deer, of the Urchin, of
+  the Conger and of the Skunk, each a full immunity during the effect at
+  49–45% less Duration, where the best tier costs 39–35%.
+mistakes:
+  - "Using an Augmentation \"to see\". The recipe needs an empty suffix slot, and the Augmentation fills it with something random."
+  - "Spending a red beast on a flask whose prefix is common. Instant Recovery, the plain kind, is 1 prefix roll in 12 here; roll the suffix with it."
+  - "Expecting the best tier from a beast. Apart from \"of Warding\", every flask recipe gives the lowest tier of its family."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and the bench suffixes. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Flask beastcrafting requires any Red Beast; yellow beasts are no longer captured." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The suffix each flask recipe adds. The number of beasts per recipe is not stated there." }

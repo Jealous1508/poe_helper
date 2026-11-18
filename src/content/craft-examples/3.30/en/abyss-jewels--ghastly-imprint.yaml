@@ -1,0 +1,148 @@
+category: abyss-jewels
+title: "A Ghastly Eye for minions, with an Imprint"
+level: 3
+summary: "Roll flat minion damage and minion speed on a Magic Ghastly Eye, save it with a beast Imprint, and repeat the Regal Orb until the third line is one the build uses."
+goal: >-
+  A three-line minion jewel in which nothing is idle. The Imprint is the only
+  safety net any jewel has, and the Ghastly Eye is where it pays best: its
+  pool is so dense with minion modifiers that a Regal Orb has a real chance
+  of adding a third. The lesson is **matching the bar for the Regal Orb to
+  the number of beasts you own.**
+base: "Ghastly Eye Jewel"
+itemLevel: 83
+baseWhy: >-
+  The Ghastly Eye is the only ordinary eye with minion modifiers. Item level
+  83 is the lowest at which Tier 1 of "Minions deal additional Physical
+  Damage" can roll, and it also covers Tier 1 Life (82). The craft below
+  accepts lower tiers than that; the item level is there so that a lucky
+  roll is not capped.
+methods: [currency, beast]
+result:
+  prefixes:
+    - { text: "Minions deal 19 to 25 additional Physical Damage" }
+    - { text: "+29 to maximum Life" }
+  suffixes:
+    - { text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }
+needs:
+  - { item: "A Ghastly Eye Jewel", amount: "1", note: "item level 83 or higher" }
+  - { item: "[[Orb of Alteration]]", amount: "250–500" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+cost: >-
+  A few hundred [[Orb of Alteration]]s for the Magic jewel, then one Croaker
+  and one [[Regal Orb]] per attempt, about six attempts on an average run.
+  Only red beasts are captured in 3.30, so check the [[Menagerie]] first.
+odds: >-
+  **The Magic jewel.** At item level 83 a prefix roll is physical minion
+  damage at Tier 3 or better 3.15% of the time, or Life at +31 or better
+  3.85%: 7% together, 1 in 14. A suffix roll is minion attack and cast speed
+  (3.6%) or "Minions deal increased Damage if you've used a Minion Skill
+  Recently" (2.3%): 5.9%, 1 in 17. Both: about 0.41%, 1 two-modifier jewel
+  in 240, by our arithmetic.
+
+
+  **The Regal Orb**, with the bar set as in step 4: about 17%, 1 attempt in
+  6, if a prefix and a suffix are equally likely to be added. That
+  assumption is ours.
+steps:
+  - title: "Roll the Magic jewel to two hits at their tiers"
+    do: >-
+      Use [[Orb of Alteration]]s and [[Orb of Augmentation]]s until the
+      **prefix** is "Minions deal additional Physical Damage" at Tier 3 or
+      better (14–17 to 20–23 or higher) or Life at +31 or more, and the
+      **suffix** is minion attack and cast speed or the minion damage
+      suffix.
+    why: >-
+      Use the damage type your minions deal; the five types are five
+      groups with the same weights, and their numbers and item levels
+      differ only a little. Whatever the Magic jewel
+      holds is in every Imprint of it, so both sides have to be right
+      before you save anything.
+    check: >-
+      Hold Alt and read the tier of the damage prefix. Tier 6 of the same
+      line is "2–3 to 5–8", a fifth of Tier 2.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Minions deal 19 to 25 additional Physical Damage" }]
+      suffixes: [{ text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }]
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item** on the
+      jewel: one [[Craicic Croaker]] and three other Rare beasts.
+    why: >-
+      The Magic jewel took a couple of hundred Alterations. A Regal Orb is
+      about to add one random line to it, and nothing on a jewel can be
+      locked or removed with certainty afterwards. The Imprint lets you
+      take that roll again.
+    check: >-
+      The [[Imprint]] sits in your inventory as its own item until you use
+      it.
+    state:
+      rarity: magic
+      prefixes: [{ text: "Minions deal 19 to 25 additional Physical Damage" }]
+      suffixes: [{ text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }]
+  - title: "Count your beasts and set the bar for the Regal Orb"
+    do: >-
+      Before the Regal Orb, write down what you will accept as the third
+      line. With six or more Croakers: Life at +26 or more as a prefix; as
+      a suffix, minion Life, minion damage, minion Taunt, or any resistance
+      of your own. With two or three Croakers: add everything harmless you
+      would not mind, such as attributes.
+    why: >-
+      The bar sets the number of attempts. With the first list about one
+      Regal Orb in six passes. Asking for one exact line, such as Life
+      at +31 or more, would be about 1 in 50, which is more Croakers than the jewel
+      is worth.
+  - title: "Regal Orb, judge, repeat"
+    do: >-
+      Use a [[Regal Orb]]. If the new line passes the bar, stop. If not,
+      use the Imprint to return the jewel to its Magic state, make a new
+      Imprint with another Croaker, and use another Regal Orb.
+    why: >-
+      The Ghastly Eye's suffix pool is the smallest of the five, 22,100,
+      and about half of it is minion modifiers. That is why the Regal Orb
+      succeeds more often here than on any other jewel.
+    fail: >-
+      Out of beasts: the last Regal Orb stands, whatever it added. The two
+      lines you rolled are still there.
+    state:
+      prefixes:
+        - { text: "Minions deal 19 to 25 additional Physical Damage" }
+        - { text: "+29 to maximum Life" }
+      suffixes:
+        - { text: "Minions have 5% increased Attack Speed / Minions have 5% increased Cast Speed" }
+  - title: "The open suffix, and the numbers"
+    do: >-
+      One suffix slot is open: an [[Exalted Orb]] there is a free roll
+      whenever you can spare one. Then look at the numbers inside each
+      tier, and use a [[Divine Orb]] if the damage prefix sits at the
+      bottom of its range.
+    why: >-
+      No line on an Abyss jewel is harmful, so the fourth can only help. A
+      Divine Orb rerolls every value at once without changing a tier.
+variations: >-
+  **A second damage type.** "Minions deal additional Fire Damage" and
+  "additional Physical Damage" are different groups, so a build whose
+  minions scale two types can take both prefixes and no Life. The five
+  minion damage prefixes together are 42% of prefix rolls.
+
+
+  **One caution on groups.** "Minions Regenerate Life per second" (a
+  prefix) and "Minions Regenerate % of Life per second" (a suffix) are one
+  group. A jewel has one or the other.
+
+
+  **Without beasts.** Regal the Magic jewel bare and accept the result. By
+  the same arithmetic you keep a three-line jewel about one time in six and
+  a two-line jewel with an idle third the rest of the time.
+mistakes:
+  - "Setting a bar for the Regal Orb that needs more Croakers than you own."
+  - "Saving a Magic jewel with a low tier of the damage prefix. Every attempt then builds on it."
+  - "Looking for critical strike suffixes on a Ghastly Eye. It has none."
+  - "Using the Regal Orb before the Imprint. An Imprint cannot be made of a Rare item."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Ghastly Eye Jewel pool, tiers, item levels, weights and groups. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the beast it needs." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Yellow beasts are no longer captured." }

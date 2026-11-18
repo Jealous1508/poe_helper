@@ -1,0 +1,190 @@
+category: two-hand-axes
+title: "Một cây axe bleed: chọn Fossil theo thứ chúng gỡ"
+level: 3
+summary: "Trên axe, rắc rối là 63% weight prefix thuộc về elemental. Một Corroded Fossil xóa phần đó, một Jagged Fossil nhân phần còn lại, và bench thêm bleed multiplier."
+goal: >-
+  Một cây Sundering Axe có ba prefix physical, hoặc hai cái cộng prefix bleed
+  chỉ Fossil mới ra, hoàn thiện bằng Physical Damage over Time Multiplier của
+  bench. Hướng dẫn về mace cho thấy một Fossil làm gì với một pool. Ví dụ này
+  nói về việc **so các Fossil bằng phép tính trước khi mua cái nào**, và về
+  việc đọc cái nửa mô tả của Fossil có chữ "No".
+base: "Sundering Axe"
+itemLevel: 77
+baseWhy: >-
+  Sundering Axe mang +20% to Damage over Time Multiplier for Bleeding làm
+  implicit, thứ không lần craft nào thêm được vào base khác, và nó rơi từ
+  level 60. Item level 77 mở Tier 1 của flat Physical Damage và Tier 2 của cả
+  hai prefix phần trăm. Roll lại bằng Fossil rơi vào tier giữa thường xuyên
+  hơn hẳn tier cao nhất, nên item level 83 sẽ là mua một tier bạn hiếm khi
+  thấy.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+  prefixes:
+    - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+    - { text: "118% increased Physical Damage", how: fossil }
+    - { text: "Adds 26 to 55 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+    - { text: "+33% to Physical Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Corroded Fossil]]", amount: "15–30" }
+  - { item: "[[Jagged Fossil]]", amount: "15–30" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ chứa được hai Fossil" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Hai Fossil và một Resonator hai socket mỗi lần thử, tất cả từ Delve, nơi mà
+  trong 3.30 đường vào đi qua những map luôn spawn Sulphite. Bước bench là 4
+  [[Chaos Orb]]. Không gì ở đây được bảo vệ, nên mỗi lần thử thay hoàn toàn
+  kết quả trước đó.
+odds: >-
+  Tất cả những điều này là phép tính của chúng tôi trên pool prefix **tự
+  nhiên** ở item level 77. Không có Fossil, một lần roll prefix ra physical
+  30% số lần và ba prefix là ba họ physical chưa tới một trên một trăm lần.
+  Chỉ với Corroded Fossil: 83%, và ba họ khoảng 36% số lần. Chỉ với Jagged
+  Fossil: 81% và 33%. Với cả hai: 98% và 88%.
+
+
+  Có hai thứ nằm ngoài phép tính đó. Các modifier chỉ Fossil mới ra, thứ mà
+  bản xuất dữ liệu liệt kê cho loại item này mà không nói Fossil nào mở chúng
+  hay với weight bao nhiêu. Và tier: với cả hai Fossil, một lần roll prefix ra
+  increased Physical Damage thuần từ 110% trở lên khoảng 1 trên 42 lần. Đủ họ
+  thì một nắm lần thử; tier tốt thì vài chục.
+steps:
+  - title: "So các Fossil trên giấy"
+    do: >-
+      Trước khi mua, hãy đọc cả hai nửa của từng Fossil. Corroded: "More
+      Physical Ailment or Chaos Ailment modifiers, **No Elemental
+      modifiers**". Jagged: "**More Physical modifiers**, No Chaos
+      modifiers".
+    why: >-
+      Không gì trong pool tự nhiên của axe mang tag bleed hay poison, nên chữ
+      "More" của Corroded Fossil không làm gì với nó. Chữ "No" thì làm tất cả:
+      added fire, cold và lightning damage cùng phần trăm elemental đều mang
+      tag elemental, và cộng lại chúng là 63% weight prefix. Gỡ chúng đi thì
+      thứ còn lại phần lớn là physical mà chẳng cần nhân gì cả. Jagged Fossil
+      tới cùng chỗ đó từ phía bên kia, bằng cách làm modifier physical nặng
+      gấp mười.
+    check: >-
+      Khác biệt lộ ra ở phía suffix. Hai suffix leech mang tag physical, nên
+      Jagged Fossil cũng nhân chúng lên: có nó, khoảng một phần ba số lần roll
+      suffix là leech. Corroded Fossil để suffix y nguyên như cũ.
+  - title: "Chuẩn bị cây axe"
+    do: >-
+      Đưa một cây Sundering Axe trắng item level 77 lên 20% quality và biến nó
+      thành Rare bằng một [[Orb of Alchemy]].
+    why: >-
+      Chaotic Resonator roll lại item Rare. Orb of Alchemy roll ra cái gì
+      không quan trọng; Resonator đầu tiên sẽ thay nó.
+    state:
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "Adds 71 to 143 Fire Damage" }
+        - { text: "Adds 11 to 219 Lightning Damage" }
+      suffixes:
+        - { text: "+31 to Dexterity" }
+        - { text: "24% increased Stun Duration on Enemies" }
+  - title: "Cả hai Fossil trong một Resonator"
+    do: >-
+      Gắn một [[Corroded Fossil]] và một [[Jagged Fossil]] vào một
+      [[Potent Chaotic Resonator]] rồi dùng nó lên cây axe.
+    why: >-
+      Hiệu ứng của chúng kết hợp lại. Một cái gỡ 63% elemental, cái kia nhân
+      các họ physical lên mười lần so với chút ít còn lại, tức là level của
+      socketed gem. Theo phép tính của chúng tôi, khi đó 98 trên 100 lần roll
+      prefix tự nhiên là physical. Nếu bạn chỉ muốn **hai** prefix physical và
+      có quan tâm tới suffix, hãy dùng riêng Corroded Fossil trong một
+      Resonator một socket: 83%, và không bị ngập leech.
+    state:
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "Adds 14 to 30 Physical Damage", how: fossil }
+        - { text: "31% increased Physical Damage / +58 to Accuracy Rating", how: fossil }
+        - { text: "52% increased Physical Damage", how: fossil }
+      suffixes:
+        - { text: "2.8% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "2.2% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+22 to Strength", how: fossil }
+  - title: "Đánh giá tier, không phải tên"
+    do: >-
+      Kết quả ở trên có đủ ba họ physical mà vẫn là một cây axe tồi: cái nào
+      cũng ở tier chót. Hãy đặt mức trước khi bắt đầu và giữ đúng nó. Cho một
+      cây axe bleed chạy map: increased Physical Damage thuần từ 110% trở lên,
+      flat Physical Damage từ adds 20 trở lên, hybrid từ 35% trở lên, **bất kỳ
+      hai trong ba**, và ít nhất một suffix trống.
+    why: >-
+      Fossil thay đổi việc bạn nhận được modifier nào. Nó không làm gì cho
+      tier: các tier thấp của một họ được nhân cũng được nhân theo. Ở lần
+      craft này các họ gần như lần nào cũng tới, nên tier là thứ duy nhất còn
+      lại để đánh giá.
+    fail: >-
+      Dùng cặp Fossil kế tiếp lên chính cây axe đó.
+  - title: "Prefix bleed chỉ Fossil mới ra"
+    do: >-
+      Để ý một prefix ghi **60% chance for Bleeding inflicted with this Weapon
+      to deal 100% more Damage**. Nếu nó tới bên cạnh hai prefix physical đạt
+      mức của bạn, như trong kết quả minh họa, hãy dừng.
+    why: >-
+      Dữ liệu liệt kê nó là một prefix chỉ Fossil mới ra cho axe hai tay, mang
+      tag bleed và physical, đúng hai tag mà các Fossil này nhân lên. Người
+      chơi từ lâu đã coi nó là modifier riêng của Corroded Fossil. Bản xuất dữ
+      liệu của chúng tôi không nói Fossil nào mở nó hay nó tới thường xuyên cỡ
+      nào, nên chúng tôi không đưa ra tỉ lệ cho nó. Nó có một bản song sinh
+      cho poison, thứ mà trên axe bleed là một prefix phí.
+    check: >-
+      Nó chiếm một ô prefix, nên một cây axe có nó giữ hai trong ba họ
+      physical, không phải ba. Với build bleed, đó là một cuộc đổi chác tốt.
+    state:
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "Adds 26 to 55 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Bench bleed multiplier"
+    do: >-
+      Ở [[Crafting Bench]], craft **+31–35% to Physical Damage over Time
+      Multiplier** vào một suffix trống: 4 [[Chaos Orb]].
+    why: >-
+      Prefix đã đầy damage, nên bench dành cho phía suffix. Modifier này khác
+      group với "+% to Damage over Time Multiplier" tự nhiên, nên nếu cái kia
+      có lúc roll ra thì hai cái cộng dồn. Attack speed từ bench là lựa chọn
+      thay thế, và với một build gây bleed bằng một cú đánh nặng thì đó là lựa
+      chọn yếu hơn.
+    state:
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "118% increased Physical Damage", how: fossil }
+        - { text: "Adds 26 to 55 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "2.9% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+33% to Physical Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Nếu hybrid kèm Accuracy roll ra còn bản phần trăm thuần thì không.** Khi
+  đó bench có chỗ dùng tốt hơn: increased Physical Damage kèm chance to cause
+  Bleeding, 95–105% kèm 18–20% giá 8 Chaos Orb, vào prefix trống. Nó thuộc
+  group của bản phần trăm thuần và nằm vừa cạnh hybrid.
+
+
+  **Prefix tốt, suffix vô dụng.** Đừng roll lại. Ba prefix tốt là nửa đắt
+  tiền, và "Prefix Modifiers cannot be changed" cùng một reforge Harvest dựng
+  lại phía suffix mà không đụng tới chúng, như ví dụ "Khóa prefix, dựng lại
+  suffix" của hướng dẫn về mace cho thấy. Còn chính Fossil đối xử với khóa đó
+  ra sao trong 3.30 thì chúng tôi chưa xác nhận được, nên đừng dùng Resonator
+  lên item đã khóa.
+
+
+  **Trên base có strand.** Vô ích: theo thử nghiệm của người chơi, Fossil
+  không dùng [[Memory Strands]] mà cũng không hưởng lợi từ chúng.
+mistakes:
+  - "Chỉ đọc dòng \"More\" của Fossil. Trên axe, dòng \"No\" của Corroded Fossil là hiệu ứng mạnh nhất mà cả hai Fossil có."
+  - "Giữ ba prefix physical ở các tier chót. Hai cái tốt cộng một craft bench là một cây axe tốt hơn."
+  - "Dùng Jagged Fossil trong khi bạn muốn attack speed từ cùng lần roll lại đó. Một phần ba số lần roll suffix thành leech."
+  - "Coi prefix bleed chỉ Fossil mới ra là được đảm bảo. Chúng tôi không đưa ra được con số cho nó, và bạn cũng vậy cho tới khi đã dùng hết một stack."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight và mô tả của Fossil, tag trên từng modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi và chỉ tính pool tự nhiên." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

@@ -1,0 +1,166 @@
+category: warstaves
+title: "Lần nào cũng ra một prefix physical: reforge Harvest thay cho Essence"
+level: 2
+summary: "Dữ liệu không có Essence nào cho warstaff, nên modifier được đảm bảo đến từ Harvest. Reforge kèm một modifier Physical tới khi hai prefix physical nằm cạnh nhau, rồi bench cái thứ ba."
+goal: >-
+  Một cây warstaff cho những map đầu tiên của bạn, có hai prefix physical
+  roll ra và một cái từ bench. Trên maul, đây sẽ là một lần craft Essence of
+  Contempt. Ở đây thì không thể, và thứ thay thế dạy một điều mà Essence
+  không dạy: **reforge đảm bảo một tag, nên trước khi trả tiền cho nó, hãy
+  đếm xem những gì mang tag đó.**
+base: "Ezomyte Staff"
+itemLevel: 73
+baseWhy: >-
+  Ezomyte Staff rơi từ level 60 với implicit +25% block và critical strike
+  chance gốc cao nhất của loại item này, 8.5%. Item level 73 mở Tier 2 của cả
+  hai prefix phần trăm, cao tới đó là vừa xứng với phương pháp này; một base
+  level 60 vẫn dùng được và chỉ lên tới tier thấp hơn một bậc.
+methods: [harvest, beast, bench, finishing]
+result:
+  implicits: ["+25% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+    - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+17% Chance to Block Attack Damage", how: harvest }
+    - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 mỗi lần reforge", note: "hãy tính 15–30 lần reforge" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "1", note: "không bắt buộc, cộng ba beast Rare" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Lifeforce là toàn bộ chi phí: 50 [[Vivid Crystallised Lifeforce]] mỗi lần
+  reforge, loại reforge rẻ nhất hiện có. Trong 3.30 nó đến từ Sacred Flora
+  mọc trong map. Bước bench là 4 [[Chaos Orb]].
+odds: >-
+  Sáu họ trên warstaff mang tag physical: ba prefix physical, hai suffix
+  leech và physical damage over time multiplier. Nếu modifier được đảm bảo
+  được bốc theo weight trong số đó, đúng như cách người ta vẫn hiểu về
+  reforge, thì ở item level 73 nó là một prefix physical khoảng 4 trên 5 lần:
+  flat damage 38%, mỗi họ phần trăm 21%. Một phần năm còn lại là suffix leech
+  hoặc damage over time. Đây là phép tính của chúng tôi; chưa được đo trong
+  3.30.
+
+
+  Reforge hứa một họ, không hứa một tier. Trong các prefix phần trăm nó có
+  thể đảm bảo, chưa tới một trên mười là từ 110% trở lên (45% với hybrid).
+  Các prefix khác trên kết quả là những lần roll thường, và những họ physical
+  còn thiếu chỉ là một phần nhỏ trong đó. Vậy nên một prefix physical là gần
+  như chắc chắn, còn hai cái ở tier đáng giữ thì tốn cỡ hai tá lần reforge.
+steps:
+  - title: "Đếm những gì mang tag đó"
+    do: >-
+      Trước khi mua Lifeforce, hãy mở danh sách modifier và tìm mọi họ có tag
+      physical. Có sáu họ. Ba là những prefix bạn muốn; ba là những suffix
+      bạn không muốn.
+    why: >-
+      "Including a Physical modifier" được thỏa bởi bất kỳ họ nào trong sáu.
+      Phép đếm này là toàn bộ giá trị của reforge: bốn phần năm weight nằm ở
+      các prefix, nên nó đáng dùng. Với một tag rải trên hai mươi họ thì
+      không.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Attack Damage"] }
+  - title: "Quality, Alchemy, và lần reforge đầu tiên"
+    do: >-
+      Đưa một cây Ezomyte Staff trắng lên 20% quality và dùng một
+      [[Orb of Alchemy]]. Ở [[Horticrafting Station]], dùng **Reforge a
+      Rare item with random modifiers, including a Physical modifier** (50
+      Vivid Lifeforce).
+    why: >-
+      Reforge Harvest dùng trên item Rare và thay toàn bộ modifier của nó,
+      như một Chaos Orb có kèm một lời hứa. Alchemy chỉ để biến cây staff
+      thành Rare; thứ nó roll ra sẽ bị bỏ đi.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 14 to 30 Physical Damage", how: harvest }
+        - { text: "+2 to Level of Socketed Cold Gems", how: harvest }
+      suffixes:
+        - { text: "+26 to Intelligence", how: harvest }
+        - { text: "12% reduced Enemy Stun Threshold", how: harvest }
+  - title: "Đọc prefix qua hai lượt"
+    do: >-
+      **Họ:** có hai prefix physical khác nhau không? **Tier:** mỗi cái có ở
+      tier bạn chấp nhận không? Một mức hợp lý cho weapon chạy map đầu tiên:
+      flat từ adds 20 to 43 trở lên, phần trăm thuần từ 85% trở lên, hybrid
+      từ 35% trở lên.
+    why: >-
+      Kết quả ở trên trượt lượt đầu: một prefix flat thấp, và một prefix
+      socketed gem mà build physical không dùng được. Suffix thì chưa cần đọc
+      gì cả, vì lần reforge kế tiếp sẽ thay chúng.
+    check: >-
+      Nếu hai prefix physical là hybrid và một cái bất kỳ khác, đó là trường
+      hợp tốt nhất: bench thêm được bản phần trăm thuần. Thuần và flat đi
+      cùng nhau thì bench không còn gì physical để thêm.
+    fail: >-
+      Reforge lại. Không mất gì ngoài 50 Lifeforce.
+  - title: "Lặp lại tới khi hai prefix physical đạt"
+    do: >-
+      Reforge, đọc, rồi lặp lại tới khi một kết quả qua cả hai lượt.
+    why: >-
+      Mỗi lần reforge là độc lập, và lần nào cũng mang về ít nhất một
+      modifier có tag physical.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+      suffixes:
+        - { text: "+17% Chance to Block Attack Damage", how: harvest }
+        - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+  - title: "Tiêu bench vào phần trăm, không phải speed"
+    do: >-
+      Khi đã roll ra hybrid và flat damage (như ở đây), craft increased
+      Physical Damage thuần vào prefix trống: 80–99% giá 4 [[Chaos Orb]]. Khi
+      đã roll ra thuần và flat, phía prefix không còn gì để mua; hãy craft
+      attack speed, 11–15% giá 2 Chaos Orb.
+    why: >-
+      Cây staff không có attack speed, và mua thứ đó trước thì rất cám dỗ.
+      Hãy so hai cái. 80–99% của bench được cộng vào một hybrid 47%, tức
+      physical damage nhiều thêm hơn một nửa nữa. 11–15% attack speed của nó
+      là thêm 11–15% số attack. Prefix thắng cách biệt mỗi khi luật group cho
+      phép.
+    state:
+      implicits: ["+25% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 27 to 56 Physical Damage", how: harvest }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: harvest }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+17% Chance to Block Attack Damage", how: harvest }
+        - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: harvest }
+variations: >-
+  **Một prefix thứ ba từ beast, chỉ trong một trường hợp.** Nếu kết quả bạn
+  giữ có bản phần trăm thuần và flat damage, bench không còn prefix physical
+  nào để thêm và dành cho attack speed. Khi đó, với một ô prefix trống và
+  **không có suffix nào bạn quan tâm**, công thức **Add a Prefix, Remove a
+  Random Suffix** ([[Farric Wolf Alpha]]) là một lần roll cầu hybrid với giá
+  là một suffix bạn vốn không dùng: khoảng 1 trên 10 lần theo phép tính của
+  chúng tôi. Dùng nó trước bench. Đừng dùng nó trên cây staff trong ví dụ
+  này: prefix trống của nó đáng giá với bench hơn nhiều so với một lần roll
+  ngẫu nhiên.
+
+
+  **Reforge Speed** (150 Vivid) đảm bảo thẳng attack speed, vì không gì khác
+  trong pool của warstaff có tag speed. Ở đây nó sẽ giải quyết phía dễ và phó
+  mặc cả ba prefix cho may rủi; nó trở thành công cụ đúng một khi prefix đã
+  được bảo vệ.
+
+
+  **Không có Harvest.** [[Chaos Orb]] làm cùng việc đó mà không có lời hứa
+  nào: theo phép tính của chúng tôi, một kết quả ba prefix có từ hai prefix
+  physical trở lên khoảng 1 trên 6 lần. Reforge thì đặt ít nhất một cái vào
+  đó bốn trên năm lần.
+mistakes:
+  - "Mua Essence of Contempt cho việc này. Dữ liệu không có modifier Essence nào cho warstaff."
+  - "Giữ một kết quả vì suffix của nó. Không có hai prefix physical thì weapon chẳng có mấy thứ để nhân."
+  - "Craft ở bench giữa các lần reforge. Lần reforge kế tiếp gỡ nó đi."
+  - "Mua attack speed khi bản phần trăm thuần còn chọn được. Trên cây staff này, lựa chọn đó bỏ đi khoảng một phần ba physical damage của nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag, tier, weight và giá bench, cùng việc không có mục Essence nào cho warstaff. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Physical và Speed cùng giá Lifeforce của chúng." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest không còn Sacred Grove trong 3.30." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức thêm prefix và con beast nó cần." }

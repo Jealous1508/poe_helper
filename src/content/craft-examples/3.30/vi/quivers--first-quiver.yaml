@@ -1,0 +1,142 @@
+category: quivers
+title: "Quiver đầu tiên: Life, và resistance bạn đang thiếu"
+level: 1
+summary: "Roll Life trên một quiver trắng bằng Alteration, đưa nó lên Rare, rồi để bench thêm một resistance. Nếp quen mà mọi lần craft quiver đều lớn lên từ đó."
+goal: >-
+  Một quiver cho campaign có một roll Life ra trò và resistance mà nhân vật
+  của bạn đang thiếu, làm từ currency bạn nhặt dọc đường. Điểm cốt lõi của nó
+  là một luật đúng với mọi quiver ở mọi mức ngân sách:
+  **roll Life, mua suffix.** Bench bán suffix tốt cho quiver gần như cho
+  không, còn prefix Life của nó thì kém, nên phần ngẫu nhiên của lần craft
+  dành cho Life.
+base: "Penetrating Arrow Quiver"
+itemLevel: 36
+baseWhy: >-
+  Quiver không có chỉ số riêng, chỉ có một implicit, và "Arrows Pierce an
+  additional Target" là cái tốt nhất để clear pack trong lúc leveling. Base
+  này rơi từ level 25.
+
+
+  Item level 36 là mốc đầu tiên mà Tier 4 của Life (+85–99) roll được. Giữ
+  Alt rồi rê chuột lên quiver trắng để kiểm. Quiver trắng nào cỡ level của
+  bạn cũng làm y như vậy được; cứ chọn implicit bạn thích.
+methods: [currency, bench]
+result:
+  implicits: ["Arrows Pierce an additional Target"]
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+  suffixes:
+    - { text: "+21% to Cold Resistance" }
+    - { text: "+26% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "cho bench" }
+cost: >-
+  Chừng một hai chục [[Orb of Alteration]], một [[Regal Orb]] và một
+  [[Orb of Alchemy]] cho bench. Quiver không nhận quality và không có
+  socket, nên không còn gì khác phải trả.
+odds: >-
+  Ở item level 36, một lần roll prefix ra maximum Life từ +70 trở lên khoảng
+  1 trên 8 lần, theo phép tính của chúng tôi từ weight của modifier, và ra
+  Life cỡ nào cũng tính thì là 43% số lần. Một Alteration không phải lúc nào
+  cũng roll ra prefix, nên hãy tính là cần mười tới hai mươi cái.
+  Augmentation và Regal Orb thuần là may rủi, và lần craft này được dựng sao
+  cho cả hai đều không phá hỏng được nó.
+steps:
+  - title: "Kiểm item level, rồi đưa nó lên Magic"
+    do: >-
+      Giữ Alt rồi rê chuột lên quiver trắng và đọc item level của nó. Nếu từ
+      36 trở lên, dùng một [[Orb of Transmutation]].
+    why: >-
+      Item level quyết định quiver này có những tier Life nào. Ở 30, tốt nhất
+      là +70–84; ở 36 là +85–99. Về sau không currency nào nâng được nó.
+      Item Magic có một prefix và một suffix, bước này chỉ cần có vậy.
+    state: { rarity: normal, implicits: ["Arrows Pierce an additional Target"] }
+  - title: "Alteration cho tới khi prefix là Life"
+    do: >-
+      Dùng từng [[Orb of Alteration]] một. Giữ Alt và đọc prefix sau mỗi
+      cái. Dừng khi nó là **maximum Life từ +70 trở lên**: tên của nó là
+      "Robust" (+70–84) hoặc "Rotund" (+85–99).
+    why: >-
+      Life là prefix hay ra nhất trên quiver, và các tier của nó có weight
+      như nhau, nên một cái tốt không hề hiếm. Life của bench là +26–40 giá 6
+      Orb of Transmutation hoặc +41–55 giá 2 Orb of Alchemy. Một "Rotund"
+      roll ra cỡ gấp đôi mức đó.
+    check: >-
+      Dòng prefix ghi "to maximum Life" và con số từ 70 trở lên. Tạm thời lờ
+      suffix đi.
+    fail: >-
+      Sắp cạn Alteration: nhận "Stout" (+55–69). Nó vẫn hơn thứ tốt nhất
+      bench có.
+    state:
+      rarity: magic
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes: [{ text: "+91 to maximum Life" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu quiver chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã có
+      rồi thì bỏ qua bước này.
+    why: >-
+      Augmentation thêm vào một ô trống và không bao giờ đụng tới thứ đang
+      có. Gần một nửa suffix của quiver là resistance hoặc Dexterity, và ở
+      giai đoạn này cái nào cũng có ích.
+    state:
+      rarity: magic
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes: [{ text: "+91 to maximum Life" }]
+      suffixes: [{ text: "+21% to Cold Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Quiver thành Rare, giữ cả hai modifier và nhận thêm một cái thứ ba
+      ngẫu nhiên. Rare mở các ô còn lại cho bench.
+    check: >-
+      Đọc xem modifier mới nằm ở phía nào. Ở đây nó thêm flat Physical
+      Damage, một prefix. Vẫn còn hai ô suffix trống.
+    state:
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes: [{ text: "+21% to Cold Resistance" }]
+  - title: "Bench resistance bạn thiếu"
+    do: >-
+      Mở bảng nhân vật và tìm elemental resistance thấp nhất của bạn. Ở
+      [[Crafting Bench]], craft resistance đó: +21–28% tốn 1
+      [[Orb of Alchemy]], +16–20% tốn 1 Orb of Transmutation.
+    why: >-
+      Quiver chứa được một modifier bench, nên nó dành cho thứ cả item lẫn
+      nhân vật đều thiếu. Resistance của bench là một group riêng cho từng
+      element, nên nó nằm vừa cạnh Cold Resistance đã roll ra. Nó sẽ không
+      vừa cạnh một resistance roll ra cùng element.
+    fail: >-
+      Nếu bench không hiện craft này thì bạn chưa tìm ra công thức đó. Hãy
+      craft resistance tốt nhất mà nó có.
+    state:
+      implicits: ["Arrows Pierce an additional Target"]
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "+21% to Cold Resistance" }
+        - { text: "+26% to Fire Resistance", how: crafted }
+variations: >-
+  **Resistance đã ổn.** Thay vào đó, bench 7–12% increased Attack Speed, giá
+  2 [[Chaos Orb]]. Attack speed chiếm 3% số lần roll suffix trên quiver, nên
+  bench là cách gần như ai cũng dùng để có nó.
+
+
+  **Trong map.** Cũng năm bước đó trên một quiver item level 64 có thể roll
+  ra "Fecund", +130–144 Life, tier cao nhất hiện có. Phương pháp không đổi
+  gì, và resistance của bench lên tới 29–35% giá 3 Chaos Orb.
+mistakes:
+  - "Roll để tìm resistance rồi bench Life. Đó là craft ngược: Life của bench bằng một nửa bản roll ra, còn resistance của nó gần tốt bằng bản roll ra."
+  - "Đi tìm Blacksmith's Whetstone hay socket. Quiver không nhận quality và không có socket."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }

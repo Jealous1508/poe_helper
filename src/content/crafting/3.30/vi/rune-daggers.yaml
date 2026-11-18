@@ -1,0 +1,474 @@
+name: "Rune Dagger"
+short: "Dagger của caster với implicit crit global. Một pool mà một nửa là modifier attack, nơi thứ đáng có là gem level và spell damage."
+icon: "Platinum Kris"
+intro: >-
+  Rune dagger là weapon của caster, chỉ tình cờ mang hình dáng một con
+  dagger. Không ai đánh attack bằng nó. Thứ nó cho caster là một implicit 40%
+  tới 65% increased Global Critical Strike Chance, cùng một pool prefix và
+  suffix có mọi thứ một spell muốn: increased Spell Damage, added damage cho
+  spell, level của spell gem, cast speed, spell critical strike chance.
+
+
+  Hãy quên logic của weapon physical khi ở đây. Không gì trên weapon caster
+  là local: không modifier nào nhân vào base, quality không giúp gì cho spell
+  của bạn, và các con số damage của base không liên quan. Các modifier khó
+  cũng khác. Đó là **gem level**, những prefix một tier với weight tí hon, và
+  các tier cao nhất của **Spell Damage**. Và pool này có một vấn đề mà mace
+  không có: hơn một nửa của nó là modifier attack mà caster không dùng được.
+basics:
+  itemLevel:
+    text: >-
+      Một cây dagger caster cần item level cao hơn một weapon attack. Tier
+      cao nhất của cast speed mở ở 83 và tier cao nhất của Spell Damage mở ở
+      84, nên 84 là base cho một lần craft nghiêm túc. Phần lớn những thứ còn
+      lại đã mở ở 76.
+
+
+      Các prefix gem level là ngoại lệ theo chiều ngược lại. "+1 to Level of
+      all Fire Spell Skill Gems" và bốn anh em của nó có một tier, và tier đó
+      cần item level 2. Một base level thấp không làm chúng yếu đi. Nó làm
+      chúng **dễ roll hơn**, vì pool quanh chúng nhỏ hơn.
+    breakpoints:
+      - ilvl: 2
+        unlocks: "\"+1 to Level of all Fire / Cold / Lightning / Chaos / Physical Spell Skill Gems\". Mỗi cái một tier, mở ngay từ đầu."
+      - ilvl: 46
+        unlocks: "Tier 4 của Spell Damage (55–69%). **Đủ cho một weapon leveling.**"
+      - ilvl: 55
+        unlocks: "\"+1 to Level of all Spell Skill Gems\", prefix hiếm nhất trong pool (weight 50). Tier 3 của cast speed (21–24%)."
+      - ilvl: 64
+        unlocks: "Tier 2 của Spell Damage (85–99%). Tier 2 của Chaos và Cold Damage over Time Multiplier (+29–33%)."
+      - ilvl: 74
+        unlocks: "Tier 1 của added damage cho spell (Fire: adds 62–84 to 124–146). Tier 1 của Critical Strike Multiplier đã mở từ 73."
+      - ilvl: 76
+        unlocks: "Tier 1 của Spell Critical Strike Chance (90–109%). **Đủ cho phần lớn weapon chạy map.**"
+      - ilvl: 78
+        unlocks: "Tier 1 của Chaos và Cold Damage over Time Multiplier (+34–38%)."
+      - ilvl: 84
+        unlocks: "Tier 1 của Spell Damage, \"Runic\" (100–109%); Tier 1 của cast speed (29–32%) đã mở ở 83. **Trần.**"
+  bases:
+    text: >-
+      Mười tám rune dagger, một pool. Base nào cũng roll cùng một bộ modifier
+      với cùng weight. Vì không gì local có ý nghĩa với caster, chọn base là
+      chọn **implicit** và yêu cầu attribute, ngoài ra không còn gì khác.
+    types:
+      - title: "Skean và knife"
+        pools: [all]
+        text: >-
+          Chín base từ Carving Knife tới Imperial Skean với 40–45% increased
+          Global Critical Strike Chance. Yêu cầu Intelligence thấp nhất trong
+          ba dòng base thường. Pool này cũng chứa các base kris, fiend và
+          Heist bên dưới.
+      - title: "Kris"
+        text: >-
+          Copper, Golden và Platinum Kris: 60–65% increased Global Critical
+          Strike Chance, implicit lớn nhất của loại item này. Nặng về
+          Intelligence (149 trên Platinum Kris, kèm 76 Dexterity).
+      - title: "Imp, Fiend và Demon Dagger"
+        text: >-
+          50–55% increased Global Critical Strike Chance, nằm giữa hai dòng
+          kia, và nặng về Intelligence ngang với kris.
+      - title: "Blade Heist"
+        text: >-
+          Flickerflame, Flashfire và Infernal Blade. Không có implicit crit:
+          "Trigger Level 10 / 20 / 30 Flame Dash when you use a Socketed
+          Skill", và trên hai cây cao hơn là 20% hoặc 40% increased Cooldown
+          Recovery Rate of Travel Skills. Dành cho build muốn có sẵn di
+          chuyển ngay trong weapon và không scale crit.
+    picks:
+      - base: "Platinum Kris"
+        for: "Caster crit"
+        why: >-
+          60–65% increased Global Critical Strike Chance, hơn skean 20 điểm,
+          trên một implicit không tốn ô nào. Cần 149 Intelligence và 76
+          Dexterity, thứ mà caster vốn có.
+      - base: "Imperial Skean"
+        for: "Yêu cầu thấp, hoặc không crit"
+        why: >-
+          95 Dexterity và 131 Intelligence, với implicit 40–45%. Base nên lấy
+          khi build không crit và item được craft vì gem level hoặc damage
+          over time, khi đó implicit cùng lắm chỉ là phần thưởng thêm.
+      - base: "Demon Dagger"
+        for: "Một base crit rẻ hơn"
+        why: >-
+          Implicit 50–55%. Yêu cầu giống Platinum Kris; nó rơi từ level 68,
+          nên dễ gặp ở item level cao, nơi không phải lúc nào cũng có sẵn một
+          cây Platinum Kris item level 84 để mua.
+      - base: "Infernal Blade"
+        for: "Một Flame Dash được trigger"
+        why: >-
+          Trigger Level 30 Flame Dash khi bạn dùng một socketed skill, kèm
+          40% increased Cooldown Recovery Rate of Travel Skills. Đổi lại bạn
+          bỏ implicit crit.
+      - base: "Carving Knife"
+        for: "Roll một gem level với giá rẻ"
+        why: >-
+          Rune dagger đầu tiên, từ level 10. Ở item level 10, một prefix "+1
+          to Level of all ... Spell Skill Gems" cụ thể là khoảng 1 trên 59
+          lần roll prefix; ở item level 84 là 1 trên 358. Một weapon leveling
+          mà nhân vật thứ hai mang được suốt nửa campaign.
+    impact: >-
+      **Implicit.** 40–45%, 50–55%, 60–65% Global Critical Strike Chance,
+      hoặc một Flame Dash được trigger. Các implicit crit là những khoảng, và
+      một [[Blessed Orb]] roll lại chúng. Global nghĩa là nó có tác dụng với
+      spell, và đó chính là điểm mấu chốt.
+
+
+      **Yêu cầu.** Dexterity và Intelligence. Các dòng có implicit cao đòi
+      nhiều Intelligence hơn hẳn.
+
+
+      **Không phải damage, tốc độ hay quality.** Physical damage và số attack
+      mỗi giây trên base, cùng 20% quality bạn có thể thêm, chỉ có ý nghĩa
+      với những attack đánh bằng dagger.
+
+
+      **Không phải pool.** Nó như nhau trên cả mười tám cây. Hãy chọn item
+      level theo tier, còn với gem level thì cân nhắc cố ý chọn thấp.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 84, cuộc xổ số prefix, theo phép tính của chúng tôi từ
+      weight, là: modifier attack 54% (riêng added Fire, Cold và Lightning
+      Damage cho attack đã là 33%), maximum Mana 12%, và modifier caster 34%.
+      Bên trong một phần ba của caster: added damage cho spell 20%, Spell
+      Damage 9%, hybrid kèm Mana 4%, và cả sáu prefix gem level cộng lại
+      1.3%.
+
+
+      Vậy nên một [[Orb of Alteration]] tìm ra *một* prefix Spell Damage nào
+      đó khoảng 1 trên 11 lần roll prefix, phần lớn ở tier thấp: Tier 3 trở
+      lên là 1 trên 130 và Tier 1 là 1 trên 2,240. Gem level của một element
+      cụ thể là 1 trên 358, và "+1 to Level of all Spell Skill Gems" là 1
+      trên 1,792. Currency thường dành cho khúc giữa của item này. Phần đỉnh
+      dành cho công cụ.
+  - method: bench
+    note: >-
+      Bench bán trọn cây weapon của caster ở dạng yếu hơn. Spell Damage:
+      35–44% giá 8 Orb of Alteration, 45–54% giá 4 Chaos Orb, 55–66% giá 4
+      Exalted Orb; kèm Mana Regeneration, 51–60% giá 6 Chaos Orb. Fire, Cold,
+      Lightning hoặc Chaos Damage ở mức giá tương tự. Added Fire Damage to
+      Spells: 23–31 to 46–54 giá 2 Orb of Alchemy, 34–45 to 67–78 giá 4 Chaos
+      Orb. Cast speed: 10–13% giá 6 Alteration, 14–17% giá 2 Chaos Orb,
+      18–21% giá 4 Exalted Orb. Spell Critical Strike Chance 60–69% giá 3
+      Chaos Orb; Critical Strike Multiplier 25–28% giá 4.
+
+
+      Hãy nắm các group, vì chúng quyết định cái gì cộng dồn được. **Mọi**
+      craft bench của Spell, Fire, Cold, Lightning hoặc Chaos Damage đều
+      chung một group với Spell Damage roll ra: mỗi item một cái trong số đó.
+      Hybrid tự nhiên của Spell Damage với maximum Mana là một group khác và
+      nằm cạnh bất kỳ cái nào trong đó. Added damage cho spell là một group
+      chung cho cả ba element. Và "Level of Socketed Support Gems" của bench
+      chung group với năm prefix gem level theo element.
+  - method: finishing
+    note: >-
+      Quality không giúp gì cho caster, nên bỏ qua Whetstone trừ khi bạn đánh
+      attack bằng nó. Socket và link có ý nghĩa nếu bạn gắn một bộ ba link
+      vào dagger. Một [[Blessed Orb]] lên implicit là nét hoàn thiện rẻ tiền:
+      implicit của kris chạy từ 60% tới 65%.
+  - method: essence
+    note: >-
+      **Dữ liệu không có cột Essence nào cho rune dagger.** Bản xuất 3.30
+      liệt kê thứ mỗi Essence cho trên Dagger, Sceptre, Wand và các class cũ
+      khác; Rune Dagger không nằm trong số đó. Cũng bản xuất ấy xếp rune
+      dagger vào loại Dagger, và kinh nghiệm lâu năm của người chơi là
+      Essence coi rune dagger như một dagger, nếu vậy thì cột của dagger sẽ
+      áp dụng: Woe cho Spell Damage, Misery cho cast speed, Scorn cho Spell
+      Critical Strike Chance.
+
+
+      Chúng tôi chưa xác nhận được điều đó cho 3.30. Với người craft, nó có
+      hai nghĩa. Không ví dụ nào ở đây dựa vào Essence. Và trước khi lên kế
+      hoạch quanh một Essence, hãy dùng một Essence rẻ lên một rune dagger
+      trắng rồi đọc xem nó cho gì.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng giá nhất là trên item này:
+      một cây dagger Magic có prefix gem level đã tốn hàng trăm Alteration,
+      và Regal Orb theo sau sẽ thêm một modifier attack trong hơn nửa số lần.
+      **Thêm một prefix, gỡ một suffix ngẫu nhiên** ([[Farric Wolf Alpha]])
+      là một prefix miễn phí khi phía suffix đang trống, với cùng cơ hội một
+      phần ba ra modifier caster như mọi lần roll khác.
+  - method: harvest
+    note: >-
+      **Caster** (75 Primal Lifeforce) đảm bảo một modifier mang tag caster:
+      tính theo weight thì 70% số lần là một prefix, còn lại là cast speed
+      hoặc Spell Critical Strike Chance. Nó không gỡ nửa attack khỏi các ô
+      khác. **Speed** (150 Vivid) ở đây có hai modifier mang tag đó, attack
+      speed và cast speed, nên chỉ 44% số lần là cast speed. **Critical**
+      (150 Primal) có ba, và hai trong số đó là thứ bạn muốn. **Chaos** (100
+      Vivid) ở phía suffix có đúng một: Chaos Damage over Time Multiplier.
+
+
+      Từ 3.27, các reforge này tôn trọng "Cannot roll Attack Modifiers", và
+      đó là cách khiến một reforge Caster chỉ roll ra modifier caster và
+      modifier trung tính.
+  - method: fossil
+    note: >-
+      [[Aetheric Fossil]] là Fossil của rune dagger: modifier Caster dễ ra
+      gấp mười lần, modifier Attack bị cắt xuống còn 15% weight. Theo phép
+      tính của chúng tôi, điều đó khiến khoảng 94% lần roll prefix là
+      modifier caster, và cast speed cộng Spell Critical Strike Chance chiếm
+      76% lần roll suffix. Nó không nâng Critical Strike Multiplier, vì
+      modifier này không có tag caster.
+
+
+      Một [[Faceted Fossil]] nhân các modifier Gem, và dùng một mình thì nó
+      là cái bẫy: kẻ hưởng lợi lớn nhất là "+2 to Level of Socketed Melee
+      Gems", thứ chung group với các prefix gem level theo element và chặn
+      hết chúng. Có một Aetheric Fossil bên cạnh thì prefix melee gần như
+      biến mất, và gem level của mỗi element thành khoảng 1 trên 17 lần roll
+      prefix. Thêm Fossil của chính element đó thì nó còn dễ ra hơn nhiều.
+      Các con số theo mô hình của cộng đồng, trong đó một modifier được nhân
+      một lần cho mỗi tag khớp; hãy coi chúng là gần đúng, không phải chính
+      xác.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra cho caster: 70–79% increased Spell Damage kèm Mana
+      Regeneration; 60–69% Spell Damage kèm 5% of Non-Chaos Damage gained as
+      extra Chaos Damage; 70–79% Fire, Cold hoặc Lightning Damage kèm chance
+      to Ignite, Freeze hoặc Shock; 60–69% Chaos Damage kèm skill effect
+      duration. Tất cả chung group Spell Damage. Suffix: 18–22% cast speed
+      kèm Arcane Surge on kill, và +24–28% to Damage over Time Multiplier của
+      một loại.
+  - method: fracture
+    note: >-
+      Modifier nên fracture trên một cây dagger caster là gem level, và trên
+      hết là "+1 to Level of all Spell Skill Gems". Group của nó tách khỏi
+      các gem level theo element, nên hai cái cộng dồn, và khi một cái đã
+      fractured thì cái kia có thể roll bằng Fossil bao nhiêu lần cũng được.
+  - method: meta
+    note: >-
+      **"Cannot roll Attack Modifiers"** (1 Divine Orb, một suffix) quan
+      trọng ở đây hơn trên bất kỳ item nào khác, vì hơn một nửa pool này là
+      modifier attack. Chừng nào nó còn trên dagger, không modifier attack
+      nào có thể được **thêm** vào: Exalted Orb không thêm được, reforge
+      cũng không. Khi item đã có Spell Damage, prefix của một Exalted Orb là
+      modifier caster 27% số lần nếu không có nó và 67% nếu có.
+
+
+      Điều nó không còn làm: từ 3.30, nó không ngăn một
+      [[Orb of Annulment]] gỡ modifier thuộc bất kỳ loại nào. Mẹo cũ, craft
+      "Cannot roll Caster Modifiers" để Annulment chỉ trúng được đồ bỏ, đã
+      chết. Giờ không gì lái được một Annulment.
+
+
+      Một lần khóa đầy đủ trên weapon là 4 Divine Orb và 1 [[Sacred Orb]].
+  - method: influence
+    note: >-
+      Hữu ích cho caster: prefix Shaper "Socketed Skills deal 40% more Spell
+      Damage" cho skill gắn trong dagger; added Chaos hoặc Physical Damage to
+      Spells của Elder; các prefix Crusader, Warlord và Redeemer thêm
+      lightning, fire hoặc cold damage cho spell kèm 4% penetration, và bản
+      8% penetration trơn của chúng; 6% elemental penetration của Hunter;
+      suffix Redeemer "Spells have a 6–7% chance to deal Double Damage". Các
+      prefix Spell Damage của Shaper và Elder yếu hơn bản tự nhiên và chung
+      group với nó. Không influence nào thêm gem level.
+  - method: corruption
+    note: >-
+      Các corruption implicit có cả một gem level thứ ba: "+1 to Level of all
+      Chaos, Cold, Lightning or Physical Spell Skill Gems" (dữ liệu không
+      liệt kê bản Fire nào cho rune dagger). Ngoài ra còn 50–60% increased
+      Spell Damage và 14–18% cast speed. Cái nào cũng thay thế implicit crit.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới."
+memoryStrands: >-
+  Strand nâng tier, mà hai prefix được muốn nhất trên item này lại không có
+  tier: gem level là gem level. Một base có strand không giúp gì cho lần
+  craft gem level, và cũng không giúp gì cho vấn đề chính của pool, tức là
+  việc roll trúng modifier attack.
+
+
+  Chỗ chúng hợp là Spell Damage và các suffix. Spell Damage chiếm 9% lần roll
+  prefix, mà gần như toàn bộ nằm ở năm tier thấp nhất, còn cast speed và
+  Spell Critical Strike Chance có bảy và sáu tier với weight đều nhau. Một
+  [[Orb of Remembrance]] lên base trắng item level 84, rồi
+  [[Orb of Alteration]] để lấy Spell Damage và một [[Regal Orb]], tiêu strand
+  chậm rãi, mỗi lần nhiều nhất 8 và 16 theo bảng data-mine.
+
+
+  Một lần craft bằng [[Aetheric Fossil]] không được lợi gì từ strand, theo
+  thử nghiệm của người chơi. Hãy quyết định bạn đi đường nào trong hai đường
+  trước khi mua base.
+reading:
+  intro: >-
+    Trước hết gạch bỏ mọi modifier attack: added damage không ghi "to
+    Spells", increased Physical Damage, attack speed, Accuracy, Critical
+    Strike Chance trơn. Trên rune dagger, những dòng đó coi như dòng trống.
+    Rồi đọc phần còn lại. **Gem level trước, rồi Spell Damage, rồi cast speed
+    và cặp crit.**
+  prefixes:
+    text: >-
+      Ba loại prefix làm việc chính, và group quyết định cách chúng kết hợp.
+      **Gem level:** "+1 to Level of all Spell Skill Gems" là một group còn
+      năm bản theo element là group khác, nên một cây dagger chứa được mỗi
+      loại một cái, thành +2 cho đúng gem. Với phần lớn spell, một gem level
+      đáng giá hơn bất kỳ phần trăm damage nào, và nó là thứ hiếm nhất trong
+      pool. **Spell Damage:** prefix thuần, và ở một group riêng là hybrid
+      kèm maximum Mana; cả hai nằm vừa trên một item. **Added damage cho
+      spell:** chỉ một element, vì cả ba chung một group.
+
+
+      Một cây dagger caster hoàn chỉnh là ba cái nào đó trong số ấy. Các dạng
+      thường gặp là hai gem level cộng một prefix damage, hoặc Spell Damage,
+      hybrid và added damage cho build có gem được nâng level ở chỗ khác.
+
+
+      Mọi thứ khác đều vướng đường: sáu prefix attack, và maximum Mana ở mức
+      12%, thứ mà chỉ vài build biến thành damage.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Nâng mọi spell. Weight 50 trong một pool 89,589: prefix tự nhiên khó nhất trên item, và ở group riêng của nó."
+        aim: "Một tier, +1 (ilvl 55)."
+      - mod: "+# to Level of all Fire / Cold / Lightning / Chaos / Physical Spell Skill Gems"
+        why: "Tương tự, cho một loại damage. Năm prefix trong một group, weight 200–250 mỗi cái. Cộng dồn với prefix ở trên."
+        aim: "Một tier, +1 (ilvl 2)."
+      - mod: "#% increased Spell Damage"
+        why: "Hệ số nhân cơ bản của caster. Cả họ thì dễ ra, trên đỉnh thì hiếm: Tier 1 tới 3 chiếm 690 trong 8,190 weight của nó."
+        aim: "T3, 70–84% (ilvl 58). T1 là 100–109% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "Một Spell Damage thứ hai, nhỏ hơn, ở group khác. Nó cộng dồn với prefix thuần và với mọi craft damage của bench."
+        aim: "T2, 37–43% (ilvl 58). T1 là 44–49% (ilvl 80)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Spells"
+        why: "Flat damage cho spell. Mạnh trên spell đánh nhanh, cast nhiều lần; mỗi item một element."
+        aim: "T3 (Fire adds 38–51 to 77–88, ilvl 51). T1 cần ilvl 74."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Bản attack. Một phần ba mọi lần roll prefix, và vô giá trị với caster. Hãy tập phân biệt hai bản bằng mấy chữ \"to Spells\"."
+  suffixes:
+    text: >-
+      Suffix của caster là cast speed (9% số lần roll), Spell Critical Strike
+      Chance (8%) và Critical Strike Multiplier (8%), tất cả đều có các tier
+      với weight đều nhau. Build damage over time đổi cặp crit lấy
+      multiplier: Chaos và Cold Damage over Time Multiplier roll tự nhiên ở
+      đây, với weight rất thấp ở các tier cao nhất, còn Damage over Time
+      Multiplier chung là một group riêng, cộng dồn với cái nào trong hai
+      cũng được.
+
+
+      Coi chừng những dòng trông giống nhau. "increased Critical Strike
+      Chance" không có chữ "Spell" là bản attack và áp dụng cho attack đánh
+      bằng dagger. Attack speed là suffix hay ra nhất và không giúp gì cho
+      bạn. Hơn một phần ba pool suffix là modifier attack.
+
+
+      Intelligence, ở mức 11%, là đồ lấp chỗ tử tế trên một item cần tới 149
+      điểm chỉ số này.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "Cast nhiều hơn. Suffix duy nhất gần như caster nào cũng muốn."
+        aim: "T2, 25–28% (ilvl 72). T1 là 29–32% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "Nhân vào crit gốc của chính spell, bên cạnh implicit global."
+        aim: "T2, 80–89% (ilvl 59). T1 là 90–109% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Cho build crit. Nó không có tag caster, nên các công cụ nhắm vào caster không tìm ra nó; bench bán 25–28%."
+        aim: "T2, 30–34% (ilvl 59), hoặc bench."
+      - mod: "+#% to Chaos Damage over Time Multiplier"
+        why: "Suffix cốt lõi của một cây dagger chaos damage over time. Weight 50 ở Tier 1; reforge Chaos dưới một lần khóa prefix là công cụ duy nhất nhắm thẳng vào nó."
+        aim: "T3, 24–28% (ilvl 36), ngang với bản veiled. T1 là 34–38% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Áp dụng cho mọi damage over time và cộng dồn với multiplier theo loại."
+        aim: "T3, 16–19% (ilvl 68)."
+approach:
+  principle: >-
+    **Gem level trước, vì về sau không gì thêm được chúng.** Bench bán Spell
+    Damage, cast speed, cả hai suffix crit và mọi multiplier damage over
+    time. Nó không bán gem level nào cho spell của bạn. Vậy nên các ô roll
+    của một cây dagger caster dành cho gem level và cho bất kỳ tier cao nào
+    bạn với tới được, còn bench lấp phần còn lại; và mọi lần roll lại đều
+    nên làm khi nửa attack của pool đã bị tắt.
+  order:
+    - title: "Chốt dạng item: gem level, hay damage"
+      text: >-
+        Build scale theo gem level muốn +1 all và +1 của loại nó dùng. Build
+        có gem đã chạm trần ở chỗ khác, hoặc ngân sách hạn hẹp, muốn Spell
+        Damage, hybrid và added damage. Điều này quyết định công cụ: gem
+        level nghĩa là Fossil hoặc một base level thấp; damage nghĩa là
+        Alteration hoặc một Aetheric Fossil.
+    - title: "Base theo implicit, item level theo kế hoạch"
+      text: >-
+        Kris cho crit, cây nào cũng được cho damage over time. Item level 84
+        cho một weapon endgame, 76 nếu Tier 1 của Spell Damage không phải mục
+        tiêu, và cố ý thấp nếu tất cả những gì bạn muốn là một gem level trên
+        weapon leveling.
+    - title: "Tắt nửa attack"
+      text: >-
+        Phương pháp nào cũng có cách. Roll lại toàn bộ: một Aetheric Fossil.
+        Reforge Harvest và Exalted Orb: "Cannot roll Attack Modifiers".
+        Alteration thường thì không có cách nào, vì thế chúng chỉ dành cho
+        từng modifier đơn lẻ.
+    - title: "Lấy gem level, rồi giữ nó an toàn"
+      text: >-
+        Fracture nó nếu được. Nếu không, hãy nhớ rằng một Imprint đưa item
+        Magic về trạng thái đã lưu, và một lần khóa là 4 Divine Orb và một
+        Sacred Orb cho mỗi lần dùng.
+    - title: "Lấp prefix bằng damage, theo group"
+      text: >-
+        Một cái từ group Spell Damage (roll ra, veiled hoặc bench), hybrid
+        Mana nếu nó ra, một prefix added damage. Kiểm group trước mỗi lần
+        craft bench.
+    - title: "Suffix sau cùng, bench cho cái còn thiếu"
+      text: >-
+        Cast speed và Spell Critical Strike Chance đến từ cùng những công cụ
+        nhắm vào caster. Critical Strike Multiplier thì không: hãy tính trước
+        là sẽ bench nó.
+  finishing: >-
+    Một [[Blessed Orb]] lên implicit, socket nếu bạn dùng tới, và một
+    [[Divine Orb]] chỉ khi Spell Damage hoặc cast speed roll ra ở đáy tier
+    của nó. Gem level không có con số nào để roll lại. Cứ để Whetstone trong
+    stash.
+  stopping: >-
+    Một gem level, một prefix Spell Damage từ bất kỳ nguồn nào ở mức 55% trở
+    lên, cast speed và một suffix crit đã là một weapon endgame thực thụ.
+    Spell Damage Tier 3 cùng hybrid, added damage và hai suffix tốt là thứ
+    ngang hàng với nó, cho build không cần gem level.
+
+
+    Những bước đắt là gem level thứ hai và Tier 1 của bất cứ thứ gì. Hãy
+    dừng khi bước kế tiếp là một cuộc xổ số mà bạn không tắt được nửa attack,
+    và đừng bao giờ sửa một cây dagger caster bằng Annulment: trong 3.30 nó
+    thích lấy gì thì lấy.
+special:
+  - mod: "+# to Level of all Spell Skill Gems"
+    source: "Tự nhiên, rất hiếm"
+    where: "Roll tự nhiên từ item level 55 với weight 50. Trên thực tế nó đến từ Faceted và Aetheric Fossil dùng cùng nhau (khoảng 1 trên 87 lần roll prefix theo phép tính của chúng tôi), từ một base fractured, hoặc từ việc mua sẵn một cây."
+  - mod: "+# to Level of all Chaos / Cold / Lightning / Physical Spell Skill Gems"
+    source: "Tự nhiên / Corruption"
+    where: "Dưới dạng prefix, từ Alteration trên base level thấp hoặc từ Fossil. Dưới dạng corruption implicit từ một [[Vaal Orb]], thay thế implicit crit; dữ liệu liệt kê Chaos, Cold, Lightning và Physical cho rune dagger."
+  - mod: "#% increased Spell Damage / Gain #% of Non-Chaos Damage as extra Chaos Damage"
+    source: "Veiled / Bench"
+    where: "Unveil: 60–69% kèm 5%. Bench: 46–50% kèm 4% giá 4 Exalted Orb, 41–45% kèm 3% giá 4 Chaos Orb. Group Spell Damage."
+  - mod: "#% increased Chaos Damage / Chaos Skills have #% increased Skill Effect Duration"
+    source: "Veiled / Bench"
+    where: "Unveil: 60–69% kèm 13–15%. Bench: 46–50% kèm 11–12% giá 8 Chaos Orb. Group Spell Damage."
+  - mod: "Trigger a Socketed Spell when you Use a Skill"
+    source: "Bench"
+    where: "Một suffix bench giá 3 Chaos Orb: cooldown 8 giây, và spell được trigger kiểu này có 150% more cost."
+  - mod: "Socketed Skills deal 40% more Spell Damage"
+    source: "Influence Shaper / Fossil"
+    where: "Một prefix Shaper ở item level 83, và nằm trong danh sách modifier chỉ có từ Fossil. Chỉ dành cho skill gắn trong ba socket của dagger."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Influence Redeemer"
+    where: "Một suffix Redeemer, 6–7% ở item level 80."
+  - mod: "Adds # to # Chaos Damage to Spells"
+    source: "Influence Elder"
+    where: "Một prefix Elder, 56–77 to 116–133 ở item level 85. Pool tự nhiên không có added Chaos Damage cho spell."
+  - mod: "Trigger Level # Flame Dash when you use a Socketed Skill"
+    source: "Implicit của base"
+    where: "Implicit của ba cây blade Heist. Được chọn cùng với base."
+mistakes:
+  - "**Đọc dòng attack thành damage.** \"Adds 89 to 180 Fire Damage\" trên rune dagger không thêm gì cho spell. Nó phải ghi \"to Spells\"."
+  - "**Bench Fire Damage cạnh Spell Damage roll ra.** Một group. Bench sẽ từ chối; hãy craft added damage cho spell hoặc một suffix."
+  - "**Faceted Fossil dùng một mình.** Nó chủ yếu roll ra Socketed Melee Gems, thứ block các gem level theo element. Hãy ghép nó với một Aetheric Fossil."
+  - "**Whetstone trên weapon caster.** Quality nâng physical damage của base, thứ spell của bạn không dùng."
+  - "**Craft \"Cannot roll Caster Modifiers\" trước một Annulment.** Từ 3.30, việc đó không bảo vệ được gì. Trên item này không có Annulment nào an toàn."
+  - "**Lên kế hoạch quanh một Essence mà chưa thử cái nào.** Dữ liệu 3.30 không cho biết Essence làm gì trên rune dagger."
+  - "**Trả tiền cho item level 84 để roll một gem level.** Các prefix gem có một tier, và pool nhỏ hơn khiến chúng dễ ra hơn."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, group, tag, tier, weight, hệ số nhân của Fossil và giá bench được dẫn ở đây, cùng việc rune dagger vắng mặt trong bảng Essence của nó. Các tỉ lệ và xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các modifier \"Cannot roll\" không còn ngăn được Orb of Annulment; giá của các modifier bảo vệ." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Reforge Harvest đảm bảo một loại modifier thì tôn trọng các modifier \"Cannot roll\"." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Caster, Speed, Critical và Chaos." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

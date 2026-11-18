@@ -1,0 +1,147 @@
+category: jewels
+title: "Two hits on a Magic jewel, then the Regal Orb"
+level: 2
+summary: "Hold out for a Magic jewel with a wanted prefix and a wanted suffix, and learn what the second one costs before you pay for it."
+goal: >-
+  A caster's jewel with two damage modifiers that stack, made Rare with room
+  to grow. The lesson is the arithmetic of the second slot: **one hit is
+  cheap, two on the same jewel cost about ten times as much**, and knowing
+  that in advance is what stops you either giving up too early or rolling
+  for ever.
+base: "Cobalt Jewel"
+itemLevel: 68
+baseWhy: >-
+  Only Cobalt rolls Spell Damage and Cast Speed, so a spell jewel is Cobalt
+  whatever else is on the list. The item level is irrelevant, as on every
+  regular jewel.
+
+
+  The example is for a fire spell cast with a shield in the off hand. For a
+  staff or two wands, swap "while holding a Shield" for the matching line.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "15% increased Spell Damage while holding a Shield" }
+  suffixes:
+    - { text: "11% increased Spell Damage" }
+    - { text: "+13% to Lightning Resistance" }
+needs:
+  - { item: "A Cobalt Jewel", amount: "1", note: "any item level, any rarity" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "10–20" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  [[Orb of Alteration]]s, in the low hundreds on an average run. One
+  [[Regal Orb]]. This is the standard price of a two-hit jewel and the reason
+  ordinary ones are cheap to buy: decide whether your list is unusual enough
+  to be worth rolling yourself.
+odds: >-
+  The prefix list below is 12.3% of Cobalt's prefix weight and the suffix
+  list 9.8% of its suffix weight, by our arithmetic. One prefix roll in 8 is
+  a hit and one suffix roll in 10.
+
+
+  Both on the same Magic jewel is the two multiplied: about 1.2%, 1 jewel in
+  83 among those that rolled both slots. Alterations do not always roll both
+  slots, which is why the budget is larger than 83.
+steps:
+  - title: "Write both columns and cross out the clashes"
+    do: >-
+      **Prefixes:** increased Spell Damage while holding a Shield, increased
+      Cast Speed while holding a Shield, increased Fire Damage, increased
+      Cast Speed with Fire Skills, increased maximum Life. **Suffixes:**
+      increased Spell Damage, increased Cast Speed, increased Area Damage,
+      increased Damage.
+    why: >-
+      Check the groups before rolling. "Spell Damage while holding a Shield"
+      and plain "Spell Damage" are different groups, so they stack; that
+      pair is the heart of this jewel. But plain Spell Damage and plain
+      increased Damage are **one** group, so they are alternatives, not a
+      pair. The same group holds the prefix "Minions deal increased Damage":
+      a jewel with that prefix can never take the Spell Damage suffix.
+    check: >-
+      Two lines of one group count once. If your list relies on both, it is
+      shorter than it looks.
+  - title: "Alterations to the first hit"
+    do: >-
+      Use [[Orb of Alteration]]s until either side shows a line from the
+      list.
+    why: >-
+      This part is quick: about 1 prefix roll in 8, or 1 suffix roll in 10.
+      Most of the time the other side will hold something you do not use, as
+      here.
+    state:
+      rarity: magic
+      prefixes: [{ text: "15% increased Spell Damage while holding a Shield" }]
+      suffixes: [{ text: "13% increased Mana Cost Efficiency" }]
+  - title: "Decide: Regal now, or roll on"
+    do: >-
+      With one hit and one modifier you do not use, choose. **Regal now** if
+      you want a jewel today: you keep the hit and take one random roll at a
+      second. **Roll on** if you set out to make a two-hit jewel: use the
+      next Alteration and lose this one.
+    why: >-
+      There is no way to keep the prefix and reroll only the suffix. An
+      Alteration rerolls both, and an [[Orb of Annulment]] on a Magic jewel
+      removes one of the two at random. So the price of the second hit is
+      giving up first hits, again and again, until one comes with company.
+    check: >-
+      The one case that costs nothing: a hit on one side and the **other
+      side empty**. Use an [[Orb of Augmentation]] before deciding. It is a
+      1 in 10 chance at the pair for one cheap orb.
+  - title: "Roll until both sides are on the list"
+    do: >-
+      Keep going. Augment every jewel that shows a hit with an empty side.
+      Stop when prefix and suffix are both from the list.
+    why: >-
+      By the arithmetic above this is around 1 in 83 two-modifier jewels.
+      Set a budget before you start, and if it runs out, Regal the best
+      one-hit jewel you see next. That is not failure. It is the jewel from
+      the first example.
+    state:
+      rarity: magic
+      prefixes: [{ text: "15% increased Spell Damage while holding a Shield" }]
+      suffixes: [{ text: "11% increased Spell Damage" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]] and read the third modifier.
+    why: >-
+      The two hits are kept. The third is a roll from whatever still fits.
+      By our arithmetic roughly one Regal in twelve adds a third hit from
+      this list, if a prefix and a suffix are about equally likely to be
+      added, which the similar size of the two pools suggests and nothing
+      official states. Here it added Lightning Resistance, which is not on
+      the list and is not useless either.
+    fail: >-
+      It added a modifier you will never use. The jewel is still a two-hit
+      jewel with an open slot. Do not try to remove the third line: an
+      [[Orb of Annulment]] takes one of three at random, so it is twice as
+      likely to remove a hit as the filler.
+    state:
+      prefixes:
+        - { text: "15% increased Spell Damage while holding a Shield" }
+      suffixes:
+        - { text: "11% increased Spell Damage" }
+        - { text: "+13% to Lightning Resistance" }
+variations: >-
+  **Why not Alchemy and Chaos Orbs?** A [[Chaos Orb]] rolls up to four
+  modifiers from the same pool at once, and you cannot stop at the moment two
+  of them are right. Alterations cost less per look and let you stop exactly
+  there.
+
+
+  **A jewel worth protecting.** If your list is short and the Magic jewel
+  took several hundred Alterations, do not Regal it bare. The next example
+  uses an Imprint to make the Regal Orb repeatable.
+
+
+  **The open prefix.** The finished jewel has one prefix slot free. An
+  [[Exalted Orb]] there is a free roll at a prefix hit, about 1 in 9 with
+  this list once the groups already on the jewel are taken out.
+mistakes:
+  - "Pairing two lines of the same group on the list and wondering why they never appear together."
+  - "Using an Annulment to clear the bad side of a Magic jewel. It is a coin flip that costs more than the Alterations it saves."
+  - "Rolling with no budget. Past a couple of hundred Alterations, buying the jewel is usually the cheaper craft."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Cobalt Jewel pool, its weights and the modifier groups. The odds are our arithmetic." }

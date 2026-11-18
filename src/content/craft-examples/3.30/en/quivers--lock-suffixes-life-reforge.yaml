@@ -1,0 +1,199 @@
+category: quivers
+title: "Lock the suffixes, and let Harvest hand you Life"
+level: 4
+summary: "A quiver with the right suffixes and the wrong prefixes. Protect the suffix side, then use a Life reforge that the lock turns into a guaranteed Life prefix."
+goal: >-
+  Finish a quiver whose suffixes are worth keeping and whose prefixes are
+  not, without risking the suffixes. On a weapon you lock the prefixes; on a
+  quiver the hard side is the other one, so the lock goes the other way
+  round. The lesson is what that changes: **where the lock itself sits,
+  what it costs on this item, and why a Harvest tag that is useless on an
+  open quiver becomes exact on a locked one.**
+base: "Spike-Point Arrow Quiver"
+itemLevel: 75
+baseWhy: >-
+  This craft starts from an item, not from a base: the result of the Fossil
+  example when the suffixes landed and the prefixes did not, or any Rare
+  quiver with suffixes you would not want to roll twice. Item level 64 or
+  higher matters for one reason: that is where the best Life tier
+  (+130–144) can roll, and Life is what the reforge is for.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["27% increased Critical Strike Chance with Bows"]
+  prefixes:
+    - { text: "+127 to maximum Life", how: harvest }
+    - { text: "36% increased Damage with Bow Skills", how: harvest }
+    - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "+36% to Critical Strike Multiplier with Bows" }
+    - { text: "32% increased Critical Strike Chance with Bows" }
+    - { text: "+41% to Fire Resistance" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Blessed Orb]]", amount: "4 per attempt" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per attempt" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if a bench modifier has to come off first" }
+  - { item: "[[Orb of Alchemy]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  The lock: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s on a quiver in 3.30,
+  used up by every reforge. The Lifeforce is small change beside it. Expect
+  two or three attempts and decide your limit before the first.
+
+
+  That price is also the test. If the suffixes on this quiver could be
+  rolled again for less than one lock, do not lock them: roll a new quiver.
+odds: >-
+  With the suffixes locked, the Life reforge can only be satisfied on the
+  prefix side, and maximum Life is the only prefix with the life tag, so
+  every attempt gives a Life prefix. Its **tier** is random. Life has ten
+  tiers of equal weight, so if the guaranteed modifier is drawn by weight
+  among them, which is how reforges are understood to work, 3 attempts in
+  10 give +100 or more and 1 in 10 gives the top tier. That is our
+  arithmetic and has not been measured in 3.30.
+
+
+  The other one or two prefixes are plain luck from a pool of six families:
+  about 3 of those rolls in 10 are bow damage and the rest are flat damage
+  of one kind or another.
+steps:
+  - title: "Check that a prefix slot is free"
+    do: >-
+      Count the prefixes. "Suffix Modifiers cannot be changed" is itself a
+      **prefix**, so the quiver needs one open prefix slot to take it. If
+      one of the prefixes is a bench modifier, remove it at the bench for 1
+      [[Orb of Scouring]].
+    why: >-
+      A meta-modifier takes a real slot, on the side opposite to the one it
+      protects. A quiver with three rolled prefixes cannot be suffix-locked
+      at all.
+    fail: >-
+      Three rolled prefixes: the only way to open a slot is an
+      [[Orb of Annulment]], which removes one of six modifiers at random
+      and hits a suffix half the time. Do not use it. A
+      quiver with great suffixes and three poor prefixes is still a quiver
+      someone will wear.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+31 to maximum Life" }
+        - { text: "Adds 7 to 14 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "+36% to Critical Strike Multiplier with Bows" }
+        - { text: "32% increased Critical Strike Chance with Bows" }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Craft the suffix lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s.
+    why: >-
+      While it is on the item, a reroll that respects it leaves all three
+      suffixes exactly as they are. Quivers pay the armour price for the
+      lock, not the weapon price, which is why the second currency is
+      Blessed Orbs. Use the full version: the 1- and 2-suffix locks cost
+      less, but the developers have said the game picks which modifiers
+      they protect at random and does not show you.
+    check: >-
+      The modifier shows among the prefixes as crafted. Use no other
+      currency on the quiver between this step and the next.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+31 to maximum Life" }
+        - { text: "Adds 7 to 14 Physical Damage to Attacks" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+36% to Critical Strike Multiplier with Bows" }
+        - { text: "32% increased Critical Strike Chance with Bows" }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Reforge with a Life modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]).
+    why: >-
+      On an open quiver this reforge is a poor tool: life leech and life on
+      kill are suffixes with the life tag, and either one satisfies it. The
+      lock removes them from the question. The reforge may only touch the
+      prefixes, the lock included, and the one prefix with the life tag is
+      maximum Life. The tag has not changed. The lock made it exact.
+    check: >-
+      Three suffixes unchanged, the lock gone, Life among the prefixes. Read
+      its tier with Alt held.
+    fail: >-
+      That Harvest reforges respect the lock is established by players, not
+      stated by the developers. If you have any doubt after a patch, test
+      it on a cheap Rare first.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+127 to maximum Life", how: harvest }
+        - { text: "36% increased Damage with Bow Skills", how: harvest }
+      suffixes:
+        - { text: "+36% to Critical Strike Multiplier with Bows" }
+        - { text: "32% increased Critical Strike Chance with Bows" }
+        - { text: "+41% to Fire Resistance" }
+  - title: "Judge the prefixes against your limit"
+    do: >-
+      Accept the result if Life is at the tier you set in advance (+100 or
+      more is Tier 3) **and** the prefix side has either an open slot or a
+      second prefix your build uses. Otherwise go back to step 2 and pay
+      again.
+    why: >-
+      Each further attempt costs a full lock. Life is what you are buying.
+      A useful second prefix is a bonus, and an open slot is nearly as good,
+      because the next step fills it with certainty.
+    check: >-
+      Do not pay a second lock to move Life from Tier 3 to Tier 1. That is
+      thirty Life for 4 Divine Orbs.
+  - title: "Bench the last prefix"
+    do: >-
+      In the open prefix, craft what the build lacks. For an elemental
+      build: 24–32% increased Elemental Damage with Attack Skills, 4
+      [[Orb of Alchemy]]s. For a physical build: adds 5–7 to 8–10 Physical
+      Damage to Attacks, 2 Chaos Orbs.
+    why: >-
+      The bench is certain, so it goes last, when you know which gap is
+      left. Elemental Damage with Attack Skills is the bench prefix a
+      quiver cannot roll by itself.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+127 to maximum Life", how: harvest }
+        - { text: "36% increased Damage with Bow Skills", how: harvest }
+        - { text: "28% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "+36% to Critical Strike Multiplier with Bows" }
+        - { text: "32% increased Critical Strike Chance with Bows" }
+        - { text: "+41% to Fire Resistance" }
+variations: >-
+  **Scour instead of reforge.** With the suffixes locked, an
+  [[Orb of Scouring]] is reported to remove only the prefixes and the lock,
+  leaving three suffixes and three empty prefix slots. The prefix side of a
+  quiver has seven families, so [[Exalted Orb]]s into it are a fair bet:
+  about 4 prefix rolls in 10 are Life. It gives no guaranteed Life, and it suits a base
+  with [[Memory Strands]], which raise the tier of what an Exalted Orb adds.
+
+
+  **The cheap locks, where they are certain.** "1 Suffix Modifier cannot be
+  changed" costs 1 Divine Orb and "2 Suffix Modifiers" costs 2. The
+  developers have said the choice is only known for certain when the side
+  holds exactly that many modifiers. So a quiver with exactly two suffixes,
+  both wanted, is a candidate for the 2-suffix version. We could not
+  confirm how a reforge treats the rest of that side under the partial
+  locks, so try it on a worthless quiver first.
+
+
+  **A veiled prefix is not worth it here.** The unveiled Life prefix on a
+  quiver is +55–60, less than half of what the reforge gives.
+mistakes:
+  - "Locking suffixes that are not worth 4 Divine Orbs and 4 Blessed Orbs. Two resistances and Dexterity can be rolled again for a few Alterations."
+  - "Using an Essence on the locked quiver. Essences are reported to ignore the protection modifiers and would reroll the suffixes too."
+  - "Using the Life reforge without the lock and expecting a Life prefix. Life leech and life on kill satisfy it just as well."
+  - "Paying for the lock on a quiver with three rolled prefixes. The lock needs a prefix slot and will not fit."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bench costs, the Life tiers and the tags on each modifier." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on quivers." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier versions choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life reforge and its Lifeforce cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Orb of Scouring respect a locked side. Partly older than 3.30." }

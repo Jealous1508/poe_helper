@@ -1,0 +1,137 @@
+category: quivers
+title: "Bow damage từ Essence, Life từ xổ số"
+level: 2
+summary: "Một Essence of Woe đảm bảo increased Damage with Bow Skills. Lặp lại tới khi một roll Life tốt rơi vào cạnh nó, rồi bench suffix."
+goal: >-
+  Một quiver chạy map có hai prefix mà build bow nào cũng muốn: bow damage,
+  được đảm bảo, và một roll Life từ +100 trở lên. Bài học là cách một Essence
+  thay đổi việc cuộc xổ số *xoay quanh* cái gì. Khi một prefix đã cố định,
+  câu hỏi duy nhất mỗi lần thử đặt ra là "Life có đi kèm không", và trên
+  quiver thì Life là đáp án dễ ra nhất.
+base: "Broadhead Arrow Quiver"
+itemLevel: 75
+baseWhy: >-
+  Implicit của Broadhead là 8–10% increased Attack Speed, hợp với mọi build
+  bow và lo luôn cái suffix hiếm khi roll ra. Hãy lấy Spike-Point hoặc
+  Primal Arrow Quiver nếu bạn đã biết build là critical strike hay
+  elemental.
+
+
+  Item level 75 nhiều hơn mức Life cần (tier cao nhất của nó mở ở 64) và đủ
+  cho các tier suffix tốt. Không gì trong lần craft này đòi hơn.
+methods: [essence, bench]
+result:
+  implicits: ["9% increased Attack Speed"]
+  prefixes:
+    - { text: "34% increased Damage with Bow Skills", how: essence }
+    - { text: "+118 to maximum Life" }
+  suffixes:
+    - { text: "+38% to Lightning Resistance" }
+    - { text: "+29 to Dexterity" }
+    - { text: "10% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Woe]]", amount: "5–10", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Essence là toàn bộ chi phí, và bậc Screaming là thứ map đỏ trao cho bạn
+  trong 3.30. Bước bench tốn 2 [[Chaos Orb]].
+odds: >-
+  Khi bow damage đã nằm trên item, mỗi prefix Essence roll thêm là maximum
+  Life trong một nửa số lần ở item level 75, và là Life từ +100 trở lên
+  khoảng 1 trên 7 lần, theo phép tính của chúng tôi từ weight. Một kết quả
+  có một hoặc hai prefix ngoài cái của Essence, nên một nắm Essence là cái
+  giá thường gặp. Suffix thì lần nào cũng ngẫu nhiên và không cần phải tốt:
+  bench lấp một ô, còn resistance hay Dexterity ở các ô khác thì đều đáng
+  mừng.
+steps:
+  - title: "Essence đầu tiên"
+    do: >-
+      Dùng một [[Screaming Essence of Woe]] lên quiver trắng.
+    why: >-
+      Trên quiver, Woe đảm bảo increased Damage with Bow Skills: 31–36% ở bậc
+      Screaming, cùng khoảng với Tier 3 tự nhiên. Item thành Rare với prefix
+      đó và ba tới năm modifier ngẫu nhiên. Từ bậc Screaming trở lên, Essence
+      còn dùng được trên item đã là Rare, nên bạn có thể dùng cái kế tiếp lên
+      chính quiver đó.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "Adds 23 to 44 Fire Damage to Attacks" }
+      suffixes:
+        - { text: "+33 to Dexterity" }
+        - { text: "22% increased Stun Duration on Enemies" }
+  - title: "Đọc prefix tìm Life"
+    do: >-
+      Giữ Alt. Một prefix là của Essence. Nhìn các cái còn lại: có cái nào là
+      **maximum Life** không, và nó là "Virile" (+100–114), "Athlete's"
+      (+115–129) hay "Fecund" (+130–144)?
+    why: >-
+      Quiver ở trên đã trượt: prefix thứ hai của nó là fire damage và không
+      có chút Life nào. Life là prefix bạn không mua được về sau. Bản của
+      bench là +41–55.
+    check: >-
+      Giữ quiver khi Life từ +100 trở lên. Rồi đếm suffix: bạn muốn ít nhất
+      một ô trống, hoặc ba suffix bạn sống chung được.
+    fail: >-
+      Không có Life, hoặc tier thấp: dùng một Essence nữa lên chính quiver
+      đó. Không mất gì ngoài Essence.
+  - title: "Lặp lại tới khi Life ra"
+    do: >-
+      Dùng Essence hết cái này tới cái khác, mỗi lần đều đọc prefix.
+    why: >-
+      Mỗi lần thử là độc lập, và bow damage lần nào cũng quay lại. Bạn chỉ
+      đang chờ một modifier phổ biến ở một tier tử tế.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+29 to Dexterity" }
+  - title: "Bench thứ quiver thiếu"
+    do: >-
+      **Còn một ô suffix trống** (như ở đây): craft 7–12% increased Attack
+      Speed giá 2 [[Chaos Orb]], hoặc một resistance ở mức 29–35% giá 3 Chaos
+      Orb nếu nhân vật cần nó hơn. **Suffix đã đầy nhưng còn một prefix
+      trống:** craft flat damage khớp với build của bạn, hoặc 24–32%
+      increased Elemental Damage with Attack Skills giá 4 Orb of Alchemy.
+    why: >-
+      Một modifier bench, dành cho thứ tốt nhất còn thiếu. Attack speed từ
+      bench khác group với cái của implicit, vốn không nằm trong sáu ô, nên
+      hai cái cộng vào nhau.
+    check: >-
+      Sáu ô, năm ô đã dùng, không có gì có hại. Một prefix trống trên quiver
+      đã hoàn thiện có thể nhận một [[Exalted Orb]] về sau: khi Life và bow
+      damage đã có chỗ, mọi prefix nó thêm được đều là flat damage loại nào
+      đó.
+    state:
+      implicits: ["9% increased Attack Speed"]
+      prefixes:
+        - { text: "34% increased Damage with Bow Skills", how: essence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+29 to Dexterity" }
+        - { text: "10% increased Attack Speed", how: crafted }
+variations: >-
+  **Essence tốt hơn.** Shrieking Woe cho 37–42% và Deafening cho 43–50%.
+  Nếu roll tự nhiên, các khoảng đó cần item level 81 và 86. Phương pháp y
+  hệt; chỉ có con số được đảm bảo là thay đổi.
+
+
+  **Build critical strike.** Dùng một Essence of Scorn thay vào. Nó đảm bảo
+  Global Critical Strike Multiplier (25–29% ở bậc Screaming, 35–41% ở
+  Deafening), suffix damage duy nhất bench không bán cho quiver. Khi đó Life
+  phải đến từ cuộc xổ số thường, nơi nó là 4 trên 10 lần roll prefix, và
+  bench thêm attack speed hoặc một prefix damage.
+mistakes:
+  - "Giữ một kết quả vì suffix của nó trong khi nó không có Life. Resistance và attack speed có ở bench. Life cỡ này thì không."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Dùng cách này trên base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên quiver, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

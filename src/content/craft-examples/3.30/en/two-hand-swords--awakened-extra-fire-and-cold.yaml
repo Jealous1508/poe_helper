@@ -1,0 +1,243 @@
+category: two-hand-swords
+title: "Two influences on one blade: extra fire and extra cold"
+level: 5
+summary: "Roll one influenced prefix on each of two swords, join them with an Awakener's Orb, close the prefix side before anything can be added to it, and reforge the suffixes behind a lock."
+goal: >-
+  An Exquisite Blade that gains 27–30% of Physical Damage as Extra Fire
+  Damage and the same again as Extra Cold Damage, with a crafted physical
+  percentage as the third prefix and critical suffixes rolled behind a lock.
+  The two extra-damage prefixes belong to different influences and cannot be
+  rolled on one sword. The craft is a sequence of decisions made by
+  arithmetic, and it has three places where it can stop short. Each is
+  marked.
+base: "Exquisite Blade"
+itemLevel: 84
+baseWhy: >-
+  +50% to Global Critical Strike Multiplier as an implicit, on a sword whose
+  damage is about to be raised by more than half through two prefixes that
+  critical strikes multiply. The top tier of both extra-damage prefixes needs
+  item level 78. The base must not be fractured: a fractured item cannot
+  take influence.
+methods: [influence, currency, meta, harvest, bench, finishing]
+result:
+  note: "Warlord and Redeemer"
+  implicits: ["+50% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+    - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+    - { text: "118% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "22% increased Attack Speed", how: harvest }
+needs:
+  - { item: "A Redeemer-influenced Exquisite Blade, item level 78+", amount: "1", note: "the sword you keep" }
+  - { item: "A Warlord-influenced two-handed sword, item level 78+", amount: "1", note: "any base; it is destroyed" }
+  - { item: "[[Orb of Alteration]]", amount: "several hundred", note: "for the two prefixes" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "6", note: "2 for the multi-modifier craft, 4 for the lock" }
+  - { item: "[[Sacred Orb]]", amount: "1" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "for the crafted physical percentage" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge" }
+cost: >-
+  Two influenced bases, [[Orb of Alteration]]s by the hundred for each, one
+  [[Awakener's Orb]], and then a fixed bill at the bench: 6 [[Divine Orb]]s,
+  a [[Sacred Orb]] and 4 [[Exalted Orb]]s for a single protected reforge. A
+  second reforge costs the Divine Orbs and the Sacred Orb again and is not
+  always possible. We give no total.
+odds: >-
+  **The two prefixes.** By our arithmetic at item level 84, on a Warlord
+  sword one prefix roll is Extra Fire at the top tier about 1 time in 139,
+  and at 21% or more about 1 in 70. The Redeemer figures for Extra Cold are
+  the same to within a roll or two. Each is its own Alteration hunt.
+
+
+  **The Awakener's Orb** keeps one influenced modifier from each item
+  according to reference pages, and rerolls the rest. Give it two swords
+  with exactly one influenced modifier each and both survive. How many
+  other modifiers arrive, and on which side, is luck.
+
+
+  **The reforge.** The guaranteed critical suffix is Tier 1 or 2 one time in
+  three, if tiers are drawn by weight. So the first protected reforge gives
+  a result worth stopping on perhaps a third of the time, and whether you
+  can try again depends on how many suffixes it left.
+steps:
+  - title: "Decide by arithmetic: one influence or two"
+    do: >-
+      Compare the two ways to put Extra Fire and Extra Cold on one sword.
+      **Shaper** alone has both prefixes: 18–20% each at the top tier, weight
+      1,000 a tier. **Warlord** has Fire and **Redeemer** has Cold: 27–30%
+      each, weight 400 a tier, and joining them takes an
+      [[Awakener's Orb]].
+    why: >-
+      The Shaper sword totals 36–40% and needs no merging. The joined sword
+      totals 54–60% and costs a second base, two Alteration hunts that are
+      each more than twice as long as the Shaper one, and the orb. That is
+      the whole trade.
+      This example takes the larger number; the variations describe the
+      smaller.
+  - title: "Stage 1: one prefix on each of two Magic swords"
+    do: >-
+      On the Redeemer Exquisite Blade: [[Orb of Transmutation]], then
+      [[Orb of Alteration]]s until the prefix is **Gain 27–30% of Physical
+      Damage as Extra Cold Damage**. On the Warlord sword, the same for
+      **Extra Fire Damage**. To make an influenced base, use a
+      [[Redeemer's Exalted Orb]] or a [[Warlord's Exalted Orb]] on a Rare
+      sword with no influence, then an [[Orb of Scouring]], which has always
+      left influence in place.
+    why: >-
+      A Magic item searches two slots cheaply, and it has a second virtue
+      here: it holds at most two modifiers, so it is easy to see that only
+      one of them is influenced. The Warlord sword can be any two-handed
+      sword of item level 78 or more, since it will be destroyed.
+    check: >-
+      On each sword, read the other modifier. If the suffix is also an
+      influenced one, such as Culling Strike or Movement Speed, the
+      Awakener's Orb has two to choose from. Use one more Alteration.
+    state:
+      rarity: magic
+      note: "Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+  - title: "Stage 2: the Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the Warlord sword, then on the Exquisite
+      Blade. The first is destroyed. The second becomes a Rare item with
+      both influences.
+    why: >-
+      The orb's text: "Destroys an item, applying its influence to another
+      of the same item class. The second item is reforged as a rare item
+      with both influence types and new modifiers". Reference pages add that
+      one influenced modifier from each survives. With one on each, there is
+      nothing to choose between.
+    check: >-
+      Both extra-damage prefixes are on the blade. Now count the rest:
+      whether the third prefix slot is empty, and how many suffixes came
+      with it.
+    fail: >-
+      **First place it can stop short.** If three suffixes arrived, there is
+      no room for any bench modifier on that side and the plan below cannot
+      start. The sword still has both prefixes; bench a physical percentage
+      if a prefix is open and use it. An [[Orb of Annulment]] would remove
+      one of five or six modifiers at random, two of which are the reason
+      the sword exists.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+  - title: "Stage 3: close the prefix side, then lock it"
+    do: >-
+      At the [[Crafting Bench]], in this order: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]]s, a suffix). **100–129% increased
+      Physical Damage** (4 [[Exalted Orb]]s, the third prefix). **Prefix
+      Modifiers cannot be changed** (4 Divine Orbs and 1 [[Sacred Orb]], a
+      suffix).
+    why: >-
+      The lock protects what is on the prefix side. Players have long
+      reported that a reroll can still add a modifier to an empty slot
+      there, and the pool would fill it with elemental damage six times in
+      ten. So the slot is filled first, with the modifier you wanted in it
+      anyway, and the lock then covers three prefixes with no door left
+      open. That takes three crafted modifiers at once, which is what the
+      first craft allows.
+    check: >-
+      Three prefixes, one crafted. Three suffixes, two crafted. If the third
+      prefix was already filled by the Awakener's Orb, skip the first two
+      crafts and place the lock alone.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+        - { text: "118% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Stage 4: reforge with a Critical modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Critical modifier**: 150
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      The reforge replaces the suffix side, both crafted suffixes included,
+      and leaves the three prefixes, the crafted one among them. One new
+      suffix must carry the critical tag. Count the tag on **this** sword
+      before trusting it: Warlord and Redeemer add no critical modifiers, so
+      it is still Critical Strike Chance or Multiplier. The Speed reforge
+      would not be safe here. Redeemer's Movement Speed carries the speed
+      tag.
+    check: >-
+      Accept a critical suffix of Tier 1 or 2 with either a second useful
+      suffix or open slots. The result shown has Multiplier at Tier 1 and
+      attack speed beside it, which is better than the bar.
+    fail: >-
+      **Second place it can stop short.** To reforge again you must lock
+      again, and because the crafted prefix is still on the sword, a second
+      crafted modifier needs the multi-modifier craft first. That is two
+      suffix slots. If the reforge left two or three suffixes, there is no
+      second attempt: you keep what rolled. That reforges respect the lock
+      at all is player-tested, not official.
+    state:
+      note: "Warlord and Redeemer"
+      implicits: ["+50% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Gain 28% of Physical Damage as Extra Fire Damage", how: influence }
+        - { text: "Gain 29% of Physical Damage as Extra Cold Damage", how: influence }
+        - { text: "118% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+36% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+  - title: "The last suffix, and the values"
+    do: >-
+      One suffix slot is open and the sword's one crafted modifier is the
+      physical percentage. An [[Exalted Orb]] fills the slot at random. Then
+      20% quality, links, and a [[Divine Orb]] if the two extra-damage rolls
+      sit at 27%.
+    why: >-
+      **Third place it can stop short**, and the mildest. On this sword the
+      suffix pool includes both influences' modifiers, and with attack speed
+      and Multiplier taken about one Exalted Orb in ten adds Critical Strike
+      Chance. Nothing is removed, so the worst case is a filler suffix on a
+      finished sword. A Divine Orb rerolls every value together and can
+      lower the ones you liked.
+variations: >-
+  **The Shaper version.** One Shaper-influenced sword, Alterations until one
+  of the two extra-damage prefixes appears (either of them at any tier is
+  about 1 prefix roll in 10; at 18–20%, about 1 in 30), then an Imprint and
+  a Regal Orb as in the mace guide. The second extra prefix has to be rolled
+  beside the first, which a Regal Orb or an Exalted Orb does about one time
+  in twenty when it adds a prefix. Most swords made this way end with one
+  extra-damage prefix and a crafted percentage, and that is a good sword for
+  a fraction of the cost.
+
+
+  **If the Awakener's Orb filled the third prefix.** Then the lock alone
+  protects a full side, the bench is free for a suffix afterwards, and each
+  further reforge needs only one open suffix slot. What the third prefix is,
+  you do not choose.
+
+
+  **On an axe.** Warlord and Redeemer axes have the same two prefixes, and a
+  Karui Chopper has more physical damage to gain from. What an axe lacks is
+  the Shaper alternative and the multiplier implicit.
+mistakes:
+  - "Merging a sword that carries two influenced modifiers. The Awakener's Orb keeps one from each item and you do not pick which."
+  - "Locking the prefixes with the third slot empty. Close it first; the multi-modifier craft is 2 Divine Orbs against a wasted prefix on the most expensive sword you own."
+  - "Using the Speed reforge because it worked on an uninfluenced weapon. Count the tag on the item in front of you."
+  - "Counting a Warlord prefix of 65–69% increased Physical Damage with attack speed as an extra percentage family. It is the group of the hybrid with Accuracy."
+  - "Starting from a fractured blade. It cannot take either influence."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The influence modifiers on two-handed swords, their tags, tiers and weights, bench costs, and the in-game text of the Awakener's Orb and the influence Exalted Orbs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "One influenced modifier from each item is kept. Not stated in the orb's own text." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical reforge and its cost." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured items cannot be given influence." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges. Partly older than 3.30." }

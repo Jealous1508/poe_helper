@@ -1,0 +1,270 @@
+category: helmets
+title: "An Energy Shield circlet finished with Eldritch currency"
+level: 5
+summary: "Two Fossils for the suffix side, then the prefixes one modifier at a time under a Searing Exarch implicit: a blocked Exalted Orb, a foreseen Annulment, and no bench lock anywhere."
+goal: >-
+  A caster's helmet with the Fossil-only fire suffix, three Energy Shield
+  prefixes and two Eldritch implicits. Every tool in it has appeared in an
+  easier example. What makes it the hardest helmet here is that **each stage
+  is protected by a different thing**, and the decisions in between are made
+  by counting weights, not by habit.
+base: "Lich's Circlet"
+itemLevel: 85
+baseWhy: >-
+  117–134 Energy Shield is the highest base in the category, and three local
+  prefixes multiply it. Item level 84 opens "Unassailable", 92–100% increased
+  Energy Shield, and Tier 1 resistances; 85 adds the top Energy Shield
+  Recharge Rate. The pinnacle of this slot needs nothing higher.
+
+
+  The base must have **no influence and no Memory Strands you care about**:
+  the plan depends on Eldritch implicits, influenced items cannot take them,
+  and we could not confirm that items with strands can.
+methods: [fossil, eldritch, lock, bench, finishing]
+result:
+  implicits: ["11% increased Cast Speed", "24% increased Spell Damage"]
+  prefixes:
+    - { text: "96% increased Energy Shield", how: fossil }
+    - { text: "+57 to maximum Energy Shield", how: eldritch }
+    - { text: "20% increased Energy Shield / +15 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+    - { text: "+47% to Fire Resistance", how: fossil }
+    - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+needs:
+  - { item: "[[Scorched Fossil]] and [[Dense Fossil]]", amount: "dozens of each" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the two-socket size" }
+  - { item: "[[Greater Eldritch Ember]]", amount: "1", note: "to set which side the Eldritch orbs work on" }
+  - { item: "[[Hinekora's Lock]]", amount: "1–3", note: "optional; see stage 3" }
+  - { item: "[[Eldritch Orb of Annulment]]", amount: "1–2" }
+  - { item: "[[Eldritch Exalted Orb]]", amount: "1–3" }
+  - { item: "[[Exceptional Eldritch Ember]] and [[Exceptional Eldritch Ichor]]", amount: "about 30 of each" }
+  - { item: "[[Chaos Orb]] and [[Orb of Scouring]]", amount: "a handful", note: "bench crafts and removing one" }
+cost: >-
+  Stage 1 is counted in pairs of Fossils. Stage 3 is counted in
+  [[Hinekora's Lock]]s if you use them, and each is worth more than most
+  helmets. The final implicits are counted in Exceptional Embers and Ichors,
+  around thirty of each by our arithmetic.
+
+
+  We give no total. Two of the stages have long tails, and prices in the
+  first week of a league move too fast to print.
+odds: >-
+  **Stage 1.** With both Fossils, a prefix roll is "Unassailable" about 1
+  time in 26 and one of the top two tiers of percentage Energy Shield 1 in 13,
+  against 1 in 54 and 1 in 27 with no Fossil. On the suffix side, Fire
+  Resistance and Energy Shield Recharge Rate together are about 77% of the
+  natural weight. For the Fossil-only suffix itself the data gives a weight
+  but not how the Fossil's multiplier applies, so we give no figure.
+
+
+  **Stage 3.** The Annulment is an even chance between your best prefix and
+  your worst unless you look first. The blocked Exalted Orb adds flat Energy
+  Shield or the Stun Recovery hybrid about 40% of the time, against 30%
+  unblocked.
+
+
+  **Stage 5.** An Exceptional Ember gives the always-on cast speed implicit
+  about 1 time in 29, and the Ichor the same for spell damage. All of this
+  is our arithmetic from the weights.
+steps:
+  - title: "Stage 1: both Fossils, and judge only the suffixes"
+    do: >-
+      Make a white item level 85 Lich's Circlet Rare. Put one
+      [[Scorched Fossil]] and one [[Dense Fossil]] in a
+      [[Potent Chaotic Resonator]] and use it. Repeat until the helmet has
+      **the fire suffix and no suffix you would want gone**.
+    why: >-
+      A Fossil is a full reroll, and nothing we know of protects a side from
+      it, so the Fossil-only suffix has to come first, while the helmet is
+      worth nothing. The second Fossil is there to make the rest of each
+      result useful. "More Defence, no Life" turns nine prefix rolls in ten
+      into Energy Shield prefixes and removes Life Regeneration from the
+      suffixes. Between them the two Fossils leave Fire Resistance and
+      Recharge Rate as most of what a suffix can be.
+    check: >-
+      Read the suffixes only. A good prefix is a bonus you keep; a bad one
+      is what stages 2 to 4 are for.
+    fail: >-
+      No fire suffix: next pair of Fossils. Fire suffix with a third suffix
+      you dislike: keep rolling. Removing one suffix later would put the
+      Fossil suffix at risk, and that is the one thing on this helmet you
+      cannot buy back cheaply.
+    state:
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+        - { text: "+18 to maximum Energy Shield / +21 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Stage 2: make the Searing Exarch the stronger implicit"
+    do: >-
+      Use one [[Greater Eldritch Ember]] on the helmet. Add no Ichor yet, or
+      nothing above Lesser.
+    why: >-
+      While the Exarch implicit is the higher strength, an Eldritch Chaos Orb
+      rerolls prefixes, an Eldritch Exalted Orb adds a prefix and an
+      Eldritch Orb of Annulment removes a prefix. None of them can touch a
+      suffix. That is the protection for the whole of the next two stages,
+      and it costs one Ember instead of 4 Divine Orbs and 4 Blessed Orbs a
+      time.
+    check: >-
+      Which implicit the Ember rolled is irrelevant; it will be replaced in
+      stage 5. Its strength is what counts. Check it again before every
+      Eldritch orb you use: the day the Eater is stronger, the same orbs
+      work on suffixes.
+    state:
+      implicits: ["9% increased Cast Speed"]
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+        - { text: "+18 to maximum Energy Shield / +21 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Stage 3: decide what the weak prefix is worth, then remove it or not"
+    do: >-
+      The second prefix adds 16–25 Energy Shield where Tier 1 of the flat
+      prefix adds 50–61, and it occupies the group the bench hybrid needs.
+      To remove it, use an [[Eldritch Orb of Annulment]]. It takes one
+      prefix at random: with two prefixes, an even chance of the wrong one.
+      Use a [[Hinekora's Lock]] on the helmet first, hover the Annulment,
+      and click only if it shows the weak prefix going.
+    why: >-
+      This is the one click in the craft that can undo stage 1's luck, and
+      the Lock exists for exactly that: it shows the result of the next
+      currency before you commit. If the preview is the wrong prefix, do not
+      use the orb. Any other change to the helmet, such as adding and
+      removing a bench modifier, ends that foresight, and you need a fresh
+      Lock for the next look.
+    check: >-
+      One prefix left, "Unassailable", and two open slots.
+    fail: >-
+      No Lock, or not willing to pay for one: keep the weak prefix and go
+      straight to the Exalted Orb in stage 4 without the block. You finish
+      with a slightly worse helmet and no chance of ruining it. That is a
+      respectable decision, and most people should make it.
+    state:
+      implicits: ["9% increased Cast Speed"]
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Stage 4: block mana, then add a prefix"
+    do: >-
+      At the [[Crafting Bench]], craft **+45–54 to maximum Mana** (2
+      [[Chaos Orb]]s) into one of the two open prefixes. Then use an
+      [[Eldritch Exalted Orb]].
+    why: >-
+      On an Energy Shield helmet mana is the most common prefix, 22% of the
+      pool. A bench modifier removes its whole group from the lottery while
+      it sits there, so the Exalted Orb cannot roll mana. Count what is left
+      once the percentage group and mana are out: flat Energy Shield and the
+      Stun Recovery hybrid are 14,000 of 35,275, about 40%. Without the
+      block they are 14,000 of 47,275, about 30%. Two Chaos Orbs bought a
+      third more chance on an orb that costs far more than two Chaos.
+    check: >-
+      The block only works because **two** prefix slots were open: one for
+      the block, one for the orb to fill. With a single open slot there is
+      nothing to block with.
+    fail: >-
+      The orb added maximum Life or one of the small hybrids. For a pure
+      Energy Shield build that is a miss. Remove the bench mana first, so
+      that the next Annulment chooses between two prefixes and not three,
+      then repeat stage 3 on the new prefix and stage 4 again.
+    state:
+      implicits: ["9% increased Cast Speed"]
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+        - { text: "+49 to maximum Mana", how: crafted }
+        - { text: "+57 to maximum Energy Shield", how: eldritch }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Swap the block for the modifier you want"
+    do: >-
+      Remove the crafted mana at the bench (1 [[Orb of Scouring]]). Craft
+      **18–21% increased Energy Shield, +14 to 16 maximum Life** for 2 Chaos
+      Orbs in its place.
+    why: >-
+      The block did its job and is now a wasted slot. The bench's plain
+      percentage Energy Shield would be refused, because "Unassailable" is
+      the same group. The hybrid with life is a different group, the one
+      the weak prefix was sitting in before stage 3.
+    state:
+      implicits: ["9% increased Cast Speed"]
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+        - { text: "+57 to maximum Energy Shield", how: eldritch }
+        - { text: "20% increased Energy Shield / +15 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Stage 5: the implicits you keep"
+    do: >-
+      Use [[Exceptional Eldritch Ember]]s until the Exarch implicit is
+      increased Cast Speed, 11% at that strength. Then
+      [[Exceptional Eldritch Ichor]]s until the Eater implicit is increased
+      Spell Damage, 23–25%.
+    why: >-
+      An Ember replaces only the Exarch implicit and an Ichor only the Eater
+      one, so each can be retried without limit and without touching the six
+      slots. They come last because no Eldritch orb will be used again, and
+      which implicit is stronger has stopped mattering.
+    check: >-
+      Each implicit also rolls in a stronger form that works only while a
+      Unique enemy is in your presence, and a stronger one still for
+      pinnacle Atlas bosses. Cast speed is 15% and 19% in those forms at
+      Exceptional. Take one of those if bosses are what the helmet is for.
+    state:
+      implicits: ["11% increased Cast Speed", "24% increased Spell Damage"]
+      prefixes:
+        - { text: "96% increased Energy Shield", how: fossil }
+        - { text: "+57 to maximum Energy Shield", how: eldritch }
+        - { text: "20% increased Energy Shield / +15 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+47% to Fire Resistance", how: fossil }
+        - { text: "37% increased Energy Shield Recharge Rate", how: fossil }
+  - title: "Finish: quality, the base roll, the values"
+    do: >-
+      20% quality and sockets if not done. A [[Sacred Orb]] if the base
+      rolled low in its 117–134 range. A [[Divine Orb]] only if "Unassailable"
+      sits near 92.
+    why: >-
+      Three local modifiers and quality multiply the base number, so its roll
+      is worth more here than on almost any other item. A Divine Orb rerolls
+      every explicit value at once and can lower as well as raise.
+variations: >-
+  **Reroll the whole prefix side instead.** If stage 1 left no prefix worth
+  keeping, use [[Eldritch Chaos Orb]]s under the same Greater Ember. Each
+  rerolls every prefix at natural weights, where "Unassailable" is 1 prefix
+  roll in 54. It is the right tool for "anything decent" and the wrong one
+  for a specific top tier.
+
+
+  **An Orb of Conflict at the end.** It raises one Eldritch implicit a
+  strength and lowers the other, unpredictably. The data holds two
+  strengths above Exceptional, which no Ember or Ichor gives directly. It
+  is a gamble on a finished item; we have no odds for it.
+
+
+  **The influence route.** A Warlord circlet rolls the same fire suffix
+  without a Fossil. It cannot have either implicit, so it gives up the cast
+  speed and the spell damage this plan ends with.
+mistakes:
+  - "Using a Fossil after stage 1. We could not confirm that anything protects a side from a Fossil reroll in 3.30; assume nothing does."
+  - "Adding a strong Ichor early. It makes the Eater the stronger implicit, and the next Eldritch orb works on the suffixes."
+  - "Using the Eldritch Annulment with three prefixes to see what happens. Remove the bench modifier first, and look before you click."
+  - "Leaving the mana block on the finished helmet."
+  - "Benching plain percentage Energy Shield beside \"Unassailable\". Same group; the bench refuses."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, Fossil multipliers, the Eldritch implicits and their strengths, bench costs, and the in-game text of the Eldritch orbs and Hinekora's Lock. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The cost of the bench locks this plan avoids, and how Delve is reached." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: the stronger Eldritch implicit decides which side the Eldritch orbs work on. Partly older than 3.30." }

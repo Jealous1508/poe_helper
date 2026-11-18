@@ -1,0 +1,546 @@
+name: "Rings"
+short: "Two slots, three pools and 43 bases. Life on one side, resistances and attributes on the other, and the damage comes from where plain rolling cannot reach."
+icon: "Vermillion Ring"
+intro: >-
+  Rings are the slots that make a character legal. Whatever resistances and
+  attributes the rest of the gear failed to supply, two rings are expected to
+  find, with Life on top. That work is easy to craft: the modifiers are
+  common, and the bench sells most of them.
+
+
+  What a ring cannot roll is the surprise. The natural pool has **no critical
+  strike modifier at all**, no Chaos Damage, and an Attack Speed suffix so
+  rare it might as well not exist. Every damage modifier worth having on a
+  ring comes from an Essence, the bench, an influence or a special base. So a
+  ring is planned in two halves: the half you roll, and the half you fetch.
+
+
+  You wear two, and the base list is the longest of any jewellery slot, with
+  bases that change how many prefixes and suffixes the ring has.
+basics:
+  itemLevel:
+    text: >-
+      Life is cheap on a ring: the top tier, 100–114, needs only item level
+      44. The item level you pay for is about the **suffixes**. Resistances
+      reach 36–41% at 60, 42–45% at 72 and 46–48% at 84; the top attributes
+      need 82.
+
+
+      Item level 72 to 75 is enough for a ring you will wear for a long
+      time. Go to 84 for top resistances, and to 80 or more for anything
+      influenced: most of the influenced ring modifiers have their best tier
+      there.
+    breakpoints:
+      - ilvl: 30
+        unlocks: "**Levelling.** Life of 70–84 and the top Cast Speed suffix (13–16%)."
+      - ilvl: 44
+        unlocks: "Tier 1 maximum Life, \"Virile\" (100–114), and Tier 1 added Physical Damage to Attacks (6–9 to 13–15)."
+      - ilvl: 60
+        unlocks: "Tier 1 all Elemental Resistances (15–16%) and Tier 3 single resistances (36–41%). **The first item level worth crafting for maps.**"
+      - ilvl: 72
+        unlocks: "Tier 2 resistances (42–45%). At 74: Tier 2 attributes (43–50) and Tier 1 Energy Shield (44–47)."
+      - ilvl: 76
+        unlocks: "On an Unset Ring only: +3 to Level of Socketed Gems."
+      - ilvl: 81
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (37–42%), Tier 1 Chaos Resistance (31–35%), and on a Bone or Gloam Ring Tier 1 minion damage (37–42%). At 82: Tier 1 attributes (51–55)."
+      - ilvl: 84
+        unlocks: "Tier 1 Fire, Cold and Lightning Resistance (46–48%). **The ceiling for an ordinary ring.**"
+  bases:
+    text: >-
+      There are 43 ring bases. Forty of them roll from one pool; the Unset
+      Ring and the two minion rings each add modifiers of their own. A ring
+      has no numbers for a modifier to multiply, so for most bases the choice
+      is the implicit.
+
+
+      Six Heist bases are different in kind. They change how many prefixes
+      and suffixes the ring can hold, which changes what a craft on them can
+      even attempt.
+    types:
+      - title: "Ordinary rings"
+        pools: [standard]
+        text: >-
+          The resistance rings: Sapphire, Topaz and Ruby (20–30% to one
+          element), Two-Stone (12–16% to two, in three versions), Prismatic
+          (8–10% to all three), Amethyst (13–19% Chaos Resistance, lowered in
+          3.30). Coral has 20–30 Life, Paua 20–30 Mana, Diamond 20–30% Global
+          Critical Strike Chance, Moonstone 7–10% Cast Speed, Gold 6–15% Item
+          Rarity, Iron 1–4 added Physical Damage to Attacks.
+
+
+          Every other kind of ring below, apart from the Unset Ring and the
+          minion rings, shares this pool.
+      - title: "Atlas rings"
+        text: >-
+          Vermillion (5–7% increased maximum Life), Cerulean (8–10% maximum
+          Mana), Opal (15–25% Elemental Damage), Iolite (17–23% Chaos
+          Damage) and Steel (adds 3–4 to 10–14 Physical Damage to Attacks).
+          They drop from level 78 to 80, and in 3.30 only on an item that
+          rolled a high enough Item Tier: the patch notes say Tier 3 or
+          higher for the Steel Ring.
+      - title: "Heist rings: the slot changers"
+        text: >-
+          Six bases, in the normal drop pool since 3.30 with an Item Tier
+          requirement. **Cogwork:** two prefixes, four suffixes, suffixes 25%
+          stronger. **Geodesic:** four and two, prefixes 25% stronger.
+          **Helical:** one prefix, four suffixes, suffixes 50% stronger.
+          **Manifold:** four prefixes, one suffix, prefixes 50% stronger.
+          **Ratcheting:** no prefixes, six suffixes. **Composite:** six
+          prefixes, no suffixes.
+
+
+          They roll from the ordinary pool. What changes is the board, and
+          with it the bench: a prefix lock is a suffix and a suffix lock is a
+          prefix, so a Ratcheting Ring can never have its suffixes locked
+          and a Composite Ring never its prefixes. That is our reasoning from
+          the slot counts.
+      - title: "Left-and-right rings"
+        text: >-
+          Dusk, Penumbra, Tenebrous and the three Shadowed Rings have an
+          implicit that helps in one ring slot and hurts in the other: 15%
+          Skill Effect Duration, 30% Effect of Curses on you, 30% Duration of
+          Ailments on you, or 25% of one element's damage taken as another.
+          Choose the slot before you craft. The data does not say where they
+          drop.
+      - title: "Damage-type rings"
+        text: >-
+          Cryonic, Enthalpic, Synaptic, Organic and Fugitive Rings read
+          "Cannot roll Modifiers of Non-Cold Damage Types" (or Fire,
+          Lightning, Physical, Chaos) and add +2% to that maximum resistance,
+          or 3% additional Physical Damage Reduction on the Organic. By its
+          wording the first line removes part of the pool. The game data
+          lists them in the ordinary pool without that filter, so the odds on
+          this site do not show it; test before you spend. The Formless Ring
+          has 5–7% Global Defences and the Nameless Ring 50% reduced Effect
+          of Curses on you with 50% longer Elemental Ailments.
+      - title: "Unset Ring"
+        pools: [unset-ring]
+        text: >-
+          "Has 1 Socket": room for one more gem. Its pool adds one prefix,
+          "+1 to +3 to Level of Socketed Gems", and with a
+          [[Faceted Fossil]] three suffixes that add a level to socketed
+          Strength, Dexterity or Intelligence gems.
+      - title: "Minion rings"
+        pools: [minion]
+        text: >-
+          The Bone Ring (minions have +10–15% to all Elemental Resistances)
+          and the Gloam Ring (minions take 15% reduced damage in the left
+          slot and 15% increased in the right). Only these two can roll
+          "Minions deal increased Damage" as a prefix and four minion
+          suffixes: Attack and Cast Speed, maximum Life, Movement Speed and
+          Elemental Resistances.
+    picks:
+      - base: "Vermillion Ring"
+        for: "Life builds"
+        why: >-
+          5–7% increased maximum Life above the line. It is a percentage of
+          your whole Life pool, where every Life modifier a ring can roll is
+          a flat number.
+      - base: "Two-Stone Ring"
+        for: "Capping resistances"
+        why: >-
+          12–16% to two elements is up to 32% of resistance in the implicit,
+          more than any single-element ring's 30%, and it drops from level
+          20. Pick the version that covers your two lowest.
+      - base: "Amethyst Ring"
+        for: "Chaos Resistance"
+        why: >-
+          13–19% Chaos Resistance where crafting cannot remove it. The Chaos
+          Resistance suffix weighs 250 per tier and no Essence gives it on a
+          ring, so the implicit is the reliable source.
+      - base: "Opal Ring"
+        for: "Elemental damage of any kind"
+        why: >-
+          15–25% increased Elemental Damage, for attacks and spells alike.
+          The Steel Ring is its counterpart for physical attacks and the
+          Iolite Ring for chaos.
+      - base: "Bone Ring"
+        for: "Minion builds"
+        why: >-
+          Not for the implicit but for the pool: minion damage of up to
+          37–42% and four minion suffixes that no other ring rolls.
+      - base: "Helical Ring"
+        for: "A ring that is nearly all suffixes"
+        why: >-
+          One prefix and four suffixes at 50% more. By the wording of the
+          implicit a 46–48% resistance becomes about 70%. You pay with two
+          prefix slots, and the single prefix left is where Life goes.
+    impact: >-
+      **The implicit.** On a ring it is often worth a whole suffix: a
+      Two-Stone's two resistances, an Amethyst's Chaos Resistance. A
+      [[Blessed Orb]] rerolls its number and nothing else changes it short of
+      corruption.
+
+
+      **The pool.** Only for the Unset Ring and the two minion rings.
+
+
+      **The number of slots.** Only for the six Heist rings, where it decides
+      which side of the ring exists.
+
+
+      **Which finger.** Only for the left-and-right rings.
+
+
+      And one thing no base decides alone: you wear **two**. Plan the pair
+      together. Two rings that each fix the same resistance waste one of
+      them.
+tools:
+  - method: currency
+    note: >-
+      At item level 84 a prefix roll is maximum Life about 1 time in 7, and
+      the top tier 1 in 59, by our arithmetic from the weights. Mana and
+      Energy Shield are 39% of prefix rolls between them.
+
+
+      On the suffix side one roll in four is an attribute and one in four an
+      elemental resistance. A resistance of 42% or more, of any element, is
+      about 1 suffix roll in 17; of the element you named, 1 in 52.
+
+
+      So a Life prefix or a good resistance is a short job for
+      [[Orb of Alteration]]s. The natural Attack Speed suffix is 1 roll in
+      207 and added elemental damage at its top tier 1 in 1,185: leave those
+      to other tools.
+  - method: bench
+    note: >-
+      The ring bench is where most ring damage comes from. **Prefixes:**
+      maximum Life 41–55 for 2 Orbs of Alchemy; 12–14% increased Damage for
+      4 Chaos Orbs or 15–17% for 4 Exalted Orbs; "Non-Channelling Skills have
+      −7 to −6 to Total Mana Cost" for 4 Chaos Orbs.
+
+
+      **Suffixes:** one resistance 21–28% or a pair 13–16% for 1 Orb of
+      Alchemy; one element and Chaos 13–15% for 3 Chaos Orbs; an attribute
+      26–30 for 2 Chaos Orbs; 3–5% Attack Speed for 2 Orbs of Alchemy; +1 to
+      Minimum Endurance, Frenzy or Power Charges for 4 Exalted Orbs;
+      "Minions have 11–15% increased maximum Life" for 4 Orbs of
+      Augmentation.
+
+
+      Groups to know: a resistance pair is its own group and sits beside a
+      single resistance of either element. The bench's Life is the same
+      group as rolled Life. Not for sale on a ring: Cast Speed, and Critical
+      Strike Multiplier on its own.
+  - method: finishing
+    note: >-
+      Quality comes from **Catalysts**, up to 20%, one kind at a time: a
+      [[Prismatic Catalyst]] for a resistance ring, a [[Fertile Catalyst]]
+      for Life and Mana, an [[Intrinsic Catalyst]] for attributes, a
+      [[Turbulent Catalyst]] for elemental damage. In 3.30 they come only
+      from Ultimatum. Our sources do not say what later crafting does to the
+      quality, so add it last.
+
+
+      A ring has no sockets, with the Unset Ring's one as the exception.
+  - method: essence
+    note: >-
+      On a ring the Essences supply what the pool lacks. **Scorn:** Critical
+      Strike Multiplier, 15–17% at Screaming and 21–25% at Deafening.
+      **Loathing:** Critical Strike Chance, up to 24–26%. **Envy:** 31–34%
+      increased Chaos Damage. **Dread:** flat Armour, 201–300 at Deafening.
+      None of those four can be rolled on a ring.
+
+
+      Others beat the natural top tier. **Anger, Hatred, Wrath:** 31–34%
+      increased Fire, Cold or Lightning Damage against 19–22%.
+      **Anguish, Suffering, Torment:** added elemental damage to attacks at
+      or above Tier 1, a tier whose natural weight is 50.
+      **Contempt:** adds 10–11 to 16–17 Physical Damage. **Rage, Sorrow,
+      Spite:** 51–58 of an attribute. **Fear** gives minion Movement Speed
+      on any ring.
+
+
+      What they do **not** give: Life or a resistance. Greed is Life
+      regeneration here and Anger is fire damage. Those you roll or bench.
+  - method: beast
+    note: >-
+      **Add a suffix, remove a random prefix** ([[Farric Lynx Alpha]]) is
+      the ring recipe. A ring's value is in its suffixes and its prefix is
+      usually Life from the bench, so a ring is often in exactly the state
+      the recipe wants: suffixes worth having, no prefix worth keeping.
+
+
+      An **Imprint** ([[Craicic Croaker]]) pays on a Magic Unset Ring with
+      +3 to Level of Socketed Gems, about 1 prefix roll in 246, and on any
+      influenced Magic ring with a curse on hit.
+  - method: harvest
+    note: >-
+      **Resistance swaps** turn one elemental resistance into another. In
+      3.30 each costs 300 Lifeforce of two different types. This is why a
+      ring craft may accept a top resistance of the wrong element.
+
+
+      **Life** (75 Wild) is maximum Life only about 1 time in 3 on an open
+      ring, because regeneration, recoup and Life on kill share the tag.
+      With three suffixes locked, maximum Life is the only life prefix in
+      the ordinary pool.
+
+
+      **Caster** (75 Primal) always gives Cast Speed on an ordinary ring
+      without influence, the only caster modifier it has. On an influenced ring the
+      curse-on-hit suffixes carry that tag too, and that is how they are
+      found. **Critical** (150 Primal) has nothing to give an ordinary ring;
+      on a Shaper, Crusader, Elder or Warlord ring it can only give that
+      influence's critical suffix.
+  - method: fossil
+    note: >-
+      A [[Pristine Fossil]] removes Energy Shield and Evasion, which are 30%
+      of prefix rolls, and multiplies Life by ten: maximum Life becomes
+      between 56% and 71% of prefix rolls by our arithmetic. The lower
+      figure counts the ring's Fossil-only prefixes, five kinds of 0.2%
+      damage leech that carry the life tag and are worth nothing.
+
+
+      A [[Bound Fossil]] on a Bone Ring makes minion damage about a third of
+      prefix rolls and minion modifiers three quarters of suffix rolls. A
+      [[Faceted Fossil]] on an Unset Ring makes the socketed gem prefix more
+      than a quarter of prefix rolls.
+  - method: veiled
+    note: >-
+      Unveiled ring modifiers: +55–60 Life with Mana regeneration (the Life
+      group); +31–35 to two attributes; +16–20% to one element and Chaos
+      Resistance; +1 to Minimum Endurance, Frenzy or Power Charges with a
+      3–4% chance to gain one on kill; added damage of two elements. The
+      hybrid Chaos resistances are the common reason to use a
+      [[Veiled Chaos Orb]] on a ring.
+  - method: influence
+    note: >-
+      Influence is where a ring's critical strike modifiers live. Shaper and
+      Crusader: 21–25% Global Critical Strike Chance. Elder: 17–20% Critical
+      Strike Multiplier; Warlord: 20–22%.
+
+
+      Each conqueror list also has a suffix that curses on hit, at a weight
+      of 200: Crusader Conductivity, Warlord Flammability and Vulnerability,
+      Redeemer Frostbite, Hunter Despair and Elemental Weakness. And a
+      damage prefix of 22–25%: Warlord Melee Damage, Redeemer Projectile
+      Attack Damage or minion damage, Crusader Spell Damage.
+  - method: meta
+    note: >-
+      A full lock on a ring costs 4 Divine Orbs and 8 Exalted Orbs in 3.30.
+      Because ring Life is so easy and ring suffixes so varied, the lock that
+      earns its price here is "Suffix Modifiers cannot be changed", on a
+      ring whose suffixes include something from an influence.
+  - method: fracture
+    note: >-
+      A fractured top resistance or a fractured Essence-level added damage
+      prefix makes a ring you can throw Essences at for ever. An influenced
+      ring cannot be fractured, so this route and the curse-on-hit route do
+      not meet.
+  - method: corruption
+    note: >-
+      Ring corruption implicits include +1 to Maximum Endurance, Frenzy or
+      Power Charges, 15–25% increased Damage, +15–20% Critical Strike
+      Multiplier, "Cannot be Ignited" and "Cannot be Poisoned". The
+      corruption replaces the base's implicit.
+  - method: strands
+    note: "See the Memory Strands section below: rings are the jewellery slot they suit best."
+memoryStrands: >-
+  Almost everything an ordinary ring wants has many tiers: eight of Life,
+  eight of each resistance, nine of each attribute. That is the situation
+  [[Memory Strands]] were made for, since they raise the tier of whatever is
+  rolled and change nothing else.
+
+
+  The use that fits is the plain one. An [[Orb of Remembrance]] on a white
+  ring of item level 84, then [[Orb of Alteration]]s for a resistance, a
+  [[Regal Orb]], and [[Exalted Orb]]s into the open slots: Alterations spend
+  at most 8 strands each and Regal and Exalted Orbs at most 16, by the
+  data-mined table, and the game shows the cost before each one.
+
+
+  Strands are wasted on the fetched half of a ring. An Essence can spend up
+  to 80 and sets its own number. The bench modifier, a curse on hit and the
+  gem level of an Unset Ring have fixed values or a single tier.
+reading:
+  intro: >-
+    Read a ring from the bottom up. **How many of the three suffixes are a
+    resistance or attribute you need, and at what tier?** That is what you
+    cannot buy at full strength. Then check that a prefix is Life or that a
+    prefix slot is open for it. Last, look for the one modifier that plain
+    rolling does not give.
+  prefixes:
+    text: >-
+      Ten families in the ordinary pool, and for most builds one of them
+      matters: Life, 13.5% of rolls. Mana and Energy Shield are the two
+      largest and together take four rolls in ten.
+
+
+      Because Life is common and its top tier needs item level 44, the prefix
+      side is the easy side of a ring. It is also where the bench puts its
+      best ring crafts, increased Damage and the mana cost reduction, and
+      those compete with Life for three slots only if the ring rolled junk
+      in the others.
+
+
+      The added elemental damage prefixes look common at 5.5% each, but
+      their top three tiers weigh 50, 100 and 100. Use an Essence for those.
+    key:
+      - mod: "+# to maximum Life"
+        why: "The one prefix nearly every ring should have. The bench's 41–55 is about half of a top roll."
+        aim: "T3, 70–84 (ilvl 30). T1 is 100–114 (ilvl 44)."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "The attack build's ring prefix, at a weight of 300 per tier."
+        aim: "T2, 31–36% (ilvl 60). T1 is 37–42% (ilvl 81)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Attacks"
+        why: "Strong at the top and nearly unrollable there. A Shrieking Essence gives the Tier 1 numbers outright."
+        aim: "T4 by rolling (ilvl 44–45). Tier 1 or better from an Essence."
+      - mod: "+# to maximum Energy Shield"
+        why: "For Energy Shield builds, and common: nearly one prefix roll in five."
+        aim: "T2, 38–43 (ilvl 68). T1 is 44–47 (ilvl 74)."
+      - mod: "Minions deal #% increased Damage"
+        why: "Bone and Gloam Rings only. The reason those bases exist."
+        aim: "T2, 31–36% (ilvl 60). T1 is 37–42% (ilvl 81)."
+      - mod: "+# to Level of Socketed Gems"
+        why: "Unset Ring only. Raises the one gem in the ring's socket."
+        aim: "T2, +2 (ilvl 50). T1 is +3 (ilvl 76), weight 250."
+  suffixes:
+    text: >-
+      Twenty-five families, and half of all rolls are a single attribute or
+      a single elemental resistance. That is the ring doing its job. The
+      skill is in getting the **right** ones at a tier the bench cannot
+      match: the bench's resistance is 21–28%, a Tier 2 roll is 42–45%.
+
+
+      The rest of the side is small recovery modifiers and filler. Nothing
+      in it adds much damage: increased Fire, Cold or Lightning Damage stops
+      at 19–22%, Cast Speed at 13–16%.
+
+
+      Groups work in your favour here. A single resistance, a pair of
+      resistances and "all Elemental Resistances" are three different
+      groups, so a ring can carry fire resistance three times over.
+    key:
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "What rings are for. A Harvest swap changes the element afterwards, so any of the three is worth keeping at a high tier."
+        aim: "T2, 42–45% (ilvl 72). T1 is 46–48% (ilvl 84)."
+      - mod: "+# to Strength / Dexterity / Intelligence"
+        why: "Requirements for gems and gear. An Essence gives 51–58, above the best roll."
+        aim: "T2, 43–50 (ilvl 74). T1 is 51–55 (ilvl 82)."
+      - mod: "+#% to all Elemental Resistances"
+        why: "Three resistances in one slot, and the top tier is early."
+        aim: "T1, 15–16% (ilvl 60)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Scarce everywhere. On a ring it is rolled at a weight of 250, crafted as a hybrid, or taken from an Amethyst implicit."
+        aim: "T3, 21–25% (ilvl 56). T1 is 31–35% (ilvl 81)."
+      - mod: "#% of Damage taken Recouped as Life"
+        why: "A defensive suffix few other slots roll."
+        aim: "T2, 10–12% (ilvl 68). T1 is 13–15% (ilvl 79)."
+      - mod: "Minions have +#% to all Elemental Resistances"
+        why: "Bone and Gloam Rings only, with the three other minion suffixes. Each is 6–7% of suffix rolls there."
+        aim: "T1, 27–30% (ilvl 61)."
+approach:
+  principle: >-
+    **Roll the suffixes, fetch the damage, buy the Life.** A ring's
+    resistances and attributes are worth rolling because the bench's versions
+    are half strength. Its one damage or utility modifier has to be fetched
+    from an Essence, the bench or an influence, because the pool does not
+    hold it. Life is last because it is the easiest thing on the item.
+  order:
+    - title: "Read the character, then choose the pair"
+      text: >-
+        Add up your resistances and attributes without rings. The gap is
+        what the two rings must cover between them. Choose implicits that
+        take the largest pieces: a Two-Stone, an Amethyst, a Vermillion if
+        the gap is already small.
+    - title: "Decide what the ring fetches"
+      text: >-
+        One thing per ring, usually: a multiplier from Scorn, a bench prefix
+        of increased Damage, a curse on hit from an influence, minion
+        damage from the Bone Ring's pool. This decides the base and whether
+        it needs an influence.
+    - title: "If the fetched modifier is rerolled into place, do that first"
+      text: >-
+        An Essence or a Harvest reforge replaces the whole ring. Anything
+        rolled before it is lost, so the Essence modifier or the influenced
+        suffix comes first and the rest is judged around it.
+    - title: "Get the suffixes"
+      text: >-
+        Alterations for one high resistance, a Regal Orb, and the Lynx
+        recipe while the prefix side is empty. Accept the wrong element at
+        a high tier: a Harvest swap fixes the element, nothing cheap fixes
+        the tier.
+    - title: "Protect only an influenced or Essence-level suffix side"
+      text: >-
+        Three ordinary resistances are not worth 4 Divine Orbs and 8 Exalted
+        Orbs. A curse on hit beside two good suffixes is.
+    - title: "Life and the bench last"
+      text: >-
+        If the ring has no Life, the bench's 41–55 goes in a prefix. If it
+        rolled Life, the bench slot is free for increased Damage, mana cost
+        or the resistance still missing.
+  finishing: >-
+    Check the pair together on the character sheet, with both rings on, and
+    use the bench slot of each for whatever is still short. Then Catalysts:
+    [[Prismatic Catalyst]]s on a resistance ring can be the difference
+    between capped and not.
+
+
+    A [[Divine Orb]] is rarely worth it on a ring unless one resistance is at
+    the very bottom of its tier and that is the one keeping you from the cap.
+  stopping: >-
+    Two suffixes you need at Tier 3 or better (a resistance of 36%, an
+    attribute of 38), Life of any kind, and the bench slot used: that is a
+    ring for the whole Atlas. The
+    third good suffix and the fetched damage modifier make it a good ring.
+    Tier 1 on all three suffixes is where the cost multiplies and the
+    character barely notices.
+
+
+    Stop when both rings together cap your resistances and meet your
+    attributes. Past that point every further improvement to a ring is
+    damage, and should be priced against the same damage from another slot.
+special:
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Essence / Influence"
+    where: "Not in the natural ring pool. 21–25% from a Deafening Essence of Scorn; 17–20% as an Elder suffix and 20–22% as a Warlord suffix at item level 80."
+  - mod: "#% increased Global Critical Strike Chance"
+    source: "Essence / Influence / Base"
+    where: "Up to 24–26% from an Essence of Loathing; 21–25% as a Shaper or Crusader suffix. The Diamond Ring has 20–30% as its implicit."
+  - mod: "Curse Enemies with Despair on Hit"
+    source: "Hunter influence"
+    where: "A Hunter suffix at item level 80, weight 200. The other conqueror lists hold Conductivity, Flammability, Vulnerability, Frostbite and Elemental Weakness. On an influenced ring a Harvest Caster reforge is the usual way to reach them."
+  - mod: "#% increased Damage"
+    source: "Bench / Corruption"
+    where: "A bench prefix: 12–14% for 4 Chaos Orbs, 15–17% for 4 Exalted Orbs. 15–25% as a corruption implicit."
+  - mod: "Non-Channelling Skills have -# to Total Mana Cost"
+    source: "Bench"
+    where: "A bench prefix, −7 to −6 for 4 Chaos Orbs. On two rings it removes most of the cost of a cheap skill."
+  - mod: "+# to Minimum Endurance / Frenzy / Power Charges"
+    source: "Bench / Veiled"
+    where: "A bench suffix for 4 Exalted Orbs; the unveiled version adds a 3–4% chance to gain the charge on kill. The +1 to **Maximum** charges is a corruption implicit only."
+  - mod: "#% increased Chaos Damage"
+    source: "Essence / Bench / Base"
+    where: "31–34% from a Deafening Essence of Envy; 13–16% from the bench; 17–23% as the Iolite Ring's implicit."
+  - mod: "+# to Armour"
+    source: "Essence"
+    where: "80–120 to 201–300 from an Essence of Dread. Flat Armour is not in a ring's natural pool."
+  - mod: "Gain 10% of Physical Damage as Extra Fire Damage"
+    source: "Corrupted Essence"
+    where: "An [[Essence of Hysteria]] prefix. The other three on a ring: +12–15% Damage over Time Multiplier (Delirium), 4 to 7 Added Cold Damage per Frenzy Charge (Horror), +60% of Reflected Damage prevented (Insanity). All come from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "#% increased Attack Speed"
+    source: "Rare roll / Bench"
+    where: "5–7% in the natural pool at a weight of 500, about 1 suffix roll in 207. The bench sells 3–5% for 2 Orbs of Alchemy."
+  - mod: "+# to Level of Socketed Gems"
+    source: "Unset Ring pool"
+    where: "Only on an Unset Ring: +1 to +3, the last from item level 76."
+  - mod: "+1 Suffix Modifier allowed / 50% increased Suffix Modifier magnitudes"
+    source: "Base implicit"
+    where: "The Helical Ring. The other Heist rings move the slots differently. Not craftable: you choose it by choosing the base."
+mistakes:
+  - "**Crafting one ring at a time.** The two are one plan. Read the resistances with both on before you bench either."
+  - "**Rolling for critical strike modifiers on an ordinary ring.** They are not in the pool. Use Scorn, Loathing, or an influence."
+  - "**Expecting Life or a resistance from an Essence.** On a ring Greed gives regeneration and Anger gives fire damage."
+  - "**Benching the resistance the ring already rolled.** Same group: the bench refuses. The pair of resistances is a different group and fits."
+  - "**Rejecting a 46% resistance because it is the wrong element.** A Harvest swap changes the element for 300 Lifeforce of two types."
+  - "**Locking three ordinary resistances.** They can be rolled again for far less than 4 Divine Orbs and 8 Exalted Orbs."
+  - "**Putting a left-and-right ring on the wrong finger.** Its implicit helps in one slot and hurts in the other."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, Essence, Fossil multiplier and bench cost quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Item Tiers and the Heist rings in the normal drop pool; the Amethyst Ring change; resistance swap costs; the 3.30 cost of the protection modifiers." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum as the only source of Catalysts." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-suffix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Life, Caster and Critical reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

@@ -1,0 +1,276 @@
+category: quivers
+title: "Quiver hàng đỉnh quanh một additional arrow fractured"
+level: 5
+summary: "Kế hoạch đầy đủ: fracture cái suffix mà không gì nhắm được vào, cố định cái thứ hai bằng một Essence, khóa suffix để có một roll Life được đảm bảo, rồi dùng một block ở bench để Exalted Orb gần như không còn chỗ xấu nào để rơi vào."
+goal: >-
+  Một quiver có additional arrow thành vĩnh viễn, Critical Strike Multiplier
+  hàng đầu, một suffix damage thứ ba, Life cao và hai prefix damage. Mỗi giai
+  đoạn dùng công cụ rẻ nhất mà *chắc chắn* cho ô đó, và thứ tự sinh ra từ
+  một câu hỏi được hỏi năm lần: **cái gì nhắm được vào modifier
+  này?** Với arrow, câu trả lời là không gì cả, nên nó được fracture. Với
+  mọi thứ sau nó thì có câu trả lời, và kế hoạch chính là danh sách các câu
+  trả lời đó.
+base: "Spike-Point Arrow Quiver"
+itemLevel: 86
+baseWhy: >-
+  Item level 86 mở tier cuối của increased Damage with Bow Skills (43–50%)
+  và, từ 85, của Critical Strike Chance with Bows (39–44%). Bản thân arrow
+  chỉ cần 70, nên một base item level 77 làm ra cùng cây quiver đó, thấp hơn
+  một tier ở hai chỗ, với giá rẻ hơn nhiều.
+
+
+  Base phải **không có influence**: [[Fracturing Orb]] từ chối item có
+  influence. Chọn implicit theo build. Ví dụ này là một build critical
+  strike elemental trên Spike-Point; Primal Arrow Quiver là lựa chọn hợp lý
+  còn lại.
+methods: [fracture, essence, meta, harvest, bench, currency, finishing]
+result:
+  note: "Fractured"
+  implicits: ["28% increased Critical Strike Chance with Bows"]
+  prefixes:
+    - { text: "+136 to maximum Life", how: harvest }
+    - { text: "45% increased Damage with Bow Skills" }
+    - { text: "30% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+    - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+    - { text: "33% increased Critical Strike Chance with Bows" }
+needs:
+  - { item: "Một quiver có \"Bow Attacks fire an additional Arrow\" fractured, item level 86", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Deafening Essence of Scorn]]", amount: "vài chục" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần reforge" }
+  - { item: "[[Exalted Orb]]", amount: "1–2" }
+  - { item: "[[Orb of Transmutation]]", amount: "4", note: "cho block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "để gỡ block" }
+  - { item: "[[Orb of Alchemy]]", amount: "4", note: "cho craft bench cuối cùng" }
+cost: >-
+  Base fractured chiếm phần lớn chi phí. Trong 3.30 fractured item hiếm hơn
+  trước: chúng đến từ đồ rơi Tier 5, một [[Fracturing Orb]] hoặc một
+  [[Fractured Fossil]], và arrow vốn đã là một trên khoảng 300 lần roll
+  suffix trước khi tính tới mấy thứ đó. Sau base, chi phí được đếm bằng
+  Deafening Essence ở giai đoạn 2 và bằng số lần khóa ở giai đoạn 3, mỗi lần
+  khóa là 4 [[Divine Orb]] và 4 [[Blessed Orb]]. So ra thì giai đoạn 4 rẻ.
+
+
+  Chúng tôi không đưa ra tổng số. Giá trong tuần đầu league biến động quá
+  nhanh, và giai đoạn 2 lẫn giai đoạn 3 đều có đuôi dài, xui thì kéo rất
+  lâu.
+odds: >-
+  Mọi con số là phép tính của chúng tôi từ weight ở item level 86, tính cho
+  từng modifier được roll.
+
+
+  **Giai đoạn 1.** Arrow có weight 250 trong một pool suffix 76,350: 1 trên
+  305 lần roll suffix. Một Fracturing Orb trên item Rare có đúng bốn modifier
+  chọn trúng nó 1 trên 4 lần.
+
+
+  **Giai đoạn 2.** Essence cố định suffix thứ hai ở mọi lần. Cái thứ ba mới
+  là câu hỏi: khi kết quả có suffix thứ ba, nó là Critical Strike Chance
+  with Bows từ 30% trở lên khoảng 1 trên 24 lần, và ở tier bất kỳ khoảng 1
+  trên 10. Một kết quả không có suffix thứ ba cũng tốt ngang vậy, vì bench
+  lấp được nó, và đó là kết cục bạn nên tính là mình sẽ dừng lại.
+
+
+  **Giai đoạn 3.** Mọi reforge Life đều cho Life. Nếu tier của nó được bốc
+  theo weight, 3 trên 10 cho +100 trở lên, 2 trên 10 cho +115 trở lên. Chưa
+  được đo trong 3.30.
+
+
+  **Giai đoạn 4.** Khi Life đã nằm trên item và flat Physical Damage bị
+  block, một prefix được thêm là bow damage trong 48% số lần, flat Fire, Cold
+  hoặc Lightning 51%, flat Chaos 1%. Với build elemental, đó là 99 kết quả
+  hữu ích trên 100. Không có block thì là 73.
+steps:
+  - title: "Giai đoạn 1: additional arrow fractured"
+    do: >-
+      Mua hoặc tìm một quiver item level 86 có **"Bow Attacks fire an
+      additional Arrow" fractured**. Còn nếu tự làm: roll "of
+      Splintering" lên một quiver Magic bằng Alteration, đưa item thành
+      Rare với **đúng bốn** modifier bằng một [[Regal Orb]] và một hoặc
+      hai [[Exalted Orb]], rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Hãy dò qua bộ công cụ với arrow trong đầu. Không Essence nào cho nó.
+      Nó không có tag riêng nào để một reforge Harvest hay một Fossil chọn
+      ra: tag duy nhất của nó là "attack", chung với một phần ba pool
+      suffix. Bench không bán nó. Một modifier mà không gì nhắm được vào
+      chính là cái cần làm cho vĩnh viễn, vì khi đó mọi giai đoạn khác đều
+      roll lại thoải mái được.
+    check: >-
+      Fracturing Orb cần ít nhất bốn modifier và chọn **ngẫu nhiên** một
+      cái. Với đúng bốn thì tỉ lệ là 1 trên 4. Đừng thêm cái thứ năm trước.
+    fail: >-
+      Nó fracture nhầm thứ khác. Quiver vẫn còn arrow dưới dạng một suffix
+      thường, với sai modifier bị khóa vĩnh viễn bên cạnh, và nó không
+      fracture lại được nữa, cũng không quay về một [[Imprint]] được. Đây
+      chính là bước khiến phần lớn người chơi chọn mua base.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "Adds 16 to 31 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+44 to Dexterity" }
+        - { text: "+33% to Cold Resistance" }
+  - title: "Giai đoạn 2: một Essence cho suffix thứ hai"
+    do: >-
+      Dùng [[Deafening Essence of Scorn]] tới khi suffix thứ ba là
+      **Critical Strike Chance with Bows từ 30% trở lên, attack speed, hoặc
+      trống**. Lờ hẳn prefix đi.
+    why: >-
+      Scorn đảm bảo Global Critical Strike Multiplier, 35–41% ở bậc
+      Deafening, cao hơn mức 35–38% của tier tự nhiên và là suffix damage
+      duy nhất bench không bán. Essence roll lại mọi thứ không fractured,
+      nên arrow ở lại và multiplier lần nào cũng quay về. Vậy là còn một ô
+      suffix phó mặc cho may rủi, và một ô trống cũng tính là thắng.
+    check: >-
+      Giữ Alt và đọc suffix thứ ba. "of Penetrating" là 30–34%,
+      "of Incision" 35–38%, "of Rending" 39–44%. Prefix không quan trọng:
+      giai đoạn 3 sẽ thay chúng.
+    fail: >-
+      Suffix thứ ba là đồ lấp chỗ: dùng Essence kế tiếp. Một resistance mà
+      nhân vật của bạn cần là chỗ hợp lý để dừng sớm.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "Adds 28 to 57 Fire Damage to Attacks" }
+        - { text: "+47 to maximum Life" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Mở một ô prefix nếu Essence đã lấp cả ba"
+    do: >-
+      Giai đoạn 3 cần một **prefix** trống cho khóa. Nếu kết quả Essence bạn
+      muốn giữ có ba prefix thì nó chưa dùng được: tiếp tục roll giai đoạn 2
+      tới khi một kết quả qua được phép thử suffix với nhiều nhất hai
+      prefix.
+    why: >-
+      Một [[Orb of Annulment]] để dọn một prefix sẽ đem multiplier và suffix
+      thứ ba, những cái không fractured, ra đánh cược. Chờ một kết quả còn
+      chỗ thì tốn Essence chứ không tốn suffix.
+  - title: "Giai đoạn 3: khóa suffix, reforge lấy Life"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** ở bench (4
+      [[Divine Orb]] và 4 [[Blessed Orb]]). Rồi, ở
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]). Lặp lại cả hai tới khi Life từ +115
+      trở lên và phía prefix có **đúng một prefix khác hoặc không có cái
+      nào**.
+    why: >-
+      Khóa bảo vệ hai suffix không fractured. Khi phía suffix đã đóng, tag
+      life chỉ có maximum Life thỏa được, nên reforge là một lần roll Life
+      được đảm bảo. Ở đây bạn muốn các ô prefix trống hơn là một prefix thứ
+      hai may mắn, vì giai đoạn 4 lấp chúng với điều kiện tốt hơn lần
+      reforge này.
+    check: >-
+      Suffix không đổi, tier của Life, số prefix. Chỉ mỗi Life là kết quả
+      lý tưởng.
+    fail: >-
+      Life thấp, hoặc ba prefix: khóa và reforge lần nữa. Mỗi lần lặp là
+      thêm 4 Divine Orb và 4 Blessed Orb, nên hãy chốt số lần thử trước khi
+      bắt đầu.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Giai đoạn 4: block một group, rồi một Exalted Orb"
+    do: >-
+      Ở bench, craft **flat Physical Damage to Attacks** rẻ nhất (adds 3–5
+      to 6–8, 4 [[Orb of Transmutation]]). Rồi dùng một
+      [[Exalted Orb]].
+    why: >-
+      Cả ba ô suffix đã đầy, nên Exalted Orb buộc phải thêm một prefix. Phía
+      prefix của quiver có bảy họ. Life đã nằm trên item, và modifier bench
+      đưa group Physical Damage ra khỏi cuộc xổ số chừng nào nó còn nằm đó.
+      Thứ còn lại là bow damage, ba element và Chaos: với build elemental,
+      toàn là kết quả muốn có, và bow damage chiếm gần một nửa. Cái block
+      tồn tại chỉ để nắn đúng một lần roll này.
+    check: >-
+      Build physical không block gì và nhận Exalted Orb ra sao thì ra: khi
+      đó bow damage và flat Physical Damage cộng lại chiếm 62% kết quả.
+    fail: >-
+      Flat Chaos Damage, 1 trên 100 lần. Chỉ Annulment mới gỡ được nó, mà
+      Annulment có thể lấy mất Life thay vào. Cứ để nó đó.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+        - { text: "Adds 4 to 7 Physical Damage to Attacks", how: crafted }
+        - { text: "45% increased Damage with Bow Skills" }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Đổi block lấy modifier bench thật"
+    do: >-
+      Gỡ modifier crafted ở bench (1 [[Orb of Scouring]]) rồi craft
+      **24–32% increased Elemental Damage with Attack Skills** vào chỗ nó, 4
+      [[Orb of Alchemy]].
+    why: >-
+      Block đã xong việc. Ô nó giữ giờ nhận prefix duy nhất mà quiver không
+      tự roll ra được, nên cả sáu ô rốt cuộc đều làm việc.
+    state:
+      note: "Fractured"
+      implicits: ["28% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+136 to maximum Life", how: harvest }
+        - { text: "45% increased Damage with Bow Skills" }
+        - { text: "30% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "Bow Attacks fire an additional Arrow", how: fractured }
+        - { text: "+38% to Global Critical Strike Multiplier", how: essence }
+        - { text: "33% increased Critical Strike Chance with Bows" }
+  - title: "Hoàn thiện: hai orb chỉnh chỉ số"
+    do: >-
+      Một [[Divine Orb]] nếu Life, multiplier hoặc bow damage nằm thấp trong
+      khoảng của chúng. [[Blessed Orb]] tới khi implicit gần 30%.
+    why: >-
+      Divine Orb roll lại mọi con số cùng lúc và có thể hạ những cái tốt,
+      nên hãy dùng khi các chỉ số quan trọng đang kém còn mấy cái kia chưa
+      hoàn hảo. Implicit có khoảng rộng mười điểm và Blessed Orb thì rẻ.
+variations: >-
+  **Không có fracture.** Ở item level 77, một arrow roll ra bằng Alteration,
+  giữ qua [[Regal Orb]] nhờ một [[Imprint]], rồi giai đoạn 3 và 4 như đã
+  viết, làm ra một quiver có arrow và prefix tốt với một phần nhỏ chi phí.
+  Nó không có giai đoạn Essence, vì Essence sẽ roll lại arrow, nên suffix
+  thứ hai và thứ ba là bất cứ thứ gì Regal Orb và một Exalted Orb cho.
+
+
+  **Dùng influence thay vào.** Một quiver không thể vừa fractured vừa có
+  influence. Đường influence đổi arrow chắc chắn lấy một prefix như Gain
+  11–15% of Physical Damage as Extra Cold Damage. Đó là một quiver khác cho
+  một build khác, và arrow trên đó phải roll ra.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Hai chỗ nó có thể đáng tiền là Fracturing Orb ở
+  giai đoạn 1 và Exalted Orb ở giai đoạn 4.
+
+
+  **Memory Strands.** Các Essence của giai đoạn 2 sẽ đốt chúng, tới 80 mỗi
+  cái theo bảng data-mine, nên một base có strand là phí ở đây.
+mistakes:
+  - "Dùng Fracturing Orb lên quiver có năm hay sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Đặt influence lên base trước. Item có influence thì không fracture được."
+  - "Bench prefix thật trước Exalted Orb. Một modifier bench chỉ block group của chính nó, mà Elemental Damage with Attack Skills không có trong pool tự nhiên, nên nó sẽ không block gì mà lại chiếm mất ô."
+  - "Để nguyên block. Adds 3–5 to 6–8 Physical Damage có mặt để nắn một lần roll, không phải để đeo."
+  - "Dùng Essence sau giai đoạn 3. Theo ghi nhận của người chơi, nó phớt lờ khóa và roll lại chỗ Life bạn đã trả tiền."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, các modifier Essence trên quiver, giá bench và mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Life và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest và Essence, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

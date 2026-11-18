@@ -1,0 +1,142 @@
+category: sceptres
+title: "Một cây sceptre attack elemental từ Essence of Wrath"
+level: 2
+summary: "Ba nguồn damage attack elemental cộng dồn được: implicit của base, added damage do một Essence cố định, và một hệ số nhân từ bench."
+goal: >-
+  Một cây sceptre cho build attack elemental ở những map đầu tiên. Essence
+  đảm bảo một prefix added damage, một element thứ hai được roll ra bên cạnh,
+  và bench thêm hệ số nhân. Bài học là damage của một cây sceptre attack được
+  **xếp lớp từ các group khác nhau** như thế nào, và cách đánh giá một kết
+  quả Essence trên weapon mà một phần ba pool thuộc về caster.
+base: "Void Sceptre"
+itemLevel: 75
+baseWhy: >-
+  40% increased Elemental Damage trên implicit, mức cao nhất sceptre có, và
+  nó nhân mọi thứ lần craft này thêm vào. Item level 75 cho phép added Cold
+  Damage 68–92 to 136–157 và attack speed 23–25%; các tier cao nhất của added
+  damage cần 82 và quá nhẹ weight để trông vào một lần roll Essence. Karui
+  Sceptre là lựa chọn nếu bạn thích 1.5 attack mỗi giây hơn 14 điểm implicit.
+methods: [essence, bench]
+result:
+  implicits: ["40% increased Elemental Damage"]
+  prefixes:
+    - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+    - { text: "Adds 57 to 115 Cold Damage" }
+    - { text: "29% increased Elemental Damage with Attack Skills", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "+35 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Wrath]]", amount: "10–15", note: "Anger cho Fire, Hatred cho Cold" }
+  - { item: "[[Orb of Alchemy]]", amount: "4", note: "cho bench" }
+cost: >-
+  Essence, mười cái trở lên. Screaming là bậc bạn giải phóng được ở map đỏ
+  trong 3.30; Shrieking và Deafening nâng dòng được đảm bảo và không đổi gì
+  khác. Craft bench là 4 [[Orb of Alchemy]].
+odds: >-
+  Lightning Damage là chắc chắn. Ở item level 75, theo phép tính của chúng
+  tôi từ weight, mỗi prefix khác mà Essence roll ra là added Fire hoặc Cold
+  Damage khoảng 1 trên 6 lần, và mỗi suffix là attack speed khoảng 1 trên 9
+  lần. Khoảng một phần ba weight prefix là modifier caster, vì thế nhiều kết
+  quả trông giống cái đầu tiên bên dưới.
+
+
+  Hãy tính là cần mười Essence trở lên để có element thứ hai kèm attack speed
+  hoặc một suffix trống, và dừng sớm hơn nếu một kết quả tốt xuất hiện.
+steps:
+  - title: "Essence lên cây sceptre trắng"
+    do: >-
+      Dùng một [[Screaming Essence of Wrath]] lên một cây Void Sceptre trắng.
+    why: >-
+      Nó đưa sceptre lên Rare với "Adds 10–14 to 197–229 Lightning Damage"
+      được đảm bảo, cùng con số với Tier 3 tự nhiên. Shrieking ngang Tier 2
+      và Deafening (13–19 to 266–310) nằm ngay dưới Tier 1, mà bản thân Tier
+      1 cần item level 82 và là khoảng 1 trên 1,200 lần roll prefix. Với
+      phần đỉnh của prefix này, Essence là nguồn thực tế.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "61% increased Spell Damage" }
+        - { text: "+1 to Level of all Cold Spell Skill Gems" }
+      suffixes:
+        - { text: "23% increased Cast Speed" }
+        - { text: "+31 to Intelligence" }
+  - title: "Gạch bỏ các dòng caster, rồi đánh giá"
+    do: >-
+      Đọc từng dòng và hỏi xem một **attack** có dùng nó không. Rồi kiểm ba
+      thứ: một prefix added damage thứ hai (Fire hoặc Cold, không có "to
+      Spells"); attack speed; và một ô trống cho bench.
+    why: >-
+      Kết quả ở trên sẽ là khởi đầu ổn cho một caster và không có gì cho bạn
+      ngoài dòng Essence: Spell Damage, một spell gem level và cast speed
+      không đụng tới attack. Sceptre hay cho ra những kết quả như thế. Nhìn
+      xuyên qua chúng thật nhanh chính là kỹ năng.
+    check: >-
+      Giữ sceptre khi nó có một prefix added damage thứ hai từ Tier 5 trở lên
+      (với Cold, adds 31–42 to 62–71) **và** có attack speed hoặc một suffix
+      trống, kèm một prefix trống nếu bạn có được.
+    fail: >-
+      Thêm một Essence nữa lên chính cây sceptre đó. Lightning Damage lần nào
+      cũng quay lại.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "Adds 57 to 115 Cold Damage" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+35 to Strength" }
+  - title: "Đếm các lớp trước khi chọn craft bench"
+    do: >-
+      Liệt kê những gì sceptre có. Added Lightning và Cold Damage: hai prefix
+      ở hai group. Một dòng increased: 40% increased Elemental Damage của
+      implicit. Một ô prefix trống.
+    why: >-
+      Added damage là thứ được nhân lên; các modifier "increased" làm việc
+      nhân, và tất cả chúng cộng vào nhau: implicit, một craft bench, passive
+      tree. Hai prefix added damage với một dòng increased bên cạnh là dạng
+      cân bằng cho một nhân vật mới. Nhân vật đã có vài trăm phần trăm
+      increased damage từ tree thì được lợi hơn từ một element thứ ba.
+  - title: "Bench dòng increased"
+    do: >-
+      Ở [[Crafting Bench]], craft **24–32% increased Elemental Damage with
+      Attack Skills** giá 4 [[Orb of Alchemy]] vào prefix trống.
+    why: >-
+      Nó là một group riêng, nên nó nằm vừa cạnh mọi added damage, và bản tự
+      nhiên chiếm chưa tới 2% lần roll prefix. Nếu kết quả Essence không có
+      attack speed và không có prefix trống, bench dành cho attack speed
+      (11–15%, 2 Chaos Orb): tốc độ nhân mọi hit của added damage và không có
+      gì thay thế.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "Adds 12 to 213 Lightning Damage", how: essence }
+        - { text: "Adds 57 to 115 Cold Damage" }
+        - { text: "29% increased Elemental Damage with Attack Skills", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+35 to Strength" }
+variations: >-
+  **Thay bằng một element thứ ba.** Nếu build của bạn convert hoặc chỉ scale
+  một element, hãy bench added damage của element đó khi prefix roll ra chưa
+  phải là nó: 35–41 to 63–73 Fire hoặc Cold giá 4 Chaos Orb.
+
+
+  **Essence of Zeal** cố định attack speed, 23–25% ở bậc Screaming, và phó
+  mặc cả hai prefix damage cho may rủi. Trên sceptre, khi modifier của caster
+  vướng đường, cố định một prefix là cách dùng tốt hơn.
+
+
+  **Giữ nửa caster ở ngoài.** Các ví dụ sceptre khó hơn làm việc này bằng một
+  Fossil hoặc một meta-modifier. Essence không có lựa chọn đó; nó bù lại bằng
+  số lượng.
+mistakes:
+  - "Giữ một kết quả vì Spell Damage hoặc cast speed của nó. Chúng là modifier của build khác."
+  - "Đọc \"Adds ... Lightning Damage to Spells\" thành một element thứ hai. Với attack, nó chẳng là gì."
+  - "Craft ở bench giữa các lần dùng Essence."
+  - "Dùng Essence lên base có [[Memory Strands]]: mỗi cái tới 80 strand theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên sceptre, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }

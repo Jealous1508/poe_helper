@@ -1,0 +1,162 @@
+category: two-hand-swords
+title: "Cây sword crit đầu tiên từ một reforge Harvest"
+level: 2
+summary: "Reforge Critical chỉ có hai đáp án khả dĩ trên sword và bạn muốn cả hai. Reforge tới khi suffix được đảm bảo đủ mạnh và các prefix cộng damage, rồi bench modifier critical còn lại."
+goal: >-
+  Một cây sword cho map đầu có một suffix critical roll ra, một cái crafted
+  bên cạnh và hai prefix damage. Bài học là **đếm một tag trước khi trả tiền
+  cho nó**. Một reforge Harvest hứa "một modifier thuộc loại này", và lời hứa
+  đó đáng giá bao nhiêu thì hoàn toàn tùy vào việc item roll được bao nhiêu
+  modifier thuộc loại đó.
+base: "Ezomyte Blade"
+itemLevel: 73
+baseWhy: >-
+  Ezomyte Blade có 6.5% critical strike chance, cao nhất của loại item này,
+  và +25% to Global Critical Strike Multiplier làm implicit. Nó rơi từ level
+  61. Item level 73 là mốc cả hai suffix critical đạt Tier 1 (35–38%); dưới
+  mốc đó reforge chỉ cho được các tier thấp hơn.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+    - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+  suffixes:
+    - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "+36 to Dexterity", how: harvest }
+    - { text: "26% increased Critical Strike Chance", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge", note: "tính năm tới mười lần reforge" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Lifeforce, 150 Primal mỗi lần thử, thứ mà trong 3.30 bạn thu từ Sacred
+  Flora mọc trong map của mình. Craft bench là 4 [[Chaos Orb]]. Không gì được
+  bảo vệ và không gì quý giá: đây là lần craft để lặp lại tới khi thành công.
+odds: >-
+  Mọi lần reforge đều cho Critical Strike Chance hoặc Critical Strike
+  Multiplier. Cả sáu tier của mỗi cái có weight như nhau, nên nếu modifier
+  được đảm bảo được bốc theo weight, đúng như cách người ta vẫn hiểu về
+  reforge, thì nó từ 25% trở lên một nửa số lần và từ 30% trở lên một phần ba
+  số lần.
+
+
+  Prefix được roll mới mỗi lần. Ở item level 73, theo phép tính của chúng
+  tôi, 94 trên 100 lần roll prefix cộng damage và khoảng một trên năm làm vậy
+  ở một tier đáng giữ. Gộp lại, đại khái một trên năm hoặc sáu lần reforge là
+  đáng giữ.
+steps:
+  - title: "Đếm tag"
+    do: >-
+      Mở danh sách modifier của sword và đếm xem cái gì mang từng tag mà
+      Horticrafting Station đưa ra. **Critical:** Critical Strike Chance và
+      Critical Strike Multiplier, cả hai là suffix, không còn gì khác.
+      **Attack:** gần như mọi prefix và một nửa số suffix. **Physical:** ba
+      prefix và hai suffix leech.
+    why: >-
+      Vì vậy một reforge "including a Critical modifier" buộc phải cho ra một
+      trong hai modifier, và một cây sword crit muốn cả hai. Reforge Attack
+      rẻ hơn và không đảm bảo thứ gì bạn gọi tên được. Luật cho mọi reforge
+      Harvest nằm trong phép so sánh đó: càng ít modifier chung tag, lời đảm
+      bảo càng đáng giá.
+  - title: "Biến cây sword thành Rare"
+    do: >-
+      Đưa một cây Ezomyte Blade trắng item level 73 lên 20% quality rồi dùng
+      một [[Orb of Alchemy]].
+    why: >-
+      Reforge dùng được trên item Rare. Thứ Orb of Alchemy roll ra sắp bị
+      thay.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 61 to 119 Cold Damage" }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Reforge kèm một modifier Critical"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Critical modifier**: 150
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      Mọi thứ trên cây sword bị thay, như một Chaos Orb, chỉ khác là một
+      trong các modifier mới chắc chắn là một suffix critical.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "+1 to Level of Socketed Gems", how: harvest }
+      suffixes:
+        - { text: "17% increased Critical Strike Chance", how: harvest }
+        - { text: "+251 to Accuracy Rating", how: harvest }
+        - { text: "11% increased Attack Speed", how: harvest }
+  - title: "Đánh giá ba điều"
+    do: >-
+      Chỉ giữ kết quả nếu cả ba điều đều đúng. Suffix critical **từ 25% trở
+      lên**. **Hai prefix cộng damage**, và một trong số đó ở tier giữa trở
+      lên: added elemental damage từ Tier 4 trở lên, flat Physical Damage từ
+      adds 20 trở lên, hoặc một phần trăm physical ở 110%, hay 45% với bản
+      kèm Accuracy. Và **còn một ô suffix trống** cho bench.
+    why: >-
+      Kết quả ở trên trượt cả ba. Chốt mức từ trước là thứ giữ cho một lần
+      craft rẻ vẫn rẻ: không có mức thì kết quả nào trông cũng gần đủ tốt để
+      dừng, hoặc gần đủ tệ để biện minh cho một lần thử nữa.
+    check: >-
+      Ở giai đoạn này, một cây sword crit không quan tâm nó nhân loại damage
+      nào. Đừng gạt fire damage đi chỉ vì bạn đã hình dung một cây sword
+      physical.
+    fail: >-
+      Reforge lại. Mỗi lần thử là độc lập và chỉ tốn Lifeforce.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+        - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+36 to Dexterity", how: harvest }
+  - title: "Bench modifier critical còn lại"
+    do: >-
+      Nếu reforge cho Multiplier, như ở đây, craft **25–27% increased
+      Critical Strike Chance** ở [[Crafting Bench]]: 4 [[Chaos Orb]]. Nếu nó
+      cho Chance, craft **+25–28% to Global Critical Strike Multiplier**,
+      cũng 4 Chaos Orb. Nếu nó cho cả hai, craft attack speed, 11–15% giá 2
+      Chaos Orb.
+    why: >-
+      Chance là local và nhân vào 6.5% của cây blade: 26% đưa nó lên khoảng
+      8.2%. Multiplier là global và cộng vào implicit. Bench bán cái nào mà
+      reforge không cho, nên reforge từ đầu chỉ cần giao được một cái.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 118 to 239 Fire Damage", how: harvest }
+        - { text: "Adds 22 to 47 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+32% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+36 to Dexterity", how: harvest }
+        - { text: "26% increased Critical Strike Chance", how: crafted }
+variations: >-
+  **Thay bằng một Essence of Loathing.** Nó đảm bảo Critical Strike Chance ở
+  một mức cố định: 25–29% ở bậc Screaming, 30–34% ở bậc Shrieking, 35–38% ở
+  bậc Deafening. Hãy chọn nó khi bạn muốn đúng con số đó và có sẵn Essence;
+  chọn reforge khi thứ bạn có là Lifeforce, hoặc khi Multiplier cũng được.
+
+
+  **Prefix trống.** Cây sword hoàn chỉnh còn trống một ô prefix. Một
+  [[Exalted Orb]] lấp nó ngẫu nhiên khi bạn dư ra được một cái, và chín trên
+  mười lần đó là một loại damage nào đó.
+
+
+  **Trên sword có influence, hãy đếm lại.** Sword Shaper và sword Elder mỗi
+  loại có một suffix Critical Strike Chance kèm một chỉ số phụ, cũng mang tag
+  critical. Khi đó lời đảm bảo là một trong ba modifier, hai cái trong đó
+  cùng group.
+mistakes:
+  - "Trả tiền cho reforge Attack vì nó rẻ hơn. Trên sword, nó gần như không đảm bảo gì."
+  - "Bench trước lần reforge. Reforge thay modifier bench như mọi modifier khác."
+  - "Giữ một kết quả có suffix critical 12% vì prefix tốt. Suffix là nửa bạn trả tiền để được đảm bảo; tier thì vẫn là một lần roll."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag trên mọi modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Critical và Attack cùng giá Lifeforce của chúng." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest trong 3.30: Sacred Flora mọc trong map." }

@@ -1,0 +1,164 @@
+category: rune-daggers
+title: "Tắt nửa attack: một cây dagger Aetheric Fossil"
+level: 3
+summary: "Hơn một nửa pool của rune dagger là modifier attack. Một Fossil cắt chúng xuống gần như không còn gì và nhân mọi thứ caster dùng."
+goal: >-
+  Một weapon chạy map cho caster crit, có modifier caster ở năm trong sáu ô
+  và bench ở ô thứ sáu. Bài học là dùng Fossil làm **bộ lọc**: bạn không nhắm
+  vào một modifier, bạn đang loại cả một kiểu modifier để một lần roll lại
+  bình thường trở thành một lần roll tốt.
+base: "Platinum Kris"
+itemLevel: 76
+baseWhy: >-
+  Implicit crit lớn nhất trên rune dagger, 60–65% increased Global Critical
+  Strike Chance. Item level 76 mở Tier 1 của Spell Critical Strike Chance
+  (90–109%), Tier 2 của cast speed (25–28%) và Tier 2 của Spell Damage
+  (85–99%). Roll lại bằng Fossil rơi vào các tier giữa thường hơn hẳn các
+  tier cao nhất, nên trả tiền cho item level 84 ở đây là mua những tier bạn
+  hiếm khi thấy.
+methods: [fossil, bench]
+result:
+  implicits: ["63% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "74% increased Spell Damage", how: fossil }
+    - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+    - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+  suffixes:
+    - { text: "26% increased Cast Speed", how: fossil }
+    - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+    - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "15–30" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "mỗi Fossil một cái" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Một Fossil và một Resonator một socket cho mỗi lần thử, từ Delve, nơi mà
+  trong 3.30 bạn tới được qua những map luôn spawn Sulphite. Bước bench là 4
+  [[Chaos Orb]]. Không phần nào ở đây đắt; thứ bạn trả là số lần thử.
+odds: >-
+  Với một Aetheric Fossil ở item level 76, theo phép tính của chúng tôi từ
+  weight: khoảng 94% lần roll prefix là modifier caster (Spell Damage 25%,
+  added damage cho spell 55%, hybrid Mana 10%), so với 34% khi không có nó.
+  Ở phía suffix, cast speed và Spell Critical Strike Chance mỗi cái 38%.
+
+
+  Tier thì không được giúp. Spell Damage từ 70% trở lên là khoảng 1 trên 49
+  lần roll prefix; cast speed từ 21% trở lên khoảng 1 trên 8 lần roll suffix;
+  Spell Critical Strike Chance từ 70% trở lên khoảng 1 trên 5. Critical
+  Strike Multiplier không có tag caster và tụt xuống khoảng 4% lần roll
+  suffix, đó là lý do bench cấp nó. Các con số chỉ tính modifier tự nhiên;
+  Fossil còn có thể roll ra modifier của riêng chúng.
+steps:
+  - title: "Đưa dagger lên Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên cây Platinum Kris trắng. Đừng thêm
+      quality; caster không dùng nó.
+    why: >-
+      Một Chaotic Resonator roll lại item Rare. Kết quả bên dưới là thứ pool
+      này cho ra khi không có gì lọc nó: bốn modifier attack trong năm cái.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 61 to 124 Fire Damage" }
+        - { text: "67% increased Physical Damage" }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+351 to Accuracy Rating" }
+        - { text: "48% increased Mana Regeneration Rate" }
+  - title: "Một Aetheric Fossil"
+    do: >-
+      Đặt một [[Aetheric Fossil]] vào một [[Primitive Chaotic Resonator]] rồi
+      dùng lên dagger.
+    why: >-
+      Fossil ghi "More Caster modifiers, Fewer Attack modifiers". Trong dữ
+      liệu 3.30, đó là gấp mười lần weight cho bất cứ thứ gì có tag caster và
+      15% weight cho bất cứ thứ gì có tag attack. Các modifier không có tag
+      nào trong hai, như maximum Mana, Intelligence và Critical Strike
+      Multiplier, giữ nguyên weight nên trở thành hiếm khi so ra.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "46% increased Spell Damage", how: fossil }
+        - { text: "Adds 3 to 101 Lightning Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "11% increased Cast Speed", how: fossil }
+        - { text: "+39 to Intelligence", how: fossil }
+        - { text: "72% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Đánh giá theo một ngưỡng bạn đặt trước"
+    do: >-
+      Quyết định bạn nhận cái gì trước khi roll. Một ngưỡng hợp lý cho map:
+      **Spell Damage từ 70% trở lên; cast speed từ 21% trở lên; Spell
+      Critical Strike Chance từ 70% trở lên; và một suffix còn trống hoặc đã
+      được lấp bằng thứ bạn dùng.** Added damage cho spell thì hoặc khớp với
+      element của spell bạn dùng, hoặc coi như không có.
+    why: >-
+      Kết quả ở trên là đúng kiểu modifier nhưng sai tier, và phía suffix
+      của nó đã đầy, với Intelligence nằm ở chỗ lẽ ra dành cho craft bench.
+      Không có ngưỡng đặt từ trước, những kết quả như thế sẽ được giữ lại.
+    fail: >-
+      Thêm một Fossil nữa. Mỗi lần thử độc lập với nhau, và ở đây chưa có gì
+      đáng bảo vệ.
+  - title: "Lặp lại tới khi đạt"
+    do: >-
+      Roll lại tới khi một kết quả vượt ngưỡng.
+    why: >-
+      Bạn đang chờ ba lần roll tier cùng lúc. Fossil đã làm xong phần của nó
+      khi lo cho các ô chứa đúng họ modifier; chỉ số lần thử mới mua được
+      tier.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "74% increased Spell Damage", how: fossil }
+        - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+        - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: fossil }
+        - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Bench cái suffix mà Fossil không tìm ra"
+    do: >-
+      Ở [[Crafting Bench]], craft **+25–28% to Global Critical Strike
+      Multiplier** giá 4 [[Chaos Orb]].
+    why: >-
+      Multiplier là suffix thứ ba của một caster crit, và là modifier duy
+      nhất trong kế hoạch mà Aetheric Fossil đẩy ra xa thay vì kéo về phía
+      bạn. 25–28% chắc chắn từ bench chính là lý do phải đòi một suffix trống
+      ở bước 3.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "74% increased Spell Damage", how: fossil }
+        - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+        - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: fossil }
+        - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Chọn element.** Một Fossil thứ hai trong Resonator hai socket lái added
+  damage: một [[Frigid Fossil]] nhân các modifier Cold và loại các modifier
+  Fire, một [[Scorched Fossil]] thì ngược lại, một
+  [[Metallic Fossil]] nhân Lightning.
+
+
+  **Cùng bộ lọc đó mà không cần Delve.** "Cannot roll Attack Modifiers" (1
+  Divine Orb ở bench) cùng một reforge Caster của Harvest (75 Primal
+  Lifeforce) cũng roll ra item không có modifier attack; từ 3.27 reforge đó
+  tôn trọng meta-modifier. Nó gỡ nửa attack mà không nhân nửa caster, và tốn
+  một Divine Orb mỗi lần thử. Fossil là công cụ tốt hơn cho roll lại toàn
+  bộ; meta-modifier có chỗ đứng của nó ở ví dụ kế tiếp, nơi không ai muốn
+  roll lại.
+
+
+  **Ba prefix tốt và phía suffix tệ**, hoặc ngược lại: ngừng roll lại. Một
+  phía giờ đã đáng giá hơn thứ một Fossil thay được.
+mistakes:
+  - "Giữ một kết quả có phía suffix đầy mà không có multiplier. Bench cần cái ô đó."
+  - "Trông chờ gem level. Chỉ riêng Aetheric Fossil khiến gem level của mỗi element là khoảng 1 trên 130 lần roll prefix."
+  - "Dùng base có strand. Fossil không tiêu cũng không dùng [[Memory Strands]], theo thử nghiệm của người chơi."
+  - "Thêm quality. Nó không giúp gì cho spell."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag của modifier, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách tới Delve trong 3.30." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Reforge Harvest tôn trọng các modifier \"Cannot roll\"." }

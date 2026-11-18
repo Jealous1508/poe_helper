@@ -1,0 +1,186 @@
+category: cluster-jewels
+title: "Một Medium Cluster Jewel với hai notable: Imprint và một beast"
+level: 3
+summary: "Cả hai notable của jewel Medium đều là prefix, nên một jewel Magic chỉ vừa một cái. Lưu nó bằng Imprint, và dùng beast thêm-một-prefix khi Regal Orb rơi vào sai phía."
+goal: >-
+  Một Medium Cluster Jewel Burning Damage với một notable build bắt buộc phải
+  có và cái thứ hai từ một danh sách ngắn. Cái khó nằm ở cấu trúc: **một jewel
+  Magic có một prefix, mà cả hai notable đều là prefix.** Cái thứ hai phải
+  được thêm vào một jewel Rare, và ví dụ này kết hợp hai công thức beast khiến
+  việc đó vừa túi tiền.
+base: "Medium Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  **Enchantment:** "Added Small Passive Skills grant: 12% increased Burning
+  Damage". **Passive:** "Adds 4 Passive Skills", mức ít nhất một jewel Medium
+  có thể có. **Item level:** 50 tới 67. Năm notable trong kế hoạch này cần
+  item level 1 hoặc 50. Ở 68, jewel có thêm sáu notable và tier thứ hai của
+  mọi bonus cho small passive, và mỗi notable bạn muốn trở nên khó ra hơn
+  khoảng một phần tư.
+methods: [currency, beast]
+result:
+  implicits:
+    - "Adds 4 Passive Skills"
+    - "1 Added Passive Skill is a Jewel Socket"
+    - "Added Small Passive Skills grant: 12% increased Burning Damage"
+  prefixes:
+    - { text: "1 Added Passive Skill is Burning Bright" }
+    - { text: "1 Added Passive Skill is Cremator", how: beast }
+  suffixes:
+    - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+needs:
+  - { item: "Một Medium Cluster Jewel có enchantment Burning Damage", amount: "1", note: "4 passive, item level 50–67" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Craicic Croaker]]", amount: "khoảng 5", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "khoảng 5" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "khoảng 2", note: "cộng thêm ba beast Rare mỗi lần" }
+cost: >-
+  Ít orb và nhiều beast: khoảng năm Imprint và hai công thức Wolf trong một
+  lượt trung bình, mỗi cái kèm ba beast Rare nữa. Trong 3.30 chỉ beast đỏ mới
+  bắt được, nên đây là lần craft phải lên kế hoạch quanh [[Menagerie]] của
+  bạn.
+odds: >-
+  **Notable đầu tiên.** Burning Bright chiếm 4.2% số lần roll prefix trên
+  jewel này ở item level 50 tới 67, theo phép tính của chúng tôi: 1 trên 24.
+
+
+  **Cái thứ hai.** Bốn notable mà ví dụ chấp nhận (Blowback, Circling
+  Oblivion, Cremator, Smoking Remains) chiếm 22% weight prefix còn lại. Regal
+  Orb thêm prefix khoảng 59% số lần, nếu tính hai phía theo weight của chúng,
+  nên nó trúng khoảng 13% số lần. Công thức Wolf luôn thêm prefix: 22%.
+
+
+  **Một chu kỳ đầy đủ** (Imprint, Regal Orb, và Wolf nếu Regal Orb thêm
+  suffix): khoảng 22%, 1 trên 4.5 chu kỳ.
+steps:
+  - title: "Chốt danh sách và phía của từng cái"
+    do: >-
+      Trong danh sách modifier, dưới enchantment Burning Damage, chọn notable
+      bạn bắt buộc phải có và những cái bạn chấp nhận làm cái thứ hai. Ở đây:
+      **Burning Bright**, rồi bất kỳ cái nào trong số Blowback, Circling
+      Oblivion, Cremator hoặc Smoking Remains. Danh sách của riêng bạn sẽ
+      khác; phép tính vẫn chạy y như vậy.
+    why: >-
+      Mọi notable trên jewel Medium đều là prefix. Điều đó giới hạn jewel ở
+      hai cái và có nghĩa là phía suffix không chứa gì ngoài bonus cho small
+      passive, một sự thật mà phần còn lại của lần craft này dựa vào.
+  - title: "Alteration tới notable đầu tiên"
+    do: >-
+      Dùng [[Orb of Alteration]] tới khi prefix là Burning Bright. Kệ hẳn
+      suffix.
+    why: >-
+      Trên jewel này, 59% số lần roll prefix là notable, nên bạn đang sàng
+      qua các notable chứ không phải chờ một cái. Suffix không quan trọng vì
+      không gì ở phía đó có thể là thứ bạn cần.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+  - title: "Imprint"
+    do: >-
+      Trong [[Menagerie]], dùng **Create an Imprint of a Magic Item**: một
+      [[Craicic Croaker]] và ba beast Rare khác.
+    why: >-
+      Hai bước kế tiếp, mỗi bước thêm một prefix ngẫu nhiên. Nếu ra sai cái,
+      ô prefix thứ hai bị đầy và không gì trên jewel dọn trống nó một cách an
+      toàn được. Imprint là đường quay lại.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+  - title: "Regal Orb, rồi đọc xem nó lấp phía nào"
+    do: >-
+      Dùng một [[Regal Orb]]. Có ba khả năng. **Một notable trong danh
+      sách:** xong. **Bất kỳ prefix nào khác:** ô đó đã bị tiêu mất; dùng
+      Imprint, làm một cái mới và lặp lại bước này. **Một suffix:** đừng khôi
+      phục gì cả. Đi tới bước kế tiếp.
+    why: >-
+      Một suffix để ô prefix thứ hai còn trống, đúng thế đứng bạn muốn cho
+      công thức beast. Khôi phục bằng Imprint ở đây là vứt đi một lần thử thứ
+      hai miễn phí.
+    state:
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +2% to all Elemental Resistances" }
+        - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+  - title: "Thêm một prefix, gỡ một suffix ngẫu nhiên"
+    do: >-
+      Dùng công thức beast **Add a Prefix, Remove a Random Suffix**
+      ([[Farric Wolf Alpha]] và ba beast Rare khác).
+    why: >-
+      Trên phần lớn item, công thức này là một rủi ro, vì suffix nó gỡ là
+      ngẫu nhiên. Trên Medium Cluster Jewel thì không: không suffix nào ở đây
+      là notable, nên nó chỉ gỡ được một bonus cho small passive. Đổi lại, nó
+      chắc chắn thêm một prefix, trong khi Regal Orb chỉ làm vậy khoảng sáu
+      trên mười lần.
+    check: >-
+      Prefix mới nằm trong danh sách của bạn. Ở đây nó là Cremator, và một
+      trong hai suffix đã mất. Lời văn của công thức chỉ nói rằng nó cần một
+      item Rare. Nếu bạn không có Wolf, một [[Exalted Orb]] làm được y việc
+      đó mỗi khi cả hai ô suffix đã đầy, vì khi ấy prefix trống là chỗ duy
+      nhất nó thêm vào được.
+    fail: >-
+      Một prefix ngoài danh sách: dùng Imprint, thứ vẫn đưa jewel về trạng
+      thái Magic đã lưu, làm một Imprint mới rồi quay lại Regal Orb.
+    state:
+      implicits:
+        - "Adds 4 Passive Skills"
+        - "1 Added Passive Skill is a Jewel Socket"
+        - "Added Small Passive Skills grant: 12% increased Burning Damage"
+      prefixes:
+        - { text: "1 Added Passive Skill is Burning Bright" }
+        - { text: "1 Added Passive Skill is Cremator", how: beast }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: 1% increased Damage over Time" }
+  - title: "Gắn vào socket và nhìn"
+    do: >-
+      Đặt jewel vào một cluster socket cỡ Medium và kiểm xem tới được cả hai
+      notable và jewel socket tốn bao nhiêu.
+    why: >-
+      Hai notable trên bốn passive thì chẳng còn mấy thứ không phải notable
+      hay socket, đó là lý do người chơi tìm các mức passive thấp. Ô suffix
+      trống còn lại là một lần roll miễn phí cho [[Exalted Orb]], bất cứ khi
+      nào bạn dư ra được một cái: nó chỉ thêm được bonus cho small passive.
+variations: >-
+  **Đúng hai notable chỉ định.** Đòi Cremator và không gì khác làm cái thứ
+  hai khiến công thức Wolf trúng 4.4% số lần và một chu kỳ đầy đủ là khoảng 1
+  trên 23. Tức gấp năm lần số beast. Hãy quyết định cặp chính xác đó có đáng
+  vậy không trước Imprint đầu tiên.
+
+
+  **Không có Imprint.** Regal jewel Magic khi không có gì che chắn. Khoảng
+  13% số lần bạn có ngay một notable trong danh sách, khoảng 41% số lần là
+  một suffix và một lần thử Wolf ở mức 22%, còn lại là một jewel một notable
+  vẫn dùng được.
+
+
+  **Đừng làm trên jewel Large.** Ở đó phía suffix có thể chứa một notable, và
+  công thức này có thể gỡ mất nó. Ví dụ Large chỉ ra nên làm gì thay vào.
+mistakes:
+  - "Khôi phục bằng Imprint khi Regal Orb thêm một suffix. Đó chính là kết cục giữ cho ô prefix thứ hai còn trống."
+  - "Dùng công thức Wolf trên một jewel Rare đã đầy cả hai prefix. Nó không có chỗ nào để thêm."
+  - "Roll kiểu này ở item level 68 trở lên khi mọi notable trong danh sách cần 50 trở xuống."
+  - "Bận tâm tới suffix trên jewel Magic. Trên jewel Medium nó không bao giờ là notable."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các notable của enchantment Burning Damage cùng level và weight của chúng; tất cả đều là prefix. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Imprint và công thức thêm-một-prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Một jewel Medium thêm 4 tới 6 passive, có một jewel socket và chứa tối đa hai notable, cả hai đều là prefix." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beast vàng không còn được bắt nữa." }

@@ -1,0 +1,129 @@
+category: boots
+title: "Your first movement speed boots"
+level: 1
+summary: "Roll one modifier on a white pair until it is movement speed, make the boots Rare around it, and bench the life. The craft most players do first, for good reason."
+goal: >-
+  Boots with 20% movement speed for the middle of the campaign, where the
+  pair you are wearing probably has 10% or none. Faster boots shorten every
+  zone from here to the end of the game. The idea to take away is **the
+  Magic route: when one modifier matters more than all the others, roll for
+  that one alone and stop the moment you have it.**
+base: "Reinforced Greaves"
+itemLevel: 33
+baseWhy: >-
+  Any white boots you can wear will do; Reinforced Greaves are an Armour base
+  for level 33. What matters is the item level, because it caps the movement
+  speed: 15% from item level 15, 20% from 30, 25% from 40, 30% from 55. Hold
+  Alt over the white boots to see it.
+
+
+  Prefer boots without Energy Shield for this. On those, a quarter of prefix
+  rolls are mana and the search takes longer.
+methods: [currency, bench]
+result:
+  prefixes:
+    - { text: "20% increased Movement Speed" }
+    - { text: "+34 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+22% to Fire Resistance" }
+    - { text: "+19 to Strength" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "plus 6 for the bench" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s and one [[Regal Orb]]. The bench step
+  is 6 Orbs of Transmutation. Nothing here is worth saving at this stage of
+  a league.
+odds: >-
+  At item level 33, one prefix roll in 23 is 20% movement speed and one in
+  12 is 15% or more, by our arithmetic from the modifier weights. An
+  Alteration does not always roll a prefix, so the count of orbs is higher
+  than that: plan on 20 to 40 for the 20%.
+steps:
+  - title: "Make the boots Magic and roll the prefix"
+    do: >-
+      Use an [[Orb of Transmutation]] on the white boots, then
+      [[Orb of Alteration]]s one at a time. Hold Alt and read the prefix
+      after each. Stop at **20% increased Movement Speed**, named
+      "Stallion's".
+    why: >-
+      A Magic item has one prefix and one suffix. Movement speed is a
+      prefix, so you are reading a single line per orb, and nothing else on
+      the item can distract you. The suffix is irrelevant for now.
+    check: >-
+      The line says "increased Movement Speed" and the number is 20. A 15%
+      roll ("Sprinter's") is one tier lower: take it only if the Alterations
+      are running out.
+    fail: >-
+      Out of Alterations with no movement speed: the bench sells 10–14% for
+      3 Orbs of Augmentation, on any boots with an open prefix. Use that and
+      try again when you have more orbs.
+    state:
+      rarity: magic
+      prefixes: [{ text: "20% increased Movement Speed" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the boots have no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It adds a modifier to the empty slot and cannot touch the movement
+      speed. On boots a third or more of suffix rolls are an elemental
+      resistance, so this is a cheap chance at something useful.
+    state:
+      rarity: magic
+      prefixes: [{ text: "20% increased Movement Speed" }]
+      suffixes: [{ text: "+22% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The boots become Rare, both modifiers stay, and one more is added at
+      random. Rare is what opens the other slots to the bench.
+    check: >-
+      Read what was added and which side it is on. Here it is Strength, a
+      suffix, so both of the other prefix slots are still open.
+    state:
+      prefixes: [{ text: "20% increased Movement Speed" }]
+      suffixes:
+        - { text: "+22% to Fire Resistance" }
+        - { text: "+19 to Strength" }
+  - title: "Bench the life"
+    do: >-
+      At the [[Crafting Bench]], craft **+26–40 to maximum Life** for 6 Orbs
+      of Transmutation. If the Regal Orb already added life, craft a
+      resistance in an open suffix instead: +16–20% for 1 Orb of
+      Transmutation, +21–28% for 1 Orb of Alchemy.
+    why: >-
+      One bench modifier per item, spent on the most useful thing the boots
+      lack. The bench also lists movement speed, and here it would be
+      refused: the rolled one is the same group.
+    state:
+      prefixes:
+        - { text: "20% increased Movement Speed" }
+        - { text: "+34 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+22% to Fire Resistance" }
+        - { text: "+19 to Strength" }
+variations: >-
+  **Boots you found.** A Rare pair with good suffixes, no movement speed and
+  an open prefix is repaired at the bench alone: 10–14% for 3 Orbs of
+  Augmentation, 15–19% for 2 Chaos Orbs. Check for the open prefix first.
+
+
+  **Later.** The same four steps on an item level 55 base stop at 30%, and
+  on an item level 86 base at 35%. From maps onwards, craft the life at
+  56–70 for 4 Orbs of Alchemy.
+
+
+  **A low Essence of Zeal.** A Wailing one makes white boots Rare with 20%
+  movement speed guaranteed. In 3.30 the weak Essences stop appearing in
+  higher maps, so use them when you find them.
+mistakes:
+  - "Stopping at 10% because it says movement speed. Read the number; the tiers are 10, 15, 20, 25, 30 and 35."
+  - "Rolling for a good suffix as well. The suffix is one Augmentation or one bench craft; the prefix is the whole reason for the Alterations."
+  - "Using the bench while the boots are still Magic, then a Regal Orb. It works, but you spent the craft before knowing what the boots needed."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Movement speed tiers and item levels, weights, the Essence of Zeal on boots and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

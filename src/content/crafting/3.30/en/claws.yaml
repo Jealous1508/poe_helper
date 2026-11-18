@@ -1,0 +1,476 @@
+name: "Claws"
+short: "Fast one-handed attack weapons that heal on every hit. One pool, 28 bases, and a prefix side where elemental damage is cheap and physical damage is not."
+icon: "Imperial Claw"
+intro: >-
+  A claw is a one-handed attack weapon, usually worn in pairs, and its
+  implicit gives life (or life and mana) each time it hits. What you craft on
+  top of that is **damage per second in a small frame**: a low base hit, a
+  high attack rate, and a base critical strike chance of 7 to 8%.
+
+
+  Two things set it apart from the big two-handed weapons. The prefix lottery
+  is different: half of it is added elemental damage and only a quarter is
+  physical, so an elemental claw is easy and a physical one is hard. And the
+  suffix side matters more: a crit claw wants attack speed, critical strike
+  chance and critical strike multiplier together, and the bench can only
+  supply one of them.
+basics:
+  itemLevel:
+    text: >-
+      Item level 77 opens everything a claw needs except the last tier of the
+      big prefixes: Tier 1 attack speed and flat Physical Damage both arrive
+      there, and Tier 1 of both critical strike suffixes is open from 73.
+      Craft your first mapping claws at 77.
+
+
+      Go higher only for a named reason: 82 for the top tier of added Fire,
+      Cold or Lightning Damage, 83 for the top tier of the two percentage
+      physical prefixes and for added Chaos Damage, which has a single tier,
+      and 86 for the best "increased Elemental Damage with Attack Skills".
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Levelling.** Tier 5 increased Physical Damage (85–109%), and added elemental damage worth having: Fire adds 24–33 to 49–57 from item level 33."
+      - ilvl: 60
+        unlocks: "Tier 3 increased Physical Damage (135–154%), Tier 3 hybrid (55–64%), Tier 2 attack speed (23–25%). **The first item level worth crafting for maps.**"
+      - ilvl: 73
+        unlocks: "Tier 2 increased Physical Damage (155–169%). Tier 1 Critical Strike Chance and Tier 1 Critical Strike Multiplier (both 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 attack speed (26–27%) and Tier 1 flat Physical Damage (adds 22–29 to 45–52). **Enough for almost every claw.**"
+      - ilvl: 82
+        unlocks: "Tier 1 of added Fire, Cold and Lightning Damage (Cold: adds 81–111 to 163–189). Only elemental claws care."
+      - ilvl: 83
+        unlocks: "Tier 1 increased Physical Damage, \"Merciless\" (170–179%), Tier 1 hybrid (75–79% with Accuracy), and the only tier of added Chaos Damage (adds 56–87 to 105–160)."
+      - ilvl: 86
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (51–59%). The ceiling for an elemental claw."
+  bases:
+    text: >-
+      There are 28 claws and they all roll from one pool with the same
+      weights, so no base unlocks a modifier another cannot have. They differ
+      in three things: how the damage is split between hit size and speed,
+      the base critical strike chance, and the implicit.
+
+
+      The ordinary claws come in three shapes that repeat as you level: fast
+      and light (1.6 attacks per second, 7% crit), middle (1.5 and 7.5%), and
+      slow and heavy (1.3 and 8%).
+    types:
+      - title: "Ordinary claws"
+        pools: [all]
+        text: >-
+          Twenty-two bases from Nailed Fist to Terror Claw. Most have "Grants
+          Life per Enemy Hit" as the implicit, from 3 on the first claw to 50
+          on the Eye Gouger. Six have Physical Attack Damage Leeched as Life
+          instead, 1.6% or 2%: Tiger's Paw, Prehistoric Claw, Eagle Claw,
+          Hellion's Paw, Vaal Claw and Terror Claw.
+      - title: "Maraketh claws"
+        text: >-
+          Double Claw, Twin Claw and Gemini Claw. Their implicit has two
+          lines: mana **and** life per enemy hit, 14 Mana and 38 Life on the
+          Gemini Claw. The mana half pays for the skill of a build that
+          reserves nearly all its mana.
+      - title: "Heist claws"
+        text: >-
+          Shadow Fangs, Malign Fangs and Void Fangs. No life on hit: the
+          implicit adds Chaos Damage, 46–63 to 92–113 on Void Fangs. Their
+          physical damage is much lower than an ordinary claw of the same
+          level (22–41 against 25–65), so they are for poison and chaos
+          builds and for nobody else.
+    picks:
+      - base: "Imperial Claw"
+        for: "The default endgame claw"
+        why: >-
+          25–65 physical damage at 1.6 attacks per second is the highest base
+          damage per second of any claw (72), with 46 Life per Enemy Hit.
+          Speed also multiplies everything that happens "on hit", the
+          implicit included.
+      - base: "Vaal Claw"
+        for: "Critical strikes and big hits"
+        why: >-
+          29–76 at 1.3 attacks per second and 8% base critical strike chance,
+          the top of the category on both. Critical Strike Chance modifiers
+          multiply that 8%. The implicit is 2% life leech instead of life on
+          hit.
+      - base: "Eye Gouger"
+        for: "The most life per hit"
+        why: >-
+          50 Life per Enemy Hit is the largest implicit of its kind, on a
+          middle-speed claw (26–68 at 1.5, 7.5% crit) that gives up almost
+          nothing in damage: 70.5 base damage per second.
+      - base: "Gemini Claw"
+        for: "Builds with no spare mana"
+        why: >-
+          14 Mana and 38 Life per Enemy Hit. Crafting cannot put mana on hit
+          on a claw, so if the build needs it, this base is where it comes
+          from.
+      - base: "Void Fangs"
+        for: "Poison and chaos builds"
+        why: >-
+          Adds 46–63 to 92–113 Chaos Damage as an implicit, which is close to
+          the single natural tier of that prefix and costs no slot. The
+          physical damage is low, so do not put physical prefixes on it.
+    impact: >-
+      The base decides four things before the first orb.
+
+
+      **Hit size against speed.** Local modifiers multiply the base: increased
+      Physical Damage multiplies its damage, attack speed its attacks per
+      second. Added damage is different: it is added per hit, so a fast claw
+      delivers the same added Fire Damage more often. Elemental claws lean
+      towards the 1.6 bases for that reason.
+
+
+      **Critical strike chance**, 7%, 7.5% or 8%. Every Critical Strike Chance
+      modifier on the character multiplies it.
+
+
+      **The implicit.** Life on hit, leech, mana on hit or Chaos Damage. No
+      ordinary crafting changes which one you have; a [[Vaal Orb]] can
+      replace it with a corruption implicit and closes the item.
+
+
+      **Requirements.** Claws need Dexterity and Intelligence both, 131 and
+      95 on an Imperial Claw.
+
+
+      What the base does not decide is the pool. Choose the base for the
+      build and the item level for the tiers.
+tools:
+  - method: currency
+    note: >-
+      At item level 83 the prefix lottery on a claw is, by our arithmetic
+      from the weights: added Cold, Fire and Lightning Damage 16% each (49%
+      together), maximum Mana 18%, flat Physical Damage 12%, and the two
+      percentage physical prefixes 6% each. The three physical families are
+      24% of prefix rolls; on a two-handed mace they are 46%.
+
+
+      So [[Orb of Alteration]]s find an elemental prefix every second roll
+      and a good physical one almost never: Tier 3 or better of pure
+      increased Physical Damage is about 1 prefix roll in 344, Tier 1 about
+      1 in 2,400. The suffix side is kinder. Attack speed is 15% of suffix
+      rolls and the two critical strike suffixes 10% each, with every tier
+      weighted the same.
+  - method: bench
+    note: >-
+      The bench fills the gap the pool leaves. Increased Physical Damage:
+      40–59% for 4 Orbs of Alteration, 60–79% for 8, 80–99% for 4 Chaos
+      Orbs, 100–129% for 4 Exalted Orbs. Flat Physical Damage: adds 13–17 to
+      26–30 for 4 Chaos Orbs. Added Fire or Cold Damage: 22–27 to 42–49 for 2
+      Orbs of Alchemy, 35–41 to 63–73 for 4 Chaos Orbs. Increased Elemental
+      Damage with Attack Skills: 24–32% for 4 Orbs of Alchemy.
+
+
+      Suffixes: attack speed 8–10% for 6 Alterations, 11–15% for 2 Chaos
+      Orbs, 16–20% for 4 Exalted Orbs. Critical Strike Chance 25–27% or
+      Critical Strike Multiplier 25–28% for 4 Chaos Orbs. Chance to deal
+      Double Damage is 4–5% for 8 Chaos Orbs, half what a two-handed weapon
+      gets.
+
+
+      The group rule that matters: the bench's pure increased Physical Damage
+      shares a group with the rolled pure one and with every veiled physical
+      prefix, and does **not** share one with the hybrid that carries
+      Accuracy. An item holds one bench modifier, so a crit claw must roll at
+      least two of its three suffixes.
+  - method: finishing
+    note: >-
+      20% quality from [[Blacksmith's Whetstone]]s raises the base's physical
+      damage, so it matters on a physical claw and does nothing for added
+      elemental damage. A one-handed weapon has three sockets at most; the
+      bench sets them and their links at a fixed price.
+  - method: essence
+    note: >-
+      On a claw, **Zeal** guarantees attack speed and Deafening gives
+      28–30%, above the natural Tier 1. **Loathing** guarantees Critical
+      Strike Chance, 35–38% at Deafening. **Anger, Hatred and Wrath**
+      guarantee added Fire, Cold and Lightning Damage at just under the
+      natural top tier (Deafening Wrath: adds 13–19 to 266–310).
+      **Contempt** guarantees flat Physical Damage, 20–26 to 40–47 at
+      Deafening.
+
+
+      **Envy** is the one to remember: added Chaos Damage, 53–79 to 101–131
+      at Deafening, from Screaming upwards. The natural version has a single
+      tier that needs item level 83 and is 1% of prefix rolls.
+      **Dread** gives increased Impale Effect (22–25%), which otherwise needs
+      Crusader influence. The corrupted Essences give suffixes found nowhere
+      else: Horror is a 16% chance to gain a Power, Frenzy or Endurance
+      Charge on Kill.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is worth its beasts on a Magic
+      claw that took hundreds of Alterations, which on this item means a
+      high physical prefix. The two add-and-remove recipes suit claws well
+      because one side is often empty after an Alteration craft:
+      **add a suffix, remove a random prefix** ([[Farric Lynx Alpha]]) on a
+      claw with no prefixes is a free roll at a pool where one suffix in
+      three is attack speed or a critical strike modifier.
+  - method: harvest
+    note: >-
+      Count the carriers of each tag before paying. **Speed** (150 Vivid
+      Lifeforce): attack speed is the only natural modifier on a claw with
+      the tag, so it is guaranteed. **Critical** (150 Primal): two carriers,
+      Critical Strike Chance and Critical Strike Multiplier, both suffixes
+      and equally weighted. **Physical** (50 Vivid): five carriers, and by
+      weight at item level 83 the guaranteed one is a prefix 84% of the time
+      and a percentage prefix 44% of the time; the rest is the two leech
+      suffixes.
+
+
+      **Attack** (75 Wild) guarantees nothing useful: almost every modifier
+      on a claw has the attack tag.
+  - method: fossil
+    note: >-
+      Three combinations do real work on a claw. A [[Jagged Fossil]] makes
+      the three physical families about 76% of prefix rolls instead of 24%.
+      A [[Corroded Fossil]] removes every Elemental modifier, which is half
+      the prefix pool: physical prefixes become 50% without multiplying
+      anything. A [[Deft Fossil]] with a [[Shuddering Fossil]] makes attack
+      speed and the two critical strike suffixes 92% of suffix rolls, and
+      removes every Mana modifier, the largest junk prefix included.
+
+
+      None of them changes tiers. The shares are our arithmetic on natural
+      modifiers; Fossils can also roll their own, listed under Fossil-only,
+      which the calculator leaves out.
+  - method: veiled
+    note: >-
+      The veiled physical prefixes are 120–139% increased Physical Damage
+      with a 21–25% chance to Blind, Bleed, Impale or Poison. They have no
+      tiers, which makes them the most reliable strong physical prefix a
+      claw can get. They share a group with pure increased Physical Damage.
+
+
+      Of the thirteen veiled prefixes on this class, seven share one group
+      with the bench's elemental and spell damage crafts. By the player-tested
+      rule that a group already on the item is never offered, a 4-Alteration
+      bench craft of that group placed before unveiling removes all seven
+      from the offer. Veiled suffixes: 6–7% chance to deal Double Damage,
+      18–22% attack speed with Dexterity and Intelligence, and Critical
+      Strike Multiplier of 36–40% while a Rare or Unique enemy is nearby.
+  - method: fracture
+    note: >-
+      The modifier worth fracturing on a physical claw is a high percentage
+      prefix, because nothing else on the item is as hard to roll twice.
+      Remember what it closes: a fractured pure increased Physical Damage
+      blocks its whole group for good, the veiled physical prefixes and the
+      bench's included.
+  - method: meta
+    note: >-
+      A full lock on a weapon is 4 Divine Orbs and 1 [[Sacred Orb]] per use.
+      On a claw both directions are used: lock the prefixes to rebuild
+      suffixes, or lock three finished suffixes to work on the prefix side.
+
+
+      "Cannot roll Caster Modifiers" removes nothing here, since the natural
+      claw pool has no caster modifier. "Cannot roll Attack Modifiers" would
+      remove nearly everything. Neither earns its Divine Orb on a claw, and
+      since 3.30 neither steers an Orb of Annulment.
+  - method: influence
+    note: >-
+      Crusader and Warlord each add a physical hybrid prefix, 65–69%
+      increased Physical Damage with Critical Strike Chance or with
+      Critical Strike Multiplier. Both share a group with the Accuracy
+      hybrid and replace it. Elder and Warlord add 33–37% increased Physical
+      Attack Damage while Dual Wielding as a suffix; Hunter adds elemental
+      and chaos penetration for attacks with the weapon. Elder's prefix
+      "+51–59% to Damage over Time Multiplier for Poison inflicted with this
+      Weapon" is what a poison claw is built around. An influenced claw
+      cannot be fractured.
+  - method: corruption
+    note: >-
+      A corruption implicit replaces the life on hit. The ones worth the
+      gamble on a finished spare: +25–30% to Global Critical Strike
+      Multiplier, 14–18% increased Critical Strike Chance, 5–7% increased
+      Attack Speed.
+  - method: strands
+    note: "See the Memory Strands section below."
+memoryStrands: >-
+  Strands raise the tier of whatever is rolled, so they pay where the family
+  is common and only its top is rare. On a claw that is added elemental
+  damage: each element is 16% of prefix rolls, and its top three tiers are
+  1 roll in 40. A white item level 82 claw with strands from an
+  [[Orb of Remembrance]], crafted with [[Orb of Alteration]]s and finished
+  with a [[Regal Orb]], is the fitting use: an Alteration spends at most 8
+  strands by the data-mined table.
+
+
+  They do much less for a physical claw. The problem there is finding the
+  family at all, 6% of prefix rolls, and strands do not help with that.
+
+
+  Do not put a strand base under Essences, one of which can spend up to 80,
+  and do not buy one for a Fossil or Harvest craft: by player testing those
+  neither use strands nor benefit from them.
+reading:
+  intro: >-
+    Hold Alt and answer two questions. **What kind of claw is this:**
+    physical, elemental or chaos? The prefixes say so. **How many of attack
+    speed, Critical Strike Chance and Critical Strike Multiplier does it
+    have?** Then check that the prefixes all serve the same kind of damage: a
+    claw with one physical, one cold and one mana prefix is three thirds of
+    three different weapons.
+  prefixes:
+    text: >-
+      A **physical** claw wants the same three families as any physical
+      weapon, each in its own group so that all three fit: pure increased
+      Physical Damage, the hybrid with Accuracy Rating, and flat Physical
+      Damage. The two percentages are local and multiply the base and the
+      flat damage. All three together are a quarter of the pool, which is
+      why this side is the hard one.
+
+
+      An **elemental** claw wants added Fire, Cold and Lightning Damage,
+      three groups that stack freely, and "increased Elemental Damage with
+      Attack Skills" on top. These are half the pool, so the families come
+      easily and the tiers are the work.
+
+
+      Maximum Mana is the junk prefix: 18% of rolls, useful to almost no
+      attack build. "+2 to Level of Socketed Melee Gems" only matters if the
+      main skill sits in the claw's three sockets.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "The largest multiplier on a physical claw, and local. 6% of prefix rolls, with almost all of that in the bottom tiers."
+        aim: "T4, 110–134% (ilvl 46), or the veiled 120–139%. T1 is 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "The same multiplier in a second group. The bench's pure percentage fits beside it, which makes it the luckier of the two to roll."
+        aim: "T3, 55–64% (ilvl 60). T1 is 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Raises what the percentages multiply. On a base that hits for 25–65, adding 22–29 to 45–52 is most of a second claw."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65). T1 needs ilvl 77."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "The elemental claw's damage. Three separate groups, so all three can sit on one claw. Wasted on a physical build."
+        aim: "T3 (Fire adds 59–81 to 120–140, ilvl 62). T1 needs ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Multiplies all added elemental damage on the character, not only this claw's. 3% of prefix rolls; the bench sells 24–32%."
+        aim: "T3, 37–42% (ilvl 60). T1 is 51–59% (ilvl 86)."
+      - mod: "Adds # to # Chaos Damage"
+        why: "One tier, item level 83, 1% of prefix rolls. In practice it comes from an Essence of Envy or from the implicit of a Heist claw."
+  suffixes:
+    text: >-
+      Three suffixes do the work and they are over a third of the pool:
+      attack speed (15%), Critical Strike Chance (10%) and Critical Strike
+      Multiplier (10%). All of their tiers weigh the same, so a high tier is
+      as likely as a low one once the family lands. This side is easy to
+      **start** and hard to **finish**: one of the three comes quickly, all
+      three on one item does not.
+
+
+      The bench supplies exactly one of them. So the plan for a crit claw is
+      two rolled and one benched, or a tool that rigs the whole side.
+
+
+      The rest is filler: Mana Regeneration, Accuracy, Dexterity,
+      Intelligence, life and mana on kill. "Grants Life per Enemy Hit" stacks
+      with the implicit and is a real defensive suffix on a fast claw.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local: multiplies the base's attacks per second, and with it every on-hit effect."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77); a Deafening Essence of Zeal gives 28–30%."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global, so it counts for the whole character and for both claws."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Multiplies the base's 7–8%. This one is local to attacks with the claw."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "Grants # Life per Enemy Hit"
+        why: "Adds to the implicit. Worth a slot on a fast claw that hits many enemies."
+        aim: "T3, 19–22 (ilvl 60)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "For poison and bleed builds. The bench and veiled versions for one damage type are stronger and in a different group."
+approach:
+  principle: >-
+    **Decide the kind of damage first, and let the pool tell you which side
+    is hard.** For an elemental claw the prefixes are common and the suffixes
+    are the work. For a physical claw the prefixes are the work, and the
+    strong ones that have no tiers, veiled and bench, are worth more than a
+    long shot at a rolled one.
+  order:
+    - title: "Kind of damage, then base, then item level"
+      text: >-
+        Physical, elemental or chaos decides everything after it, the base
+        included: fast for added damage, the Vaal Claw's 8% for crit, Void
+        Fangs for chaos. Item level 77 unless the plan names a tier that
+        needs more.
+    - title: "Count what the bench will give you"
+      text: >-
+        One bench modifier. On a physical claw it is usually a prefix, since
+        that side is short of good rolls. On an elemental claw the bench's
+        Elemental Damage with Attack Skills is the natural third prefix,
+        which leaves all three suffixes to be rolled.
+    - title: "Build the hard side with a tool that fits it"
+      text: >-
+        Physical prefixes: a Jagged or Corroded Fossil, the Physical
+        reforge, or a veiled prefix. The suffix trio: Deft and Shuddering
+        Fossils together, or an Essence of Zeal or Loathing to fix one and
+        fish for another.
+    - title: "Protect it if it earned that"
+      text: >-
+        Three good suffixes or two good physical prefixes are worth a lock.
+        Fill the locked side completely first: a full, locked side forces
+        whatever is guaranteed next onto the other one.
+    - title: "Fill the other side, bench last"
+      text: >-
+        With the lock on, use a tool that respects it. Then the bench craft
+        you planned in the second stop, quality, sockets.
+  finishing: >-
+    Quality before judging a physical claw. Then the bench slot, then a
+    [[Divine Orb]] only if the modifiers that matter rolled low in their
+    ranges. Claws are worn in pairs, so finish one before starting the
+    second; the first tells you what the second needs.
+  stopping: >-
+    An elemental claw with two added-damage prefixes at Tier 3 or better,
+    the bench's Elemental Damage with Attack Skills, and two of the three
+    damage suffixes is a strong mapping weapon. A physical claw with a veiled
+    or Tier 4 percentage prefix, flat Physical Damage and attack speed is
+    its equal.
+
+
+    The step after that, a third rolled suffix or a second rolled physical
+    percentage, costs as much as everything before it. Set the stopping
+    point in advance, and when a paid attempt fails twice in a row,
+    re-count what the item is worth against what the next attempt costs.
+special:
+  - mod: "Adds # to # Chaos Damage"
+    source: "Essence / Base implicit"
+    where: "Guaranteed by an Essence of Envy from Screaming upwards: 53–79 to 101–131 at Deafening. The implicit of Void Fangs is a second source that takes no slot. The natural prefix has one tier at item level 83."
+  - mod: "#% increased Physical Damage / #% chance to Poison on Hit"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25% chance. Bench: 95–105% with 18–20% for 8 Chaos Orbs. Versions exist for Bleeding, Impale and Blind. All share a group with pure increased Physical Damage."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% from the [[Crafting Bench]] for 8 Chaos Orbs; 6–7% unveiled. Not in the natural pool."
+  - mod: "#% increased Impale Effect"
+    source: "Essence / Crusader influence"
+    where: "22–25% from a Deafening Essence of Dread, or the same range as a Crusader suffix at item level 75."
+  - mod: "#% chance to gain a Power, Frenzy or Endurance Charge on Kill"
+    source: "Essence"
+    where: "16%, from an [[Essence of Horror]], which only comes from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Veiled / Bench / Hunter influence"
+    where: "14–16% unveiled; 11–13% from the bench for 4 Exalted Orbs; 10–12% as a Hunter prefix at item level 78. The veiled and bench versions share a group; the Hunter one is a different group."
+  - mod: "#% increased Physical Attack Damage while Dual Wielding"
+    source: "Elder / Warlord influence"
+    where: "A suffix, 33–37%, at item level 80 with Elder influence or 73 with Warlord."
+  - mod: "+#% to Damage over Time Multiplier for Poison inflicted with this Weapon"
+    source: "Elder influence"
+    where: "A prefix, 51–59% at item level 83, on an Elder-influenced claw."
+  - mod: "Grants # Mana per Enemy Hit"
+    source: "Base implicit"
+    where: "Only on the three Maraketh claws. You choose it by choosing the base."
+mistakes:
+  - "**Mixing kinds of damage.** A physical percentage does nothing for added Cold Damage. Every prefix should serve the same build."
+  - "**Rolling Alterations for a high physical prefix on a claw.** Tier 3 or better is 1 prefix roll in 344. A veiled prefix or a Fossil gets there for less."
+  - "**Putting physical prefixes on a Heist claw.** Void Fangs hits for 22–41. Its implicit is the point; build chaos and poison around it."
+  - "**Spending the bench on attack speed and then needing two critical strike suffixes.** Plan which of the three the bench supplies before rolling the other two."
+  - "**Fracturing pure increased Physical Damage and then planning a veiled physical prefix.** They are one group. The fracture closes that door for good."
+  - "**Paying for \"Cannot roll Caster Modifiers\" on a claw.** There is nothing in the natural pool for it to remove, and since 3.30 it does not protect anything from an Orb of Annulment."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, Essence, veiled modifier and bench cost quoted here. The shares and odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers, and the change to what \"Cannot roll\" modifiers do against an Orb of Annulment." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-and-remove recipes and their beasts." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Speed, Critical, Physical and Attack reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "The player-tested rule that a group already on the item is not offered when unveiling. Partly older than 3.30." }

@@ -1,0 +1,176 @@
+category: one-hand-axes
+title: "A bleed axe from two Fossils"
+level: 3
+summary: "A Corroded Fossil deletes the elemental prefixes, a Jagged Fossil multiplies the physical ones, and together they reach a bleeding prefix that only Fossils can roll."
+goal: >-
+  An axe for a bleed build with the Fossil-only prefix **"60% chance for
+  Bleeding inflicted with this Weapon to deal 100% more Damage"** and
+  physical prefixes beside it. The lesson is that a Fossil can be chosen for
+  what it **removes** as much as for what it adds, and that the tags on a
+  modifier tell you in advance which Fossils will reach it.
+base: "Reaver Axe"
+itemLevel: 77
+baseWhy: >-
+  Bleeding is based on the physical damage of the hit that caused it, so a
+  bleed axe wants the biggest single hit: the Reaver Axe's 38–114 has the
+  highest top end of any one-handed axe. Item level 77 opens Tier 1 flat
+  Physical Damage and Tier 1 attack speed. Fossil rerolls rarely land on the
+  very top tiers, so item level 83 would buy little.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+    - { text: "Adds 18 to 35 Physical Damage", how: fossil }
+    - { text: "118% increased Physical Damage", how: fossil }
+  suffixes:
+    - { text: "3.1% of Physical Attack Damage Leeched as Life", how: fossil }
+    - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Corroded Fossil]]", amount: "15–30" }
+  - { item: "[[Jagged Fossil]]", amount: "15–30" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the size that holds two Fossils" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Two Fossils and a two-socket Resonator per attempt, all from Delve. In 3.30
+  Delve is reached through the maps that always spawn Sulphite, so this is a
+  craft for someone who delves or buys from those who do.
+odds: >-
+  Our calculator, which counts only ordinary modifiers, gives this for the
+  two Fossils together at item level 77: 98% of prefix rolls are physical,
+  47% flat damage and 25% each percentage family. The elemental prefixes are
+  gone completely.
+
+
+  Fossil rerolls also roll Fossil-only modifiers. If they enter the pool at
+  the weights the data lists and are multiplied by tag like everything
+  else, which is the usual community model and not something we could test
+  in 3.30, the bleeding prefix has **both** boosted tags and becomes the
+  most likely prefix of all: a little over half of prefix rolls. Under that
+  model most results carry it, and the prefixes beside it are physical nine
+  times in ten.
+
+
+  Neither Fossil helps with tiers. Tier 4 or better of the pure percentage
+  (110% or more) is between 1 prefix roll in 42 and 1 in 100, depending on
+  which of the two counts above is nearer the truth.
+steps:
+  - title: "Why these two Fossils"
+    do: >-
+      Before spending anything, look up the target in the modifier list
+      under Fossil-only prefixes and read its tags: physical damage, bleed,
+      physical, attack, ailment. Then read the two Fossils. Corroded: more
+      bleed and poison modifiers, no Elemental modifiers. Jagged: more
+      Physical modifiers, no Chaos modifiers.
+    why: >-
+      "More" is ten times the weight in the 3.30 data and "no" is zero. The
+      target has the bleed tag and the physical tag, so each Fossil
+      multiplies it. The Corroded Fossil does a second job that matters
+      just as much on an axe: added Fire, Cold and Lightning Damage all
+      carry the elemental tag, so the 60% of prefix rolls you never wanted
+      drop to nothing. The Jagged Fossil's "no Chaos" removes the Fossil-only
+      poison prefix that the Corroded Fossil would otherwise boost.
+    state: { rarity: normal }
+  - title: "Prepare the axe and use the first Resonator"
+    do: >-
+      Take a white Reaver Axe to 20% quality and make it Rare with an
+      [[Orb of Alchemy]]. Put one [[Corroded Fossil]] and one
+      [[Jagged Fossil]] in a [[Potent Chaotic Resonator]] and use it on the
+      axe.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item like a [[Chaos Orb]], with
+      the weights changed by every Fossil in it. Two Fossils need the
+      two-socket size.
+    state:
+      prefixes:
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "22% increased Physical Damage / +44 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "2.9% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "+24 to Strength", how: fossil }
+        - { text: "Gain 9 Life per Enemy Killed", how: fossil }
+  - title: "Read it in three passes"
+    do: >-
+      **First:** is the bleeding prefix there? **Second:** what are the
+      other prefixes, and at what tier? Set the bar before you start; for a
+      mapping axe, one other prefix at flat 16–21 to 32–38 or better, or a
+      percentage of 110% or more (45% or more for the hybrid). **Third:**
+      is a suffix slot open?
+    why: >-
+      The result above passes the first and fails the other two: the hybrid
+      is near the bottom of its range and all three suffixes are taken.
+      Checking the suffix count now saves a wasted item later, because the
+      bench craft that finishes this axe is a suffix.
+    check: >-
+      Expect leech among the suffixes. Both leech modifiers carry the
+      physical tag, so the Jagged Fossil multiplies them too: together they
+      are about a third of suffix rolls with these Fossils, and attack
+      speed about a tenth.
+    fail: >-
+      Use another pair of Fossils in a new Resonator on the same axe. Every
+      attempt is independent.
+  - title: "Repeat until the three passes are met"
+    do: >-
+      Keep going until a result has the bleeding prefix, at least one other
+      physical prefix at your bar, and at most two suffixes.
+    why: >-
+      The Fossils make the right families almost certain and leave the
+      tiers alone, so the tier of the second and third prefix is what you
+      are actually waiting for. Two good physical prefixes beside the
+      bleeding one is a strong result; do not hold out for all three at
+      high tiers.
+    state:
+      prefixes:
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 18 to 35 Physical Damage", how: fossil }
+        - { text: "118% increased Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.1% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Bench the bleed suffix"
+    do: >-
+      At the [[Crafting Bench]], craft **+18–20% to Physical Damage over
+      Time Multiplier** for 4 [[Chaos Orb]]s. If the build is short of
+      speed, craft 11–15% attack speed for 2 Chaos Orbs instead.
+    why: >-
+      The prefixes are full, so the bench goes to a suffix. The Damage over
+      Time Multiplier scales the bleed directly, and the bench version is a
+      different group from the rare natural "+% to Damage over Time
+      Multiplier", so an [[Exalted Orb]] into the last suffix could still
+      add that one.
+    state:
+      prefixes:
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 18 to 35 Physical Damage", how: fossil }
+        - { text: "118% increased Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.1% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Not a bleed build.** Use the same pair for a plain physical axe and
+  treat the bleeding prefix as the one you do not want. Or use the Corroded
+  Fossil alone: by our calculator it reaches about 80% physical prefixes
+  just by removing the elemental ones, the same as a Jagged Fossil alone.
+  With only the Corroded Fossil, though, the Fossil-only poison prefix is
+  boosted as well.
+
+
+  **An open prefix instead of a third rolled one.** If the result has the
+  bleeding prefix and flat Physical Damage with the third slot empty, the
+  bench's 95–105% increased Physical Damage with 18–20% chance to cause
+  Bleeding (8 Chaos Orbs) fills it better than most rolls would. It shares a
+  group with pure increased Physical Damage, so it only fits when that did
+  not roll.
+
+
+  **For a pair.** Both axes cause their own bleeds, so the bleeding prefix
+  is wanted on each. This is a craft you repeat, which is one more reason to
+  keep the bar for the other prefixes realistic.
+mistakes:
+  - "Using a Jagged Fossil alone on an axe and still seeing fire damage. It multiplies physical modifiers; it does not remove elemental ones. The Corroded Fossil does."
+  - "Holding out for three high physical tiers. The Fossils fix families, not tiers."
+  - "Keeping a result with three filled suffixes and no attack speed. There is no room left for the bench."
+  - "Using these Fossils on a base with [[Memory Strands]] and expecting better tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil multipliers, the tags on every modifier, the Fossil-only modifiers and their weights. The odds are our arithmetic; the treatment of Fossil-only modifiers is a model." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

@@ -1,0 +1,459 @@
+name: "Warstaff"
+short: "Staff hai tay để đánh attack: block hoặc charge trên implicit, crit gốc cao, một pool prefix chật chội, và không có bảng Essence nào trong dữ liệu."
+icon: "Judgement Staff"
+intro: >-
+  Warstaff là cây staff sinh ra để đánh. Nó là một weapon physical hai tay
+  như maul, và thứ bạn craft cũng y vậy: **physical damage mỗi giây**, từ
+  damage của chính base, flat physical damage, increased physical damage và
+  attack speed. Có ba thứ trên base là của riêng nó. Implicit là Chance to
+  Block Attack Damage, 20 tới 25%. Critical strike chance gốc là 7.5 tới
+  8.5%, trong khi maul có 5%. Và warstaff nào cũng vung 1.25 hoặc 1.3 lần mỗi
+  giây.
+
+
+  Có hai điều làm việc craft khác với maul. Pool prefix chật chội: maximum
+  Mana và sáu họ socketed gem roll ở đây, nên ba prefix physical chỉ chiếm
+  27% số lần roll prefix, không phải 46% như trên mace hai tay. Và dữ liệu
+  game **không liệt kê modifier Essence nào cho warstaff**, điều này lấy mất
+  công cụ nhắm mục tiêu đầu tiên mà phần lớn người chơi với tới. Hướng dẫn
+  này được dựng trên những công cụ đã được xác nhận là dùng được.
+basics:
+  itemLevel:
+    text: >-
+      Các tier physical là những tier mà mọi weapon hai tay dùng chung. Item
+      level 77 mở mọi thứ trừ tier cuối của hai prefix phần trăm; 83 mở nốt
+      chỗ đó. Giữa hai mốc là một tier, tức thêm khoảng 10% của modifier đó,
+      với độ hiếm gấp nhiều lần.
+
+
+      Warstaff thêm hai thứ cần kiểm. Các suffix critical strike tốt nhất mở
+      từ 73, và ở đây chúng quan trọng vì crit gốc cao. Suffix block tốt nhất
+      cần 77. Build elemental cần 86 cho "increased Elemental Damage with
+      Attack Skills" cao nhất.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Tier 5 của increased Physical Damage (85–109%) và Tier 5 của hybrid kèm Accuracy. Tier 5 của flat Physical Damage (adds 16–22 to 35–40) từ 36."
+      - ilvl: 46
+        unlocks: "Tier 4 của increased Physical Damage (110–134%) và Tier 4 của flat Physical Damage (adds 20–28 to 43–51)."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 3 của hybrid (55–64%), và Tier 2 của attack speed (23–25%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 73
+        unlocks: "Tier 2 của increased Physical Damage (155–169%) và Tier 2 của hybrid (65–74%). Tier 1 của Critical Strike Chance và Tier 1 của Global Critical Strike Multiplier (cả hai 35–38%)."
+      - ilvl: 77
+        unlocks: "Tier 1 của flat Physical Damage (adds 34–47 to 72–84), Tier 1 của attack speed (26–27%) và Tier 1 của Chance to Block Attack Damage (18–20%). **Đủ cho mọi thứ, trừ tier cuối của hai prefix phần trăm.**"
+      - ilvl: 83
+        unlocks: "Tier 1 của increased Physical Damage, \"Merciless\" (170–179%), và Tier 1 của hybrid, \"Dictator's\" (75–79% kèm Accuracy). **Trần của một cây warstaff physical.**"
+  bases:
+    text: >-
+      Có 12 warstaff chia làm hai pool. Chín cây thường mang implicit block.
+      Ba cây rod Heist đổi nó lấy charge, và roll từ một pool riêng, khác
+      đúng một chỗ.
+    types:
+      - title: "Warstaff thường"
+        pools: [standard]
+        text: >-
+          Chín base từ Iron Staff tới Judgement Staff. Implicit là Chance to
+          Block Attack Damage: +20% cho tới Vile Staff, +22% trên Military,
+          Serpentine và Foul Staff, và +25% trên ba base cao cấp nhất,
+          Ezomyte Staff, Maelström Staff và Judgement Staff. Con số là cố
+          định; [[Blessed Orb]] không có gì để roll lại.
+      - title: "Rod Heist"
+        pools: [experimented]
+        text: >-
+          Capacity Rod, Potentiality Rod và Eventuality Rod. Implicit của
+          chúng là "+1 to Maximum Power Charges and Maximum Endurance
+          Charges", và chúng không có block. Pool của chúng là pool thường
+          với hai weight bị đổi chỗ: Chance to Block Attack Damage có weight
+          500 mỗi tier ở đây so với 1,000 trên warstaff thường, và Chance to
+          Block Spell Damage có weight 1,000 so với 500. Mọi modifier, tier
+          và weight khác đều như nhau. Vậy nên một cây rod bỏ implicit block,
+          và khả năng roll ra attack block dưới dạng suffix cũng chỉ còn một
+          nửa.
+    picks:
+      - base: "Ezomyte Staff"
+        for: "Build critical strike"
+        why: >-
+          8.5% critical strike chance gốc, cao nhất của loại item này, và mức
+          damage tối đa mỗi cú đánh cao nhất (53–160 với 1.25 attack mỗi
+          giây). Có từ level 60 với implicit +25% block.
+      - base: "Maelström Staff"
+        for: "Nhiều damage nhất mà vẫn có block"
+        why: >-
+          71–147 với 1.25 attack mỗi giây là damage mỗi giây gốc cao nhất
+          trong các warstaff thường (136.3), kèm 8.1% critical strike chance
+          và +25% block.
+      - base: "Judgement Staff"
+        for: "Attack speed"
+        why: >-
+          1.3 attack mỗi giây, tốc độ nhanh hơn trong hai tốc độ mà base hàng
+          đầu có, với 135.9 damage mỗi giây và 8% critical strike chance.
+          Attack speed local nhân vào tốc độ của base, nên cùng một suffix sẽ
+          cho nhiều attack hơn ở đây.
+      - base: "Eventuality Rod"
+        for: "Build chạy bằng Power hoặc Endurance Charge"
+        why: >-
+          +1 to Maximum Power Charges and Maximum Endurance Charges trên
+          implicit, damage mỗi giây gốc cao nhất của loại item này (138.8) và
+          8.3% critical strike chance. Nó không có block, rơi từ Heist, và
+          cần 117 Strength cùng 117 Intelligence.
+      - base: "Foul Staff"
+        for: "Đoạn cuối campaign"
+        why: >-
+          Từ level 55: 65–121 với 1.3 attack mỗi giây và +22% block. Base
+          thường tốt nhất trước ba base cao cấp nhất.
+    impact: >-
+      Base quyết định năm điều mà về sau không currency nào đổi được.
+
+
+      **Implicit.** Block trên warstaff thường, thêm một Power Charge và một
+      Endurance Charge trên rod. Không cái nào có khoảng để roll lại.
+
+
+      **Con số damage mà mọi modifier local nhân lên.** Flat và increased
+      Physical Damage tác động lên cú đánh của chính base, và quality cũng
+      vậy.
+
+
+      **Số attack mỗi giây và critical strike chance.** 1.25 hoặc 1.3, và
+      7.5 tới 8.5%. Suffix "increased Critical Strike Chance" là local và
+      nhân vào con số đó, vì vậy ở đây nó đáng giá hơn trên một cây maul 5%.
+
+
+      **Pool.** Chỉ riêng với suffix block: warstaff thường roll ra attack
+      block nhiều gấp đôi rod.
+
+
+      **Yêu cầu.** Strength và Intelligence ngang nhau, 113 mỗi loại trên các
+      base thường hàng đầu. Nhân vật Strength phải kiếm cho ra chỗ
+      Intelligence đó.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 83, ba prefix physical cộng lại chiếm 27% mọi lần roll
+      prefix, theo phép tính của chúng tôi từ weight. Riêng maximum Mana đã
+      là 20%, ba loại added elemental damage 28%, và các họ socketed gem 21%.
+      Một lần roll prefix ra Tier 3 trở lên của increased Physical Damage
+      thuần khoảng 1 trên 303 lần, và hybrid cũng vậy; Tier 1 của một trong
+      hai là khoảng 1 trên 2,119. Flat Physical Damage dễ chịu hơn: Tier 3
+      trở lên khoảng 1 trên 44.
+
+
+      Vậy nên [[Orb of Alteration]] tìm ra flat Physical Damage dễ dàng, một
+      prefix phần trăm tử tế thì chậm, còn cái tốt nhất thì gần như không bao
+      giờ.
+  - method: bench
+    note: >-
+      Bench bán mọi mảnh ghép của một weapon physical ở dạng yếu hơn.
+      Increased Physical Damage: 40–59% giá 4 Orb of Alteration, 60–79% giá
+      8, 80–99% giá 4 Chaos Orb, 100–129% giá 4 Exalted Orb. Nếu đã mở, bản
+      95–105% kèm 18–20% chance to Impale, Bleed, Poison hoặc Blind tốn 8
+      Chaos Orb và gần bằng bậc cao nhất. Flat Physical Damage: adds 18–24 to
+      36–42 giá 4 Chaos Orb. Attack speed: 8–10% giá 6 Orb of Alteration,
+      11–15% giá 2 Chaos Orb, 16–20% giá 4 Exalted Orb. Critical Strike
+      Chance 25–27% hoặc Global Critical Strike Multiplier 25–28% giá 4 Chaos
+      Orb. Chance to Block Attack Damage 11–13% giá 3. 8–10% chance to deal
+      Double Damage giá 8.
+
+
+      Luật group là cái mà mọi weapon physical đều có. Increased Physical
+      Damage của bench, bản trơn hay hybrid, đều cùng group với bản phần trăm
+      thuần roll ra và khác group với hybrid kèm Accuracy roll ra. Flat
+      Physical Damage của nó cùng group với flat roll ra.
+  - method: finishing
+    note: >-
+      Đưa cây warstaff lên 20% quality bằng [[Blacksmith's Whetstone]] trước
+      khi đánh giá nó: quality chính là physical damage trên base. Nó có tối
+      đa sáu socket, chính điều đó làm "+2 to Level of Socketed Melee Gems"
+      thành một prefix thực thụ khi attack chính gắn trong staff.
+  - method: essence
+    note: >-
+      **Dữ liệu game 3.30 không liệt kê modifier Essence nào cho class
+      Warstaff.** Bảng Essence ghi một modifier cho staff và cho các class
+      weapon hai tay khác; nó hoàn toàn không có mục nào cho warstaff. Chúng
+      tôi chưa xác nhận được game từ chối Essence trên warstaff hay mượn
+      modifier của class khác, và một số mục của staff là modifier caster mà
+      pool của chính warstaff không roll ra được.
+
+
+      Với người craft, điều đó nghĩa là một việc: **đừng lên kế hoạch quanh
+      Essence ở đây.** Không lần craft nào trong hướng dẫn này dùng Essence.
+      Nếu bạn muốn biết, hãy dùng một Essence rẻ lên một cây warstaff trắng
+      và đọc kết quả trước khi mua thêm. Việc mà Essence làm ở chỗ khác, một
+      lần roll lại có một modifier được đảm bảo, ở đây rơi vào tay reforge
+      Harvest.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) trên cây warstaff Magic có prefix
+      phần trăm cao làm cho [[Regal Orb]] lặp lại được. **Thêm một prefix, gỡ
+      một suffix ngẫu nhiên** ([[Farric Wolf Alpha]]) là một lần roll prefix
+      miễn phí trên cây warstaff Rare có suffix trống hoặc vô giá trị, và là
+      một lần roll đắt trên cây staff crit, nơi suffix đáng được giữ.
+  - method: harvest
+    note: >-
+      Ở đây các reforge làm việc của Essence. **Speed** (150 Vivid
+      Lifeforce) đảm bảo thẳng attack speed: đó là modifier duy nhất trong
+      pool tự nhiên của warstaff mang tag speed. **Critical** (150 Primal)
+      đảm bảo Critical Strike Chance hoặc Global Critical Strike Multiplier,
+      cả hai đều là thứ một cây warstaff crit muốn.
+
+
+      **Physical** (50 Vivid) được thỏa bởi ba prefix physical, hai suffix
+      leech và physical damage over time multiplier. Tính theo weight, khoảng
+      bốn phần năm trong đó là prefix, nên đây là cách rẻ để đặt một prefix
+      physical lên item. Nó hứa một họ, không hứa một tier.
+  - method: fossil
+    note: >-
+      Một [[Jagged Fossil]] nhân mọi modifier Physical lên mười lần và biến
+      27% prefix physical thành khoảng 80%. Một [[Shuddering Fossil]] (more
+      Speed, no Mana) hợp với warstaff một cách khác thường: nó loại bỏ
+      maximum Mana, họ prefix lớn nhất, và làm attack speed chiếm 49% số lần
+      roll suffix. Dùng cùng nhau, chúng cho 85% prefix physical và attack
+      speed chỉ trong một lần roll lại.
+
+
+      Một [[Deft Fossil]] (more Critical, no Attribute) làm cho hai suffix
+      crit điều mà Shuddering làm cho speed. Không cái nào giúp gì về tier:
+      với Jagged và Shuddering, Tier 1 của increased Physical Damage thuần
+      vẫn chỉ khoảng 1 trên 683 lần roll prefix.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra ghép 120–139% increased Physical Damage với 21–25%
+      chance to Impale, Bleed, Poison hoặc Blind. Chúng chung group với
+      increased Physical Damage thuần. Trong mười ba prefix mà một lần unveil
+      có thể đưa ra trên warstaff, bảy cái là caster damage và minion damage
+      nằm trong một group, chính điều đó làm cho block bằng bench hiệu quả ở
+      đây: một modifier crafted rẻ thuộc group đó loại cả bảy khỏi các lựa
+      chọn. Suffix: 12–14% chance to deal Double Damage, 27–30% attack speed
+      hoặc 54–60% critical strike multiplier khi có enemy Rare hoặc Unique ở
+      gần.
+  - method: fracture
+    note: >-
+      Một cây warstaff có tier cao của một prefix phần trăm đã fractured là
+      điểm xuất phát cho một weapon hàng đỉnh, vì cùng lý do như trên mọi
+      weapon physical hai tay: prefix đó là cái bạn không đủ sức roll tới hai
+      lần. Ở đây nó còn hiếm hơn nữa, 1 trên 2,119 lần roll prefix cho Tier
+      1.
+  - method: meta
+    note: >-
+      "Prefixes Cannot Be Changed" và "Suffixes Cannot Be Changed" mỗi cái
+      tốn 4 Divine Orb và 1 [[Sacred Orb]] trên warstaff. Trên cây staff
+      crit, cái thứ hai hữu dụng ngang cái thứ nhất, vì ba suffix tốt đáng
+      được bảo vệ.
+
+
+      Hai modifier block tag làm được rất ít ở đây. **Cannot roll Caster
+      Modifiers** không loại được gì: không modifier nào trong pool tự nhiên
+      của warstaff mang tag caster. **Cannot roll Attack Modifiers** loại mọi
+      prefix physical cùng với các modifier attack còn lại, và để lại Mana
+      cùng các họ socketed gem. Và từ 3.30, không cái nào trong hai còn lái
+      được [[Orb of Annulment]].
+  - method: influence
+    note: >-
+      Bảng đầy đủ nằm trong danh sách modifier. Những cái dân craft hay với
+      tới: suffix Shaper với 20–21% attack speed và 4–6% chance to deal
+      Double Damage, suffix Elder với 16–20% increased Area of Effect, suffix
+      Hunter cho các hit bằng weapon 66–80% chance to ignore enemy Physical
+      Damage Reduction, và thêm Weapon Range từ Warlord (+0.3 mét) hoặc Elder
+      (+0.2). Các prefix Crusader và Warlord với 65–69% increased Physical
+      Damage chung group với hybrid kèm Accuracy, nên chúng thay thế nó chứ
+      không cộng dồn với nó. Một cây warstaff có influence thì không fracture
+      được.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: các lần craft bằng Alteration là chỗ strand đáng đồng tiền trên weapon này."
+memoryStrands: >-
+  Warstaff có đúng vấn đề mà [[Memory Strands]] giải quyết, ở dạng gắt hơn
+  maul. Các prefix phần trăm chỉ chiếm một phần khiêm tốn của pool và các
+  tier tốt của chúng là một lát mỏng trong đó: "Merciless" có weight 25 trong
+  một họ có tổng weight 3,775. Strand nâng tier của bất cứ thứ gì được roll
+  ra và không giúp gì cho việc họ nào xuất hiện, nên chúng giúp nửa sau của
+  vấn đề đó chứ không giúp nửa đầu.
+
+
+  Cách dùng hợp nhất là cách rẻ. Đặt strand lên một base trắng item level 83
+  bằng [[Orb of Remembrance]], roll bằng [[Orb of Alteration]], mỗi cái tiêu
+  nhiều nhất 8 strand theo bảng data-mine, và kết thúc bằng một
+  [[Regal Orb]] hoặc [[Exalted Orb]]. Game hiện chi phí của từng orb trước
+  khi bạn dùng.
+
+
+  Hai kiểu craft mà loại item này dựa vào hoàn toàn không dùng strand, theo
+  thử nghiệm của người chơi: Fossil và reforge Harvest. Ở đó một base thường
+  làm được y việc đó.
+reading:
+  intro: >-
+    Giữ Alt rồi rê chuột lên một cây warstaff và đếm trước tiên: **trong ba
+    prefix có mấy cái là physical, và ở tier nào?** Rồi đọc suffix kỹ hơn so
+    với khi đọc trên maul. Attack speed thì lúc nào cũng cần, và với 8% crit
+    gốc, hai suffix critical strike cũng là damage.
+  prefixes:
+    text: >-
+      Có ba họ cộng physical damage và cộng dồn được, vì đó là ba group:
+      increased Physical Damage thuần, hybrid kèm Accuracy Rating, và flat
+      added Physical Damage. Một weapon hoàn chỉnh có cả ba.
+
+
+      Thứ cạnh tranh với chúng là nét riêng của class này. Maximum Mana là
+      prefix đơn lẻ phổ biến nhất, một trên năm lần roll. Năm họ socketed gem
+      level, Chaos, Cold, Fire, Lightning và Melee, chung một group và cộng
+      lại chiếm thêm một phần năm nữa. Chỉ "+2 to Level of Socketed Melee
+      Gems" là có ích cho build attack, và chỉ khi main skill nằm trong
+      staff.
+    key:
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân lớn nhất trên weapon. Local: nó nhân cú đánh của base và mọi flat physical damage trên đó."
+        aim: "T3, 135–154% (ilvl 60). T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Cùng hệ số nhân đó ở một group khác, nên nó nằm cạnh bản thuần được. Bench không cấp được nó, vì vậy đây là cái phần trăm nên mong khi roll."
+        aim: "T3, 55–64% (ilvl 60). T1 là 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Nâng con số mà các phần trăm nhân lên. Dễ roll nhất trong ba cái, và là cái bench thay thế kém nhất."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 cần ilvl 77."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Hai level cho một skill melee gắn trong staff. Phổ biến ở +2 (1 trên 53 lần roll prefix), nhưng nó lấy mất một prefix của physical damage."
+        aim: "+2 (ilvl 63)."
+      - mod: "+# to maximum Mana"
+        why: "Prefix phổ biến nhất trên warstaff và là thứ đầu tiên cần thiết kế cho biến khỏi một lần craft. Một Shuddering Fossil loại bỏ nó."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Cho build scale element đó. Trên warstaff physical, mỗi cái là một prefix phí, và gộp lại chúng còn dễ ra hơn cả ba họ physical."
+  suffixes:
+    text: >-
+      Attack speed là một trên mười lần roll suffix và có thể được đảm bảo
+      bằng reforge Speed. Trên maul, phía suffix tới đó là xong. Trên
+      warstaff, build crit còn muốn cả Critical Strike Chance và Global
+      Critical Strike Multiplier, tổng cộng ba suffix, mà bench chỉ cấp được
+      một modifier. Đó là lý do hướng dẫn này coi suffix tốt là thứ đáng một
+      lần khóa.
+
+
+      Block là suffix còn lại có chỗ đứng ở đây. Chance to Block Attack
+      Damage cộng vào implicit: 25% với 18–20% là 43–45% từ weapon. Rod roll
+      ra nó ít hơn một nửa.
+
+
+      Đồ lấp chỗ là stun duration, stun threshold, Accuracy, attribute, mana
+      regeneration và gain on kill: hơn một nửa phía này.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local: nó nhân vào 1.25 hoặc 1.3 attack mỗi giây của base. Suffix duy nhất warstaff nào cũng muốn."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local, nên nó nhân vào mức gốc 7.5–8.5%: cùng một suffix cho nhiều hơn khoảng 60% critical strike so với trên maul 5%."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Bạn đồng hành của crit chance. Global: nó tác động lên nhân vật."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "+#% Chance to Block Attack Damage"
+        why: "Cộng dồn với implicit block của warstaff thường. Trên rod Heist thì weight chỉ bằng một nửa."
+        aim: "T2, 16–17% (ilvl 66). T1 là 18–20% (ilvl 77)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Không có trong pool tự nhiên. Bench bán 8–10% và bản veiled là 12–14%. Suffix thứ ba mặc định cho build không crit."
+      - mod: "#% increased Stun Duration on Enemies"
+        why: "Đại diện cho đồ lấp chỗ. Cùng với reduced Enemy Stun Threshold, nó chiếm 11% số lần roll suffix và không cho chút damage nào."
+approach:
+  principle: >-
+    **Prefix trước, và đếm suffix trước khi bắt đầu.** Các prefix physical
+    vẫn là cây weapon và vẫn là phía khó. Nhưng một cây warstaff crit có ba
+    suffix nó muốn mà chỉ có một modifier bench để tiêu, nên hãy quyết ngay
+    từ đầu cây staff này có crit hay không. Câu trả lời đó định ra bao nhiêu
+    phần của phía suffix phải roll, và một phía suffix tốt có phải thứ cần
+    bảo vệ hay không.
+  order:
+    - title: "Chọn block hay charge, rồi cú đánh, rồi item level"
+      text: >-
+        Warstaff thường hay rod là câu hỏi về build. Trong các base thường
+        hàng đầu, Ezomyte là crit, Maelström là damage và Judgement là speed.
+        Item level 77 cho mọi thứ trừ tier phần trăm cuối; 83 cho tier đó.
+    - title: "Quyết định cây staff có crit hay không"
+      text: >-
+        Nếu không, attack speed và Double Damage của bench hoàn tất phía
+        suffix, và mọi công sức dồn vào prefix. Nếu có, hai suffix nữa cần
+        một nguồn mà bench chỉ có một ô.
+    - title: "Lấy các prefix physical bằng công cụ dùng được ở đây"
+      text: >-
+        Không có Essence. **Một** prefix roll: Alteration và một Regal Orb.
+        **Hai, giá rẻ:** reforge Harvest Physical. **Ba, kèm attack speed:**
+        Jagged Fossil và Shuddering Fossil. **Ba ở tier cao:** một base
+        fractured.
+    - title: "Lấp phía prefix theo luật group"
+      text: >-
+        Hybrid roll ra chừa chỗ cho bản phần trăm thuần của bench; bản phần
+        trăm thuần roll ra chỉ chừa chỗ cho flat damage của bench. Vậy nên
+        khi được chọn giữ cái nào, hybrid là roll tốt hơn.
+    - title: "Attack speed, rồi crit"
+      text: >-
+        Sau một khóa prefix, reforge Speed lần nào cũng cho attack speed và
+        reforge Critical cho một trong hai suffix crit. Dùng reforge cho
+        modifier bạn muốn ở tier cao và bench cho cái còn lại.
+    - title: "Bảo vệ phía nào xong trước"
+      text: >-
+        Một lần khóa là 4 Divine Orb và một Sacred Orb, bất kể nó canh phía
+        nào. Trên weapon này, phía nào cũng có thể là phía đáng khóa. Hãy đếm
+        các ô trống trước khi trả tiền: mỗi khóa nằm ở phía mà nó không bảo
+        vệ.
+  finishing: >-
+    Quality lên 20%, socket và link, rồi tới con số bên trong từng tier. Một
+    [[Divine Orb]] roll lại tất cả cùng lúc; hãy dùng khi modifier quan trọng
+    đang thấp trong khoảng của nó còn mấy cái kia thì chưa ở đỉnh.
+
+
+    Nếu ô dành cho bench chưa dùng thì dùng đi. Trên cây staff không crit, đó
+    là Double Damage; trên cây staff crit, đó là suffix crit nào chưa roll
+    ra.
+  stopping: >-
+    Một cây warstaff có **một** prefix physical roll ra từ Tier 4 trở lên,
+    một prefix bench bên cạnh và attack speed là một weapon cho những map
+    đầu. **Hai** prefix physical roll ra cộng cái thứ ba từ bench, kèm attack
+    speed từ 20% trở lên, gánh phần lớn build qua Atlas. Prefix roll thứ ba,
+    Tier 1, và một phía suffix crit trọn vẹn là chỗ chi phí nhân lên.
+
+
+    Hãy dừng khi bước kế tiếp tốn nhiều hơn giá trị phần cải thiện đối với
+    bạn, và hãy chốt điều đó trước khi bắt đầu. Nếu một bước hỏng và cây
+    staff giờ tệ hơn món bạn có thể mua bằng số tiền còn lại, hãy mua món đó.
+special:
+  - mod: "+# to Maximum Power Charges and Maximum Endurance Charges"
+    source: "Implicit của base"
+    where: "Implicit của ba cây rod Heist. Không craft ra được: bạn chọn nó bằng cách chọn base, và bạn bỏ implicit block để có nó."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "8–10% từ [[Crafting Bench]] giá 8 Chaos Orb. 12–14% dưới dạng suffix unveil ra, từ một veiled item rơi được, một [[Veiled Chaos Orb]] hoặc một [[Veiled Exalted Orb]]."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25% chance. Bench: 95–105% kèm 18–20%, giá 8 Chaos Orb. Có các bản cho Bleeding, Poison và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "+#% Critical Strike Multiplier while a Rare or Unique Enemy is within # metres"
+    source: "Bench / Veiled"
+    where: "39–45% từ bench giá 4 Chaos Orb; 54–60% khi unveil. Khác group với Global Critical Strike Multiplier, nên một cây staff crit mang được cả hai."
+  - mod: "Hits can't be Evaded"
+    source: "Bench"
+    where: "Một prefix bench giá 4 Exalted Orb. Nó tốn một ô prefix, phía đắt, nên nó dành cho build không còn lời giải nào khác cho accuracy."
+  - mod: "#% increased Attack Speed / #% chance to deal Double Damage"
+    source: "Influence Shaper"
+    where: "Một suffix Shaper, 20–21% attack speed kèm 4–6% chance, trên warstaff có influence Shaper từ item level 75 trở lên. Cùng group với attack speed trơn."
+  - mod: "Hits with this Weapon have #% chance to ignore Enemy Physical Damage Reduction"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter, 66–80% ở item level 71."
+  - mod: "+# metres to Weapon Range"
+    source: "Influence Warlord / Elder"
+    where: "Một suffix: +0.3 mét từ influence Warlord ở item level 73, +0.2 từ Elder ở 85."
+  - mod: "Socketed Skills deal 20% more Attack Damage"
+    source: "Fossil / influence Shaper"
+    where: "Chỉ roll ra trong craft Fossil, hoặc dưới dạng prefix Shaper ở item level 83. Chỉ hữu ích khi main skill gắn trong staff."
+  - mod: "#% chance for Bleeding inflicted with this Weapon to deal #% more Damage"
+    source: "Fossil"
+    where: "Một prefix chỉ có từ Fossil: 60% chance to deal 100% more Damage, cùng một bản tương ứng cho Poison. Nó mang tag physical và attack."
+mistakes:
+  - "**Mua Essence cho warstaff.** Dữ liệu không có modifier Essence nào cho class này. Hãy thử một cái trước khi lên kế hoạch dùng bất kỳ cái nào."
+  - "**Dùng Jagged Fossil một mình.** Nó để Mana lại trong pool prefix và đẩy attack speed xuống còn 7% số lần roll suffix vì nâng leech. Shuddering Fossil đặt bên cạnh sửa được cả hai."
+  - "**Craft \"Cannot roll Caster Modifiers\" để dọn pool.** Trong pool không có modifier caster nào. Đó là mất một Divine Orb mà chẳng được gì."
+  - "**Coi suffix là miễn phí trên cây staff crit.** Cần tới ba cái mà bench chỉ cấp một."
+  - "**Bench increased Physical Damage thuần lên cây staff đã roll ra nó.** Một group. Flat Physical Damage của bench mới là craft vừa."
+  - "**Chọn rod cho build block.** Không có implicit block, và cơ hội ra suffix block chỉ còn một nửa."
+  - "**Craft trên sai item level.** Một base level 82 không bao giờ roll ra \"Merciless\" được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, tag và giá bench được dẫn ở đây, cùng việc không có mục Essence nào cho class Warstaff. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ và thay đổi đối với các modifier \"Cannot roll\"." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Speed, Critical và Physical." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: một modifier crafted cùng group sẽ block một lựa chọn unveil. Một phần cũ hơn 3.30." }

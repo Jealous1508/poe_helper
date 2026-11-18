@@ -1,0 +1,121 @@
+category: jewels
+title: "Corrupting jewels for immunity to Corrupted Blood"
+level: 2
+summary: "A Vaal Orb is the only source of an implicit on a jewel. Make several cheap jewels and corrupt them all, because most attempts do nothing."
+goal: >-
+  A jewel with the corruption implicit "Corrupted Blood cannot be inflicted on
+  you" above two modifiers you use. The craft itself is one click. What it
+  teaches is how to gamble properly: **on items you can afford to lose, in
+  numbers, with the odds written down first.**
+base: "Viridian Jewel"
+itemLevel: 60
+baseWhy: >-
+  Any colour works; use the one your character rolls its ordinary jewels on.
+  Item level matters here for once. The data gives this implicit a level of
+  33, so by the usual rule a jewel below item level 33 cannot receive it. At
+  60 and above a jewel can receive all 21 corruption implicits.
+methods: [currency, corruption]
+result:
+  note: "Corrupted"
+  implicits: ["Corrupted Blood cannot be inflicted on you"]
+  rarity: magic
+  prefixes:
+    - { text: "6% increased maximum Life" }
+  suffixes:
+    - { text: "+13% to Cold Resistance" }
+needs:
+  - { item: "Jewels of item level 33 or higher", amount: "as many as you can make", note: "each with one or two modifiers you use" }
+  - { item: "[[Orb of Alteration]]", amount: "a few dozen per jewel" }
+  - { item: "[[Vaal Orb]]", amount: "1 per jewel" }
+cost: >-
+  One [[Vaal Orb]] per attempt and a cheap jewel under each. The total is
+  set by how many attempts you choose to make, and the honest expectation is
+  dozens. Compare that with the price of a finished one before you start:
+  this implicit is something many players buy.
+odds: >-
+  The data lists 21 corruption implicits for jewels, each with the same
+  weight. When a jewel receives one, it is this one 1 time in 21, by our
+  arithmetic.
+
+
+  How often a Vaal Orb gives an implicit at all is not published. A
+  reference page older than 3.29 lists four outcomes for a jewel: no change,
+  an implicit, a reroll into a new Rare jewel, or a Vaal-only unique jewel.
+  **If** those four were equally likely, which nobody outside the developers
+  has confirmed, one corrupted jewel in about 84 would end with this
+  implicit. Treat that as the scale, not as a promise.
+steps:
+  - title: "Make the jewels cheap, and make several"
+    do: >-
+      Roll Magic jewels with [[Orb of Alteration]]s as in the first example,
+      stopping at one or two modifiers you use. Do not Regal them, do not
+      use a [[Divine Orb]], and do not use a jewel you would mind losing.
+    why: >-
+      Most attempts change nothing, and one outcome replaces the whole jewel
+      with a random Rare. Everything you spend on the jewel before the Vaal
+      Orb is spent again on every attempt.
+    check: >-
+      Hold Alt and read the item level: 33 or higher, or the implicit you
+      want cannot appear.
+    state:
+      rarity: magic
+      prefixes: [{ text: "6% increased maximum Life" }]
+      suffixes: [{ text: "+13% to Cold Resistance" }]
+  - title: "Know the other prizes before you click"
+    do: >-
+      Decide which other implicits you would keep. From the data: "You
+      cannot be Maimed", "You cannot be Hindered", 4–5% increased Damage, 2%
+      increased Reservation Efficiency of Skills, 8–10% increased Global
+      Critical Strike Chance, 4–5% increased Area of Effect.
+    why: >-
+      One implicit in 21 is the one you came for. Several of the other 20
+      are worth a socket to some build, and knowing which turns a miss into
+      a jewel you use or sell.
+  - title: "Vaal Orb, one jewel after another"
+    do: >-
+      Use a [[Vaal Orb]] on each jewel and sort the results: an implicit you
+      want, an implicit you do not, no change, or a jewel that is no longer
+      the one you made.
+    why: >-
+      A corrupted jewel cannot be changed again by ordinary currency. That
+      is why the Vaal Orb is last, and why it goes on jewels that were
+      finished at the level you were willing to finish them.
+    fail: >-
+      "No change" is the common result and leaves a working jewel that is
+      now corrupted: socket it. A rerolled jewel is a random Rare; read it
+      before you throw it away.
+    state:
+      rarity: magic
+      note: "Corrupted"
+      implicits: ["Corrupted Blood cannot be inflicted on you"]
+      prefixes: [{ text: "6% increased maximum Life" }]
+      suffixes: [{ text: "+13% to Cold Resistance" }]
+  - title: "Stop at the number you set"
+    do: >-
+      When the Vaal Orbs you budgeted are gone, stop, whether or not the
+      implicit appeared.
+    why: >-
+      A string of misses does not make the next orb more likely to hit. If
+      the budget is gone and the implicit is not there, the rest of the
+      money is better spent buying one.
+variations: >-
+  **A good jewel, corrupted on purpose.** The same orb on a finished
+  three-modifier jewel is a different bet: you are risking a jewel you
+  worked for against a 1 in 21 share of an outcome whose own chance is not
+  published. Do it only when you own a spare, and use the [[Divine Orb]]
+  first.
+
+
+  **A narrower pool.** Three implicits need item level 40 or 60 in the data.
+  If the usual rule applies to implicits, a jewel of item level 33 to 39 has
+  18 possible implicits, not 21, which makes each of them slightly more
+  likely. We have not seen this tested.
+mistakes:
+  - "Corrupting the only good jewel you own."
+  - "Spending a Divine Orb or a Regal Orb on jewels that are about to be gambled."
+  - "Using a jewel below item level 33."
+  - "Throwing away a miss without reading its implicit."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The 21 corruption implicits of jewels, their levels and their equal weights." }
+  - { title: "poedb: Vaal Orb", url: "https://poedb.tw/us/Vaal_Orb", kind: data, note: "The four outcomes listed for jewels. The text is older than 3.29 and gives no odds." }

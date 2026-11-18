@@ -1,0 +1,150 @@
+category: two-hand-maces
+title: "Three physical prefixes with a Jagged Fossil"
+level: 3
+summary: "Rig the lottery so that nine prefix rolls in ten are physical, and reroll until all three slots hold the right families."
+goal: >-
+  A mace with all three physical prefix families on it: pure, hybrid and flat.
+  Not at top tiers; this method does not reach those. The lesson is how a
+  **Fossil changes the pool**, and how to tell from the weights what it can
+  and cannot do for you.
+base: "Karui Maul"
+itemLevel: 77
+baseWhy: >-
+  Item level 77 opens Tier 1 of flat Physical Damage and of attack speed, and
+  Tier 2 of both percentage prefixes. Fossil rerolls land on low and middle
+  tiers far more often than high ones, so paying for item level 83 here buys
+  a tier you will rarely see.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "128% increased Physical Damage", how: fossil }
+    - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+    - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "+41 to Strength", how: fossil }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Fossils and Resonators from Delve, one of each per attempt. In 3.30 Delve
+  is reached through the maps that always spawn Sulphite, so this is a craft
+  for someone who delves or buys from those who do.
+odds: >-
+  With a Jagged Fossil, by our arithmetic from the weights, a prefix roll is
+  flat Physical Damage 43% of the time and each percentage family 23%. Nine
+  in ten are physical. These figures count the natural pool only: a Fossil
+  can also bring in modifiers that roll with no other tool, the game data
+  does not say which Fossil brings which, and so they are not counted. Read
+  the percentages as the best case.
+
+
+  **When a result has three prefixes, they are the three different physical
+  families a little over half the time.** Not every result has three
+  prefixes, and nothing here controls the tier: Tier 4 or better of the pure
+  percentage is still only about 1 prefix roll in 46. So "all three
+  families" takes a handful of Fossils, and "all three at good tiers" takes
+  dozens.
+steps:
+  - title: "Prepare the base"
+    do: >-
+      Take a white item level 77 Karui Maul to 20% quality. Make it Rare with
+      anything: an [[Orb of Alchemy]], or the first Fossil in an Alchemical
+      Resonator.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item, like a Chaos Orb. The item
+      only needs to be Rare for the first one to work.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes: [{ text: "Adds 63 to 129 Cold Damage" }]
+      suffixes:
+        - { text: "+312 to Accuracy Rating" }
+        - { text: "+29 to Strength" }
+  - title: "Socket the Fossil and use the Resonator"
+    do: >-
+      Place a [[Jagged Fossil]] in a [[Primitive Chaotic Resonator]], then
+      use the Resonator on the mace.
+    why: >-
+      The Fossil's text is "More Physical modifiers, No Chaos modifiers". In
+      the 3.30 data "more" is ten times the weight. Every prefix with the
+      physical tag gets ten tickets for each one it had; the elemental
+      prefixes keep their one.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 19 to 38 Physical Damage", how: fossil }
+        - { text: "29% increased Physical Damage / +66 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "+142 to Accuracy Rating", how: fossil }
+        - { text: "+17 to Strength", how: fossil }
+        - { text: "12% increased Critical Strike Chance", how: fossil }
+  - title: "Read the result in two passes"
+    do: >-
+      **First pass, families:** are the prefixes pure, hybrid and flat, one
+      of each? **Second pass, tiers:** is each one at a tier you accept? Set
+      the bar before you start. For a mapping weapon: pure at 110% or more,
+      hybrid at 45% or more, flat at adds 25 or more to 52 or more.
+    why: >-
+      The result above passes neither: two prefixes, both low. Splitting the
+      judgement in two stops you from keeping a result because it has the
+      right three names at tiers that add up to very little.
+    check: >-
+      Count the suffixes too. If all three are filled with things you do not
+      want, the item has no room for a bench craft. That is acceptable only
+      if the prefixes are good enough to carry it.
+    fail: >-
+      Use another Fossil and Resonator on the same item. Each attempt is
+      independent.
+  - title: "Repeat until both passes are met"
+    do: >-
+      Keep going until a result has the three families at your tiers.
+    why: >-
+      You are waiting for two things at once: three prefixes of different
+      physical families, and acceptable tiers on each. The Fossil helps
+      enormously with the first and not at all with the second.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage", how: fossil }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+        - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "+41 to Strength", how: fossil }
+  - title: "Bench the attack speed"
+    do: >-
+      At the [[Crafting Bench]], craft 11–15% increased Attack Speed for 2
+      [[Chaos Orb]]s.
+    why: >-
+      All three prefix slots are taken by damage, so the bench goes to the
+      one suffix every mace needs.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage", how: fossil }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating", how: fossil }
+        - { text: "Adds 31 to 66 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "+41 to Strength", how: fossil }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Why not add a second Fossil.** A [[Serrated Fossil]] raises Attack
+  modifiers, but nearly every prefix on a mace already has the attack tag,
+  so it changes little on that side. A [[Sanctified Fossil]] makes
+  "high level modifiers more common", which is the thing this craft lacks;
+  the data does not say by how much, so we cannot put a number on it.
+
+
+  **When the prefixes are right and the suffixes are full of filler.** Do
+  not reroll. Three good prefixes are the expensive half of the weapon, and
+  the next example rebuilds the suffix side without touching them.
+mistakes:
+  - "Expecting Tier 1. The Fossil multiplies a whole tag, and the low tiers of that tag are multiplied too."
+  - "Keeping three physical prefixes at the bottom tiers. Two good ones and a bench craft are a better weapon."
+  - "Using a Fossil on a base with [[Memory Strands]] and expecting better tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, tiers and weights. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

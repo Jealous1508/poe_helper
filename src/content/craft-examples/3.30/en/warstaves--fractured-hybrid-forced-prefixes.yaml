@@ -1,0 +1,284 @@
+category: warstaves
+title: "A crit rod with no gamble on the prefixes: fractured hybrid, blocked unveil, bench"
+level: 5
+summary: "Fracture the one physical prefix nothing else can supply, roll the three crit suffixes freely with two Fossils, then lock them and force the remaining prefixes with a veiled modifier and the bench."
+goal: >-
+  A crit warstaff with three physical prefixes and attack speed, Critical
+  Strike Chance and Critical Strike Multiplier all rolled, on a plan where
+  almost nothing is left to chance at the expensive end. The tools were all
+  introduced earlier. The work is **the order**: decide which modifier only
+  rolling can give and make that one permanent, do the cheap gambling while
+  nothing of value can be lost, and leave for last the steps whose outcome
+  you can force.
+base: "Eventuality Rod"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 is the lowest at which the top hybrid, "Dictator's" (75–79%
+  with Accuracy), can exist. The Eventuality Rod has the highest base damage
+  per second of any warstaff, 8.3% base critical strike chance and +1 to
+  Maximum Power Charges, which is why the crit suffixes are worth rolling on
+  it. A Judgement or Ezomyte Staff takes the same plan with block instead.
+  The base must have **no influence**: a Fracturing Orb refuses influenced
+  items.
+methods: [fracture, fossil, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+  prefixes:
+    - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "23% increased Attack Speed", how: fossil }
+    - { text: "32% increased Critical Strike Chance", how: fossil }
+    - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "A fractured \"Dictator's\" or \"Emperor's\" Eventuality Rod, item level 83+", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Shuddering Fossil]]", amount: "dozens" }
+  - { item: "[[Deft Fossil]]", amount: "dozens" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "any Resonator with two sockets" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per lock" }
+  - { item: "[[Orb of Alteration]]", amount: "2", note: "for the bench block" }
+  - { item: "[[Orb of Scouring]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  The fractured base is most of it, and in 3.30 fractured items are rarer
+  than they were: Tier 5 drops, a [[Fracturing Orb]] or a
+  [[Fractured Fossil]]. Stage 2 is counted in pairs of Fossils. Stage 3 is
+  one lock, 4 [[Divine Orb]]s and a [[Sacred Orb]], and one
+  [[Veiled Chaos Orb]], normally once.
+
+
+  We give no total. Prices in the first week of a league move too fast, and
+  stage 2 has a long tail.
+odds: >-
+  **Stage 2.** With a Shuddering and a Deft Fossil on a rod, by our
+  arithmetic from the weights, a suffix roll is attack speed 35% of the time
+  and each of the two crit suffixes 23%. A result with three suffixes holds
+  all three families about 1 time in 3, and all three at Tier 3 or better
+  (20% attack speed, 25% for each crit suffix) about 1 time in 35. Not every
+  result has three suffixes, and the result must also leave a prefix slot
+  open, so plan for many dozens of pairs.
+
+
+  **Stage 3.** The block leaves six prefixes an unveil can offer, four of
+  them physical, and three are shown. By counting, one must be physical; the
+  rule behind that is community-tested and we have not seen this block
+  tested in 3.30. The real risk is the Veiled Chaos Orb rolling two other
+  prefixes and leaving no slot for the block.
+steps:
+  - title: "Ask of each prefix: what else could supply it?"
+    do: >-
+      List the three physical prefix groups and every source of each. **Pure
+      percentage:** rolling, the bench (100–129%), and the veiled hybrids
+      (120–139%). **Flat:** rolling and the bench (adds 18–24 to 36–42).
+      **Hybrid with Accuracy:** rolling, and nothing else. Fracture the
+      hybrid.
+    why: >-
+      A fracture is spent best on what cannot be had any other way. The
+      usual choice is "Merciless", the largest number. But with the pure
+      percentage fractured, the bench's and the veiled pool's physical
+      percentages are blocked by their own group, and the hybrid still has
+      to be rolled and then protected through every later step. With the
+      hybrid fractured, both remaining groups have a source you can force.
+    check: >-
+      The ceiling is lower this way and you should know by how much.
+      "Dictator's" with a 120–139% unveil is about 195–218% increased
+      Physical Damage. "Merciless" with a rolled Tier 3 hybrid is about
+      225–243%. This plan gives up roughly a tenth of the percentage for
+      the removal of two gambling stages.
+  - title: "Stage 1: the fractured hybrid"
+    do: >-
+      Buy or find an item level 83 or higher rod with **"Dictator's"
+      fractured** (75–79%); "Emperor's" (65–74%) is twice as common and
+      nearly as good. To make one: roll the prefix, bring the rod to a Rare
+      with exactly four modifiers, and use a [[Fracturing Orb]].
+    why: >-
+      "Dictator's" weighs 25 in a prefix pool of about 53,000: 1 prefix roll
+      in 2,119. The Fracturing Orb then picks one of the four modifiers at
+      random. This is the step that makes most players buy the base.
+    fail: >-
+      It fractured something else. The rod has the wrong modifier locked
+      for ever and cannot be fractured again.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Stage 2: roll the suffixes while nothing can be lost"
+    do: >-
+      Use a [[Shuddering Fossil]] and a [[Deft Fossil]] together in a
+      [[Potent Chaotic Resonator]], again and again, until the rod has
+      **attack speed, Critical Strike Chance and Global Critical Strike
+      Multiplier**, each at the tier you set, and **no more than two
+      prefixes**. Ignore what the other prefix is.
+    why: >-
+      The only valuable thing on the rod is fractured, so these rerolls
+      cost Fossils and risk nothing. Shuddering is "more Speed, no Mana";
+      Deft is "more Critical, no Attribute". Between them the three wanted
+      suffixes become four fifths of every suffix roll. No Jagged Fossil is
+      needed: the prefixes rolled here are thrown away in stage 3.
+    check: >-
+      Three suffixes, all three families, tiers at your bar. Then count the
+      prefixes: the fractured one and at most one other, because the lock in
+      stage 3 is a prefix and needs a slot.
+    fail: >-
+      Two good suffixes and a filler is the common near miss. Do not settle
+      for it: stage 3 needs the suffix side full of things you want, and
+      another pair of Fossils costs far less than what follows.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "+2 to Level of Socketed Lightning Gems", how: fossil }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 3: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      From here the suffixes are the work to protect. The lock sits in the
+      open prefix slot and is spent by the next reroll.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "+2 to Level of Socketed Lightning Gems", how: fossil }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the rod.
+    why: >-
+      It rerolls what it is allowed to: the two prefixes that are neither
+      fractured nor protected, the lock included. One of the new prefixes is
+      veiled. With all three suffix slots filled and locked, the prefix side
+      is the only place it can go.
+    check: >-
+      The fractured hybrid and the three suffixes are unchanged, "Veiled
+      Prefix" is on the rod, and one prefix slot is open.
+    fail: >-
+      The orb rolled a second new prefix and the prefix side is full. There
+      is no slot for the block or for the bench: unveil without the block
+      and take a physical hybrid if one is offered. If the extra prefix is
+      flat Physical Damage, that outcome is as good as the planned one.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix" }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Block, then unveil"
+    do: >-
+      Craft **increased Chaos Damage**, 44–60% for 2 [[Orb of Alteration]]s,
+      in the open prefix. Then right-click the rod and choose **increased
+      Physical Damage with a chance to Impale** (or the Bleeding, Poison or
+      Blind version).
+    why: >-
+      Seven of the thirteen prefixes an unveil can offer on a warstaff are
+      caster and minion damage percentages in one group, and by community
+      testing an unveil never offers a group already on the item. One cheap
+      craft of that group leaves four physical hybrids and two penetration
+      modifiers, and three choices are shown. The previous example walks
+      through this step and its hedges.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "52% increased Chaos Damage", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 4: the bench takes the last prefix"
+    do: >-
+      Remove the Chaos Damage for 1 [[Orb of Scouring]] and craft flat
+      Physical Damage in its place: adds 18–24 to 36–42 for 4
+      [[Chaos Orb]]s.
+    why: >-
+      The pure percentage group is held by the unveiled modifier and the
+      hybrid group by the fracture. Flat damage is the third group, and the
+      bench sells it.
+    check: >-
+      Six of six slots, and three different physical prefix groups, none of
+      them left to a late roll.
+    state:
+      note: "Fractured"
+      implicits: ["+1 to Maximum Power Charges and Maximum Endurance Charges"]
+      prefixes:
+        - { text: "77% increased Physical Damage / +188 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "23% increased Attack Speed", how: fossil }
+        - { text: "32% increased Critical Strike Chance", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Finish: quality, links, values"
+    do: >-
+      20% quality and six linked sockets if not done. Then a [[Divine Orb]]
+      if the numbers that matter are low in their ranges.
+    why: >-
+      A Divine Orb rerolls every value at once, the fractured prefix
+      included, and never changes a tier. It can lower as well as raise.
+variations: >-
+  **The higher ceiling.** Fracture "Merciless" instead, use Jagged and
+  Shuddering Fossils until the hybrid lands at Tier 3 or better, about 1 set
+  in 33 when both open prefixes roll, then lock the prefixes and use a
+  Harvest Speed reforge, which guarantees attack speed on a warstaff. If its
+  tier is drawn by weight, 23% or more is 2 reforges in 9. More damage at
+  the end, and two stages where this plan has none: each failed reforge is
+  another lock, and the crit suffixes are left to one bench modifier.
+
+
+  **Without the Veiled Chaos Orb.** The bench can supply both remaining
+  prefixes, 100–129% increased Physical Damage (4 Exalted Orbs) and flat
+  damage. Two bench modifiers need "Can have up to 3 Crafted Modifiers",
+  which is a suffix, so that version settles for two rolled suffixes in
+  stage 2 and for a stage 2 result with no stray prefix in the way.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next
+  currency before you commit. The place it could pay here is the Fracturing
+  Orb in stage 1: one look at which modifier it would pick. Any change to
+  the rod ends the foresight, so a wrong answer still costs a Lock.
+
+
+  **With Memory Strands.** Fossils do not use strands by player testing,
+  and a Veiled Chaos Orb can spend up to 80. An [[Orb of Unravelling]] at
+  the very end could raise a suffix by a tier; it skips bench modifiers, and
+  how often it works is a player model, not a published number.
+mistakes:
+  - "Fracturing \"Merciless\" by habit and then finding the bench and the unveil both refuse to add a percentage. Decide the route before the fracture."
+  - "Accepting two good suffixes in stage 2. A filler suffix is locked in with the others and stays for good."
+  - "Keeping a stage 2 result with three prefixes. The suffix lock is a prefix and has nowhere to go."
+  - "Unveiling before the block is on the rod."
+  - "Using a Fracturing Orb on a rod with five or six modifiers. One in four becomes one in five or six."
+  - "Putting influence on the base first. An influenced item cannot be fractured."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Groups, weights, tiers, veiled modifiers, Fossil multipliers, bench costs and the in-game text of the Fracturing Orb. The odds and the counting are ours." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs and modifiers protected by fracturing or meta-modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge used in the alternative route." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs respect a locked side, and a crafted modifier of the same group blocks an unveil choice. Partly older than 3.30." }

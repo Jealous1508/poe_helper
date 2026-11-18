@@ -1,0 +1,145 @@
+category: wands
+title: "A levelling caster wand from Alterations and the bench"
+level: 1
+summary: "Roll Spell Damage on a white wand, make it Rare, and bench cast speed. A first craft that also teaches which lines on a wand are for casters."
+goal: >-
+  A wand for a spell caster in the middle of the campaign, with increased
+  Spell Damage rolled and cast speed bought. The routine is the usual one:
+  roll one modifier, keep it, add to it. What is particular to a wand is the
+  reading. Half of what it rolls is for attacks, and two of those modifiers
+  look almost like the ones you want. **Learn to tell "to Spells" from its
+  twin** and you can judge any wand that drops.
+base: "Sage Wand"
+itemLevel: 35
+baseWhy: >-
+  For a caster the base is its implicit and nothing more: a spell does not
+  use the wand's damage or attack speed. The Sage Wand can be used from
+  level 30 and has 17–21% increased Spell Damage. Item level 35 opens the
+  fifth tier of Spell Damage (40–54%). Hold Alt over the white wand to
+  check.
+
+
+  Any white wand with a Spell Damage implicit works. Avoid the Somatic and
+  Blasting Wands: their implicit forbids every caster modifier.
+methods: [currency, bench]
+result:
+  implicits: ["19% increased Spell Damage"]
+  prefixes:
+    - { text: "36% increased Spell Damage" }
+    - { text: "+74 to maximum Mana" }
+  suffixes:
+    - { text: "+25 to Intelligence" }
+    - { text: "12% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–30", note: "plus 6 for the bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s and one [[Regal Orb]]. The bench craft
+  is 6 more Alterations. No whetstones: quality raises physical damage,
+  which a caster never uses.
+odds: >-
+  At item level 35, one prefix roll is increased Spell Damage of 30% or
+  more about 1 time in 18, by our arithmetic from the modifier weights.
+  Count the hybrid of Spell Damage with Mana at 19% or more as well and it
+  is 1 in 11. An Alteration does not always roll a prefix, so allow twenty
+  to thirty. A third of all prefix rolls at this level are attack
+  modifiers: expect to see plenty of them and reroll every one.
+steps:
+  - title: "Make it Magic and roll the prefix"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Hold Alt and read the prefix after each. Stop on **increased
+      Spell Damage of 30% or more**: "Scholar's" (30–39%) or "Professor's"
+      (40–54%). The hybrid "Wizard's" or "Warlock's" (19–30% Spell Damage
+      with Mana) is also a keeper.
+    why: >-
+      Spell Damage works for every spell, whatever its element, which makes
+      it the right first prefix when you are not sure what you will be
+      casting in ten levels. The bench's version is 25–34% for 4
+      Alterations, so a rolled 30–39% or better is worth the search.
+    check: >-
+      Read the exact words. **"Adds 14 to 28 Fire Damage"** is an attack
+      modifier: it adds to hits made with the wand itself. **"Adds 14 to 28
+      Fire Damage to Spells"** is the caster one. Likewise "increased
+      Physical Damage" and "increased Elemental Damage with Attack Skills"
+      are for attacks. Reroll all of those.
+    fail: >-
+      Short of Alterations: accept "Adept's" (20–29%), or flat damage "to
+      Spells" of the element you cast.
+    state:
+      rarity: magic
+      implicits: ["19% increased Spell Damage"]
+      prefixes: [{ text: "36% increased Spell Damage" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If the wand has no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      A free roll at cast speed, the most common suffix on a wand, and it
+      cannot touch the prefix. Most other outcomes are harmless.
+    state:
+      rarity: magic
+      implicits: ["19% increased Spell Damage"]
+      prefixes: [{ text: "36% increased Spell Damage" }]
+      suffixes: [{ text: "+25 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The wand becomes Rare, keeps both modifiers and gains a third. Rare is
+      what lets the bench add to it.
+    check: >-
+      Read the new line and which side it is on. Here it added maximum
+      Mana, a prefix a caster can use. One prefix slot and two suffix slots
+      are still open.
+    state:
+      implicits: ["19% increased Spell Damage"]
+      prefixes:
+        - { text: "36% increased Spell Damage" }
+        - { text: "+74 to maximum Mana" }
+      suffixes: [{ text: "+25 to Intelligence" }]
+  - title: "Bench what is missing"
+    do: >-
+      At the [[Crafting Bench]], add **one** modifier. If the wand has no
+      cast speed: 10–13% increased Cast Speed, 6 Orbs of Alteration. If it
+      rolled cast speed already: flat damage to spells of your element in
+      an open prefix, for example adds 13–18 to 25–30 Fire Damage to Spells
+      for 4 Orbs of Transmutation.
+    why: >-
+      One bench modifier per item, spent on the larger gap. The bench
+      cannot add Spell Damage here, nor increased Fire, Cold or Lightning
+      Damage: on a wand those are all one group with the Spell Damage that
+      rolled. Cast speed and flat damage to spells are other groups and
+      fit.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Take the best caster option it does show.
+    state:
+      implicits: ["19% increased Spell Damage"]
+      prefixes:
+        - { text: "36% increased Spell Damage" }
+        - { text: "+74 to maximum Mana" }
+      suffixes:
+        - { text: "+25 to Intelligence" }
+        - { text: "12% increased Cast Speed", how: crafted }
+variations: >-
+  **Starting from an Essence.** A low Essence of Woe on a white wand makes
+  it Rare with Spell Damage guaranteed (20–29% at Muttering, 30–39% at
+  Weeping, 40–54% at Wailing), and the bench adds cast speed. In 3.30 the
+  weak Essences only drop in the campaign and white maps, so this is the
+  time to spend them.
+
+
+  **A gem level turned up.** "+1 to Level of all Fire Spell Skill Gems" and
+  its four siblings can roll from item level 2. If an Alteration shows one
+  for the spell type you cast, keep it over any Spell Damage roll at this
+  level, and bench Spell Damage (25–34%) beside it: the gem prefix is a
+  different group.
+mistakes:
+  - "Keeping \"Adds Fire Damage\" without \"to Spells\" on a caster wand. It does nothing for a spell."
+  - "Benching increased Fire Damage beside rolled Spell Damage. One group; the bench will refuse."
+  - "Choosing the wand with the higher damage per second. A spell never uses it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, groups, weights, Essence tiers and bench costs. The odds are our arithmetic." }

@@ -1,0 +1,165 @@
+category: two-hand-maces
+title: "Alt, Imprint, Regal: một prefix mạnh không thể mất"
+level: 3
+summary: "Roll một prefix phần trăm cao lên cây mace Magic, lưu nó bằng một Imprint từ beast, rồi thử lại Regal Orb tới khi nó thêm thứ bạn muốn."
+goal: >-
+  Một cây mace endgame dựng quanh một prefix phần trăm mạnh roll ra được, với
+  một modifier hữu ích thứ hai bên cạnh và mọi ô khác còn trống. Bài học là
+  **Imprint**: cách làm cho Regal Orb lặp lại được, để phần khó của lần craft
+  chỉ phải làm một lần.
+base: "Imperial Maul"
+itemLevel: 83
+baseWhy: >-
+  Imperial Maul có damage mỗi giây gốc cao nhất và một implicit Strength.
+  Item level 83 mở tier cuối của cả hai prefix phần trăm. Lần craft này không
+  nhắm tier đó, nhưng một Alteration vẫn có thể rơi trúng nó, và ở 83 thì khi
+  trúng bạn được giữ.
+methods: [currency, beast, bench, finishing]
+result:
+  implicits: ["10% increased Strength"]
+  prefixes:
+    - { text: "148% increased Physical Damage" }
+    - { text: "Adds 29 to 57 Physical Damage" }
+    - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+  suffixes:
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Farric Wolf Alpha]]", amount: "1", note: "không bắt buộc, cộng ba beast Rare" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Alteration số lượng lớn, và beast. Imprint là thứ làm cho cách này vừa túi
+  tiền: không có nó, mỗi Regal Orb xấu sẽ đẩy bạn về lại khâu Alteration.
+  Trong 3.30 chỉ beast đỏ được bắt, nên hãy đếm Menagerie của bạn trước khi
+  bắt đầu.
+odds: >-
+  Ở item level 83, một lần roll prefix ra Tier 3 trở lên của một prefix phần
+  trăm, thuần hoặc hybrid, khoảng 1 trên 90 lần theo phép tính của chúng tôi.
+  Không phải Alteration nào cũng roll ra prefix, nên con số thật cao hơn: vài
+  trăm cái là ngân sách thực tế, và một chuỗi xui thì dài hơn thế.
+
+
+  Regal Orb thêm một modifier ngẫu nhiên. Khoảng một phần ba những gì nó có
+  thể thêm là hữu ích ở đây: một prefix physical nữa, attack speed, hoặc một
+  suffix critical strike. Vậy nên hãy tính khoảng ba Imprint.
+steps:
+  - title: "Quality, Transmutation, rồi Alteration tới khi ra prefix"
+    do: >-
+      Đưa một cây Imperial Maul trắng item level 83 lên 20% quality. Dùng một
+      [[Orb of Transmutation]], rồi [[Orb of Alteration]] tới khi prefix là
+      **Tier 3 trở lên** của increased Physical Damage (từ 135%) hoặc của
+      hybrid kèm Accuracy (từ 55%).
+    why: >-
+      Item Magic giữ cho cuộc tìm kiếm nhỏ gọn: hai ô, và bạn chỉ đọc một.
+      Tier 3 là mốc mà từ đó weight không còn hợp lý để cố vượt qua chỉ bằng
+      Alteration thường. Tier 1 hiếm hơn khoảng bảy lần.
+    check: >-
+      Giữ Alt và đọc tier, đừng chỉ đọc con số. Nếu prefix đã đúng, nhìn sang
+      suffix: bạn muốn nó **trống**.
+    state:
+      rarity: magic
+      implicits: ["10% increased Strength"]
+      prefixes: [{ text: "148% increased Physical Damage" }]
+      suffixes: [{ text: "+214 to Accuracy Rating" }]
+  - title: "Dọn suffix nếu có"
+    do: >-
+      Nếu item Magic còn có một suffix bạn không muốn, chỉ dùng
+      [[Orb of Annulment]] khi bạn chịu được việc mất prefix trong một nửa số
+      lần. Cách rẻ hơn là cứ tiếp tục dùng Alteration tới khi prefix tốt xuất
+      hiện **một mình**, hoặc đi kèm một suffix bạn chịu giữ.
+    why: >-
+      Bất cứ thứ gì trên item Magic đều được mang sang item Rare và vào mọi
+      Imprint của nó. Một suffix rác ở đây là một suffix rác cho suốt phần
+      còn lại của lần craft. Đừng dùng Augmentation: một ô suffix trống đáng
+      giá hơn một suffix ngẫu nhiên.
+    state:
+      rarity: magic
+      implicits: ["10% increased Strength"]
+      prefixes: [{ text: "148% increased Physical Damage" }]
+  - title: "Imprint"
+    do: >-
+      Ở [[Menagerie]], dùng công thức **Create an Imprint of a Magic
+      Item** lên cây mace. Nó cần một [[Craicic Croaker]] và ba beast Rare
+      khác.
+    why: >-
+      Imprint là một bản sao lưu của item đúng như lúc này. Sau đó có chuyện
+      gì đi nữa, dùng Imprint là cây mace quay về trạng thái này. Nó chỉ dùng
+      được trên item Magic, vì vậy nó đi trước Regal Orb.
+    check: >-
+      Imprint xuất hiện trong inventory của bạn như một item riêng. Khoan
+      dùng nó.
+  - title: "Regal Orb, rồi đánh giá"
+    do: >-
+      Dùng một [[Regal Orb]] lên cây mace. Đọc modifier nó vừa thêm.
+    why: >-
+      Item thành Rare với prefix còn nguyên và một modifier mới. **Giữ** nó
+      nếu modifier mới là prefix phần trăm còn lại, flat Physical Damage,
+      attack speed, hoặc một suffix critical strike mà build bạn dùng.
+    fail: >-
+      Ra bất cứ thứ gì khác: dùng [[Imprint]] lên cây mace để đưa nó về trạng
+      thái Magic, tạo một Imprint mới bằng một con Croaker khác, rồi dùng
+      thêm một Regal Orb. Mỗi lần thử tốn một Regal Orb và một bộ beast.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+  - title: "Một prefix thứ ba miễn phí"
+    do: >-
+      Khi item chưa có suffix nào, dùng công thức beast **Add a Prefix,
+      Remove a Random Suffix** ([[Farric Wolf Alpha]]).
+    why: >-
+      Phía suffix không có gì thì không có gì để gỡ, nên theo kinh nghiệm lâu
+      năm của người chơi, đây là một prefix với giá chỉ bằng mấy con beast.
+      Đó là một prefix ngẫu nhiên. Trên item này, khoảng một trên năm lần
+      roll ra hybrid; ví dụ cho thấy kết quả dễ xảy ra hơn, một prefix
+      elemental.
+    check: >-
+      Làm việc này **trước** bước bench. Một khi đã có suffix bench trên
+      item, công thức có thứ để gỡ.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+        - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+  - title: "Bench attack speed"
+    do: >-
+      Ở [[Crafting Bench]], craft 11–15% increased Attack Speed giá 2
+      [[Chaos Orb]], hoặc 16–20% giá 4 Exalted Orb nếu cây weapon xứng đáng.
+    why: >-
+      Attack speed là suffix cây mace nào cũng muốn và bench lúc nào cũng có.
+      Hai ô suffix vẫn để trống cho sau này: một [[Exalted Orb]] khi bạn dư
+      được một viên, hoặc các cách làm suffix trong những ví dụ khó hơn.
+    state:
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "148% increased Physical Damage" }
+        - { text: "Adds 29 to 57 Physical Damage" }
+        - { text: "Adds 12 to 226 Lightning Damage", how: beast }
+      suffixes:
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Trên base có Memory Strands.** Đây chính là lần craft hợp với chúng. Một
+  Alteration tiêu nhiều nhất 8 strand và một Regal Orb nhiều nhất 16, theo
+  bảng data-mine, và strand nâng tier của bất cứ thứ gì được roll ra. Hãy
+  dùng một [[Orb of Remembrance]] lên cây maul trắng trước, và để ý chi phí
+  game hiện ra trước mỗi orb.
+
+
+  **Nếu hybrid roll ra trước.** Khi đó bench thêm được increased Physical
+  Damage thuần, 100–129% giá 4 Exalted Orb, làm prefix phần trăm thứ hai. Đó
+  là thế mạnh hơn thế trong ví dụ: bench prefix, rồi lấy attack speed từ một
+  [[Exalted Orb]] hoặc một lần craft về sau.
+mistakes:
+  - "Dùng Regal Orb trước Imprint. Không tạo được Imprint của item Rare."
+  - "Augmentation lên item Magic \"để xem thử\". Nếu suffix xấu thì giờ nó nằm trong mọi lần thử."
+  - "Dùng beast thêm prefix sau bước bench. Nó gỡ một suffix ngẫu nhiên, mà modifier bench lại là suffix."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần trong 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

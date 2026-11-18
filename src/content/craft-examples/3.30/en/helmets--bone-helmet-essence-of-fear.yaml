@@ -1,0 +1,161 @@
+category: helmets
+title: "A minion helmet: Bone Helmet under an Essence of Fear"
+level: 2
+summary: "Three things plain rolling can never give, on one item: a base implicit, an Essence-only prefix and a bench-only prefix."
+goal: >-
+  A helmet for a minion build with minion damage twice over and a life
+  prefix beside it. Nothing here is hard. The point is to see **where a
+  helmet's special modifiers come from**: one from the base, one from an
+  Essence, one from the bench, and none from the lottery.
+base: "Bone Helmet"
+itemLevel: 75
+baseWhy: >-
+  The Bone Helmet's implicit is "Minions deal 20–30% increased Damage", raised
+  to that range in 3.30. It is an Atlas base, so it only drops when an item
+  rolls a high enough Item Tier. Find a white one or buy one.
+
+
+  The base drops from level 73, and item level 75 is more than this craft
+  needs: Tier 1 maximum Life is open from 64. At 75 the natural "+2 to Level
+  of all Minion Skill Gems" can also roll, with a weight of 25. Do not plan
+  on it.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["Minions deal 27% increased Damage"]
+  prefixes:
+    - { text: "Minions deal 23% increased Damage", how: essence }
+    - { text: "+104 to maximum Life" }
+    - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+  suffixes:
+    - { text: "+39% to Lightning Resistance" }
+    - { text: "+34 to Intelligence" }
+needs:
+  - { item: "[[Screaming Essence of Fear]]", amount: "5–15", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench, or 4 Orbs of Alchemy for life" }
+  - { item: "[[Blessed Orb]]", amount: "1–3", note: "optional, for the implicit" }
+cost: >-
+  The white base, then Essences. Screaming Essences are what red maps hand
+  out in 3.30. The bench step is 4 [[Chaos Orb]]s or 4 Orbs of Alchemy,
+  depending on which gap is left.
+odds: >-
+  The Essence's own prefix is certain. Beside it, each further prefix the
+  Essence rolls is maximum Life about 1 time in 5 on this base, and life of
+  85 or more about 1 time in 12, by our arithmetic from the weights at item
+  level 75. A result with an **open** prefix also passes, because the bench
+  can put life there. Only a result with three prefixes and no life fails
+  outright, so most players need a handful of Essences, not dozens.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Take the white Bone Helmet to 20% quality with
+      [[Armourer's Scrap]]s. Use one [[Screaming Essence of Fear]] on it.
+    why: >-
+      On a helmet an Essence of Fear guarantees "Minions deal increased
+      Damage" as a **prefix**: 22–24% at Screaming, 25–27% at Shrieking,
+      28–30% at Deafening. No tier of that modifier exists in the natural
+      pool. It is a different group from the implicit, so the two add up.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+61 to maximum Mana" }
+        - { text: "+21% to Item Rarity" }
+      suffixes:
+        - { text: "+15 to Strength" }
+        - { text: "Regenerate 36.4 Life per second" }
+  - title: "Read the prefixes against one rule"
+    do: >-
+      Hold Alt. The Essence prefix is always there. Ask of the other two
+      prefix slots: **is one of them maximum Life of 85 or more, or is one of
+      them empty?**
+    why: >-
+      The helmet above fails. Its other prefixes are mana and Item Rarity,
+      and all three slots are taken, so not even the bench can add life. On a
+      base with Energy Shield in it, mana is the most common prefix there is.
+    check: >-
+      Pass with rolled life of 85 or more. Pass with an open prefix, and you
+      will bench the life. Fail only with three prefixes and no life.
+    fail: >-
+      Use the next Essence on the same helmet. From Screaming upwards an
+      Essence rerolls a Rare item, and its guaranteed prefix comes back every
+      time.
+  - title: "Repeat until it passes, then glance at the suffixes"
+    do: >-
+      Keep using Essences until the prefix rule is met. Then look at the
+      suffixes: you want at least one resistance, or an open suffix slot.
+    why: >-
+      The prefix side holds everything rare about this helmet, so it is
+      judged first. A weak suffix side is cheap to live with; a missing life
+      prefix is not.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+  - title: "Spend the one bench craft on the biggest gap"
+    do: >-
+      **Life rolled, a prefix open** (as here): at the [[Crafting Bench]],
+      craft "+1 to maximum number of Raised Zombies, +1 to maximum number of
+      Skeletons" for 4 [[Chaos Orb]]s if your build uses either. If it does
+      not, leave the prefix and craft a resistance in a suffix: 29–35% for 3
+      Chaos Orbs.
+
+
+      **No life, a prefix open:** craft maximum Life, 56–70 for 4 Orbs of
+      Alchemy.
+    why: >-
+      One bench modifier per item, so it goes where nothing else can. The
+      zombie-and-skeleton prefix exists only on the bench and as a veiled
+      modifier.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+        - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+  - title: "Reroll the implicit's number"
+    do: >-
+      Once you are keeping the helmet, use a [[Blessed Orb]] if the implicit
+      is near the bottom of its 20–30% range.
+    why: >-
+      A Blessed Orb rerolls the value of the implicit and touches nothing
+      else. Ten points of minion damage for a cheap orb is the best trade on
+      the item, and it is easy to forget because the implicit never changes
+      during the craft.
+    state:
+      implicits: ["Minions deal 27% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+        - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+variations: >-
+  **Not a minion build.** The same routine with an Essence of Loathing gives
+  increased Mana Reservation Efficiency as a suffix: 5–6% at Screaming, 7–8%
+  at Shrieking, 9–10% at Deafening. It is also absent from the natural pool.
+  Use any base you like, since the Bone Helmet's implicit is then wasted.
+
+
+  **Eldritch implicits later.** A Bone Helmet has no influence and can take
+  an Ember or an Ichor. Read their text first: each "replaces any existing
+  implicit modifiers" other than the opposite Eldritch one. Adding either
+  removes the minion damage implicit. The Searing Exarch does offer minion
+  life and minion movement speed on helmets, so it is a trade, not a mistake;
+  make it knowingly.
+mistakes:
+  - "Keeping a result with three prefixes and no life because the suffixes are good. The bench cannot reach a full side."
+  - "Using the bench between Essences. The next Essence removes the bench modifier with everything else."
+  - "Buying a Bone Helmet for a build with no minions. The base has lower defences than an ordinary helmet of its level; the implicit is the whole reason to use it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on helmets, the Bone Helmet, tiers, weights and bench costs, and the in-game text of the Eldritch Embers. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The Bone Helmet's 3.30 implicit, Item Tiers for special bases, and which Essence strengths appear in which maps." }

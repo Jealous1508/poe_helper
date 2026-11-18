@@ -1,0 +1,142 @@
+category: belts
+title: "A first belt with an Orb of Alchemy"
+level: 1
+summary: "On most items rolling everything at once is a waste. A belt's modifier list is short enough that it works: Alchemy, read, repeat once or twice, bench the gap."
+goal: >-
+  A belt with Life and two resistances for the second half of the campaign,
+  made in a handful of clicks. The lesson is **when rolling a whole item is a
+  fair bet**. It is fair when the pool is small and most of it is useful,
+  and the belt is the one slot where that is true.
+base: "Leather Belt"
+itemLevel: 40
+baseWhy: >-
+  A Leather Belt has +25–40 maximum Life as its implicit and drops from level
+  10, so a Life roll under it gives the belt Life twice. Item level 36 or
+  more opens Life of 85–99. Use any white Leather Belt of about your own
+  level; a Heavy Belt is the alternative for a character short of Strength.
+methods: [currency, bench]
+result:
+  implicits: ["+32 to maximum Life"]
+  prefixes:
+    - { text: "+62 to maximum Life" }
+    - { text: "+38 to maximum Mana" }
+  suffixes:
+    - { text: "+27% to Cold Resistance" }
+    - { text: "+25 to Strength" }
+    - { text: "+25% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "2–4", note: "one of them for the bench" }
+  - { item: "[[Orb of Scouring]]", amount: "1–3", note: "or a Chaos Orb in place of a Scouring and an Alchemy" }
+cost: >-
+  A few [[Orb of Alchemy]] and [[Orb of Scouring]]. Since 3.30 Orbs of
+  Alchemy are more common than they were, which is what makes this a
+  day-two craft and not a luxury.
+odds: >-
+  At item level 40, one prefix roll in four is maximum Life, by our
+  arithmetic from the modifier weights, and more than one suffix roll in
+  three is an elemental resistance. A Rare belt has one to three prefixes,
+  so somewhere between a quarter and six in ten of them have Life,
+  depending on how many prefixes rolled. On average the second or third
+  belt is one to keep.
+
+
+  Compare an amulet at the same level: Life is about one prefix roll in six
+  there, and a wanted suffix far rarer. That difference is the whole
+  argument for doing it this way on a belt and not elsewhere.
+steps:
+  - title: "Orb of Alchemy"
+    do: >-
+      Use one [[Orb of Alchemy]] on the white belt.
+    why: >-
+      It makes the belt Rare with four to six random modifiers in one
+      click. On a belt there are only nine kinds of prefix and twelve kinds
+      of suffix to draw from. Life is the most-wanted of the nine and one
+      roll in four; three resistances and Strength are four of the twelve.
+    state:
+      implicits: ["+32 to maximum Life"]
+      prefixes:
+        - { text: "+41 to maximum Mana" }
+        - { text: "+17 to maximum Energy Shield" }
+      suffixes:
+        - { text: "18% increased Stun and Block Recovery" }
+        - { text: "23% increased Stun Duration on Enemies" }
+  - title: "Read it with three questions"
+    do: >-
+      Hold Alt. **Is there a Life prefix? Is there at least one resistance?
+      Is a suffix slot open for the bench?**
+    why: >-
+      Life is the modifier the bench replaces worst, so it has to be rolled.
+      One resistance can be rolled and a second bought. The belt above
+      answers no, no and yes: Mana and Energy Shield for prefixes, two stun
+      modifiers for suffixes. It is a miss.
+    check: >-
+      Two yeses including the first are enough to keep the belt. Do not wait
+      for a perfect one at this level.
+    fail: >-
+      No Life: go to the next step. Life but three suffixes of filler: also
+      a miss, because the bench has no room.
+  - title: "Wipe it and roll again"
+    do: >-
+      Use an [[Orb of Scouring]] to make the belt Normal, then another
+      [[Orb of Alchemy]]. A single [[Chaos Orb]] does both at once if you
+      would sooner spend that.
+    why: >-
+      Each attempt is independent. Nothing on a missed belt is worth
+      protecting, so there is no reason to do anything cleverer than start
+      over.
+    state:
+      implicits: ["+32 to maximum Life"]
+      prefixes:
+        - { text: "+62 to maximum Life" }
+        - { text: "+38 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+25 to Strength" }
+  - title: "Bench the second resistance"
+    do: >-
+      At the [[Crafting Bench]], craft the elemental resistance you are
+      lowest in: 21–28% for 1 [[Orb of Alchemy]], or 16–20% for 1 Orb of
+      Transmutation.
+    why: >-
+      The belt has Life, one resistance and an open suffix. The bench fills
+      the open suffix with certainty. It cannot repeat the element the belt
+      already rolled, since that is one group, so choose another.
+    state:
+      implicits: ["+32 to maximum Life"]
+      prefixes:
+        - { text: "+62 to maximum Life" }
+        - { text: "+38 to maximum Mana" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+25 to Strength" }
+        - { text: "+25% to Fire Resistance", how: crafted }
+  - title: "Know when to stop using this method"
+    do: >-
+      Use it through the campaign and into your first maps. Stop when you
+      start caring about the **tier** of the Life roll.
+    why: >-
+      An Alchemy roll gives Life at a random tier among all the item level
+      allows. Once you want the top one, six modifiers at a time is the slow
+      way to find it, and the next example's two is the fast way.
+variations: >-
+  **No Scouring Orbs.** Keep the missed belt and use Alchemy on the next
+  white belt you find. At this level bases are free.
+
+
+  **Already Rare.** A Rare belt from the ground is the same thing with the
+  first step done for you. Read it with the same three questions.
+
+
+  **With a low Essence.** A Weeping or Wailing Essence of Anger, Hatred or
+  Wrath on the white belt makes it Rare with that resistance guaranteed.
+  Belts are the only jewellery where those Essences give a resistance. The
+  weak strengths work on a Normal item only and hold the other modifiers to
+  level 60 or 75 and below.
+mistakes:
+  - "Using this method on an amulet or a weapon because it worked on a belt. Their lists are two and three times as long."
+  - "Keeping a belt without Life because the suffixes were good. Resistances can be bought at the bench; a Life roll cannot."
+  - "Crafting before reading. A belt with three suffixes cannot take a bench resistance."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, bench costs and the Essence modifiers on belts. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orbs of Binding removed and Orbs of Alchemy more common." }

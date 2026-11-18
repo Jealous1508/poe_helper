@@ -1,0 +1,142 @@
+category: one-hand-maces
+title: "Một Essence yếu trên cây mace trắng"
+level: 2
+summary: "Một Wailing Essence of Contempt biến cây mace trắng thành Rare với flat Physical Damage được đảm bảo, rồi bench thêm phần trăm. Hai cú click, hai prefix physical."
+goal: >-
+  Một cây mace cho đoạn cuối campaign và những map đầu tiên, với flat
+  Physical Damage từ một Essence và một prefix phần trăm từ bench. Bài học là
+  **Essence yếu** khác Essence mạnh thế nào: chúng dùng được một lần, chỉ
+  trên item trắng, và trong 3.30 chỉ tìm thấy trên đường đi lên. Dùng đúng
+  lúc, mỗi cái đáng một craft bench. Để dành về sau, chúng chẳng đáng gì.
+base: "Tenderizer"
+itemLevel: 60
+baseWhy: >-
+  Tenderizer rơi từ level 58 với 49–62 physical damage ở 1.4 attack mỗi giây,
+  một base nhanh so với level của nó. Item level 60 mở Tier 3 của cả hai
+  prefix phần trăm và Tier 2 của attack speed, phòng khi may mắn thêm một
+  cái. Cây mace phải là **Normal**: bốn bậc Essence yếu nhất không dùng được
+  trên item Magic hay Rare.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "Adds 10 to 19 Physical Damage", how: essence }
+    - { text: "Adds 6 to 119 Lightning Damage" }
+    - { text: "72% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+36 to Strength" }
+    - { text: "17% increased Attack Speed" }
+needs:
+  - { item: "[[Wailing Essence of Contempt]]", amount: "1", note: "Weeping dùng được trên cây mace level thấp hơn" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "cho bench" }
+cost: >-
+  Một Essence bạn nhặt được khi leveling, và 8 [[Orb of Alteration]] ở bench.
+  Thêm một Essence thứ hai và một [[Orb of Scouring]] nếu kết quả đầu kém và
+  bạn muốn thử lần nữa.
+odds: >-
+  Flat damage thì chắc chắn. Prefix phần trăm của bench cũng vậy, miễn là một
+  điều đúng: Essence phải chừa lại một ô prefix trống và không tự roll ra
+  increased Physical Damage thuần. Theo phép tính của chúng tôi ở item level
+  này, mỗi prefix khác mà Essence roll ra là increased Physical Damage thuần
+  khoảng 1 trên 6 lần, và hybrid Accuracy cũng thường xuyên cỡ đó. Cái nào
+  trong hai cũng là kết quả tốt hơn cái trong ví dụ chứ không tệ hơn; chúng
+  chỉ thay đổi craft bench bạn chọn.
+steps:
+  - title: "Quality trên cây mace trắng"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] tới khi cây Tenderizer hiện 20%
+      quality. Kiểm xem nó có phải Normal không, với tên màu trắng.
+    why: >-
+      Quality rẻ nhất trên item trắng và là một phần của damage mà cả hai
+      prefix sẽ dựng lên trên.
+    state:
+      rarity: normal
+      implicits: ["10% reduced Enemy Stun Threshold"]
+  - title: "Dùng Essence"
+    do: >-
+      Dùng một [[Wailing Essence of Contempt]] lên cây mace.
+    why: >-
+      Nó biến cây mace thành Rare với **adds 8–12 to 17–20 Physical Damage**
+      được đảm bảo còn các modifier khác thì ngẫu nhiên. Đó gần như đúng bằng
+      thứ bench bán giá 2 Orb of Alchemy, nên Essence đáng một craft bench:
+      nó cấp flat damage và để bench rảnh tay cho phần trăm.
+
+
+      Mô tả của item ghi rằng một Wailing Essence giới hạn các modifier khác
+      ở level 75 trở xuống. Trên một cây mace item level 60, điều đó không
+      thay đổi gì; đằng nào cũng không gì trên 60 roll ra được.
+    check: >-
+      Giữ Alt và xếp những gì roll ra thành prefix và suffix. Đếm prefix.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 10 to 19 Physical Damage", how: essence }
+        - { text: "Adds 6 to 119 Lightning Damage" }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "17% increased Attack Speed" }
+  - title: "Chọn craft bench theo thứ đã roll ra"
+    do: >-
+      **Không có prefix phần trăm nào roll ra và còn một prefix trống** (như
+      ở đây): craft 60–79% increased Physical Damage giá 8
+      [[Orb of Alteration]]. **Hybrid Accuracy roll ra:** vẫn craft đó, và
+      cây mace có hai prefix phần trăm. **Increased Physical Damage thuần
+      roll ra:** prefix phần trăm của bench bị từ chối, nên hãy craft attack
+      speed vào một suffix, 8–10% giá 6 Orb of Alteration. **Ba prefix và
+      không cái nào là phần trăm:** craft attack speed nếu còn một suffix
+      trống.
+    why: >-
+      Prefix phần trăm của bench chung group với bản thuần roll ra và không
+      chung với gì khác trên item này. Flat damage của bench thì trường hợp
+      nào cũng bị từ chối, vì modifier của Essence cùng group với nó.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "Adds 10 to 19 Physical Damage", how: essence }
+        - { text: "Adds 6 to 119 Lightning Damage" }
+        - { text: "72% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "17% increased Attack Speed" }
+  - title: "Nếu kết quả kém"
+    do: >-
+      Nếu Essence lấp cả ba prefix bằng những thứ bạn không dùng được và bạn
+      còn một Essence khác, hãy dùng một [[Orb of Scouring]] lên cây mace rồi
+      tới Essence thứ hai. Còn không thì giữ cái bạn đang có.
+    why: >-
+      Một Wailing Essence không dùng lại được lên cây mace Rare; đó là điểm
+      phân biệt nó với bậc Screaming trở lên. Scouring đưa cây mace về
+      Normal, trạng thái duy nhất mà một Essence yếu chấp nhận. Quality vẫn
+      còn nguyên qua Scouring.
+    check: >-
+      Làm việc này trước bước bench, không phải sau. Scouring gỡ modifier
+      bench cùng với mọi thứ khác.
+variations: >-
+  **Bậc nào ở level nào.** Whispering cho adds 1 to 2–3, Muttering 4–5 to
+  8–9, Weeping 6–9 to 13–15, Wailing 8–12 to 17–20. Mỗi bậc vừa với đoạn
+  campaign mà bạn tìm thấy nó. Giới hạn level của chúng lên các modifier
+  khác, 35, 45, 60 và 75, chỉ quan trọng nếu bạn dùng một cái trên item cao
+  hơn level đó, tức là sai item cho nó.
+
+
+  **Vì sao là bây giờ chứ không phải về sau.** Trong 3.30, Weeping Essence
+  không còn xuất hiện trong map vàng và map đỏ, và Wailing Essence không còn
+  xuất hiện trong map đỏ. Lên cao hơn bạn sẽ dùng bậc Screaming trở lên, thứ
+  roll lại item Rare và lặp lại được. Essence yếu là công cụ leveling; hãy
+  tiêu chúng ngay khi tìm thấy.
+
+
+  **Một Essence of Zeal yếu.** Wailing Zeal đảm bảo 20–22% attack speed,
+  nhiều hơn mức bench bán ở bất kỳ giá nào. Nếu đó là Essence bạn tìm được,
+  hãy dùng nó y như vậy và craft phần trăm hoặc flat damage ở bench, tùy
+  prefix chừa chỗ cho cái nào.
+mistakes:
+  - "Cố dùng Essence yếu lên một cây mace Magic hay Rare. Hãy scour nó trước, hoặc chọn một cây trắng."
+  - "Để dành Essence yếu cho endgame. Chúng không rơi ở đó và quá nhỏ để có ý nghĩa ở đó."
+  - "Bench flat Physical Damage sau một Essence of Contempt. Cùng group với modifier của Essence; bench từ chối."
+  - "Scour sau craft bench. Scouring lấy luôn cả modifier crafted."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier Essence và giới hạn level của chúng, mô tả trong game của từng bậc Essence, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Weeping và Wailing Essence không còn sinh ra ở các tier map cao hơn." }

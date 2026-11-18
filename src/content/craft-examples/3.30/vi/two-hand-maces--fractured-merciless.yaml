@@ -1,0 +1,224 @@
+category: two-hand-maces
+title: "Một cây maul hàng đỉnh quanh \"Merciless\" fractured"
+level: 5
+summary: "Kế hoạch trọn vẹn cho một cây mace physical best-in-slot: một prefix Tier 1 fractured, một Fossil cho prefix thứ hai, một reforge Harvest có khóa để lấy attack speed, và ba modifier bench để khép lại."
+goal: >-
+  Một cây mace có increased Physical Damage Tier 1 không bao giờ mất được,
+  một prefix hybrid cao bên cạnh, attack speed hàng đầu, và mọi ô còn lại đều
+  được lấp có chủ đích. Không công cụ nào trong lần craft này là mới. Thứ làm
+  nó thành ví dụ khó nhất là **thứ tự**: mỗi giai đoạn làm cho giai đoạn sau
+  an toàn, và việc chọn công cụ cho từng giai đoạn là bằng phép tính, không
+  phải bằng thói quen.
+base: "Imperial Maul"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 là mức thấp nhất mà "Merciless" (170–179%) và hybrid cao nhất
+  tồn tại được. Imperial Maul có damage mỗi giây gốc cao nhất; hãy lấy
+  Coronal Maul thay vào nếu build của bạn muốn 20% Area of Effect của nó. Vì
+  base là fractured nên nó phải **không có influence**: Fracturing Orb từ
+  chối item có influence, và các trang tra cứu nói fractured item không thể
+  được thêm influence về sau.
+methods: [fracture, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["10% increased Strength"]
+  prefixes:
+    - { text: "177% increased Physical Damage", how: fractured }
+    - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "10% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "Một cây Imperial Maul có \"Merciless\" fractured, item level 83+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Jagged Fossil]]", amount: "vài chục" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "một cái mỗi Fossil" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa, cộng thêm 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "12", note: "cho hai craft bench cuối cùng" }
+cost: >-
+  Base fractured chiếm phần lớn chi phí, và trong 3.30 fractured item hiếm
+  hơn trước: chúng đến từ đồ rơi Tier 5, một [[Fracturing Orb]] hoặc một
+  [[Fractured Fossil]]. Sau đó chi phí được đếm bằng Fossil ở giai đoạn 2 và
+  bằng số lần khóa ở giai đoạn 3, mỗi lần khóa là 4 [[Divine Orb]] và một
+  [[Sacred Orb]].
+
+
+  Chúng tôi không đưa ra tổng số. Giá trong tuần đầu league biến động quá
+  nhanh, và hai giai đoạn ngẫu nhiên đều có đuôi dài, xui thì kéo rất lâu.
+odds: >-
+  **Giai đoạn 2.** Khi "Merciless" đã fractured và đang dùng
+  [[Jagged Fossil]], một lần roll prefix ra hybrid khoảng 30% số lần, và ra
+  hybrid từ Tier 3 trở lên khoảng 1 trên 71 lần, theo phép tính của chúng
+  tôi. Mỗi Fossil roll tối đa hai prefix, nên trong trường hợp tốt nhất
+  khoảng một trên 36 Fossil là trúng. Con số đó chỉ tính pool tự nhiên;
+  modifier chỉ có từ Fossil, thứ mà dữ liệu không gắn với Fossil cụ thể
+  nào, sẽ làm nó thấp hơn. Cùng ô đó với một Deafening Essence of
+  Contempt thì ra khoảng 1 trên 119, trên một prefix trống duy nhất. Phép so
+  sánh đó là lý do Fossil là công cụ ở đây.
+
+
+  **Giai đoạn 3.** Mọi reforge Speed đều cho attack speed. Nếu tier của nó
+  được bốc theo weight, khoảng một trên tám lần reforge cho Tier 1 ở item
+  level 83, và một trên bốn cho Tier 2 trở lên. Đây là phép tính của chúng
+  tôi; chưa được đo trong 3.30.
+steps:
+  - title: "Giai đoạn 1: prefix fractured"
+    do: >-
+      Mua hoặc tìm một cây Imperial Maul item level 83 trở lên có
+      **"Merciless" fractured**. Còn nếu tự làm: roll "Merciless" lên một cây
+      maul Magic, đưa item thành Rare với **đúng bốn** modifier, rồi dùng một
+      [[Fracturing Orb]].
+    why: >-
+      "Merciless" có weight 25 trong một pool prefix khoảng 31,660: một trên
+      1,270 lần roll prefix. Nó là modifier duy nhất bạn không đủ sức roll
+      lại sau mỗi bước hỏng, nên nó là cái cần làm cho vĩnh viễn.
+    check: >-
+      Fracturing Orb cần ít nhất bốn modifier và chọn **ngẫu nhiên** một cái.
+      Với đúng bốn thì tỉ lệ là một trên bốn. Đừng thêm cái thứ năm hay thứ
+      sáu trước: mỗi cái đều hạ tỉ lệ xuống.
+    fail: >-
+      Nó fracture nhầm thứ khác. Item giờ là một base có sai modifier bị khóa
+      vĩnh viễn, và không fracture lại được nữa. Đây chính là bước khiến phần
+      lớn người chơi chọn mua base.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "+36 to Strength" }
+        - { text: "+402 to Accuracy Rating" }
+        - { text: "14% reduced Enemy Stun Threshold" }
+  - title: "Giai đoạn 2: chọn công cụ bằng phép tính, rồi roll hybrid"
+    do: >-
+      Dùng [[Jagged Fossil]] trong [[Primitive Chaotic Resonator]] tới khi
+      item có **hybrid của increased Physical Damage với Accuracy ở Tier 3
+      trở lên** (từ 55%). Flat Physical Damage ra bên cạnh là phần thưởng
+      thêm, bạn không cần tới nó.
+    why: >-
+      Hãy so các ứng viên trên đúng cái ô quan trọng. Prefix fractured loại
+      group phần trăm thuần ra khỏi pool. Lúc đó Jagged Fossil làm hybrid
+      chiếm khoảng 30% số lần roll prefix, so với 18% khi không có Fossil.
+      Một Essence of Contempt thì đảm bảo flat Physical Damage, thứ đằng nào
+      bench cũng cấp được, và để mặc hybrid cho một lần roll không được
+      Fossil nâng weight.
+    check: >-
+      Tier của hybrid, khi giữ Alt. "Conqueror's" là Tier 3, "Emperor's" là
+      Tier 2, "Dictator's" là Tier 1. Kệ hẳn suffix; giai đoạn 3 sẽ thay
+      chúng.
+    fail: >-
+      Không có gì phải sửa: prefix fractured sống qua mọi lần roll lại. Dùng
+      Fossil kế tiếp.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "3.1% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "+19 to Strength", how: fossil }
+  - title: "Mở một ô suffix nếu Fossil lấp cả ba"
+    do: >-
+      Nhìn số suffix. Giai đoạn 3 cần một suffix trống cho khóa. Nếu Fossil
+      để lại ba cái, hãy roll tiếp giai đoạn 2 tới khi một kết quả có hybrid
+      **và** nhiều nhất hai suffix.
+    why: >-
+      Gỡ một suffix bằng [[Orb of Annulment]] là đem hybrid ra đánh cược: nó
+      gỡ ngẫu nhiên một modifier không fractured. Chờ một kết quả còn chỗ thì
+      tốn Fossil, không tốn prefix.
+  - title: "Giai đoạn 3: khóa, rồi reforge lấy attack speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** ở bench (4
+      [[Divine Orb]] và 1 [[Sacred Orb]]). Rồi, ở
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150 Vivid Lifeforce). Lặp lại
+      cả hai tới khi attack speed là Tier 1 hoặc 2 và item có **ít nhất hai ô
+      suffix trống, hoặc một ô trống và một suffix bạn muốn**.
+    why: >-
+      Khóa bảo vệ hybrid, vốn không fractured. Reforge thay các suffix và
+      tiêu mất khóa; attack speed là modifier speed duy nhất trong pool, nên
+      nó được đảm bảo. Ở đây ô suffix trống quan trọng hơn một suffix tốt thứ
+      hai, vì giai đoạn cuối lấp chúng từ bench.
+    check: >-
+      Prefix không đổi, tier của attack speed, số suffix. Một kết quả có
+      attack speed và không có gì khác là lý tưởng.
+    fail: >-
+      Tier thấp, hoặc ba suffix không còn chỗ: khóa rồi reforge lại. Mỗi lần
+      lặp là thêm 4 Divine Orb và một Sacred Orb, nên hãy đặt số lần thử
+      trước khi bắt đầu và dừng đúng ở đó.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: harvest }
+  - title: "Giai đoạn 4: ba modifier bench"
+    do: >-
+      Ở bench, theo thứ tự này: **Can have up to 3 Crafted Modifiers** (2
+      Divine Orb, một suffix); **adds 18–24 to 36–42 Physical Damage** (4
+      Chaos Orb, prefix thứ ba); **8–10% chance to deal Double Damage**
+      (8 Chaos Orb, suffix thứ ba).
+    why: >-
+      Craft multi-modifier tốn một ô suffix và đổi lại cho bench lấp thêm một
+      prefix và một suffix. Tính ra là lời một ô, và ở đây đó là khác biệt
+      giữa một prefix trống và flat Physical Damage. Build crit thì lấy
+      Critical Strike Multiplier thay cho Double Damage.
+    check: >-
+      Sáu trên sáu ô đã dùng, ba trong đó là crafted. Không thứ gì trên item
+      nằm đó do tình cờ.
+    state:
+      note: "Fractured"
+      implicits: ["10% increased Strength"]
+      prefixes:
+        - { text: "177% increased Physical Damage", how: fractured }
+        - { text: "68% increased Physical Damage / +158 to Accuracy Rating", how: fossil }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "10% chance to deal Double Damage", how: crafted }
+  - title: "Hoàn thiện: quality, link, chỉ số"
+    do: >-
+      20% quality và sáu socket link nếu chưa làm. Rồi một [[Divine Orb]]
+      nếu roll bên trong các tier còn kém.
+    why: >-
+      Một Divine Orb roll lại giá trị của mọi modifier cùng lúc, kể cả cái
+      fractured, và không bao giờ đổi tier. Hãy dùng khi những con số quan
+      trọng đang thấp trong khoảng của chúng, và chấp nhận rằng nó cũng có
+      thể hạ chúng xuống.
+variations: >-
+  **Flat Physical Damage từ Fossil.** Nếu giai đoạn 2 cho cùng lúc hybrid và
+  một tier cao của flat Physical Damage, cả ba prefix đều là roll ra và bench
+  rảnh tay cho hai suffix. Đó là cây weapon tốt hơn và là kết quả hiếm hơn
+  nhiều; theo phép tính của chúng tôi thì phải vài trăm Fossil, không phải
+  vài chục.
+
+
+  **Với Memory Strands.** Theo thử nghiệm của người chơi, Fossil và Harvest
+  không dùng strand, nên base có strand không thay đổi gì ở giai đoạn 2 và 3.
+  Một [[Orb of Unravelling]] ở tận cuối có thể nâng hybrid hoặc attack speed
+  lên một tier; nó bỏ qua modifier bench, và nó thành công thường xuyên tới
+  đâu là một mô hình của người chơi, không phải con số được công bố.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Trong lần craft này, chỗ duy nhất nó có thể đáng
+  tiền là Fracturing Orb ở giai đoạn 1.
+mistakes:
+  - "Dùng Fracturing Orb lên item có năm hay sáu modifier. Một trên bốn thành một trên năm hoặc sáu."
+  - "Đặt influence lên base trước. Item có influence thì không fracture được."
+  - "Dùng Annulment để dọn một suffix sau giai đoạn 2. Hybrid không được bảo vệ và là một trong những modifier nó có thể gỡ."
+  - "Craft flat Physical Damage trước lần reforge. Một prefix bench sẽ được khóa bảo vệ, nhưng nó cũng chiếm mất cái ô mà Fossil có thể đã lấp bằng một cái tốt hơn."
+  - "Bỏ qua craft multi-modifier để tiết kiệm 2 Divine Orb, rồi để trống một prefix trên item đã tốn gấp nhiều lần số đó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weight, tier, hệ số nhân của Fossil, giá bench và mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

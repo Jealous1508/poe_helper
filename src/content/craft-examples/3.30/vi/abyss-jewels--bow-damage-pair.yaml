@@ -1,0 +1,133 @@
+category: abyss-jewels
+title: "Flat damage hai lần: một Searching Eye cho bow"
+level: 2
+summary: "Roll một prefix bow và một suffix attack trên cùng một jewel Magic, mỗi cái ở tier bạn đặt trước, rồi Regal."
+goal: >-
+  Một jewel chạy map cho build bow elemental, có flat damage ở cả hai phía.
+  Nó dạy hai ý làm cho Abyss Jewel đáng craft: prefix weapon và suffix attack
+  chung là **hai group khác nhau và cộng dồn**, và một dòng trúng chỉ được
+  tính nếu nó **ở tier bạn đã quyết**.
+base: "Searching Eye Jewel"
+itemLevel: 75
+baseWhy: >-
+  Chỉ Searching Eye có các prefix "with Bow Attacks", và nó đặt weight gấp
+  đôi cho chúng: mỗi cái elemental chiếm khoảng 8% số lần roll prefix ở item
+  level này. Murderous Eye không có cái nào.
+
+
+  Item level 75 mở Tier 2 của mọi prefix bow elemental (chúng cần 68 tới 72)
+  và Tier 2 của các suffix attack elemental (64 tới 65). Các tier cao nhất cần
+  76 tới 84, nên một jewel từ map cao hơn nâng trần lên mà không đổi phương
+  pháp.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "13 to 22 Added Cold Damage with Bow Attacks" }
+    - { text: "+72 to Evasion Rating" }
+  suffixes:
+    - { text: "Adds 10 to 22 Fire Damage to Attacks" }
+needs:
+  - { item: "Một Searching Eye Jewel", amount: "1", note: "item level 72 trở lên" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "10–20" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  [[Orb of Alteration]] cỡ một vài trăm cái, một [[Regal Orb]]. Hạ mức tier
+  xuống một bậc thì chi phí giảm khoảng một nửa; đánh đổi đó là việc bạn tự
+  quyết trước khi bắt đầu.
+odds: >-
+  Ở item level 75, một lần roll prefix ra prefix bow elemental từ Tier 3 trở
+  lên 8.1% số lần (2.7% cho mỗi loại Cold, Fire và Lightning), theo phép tính
+  của chúng tôi: 1 trên 12. Một lần roll suffix ra suffix elemental "to
+  Attacks" từ Tier 3 trở lên 12.5% số lần: 1 trên 8.
+
+
+  Cả hai trên một jewel Magic: khoảng 1%, 1 trên 99 jewel hai modifier.
+steps:
+  - title: "Đặt mức, từng dòng một"
+    do: >-
+      Viết danh sách ngắn với một tier trên mỗi dòng. **Prefix:** Added Cold,
+      Fire hoặc Lightning Damage with Bow Attacks, **Tier 3 trở lên**.
+      **Suffix:** Adds Cold, Fire hoặc Lightning Damage to Attacks, **Tier 3
+      trở lên**. Tra tên hoặc con số của các tier đó trong danh sách modifier
+      để liếc qua là nhận ra.
+    why: >-
+      Trên eye này, đúng họ ra liên tục: cứ bốn lần roll prefix thì một lần
+      là prefix bow elemental ở tier nào đó. Không có mức thì bạn sẽ dừng ở
+      cái đầu tiên, mà tier thấp nhất chỉ thêm một phần ba so với tier cao
+      nhất.
+    check: >-
+      Item level phải cho phép các tier trong danh sách của bạn. Tier 3 của
+      các prefix bow cần 59 tới 62 và Tier 2 cần 68 tới 72; các tier suffix
+      tới sớm hơn một chút.
+  - title: "Alteration: đọc tới cuối mỗi dòng"
+    do: >-
+      Dùng [[Orb of Alteration]]. Với mỗi prefix damage, đọc xem nó nêu
+      weapon nào trước khi đọc con số.
+    why: >-
+      Searching Eye còn roll cả các prefix "with Wand Attacks", khoảng 12% số
+      lần roll prefix ở item level này. Chúng trông y hệt và chẳng làm gì cho
+      một cây bow.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13 to 21 Added Fire Damage with Wand Attacks" }]
+      suffixes: [{ text: "Adds 10 to 22 Fire Damage to Attacks" }]
+  - title: "Roll tiếp để ra cả cặp"
+    do: >-
+      Chỉ dừng khi cả prefix lẫn suffix đều nằm trong danh sách ở đúng tier.
+      Khi một phía trúng còn phía kia trống, dùng một [[Orb of Augmentation]]
+      trước.
+    why: >-
+      Hai modifier không bắt buộc phải cùng element. Một prefix bow và một
+      suffix attack là hai group khác nhau bất kể loại damage, nên Cold với
+      Fire cộng dồn tốt y như Cold với Cold. Chỉ hai prefix **weapon** cùng
+      loại damage mới bị cấm.
+    fail: >-
+      Hết ngân sách khi một phía đã đúng: dùng Regal Orb lên jewel đó. Một
+      prefix bow Tier 2 với suffix nào đi nữa vẫn là jewel bạn sẽ gắn vào
+      socket.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13 to 22 Added Cold Damage with Bow Attacks" }]
+      suffixes: [{ text: "Adds 10 to 22 Fire Damage to Attacks" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]] và đọc dòng thứ ba cùng tier của nó.
+    why: >-
+      Cứ khoảng sáu Regal Orb thì một cái thêm thứ build này muốn: Life từ
+      +26 trở lên, một prefix bow hoặc suffix attack thứ hai từ Tier 3 trở
+      lên, attack speed hoặc critical strike multiplier. Con số đó là phép
+      tính của chúng tôi và giả định rằng prefix và suffix có khả năng được
+      thêm ngang nhau. Ở đây orb thêm Evasion Rating.
+    check: >-
+      Còn một ô suffix trống. Một [[Exalted Orb]] vào đó là một lần roll miễn
+      phí: không gì trên Abyss Jewel có hại, nên kết quả tệ nhất là một dòng
+      bạn bỏ qua.
+    state:
+      prefixes:
+        - { text: "13 to 22 Added Cold Damage with Bow Attacks" }
+        - { text: "+72 to Evasion Rating" }
+      suffixes:
+        - { text: "Adds 10 to 22 Fire Damage to Attacks" }
+variations: >-
+  **Life thay cho prefix.** Nếu nhân vật cần Life hơn damage, hãy đặt dòng
+  prefix là "+31 to maximum Life trở lên" (Tier 2, 2.6% số lần roll prefix ở
+  item level này) hoặc "+26 trở lên" (10.3%).
+
+
+  **Melee.** Cũng lần craft đó trên Murderous Eye thì dùng prefix cho loại
+  weapon của bạn. Hãy tính nó lâu hơn khoảng hai lần rưỡi: các prefix
+  elemental của một weapon mỗi cái chiếm 3% số lần roll prefix, trong khi của
+  bow là 8%.
+
+
+  **Tier cao hơn.** Ở item level 77, tier cao nhất của mọi suffix attack
+  elemental roll được, và ở 84 là tier cao nhất của mọi prefix bow. Chỉ dời
+  mức khi item level cho phép.
+mistakes:
+  - "Dừng ở prefix bow đầu tiên mà không đọc tier của nó."
+  - "Giữ một prefix wand trên build bow."
+  - "Roll kiểu này trên Murderous Eye. Nó hoàn toàn không có prefix bow nào."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool, tier, item level, weight và các group của Searching Eye Jewel. Xác suất là phép tính của chúng tôi." }

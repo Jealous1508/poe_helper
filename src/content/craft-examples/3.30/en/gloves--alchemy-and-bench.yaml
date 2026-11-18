@@ -1,0 +1,136 @@
+category: gloves
+title: "Campaign gloves from an Orb of Alchemy and the bench"
+level: 1
+summary: "Roll all six slots at once, keep the result only if it passes one rule, and let the bench add the piece that is missing. If it fails, wipe it and go again."
+goal: >-
+  Gloves with life and two resistances for the second half of the campaign.
+  The craft itself is two orbs. The lesson is the other way of rolling an
+  item, **the Rare route**, and the habit that makes it work: decide what
+  "good enough" means before you look at the result.
+base: "Antique Gauntlets"
+itemLevel: 41
+baseWhy: >-
+  Any white gloves you can wear will do; Antique Gauntlets are an Armour base
+  for level 39. At item level 41 maximum Life can roll up to 85–99, which is
+  more than a campaign character expects from this slot.
+
+
+  Start from a white item. An [[Orb of Alchemy]] only works on Normal items,
+  and in 3.30 they drop more often than they used to.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "+91 to maximum Life" }
+    - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+  suffixes:
+    - { text: "+27% to Cold Resistance" }
+    - { text: "+19 to Dexterity" }
+    - { text: "+25% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "3–6", note: "plus 1 for the bench" }
+  - { item: "[[Orb of Scouring]]", amount: "one fewer than the Alchemy Orbs" }
+  - { item: "[[Armourer's Scrap]]", amount: "a few", note: "optional" }
+cost: >-
+  A few [[Orb of Alchemy]] and [[Orb of Scouring]] pairs, and one more
+  Alchemy for the bench. All of it drops in the campaign. If Scouring Orbs
+  run out, pick up another white pair instead: a fresh base costs nothing.
+odds: >-
+  At item level 41, each prefix an Alchemy rolls is maximum Life about 1 time
+  in 5, and life of 55 or more about 1 time in 11, by our arithmetic from the
+  weights. A Rare item has between one and three prefixes, so one Alchemy is
+  more than one try at it; how many prefixes a result gets is not in the
+  data, so we stop at the per-prefix figure. The rule below also passes a
+  result with two resistances, and each suffix rolled is one of the three
+  about 1 time in 3. Expect to use a handful of orbs, not dozens.
+steps:
+  - title: "Set the rule first"
+    do: >-
+      Before any orb, decide what you will keep. For campaign gloves:
+      **maximum Life of 55 or more, or two resistances.** Either one, plus at
+      least one slot still open on the other side.
+    why: >-
+      An Alchemy fills four to six slots with random modifiers. Without a
+      rule, every result looks half good, and you either keep rubbish or
+      reroll something fine. The rule is built around the bench: whichever
+      half the orb gives you, the bench supplies the other.
+  - title: "Orb of Alchemy, and read both sides"
+    do: >-
+      Use one [[Orb of Alchemy]] on the white gloves. Hold Alt and sort the
+      result into prefixes and suffixes.
+    why: >-
+      Normal becomes Rare in one step. This first result has two prefixes,
+      Armour and Item Rarity, and three suffixes with nothing you need: no
+      life, no resistance, and the suffix side is full.
+    check: >-
+      Apply the rule exactly as you set it. This one fails both halves.
+    state:
+      prefixes:
+        - { text: "+47 to Armour" }
+        - { text: "+11% to Item Rarity" }
+      suffixes:
+        - { text: "+14 to Dexterity" }
+        - { text: "Gain 13 Life per Enemy Killed" }
+        - { text: "+84 to Accuracy Rating" }
+  - title: "Wipe it and roll again"
+    do: >-
+      Use one [[Orb of Scouring]] to return the gloves to Normal, then
+      another Orb of Alchemy. Repeat until a result passes the rule.
+    why: >-
+      Scouring removes every modifier and keeps the base, its quality and
+      its sockets. Each Alchemy is a fresh, independent roll. A Chaos Orb
+      does both steps in one, but early in a league Alchemy and Scouring
+      Orbs are what you have.
+    check: >-
+      This result passes on life: 91, with an open prefix and an open
+      suffix.
+    state:
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+19 to Dexterity" }
+  - title: "Let the bench supply the other half"
+    do: >-
+      **Passed on life** (as here): at the [[Crafting Bench]], craft a
+      resistance the gloves lack into an open suffix, +21–28% for 1 Orb of
+      Alchemy. **Passed on two resistances:** craft maximum Life into an open
+      prefix, 41–55 for 2 Orbs of Alchemy or 26–40 for 6 Orbs of
+      Transmutation.
+    why: >-
+      One bench modifier per item, so it goes to whichever of life and
+      resistance the orb did not give. The gloves already have Cold
+      Resistance, and a second modifier of that group would be refused;
+      fire or lightning fits.
+    fail: >-
+      The side you need is full. That is why the rule asked for an open
+      slot. Scour and go again.
+    state:
+      prefixes:
+        - { text: "+91 to maximum Life" }
+        - { text: "Adds 7 to 14 Cold Damage to Attacks" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+19 to Dexterity" }
+        - { text: "+25% to Fire Resistance", how: crafted }
+variations: >-
+  **Attack speed for an attack build.** The bench sells 7–12% increased
+  Attack Speed for 2 Chaos Orbs. On gloves that already have life and a
+  resistance it is worth more than a second resistance. Chaos Orbs are
+  scarcer than Alchemy in the first days, which is the only reason it is not
+  the main step here.
+
+
+  **Compared with the Magic route.** Alterations roll two slots and let you
+  stop at one good modifier; an Alchemy rolls up to six and makes you judge
+  them together. Use the Magic route when one specific modifier matters, and
+  this one when several ordinary modifiers would all be welcome, which is
+  the usual state of campaign gloves.
+mistakes:
+  - "Changing the rule after seeing the result. \"It has 40 life and accuracy, close enough\" is how a stash fills with gloves nobody wears."
+  - "Benching before you are sure you are keeping the item. A Scouring Orb removes the bench modifier too, and the Alchemy you paid for it is gone."
+  - "Scouring a result with good modifiers and one bad line. No ordinary orb removes a single chosen modifier; a mostly good Rare is a keeper."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs, and the in-game text of the orbs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orbs of Alchemy are more common in 3.30." }

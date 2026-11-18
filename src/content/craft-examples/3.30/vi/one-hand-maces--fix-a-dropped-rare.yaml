@@ -1,0 +1,158 @@
+category: one-hand-maces
+title: "Sửa một cây mace nhặt được: đọc nó, rồi bench chỗ thiếu"
+level: 1
+summary: "Hoàn toàn không roll. Lấy một cây mace Rare nhặt dưới đất, tìm ra phía nào còn chỗ, rồi để bench thêm đúng một thứ vừa vào."
+goal: >-
+  Một cây mace dùng được cho map trắng, làm từ một món đồ rơi và một craft
+  bench. Kỹ năng được dạy ở đây là **đọc một item Rare**: modifier nào là
+  prefix, cái nào là suffix, ô nào còn trống, và item sẽ nhận craft bench
+  nào. Mọi lần craft về sau đều kết thúc bằng đúng quyết định này, nên rất
+  đáng học nó trên một item không tốn gì.
+base: "Pernach"
+itemLevel: 70
+baseWhy: >-
+  Lần craft này bắt đầu từ bất cứ thứ gì rơi ra, nên base chỉ là ví dụ: một
+  cây Pernach, 49–82 với 1.3 attack mỗi giây, là kiểu mace mà map trắng hay
+  cho. Item level chỉ cần đủ cao cho các modifier đã có sẵn trên nó.
+
+
+  Mace là class đúng để tập. Gần một nửa số lần roll prefix của mace là
+  physical, nên một cây Rare nhặt dưới đất có prefix physical nhiều hơn là
+  không.
+methods: [bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "88% increased Physical Damage" }
+    - { text: "Adds 36 to 66 Cold Damage" }
+    - { text: "Adds 9 to 17 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+33 to Strength" }
+    - { text: "12% reduced Enemy Stun Threshold" }
+    - { text: "Gain 27 Life per Enemy Killed" }
+needs:
+  - { item: "Một cây mace một tay Rare có một prefix physical", amount: "1", note: "đã identify; nhặt dưới đất" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho craft bench trong ví dụ" }
+cost: >-
+  Hai [[Orb of Alchemy]] cho craft bench trong ví dụ này và vài
+  [[Blacksmith's Whetstone]]. Bản thân cây mace thì miễn phí.
+odds: >-
+  Không có lần roll nào trong lần craft này. Bench luôn cho đúng thứ nó liệt
+  kê. May rủi duy nhất là món đồ rơi, và trên mace đó là may rủi dễ chịu:
+  theo phép tính của chúng tôi, 46% số lần roll prefix ở item level này là
+  một trong ba prefix physical.
+steps:
+  - title: "Đọc item trong khi giữ Alt"
+    do: >-
+      Bật Advanced Mod Descriptions trong phần options, rê chuột lên cây mace
+      và giữ Alt. Với mỗi modifier, game giờ hiện "Prefix" hoặc "Suffix",
+      tier và khoảng của nó. Xếp chúng thành hai danh sách.
+    why: >-
+      Một item Rare có ba ô prefix và ba ô suffix. Bench thêm một modifier,
+      và nó chỉ vào được một ô trống ở phía mà modifier đó thuộc về. Bạn
+      không thể chọn craft trước khi biết phía nào còn chỗ.
+    check: >-
+      Cây mace này: hai prefix (increased Physical Damage, added Cold Damage)
+      và ba suffix (Strength, stun threshold, life on kill). Dòng nằm trên
+      đường kẻ phân cách, cũng nói về stun threshold, là implicit và không
+      chiếm ô nào.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "88% increased Physical Damage" }
+        - { text: "Adds 36 to 66 Cold Damage" }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "12% reduced Enemy Stun Threshold" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Quyết định xem nó có đáng một craft không"
+    do: >-
+      Tìm **một prefix physical**: increased Physical Damage, cái đó kèm
+      Accuracy Rating, hoặc "Adds # to # Physical Damage". Nếu không có cái
+      nào, bỏ cây mace lại và đọc cây kế tiếp.
+    why: >-
+      Bench có thể thêm một prefix physical thứ hai cạnh cái thứ nhất. Nó
+      không thể làm ra một weapon từ một item không có cái nào, vì craft của
+      chính nó yếu hơn thứ roll ra. 88% increased Physical Damage là một tier
+      trung bình, "Vicious", và thừa đủ cho map trắng.
+  - title: "Tìm ô trống"
+    do: >-
+      Đếm từng phía. Ở đây: hai trên ba prefix đã dùng, ba trên ba suffix đã
+      dùng. Ô trống duy nhất là một **prefix**.
+    why: >-
+      Điều này loại bỏ craft mà phần lớn người chơi với tới đầu tiên. Attack
+      speed là một suffix, và cây mace này không còn chỗ cho nó. Bench sẽ
+      không cho chọn nó.
+  - title: "Áp luật group vào ô đó"
+    do: >-
+      Liệt kê các prefix physical bench bán và gạch đi những cái có group đã
+      nằm trên item. Increased Physical Damage: gạch, cây mace đã roll ra nó
+      rồi. Flat Physical Damage: được phép.
+    why: >-
+      Một item chứa một modifier của mỗi group. Prefix phần trăm của bench và
+      cái roll ra là cùng một group; flat damage là group khác. Nếu cây mace
+      roll ra hybrid kèm Accuracy Rating thay vào, câu trả lời sẽ đảo lại:
+      hybrid là group riêng, và prefix phần trăm của bench sẽ là craft nên
+      lấy.
+  - title: "Quality, rồi craft"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] lên 20% quality. Rồi, ở
+      [[Crafting Bench]], craft **adds 7–11 to 16–19 Physical Damage** giá 2
+      [[Orb of Alchemy]]. Có nhiều currency hơn thì công thức kế tiếp cho
+      13–17 to 26–30 giá 4 Chaos Orb.
+    why: >-
+      Flat damage được cộng vào mọi cú đánh rồi được nhân với 88% mà cây mace
+      đã có, vì cả hai đều là local trên weapon này. Quality nâng damage của
+      chính base và cũng được nhân theo cách đó.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Hãy lấy cái thấp hơn, adds 6–8 to 13–15 giá 4 Orb of Transmutation.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "88% increased Physical Damage" }
+        - { text: "Adds 36 to 66 Cold Damage" }
+        - { text: "Adds 9 to 17 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "12% reduced Enemy Stun Threshold" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Biết rằng craft này không vĩnh viễn"
+    do: >-
+      Dùng cây mace. Khi bạn mở được một công thức tốt hơn, hãy gỡ modifier
+      crafted ở bench với giá 1 [[Orb of Scouring]] rồi craft cái tốt hơn.
+    why: >-
+      Một modifier bench lúc nào cũng gỡ được ở bench, và chỉ modifier bench
+      bị gỡ. Điều đó khiến bench là bước duy nhất trong craft mà bạn rút lại
+      được.
+    check: >-
+      Dùng mục "Remove Crafted Mods" của bench. Một Orb of Scouring dùng
+      thẳng lên cây mace sẽ gỡ mọi thứ và để lại một item trắng.
+variations: >-
+  **Một suffix trống và chưa có attack speed.** Craft attack speed: 8–10% giá
+  6 Orb of Alteration, 11–15% giá 2 Chaos Orb. Trên một cây mace có một
+  prefix physical, đây thường là craft tốt hơn, khi có ô cho nó.
+
+
+  **Hybrid Accuracy thay cho prefix phần trăm thuần.** Craft increased
+  Physical Damage vào một prefix trống: 60–79% giá 8 Orb of Alteration. Hai
+  prefix phần trăm trên một cây mace là điều mạnh nhất bench làm được cho một
+  món đồ rơi.
+
+
+  **Cả hai phía đều đầy.** Không có gì để craft. Dùng cây mace như nó đang có
+  hoặc bỏ nó. Gỡ một modifier để lấy chỗ tốn nhiều hơn giá trị của item này.
+
+
+  **Cạnh một cái shield.** Cây mace này thực hiện mọi cú đánh, nên hãy thay
+  nó ngay khi một món đồ rơi tốt hơn qua được cùng cách đọc đó. Cả quy trình
+  chỉ mất một phút khi bạn đã làm hai lần.
+mistakes:
+  - "Scour một cây mace Rare để \"bắt đầu cho sạch\". Prefix physical chính là phần có giá trị."
+  - "Cố bench increased Physical Damage lên cây mace đã có nó. Cùng group; bench từ chối."
+  - "Chọn craft trước khi đếm hai phía. Attack speed cần một suffix trống, physical damage cần một prefix trống."
+  - "Đánh giá cây mace trước khi lên quality. 20% quality là một phần lớn damage của một base một tay."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, group, weight và giá bench. Tỉ lệ prefix physical là phép tính của chúng tôi." }

@@ -1,0 +1,236 @@
+category: rings
+title: "A curse on hit from a Hunter ring"
+level: 4
+summary: "Find \"Curse Enemies with Despair on Hit\" with a Harvest reforge that has only three modifiers to choose from, then lock the suffixes and force Life above them."
+goal: >-
+  A Hunter-influenced ring that curses with Despair on every hit, with
+  resistances beside the curse and rolled Life above it. Two stages, each
+  with a real chance of going badly: **finding a weight-200 suffix by its
+  tag**, and then **protecting it** while the other side is rebuilt. The
+  craft is mostly about knowing when the second stage is worth paying for.
+base: "Vermillion Ring"
+itemLevel: 84
+baseWhy: >-
+  The Despair suffix needs item level 80 and a Hunter-influenced ring. The
+  example uses 84 so that the resistances beside it can reach their top
+  tier. A Vermillion Ring adds 5–7% maximum Life in the implicit; any ring
+  base takes the influence equally well.
+
+
+  The ring must not be fractured: by reference pages a fractured item cannot
+  be given an influence.
+methods: [influence, harvest, meta, bench]
+result:
+  note: "Hunter"
+  implicits: ["6% increased maximum Life"]
+  prefixes:
+    - { text: "+104 to maximum Life", how: harvest }
+    - { text: "+44 to maximum Mana", how: harvest }
+    - { text: "13% increased Damage", how: crafted }
+  suffixes:
+    - { text: "Curse Enemies with Despair on Hit", how: harvest }
+    - { text: "+43% to Cold Resistance", how: harvest }
+    - { text: "+35 to Dexterity", how: harvest }
+needs:
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1", note: "or a ring that is already Hunter-influenced" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 per Caster reforge", note: "expect 15–30 reforges" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Exalted Orb]]", amount: "8 per lock" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per Life reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  The first stage is cheap: one [[Hunter's Exalted Orb]] and Lifeforce in the
+  low thousands. The second stage is the lock, 4 [[Divine Orb]]s and 8
+  [[Exalted Orb]]s per attempt on jewellery in 3.30.
+
+
+  You can stop between the stages. A ring with the curse, two resistances
+  and the bench's 41–55 Life is finished and useful, and costs none of the
+  second bill.
+odds: >-
+  **Stage 1.** On a Hunter ring three modifiers carry the caster tag: Cast
+  Speed, at a weight of 2,400, and the two curse suffixes, Despair and
+  Elemental Weakness, at 200 each. If the guaranteed modifier is drawn by
+  weight, which is how reforges are understood to work, a Caster reforge
+  gives Despair about 1 time in 14 and either curse 1 in 7. Our arithmetic;
+  not measured in 3.30.
+
+
+  **Stage 2.** With the suffixes locked, the Life reforge must give a prefix
+  with the life tag. On a Hunter ring there are two: maximum Life, weight
+  8,000, and "Gain Life per Enemy Hit with Attacks", weight 1,000. So eight
+  attempts in nine give maximum Life, and three of its eight tiers are 70 or
+  more.
+steps:
+  - title: "Give the ring the influence"
+    do: >-
+      Make the ring Rare with an [[Orb of Alchemy]] if it is not, check that
+      one slot is open, and use a [[Hunter's Exalted Orb]].
+    why: >-
+      The orb's text is "Adds Hunter influence and a new Hunter modifier to a
+      rare item", and it only works on an item with no influence. From this
+      moment the Hunter modifiers are in the ring's pool for every later
+      roll. The modifier it adds now does not matter.
+    check: >-
+      The ring shows the Hunter symbol. If you were handed a Hunter ring to
+      begin with, skip this step.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+38 to maximum Energy Shield" }
+        - { text: "Exerted Attacks deal 26% increased Damage", how: influence }
+      suffixes:
+        - { text: "+31 to Dexterity" }
+        - { text: "+36% to Fire Resistance" }
+  - title: "Stage 1: reforge with a Caster modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]). Read the suffixes.
+    why: >-
+      A ring's ordinary pool has one caster modifier, Cast Speed. The Hunter
+      list adds two, both of them curses on hit. So the reforge has three
+      possible answers, and two are what you came for. By plain rolling the
+      Despair suffix is 1 suffix roll in more than 500.
+    check: >-
+      Most results look like the one below: Cast Speed. That is the expected
+      outcome 6 times in 7, not a sign that something is wrong.
+    fail: >-
+      Reforge again. Each attempt is independent and costs only Lifeforce.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+72 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "14% increased Cast Speed", how: harvest }
+        - { text: "+27 to Strength", how: harvest }
+  - title: "Stop when the curse lands with company"
+    do: >-
+      Keep a result with **Despair on Hit and at least one other suffix you
+      need**. If the third suffix slot is open, better still.
+    why: >-
+      The reforge rolls the whole ring each time, so the curse arrives with
+      random neighbours. Since reforges here are cheap, you can afford to
+      wait for a curse that comes with a resistance. You cannot afford to
+      wait for a perfect ring: three named suffixes together would take
+      hundreds of attempts.
+    check: >-
+      Read the prefixes last. They decide what stage 2 costs, not whether
+      stage 1 succeeded.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+41 to maximum Mana", how: harvest }
+        - { text: "+58 to Evasion Rating", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Decide: bench the Life, or pay for the lock"
+    do: >-
+      If a prefix slot is open, you can craft +41–55 Life at the bench now
+      and be done. Go on to stage 2 only if the suffixes are worth 4 Divine
+      Orbs and 8 Exalted Orbs to you **and** you want rolled Life.
+    why: >-
+      This is the honest fork. The lock buys the difference between 50 Life
+      and about 100, on a ring whose value is already in the curse. Many
+      finished curse rings carry bench Life.
+  - title: "Stage 2: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 8 [[Exalted Orb]]s. It is a prefix, so one prefix
+      slot must be open.
+    why: >-
+      The curse took fourteen reforges on average. Nothing done to the prefix
+      side should be able to reach it. Use the full lock, not the one- or
+      two-modifier versions: those pick what they protect at random and do
+      not show it.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+41 to maximum Mana", how: harvest }
+        - { text: "+58 to Evasion Rating", how: harvest }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Reforge with a Life modifier"
+    do: >-
+      Use **Reforge a Rare item with random modifiers, including a Life
+      modifier** (75 [[Wild Crystallised Lifeforce]]).
+    why: >-
+      The suffix side is full and locked, so the Life modifier has to be a
+      prefix. On an ordinary ring that could only be maximum Life. The
+      Hunter list adds one more prefix with the life tag, Life gained per
+      enemy hit with attacks, which is the one-in-nine miss.
+    check: >-
+      Suffixes untouched, the lock gone, maximum Life among the prefixes.
+    fail: >-
+      Life on hit instead of maximum Life, or a low tier: lock and reforge
+      again if a prefix slot is open, or accept and bench. Set the number of
+      locks you will pay for before the first one.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+104 to maximum Life", how: harvest }
+        - { text: "+44 to maximum Mana", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+  - title: "Bench the last prefix"
+    do: >-
+      Craft 12–14% increased Damage for 4 [[Chaos Orb]]s, or 15–17% for 4
+      Exalted Orbs.
+    why: >-
+      The suffix side is full, so the bench can only work on a prefix, and
+      increased Damage is the best prefix the ring bench sells once Life is
+      rolled.
+    state:
+      note: "Hunter"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+104 to maximum Life", how: harvest }
+        - { text: "+44 to maximum Mana", how: harvest }
+        - { text: "13% increased Damage", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: harvest }
+        - { text: "+43% to Cold Resistance", how: harvest }
+        - { text: "+35 to Dexterity", how: harvest }
+variations: >-
+  **Other curses.** The method is the same on any conqueror ring; only the
+  list changes. Crusader has Conductivity, Redeemer Frostbite, Warlord
+  Flammability and Vulnerability. Count the caster modifiers in that
+  influence's list before you start: Shaper and Crusader rings also have
+  "reduced Effect of Curses on you", which carries the caster tag at a
+  weight of 1,000 or more and makes the curse much harder to hit there.
+
+
+  **A critical strike suffix the same way.** An ordinary ring has no
+  critical modifier, so on an Elder or Warlord ring a Critical reforge (150
+  Primal) can only give that influence's Critical Strike Multiplier. The
+  next example uses exactly this.
+
+
+  **An Imprint route.** On a white Hunter ring, Alterations and a beast
+  Imprint work as they do for any rare prefix, but the curse is about 1
+  suffix roll in 530. The reforge is the better tool by a wide margin.
+mistakes:
+  - "Fracturing the ring first to keep a resistance. A fractured item cannot be given the influence."
+  - "Taking the first curse that appears with two dead suffixes. Reforges cost Lifeforce; the lock that follows costs Divine Orbs. Be picky at the cheap stage."
+  - "Using the one-modifier lock to save Divine Orbs. With three suffixes the game chooses which one it protects and does not tell you."
+  - "Paying for stage 2 when the bench's Life would do. Decide at the fork, not after the first lock."
+  - "Using an Essence on the locked ring. Essences are reported to ignore the lock and would remove the curse."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Hunter ring modifiers, weights, tags, bench costs and the in-game text of the Hunter's Exalted Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on jewellery; conqueror bosses drop their Exalted Orbs." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Caster, Life and Critical reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side; Essences do not. Partly older than 3.30." }

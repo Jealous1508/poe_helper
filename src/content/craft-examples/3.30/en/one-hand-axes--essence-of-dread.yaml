@@ -1,0 +1,146 @@
+category: one-hand-axes
+title: "An impale axe: an Essence for the suffix, the bench for the prefix"
+level: 2
+summary: "Essence of Dread guarantees Impale Effect, a suffix the natural pool does not have. The bench then adds a physical percentage that carries a chance to Impale."
+goal: >-
+  An axe for an Impale build with two modifiers that plain rolling can never
+  produce: **increased Impale Effect** from an Essence, and the bench's
+  **increased Physical Damage with a chance to Impale**. The lesson is about
+  fitting two special modifiers together: one of them fixes a suffix and
+  leaves the prefixes to luck, so you have to know in advance which lucky
+  prefixes leave room for the other.
+base: "Siege Axe"
+itemLevel: 75
+baseWhy: >-
+  Impale is applied per hit, so the fastest axe suits it: the Siege Axe has
+  1.5 attacks per second. Item level 75 opens Tier 2 of flat Physical Damage
+  and of both percentage prefixes. The Essence's own modifier does not depend
+  on item level.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 17 to 35 Physical Damage" }
+    - { text: "90% increased Physical Damage / 16% chance to Impale Enemies on Hit with Attacks", how: crafted }
+  suffixes:
+    - { text: "19% increased Impale Effect", how: essence }
+    - { text: "21% increased Attack Speed" }
+    - { text: "+287 to Accuracy Rating" }
+needs:
+  - { item: "[[Shrieking Essence of Dread]]", amount: "10–20", note: "Screaming works; Deafening is better" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  The Essences are the whole cost. Dread only exists at Screaming strength
+  and above; in 3.30 every Essence in a red map is Screaming or better, so
+  that is where to collect them. The bench craft is 3 [[Chaos Orb]]s.
+odds: >-
+  The suffix is certain. The question is the prefixes. At item level 75, by
+  our arithmetic, one prefix roll is flat Physical Damage 14% of the time
+  and the hybrid with Accuracy 8%: together a little over 1 in 5. Those are
+  the two physical prefixes that leave the bench craft possible. Pure
+  increased Physical Damage, another 8%, is a good roll that changes the
+  plan.
+
+
+  An Essence result has one to three prefixes, so somewhere between one
+  result in five and one in two shows a prefix you can build on, and far
+  fewer show a good tier: flat Physical Damage of 13–18 to 27–31 or better
+  is about 1 prefix roll in 27. Plan on ten to twenty Essences.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Bring a white Siege Axe to 20% quality. Use one
+      [[Shrieking Essence of Dread]] on it.
+    why: >-
+      The Essence makes the axe Rare and guarantees 17–21% increased Impale
+      Effect (12–16% at Screaming, 22–25% at Deafening). On an axe with no
+      influence, an Essence is the only source of that modifier. Everything
+      else on the item is random, and from Screaming upwards the Essence
+      can be used again on the Rare result.
+    state:
+      prefixes:
+        - { text: "Adds 66 to 131 Fire Damage" }
+        - { text: "Adds 12 to 213 Lightning Damage" }
+        - { text: "Adds 45 to 90 Cold Damage" }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "+38 to Dexterity" }
+  - title: "Read the prefixes with the bench in mind"
+    do: >-
+      Hold Alt and look at the prefix side only. You are looking for two
+      things at once: **a physical prefix that is flat damage or the
+      Accuracy hybrid**, and **at most two prefixes in total**.
+    why: >-
+      The bench craft you are saving for is a prefix, so it needs an open
+      slot. And it belongs to the same group as pure increased Physical
+      Damage, so it cannot go on an axe that rolled that. Flat Physical
+      Damage and the Accuracy hybrid are in other groups and sit beside it.
+      The result above fails twice over: three prefixes, all elemental.
+    check: >-
+      A sensible bar for a first mapping axe: flat Physical Damage of 13–18
+      to 27–31 or better, or the hybrid at 45% or more.
+    fail: >-
+      Use another Essence on the same axe. The Impale Effect comes back
+      every time; only the Essence is spent.
+  - title: "Repeat until a prefix lands with room beside it"
+    do: >-
+      Use Essences one after another, reading the prefixes each time, until
+      one passes the check. Glance at the suffixes only as a tie-breaker.
+    why: >-
+      Each use is an independent roll of everything but the Essence
+      modifier. Attack speed among the suffixes is a welcome extra, 14% of
+      suffix rolls, but it is not what you are rolling for: the prefix is
+      the part an Essence of Dread cannot promise.
+    state:
+      prefixes:
+        - { text: "Adds 17 to 35 Physical Damage" }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "21% increased Attack Speed" }
+        - { text: "+287 to Accuracy Rating" }
+  - title: "Bench the Impale prefix"
+    do: >-
+      At the [[Crafting Bench]], craft **increased Physical Damage with a
+      chance to Impale Enemies on Hit with Attacks**: 86–94% and 16–17% for
+      3 [[Chaos Orb]]s. The lower recipe gives 81–85% and 13–15% for 3 Orbs
+      of Alchemy, the higher 95–105% and 18–20% for 8 Chaos Orbs.
+    why: >-
+      One slot buys a percentage close to natural Tier 5 and a chance to
+      Impale that would otherwise have to come from the passive tree or a
+      support gem. It multiplies the flat damage you rolled, because both
+      are local to this axe.
+    check: >-
+      The crafted line shows on the prefix side. The axe now has the two
+      modifiers the plan was built around and one prefix slot still open.
+    state:
+      prefixes:
+        - { text: "Adds 17 to 35 Physical Damage" }
+        - { text: "90% increased Physical Damage / 16% chance to Impale Enemies on Hit with Attacks", how: crafted }
+      suffixes:
+        - { text: "19% increased Impale Effect", how: essence }
+        - { text: "21% increased Attack Speed" }
+        - { text: "+287 to Accuracy Rating" }
+variations: >-
+  **If pure increased Physical Damage rolled.** Keep it if the tier is good:
+  it is the rarer prefix. The bench's Impale percentage will be refused, so
+  craft flat Physical Damage in the open prefix (adds 13–17 to 26–30 for 4
+  Chaos Orbs) and take the chance to Impale from elsewhere in the build.
+
+
+  **For a pair.** Impale Effect is not local to the weapon, so one axe with
+  the Essence suffix serves both hands. The second axe can come from a
+  cheaper craft, or from an Essence of Zeal, which guarantees attack speed.
+
+
+  **Not an Impale build.** The same two steps work with a different pair of
+  special modifiers: the bench sells the same percentage with a chance to
+  cause Bleeding, Poison or Blind, at the same prices.
+mistakes:
+  - "Keeping a result with three prefixes because one of them is physical. There is no room left for the bench prefix."
+  - "Expecting the bench to add its percentage beside a rolled pure one. Same group; only the Accuracy hybrid and flat damage leave room."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using this on a base with [[Memory Strands]]: one Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on one-handed axes, tiers, weights, groups and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

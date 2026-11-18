@@ -1,0 +1,145 @@
+category: cluster-jewels
+title: "Một Small Cluster Jewel với một notable"
+level: 1
+summary: "Chọn enchantment, số passive và item level, rồi dùng Alteration tới khi notable bạn muốn xuất hiện. Không gì thêm về sau đẩy nó đi được."
+goal: >-
+  Một Small Cluster Jewel Life với một notable do bạn chọn, lần craft cluster
+  đơn giản hết mức. Nó có mặt ở đây để dạy phần đi trước các orb: **ba thứ
+  trên Cluster Jewel không craft được, và chọn chúng cho khéo là phần lớn công
+  việc.**
+base: "Small Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  Ba lựa chọn, tất cả cố định trên jewel. **Enchantment:** "Added Small
+  Passive Skills grant: 4% increased maximum Life", thứ quyết định rằng
+  notable đến từ danh sách Life. **Passive:** "Adds 2 Passive Skills", con số
+  nhỏ hơn trong hai mức một jewel Small có thể có; hãy gắn jewel vào socket
+  trước khi quyết để xem tới được notable tốn bao nhiêu. **Item level:** 50
+  tới 67, vì các notable trong danh sách này cần 1 hoặc 50, và mỗi level từ 68
+  trở lên thêm những thứ khác vào cuộc xổ số.
+methods: [currency]
+result:
+  implicits:
+    - "Adds 2 Passive Skills"
+    - "Added Small Passive Skills grant: 4% increased maximum Life"
+  prefixes:
+    - { text: "1 Added Passive Skill is Surging Vitality" }
+    - { text: "Added Small Passive Skills also grant: +3 to Maximum Life" }
+  suffixes:
+    - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+needs:
+  - { item: "Một Small Cluster Jewel có enchantment Life", amount: "1", note: "2 passive, item level 50–67" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "nếu jewel là Normal" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "tùy chọn" }
+cost: >-
+  Bản thân cái jewel, rồi một nhúm [[Orb of Alteration]]. Regal Orb ở cuối là
+  tùy chọn và không thể gây hại.
+odds: >-
+  Trên một jewel Small Life item level 50 tới 67, 55% số lần roll prefix là
+  notable, theo phép tính của chúng tôi từ weight. Mỗi cái trong bốn notable
+  level 1 (Surging Vitality, Peak Vigour, Sage, Vicious Guard) chiếm 10% số
+  lần roll prefix, 1 trên 10, và mỗi cái trong ba notable level 50 chiếm 5%.
+
+
+  Cũng jewel đó ở item level 84 cho mỗi notable level 1 là 1 trên 20 lần
+  roll. Toàn bộ lý lẽ cho item level thấp nằm ở đó.
+steps:
+  - title: "Chọn jewel"
+    do: >-
+      Tìm hoặc mua một Small Cluster Jewel ghi "Adds 2 Passive Skills" và
+      "Added Small Passive Skills grant: 4% increased maximum Life". Giữ Alt
+      và kiểm item level: 50 tới 67.
+    why: >-
+      Không orb nào đổi được enchantment hay số passive. Và ở đây item level
+      hoạt động ngược: mức cao hơn mở thêm notable và thêm tier của các bonus
+      cho small passive, và cái nào trong số đó cũng cạnh tranh với notable
+      bạn muốn.
+    check: >-
+      Tra notable của bạn trong danh sách modifier trước. Nó nêu enchantment
+      mà notable thuộc về và item level nó cần. Nếu nó cần 68 hoặc 75, đây là
+      sai dải: hãy mua jewel ở 68 tới 72, hoặc 75 tới 77.
+    state:
+      rarity: normal
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+  - title: "Alteration tới khi ra notable"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]], tới khi
+      một dòng ghi "1 Added Passive Skill is" theo sau là notable bạn muốn.
+      Rê chuột lên tên notable để đọc nó cho gì.
+    why: >-
+      Trên jewel Small, notable luôn là prefix, và một jewel Magic có một
+      prefix. Vậy nên mỗi Alteration là một lần ngó vào danh sách prefix, nơi
+      hơn một nửa weight là notable.
+    fail: >-
+      Một notable khác cứ ra hoài. Chuyện đó nằm trong dự tính: dải này có
+      bảy cái roll được. Nếu bạn dùng được bất kỳ cái nào trong hai ba cái
+      trong số đó, hãy xác định vậy trước khi bắt đầu và dừng ở cái đầu tiên.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+  - title: "Lấp suffix"
+    do: >-
+      Nếu chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Suffix trên jewel Small không bao giờ là notable. Nó thêm một bonus nhỏ
+      vào small passive duy nhất của jewel: một attribute, một resistance
+      hoặc regeneration. Cái nào cũng là giá trị miễn phí.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+  - title: "Regal Orb, nếu bạn thích"
+    do: >-
+      Dùng một [[Regal Orb]]. Rồi gắn jewel vào một cluster socket cỡ Small
+      trở lên và lấy notable.
+    why: >-
+      Một jewel Small chứa một notable, và dữ liệu không cho cái thứ hai cơ
+      hội roll nào một khi cái đầu đã có. Vậy nên Regal Orb, và một
+      [[Exalted Orb]] sau nó, chỉ thêm được bonus cho small passive. Đây là
+      item duy nhất trong game mà hai orb đó không có kết cục xấu nào.
+    state:
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+        - { text: "Added Small Passive Skills also grant: +3 to Maximum Life" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+variations: >-
+  **Các enchantment khác.** Cũng bốn bước đó dùng được cho mọi jewel Small:
+  Energy Shield, Armour, Evasion, một resistance, reservation efficiency. Chỉ
+  có danh sách notable là đổi, và cùng với nó là dải item level.
+
+
+  **Một notable hiếm.** Hai notable level 75 của enchantment này, Fettle và
+  Wall of Muscle, mỗi cái có weight 49. Ở item level 75 tới 77, mỗi cái là
+  khoảng 1 trên 280 lần roll prefix, và ở 84 khoảng 1 trên 320. Cùng phương
+  pháp, vài trăm Alteration.
+
+
+  **Khi small passive mới là mục đích.** Ở item level 84, prefix thứ hai có
+  thể là "Added Small Passive Skills have 35% increased Effect". Chọn 84 vì
+  nó khiến notable chỉ dễ ra bằng khoảng một nửa, nên hãy quyết định bạn mua
+  jewel vì cái nào trong hai.
+mistakes:
+  - "Mua một jewel item level 84 để tìm notable level 1 rồi tự cắt đôi xác suất của mình."
+  - "Roll một jewel sai enchantment. Notable bạn muốn không có trong danh sách của nó và sẽ không bao giờ có."
+  - "Scouring một jewel vì Regal Orb thêm một bonus nhạt nhẽo. Notable chính là jewel."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các notable của enchantment Life cùng level và weight của chúng, và các bonus cho small passive của jewel Small. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "Một jewel Small thêm 2 hoặc 3 passive và chứa một notable." }

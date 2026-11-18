@@ -1,0 +1,241 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import Detail from '../../../../../components/Detail.astro';
+import BaseIcon from '../../../../../components/crafting/BaseIcon.astro';
+import CraftTabs from '../../../../../components/crafting/CraftTabs.astro';
+import ModPool from '../../../../../components/crafting/ModPool.astro';
+import { getLeague, leagues } from '../../../../../config/leagues';
+import { isLocale, locales, t } from '../../../../../i18n';
+import { examplesOf, getCraftData, getCrafting, poolNames, type CraftFamily } from '../../../../../lib/crafting';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      (getCrafting(league.id, 'en')?.guides ?? []).map((guide) => ({ params: { locale, league: league.id, category: guide.id } })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, category } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const crafting = getCrafting(league.id, locale)!;
+const guide = crafting.guides.find((entry) => entry.id === category)!;
+const data = getCraftData(guide.id);
+const examples = examplesOf(crafting, guide.id);
+const names = poolNames(guide, data, (key) => t(locale, key));
+const icon = data.bases.find((base) => base.name === guide.icon)!;
+const only = (family: CraftFamily) => (family.on ? ` (${family.on.map((pool) => names[pool] ?? pool).join(', ')})` : '');
+const cost = (list: { currency: string; n: number }[]) => list.map((entry) => `${entry.n}× ${entry.currency}`).join(' + ');
+const influenceName: Record<string, string> = { shaper: 'Shaper', elder: 'Elder', crusader: 'Crusader', warlord: 'Warlord', redeemer: 'Redeemer', hunter: 'Hunter' };
+const benchSides = (['prefix', 'suffix'] as const).map((affix) => ({ affix, list: data.bench.filter((entry) => entry.affix === affix) }));
+const implicitSets = [
+  { key: 'exarch', list: data.eldritch.exarch },
+  { key: 'eater', list: data.eldritch.eater },
+  { key: 'corrupted', list: data.corrupted },
+].filter((set) => set.list.length > 0);
+---
+<Base locale={locale} league={league} title={`${guide.name}: ${t(locale, 'craft.tab.modifiers')}`} description={t(locale, 'craft.mods.lede', { name: guide.name })} section="crafting">
+  <header class="container chead">
+    <BaseIcon base={icon} cell={30} max={104} eager />
+    <div>
+      <div class="eyebrow">{t(locale, 'craft.title')} · {t(locale, `craft.group.${guide.group}`)}</div>
+      <h1>{guide.name}</h1>
+      <p class="lede">{t(locale, 'craft.mods.lede', { name: guide.name })}</p>
+    </div>
+  </header>
+  <CraftTabs locale={locale} league={league.id} category={guide.id} current="modifiers" examples={examples.length} />
+
+  <div class="container body">
+    <p class="how muted">{t(locale, 'craft.mods.how')}</p>
+    <ModPool data={data} locale={locale} poolNames={names} />
+
+    <div class="more">
+      {data.bench.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.bench')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.bench.note')}</p>
+          <div class="cols">
+            {benchSides.map((side) => (
+              <div>
+                <h3>{t(locale, side.affix === 'prefix' ? 'craft.prefixes' : 'craft.suffixes')}</h3>
+                {side.list.map((entry) => (
+                  <Detail summary={entry.label + (entry.classes ? ` (${entry.classes.join(', ')})` : '')}>
+                    <ul class="plain">
+                      {entry.tiers.map((tier) => <li><span>{tier.text.join(' / ')}</span><em>{cost(tier.cost)}</em></li>)}
+                    </ul>
+                  </Detail>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {data.essences.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.essence')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.essence.note')}</p>
+          <table class="list">
+            <thead><tr><th>Essence</th><th>{t(locale, 'craft.mods.side')}</th><th>{t(locale, 'craft.mods.top')}</th><th>{t(locale, 'craft.mods.low')}</th></tr></thead>
+            <tbody>
+              {data.essences.map((entry) => (
+                <tr>
+                  <th scope="row">{entry.essence}{data.classes.length > 1 && <small>{entry.class}</small>}</th>
+                  <td>{t(locale, entry.tiers[0].affix === 'prefix' ? 'craft.prefix' : 'craft.suffix')}</td>
+                  <td>{entry.tiers[0].text.join(' / ')}<small>{entry.tiers[0].name}</small></td>
+                  <td>{entry.tiers.length > 1 ? <>{entry.tiers.at(-1)!.text.join(' / ')}<small>{entry.tiers.at(-1)!.name}</small></> : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
+      {data.veiled.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.veiled')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.veiled.note')}</p>
+          <table class="list">
+            <thead><tr><th>{t(locale, 'craft.reading.mod')}</th><th>{t(locale, 'craft.mods.side')}</th></tr></thead>
+            <tbody>
+              {data.veiled.map((entry) => (
+                <tr>
+                  <td>{entry.tiers[0].text.join(' / ')}</td>
+                  <td>{t(locale, entry.affix === 'prefix' ? 'craft.prefix' : 'craft.suffix')}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
+      {data.influence.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.influence')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.influence.note')}</p>
+          {data.influence.map((influence) => (
+            <Detail summary={`${influenceName[influence.id]} · ${influence.prefix.length + influence.suffix.length}`}>
+              <div class="cols">
+                {(['prefix', 'suffix'] as const).map((affix) => (
+                  <div>
+                    <h3>{t(locale, affix === 'prefix' ? 'craft.prefixes' : 'craft.suffixes')}</h3>
+                    <ul class="plain">
+                      {influence[affix].map((family) => (
+                        <li><span>{family.tiers[0].text.join(' / ')}{only(family)}</span><em>{t(locale, 'craft.ilvl.short', { n: family.tiers.at(-1)!.ilvl })}–{family.tiers[0].ilvl}</em></li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </Detail>
+          ))}
+        </section>
+      )}
+
+      {data.delve.prefix.length + data.delve.suffix.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.delve')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.delve.note')}</p>
+          <div class="cols">
+            {(['prefix', 'suffix'] as const).map((affix) => (
+              <div>
+                <h3>{t(locale, affix === 'prefix' ? 'craft.prefixes' : 'craft.suffixes')}</h3>
+                <ul class="plain">
+                  {data.delve[affix].map((family) => <li><span>{family.tiers[0].text.join(' / ')}{only(family)}</span></li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {data.cluster && (
+        <section>
+          <h2>{t(locale, 'craft.mods.cluster')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.cluster.note')}</p>
+          {data.cluster.enchants.map((enchant) => {
+            const mods = data.cluster!.mods.filter((mod) => mod.weights[enchant.tag]);
+            const notables = mods.filter((mod) => mod.notable);
+            const total = notables.reduce((sum, mod) => sum + mod.weights[enchant.tag], 0);
+            return (
+              <Detail summary={`${enchant.name} · ${enchant.sizes.join(', ')} · ${notables.length}`}>
+                <p class="cluster__enchant">{enchant.text.join(' / ')}</p>
+                <ul class="plain">
+                  {notables
+                    .sort((a, b) => b.weights[enchant.tag] - a.weights[enchant.tag])
+                    .map((mod) => (
+                      <li>
+                        <span>{mod.notable}</span>
+                        <em>
+                          {t(locale, mod.affix === 'prefix' ? 'craft.prefix' : 'craft.suffix')} · {t(locale, 'craft.ilvl.short', { n: mod.ilvl })} · {((mod.weights[enchant.tag] / total) * 100).toFixed(1)}%
+                        </em>
+                      </li>
+                    ))}
+                  {mods.filter((mod) => !mod.notable).map((mod) => (
+                    <li>
+                      <span>{mod.text.join(' / ')}</span>
+                      <em>{t(locale, mod.affix === 'prefix' ? 'craft.prefix' : 'craft.suffix')} · {t(locale, 'craft.ilvl.short', { n: mod.ilvl })}</em>
+                    </li>
+                  ))}
+                </ul>
+              </Detail>
+            );
+          })}
+        </section>
+      )}
+
+      {implicitSets.length > 0 && (
+        <section>
+          <h2>{t(locale, 'craft.mods.implicit')}</h2>
+          <p class="muted note">{t(locale, 'craft.mods.implicit.note')}</p>
+          {implicitSets.map((set) => (
+            <Detail summary={`${t(locale, `craft.mods.implicit.${set.key}`)} · ${set.list.length}`}>
+              <ul class="plain plain--wide">
+                {set.list.map((family) => <li><span>{family.tiers[0].text.join(' / ')}</span></li>)}
+              </ul>
+            </Detail>
+          ))}
+        </section>
+      )}
+
+      <p class="source muted">
+        {t(locale, 'craft.mods.source')}
+        <a href="https://repoe-fork.github.io/" rel="noopener" target="_blank">RePoE</a>.
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .chead { display: flex; align-items: center; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: 1.75rem; }
+  .chead h1 { margin: 0.3rem 0 0.5rem; }
+  .chead .lede { margin: 0; }
+  .body { padding-top: 2rem; }
+  .how { max-width: var(--measure); font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .more section { padding-top: 3rem; }
+  .more h2 { padding-bottom: 0.55rem; border-bottom: 2px solid var(--text); margin-bottom: 0.8rem; }
+  .more h3 { font-size: 1.05rem; margin: 0.8rem 0 0.5rem; }
+  .note { max-width: var(--measure); font-size: 0.9rem; margin-bottom: 1rem; }
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; align-items: start; }
+  .plain { list-style: none; margin: 0; padding: 0; font-size: 0.86rem; }
+  .plain li { display: flex; justify-content: space-between; gap: 1rem; margin: 0; padding: 0.35rem 0; border-top: 1px solid var(--border); }
+  .plain li:first-child { border-top: 0; }
+  .plain em { flex: none; font-style: normal; color: var(--text-muted); text-align: right; }
+  .plain--wide { columns: 2; column-gap: 2.5rem; }
+  .plain--wide li { break-inside: avoid; }
+  .cluster__enchant { margin: 0 0 0.5rem; font-size: 0.86rem; color: var(--text-muted); }
+  .list { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .list thead th { text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0.4rem 1rem 0.45rem 0; border-bottom: 1px solid var(--border-strong); }
+  .list tbody th { text-align: left; font-weight: 600; }
+  .list tbody th, .list td { padding: 0.45rem 1rem 0.45rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .list small { display: block; color: var(--text-muted); font-size: 0.76rem; font-weight: 400; }
+  .source { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--border); font-size: 0.88rem; }
+  @media (max-width: 800px) {
+    .cols { grid-template-columns: minmax(0, 1fr); }
+    .plain--wide { columns: 1; }
+    .chead { gap: 1rem; padding-top: 1.5rem; }
+    .list { display: block; overflow-x: auto; }
+  }
+</style>

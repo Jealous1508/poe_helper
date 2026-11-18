@@ -1,0 +1,230 @@
+category: one-hand-axes
+title: "Suffixes first, then a physical prefix you choose"
+level: 4
+summary: "Fix attack speed with an Essence, lock the suffixes, and let a Veiled Chaos Orb put a veiled modifier on the prefix side. A bench block makes the unveil offer a physical percentage."
+goal: >-
+  An axe with suffixes worth keeping and a guaranteed 120–139% increased
+  Physical Damage prefix, the percentage an axe almost never rolls by
+  itself. Three ideas meet here: an **Essence-fixed** modifier, a
+  **protection modifier** and what it does and does not protect, and a
+  **blocked unveil**. The order is the whole craft. Done in any other order,
+  one step destroys another.
+base: "Infernal Axe"
+itemLevel: 78
+baseWhy: >-
+  51–85 at 1.3 attacks per second: the hardest-hitting of the axes at that
+  speed, 88 damage per second. Item level 78 allows Tier 1 attack speed and Tier 1
+  Critical Strike Multiplier; the unveiled modifiers need only item level 60.
+  Nothing in this craft reaches for a tier that needs 83.
+methods: [essence, meta, veiled, bench]
+result:
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to cause Bleeding on Hit", how: veiled }
+    - { text: "Adds 51 to 90 Cold Damage" }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "27% increased Attack Speed", how: essence }
+    - { text: "+32% to Global Critical Strike Multiplier" }
+needs:
+  - { item: "[[Shrieking Essence of Zeal]]", amount: "20–40", note: "Deafening gives 28–30%" }
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "for the block" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the block" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  Two things, in two stages. First Essences, as many as it takes to get a
+  second good suffix. Then the lock, 4 [[Divine Orb]]s and 1 [[Sacred Orb]]
+  on a weapon in 3.30, plus one [[Veiled Chaos Orb]], for every attempt at
+  the prefix side.
+
+
+  The lock sets the test. If these suffixes could be rolled again for less
+  than one lock, they are not worth locking: use Veiled Chaos Orbs on the
+  bare axe and take what comes.
+odds: >-
+  **Stage 1.** The Essence's attack speed is certain. A second suffix worth
+  locking is not: with attack speed already on the item, Critical Strike
+  Multiplier of 30% or more is about 1 suffix roll in 27 by our arithmetic.
+  A result has up to two other suffixes, so plan on a few dozen Essences,
+  or lower the bar.
+
+
+  **Stage 2.** A veiled modifier can turn into thirteen different prefixes
+  on an axe, and four of them are the physical percentage with a chance to
+  Bleed, Impale, Poison or Blind. Seven others share one group. With that
+  group blocked, six remain and four are the ones you want, so three
+  different offers must include at least one. That rests on two things
+  players have tested and the developers have not stated: that a group on
+  the item is never offered, and that the three offers differ. Without the
+  block, and if the offers are drawn evenly, which the data does not tell
+  us, a physical percentage appears about 7 times in 10.
+steps:
+  - title: "Stage 1: Essences of Zeal until the suffix side is worth a lock"
+    do: >-
+      On a white Infernal Axe with 20% quality, use
+      [[Shrieking Essence of Zeal]] repeatedly. Stop when the suffixes are
+      attack speed **plus one more suffix you would pay to keep**, and the
+      axe has **at most two prefixes**. For a build that crits, that second
+      suffix is Critical Strike Multiplier or Critical Strike Chance at 30%
+      or more.
+    why: >-
+      Shrieking Zeal gives 26–27% attack speed, equal to natural Tier 1, on
+      every use. Everything Essence-related has to happen now, because an
+      Essence ignores protection modifiers by community testing: used
+      later, it would reroll a locked side as if the lock were not there.
+      Ignore the prefixes; they are about to be replaced. Only count them.
+    check: >-
+      Two or fewer prefixes. The lock in the next step is itself a prefix
+      and needs an empty slot.
+    fail: >-
+      Three prefixes and good suffixes: one more Essence is the only clean
+      way forward, and it rerolls the suffixes too. Do not use an
+      [[Orb of Annulment]] to open a slot; it is as likely to remove the
+      suffix you were keeping.
+    state:
+      prefixes:
+        - { text: "Adds 9 to 158 Lightning Damage" }
+        - { text: "Adds 38 to 72 Fire Damage" }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+  - title: "Craft the suffix lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      While it is on the item, a reroll that respects it leaves both
+      suffixes alone. Use the full lock, not the cheaper "1 Suffix Modifier
+      cannot be changed": with two suffixes on the axe the game would pick
+      which one to protect at random and not tell you.
+    check: >-
+      The lock shows as a crafted prefix. Use nothing else on the axe
+      between this step and the next.
+    state:
+      prefixes:
+        - { text: "Adds 9 to 158 Lightning Damage" }
+        - { text: "Adds 38 to 72 Fire Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the axe.
+    why: >-
+      It reforges a Rare item with new modifiers, one of them veiled. With
+      the suffixes locked, only the prefix side can change, so the veiled
+      modifier has to be a prefix. The lock is spent with the old prefixes.
+      That a Veiled Chaos Orb respects the lock comes from player testing,
+      not from the developers.
+    check: >-
+      Both suffixes unchanged; one "Veiled Prefix" on the item. Count the
+      prefixes again and read any that rolled beside the veil.
+    fail: >-
+      If pure increased Physical Damage rolled beside the veil, the
+      physical choices will not be offered, because they share its group.
+      That is not a loss if its tier is good: you have the percentage
+      another way. If the tier is poor, lock and use another Veiled Chaos
+      Orb; since the 17 November hotfix it works on an item that already
+      has a veiled modifier.
+    state:
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 51 to 90 Cold Damage" }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+  - title: "Block before you unveil"
+    do: >-
+      If a prefix slot is open, craft **25–34% increased Fire Damage** at
+      the bench for 4 [[Orb of Alteration]]s. Do not unveil yet.
+    why: >-
+      That craft is useless to the build and belongs to the group that
+      seven of the thirteen possible unveils share: the percentages for
+      spell, minion, chaos and single-element damage. By the rule players
+      have tested, a group already on the item is not offered. One cheap
+      craft removes seven wrong answers and leaves six, four of them the
+      physical percentage.
+    fail: >-
+      Three prefixes rolled, so there is no slot for the block: unveil
+      without it and accept the weaker odds.
+    state:
+      prefixes:
+        - { text: "Veiled Prefix" }
+        - { text: "Adds 51 to 90 Cold Damage" }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+  - title: "Unveil"
+    do: >-
+      Right-click the axe and choose from the three offers. Take increased
+      Physical Damage with a chance to cause **Bleeding**, **Impale**,
+      **Poison** or **Blind**, whichever your build uses. All four give
+      120–139%.
+    why: >-
+      The unveiled modifier is an ordinary one from then on, stronger than
+      the bench copy (95–105%) and not a crafted modifier, so the bench
+      slot stays yours.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "Adds 51 to 90 Cold Damage" }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+  - title: "Swap the block for flat damage"
+    do: >-
+      At the bench, remove the crafted modifier for 1 [[Orb of Scouring]],
+      then craft **adds 13–17 to 26–30 Physical Damage** for 4
+      [[Chaos Orb]]s in the same slot.
+    why: >-
+      The block has done its work. Flat Physical Damage is a different
+      group from the unveiled percentage and is multiplied by it. The cold
+      prefix that came with the reroll stays: removing it would mean
+      another lock, and on one axe of a pair that is rarely worth it.
+    check: >-
+      Use the bench's own "Remove Crafted Mods", not an Orb of Scouring on
+      the item, which would strip everything.
+    state:
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to cause Bleeding on Hit", how: veiled }
+        - { text: "Adds 51 to 90 Cold Damage" }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "27% increased Attack Speed", how: essence }
+        - { text: "+32% to Global Critical Strike Multiplier" }
+variations: >-
+  **Without the lock.** If the suffixes are only attack speed and filler,
+  skip stages 1 and 2: use Veiled Chaos Orbs on a bare Rare axe, and unveil
+  whenever the veil lands on the prefix side. You lose the certainty of
+  where the veil goes and keep 4 Divine Orbs per attempt.
+
+
+  **The third suffix.** This axe ends with one suffix slot open and the
+  bench slot used. An [[Exalted Orb]] fills it at random. If you would
+  rather choose, craft the flat damage last and decide then whether the open
+  suffix or the open prefix needs the bench more.
+
+
+  **Where Veiled Chaos Orbs come from.** Safehouse leaders have a chance to
+  drop them, and reference pages list Aisling's Research bench as a second
+  source.
+mistakes:
+  - "Using an Essence after the lock. It ignores the lock, by community testing, and rerolls the suffixes you paid to protect."
+  - "Unveiling before blocking. The block costs 4 Alterations and removes seven of the nine wrong outcomes."
+  - "Removing the block with an Orb of Scouring on the item instead of at the bench."
+  - "Locking attack speed and two filler suffixes. An Essence of Zeal gives the attack speed back for far less than a lock."
+  - "Crafting the cheaper one-suffix lock on an axe with two suffixes. Which one it protects is random and hidden."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The unveiled modifiers and their groups, the Essence tiers, bench costs and weights. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs on items that already have a veiled modifier." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun; Safehouse leaders can drop Veiled Chaos Orbs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs respect a locked side, and a group on the item is not offered at the unveil. Partly older than 3.30." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essences reported to ignore the protection modifiers." }

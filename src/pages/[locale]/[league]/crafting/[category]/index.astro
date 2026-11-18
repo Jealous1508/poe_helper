@@ -1,0 +1,328 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import Rich from '../../../../../components/Rich.astro';
+import BaseIcon from '../../../../../components/crafting/BaseIcon.astro';
+import BaseTable from '../../../../../components/crafting/BaseTable.astro';
+import CraftTabs from '../../../../../components/crafting/CraftTabs.astro';
+import Level from '../../../../../components/crafting/Level.astro';
+import Sources from '../../../../../components/crafting/Sources.astro';
+import { getLeague, leagues } from '../../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../../i18n';
+import { examplesOf, getCraftData, getCrafting, poolNames } from '../../../../../lib/crafting';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      (getCrafting(league.id, 'en')?.guides ?? []).map((guide) => ({ params: { locale, league: league.id, category: guide.id } })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, category } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const crafting = getCrafting(league.id, locale)!;
+const guide = crafting.guides.find((entry) => entry.id === category)!;
+const data = getCraftData(guide.id);
+const examples = examplesOf(crafting, guide.id);
+const names = poolNames(guide, data, (key) => t(locale, key));
+const baseByName = new Map(data.bases.map((base) => [base.name, base]));
+const methods = new Map(crafting.overview.methods.map((method) => [method.id, method]));
+const howHref = pagePath(locale, league.id, 'crafting', 'how-it-works');
+const toc = ['basics', 'tools', 'strands', 'reading', 'approach', 'special', 'mistakes'];
+const sides = ['prefixes', 'suffixes'] as const;
+---
+<Base locale={locale} league={league} title={guide.name} description={guide.short} section="crafting" isFallback={guide.isFallback === true}>
+  <header class="container chead">
+    <BaseIcon base={baseByName.get(guide.icon)!} cell={30} max={104} eager />
+    <div>
+      <div class="eyebrow">{t(locale, 'craft.title')} · {t(locale, `craft.group.${guide.group}`)}</div>
+      <h1>{guide.name}</h1>
+      <p class="lede">{guide.short}</p>
+    </div>
+  </header>
+  <CraftTabs locale={locale} league={league.id} category={guide.id} current="guide" examples={examples.length} />
+
+  <div class="container layout">
+    <aside class="side">
+      <nav class="toc" aria-label={t(locale, 'build.toc')}>
+        {toc.map((id) => <a href={`#${id}`}>{t(locale, `craft.section.${id}`)}</a>)}
+        <a href="#sources">{t(locale, 'common.sources')}</a>
+      </nav>
+      <dl class="facts">
+        <div><dt>{t(locale, 'craft.fact.bases')}</dt><dd>{data.bases.length}</dd></div>
+        <div><dt>{t(locale, 'craft.fact.pool')}</dt><dd>{data.prefix.length} + {data.suffix.length}</dd></div>
+        <div><dt>{t(locale, 'craft.tab.examples')}</dt><dd>{examples.length}</dd></div>
+        <div><dt>{t(locale, 'common.verified')}</dt><dd>{guide.verified}</dd></div>
+      </dl>
+    </aside>
+
+    <article class="article">
+      <Rich text={guide.intro} league={league.id} where={guide.where} class="intro" />
+
+      <section id="basics" data-reveal>
+        <h2>{t(locale, 'craft.section.basics')}</h2>
+
+        <h3>{t(locale, 'craft.basics.ilvl')}</h3>
+        <Rich text={guide.basics.itemLevel.text} league={league.id} where={guide.where} />
+        <ol class="ladder">
+          {guide.basics.itemLevel.breakpoints.map((point) => (
+            <li>
+              <span class="ladder__ilvl">{point.ilvl}</span>
+              <Rich text={point.unlocks} league={league.id} where={guide.where} inline />
+            </li>
+          ))}
+        </ol>
+
+        <h3>{t(locale, 'craft.basics.types', { count: guide.basics.bases.types.length })}</h3>
+        <Rich text={guide.basics.bases.text} league={league.id} where={guide.where} />
+        <div class="types">
+          {guide.basics.bases.types.map((type) => (
+            <div class="type">
+              <h4>{type.title}</h4>
+              <Rich text={type.text} league={league.id} where={guide.where} />
+            </div>
+          ))}
+        </div>
+
+        <h3>{t(locale, 'craft.basics.impact')}</h3>
+        <Rich text={guide.basics.bases.impact} league={league.id} where={guide.where} />
+
+        <h3>{t(locale, 'craft.basics.picks')}</h3>
+        <ul class="picks">
+          {guide.basics.bases.picks.map((pick) => {
+            const base = baseByName.get(pick.base)!;
+            return (
+              <li>
+                <BaseIcon base={base} cell={22} max={70} />
+                <div>
+                  <strong>{base.name}</strong>
+                  <span class="picks__for">{pick.for}</span>
+                  {base.implicits.length > 0 && <span class="picks__implicit">{base.implicits.join(' / ')}</span>}
+                  <Rich text={pick.why} league={league.id} where={guide.where} />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+
+        <h3>{t(locale, 'craft.basics.all', { count: data.bases.length })}</h3>
+        <p class="muted note">{t(locale, 'craft.basics.all.note')}</p>
+        <BaseTable data={data} locale={locale} poolNames={names} picks={guide.basics.bases.picks.map((pick) => pick.base)} />
+      </section>
+
+      <section id="tools" data-reveal>
+        <h2>{t(locale, 'craft.section.tools')}</h2>
+        <p class="muted note">{t(locale, 'craft.tools.note')}</p>
+        <ul class="tools">
+          {guide.tools.map((tool) => {
+            const method = methods.get(tool.method)!;
+            return (
+              <li>
+                <div class="tools__head">
+                  <a href={`${howHref}#method-${method.id}`}>{method.name}</a>
+                  <Level level={method.level} locale={locale} />
+                </div>
+                <Rich text={tool.note} league={league.id} where={guide.where} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section id="strands" data-reveal>
+        <h2>{t(locale, 'craft.section.strands')}</h2>
+        <Rich text={crafting.overview.memoryStrands.summary} league={league.id} where={crafting.overview.where} />
+        <div class="callout">
+          <h3>{t(locale, 'craft.strands.here', { name: guide.name })}</h3>
+          <Rich text={guide.memoryStrands} league={league.id} where={guide.where} />
+        </div>
+        <p><a href={`${howHref}#memory-strands`}>{t(locale, 'craft.strands.more')} →</a></p>
+      </section>
+
+      <section id="reading" data-reveal>
+        <h2>{t(locale, 'craft.section.reading')}</h2>
+        <Rich text={guide.reading.intro} league={league.id} where={guide.where} />
+        {sides.map((side) => (
+          <div class="side-read">
+            <h3>{t(locale, `craft.${side}`)}</h3>
+            <Rich text={guide.reading[side].text} league={league.id} where={guide.where} />
+            <table class="keys">
+              <thead>
+                <tr><th>{t(locale, 'craft.reading.mod')}</th><th>{t(locale, 'craft.reading.why')}</th><th>{t(locale, 'craft.reading.aim')}</th></tr>
+              </thead>
+              <tbody>
+                {guide.reading[side].key.map((entry) => (
+                  <tr>
+                    <th scope="row">{entry.mod}</th>
+                    <td><Rich text={entry.why} league={league.id} where={guide.where} inline /></td>
+                    <td>{entry.aim ?? '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+        <p><a href={pagePath(locale, league.id, 'crafting', guide.id, 'modifiers')}>{t(locale, 'craft.reading.all')} →</a></p>
+      </section>
+
+      <section id="approach" data-reveal>
+        <h2>{t(locale, 'craft.section.approach')}</h2>
+        <div class="principle">
+          <h3>{t(locale, 'craft.approach.principle')}</h3>
+          <Rich text={guide.approach.principle} league={league.id} where={guide.where} />
+        </div>
+        <h3>{t(locale, 'craft.approach.order')}</h3>
+        <ol class="route">
+          {guide.approach.order.map((step, index) => (
+            <li>
+              <span class="route__n" aria-hidden="true">{index + 1}</span>
+              <div>
+                <h4>{step.title}</h4>
+                <Rich text={step.text} league={league.id} where={guide.where} />
+              </div>
+            </li>
+          ))}
+        </ol>
+        <h3>{t(locale, 'craft.approach.finishing')}</h3>
+        <Rich text={guide.approach.finishing} league={league.id} where={guide.where} />
+        <h3>{t(locale, 'craft.approach.stopping')}</h3>
+        <Rich text={guide.approach.stopping} league={league.id} where={guide.where} />
+      </section>
+
+      <section id="special" data-reveal>
+        <h2>{t(locale, 'craft.section.special')}</h2>
+        <p class="muted note">{t(locale, 'craft.special.note')}</p>
+        <table class="keys keys--special">
+          <thead>
+            <tr><th>{t(locale, 'craft.reading.mod')}</th><th>{t(locale, 'craft.special.source')}</th><th>{t(locale, 'craft.special.where')}</th></tr>
+          </thead>
+          <tbody>
+            {guide.special.map((entry) => (
+              <tr>
+                <th scope="row">{entry.mod}</th>
+                <td>{entry.source}</td>
+                <td><Rich text={entry.where} league={league.id} where={guide.where} inline /></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      <section id="mistakes" data-reveal>
+        <h2>{t(locale, 'craft.section.mistakes')}</h2>
+        <ul class="mistakes">
+          {guide.mistakes.map((item) => <li><Rich text={item} league={league.id} where={guide.where} inline /></li>)}
+        </ul>
+      </section>
+
+      <div class="next">
+        <a class="btn" href={pagePath(locale, league.id, 'crafting', guide.id, 'examples')}>{t(locale, 'craft.next.examples', { count: examples.length })} →</a>
+        <a class="btn btn--ghost" href={pagePath(locale, league.id, 'crafting', guide.id, 'modifiers')}>{t(locale, 'craft.next.modifiers')}</a>
+      </div>
+
+      <Sources sources={guide.sources} league={league.id} locale={locale} where={guide.where} verified={guide.verified} />
+    </article>
+  </div>
+</Base>
+
+<style>
+  .chead { display: flex; align-items: center; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: 1.75rem; }
+  .chead h1 { margin: 0.3rem 0 0.5rem; }
+  .chead .lede { margin: 0; }
+
+  .layout { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 3rem; padding-top: 2.25rem; align-items: start; }
+  .side { position: sticky; top: calc(var(--header-h) + 4rem); font-size: 0.88rem; }
+  .toc { display: grid; }
+  .toc a { padding: 0.32rem 0; color: var(--text-muted); text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+  .facts { margin: 1.25rem 0 0; padding-top: 1rem; border-top: 1px solid var(--border); display: grid; gap: 0.6rem; }
+  .facts dt { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+  .facts dd { margin: 0.1rem 0 0; font-weight: 600; }
+
+  .article { min-width: 0; }
+  .article :global(.intro) { font-size: 1.06rem; max-width: var(--measure); }
+  .article section { padding-top: 2.75rem; scroll-margin-top: calc(var(--header-h) + 3.5rem); }
+  .article section > :global(.rich), .article section > p { max-width: var(--measure); }
+  .article h2 { padding-bottom: 0.55rem; border-bottom: 2px solid var(--text); margin-bottom: 1.1rem; }
+  .article h3 { margin: 1.9rem 0 0.6rem; font-size: 1.2rem; }
+  .note { font-size: 0.9rem; max-width: var(--measure); }
+
+  /* Item level as a ladder: each rung is a level at which something new can roll. */
+  .ladder { list-style: none; margin: 1rem 0 0; padding: 0 0 0 1.4rem; border-left: 2px solid var(--border-strong); max-width: var(--measure); }
+  .ladder li { position: relative; margin: 0; padding: 0.45rem 0 0.45rem 3rem; font-size: 0.95rem; }
+  .ladder__ilvl {
+    position: absolute;
+    left: -1.4rem;
+    top: 0.35rem;
+    transform: translateX(-50%);
+    min-width: 2.5rem;
+    padding: 0.1rem 0.35rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 3px;
+  }
+
+  .types { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .type { padding: 0.9rem 1rem 0.5rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); font-size: 0.92rem; }
+  .type h4 { font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin: 0 0 0.5rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--text); }
+
+  .picks { list-style: none; margin: 0.8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; }
+  .picks li { display: flex; gap: 0.9rem; align-items: flex-start; margin: 0; padding: 0.9rem 1rem 0.5rem; border: 1px solid var(--border); border-left: 3px solid var(--buff); border-radius: 6px; background: var(--surface); font-size: 0.92rem; }
+  .picks strong { display: block; font-family: var(--font-display); font-size: 1.08rem; }
+  .picks__for { display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--buff); margin: 0.1rem 0 0.3rem; }
+  .picks__implicit { display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+
+  .tools { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+  .tools li { margin: 0; padding: 0.9rem 0 0.4rem; border-top: 1px solid var(--border); }
+  .tools li:first-child { border-top: 0; padding-top: 0.2rem; }
+  .tools__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.3rem 1rem; margin-bottom: 0.35rem; }
+  .tools__head a { font-weight: 600; font-size: 1.02rem; text-decoration: none; }
+  .tools__head a:hover { text-decoration: underline; }
+
+  .callout { max-width: var(--measure); margin: 1.1rem 0; padding: 0.2rem 0 0.2rem 1.1rem; border-left: 3px solid var(--accent); }
+  .callout h3 { font-family: var(--font-body); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.45rem; }
+  .principle { max-width: var(--measure); padding: 1rem 1.2rem 0.4rem; border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 6px; background: var(--surface); }
+  .principle h3 { margin: 0 0 0.5rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); }
+
+  .keys { width: 100%; border-collapse: collapse; margin: 0.9rem 0 0.4rem; font-size: 0.9rem; }
+  .keys thead th { text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0.4rem 1rem 0.45rem 0; border-bottom: 1px solid var(--border-strong); }
+  .keys tbody th { text-align: left; font-weight: 600; width: 30%; }
+  .keys tbody th, .keys td { padding: 0.55rem 1rem 0.55rem 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .keys td:last-child { width: 22%; color: var(--text-muted); padding-right: 0; }
+  .keys--special td:nth-child(2) { width: 18%; color: var(--text-muted); }
+  .keys--special td:last-child { width: auto; color: inherit; }
+
+  /* The order to work in, drawn as a route: one line, numbered stops. */
+  .route { list-style: none; margin: 0.9rem 0 0; padding: 0; max-width: var(--measure); }
+  .route li { position: relative; display: grid; grid-template-columns: 2.1rem minmax(0, 1fr); gap: 0 1rem; margin: 0; padding-bottom: 1.1rem; }
+  .route li::before { content: ''; position: absolute; left: 1.02rem; top: 2.1rem; bottom: 0; width: 1px; background: var(--border-strong); }
+  .route li:last-child::before { display: none; }
+  .route__n { display: inline-flex; align-items: center; justify-content: center; width: 2.1rem; height: 2.1rem; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); font-weight: 700; font-size: 0.9rem; background: var(--bg); }
+  .route h4 { font-family: var(--font-display); font-size: 1.1rem; margin: 0.3rem 0 0.35rem; }
+
+  .mistakes { max-width: var(--measure); }
+  .mistakes li { margin: 0.6em 0; }
+  .mistakes li::marker { color: var(--nerf); }
+  .next { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.75rem; }
+  .article :global(.craft-sources) { margin-top: 2.75rem; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 1rem; }
+    .side { display: none; }
+    .chead { gap: 1rem; padding-top: 1.5rem; }
+  }
+  @media (max-width: 640px) {
+    .keys thead { display: none; }
+    .keys, .keys tbody, .keys tr, .keys th, .keys td { display: block; width: auto !important; }
+    .keys tr { padding: 0.65rem 0; border-bottom: 1px solid var(--border); }
+    .keys tbody th, .keys td { border: 0; padding: 0.1rem 0; }
+    .picks { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

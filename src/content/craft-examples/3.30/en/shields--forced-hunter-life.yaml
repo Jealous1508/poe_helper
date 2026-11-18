@@ -1,0 +1,267 @@
+category: shields
+title: "A shield planned backwards from one forced modifier"
+level: 5
+summary: "On a shield the Hunter influence has a single prefix. Build two prefixes and three suffixes first, and a Hunter's Exalted Orb has exactly one thing it can add: increased maximum Life."
+goal: >-
+  A block shield with three prefixes that all matter, block, flat life and
+  7–10% increased maximum Life, and a suffix side built on purpose. The last
+  of those prefixes comes from an orb that is random on every other item.
+  This is what crafters mean by **forcing an outcome**: you do not improve
+  the odds of the modifier you want, you remove every other place the orb
+  could land. The plan is written from that final step backwards, and each
+  earlier stage exists to set it up.
+base: "Pinnacle Tower Shield"
+itemLevel: 86
+baseWhy: >-
+  The Pinnacle Tower Shield is the all-round tower shield: 25% block, 467–537
+  Armour, +20–30 maximum Life on the implicit. The Hunter's 7–10% increased
+  maximum Life needs item level 84; 86 also opens the last tier of increased
+  Chance to Block and 8% Physical Damage Reduction. The base must have **no
+  influence and no fractured modifier**: the Hunter's Exalted Orb needs an
+  item without influence, and by reference pages a fractured item cannot be
+  given one.
+methods: [essence, meta, harvest, bench, influence]
+result:
+  note: "Hunter"
+  implicits: ["+27 to maximum Life"]
+  prefixes:
+    - { text: "73% increased Chance to Block", how: essence }
+    - { text: "+151 to maximum Life" }
+    - { text: "9% increased maximum Life", how: influence }
+  suffixes:
+    - { text: "7% additional Physical Damage Reduction", how: harvest }
+    - { text: "+45% to Fire Resistance", how: harvest }
+    - { text: "+33% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Deafening Essence of Loathing]]", amount: "dozens" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Blessed Orb]]", amount: "4 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1" }
+cost: >-
+  Three costs of different kinds. Deafening Essences in quantity, because
+  stage 1 asks for a result of an exact shape. One or more locks at 4
+  [[Divine Orb]]s and 4 [[Blessed Orb]]s each. And a single
+  [[Hunter's Exalted Orb]], which conquerors drop; it is the only part that
+  cannot be repeated, because the orb needs an item with no influence.
+
+
+  We give no total. The Essence stage has a long tail, and the price of a
+  conqueror's orb five days into a league is not a number worth printing.
+odds: >-
+  **Stage 1.** With the block fixed by the Essence at item level 86, by our
+  arithmetic from the weights, each further prefix is maximum Life 23% of
+  the time and life of 115 or more 1 time in 16. The result must also have
+  **exactly two prefixes**. How often a result has two and not three is not
+  in the data, so we give no figure per Essence; expect dozens.
+
+
+  **Stage 2.** With the prefixes locked, a Physical reforge on a Strength
+  shield can only be Physical Damage Reduction. If its tier is drawn by
+  weight, 7% or more is 2 reforges in 5.
+
+
+  **Stage 4.** The Hunter has one prefix family on a shield, with two tiers
+  of equal weight. With a prefix as the only open slot, the modifier is
+  certain and its tier is a coin flip: 7–10% or 3–6%. That certainty is our
+  deduction from the orb's text and the modifier list. We have not seen it
+  tested in 3.30.
+steps:
+  - title: "Write the plan from the last step backwards"
+    do: >-
+      Start with the final orb and list what must be true at the moment you
+      use it. Then order the stages so that each makes the next one
+      possible.
+    why: >-
+      A [[Hunter's Exalted Orb]] "adds Hunter influence and a new Hunter
+      modifier to a rare item". On a shield the Hunter's prefixes are one
+      family, increased maximum Life. Its suffixes are four. So the orb is
+      certain only if **no suffix slot is open and one prefix slot is**.
+
+
+      Working backwards. Before the orb: two prefixes, three suffixes, no
+      influence. So the suffix side must be finished first, and closed. To
+      finish the suffixes without losing the prefixes takes a lock, and the
+      full lock, because the third prefix slot must stay empty through the
+      reforge. And before that, the two prefixes themselves, from the one
+      tool that would wreck everything later: Essences. That gives four
+      stages in the only order that works.
+    check: >-
+      Compare the alternatives the data offers. The Elder also has
+      increased maximum Life, among four prefix families: its orb would land
+      on life a little over 1 time in 4. A [[Shaper's Exalted Orb]] works
+      exactly like the Hunter's for a different build: the Shaper's only
+      shield prefix is "+1 to maximum number of Summoned Totems".
+  - title: "Stage 1: two prefixes, and only two"
+    do: >-
+      Use [[Deafening Essence of Loathing]] on the shield until the result
+      has the block, **maximum Life of 115 or more, and no third prefix**.
+      It also needs at most two suffixes, to leave room for the lock.
+    why: >-
+      The Essence fixes 70–75% increased Chance to Block, the range of the
+      second-best natural tier. Life is the prefix to wait for beside it:
+      the bench only sells +56–70, and after stage 4 the bench will be busy
+      elsewhere. The empty third prefix is not a flaw in the result. It is
+      the slot the whole plan is for.
+    check: >-
+      Count prefixes before reading tiers. A result with block, high life
+      and a third prefix has failed, however good the third one is.
+    fail: >-
+      Three prefixes, or three suffixes: another Essence. Do not open a
+      slot with an [[Orb of Annulment]]; it is as likely to take the life.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "22% increased Stun and Block Recovery" }
+  - title: "Stage 2: the full lock"
+    do: >-
+      Craft **Prefix Modifiers cannot be changed** at the
+      [[Crafting Bench]]: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s. From this
+      moment the Essences are put away for good.
+    why: >-
+      A shield has no Eldritch orbs, so this is the only way to keep the
+      prefix side through a reroll. The item has exactly two prefixes, and
+      the 2 Divine Orb version would protect both; but a reforge that
+      respects the full lock is understood to leave the whole prefix side
+      alone, empty slot included, and this plan cannot afford a random third
+      prefix. Pay for the certainty.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "22% increased Stun and Block Recovery" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Stage 2, continued: reforge the suffixes by tag"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Physical modifier** (50
+      [[Vivid Crystallised Lifeforce]]). Repeat the lock and the reforge
+      until the suffix side has **two modifiers you will keep and one open
+      slot**.
+    why: >-
+      Count the tag. On a Strength shield two modifiers are physical: the
+      reflected-damage prefix and Physical Damage Reduction. With the
+      prefixes locked only the suffix remains, so a reforge that sounds
+      loose is exact. The Critical reforge is exact in the same way, for
+      reduced Extra Damage from Critical Strikes.
+
+
+      The open slot is part of the target, as it was in stage 1. Three
+      rolled suffixes would also close the side, but then all three have to
+      be good, and the bench has nothing left to fix.
+    check: >-
+      Both prefixes unchanged, **still exactly two**, and the lock gone.
+    fail: >-
+      A third prefix has appeared: the reforge did not treat the empty slot
+      as locked, and the forced step is lost. We believe this does not
+      happen, on player testing older than 3.30. If you can, try the lock
+      and reforge on a cheap shield with two prefixes first.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+  - title: "Stage 3: close the suffix side with the bench"
+    do: >-
+      Craft a suffix into the open slot: the resistance you lack, 29–35% for
+      3 [[Chaos Orb]]s.
+    why: >-
+      This bench modifier does two jobs. It is a resistance. And it is a
+      **blocker**: with three suffixes on the item, the next orb cannot add
+      a fourth. Crafters reach for the bench to fill a gap; here it is
+      filling a slot so that something else cannot.
+    check: >-
+      Count once more: two prefixes, three suffixes, no influence symbol on
+      the item. If any of the three is not so, do not go on.
+    state:
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+        - { text: "+33% to Cold Resistance", how: crafted }
+  - title: "Stage 4: the Hunter's Exalted Orb"
+    do: >-
+      Use the [[Hunter's Exalted Orb]].
+    why: >-
+      The item gains Hunter influence and one Hunter modifier. It needs an
+      open slot of its own side. Every suffix slot is taken, one prefix slot
+      is open, and the only Hunter prefix a shield can have is increased
+      maximum Life. It is a different group from flat maximum Life, and the
+      two multiply.
+    check: >-
+      The tier. 7–10% and 3–6% have equal weight at this item level.
+    fail: >-
+      The lower tier. There is no second attempt: the orb cannot be used on
+      an influenced item. A [[Hinekora's Lock]] beforehand would show the
+      tier before you commit. By its text, any change to the item, such as
+      swapping the bench suffix, removes the foresight, and another Lock
+      then looks again. That is a Lock per look at a coin flip, and a Lock costs
+      more than most shields. Nearly always the right answer is to take
+      what comes.
+    state:
+      note: "Hunter"
+      implicits: ["+27 to maximum Life"]
+      prefixes:
+        - { text: "73% increased Chance to Block", how: essence }
+        - { text: "+151 to maximum Life" }
+        - { text: "9% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "7% additional Physical Damage Reduction", how: harvest }
+        - { text: "+45% to Fire Resistance", how: harvest }
+        - { text: "+33% to Cold Resistance", how: crafted }
+  - title: "Finish: the bench suffix, quality, values"
+    do: >-
+      The bench suffix can now be exchanged for whichever one the character
+      needs most: remove it for 1 [[Orb of Scouring]] at the bench and craft
+      another. Then quality, a [[Blessed Orb]] for the life implicit if it
+      rolled low, and a [[Divine Orb]] if the values deserve one.
+    why: >-
+      The blocker has done its work, and a bench modifier is the one part of
+      a finished item that stays adjustable. A Divine Orb rerolls the
+      Hunter's life inside its tier along with everything else; it does not
+      change the tier.
+variations: >-
+  **Life from the Essence, block from the roll.** Deafening Essences of
+  Greed fix +130–144 life and leave increased Chance to Block to luck:
+  64% or more is about 1 further prefix in 14. The same plan, the other way
+  round.
+
+
+  **A totem shield.** Replace the last orb with a [[Shaper's Exalted Orb]]
+  and the forced prefix is +1 to maximum number of Summoned Totems, which
+  needs only item level 70. The Crusader's, Warlord's and Redeemer's orbs
+  are forced in the same way, each onto its one prefix family.
+
+
+  **Why not fracture the best prefix first.** It would make stage 2 free of
+  locks for that modifier, and it would end the plan: by reference pages a
+  fractured item cannot be given influence. On a shield, choosing between a
+  fracture and an influence is the first decision of an expensive craft.
+mistakes:
+  - "Using the Hunter's Exalted Orb with a suffix slot open. It has four suffixes to choose from and will take one of them as readily as the prefix."
+  - "Keeping an Essence result with three prefixes because all three are good. The plan needs the third slot empty."
+  - "Using the 2 Divine Orb lock to save money on this item. If a reforge then adds a third prefix, the forced step is gone."
+  - "Benching the last suffix before the reforge instead of after. The reforge removes it."
+  - "Any Essence, Chaos Orb or Fossil after stage 1. On a shield nothing but the lock stands between those and the prefixes."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The influence modifiers of shields and their weights, the Essence and bench tables, the tags on each modifier, and the in-game text of the conqueror Exalted Orbs and Hinekora's Lock. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers; conquerors drop their Exalted Orbs." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "How the one- and two-modifier locks choose what they protect." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Physical and Critical reforges and their Lifeforce costs." }
+  - { title: "poedb: Fractured items", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "That a fractured item cannot be given influence." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

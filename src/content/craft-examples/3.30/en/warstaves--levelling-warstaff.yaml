@@ -1,0 +1,158 @@
+category: warstaves
+title: "A levelling warstaff: roll the flat damage, buy the percentage"
+level: 1
+summary: "Your first craft: Alterations for flat Physical Damage, a Regal Orb, and the bench's increased Physical Damage on top. Two prefixes that multiply each other, for a handful of orbs."
+goal: >-
+  A weapon for the second half of the campaign that out-hits anything on the
+  ground, made from currency you already have. The idea to take away is a
+  habit of comparison: before rolling anything, **look at what the bench
+  sells, and roll the modifier it sells worst.** At this level that is flat
+  Physical Damage.
+base: "Vile Staff"
+itemLevel: 36
+baseWhy: >-
+  A Vile Staff can be held at level 33 and hits for 41–76 at 1.3 attacks per
+  second, with +20% Chance to Block Attack Damage built in. Item level 36 is
+  the first at which Tier 5 flat Physical Damage (adds 16–22 to 35–40) can
+  roll. Hold Alt over the staff to check.
+
+
+  Any white warstaff of your level works the same way. It needs as much
+  Intelligence as Strength, 59 of each here, which a Strength character may
+  not have yet.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["+20% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "Adds 18 to 37 Physical Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+19 to Strength" }
+    - { text: "+10% Chance to Block Attack Damage" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "15–20", note: "plus 8 for the bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A dozen or two [[Orb of Alteration]]s and one [[Regal Orb]]. The bench
+  craft is 8 more Alterations. Cheap enough to repeat every ten levels.
+odds: >-
+  At item level 36, one prefix roll is flat Physical Damage about 1 time in
+  6.5, by our arithmetic from the modifier weights, and one of its three best
+  tiers here (adds 10–13 to 21–25 or more) about 1 time in 11. An Alteration
+  does not always roll a prefix, so expect fifteen to twenty. The same roll
+  for the best percentage tier at this level would be 1 in 82: that
+  difference is the reason for the order of this craft.
+steps:
+  - title: "Compare the bench with the pool"
+    do: >-
+      Open the [[Crafting Bench]] and read its two physical prefixes. Flat:
+      adds 9–12 to 18–21 for 4 Orbs of Transmutation. Increased: 60–79% for 8
+      Orbs of Alteration. Now the best the staff can roll at item level 36.
+      Flat: adds 16–22 to 35–40. Increased: 85–109%, and only rarely; the
+      tiers you will usually see run from 40% to 84%.
+    why: >-
+      The bench's percentage is as good as what you would usually roll.
+      Its flat damage is about half of what the staff can roll. One of the
+      two prefixes will come from the bench, so make it the percentage, and
+      roll the flat.
+    state: { rarity: normal, implicits: ["+20% Chance to Block Attack Damage"] }
+  - title: "Quality, then roll the flat damage"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s to 20% quality. Use one
+      [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a time,
+      holding Alt, until the prefix is **"Adds # to # Physical Damage"** with
+      a first number of 10 or more. The names are "Polished", "Honed" and
+      "Gleaming".
+    why: >-
+      Quality is physical damage on the base and everything after it
+      multiplies the result. A Magic item has one prefix and one suffix, so
+      each Alteration is a cheap look at one prefix. On a base that hits for
+      41–76, adding 18 to 37 is nearly half as much again before any
+      percentage.
+    check: >-
+      The line says Physical Damage, not Fire, Cold or Lightning: those look
+      alike and are far more common together. Ignore the suffix.
+    fail: >-
+      Running low: accept any flat Physical Damage. It still beats the
+      bench's.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]]. If there is
+      one, skip this step.
+    why: >-
+      An Augmentation adds to an empty slot of a Magic item and touches
+      nothing else. It is a free roll at attack speed, the most common
+      suffix on a warstaff.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+      suffixes: [{ text: "+19 to Strength" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      It makes the staff Rare, keeps both modifiers, and adds a third at
+      random. Rare is what gives the bench an open slot.
+    check: >-
+      Read what was added and on which side. Here it is a little more block,
+      which adds to the implicit. If it added increased Physical Damage,
+      read the next step's second case.
+    state:
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+      suffixes:
+        - { text: "+19 to Strength" }
+        - { text: "+10% Chance to Block Attack Damage" }
+  - title: "Buy the percentage"
+    do: >-
+      At the bench, craft increased Physical Damage: 60–79% for 8 Orbs of
+      Alteration, or 40–59% for 4. **If the Regal Orb already added pure
+      increased Physical Damage,** the bench will refuse; craft attack speed
+      instead, 8–10% for 6 Orbs of Alteration.
+    why: >-
+      Flat and increased Physical Damage are different groups, so both sit
+      on the staff and the second multiplies the first. The bench's
+      percentage is the same group as a rolled pure percentage and cannot
+      join it. An item holds one bench modifier, so this is the only craft.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Use the best physical or speed option it does offer.
+    state:
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 18 to 37 Physical Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+19 to Strength" }
+        - { text: "+10% Chance to Block Attack Damage" }
+variations: >-
+  **If the hybrid rolls.** "Increased Physical Damage with Accuracy Rating"
+  is a third group. If an Alteration shows it, keep it: the bench's pure
+  percentage fits beside it just as it fits beside flat damage.
+
+
+  **No Essence shortcut.** On most weapons a low Essence of Contempt on a
+  white base is the quick version of this craft. The game data lists no
+  Essence modifier for warstaves, so do not buy one for it without testing
+  what it gives.
+
+
+  **Higher up.** By item level 60 the comparison has changed: the bench's
+  80–99% (4 Chaos Orbs) is well below a rolled 135–154%, and the percentage
+  becomes the thing worth rolling. The later examples start from there.
+mistakes:
+  - "Stopping on added Fire, Cold or Lightning Damage. A physical build gets nothing from it."
+  - "Rolling for the percentage at this level. The bench sells the common tier for 8 Alterations."
+  - "Crafting before the Regal Orb. It works, but the one bench modifier is spent before you know what the staff lacks."
+  - "Forgetting the Intelligence requirement. A warstaff needs as much of it as Strength."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs, and the absence of Essence entries for warstaves. The odds are our arithmetic." }

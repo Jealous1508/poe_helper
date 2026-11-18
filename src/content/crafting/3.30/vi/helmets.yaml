@@ -1,0 +1,533 @@
+name: "Helmet"
+short: "Life, resistance và một modifier định hình build. Bảy pool, và gần như mọi thứ đặc biệt đều đến từ bên ngoài pool tự nhiên."
+icon: "Hubris Circlet"
+intro: >-
+  Một cái helmet làm hai việc. Việc thường là defence: maximum Life hoặc
+  Energy Shield ở prefix, resistance ở suffix. Việc thứ hai là lý do dân
+  craft quan tâm tới loại trang bị này: helmet có thể hạ resistance của enemy
+  đứng gần bạn, nâng level của các gem gắn trong nó, hoặc làm aura của bạn
+  reserve rẻ hơn.
+
+
+  Dữ liệu cho thấy một điều làm người quen craft weapon phải bất ngờ. **Không
+  modifier đặc biệt nào trong số đó nằm trong pool tự nhiên.** Roll thường
+  trên helmet cho life, mana, defence, attribute và resistance, ngoài ra
+  không có gì đáng kể. Phần còn lại đến từ Fossil, Essence, veiled modifier,
+  influence và hai Eldritch implicit. Vậy nên craft một cái helmet chủ yếu là
+  chuyện chọn mở cánh cửa nào trong số đó, rồi lấp các ô thường quanh nó.
+basics:
+  itemLevel:
+    text: >-
+      Helmet đòi item level thấp hơn weapon. Maximum Life tốt nhất, 130–144,
+      đã mở ở item level 64. Thứ các mốc cao hơn thêm vào là tier cuối của
+      resistance và của prefix defence phần trăm ở 84, cùng một nhúm suffix ở
+      85.
+
+
+      Có một điều chạy khác với weapon. Trên helmet, gần như mọi tier của mọi
+      modifier đều có cùng weight, 1,000. Tier cao nhất dễ ra đúng bằng tier
+      thấp nhất, và item level cao hơn chỉ thêm một tier lên trên: nó không
+      bao giờ bỏ các tier yếu đi. Một cái helmet level 84 roll ra "+3 to 9
+      maximum Life" thường xuyên ngang với "+130 to 144".
+
+
+      **Item level 72 tới 75 là đủ cho một cái helmet thường.** Lên 84 hoặc
+      85 khi đằng nào bạn cũng đang trả tiền cho kết quả. Các suffix chỉ
+      Fossil mới có thì không cần item level nào cả.
+    breakpoints:
+      - ilvl: 44
+        unlocks: "**Leveling.** Tier 3 của maximum Life (100–114) và Tier 4 của prefix defence phần trăm (56–67%)."
+      - ilvl: 51
+        unlocks: "Tier 1 của prefix flat defence: +151–200 Armour hoặc Evasion Rating, +50–61 Energy Shield."
+      - ilvl: 64
+        unlocks: "Tier 1 của maximum Life, \"Fecund\" (130–144). Cùng với resistance Tier 3 (36–41%, item level 60), chừng này là **đủ cho một cái helmet life và resistance**."
+      - ilvl: 72
+        unlocks: "Tier 2 của resistance (42–45%) và Tier 2 của prefix defence phần trăm (80–91%)."
+      - ilvl: 75
+        unlocks: "\"+2 to Level of all Minion Skill Gems\", và tier cao nhất của nhiều modifier influence."
+      - ilvl: 78
+        unlocks: "Tier 1 của prefix defence kèm Stun Recovery (39–42%) và Tier 1 của Life Regeneration (96–128 mỗi giây)."
+      - ilvl: 84
+        unlocks: "Tier 1 của resistance (46–48%) và Tier 1 của defence phần trăm (92–100%). **Trần của phần lớn helmet.**"
+      - ilvl: 85
+        unlocks: "Tier 1 của spell suppression (13–14%), Intelligence (56–60) và Energy Shield Recharge Rate (36–38%), cùng các modifier influence tác động lên enemy trong vòng 6 mét."
+  bases:
+    text: >-
+      Có 94 helmet chia vào bảy pool. Pool do defence của base quyết định, và
+      nó quyết định nhiều thứ hơn là prefix defence: vài suffix gắn với một
+      attribute và chỉ roll ở nơi có defence của attribute đó. Hãy chọn pool
+      trước khi chọn base.
+    types:
+      - title: "Một defence: Armour, Evasion hoặc Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          Mỗi loại này chỉ roll prefix defence cho defence của riêng nó, và
+          roll các suffix của attribute mình ở weight đầy đủ. Helmet
+          **Armour** roll Strength và increased Life Regeneration rate.
+          Helmet **Evasion** roll Dexterity và chance to Suppress Spell
+          Damage. Helmet **Energy Shield** roll Energy Shield Recharge Rate.
+          Intelligence thì roll trên mọi helmet.
+
+
+          Helmet Energy Shield còn roll maximum Mana dưới dạng prefix, và đó
+          là prefix hay gặp nhất của chúng: 22% số lần roll prefix, so với
+          18% của life. Helmet Armour và Evasion không có prefix mana, và
+          life chiếm một phần tư số lần roll prefix của chúng.
+      - title: "Hai defence"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Base hybrid roll bản hybrid của từng prefix defence, và roll suffix
+          attribute của cả hai bên gốc, mỗi bên nửa weight. Một cái helmet
+          Armour và Evasion roll được spell suppression, với weight 500 mỗi
+          tier trong khi helmet thuần Evasion có 1,000. Base nào có Energy
+          Shield trong đó đều roll prefix mana ở weight đầy đủ.
+      - title: "Helmet Runic (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Helm, Runic Crest và Runic Crown, các base Expedition. Chúng
+          có Ward thay cho các defence khác, cần cả ba attribute, và roll các
+          prefix Ward cùng "faster Restoration of Ward". Không có defence
+          theo attribute nên chúng không roll Strength hay Dexterity, không
+          spell suppression, không Life Regeneration rate và không Energy
+          Shield Recharge Rate.
+      - title: "Bone Helmet"
+        text: >-
+          Base Atlas của loại trang bị này. Nó nằm trong pool Armour và
+          Energy Shield với defence thấp hơn các base cùng lứa, và từ 3.30
+          implicit của nó là "Minions deal 20–30% increased Damage". Nó chỉ
+          rơi khi một item roll ra Item Tier đủ cao.
+      - title: "Crown và mask có implicit"
+        text: >-
+          Ba họ base Ritual, mỗi họ ba cỡ. Gale, Winter và Blizzard Crown
+          thêm Cold Damage và khiến hit của bạn tính Cold Resistance như thể
+          cao hơn 10%. Sorrow, Atonement và Penitent Mask cho +2% tới +4%
+          maximum Chaos Resistance, với cái giá là bị Crushed. Imp, Demon và
+          Archdemon Crown cho +1 hoặc +2 level của các skill gem gắn trong
+          đó và trừ đúng chừng ấy ở các support gem gắn trong đó. Tất cả đều
+          có defence thấp hơn một base thường cùng level, và chúng roll từ
+          pool thường của kiểu defence mình.
+    picks:
+      - base: "Giantslayer Helmet"
+        for: "Armour nhiều nhất"
+        why: >-
+          582–669 Armour, cao nhất trong loại item này, với yêu cầu level 84
+          và 224 Strength. Mọi prefix Armour và toàn bộ quality nhân con số
+          đó lên.
+      - base: "Lich's Circlet"
+        for: "Energy Shield nhiều nhất"
+        why: >-
+          117–134 Energy Shield ở level 84 và 224 Intelligence. Base được
+          chuộng trước đây, Hubris Circlet, có 80–92, nên ở đây các prefix
+          phần trăm và quality nhân một con số lớn hơn khoảng 45%.
+      - base: "Majestic Pelt"
+        for: "Evasion và spell suppression"
+        why: >-
+          582–669 Evasion Rating, và pool thuần Evasion roll spell
+          suppression ở weight gấp đôi bất kỳ base hybrid nào.
+      - base: "Eternal Burgonet"
+        for: "Armour mà không cần chừng ấy Strength"
+        why: >-
+          373–429 Armour với 138 Strength ở level 69. Base cao nhất đòi 224,
+          con số mà nhiều nhân vật không dư ra được.
+      - base: "Bone Helmet"
+        for: "Build minion"
+        why: >-
+          20–30% increased Minion Damage trên implicit, trước khi tính bất kỳ
+          modifier nào. Một Essence of Fear thêm cùng kiểu modifier đó lần
+          nữa dưới dạng prefix.
+      - base: "Archdemon Crown"
+        for: "Gem không cần support"
+        why: >-
+          "+2 to Level of Socketed Skill Gems, -2 to Level of Socketed Support
+          Gems". Với aura và những gem khác mà bạn gắn một mình, đó là hai
+          level miễn phí.
+    impact: >-
+      Base quyết định bốn điều trước khi tiêu bất kỳ currency nào.
+
+
+      **Con số defence.** Các prefix phần trăm và quality là local: chúng
+      nhân Armour, Evasion hoặc Energy Shield của chính base. Mỗi base còn
+      rơi ra với một con số roll trong khoảng của nó, và một [[Sacred Orb]]
+      roll lại con số đó.
+
+
+      **Pool.** Prefix defence nào tồn tại, và item có roll được Strength,
+      Dexterity, spell suppression hay prefix mana hay không.
+
+
+      **Implicit, nếu có.** Phần lớn helmet không có. Ở base nào có, một
+      [[Blessed Orb]] roll lại chỉ số của nó. Hãy để ý dòng chữ trên mọi
+      Eldritch Ember và Ichor: nó "replaces any existing implicit
+      modifiers" ngoại trừ implicit Eldritch của phía đối diện. Một cái Bone
+      Helmet được gắn Eldritch implicit thì không còn là Bone Helmet theo
+      cái nghĩa đáng kể nữa.
+
+
+      **Yêu cầu.** 224 của một attribute với các base cao nhất. Suffix "32%
+      reduced Attribute Requirements" có tồn tại, và tốn một ô.
+tools:
+  - method: currency
+    note: >-
+      Trên một cái helmet Armour ở item level 84, theo phép tính của chúng
+      tôi từ weight, một trên bốn lần roll prefix là maximum Life, một trên
+      13 là life từ 100 trở lên, và một trên 39 là tier cao nhất. Trên helmet
+      Energy Shield, prefix mana pha loãng con số đó: một trên 18 cho mức từ
+      100 trở lên. Một trên 25 lần roll suffix là một resistance cụ thể từ
+      36% trở lên.
+
+
+      Đó là những con số dễ chịu. [[Orb of Alteration]] sẽ nhanh chóng tìm ra
+      **một** modifier thường tốt. Thứ currency thường không làm được là roll
+      ra bất kỳ modifier nào trong số những cái làm nên một cái helmet đặc
+      biệt.
+  - method: bench
+    note: >-
+      Bench lo các việc thường với giá rẻ. Maximum Life: 56–70 giá 4 Orb of
+      Alchemy, 41–55 giá 2. Một resistance: 29–35% giá 3 Chaos Orb, 21–28%
+      giá 1 Orb of Alchemy, 16–20% giá 1 Orb of Transmutation. Hai resistance
+      cùng lúc: mỗi cái 17–20% giá 3 Chaos Orb. Defence phần trăm: 56–74% giá
+      2 Chaos Orb. Spell suppression: 5–6% giá 4 Chaos Orb.
+
+
+      Nó cũng bán các prefix chỉ helmet mới có ở dạng yếu hơn, mỗi cái giá 4
+      Chaos Orb: "+1 to Level of Socketed AoE Gems" kèm 8–10% Area of Effect,
+      bản tương tự cho gem Projectile kèm thêm một pierce, cho gem Melee kèm
+      +0.2 mét strike range, và "+1 to maximum number of Raised Zombies and
+      Skeletons".
+
+
+      Có một luật về group cần biết. Hybrid của bench "18–21% increased
+      defence, +14 to 16 maximum Life" (2 Chaos Orb) chung group với prefix
+      flat defence kèm life roll ra, không phải với life thuần. Nó nằm vừa
+      cạnh một prefix life roll ra và cạnh một prefix defence phần trăm roll
+      ra.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng số beast bỏ ra trên một cái
+      helmet Magic đã ngốn nhiều Alteration, chẳng hạn chỉ có mỗi life Tier 1
+      hoặc suppression Tier 1: nó biến [[Regal Orb]] thành thứ bạn thử lại
+      được.
+
+
+      Các công thức thêm-và-gỡ chỉ an toàn khi phía bị mất một modifier đang
+      trống. Một cái helmet Rare có suffix tốt mà hoàn toàn không có prefix
+      nào thì hiếm, nên trên helmet hai công thức này ít được dùng hơn so với
+      trên weapon. Hãy đếm số modifier ở cả hai phía trước khi tiêu beast.
+  - method: finishing
+    note: >-
+      20% quality bằng [[Armourer's Scrap]] nâng defence gốc mà mọi prefix
+      local nhân lên. Helmet có tối đa bốn socket. Với resistance rơi nhầm
+      element, Harvest đổi cái này sang cái khác: 300 Lifeforce thuộc hai màu
+      khác nhau trong 3.30.
+  - method: essence
+    note: >-
+      Essence có ý nghĩa trên helmet là vì những thứ pool thiếu, không phải
+      vì life. **Greed** cho 91–105 maximum Life ở bậc Deafening, thấp hơn
+      Tier 3 tự nhiên; hãy dùng nó khi leveling, sau đó thì thôi.
+
+
+      Những cái đáng có: **Loathing** cho increased Mana Reservation
+      Efficiency, 5–6% ở bậc Screaming, 7–8% ở Shrieking, 9–10% ở Deafening.
+      **Fear** cho increased Minion Damage dưới dạng prefix, từ 22–24% tới
+      28–30%. **Envy** đảm bảo Chaos Resistance, 31–35% ở bậc Deafening, một
+      suffix mà bình thường chỉ là một trên năm mươi lần roll. **Woe**,
+      **Dread** và **Doubt** đảm bảo prefix flat defence ở gần tier cao nhất.
+
+
+      Các Essence corrupted đặt lên helmet những modifier cho gem gắn trong
+      nó: [[Essence of Horror]] cho "Socketed Gems deal 30% more Elemental
+      Damage", [[Essence of Delirium]] cho "+2 to Level of Socketed Aura
+      Gems".
+  - method: fossil
+    note: >-
+      Đây là nơi các modifier lên enemy ở gần trú ngụ. Dữ liệu liệt kê, dưới
+      dạng suffix chỉ Fossil mới có và không yêu cầu item level: "Enemies
+      within 6 metres have -9% to Fire Resistance", bản tương tự cho Cold,
+      Lightning và Chaos, và "take 9% increased Physical Damage". Theo kinh
+      nghiệm lâu năm của người chơi, mỗi cái cần Fossil đúng loại của nó: một
+      [[Scorched Fossil]] cho fire, [[Frigid Fossil]] cho cold,
+      [[Metallic Fossil]] cho lightning, [[Aberrant Fossil]] cho chaos,
+      [[Jagged Fossil]] cho physical.
+
+
+      Các Fossil theo tag cũng nắn lại pool thường. Một [[Pristine Fossil]]
+      khiến maximum Life gần như chắc chắn ra ở prefix nhưng làm ngập phía
+      suffix bằng life regeneration. Một [[Dense Fossil]] biến gần như mọi
+      lần roll prefix thành một prefix defence và loại hẳn life.
+  - method: eldritch
+    note: >-
+      Một cái helmet nhận một implicit Searing Exarch và một implicit Eater
+      of Worlds, và pool của chúng ở đây rất mạnh. Từ Exarch: increased Cast
+      Speed (8% ở bậc Lesser, 11% ở Exceptional), Area of Effect, Spell
+      Critical Strike Chance, effect của một curse cụ thể. Từ Eater:
+      increased Spell Damage hoặc Attack Damage (14–16% ở Lesser, 23–25% ở
+      Exceptional), Mana Reservation Efficiency (7% tới 10%), elemental
+      penetration.
+
+
+      Theo phép tính của chúng tôi từ weight, một Lesser Ember cho cast speed
+      khoảng 1 trên 17 lần. Mỗi implicit còn có các bản mạnh hơn chỉ có tác
+      dụng khi một enemy Unique, hoặc một pinnacle boss của Atlas, ở gần bạn;
+      các bản đó bắt đầu từ bậc Greater và Grand.
+
+
+      Hai cái giá. Một Ember hoặc Ichor thay implicit của chính base, và một
+      cái helmet có influence thì không nhận được cái nào.
+  - method: harvest
+    note: >-
+      Hãy đếm các modifier mang tag trước khi trả tiền. Trên helmet, modifier
+      tự nhiên duy nhất mang tag chaos là Chaos Resistance, nên "reforge kèm
+      một modifier Chaos" (100 Vivid Lifeforce) đảm bảo nó. Fire, Cold và
+      Lightning (mỗi cái 50) làm y vậy cho một resistance.
+
+
+      **Life** (75 Wild) yếu hơn nghe tên: maximum Life mang tag này, và Life
+      Regeneration cùng prefix flat defence kèm life cũng vậy. **Defence**
+      (75 Primal) đảm bảo một trong các prefix defence, hoặc trên base có
+      Energy Shield thì có thể là suffix recharge rate, thứ mang cùng tag.
+  - method: veiled
+    note: >-
+      Các prefix helmet unveil ra là bản mạnh của các prefix bench: "+2 to
+      Level of Socketed AoE Gems" kèm 8–10% Area of Effect, bản tương tự cho
+      gem Projectile và Melee, và +55 to 60 maximum Life kèm mana
+      regeneration. Ở phía suffix, một resistance ghép với Chaos Resistance,
+      mỗi cái 16–20%.
+  - method: influence
+    note: >-
+      Mỗi conqueror mang một suffix lên enemy ở gần ở item level 85: Warlord
+      là fire, Redeemer cold, Crusader lightning, Hunter chaos, tất cả đều
+      "-9% to Resistance", weight 250. Elder có "9% increased Physical Damage
+      taken" và Shaper có "6% increased Elemental Damage taken". Redeemer còn
+      có 7–10% Mana Reservation Efficiency, Warlord có "+1 to Maximum Power
+      Charges", Elder có 23–25% Minion Damage.
+
+
+      Phần lớn những thứ này có được mà không cần influence, từ một Fossil
+      hoặc một Essence. Influence là để chồng hai cái trong số đó lên nhau,
+      và nó lấy mất của bạn cả hai Eldritch implicit.
+  - method: meta
+    note: >-
+      Trên armour, khóa tốn 4 Divine Orb và 4 [[Blessed Orb]] trong 3.30.
+      Helmet thường không cần tới chúng: khi một Eldritch implicit mạnh hơn
+      cái kia, một [[Eldritch Chaos Orb]] vốn đã chỉ roll lại một phía. Hãy
+      trả tiền khóa khi lần roll lại buộc phải là thứ Eldritch currency không
+      làm được, chẳng hạn một Veiled Chaos Orb hoặc một reforge Harvest.
+  - method: corruption
+    note: >-
+      Các corruption implicit gồm "+2 to Level of Socketed" cho cả chục loại
+      gem (AoE, Aura, Curse, Minion, Projectile và nhiều nữa), "+1 to Maximum
+      Power Charges" và 4–6% increased maximum Life. Một corruption implicit
+      chiếm chỗ implicit của chính helmet. Hãy coi như Eldritch implicit cũng
+      mất theo, như xưa nay vẫn vậy; chúng tôi chưa xác nhận được điều đó cho
+      3.30.
+  - method: strands
+    note: "Helmet là chỗ hợp để dùng strand, vì một lý do mà phần Memory Strands bên dưới giải thích."
+memoryStrands: >-
+  Vì mọi tier trên helmet có weight như nhau, cái khó khi roll không bao giờ
+  là tier cao nhất hiếm. Cái khó là có mười tier life và tám tier cho mỗi
+  resistance, và các tier đáy xuất hiện thường xuyên ngang các tier đỉnh.
+  [[Memory Strands]] loại các tier thấp khỏi bất cứ thứ gì được roll ra, tức
+  đúng vấn đề đó. Các mốc do người chơi đo được là cho một modifier 13 tier
+  và chưa có gì được công bố cho các modifier ngắn hơn, nên hãy coi độ lớn
+  của hiệu ứng là chưa biết, còn chiều hướng của nó là chắc chắn.
+
+
+  Hãy tiêu chúng vào các orb rẻ: [[Orb of Alteration]] với tối đa 8 strand
+  mỗi cái, một [[Regal Orb]] hoặc một Eldritch Exalted Orb với tối đa 16. Một
+  Essence có thể tiêu 80 và một Eldritch Chaos Orb 60, theo bảng data-mine.
+  Fossil và reforge Harvest hoàn toàn không đụng tới strand, theo thử nghiệm
+  của người chơi, nên một cái helmet đi Fossil trước không được lợi gì từ
+  base có strand.
+
+
+  Có một câu hỏi còn bỏ ngỏ quan trọng với loại trang bị này. Một thread của
+  người chơi năm 2025 gợi ý rằng item có strand không nhận được Eldritch
+  implicit; chúng tôi chưa xác nhận được điều đó theo hướng nào. Hãy thử một
+  Lesser Ember trước khi dựng kế hoạch dựa trên cả hai.
+reading:
+  intro: >-
+    Giữ Alt và đọc một cái helmet qua ba lượt. **Life hoặc Energy Shield:**
+    có không, và ở tier nào? **Resistance:** có mấy cái, và có cái nào từ 36%
+    trở lên không? **Modifier đặc biệt:** có cái nào không, và còn chỗ cho
+    một cái không? Một cái helmet qua được hai lượt đầu là một cái helmet
+    thường tốt. Lượt thứ ba là thứ khiến nó đáng để craft tiếp.
+  prefixes:
+    text: >-
+      Ba ô, và hai thứ giành nhau chúng: life và defence.
+
+
+      Các prefix defence đi thành bộ ba cộng dồn được, vì chúng là ba group:
+      flat defence, defence phần trăm, và defence phần trăm kèm Stun and
+      Block Recovery. Build Energy Shield muốn cả ba và không còn ô nào cho
+      life. Build life muốn maximum Life và nhận một hoặc hai prefix defence
+      tùy cái nào đến.
+
+
+      Họ thứ tư, flat defence kèm chút life, là một group riêng và thấp ở cả
+      hai con số. Nó là đồ lấp chỗ. Prefix mana cũng vậy với phần lớn build,
+      và nó là prefix hay gặp nhất trên mọi base có Energy Shield. Item
+      Rarity và "Reflects Physical Damage" là hai lần roll phí thấy rõ.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Nguồn life đơn lẻ lớn nhất trên item. Mười tier với weight bằng nhau, nên tier chính là thứ bạn đang roll để có."
+        aim: "T3, 100–114 (ilvl 44). T1 là 130–144 (ilvl 64)."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local: nó nhân defence của base và prefix flat. Mỗi pool có bản riêng của mình và chỉ bản đó thôi."
+        aim: "T3, 68–79% (ilvl 60). T1 là 92–100% (ilvl 84)."
+      - mod: "+# to Armour, Evasion Rating or maximum Energy Shield"
+        why: "Nâng con số mà các cái phần trăm nhân lên. Bản Energy Shield đáng giá nhất, vì con số của base nhỏ."
+        aim: "T2 hoặc T1, cả hai đã mở ở ilvl 51."
+      - mod: "#% increased defence / #% increased Stun and Block Recovery"
+        why: "Cái phần trăm thứ hai ở một group khác, nên nó nằm cạnh cái đầu được. Build Energy Shield cần nó, các build khác bỏ qua được."
+        aim: "T2, 33–38% (ilvl 60). T1 là 39–42% (ilvl 78)."
+      - mod: "+# to maximum Mana"
+        why: "Chỉ có trên base có Energy Shield. Hữu ích với build ngốn mana, và là thứ hay đẩy life khỏi các base đó nhất."
+      - mod: "+# to Level of all Minion Skill Gems"
+        why: "Prefix đặc biệt duy nhất trong pool tự nhiên, và gần như không thể có bằng cách roll: +1 có weight 250 và +2 có weight 25, so với 1,000 cho một tier của bất cứ thứ gì khác."
+  suffixes:
+    text: >-
+      Phía suffix là resistance và bất cứ thứ gì pool của bạn thêm vào. Fire,
+      Cold và Lightning Resistance mỗi cái chiếm khoảng một phần mười số lần
+      roll suffix, mỗi cái tám tier. Chaos Resistance nằm trong pool với một
+      phần tư weight đó, khoảng một trên năm mươi lần roll suffix.
+
+
+      Sau resistance, suffix hữu ích tùy vào base: spell suppression trên bất
+      cứ thứ gì có Evasion, một attribute bạn đang thiếu, Life Regeneration
+      trên build kiểu Righteous Fire. Stun and Block Recovery, Light Radius
+      kèm Accuracy, reduced Attribute Requirements và Item Rarity lấp phần
+      còn lại của pool.
+
+
+      Nếu helmet sẽ mang một suffix từ Fossil, Essence hoặc influence thì một
+      trong ba ô đã mất. Hãy tính resistance xoay quanh nó.
+    key:
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "Thứ mà loại trang bị này sinh ra để gánh trên phần lớn nhân vật. Weight bằng nhau trên tám tier."
+        aim: "T3, 36–41% (ilvl 60). T1 là 46–48% (ilvl 84)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Một phần tư weight của mấy cái kia, nên hãy mua nó: một Essence of Envy hoặc một reforge Harvest đảm bảo nó."
+        aim: "T3, 21–25% (ilvl 56). T1 là 31–35% (ilvl 81)."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Chỉ có trên base có Evasion, và ở nửa weight trên base hybrid. Build cap suppression cần nó trên nhiều món."
+        aim: "T3, 9–10% (ilvl 68). T1 là 13–14% (ilvl 85)."
+      - mod: "+# to Strength, Dexterity or Intelligence"
+        why: "Giải quyết một yêu cầu mà không tốn passive point. Strength và Dexterity chỉ roll trên base có defence của chúng; Intelligence roll ở mọi nơi."
+      - mod: "Regenerate # Life per second"
+        why: "Phổ biến, và mạnh ở đỉnh: 96–128 mỗi giây ở Tier 1. Đồ lấp chỗ với phần lớn build, một modifier thực thụ với số ít."
+      - mod: "#% increased Energy Shield Recharge Rate"
+        why: "Chỉ có trên base có Energy Shield. Suffix phòng thủ của pool đó."
+approach:
+  principle: >-
+    **Một cái helmet là năm ô thường quanh một modifier đặc biệt.** Hãy gọi
+    tên modifier đặc biệt trước, vì nguồn của nó quyết định mọi thứ khác:
+    công cụ nào roll lại item, helmet có nhận được Eldritch implicit hay
+    không, và phía nào thiếu một ô. Life và resistance thì lúc nào cũng mua
+    được sau đó.
+  order:
+    - title: "Chọn pool, chọn base, rồi tới item level"
+      text: >-
+        Pool theo defence của bạn và theo những suffix bạn cần từ nó. Base
+        theo con số và yêu cầu của nó. Item level 72 tới 75 cho một cái
+        helmet thường, 84 hoặc 85 cho các tier tốt nhất.
+    - title: "Gọi tên một modifier đặc biệt và nguồn của nó"
+      text: >-
+        Hạ resistance của enemy ở gần: một Fossil, hoặc influence.
+        Reservation: một Essence of Loathing hoặc một implicit Eater. Gem
+        level: một prefix veiled hoặc bench. Minion damage: một Essence of
+        Fear. Nếu câu trả lời là "không có", bạn đang craft một cái helmet
+        life và resistance, và Alteration cùng bench sẽ lo được.
+    - title: "Quyết định giữa Eldritch implicit và influence"
+      text: >-
+        Bạn không thể có cả hai. Eldritch implicit là hai modifier thêm và là
+        cách rẻ nhất để làm việc trên một phía. Influence dành cho một
+        modifier không tồn tại ở đâu khác, hoặc cho hai modifier lên enemy ở
+        gần trên cùng một cái helmet. Một base đặc biệt chỉ giữ được implicit
+        của nó trên con đường không có Ember và Ichor.
+    - title: "Lấy modifier đặc biệt trước"
+      text: >-
+        Khi item còn rẻ để roll lại. Một Fossil hay Essence roll lại tất cả,
+        nên lúc này chưa có gì khác đáng để có.
+    - title: "Bảo vệ phía của nó, rồi làm phía kia"
+      text: >-
+        Hãy để Eldritch implicit của phía **kia** là cái mạnh hơn, và
+        Eldritch Chaos Orb chỉ roll lại phía đó. Chỉ dùng khóa bench cho công
+        cụ nào cần tới nó.
+    - title: "Lấp ô, chừa một ô cho bench"
+      text: >-
+        Life nếu còn thiếu, không thì resistance mà nhân vật của bạn đang
+        thiếu. Bench không cho được tier cao nhất, nên hãy giao cho nó ô mà
+        một tier trung bình ít đau nhất.
+    - title: "Implicit cuối cùng làm sau chót"
+      text: >-
+        Mấy implicit rẻ bạn dùng để lái các Eldritch orb không phải là những
+        cái bạn giữ. Hãy thay chúng ở cuối, khi không còn lần roll lại nào
+        nữa.
+  finishing: >-
+    Quality lên 20%, socket và link, và ô trống cuối cùng ở bench. Rồi tới
+    các con số: một [[Divine Orb]] roll lại mọi chỉ số explicit cùng lúc, một
+    [[Blessed Orb]] roll lại implicit, một [[Sacred Orb]] roll lại defence
+    của base.
+
+
+    Nếu resistance đúng về tổng nhưng sai element, hãy đổi một cái ở
+    [[Horticrafting Station]] trước khi nghĩ tới chuyện roll lại.
+  stopping: >-
+    Một cái helmet có life từ 100 trở lên và hai resistance từ 36% trở lên là
+    xong cho phần lớn game, và Alteration cộng bench sẽ làm ra một cái như
+    vậy. Thêm modifier đặc biệt vào thì nó xong cho gần như toàn bộ game.
+
+
+    Chi phí leo thang ở chỗ bạn đòi modifier đặc biệt **và** ba ô tốt trên
+    cùng một phía. Trước một lần roll lại, hãy hỏi cái helmet như nó đang có
+    thì bán được bao nhiêu. Nếu câu trả lời nhiều hơn chi phí của lần thử,
+    hãy dừng.
+special:
+  - mod: "Enemies within 6 metres have -9% to Fire, Cold, Lightning or Chaos Resistance"
+    source: "Fossil / Influence"
+    where: "Một suffix chỉ Fossil mới có, không yêu cầu item level, được mở bởi Fossil đúng loại đó theo kinh nghiệm lâu năm của người chơi. Cũng là một suffix conqueror ở item level 85: Warlord là fire, Redeemer cold, Crusader lightning, Hunter chaos."
+  - mod: "Enemies within 6 metres take 9% increased Physical Damage"
+    source: "Fossil / Influence Elder"
+    where: "Thành viên physical của cùng họ đó. Chỉ Fossil mới có, hoặc là một suffix Elder ở item level 85."
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Essence / Eldritch / Influence"
+    where: "Một Essence of Loathing, 9–10% ở bậc Deafening. Một implicit Eater of Worlds, từ 7% ở bậc Lesser tới 10% ở Exceptional. Một suffix Redeemer, 7–10% ở item level 75. Dữ liệu còn liệt kê một bản chỉ Fossil mới có ở mức 10%."
+  - mod: "Minions deal #% increased Damage"
+    source: "Essence / Implicit của base"
+    where: "Một prefix từ Essence of Fear, 28–30% ở bậc Deafening. Implicit của Bone Helmet, 20–30%. Một prefix Elder, 23–25% ở item level 83."
+  - mod: "+2 to Level of Socketed AoE, Projectile or Melee Gems"
+    source: "Veiled / Bench"
+    where: "Ba prefix unveil ra, mỗi cái kèm một dòng thứ hai. [[Crafting Bench]] bán các bản +1 giá 4 Chaos Orb. Lấy veiled modifier từ một item rơi ra của Betrayal, một [[Veiled Chaos Orb]] hoặc một [[Veiled Exalted Orb]]."
+  - mod: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons"
+    source: "Bench / Veiled"
+    where: "Một prefix bench giá 4 Chaos Orb. Bản unveil ra thêm 8–10% minion life."
+  - mod: "Socketed Gems deal 30% more Elemental Damage"
+    source: "Essence corrupted"
+    where: "Suffix trên helmet của một [[Essence of Horror]], thứ chỉ có được bằng cách corrupt một Essence monster với một [[Remnant of Corruption]]. Essence of Delirium cho \"+2 to Level of Socketed Aura Gems\" theo cùng cách."
+  - mod: "+1 to Maximum Power Charges"
+    source: "Influence Warlord / Corruption"
+    where: "Một prefix Warlord ở item level 75, weight 125. Cũng là một trong các corruption implicit."
+  - mod: "#% increased Cast Speed, Spell Damage, Area of Effect"
+    source: "Eldritch implicit"
+    where: "Các implicit Searing Exarch và Eater of Worlds, thêm bằng Ember và Ichor lên một cái helmet không có influence. Danh sách đầy đủ nằm trong danh sách modifier."
+  - mod: "+# to Level of Socketed Skill Gems / -# to Level of Socketed Support Gems"
+    source: "Implicit của base"
+    where: "Implicit của Imp, Demon và Archdemon Crown. Được chọn cùng với base, và mất nếu bạn thêm một Eldritch implicit."
+  - mod: "+6 to Level of Socketed Gems while there is a single Gem Socketed in this Item"
+    source: "Essence"
+    where: "Được liệt kê trong dữ liệu cho một [[Essence of Desolation]], thứ chỉ dùng được trên item Normal và ghìm mọi modifier khác ở level 15 trở xuống. Chúng tôi chưa xác nhận được Essence này kiếm bằng cách nào trong 3.30."
+mistakes:
+  - "**Roll để tìm một modifier mà pool không có.** Bao nhiêu Chaos Orb cũng không đặt được \"-9% to Fire Resistance\" hay reservation efficiency lên helmet. Kiểm nguồn trước."
+  - "**Dùng một Ember lên Bone Helmet hoặc Archdemon Crown.** Theo chính dòng chữ của Ember, nó thay cái implicit mà vì nó bạn mới chọn base."
+  - "**Dùng Essence of Greed lên một cái helmet endgame.** Bậc Deafening cho 91–105 life. Tier 3 tự nhiên là 100–114 và chỉ cần item level 44."
+  - "**Bấm một Eldritch Chaos Orb mà không kiểm implicit nào mạnh hơn.** Nó roll lại prefix khi Exarch dominant và suffix khi Eater dominant. Nhầm cái là xóa mất phía bạn định giữ."
+  - "**Trả tiền khóa ở chỗ dominance là đủ.** 4 Divine Orb và 4 Blessed Orb mua một lần roll lại có bảo vệ. Một Eldritch Chaos Orb bảo vệ phía kia mà không tốn gì."
+  - "**Chọn base Energy Shield cho build life mà không tính tới prefix mana.** Trên các base đó mana là prefix hay gặp nhất và life tụt từ một phần tư số lần roll prefix xuống dưới một phần năm."
+  - "**Thêm influence lên cái helmet bạn định gắn Eldritch implicit.** Hai thứ loại trừ nhau, và influence thì không gỡ ra được."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, Essence, giá bench và implicit được dẫn ở đây, cùng dòng chữ in-game của các Eldritch Ember và Ichor. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên armour, implicit của Bone Helmet, Item Tier cho các base đặc biệt, việc đổi resistance bằng Harvest." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: Eldritch implicit nào là dominant, và các modifier bảo vệ trụ được trước những gì. Một phần cũ hơn 3.30." }

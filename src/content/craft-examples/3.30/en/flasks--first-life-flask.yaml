@@ -1,0 +1,150 @@
+category: flasks
+title: "A first life flask that stops bleeding"
+level: 1
+summary: "Your first craft of all: roll one suffix on the life flask you already carry, so that pressing it also ends bleeding and Corrupted Blood."
+goal: >-
+  A life flask that heals you and, pressed while you are bleeding, makes you
+  immune to bleeding and Corrupted Blood for a few seconds. Bleeding is one of
+  the first things in the campaign that kills a character who is otherwise
+  fine, and this answers it for a handful of orbs.
+
+
+  The item matters less than the routine: **reroll with an Alteration, fill
+  the empty slot with an Augmentation, stop when one line is right.** Every
+  flask you ever make is this routine.
+base: "Colossal Life Flask"
+itemLevel: 33
+baseWhy: >-
+  Use the life flask on your belt: the craft is the same on every size. A
+  Colossal Life Flask drops from level 30 and restores 1,000 life over 3.5
+  seconds. Item level hardly matters here. The lowest tier of the bleeding
+  suffix needs item level 8 and already does the whole job; item level 32
+  opens the next tier, which only makes the immunity last 9–11 seconds where
+  the lowest lasts 6–8.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  prefixes:
+    - { text: "49% increased Recovery rate" }
+  suffixes:
+    - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "only if the flask is white" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "5–10" }
+  - { item: "[[Glassblower's Bauble]]", amount: "a few", note: "optional" }
+cost: >-
+  A dozen or two [[Orb of Alteration]]s and a few
+  [[Orb of Augmentation]]s. Nothing here is worth saving at this point in a
+  league, and the result stays useful until you replace the flask with a
+  bigger size.
+odds: >-
+  At item level 33, one suffix roll is the bleeding suffix about 1 time in 9,
+  by our arithmetic from the modifier weights (11.5% of the suffix pool). If
+  you use an Augmentation whenever a result has no suffix, every attempt
+  includes one suffix roll, so the average is about nine attempts. Averages
+  have bad days: roughly one run in eleven takes more than twenty.
+steps:
+  - title: "Start with the flask you have"
+    do: >-
+      Take your life flask out of the belt and hold Alt over it. If it is
+      white, go to the next step. If it is already Magic, as most dropped
+      flasks are, skip to step 4: Alterations work on it as it is.
+    why: >-
+      A white (Normal) flask has no slots at all. A Magic one has two, one
+      prefix and one suffix, and that is as many as a flask ever gets.
+    state: { rarity: normal }
+  - title: "Make it Magic"
+    do: >-
+      Use one [[Orb of Transmutation]]. Hold Alt and read what appeared, and
+      which slot it is in.
+    why: >-
+      The Transmutation opens the two slots and fills one or both at random.
+      Here it gave a prefix and left the suffix slot empty.
+    state:
+      rarity: magic
+      prefixes: [{ text: "18% increased Charge Recovery" }]
+  - title: "Fill the empty slot before you reroll"
+    do: >-
+      The suffix slot is empty, so use an [[Orb of Augmentation]].
+    why: >-
+      An Augmentation adds a modifier to an empty slot and never touches the
+      full one. It is a roll at the suffix for almost nothing, so take it
+      every time a slot is empty. This one gave a cure for shock: useful, not
+      what we came for.
+    state:
+      rarity: magic
+      prefixes: [{ text: "18% increased Charge Recovery" }]
+      suffixes: [{ text: "Grants Immunity to Shock for 7 seconds if used while Shocked" }]
+  - title: "Alterations until the suffix says Bleeding"
+    do: >-
+      Use an [[Orb of Alteration]] and read the suffix. No suffix: use an
+      Augmentation. Wrong suffix: next Alteration. Stop when the suffix
+      begins "Grants Immunity to Bleeding".
+    why: >-
+      An Alteration throws away both modifiers and rolls new ones. You are
+      reading one line and ignoring the other, which is why this is quick.
+    check: >-
+      The flask's name ends in "of Sealing" (6–8 seconds) or "of Alleviation"
+      (9–11 seconds). Either is a finished suffix: the immunity ends the
+      bleeding the moment it starts, and the seconds only say how long before
+      you can bleed again.
+    fail: >-
+      If the orbs run out, stop on any cure you have needed lately: the same
+      suffix exists for freeze, ignite, shock and poison, and "Removes Curses
+      on use" is the most common of all at this item level.
+    state:
+      rarity: magic
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+  - title: "Give it a prefix"
+    do: >-
+      If the prefix slot is empty, use one more Augmentation. Then stop,
+      whatever it gives.
+    why: >-
+      The suffix is the reason for this flask, and it is safe: an
+      Augmentation cannot remove it. No prefix on a life flask ruins it. If
+      you get "Instant Recovery", a little under one prefix roll in five at
+      this item level, you have the prefix most players hope for while
+      levelling: the whole heal at once, for less of it.
+    check: >-
+      Do **not** use an Alteration to improve the prefix. It would reroll the
+      suffix you just spent your orbs on.
+    state:
+      rarity: magic
+      prefixes: [{ text: "49% increased Recovery rate" }]
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+  - title: "Quality, when you can spare it"
+    do: >-
+      If you have [[Glassblower's Bauble]]s, use them on the flask up to 20%
+      quality.
+    why: >-
+      On a life flask quality raises the amount recovered, by long-standing
+      behaviour: watch the number on the flask go up. The orb's own text says
+      it has a greater effect on lower item level flasks, so a levelling
+      flask takes few. Skip this if Baubles are scarce; the craft is done
+      without it.
+    state:
+      rarity: magic
+      prefixes: [{ text: "49% increased Recovery rate" }]
+      suffixes:
+        - { text: "Grants Immunity to Bleeding for 7 seconds if used while Bleeding / Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood" }
+variations: >-
+  **A second flask for curses.** "Removes Curses on use" has a single tier
+  with a large weight, so on a low flask it is the easiest useful suffix in
+  the game: 23% of suffix rolls at item level 33, by our arithmetic. The six
+  steps are the same.
+
+
+  **The same flask in maps.** Repeat the craft on a Divine or Eternal Life
+  Flask when you reach them. At item level 80 the best tier, "of Assuaging",
+  gives 15–17 seconds of immunity. All tiers weigh the same, so a higher
+  item level does not make the suffix harder to find.
+mistakes:
+  - "Using an Alteration when the suffix is right and only the prefix is missing. An Alteration rerolls both slots."
+  - "Looking for \"of the Lizard\". That is the bleeding suffix of utility flasks; a life flask cannot roll it."
+  - "Rolling on for more seconds of immunity. The lowest tier ends the bleeding just as surely as the best."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bases, tiers, item levels and weights, and the text of the Glassblower's Bauble. The odds are our arithmetic." }

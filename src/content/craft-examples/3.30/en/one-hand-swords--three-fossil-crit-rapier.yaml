@@ -1,0 +1,178 @@
+category: one-hand-swords
+title: "A critical strike rapier from three Fossils"
+level: 3
+summary: "One Fossil for the prefixes and two for the suffixes: a single Resonator that aims at physical damage, attack speed and both critical strike modifiers at once."
+goal: >-
+  A physical rapier for a build that crits: physical prefixes on one side
+  and attack speed, Critical Strike Chance and Critical Strike Multiplier on
+  the other. On this weapon **both sides are crowded**, which is what makes
+  it the hardest kind of sword, and no cheap tool handles both. The lesson
+  is how several Fossils in one Resonator combine, and how to read the
+  result when two sides are being rolled for at the same time.
+base: "Vaal Rapier"
+itemLevel: 77
+baseWhy: >-
+  6.5% base critical strike chance is the highest in the category, and local
+  Critical Strike Chance multiplies it. The implicit adds +25% Critical
+  Strike Multiplier. Item level 77 opens Tier 1 attack speed and Tier 1 of
+  both critical strike suffixes, and Tier 2 of the physical percentages.
+  Fossil rerolls land on middle tiers far more often than top ones, so item
+  level 83 would buy a tier you will rarely see.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+    - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: fossil }
+    - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+    - { text: "31% increased Critical Strike Chance", how: fossil }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Shuddering Fossil]]", amount: "20–40" }
+  - { item: "[[Deft Fossil]]", amount: "20–40" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt", note: "the size that holds three Fossils" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Three Fossils and a three-socket Resonator per attempt, all from Delve. It
+  is three times the Fossils of a simple reroll, and worth it only because
+  one use works on five modifiers.
+odds: >-
+  By our calculator at item level 77, with all three Fossils: 73% of prefix
+  rolls are physical (flat damage 35%, each percentage family 19%), and 83%
+  of suffix rolls are attack speed (36%), Critical Strike Chance (24%) or
+  Critical Strike Multiplier (24%). When a result has three suffixes they
+  are those three, one of each, a little over a third of the time. The
+  calculator leaves out Fossil-only modifiers, so the true figures are
+  slightly lower.
+
+
+  Tiers are untouched. A physical percentage of Tier 4 or better (110% pure,
+  or 45% hybrid) is about 1 prefix roll in 28, counting both families.
+  "Right families on both sides" takes a handful of Resonators; "and good
+  tiers" takes dozens.
+steps:
+  - title: "Choose a Fossil for each thing you want"
+    do: >-
+      Line the Fossils up against the plan. [[Jagged Fossil]]: more Physical
+      modifiers, for the prefixes. [[Shuddering Fossil]]: more Speed
+      modifiers, and attack speed is the only one a rapier has.
+      [[Deft Fossil]]: more Critical modifiers, which are the two critical
+      strike suffixes.
+    why: >-
+      Each "more" is ten times the weight and they combine. The "no" lines
+      help as well: Deft removes Attribute modifiers, so Strength and
+      Dexterity leave the suffix pool; Shuddering removes Mana modifiers.
+      What stays is one stowaway: life leech carries the physical tag, so
+      the Jagged Fossil multiplies it, and it is about 7% of suffix rolls.
+    state:
+      rarity: normal
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+  - title: "Prepare the rapier and use the first Resonator"
+    do: >-
+      Take a white Vaal Rapier to 20% quality and make it Rare with an
+      [[Orb of Alchemy]]. Put the three Fossils in a
+      [[Powerful Chaotic Resonator]] and use it on the rapier.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item with the combined weights of
+      everything in it. Quality matters here, unlike on an elemental foil:
+      this weapon's damage is physical.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 38 to 71 Cold Damage", how: fossil }
+        - { text: "Adds 9 to 18 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: fossil }
+        - { text: "2.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+17% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Judge the prefixes first, and be strict"
+    do: >-
+      Look at the prefix side before anything else. You want **two physical
+      prefixes, at least one of them a percentage** at a tier you set in
+      advance; for a mapping rapier, 110% or more pure, or 45% or more with
+      Accuracy. Only if the prefixes pass, look at the suffixes: attack
+      speed and at least one critical strike suffix.
+    why: >-
+      The result above shows why a rapier needs the Jagged Fossil and why
+      that is still not enough. Elemental damage weighs so much on this
+      pool that a quarter of prefix rolls are elemental even with physical
+      modifiers at ten times their weight. The suffix side behaves; the
+      prefix side is where results fail. So that is the side to judge
+      first.
+    check: >-
+      A suffix you would rather not have is acceptable. A third prefix slot
+      taken by cold damage is acceptable only if the other two are good:
+      it is the slot the bench would have used.
+    fail: >-
+      Use three more Fossils in a new Resonator on the same rapier.
+  - title: "Repeat until the prefixes pass"
+    do: >-
+      Keep going until a result meets the prefix bar with suffixes you can
+      live with. Stop early if the suffix side comes up complete.
+    why: >-
+      You are waiting for the rarer event, a decent percentage tier. While
+      you wait, the suffix side is being rolled again for free each time,
+      and it is right far more often than the prefixes are.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+  - title: "Bench the slot that is left"
+    do: >-
+      **If the hybrid rolled and a prefix is open** (as here): craft pure
+      increased Physical Damage, 80–99% for 4 [[Chaos Orb]]s or 100–129%
+      for 4 Exalted Orbs. **If the pure percentage rolled:** craft flat
+      Physical Damage, adds 13–17 to 26–30 for 4 Chaos Orbs. **If all
+      three prefixes are taken and a suffix is missing:** craft that
+      suffix: Critical Strike Chance 25–27% or Critical Strike Multiplier
+      25–28% for 4 Chaos Orbs, or attack speed 11–15% for 2.
+    why: >-
+      The bench has one slot and this weapon has six jobs, so the slot goes
+      wherever luck ran out. The bench percentage shares a group with the
+      rolled pure one and not with the hybrid, which is why the hybrid is
+      the better roll to see on a budget.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+variations: >-
+  **An elemental crit foil.** Swap the Jagged Fossil for a
+  [[Prismatic Fossil]], which multiplies Elemental modifiers by six and
+  removes bleed and poison modifiers. On a thrusting sword at item level 83
+  our calculator then gives 92% of prefix rolls as added Fire, Cold or
+  Lightning Damage, with the suffix side as before. Use a Jewelled Foil for
+  its speed and skip the whetstones.
+
+
+  **On a one-hand sword.** The same three Fossils reach about 81% physical
+  prefixes there, because the elemental weights are lower. You give up the
+  rapier's critical strike chance and implicit to get it.
+
+
+  **When the prefixes are right and the suffixes are not.** Do not reroll.
+  Good physical prefixes on a rapier are the expensive half, and the
+  hardest example shows how to rebuild the suffixes without touching them.
+mistakes:
+  - "Judging the suffixes first because they look good. They look good on most results; the prefixes decide."
+  - "Leaving out the Jagged Fossil to save a socket. Without it a rapier's prefixes are 72% elemental."
+  - "Keeping three physical prefixes at the bottom tiers. Two good ones and a bench craft are a better weapon."
+  - "Expecting [[Memory Strands]] to raise the tiers. Fossils do not use strands, by player testing."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil multipliers, the tags on each modifier, the thrusting sword pool and its weights, bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }

@@ -1,0 +1,211 @@
+category: one-hand-swords
+title: "Một cây Spiritblade elemental: Essence trước, khóa sau"
+level: 4
+summary: "Một Essence of Wrath cố định một prefix elemental trong khi bạn roll tìm hai cái nữa. Rồi prefix được khóa và một reforge Critical dựng lại suffix. Thứ tự này không đảo được."
+goal: >-
+  Một cây sword elemental cho build crit: ba added elemental damage, hai
+  suffix critical strike và attack speed. Công cụ là một Essence, một
+  modifier bảo vệ và một reforge Harvest, và lần craft này nói về cách chúng
+  đối xử với nhau. **Essence phớt lờ khóa; reforge Harvest tôn trọng khóa.**
+  Vậy nên mọi việc Essence làm phải xong trước khi khóa được đặt lên, và mọi
+  việc sau đó phải làm bằng một công cụ mà khóa trụ được.
+base: "Anarchic Spiritblade"
+itemLevel: 83
+baseWhy: >-
+  Anarchic Spiritblade có 1.6 attack mỗi giây và 6.5% critical strike chance,
+  thứ không cây sword thường nào kết hợp được. Implicit của nó convert
+  physical damage của chính weapon thành một element ngẫu nhiên, điều không
+  làm một build elemental mất gì. Nó là one-hand sword, nên nó dùng pool đó:
+  prefix elemental là 60% số lần roll, không phải 72% như thrusting sword, và
+  đó là cái giá của base.
+
+
+  Item level 82 là cần cho Tier 1 của các added elemental damage. Một cây
+  Jewelled Foil cùng item level là lựa chọn thay thế: critical strike chance
+  thấp hơn, pool tốt hơn, và +25% Critical Strike Multiplier trên implicit.
+methods: [essence, meta, harvest, bench]
+result:
+  implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+  prefixes:
+    - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+    - { text: "Adds 62 to 124 Fire Damage" }
+    - { text: "Adds 47 to 92 Cold Damage" }
+  suffixes:
+    - { text: "36% increased Critical Strike Chance", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "18% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Deafening Essence of Wrath]]", amount: "20–40", note: "Shrieking thấp hơn một tier và rẻ hơn nhiều" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "cho craft attack speed cao nhất; 2 Chaos Orb mua được tier ngay dưới" }
+cost: >-
+  Essence cho giai đoạn một và các lần khóa cho giai đoạn hai: 4
+  [[Divine Orb]] và 1 [[Sacred Orb]] trên weapon trong 3.30, bị mỗi lần
+  reforge tiêu mất. Lifeforce thì nhỏ khi đặt cạnh cả hai. Hãy đặt số lần
+  khóa bạn sẵn lòng trả trước khi craft lần đầu tiên.
+odds: >-
+  **Giai đoạn 1.** Khi lightning đã được Essence cố định, mỗi lần roll prefix
+  tiếp theo trên pool này ra added Fire hoặc Cold Damage khoảng một nửa số
+  lần, theo phép tính của chúng tôi ở item level 83, và ra một trong hai cái
+  đó ở Tier 3 trở lên khoảng 1 trên 13 lần. Khi một kết quả có ba prefix, đó
+  là lightning, fire và cold khoảng 1 trên 6 lần, và trong khoảng một nửa số
+  đó, một trong hai cái roll ra là Tier 4 trở lên. Không phải kết quả nào
+  cũng có ba prefix. Vài chục Essence là một ngân sách thực tế.
+
+
+  **Giai đoạn 2.** Reforge Critical luôn cho Critical Strike Chance hoặc
+  Critical Strike Multiplier. Nếu tier được bốc theo weight, 1 trên 6 lần
+  reforge cho Tier 1 của cái nào đến và 1 trên 3 cho Tier 2 trở lên. Mỗi
+  suffix khác mà reforge roll ra là modifier critical thứ hai hoặc attack
+  speed khoảng một phần tư số lần. Đây là phép tính của chúng tôi; chưa được
+  đo trong 3.30.
+steps:
+  - title: "Giai đoạn 1: Essence of Wrath tới khi prefix xong"
+    do: >-
+      Dùng [[Deafening Essence of Wrath]] lên cây Spiritblade, hết lần này
+      tới lần khác. Chỉ đọc prefix. Dừng khi cả ba đều là elemental:
+      lightning của Essence, cộng hai trong số added Fire Damage, added Cold
+      Damage và increased Elemental Damage with Attack Skills, với ít nhất
+      một trong các cái roll ra ở Tier 4 trở lên.
+    why: >-
+      Essence đảm bảo adds 13–19 to 266–310 Lightning Damage, nằm giữa Tier 2
+      và Tier 1 tự nhiên, ở mọi lần dùng. Không gì khác trong game cố định
+      được tier của một prefix elemental. Kết quả bên dưới là cái cần từ
+      chối: suffix thì hấp dẫn còn prefix thứ hai là một prefix phần trăm
+      physical mà weapon này không dùng được.
+    check: >-
+      Fire và cold thuộc group khác với lightning của Essence, nên cả ba nằm
+      cùng nhau được. Attack speed trong các suffix không phải lý do để giữ
+      một kết quả: giai đoạn 2 sẽ thay các suffix.
+    fail: >-
+      Thêm một Essence. Lightning lần nào cũng quay lại.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "71% increased Physical Damage" }
+      suffixes:
+        - { text: "25% increased Attack Speed" }
+        - { text: "+46 to Dexterity" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Nhận một kết quả còn chỗ cho khóa"
+    do: >-
+      Khi prefix qua, hãy đếm suffix. Bạn cần **nhiều nhất hai**. Nếu kết quả
+      qua được lại có ba, lựa chọn là thêm một Essence hoặc dừng ở đây với
+      suffix như chúng đang có.
+    why: >-
+      "Prefix Modifiers cannot be changed" là một suffix và chiếm một ô. Đây
+      là thời điểm cuối cùng còn dùng được Essence: một khi prefix đã đáng
+      bảo vệ, Essence là công cụ duy nhất sẽ phá chúng bất kể trên item đang
+      craft gì.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "Gain 31 Life per Enemy Killed" }
+  - title: "Giai đoạn 2: khóa prefix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be changed**: 4
+      [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Hãy biết chính xác mình vừa mua gì. Reforge Harvest, các Veiled orb và
+      Orb of Scouring được người chơi ghi nhận là để yên một phía đã khóa.
+      Essence được ghi nhận là phớt lờ khóa. Với Fossil, trong 3.30 chúng tôi
+      chưa xác nhận được theo hướng nào. Không điều nào trong số này do nhà
+      phát triển tuyên bố, nên ở bản patch mới hãy thử trên một item rẻ
+      trước.
+    check: >-
+      Khóa hiện dưới dạng một suffix crafted. Cất Essence đi.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "+352 to Accuracy Rating" }
+        - { text: "Gain 31 Life per Enemy Killed" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge kèm một modifier Critical"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Nhận kết quả khi cây sword có hai
+      trong ba suffix nó muốn ở các tier bạn đã đặt từ trước, **và một ô
+      trống hoặc cái thứ ba**. Nếu không, khóa lại và lặp lại.
+    why: >-
+      Trên sword có hai modifier mang tag critical, và build này muốn cả hai,
+      nên phần đảm bảo chỉ có thể rơi vào thứ hữu dụng. Reforge Speed (150
+      Vivid) thì sẽ đảm bảo attack speed. Critical là lựa chọn nhỉnh hơn một
+      chút: sau nó, các suffix còn cần là attack speed và modifier critical
+      kia, khoảng một phần tư những gì các ô còn lại có thể roll ra; sau một
+      reforge Speed, hai modifier critical là hơn một phần năm một chút.
+    check: >-
+      Prefix không đổi, khóa đã biến mất, có một suffix critical strike. Rồi
+      đếm: hai suffix cần có và một ô trống là kết quả nên nhận.
+    fail: >-
+      Một suffix cần có, hoặc ba suffix trong đó có một đồ lấp chỗ: mỗi lần
+      thử thêm là trọn một lần khóa. Dừng ở con số bạn đã đặt.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "36% increased Critical Strike Chance", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Bench suffix thứ ba"
+    do: >-
+      Craft cái nào còn thiếu trong ba cái. Attack speed: 16–20% giá 4
+      [[Exalted Orb]], hoặc 11–15% giá 2 Chaos Orb. Critical Strike Chance
+      25–27% hoặc Critical Strike Multiplier 25–28%: 4 Chaos Orb.
+    why: >-
+      Sáu modifier cần có và một ô bench. Kế hoạch là để bench cấp suffix nào
+      mà reforge không cho, nên không có gì bị tiêu vào việc đuổi theo một cú
+      roll thứ ba.
+    state:
+      implicits: ["100% of Physical Damage from Hits with this Weapon is Converted to a random Element"]
+      prefixes:
+        - { text: "Adds 16 to 291 Lightning Damage", how: essence }
+        - { text: "Adds 62 to 124 Fire Damage" }
+        - { text: "Adds 47 to 92 Cold Damage" }
+      suffixes:
+        - { text: "36% increased Critical Strike Chance", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "18% increased Attack Speed", how: crafted }
+variations: >-
+  **Khóa phía kia.** Nếu giai đoạn 1 tình cờ cho ba suffix tốt và prefix kém,
+  hãy xoay ngược lần craft: "Suffix Modifiers cannot be changed" là một
+  prefix, và khi đó một reforge Fire, Cold hoặc Lightning của Harvest (50
+  Lifeforce) chỉ roll lại prefix và luôn kèm element đó. Nó cần một ô prefix
+  trống cho khóa.
+
+
+  **Trên Jewelled Foil.** Giai đoạn 1 đi nhanh hơn: mỗi prefix tiếp theo là
+  fire hoặc cold 63% số lần, không phải 50%. Cùng các Essence đó dùng được
+  trên thrusting sword và cho cùng các modifier.
+
+
+  **Rẻ hơn.** [[Shrieking Essence of Wrath]] cho adds 13–17 to 247–286, đúng
+  bằng Tier 2 tự nhiên. Trên một cây sword sẽ không được mirror, đó là
+  Essence hợp lý.
+mistakes:
+  - "Dùng Essence lên cây sword đã khóa để \"cải thiện lightning\". Theo thử nghiệm của cộng đồng, nó phớt lờ khóa và roll lại cả ba prefix."
+  - "Giữ một kết quả Essence vì suffix của nó. Kế hoạch này thay các suffix; ở giai đoạn 1 chỉ prefix là thứ đang được roll tìm."
+  - "Khóa khi item có ba suffix. Không có ô cho khóa."
+  - "Trả tiền cho lần khóa thứ ba để biến một multiplier 30% thành 35%. Số Divine Orb đó lẽ ra đã mua được nhiều damage hơn ở chỗ khác trên nhân vật."
+  - "Dùng Essence trên base có [[Memory Strands]]: mỗi cái có thể tiêu tới 80, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier Essence cho cả hai class sword, pool của one-hand sword, tag, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Critical, Speed và element cùng giá của chúng." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essence được ghi nhận là phớt lờ các modifier bảo vệ." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

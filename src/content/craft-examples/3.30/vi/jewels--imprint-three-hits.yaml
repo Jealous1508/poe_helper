@@ -1,0 +1,149 @@
+category: jewels
+title: "Life và hai dòng nữa: Imprint trước Regal Orb"
+level: 3
+summary: "Roll một jewel Magic có Life và một suffix mong muốn, lưu nó bằng Imprint của beast, rồi lặp lại Regal Orb tới khi modifier thứ ba là cái bạn dùng."
+goal: >-
+  Một jewel Rare có increased maximum Life và hai modifier damage, cả ba đều
+  do bạn chọn. Jewel không có ô bench và không gì khóa được một phía của nó,
+  nên **Imprint** là sự bảo vệ duy nhất item này có được. Bài học là khi nào
+  một jewel xứng đáng có Imprint, và mỗi lần thử lại thật sự tốn bao nhiêu.
+base: "Crimson Jewel"
+itemLevel: 70
+baseWhy: >-
+  Life là modifier lần craft này nhất định phải có, và Crimson đặt weight 500
+  cho nó, trong khi Viridian và Cobalt đặt 350. Phần còn lại của danh sách là
+  melee hai tay, thứ Crimson cũng có. Item level không đóng vai trò gì.
+methods: [currency, beast]
+result:
+  prefixes:
+    - { text: "7% increased maximum Life" }
+    - { text: "13% increased Damage with Two Handed Weapons" }
+  suffixes:
+    - { text: "11% increased Melee Damage" }
+needs:
+  - { item: "Một Crimson Jewel", amount: "1", note: "item level nào cũng được" }
+  - { item: "[[Orb of Alteration]]", amount: "400–800" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Craicic Croaker]]", amount: "1 cho mỗi lần thử Regal", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 cho mỗi lần thử" }
+cost: >-
+  Alteration tính bằng trăm cho jewel Magic, rồi tới beast. Trong 3.30, Einhar
+  chỉ bắt beast đỏ, nên hãy đếm số Croaker trong [[Menagerie]] trước
+  Alteration đầu tiên: kế hoạch cần khoảng mười con trong một lượt trung bình,
+  và một lượt xui cần gấp đôi.
+odds: >-
+  **Jewel Magic.** Life chiếm 2.80% weight prefix của Crimson. Bốn suffix
+  trong danh sách chiếm 8.1% weight suffix của nó. Cả hai cùng lúc là khoảng
+  0.23%: 1 trên 440 jewel hai modifier, theo phép tính của chúng tôi.
+
+
+  **Regal Orb.** Khi jewel đã có Life, năm prefix trong danh sách chiếm 13%
+  weight prefix còn lại; khi nó đã có Melee Damage, ba suffix còn lại chiếm
+  khoảng 6% weight suffix còn lại. Nếu Regal Orb thêm prefix khoảng một nửa
+  số lần, điều mà kích cỡ tương đương của hai pool gợi ý và không nguồn chính
+  thức nào khẳng định, thì cứ khoảng mười một Regal có một cái trúng.
+steps:
+  - title: "Roll jewel Magic: Life và một suffix trong danh sách"
+    do: >-
+      Dùng [[Orb of Alteration]] tới khi prefix là **increased maximum
+      Life**. Khi Life ra mà suffix còn trống, dùng một
+      [[Orb of Augmentation]]. Chỉ giữ jewel khi suffix là một trong số:
+      increased Melee Damage, increased Attack Speed, +% to Melee Critical
+      Strike Multiplier, +% to Global Critical Strike Multiplier.
+    why: >-
+      Jewel Magic chứa gì thì thứ đó đi theo vào jewel Rare và vào mọi
+      Imprint của nó. Một suffix bạn không dùng sẽ chiếm một trong vỏn vẹn
+      hai ô suffix suốt phần còn lại của lần craft, nên jewel Magic phải đúng
+      ở cả hai phía trước khi lưu bất cứ thứ gì.
+    check: >-
+      Roll của Life là 5–7%. Đừng loại một cái 5%: một [[Divine Orb]] ở cuối
+      sẽ roll lại nó. Chỉ loại những modifier sai.
+    fail: >-
+      Hết Alteration khi đang có Life và một suffix bạn không dùng: Regal nó
+      như hiện trạng rồi dừng. Đó là một jewel hai dòng, không phải một cái
+      phí.
+    state:
+      rarity: magic
+      prefixes: [{ text: "7% increased maximum Life" }]
+      suffixes: [{ text: "11% increased Melee Damage" }]
+  - title: "Tự hỏi jewel này có xứng đáng một Imprint không"
+    do: >-
+      Đếm xem jewel Magic đã tốn bao nhiêu. Nếu nó tốn vài chục Alteration,
+      nhảy tới Regal Orb. Nếu nó tốn hàng trăm, như mức trung bình của một
+      jewel có Life và một suffix trong danh sách, thì đi tiếp.
+    why: >-
+      Một Regal Orb tệ mà không có Imprint sẽ đưa bạn về lại chỗ Alteration.
+      Một Imprint tốn một Croaker, ba beast khác và một Regal Orb thứ hai.
+      Imprint là món mua hời hơn đúng khi jewel Magic khó roll, và là phí
+      phạm khi nó không khó.
+  - title: "Imprint"
+    do: >-
+      Trong [[Menagerie]], dùng **Create an Imprint of a Magic Item** lên
+      jewel: một [[Craicic Croaker]] và ba beast Rare khác.
+    why: >-
+      Imprint là một bản sao lưu của jewel đúng như lúc này. Nó chỉ dùng được
+      trên item Magic, đó là lý do nó đi trước Regal Orb.
+    check: >-
+      [[Imprint]] nằm trong inventory của bạn như một item riêng. Cứ để nó ở
+      đó.
+    state:
+      rarity: magic
+      prefixes: [{ text: "7% increased maximum Life" }]
+      suffixes: [{ text: "11% increased Melee Damage" }]
+  - title: "Regal Orb, rồi đối chiếu với danh sách"
+    do: >-
+      Dùng một [[Regal Orb]]. **Giữ** jewel nếu modifier mới là một trong các
+      prefix của danh sách (Damage with Two Handed Weapons, Global Physical
+      Damage, damage với loại weapon của bạn, Attack Speed with Two Handed
+      Melee Weapons, Critical Strike Multiplier with Two Handed Melee
+      Weapons) hoặc một trong ba suffix nó còn nhận được.
+    why: >-
+      Melee Damage chung group với Projectile Damage và increased Damage
+      thuần, nên hai cái đó không còn thêm vào được nữa. Mọi thứ khác ở cả
+      hai phía thì được.
+    fail: >-
+      Bất cứ thứ gì ngoài danh sách: dùng Imprint lên jewel để đưa nó về
+      trạng thái Magic, làm một Imprint **mới** bằng một Croaker khác, rồi
+      dùng một Regal Orb khác. Mỗi lần thử tốn một Regal Orb và một bộ beast.
+      Hãy quyết định bạn sẽ trả tiền cho bao nhiêu lần thử trước lần đầu
+      tiên.
+    state:
+      prefixes:
+        - { text: "7% increased maximum Life" }
+        - { text: "13% increased Damage with Two Handed Weapons" }
+      suffixes:
+        - { text: "11% increased Melee Damage" }
+  - title: "Cất Imprint đi"
+    do: >-
+      Sau một Regal Orb mà bạn giữ, bạn vẫn còn cầm một Imprint chưa dùng.
+      Đừng dùng nó. Chuyển nó ra khỏi inventory.
+    why: >-
+      Dùng nó lúc này sẽ xóa bỏ cái Regal Orb bạn vừa chấp nhận. Nó vẫn đáng
+      giữ làm bảo hiểm: nếu một ván cược về sau làm hỏng jewel Rare, Imprint
+      đưa nó về trạng thái Magic bạn đã lưu. Ví dụ bốn modifier dựa vào điều
+      đó.
+variations: >-
+  **Sắp cạn beast.** Hãy nới rộng danh sách thay vì mua thêm Croaker. Tính
+  bất kỳ resistance nào là trúng sẽ nâng cơ hội của Regal Orb từ khoảng 1 trên
+  11 lên khoảng 1 trên 6, theo phép tính của chúng tôi.
+
+
+  **Bản cho caster.** Trên Cobalt Jewel, cùng kế hoạch đó là Life với
+  increased Spell Damage hoặc Cast Speed, rồi một Regal Orb cầu một prefix
+  "Spell Damage while…". Ở đó Life chỉ có weight 350, nên jewel Magic lâu hơn
+  khoảng một nửa.
+
+
+  **Không có Life.** Bỏ yêu cầu đó thì lần này trở thành ví dụ trước kèm một
+  lưới an toàn, với một phần nhỏ số Alteration. Life chính là thứ làm jewel
+  này đắt.
+mistakes:
+  - "Làm Imprint sau Regal Orb. Không làm được Imprint của một item Rare."
+  - "Lưu một jewel Magic có suffix bạn không dùng. Khi đó nó là một phần của mọi lần thử."
+  - "Imprint một jewel chỉ tốn ba mươi Alteration. Roll lại nó còn rẻ hơn số beast."
+  - "Lỡ tay dùng cái Imprint còn thừa sau một Regal Orb tốt."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool, weight và các group của Crimson Jewel. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và beast nó cần trong 3.30." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Beast vàng không còn được bắt nữa." }

@@ -1,0 +1,244 @@
+category: amulets
+title: "Two gem levels: a fractured +1 and a forced second"
+level: 5
+summary: "The full plan for a +2 Chaos amulet: fracture the gem level nothing can aim at, build the suffixes with Essences, then lock them and make a Chaos reforge give the second gem level."
+goal: >-
+  An amulet with "+1 to Level of all Skill Gems" and "+1 to Level of all
+  Chaos Skill Gems" together, increased Chaos Damage and Damage over Time
+  Multiplier below them, and Life from the bench. No step here uses a new
+  tool. What makes it the hardest amulet on this page is **deciding which
+  modifier gets which kind of protection**, and doing the stages in the only
+  order in which each one survives the next.
+base: "Turquoise Amulet"
+itemLevel: 84
+baseWhy: >-
+  Item level 82 or more for Tier 1 Damage over Time Multiplier; the example
+  uses 84. The gem levels need only 75. The base must have **no influence**:
+  a [[Fracturing Orb]] refuses influenced items, which rules out the
+  Astrolabe Amulet. Turquoise gives Dexterity and Intelligence, the usual
+  shortfall of a chaos build; any ordinary amulet works.
+methods: [fracture, essence, meta, harvest, bench]
+result:
+  note: "Fractured"
+  implicits: ["+21 to Dexterity and Intelligence"]
+  prefixes:
+    - { text: "+1 to Level of all Skill Gems", how: fractured }
+    - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+    - { text: "+52 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "33% increased Chaos Damage", how: essence }
+    - { text: "+21% to Damage over Time Multiplier" }
+    - { text: "+41 to Intelligence" }
+needs:
+  - { item: "An amulet with \"+1 to Level of all Skill Gems\" fractured, item level 82+", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Deafening Essence of Envy]]", amount: "50–150" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Exalted Orb]]", amount: "8 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 per reforge" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Three bills, in order of size. The fractured base: in 3.30 fractured items
+  come from Tier 5 drops, a [[Fracturing Orb]] or a [[Fractured Fossil]], and
+  this particular modifier is the rarest prefix in the category. Then
+  Deafening Essences of Envy, counted in dozens at least. Then one or two
+  locks at 4 [[Divine Orb]]s and 8 [[Exalted Orb]]s each.
+
+
+  We give no total. Prices in the first week of a league move too fast, and
+  the Essence stage has a long tail.
+odds: >-
+  **Stage 2.** The Essence guarantees Chaos Damage. Beside it you are waiting
+  for Damage over Time Multiplier, which weighs 300 per tier in a suffix pool
+  of about 124,000: one suffix roll in 138 is 16% or more, by our arithmetic.
+  Each Essence rolls one or two further suffixes, so at best about one
+  Essence in 70 lands it, and often it is worse. This is the stage that
+  decides the budget.
+
+
+  **Stage 3.** The Chaos gem level is the only prefix with the chaos tag, so
+  with the suffixes locked the reforge gives it every time, if reforges
+  choose their guaranteed modifier the way players have always found them
+  to. What you cannot control is whether a third prefix rolls with it.
+
+
+  **Making the base yourself.** About 1 prefix roll in 1,750 for the gem
+  level, then a one-in-four Fracturing Orb with no way back.
+steps:
+  - title: "Stage 1: the fractured gem level"
+    do: >-
+      Buy or find an amulet with **"+1 to Level of all Skill Gems"
+      fractured**. To make one: roll the prefix on a Magic amulet, bring the
+      item to a Rare with **exactly four** modifiers, and use a
+      [[Fracturing Orb]].
+    why: >-
+      Choose what to fracture by asking which modifier no later tool can
+      bring back. The Chaos gem level can be forced, as stage 3 shows. This
+      one cannot: it weighs 50, it has no tag of its own that a reforge can
+      name, and every Essence and reforge in the next two stages would wipe
+      it. So it is the one that must be permanent.
+    check: >-
+      The Fracturing Orb picks one modifier at random among those on the
+      item. With four it is one in four. Do not add a fifth first.
+    fail: >-
+      It fractured something else. The amulet cannot be fractured again and
+      an Imprint cannot be applied to a fractured item, so there is no
+      undoing it. This is why most people buy the base.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+19 to maximum Energy Shield" }
+      suffixes:
+        - { text: "+27 to Strength" }
+        - { text: "+18% to Cold Resistance" }
+  - title: "Stage 2: suffixes first, with Essences"
+    do: >-
+      Use [[Deafening Essence of Envy]] on the amulet, again and again,
+      until the suffixes are **the Essence's Chaos Damage, Damage over Time
+      Multiplier of 16% or more, and a third suffix you can live with**, and
+      the amulet has **at most two prefixes**.
+    why: >-
+      Suffixes come before prefixes for one reason: Essences are reported to
+      ignore the lock. If the prefix side were finished first, the first
+      Essence would destroy everything on it that is not fractured. Done in
+      this order, the Essence stage has nothing to lose but itself.
+
+
+      Envy is the Essence because increased Chaos Damage exists nowhere in an
+      amulet's natural pool, and its 31–34% at Deafening is a suffix you
+      could not get by any roll.
+    check: >-
+      Count the prefixes on any result you mean to keep. Stage 3 needs one
+      open prefix slot for the lock, and the fractured gem level already
+      takes one.
+    fail: >-
+      Nothing to fix: the fractured prefix survives every Essence. Use the
+      next one. If the budget runs out, a result with Chaos Damage and two
+      plain suffixes is still a +1 amulet worth finishing; skip to stage 3.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+52 to maximum Mana" }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Stage 3a: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 8 [[Exalted Orb]]s.
+    why: >-
+      The Damage over Time Multiplier is not fractured and took the whole of
+      stage 2 to find. From here on, nothing may touch the suffix side.
+    check: >-
+      Three suffixes, all kept. The lock shows as a crafted prefix.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+52 to maximum Mana" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Stage 3b: the Chaos reforge"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Chaos modifier** (100
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Two natural modifiers on an amulet carry the chaos tag: Chaos
+      Resistance, a suffix, and "+1 to Level of all Chaos Skill Gems", a
+      prefix. The suffix side is full and locked. The guaranteed modifier has
+      one place left to be. The fractured prefix stays, the Mana and the
+      lock are replaced.
+
+
+      The two gem levels can share the amulet because they are different
+      groups. A second **typed** gem level could not join them.
+    check: >-
+      Suffixes unchanged, the lock gone, both gem levels present. Then count
+      prefixes: two is the result you want, three means the reforge rolled
+      an extra one.
+    fail: >-
+      A third prefix you do not want, and no room for Life: the choice is to
+      accept the amulet without Life, or to lock and reforge again. The
+      second gem level comes back each time; only the third prefix changes.
+      Each repeat is a full lock.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Stage 4: one bench modifier"
+    do: >-
+      Craft +41–55 to maximum Life at the bench for 2 [[Orb of Alchemy]].
+    why: >-
+      One slot is open, so one plain craft fills it. "Can have up to 3
+      Crafted Modifiers" would be a mistake here: it is a suffix, the suffix
+      side is full, and even with room it would spend a slot to gain nothing
+      when only one slot is free.
+    state:
+      note: "Fractured"
+      implicits: ["+21 to Dexterity and Intelligence"]
+      prefixes:
+        - { text: "+1 to Level of all Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Skill Gems", how: harvest }
+        - { text: "+52 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "33% increased Chaos Damage", how: essence }
+        - { text: "+21% to Damage over Time Multiplier" }
+        - { text: "+41 to Intelligence" }
+  - title: "Finish: Catalysts and values"
+    do: >-
+      Add Catalysts now that nothing else will change, then a [[Divine Orb]]
+      if the Damage over Time Multiplier is at the bottom of its range.
+    why: >-
+      A Divine Orb rerolls every number at once and never changes a tier or
+      a gem level. In 3.30 Catalysts come only from Ultimatum; choose the
+      kind that matches the modifier you most want larger.
+variations: >-
+  **Without the fracture.** Skip stage 1 and do stages 2 to 4 on any amulet:
+  the result is a +1 Chaos amulet with the same suffixes, for a fraction of
+  the cost. That is the version most builds should make.
+
+
+  **Other gem types.** Only Chaos can be forced this way. A Fire, Cold or
+  Lightning reforge under the same lock could also give added damage of that
+  element to attacks, which is a prefix with the same tag and twenty times
+  the weight. For those types fracture the typed gem level instead, or
+  accept one.
+
+
+  **A Hunter amulet.** Hunter influence adds "+16–20% to Chaos Damage over
+  Time Multiplier", a different group from the natural multiplier, and none
+  of its prefixes has the chaos tag, so stage 3 still works. But an
+  influenced item cannot be fractured: on that route the first gem level
+  has to go.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next currency
+  before you commit. The one place it could pay here is the Fracturing Orb.
+mistakes:
+  - "Finishing the prefixes before the suffixes. The Essences that build the suffix side ignore the lock and would wipe them."
+  - "Fracturing the Chaos gem level. It is the one modifier the plan can produce on demand; the fracture belongs on the one it cannot."
+  - "Keeping a stage 2 result with three prefixes. The lock needs a prefix slot, and an Annulment to make one can hit the multiplier."
+  - "Crafting \"Can have up to 3 Crafted Modifiers\" with one slot open. It uses the slot it was meant to fill."
+  - "Using an influenced or Astrolabe base. Neither can be fractured."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, groups and tags, the Essence modifiers, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers on jewellery." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum as the only source of Catalysts." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Chaos reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side and Essences do not. Partly older than 3.30." }

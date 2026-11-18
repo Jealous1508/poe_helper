@@ -1,0 +1,163 @@
+category: helmets
+title: "Một cái helmet minion: Bone Helmet dưới Essence of Fear"
+level: 2
+summary: "Ba thứ mà roll thường không bao giờ cho được, trên cùng một item: một implicit của base, một prefix chỉ Essence mới có và một prefix chỉ bench mới có."
+goal: >-
+  Một cái helmet cho build minion với minion damage hai lần và một prefix
+  life bên cạnh. Ở đây không có gì khó. Điều cốt yếu là thấy được **các
+  modifier đặc biệt của một cái helmet đến từ đâu**: một cái từ base, một cái
+  từ Essence, một cái từ bench, và không cái nào từ cuộc xổ số.
+base: "Bone Helmet"
+itemLevel: 75
+baseWhy: >-
+  Implicit của Bone Helmet là "Minions deal 20–30% increased Damage", được
+  nâng lên khoảng đó trong 3.30. Nó là một base Atlas, nên chỉ rơi khi một
+  item roll ra Item Tier đủ cao. Hãy tìm một cái trắng hoặc mua một cái.
+
+
+  Base này rơi từ level 73, và item level 75 là nhiều hơn mức lần craft này
+  cần: Tier 1 của maximum Life đã mở từ 64. Ở 75, "+2 to Level of all Minion
+  Skill Gems" tự nhiên cũng roll được, với weight 25. Đừng tính tới nó.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["Minions deal 27% increased Damage"]
+  prefixes:
+    - { text: "Minions deal 23% increased Damage", how: essence }
+    - { text: "+104 to maximum Life" }
+    - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+  suffixes:
+    - { text: "+39% to Lightning Resistance" }
+    - { text: "+34 to Intelligence" }
+needs:
+  - { item: "[[Screaming Essence of Fear]]", amount: "5–15", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench, hoặc 4 Orb of Alchemy để lấy life" }
+  - { item: "[[Blessed Orb]]", amount: "1–3", note: "tùy chọn, cho implicit" }
+cost: >-
+  Base trắng, rồi tới Essence. Screaming Essence là thứ map đỏ phát ra trong
+  3.30. Bước bench là 4 [[Chaos Orb]] hoặc 4 Orb of Alchemy, tùy chỗ thiếu
+  nào còn lại.
+odds: >-
+  Prefix của chính Essence thì chắc chắn. Bên cạnh nó, mỗi prefix khác mà
+  Essence roll ra là maximum Life khoảng 1 trên 5 lần trên base này, và life
+  từ 85 trở lên khoảng 1 trên 12 lần, theo phép tính của chúng tôi từ weight
+  ở item level 75. Một kết quả có prefix **trống** cũng đạt, vì bench đặt
+  được life vào đó. Chỉ kết quả có ba prefix mà không có life mới hỏng hẳn,
+  nên phần lớn người chơi cần một nhúm Essence, không phải hàng chục.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa cái Bone Helmet trắng lên 20% quality bằng
+      [[Armourer's Scrap]]. Dùng một [[Screaming Essence of Fear]] lên nó.
+    why: >-
+      Trên helmet, một Essence of Fear đảm bảo "Minions deal increased
+      Damage" dưới dạng **prefix**: 22–24% ở bậc Screaming, 25–27% ở
+      Shrieking, 28–30% ở Deafening. Không tier nào của modifier đó tồn tại
+      trong pool tự nhiên. Nó khác group với implicit, nên hai cái cộng lại
+      với nhau.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+61 to maximum Mana" }
+        - { text: "+21% to Item Rarity" }
+      suffixes:
+        - { text: "+15 to Strength" }
+        - { text: "Regenerate 36.4 Life per second" }
+  - title: "Đọc prefix theo một luật"
+    do: >-
+      Giữ Alt. Prefix Essence lúc nào cũng ở đó. Hãy hỏi về hai ô prefix còn
+      lại: **có cái nào là maximum Life từ 85 trở lên không, hoặc có cái nào
+      trống không?**
+    why: >-
+      Cái helmet ở trên không đạt. Các prefix còn lại của nó là mana và Item
+      Rarity, và cả ba ô đã bị chiếm, nên ngay cả bench cũng không thêm được
+      life. Trên một base có Energy Shield trong đó, mana là prefix hay gặp
+      nhất.
+    check: >-
+      Đạt nếu có life roll ra từ 85 trở lên. Đạt nếu có một prefix trống, và
+      bạn sẽ bench life vào. Chỉ không đạt khi có ba prefix mà không có life.
+    fail: >-
+      Dùng Essence kế tiếp lên cùng cái helmet đó. Từ bậc Screaming trở lên,
+      một Essence roll lại item Rare, và prefix được đảm bảo của nó quay lại
+      mỗi lần.
+  - title: "Lặp lại tới khi đạt, rồi liếc qua suffix"
+    do: >-
+      Cứ dùng Essence tới khi luật về prefix được thỏa. Rồi nhìn suffix: bạn
+      muốn ít nhất một resistance, hoặc một ô suffix trống.
+    why: >-
+      Phía prefix giữ mọi thứ hiếm của cái helmet này, nên nó được đánh giá
+      trước. Một phía suffix yếu thì sống chung được với giá rẻ; thiếu prefix
+      life thì không.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+  - title: "Dùng một craft bench duy nhất cho chỗ thiếu lớn nhất"
+    do: >-
+      **Life đã roll ra, còn một prefix trống** (như ở đây): ở
+      [[Crafting Bench]], craft "+1 to maximum number of Raised Zombies, +1
+      to maximum number of Skeletons" giá 4 [[Chaos Orb]] nếu build của bạn
+      dùng một trong hai. Nếu không, để yên prefix đó và craft một resistance
+      vào suffix: 29–35% giá 3 Chaos Orb.
+
+
+      **Không có life, còn một prefix trống:** craft maximum Life, 56–70 giá
+      4 Orb of Alchemy.
+    why: >-
+      Mỗi item một modifier bench, nên nó đi vào chỗ không gì khác vào được.
+      Prefix zombie và skeleton chỉ tồn tại ở bench và dưới dạng veiled
+      modifier.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+        - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+  - title: "Roll lại con số của implicit"
+    do: >-
+      Khi đã quyết giữ cái helmet, hãy dùng một [[Blessed Orb]] nếu implicit
+      đang gần đáy khoảng 20–30% của nó.
+    why: >-
+      Một Blessed Orb roll lại chỉ số của implicit và không đụng tới gì khác.
+      Mười điểm minion damage đổi lấy một orb rẻ là cuộc đổi chác lời nhất
+      trên item, và nó dễ bị quên vì implicit không hề thay đổi trong suốt
+      lần craft.
+    state:
+      implicits: ["Minions deal 27% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 23% increased Damage", how: essence }
+        - { text: "+104 to maximum Life" }
+        - { text: "+1 to maximum number of Raised Zombies / +1 to maximum number of Skeletons", how: crafted }
+      suffixes:
+        - { text: "+39% to Lightning Resistance" }
+        - { text: "+34 to Intelligence" }
+variations: >-
+  **Không phải build minion.** Cùng quy trình đó với một Essence of Loathing
+  cho increased Mana Reservation Efficiency dưới dạng suffix: 5–6% ở bậc
+  Screaming, 7–8% ở Shrieking, 9–10% ở Deafening. Nó cũng không có trong pool
+  tự nhiên. Dùng base nào bạn thích cũng được, vì khi đó implicit của Bone
+  Helmet là phí.
+
+
+  **Eldritch implicit về sau.** Một cái Bone Helmet không có influence và
+  nhận được một Ember hoặc một Ichor. Hãy đọc dòng chữ của chúng trước: mỗi
+  cái "replaces any existing implicit modifiers" ngoại trừ implicit Eldritch
+  của phía đối diện. Thêm cái nào cũng gỡ mất implicit minion damage. Searing
+  Exarch đúng là có minion life và minion movement speed trên helmet, nên đó
+  là một cuộc đổi chác, không phải một sai lầm; hãy làm khi đã biết rõ.
+mistakes:
+  - "Giữ một kết quả có ba prefix mà không có life vì suffix tốt. Bench không với tới được một phía đã đầy."
+  - "Dùng bench giữa các Essence. Essence kế tiếp gỡ modifier bench cùng với mọi thứ khác."
+  - "Mua Bone Helmet cho một build không có minion. Base này có defence thấp hơn một cái helmet thường cùng level; implicit là toàn bộ lý do để dùng nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên helmet, Bone Helmet, tier, weight và giá bench, cùng dòng chữ in-game của các Eldritch Ember. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Implicit 3.30 của Bone Helmet, Item Tier cho các base đặc biệt, và bậc Essence nào xuất hiện ở map nào." }

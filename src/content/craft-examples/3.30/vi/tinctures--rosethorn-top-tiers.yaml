@@ -1,0 +1,160 @@
+category: tinctures
+title: "Rosethorn Tincture ở item level 85: trả tiền cho tier"
+level: 3
+summary: "Critical strike multiplier tier cao cùng với increased effect. Orb vẫn là ba cái đó như mọi khi; phần việc là quyết định trả tiền cho những tier nào."
+goal: >-
+  Một Rosethorn Tincture cho endgame: implicit mạnh, critical strike
+  multiplier từ +24% trở lên, và increased effect từ 17% trở lên. Không có
+  công cụ mới nào xuất hiện trong ví dụ này, vì dữ liệu 3.30 không cho
+  tincture cái nào. Thứ làm nó thành lần craft tincture khó nhất là phép
+  tính: **mỗi lần "chỉ lấy tier tốt nhất" là hóa đơn nhân đôi, và với hai ô
+  thì nó nhân đôi hai lần.** Biết điều đó trước khi bắt đầu là toàn bộ kỹ
+  năng.
+base: "Rosethorn Tincture"
+itemLevel: 85
+baseWhy: >-
+  Implicit là 100–150% increased Critical Strike Chance with Melee Weapons,
+  và critical strike multiplier là suffix biến nó thành lợi ích. Item level
+  85 mở tier tốt nhất của cả hai mục tiêu: +29–33% multiplier và 20–22%
+  increased effect. Ở 84 cả hai dừng thấp hơn một tier. Item level đó đáng
+  có kể cả khi bạn bằng lòng với tier thứ nhì, và phần xác suất bên dưới cho
+  thấy vì sao.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+  prefixes:
+    - { text: "18% increased effect" }
+  suffixes:
+    - { text: "+31% to Melee Weapon Critical Strike Multiplier" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "300–600" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Glassblower's Bauble]]", amount: "tới 20%" }
+cost: >-
+  Alteration tính bằng trăm. Không tiêu thứ gì khác, và không gì bảo vệ một
+  nửa tốt trong khi bạn roll lại nửa kia, nên cái giá hoàn toàn do mức bạn
+  chọn ở bước 2 quyết định.
+odds: >-
+  Tất cả tính từ weight ở item level 85, theo phép tính của chúng tôi. Một
+  lần roll suffix ra critical strike multiplier ở tier tốt nhất là 1 trên 63
+  lần, và ở hai tier tốt nhất là 1 trên 31. Một lần roll prefix ra increased
+  effect thuần ở tier tốt nhất là 1 trên 20 lần, và ở hai tier tốt nhất là 1
+  trên 10.
+
+
+  Một kết quả cần cả hai, nên nhân lại. Hai tier tốt nhất ở cả hai phía:
+  khoảng 1 trên 314 lần thử. Tier tốt nhất ở suffix, hai tier tốt nhất ở
+  prefix: 1 trên 628. Tier tốt nhất ở cả hai: 1 trên 1,256. Mỗi lần "chỉ lấy
+  cái tốt nhất" là chi phí nhân đôi, để đổi lấy 5 điểm multiplier hoặc 3
+  điểm effect.
+
+
+  **Vì sao item level 85 kể cả khi chỉ cần tier thứ nhì.** Trên base item
+  level 73, tier thứ nhì là tier tốt nhất roll được, và có nó ở cả hai phía
+  là khoảng 1 trên 689 lần thử. Ở 85, mỗi lần roll ra tier tốt nhất cũng
+  tính là đạt, nhờ vậy cùng mức đó hạ xuống còn 1 trên 314.
+steps:
+  - title: "Kiểm item level và implicit"
+    do: >-
+      Giữ Alt rồi rê chuột lên tincture trắng. Nó phải ghi item level 85.
+      Rồi nhìn implicit, và nếu bạn có vài cái, hãy bắt đầu với cái cao
+      nhất.
+    why: >-
+      Hàng trăm Alteration sắp đổ vào base này, và không cái nào đổi được
+      implicit. Một Rosethorn 142% và một cái 104% tốn đúng cùng công sức để
+      hoàn thành.
+    state:
+      rarity: normal
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+  - title: "Chọn mức từ bảng giá"
+    do: >-
+      Đọc phần xác suất ở trên và chọn một dòng. Ví dụ này lấy dòng đầu:
+      critical strike multiplier từ +24% trở lên, và increased effect thuần
+      từ 17% trở lên. Viết nó ra.
+    why: >-
+      Không có bench và không có cách giữ một ô, nên mức là quyết định duy
+      nhất làm đổi chi phí. Bước từ "hai tier tốt nhất" lên "tier tốt nhất"
+      ở một phía mua được vài điểm và nhân đôi số Alteration. Hầu như không
+      build nào nhận ra khác biệt; stash nào cũng nhận ra.
+    check: >-
+      Quyết định ngay bây giờ xem bạn có chấp nhận cả "35% increased effect
+      kèm increased Mana Burn rate" không. Nó là thêm một phần mười số lần
+      roll prefix, đưa mức xuống còn khoảng 1 trên 157 lần thử, và nó cho
+      nhiều effect hơn mức prefix thuần có thể cho. Nó chỉ đạt nếu mana của
+      bạn trả nổi.
+  - title: "Roll, và chấm theo mức"
+    do: >-
+      Một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Đọc
+      suffix trước: nó là nửa hiếm hơn. Chỉ dùng [[Orb of Augmentation]] lên
+      ô trống khi modifier đã có sẵn đạt mức.
+    why: >-
+      Kết quả bên dưới là cái thử thách bạn. Suffix đạt. Prefix là cái đánh
+      đổi, ở tier tốt nhất của nó. Nhân vật này đã quyết định ở bước 2 rằng
+      mana của nó không gánh nổi Mana Burn nhanh hơn, nên đây là một lần
+      trượt, và Alteration kế tiếp được dùng.
+    fail: >-
+      Nếu bạn thấy mình muốn giữ một kết quả như thế này, thì cái sai là
+      mức, không phải kết quả. Dừng lại, chủ động đổi mức, rồi chấp nhận nó.
+      Đó là một quyết định. Trôi dạt thì không phải.
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "35% increased effect / 39% increased Mana Burn rate" }]
+      suffixes: [{ text: "+26% to Melee Weapon Critical Strike Multiplier" }]
+  - title: "Lần đạt"
+    do: >-
+      Tiếp tục tới khi một kết quả đạt cả hai mức. Giữ Alt và đọc tier trước
+      khi tin.
+    why: >-
+      Kết quả này có tier tốt nhất của suffix và tier thứ nhì của prefix. Nó
+      không phải thứ mức đã đòi; mức đòi ít hơn, và cái suffix tốt hơn là
+      phần may mà item level 85 chừa chỗ cho.
+    check: >-
+      Tên suffix là "of Ferocity" (+29–33%) hoặc "of Fury" (+24–28%). Tên
+      prefix là "Horticultural" (20–22%) hoặc "Medicinal" (17–19%).
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "18% increased effect" }]
+      suffixes: [{ text: "+31% to Melee Weapon Critical Strike Multiplier" }]
+  - title: "Dừng, rồi quality"
+    do: >-
+      Cất Alteration đi. Đưa tincture lên 20% quality bằng
+      [[Glassblower's Bauble]].
+    why: >-
+      Một Alteration để nâng prefix từ 18% lên 20% sẽ roll lại cả suffix, và
+      một kết quả có cả hai tier tốt nhất là 1 trên 1,256 lần thử. Item đã
+      xong.
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "18% increased effect" }]
+      suffixes: [{ text: "+31% to Melee Weapon Critical Strike Multiplier" }]
+variations: >-
+  **Cùng bảng giá đó cho build khác.** Elemental penetration trên Prismatic
+  Tincture có cùng weight và cùng item level như critical strike multiplier
+  ở đây, nên mọi con số ở trên đều dùng lại được. Damage over Time
+  Multiplier cũng có cùng weight, và tier tốt nhất của nó cần 84. Attack
+  speed có ba tier và weight 800: tier tốt nhất của nó là 1 trên 39 lần roll
+  suffix.
+
+
+  **Một mức rẻ hơn.** Tier bất kỳ của critical strike multiplier cùng với
+  increased effect thuần bất kỳ là khoảng 1 trên 63 lần thử. Trên một base
+  bạn nhặt hôm nay và sẽ thay tuần sau, đó là mức đúng.
+
+
+  **Nếu game của bạn cho tincture hơn Magic.** Chúng tôi chưa xác nhận được
+  quy tắc rarity của tincture trong 3.30. Mọi thứ ở đây giả định một prefix
+  và một suffix, mức ít nhất mà quy tắc nào cũng cho phép; nếu hóa ra có thể
+  nhiều hơn, lần craft Magic này vẫn là nửa đầu của nó.
+mistakes:
+  - "Roll trên base item level 84. Cả hai tier tốt nhất đều đóng, và các tier thứ nhì khó với tới hơn so với trên base 85."
+  - "Nâng mức sau một lần suýt đạt. Mỗi phía bạn chuyển từ hai tier tốt nhất sang chỉ tier tốt nhất là số Alteration nhân đôi."
+  - "Tính prefix đánh đổi là đạt mà không hỏi xem mana của bạn có trả nổi không."
+  - "Dùng thêm một Alteration lên tincture đã xong để lấy tier nhỉnh hơn một chút."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Base, implicit, tier, item level và weight. Xác suất là phép tính của chúng tôi." }

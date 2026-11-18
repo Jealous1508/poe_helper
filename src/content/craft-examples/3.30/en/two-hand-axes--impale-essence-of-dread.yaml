@@ -1,0 +1,163 @@
+category: two-hand-axes
+title: "An impale axe: the suffix no roll can give"
+level: 2
+summary: "An Essence of Dread guarantees Impale Effect, which the natural pool does not have. Repeat it until a physical prefix that leaves room rolls beside it, then bench the impale hybrid."
+goal: >-
+  A first mapping axe for an impale build: Impale Effect on the suffix side, a
+  rolled physical prefix, and the bench's increased Physical Damage with a
+  chance to Impale on top. The lesson is **when an Essence is the only door**.
+  The mace guide uses an Essence to save a roll. Here it supplies a modifier
+  that plain currency can never produce, so the whole craft is arranged
+  around it.
+base: "Karui Chopper"
+itemLevel: 77
+baseWhy: >-
+  The Karui Chopper has the highest base damage in the category, 121–189, and
+  no implicit to consider. Impale is built from the physical damage of the
+  hit, so the biggest hit is the right base. Item level 77 opens Tier 1 flat
+  Physical Damage and Tier 1 attack speed; this craft does not need the top
+  percentage tiers, because the percentage comes from the bench.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 27 to 58 Physical Damage" }
+    - { text: "Adds 96 to 187 Fire Damage" }
+    - { text: "99% increased Physical Damage / 19% chance to Impale Enemies on Hit with Attacks", how: crafted }
+  suffixes:
+    - { text: "27% increased Impale Effect", how: essence }
+    - { text: "+34 to Strength" }
+    - { text: "18% increased Attack Speed" }
+needs:
+  - { item: "[[Screaming Essence of Dread]]", amount: "10–20", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "for the bench" }
+cost: >-
+  The Essences are the cost. Essence of Dread has no strength below
+  Screaming, and Screaming or better is what red maps give you in 3.30, so
+  this is a craft for when you are in maps, not before. The bench step is 8
+  [[Chaos Orb]]s, or 3 for the rank below.
+odds: >-
+  The suffix is certain. The prefix is the lottery, and on an axe it is a
+  hard one: at item level 77, by our arithmetic, a prefix roll is flat
+  Physical Damage of adds 16 or more, or the hybrid with Accuracy at 35% or
+  more, about 1 time in 13. Six rolls in ten are elemental.
+
+
+  An Essence result has one to three prefixes, so somewhere around one
+  Essence in seven to ten passes. Ten to twenty is a sensible stock.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Take a white item level 77 Karui Chopper to 20% quality and use one
+      [[Screaming Essence of Dread]] on it.
+    why: >-
+      The Essence makes the axe Rare and guarantees 25–29% increased Impale
+      Effect as a suffix. That modifier is not in the natural pool of any
+      two-handed axe. Without influence, an Essence of Dread is the only way
+      to have it.
+    state:
+      prefixes:
+        - { text: "Adds 21 to 398 Lightning Damage" }
+        - { text: "Adds 63 to 124 Cold Damage" }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Read the prefixes with the bench in mind"
+    do: >-
+      Hold Alt and look for one of two things among the prefixes: **flat
+      Physical Damage** ("Adds … Physical Damage") or the **hybrid** of
+      increased Physical Damage with Accuracy Rating. Then check that a third
+      prefix slot is empty.
+    why: >-
+      The modifier you are going to bench, increased Physical Damage with a
+      chance to Impale, is in the same group as pure increased Physical
+      Damage. Those two cannot share an item. Flat Physical Damage and the
+      hybrid with Accuracy are different groups and sit beside it. So this
+      plan reverses what you would hope for on a plain physical axe: the pure
+      percentage is the roll that gets in the way.
+    check: >-
+      A sensible bar: flat Physical Damage of adds 16 or more ("Gleaming" or
+      better), or the hybrid at 35% or more ("Mercenary's" or better), **and**
+      at most two prefixes in total.
+    fail: >-
+      The result above fails: two elemental prefixes. Use another Essence on
+      the same axe. The Impale Effect comes back every time; only the rest
+      changes.
+  - title: "Repeat until a prefix fits"
+    do: >-
+      Use Essences one at a time, reading the prefixes after each, until one
+      passes the check.
+    why: >-
+      Each use rerolls everything except the guaranteed suffix. Ignore the
+      other suffixes while you do this. Attack speed beside the Impale Effect
+      is a bonus and will not survive the next Essence, so it is never a
+      reason to keep a result with the wrong prefixes.
+    state:
+      prefixes:
+        - { text: "Adds 27 to 58 Physical Damage" }
+        - { text: "Adds 96 to 187 Fire Damage" }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+34 to Strength" }
+        - { text: "18% increased Attack Speed" }
+  - title: "If the pure percentage rolled instead"
+    do: >-
+      Keep it only if it is strong, 110% or more ("Bloodthirsty" or better).
+      Then bench flat Physical Damage in an open prefix, adds 18–24 to 36–42
+      for 4 [[Chaos Orb]]s, and take your chance to Impale from the passive
+      tree or a support gem.
+    why: >-
+      A rolled 110–134% is more damage than the bench hybrid's 95–105%, and
+      you still have the Impale Effect. What you lose is the 18–20% chance
+      to Impale on the weapon. Below 110% the bench hybrid is simply better,
+      and the pure prefix is occupying its place: use another Essence.
+  - title: "Bench the impale hybrid"
+    do: >-
+      At the [[Crafting Bench]], craft **95–105% increased Physical Damage
+      with 18–20% chance to Impale Enemies on Hit with Attacks** into the
+      open prefix: 8 [[Chaos Orb]]s. The rank below, 86–94% with 16–17%, is 3
+      Chaos Orbs.
+    why: >-
+      One bench slot buys both the multiplier the axe was missing and part of
+      the impale chance. The fire damage that rolled as the second prefix
+      stays where it is; removing it would mean rolling again, and one wasted
+      prefix on a first mapping axe is an acceptable price.
+    check: >-
+      Three prefixes, one of them crafted. The bench is now spent: the axe
+      holds one crafted modifier.
+    state:
+      prefixes:
+        - { text: "Adds 27 to 58 Physical Damage" }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "99% increased Physical Damage / 19% chance to Impale Enemies on Hit with Attacks", how: crafted }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+34 to Strength" }
+        - { text: "18% increased Attack Speed" }
+variations: >-
+  **The same craft for bleeding.** There is no Essence for bleeding, so the
+  shape changes: roll the prefix with any tool, then bench increased Physical
+  Damage with a chance to cause Bleeding (same ranks, same prices), on a
+  Sundering Axe for its +20% bleed multiplier. The Fossil example does this.
+
+
+  **Better Essences.** Shrieking Dread gives 30–34% and
+  [[Deafening Essence of Dread]] 35–38%, the same as the top Crusader
+  influence roll. Use the cheap ones to find the prefix only if you are happy
+  to keep the cheap number: the Essence modifier is rerolled with the
+  Essence, so the last one you use sets it.
+
+
+  **Upgrading the hybrid later.** The unveiled version of the same prefix is
+  120–139% with 21–25% chance. The last axe example builds one.
+mistakes:
+  - "Keeping a result for its attack speed. The suffixes are rerolled by the next Essence; the prefix is what you are paying for."
+  - "Benching the hybrid onto an axe that rolled pure increased Physical Damage. The bench will refuse: one group."
+  - "Using this on a base with [[Memory Strands]]. One Essence can spend up to 80 of them by the data-mined table."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence of Dread modifier on two-handed axes, groups, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand cost of an Essence. Not official." }

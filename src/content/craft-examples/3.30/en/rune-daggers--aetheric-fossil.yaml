@@ -1,0 +1,168 @@
+category: rune-daggers
+title: "Switch off the attack half: an Aetheric Fossil dagger"
+level: 3
+summary: "More than half of a rune dagger's pool is attack modifiers. One Fossil cuts them to almost nothing and multiplies everything a caster uses."
+goal: >-
+  A crit caster's mapping weapon with caster modifiers in five of its six
+  slots and the bench in the sixth. The lesson is using a Fossil as a
+  **filter**: you are not after one modifier, you are removing a whole kind
+  of modifier so that an ordinary reroll becomes a good one.
+base: "Platinum Kris"
+itemLevel: 76
+baseWhy: >-
+  The largest crit implicit on a rune dagger, 60–65% increased Global
+  Critical Strike Chance. Item level 76 opens Tier 1 Spell Critical Strike
+  Chance (90–109%), Tier 2 cast speed (25–28%) and Tier 2 Spell Damage
+  (85–99%). Fossil rerolls land on middle tiers far more often than on top
+  ones, so paying for item level 84 here buys tiers you will rarely see.
+methods: [fossil, bench]
+result:
+  implicits: ["63% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "74% increased Spell Damage", how: fossil }
+    - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+    - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+  suffixes:
+    - { text: "26% increased Cast Speed", how: fossil }
+    - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+    - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "15–30" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  One Fossil and one single-socket Resonator per attempt, from Delve, which
+  in 3.30 is reached through the maps that always spawn Sulphite. The bench
+  step is 4 [[Chaos Orb]]s. No part of this is expensive; the count of
+  attempts is what you pay.
+odds: >-
+  With an Aetheric Fossil at item level 76, by our arithmetic from the
+  weights: about 94% of prefix rolls are caster modifiers (Spell Damage 25%,
+  added damage to spells 55%, the Mana hybrid 10%), against 34% without it.
+  On the suffix side cast speed and Spell Critical Strike Chance are 38%
+  each.
+
+
+  Tiers are not helped. Spell Damage of 70% or more is about 1 prefix roll
+  in 49; cast speed of 21% or more about 1 suffix roll in 8; Spell Critical
+  Strike Chance of 70% or more about 1 in 5. Critical Strike Multiplier has
+  no caster tag and falls to about 4% of suffix rolls, which is why the
+  bench supplies it. The figures cover natural modifiers; Fossils can also
+  roll their own.
+steps:
+  - title: "Make the dagger Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white Platinum Kris. Do not add
+      quality; a caster does not use it.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. The result below is what this
+      pool gives when nothing is filtering it: four attack modifiers out of
+      five.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 61 to 124 Fire Damage" }
+        - { text: "67% increased Physical Damage" }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+351 to Accuracy Rating" }
+        - { text: "48% increased Mana Regeneration Rate" }
+  - title: "One Aetheric Fossil"
+    do: >-
+      Put an [[Aetheric Fossil]] in a [[Primitive Chaotic Resonator]] and
+      use it on the dagger.
+    why: >-
+      The Fossil reads "More Caster modifiers, Fewer Attack modifiers". In
+      the 3.30 data that is ten times the weight for anything with the
+      caster tag and 15% of the weight for anything with the attack tag.
+      Modifiers with neither tag, such as maximum Mana, Intelligence and
+      Critical Strike Multiplier, keep their weight and so become rare by
+      comparison.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "46% increased Spell Damage", how: fossil }
+        - { text: "Adds 3 to 101 Lightning Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "11% increased Cast Speed", how: fossil }
+        - { text: "+39 to Intelligence", how: fossil }
+        - { text: "72% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Judge by a bar you set first"
+    do: >-
+      Decide what you accept before rolling. A sensible bar for maps:
+      **Spell Damage 70% or more; cast speed 21% or more; Spell Critical
+      Strike Chance 70% or more; and one suffix open or filled with
+      something you use.** Added damage to spells should match your
+      spell's element or be ignored.
+    why: >-
+      The result above is the right kinds of modifier at the wrong
+      tiers, and its suffix side is full, with Intelligence where the bench
+      craft should go. Without a bar set in advance, results like it get
+      kept.
+    fail: >-
+      Another Fossil. Every attempt is independent, and nothing here is
+      worth protecting yet.
+  - title: "Repeat until it passes"
+    do: >-
+      Reroll until a result clears the bar.
+    why: >-
+      You are waiting for three tier rolls at once. The Fossil has already
+      done its part by making sure the slots hold the right families; only
+      the count of attempts buys the tiers.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "74% increased Spell Damage", how: fossil }
+        - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+        - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: fossil }
+        - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Bench the suffix the Fossil cannot find"
+    do: >-
+      At the [[Crafting Bench]], craft **+25–28% to Global Critical Strike
+      Multiplier** for 4 [[Chaos Orb]]s.
+    why: >-
+      The multiplier is the third suffix of a crit caster, and the one
+      modifier in the plan that an Aetheric Fossil pushes away instead of
+      towards you. A certain 25–28% from the bench is the reason to insist
+      on an open suffix in step 3.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "74% increased Spell Damage", how: fossil }
+        - { text: "Adds 44 to 85 Cold Damage to Spells", how: fossil }
+        - { text: "33% increased Spell Damage / +36 to maximum Mana", how: fossil }
+      suffixes:
+        - { text: "26% increased Cast Speed", how: fossil }
+        - { text: "83% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Choosing the element.** A second Fossil in a two-socket Resonator steers
+  the added damage: a [[Frigid Fossil]] multiplies Cold modifiers and
+  removes Fire ones, a [[Scorched Fossil]] the reverse, a
+  [[Metallic Fossil]] multiplies Lightning.
+
+
+  **The same filter without Delve.** "Cannot roll Attack Modifiers" (1 Divine
+  Orb at the bench) with a Harvest Caster reforge (75 Primal Lifeforce) also
+  rolls an item with no attack modifiers; since 3.27 that reforge respects
+  the meta-modifier. It removes the attack half without multiplying the
+  caster half, and costs a Divine Orb per attempt. The Fossil is the better
+  tool for full rerolls; the meta-modifier earns its place in the next
+  example, where a reroll is not wanted.
+
+
+  **Three good prefixes and a bad suffix side**, or the reverse: stop
+  rerolling. One side is now worth more than a Fossil can replace.
+mistakes:
+  - "Keeping a result with a full suffix side and no multiplier. The bench needs the slot."
+  - "Expecting gem levels. An Aetheric Fossil alone makes each element's gem level about 1 prefix roll in 130."
+  - "Using a strand base. Fossils neither spend nor use [[Memory Strands]], by player testing."
+  - "Adding quality. It does nothing for spells."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, modifier tags, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges respect the \"Cannot roll\" modifiers." }

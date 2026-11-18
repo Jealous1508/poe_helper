@@ -1,0 +1,242 @@
+category: one-hand-axes
+title: "Cây axe bleed với hai prefix bleeding: influence Elder, Fossil và một lần khóa"
+level: 5
+summary: "Một cây axe Elder thêm một prefix bleeding mà chính hai Fossil đó nhân lên. Roll cả hai prefix bleeding cùng lúc, khóa chúng, dựng lại suffix, và tính kỹ từng ô."
+goal: >-
+  Một cây axe bleed hàng đỉnh: prefix Elder "+51–59% to Damage over Time
+  Multiplier for Bleeding from Hits with this Weapon", prefix chỉ có từ
+  Fossil "60% chance for Bleeding inflicted with this Weapon to deal 100%
+  more Damage", một prefix physical bên cạnh, và các suffix được dựng có chủ
+  đích. Không bước riêng lẻ nào là mới. Điều khiến đây là lần craft axe khó
+  nhất là **item có influence thì không fracture được**: không gì ở đây từng
+  an toàn vĩnh viễn, nên mỗi giai đoạn phải được xếp thứ tự sao cho giai đoạn
+  kế không thể phá nó.
+base: "Royal Axe"
+itemLevel: 83
+baseWhy: >-
+  Tier cao nhất của prefix bleeding Elder cần item level 83; ở 75 tới 82 nó
+  dừng ở 43–50%. Royal Axe có damage mỗi giây gốc cao nhất. Reaver Axe là lựa
+  chọn thay thế nếu bạn muốn cú đánh đơn lớn nhất.
+
+
+  Cây axe phải mang **influence Elder**. Điều đó đóng hai cánh cửa: không
+  Fracturing Orb, và không Fractured Fossil.
+methods: [influence, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Elder"
+  prefixes:
+    - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+    - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+    - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+    - { text: "+41 to Strength" }
+needs:
+  - { item: "Một cây Royal Axe có influence Elder, item level 83+", amount: "1", note: "nhặt được, mua, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Corroded Fossil]]", amount: "vài chục" }
+  - { item: "[[Jagged Fossil]]", amount: "vài chục" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+  - { item: "[[Exalted Orb]]", amount: "1", note: "cho suffix cuối cùng" }
+cost: >-
+  Base có influence, rồi Fossil tính bằng chục cho giai đoạn 2, rồi các lần
+  khóa cho giai đoạn 3 với giá 4 [[Divine Orb]] và 1 [[Sacred Orb]] mỗi lần.
+  Chúng tôi không đưa ra tổng số: giá trong tuần đầu league biến động quá
+  nhanh, và cả hai giai đoạn ngẫu nhiên đều có đuôi dài, xui thì kéo rất lâu.
+  Và một build bleed dual wield thì cần cây axe này hai lần.
+odds: >-
+  **Giai đoạn 2.** Chỉ đếm các modifier thường và modifier Elder, công cụ
+  tính của chúng tôi đặt prefix bleeding Elder ở 47% số lần roll prefix với
+  cả hai Fossil, và tier cao nhất của nó ở khoảng 1 trên 6 lần roll. Nếu
+  modifier chỉ có từ Fossil được đếm theo weight mà dữ liệu liệt kê, tức mô
+  hình quen dùng của cộng đồng, thì con số là 28% (tier cao nhất khoảng 1
+  trên 11) và prefix bleeding chỉ có từ Fossil là 38%. Theo mô hình đó, trong
+  các kết quả roll ra ba prefix, khoảng hai trên ba mang cả hai, và khoảng
+  một phần ba trong số đó có prefix Elder ở Tier 1. Ước tính đó là của chúng
+  tôi và chưa được đo trong 3.30.
+
+
+  **Giai đoạn 3.** Reforge Speed lúc nào cũng cho attack speed, nhưng một cây
+  axe Elder có hai modifier mang tag speed: cái tự nhiên và cái của riêng
+  Elder, vốn chỉ lên tới 20–21%. Nếu modifier được đảm bảo được bốc theo
+  weight, khoảng 2 trên 11 lần reforge cho bản yếu hơn của Elder và 2 trên 11
+  cho attack speed tự nhiên từ 23% trở lên.
+steps:
+  - title: "Giai đoạn 1: một cây axe Elder"
+    do: >-
+      Bắt đầu từ một cây Royal Axe item level 83 trở lên có influence Elder.
+      Một [[Elder's Exalted Orb]] cho influence đó, cùng một modifier Elder
+      ngẫu nhiên, lên một cây axe Rare chưa có influence nào. Quality lên 20%
+      ngay bây giờ.
+    why: >-
+      Influence thêm một pool thứ hai cho item, và pool Elder chứa prefix
+      bleeding mà lần craft này được dựng quanh. Nó chưa cần phải có trên cây
+      axe: giai đoạn kế roll lại mọi thứ. Chỉ influence là phải có ở đó.
+    check: >-
+      Item level 83, influence Elder, không fractured. Chúng tôi chưa xác
+      nhận được base có influence Elder hay Elder's Exalted Orb tìm ở đâu
+      trong 3.30, nên hãy kiểm xem thực tế đang có gì được bán trước khi lên
+      kế hoạch dựa vào cái nào.
+    state: { note: "Elder", rarity: rare }
+  - title: "Giai đoạn 2: cả hai prefix bleeding từ một cặp Fossil"
+    do: >-
+      Dùng một [[Corroded Fossil]] và một [[Jagged Fossil]] cùng nhau trong
+      một [[Potent Chaotic Resonator]], và lặp lại tới khi cây axe có prefix
+      bleeding Elder từ 43% trở lên (từ 51% trở lên nếu bạn cố chờ Tier 1),
+      prefix bleeding chỉ có từ Fossil, **và nhiều nhất hai suffix**.
+    why: >-
+      Hãy đọc tag. Prefix Elder mang bleed và physical, y hệt cái chỉ có từ
+      Fossil, nên cả hai Fossil nhân cả hai. Một công cụ nhắm vào hai
+      modifier hiếm cùng lúc, và chính Corroded Fossil đó gỡ mọi prefix
+      elemental có thể chiếm ô thứ ba. Đây là lý do Fossil đi trước mọi thứ
+      khác: chúng sẽ roll lại bất kỳ công sức nào làm trước đó, và không gì
+      trên một cây axe có influence có thể fractured để sống sót qua chúng.
+    check: >-
+      Giữ Alt và đọc tier của prefix Elder; ba tier của nó là 37–42%, 43–50%
+      và 51–59%. Rồi đếm suffix. Nội dung của chúng không quan trọng, giai
+      đoạn 3 sẽ thay chúng, nhưng khóa cần một ô suffix trống.
+    fail: >-
+      Cả hai prefix mà có ba suffix: cứ roll tiếp. Một
+      [[Orb of Annulment]] để giải phóng một ô sẽ gỡ ngẫu nhiên một trong sáu
+      modifier và một phần ba số lần trúng một trong hai prefix bleeding.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "2.7% of Physical Attack Damage Leeched as Mana", how: fossil }
+  - title: "Giai đoạn 3: khóa prefix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be changed**: 4
+      [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Từ đây trở đi ba prefix đáng giá hơn một lần khóa rất nhiều, và đây là
+      lớp bảo vệ duy nhất một item có influence có được. Từ giây phút này
+      đừng dùng thêm Fossil hay Essence nào lên cây axe. Essence được ghi
+      nhận là phớt lờ khóa, còn với Fossil thì trong 3.30 chúng tôi chưa xác
+      nhận được theo hướng nào.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "2.7% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge suffix để lấy attack speed"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150 Vivid Lifeforce). Nhận kết
+      quả khi attack speed từ 23% trở lên và cây axe có **hai ô suffix trống,
+      hoặc một ô trống và một suffix bạn muốn**. Nếu không, craft khóa lần
+      nữa và lặp lại.
+    why: >-
+      Khi prefix đã khóa, reforge chỉ thay các suffix, kể cả cái khóa. Attack
+      speed là suffix bench thay thế kém nhất: craft tốt nhất của nó là
+      16–20% giá 4 Exalted Orb so với 26–27% ở Tier 1. Vậy nên attack speed
+      là cái cần đảm bảo, còn suffix bleed để lại cho bench, nơi bán nó ở
+      trọn giá trị.
+    check: >-
+      Đọc xem attack speed **nào** đã đến. "of the Elder" là bản influence và
+      dừng ở 20–21%; tên của bản tự nhiên là "of Infamy" (23–25%) và "of
+      Celebration" (26–27%). Chúng chung group, nên bạn không thể có cả hai.
+    fail: >-
+      Việc reforge Harvest tôn trọng khóa là do người chơi xác lập, không
+      phải do nhà phát triển. Mỗi lần lặp lại tốn trọn một lần khóa, nên hãy
+      chốt số lần thử trước lần đầu tiên.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+  - title: "Giai đoạn 4: đếm ô trước khi đụng tới bench"
+    do: >-
+      Craft **+18–20% to Physical Damage over Time Multiplier** giá 4
+      [[Chaos Orb]]. **Đừng** craft "Can have up to 3 Crafted Modifiers"
+      trước.
+    why: >-
+      Craft multi-modifier là một suffix. Nó xứng với ô của mình khi nó cho
+      bench lấp cả một prefix lẫn một suffix. Ở đây cả ba prefix đều là roll
+      ra, nên nó sẽ tiêu một ô suffix để thêm một suffix, và 2 Divine Orb
+      chẳng để làm gì. Một craft bench đơn thuần chừa ô suffix thứ ba cho một
+      modifier thật.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+  - title: "Suffix cuối cùng, và chỉ số"
+    do: >-
+      Dùng một [[Exalted Orb]] cho ô suffix trống, rồi một [[Divine Orb]] nếu
+      con số bên trong các tier kém.
+    why: >-
+      Exalted Orb thêm một modifier ngẫu nhiên và ở đây chỉ có thể thêm
+      suffix, vì prefix đã đầy. Kết quả bạn mong là modifier tự nhiên "+% to
+      Damage over Time Multiplier", thuộc group khác với craft bench và cộng
+      dồn được với nó; nó hiếm, và ví dụ cho thấy một kết quả dễ xảy ra hơn.
+      Không gì Exalted Orb có thể thêm lại làm hại cây axe.
+    check: >-
+      Sáu trên sáu ô đã dùng. Divine Orb roll lại mọi chỉ số cùng lúc, kể cả
+      prefix Elder, và có thể hạ chúng xuống cũng dễ như nâng lên.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+        - { text: "+41 to Strength" }
+variations: >-
+  **Một suffix veiled thay cho Harvest.** Một [[Veiled Chaos Orb]] dùng lên
+  cây axe đã khóa sẽ roll lại suffix và có một veiled modifier trong số đó,
+  theo cùng luật do người chơi thử nghiệm ấy. Unveil ra, "+24–28% to Physical
+  Damage over Time Multiplier" hơn mức 18–20% của bench, và khi đó bench cấp
+  attack speed. Đây là đường tốt hơn nếu bạn đã có sẵn attack speed tốt ở chỗ
+  khác.
+
+
+  **Prefix thứ ba từ bench.** Nếu giai đoạn 2 cho cả hai prefix bleeding và ô
+  thứ ba trống, thì 95–105% increased Physical Damage kèm 18–20% chance to
+  cause Bleeding của bench (8 Chaos Orb) lấp nó. Khi đó craft multi-modifier
+  mới sinh lời: nó mua prefix đó và suffix bleed cùng lúc.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Chỗ duy nhất nó có thể đáng tiền ở đây là Exalted
+  Orb cuối cùng, và chỉ khi cây axe đã đáng giá hơn cái Lock.
+
+
+  **Memory Strands.** Theo thử nghiệm của người chơi, Fossil và Harvest không
+  dùng strand, nên một base strand không thay đổi gì cho tới Exalted Orb cuối
+  cùng, thứ tiêu nhiều nhất 16.
+mistakes:
+  - "Tìm một cây axe Elder fractured. Item có influence không fracture được, và theo các trang tra cứu, fractured item không thể được thêm influence."
+  - "Dùng Annulment để mở một ô suffix sau giai đoạn 2. Hai trong sáu modifier nó có thể gỡ là những cái mà cả lần craft tồn tại vì chúng."
+  - "Nhận attack speed của riêng Elder từ reforge. Nó chung group với bản tự nhiên và dừng ở 20–21% trong khi bản tự nhiên lên tới 26–27%."
+  - "Craft meta-modifier multi-modifier theo thói quen. Với ba prefix roll ra, nó tốn một ô suffix và không trả lại gì."
+  - "Dùng Fossil lên cây axe đã khóa. Fossil có tôn trọng khóa trong 3.30 hay không thì chưa được xác nhận."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Elder và tag của chúng, hệ số nhân của Fossil, modifier chỉ có từ Fossil, weight và giá bench. Xác suất là phép tính của chúng tôi; cách xử lý modifier chỉ có từ Fossil là một mô hình." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá của các modifier bảo vệ; cách vào Delve." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và giá của nó." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured item không thể được thêm influence." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest và các Veiled orb, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

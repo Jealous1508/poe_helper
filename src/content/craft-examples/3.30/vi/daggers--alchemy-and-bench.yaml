@@ -1,0 +1,141 @@
+category: daggers
+title: "Alchemy, đọc, bench: một cây dagger crit leveling"
+level: 1
+summary: "Đưa một cây dagger trắng lên Rare bằng một cú nhấp, xếp các dòng của nó thành prefix và suffix, rồi để bench thêm hệ số nhân physical. Nếu kết quả không còn chỗ, scour rồi làm lại."
+goal: >-
+  Một cây dagger cho nửa sau của campaign, làm theo cách nhanh. Kỹ năng bài
+  này dạy là **đọc một item Rare**: dòng nào là prefix, dòng nào là suffix,
+  mỗi phía còn mấy ô trống, và bench đặt được gì vào đó. Mọi lần craft về sau
+  đều dựa vào cách đọc đó.
+base: "Poignard"
+itemLevel: 44
+baseWhy: >-
+  Poignard đeo được từ level 41, attack 1.5 lần mỗi giây và có implicit của
+  dagger, 40–45% increased Global Critical Strike Chance. Item level 44 cho
+  phép attack speed 17–19% và Critical Strike Multiplier 25–29%. Cây dagger
+  trắng nào ngang level của bạn cũng dùng được theo cùng cách.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "Adds 37 to 71 Fire Damage" }
+    - { text: "72% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "18% increased Attack Speed" }
+    - { text: "+22% to Global Critical Strike Multiplier" }
+    - { text: "+241 to Accuracy Rating" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "2–4" }
+  - { item: "[[Orb of Scouring]]", amount: "1–3" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "cho bench" }
+cost: >-
+  Vài [[Orb of Alchemy]] và [[Orb of Scouring]], cùng 8
+  [[Orb of Alteration]] cho bench. Trong 3.30, Orb of Alchemy phổ biến hơn
+  trước, và chính điều đó khiến đây là con đường đầu tiên hợp lý.
+odds: >-
+  Ở item level 44, mỗi suffix mà một Orb of Alchemy roll ra là attack speed,
+  Critical Strike Chance hoặc Critical Strike Multiplier trong khoảng 37% số
+  lần, theo phép tính của chúng tôi từ weight. Một item Rare có hai suffix
+  trong phần nhiều trường hợp, nên phần lớn kết quả mang ít nhất một cái. Vì
+  còn cần thêm một prefix trống, hãy tính hai tới bốn orb.
+
+
+  Tự roll ra hệ số nhân physical lại là chuyện khác: một lần roll prefix ra
+  increased Physical Damage từ 65% trở lên khoảng 1 trên 33 lần.
+steps:
+  - title: "Quality, rồi một Orb of Alchemy"
+    do: >-
+      Đưa cây Poignard trắng lên 20% quality bằng
+      [[Blacksmith's Whetstone]], rồi dùng một [[Orb of Alchemy]].
+    why: >-
+      Alchemy biến một item Normal thành Rare với bốn tới sáu modifier chỉ
+      trong một bước. Đó là một lần roll rộng hơn đường Alteration: sáu ô
+      bạn không kiểm soát. Ở đây điều đó chấp nhận được vì một lý do, và lý
+      do đó nằm ở cách đây hai bước: bench thêm được cái modifier quan trọng
+      nhất.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+93 to maximum Mana" }
+        - { text: "Adds 5 to 119 Lightning Damage" }
+        - { text: "+1 to Level of Socketed Cold Gems" }
+      suffixes:
+        - { text: "+26 to Intelligence" }
+        - { text: "38% increased Mana Regeneration Rate" }
+  - title: "Xếp loại các dòng"
+    do: >-
+      Giữ Alt (với Advanced Mod Descriptions đang bật). Mỗi dòng được ghi
+      nhãn Prefix hoặc Suffix. Đếm từng phía, và đếm xem mỗi phía còn thiếu
+      mấy cái cho đủ ba.
+    why: >-
+      Item ở trên có **ba prefix và hai suffix**. Phía prefix đã đầy, nên
+      không gì thêm vào đó được nữa, dù bằng bench hay bất cứ thứ gì khác.
+      Còn một ô suffix trống.
+    check: >-
+      Hai câu hỏi quyết định có giữ một kết quả hay không. Có **ô prefix nào
+      trống** không? Có **attack speed hoặc một suffix critical strike**
+      không? Cây này trượt cả hai.
+    fail: >-
+      Dùng một [[Orb of Scouring]], thứ đưa cây dagger về lại item trắng mà
+      vẫn nguyên quality, rồi thêm một Orb of Alchemy nữa.
+  - title: "Một kết quả đáng giữ"
+    do: >-
+      Lặp lại tới khi cả hai câu trả lời đều là có.
+    why: >-
+      Lần thử thứ hai được minh họa ở đây có một prefix, thuộc kiểu build
+      này không dùng, và ba suffix, trong đó hai cái là damage. Cái prefix
+      vô dụng không quan trọng. Các ô prefix trống mới quan trọng.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 37 to 71 Fire Damage" }
+      suffixes:
+        - { text: "18% increased Attack Speed" }
+        - { text: "+22% to Global Critical Strike Multiplier" }
+        - { text: "+241 to Accuracy Rating" }
+  - title: "Bench hệ số nhân"
+    do: >-
+      Ở [[Crafting Bench]], craft **60–79% increased Physical Damage**
+      giá 8 [[Orb of Alteration]]. Nếu bạn chưa tìm được công thức đó, bản
+      40–59% tốn 4.
+    why: >-
+      Increased Physical Damage nhân damage của chính cây dagger, kể cả
+      quality. Ở bench nó là chắc chắn; từ một orb ở item level này thì là
+      một trên 33 lần roll prefix. Vậy nên orb được tiêu vào việc tìm
+      suffix, thứ bench chỉ bán mỗi lần một cái, còn bench được để dành cho
+      cái prefix mà nó bán tốt.
+    check: >-
+      Bench từ chối craft này nếu cây dagger đã roll ra increased Physical
+      Damage không kèm Accuracy: cùng group. Khi đó hãy craft attack speed
+      (8–10%, 6 Alteration) hoặc flat Physical Damage thay thế.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 37 to 71 Fire Damage" }
+        - { text: "72% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "18% increased Attack Speed" }
+        - { text: "+22% to Global Critical Strike Multiplier" }
+        - { text: "+241 to Accuracy Rating" }
+variations: >-
+  **Đổi ý về sau.** Một modifier bench được gỡ ngay ở bench với giá một Orb
+  of Scouring ("Remove Crafted Mods"), rồi craft một cái khác vào chỗ nó.
+  Các modifier roll ra vẫn ở lại.
+
+
+  **Implicit.** Nó là một khoảng, 40–45%. Một [[Blessed Orb]] roll lại nó;
+  không đáng tốn một cái trên một cây dagger leveling.
+
+
+  **Ở level cao hơn** thì đường Rare tệ đi còn đường Magic tốt lên, vì các
+  modifier bạn muốn có weight nhẹ dần và sáu ô không kiểm soát tốn nhiều hơn
+  để roll lại. Ví dụ kế tiếp nhắm thay vì hy vọng.
+mistakes:
+  - "Giữ một item Rare có ba prefix vì một cái trong đó tạm được. Một phía đã đầy là đóng cửa với bench."
+  - "Scour một cây dagger vì một prefix tệ trong khi còn một ô prefix trống. Một prefix sai không mất gì; hết chỗ thì mất cả item."
+  - "Dùng bench trước khi quyết định giữ kết quả. Một Orb of Scouring gỡ craft đó cùng với mọi thứ khác."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orb of Alchemy phổ biến hơn từ khi Orb of Binding bị loại bỏ." }

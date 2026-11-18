@@ -1,0 +1,163 @@
+category: one-hand-maces
+title: "Fix a mace you found: read it, then bench the gap"
+level: 1
+summary: "No rolling at all. Take a Rare mace off the ground, work out which side has room, and let the bench add the one thing that fits."
+goal: >-
+  A usable mace for white maps made from a drop and one bench craft. The
+  skill being taught is **reading a Rare item**: which modifiers are
+  prefixes, which are suffixes, which slots are open, and which bench craft
+  the item will accept. Every later craft ends with exactly this decision,
+  so it is worth learning on an item that cost nothing.
+base: "Pernach"
+itemLevel: 70
+baseWhy: >-
+  This craft starts from whatever drops, so the base is an example: a
+  Pernach, 49–82 at 1.3 attacks per second, is the kind of mace white maps
+  hand out. The item level only has to be high enough for the modifiers
+  already on it.
+
+
+  Maces are the right class to practise on. Nearly half of a mace's prefix
+  rolls are physical, so a Rare one off the ground has a physical prefix
+  more often than not.
+methods: [bench, finishing]
+result:
+  implicits: ["10% reduced Enemy Stun Threshold"]
+  prefixes:
+    - { text: "88% increased Physical Damage" }
+    - { text: "Adds 36 to 66 Cold Damage" }
+    - { text: "Adds 9 to 17 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+33 to Strength" }
+    - { text: "12% reduced Enemy Stun Threshold" }
+    - { text: "Gain 27 Life per Enemy Killed" }
+needs:
+  - { item: "A Rare one-handed mace with a physical prefix", amount: "1", note: "identified; from the ground" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench craft shown" }
+cost: >-
+  Two [[Orb of Alchemy]]s for the bench craft in this example and a few
+  [[Blacksmith's Whetstone]]s. The mace itself was free.
+odds: >-
+  There is no roll in this craft. The bench always gives what it lists. The
+  only luck is the drop, and on a mace it is decent luck: by our arithmetic
+  46% of prefix rolls at this item level are one of the three physical
+  prefixes.
+steps:
+  - title: "Read the item with Alt held"
+    do: >-
+      Turn on Advanced Mod Descriptions in the options, hover over the mace
+      and hold Alt. For each modifier the game now shows "Prefix" or
+      "Suffix", its tier and its range. Sort them into two lists.
+    why: >-
+      A Rare item has three prefix slots and three suffix slots. The bench
+      adds one modifier, and it can only go into a slot that is empty on
+      the side that modifier belongs to. You cannot choose a craft before
+      you know which side has room.
+    check: >-
+      This mace: two prefixes (increased Physical Damage, added Cold
+      Damage) and three suffixes (Strength, stun threshold, life on kill).
+      The line above the divider, also about stun threshold, is the
+      implicit and takes no slot.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "88% increased Physical Damage" }
+        - { text: "Adds 36 to 66 Cold Damage" }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "12% reduced Enemy Stun Threshold" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Decide whether it deserves a craft"
+    do: >-
+      Look for **one physical prefix**: increased Physical Damage, the same
+      with Accuracy Rating, or "Adds # to # Physical Damage". If there is
+      none, put the mace back and read the next one.
+    why: >-
+      The bench can add a second physical prefix to a first. It cannot make
+      a weapon out of an item that has none, because its own crafts are
+      weaker than what rolls. 88% increased Physical Damage is a middling
+      tier, "Vicious", and plenty for white maps.
+  - title: "Find the open slot"
+    do: >-
+      Count each side. Here: two of three prefixes used, three of three
+      suffixes used. The one open slot is a **prefix**.
+    why: >-
+      This rules out the craft most players reach for first. Attack speed
+      is a suffix, and this mace has no room for one. The bench will not
+      offer it.
+  - title: "Apply the group rule to that slot"
+    do: >-
+      List the physical prefixes the bench sells and strike out any whose
+      group is already on the item. Increased Physical Damage: struck out,
+      the mace already rolled it. Flat Physical Damage: allowed.
+    why: >-
+      An item holds one modifier of each group. The bench's percentage and
+      the rolled one are the same group; flat damage is another. Had the
+      mace rolled the hybrid with Accuracy Rating instead, the answer would
+      flip: the hybrid is its own group, and the bench percentage would be
+      the craft to take.
+  - title: "Quality, then craft"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s to 20% quality. Then, at the
+      [[Crafting Bench]], craft **adds 7–11 to 16–19 Physical Damage** for
+      2 [[Orb of Alchemy]]s. With more currency, the next recipe gives
+      13–17 to 26–30 for 4 Chaos Orbs.
+    why: >-
+      Flat damage is added to every hit and then multiplied by the 88% the
+      mace already has, because both are local to this weapon. Quality
+      raises the base's own damage and is multiplied the same way.
+    fail: >-
+      If the bench does not list the craft, you have not found that recipe
+      yet. Take the lower one, adds 6–8 to 13–15 for 4 Orbs of
+      Transmutation.
+    state:
+      implicits: ["10% reduced Enemy Stun Threshold"]
+      prefixes:
+        - { text: "88% increased Physical Damage" }
+        - { text: "Adds 36 to 66 Cold Damage" }
+        - { text: "Adds 9 to 17 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+33 to Strength" }
+        - { text: "12% reduced Enemy Stun Threshold" }
+        - { text: "Gain 27 Life per Enemy Killed" }
+  - title: "Know that the craft is not permanent"
+    do: >-
+      Use the mace. When you unlock a better recipe, remove the crafted
+      modifier at the bench for 1 [[Orb of Scouring]] and craft the better
+      one.
+    why: >-
+      A bench modifier can always be taken off at the bench, and only the
+      bench modifier is removed. That makes the bench the one step in
+      crafting you can take back.
+    check: >-
+      Use the bench's "Remove Crafted Mods". An Orb of Scouring used
+      directly on the mace would remove everything and leave a white item.
+variations: >-
+  **An open suffix and no attack speed.** Craft attack speed: 8–10% for 6
+  Orbs of Alteration, 11–15% for 2 Chaos Orbs. On a mace with one physical
+  prefix this is usually the better craft, when the slot exists.
+
+
+  **The Accuracy hybrid instead of the pure percentage.** Craft increased
+  Physical Damage in an open prefix: 60–79% for 8 Orbs of Alteration. Two
+  percentages on one mace is the strongest thing the bench can do for a
+  drop.
+
+
+  **Both sides full.** There is nothing to craft. Use the mace as it is or
+  leave it. Removing a modifier to make room costs more than this item is
+  worth.
+
+
+  **Beside a shield.** This mace makes every hit, so replace it as soon as
+  a better drop passes the same reading. The whole routine takes a minute
+  once you have done it twice.
+mistakes:
+  - "Scouring a Rare mace to \"start clean\". The physical prefix was the valuable part."
+  - "Trying to bench increased Physical Damage onto a mace that already has it. Same group; the bench refuses."
+  - "Picking the craft before counting the sides. Attack speed needs an open suffix, physical damage an open prefix."
+  - "Judging the mace before quality. 20% quality is a large part of a one-handed base's damage."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, groups, weights and bench costs. The share of physical prefixes is our arithmetic." }

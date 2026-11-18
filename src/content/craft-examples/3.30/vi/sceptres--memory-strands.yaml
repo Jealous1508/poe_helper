@@ -1,0 +1,166 @@
+category: sceptres
+title: "Spell Damage trên base có strand"
+level: 3
+summary: "Memory Strands nâng tier của bất cứ thứ gì được roll ra. Spell Damage là một prefix dễ ra nhưng phần đỉnh thì hiếm, nên hãy đặt strand lên base và tiêu chúng qua những orb rẻ nhất."
+goal: >-
+  Một cây sceptre caster có tier cao của Spell Damage, đạt được bằng
+  Alteration trên base mang [[Memory Strands]]. Ví dụ này nói về **cái gì đã
+  biết và cái gì chưa** nhiều ngang với nói về lần craft: nhà phát triển mới
+  chỉ mô tả strand bằng lời, còn các con số người chơi dẫn ra là đo đạc và
+  data-mine. Kế hoạch bên dưới được dựng để chạy được dù những thứ đó hóa ra
+  thế nào.
+base: "Void Sceptre"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 mở Tier 1 của Spell Damage (100–109%), và strand bị phí trên
+  một base không với tới được các tier mà chúng đẩy về. Void Sceptre có
+  implicit 40%. Base phải là **Normal** lúc đặt strand lên: Orb of
+  Remembrance chỉ dùng được trên item Normal.
+methods: [strands, currency, bench]
+result:
+  implicits: ["40% increased Elemental Damage"]
+  prefixes:
+    - { text: "91% increased Spell Damage" }
+    - { text: "Adds 38 to 72 Fire Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "+48 to Intelligence" }
+    - { text: "27% increased Cast Speed" }
+needs:
+  - { item: "Một cây sceptre trắng item level 84", amount: "1" }
+  - { item: "[[Orb of Remembrance]]", amount: "1–3" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "40–100" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  [[Orb of Remembrance]] là món khác thường; phần còn lại là Alteration, một
+  [[Regal Orb]] và 4 [[Chaos Orb]]. Một cây sceptre rơi ra có sẵn strand
+  trong map có influence Originator thì đỡ được cái orb, nếu nó là Normal
+  hoặc bạn sống được với những gì nó đã có.
+odds: >-
+  Điều dữ liệu cho biết: Spell Damage chiếm 9% lần roll prefix ở item level
+  84, khoảng 1 trên 11, và strand không thay đổi điều đó. Không có strand,
+  Tier 3 trở lên chiếm 690 trong 8,190 weight của họ này, nên chỉ khoảng 1
+  trên 12 lần roll ra Spell Damage là từ 70% trở lên.
+
+
+  Điều người chơi đã đo, với một modifier có 13 tier: một strand duy nhất
+  loại bốn tier thấp nhất khỏi lần roll, và từ 62 trở lên thì chỉ còn lại bốn
+  tier cao nhất. Spell Damage có 8 tier và chưa ai công bố các mốc của nó,
+  nên **chúng tôi không thể cho bạn một tỉ lệ.** Chiều hướng thì không có gì
+  phải nghi ngờ: các tier thấp đi trước, và chúng chiếm 92% weight của họ
+  này.
+steps:
+  - title: "Đặt strand lên base trắng"
+    do: >-
+      Dùng một [[Orb of Remembrance]] lên cây sceptre Normal rồi đọc số
+      Memory Strands nó đang hiện, từ 0 tới 100.
+    why: >-
+      Orb này "randomises the number of Memory Strands on a normal equipment
+      item". Đó là cách duy nhất để đặt strand lên một base bạn tự chọn, và
+      việc đó phải xảy ra trước Transmutation đầu tiên.
+    check: >-
+      Một con số thấp chưa phải là chốt: item vẫn là Normal, nên thêm một orb
+      nữa sẽ roll lại. Việc đó có đáng một orb hay không tùy vào bạn có bao
+      nhiêu cái.
+    state: { rarity: normal, note: "Memory Strands", implicits: ["40% increased Elemental Damage"] }
+  - title: "Alteration, mỗi lần đọc hai thứ"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]]. Trước mỗi
+      cái, rê nó lên sceptre: game hiện orb đó sẽ lấy đi bao nhiêu strand.
+      Sau mỗi cái, đọc prefix.
+    why: >-
+      Theo bảng data-mine, một Alteration lấy đi nhiều nhất 8 strand, trong
+      khi một Orb of Alchemy hay một Chaos Orb có thể lấy 50 và một Essence
+      80. "Nhiều nhất 8" là mức trần hay là lượng thường gặp thì không được
+      ghi lại ở đâu, và vì thế bạn đọc con số trên từng orb thay vì tin một
+      cái bảng. Orb rẻ giúp strand trụ được qua rất nhiều lần roll cần có để
+      trúng họ modifier này.
+    check: >-
+      Bạn đang chờ dòng "% increased Spell Damage", bản thuần, ở **70% trở
+      lên**. Một tier thấp hơn khi vẫn còn strand: roll tiếp.
+    state:
+      rarity: magic
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "43% increased Spell Damage" }]
+      suffixes: [{ text: "+214 to Accuracy Rating" }]
+  - title: "Biết khi nào strand đã hết"
+    do: >-
+      Theo dõi số strand giảm dần. Khi nó về không, hãy quyết định lại xem có
+      tiếp tục không.
+    why: >-
+      Không có strand, sceptre là một base thường: khi đó Spell Damage từ 70%
+      trở lên là khoảng 1 trên 127 lần roll prefix. Tiếp tục không phải là
+      sai, nhưng đó là một lần craft khác với một cái giá khác, và nó nên là
+      một quyết định chứ không phải một thói quen.
+    fail: >-
+      Strand hết, không giữ được gì: một prefix Spell Damage 55–69% cộng
+      bench vẫn là weapon dùng được. Hoặc scour cây sceptre, việc đó đưa nó
+      về Normal, rồi dùng thêm một Orb of Remembrance.
+    state:
+      rarity: magic
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "91% increased Spell Damage" }]
+      suffixes: [{ text: "+48 to Intelligence" }]
+  - title: "Regal Orb khi còn strand"
+    do: >-
+      Dùng một [[Regal Orb]]. Kiểm chi phí strand của nó trước, như lúc nãy.
+    why: >-
+      Regal Orb giữ cả hai modifier và thêm cái thứ ba, và theo cùng bảng đó
+      nó lấy đi nhiều nhất 16 strand. Strand nào còn trên sceptre cũng cải
+      thiện tier của thứ nó thêm; lúc này chúng không còn chỗ dùng nào tốt
+      hơn.
+    state:
+      note: "Memory Strands"
+      implicits: ["40% increased Elemental Damage"]
+      prefixes: [{ text: "91% increased Spell Damage" }]
+      suffixes:
+        - { text: "+48 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+  - title: "Bench prefix thứ hai"
+    do: >-
+      Ở [[Crafting Bench]], craft **adds 34–45 to 67–78 Fire Damage to
+      Spells** giá 4 [[Chaos Orb]], theo element của spell bạn dùng.
+    why: >-
+      Added damage cho spell là một group khác với Spell Damage, thứ nhân nó
+      lên. Modifier bench là một khoảng cố định; strand không có phần trong
+      đó. Craft ở bench có lấy đi strand hay không thì chưa xác nhận được, và
+      tới lúc này điều đó không còn quan trọng.
+    state:
+      implicits: ["40% increased Elemental Damage"]
+      prefixes:
+        - { text: "91% increased Spell Damage" }
+        - { text: "Adds 38 to 72 Fire Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "+48 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+variations: >-
+  **Thay vào đó, tiêu hết chúng ở cuối.** Một [[Orb of Unravelling]] tiêu mọi
+  strand để thử nâng tier của các modifier đã có trên item, trừ modifier
+  bench. Cách đó hợp với item có modifier đúng mà tier chưa đúng. Mỗi
+  Alteration trước nó đều ăn vào thứ nó có để làm việc, nên hãy chọn một
+  trong hai kế hoạch trước bước 2.
+
+
+  **Một prefix elemental damage.** Increased Fire, Cold hoặc Lightning Damage
+  dễ ra bằng một phần ba Spell Damage với phần đỉnh còn nhẹ weight hơn,
+  weight 12 ở Tier 1. Strand hợp với nó vì cùng lý do; số lần roll thì cao
+  gấp ba.
+
+
+  **Thứ strand không giúp được.** Gem level có một tier. Aetheric Fossil hay
+  reforge Harvest không dùng strand, theo thử nghiệm của người chơi. Với
+  những thứ đó, một base thường là cùng món item với giá thấp hơn.
+mistakes:
+  - "Dùng Orb of Alchemy hoặc Essence lên base có strand. Một lần dùng có thể lấy đi phần lớn strand."
+  - "Mua base có strand dưới item level 84 cho một lần craft tier cao nhất. Strand không mở được tier mà item level cấm."
+  - "Không đọc chi phí strand game hiện trên orb."
+  - "Trông chờ strand tìm ra modifier. Chúng cải thiện tier của thứ được roll ra và không gì khác."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier và weight của Spell Damage, giá bench, và dòng mô tả của Orb of Remembrance và Orb of Unravelling." }
+  - { title: "3.29.2 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3994431", kind: official, note: "Game hiển thị số Memory Strands mà một currency sẽ lấy đi." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Bảng data-mine về số strand mỗi currency lấy đi. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: các mốc strand cho một modifier 13 tier, và việc Fossil với Harvest không dùng strand. Không chính thức." }

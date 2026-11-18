@@ -1,0 +1,121 @@
+category: rune-daggers
+title: "A gem level from a level 10 knife"
+level: 2
+summary: "The gem-level prefixes have a single tier that needs item level 2. On a base of item level 10 the pool around them is a sixth of its endgame size, and they roll six times as often."
+goal: >-
+  A levelling weapon with "+1 to Level of all Fire Spell Skill Gems" (or your
+  spell's type) that a character can equip at level 10 and keep for half the
+  campaign. The idea it teaches turns the usual rule upside down: **item
+  level is not always better high.** A modifier with one low tier gains
+  nothing from item level, and everything that item level adds to the pool
+  is competition.
+base: "Carving Knife"
+itemLevel: 10
+baseWhy: >-
+  The Carving Knife is the first rune dagger and drops from level 10. At item
+  level 10 the whole prefix pool weighs 14,700; at item level 84 it weighs
+  89,589. The Fire gem prefix weighs 250 in both. That is 1 prefix roll in
+  59 here against 1 in 358 on an endgame base. By item level 20 it is
+  already 1 in 137, so use the lowest base you can find, not merely a low
+  one.
+methods: [currency, bench]
+result:
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Spell Skill Gems" }
+    - { text: "29% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "+11 to Dexterity" }
+needs:
+  - { item: "A white Carving Knife, item level 10–12", amount: "1", note: "from the first act, or bought" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "80–120", note: "plus 4 for the bench" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Around a hundred [[Orb of Alteration]]s and one [[Regal Orb]]. That is a
+  lot for a first character and very little for a second, which is who this
+  weapon is for: craft it once and hand it down.
+odds: >-
+  By our arithmetic from the weights at item level 10: one prefix roll is a
+  **named** element's gem level 1 time in 59 for Fire, Cold or Lightning and
+  1 in 74 for Chaos or Physical. Any of the five is 1 in 13. An Alteration
+  does not always roll a prefix, so the count of orbs is higher than the
+  count of prefix rolls.
+steps:
+  - title: "Check the item level before anything else"
+    do: >-
+      Hold Alt over the white Carving Knife. You want **item level 10**, or
+      as close above it as you can get.
+    why: >-
+      Each item level above 10 opens more tiers of other prefixes and adds
+      their weight to the lottery. The gem prefix gets nothing in return:
+      it has one tier, and that tier has been open since item level 2.
+    state: { rarity: normal, implicits: ["43% increased Global Critical Strike Chance"] }
+  - title: "Alterations to the gem level"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      prefix reads **"+1 to Level of all Fire Spell Skill Gems"**, with the
+      type your main spell has.
+    why: >-
+      One level on the main spell is worth more at this stage than any
+      damage percentage a level 10 item can roll: the best Spell Damage
+      available here is 10–19%.
+    check: >-
+      Read the wording. "+1 to Level of Socketed Melee Gems" is a different
+      prefix, for attacks, and it shares a group with the one you want.
+    fail: >-
+      Out of Alterations: any Spell Damage prefix makes a usable levelling
+      weapon in the meantime. Come back to it.
+    state:
+      rarity: magic
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+  - title: "Regal Orb"
+    do: >-
+      Use a [[Regal Orb]]. Leave the suffix slot alone first: no
+      Augmentation.
+    why: >-
+      The Regal Orb makes the dagger Rare, which is what gives the bench a
+      second prefix slot. Skipping the Augmentation keeps one more slot
+      open, and on a level 10 item nothing an Augmentation could add is
+      worth a slot.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+      suffixes: [{ text: "+11 to Dexterity" }]
+  - title: "Bench Spell Damage"
+    do: >-
+      At the [[Crafting Bench]], craft **25–34% increased Spell Damage** for
+      4 Orbs of Alteration.
+    why: >-
+      Gem levels and Spell Damage are different groups, so they stack. The
+      bench's lowest Spell Damage is already better than anything this item
+      level can roll.
+    fail: >-
+      The bench may refuse its higher ranks on an item of this level. Take
+      the best it offers.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems" }
+        - { text: "29% increased Spell Damage", how: crafted }
+      suffixes: [{ text: "+11 to Dexterity" }]
+variations: >-
+  **Why this does not make an endgame weapon.** Every other modifier on the
+  dagger is capped by item level 10 for ever. For the same prefix on an
+  item level 84 base the cheap route is gone, and the tools are an
+  [[Imprint]] to protect a long Alteration roll, or Faceted and Aetheric
+  Fossils, as in the hardest example.
+
+
+  **Save the result before the Regal Orb.** If you ran more than a hundred
+  Alterations and own the beasts, an Imprint of the Magic dagger lets you
+  retry the Regal Orb. On a levelling weapon it is rarely worth a
+  [[Craicic Croaker]].
+mistakes:
+  - "Using a higher base \"to be safe\". Every item level makes this prefix rarer."
+  - "Augmenting the Magic dagger. An open slot is worth more than a level 10 suffix."
+  - "Stopping on \"Socketed Melee Gems\". Same group, wrong modifier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The gem-level prefixes, their single tier and weight, the weight of the prefix pool at each item level, and bench costs. The odds are our arithmetic." }

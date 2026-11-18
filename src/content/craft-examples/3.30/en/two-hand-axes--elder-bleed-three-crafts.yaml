@@ -1,0 +1,189 @@
+category: two-hand-axes
+title: "An Elder bleed axe: roll one prefix, craft the rest"
+level: 4
+summary: "The Elder bleed multiplier is the one prefix the bench cannot sell. Roll it alone on a Magic axe, keep the prefix side empty around it with an Imprint, then pay for three crafted modifiers."
+goal: >-
+  A Sundering Axe with the Elder prefix that adds Damage over Time Multiplier
+  for Bleeding, and both remaining prefixes filled from the bench: the
+  bleeding hybrid and flat Physical Damage. The idea is **to roll only what
+  cannot be bought**. One modifier here needs luck. Everything else is a
+  price list, and the craft is arranged so that luck is asked for once, on a
+  Magic item, where it is cheap.
+base: "Sundering Axe"
+itemLevel: 84
+baseWhy: >-
+  The implicit, +20% to Damage over Time Multiplier for Bleeding, is the
+  reason to use this base for bleed. The Elder prefix has three tiers and the
+  top one, 51–59%, needs item level 83; at 75 it stops at 43–50%. The axe
+  must have **Elder influence**, which rules out a fractured base: a
+  fractured item cannot be given influence.
+methods: [influence, currency, beast, meta, bench, finishing]
+result:
+  note: "Elder"
+  implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+  prefixes:
+    - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+    - { text: "101% increased Physical Damage / 19% chance to cause Bleeding on Hit", how: crafted }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "An Elder-influenced Sundering Axe, item level 83+", amount: "1", note: "or an Elder's Exalted Orb to make one" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Divine Orb]]", amount: "2" }
+  - { item: "[[Chaos Orb]]", amount: "12", note: "8 and 4, for the two bench prefixes" }
+cost: >-
+  The Elder base, then [[Orb of Alteration]]s in bulk, a few sets of beasts,
+  and fixed bench prices: 2 [[Divine Orb]]s for "Can have up to 3 Crafted
+  Modifiers", 8 [[Chaos Orb]]s for the bleeding hybrid, 4 for flat Physical
+  Damage. Nothing in this craft can destroy the axe. What it can do is take
+  longer than you planned at the Alteration stage.
+odds: >-
+  On an Elder axe of item level 84 the prefix pool is the natural one plus
+  three Elder families. By our arithmetic one prefix roll is the bleed
+  prefix at any tier about 1 time in 36, at 43% or more about 1 in 53, and
+  at the top tier about 1 in 107. An Alteration does not always roll a
+  prefix, so budget a couple of hundred for the middle target.
+
+
+  The Regal Orb adds one modifier and the data does not give its split
+  between prefix and suffix. You keep the result when it is a suffix or a
+  physical prefix, so expect one to three Imprints.
+steps:
+  - title: "Get an Elder base"
+    do: >-
+      Start from a Sundering Axe of item level 83 or higher with Elder
+      influence. To make one: use an [[Elder's Exalted Orb]] on a Rare
+      Sundering Axe that has no influence, then an [[Orb of Scouring]].
+    why: >-
+      The orb adds the influence and one random Elder modifier. Influence
+      belongs to the item and not to its modifiers, and a Scouring has always
+      left it in place, so you end with a white Elder axe. Where influenced
+      bases drop in 3.30 we could not confirm; the orb is the route we can
+      vouch for.
+    check: >-
+      The item shows the Elder background and no fractured modifier. Bring it
+      to 20% quality now.
+    state: { rarity: normal, note: "Elder", implicits: ["+20% to Damage over Time Multiplier for Bleeding"] }
+  - title: "Alterations to the Elder prefix, alone"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      prefix reads **+% to Damage over Time Multiplier for Bleeding from Hits
+      with this Weapon** at 43% or more. Then look at the suffix: you want it
+      empty, or something you would keep.
+    why: >-
+      On a Magic item the search is two slots and each try costs one
+      Alteration. The Elder prefix weighs 500 a tier in a prefix pool of
+      about 53,300, which is common enough to roll this way and far too rare
+      to wait for on a Rare item. Do not use an Augmentation afterwards: an
+      empty suffix is worth more than a random one.
+    check: >-
+      Hold Alt and read the tier: 51–59% is the top, 43–50% the second.
+      Decide before you start whether the second is enough.
+    state:
+      rarity: magic
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+  - title: "Imprint, then Regal Orb"
+    do: >-
+      In the [[Menagerie]], make an [[Imprint]] of the Magic axe
+      ([[Craicic Croaker]] and three Rare beasts). Then use a [[Regal Orb]].
+    why: >-
+      The mace guide uses the Imprint to keep a prefix. Here it protects
+      something else: **the two empty prefix slots**. The plan fills them
+      from the bench, and a Regal Orb that puts fire damage in one of them
+      has taken a third of the axe's damage. The Imprint lets you refuse
+      that. It works on an influenced item; it would not on a fractured one.
+    check: >-
+      Keep the result if the Regal Orb added a **suffix**, or a physical
+      prefix: flat Physical Damage or the hybrid with Accuracy.
+    fail: >-
+      Any other prefix: use the Imprint to return the axe to Magic, make a
+      new Imprint, and use another Regal Orb. A first attempt here added
+      fire damage and was undone.
+    state:
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+  - title: "Three crafted modifiers"
+    do: >-
+      At the [[Crafting Bench]], in this order: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]]s, a suffix). **95–105% increased Physical
+      Damage with 18–20% chance to cause Bleeding on Hit** (8
+      [[Chaos Orb]]s, a prefix). **Adds 18–24 to 36–42 Physical Damage** (4
+      Chaos Orbs, a prefix).
+    why: >-
+      The first craft spends a suffix slot and allows two more bench
+      modifiers. On most weapons that is an even trade. On this axe it is a
+      good one, because both things you want from the bench are prefixes in
+      different groups, and the prefix side is where an axe's damage is.
+      The bleeding hybrid is the pure percentage's group; flat Physical
+      Damage is its own.
+    check: >-
+      Three prefixes, two crafted. Two suffixes, one crafted. One suffix
+      slot open.
+    state:
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "101% increased Physical Damage / 19% chance to cause Bleeding on Hit", how: crafted }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "The last suffix: a gamble you may decline"
+    do: >-
+      One suffix slot is open and the bench is full. An [[Exalted Orb]] adds
+      one random suffix there. Or leave it empty.
+    why: >-
+      With attack speed already on the axe, by our arithmetic about one
+      Exalted Orb in 27 gives one of the two suffixes a bleed build would
+      choose: the natural Damage over Time Multiplier, or Elder's Culling
+      Strike against Bleeding enemies with 30–49% increased Physical Damage.
+      The rest is filler. It cannot hurt the axe, since nothing is removed,
+      but it is a poor price for a 1 in 27.
+    check: >-
+      If you would rather have a certain suffix than a third crafted prefix,
+      swap the flat Physical Damage for +31–35% to Physical Damage over Time
+      Multiplier (4 Chaos Orbs) and leave a prefix open for later.
+variations: >-
+  **Why Alterations and not Harvest.** The Horticrafting Station has "Reforge
+  an Influenced Rare item with random modifiers, including an Influence
+  modifier" for 5,000 Primal Lifeforce and a Sacred Crystallised Lifeforce.
+  It guarantees *an* Elder modifier, and an Elder axe has thirteen families
+  of them. Alterations ask for the one you want at a known rate.
+
+
+  **A veiled hybrid in place of the bench one.** 120–139% with 21–25% chance
+  to cause Bleeding is the upgrade for the second prefix. The route is the
+  one in the next example, a locked suffix side and a veiled orb, and on this
+  axe it would need all three suffix slots filled with rolled modifiers
+  first, which means giving up the three-craft finish.
+
+
+  **A second influence.** Hunter has "Bleeding you inflict deals Damage
+  22–25% Faster" as a suffix. Putting it on the same axe takes an
+  [[Awakener's Orb]], which rerolls everything except one influenced
+  modifier from each item. The sword guide's last example shows that orb at
+  work.
+mistakes:
+  - "Using the Regal Orb without an Imprint and accepting an elemental prefix. Every prefix it takes is one the bench was going to fill with damage."
+  - "Starting from a fractured axe because it has a good prefix. It cannot take Elder influence."
+  - "Crafting the bleeding hybrid first and then finding the bench refuses a second modifier. \"Can have up to 3 Crafted Modifiers\" goes on before the other two."
+  - "Rolling for the top tier on a budget that only covers the second. Decide at the start; 43–50% is a strong modifier and costs half the Alterations."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Elder modifiers on two-handed axes, tiers, weights, groups and bench costs, and the in-game text of the Elder's Exalted Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the bench's meta-modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the beast it needs." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The influenced reforge and its cost." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured items cannot be given influence." }

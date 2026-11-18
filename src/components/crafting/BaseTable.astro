@@ -1,0 +1,116 @@
+---
+import BaseIcon from './BaseIcon.astro';
+import { t, type Locale } from '../../i18n';
+import type { CraftBase, CraftData } from '../../lib/crafting';
+
+/**
+ * Every base item of a category, grouped by the modifier pool it rolls
+ * from. The numbers are the game's own: they come from the data export.
+ */
+interface Props {
+  data: CraftData;
+  locale: Locale;
+  /** Display name for each pool id. */
+  poolNames: Record<string, string>;
+  /** Base names the guide recommends; they get a mark. */
+  picks?: string[];
+}
+const { data, locale, poolNames, picks = [] } = Astro.props;
+const groups = data.pools.map((pool) => ({ pool, bases: data.bases.filter((base) => base.pool === pool.id) }));
+const span = (value: number | number[]) => (Array.isArray(value) ? value.join('–') : String(value));
+
+// The words here are the game's own stat names, so they stay in English in
+// both languages, like every other game term on the site.
+function properties(base: CraftBase): string[] {
+  const s = base.stats;
+  const out: string[] = [];
+  if (s.armour) out.push(`Armour ${span(s.armour)}`);
+  if (s.evasion) out.push(`Evasion ${span(s.evasion)}`);
+  if (s.energy_shield) out.push(`Energy Shield ${span(s.energy_shield)}`);
+  if (s.ward) out.push(`Ward ${span(s.ward)}`);
+  if (s.block) out.push(`Block ${span(s.block)}%`);
+  if (s.physical) out.push(`Physical ${span(s.physical)}`, `${s.aps} APS`, `Crit ${s.crit}%`, `${s.dps} DPS`);
+  if (s.life_per_use) out.push(`Life ${s.life_per_use}`);
+  if (s.mana_per_use) out.push(`Mana ${s.mana_per_use}`);
+  if (s.duration) out.push(`${(Number(s.duration) / 10).toFixed(1)} s`);
+  if (s.charges_max) out.push(`Charges ${s.charges_per_use}/${s.charges_max}`);
+  return out;
+}
+const requirements = (base: CraftBase) =>
+  ['strength', 'dexterity', 'intelligence'].filter((key) => base.req[key]).map((key) => `${base.req[key]} ${key.slice(0, 3)}`);
+// What sets a base apart from the plain ones of its kind.
+function marks(base: CraftBase): string[] {
+  const out: string[] = [];
+  if (base.tags.includes('atlas_base_type')) out.push('atlas');
+  if (base.tags.includes('experimental_base')) out.push('experimented');
+  if (base.tags.includes('ward_armour')) out.push('expedition');
+  return out;
+}
+---
+<div class="bases">
+  {groups.map(({ pool, bases }, index) => (
+    <details class="bases__group" open={index === 0 || groups.length === 1}>
+      <summary>
+        <svg class="bases__chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6" /></svg>
+        <span class="bases__title">{poolNames[pool.id] ?? pool.id}</span>
+        <span class="bases__n">{t(locale, 'craft.bases.count', { count: bases.length })}</span>
+      </summary>
+      <div class="bases__scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>{t(locale, 'craft.bases.base')}</th>
+              <th class="num">{t(locale, 'craft.bases.level')}</th>
+              <th>{t(locale, 'craft.bases.requires')}</th>
+              <th>{t(locale, 'craft.bases.properties')}</th>
+              <th>{t(locale, 'craft.bases.implicit')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bases.map((base) => (
+              <tr class:list={{ 'is-pick': picks.includes(base.name) }}>
+                <td>
+                  <span class="bases__name">
+                    <BaseIcon base={base} cell={20} max={52} />
+                    <span>
+                      <strong>{base.name}</strong>
+                      {picks.includes(base.name) && <em class="bases__mark bases__mark--pick">{t(locale, 'craft.bases.pick')}</em>}
+                      {marks(base).map((mark) => <em class="bases__mark">{t(locale, `craft.bases.mark.${mark}`)}</em>)}
+                    </span>
+                  </span>
+                </td>
+                <td class="num">{base.req.level ?? base.dropLevel}</td>
+                <td>{requirements(base).join(', ') || '—'}</td>
+                <td>{properties(base).join(' · ') || '—'}</td>
+                <td>{base.implicits.join(' / ') || '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .bases__group { border-top: 1px solid var(--border); }
+  .bases__group:last-child { border-bottom: 1px solid var(--border); }
+  summary { display: flex; align-items: center; gap: 0.55rem; padding: 0.7rem 0; cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover .bases__title { color: var(--accent); }
+  .bases__chevron { flex: none; color: var(--text-muted); transition: transform 0.15s var(--ease); }
+  details[open] > summary .bases__chevron { transform: rotate(90deg); }
+  .bases__title { font-weight: 600; }
+  .bases__n { font-size: 0.82rem; color: var(--text-muted); }
+  .bases__scroll { overflow-x: auto; padding-bottom: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  th { text-align: left; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0.35rem 0.8rem 0.45rem 0; border-bottom: 1px solid var(--border-strong); white-space: nowrap; }
+  td { padding: 0.4rem 0.8rem 0.4rem 0; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: 0; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .bases__name { display: flex; align-items: center; gap: 0.65rem; min-width: 12rem; }
+  .bases__name strong { font-weight: 600; display: block; }
+  .bases__mark { display: inline-block; margin: 0.1rem 0.3rem 0 0; font-style: normal; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border-strong); border-radius: 3px; padding: 0 0.3rem; }
+  .bases__mark--pick { color: var(--buff); border-color: var(--buff); }
+  tr.is-pick td { background: var(--surface); }
+</style>

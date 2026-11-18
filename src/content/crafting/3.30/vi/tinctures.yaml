@@ -1,0 +1,326 @@
+name: "Tincture"
+short: "Mười base, một pool, và không có công cụ nào ngoài ba orb bạn dùng trên flask. Implicit làm phần việc chính; hai ô tinh chỉnh nó."
+icon: "Prismatic Tincture"
+intro: >-
+  Tincture là họ hàng gần của flask. Bạn roll nó bằng cùng ba orb đó,
+  [[Glassblower's Bauble]] thêm quality cho nó, và nó có phía prefix và phía
+  suffix của riêng mình. Việc nó làm thì khác: mọi dòng trên tincture, từ
+  implicit trở xuống, áp dụng cho attack bằng **melee weapon**, và ở chỗ
+  flask có charge thì tincture có cooldown và một chi phí duy trì gọi là
+  Mana Burn.
+
+
+  Hướng dẫn này cố ý viết ngắn. Dữ liệu 3.30 có mười base tincture, năm họ
+  prefix và mười hai họ suffix, và không có modifier bench, Essence, công
+  thức beast hay modifier đặc biệt nào cho chúng. Có một điều chúng tôi chưa
+  xác nhận được là quy tắc rarity của tincture trong 3.30. Mọi thứ ở đây coi
+  tincture như trang tổng quan đã coi, là một item Magic với một prefix và
+  một suffix, và chỉ dùng những orb tác động được lên item Magic.
+basics:
+  itemLevel:
+    text: >-
+      Mọi họ prefix và chín trong mười hai họ suffix đều có một tier ở item
+      level 1, nên một tincture nhặt được trong campaign đã roll được
+      modifier bạn muốn, ở dạng yếu nhất của nó. Item level thêm các tier
+      lên trên.
+
+
+      Cũng như trên flask, mọi tier của một modifier có weight bằng nhau
+      trong dữ liệu 3.30. Tier tốt nhất không hiếm hơn tier tệ nhất; item
+      level là thứ duy nhất chặn nó lại. Điều đó dẫn tới một hệ quả dễ chịu:
+      item level cao hơn làm cho "tốt thứ nhì trở lên" *dễ hơn*, vì mỗi lần
+      roll ra tier tốt nhất cũng được tính.
+
+
+      Item level 73 đưa mọi modifier tới chỗ chỉ còn cách tier tốt nhất của
+      nó một tier. Các tier cao nhất trải từ 77 tới 85, và năm cái trong số
+      đó cần đủ 85: increased effect, attack speed, critical strike
+      multiplier, elemental penetration và flask charge từ việc giết quái.
+    breakpoints:
+      - ilvl: 1
+        unlocks: "Tier đầu tiên của cả năm họ prefix và của chín họ suffix, trong đó có 15–19% increased Melee Weapon Attack Speed, modifier chỉ có ba tier."
+      - ilvl: 45
+        unlocks: "Ba họ suffix cuối cùng đã xuất hiện: Mana per Enemy Killed (từ 38), cơ hội ignore Physical Damage Reduction (từ 40) và Mana per Enemy Hit (từ 45)."
+      - ilvl: 58
+        unlocks: "Tier 2 của cả hai prefix duy trì: 23–27% increased Cooldown Recovery Rate và 23–21% reduced Mana Burn rate."
+      - ilvl: 65
+        unlocks: "Attack speed Tier 2, 20–24%, và increased effect Tier 2, 17–19% (từ 64)."
+      - ilvl: 73
+        unlocks: "Tier 2 của critical strike multiplier (+24–28%) và elemental penetration (14–16%). **Giờ mọi modifier chỉ còn cách tier tốt nhất của nó một tier.**"
+      - ilvl: 80
+        unlocks: "Tier 1 reduced Mana Burn rate (26–24%) và Tier 1 của cơ hội ignore Physical Damage Reduction (50–60%)."
+      - ilvl: 84
+        unlocks: "Tier 1 Damage over Time Multiplier (+29–33%), và tier tốt nhất của hai prefix đánh đổi. Tier 1 Cooldown Recovery Rate (28–32%) mở từ 82."
+      - ilvl: 85
+        unlocks: "Tier 1 của increased effect (20–22%), attack speed (25–29%), critical strike multiplier (+29–33%) và elemental penetration (17–19%). **Mức trần.**"
+  bases:
+    text: >-
+      Dữ liệu có mười tincture, và tất cả roll từ một pool với cùng weight.
+      Không base nào mở ra một modifier mà base khác không thể có. Base
+      tincture **chính là** implicit của nó, và implicit là phần lớn những
+      gì item làm.
+
+
+      Tám trong mười cái tên xuất hiện trong dữ liệu thêm một lần nữa, ở
+      drop level 1 và không có implicit. Chúng tôi không biết các mục đó là
+      gì. Bảng base có hiện chúng, và không gì trong hướng dẫn này dựa vào
+      chúng.
+    types:
+      - title: "Một pool cho mọi tincture"
+        pools: [all]
+        text: >-
+          Năm họ prefix và mười hai họ suffix, giống hệt nhau trên mọi base.
+          Chọn giữa các base là chọn một implicit, không bao giờ là chọn một
+          danh sách modifier.
+      - title: "Damage: Prismatic và Rosethorn"
+        text: >-
+          Cả hai rơi từ level 18. Prismatic Tincture cho 70–100% increased
+          Elemental Damage with Melee Weapons, Rosethorn cho 100–150%
+          increased Critical Strike Chance with Melee Weapons. Hai cái này
+          hợp với nhiều build nhất.
+      - title: "Ailment: năm base"
+        text: >-
+          Mỗi cái thêm cơ hội gây một ailment bằng melee weapon và làm
+          ailment đó mạnh hơn. Ashbark (ignite), Borealwood (freeze và
+          chill) và Fulgurite (shock) rơi từ level 32; Blood Sap (bleeding)
+          và Poisonberry (poison) từ 45. Ba ailment gây damage là ignite,
+          bleeding và poison mang theo 60–90% increased damage với ailment
+          đó.
+      - title: "Stun, Blind và Rage"
+        text: >-
+          Ironwood (từ level 18) kéo dài stun và hạ stun threshold của kẻ
+          địch 40%. Sporebloom (52) gây blind khi đánh trúng. Oakbranch
+          (60), cái xuất hiện sau cùng, có implicit duy nhất không có
+          khoảng: Gain 3 Rage on Melee Weapon Hit.
+    picks:
+      - base: "Rosethorn Tincture"
+        for: "Build critical strike"
+        why: >-
+          Implicit chạy từ 100% tới 150%, khoảng rộng nhất trên mọi
+          tincture, nên hai cái Rosethorn trắng có thể cách nhau rất xa
+          trước khi dùng tới orb nào. Chọn cái cao.
+      - base: "Prismatic Tincture"
+        for: "Attack elemental"
+        why: >-
+          70–100% increased Elemental Damage with Melee Weapons, từ level
+          18. Tincture đầu tiên mà một nhân vật attack elemental dùng được,
+          và là cái không bao giờ hết hữu dụng.
+      - base: "Poisonberry Tincture"
+        for: "Poison"
+        why: >-
+          20% cơ hội gây poison và 60–90% increased poison damage trên
+          implicit. Blood Sap Tincture là cùng item đó cho bleeding.
+      - base: "Oakbranch Tincture"
+        for: "Rage"
+        why: >-
+          Gain 3 Rage on Melee Weapon Hit là con số cố định, nên Oakbranch
+          nào cũng như nhau và không có roll implicit nào để kiểm.
+    impact: >-
+      **Implicit, và roll của nó.** Chín trong mười implicit có một khoảng,
+      và không orb nào trong hướng dẫn này đổi được vị trí của tincture bạn
+      trong khoảng đó. Một [[Blessed Orb]] roll lại chỉ số implicit trên
+      trang bị; nó có tác dụng trên tincture hay không thì chúng tôi chưa
+      xác nhận được. Vậy nên hãy so các base trắng và bắt đầu từ roll tốt
+      nhất bạn có.
+
+
+      **Các con số duy trì.** Bản xuất dữ liệu game cho mỗi base thêm hai
+      con số mà bảng ở đây không hiện: nó áp Mana Burn dày tới đâu (mỗi 0.5
+      tới 0.9 giây, tùy base) và cooldown của nó dài bao lâu (6 tới 10
+      giây). Các prefix tác động đúng lên những con số này, nên hãy đọc
+      chúng trên item trước khi quyết định bạn cần prefix nào.
+
+
+      **Không phải pool.** Tincture roll được gì thì cả mười cái đều như
+      nhau.
+tools:
+  - method: currency
+    note: >-
+      [[Orb of Transmutation]] biến tincture trắng thành Magic,
+      [[Orb of Alteration]] roll lại nó, và [[Orb of Augmentation]] lấp một
+      ô trống. Đó là quy trình của flask, và trong phạm vi chúng tôi xác
+      định được thì đó là toàn bộ bộ công cụ. Nếu tincture của bạn nhận một
+      [[Regal Orb]] hay một [[Orb of Alchemy]], chuyện đó nằm ngoài những gì
+      chúng tôi đã kiểm chứng, và các ví dụ không dùng tới chúng.
+
+
+      Phía prefix thì nhỏ. Ở item level 85, theo phép tính của chúng tôi từ
+      weight, một lần roll prefix ra reduced Mana Burn rate một phần ba số
+      lần, increased Cooldown Recovery Rate 27%, increased effect thuần 20%,
+      và mỗi cái trong hai prefix đánh đổi 10%. Phía suffix có mười hai họ.
+      Life khi giết quái và mana khi giết quái có weight cao nhất, mỗi cái
+      12.7%; các suffix damage mà người ta roll tìm thì mỗi cái khoảng 8%.
+  - method: bench
+    note: >-
+      Không có gì để mua. Dữ liệu bench 3.30 không có modifier nào cho
+      tincture. Những mục duy nhất liệt kê chúng là ba lựa chọn roll lại
+      chung của bench, và hai trong số đó cần item Rare. Hãy lên kế hoạch
+      mọi tincture mà không có bước bench.
+  - method: finishing
+    note: >-
+      [[Glassblower's Bauble]] ghi "Improves the quality of a flask or
+      tincture", tối đa 20%. Quality cải thiện cái gì trên tincture thì hiện
+      trên item; dữ liệu của chúng tôi không nói, nên chúng tôi cũng không
+      nói. Instilling Orb và Enkindling Orb đều nêu utility flask, và theo
+      chính mô tả của chúng thì không phải công cụ cho tincture.
+memoryStrands: >-
+  Không có gì chúng tôi xác nhận được cho thấy [[Memory Strands]] có trên
+  tincture. Strand được mô tả là một thuộc tính của trang bị, và
+  [[Orb of Remembrance]] ghi "a normal equipment item". Hãy lên kế hoạch như
+  thể chúng không tồn tại.
+
+
+  Cũng như với flask, chẳng mất bao nhiêu: các tier của một modifier
+  tincture vốn đã có weight bằng nhau, và một lần trượt tốn một Alteration.
+reading:
+  intro: >-
+    Đọc implicit trước: nó nói tincture này dùng để làm gì. Rồi tới suffix:
+    nó có đẩy cùng hướng với implicit không? Rồi tới prefix: nó là sức mạnh
+    hay duy trì, và nhân vật này cần cái nào trong hai?
+  prefixes:
+    text: >-
+      Năm họ trong ba group. Hai họ là **duy trì**: reduced Mana Burn rate,
+      và increased Cooldown Recovery Rate. Ba họ xoay quanh **effect** và
+      chung một group: increased effect thuần; 35% increased effect trả bằng
+      Mana Burn nhanh hơn; và chiều ngược lại, ít effect hơn để đổi lấy một
+      nửa Mana Burn rate.
+
+
+      Với một ô prefix, bạn được một trong năm. Nên câu hỏi không phải là
+      chuyện tier. Mà là bạn đang gặp vấn đề nào: tincture chưa đủ mạnh, hay
+      bạn không giữ nó bật được.
+
+
+      Việc "effect" nhân lên cái gì, và một stack Mana Burn tốn của bạn bao
+      nhiêu, là những quy tắc ghi trong game. Dữ liệu của chúng tôi chứa
+      khoảng của modifier chứ không chứa các quy tắc đó, nên hãy đọc chúng
+      trên item và trong phần trợ giúp của game.
+    key:
+      - mod: "#% increased effect"
+        why: "Thêm những gì tincture làm, không mất gì. Lựa chọn đơn giản khi mana của bạn vốn đã theo kịp."
+        aim: "T2, 17–19% (ilvl 64). T1 là 20–22% (ilvl 85)."
+      - mod: "#% increased effect / #% increased Mana Burn rate"
+        why: "35% ở mọi tier, hơn hẳn prefix thuần, trả bằng Mana Burn nhanh hơn. Tier tốt hơn chỉ hạ cái giá đó xuống."
+        aim: "Tier nào cũng được 35%. T1 (ilvl 84) burn nhanh hơn 37–41%, T3 (ilvl 1) là 47–51%."
+      - mod: "#% reduced Mana Burn rate"
+        why: "Prefix dễ ra nhất, một phần ba số lần roll prefix. Dành cho nhân vật cạn mana trước khi trận đánh kết thúc."
+        aim: "T2, 23–21% (ilvl 58). T1 là 26–24% (ilvl 80)."
+      - mod: "#% increased Cooldown Recovery Rate"
+        why: "Rút ngắn thời gian chờ trước khi bật lại được tincture."
+        aim: "T2, 23–27% (ilvl 58). T1 là 28–32% (ilvl 82)."
+      - mod: "#% reduced effect / #% reduced Mana Burn rate"
+        why: "Một nửa Mana Burn rate, đổi lại mất 21% tới 35% effect, tùy tier. Hiếm khi là thứ bạn roll để tìm; chỉ giữ nó khi duy trì là toàn bộ vấn đề."
+        aim: "T1 (ilvl 84) mất 25–21% effect, T3 (ilvl 1) mất 35–31%."
+  suffixes:
+    text: >-
+      Mười hai họ thuộc ba kiểu. **Damage:** attack speed, critical strike
+      multiplier, Damage over Time Multiplier, elemental penetration, cơ hội
+      ignore Physical Damage Reduction, và damage lên kẻ địch đang Low Life.
+      **Hồi phục:** life và mana khi giết quái, life và mana khi đánh trúng,
+      flask charge từ việc giết quái. Và elemental ailment kéo dài hơn, một
+      kiểu riêng của nó.
+
+
+      Các suffix hồi phục là những cái có weight cao. Life khi giết quái và
+      mana khi giết quái có weight 1,000 mỗi tier, trong khi critical strike
+      multiplier, penetration và Damage over Time Multiplier có weight 500.
+      Một tincture phó mặc cho may rủi sẽ roll ra hồi phục; phải đẩy thì nó
+      mới về phía damage.
+
+
+      Hãy ghép suffix với implicit: penetration trên Prismatic Tincture,
+      critical strike multiplier trên Rosethorn, Damage over Time Multiplier
+      trên Blood Sap hoặc Poisonberry. Attack speed thì hợp với tất cả.
+    key:
+      - mod: "#% increased Melee Weapon Attack Speed"
+        why: "Hữu ích cho mọi build vung melee weapon, và tier thấp nhất của nó đã là 15–19% ở item level 1."
+        aim: "T2, 20–24% (ilvl 65). T1 là 25–29% (ilvl 85)."
+      - mod: "+#% to Melee Weapon Critical Strike Multiplier"
+        why: "Bạn đồng hành của critical strike chance trên Rosethorn Tincture."
+        aim: "T2, +24–28% (ilvl 73). T1 là +29–33% (ilvl 85)."
+      - mod: "Melee Weapon Damage Penetrates #% Elemental Resistances"
+        why: "Cho attack elemental. Suffix hiển nhiên cho Prismatic Tincture."
+        aim: "T2, 14–16% (ilvl 73). T1 là 17–19% (ilvl 85)."
+      - mod: "+#% to Damage over Time Multiplier with Melee Weapon Attacks"
+        why: "Cho build bleeding, poison và ignite, trên chính tincture gây ra ailment đó."
+        aim: "T2, +24–28% (ilvl 70). T1 là +29–33% (ilvl 84)."
+      - mod: "Melee Weapon Hits have #% chance to ignore Enemy Physical Damage Reduction"
+        why: "Cho build physical. Ba tier và weight thấp: dưới 5% số lần roll suffix."
+        aim: "T2, 40–49% (ilvl 62). T1 là 50–60% (ilvl 80)."
+      - mod: "Gain # Mana per Enemy Killed with Melee Weapons"
+        why: "Mana trả về trong lúc bạn clear. Một trong hai suffix dễ ra nhất."
+        aim: "T2, 6–8 (ilvl 68). T1 là 9–11 (ilvl 82)."
+      - mod: "Gain # Life per Enemy Killed with Melee Weapons"
+        why: "Suffix dễ ra nhất còn lại. Ổn trên tincture leveling, thường là phí một ô trên tincture damage."
+        aim: "T2, 21–25 (ilvl 62). T1 là 26–30 (ilvl 80)."
+      - mod: "#% increased Flask Charges gained from Kills with Melee Weapons"
+        why: "Giữ cho các flask bên cạnh tincture luôn đầy trong lúc chạy map."
+        aim: "T2, 21–25% (ilvl 72). T1 là 26–30% (ilvl 85)."
+approach:
+  principle: >-
+    **Implicit chính là tincture; hai ô tinh chỉnh nó.** Chọn base theo điều
+    bạn muốn các cú đánh melee của mình làm được, và kiểm roll implicit của
+    nó khi nó còn trắng. Rồi cho nó một suffix đẩy cùng hướng, và một prefix
+    trả lời một câu hỏi: thêm sức mạnh, hay duy trì dễ hơn.
+  order:
+    - title: "Chọn base theo implicit"
+      text: >-
+        Tincture nào cũng roll cùng những modifier đó, nên với người craft
+        không còn gì khác phân biệt các base. Elemental damage, critical
+        strike, một ailment, stun, blind hay Rage: lấy cái mà build của bạn
+        vốn đã làm.
+    - title: "Kiểm roll implicit trước orb đầu tiên"
+      text: >-
+        Giữ Alt rồi rê chuột lên các base trắng bạn có và so sánh. Một
+        Rosethorn 145% và một cái 105% tốn cùng số Alteration nhưng không
+        phải cùng một item.
+    - title: "Lấy item level theo tier bạn sẽ chấp nhận"
+      text: >-
+        Item level nào cũng được cho tincture đầu tiên. 73 cho tier tốt thứ
+        nhì của mọi thứ. 85 khi bạn muốn tier tốt nhất, hoặc muốn tier tốt
+        thứ nhì ra dễ dàng.
+    - title: "Đọc suffix trước"
+      text: >-
+        Phía suffix có mười hai họ và phía prefix có năm, nên suffix là nửa
+        hiếm hơn. Đọc nó trước sau mỗi [[Orb of Alteration]], và chỉ dùng
+        [[Orb of Augmentation]] lên ô trống khi nửa đã có sẵn đạt mức.
+    - title: "Đọc prefix là sức mạnh hay duy trì"
+      text: >-
+        Biết mình cần cái nào trước khi roll, và gọi tên prefix duy nhất bạn
+        sẽ từ chối. Với phần lớn tincture damage, đó là cái reduced effect.
+    - title: "Quality sau cùng"
+      text: >-
+        [[Glassblower's Bauble]], trên tincture bạn sẽ giữ.
+  finishing: >-
+    Quality lên 20% bằng [[Glassblower's Bauble]] là bước hoàn thiện duy
+    nhất có cơ sở trong dữ liệu. Không có craft bench nào để thêm và không
+    có enchantment nào cho tincture trong dữ liệu 3.30.
+  stopping: >-
+    Một tincture là xong khi suffix thuộc cùng build với implicit và prefix
+    không phải cái chống lại bạn. Theo phép tính của chúng tôi ở item level
+    85, một suffix damage chỉ định như critical strike multiplier là khoảng
+    1 trên 13 lần roll suffix ở tier bất kỳ, 1 trên 31 ở hai tier tốt nhất,
+    và 1 trên 63 ở tier tốt nhất. Mỗi đòi hỏi đặt lên prefix đều nhân con số
+    đó lên.
+
+
+    Không có cách nào giữ một ô mà roll lại ô kia, nên đòn bẩy duy nhất bạn
+    có là mức đặt ra. Hãy đặt nó trước khi bắt đầu. Nếu build chạy được với
+    tier tốt thứ nhì, mà gần như lúc nào cũng vậy, thì đó là mức.
+special:
+  - mod: "The base implicit, for example Gain 3 Rage on Melee Weapon Hit"
+    source: "Base"
+    where: "Mỗi base trong mười base có cái của riêng mình. Không thứ gì trong hướng dẫn này roll, thêm hay thay được nó: bạn chọn nó bằng cách chọn base."
+  - mod: "Bench, Essence, beast, veiled, influence and Fossil modifiers"
+    source: "Không có trong dữ liệu"
+    where: "Dữ liệu game 3.30 không liệt kê modifier nào thuộc các loại này cho tincture. Nếu game có, chúng tôi chưa kiểm chứng được, và không gì ở đây phụ thuộc vào nó."
+mistakes:
+  - "**Craft trên một roll implicit thấp.** Implicit của Rosethorn chạy từ 100% tới 150%, và không Alteration nào xê dịch được nó. Base trắng có roll cao đáng để tìm trước."
+  - "**Giữ một suffix hồi phục trên tincture damage vì nó xuất hiện sớm.** Life và mana khi giết quái là những suffix dễ ra nhất. Thấy một cái không phải là may."
+  - "**Roll tìm tier tốt nhất trên base item level 84.** Năm cái trong số đó cần 85."
+  - "**Lấy 35% increased effect mà không nhìn mana của mình.** Nó đi kèm Mana Burn rate nhanh hơn 37% tới 51%, tùy tier."
+  - "**Đi tìm một craft bench.** Không có cái nào cho tincture trong dữ liệu 3.30."
+  - "**Cho rằng công cụ của flask dùng sang được.** Instilling Orb và Enkindling Orb nêu utility flask, và các công thức flask của Blood Altar là dành cho flask."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, implicit, modifier, tier và weight được dẫn ở đây, các lựa chọn bench có liệt kê tincture, cooldown và chu kỳ Mana Burn của từng base, và mô tả của Glassblower's Bauble. Xác suất là phép tính của chúng tôi từ weight trong đó." }

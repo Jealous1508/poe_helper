@@ -1,0 +1,209 @@
+category: daggers
+title: "A poison dagger and an Elder's Exalted Orb with two outcomes"
+level: 5
+summary: "Fill the suffixes, hold the physical group with a veiled prefix, and the Elder modifier an Exalted Orb adds can only be one of two. Then look before you click."
+goal: >-
+  A Heist poison dagger with the Elder prefix that multiplies its poison,
+  "+51–59% to Damage over Time Multiplier for Poison inflicted with this
+  Weapon", next to a veiled physical prefix with a chance to Poison. The
+  Elder's Exalted Orb normally adds one of thirteen modifiers. This plan is
+  **block-crafting**: arrange the item so that eleven of them are
+  impossible before the orb is used.
+base: "Pneumatic Dagger"
+itemLevel: 83
+baseWhy: >-
+  The top Heist dagger: all damage from its hits can poison. Item level 83
+  is what the best tier of the Elder poison prefix needs (75 gives 43–50%).
+  The base must be **neither influenced nor fractured**: the orb needs an
+  item with no influence, and by reference pages a fractured item cannot be
+  given influence. So nothing on this dagger can be fractured, and every
+  protection in the plan is a bench lock.
+methods: [veiled, meta, harvest, influence, lock, bench]
+result:
+  note: "Elder"
+  implicits: ["All Damage from Hits with This Weapon can Poison"]
+  prefixes:
+    - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+    - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "+22% to Damage over Time Multiplier", how: harvest }
+    - { text: "+47 to Intelligence", how: harvest }
+needs:
+  - { item: "[[Veiled Chaos Orb]]", amount: "a few" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Elder's Exalted Orb]]", amount: "1" }
+  - { item: "[[Hinekora's Lock]]", amount: "1 or more", note: "optional; see stage 4" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "bench crafts" }
+cost: >-
+  One [[Elder's Exalted Orb]], which the conquerors drop, is the piece there
+  is only one of: the item can take it once. Around it, a few
+  [[Veiled Chaos Orb]]s from Betrayal and one or more locks at 4
+  [[Divine Orb]]s and a [[Sacred Orb]] each. A [[Hinekora's Lock]] costs
+  more than everything else together; the plan works without it at even
+  odds.
+odds: >-
+  **Stage 2.** Every Speed reforge gives attack speed, the only natural
+  dagger modifier with that tag. If the tier is drawn by weight, about one
+  reforge in four gives 23% or more.
+
+
+  **Stage 4.** On Elder daggers the data lists five prefixes: three versions
+  of increased Physical Damage, all in the pure physical group, and the
+  damage-over-time multipliers for Bleeding and for Poison, each with three
+  tiers of equal weight. With the suffixes full and the physical group
+  occupied, two remain. If the orb draws by weight among what the item can
+  still take, as every other added modifier does, it is the Poison one
+  **one time in two**, and its top tier one time in three after that. With
+  a suffix slot open as well, it would be about 1 chance in 13.
+steps:
+  - title: "Stage 1: the veiled Poison prefix, and nothing else in front"
+    do: >-
+      Make the white dagger Rare, then use [[Veiled Chaos Orb]]s until the
+      result has a **Veiled Prefix and at most one other prefix**. Craft
+      25–34% increased Fire Damage (4 Orbs of Alteration) in an open prefix
+      to block the caster choices, unveil **120–139% increased Physical
+      Damage with 21–25% chance to Poison on Hit**, and remove the block
+      again (1 Orb of Scouring).
+    why: >-
+      This prefix does three jobs. It is the dagger's physical multiplier.
+      It supplies chance to Poison. And it occupies the pure physical
+      group, which is what will later rule out three of the five Elder
+      prefixes.
+    check: >-
+      After this stage you want the veiled prefix and **two open prefix
+      slots**, or one open slot and a prefix you can live with. Ignore the
+      suffixes.
+    state:
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+      suffixes:
+        - { text: "+38 to Dexterity" }
+        - { text: "Gain 19 Mana per Enemy Killed" }
+  - title: "Stage 2: lock the prefix, reforge for attack speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]; it needs an open suffix). Then, at the
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150 Vivid Lifeforce). Repeat
+      both until the attack speed tier satisfies you.
+    why: >-
+      Use the full lock even though only one prefix needs protecting. The
+      1 Divine Orb version would be certain here, but nothing says it stops
+      a reforge from **adding** prefixes to the open slots, and those slots
+      must stay empty. Under the full lock, players report the prefix side
+      is left exactly as it is.
+    check: >-
+      One prefix, as before. Attack speed among the suffixes. Count the
+      suffixes: the next stage needs three.
+    fail: >-
+      If a reforge under the lock ever adds a prefix, stop: the rule has
+      changed since this was written, and the plan needs the slot.
+    state:
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+  - title: "Stage 3: make sure the suffix side is full"
+    do: >-
+      Three suffixes: go on. Two: craft a third at the bench, such as
+      +18–20% to Chaos Damage over Time Multiplier (4 [[Chaos Orb]]s).
+    why: >-
+      An Exalted Orb of any kind adds its modifier to a side with room. A
+      full suffix side leaves the Elder orb only the prefixes, and of the
+      eight Elder suffixes none is what this dagger is being built for.
+    check: >-
+      Six slots: one prefix, three suffixes, two empty prefixes. Read it
+      twice. This is the state the whole plan exists to reach.
+  - title: "Stage 4: the Elder's Exalted Orb"
+    do: >-
+      If you have a [[Hinekora's Lock]], use it on the dagger first, then
+      hover the [[Elder's Exalted Orb]] over the item and read the
+      modifier it would add. Poison: click. Without a Lock, click.
+    why: >-
+      The orb "adds Elder influence and a new Elder modifier to a rare
+      item". The new modifier has to be a prefix, and it cannot be any of
+      the three physical ones because their group is taken. That leaves
+      the Bleeding multiplier and the Poison multiplier. The Lock turns a
+      coin flip into a look.
+    check: >-
+      Read the tier as well: 51–59% is the top, 43–50% and 37–42% below
+      it.
+    fail: >-
+      **The Lock shows Bleeding:** do not use the orb. Any change to the
+      item removes the foresight; change something cheap, such as swapping
+      the bench suffix, and look again with another Lock. **No Lock, and
+      Bleeding landed:** one prefix is still open and the Bleeding group is
+      now taken too, so of the Elder prefixes only Poison can still be
+      added. The beast recipe "Add a Mod to an Elder Item" is the tool that
+      adds one; it is on the current recipe list, and we have not tested
+      that it follows the same logic. An [[Orb of Annulment]] is not the
+      answer: nothing steers it in 3.30.
+    state:
+      note: "Elder"
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+        - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+  - title: "Stage 5: the last prefix"
+    do: >-
+      If the bench is free, craft **adds 13–17 to 26–30 Physical Damage**
+      (4 Chaos Orbs) in the remaining prefix. If the bench is holding the
+      third suffix, leave it there and decide whether an [[Exalted Orb]] is
+      worth a random prefix.
+    why: >-
+      On this base all damage can poison, so flat Physical Damage raises
+      both the hit and the poison, and the veiled percentage multiplies it.
+      An item holds one bench modifier; which slot gets it was decided in
+      stage 3 by how many suffixes the reforge gave you.
+    state:
+      note: "Elder"
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+        - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+variations: >-
+  **Rolling the Elder prefix instead of forcing it.** On an Elder dagger
+  with Alterations the Poison multiplier is about 1 prefix roll in 49, and
+  what you then hold is a Magic item with none of the other five lines.
+  Forcing it last, onto a finished item, is the reason for this order.
+
+
+  **A second influence.** Hunter has "Poisons you inflict deal Damage 13–15%
+  Faster" as a suffix. Joining two influences takes an [[Awakener's Orb]],
+  which by reference pages rerolls everything but one influenced modifier
+  from each item, and so belongs at the start of a plan, not the end of this one.
+
+
+  **Tier.** A [[Divine Orb]] rerolls the value inside the Elder prefix's
+  tier, not the tier.
+mistakes:
+  - "Starting from a fractured dagger. It cannot take the Elder's Exalted Orb, by reference pages."
+  - "Using the orb with a suffix slot open. Eight Elder suffixes join the draw and the Poison prefix drops from 1 in 2 to about 1 in 13."
+  - "Using the orb before the physical group is on the item. Three more prefixes join the draw."
+  - "Rolling pure increased Physical Damage and planning to add the veiled one later. Same group; the veiled prefix is the one that carries the chance to Poison."
+  - "Reaching for an Annulment after a bad outcome. Since 3.30 no meta-modifier steers it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Elder modifiers on daggers with their groups and weights, the veiled prefixes, bench costs, and the item text of the Elder's Exalted Orb and Hinekora's Lock. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Lock costs; conqueror Exalted Orbs; the Annulment change; Hinekora's Lock and Imprints." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured items cannot be given influence." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The \"Add a Mod to an Elder Item\" recipe on the current list." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side; the unveil block. Partly older than 3.30." }

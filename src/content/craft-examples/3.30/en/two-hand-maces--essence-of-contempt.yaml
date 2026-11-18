@@ -1,0 +1,131 @@
+category: two-hand-maces
+title: "Two physical prefixes from an Essence"
+level: 2
+summary: "An Essence of Contempt guarantees flat Physical Damage. Repeat until a percentage prefix rolls beside it, then bench the rest."
+goal: >-
+  A mace for your first maps with two physical prefixes, one of them
+  guaranteed. This is the first craft where you use a tool that **skips the
+  lottery** for one slot, and the first where you read a whole Rare item and
+  decide whether to keep it.
+base: "Karui Maul"
+itemLevel: 73
+baseWhy: >-
+  The Karui Maul has the biggest hit in the category and drops from level 57.
+  Item level 73 opens Tier 2 of both percentage prefixes (155–169% pure,
+  65–74% hybrid), which is as high as this method deserves. A level 60 base
+  works too and tops out one tier lower.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "Adds 23 to 48 Physical Damage", how: essence }
+    - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+    - { text: "92% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "22% increased Attack Speed" }
+    - { text: "+39 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Contempt]]", amount: "10–20", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Essences are the whole cost, and Screaming ones are what red maps hand you
+  in 3.30. The bench step is 4 [[Chaos Orb]]s.
+odds: >-
+  With flat Physical Damage already on the item, each further prefix the
+  Essence rolls is one of the two percentage prefixes about 1 time in 3, by
+  our arithmetic at item level 73. Most of those are low tiers: Tier 4 or
+  better is about 1 in 33 per prefix rolled. An Essence result does not
+  always have a second prefix, so the real rate per Essence is lower than
+  that. Plan on ten to twenty for a result worth keeping, and stop earlier if
+  one turns up.
+steps:
+  - title: "Quality, then the first Essence"
+    do: >-
+      Bring a white Karui Maul to 20% quality. Use one
+      [[Screaming Essence of Contempt]] on it.
+    why: >-
+      The Essence makes the item Rare and **guarantees** flat Physical
+      Damage: adds 20–28 to 43–51 at Screaming. The other modifiers are
+      random. From Screaming upwards an Essence also works on an item that is
+      already Rare, which is what lets you repeat it.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "Adds 71 to 139 Fire Damage" }
+      suffixes:
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "33% increased Stun Duration on Enemies" }
+  - title: "Read the prefixes, and only the prefixes"
+    do: >-
+      Hold Alt. The Essence modifier is one prefix. Look at the other
+      prefixes: is one of them **increased Physical Damage**, pure or with
+      Accuracy Rating?
+    why: >-
+      The item above failed: its second prefix is fire damage. The suffixes
+      are irrelevant at this stage, because every Essence rerolls them.
+    check: >-
+      Keep the item if a percentage prefix is there at a tier you accept. A
+      sensible bar for a first mapping weapon: pure at 110% or more, or the
+      hybrid at 45% or more.
+    fail: >-
+      No percentage prefix: use another Essence on the same item. Nothing is
+      lost but the Essence.
+  - title: "Repeat until it lands"
+    do: >-
+      Use Essences one after another, reading the prefixes each time, until
+      one passes the check.
+    why: >-
+      Each use is an independent roll. The flat Physical Damage comes back
+      every time, so only the percentage prefix is in question.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+39 to Strength" }
+  - title: "Decide the bench craft from what rolled"
+    do: >-
+      **If the hybrid rolled** (as here): bench pure increased Physical
+      Damage in the open prefix, 80–99% for 4 [[Chaos Orb]]s. **If the pure
+      one rolled:** the third prefix cannot come from the bench, so craft
+      attack speed in a suffix instead, 11–15% for 2 Chaos Orbs, unless the
+      item already has it.
+    why: >-
+      The bench's increased Physical Damage is the same group as the pure
+      rolled one and a different group from the hybrid. Its flat Physical
+      Damage is the same group as the Essence's. So the hybrid is the lucky
+      roll: it leaves a slot the bench can fill with damage.
+    check: >-
+      Before you craft, make sure the slot is open. If the Essence rolled
+      three prefixes there is no room, and you craft a suffix.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+        - { text: "92% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+39 to Strength" }
+variations: >-
+  **Essence of Zeal instead.** Zeal guarantees attack speed, 23–25% at
+  Screaming. It is the right Essence when you already own a mace with good
+  prefixes that are fractured, and the wrong one here: it fixes the easy side
+  and leaves all three prefixes to luck.
+
+
+  **Better Essences.** Shrieking Contempt gives adds 25–33 to 52–61 and
+  Deafening adds 31–42 to 65–75. The method is identical; only the guaranteed
+  number changes.
+mistakes:
+  - "Keeping a result because the suffixes are good. The suffixes can be rebuilt. Without a percentage prefix the weapon has no multiplier."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using this on a base with [[Memory Strands]]: one Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on two-handed maces, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

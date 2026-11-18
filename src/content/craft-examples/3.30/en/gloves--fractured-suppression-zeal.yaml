@@ -1,0 +1,207 @@
+category: gloves
+title: "Two suffixes that cannot be lost: a fractured base under Deafening Essences"
+level: 4
+summary: "Fracture holds one suffix for ever, the Essence returns a second on every reroll, and a multi-modifier craft closes the item. The plan is safe at every step but the first."
+goal: >-
+  Evasion gloves with Tier 1 spell suppression, 17–18% attack speed, high
+  life and two damage-and-defence prefixes of your choosing. The craft is
+  about **choosing the right kind of protection**. A bench lock would not
+  work here, and the example shows why a fractured modifier does.
+base: "Velour Gloves"
+itemLevel: 85
+baseWhy: >-
+  Item level 85 is the lowest at which "of Nullification", +13–14% chance to
+  Suppress Spell Damage, exists. Velour Gloves are the top Evasion base,
+  359–413, and the pure Evasion pool rolls suppression at full weight.
+
+
+  The base must be **fractured and not influenced**. A fractured item cannot
+  be given influence afterwards according to reference pages, so this pair
+  will never have any; that is part of the choice.
+methods: [fracture, essence, meta, bench, finishing]
+result:
+  note: "Fractured"
+  prefixes:
+    - { text: "+111 to maximum Life" }
+    - { text: "34% increased Damage while Leeching", how: crafted }
+    - { text: "20% increased Evasion Rating / +13 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+    - { text: "18% increased Attack Speed", how: essence }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "Velour Gloves with Tier 1 suppression fractured, item level 85+", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "if the base is still Magic" }
+  - { item: "[[Deafening Essence of Zeal]]", amount: "dozens" }
+  - { item: "[[Divine Orb]]", amount: "2", note: "for the multi-modifier craft" }
+  - { item: "[[Chaos Orb]]", amount: "5", note: "for the two bench prefixes" }
+cost: >-
+  The fractured base, then Deafening Essences in quantity. In 3.30 fractured
+  items are rarer than they were: Tier 5 drops, a [[Fracturing Orb]] or a
+  [[Fractured Fossil]]. The bench work at the end is 2 [[Divine Orb]]s and 5
+  [[Chaos Orb]]s, small beside the rest.
+odds: >-
+  **Stage 1, if you make the base.** A Fracturing Orb chooses at random among
+  the modifiers of a Rare item with at least four. With exactly four, the
+  suppression is chosen 1 time in 4. Three times in 4 the base is spent.
+
+
+  **Stage 2.** Suppression and attack speed are on every result. Each prefix
+  the Essence rolls is maximum Life of 100 or more about 1 time in 23, by our
+  arithmetic from the weights, and the plan also wants the third suffix slot
+  left empty. How many modifiers a result gets is not in the data, so we can
+  only say: dozens of Essences, and more on a bad run.
+steps:
+  - title: "Stage 1: the fractured suppression"
+    do: >-
+      Buy or find item level 85 Velour Gloves with **+13–14% chance to
+      Suppress Spell Damage fractured**. A Tier 5 drop can be a fractured
+      Magic item. To make one: roll the suppression on Magic gloves with
+      Alterations (about 1 suffix roll in 69), bring the item to a Rare with
+      **exactly four** modifiers, and use a [[Fracturing Orb]].
+    why: >-
+      Tier 1 suppression is a 1-in-69 suffix roll and would be gone after
+      every reroll that follows. Fracturing makes it permanent, so it is
+      paid for once.
+    check: >-
+      Four modifiers, not five or six: each extra one lowers the chance the
+      orb picks the right one. An [[Imprint]] is no safety net here. It
+      saves a Magic item, and by the item text it cannot be applied to a
+      fractured one.
+    fail: >-
+      The orb fractured something else. The gloves are now a base with the
+      wrong modifier locked, and cannot be fractured again. This is why most
+      players buy the base.
+    state:
+      rarity: magic
+      note: "Fractured"
+      prefixes: [{ text: "+38 to Evasion Rating" }]
+      suffixes: [{ text: "+14% chance to Suppress Spell Damage", how: fractured }]
+  - title: "Make it Rare"
+    do: >-
+      If the base is Magic, use one [[Regal Orb]].
+    why: >-
+      A Deafening Essence "upgrades a normal item to rare or reforges a rare
+      item". A Magic item is neither, so it has to become Rare first. What
+      the Regal Orb adds is irrelevant; the first Essence removes it.
+    state:
+      note: "Fractured"
+      prefixes: [{ text: "+38 to Evasion Rating" }]
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "+29 to Dexterity" }
+  - title: "Stage 2: understand why this protection and no other"
+    do: >-
+      Before spending Essences, be clear about what is holding the
+      suppression in place: the fracture, and only the fracture.
+    why: >-
+      An Essence rerolls everything on the item that is not fractured, and
+      by community testing it ignores the bench's protection modifiers.
+      "Suffix Modifiers cannot be changed" would cost 4 Divine Orbs and 4
+      Blessed Orbs and then be wiped along with the suffix it was meant to
+      guard. Fracture is the one protection an Essence respects. It is also
+      the only one that costs nothing per attempt.
+  - title: "Deafening Essences of Zeal, to one rule"
+    do: >-
+      Use [[Deafening Essence of Zeal]]s one at a time. Keep the result when
+      it has **maximum Life of 100 or more and an empty third suffix slot**.
+    why: >-
+      Every result has the fractured suppression and the Essence's 17–18%
+      attack speed, which is above the 14–16% of natural Tier 1. Life is the
+      only thing left to chance on the prefix side. The empty suffix is
+      needed for the last stage: "Can have up to 3 Crafted Modifiers" is a
+      suffix.
+    check: >-
+      A result with good life and a **good** third suffix, a high
+      resistance for instance, is also a keeper. It takes the simpler
+      ending: one bench prefix and no multi-modifier craft.
+    fail: >-
+      Low life, or a third suffix you do not want: next Essence. Nothing is
+      lost but the Essence. Do not try to remove a bad suffix with an
+      Annulment; it can take the attack speed or the life instead.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "+67 to maximum Life" }
+        - { text: "Adds 2 to 33 Lightning Damage to Attacks" }
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+        - { text: "+41% to Fire Resistance" }
+  - title: "The result that passes"
+    do: >-
+      Stop at the first result that meets the rule. Count the open slots:
+      here two prefixes and one suffix.
+    why: >-
+      Three open slots and three bench modifiers is the ideal ending. One
+      open prefix instead of two is fine too: the second bench prefix is
+      then simply left out.
+    state:
+      note: "Fractured"
+      prefixes: [{ text: "+111 to maximum Life" }]
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+  - title: "Stage 3: three bench modifiers"
+    do: >-
+      At the [[Crafting Bench]], in this order: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]]s, the last suffix). **31–36% increased
+      Damage while Leeching** (3 [[Chaos Orb]]s, a prefix). **18–21%
+      increased Evasion Rating with +12 to 14 maximum Life** (2 Chaos Orbs,
+      the other prefix).
+    why: >-
+      The multi-modifier craft spends the suffix slot and buys two crafted
+      prefixes in return. Neither prefix exists at this strength in the
+      natural pool: the leech prefix is bench-only, and the hybrid is its
+      own group, so it sits beside rolled life. For a build that does not
+      leech, swap the first for conversion of Physical Damage (20–25%, 4
+      Chaos Orbs) or Damage during any Flask Effect (24–28%, 4 Chaos Orbs).
+    check: >-
+      Six of six slots, three of them crafted, and nothing on the gloves
+      that you did not choose or accept on purpose.
+    state:
+      note: "Fractured"
+      prefixes:
+        - { text: "+111 to maximum Life" }
+        - { text: "34% increased Damage while Leeching", how: crafted }
+        - { text: "20% increased Evasion Rating / +13 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+14% chance to Suppress Spell Damage", how: fractured }
+        - { text: "18% increased Attack Speed", how: essence }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Finish"
+    do: >-
+      20% quality and sockets. A [[Divine Orb]] only if life rolled near 100
+      or attack speed at 17.
+    why: >-
+      A Divine Orb rerolls the values of every modifier at once, the
+      fractured one included, and never changes a tier. On an item with
+      this few rolled values it is a cheap improvement or a cheap
+      disappointment.
+variations: >-
+  **Eldritch implicits.** The text of the Embers and Ichors bars only
+  influenced items, so a fractured pair should accept them, and attack
+  speed from the Exarch would stack with the Essence's. We could not confirm
+  that for 3.30; test with a Lesser Ember.
+
+
+  **A different fractured suffix.** A Tier 1 resistance works the same way
+  and is easier to find. The logic is unchanged: fracture one hard suffix,
+  let the Essence supply another.
+
+
+  **Critical strikes.** A Deafening Essence of Loathing in place of Zeal
+  gives 24–26% Global Critical Strike Chance on every result, and the bench
+  adds 7–12% attack speed inside the multi-modifier craft.
+mistakes:
+  - "Crafting a suffix lock and then using an Essence. The Essence is reported to ignore the lock, so both the lock and the suffix go."
+  - "Using a Fracturing Orb on five or six modifiers. One in four becomes one in five or six."
+  - "Keeping a result with three suffixes and trying to free one with an Orb of Annulment. It chooses among everything that is not fractured."
+  - "Skipping the multi-modifier craft to save 2 Divine Orbs and leaving two prefixes empty on gloves that cost dozens of Deafening Essences."
+  - "Planning to add influence later. Reference pages say a fractured item cannot receive it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tiers, the Essence modifiers on gloves, bench costs, and the in-game text of the Fracturing Orb, the Essences and the Imprint. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essences ignore the protection modifiers, by community testing." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "A fractured modifier cannot be changed; a fractured item cannot be given influence." }

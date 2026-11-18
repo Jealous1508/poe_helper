@@ -1,0 +1,132 @@
+category: abyss-jewels
+title: "Flat damage twice: a Searching Eye for a bow"
+level: 2
+summary: "Roll a bow prefix and an attack suffix on one Magic jewel, each at a tier you set in advance, then Regal."
+goal: >-
+  A mapping jewel for an elemental bow build with flat damage on both sides.
+  It teaches the two ideas that make Abyss jewels worth crafting: the weapon
+  prefix and the generic attack suffix are **different groups and stack**,
+  and a hit only counts if it is **at the tier you decided on**.
+base: "Searching Eye Jewel"
+itemLevel: 75
+baseWhy: >-
+  Only the Searching Eye has "with Bow Attacks" prefixes, and it weighs them
+  double: each elemental one is about 8% of prefix rolls at this item level.
+  A Murderous Eye has none of them.
+
+
+  Item level 75 opens Tier 2 of every elemental bow prefix (they need 68 to
+  72) and Tier 2 of the elemental attack suffixes (64 to 65). The top tiers
+  need 76 to 84, so a jewel from higher maps raises the ceiling without
+  changing the method.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "13 to 22 Added Cold Damage with Bow Attacks" }
+    - { text: "+72 to Evasion Rating" }
+  suffixes:
+    - { text: "Adds 10 to 22 Fire Damage to Attacks" }
+needs:
+  - { item: "A Searching Eye Jewel", amount: "1", note: "item level 72 or higher" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "10–20" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  [[Orb of Alteration]]s in the low hundreds, one [[Regal Orb]]. Lower the
+  tier bar by one and the cost roughly halves; that trade is yours to make
+  before you start.
+odds: >-
+  At item level 75 a prefix roll is an elemental bow prefix at Tier 3 or
+  better 8.1% of the time (2.7% for each of Cold, Fire and Lightning), by
+  our arithmetic: 1 in 12. A suffix roll is an elemental "to Attacks" suffix
+  at Tier 3 or better 12.5% of the time: 1 in 8.
+
+
+  Both on one Magic jewel: about 1%, 1 two-modifier jewel in 99.
+steps:
+  - title: "Set the bar, line by line"
+    do: >-
+      Write the shortlist with a tier on each line. **Prefix:** Added Cold,
+      Fire or Lightning Damage with Bow Attacks, **Tier 3 or better**.
+      **Suffix:** Adds Cold, Fire or Lightning Damage to Attacks, **Tier 3
+      or better**. Look up the names or the numbers of those tiers in the
+      modifier list so you can recognise them at a glance.
+    why: >-
+      On this eye the right families appear constantly: one prefix roll in
+      four is an elemental bow prefix of some tier. Without a bar you will
+      stop at the first one, and the lowest tier adds a third of what the
+      top one does.
+    check: >-
+      The item level must allow the tiers on your list. Tier 3 of the bow
+      prefixes needs 59 to 62 and Tier 2 needs 68 to 72; the suffix tiers
+      come a little earlier.
+  - title: "Alterations: read the end of every line"
+    do: >-
+      Use [[Orb of Alteration]]s. For each damage prefix, read which weapon
+      it names before you read the numbers.
+    why: >-
+      The Searching Eye also rolls "with Wand Attacks" prefixes, about 12%
+      of prefix rolls at this item level. They look the same and do nothing
+      for a bow.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13 to 21 Added Fire Damage with Wand Attacks" }]
+      suffixes: [{ text: "Adds 10 to 22 Fire Damage to Attacks" }]
+  - title: "Keep rolling for the pair"
+    do: >-
+      Stop only when the prefix and the suffix are both on the list at
+      their tiers. When one side is a hit and the other is empty, use an
+      [[Orb of Augmentation]] first.
+    why: >-
+      The two modifiers do not have to be the same element. A bow prefix
+      and an attack suffix are different groups whatever their damage
+      types, so Cold with Fire stacks as well as Cold with Cold. Only two
+      **weapon** prefixes of the same damage type are barred.
+    fail: >-
+      Budget gone with one side right: use the Regal Orb on that jewel. A
+      Tier 2 bow prefix with any suffix is still a jewel you will socket.
+    state:
+      rarity: magic
+      prefixes: [{ text: "13 to 22 Added Cold Damage with Bow Attacks" }]
+      suffixes: [{ text: "Adds 10 to 22 Fire Damage to Attacks" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]] and read the third line with its tier.
+    why: >-
+      Roughly one Regal Orb in six adds something this build wants: Life at
+      +26 or more, a second bow prefix or attack suffix at Tier 3 or better,
+      attack speed or critical strike multiplier. That figure is our
+      arithmetic and assumes a prefix and a suffix are equally likely to be
+      added. Here the orb added Evasion Rating.
+    check: >-
+      One suffix slot is open. An [[Exalted Orb]] there is a free roll:
+      nothing on an Abyss jewel is harmful, so the worst result is a line
+      you ignore.
+    state:
+      prefixes:
+        - { text: "13 to 22 Added Cold Damage with Bow Attacks" }
+        - { text: "+72 to Evasion Rating" }
+      suffixes:
+        - { text: "Adds 10 to 22 Fire Damage to Attacks" }
+variations: >-
+  **Life in place of the prefix.** If the character needs Life more than
+  damage, make the prefix line "+31 to maximum Life or more" (Tier 2, 2.6%
+  of prefix rolls at this item level) or "+26 or more" (10.3%).
+
+
+  **Melee.** The same craft on a Murderous Eye uses the prefix for your
+  weapon type. Expect it to take about two and a half times as long: one
+  weapon's elemental prefixes are 3% of prefix rolls each where the bow's
+  are 8%.
+
+
+  **Higher tiers.** At item level 77 the top tier of every elemental attack
+  suffix can roll, and at 84 the top tier of every bow prefix. Move the bar
+  only when the item level allows it.
+mistakes:
+  - "Stopping at the first bow prefix without reading its tier."
+  - "Keeping a wand prefix on a bow build."
+  - "Rolling this on a Murderous Eye. It has no bow prefixes at all."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Searching Eye Jewel pool, tiers, item levels, weights and groups. The odds are our arithmetic." }

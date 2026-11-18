@@ -1,0 +1,250 @@
+category: one-hand-swords
+title: "Một cây rapier physical crit: sáu modifier cần có, một ô bench"
+level: 5
+summary: "Cây sword khó nhất có thể làm. Một prefix phần trăm fractured, ba Fossil cho hai prefix còn lại, một reforge Critical có khóa cho suffix, và một phép đếm thành thật về những gì bench lo được và không lo được."
+goal: >-
+  Một cây rapier có ba prefix physical, attack speed và cả hai suffix
+  critical strike. Đó là sáu modifier bạn muốn trên một item có sáu ô, trong
+  khi mace muốn bốn và lấp phần còn lại bằng bất cứ thứ gì bench bán. Các
+  công cụ đều là những cái các ví dụ trước đã dùng. Thứ lần craft này thêm
+  vào là **phép tính ô** mà một người craft hàng đỉnh làm trước tiên: cái nào
+  trong sáu mua được, cái nào phải roll, và giai đoạn nào phải gánh rủi ro.
+base: "Vaal Rapier"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 là mức thấp nhất mà "Merciless" (170–179%) tồn tại. Vaal
+  Rapier có 6.5% critical strike chance và +25% Critical Strike Multiplier
+  trên implicit; Harpy Rapier đổi một phần chance lấy +35%.
+
+
+  Chọn thrusting sword cho một weapon physical là có giá, và bạn nên biết giá
+  đó trước khi trả. Physical damage gốc của nó thấp hơn các one-hand sword
+  tốt nhất khoảng một phần năm, và pool của nó là tệ nhất trong mọi class một
+  tay về prefix physical: theo phép tính của chúng tôi, "Merciless" ở đây là
+  1 trên khoảng 2,760 lần roll prefix, so với 1,970 trên one-hand sword hay
+  axe và 1,270 trên mace. Critical strike là thứ bạn nhận lại.
+methods: [fracture, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "172% increased Physical Damage", how: fractured }
+    - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+    - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "37% increased Critical Strike Chance", how: harvest }
+    - { text: "26% increased Attack Speed", how: harvest }
+    - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "Một cây Vaal Rapier có \"Merciless\" fractured, item level 83+", amount: "1", note: "mua, nhặt được, hoặc tự làm ở giai đoạn 1" }
+  - { item: "[[Jagged Fossil]]", amount: "nhiều chục" }
+  - { item: "[[Shuddering Fossil]]", amount: "nhiều chục" }
+  - { item: "[[Deft Fossil]]", amount: "nhiều chục" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "một cái mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Trước hết là base fractured: trong 3.30 fractured item đến từ đồ rơi Tier
+  5, một [[Fracturing Orb]] hoặc một [[Fractured Fossil]], và một prefix phần
+  trăm tier cao nhất đã fractured trên rapier là hiếm ngay cả trong số đó.
+  Rồi ba Fossil mỗi lần thử cho một giai đoạn tốn trung bình một trăm lần
+  thử, rồi các lần khóa với giá 4 [[Divine Orb]] và 1 [[Sacred Orb]] mỗi lần.
+
+
+  Chúng tôi không đưa ra tổng số. Đây là một item tầm mirror làm theo đường
+  dài, và tóm tắt thành thật là phần lớn người chơi muốn có một cây sẽ mua
+  giai đoạn 1 hoặc giai đoạn 2 từ người khác.
+odds: >-
+  **Giai đoạn 2.** Khi prefix phần trăm thuần đã fractured thì group của nó
+  rời khỏi pool, và với ba Fossil, hybrid chiếm 23% số lần roll prefix còn
+  flat damage 43%, theo công cụ tính của chúng tôi. Vấn đề là tier: hybrid từ
+  45% trở lên là khoảng 1 trên 43 lần roll prefix, flat damage từ 13–18 to
+  27–31 trở lên khoảng 1 trên 8. Cả hai cùng lúc trong hai ô prefix trống ra
+  khoảng 1 trên 110 kết quả, trong số các kết quả lấp cả hai ô. Hạ mức của
+  hybrid xuống một tier, còn 35%, thì là khoảng 1 trên 55. Không có Jagged
+  Fossil, cùng hybrid đó sẽ là 1 trên 174 lần roll prefix.
+
+
+  **Giai đoạn 3.** Mọi reforge Critical đều cho Critical Strike Chance hoặc
+  Critical Strike Multiplier; 1 trên 6 ở Tier 1 nếu tier được bốc theo
+  weight. Mỗi suffix khác mà nó roll ra là attack speed hoặc modifier
+  critical thứ hai khoảng một phần tư số lần. Đây là phép tính của chúng tôi;
+  chưa được đo trong 3.30.
+steps:
+  - title: "Trước mọi thứ: đếm ô"
+    do: >-
+      Viết sáu modifier ra và đánh dấu mỗi cái có thể đến từ đâu. Prefix:
+      phần trăm thuần, hybrid Accuracy, flat damage. Suffix: attack speed,
+      Critical Strike Chance, Critical Strike Multiplier. Bench cấp được đúng
+      **một** trong số đó.
+    why: >-
+      Trên mace, đáp án quen thuộc cho một ô còn thiếu là "Can have up to 3
+      Crafted Modifiers". Ở đây nó không dùng được. Meta-modifier đó tự nó là
+      một suffix. Có nó, một weapon crit sẽ chứa meta-modifier, một suffix
+      crafted và một suffix roll ra: hai trong ba suffix nó cần. Vậy nên năm
+      modifier phải được roll hoặc fractured, và bench lo cái thứ sáu. Hãy
+      quyết định ngay bây giờ rằng cái thứ sáu là một suffix, vì bench bán cả
+      ba suffix còn các craft prefix của nó thì đụng với những cái roll ra
+      cùng group.
+  - title: "Giai đoạn 1: prefix phần trăm fractured"
+    do: >-
+      Mua hoặc tìm một cây Vaal Rapier item level 83 trở lên có
+      **"Merciless" fractured**; "Tyrannical" (155–169%) là lựa chọn thứ hai
+      thực tế. Còn nếu tự làm: roll prefix lên một cây rapier Magic, đưa item
+      thành Rare với **đúng bốn** modifier, rồi dùng một [[Fracturing Orb]].
+    why: >-
+      Trong năm modifier phải roll, đây là cái hiếm nhất, hơn xa các cái
+      khác, nên nó là cái cần làm cho vĩnh viễn. Một fractured modifier sống
+      qua mọi Fossil và mọi lần reforge theo sau, và chính điều đó cho phép
+      giai đoạn kế được lặp lại một trăm lần.
+    check: >-
+      Không có influence trên item: Fracturing Orb từ chối item có influence.
+      Với đúng bốn modifier, lần chọn ngẫu nhiên của orb trúng 1 trên 4 lần;
+      mỗi modifier thêm vào đều làm nó tệ hơn.
+    fail: >-
+      Orb fracture nhầm thứ khác. Cây rapier đó coi như xong với vai trò base
+      cho lần craft này và không fracture lại được nữa. Đây là lý do base
+      thường được mua.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "+38 to Dexterity" }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "29% increased Stun Duration on Enemies" }
+  - title: "Giai đoạn 2: ba Fossil cho hai prefix còn lại"
+    do: >-
+      Dùng một [[Jagged Fossil]], một [[Shuddering Fossil]] và một
+      [[Deft Fossil]] cùng nhau trong một [[Powerful Chaotic Resonator]]. Lặp
+      lại tới khi cây rapier có **hybrid Accuracy từ 45% trở lên và flat
+      Physical Damage từ 13–18 to 27–31 trở lên**, với nhiều nhất hai suffix.
+    why: >-
+      Jagged Fossil có mặt là vì prefix: nó nâng hybrid từ khoảng 6% số lần
+      roll prefix lên 23%. Hai cái kia đi kèm vì Resonator còn chỗ cho chúng
+      và đôi khi chúng trao sớm cho bạn phía suffix. Hãy đánh giá kết quả chỉ
+      bằng prefix. Cả hai đều phải là roll ra; ô bench đã hứa cho một suffix.
+    check: >-
+      "Champion's" là Tier 4 của hybrid, "Conqueror's" là Tier 3, "Emperor's"
+      là Tier 2, "Dictator's" là Tier 1. Rồi đếm suffix: khóa ở giai đoạn 3
+      cần một ô trống.
+    fail: >-
+      Ở đây không mất được gì ngoài Fossil; prefix fractured vẫn sống. Nếu
+      prefix qua mà item có ba suffix, hãy roll tiếp chứ đừng dùng
+      [[Orb of Annulment]], thứ có thể gỡ một trong hai prefix mới.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "3.9% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Quyết định xem suffix đã qua chưa"
+    do: >-
+      Nhìn xem giai đoạn 2 để lại gì ở phía suffix. Nếu đó là hai trong ba
+      suffix cần có ở tier tốt và còn một ô trống, hãy nhảy thẳng tới bench.
+      Nếu không, như ở đây, thì sang giai đoạn 3.
+    why: >-
+      Giai đoạn 3 tốn một lần khóa cho mỗi lần thử. Fossil đã roll suffix với
+      attack speed và các modifier critical ở gấp mười weight, nên một phía
+      suffix đã xong vào lúc này không phải chuyện lạ, và nhận nó là tiết
+      kiệm được giai đoạn đắt nhất.
+  - title: "Giai đoạn 3: khóa, rồi một reforge Critical"
+    do: >-
+      Craft **Prefix Modifiers cannot be changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]). Rồi, ở [[Horticrafting Station]], **Reforge a Rare
+      item with random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Lặp lại cả hai tới khi hai trong ba
+      suffix cần có ở Tier 1 hoặc 2 và ô thứ ba còn trống.
+    why: >-
+      Prefix fractured không cần bảo vệ; hybrid và flat damage thì cần, và
+      chúng đã tốn một trăm lần thử. Khóa che chúng và reforge tiêu mất khóa.
+      Đừng dùng Fossil cho giai đoạn này: Fossil có tôn trọng khóa trong 3.30
+      hay không thì chưa xác nhận được, và đây không phải item để thử cho
+      biết.
+    check: >-
+      Cả ba prefix không đổi. Đọc tier của các suffix mới và đếm chúng.
+    fail: >-
+      Mỗi lần lặp là 4 Divine Orb và một Sacred Orb. Hãy đặt số lần thử trước
+      lần đầu tiên và nhận Tier 2 khi nó đến.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "37% increased Critical Strike Chance", how: harvest }
+        - { text: "26% increased Attack Speed", how: harvest }
+  - title: "Giai đoạn 4: một ô bench duy nhất"
+    do: >-
+      Craft suffix còn thiếu. Ở đây: **+25–28% to Global Critical Strike
+      Multiplier** giá 4 [[Chaos Orb]].
+    why: >-
+      Trong ba suffix, multiplier là cái mà rapier dễ chấp nhận lấy từ bench
+      nhất, vì implicit đã cấp sẵn +25%. Nếu reforge cho multiplier và attack
+      speed, bench sẽ thêm Critical Strike Chance (25–27%); nếu nó cho cả hai
+      modifier critical, thì là attack speed (16–20% giá 4 Exalted Orb).
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "37% increased Critical Strike Chance", how: harvest }
+        - { text: "26% increased Attack Speed", how: harvest }
+        - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+  - title: "Hoàn thiện: quality, socket, chỉ số"
+    do: >-
+      20% quality và ba socket link nếu chưa làm. Rồi một [[Divine Orb]] nếu
+      roll bên trong các tier còn kém.
+    why: >-
+      Một Divine Orb roll lại mọi chỉ số cùng lúc, kể cả cái fractured, và
+      không bao giờ đổi tier. Trên item có năm modifier roll ra, khả năng nó
+      hạ những cái bạn thích cũng ngang với nâng những cái bạn không thích,
+      nên hãy dùng khi prefix phần trăm đang thấp và ít thứ khác đang cao.
+variations: >-
+  **Trên one-hand sword.** Cùng kế hoạch đó trên Legion Sword hoặc Tiger Hook
+  rẻ hơn ở mọi giai đoạn: damage gốc cao hơn, và với Jagged Fossil là 81%
+  prefix physical so với 73%. Bạn mất 1.5 điểm critical strike chance gốc và
+  multiplier của implicit. Với build crit nhờ tree và đồ, đó có thể là cuộc
+  đổi chác tốt hơn.
+
+
+  **Chủ động bỏ một suffix.** Một cây rapier có ba prefix physical roll ra,
+  attack speed và một modifier critical, với modifier critical kia từ bench ở
+  25–28%, là phần lớn cây weapon này với một phần nhỏ số lần khóa. Vài điểm
+  cuối cùng của mỗi suffix mới là thứ giai đoạn 3 thật sự đang mua.
+
+
+  **Memory Strands.** Theo thử nghiệm của người chơi, Fossil và Harvest bỏ
+  qua strand. Một [[Orb of Unravelling]] ở tận cuối có thể nâng hybrid hoặc
+  một suffix lên một tier; nó bỏ qua modifier bench, và nó thành công thường
+  xuyên tới đâu là một mô hình của người chơi, không phải con số được công
+  bố.
+
+
+  **Thấy trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp. Ở đây, chỗ duy nhất nó có thể đáng tiền là Fracturing Orb ở giai đoạn
+  1.
+mistakes:
+  - "Với tay tới \"Can have up to 3 Crafted Modifiers\". Trên weapon crit, nó chiếm một trong ba ô suffix mà weapon cần."
+  - "Lên kế hoạch bench một prefix. Prefix phần trăm của bench chung group với cái fractured, còn bench flat damage thì sẽ để một suffix cho may rủi."
+  - "Dùng Annulment sau giai đoạn 2 để mở một suffix. Hybrid và flat damage không được bảo vệ vào lúc đó."
+  - "Fossil lên cây rapier đã khóa. Chưa được xác nhận là tôn trọng khóa trong 3.30."
+  - "Bắt đầu việc này trên thrusting sword mà không có build crit để biện minh. Pool khiến mọi giai đoạn physical đắt hơn so với trên one-hand sword."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Cả hai pool của sword, hệ số nhân của Fossil, tier, weight, giá bench và mô tả trong game của Fracturing Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Fractured item đến từ đâu trong 3.30, và giá của các modifier bảo vệ." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Critical và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ với reforge Harvest, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

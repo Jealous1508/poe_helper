@@ -1,0 +1,149 @@
+category: belts
+title: "Top-tier Life with Alterations"
+level: 2
+summary: "On a belt the best Life tier is within reach of plain Alterations. Roll it on a Magic belt, decide in advance which tier ends the search, then Regal and bench a 35% resistance."
+goal: >-
+  A mapping belt with Life of 100 or more, two useful suffixes and a strong
+  bench resistance. The craft is the ordinary Alteration, Regal, bench
+  routine. What it teaches is **setting the stopping tier by arithmetic**,
+  because this is one of the few items where the top tier is cheap enough to
+  be a real choice.
+base: "Leather Belt"
+itemLevel: 72
+baseWhy: >-
+  Item level 64 opens the top Life tier, 130–144; 72 adds resistances of
+  42–45% for whatever the other orbs roll. The Leather Belt puts 25–40 more
+  Life above the line. Do exactly the same on a Stygian Vise if you own one:
+  the pool is identical and the Abyssal socket is the better implicit.
+methods: [currency, bench]
+result:
+  implicits: ["+34 to maximum Life"]
+  prefixes:
+    - { text: "+121 to maximum Life" }
+  suffixes:
+    - { text: "+38% to Lightning Resistance" }
+    - { text: "+41 to Strength" }
+    - { text: "+32% to Fire Resistance", how: crafted }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–80", note: "depending on the tier you stop at" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  Alterations, one [[Regal Orb]] and 3 [[Chaos Orb]]s for the bench. The
+  number of Alterations is yours to choose, and the odds below are how to
+  choose it.
+odds: >-
+  At item level 72, by our arithmetic from the modifier weights, one prefix
+  roll is maximum Life of:
+
+
+  **100 or more** (the top three tiers): about 1 in 15.
+
+
+  **115 or more** (the top two): about 1 in 22.
+
+
+  **130–144** (the top tier): about 1 in 45.
+
+
+  An Alteration does not always roll a prefix, so multiply by something
+  between one and two for the count of orbs. The step from "100 or more" to
+  the top tier triples the Alterations for about 30 Life.
+steps:
+  - title: "Choose the tier that ends the search"
+    do: >-
+      Before the first orb, pick one line: 100, 115 or 130. Write it down if
+      you have to.
+    why: >-
+      All ten Life tiers weigh the same, so each better tier you insist on
+      removes a third or half of the acceptable outcomes. With a number
+      fixed in advance you stop when you hit it. Without one, every hit
+      looks like a reason to try for the next.
+  - title: "Roll the prefix"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      prefix is maximum Life at your line or above. The names: "Virile"
+      (100–114), "Athlete's" (115–129), "Fecund" (130–144).
+    why: >-
+      Two slots per roll, and you read one. Life is a fifth of this pool's
+      prefix rolls, which is why a method this plain reaches the top of it.
+      The same routine on a mace's best prefix would take over a thousand.
+    check: >-
+      The tier name, with Alt held. Ignore the suffix for now.
+    state:
+      rarity: magic
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+  - title: "Augment the suffix"
+    do: >-
+      If the Magic belt has no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      On a belt a random suffix is a resistance or Strength about half the
+      time, and nothing on the suffix side is worth protecting yet. On an
+      item with a crowded, valuable suffix side you would leave the slot
+      empty; here the free roll is the better choice.
+    state:
+      rarity: magic
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes: [{ text: "+38% to Lightning Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]]. Read the new modifier and its side.
+    why: >-
+      Rare opens the other four slots. Whatever the Regal Orb adds, the Life
+      stays. A prefix it adds is usually Mana, Energy Shield or Armour and
+      costs you nothing; a suffix is useful about half the time.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+41 to Strength" }
+  - title: "Bench the resistance"
+    do: >-
+      At the [[Crafting Bench]], craft 29–35% of the elemental resistance you
+      need most for 3 [[Chaos Orb]]s.
+    why: >-
+      The belt bench sells a higher top rank of single resistances than the
+      ring and amulet benches do, 29–35% against 21–28%. That makes the belt
+      the right place to buy the resistance your rings could not find.
+    check: >-
+      A different element from the one the belt rolled. If two suffix slots
+      were open, this fills one; the other can wait for an
+      [[Exalted Orb]].
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes: [{ text: "+121 to maximum Life" }]
+      suffixes:
+        - { text: "+38% to Lightning Resistance" }
+        - { text: "+41 to Strength" }
+        - { text: "+32% to Fire Resistance", how: crafted }
+variations: >-
+  **An Essence for the suffix instead.** A Screaming Essence of Anger, Hatred
+  or Wrath on the white belt guarantees 36–41% of that resistance, Shrieking
+  42–45%, Deafening 46–48%. Life then has to turn up among the Essence's
+  other rolls, one prefix in five at any tier. It is the better route when
+  the resistance tier matters more to you than the Life tier.
+
+
+  **The two open prefixes.** The bench has good belt prefixes, 12–14%
+  increased Damage or 8–10% flask effect, but one bench modifier per item
+  means choosing between one of those and the resistance. An Exalted Orb
+  fills a slot at random.
+
+
+  **On a base with Memory Strands.** Alterations spend at most 8 strands
+  each by the data-mined table, and strands remove the low tiers from
+  whatever is rolled. With ten Life tiers that is exactly the help this
+  craft wants. Use an [[Orb of Remembrance]] on the white belt first.
+mistakes:
+  - "Rolling past your own line. \"Athlete's\" was the goal until it appeared."
+  - "Benching Life on a belt with an open prefix. The belt already has Life, and the bench's is the same group."
+  - "Using this on an item level 60 belt and waiting for \"Fecund\". The top tier needs 64."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, bench costs and the Essence modifiers on belts. The odds are our arithmetic." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

@@ -1,0 +1,164 @@
+category: staves
+title: "Cast speed from an Essence, spell damage from the bench"
+level: 2
+summary: "Pick the Essence by what the bench replaces worst: Misery guarantees cast speed, and the bench then sells the spell damage. Reroll until a prefix slot is free for it."
+goal: >-
+  A staff for your first maps with strong cast speed and bench spell damage,
+  made in a handful of Essences. The staff is ordinary. The lesson is how to
+  choose between two tools that both guarantee something: **let the Essence
+  give the modifier the bench does badly, and let the bench give the one it
+  does well.**
+base: "Imperial Staff"
+itemLevel: 72
+baseWhy: >-
+  The Imperial Staff carries the best block implicit, +25% Chance to Block
+  Spell Damage, and drops from level 66. The item level matters little here,
+  since the Essence fixes the cast speed whatever the base allows; 72 is
+  simply what your first maps drop. The staff's own damage numbers
+  do not matter to a caster.
+methods: [essence, bench]
+result:
+  implicits: ["+25% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+147 to maximum Mana" }
+    - { text: "Adds 70 to 138 Fire Damage to Spells" }
+    - { text: "97% increased Spell Damage / 28% increased Mana Regeneration Rate", how: crafted }
+  suffixes:
+    - { text: "34% increased Cast Speed", how: essence }
+    - { text: "+14% Chance to Block Spell Damage" }
+    - { text: "+33 to Intelligence" }
+needs:
+  - { item: "[[Screaming Essence of Misery]]", amount: "5–10", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "6", note: "for the bench; 4 for the plain recipe" }
+cost: >-
+  Essences are the whole cost, and in 3.30 red maps hand you nothing weaker
+  than Screaming. The bench step is 6 [[Chaos Orb]]s for the hybrid recipe or 4 for
+  plain spell damage.
+odds: >-
+  The cast speed is certain. What you are rolling for is room: a result with
+  **at most two prefixes, none of them a damage percentage you do not want**.
+  At item level 72 a prefix roll is increased Cold, Fire or Lightning Damage
+  about 1 time in 11, by our arithmetic, and those take the slot the bench's
+  spell damage needs. How many prefixes an Essence result has is not
+  something the data lets us compute, so in words: most results leave a slot
+  open, and five to ten Essences is a comfortable budget.
+
+
+  A gem-level prefix can appear beside the cast speed, but do not wait for
+  one: "all Spell Skill Gems" or the prefix for your own element is about 1
+  prefix roll in 28 at this item level.
+steps:
+  - title: "Choose the Essence by arithmetic"
+    do: >-
+      Put the two candidates next to the bench. **Misery** guarantees cast
+      speed: 32–37% at Screaming, where the bench sells 21–26% for 2 Chaos
+      Orbs and needs 4 Exalted Orbs for 27–32%. **Woe** guarantees spell
+      damage: 88–116% at Screaming, where the bench sells 79–95% for 4 Chaos
+      Orbs, or 89–105% with mana regeneration for 6. Take Misery.
+    why: >-
+      A staff has one bench modifier. Whichever of the two you do not get
+      from the Essence, you buy. The bench's spell damage is nearly as good
+      as a Screaming Woe; its cheap cast speed is a third lower than a
+      Screaming Misery. So the Essence goes where the gap is.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Spell Damage"] }
+  - title: "Use the first Essence"
+    do: >-
+      Use one [[Screaming Essence of Misery]] on the white staff.
+    why: >-
+      The Essence makes the staff Rare and guarantees cast speed. Everything
+      else is random. From Screaming upwards an Essence also works on a staff
+      that is already Rare, which is what lets you repeat it.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "Adds 33 to 68 Physical Damage" }
+        - { text: "98% increased Cold Damage" }
+        - { text: "+131 to maximum Mana" }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+38 to Strength" }
+  - title: "Read the prefixes for room, not for quality"
+    do: >-
+      Hold Alt and ask two questions. **Is a prefix slot open?** **Is the
+      damage percentage slot free?** That slot is taken if the staff rolled
+      spell damage or increased Fire, Cold or Lightning Damage.
+    why: >-
+      The staff above fails both: three prefixes, one of them increased Cold
+      Damage. The bench has nowhere to put spell damage, and even with a
+      free slot it would refuse, because all the caster damage percentages
+      are one group.
+    check: >-
+      Keep the staff when a prefix is open and the percentage slot is free.
+      Keep it also if it rolled spell damage of 96% or more by itself: then
+      the bench modifier goes to something else.
+    fail: >-
+      Use another Essence on the same staff. Nothing is lost but the
+      Essence.
+  - title: "Repeat until there is room"
+    do: >-
+      Use Essences one after another, asking the same two questions, until a
+      result passes.
+    why: >-
+      Each use is an independent reroll and the cast speed comes back every
+      time. You are not hunting a rare modifier here, only waiting for the
+      random prefixes to leave space.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+147 to maximum Mana" }
+        - { text: "Adds 70 to 138 Fire Damage to Spells" }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+14% Chance to Block Spell Damage" }
+        - { text: "+33 to Intelligence" }
+  - title: "Bench the spell damage"
+    do: >-
+      At the [[Crafting Bench]], craft the hybrid of increased Spell Damage
+      with Mana Regeneration Rate, 89–105% with 26–30%, for 6
+      [[Chaos Orb]]s. If you have not unlocked it, craft plain spell damage,
+      79–95% for 4 Chaos Orbs.
+    why: >-
+      Both recipes are the same group and both fit beside damage added to
+      spells, which is a different one. The hybrid has the higher spell
+      damage and costs two Chaos Orbs more.
+    check: >-
+      The staff now has cast speed, a damage percentage, and whatever the
+      Essence left around them. That is a mapping weapon.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+147 to maximum Mana" }
+        - { text: "Adds 70 to 138 Fire Damage to Spells" }
+        - { text: "97% increased Spell Damage / 28% increased Mana Regeneration Rate", how: crafted }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+14% Chance to Block Spell Damage" }
+        - { text: "+33 to Intelligence" }
+variations: >-
+  **If a gem-level prefix rolls.** Keep the staff whatever else is on it, and
+  bench around it. Beside "all Spell Skill Gems" with no element prefix, the
+  bench's "+1 to Level of Socketed Support Gems" (8 Chaos Orbs) is the
+  alternative to spell damage.
+
+
+  **Scorn, for critical strike builds.** The same comparison goes the other
+  way until the top strength. Screaming and Shrieking Scorn give 80–89% and
+  90–109% Spell Critical Strike Chance, and the bench sells 90–120% for 3
+  Chaos Orbs. Only a [[Deafening Essence of Scorn]], at 165–179%, is worth
+  using.
+
+
+  **Rage, Sorrow or Spite.** These guarantee "Damage Penetrates Fire, Cold or
+  Lightning Resistance", 11–12% at Screaming, a prefix the natural pool does
+  not have. It is a group of its own, so the bench's spell damage still
+  fits. A good second Essence craft for a build of one element.
+mistakes:
+  - "Using Essence of Woe and then buying cast speed. You pay an Essence for what the bench nearly matches and take the bench's weakest rank of what it does not."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Keeping a result with three prefixes because one of them looks good. Without a free slot the staff has no damage percentage."
+  - "Using this on a staff with [[Memory Strands]]: one Essence can spend up to 80 of them, by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on staves, tiers, weights, groups and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

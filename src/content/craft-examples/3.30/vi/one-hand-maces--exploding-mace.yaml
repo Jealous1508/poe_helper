@@ -1,0 +1,227 @@
+category: one-hand-maces
+title: "Một cây mace explode: một suffix influence, một Imprint và một khóa suffix"
+level: 4
+summary: "Roll cái suffix mà chỉ mace có influence mới có, cất giữ nó bằng một beast, rồi khóa suffix và để một reforge Harvest cấp các prefix physical."
+goal: >-
+  Một cây mace Redeemer có "Enemies Killed with Attack or Spell Hits Explode,
+  dealing 5% of their Life as Fire Damage" và các prefix physical dựng quanh
+  nó. Mọi lần craft mace khác đều nói prefix đi trước. Lần này là ngoại lệ,
+  và lý do chính là quy tắc chung đứng sau lời khuyên đó: **bảo vệ bất cứ thứ
+  gì bạn không roll được hai lần.** Ở đây đó là một suffix, nên lần craft
+  chạy theo chiều ngược lại, và mỗi lớp bảo vệ được dùng, một Imprint rồi tới
+  một khóa, đều được chọn theo thứ nó trụ được.
+base: "Behemoth Mace"
+itemLevel: 80
+baseWhy: >-
+  Behemoth Mace có 6% increased Attack Speed trên implicit, điều quan trọng
+  hơn thường lệ ở đây vì phía suffix sẽ thiếu chỗ. Bản Redeemer của suffix
+  explode cần item level 78. Base phải mang **influence Redeemer**; mace
+  Shaper có cùng suffix đó từ item level 68 và roll ra nó thường xuyên hơn.
+methods: [influence, currency, beast, meta, harvest, bench]
+result:
+  note: "Redeemer"
+  implicits: ["6% increased Attack Speed"]
+  prefixes:
+    - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+    - { text: "112% increased Physical Damage", how: harvest }
+    - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+  suffixes:
+    - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+    - { text: "+38 to Strength" }
+    - { text: "14% increased Attack Speed", how: crafted }
+needs:
+  - { item: "Một cây Behemoth Mace có influence Redeemer, item level 78+", amount: "1", note: "Normal hoặc Magic; xem giai đoạn 1" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng thêm ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "50 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Alteration số lượng lớn cho suffix, vài con beast, rồi tới các lần khóa: 4
+  [[Divine Orb]] và 1 [[Sacred Orb]] mỗi lần prefix được roll lại. Lifeforce
+  là 50 mỗi lần reforge và hầu như không đáng kể. Base có influence là phần
+  chúng tôi không định giá được, thậm chí không chỉ ra được chỗ tìm một cách
+  chắc chắn trong 3.30.
+odds: >-
+  **Suffix.** Trên mace Redeemer ở item level 80, modifier explode là khoảng
+  1 trên 129 lần roll suffix, theo phép tính của chúng tôi với weight
+  Redeemer được cộng vào pool. Trên mace Shaper là khoảng 1 trên 74. Không
+  phải Alteration nào cũng roll ra suffix: hãy dự trù vài trăm cái.
+
+
+  **Prefix.** Khi suffix đã khóa, một reforge Physical, về lý, sẽ buộc phải
+  đặt modifier được đảm bảo của nó lên phía prefix. Nếu nó được bốc theo
+  weight, đó là flat Physical Damage khoảng một nửa số lần và mỗi họ phần
+  trăm khoảng một phần tư. Mỗi prefix khác mà reforge roll ra là physical
+  khoảng 42% số lần trên pool này. Tier là may rủi: flat damage Tier 3 trở
+  lên là khoảng 1 trên 6 trong những lần flat damage đến. Đây là phép tính
+  của chúng tôi; chưa được đo trong 3.30.
+steps:
+  - title: "Giai đoạn 1: một cây mace Redeemer dùng được Alteration"
+    do: >-
+      Kiếm một cây Behemoth Mace item level 78 trở lên có influence Redeemer,
+      ở dạng item Normal hoặc Magic. Một [[Redeemer's Exalted Orb]] cho
+      influence đó, cùng một modifier Redeemer ngẫu nhiên, lên một cây mace
+      Rare không có influence; sau đó một [[Orb of Scouring]] đưa nó về
+      Normal.
+    why: >-
+      Influence thuộc về item, không thuộc về modifier của nó, nên từ giờ nó
+      thêm pool Redeemer vào mọi thứ được roll trên cây mace này. Trong 3.30,
+      các conqueror rơi Exalted Orb của mình. Việc influence sống qua một lần
+      Scouring là hành vi đã có từ lâu mà chúng tôi không thử lại trong 3.30,
+      và chúng tôi chưa xác nhận được base có influence rơi ở đâu trong
+      league này, nên nếu tự làm thì hãy kiểm cách làm base trên một item rẻ
+      trước.
+    check: >-
+      Phần đầu item hiện biểu tượng Redeemer, cây mace là Normal, và item
+      level từ 78 trở lên. Một cây mace có influence thì không fracture được,
+      và đó là lý do lần craft này dùng lớp bảo vệ khác.
+    state:
+      note: "Redeemer"
+      rarity: normal
+      implicits: ["6% increased Attack Speed"]
+  - title: "Alteration tới khi suffix xuất hiện"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Chỉ
+      đọc suffix. Dừng ở **"Enemies Killed with Attack or Spell Hits Explode,
+      dealing 5% of their Life as Fire Damage"**. Tên của nó trên item kết
+      thúc bằng "of Redemption".
+    why: >-
+      Item Magic có một suffix, nên mỗi Alteration là một lần nhìn gọn vào
+      cuộc xổ số suffix. Nó chậm, khoảng 1 trên 129 suffix, nhưng không công
+      cụ rẻ hơn nào nhắm vào modifier này, và bạn chỉ phải làm một lần.
+    check: >-
+      Nhìn prefix đi kèm nó. Không có prefix hay có bất kỳ prefix physical
+      nào đều ổn. Prefix sẽ bị thay ở giai đoạn 3, nên nó không phải lý do để
+      roll tiếp.
+    state:
+      note: "Redeemer"
+      rarity: magic
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+  - title: "Imprint trước Regal Orb"
+    do: >-
+      Trong [[Menagerie]], dùng **Create an Imprint of a Magic Item**
+      ([[Craicic Croaker]] và ba beast Rare khác). Rồi dùng một
+      [[Regal Orb]] và đọc xem nó thêm gì.
+    why: >-
+      Regal Orb thêm một modifier ngẫu nhiên, và nếu đó là một suffix thì nó
+      sẽ bị khóa lên cây mace cùng với cái explode trong suốt phần còn lại
+      của lần craft. Imprint cho bạn từ chối nó. **Giữ** kết quả nếu modifier
+      mới là một prefix bất kỳ, vì prefix sẽ được roll lại, hoặc là một
+      suffix bạn sẽ dùng: attack speed, Strength, một modifier critical
+      strike.
+    fail: >-
+      Một suffix bạn sẽ không dùng, như light radius hay mana on kill: dùng
+      [[Imprint]] để quay về cây mace Magic, tạo một Imprint mới bằng một con
+      Croaker khác, rồi dùng một Regal Orb khác.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Giai đoạn 2: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**: 4
+      [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Đây là hình ảnh phản chiếu của kiểu khóa thường gặp. Meta-modifier là
+      một prefix, nó bảo vệ cả hai suffix, và lần roll lại kế tiếp sẽ tiêu
+      mất nó. Hãy dùng khóa đầy đủ: với hai suffix trên cây mace, bản một
+      suffix rẻ hơn sẽ bảo vệ ngẫu nhiên một trong hai và không nói là cái
+      nào.
+    check: >-
+      Khóa cần một ô prefix trống. Sau một Regal Orb cây mace có nhiều nhất
+      hai prefix, nên lần đầu lúc nào cũng còn chỗ.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Reforge kèm một modifier Physical"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Physical modifier** giá 50
+      [[Vivid Crystallised Lifeforce]].
+    why: >-
+      Trên một cây mace còn mở, reforge này mơ hồ: năm modifier mang tag
+      physical, ba prefix và hai suffix leech. Khi suffix đã khóa, các suffix
+      leech không đặt vào được, nên phần đảm bảo, về lý, sẽ buộc phải do một
+      prefix đáp ứng. Một lần khóa tốn Divine Orb đã biến reforge rẻ nhất
+      trong game thành một prefix physical được đảm bảo.
+    check: >-
+      Cả hai suffix không đổi, khóa đã biến mất, có ít nhất một prefix
+      physical. Rồi đánh giá: bạn cần **hai prefix physical** ở các tier bạn
+      đã đặt từ trước.
+    fail: >-
+      Một prefix physical, hoặc hai cái kém: craft khóa lần nữa và reforge
+      lần nữa. Việc Harvest tôn trọng khóa, và việc phần đảm bảo chuyển sang
+      phía prefix, đều là hiểu biết của người chơi; hãy thử cả cặp trên một
+      item Rare rẻ trước.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+        - { text: "112% increased Physical Damage", how: harvest }
+        - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+  - title: "Bench attack speed"
+    do: >-
+      Craft **11–15% increased Attack Speed** giá 2 [[Chaos Orb]] vào suffix
+      trống, hoặc 16–20% giá 4 Exalted Orb.
+    why: >-
+      Ô suffix duy nhất còn lại dành cho suffix cây mace nào cũng cần. Đây là
+      chỗ implicit của Behemoth Mace xứng với vị trí của nó: cây mace đã có
+      6% attack speed trước khi tiêu suffix nào cho nó.
+    state:
+      note: "Redeemer"
+      implicits: ["6% increased Attack Speed"]
+      prefixes:
+        - { text: "Adds 21 to 42 Physical Damage", how: harvest }
+        - { text: "112% increased Physical Damage", how: harvest }
+        - { text: "Adds 9 to 162 Lightning Damage", how: harvest }
+      suffixes:
+        - { text: "Enemies Killed with Attack or Spell Hits Explode, dealing 5% of their Life as Fire Damage", how: influence }
+        - { text: "+38 to Strength" }
+        - { text: "14% increased Attack Speed", how: crafted }
+variations: >-
+  **Scour prefix thay vào.** Khi suffix đã khóa, một [[Orb of Scouring]] được
+  ghi nhận là chỉ gỡ prefix và cái khóa. Điều đó để lại ba ô prefix trống cho
+  bench và cho [[Exalted Orb]]. Đây là nước đi đúng khi các lần reforge cứ
+  lấp prefix bằng elemental damage.
+
+
+  **Trên mace Shaper.** Cùng suffix đó tồn tại từ item level 68 và mỗi lần
+  roll dễ ra gần gấp đôi. Chúng tôi chưa xác nhận được base Shaper hay
+  [[Shaper's Exalted Orb]] tìm ở đâu trong 3.30.
+
+
+  **Cách khác để tìm suffix.** Harvest có "Reforge an Influenced Rare item
+  with random modifiers, including an Influence modifier" giá 5,000 Primal
+  Lifeforce và một Sacred Crystallised Lifeforce. Nó đảm bảo một modifier
+  Redeemer nào đó, không phải cái này, và mace có tám loại. Alteration chậm
+  hơn và rẻ hơn nhiều.
+mistakes:
+  - "Roll prefix trước theo thói quen. Suffix mới là phần không roll được hai lần; prefix thì reforge được dưới khóa."
+  - "Dùng Regal Orb mà không có Imprint. Một suffix vô dụng thêm vào lúc đó sẽ bị khóa chung với cái tốt."
+  - "Cố fracture suffix. Item có influence không fracture được."
+  - "Dùng reforge Physical mà không khóa. Nó roll lại suffix, và nó có thể đáp ứng phần đảm bảo bằng một suffix leech."
+  - "Dùng Essence lên cây mace đã khóa. Essence được ghi nhận là phớt lờ khóa."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Redeemer và Shaper trên mace một tay, tag, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá của các modifier bảo vệ; các boss conqueror rơi Exalted Orb của mình." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các bản khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và beast của nó." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Physical, reforge Influence và giá của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest và Orb of Scouring tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

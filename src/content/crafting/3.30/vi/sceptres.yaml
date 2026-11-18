@@ -1,0 +1,480 @@
+name: "Sceptre"
+short: "Weapon một tay hệ elemental: một weapon caster và một weapon attack elemental chung một pool, trên những base có sẵn tới 40% increased Elemental Damage."
+icon: "Void Sceptre"
+intro: >-
+  Sceptre là hai weapon trong một pool. Với **caster**, nó mang Spell Damage,
+  level của spell gem, added damage cho spell, cast speed và spell crit. Với
+  **build attack elemental**, nó mang added Fire, Cold và Lightning Damage,
+  increased Elemental Damage with Attack Skills và attack speed. Implicit,
+  increased Elemental Damage, phục vụ cả hai.
+
+
+  Cái pool kép đó là điều đầu tiên cần hiểu, vì dù bạn đang làm build nào
+  trong hai, modifier của build kia cũng vướng đường bạn: khoảng 44% weight
+  prefix là modifier attack và 35% là modifier caster. Logic của weapon
+  physical, nhân vào base, không áp dụng theo kiểu thường lệ cho build nào
+  cả. Caster không dùng thứ gì local. Build attack elemental dùng attack
+  speed và crit của base, nhưng damage của nó đến từ thứ được thêm vào, không
+  phải từ các con số physical của base.
+basics:
+  itemLevel:
+    text: >-
+      Hai build cần item level khác nhau. Một cây sceptre **caster** chạm
+      trần ở 84, nơi tier tốt nhất của Spell Damage và của Fire, Cold và
+      Lightning Damage mở ra; 76 đã bao phần lớn thứ một weapon chạy map
+      dùng. Một cây sceptre **attack** muốn 77 cho attack speed, 82 cho added
+      elemental damage cao nhất, và 86 chỉ để lấy tier cuối của Elemental
+      Damage with Attack Skills.
+
+
+      Các prefix gem level cho một loại damage có một tier duy nhất ở item
+      level 2. Cũng như trên rune dagger, một base thấp làm chúng dễ roll
+      hơn, chứ không yếu đi.
+    breakpoints:
+      - ilvl: 46
+        unlocks: "Tier 4 của Spell Damage và của Fire, Cold và Lightning Damage (tất cả 55–69%). **Leveling.**"
+      - ilvl: 55
+        unlocks: "\"+1 to Level of all Spell Skill Gems\" (weight 50). Tier 3 của cast speed (21–24%)."
+      - ilvl: 64
+        unlocks: "Tier 2 của Spell Damage và Tier 2 của elemental damage (85–99%). Tier 2 của Fire và Cold Damage over Time Multiplier (+29–33%)."
+      - ilvl: 74
+        unlocks: "Tier 1 của added damage cho spell (Fire: adds 62–84 to 124–146). Tier 2 của added Fire và Lightning Damage cho attack."
+      - ilvl: 77
+        unlocks: "Tier 1 của attack speed (26–27%). Tier 1 của Spell Critical Strike Chance đã mở ở 76 và cả hai suffix crit ở 73. **Đủ cho phần lớn sceptre thuộc cả hai kiểu.**"
+      - ilvl: 82
+        unlocks: "Tier 1 của added Fire, Cold và Lightning Damage cho attack (Lightning: adds 15–21 to 296–344)."
+      - ilvl: 84
+        unlocks: "Tier 1 của Spell Damage và Tier 1 của Fire, Cold và Lightning Damage (100–109%); Tier 1 của cast speed (29–32%) đã mở ở 83. **Trần của caster.**"
+      - ilvl: 86
+        unlocks: "Tier 1 của increased Elemental Damage with Attack Skills (51–59%). **Trần của attack.**"
+  bases:
+    text: >-
+      Hai mươi tám sceptre, một pool, cùng weight trên tất cả. Base quyết
+      định implicit và, với build attack, cả tốc độ lẫn crit. Sceptre nào
+      cũng cần Strength và Intelligence.
+    types:
+      - title: "Sceptre thường"
+        pools: [all]
+        text: >-
+          Hai mươi hai base có implicit là increased Elemental Damage. Con số
+          cố định theo từng base và không tăng đều theo level: 10% trên
+          Driftwood Sceptre, 30% trên Crystal Sceptre ở level 41, 40% trên
+          Opal Sceptre ở 60 và Void Sceptre ở 68. Pool này cũng chứa các
+          sceptre Maraketh và Heist bên dưới.
+      - title: "Sceptre Maraketh"
+        text: >-
+          Horned, Stag và Sambar Sceptre. Implicit: "Damage Penetrates 4%
+          Elemental Resistances", 6% trên Sambar Sceptre. Với một build đã có
+          nhiều increased, penetration đáng giá hơn increased damage.
+      - title: "Sceptre Heist"
+        text: >-
+          Oscillating, Stabilising và Alternating Sceptre. Mỗi cây cho một
+          keystone làm implicit: Elemental Overload, Elemental Equilibrium và
+          Secrets of Suffering. Chúng đánh 1.45 attack mỗi giây. Chỉ lấy khi
+          build được thiết kế quanh keystone đó.
+    picks:
+      - base: "Void Sceptre"
+        for: "Sceptre endgame mặc định"
+        why: >-
+          40% increased Elemental Damage, implicit cao nhất, trên một base
+          rơi từ level 68 nên dễ tìm ở item level cao. 7.3% crit gốc và 1.25
+          attack mỗi giây cho build attack. Cần 122 Intelligence và 104
+          Strength.
+      - base: "Opal Sceptre"
+        for: "Cùng implicit đó, sớm hơn"
+        why: >-
+          40% increased Elemental Damage từ level 60, với 8% critical strike
+          chance gốc, cao nhất trên sceptre. Cây tốt hơn trong hai cho build
+          attack crit; nặng về Intelligence hơn (131).
+      - base: "Sambar Sceptre"
+        for: "Penetration"
+        why: >-
+          Damage Penetrates 6% Elemental Resistances, trong khi craft chỉ
+          thêm được penetration qua Essence hoặc influence. 1.3 attack mỗi
+          giây.
+      - base: "Karui Sceptre"
+        for: "Attack elemental nhanh"
+        why: >-
+          1.5 attack mỗi giây, nhanh nhất mà sceptre có được, với implicit
+          26%. Added elemental damage tính một lần cho mỗi hit, nên tốc độ
+          nhân nó lên.
+      - base: "Crystal Sceptre"
+        for: "Leveling"
+        why: >-
+          30% increased Elemental Damage ở level 41, cao hơn hẳn hàng xóm của
+          nó (Lead Sceptre ba level sau đó có 22%). Cây sceptre để nhặt lên
+          và craft ở giữa campaign.
+    impact: >-
+      **Implicit**, thứ chiếm phần lớn quyết định. Increased Elemental Damage
+      từ 10% tới 40%, penetration, hoặc một keystone. Trên sceptre thường nó
+      là con số cố định, nên không có gì để roll lại; một
+      [[Vaal Orb]] có thể thay nó bằng một corruption implicit và đóng item
+      lại.
+
+
+      **Với build attack: tốc độ và crit.** Attack speed là local và nhân vào
+      1.2 tới 1.5 attack mỗi giây của base. Critical Strike Chance nhân vào
+      7% tới 8% của nó. Physical damage của base ít ý nghĩa với một build
+      elemental.
+
+
+      **Với caster: không còn gì khác.** Damage, tốc độ, crit và quality của
+      base không chạm tới spell.
+
+
+      **Không phải pool.** Sceptre nào cũng roll cùng một bộ modifier.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 84, theo phép tính của chúng tôi từ weight, cuộc xổ số
+      prefix là: modifier attack 44% (added elemental damage cho attack 23%,
+      các họ physical 17%), modifier caster 35% (added damage cho spell 20%,
+      Spell Damage 9%, hybrid Mana 4%, gem level 1.1%), maximum Mana 12%, và
+      ba prefix elemental damage 9%.
+
+
+      Mấy prefix elemental đó là của riêng sceptre, và phần đỉnh của chúng là
+      thứ nhẹ weight nhất ở đây: Tier 1 của Fire Damage có weight 12, tức 1
+      trên 7,284 lần roll prefix. Tier 3 trở lên của một element là 1 trên
+      433; Tier 3 trở lên của Spell Damage là 1 trên 127. Một gem level đã
+      chọn là 1 trên 350. [[Orb of Alteration]] dành cho các tier giữa của
+      item này và cho từng modifier một.
+  - method: bench
+    note: >-
+      Cả hai build đều được phục vụ. **Caster:** Spell Damage hoặc Fire, Cold
+      hay Lightning Damage ở 35–44% giá 8 Orb of Alteration, 45–54% giá 4
+      Chaos Orb (Spell Damage 55–66% giá 4 Exalted Orb); kèm chance to
+      Ignite, Freeze hoặc Shock, 51–60% giá 8 Chaos Orb. Added Fire Damage to
+      Spells 34–45 to 67–78 giá 4 Chaos Orb. Cast speed 14–17% giá 2 Chaos
+      Orb. Spell crit 60–69% giá 3. **Build attack:** added Fire hoặc Cold
+      Damage 35–41 to 63–73 giá 4 Chaos Orb; Elemental Damage with Attack
+      Skills 24–32% giá 4 Orb of Alchemy; attack speed 11–15% giá 2 Chaos
+      Orb. **Cả hai:** Critical Strike Multiplier 25–28% giá 4 Chaos Orb.
+
+
+      Group: Spell Damage roll ra, Fire, Cold và Lightning Damage roll ra, và
+      mọi craft bench thuộc các loại đó là **một group**. Một cây sceptre có
+      một cái trong số đó. Hybrid Mana, added damage cho spell, mỗi element
+      của added damage cho attack, và Elemental Damage with Attack Skills,
+      mỗi thứ là một group riêng.
+  - method: finishing
+    note: >-
+      Quality chỉ nâng physical damage, nên caster bỏ qua nó và với build
+      attack elemental nó gần như không liên quan. Tối đa ba socket. Implicit
+      là con số cố định trên sceptre thường; một [[Blessed Orb]] không có
+      việc gì để làm.
+  - method: essence
+    note: >-
+      Sceptre có bảng Essence đầy đủ. Cho caster: **Woe** cho Spell Damage,
+      83–94% ở bậc Deafening, nằm giữa Tier 3 và Tier 2 tự nhiên. **Scorn**
+      cho Spell Critical Strike Chance, 110–119% ở bậc Deafening, cao hơn
+      Tier 1 tự nhiên. **Misery** cho cast speed, 29–32% ở bậc Deafening,
+      ngang Tier 1 mà không cần item level 83. **Anguish, Suffering và
+      Torment** cho added Fire, Cold và Lightning Damage to Spells ở chỉ số
+      Tier 1.
+
+
+      Cho build attack: **Anger, Hatred và Wrath** cho added Fire, Cold và
+      Lightning Damage (Deafening Wrath: 13–19 to 266–310), và **Zeal** cho
+      attack speed, 28–30% ở bậc Deafening.
+
+
+      Cho cả hai: **Rage, Sorrow và Spite** cho "Damage Penetrates 8% Fire,
+      Cold or Lightning Resistance" ở bậc Deafening, một prefix mà pool tự
+      nhiên không có.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) cho bất kỳ cây sceptre Magic nào
+      có gem level hoặc một prefix damage cao. Ở đây nó còn một công dụng thứ
+      hai: Imprint đưa sceptre về trạng thái có đúng một prefix, và đó là
+      trạng thái mà khóa 1 Divine Orb là chắc chắn.
+  - method: harvest
+    note: >-
+      **Caster** (75 Primal Lifeforce): modifier được đảm bảo là một prefix
+      caster khoảng hai trên ba lần, còn lại là cast speed hoặc Spell
+      Critical Strike Chance. **Speed** (150 Vivid) có hai modifier mang tag
+      đó trên sceptre, attack speed và cast speed, theo tỉ lệ 9 so với 8.
+      **Critical** (150 Primal) có ba: crit của attack, spell crit và
+      multiplier. **Fire, Cold, Lightning** (50 mỗi cái) thì đông đúc: năm
+      hoặc sáu loại modifier mang tag của mỗi element.
+
+
+      Từ 3.27, các reforge này tôn trọng "Cannot roll Attack Modifiers" và
+      "Cannot roll Caster Modifiers", thứ loại nửa của build kia khỏi bất cứ
+      thứ gì chúng roll ra.
+  - method: fossil
+    note: >-
+      Mỗi build một Fossil. Một [[Aetheric Fossil]] (nhiều Caster hơn, ít
+      Attack hơn) khiến khoảng 92% lần roll prefix là modifier caster, và
+      cast speed cộng spell crit chiếm 76% lần roll suffix. Một
+      [[Serrated Fossil]] là tấm gương của nó cho build attack, và có một
+      [[Prismatic Fossil]] bên cạnh thì added elemental damage cho attack
+      chiếm khoảng 78% lần roll prefix.
+
+
+      Hãy để ý Aetheric Fossil làm gì với các prefix của riêng sceptre:
+      increased Fire, Cold và Lightning Damage không có tag caster, nên chúng
+      không được nhân và trở thành hiếm khi so ra. Caster muốn một trong số
+      đó thì dùng Fossil của element ấy, hoặc bench. Các con số theo mô hình
+      một lần nhân cho mỗi tag khớp; hãy coi chúng là gần đúng.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra cho người dùng sceptre: 70–79% Fire, Cold hoặc
+      Lightning Damage kèm 21–23% chance to Ignite, Freeze hoặc Shock; 70–79%
+      Spell Damage kèm Mana Regeneration; 60–69% Spell Damage kèm 5% of
+      Non-Chaos Damage as extra Chaos Damage; và cho build attack là 14–16%
+      elemental penetration cho attack bằng weapon này. Mấy cái damage chung
+      group Spell Damage. Suffix: +24–28% to Fire hoặc Cold Damage over Time
+      Multiplier, 18–22% cast speed kèm Arcane Surge.
+  - method: fracture
+    note: >-
+      Đáng fracture: một gem level, hoặc một prefix elemental damage Tier 1
+      hay Tier 2, mà weight của chúng (12 và 40) đặt chúng ngoài tầm với của
+      việc roll đi roll lại. Một cây sceptre fractured không nhận được
+      influence, theo các trang tra cứu.
+  - method: meta
+    note: >-
+      Trên sceptre, cả hai modifier "Cannot roll" đều có việc, mỗi build một
+      cái. **"Cannot roll Attack Modifiers"** loại 44% weight prefix và một
+      phần ba weight suffix cho caster.
+      **"Cannot roll Caster Modifiers"** loại 35% weight prefix cho build
+      attack, cùng cast speed và spell crit khỏi suffix. Mỗi cái giá 1 Divine
+      Orb và là một suffix, và mỗi cái chỉ giới hạn thứ có thể được **thêm**
+      vào, bởi Exalted Orb hoặc reforge.
+
+
+      Từ 3.30, không cái nào ngăn một [[Orb of Annulment]] gỡ modifier thuộc
+      loại của nó. Mọi kỹ thuật dựa vào điều đó đều đã chết.
+
+
+      Các khóa một phần, mới trong 3.30, hợp với item này: "1 Prefix Modifier
+      cannot be changed" tốn 1 Divine Orb và chắc chắn khi sceptre có đúng
+      một prefix; khóa đầy đủ là 4 Divine Orb và 1
+      [[Sacred Orb]].
+  - method: influence
+    note: >-
+      Penetration là chủ đề chính. Hunter: "Attacks with this Weapon
+      Penetrate 10–12% Elemental Resistances" và "Damage Penetrates 6%
+      Elemental Resistances". Crusader, Warlord và Redeemer: 13–15%
+      penetration của một element cho attack bằng weapon này, 8% cho mọi
+      damage, và added damage cho spell kèm 4% penetration. Ngoài ra còn
+      90–94% increased Burning Damage của Warlord, "Ignites you inflict deal
+      Damage 13–15% Faster" của Hunter, "Spells have a 6–7% chance to deal
+      Double Damage" của Redeemer, và effect của một aura ở mức 34–40% cho
+      mỗi influence. Các suffix aura đều chung một group: mỗi item một cái.
+      Một [[Awakener's Orb]] gộp hai influence lên một cây sceptre.
+  - method: corruption
+    note: >-
+      Các corruption implicit của sceptre có "+1 to Level of all Fire, Cold
+      or Lightning Spell Skill Gems", một gem level thứ ba thế chỗ elemental
+      damage; 15–20% increased Area of Effect; 14–18% cast speed; và 10–15%
+      chance để enemy bạn giết phát nổ.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới."
+memoryStrands: >-
+  Sceptre là chỗ tốt để dùng strand, vì một lý do: các prefix damage của nó
+  là những họ dễ ra nhưng phần đỉnh gần như trống. Spell Damage chiếm 9% lần
+  roll prefix, và Tier 1 tới 3 chiếm 690 trong 8,190 weight của nó. Mỗi
+  prefix elemental damage chiếm 3%, với 202 trong 2,702 nằm ở ba tier cao
+  nhất. Strand, thứ loại các tier thấp khỏi bất cứ thứ gì được roll ra, tác
+  động đúng vào chỗ đó.
+
+
+  Con đường là con đường rẻ: một [[Orb of Remembrance]] lên base trắng item
+  level 84, [[Orb of Alteration]] tới khi prefix damage ra (mỗi cái nhiều
+  nhất 8 strand theo bảng data-mine), rồi một [[Regal Orb]]. Hãy để mắt tới
+  chi phí game hiện trên từng orb.
+
+
+  Chúng không giúp gì cho gem level, thứ không có tier, và một lần craft bằng
+  Fossil hay Harvest không dùng cũng không tiêu chúng, theo thử nghiệm của
+  người chơi. Một Essence có thể tiêu tới 80.
+reading:
+  intro: >-
+    Xác định bạn đang nhìn cây sceptre nào, caster hay attack, rồi gạch bỏ
+    các dòng của build kia. Added damage có "to Spells" là dòng caster; không
+    có thì là dòng attack. Spell Damage, cast speed và Spell Critical Strike
+    Chance là dòng caster; attack speed, Critical Strike Chance trơn và
+    Accuracy là dòng attack. Increased Fire, Cold hoặc Lightning Damage,
+    implicit và Critical Strike Multiplier phục vụ cả hai.
+  prefixes:
+    text: >-
+      **Caster** lấp ba ô từ bốn loại prefix. Gem level: "+1 to Level of all
+      Spell Skill Gems" và một trong bốn bản theo loại damage (Fire, Cold,
+      Lightning, Physical; sceptre không có bản Chaos) là hai group khác nhau
+      và cộng dồn. Một modifier từ group Spell Damage, mà trên sceptre group
+      này gồm cả increased Fire, Cold và Lightning Damage. Hybrid Mana, ở
+      group riêng của nó. Added damage cho spell, một element.
+
+
+      **Build attack** chồng added Fire, Cold và Lightning Damage, ba group,
+      và Elemental Damage with Attack Skills, group thứ tư. Prefix increased
+      damage của một element đơn lẻ cũng có tác dụng với attack, và là cái
+      prefix duy nhất cả hai build cùng tranh.
+
+
+      Maximum Mana, 12%, vướng đường tất cả mọi người.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Mọi spell được thêm một level. Weight 50; group riêng, nên nó cộng dồn với một gem level theo loại damage."
+        aim: "Một tier, +1 (ilvl 55)."
+      - mod: "+# to Level of all Fire / Cold / Lightning / Physical Spell Skill Gems"
+        why: "Một group cho cả bốn. Mỗi cái khoảng 1 trên 350 lần roll prefix ở item level 84, và dễ ra hơn hẳn trên base thấp."
+        aim: "Một tier, +1 (ilvl 2)."
+      - mod: "#% increased Spell Damage"
+        why: "Hệ số nhân của caster. Cùng group với các prefix elemental damage bên dưới và với mọi craft damage của bench."
+        aim: "T3, 70–84% (ilvl 58), hoặc một Deafening Essence of Woe. T1 là 100–109% (ilvl 84)."
+      - mod: "#% increased Fire / Cold / Lightning Damage"
+        why: "Lớn ngang Spell Damage, và nó tính cho cả attack lẫn damage over time chứ không chỉ spell. Dễ ra bằng một phần ba Spell Damage, với phần đỉnh nhẹ weight hơn hẳn."
+        aim: "T3, 70–84% (ilvl 58), hoặc bản veiled 70–79%. T1 là 100–109% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "Một Spell Damage thứ hai ở group riêng."
+        aim: "T2, 37–43% (ilvl 58)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Spells"
+        why: "Flat damage cho spell; mỗi item một element. Essence cho chỉ số Tier 1."
+        aim: "T3 (Fire adds 38–51 to 77–88, ilvl 51)."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Damage của build attack. Ba group; một cây sceptre attack hoàn chỉnh có hai hoặc ba cái trong số đó."
+        aim: "T3 (Lightning adds 10–14 to 197–229, ilvl 63). T1 cần ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Nhân mọi added elemental damage trên nhân vật. 2% lần roll prefix; bench bán 24–32%."
+        aim: "Bench, hoặc T3, 37–42% (ilvl 60). T1 là 51–59% (ilvl 86)."
+  suffixes:
+    text: >-
+      Caster: cast speed (10% số lần roll), Spell Critical Strike Chance
+      (7%), Critical Strike Multiplier (7%). Build attack: attack speed
+      (11%), Critical Strike Chance (7%) và cùng multiplier đó. Cái nào cũng
+      có các tier với weight đều nhau.
+
+
+      Build damage over time có Fire và Cold Damage over Time Multiplier ở
+      đây, với weight rất nhẹ ở các tier cao nhất, cộng multiplier chung ở
+      một group riêng. Chance to Ignite, Freeze và Shock là những suffix của
+      sceptre mà ít build cần lấy từ weapon.
+
+
+      Strength và Intelligence là đồ lấp chỗ, và trên một item cần hơn một
+      trăm điểm mỗi loại thì không phải lúc nào chúng cũng thừa.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "Tốc độ của caster. Một Essence of Misery cố định nó ở chỉ số lên tới Tier 1."
+        aim: "T2, 25–28% (ilvl 72). T1 là 29–32% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "Cho caster crit. Một Deafening Essence of Scorn cho 110–119%, cao hơn mọi tier tự nhiên."
+        aim: "T2, 80–89% (ilvl 59). T1 là 90–109% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Suffix damage duy nhất cả hai build đều dùng. Nó không có tag caster lẫn tag attack, nên các công cụ nhắm của cả hai build đều lướt qua nó; hãy tính trước là sẽ bench nó."
+        aim: "T2, 30–34% (ilvl 59), hoặc 25–28% của bench."
+      - mod: "#% increased Attack Speed"
+        why: "Local. Suffix đầu tiên của build attack, và là suffix hay ra nhất trong pool."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Bản attack: nó áp dụng cho attack đánh bằng sceptre và không giúp gì cho spell."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "Cho build ignite và burning. Weight 35 ở Tier 1; bản veiled 24–28% và 18–20% của bench là các nguồn thực tế."
+        aim: "Veiled, hoặc T3, 24–28% (ilvl 36)."
+approach:
+  principle: >-
+    **Chọn một trong hai build và tắt nửa kia của pool.** Mọi lần craft
+    sceptre mạnh đều bắt đầu bằng việc loại các modifier thuộc về build bạn
+    không làm: một Fossil cho roll lại toàn bộ, một modifier "Cannot roll"
+    cho các lần thêm và reforge. Rồi tới luật của caster, gem level trước
+    damage vì bench bán damage, hoặc luật của build attack, added damage ở
+    hai hay ba element và bench cho multiplier.
+  order:
+    - title: "Caster hay attack, rồi tới implicit"
+      text: >-
+        Các base 40% cho phần lớn build thuộc cả hai kiểu; Sambar cho
+        penetration; base Heist chỉ vì keystone của nó. Build attack còn nhìn
+        cả tốc độ và crit.
+    - title: "Item level theo những tier bạn thật sự sẽ roll"
+      text: >-
+        77 bao phần lớn sceptre. 84 cho caster săn damage Tier 1, 82 cho
+        build attack săn added damage Tier 1. Một base cố ý thấp cho gem
+        level trên weapon leveling.
+    - title: "Gọi tên modifier khó và công cụ của nó"
+      text: >-
+        Một gem level: Fossil theo tag, hoặc một base thấp. Một prefix
+        elemental damage cao: base có strand với Alteration, hoặc chấp nhận
+        bản veiled 70–79%. Spell crit trên Tier 1, cast speed ở chỉ số Tier
+        1, penetration: một Essence. Added damage cho attack ở tier cao:
+        Serrated và Prismatic Fossil.
+    - title: "Bảo vệ bằng cách đếm prefix"
+      text: >-
+        Một prefix đáng giữ: khóa 1 Divine Orb là chắc chắn. Hai: khóa 2
+        Divine Orb. Ba: khóa đầy đủ. Một Imprint của item Magic đưa bạn về
+        trạng thái một prefix sau một lần hỏng.
+    - title: "Lấp phần còn lại khi nửa kia đã tắt"
+      text: >-
+        Exalted Orb và reforge dưới "Cannot roll Attack Modifiers" hoặc
+        "Cannot roll Caster Modifiers". Đếm lại pool sau mỗi modifier bạn
+        thêm.
+    - title: "Bench multiplier hoặc dòng damage còn thiếu"
+      text: >-
+        Critical Strike Multiplier cho build crit thuộc cả hai kiểu;
+        Elemental Damage with Attack Skills cho build attack đã roll xong
+        suffix; một prefix damage cho caster đã roll ra gem level.
+  finishing: >-
+    Craft bench, rồi một [[Divine Orb]] nếu prefix damage chính nằm thấp
+    trong tier của nó. Caster không cần quality. Nếu sceptre là một trong hai
+    weapon, hoặc nằm cạnh một shield, hãy kiểm Strength và Intelligence của
+    nhân vật trước khi tiêu vào bất cứ thứ gì khác: một cây sceptre bạn không
+    đeo được là lỗi hoàn thiện phổ biến nhất của loại item này.
+  stopping: >-
+    Một cây sceptre caster có một gem level, một prefix damage từ 55% trở lên
+    từ bất kỳ nguồn nào, cast speed và thêm một suffix hữu ích là đã sẵn sàng
+    cho map đỏ. Một cây sceptre attack có hai prefix added damage từ Tier 3
+    trở lên, Elemental Damage with Attack Skills của bench, attack speed và
+    một suffix crit cũng vậy.
+
+
+    Các bước xa hơn là gem level thứ hai, một prefix elemental damage Tier 1
+    hoặc 2, và ba suffix roll ra. Mỗi bước tốn ngang cả cây item bên dưới nó.
+    Khi một lần thử trả tiền đã hỏng hai lần, hãy so giá lần kế tiếp với việc
+    cứ mua luôn món nâng cấp.
+special:
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Influence"
+    where: "8% từ một Deafening Essence of Rage (Fire), Sorrow (Cold) hoặc Spite (Lightning); 6% ở bậc Screaming. Cũng 8% đó tồn tại dưới dạng prefix Warlord, Redeemer hoặc Crusader ở item level 78."
+  - mod: "#% increased Spell Critical Strike Chance (above Tier 1)"
+    source: "Essence"
+    where: "110–119% từ một [[Deafening Essence of Scorn]]. Tier tự nhiên cao nhất là 90–109%."
+  - mod: "+# to Level of all Fire / Cold / Lightning Spell Skill Gems (implicit)"
+    source: "Corruption"
+    where: "Một corruption implicit từ [[Vaal Orb]], thay thế implicit elemental damage. Cộng dồn với cả hai prefix gem level."
+  - mod: "#% increased Fire Damage / #% chance to Ignite"
+    source: "Veiled / Bench"
+    where: "Unveil: 70–79% kèm 21–23%. Bench: 51–60% kèm 18–20% giá 8 Chaos Orb. Cold kèm Freeze và Lightning kèm Shock cũng vậy. Group Spell Damage."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Veiled / Bench / influence Hunter"
+    where: "14–16% khi unveil; 11–13% từ bench giá 4 Exalted Orb; 10–12% dưới dạng prefix Hunter ở item level 78, vốn ở một group khác với hai cái kia."
+  - mod: "#% increased Burning Damage"
+    source: "Influence Warlord"
+    where: "Một prefix Warlord, 90–94% ở item level 78, weight 100. Nó chiếm group Spell Damage."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Influence Redeemer"
+    where: "Một suffix Redeemer, 6–7% ở item level 80."
+  - mod: "Zealotry / Wrath / Anger / Hatred / Malevolence has #% increased Aura Effect"
+    source: "Influence"
+    where: "34–40% ở item level 80: Zealotry và Wrath với Crusader, Anger với Warlord, Hatred với Redeemer, Malevolence với Hunter. Cả năm chung một group, nên một cây sceptre chứa một cái."
+  - mod: "Elemental Overload / Elemental Equilibrium / Secrets of Suffering"
+    source: "Implicit của base"
+    where: "Các implicit keystone của ba cây sceptre Heist. Được chọn cùng với base."
+mistakes:
+  - "**Làm mỗi build một nửa.** Spell Damage đi với attack speed không phải là một weapon hybrid; đó là hai ô phí cho bất kỳ build nào đeo nó."
+  - "**Bench Fire Damage cạnh Spell Damage roll ra**, hoặc ngược lại. Một group."
+  - "**Aetheric Fossil để lấy prefix Fire Damage.** Prefix đó không có tag caster; Fossil làm nó hiếm hơn."
+  - "**Trông chờ hai aura effect.** Mọi suffix aura chung một group, nên kể cả hai influence cũng chỉ cho một."
+  - "**\"Cannot roll Caster Modifiers\" làm khiên chắn Annulment.** Đã bị bỏ trong 3.30. Nó chỉ giới hạn thứ được thêm vào."
+  - "**Craft khóa 1 Divine Orb lên cây sceptre có hai hoặc ba prefix.** Game chọn cái nào nó bảo vệ và không báo cho bạn."
+  - "**Bỏ qua các yêu cầu.** Hơn 100 Strength và hơn 100 Intelligence trên các base hàng đầu."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, group, tag, tier, weight, Essence, hệ số nhân của Fossil, modifier influence và giá bench được dẫn ở đây. Các tỉ lệ và xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ, các khóa một phần, và việc các modifier \"Cannot roll\" không còn ngăn modifier bị gỡ." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Khi nào các khóa một và hai modifier là chắc chắn." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Reforge Harvest tôn trọng các modifier \"Cannot roll\"." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

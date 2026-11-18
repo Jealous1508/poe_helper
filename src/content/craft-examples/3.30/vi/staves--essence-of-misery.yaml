@@ -1,0 +1,162 @@
+category: staves
+title: "Cast speed từ một Essence, spell damage từ bench"
+level: 2
+summary: "Chọn Essence theo thứ bench thay thế kém nhất: Misery đảm bảo cast speed, rồi bench bán spell damage. Roll lại tới khi có một ô prefix trống cho nó."
+goal: >-
+  Một cây staff cho những map đầu tiên của bạn, có cast speed mạnh và spell
+  damage từ bench, làm bằng một nắm Essence. Cây staff thì bình thường. Bài
+  học là cách chọn giữa hai công cụ cùng đảm bảo một thứ gì đó: **để Essence
+  cho modifier mà bench làm dở, và để bench cho cái nó làm tốt.**
+base: "Imperial Staff"
+itemLevel: 72
+baseWhy: >-
+  Imperial Staff mang implicit block tốt nhất, +25% Chance to Block Spell
+  Damage, và rơi từ level 66. Item level ở đây không quan trọng mấy, vì
+  Essence ấn định cast speed bất kể base cho phép tới đâu; 72 đơn giản là mức
+  những map đầu của bạn rơi ra. Các con số damage của chính cây staff không
+  quan trọng với caster.
+methods: [essence, bench]
+result:
+  implicits: ["+25% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+147 to maximum Mana" }
+    - { text: "Adds 70 to 138 Fire Damage to Spells" }
+    - { text: "97% increased Spell Damage / 28% increased Mana Regeneration Rate", how: crafted }
+  suffixes:
+    - { text: "34% increased Cast Speed", how: essence }
+    - { text: "+14% Chance to Block Spell Damage" }
+    - { text: "+33 to Intelligence" }
+needs:
+  - { item: "[[Screaming Essence of Misery]]", amount: "5–10", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Chaos Orb]]", amount: "6", note: "cho bench; 4 cho công thức trơn" }
+cost: >-
+  Essence là toàn bộ chi phí, và trong 3.30 map đỏ không đưa cho bạn thứ gì
+  yếu hơn Screaming. Bước bench là 6 [[Chaos Orb]] cho công thức hybrid hoặc
+  4 cho spell damage trơn.
+odds: >-
+  Cast speed là chắc chắn. Thứ bạn roll để tìm là chỗ trống: một kết quả có
+  **nhiều nhất hai prefix, không cái nào là một phần trăm damage bạn không
+  muốn**. Ở item level 72, một lần roll prefix ra increased Cold, Fire hoặc
+  Lightning Damage khoảng 1 trên 11 lần, theo phép tính của chúng tôi, và mấy
+  cái đó chiếm cái ô mà spell damage của bench cần. Một kết quả Essence có
+  mấy prefix là thứ dữ liệu không cho chúng tôi tính được, nên nói bằng lời:
+  phần lớn kết quả để lại một ô trống, và năm tới mười Essence là một ngân
+  sách thoải mái.
+
+
+  Một prefix gem level có thể xuất hiện cạnh cast speed, nhưng đừng chờ nó:
+  "all Spell Skill Gems" hoặc prefix của chính element bạn dùng là khoảng 1
+  trên 28 lần roll prefix ở item level này.
+steps:
+  - title: "Chọn Essence bằng phép tính"
+    do: >-
+      Đặt hai ứng viên cạnh bench. **Misery** đảm bảo cast speed: 32–37% ở
+      bậc Screaming, trong khi bench bán 21–26% giá 2 Chaos Orb và cần 4
+      Exalted Orb cho 27–32%. **Woe** đảm bảo spell damage: 88–116% ở bậc
+      Screaming, trong khi bench bán 79–95% giá 4 Chaos Orb, hoặc 89–105% kèm
+      mana regeneration giá 6. Lấy Misery.
+    why: >-
+      Một cây staff có một modifier bench. Cái nào trong hai bạn không lấy từ
+      Essence thì bạn mua. Spell damage của bench gần bằng một Screaming Woe;
+      cast speed rẻ của nó thấp hơn một Screaming Misery tới một phần ba. Vậy
+      nên Essence đi vào chỗ có khoảng cách.
+    state: { rarity: normal, implicits: ["+25% Chance to Block Spell Damage"] }
+  - title: "Dùng Essence đầu tiên"
+    do: >-
+      Dùng một [[Screaming Essence of Misery]] lên cây staff trắng.
+    why: >-
+      Essence biến cây staff thành Rare và đảm bảo cast speed. Mọi thứ khác
+      là ngẫu nhiên. Từ bậc Screaming trở lên, Essence còn dùng được trên cây
+      staff đã là Rare, chính điều đó cho bạn lặp lại nó.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "Adds 33 to 68 Physical Damage" }
+        - { text: "98% increased Cold Damage" }
+        - { text: "+131 to maximum Mana" }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+38 to Strength" }
+  - title: "Đọc prefix để tìm chỗ trống, không phải tìm chất lượng"
+    do: >-
+      Giữ Alt và hỏi hai câu. **Có ô prefix nào trống không?** **Ô phần trăm
+      damage có rảnh không?** Ô đó đã bị chiếm nếu cây staff roll ra spell
+      damage hoặc increased Fire, Cold hoặc Lightning Damage.
+    why: >-
+      Cây staff ở trên trượt cả hai: ba prefix, một trong đó là increased
+      Cold Damage. Bench không có chỗ đặt spell damage, và kể cả có ô trống
+      nó cũng sẽ từ chối, vì mọi phần trăm caster damage là một group.
+    check: >-
+      Giữ cây staff khi còn một prefix trống và ô phần trăm đang rảnh. Cũng
+      giữ nó nếu tự nó roll ra spell damage từ 96% trở lên: khi đó modifier
+      bench dành cho thứ khác.
+    fail: >-
+      Dùng thêm một Essence lên chính cây staff đó. Không mất gì ngoài cái
+      Essence.
+  - title: "Lặp lại tới khi có chỗ"
+    do: >-
+      Dùng Essence hết cái này tới cái khác, hỏi cùng hai câu đó, tới khi một
+      kết quả đạt.
+    why: >-
+      Mỗi lần dùng là một lần roll lại độc lập và cast speed lần nào cũng
+      quay lại. Ở đây bạn không săn một modifier hiếm, chỉ chờ các prefix
+      ngẫu nhiên chừa chỗ.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+147 to maximum Mana" }
+        - { text: "Adds 70 to 138 Fire Damage to Spells" }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+14% Chance to Block Spell Damage" }
+        - { text: "+33 to Intelligence" }
+  - title: "Bench spell damage"
+    do: >-
+      Ở [[Crafting Bench]], craft hybrid của increased Spell Damage với Mana
+      Regeneration Rate, 89–105% kèm 26–30%, giá 6
+      [[Chaos Orb]]. Nếu bạn chưa mở nó, craft spell damage trơn, 79–95% giá
+      4 Chaos Orb.
+    why: >-
+      Cả hai công thức cùng một group và cả hai đều nằm vừa cạnh added damage
+      cho spell, vốn là group khác. Bản hybrid có spell damage cao hơn và tốn
+      thêm hai Chaos Orb.
+    check: >-
+      Cây staff giờ có cast speed, một phần trăm damage, và bất cứ thứ gì
+      Essence để lại quanh chúng. Đó là một weapon chạy map.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+147 to maximum Mana" }
+        - { text: "Adds 70 to 138 Fire Damage to Spells" }
+        - { text: "97% increased Spell Damage / 28% increased Mana Regeneration Rate", how: crafted }
+      suffixes:
+        - { text: "34% increased Cast Speed", how: essence }
+        - { text: "+14% Chance to Block Spell Damage" }
+        - { text: "+33 to Intelligence" }
+variations: >-
+  **Nếu roll ra một prefix gem level.** Giữ cây staff dù trên nó còn gì khác,
+  và bench xoay quanh nó. Cạnh "all Spell Skill Gems" mà không có prefix
+  element, "+1 to Level of Socketed Support Gems" của bench (8 Chaos Orb) là
+  lựa chọn thay cho spell damage.
+
+
+  **Scorn, cho build critical strike.** Cùng phép so sánh đó cho kết quả
+  ngược lại cho tới bậc cao nhất. Scorn bậc Screaming và Shrieking cho 80–89%
+  và 90–109% Spell Critical Strike Chance, còn bench bán 90–120% giá 3 Chaos
+  Orb. Chỉ một [[Deafening Essence of Scorn]], ở 165–179%, là đáng dùng.
+
+
+  **Rage, Sorrow hoặc Spite.** Mấy cái này đảm bảo "Damage Penetrates Fire,
+  Cold or Lightning Resistance", 11–12% ở bậc Screaming, một prefix mà pool
+  tự nhiên không có. Nó là một group riêng, nên spell damage của bench vẫn
+  vừa. Một lần craft Essence thứ hai đáng làm cho build một element.
+mistakes:
+  - "Dùng Essence of Woe rồi mua cast speed. Bạn trả một Essence cho thứ bench gần sánh kịp, và nhận bậc yếu nhất của bench ở thứ nó không sánh được."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp gỡ nó đi."
+  - "Giữ một kết quả có ba prefix vì một trong số đó trông ổn. Không có ô trống thì cây staff không có phần trăm damage nào."
+  - "Dùng cách này trên cây staff có [[Memory Strands]]: một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên staff, tier, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện trong map nào." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

@@ -1,0 +1,188 @@
+category: two-hand-maces
+title: "Khóa prefix, dựng lại suffix"
+level: 4
+summary: "Bạn có ba prefix tốt và suffix tệ. Bảo vệ một phía bằng một meta-modifier rồi roll lại phía kia bằng một reforge Harvest đảm bảo attack speed."
+goal: >-
+  Biến một cây mace có phía prefix đã xong và phía suffix vô dụng thành một
+  weapon hoàn chỉnh, mà không đem prefix ra đánh cược. Đây là lần craft đầu
+  tiên bạn **trả tiền để bảo vệ công sức**, nên toàn bộ nội dung xoay quanh
+  việc biết lớp bảo vệ che được gì, tốn bao nhiêu, và khi nào thì không đáng.
+base: "Karui Maul"
+itemLevel: 77
+baseWhy: >-
+  Lần craft này bắt đầu từ một item, không phải từ một base: kết quả của ví
+  dụ Jagged Fossil, hoặc bất kỳ cây mace Rare nào có ba prefix bạn muốn giữ.
+  Item level 77 quan trọng vì một lý do. Đó là mốc mà Tier 1 của attack speed
+  (26–27%) roll được, và attack speed chính là mục đích của lần reforge.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "128% increased Physical Damage" }
+    - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+    - { text: "Adds 31 to 66 Physical Damage" }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "9% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần thử" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần thử" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "chỉ khi item có một modifier bench cần gỡ" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "cho craft bench cuối cùng" }
+cost: >-
+  Khóa: 4 [[Divine Orb]] và 1 [[Sacred Orb]] trên weapon trong 3.30, và mỗi
+  lần reforge đều tiêu mất nó. Lifeforce chỉ là tiền lẻ khi đặt cạnh. Hãy
+  tính là sẽ cần hơn một lần thử, và chốt giới hạn của bạn trước lần đầu
+  tiên.
+
+
+  Cái giá đó chính là phép thử xem có nên làm việc này hay không. Nếu bạn có
+  thể roll lại ba prefix này với giá thấp hơn một lần khóa thì đừng khóa
+  chúng.
+odds: >-
+  Reforge Speed đảm bảo một modifier mang tag speed, và attack speed là cái
+  duy nhất trong pool tự nhiên của mace, nên lần thử nào cũng cho attack
+  speed. **Tier** của nó thì ngẫu nhiên. Nếu modifier được đảm bảo được chọn
+  theo weight trong số các tier item level cho phép, đúng như cách người ta
+  vẫn hiểu về reforge, thì ở item level 77 khoảng một trên bốn lần thử cho
+  Tier 1 hoặc Tier 2 (23% trở lên): trong dữ liệu, attack speed có tám tier
+  với weight bằng nhau. Đó là phép tính của chúng tôi, và chưa được đo trong
+  3.30.
+
+
+  Một hai suffix còn lại thuần là may rủi từ pool.
+steps:
+  - title: "Kiểm xem còn ô suffix trống không"
+    do: >-
+      Đếm suffix. "Prefixes Cannot Be Changed" tự nó là một suffix, nên item
+      cần **một ô suffix trống** để nhận nó. Nếu một trong ba suffix là
+      modifier bench, hãy gỡ nó ở bench với giá 1
+      [[Orb of Scouring]].
+    why: >-
+      Meta-modifier chiếm một ô thật. Trên item có ba suffix roll ra, bench
+      sẽ không cho chọn craft này.
+    fail: >-
+      Ba suffix roll ra và không có modifier bench nào: cách duy nhất để mở
+      một ô là [[Orb of Annulment]], thứ gỡ ngẫu nhiên một trong sáu modifier
+      nên một nửa số lần sẽ trúng prefix. Đừng làm vậy. Dùng item như nó đang
+      có, hoặc bán cho người chịu dùng nó như vậy.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "+41 to Strength" }
+        - { text: "+287 to Accuracy Rating" }
+  - title: "Craft khóa"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers Cannot Be Changed**:
+      4 [[Divine Orb]] và 1 [[Sacred Orb]].
+    why: >-
+      Chừng nào modifier này còn trên item, một lần roll lại tôn trọng nó sẽ
+      để cả ba prefix y nguyên. Hãy dùng bản đầy đủ. Các bản mới cho một và
+      hai prefix tốn 1 hoặc 2 Divine Orb, nhưng nhà phát triển đã nói game
+      chọn ngẫu nhiên prefix nào được bảo vệ và không cho bạn thấy; với ba
+      prefix bạn muốn giữ, đó là một lần tung đồng xu bạn không cần.
+    check: >-
+      Modifier hiện trong danh sách suffix dưới dạng crafted. Đừng dùng bất
+      kỳ currency nào khác lên item giữa bước này và bước kế.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "+41 to Strength" }
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge kèm một modifier Speed"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Reforge thay mọi modifier nó được phép đụng tới. Khi prefix đã khóa, đó
+      là các suffix, kể cả chính cái khóa, vốn bị tiêu mất. Một trong các
+      suffix mới buộc phải mang tag speed, và trên mace điều đó nghĩa là
+      attack speed.
+    check: >-
+      Ba prefix không đổi, khóa đã biến mất, và attack speed nằm trong các
+      suffix. Đọc tier của nó.
+    fail: >-
+      Việc reforge Harvest tôn trọng khóa là do người chơi xác lập, không
+      phải do nhà phát triển tuyên bố. Nếu sau một bản patch bạn có chút nghi
+      ngờ nào, hãy thử trên một item rẻ trước.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Đánh giá suffix theo giới hạn của bạn"
+    do: >-
+      Nhận kết quả nếu attack speed ở tier bạn đã đặt từ trước (23% trở lên
+      là Tier 2) **và** có ít nhất một ô suffix còn trống hoặc đã được lấp
+      bằng thứ bạn dùng. Nếu không, quay lại bước 2 và trả tiền lần nữa.
+    why: >-
+      Mỗi lần thử thêm tốn trọn một lần khóa. Suffix tốt thứ hai là phần
+      thưởng thêm; attack speed và một ô trống mới là kết quả bạn đang trả
+      tiền để có.
+    check: >-
+      Một ô suffix trống đáng giá hơn một suffix thứ ba làng nhàng, vì bench
+      sẽ lấp nó bằng đúng thứ build cần.
+  - title: "Bench suffix cuối cùng"
+    do: >-
+      Craft suffix damage thứ ba của build vào ô trống. Với build không crit:
+      8–10% chance to deal Double Damage, 8
+      [[Chaos Orb]]. Với build crit: Critical Strike Chance hoặc Multiplier,
+      4 Chaos Orb.
+    why: >-
+      Bench là thứ chắc chắn, nên nó đi sau cùng, khi bạn đã biết còn lại
+      khoảng trống nào.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "9% chance to deal Double Damage", how: crafted }
+variations: >-
+  **Scour thay vì reforge.** Khi prefix đã khóa, một
+  [[Orb of Scouring]] được ghi nhận là chỉ gỡ suffix và cái khóa, để lại một
+  item Rare với ba prefix và ba ô suffix trống. Sau đó bạn lấp chúng bằng
+  bench và [[Exalted Orb]]. Cách này rẻ hơn cho mỗi lần thử nhưng không cho
+  attack speed được đảm bảo.
+
+
+  **Một suffix veiled.** Một [[Veiled Chaos Orb]] dùng lên item đã khóa sẽ
+  roll lại suffix và có một veiled modifier trong số đó, theo cùng luật do
+  người chơi thử nghiệm ấy. Unveil nó để lấy 12–14% chance to deal Double
+  Damage, hoặc attack speed khi có enemy Rare hoặc Unique ở gần.
+
+
+  **Reforge Critical** (150 Primal) hoạt động y như vậy, nhưng đảm bảo
+  Critical Strike Chance hoặc Multiplier. Dùng nó khi attack speed sẽ đến từ
+  nguồn khác.
+mistakes:
+  - "Khóa những prefix không đáng tiền khóa. Bốn Divine Orb và một Sacred Orb mỗi lần thử còn nhiều hơn giá của không ít cây mace."
+  - "Dùng Essence lên item đã khóa. Essence được ghi nhận là phớt lờ các modifier bảo vệ và sẽ roll lại tất cả."
+  - "Craft khóa lên item mà không có kế hoạch cho lần roll lại. Khóa tự nó không làm gì cả và bị lần reforge kế tiếp gỡ mất."
+  - "Đuổi theo một suffix thứ ba hoàn hảo bằng cách khóa đi khóa lại, trong khi một craft bench là đủ."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Giá bench, các tier attack speed và tag trên từng modifier." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các bản một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và Critical cùng giá Lifeforce của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest, các Veiled orb và Orb of Scouring tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

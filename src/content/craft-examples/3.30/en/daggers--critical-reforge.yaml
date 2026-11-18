@@ -1,0 +1,145 @@
+category: daggers
+title: "A Critical reforge and a bench prefix"
+level: 2
+summary: "A Harvest reforge that must include a Critical modifier. On a dagger only two modifiers carry that tag, and you want both."
+goal: >-
+  A mapping dagger with a guaranteed critical strike suffix and a bench
+  physical percentage. It is the first craft that **aims**: you tell the
+  reforge which tag to include, and before paying you count how many
+  modifiers on this item carry that tag. Two, here. That count is the whole
+  method.
+base: "Ambusher"
+itemLevel: 75
+baseWhy: >-
+  The fastest of the top crit daggers, with the 40–45% Global Critical Strike
+  Chance implicit. Item level 73 opens the top tier of both critical strike
+  suffixes (35–38%), so a base of 73 or more lets the reforge reach them; 75
+  is simply what such bases tend to be. Tier 1 attack speed would need 77
+  and is not the target.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["42% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "22% increased Attack Speed", how: harvest }
+    - { text: "+47 to Dexterity", how: harvest }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "to 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge", note: "plan for 5–10 reforges" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Lifeforce: 150 [[Primal Crystallised Lifeforce]] per attempt, from Sacred
+  Flora in maps. Then 4 [[Chaos Orb]]s at the bench. Nothing else.
+odds: >-
+  Every reforge gives Critical Strike Chance or Critical Strike Multiplier:
+  they are the only two natural modifiers on a dagger with the critical tag,
+  and their weights are equal. If the guaranteed modifier's tier is drawn by
+  weight, which is how reforges are understood to work, half of all attempts
+  give 25% or more and a third give 30% or more. That is our arithmetic on
+  equal tier weights; it has not been measured in 3.30.
+
+
+  The rest of the item is an ordinary roll. Each other suffix is attack
+  speed about 1 time in 6.
+steps:
+  - title: "Prepare a Rare dagger"
+    do: >-
+      Quality to 20%, then one [[Orb of Alchemy]]. Ignore the result.
+    why: >-
+      The Harvest craft is "Reforge a Rare item": the dagger has to be Rare
+      first, and everything on it is about to be replaced.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 48 to 96 Fire Damage" }
+        - { text: "+2 to Level of Socketed Lightning Gems" }
+      suffixes:
+        - { text: "+45 to Intelligence" }
+        - { text: "Gain 29 Life per Enemy Killed" }
+  - title: "Count the tag, then reforge"
+    do: >-
+      At the [[Horticrafting Station]], choose **Reforge a Rare item with
+      random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]).
+    why: >-
+      "Including a Critical modifier" means at least one modifier with the
+      critical tag will be on the result. Open the modifier list for
+      daggers and count the carriers: Critical Strike Chance and Critical
+      Strike Multiplier. Both are suffixes and both are wanted, so the
+      guarantee cannot be wasted. Compare the Attack reforge, where nearly
+      every modifier qualifies and the guarantee means nothing.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+135 to maximum Mana", how: harvest }
+        - { text: "Adds 19 to 37 Physical Damage", how: harvest }
+        - { text: "Adds 55 to 112 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "16% increased Critical Strike Chance", how: harvest }
+        - { text: "+389 to Accuracy Rating", how: harvest }
+  - title: "Judge: tier, then room"
+    do: >-
+      Keep the result when the critical strike suffix is **25% or more**
+      and **a prefix slot is open**. Attack speed or the second critical
+      strike suffix beside it is a bonus, not a requirement.
+    why: >-
+      The result above has the guaranteed suffix at 16%, a low tier, and
+      three prefixes, so the bench has nowhere to put the multiplier. It
+      fails twice.
+    fail: >-
+      Reforge again. Each attempt is independent and costs only Lifeforce.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+        - { text: "+47 to Dexterity", how: harvest }
+  - title: "Bench the physical percentage"
+    do: >-
+      At the [[Crafting Bench]], craft **80–99% increased Physical Damage**
+      for 4 [[Chaos Orb]]s.
+    why: >-
+      The dagger above rolled flat Physical Damage, which the percentage
+      multiplies; the two are different groups. The suffix side came out
+      full, which is fine: the bench craft was always meant for a prefix.
+    check: >-
+      If the reforge gave pure increased Physical Damage as a prefix, the
+      bench cannot add its own. Craft flat Physical Damage (13–17 to 26–30,
+      4 Chaos Orbs) in that case.
+    state:
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Adds 19 to 41 Physical Damage", how: harvest }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+33% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "22% increased Attack Speed", how: harvest }
+        - { text: "+47 to Dexterity", how: harvest }
+variations: >-
+  **The Speed reforge** (150 Vivid Lifeforce) works the same way with one
+  carrier: attack speed is guaranteed, and the critical strike suffixes are
+  left to luck or the bench. Take it when the build values speed over crit.
+
+
+  **The Chaos reforge** is the one to avoid on a dagger. Its heaviest carrier
+  is "+2 to Level of Socketed Chaos Gems", a prefix almost no dagger build
+  wants.
+
+
+  **Lifeforce and Memory Strands.** By player testing Harvest reforges
+  neither use nor spend strands, so an ordinary base is as good as a strand
+  base here.
+mistakes:
+  - "Paying for a reforge without counting the tag's carriers. The guarantee is only as good as the worst modifier that satisfies it."
+  - "Keeping a 30% suffix on a dagger with three junk prefixes. Without the bench prefix it has no multiplier."
+  - "Benching between reforges. The next reforge removes it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The tags on each modifier, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical, Speed and Chaos reforges and their Lifeforce costs." }

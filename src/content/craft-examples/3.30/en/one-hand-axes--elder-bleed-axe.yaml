@@ -1,0 +1,247 @@
+category: one-hand-axes
+title: "The bleed axe with two bleeding prefixes: Elder influence, Fossils and a lock"
+level: 5
+summary: "An Elder axe adds a bleeding prefix that the same two Fossils multiply. Roll both bleeding prefixes at once, lock them, rebuild the suffixes, and account for every slot."
+goal: >-
+  A top-end bleed axe: the Elder prefix "+51–59% to Damage over Time
+  Multiplier for Bleeding from Hits with this Weapon", the Fossil-only "60%
+  chance for Bleeding inflicted with this Weapon to deal 100% more Damage", a
+  physical prefix beside them, and suffixes built on purpose. No single step
+  is new. What makes this the hardest axe craft is that **an influenced item
+  cannot be fractured**: nothing here is ever permanently safe, so every
+  stage has to be ordered so that the next one cannot undo it.
+base: "Royal Axe"
+itemLevel: 83
+baseWhy: >-
+  The top tier of the Elder bleeding prefix needs item level 83; at 75 to 82
+  it stops at 43–50%. The Royal Axe has the highest base damage per second.
+  A Reaver Axe is the alternative if you want the largest single hit.
+
+
+  The axe must carry **Elder influence**. That shuts two doors: no
+  Fracturing Orb, and no Fractured Fossil.
+methods: [influence, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Elder"
+  prefixes:
+    - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+    - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+    - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+    - { text: "+41 to Strength" }
+needs:
+  - { item: "An Elder-influenced Royal Axe, item level 83+", amount: "1", note: "found, bought, or made in stage 1" }
+  - { item: "[[Corroded Fossil]]", amount: "dozens" }
+  - { item: "[[Jagged Fossil]]", amount: "dozens" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+  - { item: "[[Exalted Orb]]", amount: "1", note: "for the last suffix" }
+cost: >-
+  The influenced base, then Fossils by the dozen for stage 2, then locks for
+  stage 3 at 4 [[Divine Orb]]s and 1 [[Sacred Orb]] each. We give no total:
+  prices in the first week of a league move too fast, and both random stages
+  have long tails. And a bleed build that dual wields wants this axe twice.
+odds: >-
+  **Stage 2.** Counting only ordinary and Elder modifiers, our calculator
+  puts the Elder bleeding prefix at 47% of prefix rolls with both Fossils,
+  and its top tier at about 1 roll in 6. If Fossil-only modifiers are
+  counted at the weights the data lists, the usual community model, it is
+  28% (top tier about 1 in 11) and the Fossil-only bleeding prefix is 38%.
+  Under that model roughly two results in three that roll three prefixes
+  carry both, and about a third of those have the Elder one at Tier 1. That
+  estimate is ours and has not been measured in 3.30.
+
+
+  **Stage 3.** A Speed reforge always gives attack speed, but an Elder axe
+  has two modifiers with the speed tag: the natural one and Elder's own,
+  which tops out at 20–21%. If the guaranteed modifier is drawn by weight,
+  about 2 reforges in 11 give Elder's weaker version and 2 in 11 give
+  natural attack speed of 23% or more.
+steps:
+  - title: "Stage 1: an Elder axe"
+    do: >-
+      Start from a Royal Axe of item level 83 or higher with Elder
+      influence. An [[Elder's Exalted Orb]] gives that influence, and one
+      random Elder modifier, to a Rare axe that has none. Quality to 20%
+      now.
+    why: >-
+      Influence adds a second pool to the item, and the Elder pool holds the
+      bleeding prefix this craft is built around. It does not need to be on
+      the axe yet: the next stage rerolls everything. Only the influence
+      has to be there.
+    check: >-
+      Item level 83, Elder influence, no fracture. We could not confirm
+      where Elder-influenced bases or Elder's Exalted Orbs are found in
+      3.30, so check what is actually for sale before planning around
+      either.
+    state: { note: "Elder", rarity: rare }
+  - title: "Stage 2: both bleeding prefixes from one pair of Fossils"
+    do: >-
+      Use a [[Corroded Fossil]] and a [[Jagged Fossil]] together in a
+      [[Potent Chaotic Resonator]], and repeat until the axe has the Elder
+      bleeding prefix at 43% or more (51% or more if you are holding out
+      for Tier 1), the Fossil-only bleeding prefix, **and at most two
+      suffixes**.
+    why: >-
+      Read the tags. The Elder prefix carries bleed and physical, exactly
+      like the Fossil-only one, so both Fossils multiply both. One tool
+      aims at two rare modifiers at once, and the same Corroded Fossil
+      removes every elemental prefix that could take the third slot. This
+      is why the Fossils come before anything else: they would reroll any
+      earlier work, and nothing on an influenced axe can be fractured to
+      survive them.
+    check: >-
+      Hold Alt and read the tier of the Elder prefix; its three tiers are
+      37–42%, 43–50% and 51–59%. Then count suffixes. Their content does
+      not matter, stage 3 replaces them, but the lock needs one empty
+      suffix slot.
+    fail: >-
+      Both prefixes with three suffixes: keep rolling. An
+      [[Orb of Annulment]] to free a slot removes one of six modifiers at
+      random and hits one of the two bleeding prefixes a third of the time.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "2.7% of Physical Attack Damage Leeched as Mana", how: fossil }
+  - title: "Stage 3: lock the prefixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      From here on the three prefixes are worth far more than a lock, and
+      this is the only protection an influenced item can have. From this
+      moment do not use another Fossil or an Essence on the axe. Essences
+      are reported to ignore the lock, and for Fossils we could not confirm
+      either way in 3.30.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "3.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "2.7% of Physical Attack Damage Leeched as Mana", how: fossil }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge the suffixes for attack speed"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with
+      random modifiers, including a Speed modifier** (150 Vivid Lifeforce).
+      Accept the result when attack speed is 23% or more and the axe has
+      **two open suffix slots, or one open slot and a suffix you want**.
+      Otherwise craft the lock again and repeat.
+    why: >-
+      With the prefixes locked the reforge replaces only the suffixes,
+      lock included. Attack speed is the suffix the bench replaces worst:
+      its best craft is 16–20% for 4 Exalted Orbs against 26–27% at Tier 1.
+      So attack speed is the one to guarantee, and the bleed suffix is left
+      to the bench, which sells it at full value.
+    check: >-
+      Read **which** attack speed arrived. "of the Elder" is the influence
+      version and stops at 20–21%; the natural names are "of Infamy"
+      (23–25%) and "of Celebration" (26–27%). They share a group, so you
+      cannot have both.
+    fail: >-
+      That Harvest reforges respect the lock is established by players,
+      not by the developers. Each repeat costs a full lock, so decide the
+      number of attempts before the first.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+  - title: "Stage 4: count the slots before touching the bench"
+    do: >-
+      Craft **+18–20% to Physical Damage over Time Multiplier** for 4
+      [[Chaos Orb]]s. Do **not** craft "Can have up to 3 Crafted
+      Modifiers" first.
+    why: >-
+      The multi-modifier craft is a suffix. It earns its slot when it lets
+      the bench fill a prefix as well as a suffix. Here all three prefixes
+      are rolled, so it would spend one suffix slot to add one suffix and
+      2 Divine Orbs for nothing. One plain bench craft leaves the third
+      suffix open for a real modifier.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+  - title: "The last suffix, and the values"
+    do: >-
+      Use an [[Exalted Orb]] for the open suffix, then a [[Divine Orb]] if
+      the numbers inside the tiers are poor.
+    why: >-
+      An Exalted Orb adds one random modifier and can only add a suffix
+      here, since the prefixes are full. The outcome you hope for is the
+      natural "+% to Damage over Time Multiplier", which is a different
+      group from the bench craft and stacks with it; it is rare, and the
+      example shows a more likely result. Nothing an Exalted Orb can add
+      harms the axe.
+    check: >-
+      Six of six slots used. The Divine Orb rerolls every value at once,
+      the Elder prefix included, and can lower them as easily as raise
+      them.
+    state:
+      note: "Elder"
+      prefixes:
+        - { text: "+56% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "60% chance for Bleeding inflicted with this Weapon to deal 100% more Damage", how: fossil }
+        - { text: "Adds 20 to 41 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+19% to Physical Damage over Time Multiplier", how: crafted }
+        - { text: "+41 to Strength" }
+variations: >-
+  **A veiled suffix instead of Harvest.** A [[Veiled Chaos Orb]] on the
+  locked axe rerolls the suffixes with a veiled one among them, by the same
+  player-tested rule. Unveiled, "+24–28% to Physical Damage over Time
+  Multiplier" beats the bench's 18–20%, and then the bench supplies attack
+  speed. It is the better route if you already own good attack speed
+  elsewhere.
+
+
+  **A third prefix from the bench.** If stage 2 gives both bleeding prefixes
+  and an empty third slot, the bench's 95–105% increased Physical Damage
+  with 18–20% chance to cause Bleeding (8 Chaos Orbs) fills it. Then the
+  multi-modifier craft does pay: it buys that prefix and the bleed suffix
+  together.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next currency
+  before you commit. The one place it could pay here is the final Exalted
+  Orb, and only if the axe is already worth more than the Lock.
+
+
+  **Memory Strands.** Fossils and Harvest do not use strands by player
+  testing, so a strand base changes nothing until the final Exalted Orb,
+  which spends at most 16.
+mistakes:
+  - "Looking for a fractured Elder axe. Influenced items cannot be fractured, and fractured items cannot be given influence according to reference pages."
+  - "Using an Annulment to open a suffix slot after stage 2. Two of the six modifiers it can remove are the ones the whole craft exists for."
+  - "Accepting Elder's own attack speed from the reforge. It shares a group with the natural one and stops at 20–21% where the natural one reaches 26–27%."
+  - "Crafting the multi-modifier meta-modifier out of habit. With three rolled prefixes it costs a suffix slot and returns nothing."
+  - "Using a Fossil on the locked axe. Whether Fossils respect the lock in 3.30 is not confirmed."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Elder modifiers and their tags, Fossil multipliers, Fossil-only modifiers, weights and bench costs. The odds are our arithmetic; the treatment of Fossil-only modifiers is a model." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The cost of the protection modifiers; how Delve is reached." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge and its cost." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured items cannot be given influence." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges and Veiled orbs. Partly older than 3.30." }

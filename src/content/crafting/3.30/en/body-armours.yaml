@@ -1,0 +1,642 @@
+name: "Body Armours"
+short: "The largest life and defence rolls in the game, six sockets and two extra implicits. Seven pools: the base decides which defences and which suffixes can exist."
+icon: "Astral Plate"
+intro: >-
+  The body armour is the biggest single piece of a character's survival. It
+  rolls the largest maximum Life of any slot (up to +189), by far the largest
+  defence numbers, and it holds the six sockets your main skill lives in.
+
+
+  It is also an unusual item to craft, for two reasons. **Nothing here is
+  rare by weight:** almost every tier of every modifier has the same weight,
+  so there is no single jackpot modifier to chase. The difficulty is getting
+  six useful modifiers at good tiers on one item. And **this slot has the
+  best tools for working on one half at a time:** Eldritch currency rerolls
+  only the prefixes or only the suffixes, for the price of an orb. Learn
+  that, and a chest stops being one six-way gamble and becomes two small
+  ones.
+basics:
+  itemLevel:
+    text: >-
+      This is the slot where the top item level earns its price. Maximum
+      Life has thirteen tiers and the best, "Prime" (175–189), needs item
+      level 86, the highest requirement of any ordinary modifier in the
+      game. The last tier of percentage defence, of Spell Suppression and of
+      Physical Damage Reduction sits at 86 as well.
+
+
+      For an ordinary mapping chest, item level 73 to 78 is enough: it opens
+      life of 145–159, the top flat defence and the second-best resistances.
+      Item level 84 opens everything except those four last tiers. Go to 86
+      when you are deliberately building around one of them.
+
+
+      One thing the numbers hide. Because every tier weighs the same, a
+      higher item level does not make low rolls rarer. It adds better tiers
+      on top and leaves every weak one in the lottery.
+    breakpoints:
+      - ilvl: 44
+        unlocks: "**Late campaign.** Life up to 100–114, resistances up to 24–29%, and percentage defence of 56–67%."
+      - ilvl: 60
+        unlocks: "Percentage defence 68–79%, flat Armour or Evasion 201–300, resistances 36–41%. Life of 115–129 has been open since 54."
+      - ilvl: 73
+        unlocks: "Life 145–159 (\"Vigorous\"). Percentage defence 80–91% and resistances 42–45% arrive at 72. **The first item level worth crafting for maps.**"
+      - ilvl: 79
+        unlocks: "The top tier of every flat defence: +401–500 Armour or Evasion (from 77), +91–100 Energy Shield (from 75), and the top flat tier of the two-defence bases (79). Also the top hybrid of percentage defence with Stun and Block Recovery (78), Suppression of 17–19% and Physical Damage Reduction of 7% (77)."
+      - ilvl: 81
+        unlocks: "Life 160–174 (\"Rapturous\") and Chaos Resistance 31–35%."
+      - ilvl: 84
+        unlocks: "Resistances 46–48% and percentage defence 92–100%. **Enough for everything except the last tier of four modifiers.**"
+      - ilvl: 86
+        unlocks: "Life 175–189 (\"Prime\"), percentage defence 101–110%, Suppression 20–22%, Physical Damage Reduction 8%, Energy Shield Recharge starting 59–66% faster. **The ceiling.**"
+  bases:
+    text: >-
+      There are 122 body armours in seven pools, and unlike a weapon class the
+      pool is not a detail. Every base rolls maximum Life, the three
+      elemental resistances, Chaos Resistance, life regeneration and Stun and
+      Block Recovery. Everything else depends on the attributes the base
+      asks for.
+
+
+      **Defence prefixes exist only for the base's own defence.** A plate
+      cannot roll Evasion, a robe cannot roll Armour. **Three valuable
+      suffixes are tied to an attribute:** Physical Damage Reduction to
+      Strength bases, Spell Suppression to Dexterity bases, faster Energy
+      Shield Recharge to Intelligence bases. And any base that asks for
+      Intelligence also rolls maximum Mana as a prefix.
+    types:
+      - title: "Armour (Strength)"
+        pools: [str]
+        text: >-
+          Twenty plates, from Plate Vest to Royal Plate. Prefixes: flat
+          Armour, increased Armour, increased Armour with Stun and Block
+          Recovery, and a small Armour-with-Life hybrid. Suffixes of their
+          own: additional Physical Damage Reduction (up to 8%) and Strength.
+
+
+          With no Mana prefix the prefix pool is tight, which makes life easy
+          to find: 29% of prefix rolls. The data gives
+          almost every plate a 5% movement speed penalty, against 3% on the
+          other kinds.
+      - title: "Evasion (Dexterity)"
+        pools: [dex]
+        text: >-
+          Twenty leathers and garbs, from Shabby Jerkin to Syndicate's Garb.
+          The prefix pool mirrors the plates with Evasion in place of Armour.
+          The suffix that brings people here is **+% chance to Suppress Spell
+          Damage**, up to 20–22%, which no Strength or Intelligence base can
+          roll.
+      - title: "Energy Shield (Intelligence)"
+        pools: [int]
+        text: >-
+          Twenty robes, vestments and regalia, from Simple Robe to Twilight
+          Regalia. Flat and increased Energy Shield, the hybrid with Stun and
+          Block Recovery, and two small hybrids of Energy Shield with Life or
+          with Mana. Suffixes of their own: faster start of Energy Shield
+          Recharge and Intelligence.
+
+
+          Maximum Mana is a prefix here and takes a fifth of all prefix
+          rolls, so each prefix you want is rarer than on a plate: flat
+          Energy Shield is 18% of prefix rolls, life 21%.
+      - title: "Two-defence bases"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Sixty bases in three families: brigandines, lamellar and doublets
+          (Armour and Evasion); chainmail, ringmail and hauberks (Armour and
+          Energy Shield); jackets, coats, raiment and garbs (Evasion and
+          Energy Shield). Their defence prefixes are combined ones, such as
+          "increased Armour and Evasion", so one prefix raises both numbers.
+
+
+          On the suffix side a hybrid rolls what both parents roll, at half
+          the weight each. An Armour and Evasion base can carry Physical
+          Damage Reduction **and** Suppression; the other two pair one of
+          those with Energy Shield Recharge. The two with Intelligence also
+          roll the Mana prefix.
+      - title: "Three-attribute bases"
+        pools: [str_dex_int]
+        text: >-
+          Two bases only: Grasping Mail and Sacrificial Garb. They roll
+          "increased Armour, Evasion and Energy Shield", whose best tier
+          needs item level 85, and every flat defence family of every other
+          pool at about a sixth of the usual weight. All three attributes and
+          all three attribute-linked suffixes can appear.
+
+
+          Sacrificial Garb has the implicit "+1 to Level of all Vaal Skill
+          Gems" and is the reason to be here. Grasping Mail has no implicit
+          and about two thirds of the Garb's defences.
+      - title: "The level 73, 78 and 84 bases"
+        text: >-
+          Each of the six main kinds ends in three bases that drop from level
+          73, 78 and 84, such as Titan Plate, Legion Plate and Royal Plate.
+          They roll the same pool as the rest of their kind but have far
+          higher defences: a Royal Plate has half as much Armour again as a
+          Glorious Plate. The price is in the requirements: character level
+          84 and 293 of one attribute for the top pure bases, 173 of each
+          for the top hybrids.
+    picks:
+      - base: "Royal Plate"
+        for: "The most Armour"
+        why: >-
+          1,183–1,360 Armour on the base before any modifier, the highest in
+          the data. Needs level 84 and 293 Strength. Legion Plate (1,018–1,171,
+          level 78) is the step below.
+      - base: "Astral Plate"
+        for: "Resistances on the implicit, on a chest that will carry influence"
+        why: >-
+          The only plate with an implicit: +8–12% to all Elemental
+          Resistances, on a base of 711–782 Armour that needs only level 62.
+          Read the Eldritch note before choosing it: an Ember or Ichor
+          replaces this implicit, so it pays on influenced chests and on
+          budget ones, not under Eldritch implicits.
+      - base: "Syndicate's Garb"
+        for: "The most Evasion, with Suppression in the pool"
+        why: >-
+          1,205–1,386 Evasion and the Dexterity pool, the only pure pool that
+          rolls Suppression. Needs level 84 and 293 Dexterity.
+      - base: "Assassin's Garb"
+        for: "Movement speed"
+        why: >-
+          The only body armour in the data with a movement implicit, 3%
+          increased Movement Speed, and one of two with no movement penalty
+          on the base (Glorious Plate is the other). 737–811 Evasion.
+      - base: "Twilight Regalia"
+        for: "The most Energy Shield"
+        why: >-
+          262–302 Energy Shield on the base, against 171–197 on a Vaal
+          Regalia. Flat Energy Shield is small next to that number, so here
+          the base matters more than on any other kind. Needs level 84 and
+          293 Intelligence.
+      - base: "Conquest Lamellar"
+        for: "Two defences, and both Physical Damage Reduction and Suppression"
+        why: >-
+          723–831 of both Armour and Evasion, for 173 Strength and 173
+          Dexterity. The other two top hybrids have the same numbers:
+          Sacred Chainmail (Armour 723–831, Energy Shield 145–167) and
+          Necrotic Armour (Evasion 723–831, Energy Shield 145–167).
+    impact: >-
+      The base decides five things before the first orb.
+
+
+      **The defence number everything multiplies.** Flat defence is added to
+      the base, then increased defence and quality multiply the sum. 100%
+      increased Armour is worth about 1,270 Armour on a Royal Plate and about
+      750 on an Astral Plate. The base number is itself a roll inside the
+      range shown, and a [[Sacred Orb]] rerolls it.
+
+
+      **The pool.** Which defences can roll, and whether Suppression,
+      Physical Damage Reduction, Energy Shield Recharge or Mana exist on the
+      item at all.
+
+
+      **The implicit.** Only five bases have one. A [[Blessed Orb]] rerolls
+      its value; an Eldritch Ember or Ichor replaces it.
+
+
+      **The requirements.** Up to level 84 and 293 of an attribute. The
+      suffix "32% reduced Attribute Requirements" exists, and it costs a
+      slot.
+
+
+      **The movement penalty**, 5% on most plates and Armour and Energy
+      Shield bases, 3% on most others, none on two bases.
+tools:
+  - method: currency
+    note: >-
+      Almost every tier of every modifier on a body armour weighs 1,000.
+      Chaos Resistance, at 250, is the notable exception. So the lottery
+      is flat: at item level 86 on a plate, one prefix roll is maximum Life
+      29% of the time, and "Prime" only 2.2% of the time, 1 in 46 by our
+      arithmetic. Life of 145 or more is 1 in 15.
+
+
+      [[Orb of Alteration]]s are therefore a good way to get *some* life or
+      *some* Suppression and a slow way to get the best tier. Three good
+      prefixes at once from [[Chaos Orb]]s is not a plan.
+  - method: bench
+    note: >-
+      The bench sells a middle version of nearly everything, cheaply. From
+      the 3.30 data: **+71–85 maximum Life** for 4 Chaos Orbs (56–70 for 4
+      Orbs of Alchemy). **56–74% increased Armour**, Evasion, Energy Shield
+      or a two-defence mix for 2 Chaos Orbs. **+250–320 Armour or Evasion**,
+      or +56–69 Energy Shield, for 2 Chaos Orbs. **One resistance, 29–35%**,
+      for 3 Chaos Orbs (21–28% for 1 Orb of Alchemy); two resistances,
+      17–20% each, for 3 Chaos Orbs. **Suppression 8–10%** or **3%
+      Physical Damage Reduction** for 4 Chaos Orbs. One attribute, 26–30,
+      for 2 Chaos Orbs.
+
+
+      Two rules decide what fits. The bench's increased defence is the same
+      group as the rolled one, and its flat defence the same group as rolled
+      flat defence. So bench whichever of the two the item did **not** roll.
+      And the bench's hybrid, 18–21% increased defence with +17–19 Life for
+      2 Chaos Orbs, is the same group as the rolled defence-with-Life hybrid
+      and no other: it fits beside pure life and beside both pure defence
+      prefixes.
+  - method: finishing
+    note: >-
+      Quality from [[Armourer's Scrap]]s multiplies the defence line, so
+      take it to 20% before you judge a chest. A body armour holds up to six
+      sockets. Sockets and links are not modifiers: no reroll, Essence or
+      Fossil touches them, so they can be done at any point, on a base you
+      are sure to keep. Use [[Jeweller's Orb]]s and [[Orb of Fusing]]s, or
+      the bench at its fixed price.
+
+
+      A [[Sacred Orb]] rerolls the base's own defence number inside its
+      range, 1,183 to 1,360 on a Royal Plate. Use it when a finished chest
+      sits near the bottom. The Horticrafting Station also lists enchants
+      that replace quality on a body armour, at 3,250 Lifeforce in the
+      reference table; we have not checked which ones 3.30 offers.
+  - method: essence
+    note: >-
+      **Greed** is the Essence of this slot: maximum Life, guaranteed.
+      Screaming gives 130–144, Shrieking 145–159, Deafening 160–174. That
+      is the range of the second-best natural tier; "Prime" only comes from
+      a roll. **Dread**, **Doubt** and **Woe** guarantee flat Armour
+      (390–475 at Deafening), flat Evasion (390–475) and flat Energy Shield
+      (88–95), each a little under the best natural tier.
+
+
+      On the suffix side **Anger, Hatred and Wrath** give a resistance at
+      natural values, 46–48% at Deafening. **Envy** gives Chaos Resistance,
+      31–35% at Deafening, and is the practical way to a modifier that is
+      only 2.6% of suffix rolls. **Rage, Sorrow and Spite** give 51–58 of an
+      attribute, above the natural maximum of 55.
+
+
+      Three give something the natural pool lacks: **Loathing**, 9–10%
+      increased Mana Reservation Efficiency at Deafening; **Scorn**,
+      increased Stun Threshold; and the corruption-only
+      [[Essence of Hysteria]], 25% increased Area of Effect.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is worth a beast when the Magic
+      chest holds something that took a long time to roll: top-tier
+      Suppression, or life of 160 or more at item level 86. The two
+      add-and-remove recipes ([[Farric Wolf Alpha]] for a prefix,
+      [[Farric Lynx Alpha]] for a suffix) are for a Rare chest whose losing
+      side is empty or worthless. On this slot Eldritch currency usually
+      does the same job with less risk.
+  - method: eldritch
+    note: >-
+      The tool that defines this slot. Two things to know before the first
+      one.
+
+
+      **An Ember or Ichor replaces the base's own implicit.** The item text
+      says so: it replaces "any existing implicit modifiers" other than the
+      opposite Eldritch one. An Astral Plate loses its resistances, an
+      Assassin's Garb its movement speed.
+
+
+      **The implicits are strong.** The data lists six strengths of each.
+      From the Eater of Worlds: all Elemental Resistances from 5–6% to
+      15–16%, 10–12% of Physical Damage from Hits taken as an element,
+      increased Armour or Evasion from 17–18% to 27–28%, increased maximum
+      Energy Shield from 6–7% to 16–17%, Life Recovery rate 7–12%. From the
+      Searing Exarch: Damage taken Recouped as Life from 8–9% to 18–19%, +1%
+      to all maximum Resistances (+2% at the two highest strengths), +1% to
+      +3% of one maximum resistance, aura effect from 9–10% to 19–20%.
+      Embers and Ichors come in four strengths, which leaves an
+      [[Orb of Conflict]] as the way to the top two. The data also
+      holds stronger versions that apply only near a Unique enemy or a
+      pinnacle boss.
+
+
+      Then the orbs. With the Eater dominant an [[Eldritch Chaos Orb]]
+      rerolls **only the suffixes**; with the Exarch dominant, only the
+      prefixes. That is what a protection modifier does on other items for 4
+      Divine Orbs and 4 Blessed Orbs per attempt.
+
+
+      Not for influenced chests. Whether a fractured chest, or one with
+      Memory Strands, accepts Eldritch implicits we could not confirm for
+      3.30: test with a Lesser Ember first.
+  - method: fossil
+    note: >-
+      Two Fossils split this slot in half. A [[Pristine Fossil]] ("more
+      Life, no Defence") removes every defence prefix, and on a plate at
+      item level 86 leaves life as 97% of prefix rolls: "Prime" goes from 1
+      roll in 46 to 1 in 13 by our arithmetic. It also makes life
+      regeneration 70% of suffix rolls, which is the price.
+
+
+      A [[Dense Fossil]] ("more Defence, no Life") is the reverse and is the
+      tool for Energy Shield chests: on a robe, 83% of prefix rolls become
+      one of the three stacking Energy Shield families, and no life can
+      appear.
+
+
+      The Fossil-only list for this slot includes +1 to Level of Socketed
+      Strength, Dexterity or Intelligence Gems, "Regenerate 1% of Life per
+      second", flat reduction of Physical Damage taken from Hits, 20–25%
+      increased effect of Non-Curse Auras, and an Abyssal Socket, which a
+      [[Hollow Fossil]] forces. Our figures leave these extra modifiers out,
+      so read them as close, not exact.
+  - method: harvest
+    note: >-
+      Count the tags in the natural pool and the reforges sort themselves.
+
+
+      **Fire, Cold or Lightning** (50 Lifeforce): the matching resistance is
+      the only modifier with that tag, so the reforge guarantees it, at a
+      random tier. **Chaos** (100 Vivid) guarantees Chaos Resistance the
+      same way.
+
+
+      **Life** (75 Wild) is weaker than it sounds: maximum Life, the
+      defence-with-Life hybrid and life regeneration all carry the tag, and
+      on a plate maximum Life is under half of that weight. **Defence** (75
+      Primal) is satisfied by any defence prefix, and on an Intelligence
+      base by the Recharge suffix too.
+
+
+      Nothing in the natural pool has the speed or critical tag. Those two
+      reforges only matter on an influenced chest. A resistance can be
+      swapped for another element for 300 Lifeforce of two types.
+  - method: veiled
+    note: >-
+      Unveiled prefixes worth knowing: 24–28% increased defence with +23–26
+      Life, in the same group as the defence-with-Life hybrid; **9–10%
+      increased maximum Life with 9–10% increased maximum Mana**, whose bench
+      copy is 5–8% for 6 Chaos Orbs; 8–9% Chance to Block Attack Damage or
+      9–10% for spells; 30–35% chance to Avoid Elemental Ailments and Stun.
+      Suffixes: two attributes at once, 31–35 each, or one element with
+      Chaos Resistance, 16–20% each.
+  - method: fracture
+    note: >-
+      Since no modifier is rare by weight, fracture the one you would hate
+      to roll twice: top-tier Suppression (1 suffix roll in 58 at item level
+      86) or "Prime" life. A fractured modifier is the only protection that
+      holds through an Essence. A fractured chest cannot be given
+      influence.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" and its suffix twin cost 4 Divine
+      Orbs and 4 Blessed Orbs on a body armour in 3.30, per attempt. On a
+      chest with no influence an Eldritch Chaos Orb does one side for far
+      less, so the locks belong to influenced chests, which cannot take
+      Eldritch implicits. Essences are reported to ignore them.
+  - method: influence
+    note: >-
+      Each influence adds modifiers that exist nowhere else, and closes the
+      door on Eldritch implicits. The ones chests are built around:
+      **Crusader**, enemies you kill explode (11–20% at item level 75,
+      21–30% at 85, the top tier with a weight of 25). **Elder or Hunter**,
+      9–12% increased maximum Life (item level 85). **Hunter**, an
+      additional Curse (82). **Elder or Hunter**, attacks have +1.1–1.5% to
+      Critical Strike Chance; **Shaper or Hunter**, the same for spells
+      (84). **Redeemer**, 21–25% increased effect of Non-Curse Auras (80).
+      **Warlord**, +16–18% to all Elemental Resistances (75). Every influence
+      also has a prefix that takes 13–15% of Physical Damage from Hits as an
+      element, or as Chaos on Hunter.
+
+
+      An [[Orb of Dominance]] works on body armours and makes Elevated
+      modifiers; their values are not in our data.
+  - method: corruption
+    note: >-
+      The corruption implicits for this slot: +1 to Level of Socketed Gems,
+      or +2 to one kind (Area, Aura, Curse, Duration, Minion, Projectile,
+      Trap or Mine, Warcry); 4–6% increased maximum Life or Energy Shield;
+      +1% to all maximum Resistances (item level 80); "You take 50% reduced
+      Extra Damage from Critical Strikes"; 40–50% increased Damage. A
+      corruption implicit replaces the implicit. What a [[Vaal Orb]] does to
+      a pair of Eldritch implicits we could not confirm for 3.30: assume it
+      can take them.
+  - method: strands
+    note: "See the Memory Strands section below: a flat lottery is where strands do the most."
+memoryStrands: >-
+  On a body armour the weak tiers are exactly as common as the strong ones:
+  thirteen tiers of life, one ticket each. [[Memory Strands]] remove low
+  tiers from whatever is rolled, so they are worth more here than on an item
+  whose good modifiers are simply rare. By the player-tested model in the
+  overview, a base with 62 or more strands rolls only the top four tiers of
+  a thirteen-tier modifier: life of 130 or more, every time life appears.
+
+
+  The crafts that suit a strand chest are the cheap-orb ones. Put strands on
+  a white base with an [[Orb of Remembrance]], roll life or Suppression with
+  [[Orb of Alteration]]s (at most 8 strands each, by the data-mined table),
+  then a [[Regal Orb]] and [[Exalted Orb]]s (at most 16).
+
+
+  What wastes them: an Essence can spend up to 80, and an Eldritch Chaos Orb
+  up to 60 by the same table, so the two workhorses of this slot are the two
+  worst things to use on a strand base. Dense and Pristine Fossils and
+  Harvest reforges do not use strands at all, by player testing.
+
+
+  One open question matters here more than anywhere: a 2025 player thread
+  implies an item with strands cannot take Eldritch implicits. We could not
+  confirm it either way. Try a Lesser Ember on the base before you plan a
+  craft around both.
+reading:
+  intro: >-
+    Hold Alt and ask three questions in this order. **How much life, or
+    Energy Shield, do the prefixes give?** **What does the defence line at
+    the top read, and how many prefixes are feeding it?** **Which suffixes
+    do something the rest of your gear cannot?** A resistance is worth less
+    than it looks, because the bench sells one.
+  prefixes:
+    text: >-
+      Three slots, four things worth having. Maximum Life is one. The other
+      three are the defence prefixes, and they stack because they are three
+      different groups: **flat** defence, **increased** defence, and
+      **increased defence with Stun and Block Recovery**. All three are
+      local. Flat is added to the base first, then both percentages and
+      quality multiply the sum.
+
+
+      So every chest makes the same choice. A life build takes life and two
+      defence prefixes. A pure Energy Shield build takes all three defence
+      prefixes and no life. There is never room for all four.
+
+
+      What competes for those slots is short and familiar: "Reflects
+      Physical Damage to Melee Attackers", 9% of prefix rolls on a plate and
+      worth nothing; the small defence-with-Life hybrids; and, on any base
+      with Intelligence, maximum Mana.
+    key:
+      - mod: "+# to maximum Life"
+        why: "The largest life roll of any slot, and 21–31% of prefix rolls depending on the pool. Easy to get, hard to get high: thirteen tiers at equal weight."
+        aim: "T3, 145–159 (ilvl 73). T1 is 175–189 (ilvl 86)."
+      - mod: "+# to Armour"
+        why: "Stands for every flat defence prefix: Evasion has the same numbers, two-defence bases roll both at once. It is added to the base before anything multiplies, so it is worth most on a base with a low number and beside a high percentage."
+        aim: "T2, 301–400 (ilvl 69). T1 is 401–500 (ilvl 77)."
+      - mod: "+# to maximum Energy Shield"
+        why: "The flat prefix of a robe. Small next to a Twilight Regalia's 262–302, large next to a levelling robe: the reason the base matters most for Energy Shield."
+        aim: "T2, 77–90 (ilvl 69). T1 is 91–100 (ilvl 75)."
+      - mod: "#% increased Armour"
+        why: "Stands for the increased prefix of every pool. Multiplies base plus flat. Same group as the bench's 56–74%, so one or the other."
+        aim: "T3, 80–91% (ilvl 72). T1 is 101–110% (ilvl 86)."
+      - mod: "#% increased Armour / #% increased Stun and Block Recovery"
+        why: "A second percentage in a different group, so it sits beside the first. The numbers are under half as big, and the tiers come early."
+        aim: "T2, 33–38% (ilvl 60). T1 is 39–42% (ilvl 78)."
+      - mod: "+# to Armour / +# to maximum Life"
+        why: "A hybrid with small numbers on both halves: at best +97–144 Armour and +34–38 Life. Usually a slot that pure life or pure defence would have used better. Same group as the bench and veiled defence-with-Life prefixes."
+      - mod: "+# to maximum Mana"
+        why: "Only on bases that ask for Intelligence. Wanted by builds that spend or reserve a lot of mana, and the most common wasted prefix on a robe for everyone else."
+      - mod: "Reflects # Physical Damage to Melee Attackers"
+        why: "A dead prefix on every base. Its four tiers all unlock by item level 35, so it is always in the lottery."
+  suffixes:
+    text: >-
+      The suffix side is where a chest fills gaps. Resistances are 41% of
+      all suffix rolls between the three elements, life regeneration is the
+      single most common suffix at 19%, an attribute is 15%, Stun and Block
+      Recovery 10%.
+
+
+      Sort the suffixes into two kinds. **Buyable:** a resistance or an
+      attribute, which the bench, an Essence or a Harvest reforge will
+      supply on demand. **Not buyable at full strength:** Suppression,
+      Physical Damage Reduction, high Chaos Resistance. The bench sells
+      Suppression at 8–10% where the top tier is 20–22%. Those are the
+      suffixes to roll, fracture or protect; resistances are what you fill
+      in around them.
+    key:
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Only on bases that ask for Dexterity. For an evasion character the chest is a large part of reaching full Suppression, and the bench version is less than half the top tier."
+        aim: "T2, 17–19% (ilvl 77). T1 is 20–22% (ilvl 86)."
+      - mod: "+#% to Fire Resistance"
+        why: "Stands for all three elements. Common, and guaranteed by an Essence or a Harvest reforge, so never the reason to keep a chest."
+        aim: "T3, 36–41% (ilvl 60). T1 is 46–48% (ilvl 84)."
+      - mod: "+#% to Chaos Resistance"
+        why: "A quarter of the weight of the other resistances. The bench only sells it paired with an element, at 13–15%."
+        aim: "T2, 26–30% (ilvl 65). T1 is 31–35% (ilvl 81)."
+      - mod: "#% additional Physical Damage Reduction"
+        why: "Only on bases that ask for Strength. Flat mitigation that works against the hits Armour handles worst. The bench sells 3%."
+        aim: "T2, 7% (ilvl 77). T1 is 8% (ilvl 86)."
+      - mod: "#% faster start of Energy Shield Recharge"
+        why: "Only on bases that ask for Intelligence. For builds that rely on Recharge, nothing else on a chest replaces it."
+        aim: "T2, 51–58% (ilvl 77). T1 is 59–66% (ilvl 86)."
+      - mod: "Regenerate # Life per second"
+        why: "The most common suffix, with eleven tiers. Real power for a build that lives on regeneration, at up to 152–176 per second; filler for most others."
+      - mod: "+# to Strength"
+        why: "Stands for the attribute of the base. Useful when it pays for gem or gear requirements, and common enough to arrive unasked."
+approach:
+  principle: >-
+    **Build one side at a time.** The prefixes decide how much punishment the
+    chest absorbs; the suffixes patch what the rest of your gear lacks. An
+    Essence or a Fossil fixes the prefixes while the suffixes are still
+    worthless, Eldritch orbs then reroll the suffixes without touching the
+    prefixes, and the bench fills the last slot. You never have to roll all
+    six at once, so do not try.
+  order:
+    - title: "Decide what the chest is for, and take the base that can roll it"
+      text: >-
+        Life and Armour, Evasion and Suppression, or pure Energy Shield. The
+        answer picks the pool, and the pool cannot be changed later. Then
+        pick the base inside the pool by its defence number and the
+        requirements you can meet.
+    - title: "Pick the item level by the one tier you care about"
+      text: >-
+        84 covers almost everything. Pay for 86 only if the plan needs
+        "Prime" life, 20–22% Suppression, 8% Physical Damage Reduction or
+        the last tier of percentage defence. An Essence of Greed gives the
+        same life on any item level.
+    - title: "Decide between Eldritch implicits and influence"
+      text: >-
+        Before spending anything, because the two exclude each other. If no
+        influence modifier is essential to the build, the chest gets
+        implicits. That choice also settles the base: under Eldritch
+        implicits a base implicit is lost.
+    - title: "Prefixes first, with an anchor"
+      text: >-
+        An Essence of Greed for life, an Essence of Woe or a Dense Fossil for
+        Energy Shield. Repeat until two of the three prefixes are ones you
+        want, or one is and a slot is open. Do not look at the suffixes yet:
+        the next reroll replaces them anyway.
+    - title: "Then the suffixes, alone"
+      text: >-
+        Add the two implicits with the Eater of Worlds dominant, and reroll
+        the suffixes with Eldritch Chaos Orbs. Stop at two suffixes you want
+        and an open slot. From this point an Essence, a Fossil or an
+        ordinary Chaos Orb would undo the prefixes: put them away.
+    - title: "Close with the bench"
+      text: >-
+        One bench modifier, spent on the largest gap: a missing resistance,
+        or the defence prefix the item did not roll.
+    - title: "Sockets, links and quality whenever it suits you"
+      text: >-
+        They survive everything above. Many players link the base first, so
+        that a chest that turns out well is ready to wear.
+  finishing: >-
+    Quality to 20%, six sockets, the links your skill needs. Then the numbers:
+    a [[Sacred Orb]] if the base defence rolled low in its range, a
+    [[Divine Orb]] if the modifiers that matter sit at the bottom of their
+    tiers, a [[Blessed Orb]] for a base implicit you kept.
+
+
+    Corruption comes after all of that or not at all. On this slot the
+    prize is usually +1 to Level of Socketed Gems or 4–6% increased maximum
+    Life, and the risk is the whole chest.
+  stopping: >-
+    Life of 130 or more, one defence prefix at a middle tier, and two
+    resistances is a real chest for yellow and red maps. That is one
+    Essence stage and, at most, a few dozen Eldritch Chaos Orbs.
+
+
+    The cost multiplies in three places: the third good prefix, the last
+    tier of anything, and a top-tier Suppression or Chaos Resistance roll
+    with two more good suffixes beside it. Decide before you start which of
+    those you are paying for. When the Eldritch orbs have given you two
+    suffixes you want and an open slot, stop rolling: the bench finishes it
+    for certain.
+special:
+  - mod: "#% increased Mana Reservation Efficiency of Skills"
+    source: "Essence"
+    where: "An Essence of Loathing on a body armour: 5–6% at Screaming, 7–8% at Shrieking, 9–10% at Deafening. A suffix that the natural pool does not have."
+  - mod: "#% increased Area of Effect"
+    source: "Corrupted Essence"
+    where: "25%, from an [[Essence of Hysteria]], which only comes from corrupting an Essence monster with a [[Remnant of Corruption]]. The other three corrupted Essences give: 25% reduced Chaos Damage taken over time (Delirium), Onslaught for 6 seconds when Hit (Insanity), and reduced Extra Damage from Critical Strikes per Endurance Charge (Horror)."
+  - mod: "Enemies you Kill have a #% chance to Explode, dealing a tenth of their maximum Life as Physical Damage"
+    source: "Crusader influence"
+    where: "A Crusader prefix: 11–20% from item level 75 (weight 100), 21–30% from item level 85 (weight 25). On a Magic Crusader plate at item level 86, any tier is about 1 prefix roll in 385 by our arithmetic."
+  - mod: "#% increased maximum Life"
+    source: "Elder or Hunter influence"
+    where: "A prefix, 9–12% from item level 85 and 5–8% from 68. It is a different group from flat maximum Life, so both fit. The veiled prefix with Life and Mana, and its bench copy, share its group and block it."
+  - mod: "You can apply an additional Curse"
+    source: "Hunter influence"
+    where: "A Hunter prefix from item level 82, with a weight of 250."
+  - mod: "#% of Physical Damage from Hits taken as Fire Damage"
+    source: "Influence / Eater of Worlds implicit"
+    where: "13–15% as an Elder or Warlord prefix (Cold on Shaper and Redeemer, Lightning on Shaper and Crusader, Chaos on Hunter). 10–12% as an Eater of Worlds implicit, which needs no influence."
+  - mod: "Attacks have +#% to Critical Strike Chance"
+    source: "Elder or Hunter influence"
+    where: "A suffix, +1.1–1.5% from item level 84. The spell version is a Shaper or Hunter suffix. With the prefixes locked, a Harvest Critical reforge can land on little else."
+  - mod: "+#% to all maximum Resistances"
+    source: "Searing Exarch implicit / Corruption"
+    where: "+1% as a Searing Exarch implicit, +2% at its two highest strengths. +1% as a corruption implicit on a chest of item level 80 or higher."
+  - mod: "+# to Level of Socketed Gems"
+    source: "Corruption / Influence / Fossil"
+    where: "+1 to all socketed gems, or +2 to one kind, as a corruption implicit. +1 to Level of Socketed Skill Gems as a Shaper or Warlord prefix, +1 to Socketed Support Gems on Elder or Redeemer (item level 80). +1 to Socketed Strength, Dexterity or Intelligence Gems as a Fossil-only suffix."
+  - mod: "Has 1 Abyssal Socket"
+    source: "Fossil"
+    where: "Forced by a [[Hollow Fossil]] in the Resonator. It takes a suffix."
+  - mod: "#% increased effect of Non-Curse Auras from your Skills"
+    source: "Redeemer influence / Fossil / Searing Exarch implicit"
+    where: "21–25% as a Redeemer suffix (item level 80), 20–25% as a Fossil-only suffix, and from 9–10% to 19–20% as a Searing Exarch implicit."
+  - mod: "+1 to Level of all Vaal Skill Gems"
+    source: "Base implicit"
+    where: "The implicit of the Sacrificial Garb. You choose it by choosing the base, and you lose it to an Eldritch Ember or Ichor."
+mistakes:
+  - "**Choosing the base before the pool.** Suppression cannot roll on a plate, Physical Damage Reduction cannot roll on a robe. No currency fixes that afterwards."
+  - "**Using an Essence after the suffixes are right.** An Essence rerolls everything that is not fractured, and is reported to ignore the protection modifiers. Essences come first, Eldritch orbs second."
+  - "**Putting an Ember on an Astral Plate without knowing the price.** The Ember's own text says it replaces the base implicit."
+  - "**Paying for a prefix lock on a chest with no influence.** 4 Divine Orbs and 4 Blessed Orbs per attempt buys what an Eldritch Chaos Orb does by itself."
+  - "**Benching increased defence onto a chest that rolled it.** One group. Bench the flat defence, or life, instead."
+  - "**Buying item level 85 for \"Prime\" life.** It needs 86. On a chest without influence, item level 85 unlocks nothing that 84 does not, outside the two three-attribute bases."
+  - "**Rolling for a resistance.** The bench sells 29–35% for 3 Chaos Orbs. Roll the suffix the bench cannot match."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, Essence, implicit and bench cost quoted here, and the in-game text of the Eldritch currency. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on armour." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges, the resistance swap and the body armour enchants." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-and-remove recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Which implicit is dominant, what the protection modifiers hold against, and the Memory Strands breakpoints. Player-tested and partly older than 3.30." }

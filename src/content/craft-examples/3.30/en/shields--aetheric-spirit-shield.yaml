@@ -1,0 +1,183 @@
+category: shields
+title: "A caster's shield with an Aetheric Fossil"
+level: 3
+summary: "An Aetheric Fossil multiplies every caster modifier by ten. On a spirit shield that is Spell Damage on the prefix side and spell critical strikes on the suffix side, in the same reroll."
+goal: >-
+  An endgame off-hand for a spell caster: a Spell Damage prefix at a tier
+  Alterations rarely reach, Spell Critical Strike Chance, and cast speed from
+  the bench. The lesson is to **read tags before choosing a Fossil**. On
+  this pool one tag sits on the two modifiers you want, on both sides of the
+  item, and on almost nothing you do not want. It also misses a modifier you
+  might have expected it to cover.
+base: "Harmonic Spirit Shield"
+itemLevel: 84
+baseWhy: >-
+  The Harmonic Spirit Shield has the larger Spell Damage implicit, 10–15%,
+  with 58–66 Energy Shield and 23% block, and can be used at level 65. Item
+  level 84 is the lowest at which the top tier of Spell Damage, 100–109%, can
+  roll. This method will seldom reach that tier, but at 84 you keep it when
+  it comes. It must be a spirit shield: no other family has the prefix.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["13% increased Spell Damage"]
+  prefixes:
+    - { text: "76% increased Spell Damage", how: fossil }
+    - { text: "+118 to maximum Life", how: fossil }
+  suffixes:
+    - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+    - { text: "+37% to Cold Resistance", how: fossil }
+    - { text: "8% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Aetheric Fossil]]", amount: "30–60" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "one per Fossil" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "to make the base Rare" }
+  - { item: "[[Orb of Alteration]]", amount: "6", note: "for the bench" }
+cost: >-
+  One Fossil and one Resonator per attempt, both from Delve, which in 3.30 is
+  reached through the maps that always spawn Sulphite. The bench step is 6
+  [[Orb of Alteration]]s.
+odds: >-
+  With an Aetheric Fossil at item level 84, by our arithmetic from the
+  weights: one prefix roll is increased Spell Damage 49% of the time, at 55%
+  or more 1 time in 8, and at 70% or more 1 time in 24. Without the Fossil
+  the last figure is about 1 in 120. One suffix roll is Spell Critical Strike
+  Chance 42% of the time, and at 70% or more 1 time in 5.
+
+
+  The Fossil multiplies the whole Spell Damage family, low tiers included,
+  so it helps the top tier only as much as it helps the rest: 100–109% is
+  still about 1 prefix roll in 420. The bar in this example, Spell Damage of
+  70% or more with a strong spell critical strike suffix beside it, is a
+  matter of several dozen Fossils. Our figures leave out the few modifiers only
+  Fossils can add.
+steps:
+  - title: "Sort the pool by tag"
+    do: >-
+      Before buying Fossils, read the Fossil ("More Caster modifiers, Fewer
+      Attack modifiers") against the spirit shield's modifier list.
+    why: >-
+      Three things on a spirit shield carry the caster tag. **Increased
+      Spell Damage** and the **"+1 to Level of all ... Spell Skill Gems"**
+      prefixes, and **Spell Critical Strike Chance** among the suffixes.
+      Each gets ten tickets for every one it had.
+
+
+      Increased Fire, Cold and Lightning Damage do **not** carry it. Their
+      tags are the element and "elemental". They are also in the same group
+      as Spell Damage, so under this Fossil they become rarer and Spell
+      Damage takes their place. A build that scales one element wants a
+      [[Scorched Fossil]] or its Cold or Lightning counterpart instead.
+    check: >-
+      Nothing on this pool has the attack tag, so the Fossil's second line
+      costs you nothing.
+  - title: "Make the base Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white shield.
+    why: >-
+      A Chaotic Resonator rerolls a Rare item. What the Alchemy rolls is
+      thrown away. It is shown here because it is typical of this pool
+      without help: mana, a dead prefix, and suffixes that do nothing for
+      spells.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "+46 to maximum Mana" }
+        - { text: "Reflects 33 Physical Damage to Melee Attackers" }
+      suffixes:
+        - { text: "+24% to Lightning Resistance" }
+        - { text: "36% increased Mana Regeneration Rate" }
+  - title: "The first Fossil"
+    do: >-
+      Place an [[Aetheric Fossil]] in a [[Primitive Chaotic Resonator]] and
+      use it on the shield.
+    why: >-
+      The result shows what the Fossil does and what it does not. A caster
+      modifier can arrive on each side at once, as here. Their tiers are
+      whatever the lottery gives, and here they are low.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "33% increased Spell Damage", how: fossil }
+        - { text: "+52 to maximum Energy Shield", how: fossil }
+      suffixes:
+        - { text: "58% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Set the bar on tiers, and leave room for the bench"
+    do: >-
+      Decide what you keep: **Spell Damage of 70% or more** ("Incanter's",
+      "Glyphic" or "Runic"), **Spell Critical Strike Chance of 70% or more**,
+      and **one open slot**. Check each result against that and nothing
+      else.
+    why: >-
+      The first result has the right names and fails on every number.
+      Keeping it would be the commonest mistake with Fossils. The open slot
+      is in the bar because the bench finishes the shield: cast speed if a
+      suffix is free, life if a prefix is.
+    check: >-
+      Do not wait for cast speed to roll. It is not in a shield's natural
+      pool at all; the bench sells 6–9%.
+    fail: >-
+      Below the bar: another Fossil and Resonator. Nothing on the item is
+      worth protecting until one result passes.
+  - title: "Repeat until a result passes"
+    do: >-
+      Use Fossils one at a time, judging each result against the bar.
+    why: >-
+      Each is an independent reroll of all six slots. If a result has the
+      Spell Damage and a full, useless suffix side, it has still failed:
+      this method has no way to keep one side.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "76% increased Spell Damage", how: fossil }
+        - { text: "+118 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+37% to Cold Resistance", how: fossil }
+  - title: "Bench the cast speed"
+    do: >-
+      At the [[Crafting Bench]], craft 6–9% increased Cast Speed in the open
+      suffix for 6 [[Orb of Alteration]]s.
+    why: >-
+      Cast speed is the caster suffix the natural pool does not have and
+      the bench does. Had the suffixes been full and a prefix
+      open, the craft would be +56–70 maximum Life for 4 Orbs of Alchemy.
+    state:
+      implicits: ["13% increased Spell Damage"]
+      prefixes:
+        - { text: "76% increased Spell Damage", how: fossil }
+        - { text: "+118 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "84% increased Spell Critical Strike Chance", how: fossil }
+        - { text: "+37% to Cold Resistance", how: fossil }
+        - { text: "8% increased Cast Speed", how: crafted }
+variations: >-
+  **Harvest in place of the Fossil.** A Critical reforge (150 Primal
+  Lifeforce) can only be Spell Critical Strike Chance on a spirit shield, and
+  a Caster reforge (75 Primal) is Spell Damage about half the time. Each
+  guarantees one modifier and leaves the rest of the item to an unweighted
+  roll. The Fossil guarantees nothing and tilts every roll. For two wanted
+  modifiers on opposite sides, the Fossil is the better tool.
+
+
+  **The top tier.** For Spell Damage of 85% or more, the Magic route is the
+  honest one: Alterations on a white base until the prefix appears, an
+  [[Imprint]] from a [[Craicic Croaker]], then a [[Regal Orb]] that can be
+  retried. At item level 84 that tier is about 1 prefix roll in 430, and a
+  base with [[Memory Strands]] is worth using for it.
+
+
+  **A minion shield.** On a Bone, Ivory or Fossilised Spirit Shield a
+  [[Bound Fossil]] plays the same part: minion damage becomes 57% of prefix
+  rolls and four suffix rolls in five are minion modifiers. Minion damage is
+  in the same group as Spell Damage, so that shield holds one of the two.
+mistakes:
+  - "Keeping the first result with the right names. The Fossil makes Spell Damage common; it does not make 70% common."
+  - "Using an Aetheric Fossil for a fire, cold or lightning build that wanted its own damage prefix. Those lack the caster tag and lose ground to Spell Damage."
+  - "Trying this on a kite or spiked shield. The Fossil multiplies a modifier only where the pool has it."
+  - "Accepting a full item with no open suffix. Cast speed only comes from the bench, and one more Fossil is cheaper than a shield without it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Fossil weight multipliers, the tags on each modifier, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "How Delve is reached in 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical and Caster reforges and their costs, for the variation." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe, for the variation." }

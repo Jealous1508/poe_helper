@@ -1,0 +1,142 @@
+category: tinctures
+title: "A tincture you can leave on: both slots for upkeep"
+level: 2
+summary: "The upkeep modifiers are the common ones, so this is the craft where asking for a prefix and a suffix at once is still cheap."
+goal: >-
+  An Oakbranch Tincture built to stay switched on: less Mana Burn on the
+  prefix, mana back on every kill on the suffix. The first tincture took any
+  prefix. This one asks for **both slots at once**, and the lesson is why
+  that is affordable here and expensive elsewhere: you are asking for the
+  heaviest modifiers on each side.
+base: "Oakbranch Tincture"
+itemLevel: 82
+baseWhy: >-
+  The Oakbranch Tincture's implicit is "Gain 3 Rage on Melee Weapon Hit": a
+  fixed number, so there is no implicit roll to compare and any white one
+  will do. It is the last tincture to appear, from level 60. A Rage
+  character wants it running for as long as possible, which makes upkeep the
+  thing to craft. Item level 82 opens the best tier of both targets: 26–24%
+  reduced Mana Burn rate (needs 80) and 9–11 Mana per Enemy Killed (needs
+  82).
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+  prefixes:
+    - { text: "24% reduced Mana Burn rate" }
+  suffixes:
+    - { text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "40–80" }
+  - { item: "[[Orb of Augmentation]]", amount: "5–10" }
+  - { item: "[[Glassblower's Bauble]]", amount: "to 20%" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s. There is no bench step and no beast:
+  the 3.30 data offers a tincture nothing but the three orbs.
+odds: >-
+  At item level 82, by our arithmetic from the weights, one prefix roll is
+  reduced Mana Burn rate at 21% or better about 1 time in 5 (18.9%): it is
+  the heaviest prefix family, and those are its two best tiers of four. One
+  suffix roll is Mana per Enemy Killed, at any tier, about 1 time in 7
+  (14.4%).
+
+
+  You need both on the same result, so multiply: about 1 attempt in 37. Ask
+  for 6 mana or more, the best two tiers, and it is about 1 in 74. For
+  comparison, a best-tier damage suffix alone is 1 suffix roll in 63 at item
+  level 85.
+steps:
+  - title: "Set both bars"
+    do: >-
+      Before the first orb, write down what passes. Prefix: reduced Mana Burn
+      rate, 21% or more. Suffix: Gain Mana per Enemy Killed with Melee
+      Weapons, any tier.
+    why: >-
+      Mana Burn, as its name says, is paid in mana, and it is the reason a
+      tincture switches off. The prefix slows the cost and the suffix pays
+      some of it back while you clear. With two bars, each Alteration is
+      judged on two lines, and you need a rule you can apply in a second.
+    state:
+      rarity: normal
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+  - title: "Transmutation, then Alterations, reading both lines"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s. After
+      each, check the prefix against its bar and the suffix against its bar.
+    why: >-
+      The result below is the kind that makes people stop too early: the
+      best tier of two good modifiers. Neither is on the list. A shorter
+      cooldown helps after the tincture has switched off, and you set out to
+      stop it switching off.
+    check: >-
+      Judge by the bar, not by the tier. A best-tier modifier that does the
+      wrong job is a miss.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "30% increased Cooldown Recovery Rate" }]
+      suffixes: [{ text: "Gain 28 Life per Enemy Killed with Melee Weapons" }]
+  - title: "Augment only when the half you have passes"
+    do: >-
+      When an Alteration gives one modifier and it passes its bar, use an
+      [[Orb of Augmentation]] on the empty slot. When the one modifier fails,
+      do not augment: use the next Alteration.
+    why: >-
+      An Augmentation is a roll at the missing half. It is only worth using
+      when the half you already hold is one you would keep. Here the
+      Alteration gave the prefix alone, and it passes.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+  - title: "The other half"
+    do: >-
+      Use the Augmentation and read the suffix.
+    why: >-
+      One suffix roll, about 1 in 7 to pass. This time it did.
+    fail: >-
+      Six times in seven it does not. The tincture now has two modifiers and
+      one of them is wrong, so it goes back to step 2: an Alteration rerolls
+      both. Do not grieve for the prefix. It was 1 roll in 5.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+      suffixes: [{ text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }]
+  - title: "Quality"
+    do: >-
+      Take the tincture to 20% quality with [[Glassblower's Bauble]]s.
+    why: >-
+      The Bauble's text covers tinctures, to a maximum of 20%. It is the only
+      finishing step the data gives this item, so it goes on the one you are
+      keeping.
+    state:
+      rarity: magic
+      implicits: ["Gain 3 Rage on Melee Weapon Hit"]
+      prefixes: [{ text: "24% reduced Mana Burn rate" }]
+      suffixes: [{ text: "Gain 7 Mana per Enemy Killed with Melee Weapons" }]
+variations: >-
+  **Upkeep in one prefix.** "Reduced effect with 50% reduced Mana Burn rate"
+  cuts the cost twice as hard as the best plain tier and takes 21% to 35% of
+  the tincture's effect with it. What reduced effect does to a flat "Gain 3
+  Rage" we could not establish from the data, so test it on your own
+  character before relying on it.
+
+
+  **Bosses, not packs.** Mana per kill pays nothing in a fight with one
+  enemy. "Gain Mana per Enemy Hit with Melee Weapons" does, and it is four
+  times rarer: 3.6% of suffix rolls at this item level, with 1 to 2 mana a
+  hit.
+
+
+  **If mana was never the problem.** Then this is the wrong craft. Put a
+  damage suffix on the tincture and take plain increased effect on the
+  prefix, as in the next example.
+mistakes:
+  - "Keeping two best-tier modifiers that do a different job from the one you wrote down."
+  - "Using an Augmentation on a result whose only modifier already fails. It cannot fix the half that is there."
+  - "Using an Alteration to chase a better suffix tier once both halves pass. It rerolls the prefix too."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bases, implicits, tiers, item levels and weights, and the text of the Glassblower's Bauble. The odds are our arithmetic." }

@@ -1,0 +1,208 @@
+category: wands
+title: "One rolled prefix, an Imprint, and three bench modifiers"
+level: 4
+summary: "Roll a spell gem prefix on a Magic wand, protect it with an Imprint through the Regal Orb, then let \"Can have up to 3 Crafted Modifiers\" build the rest of the wand from the bench."
+goal: >-
+  A caster wand with "+1 to Level of all Lightning Spell Skill Gems" rolled,
+  Spell Damage and flat lightning damage to spells crafted, and cast speed
+  beside them. Only two modifiers on it come from luck. The lesson is the
+  wand's own way of protecting work: **keep the item small.** A Magic wand
+  with one modifier can be saved whole by an Imprint, and a Rare wand with
+  two modifiers has four slots the bench can fill with exactly what you
+  choose. The meta-modifier that makes that possible costs 2 Divine Orbs
+  and a suffix slot, and the craft is about spending them well.
+base: "Profane Wand"
+itemLevel: 84
+baseWhy: >-
+  The Profane Wand's implicit is 14% increased Cast Speed, which adds to
+  whatever cast speed the suffixes hold. The gem prefix rolls at any item
+  level. Item level 84 matters for one moment only, the Regal Orb, which
+  can add the top tier of cast speed (from 83) or of Spell Critical Strike
+  Chance.
+
+
+  Use the element your spell has. This example is Lightning; the Fire and
+  Cold prefixes have the same weight.
+methods: [currency, beast, meta, bench, finishing]
+result:
+  implicits: ["14% increased Cast Speed"]
+  prefixes:
+    - { text: "+1 to Level of all Lightning Spell Skill Gems" }
+    - { text: "61% increased Spell Damage", how: crafted }
+    - { text: "Adds 7 to 120 Lightning Damage to Spells", how: crafted }
+  suffixes:
+    - { text: "26% increased Cast Speed" }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "300–600" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Divine Orb]]", amount: "2", note: "for the multi-modifier craft" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "for the bench's best Spell Damage; 4 Chaos Orbs for the rank below" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the flat damage to spells" }
+cost: >-
+  Alterations in bulk for the prefix, then beasts: one [[Craicic Croaker]]
+  and three other Rare beasts for every Regal Orb you want to be able to
+  take back. In 3.30 only red beasts are captured, so count your Menagerie
+  first. The bench stage is fixed: 2 [[Divine Orb]]s, 4 [[Exalted Orb]]s
+  and 4 [[Chaos Orb]]s, with a cheaper version at 2 Divine Orbs and 8 Chaos
+  Orbs.
+odds: >-
+  **The prefix.** "+1 to Level of all Lightning Spell Skill Gems" weighs 250
+  in a prefix pool of 79,166: 1 prefix roll in 317, by our arithmetic. An
+  Alteration does not always roll a prefix, so several hundred is the
+  honest budget and a bad run is longer. Three Fossils reach the same
+  prefix faster (see the previous example) but on a Rare item, where no
+  Imprint is possible.
+
+
+  **The Regal Orb.** It adds one modifier from the whole pool. About half
+  of what it can add is a suffix. One addition in 8 is cast speed, Spell
+  Critical Strike Chance or Critical Strike Multiplier. About 1 in 30 is a
+  prefix worth keeping (the Spell Damage and Mana hybrid, mostly). The
+  rest is a prefix that takes a slot the bench needed, or a filler suffix.
+steps:
+  - title: "Alterations to the gem prefix, alone"
+    do: >-
+      Use an [[Orb of Transmutation]] on the white wand, then
+      [[Orb of Alteration]]s until the prefix is **"+1 to Level of all
+      Lightning Spell Skill Gems"** ("Thunderhand's"). If it comes with a
+      suffix you do not want, keep going until it comes alone or with cast
+      speed, Spell Critical Strike Chance or Critical Strike Multiplier.
+    why: >-
+      Nothing guarantees a gem prefix: no Essence, no bench craft, no
+      Harvest tag. On a Magic item the search costs only Alterations, and
+      the result is small enough to save. Whatever sits on the Magic wand
+      is carried into every later attempt, so a filler suffix now is a
+      filler suffix for good.
+    check: >-
+      Read the element. All five gem prefixes look alike, and four of them
+      are for somebody else's build.
+    state:
+      rarity: magic
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item** on the
+      wand: a [[Craicic Croaker]] and three other Rare beasts.
+    why: >-
+      The Imprint is a saved copy. Used later, it returns the wand to this
+      exact Magic state. It is the only protection this craft needs until
+      the bench stage, and it only works on Magic items, which is why the
+      wand was kept Magic this long.
+    check: >-
+      The Imprint is an item in your inventory. Do not use it yet.
+  - title: "Regal Orb, and judge by slots"
+    do: >-
+      Use a [[Regal Orb]]. **Keep** the result if it added cast speed, Spell
+      Critical Strike Chance or Critical Strike Multiplier. **Keep** it,
+      with less joy, if it added any other suffix that is not an attack
+      modifier. **Take it back** if it added a prefix, unless that prefix
+      is the Spell Damage and Mana hybrid or Spell Damage at 70% or more.
+    why: >-
+      Count what the bench stage needs: two prefix slots for crafted
+      damage and one suffix slot for the meta-modifier. A Regal Orb that
+      adds a prefix leaves only one slot for crafted damage. A Regal Orb
+      that adds a suffix costs nothing the plan needs, so even a dull one
+      is acceptable.
+    fail: >-
+      Use the [[Imprint]] on the wand to return it to Magic, make a new
+      Imprint with another Croaker, and use another Regal Orb. Each attempt
+      costs one Regal Orb and one set of beasts.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+      suffixes: [{ text: "26% increased Cast Speed" }]
+  - title: "Craft the multi-modifier"
+    do: >-
+      At the [[Crafting Bench]], craft **Can have up to 3 Crafted
+      Modifiers**: 2 [[Divine Orb]]s. It is a suffix.
+    why: >-
+      An item normally holds one bench modifier. This one lets it hold
+      three, itself included, so it buys two real ones for the price of one
+      suffix slot. That is only a gain when there are at least two open
+      slots it can fill with something good, which on this wand is exactly
+      the position: two open prefixes and the bench's two best caster
+      prefixes in different groups.
+    check: >-
+      From here on, no rerolling of any kind: no Chaos Orb, no Essence, no
+      Fossil. Each would remove the crafted modifiers with everything else.
+      The unused Imprint is now only an undo button for the whole wand.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes: [{ text: "+1 to Level of all Lightning Spell Skill Gems" }]
+      suffixes:
+        - { text: "26% increased Cast Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Craft the two prefixes"
+    do: >-
+      Craft **55–66% increased Spell Damage** (4 [[Exalted Orb]]s; or 45–54%
+      for 4 Chaos Orbs), then **adds 3–10 to 117–123 Lightning Damage to
+      Spells** (4 [[Chaos Orb]]s).
+    why: >-
+      Group rules pick these two. Spell Damage and the increased Lightning
+      Damage craft are one group, so only one of them can go on; the
+      bench's two Spell Damage hybrids are in that group as well. Flat
+      damage to spells is a separate group. The gem prefix is a third. So
+      the three prefixes are three groups, and nothing is refused.
+    check: >-
+      Three prefixes, two of them crafted, and a rolled suffix beside the
+      meta-modifier. One suffix slot is still open.
+    state:
+      implicits: ["14% increased Cast Speed"]
+      prefixes:
+        - { text: "+1 to Level of all Lightning Spell Skill Gems" }
+        - { text: "61% increased Spell Damage", how: crafted }
+        - { text: "Adds 7 to 120 Lightning Damage to Spells", how: crafted }
+      suffixes:
+        - { text: "26% increased Cast Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "The last suffix: decide, do not drift"
+    do: >-
+      The open suffix can stay open, or take an [[Exalted Orb]]. Decide
+      which before you look at your currency tab.
+    why: >-
+      With cast speed on the wand, an added suffix is Spell Critical Strike
+      Chance or Critical Strike Multiplier about 1 time in 6, by our
+      arithmetic, and an attack modifier 1 time in 3. The three crafted
+      slots are used, so "Cannot roll Attack Modifiers" cannot be added to
+      improve those odds. A plain Exalted Orb here is a small gamble on a
+      finished item; it cannot make the wand worse, only fail to improve
+      it.
+variations: >-
+  **A crafted suffix instead of flat damage.** For a build that does not
+  hit, such as damage over time, replace the flat damage craft with
+  +18–20% to a Damage over Time Multiplier (4 Chaos Orbs, a suffix). Both
+  suffix slots are then crafted and one prefix stays open. A damage over
+  time build also has no use for Spell Critical Strike Chance, so its Regal
+  Orb is judged on cast speed alone.
+
+
+  **With "Cannot roll Attack Modifiers".** If you would rather gamble on
+  two open slots than craft two certain modifiers, use the single bench
+  slot differently: craft "Cannot roll Attack Modifiers" (1 Divine Orb)
+  **instead of** the multi-modifier, add with Exalted Orbs while it removes
+  a third of the pool, then replace it with a real craft. It is the
+  riskier wand. Since 3.30 the modifier no longer steers an Orb of
+  Annulment, so a bad addition cannot be removed safely.
+
+
+  **Memory Strands.** They do nothing for the gem prefix, which has one
+  tier. A strand base does improve what the Regal Orb adds, and a Regal Orb
+  spends at most 16 strands by the data-mined table, so it is a small real
+  gain for this craft if the Alterations before it (up to 8 each) have left
+  any.
+mistakes:
+  - "Using the Regal Orb before the Imprint. An Imprint cannot be made of a Rare item."
+  - "Augmenting the Magic wand \"to see\". A bad suffix then rides along through every attempt."
+  - "Crafting the multi-modifier on a wand with one open slot. It costs 2 Divine Orbs and a suffix to add a single extra craft."
+  - "Crafting increased Lightning Damage as the second prefix. It is the same group as Spell Damage; the bench will refuse it, and flat damage to spells is the one that fits."
+  - "Benching \"+2 to Level of Socketed Support Gems\" at any stage. It shares the gem prefix's group."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, groups, tiers and bench costs, including the meta-modifiers. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The change to \"Cannot roll Attack Modifiers\", and that only red beasts are captured." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the beasts it needs in 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

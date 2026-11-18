@@ -1,0 +1,146 @@
+category: wands
+title: "A minion wand from an Essence of Fear"
+level: 2
+summary: "On a Convening Wand, an Essence of Fear guarantees minion damage. Repeat until there is room for the bench to add minion attack and cast speed."
+goal: >-
+  A wand for a minion build's first maps: minion damage guaranteed, minion
+  attack and cast speed from the bench, and whatever else the minion pool
+  offers on the way. The lesson is the difference between **a wand with a
+  minion modifier and a minion wand.** An Essence of Fear puts minion damage
+  on any wand. Only three bases can roll the rest, and this craft shows what
+  "the rest" is worth.
+base: "Convening Wand"
+itemLevel: 72
+baseWhy: >-
+  The Convening Wand is one of three bases that roll from the minion pool,
+  and it can be used from level 50; the Convoking Wand is the same thing
+  from level 72 with a larger implicit, and an Atlas base. The implicit here
+  is 20–24% increased minion damage.
+
+
+  Item level 72 opens Tier 2 of "Minions have increased Attack and Cast
+  Speed" (20–22%) and is well past the 60 that "+1 to Level of all Minion
+  Skill Gems" needs.
+methods: [essence, bench]
+result:
+  implicits: ["Minions deal 22% increased Damage"]
+  prefixes:
+    - { text: "Minions deal 58% increased Damage", how: essence }
+    - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+  suffixes:
+    - { text: "22% increased Cast Speed" }
+    - { text: "Minions have 15% increased Attack Speed / Minions have 14% increased Cast Speed", how: crafted }
+needs:
+  - { item: "[[Screaming Essence of Fear]]", amount: "5–10", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  A handful of Essences and 4 [[Chaos Orb]]s. Screaming Essences are what
+  red maps give you in 3.30.
+odds: >-
+  The minion damage is certain. What varies is the company it keeps. By our
+  arithmetic at item level 72, when a result has three suffixes one of them
+  is "Minions have increased Attack and Cast Speed" about 3 times in 10;
+  with two suffixes, 2 in 10. The minion damage and Mana hybrid is about 1
+  in 8 of the other prefix rolls. "+1 to Level of all Minion Skill Gems" is
+  rarer than 1 in 150 and not worth waiting for.
+
+
+  Because the bench sells minion attack and cast speed, the real target is
+  modest: **one open suffix slot**, or the natural minion speed suffix. Most
+  results pass.
+steps:
+  - title: "The first Essence"
+    do: >-
+      Use one [[Screaming Essence of Fear]] on the white Convening Wand.
+    why: >-
+      On a wand, Fear guarantees "Minions deal #% increased Damage": 50–66%
+      at Screaming, 67–82% at Shrieking, 83–94% at Deafening. Rolled
+      naturally, 70% or more is 1 prefix roll in 200 on this base. The item
+      becomes Rare around it and can take another Essence.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "+112 to maximum Mana" }
+      suffixes:
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "Minions have 84% increased Critical Strike Chance" }
+        - { text: "34% increased Projectile Speed" }
+  - title: "Read it as a minion wand"
+    do: >-
+      Hold Alt and sort every line into three piles. **Minion:** anything
+      that begins "Minions". **Yours:** cast speed, Mana, Intelligence,
+      which help the character who summons. **Neither:** everything about
+      attacks and spell damage.
+    why: >-
+      A minion wand's pool is the ordinary wand pool with the minion
+      modifiers added, so most of what rolls is for somebody else. The
+      result above has three suffixes and none of them is minion speed:
+      accuracy, minion critical strike chance, which few minion builds
+      use, and Projectile Speed. With the suffix side full, the bench has
+      nowhere to go. It fails.
+    check: >-
+      Keep a result when a suffix slot is open **or** "Minions have
+      increased Attack and Cast Speed" has rolled. A second minion prefix
+      is a bonus.
+    fail: >-
+      Use another Essence on the same wand. The minion damage returns every
+      time.
+  - title: "Repeat until there is room"
+    do: >-
+      Use Essences until a result passes the check.
+    why: >-
+      Each attempt is independent. You are not waiting for anything rare,
+      only for a result that leaves the bench a slot.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+      suffixes:
+        - { text: "22% increased Cast Speed" }
+  - title: "Bench the minion speed"
+    do: >-
+      At the [[Crafting Bench]], craft **Minions have 14–15% increased
+      Attack Speed and 14–15% increased Cast Speed**, 4 [[Chaos Orb]]s. If
+      the natural minion speed suffix rolled, bench something for yourself
+      instead: +65–74 to maximum Mana in an open prefix, 4 Chaos Orbs.
+    why: >-
+      The bench's minion speed is the same group as the natural suffix, so
+      it is one or the other. It is weaker than a good roll (17–19% at Tier
+      3) and certain. The hybrid prefix that rolled here is a different
+      group from the Essence's minion damage and adds to it.
+    state:
+      implicits: ["Minions deal 22% increased Damage"]
+      prefixes:
+        - { text: "Minions deal 58% increased Damage", how: essence }
+        - { text: "Minions deal 33% increased Damage / +35 to maximum Mana" }
+      suffixes:
+        - { text: "22% increased Cast Speed" }
+        - { text: "Minions have 15% increased Attack Speed / Minions have 14% increased Cast Speed", how: crafted }
+variations: >-
+  **On an ordinary wand.** The same Essence and the same bench craft work
+  on any wand, and that is a fair stop-gap. It can never roll the hybrid
+  prefix, the natural speed suffix or the minion gem level, and its
+  implicit will be Spell Damage. Use the minion base as soon as you have
+  one.
+
+
+  **A Bound Fossil.** From Delve, "more Minion, Aura and Curse modifiers"
+  makes every minion modifier on this base ten times as likely. It is the
+  tool for a wand with several minion modifiers at once, where the Essence
+  guarantees exactly one.
+
+
+  **A utility suffix.** Many minion builds socket an offering or a curse in
+  the wand and bench "Trigger a Socketed Spell when you Use a Skill" (3
+  Chaos Orbs). It uses the bench slot, so the minion speed then has to roll
+  naturally.
+mistakes:
+  - "Keeping minion critical strike chance or multiplier because the line says \"Minions\". Unless the build's minions crit, they are filler."
+  - "Benching minion damage. It is the same group as the Essence's and the bench will refuse; the bench's place on this wand is a suffix."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The minion pool, the Essence of Fear tiers on wands, groups, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

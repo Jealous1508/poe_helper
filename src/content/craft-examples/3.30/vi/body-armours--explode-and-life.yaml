@@ -1,0 +1,297 @@
+category: body-armours
+title: "Hai influence trên một áo giáp: explode và increased maximum Life"
+level: 5
+summary: "Một prefix Crusader và một prefix Hunter được ghép bằng Awakener's Orb, rồi phía suffix được dựng lại dưới một lần khóa bằng một reforge Harvest chọn theo cách đếm tag."
+goal: >-
+  Một cái áo giáp có hai prefix influence mạnh nhất mà body armour giữ được:
+  enemy phát nổ khi bị giết (Crusader) và 9–12% increased maximum Life
+  (Hunter), kèm một suffix critical strike chỉ influence mới cho. Đây là con
+  đường còn lại của body armour: không Eldritch implicit, không Eldritch orb,
+  lớp bảo vệ nào cũng phải trả tiền. Bài học là cách một người thành thạo
+  tước bớt lựa chọn khỏi các công cụ ngẫu nhiên trước khi dùng chúng, và phép
+  tính bảo dừng ở đâu.
+base: "Astral Plate"
+itemLevel: 86
+baseWhy: >-
+  Cả hai tier cao nhất đều cần item level 85: explode 21–30% và life 9–12%.
+  86 thêm lựa chọn roll life tier cao nhất về sau. Astral Plate là base đúng
+  **chính vì** cái áo giáp này có influence: nó không bao giờ nhận được
+  Eldritch Ember, nên implicit của nó, +8–12% to all Elemental Resistances,
+  an toàn vĩnh viễn. Item hiến trong giai đoạn 1 có thể là bất kỳ body armour
+  nào.
+methods: [influence, currency, meta, harvest, bench]
+result:
+  note: "Crusader và Hunter"
+  implicits: ["+11% to all Elemental Resistances"]
+  prefixes:
+    - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+    - { text: "11% increased maximum Life", how: influence }
+    - { text: "+79 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+    - { text: "+43% to Lightning Resistance", how: harvest }
+needs:
+  - { item: "Một Astral Plate có influence Hunter, item level 85 trở lên", amount: "1" }
+  - { item: "Một body armour có influence Crusader, base nào cũng được, item level 85 trở lên", amount: "1", note: "item level 75 là đủ cho tier explode thấp hơn" }
+  - { item: "[[Orb of Alteration]]", amount: "nhiều trăm cái" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Blessed Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Ba thứ chiếm phần lớn. Alteration cho modifier explode, vào ngày may cũng
+  lên tới hàng trăm cái. [[Awakener's Orb]]. Và các lần khóa: 4
+  [[Divine Orb]] và 4 [[Blessed Orb]] cho mỗi lần thử ở phía suffix, vì áo
+  giáp có influence không có cách nào rẻ hơn để bảo vệ một phía.
+
+
+  Chúng tôi không đưa ra tổng. Hai khoản đầu là chi phí một lần nhưng có thể
+  kéo rất dài, còn khoản thứ ba tùy bạn đặt ngưỡng ở đâu.
+odds: >-
+  **Modifier explode.** Trên một cái plate Magic có influence Crusader ở item
+  level 86, theo phép tính của chúng tôi từ weight, một lần roll prefix ra
+  explode khoảng 1 trên 385 lần, và ra tier cao nhất của nó 1 trên 1,925 lần.
+  Một Alteration không phải lúc nào cũng roll ra prefix, nên con số thực còn
+  cao hơn.
+
+
+  **Life.** Trên một cái plate Magic có influence Hunter, một lần roll prefix
+  ra 9–12% increased maximum Life 1 trên 96 lần; tier nào cũng được thì 1
+  trên 48.
+
+
+  **Suffix.** Khi prefix đã khóa, một reforge Critical buộc phải cho một
+  trong đúng ba modifier. Nếu nó chọn theo weight, đúng như cách người ta vẫn
+  hiểu về reforge, thì nó ra bản attack 40% số lần, và tier cao nhất của bản
+  đó 20%. Chưa được đo trong 3.30.
+
+
+  **Những gì có thể hỏng** được liệt kê dưới từng bước. Bước không có cách
+  chữa là khi [[Awakener's Orb]] lấp đầy mọi ô quanh hai prefix.
+steps:
+  - title: "Kế hoạch: influence đóng lại những gì"
+    do: >-
+      Trước khi mua bất cứ thứ gì, hãy chấp nhận ba hệ quả. Một cái áo giáp
+      có influence **không nhận Eldritch implicit** và không nhận Eldritch
+      orb. Nó không thể **fracture**. Và cả hai modifier bạn đang build xoay
+      quanh đều là **prefix**, nên chỉ còn một ô prefix cho mọi thứ khác.
+    why: >-
+      Ba sự thật đó viết ra kế hoạch. Không fracture và không Eldritch orb
+      nghĩa là lớp bảo vệ duy nhất là khóa ở bench. Hai prefix đã có chủ
+      nghĩa là flat life sẽ là cái thứ ba, từ bench nếu không phải từ may
+      mắn. Và vì phía có giá trị là phía prefix, mọi việc roll lại diễn ra ở
+      suffix.
+  - title: "Giai đoạn 1: explode, một mình, trên item hiến"
+    do: >-
+      Lấy bất kỳ body armour nào có influence Crusader từ item level 85 trở
+      lên. Khi nó là item Magic, dùng [[Orb of Alteration]] tới khi prefix
+      của nó là "Enemies you Kill have a #% chance to Explode". Đó phải là
+      **modifier Crusader duy nhất** trên item.
+    why: >-
+      Item hiến bị phá hủy, nên base của nó không quan trọng: dòng chữ của
+      orb chỉ đòi "the same item class". Theo các trang tra cứu, Awakener's
+      Orb giữ một modifier influence từ mỗi item. Nếu mỗi item có đúng một
+      cái thì orb không còn gì để chọn. Toàn bộ mẹo là vậy: **tước bỏ lựa
+      chọn trước khi dùng công cụ ngẫu nhiên.**
+    check: >-
+      Đọc suffix. Một suffix Crusader bên cạnh explode cho orb hai ứng viên.
+      Dùng thêm Alteration tới khi explode đứng đó mà không có modifier
+      Crusader nào khác.
+    fail: >-
+      Không có sẵn base có influence: một [[Crusader's Exalted Orb]] cho một
+      cái áo giáp Rare influence đó và một modifier Crusader ngẫu nhiên.
+      Influence thuộc về item chứ không thuộc về modifier, nên theo kinh
+      nghiệm lâu năm của người chơi, một [[Orb of Scouring]] sau đó để lại
+      một base Crusader Normal để roll. Base có influence rơi ở đâu trong
+      3.30 thì chúng tôi chưa xác nhận được.
+  - title: "Giai đoạn 2: life, một mình, trên Astral Plate"
+    do: >-
+      Trên Astral Plate có influence Hunter, khi nó là item Magic, dùng
+      Alteration tới khi prefix là **9–12% increased maximum Life**. Một lần
+      nữa, đó phải là modifier Hunter duy nhất trên item.
+    why: >-
+      Item này sống sót, nên đây là chỗ base và item level quan trọng. Prefix
+      Hunter dễ hơn explode nhiều: ở tier cao nhất, mỗi lần roll dễ ra hơn
+      khoảng 20 lần.
+    check: >-
+      Alt cho thấy tier: bản 9–12% cần item level 85, bản 5–8% cần 68. Quyết
+      định ngay bây giờ bạn nhận cái nào; về sau không nâng cấp được.
+    state:
+      rarity: magic
+      note: "Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "11% increased maximum Life", how: influence }
+  - title: "Giai đoạn 3: Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên item hiến trước, rồi lên Astral Plate. Item
+      đầu tiên là cái bị phá hủy.
+    why: >-
+      Dòng chữ của orb: nó "destroys an item, applying its influence to
+      another of the same item class", và item thứ hai "is reforged as a rare
+      item with both influence types and new modifiers". Hai prefix influence
+      đi qua được; mọi thứ khác đều mới và ngẫu nhiên.
+    check: >-
+      Cả hai prefix có trên kết quả. Dòng chữ của orb không đặt rarity nào
+      cho cả hai item và dân craft từ lâu đã dùng nó trên item Magic. Chúng
+      tôi chưa thử lại được điều đó trong 3.30. Nếu nó từ chối thì lời giải
+      là một [[Regal Orb]] lên từng item trước, miễn là nó không thêm một
+      modifier thứ hai của influence đó.
+    state:
+      note: "Crusader và Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Regenerate 71 Life per second" }
+  - title: "Đọc kết quả: có ô suffix cho khóa không?"
+    do: >-
+      Đếm suffix. Khóa tự nó là một suffix, nên item cần **một ô suffix
+      trống**. Hai suffix, như ở đây, là trường hợp tốt.
+    why: >-
+      Mọi thứ từ đây đều nhằm bảo vệ hai prefix, và lớp bảo vệ duy nhất có
+      được thì chiếm một ô suffix.
+    fail: >-
+      **Ba suffix và một prefix trống:** công thức beast "Add a Prefix,
+      Remove a Random Suffix" ([[Farric Wolf Alpha]]) mở một ô suffix và chỉ
+      có thể gỡ từ phía suffix. Nó tiêu prefix thứ ba vào một modifier ngẫu
+      nhiên, khoảng 1 trên 4 trong số đó là life.
+
+
+      **Ba suffix và ba prefix:** chỉ một [[Orb of Annulment]] mới mở được
+      một ô, và nó gỡ ngẫu nhiên một trong sáu modifier: một suffix một nửa
+      số lần, một trong hai prefix influence một phần ba số lần. Đây là chỗ
+      duy nhất một [[Hinekora's Lock]] xứng với giá của nó, vì nó cho thấy
+      kết quả trước khi bạn quyết. Không có nó, phần lớn dân craft giữ cái áo
+      giáp như nó đang có và không bench gì cả.
+  - title: "Giai đoạn 4: khóa prefix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Prefix Modifiers cannot be changed**: 4
+      [[Divine Orb]] và 4 [[Blessed Orb]] trên body armour.
+    why: >-
+      Khóa đầy đủ đóng phía prefix lại: một lần reforge tôn trọng nó sẽ không
+      đổi prefix nào mà cũng không thêm cái nào, nên ô thứ ba vẫn trống cho
+      bench.
+
+
+      Có một ứng viên rẻ hơn, và người thành thạo sẽ cân nhắc nó. "2 Prefix
+      Modifiers cannot be changed" tốn 2 Divine Orb. Nhà phát triển đã nói
+      các khóa nhỏ hơn chọn modifier của chúng ngẫu nhiên và không có gì báo
+      cho bạn biết, điều vô hại trên item có đúng hai prefix. Cái chúng tôi
+      chưa xác nhận được là liệu khi đó một lần reforge có thể tự thêm một
+      prefix thứ ba hay không. Hãy thử trên một item rẻ trước khi giao cái
+      này cho nó. Khi item có ba prefix, chỉ khóa đầy đủ mới an toàn.
+    state:
+      note: "Crusader và Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+38 to Strength" }
+        - { text: "Regenerate 71 Life per second" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Giai đoạn 5: một reforge chọn theo cách đếm tag"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Lặp lại giai đoạn 4 và bước này tới
+      khi "Attacks have +#% to Critical Strike Chance" có trên item.
+    why: >-
+      Đếm xem reforge được chọn những gì. Không modifier tự nhiên nào trên
+      body armour mang tag critical. Khi prefix đã khóa, modifier được đảm
+      bảo phải là một suffix mang tag đó, và trên áo giáp Crusader và Hunter
+      có đúng ba cái: bản attack của Hunter, bản spell của Hunter, và Power
+      Charge on Critical Strike của Crusader. Một reforge nghe có vẻ mơ hồ,
+      trên item này, lại là một lần rút thăm ba ngả.
+
+
+      **Có nên block bản spell không?** "Cannot roll Caster Modifiers" (1
+      Divine Orb) loại nó khỏi lần rút thăm, và reforge Harvest đã tôn trọng
+      modifier đó từ 3.27. Nhưng nó cần "Can have up to 3 Crafted Modifiers"
+      (2 Divine Orb) để nằm cạnh khóa, và ba ô suffix trống. Hãy làm phép
+      tính cho tier cao nhất: không block, 1 trên 5 lần thử với giá 4 Divine
+      Orb và 4 Blessed Orb mỗi lần, khoảng 20 và 20. Có block, 1 trên 3 lần
+      thử với giá 7 và 4 mỗi lần, khoảng 21 và 12. Ở đây block gần như chẳng
+      mua được gì. Hãy làm phép tính đó mỗi lần trước khi trả tiền cho một
+      cái.
+    check: >-
+      Cả hai prefix không đổi, khóa đã biến mất, và suffix critical có mặt.
+      Rồi tới các suffix khác: một resistance là phần thưởng thêm.
+    fail: >-
+      Ra bản spell hoặc Power Charge: khóa và reforge lại. Đặt số lần thử
+      trước lần đầu tiên, và dừng ở con số đó. Việc reforge tôn trọng khóa là
+      do người chơi thử nghiệm, không phải do nhà phát triển tuyên bố; nếu
+      nghi ngờ sau một bản patch, hãy thử trên một item rẻ.
+    state:
+      note: "Crusader và Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+        - { text: "+43% to Lightning Resistance", how: harvest }
+  - title: "Giai đoạn 6: prefix thứ ba, từ bench"
+    do: >-
+      Craft **+71–85 to maximum Life** vào prefix trống, 4 [[Chaos Orb]]. Rồi
+      quality, socket và link, và một [[Divine Orb]] nếu hai prefix influence
+      roll thấp.
+    why: >-
+      Flat life và increased life là hai group khác nhau và nhân lẫn nhau.
+      Bản 5–8% increased maximum Life kèm Mana của bench thì **không** vừa:
+      nó chung group với prefix Hunter. Ô suffix thứ ba đang trống; khi mọi ô
+      prefix đã đầy, một [[Exalted Orb]] ở đó chỉ có thể thêm một suffix và
+      không gây rủi ro cho thứ gì đã có trên item.
+    state:
+      note: "Crusader và Hunter"
+      implicits: ["+11% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Enemies you Kill have a 17% chance to Explode, dealing a tenth of their maximum Life as Physical Damage", how: influence }
+        - { text: "11% increased maximum Life", how: influence }
+        - { text: "+79 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "Attacks have +1.3% to Critical Strike Chance", how: harvest }
+        - { text: "+43% to Lightning Resistance", how: harvest }
+variations: >-
+  **Elder thay cho Hunter.** Elder có cùng prefix life 9–12% và cùng suffix
+  critical cho attack. Số đếm tag ở giai đoạn 5 đổi theo: một cái áo giáp
+  Elder và Crusader hoàn toàn không có bản spell trong lần rút thăm.
+
+
+  **Áo giáp của caster.** Hunter và Shaper đều cho "+1.1–1.5% to Spell
+  Critical Strike Chance". Phương pháp vẫn vậy, với "Cannot roll Attack
+  Modifiers" là cái block cần tính giá.
+
+
+  **Một resistance thay cho suffix critical.** Một reforge Fire, Cold hoặc
+  Lightning dưới lớp khóa chỉ có thể rơi vào resistance đó, với giá 50
+  Lifeforce. Đó là cách rẻ để hoàn thiện một cái áo giáp cho build không
+  crit.
+
+
+  **Modifier Elevated.** Một [[Orb of Dominance]] gỡ một modifier influence
+  và nâng cấp một cái khác, và dùng được trên body armour. Trên áo giáp có
+  đúng hai cái, nó sẽ phá hủy một trong hai. Chỉ số của chúng không có trong
+  dữ liệu của chúng tôi, và chúng tôi không dạy một con đường mình không kiểm
+  tra được.
+mistakes:
+  - "Để một modifier thứ hai của cùng influence trên một trong hai item trước Awakener's Orb. Khi đó orb sẽ chọn, và có thể giữ sai cái."
+  - "Dùng Astral Plate làm item hiến. Item hiến bị phá hủy; item thứ hai bạn bấm vào mới là cái sống sót."
+  - "Với tay lấy một Essence hoặc một Chaos Orb thường sau Awakener's Orb. Cái nào cũng roll lại hai prefix mà cả lần craft này sinh ra vì chúng."
+  - "Bench prefix life kèm mana. Nó cùng group với increased maximum Life của Hunter."
+  - "Trả tiền cho một cái block mà không làm phép tính. Ở đây nó tốn thêm ba Divine Orb mỗi lần thử và tiết kiệm được ít hơn số nó tốn."
+  - "Tính để dành Eldritch implicit cho sau này. Áo giáp có influence không bao giờ nhận chúng."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier influence, item level, weight và tag của chúng, giá bench, cùng dòng chữ trong game của Awakener's Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ; các Exalted Orb của conqueror." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "Các khóa một và hai modifier chọn ngẫu nhiên và không có gì báo cho bạn biết." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Các reforge Harvest đảm bảo một loại modifier thì tôn trọng các modifier Cannot roll." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Rằng kết quả giữ một modifier influence từ mỗi item. Chúng tôi chưa thử lại trong 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge Critical và theo element cùng giá Lifeforce của chúng." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức thêm prefix dùng để mở một ô suffix." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

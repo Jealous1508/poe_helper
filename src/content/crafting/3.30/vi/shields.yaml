@@ -1,0 +1,617 @@
+name: "Shield"
+short: "Ba item khác nhau dưới một cái tên: block và life trên tower shield và buckler, spell damage trên spirit shield, modifier minion trên ba base đặc biệt. Eldritch implicit không áp dụng."
+icon: "Colossal Tower Shield"
+intro: >-
+  "Shield" gồm ba kiểu craft chẳng mấy điểm chung. Một **tower shield hoặc
+  buckler** là item phòng thủ: Chance to Block, life, resistance. Một
+  **spirit shield** là một nửa cây weapon của caster: nó roll increased Spell
+  Damage và spell critical strike, trên một pool không shield nào khác có
+  chung. Và ba **minion spirit shield** roll thêm các modifier của summoner
+  lên trên đó. Hãy đọc pool trước mọi thứ khác, vì ba kiểu này không trộn
+  lẫn.
+
+
+  Một luật trùm lên cả ba. Shield là một món armour **không nhận được
+  Eldritch implicit**: Ember và Ichor nêu tên body armour, boots, gloves và
+  helmet, và chỉ có vậy. Nên kiểu roll lại một phía giá rẻ của các loại trang
+  bị kia không tồn tại ở đây. Shield được craft như weapon: từng phía một, và
+  lớp bảo vệ nào cũng phải trả tiền.
+basics:
+  itemLevel:
+    text: >-
+      Một cái shield phòng thủ đòi item level thấp hơn áo giáp. Life của nó
+      dừng ở 145–159, cần item level 73, và flat defence tốt nhất của nó cần
+      69. Item level 77 thêm Chance to Block tốt thứ nhì và Chance to Block
+      Spell Damage tốt nhất. Vậy là đủ cho một cái shield chạy map hoàn
+      chỉnh.
+
+
+      Ba thứ đòi cao hơn. **Prefix caster:** Spell Damage và elemental damage
+      tốt nhất, 100–109%, cần item level 84. **Maximum resistance:** +3% cho
+      một element và +2% cho tất cả cần 81. **Tier cuối của block**, 76–81%
+      increased Chance to Block, cần 86, cũng như các tier cuối của defence
+      phần trăm, Suppression và Physical Damage Reduction.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Leveling.** Spell Damage 40–54% trên spirit shield, increased Chance to Block 52–57%, life 70–84 (từ 30)."
+      - ilvl: 46
+        unlocks: "Spell Damage 55–69%, tier phổ biến cuối cùng của nó. Life 100–114 (từ 44)."
+      - ilvl: 64
+        unlocks: "Life 130–144. Từ 60 hoặc 61: flat Armour hoặc Evasion 201–300, all Elemental Resistances 15–16%, block 64–69%. Spell Damage 85–99%, ở một phần mười weight của các tier phổ biến."
+      - ilvl: 73
+        unlocks: "Life 145–159 (\"Vigorous\"), mức cao nhất. Flat defence cao nhất đã mở từ 69 và resistance 42–45% từ 72. **Đủ cho một cái shield life và resistance.**"
+      - ilvl: 77
+        unlocks: "Increased Chance to Block 70–75%, Chance to Block Spell Damage 14–15% (mức cao nhất), Suppression 17–19%, Physical Damage Reduction 7%. Spell Critical Strike Chance 90–109% và attack speed 14–16% từ 76."
+      - ilvl: 81
+        unlocks: "+3% cho một maximum elemental resistance và +2% to all maximum Resistances. Chaos Resistance 31–35%."
+      - ilvl: 84
+        unlocks: "Spell, Fire, Cold, Lightning và Minion Damage 100–109%. Resistance 46–48%. 7–10% increased maximum Life của Hunter. **Đủ cho mọi shield caster.**"
+      - ilvl: 86
+        unlocks: "Increased Chance to Block 76–81%, defence phần trăm 101–110%, Suppression 20–22%, Physical Damage Reduction 8%. All Elemental Resistances 17–18% từ 85. **Mức trần.**"
+  bases:
+    text: >-
+      Có 97 shield chia trong bảy pool. Cái nào cũng có Chance to Block gốc
+      từ 22% tới 29%, một defence đi theo attribute của nó, và, trừ vài ngoại
+      lệ, một implicit đi theo nhóm của nó. Không base shield nào rơi muộn
+      hơn level 70, nên không có lớp base thượng hạng như ở body armour.
+
+
+      Pool nào cũng roll life, hai prefix block, resistance và các suffix
+      maximum resistance. Phần còn lại chia theo attribute. **Strength** thêm
+      Physical Damage Reduction và reduced Extra Damage from Critical
+      Strikes. **Dexterity** thêm Suppression, attack speed và Accuracy.
+      **Intelligence** thêm Mana, mana regeneration và Spell Critical Strike
+      Chance. Increased Spell Damage và các prefix "+1 to Level of all Spell
+      Skill Gems" cần một base **thuần** Intelligence.
+    types:
+      - title: "Tower shield (Armour)"
+        pools: [str]
+        text: >-
+          Hai mươi base. Trên mười sáu cái trong số đó, implicit là maximum
+          Life: +10–20, +20–30 hoặc +30–40 tùy base. Các prefix Armour, "+2
+          to Level of Socketed Melee Gems", và hai suffix thuộc về Strength.
+          Life là 20% số lần roll prefix và increased Chance to Block là 13%.
+          Đây là pool cho nhân vật block và muốn tổng life lớn.
+      - title: "Buckler (Evasion)"
+        pools: [dex]
+        text: >-
+          Mười chín base, mười sáu cái có implicit movement speed: 3%, 6%
+          hoặc 9%. Pool prefix y hệt tower shield, chỉ thay Armour bằng
+          Evasion. Suffix thì là của nhân vật attack: Suppression tới 20–22%,
+          attack speed tới 14–16%, Accuracy. Crusader Buckler là base cao
+          nhất có implicit 9%; Lacquered Buckler có Evasion nhiều nhất,
+          477–549.
+      - title: "Spirit shield (Energy Shield)"
+        pools: [int]
+        text: >-
+          Mười sáu base, phần lớn có implicit là increased Spell Damage
+          (5–10% hoặc 10–15%). Ba base Energy Shield cao không có implicit:
+          Brass, Thorium và Titanium.
+
+
+          Pool của chúng mang các modifier của weapon. Prefix: increased
+          Spell Damage, increased Fire, Cold hoặc Lightning Damage, và "+1 to
+          Level of all Fire (Cold, Lightning, Chaos, Physical) Spell Skill
+          Gems". Suffix: Spell Critical Strike Chance và mana regeneration.
+          Cast speed không có trong pool tự nhiên của bất kỳ shield nào; nó
+          đến từ bench. Increased Chance to Block ở đây có nửa weight thông
+          thường còn Chance to Block Spell Damage thì gấp đôi.
+      - title: "Minion spirit shield"
+        pools: [int-focus]
+        text: >-
+          Ba base: Bone, Ivory và Fossilised Spirit Shield, với implicit
+          "Minions deal 5–10% increased Damage". Chúng roll mọi thứ một
+          spirit shield roll, và thêm một bộ thứ hai không tồn tại trên
+          shield nào khác: "Minions deal increased Damage" (tới 100–109%),
+          "+1 to Level of all Minion Skill Gems" (item level 60), và các
+          suffix cho minion life (tới 37–40%), minion critical strike chance
+          và minion resistance.
+
+
+          Cái giá là một cuộc xổ số đông đúc và một base yếu: 49–55 Energy
+          Shield và 22% block trên cái tốt nhất trong số đó.
+      - title: "Shield hai defence"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Mỗi nhóm mười ba cái. **Round shield** (Armour và Evasion) có
+          implicit Block Recovery hoặc không có gì. **Kite shield** (Armour
+          và Energy Shield) có +4%, +8% hoặc +12% to all Elemental
+          Resistances, hoặc không có gì. **Spiked shield** (Evasion và Energy
+          Shield) có +3% hoặc +5% chance to Suppress Spell Damage.
+
+
+          Mỗi nhóm roll suffix của cả hai attribute của mình, vài cái trong
+          đó ở nửa weight. Một kite shield hoặc spiked shield có các suffix
+          caster, nhưng **không** có increased Spell Damage hay các prefix
+          spell gem. Caster nào muốn những thứ đó thì phải dùng spirit
+          shield.
+      - title: "Base Experimented (Heist)"
+        text: >-
+          Chín base, tower shield, buckler và spirit shield mỗi loại ba cái,
+          với một implicit kích hoạt khi block: "Scorch Enemies when you
+          Block their Damage", "Inflict Brittle" hoặc "Sap". Chúng roll pool
+          của nhóm mình và có khoảng một nửa defence của nhóm. Cái cao nhất
+          của mỗi loại có block cao nhất trong nhóm của nó: Heat-attuned
+          Tower Shield 29%, Cold-attuned Buckler 28%, Transfer-attuned Spirit
+          Shield 26%.
+    picks:
+      - base: "Pinnacle Tower Shield"
+        for: "Life và block, cái shield phòng thủ toàn diện"
+        why: >-
+          467–537 Armour, 25% block và +20–30 maximum Life trên implicit.
+          Colossal Tower Shield đổi lấy nhiều Armour hơn (522–601) với 23%
+          block và +10–20 Life; Ezomyte đổi lấy nhiều Life hơn (+30–40) với
+          24% block và 412–474 Armour.
+      - base: "Heat-attuned Tower Shield"
+        for: "Chance to Block cao nhất"
+        why: >-
+          29% block trên base, cao nhất trong dữ liệu. Increased Chance to
+          Block trên shield là local, nên cùng một prefix sẽ cộng nhiều hơn ở
+          đây so với bất cứ đâu: 75% increased block biến 29% thành khoảng
+          51%, và 25% thành khoảng 44%. Armour của nó chưa bằng một nửa của
+          Pinnacle, 220–253.
+      - base: "Titanium Spirit Shield"
+        for: "Energy Shield"
+        why: >-
+          Energy Shield nhiều nhất trong mọi shield, 67–77, với 25% block và
+          không có implicit. Dành cho nhân vật muốn phần defence và không tìm
+          spell damage trên shield.
+      - base: "Harmonic Spirit Shield"
+        for: "Caster dùng spell"
+        why: >-
+          10–15% increased Spell Damage nằm trên implicit, chỗ không lần roll
+          lại nào đụng tới được, với 58–66 Energy Shield và 23% block.
+          Implicit cộng dồn với một prefix Spell Damage: nó không phải một
+          trong sáu ô.
+      - base: "Fossilised Spirit Shield"
+        for: "Summoner"
+        why: >-
+          Cái tốt nhất trong ba base roll được modifier minion. Được chọn vì
+          pool, không phải vì con số.
+      - base: "Archon Kite Shield"
+        for: "Vá resistance"
+        why: >-
+          +12% to all Elemental Resistances trên implicit. Cùng với suffix
+          "+# to all Elemental Resistances", thứ có trên shield mà không có
+          trên body armour, một item có thể mang gần 30% cho mọi element chỉ
+          từ hai dòng, chưa tính suffix một element nào. Cái giá là block
+          thấp nhất trong các base hàng đầu, 22%.
+    impact: >-
+      **Pool**, hơn bất kỳ món armour nào khác. Spell Damage, modifier
+      minion, attack speed và Suppression, mỗi thứ có trên shield này mà
+      không có trên shield khác.
+
+
+      **Chance to Block gốc.** "Increased Chance to Block" là một modifier
+      local trong dữ liệu game: nó nhân vào block của chính cái shield, 22%
+      tới 29%. Quality không tăng block.
+
+
+      **Con số defence** mà các prefix flat defence và defence phần trăm tác
+      động lên, và là thứ một [[Sacred Orb]] roll lại trong khoảng của nó.
+
+
+      **Implicit**, thứ gần như là một modifier miễn phí trên phần lớn các
+      nhóm: life, movement speed, spell damage, resistance hoặc Suppression.
+      Không gì trong việc craft shield thông thường thay được nó, vì Eldritch
+      currency không dùng được ở đây. Một [[Blessed Orb]] roll lại chỉ số của
+      nó.
+
+
+      **Yêu cầu** thì nhẹ: không quá 159 của một attribute, hoặc 85 của hai
+      attribute.
+tools:
+  - method: currency
+    note: >-
+      Trên tower shield và buckler, cuộc xổ số phẳng như trên áo giáp: gần
+      như mọi tier đều có weight 1,000. Ở item level 86, một lần roll prefix
+      ra life 20% số lần và ra tier cao nhất của nó 1 trên 54 lần, theo phép
+      tính của chúng tôi.
+
+
+      Spirit shield thì khác, và chỗ khác đó là toàn bộ việc craft. Increased
+      Spell Damage chiếm một phần mười số lần roll prefix, nhưng ba tier cao
+      nhất của nó có weight 500, 150 và 40, so với 1,500 cho mỗi tier bên
+      dưới. Ở item level 86, Spell Damage từ 70% trở lên là 1 trên 122 lần
+      roll prefix, từ 85% trở lên là 1 trên 442, và tier cao nhất là 1 trên
+      2,099. Các bản elemental còn hiếm hơn: 100–109% increased Fire Damage
+      là khoảng 1 trên 7,000 lần roll. [[Orb of Alteration]] tìm một tier tầm
+      trung thì thoải mái, còn tier cao nhất thì gần như không bao giờ.
+  - method: bench
+    note: >-
+      Bench của shield rất rộng. **Prefix:** +56–70 maximum Life giá 4 Orb of
+      Alchemy, là bậc life tốt nhất mà shield có; **41–50% increased Chance
+      to Block** giá 3 Chaos Orb (31–40% giá 9 Orb of Alteration); 5–6%
+      Chance to Block Spell Damage giá 3 Regal Orb; 56–74% increased defence
+      hoặc +250–320 Armour hoặc Evasion giá 2 Chaos Orb; "+1 to Level of
+      Socketed Support Gems" giá 8 Chaos Orb. **Suffix:** một resistance,
+      29–35%, giá 3 Chaos Orb; **6–9% increased Cast Speed** giá 6 Orb of
+      Alteration; 7–12% attack speed giá 2 Chaos Orb; 21–25% chance to Avoid
+      Elemental Ailments giá 2 Chaos Orb; Suppression 8–10% hoặc 3% Physical
+      Damage Reduction giá 4 Chaos Orb; minion life 16–20% giá 2 Orb of
+      Alchemy; 4–5% chance to deal Double Damage giá 8 Chaos Orb.
+
+
+      Thứ nó **không** bán quyết định bạn roll cái gì: không có increased
+      Spell Damage, không có Spell Critical Strike Chance, không có maximum
+      resistance, không có "all Elemental Resistances", không có reduced
+      damage from Critical Strikes.
+  - method: finishing
+    note: >-
+      [[Armourer's Scrap]] lên 20% quality tăng defence của shield, không
+      tăng block. Một [[Sacred Orb]] roll lại defence gốc của base, một
+      [[Blessed Orb]] roll lại implicit: +30–40 Life trên Ezomyte Tower
+      Shield hoặc 10–15% Spell Damage trên Harmonic Spirit Shield đáng để bỏ
+      ra vài cái. Socket chỉ quan trọng nếu bạn dùng chúng: các prefix gem
+      level tác động lên gem gắn trong socket.
+  - method: essence
+    note: >-
+      **Loathing** là Essence thuộc về shield: increased Chance to Block, một
+      prefix. 58–63% ở bậc Screaming, 64–69% ở Shrieking, 70–75% ở Deafening,
+      tức khoảng của tier tự nhiên tốt thứ nhì. **Greed** cho life: 100–114,
+      115–129 và 130–144, cũng thiếu một tier so với lần roll tốt nhất.
+      **Dread, Doubt và Woe** cho flat Armour, Evasion (301–375 ở bậc
+      Deafening) và Energy Shield (75–85).
+
+
+      Hai Essence suffix vượt pool tự nhiên. **Scorn** cho Spell Critical
+      Strike Chance, 110–119% ở bậc Deafening trong khi tier tự nhiên tốt
+      nhất là 90–109%. **Misery** cho mana regeneration, 70–76% so với
+      60–69%. **Fear** đặt minion life, 28–30% ở bậc Deafening, lên bất kỳ
+      shield nào, kể cả những cái mà pool không roll được nó.
+
+
+      Cả bốn Essence corrupted đều xoay quanh block: +15% Chance to Block
+      Spell Damage while on Low Life (Delirium), Chill Enemies within 3
+      metres when you Block (Horror), added Fire Damage if you have Blocked
+      Recently (Hysteria), 25% chance for a Power Charge when you Block
+      (Insanity).
+  - method: beast
+    note: >-
+      **Imprint** ([[Craicic Croaker]]) hữu dụng nhất trên spirit shield: một
+      cái Magic có Spell Damage từ 85% trở lên đã ngốn hàng trăm Alteration,
+      và Imprint cho bạn thử lại [[Regal Orb]]. Các công thức thêm-và-gỡ
+      ([[Farric Wolf Alpha]], [[Farric Lynx Alpha]]) dành cho shield Rare mà
+      phía bị gỡ đang trống.
+  - method: harvest
+    note: >-
+      Không có Eldritch orb, nên một reforge Harvest chọn theo số tag, dùng
+      dưới một lần khóa, là cách chính để dựng lại một phía. Dưới đây là số
+      đếm, từ các tag trong dữ liệu.
+
+
+      **Trên spirit shield:** Critical (150 Primal) chỉ có thể là Spell
+      Critical Strike Chance. Pool không có modifier speed nào, nên reforge
+      Speed không có gì để cho ở đây. Caster (75 Primal) ra Spell Damage
+      khoảng một nửa số lần và Spell Critical Strike Chance hơn một phần ba.
+
+
+      **Trên tower shield:** Critical chỉ có thể là reduced Extra Damage from
+      Critical Strikes. Physical là Physical Damage Reduction hoặc prefix
+      reflect damage, nên nó chỉ chính xác khi prefix đã khóa. Chaos ra Chaos
+      Resistance 4 trên 5 lần và maximum Chaos Resistance 1 trên 5. Fire,
+      Cold hoặc Lightning ra resistance 63% số lần, Avoid Elemental Ailments
+      31%, và maximum resistance 6%. Life là maximum Life, hybrid Armour kèm
+      Life hoặc regeneration.
+
+
+      **Trên buckler:** Speed chỉ có thể là attack speed.
+  - method: fossil
+    note: >-
+      [[Aetheric Fossil]] ("more Caster") là Fossil của spirit shield. Ở item
+      level 84, nó khiến Spell Damage chiếm 49% số lần roll prefix, theo phép
+      tính của chúng tôi, và Spell Damage từ 70% trở lên thành 1 trên 24 lần
+      roll thay vì 1 trên 122; Spell Critical Strike Chance thành 42% số lần
+      roll suffix. Nó **không** nâng Fire, Cold hay Lightning Damage, vì
+      chúng không mang tag caster.
+
+
+      Một [[Pristine Fossil]] trên tower shield loại bỏ mọi prefix Armour:
+      life thành 88% số lần roll prefix và phần lớn những gì còn lại là
+      block. Cái giá của nó là life regeneration ở 62% số lần roll suffix.
+      Một [[Bound Fossil]] ("more Minion") trên minion spirit shield khiến
+      minion damage chiếm 57% số lần roll prefix, "+1 to Level of all Minion
+      Skill Gems" thành 1 trên 50 lần roll thay vì 1 trên 235, và bốn trên
+      năm lần roll suffix là một modifier minion.
+
+
+      Các modifier chỉ Fossil mới có của shield gồm một **prefix** 3–5%
+      Physical Damage Reduction, +1 to Level of Socketed Strength, Dexterity
+      hoặc Intelligence Gems, và "Socketed Spells have 20% reduced Mana
+      Cost". Các con số của chúng tôi không tính những cái này, nên hãy đọc
+      chúng là gần đúng.
+  - method: veiled
+    note: >-
+      Suffix unveil ra: 6–7% chance to deal Double Damage (bench bán 4–5%),
+      8–10% increased Effect of your Curses, hai attribute mỗi cái 31–35,
+      hoặc một element kèm Chaos Resistance mỗi cái 16–20%. Prefix unveil ra:
+      24–28% increased defence kèm +19–22 Life, và các cặp added elemental
+      damage. Không cái nào là lý do để làm một cái shield; chúng là modifier
+      thứ ba tốt.
+  - method: fracture
+    note: >-
+      Hãy fracture thứ hiếm theo weight. Trên spirit shield, đó là một tier
+      cao của Spell Damage. Trên shield phòng thủ, đó là một maximum
+      resistance: "+2% to all maximum Resistances" có weight 125 và là 1 trên
+      591 lần roll suffix ở item level 86; +3% cho một element là 1 trên 296.
+      Một cái shield fractured thì không thêm influence được, nên hãy chọn
+      giữa hai thứ trước khi bắt đầu.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" và "Suffix Modifiers cannot be
+      changed" tốn 4 Divine Orb và 4 Blessed Orb trên shield trong 3.30, cho
+      mỗi lần thử. Trên body armour có cách rẻ hơn để làm một phía; trên
+      shield thì không. Điều đó khiến một câu hỏi thành trọng tâm: phía bạn
+      muốn giữ có đáng vài lần khóa không? Essence được ghi nhận là phớt lờ
+      chúng.
+  - method: influence
+    note: >-
+      Shield có một điểm đặc biệt mà danh sách modifier cho thấy rõ: **năm
+      trong sáu influence có đúng một họ prefix.** Hunter: increased maximum
+      Life (7–10% ở item level 84). Shaper: +1 to maximum number of Summoned
+      Totems (70). Crusader: 1% increased Damage per 1% Chance to Block
+      Attack Damage (68). Warlord: increased Area of Effect (13–15% ở 80).
+      Redeemer: increased Elemental Damage with Attack Skills (36–40% ở 80).
+      Chỉ Elder có vài họ. Một Exalted Orb của conqueror thêm một modifier
+      thuộc influence của nó, nên trên shield mà ô trống duy nhất là một
+      prefix thì kết quả được biết trước.
+
+
+      Những suffix đáng một influence: Warlord, +7–8% Chance to Block Attack
+      Damage if you have Blocked Attack Damage Recently; Crusader, +10–12%
+      Chance to Block Spell Damage if you have Blocked Spell Damage Recently;
+      Shaper hoặc Hunter, "Socketed Gems have 30% increased Reservation
+      Efficiency" (80). [[Orb of Dominance]] không dùng được trên shield.
+  - method: corruption
+    note: >-
+      Shield có vài corruption implicit thuộc hàng tốt nhất game, và vì
+      shield không có Eldritch implicit nào để mất, ván cược này tốn ít hơn
+      so với trên áo giáp. Danh sách: +1% to maximum Chance to Block Attack
+      Damage; 20–30% increased Chance to Block; 4–5% Chance to Block Spell
+      Damage; +2% cho một maximum elemental resistance hoặc +1% cho tất cả;
+      +1 minimum cho một loại charge; hai keystone Glancing Blows và
+      Versatile Combatant; +2 to Level cho một loại gem gắn trong socket. Một
+      corruption implicit thay thế implicit của base, và item không còn craft
+      được nữa.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: câu trả lời khác nhau giữa tower shield và spirit shield."
+memoryStrands: >-
+  [[Memory Strands]] loại các tier thấp khỏi bất cứ thứ gì được roll ra, và
+  điều đó đáng giá bao nhiêu thì tùy bạn đang cầm cái shield nào.
+
+
+  **Trên spirit shield** thì nó đáng giá rất nhiều. Spell Damage thì phổ biến
+  còn các tier cao của nó thì hiếm theo weight, cùng một hình dạng với các
+  prefix physical của weapon, và spirit shield được roll theo cùng cách: một
+  [[Orb of Remembrance]] lên một base trắng item level 84, rồi
+  [[Orb of Alteration]], mỗi cái tiêu nhiều nhất 8 strand theo bảng
+  data-mine. Strand gọt bớt được tới đâu với một modifier tám tier có weight
+  không đều thì, theo chỗ chúng tôi biết, chưa ai công bố hay thử nghiệm, nên
+  hãy quan sát các tier bạn nhận được và tự đánh giá từ đó.
+
+
+  **Trên tower shield hoặc buckler**, cuộc xổ số phẳng và strand làm đúng
+  việc chúng làm trên áo giáp: mọi lần roll life hay resistance đều đến từ
+  các tier trên. Hữu ích, nhưng không có modifier hiếm nào để chúng cứu.
+  Chúng không bao giờ làm một maximum resistance dễ xuất hiện hơn.
+
+
+  **Thứ làm phí strand:** spam Essence of Loathing, tới 80 strand mỗi
+  Essence. Fossil và reforge Harvest, hai công cụ mà các kiểu craft shield
+  khó hơn dựa vào, hoàn toàn không dùng strand, theo thử nghiệm của người
+  chơi.
+reading:
+  intro: >-
+    Trước hết hãy xác định bạn đang nhìn cái nào trong ba item; shield của
+    caster và shield của nhân vật block được đánh giá theo những dòng khác
+    nhau. Với shield phòng thủ: **Chance to Block ở trên cùng, life, rồi có
+    mấy suffix là resistance và có cái nào là maximum resistance không.** Với
+    shield của caster: **tier của prefix Spell Damage**, rồi spell critical
+    strike chance, và còn suffix nào trống cho cast speed của bench không.
+  prefixes:
+    text: >-
+      **Shield phòng thủ.** Life, increased Chance to Block và Chance to
+      Block Spell Damage là ba group và có thể nằm cùng nhau; bộ ba đó là cái
+      shield block kinh điển. Ba prefix defence của áo giáp cũng có ở đây
+      (flat, phần trăm, phần trăm kèm Stun and Block Recovery), nên một cái
+      shield làm cho Armour hoặc Energy Shield sẽ lấp prefix bằng mấy cái đó
+      và bỏ block hoặc life để làm vậy. "Reflects Physical Damage" là prefix
+      chết, 7% số lần roll.
+
+
+      **Spirit shield.** Increased Spell Damage, increased Fire, Cold và
+      Lightning Damage cùng "Minions deal increased Damage" là **một group**.
+      Một cái shield giữ một trong số đó, không bao giờ hai, nên hãy quyết
+      định build của bạn scale cái nào. Các prefix "+1 to Level of all ...
+      Spell Skill Gems" là một group đơn thứ hai, chung với "+1 to Level of
+      Socketed Support Gems" của bench. Xung quanh hai group đó là life,
+      Energy Shield và Mana.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Có trên mọi pool. Dừng thấp hơn áo giáp hai tier, nên implicit của base tower shield là một phần đáng kể trong tổng."
+        aim: "T2, 130–144 (ilvl 64). T1 là 145–159 (ilvl 73)."
+      - mod: "#% increased Chance to Block"
+        why: "Local: nó nhân vào 22–29% của chính base. Prefix định hình một cái shield block, và là lý do con số block của base quan trọng."
+        aim: "T3, 64–69% (ilvl 61). T1 là 76–81% (ilvl 86)."
+      - mod: "#% Chance to Block Spell Damage"
+        why: "Một lượng spell block flat, khác group với prefix ở trên. Nửa weight trên shield Strength và Dexterity, đủ weight trên spirit shield và spiked shield."
+        aim: "T2, 12–13% (ilvl 66). T1 là 14–15% (ilvl 77)."
+      - mod: "#% increased Spell Damage"
+        why: "Chỉ có trên base thuần Intelligence. Modifier duy nhất của shield có độ hiếm kiểu weapon: phổ biến ở tier thấp, rất hiếm ở trên cùng. Cộng dồn với implicit Spell Damage."
+        aim: "T4, 55–69% (ilvl 46). T1 là 100–109% (ilvl 84)."
+      - mod: "#% increased Fire Damage"
+        why: "Đại diện cho ba element. Cùng group với Spell Damage và hiếm hơn ở mọi tier, nên một build hoặc muốn element của riêng nó ở đây, hoặc muốn Spell Damage."
+        aim: "T4, 55–69% (ilvl 46). T1 là 100–109% (ilvl 84)."
+      - mod: "+# to Level of all Fire Spell Skill Gems"
+        why: "Đại diện cho năm prefix, mỗi loại damage một cái. Mỗi cái khoảng 1 trên 340 lần roll prefix hoặc hiếm hơn, với một tier duy nhất mà item level nào cũng roll được."
+      - mod: "Minions deal #% increased Damage"
+        why: "Chỉ có trên minion spirit shield, và cùng group với Spell Damage. Các tier thấp của nó có weight 3,000 mỗi cái, nên phần lớn lần roll ra nó đều nhỏ."
+        aim: "T4, 55–69% (ilvl 46). T1 là 100–109% (ilvl 84)."
+      - mod: "+# to Armour"
+        why: "Đại diện cho mọi prefix flat defence. So với base thì trên shield nó đáng giá hơn trên áo giáp, vì base shield nhỏ."
+        aim: "T2, 201–300 (ilvl 60). T1 là 301–400 (ilvl 69)."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Không có trên spirit shield. +2 từ item level 63. Chỉ có ý nghĩa khi một skill melee gắn trong shield."
+  suffixes:
+    text: >-
+      Shield có pool suffix rộng nhất trong mọi món armour, và phần lớn
+      modifier làm một cái shield có giá nằm ở đây. Mỗi elemental resistance
+      là 11% số lần roll suffix trên tower shield và "all Elemental
+      Resistances" thêm 8% nữa, nên resistance tự đến mà không cần gọi. Bench
+      lo cái còn thiếu.
+
+
+      Thứ bench không cho được chính là danh sách ngắn cần tìm: một
+      **maximum resistance** (weight 250 cho một element, 125 cho tất cả),
+      reduced Extra Damage from Critical Strikes, Physical Damage Reduction
+      trên 3%, và ở phía caster là Spell Critical Strike Chance. Một cái
+      shield có một cái trong nhóm đầu và hai resistance là đã xong phía
+      suffix, và từ đó trở đi đáng được bảo vệ.
+    key:
+      - mod: "+#% to all Elemental Resistances"
+        why: "Một suffix làm được một phần ba công việc của ba cái. Có trên shield mà không có trên body armour."
+        aim: "T2, 15–16% (ilvl 60). T1 là 17–18% (ilvl 85)."
+      - mod: "+#% to Fire Resistance"
+        why: "Đại diện cho cả ba element. Phổ biến, bench được ở 29–35%, và được đảm bảo bởi một Essence."
+        aim: "T3, 36–41% (ilvl 60). T1 là 46–48% (ilvl 84)."
+      - mod: "+#% to all maximum Resistances"
+        why: "Suffix thông thường hiếm nhất trên shield. Một trong số ít modifier của loại item này tự nó đã đáng một lần fracture hoặc một lần khóa."
+        aim: "+1% (ilvl 75). +2% cần ilvl 81."
+      - mod: "+#% to maximum Fire Resistance"
+        why: "Đại diện cho Fire, Cold, Lightning và Chaos. Weight gấp đôi bản cho mọi resistance."
+        aim: "+2% (ilvl 75). +3% cần ilvl 81."
+      - mod: "You take #% reduced Extra Damage from Critical Strikes"
+        why: "Chỉ có trên shield yêu cầu Strength. Modifier duy nhất ở đó mang tag critical, và chính điều đó cho một reforge Harvest tìm ra nó."
+        aim: "T2, 41–50% (ilvl 67). T1 là 51–60% (ilvl 78)."
+      - mod: "#% additional Physical Damage Reduction"
+        why: "Chỉ có trên shield yêu cầu Strength. Bench bán 3%."
+        aim: "T2, 7% (ilvl 77). T1 là 8% (ilvl 86)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "Có trên mọi shield yêu cầu Intelligence. Bench không có. Một Deafening Essence of Scorn cho nhiều hơn tier tự nhiên tốt nhất."
+        aim: "T2, 80–89% (ilvl 59). T1 là 90–109% (ilvl 76)."
+      - mod: "#% increased Cast Speed"
+        why: "Không có trong pool tự nhiên của bất kỳ shield nào. Bench bán 6–9% giá 6 Orb of Alteration, nên trên shield của caster hãy chừa một suffix trống cho nó."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Có trên mọi shield yêu cầu Dexterity, và trên implicit của spiked shield."
+        aim: "T2, 17–19% (ilvl 77). T1 là 20–22% (ilvl 86)."
+      - mod: "#% increased Attack Speed"
+        why: "Có trên mọi shield yêu cầu Dexterity, ở nửa weight. Trên shield nó là global: nó tăng tốc cây weapon ở tay kia."
+        aim: "T2, 11–13% (ilvl 22). T1 là 14–16% (ilvl 76)."
+      - mod: "Minions have #% increased maximum Life"
+        why: "Minion spirit shield, là một trong năm suffix minion mà gộp lại chiếm một phần ba số lần roll suffix của pool đó."
+        aim: "T2, 33–36% (ilvl 74). T1 là 37–40% (ilvl 82)."
+approach:
+  principle: >-
+    **Gọi tên cái shield trước, rồi craft nó như weapon.** Block và life,
+    spell damage, hay minion: câu trả lời chọn ra pool, và pool chọn ra
+    modifier khó. Lấy cái đó bằng công cụ nhắm vào nó. Sau đó, mọi bước giữ
+    một phía trong khi đổi phía kia đều tốn một lần khóa, nên mỗi lần hãy hỏi
+    xem phía đã xong có xứng với nó không.
+  order:
+    - title: "Xác định đó là shield nào rồi lấy base từ đúng pool"
+      text: >-
+        Một caster dùng kite shield sẽ không bao giờ thấy Spell Damage; một
+        nhân vật block dùng spirit shield thì roll block ở nửa weight. Trong
+        pool, chọn theo block gốc của base cho shield block, theo Energy
+        Shield hoặc implicit cho các kiểu còn lại.
+    - title: "Tìm ra modifier khó"
+      text: >-
+        Với shield block, không gì hiếm ngoài các maximum resistance: cái khó
+        là ba prefix tốt cùng lúc. Với spirit shield, đó là tier của Spell
+        Damage. Với shield minion, là minion damage và gem level. Mọi thứ
+        khác trong kế hoạch được sắp xếp quanh cái đó.
+    - title: "Neo nó bằng công cụ nhắm vào nó"
+      text: >-
+        Block hoặc life: một Essence of Loathing hoặc Greed. Spell Damage:
+        Alteration cho một tier tầm trung, một Aetheric Fossil cho vài
+        modifier caster cùng lúc. Minion: một Bound Fossil. Một maximum
+        resistance: không gì nhắm vào nó tốt cả, và đó là lý do một cái
+        shield đã có sẵn nó là một điểm xuất phát đáng mua.
+    - title: "Đánh giá xem item có xứng một lần khóa không"
+      text: >-
+        Một phía đã xong còn phía kia thì tệ là chỗ shield khác với áo giáp.
+        Khóa là 4 Divine Orb và 4 Blessed Orb mỗi lần thử. Nếu phía tốt có
+        thể roll lại với giá thấp hơn thì làm vậy, hoặc bench những gì bench
+        được rồi dừng.
+    - title: "Dựng lại phía kia theo tag"
+      text: >-
+        Dưới lớp khóa, dùng reforge Harvest có tag khớp với ít modifier nhất
+        ở phía đang mở. Dừng khi có hai modifier bạn muốn và một ô trống.
+    - title: "Dùng ô cuối cho thứ chắc chắn"
+      text: >-
+        Bench, luôn luôn. Hoặc, trên shield không có influence, một Exalted
+        Orb của conqueror vào prefix trống cuối cùng: với một họ prefix cho
+        mỗi influence, đó là orb duy nhất trong game hoạt động như một craft
+        bench.
+  finishing: >-
+    Quality lên 20%, rồi ba kiểu roll lại chỉ số ở chỗ chúng đáng tiền: một
+    [[Blessed Orb]] cho implicit có khoảng, một [[Sacred Orb]] cho defence
+    gốc thấp, một [[Divine Orb]] cho các con số explicit.
+
+
+    Rồi hãy cân nhắc corruption nghiêm túc hơn so với các món armour khác.
+    Shield không có Eldritch implicit nào để mất, và danh sách corruption của
+    nó có +1% maximum block, 20–30% increased Chance to Block và +2% cho một
+    maximum resistance. Nó vẫn là dấu chấm hết cho việc craft trên item đó,
+    và xác suất của từng kết quả không được công bố.
+  stopping: >-
+    Một cái tower shield có block, life từ 100 trở lên và hai resistance gánh
+    được nhân vật qua các map; một Essence và bench là làm ra nó. Một cái
+    spirit shield có Spell Damage từ 55% trở lên, một suffix spell critical
+    strike và cast speed của bench làm điều tương tự cho caster.
+
+
+    Những bậc dốc là prefix tốt thứ ba, Spell Damage trên 85%, và bất kỳ
+    maximum resistance nào. Mỗi cái là chỗ một lần khóa hoặc một lần fracture
+    bước vào kế hoạch. Nếu một lần khóa tốn nhiều hơn số tiền bán được cái
+    shield thì cái shield đã xong: bench ô trống rồi dùng nó.
+special:
+  - mod: "+# to maximum number of Summoned Totems"
+    source: "Influence Shaper"
+    where: "+1, prefix Shaper duy nhất một cái shield có thể có, từ item level 70. Một [[Shaper's Exalted Orb]] dùng lên shield Rare mà ô trống duy nhất là một prefix thì không còn chỗ nào khác để đặt modifier của nó."
+  - mod: "#% increased maximum Life"
+    source: "Influence Hunter hoặc Elder"
+    where: "7–10% từ item level 84, 3–6% từ 68. Nó là prefix Hunter duy nhất trên shield, và là một trong bốn prefix Elder."
+  - mod: "+#% Chance to Block Attack Damage if you have Blocked Attack Damage Recently"
+    source: "Influence Warlord"
+    where: "Một suffix Warlord, +7–8% từ item level 75. Bản cho spell, +10–12% Chance to Block Spell Damage if you have Blocked Spell Damage Recently, là một suffix Crusader."
+  - mod: "Socketed Gems have #% increased Reservation Efficiency"
+    source: "Influence Shaper hoặc Hunter"
+    where: "Một suffix: 30% từ item level 80, 20% từ 68."
+  - mod: "#% increased Spell Critical Strike Chance"
+    source: "Essence"
+    where: "Modifier này có trong pool tự nhiên tới 90–109%. Một [[Deafening Essence of Scorn]] cho 110–119%, mức không lần roll nào chạm tới."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% từ [[Crafting Bench]] giá 8 Chaos Orb, 6–7% dưới dạng suffix unveil ra. Không có trong pool tự nhiên."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 giá 8 Chaos Orb, +2 giá 4 Exalted Orb. Một prefix, cùng group với các prefix spell gem và melee gem."
+  - mod: "+#% to maximum Chance to Block Attack Damage"
+    source: "Corruption"
+    where: "+1%, một corruption implicit từ [[Vaal Orb]]. Cùng danh sách đó có 20–30% increased Chance to Block, 4–5% Chance to Block Spell Damage và hai keystone Glancing Blows và Versatile Combatant."
+  - mod: "#% additional Physical Damage Reduction"
+    source: "Fossil"
+    where: "Dưới dạng **prefix**, 3–5%, chỉ từ một lần roll lại bằng Fossil. Nó chung group với suffix tự nhiên cùng tên, nên một cái shield chỉ giữ được một trong hai."
+  - mod: "+15% Chance to Block Spell Damage while on Low Life"
+    source: "Essence corrupted"
+    where: "Một [[Essence of Delirium]], thứ chỉ có được bằng cách corrupt một monster Essence bằng [[Remnant of Corruption]]."
+  - mod: "Scorch Enemies when you Block their Damage"
+    source: "Implicit của base"
+    where: "Implicit của ba tower shield Experimented. Buckler cùng nguồn gốc thì gây Brittle còn spirit shield gây Sap. Không craft ra được: bạn chọn nó cùng với base."
+mistakes:
+  - "**Lên kế hoạch dùng Eldritch implicit hoặc Eldritch Chaos Orb cho shield.** Chính dòng chữ trên currency giới hạn nó ở body armour, boots, gloves và helmet."
+  - "**Craft shield caster trên kite shield hoặc spiked shield.** Chúng roll spell critical strike, không bao giờ roll Spell Damage hay các prefix spell gem."
+  - "**Mong có Spell Damage và Fire Damage cùng lúc.** Cùng một group. Minion damage trên minion spirit shield cũng vậy."
+  - "**Bỏ qua block của base.** Increased Chance to Block là local; cùng một prefix trên base 29% đáng giá hơn một phần sáu so với trên base 25%."
+  - "**Bench increased Chance to Block lên shield đã roll ra nó.** Cùng group. Spell block của bench mới là cái nằm vừa cạnh nó."
+  - "**Dùng Exalted Orb của conqueror khi còn một ô suffix trống.** Họ prefix duy nhất chỉ ép được kết quả khi một prefix là chỗ duy nhất còn lại."
+  - "**Khóa một phía mà một Essence dựng lại được.** Bốn Divine Orb và bốn Blessed Orb mỗi lần thử còn nhiều hơn chi phí roll lại của phần lớn phía prefix block và life."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, tag, Essence, implicit và giá bench được dẫn ở đây, chỉ số block local, cùng dòng chữ trong game của Eldritch currency và currency influence. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên shield." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge theo loại modifier và giá Lifeforce của chúng." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và các công thức thêm-và-gỡ." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Cách các modifier bảo vệ hoạt động, theo thử nghiệm của người chơi. Một phần cũ hơn 3.30." }

@@ -1,0 +1,513 @@
+name: "Boots"
+short: "Movement speed first, on every pair. After that boots are the cleanest place in the game to stack resistances, and two Atlas bases start with some."
+icon: "Two-Toned Boots"
+intro: >-
+  Boots have one modifier that no build skips: increased Movement Speed. It
+  is a prefix, it is common, and its best tier needs item level 86, as high
+  as any ordinary modifier in the game goes. A pair of boots without it is not
+  finished, whatever else it has.
+
+
+  Once movement speed is in place, boots are a defensive item with an
+  unusually tidy suffix pool. There is no damage in it and little clutter,
+  so resistances come easily. That makes this the friendliest armour slot to
+  craft, and the one where a new player's first real craft usually happens.
+basics:
+  itemLevel:
+    text: >-
+      Movement speed sets the item levels that matter. 30% needs item level
+      55. The last tier, 35%, needs **86**, which only the highest areas in
+      the game drop. Nothing else on boots asks for more than 85.
+
+
+      Maximum Life tops out early: 115–129 at item level 54. Resistances and
+      the percentage defence prefix reach their last tier at 84, spell
+      suppression at 85.
+
+
+      **Item level 55 is enough for a good pair**, because it opens 30%
+      movement speed and the best life together. Use 72 or more when the
+      resistances matter, and pay for 86 only when you want the last five
+      points of speed.
+    breakpoints:
+      - ilvl: 15
+        unlocks: "**Levelling.** 15% movement speed."
+      - ilvl: 30
+        unlocks: "20% movement speed, \"Stallion's\"."
+      - ilvl: 40
+        unlocks: "25% movement speed, \"Gazelle's\"."
+      - ilvl: 55
+        unlocks: "30% movement speed, \"Cheetah's\", with Tier 1 maximum Life (115–129) open since 54. **Enough for most boots.**"
+      - ilvl: 72
+        unlocks: "Tier 2 resistances (42–45%) and Tier 2 percentage defence (80–91%)."
+      - ilvl: 75
+        unlocks: "The influence modifiers Tailwind and Elusive, and the top tier of most other influence modifiers."
+      - ilvl: 84
+        unlocks: "Tier 1 resistances (46–48%) and Tier 1 percentage defence (92–100%)."
+      - ilvl: 86
+        unlocks: "35% movement speed, \"Hellion's\". Tier 1 spell suppression (13–14%) is open from 85. **The ceiling.**"
+  bases:
+    text: >-
+      There are 81 boots in eight pools: the usual six by defence, the Ward
+      bases, and one base that has a pool to itself. Movement speed, life and
+      resistances roll on all of them. The pool decides the defence prefixes,
+      whether mana competes for prefix slots, and which attribute suffixes
+      and spell suppression can appear.
+    types:
+      - title: "One defence: Armour, Evasion or Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          **Armour** boots roll Strength and increased Life Regeneration
+          rate. **Evasion** boots roll Dexterity and chance to Suppress Spell
+          Damage at full weight. **Energy Shield** boots roll Intelligence,
+          Recharge Rate, and maximum Mana as a prefix. Unlike on gloves, each
+          attribute rolls only on boots with its own defence.
+
+
+          The mana prefix matters more than it looks. On Armour or Evasion
+          boots movement speed is about one prefix roll in six. On any base
+          with Energy Shield, mana takes about a quarter of the prefix pool
+          and movement speed drops to one roll in eight.
+      - title: "Two defences"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Hybrid boots roll the hybrid defence prefixes and both parents'
+          attribute suffixes at half weight. Spell suppression rolls on
+          anything with Evasion, at 500 a tier against 1,000 on pure Evasion
+          boots. The Armour-and-Evasion pool has the smallest prefix pool of
+          the ordinary boots, and so the best odds on movement speed.
+      - title: "Avian Slippers"
+        pools: [avian-slippers]
+        text: >-
+          One base, alone in its pool. The data gives it no defence, no
+          attribute requirement, a level of 1 and the implicit "10% increased
+          Movement Speed". With no defence type it can roll no defence
+          prefix and no attribute suffix, which leaves three prefix families
+          in all: maximum Life, movement speed and Item Rarity. Half of its
+          prefix rolls are life and over a third are movement speed. The
+          data does not say where it drops, and we could not confirm its
+          source in 3.30.
+      - title: "Runic boots (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Greaves, Runic Sollerets and Runic Sabatons, the Expedition
+          bases, with Ward for a defence. They roll Ward prefixes and
+          "faster Restoration of Ward", and no attribute or suppression
+          suffix.
+      - title: "Two-Toned Boots"
+        text: >-
+          The Atlas base, in three versions, one in each hybrid pool. The
+          implicit is +16–20% to two elemental resistances since 3.30:
+          Fire and Cold on Armour and Evasion, Fire and Lightning on Armour
+          and Energy Shield, Cold and Lightning on Evasion and Energy
+          Shield. That is most of a suffix, placed where it takes no slot.
+      - title: "Fugitive Boots"
+        text: >-
+          The second Atlas base, in the Evasion-and-Energy-Shield pool, with
+          +17–23% to Chaos Resistance. Like the Two-Toned Boots it has lower
+          defences than ordinary boots of its level and only drops when an
+          item rolls a high enough Item Tier.
+      - title: "Ritual boots"
+        text: >-
+          Three families in three sizes with two-sided implicits. Basemetal,
+          Darksteel and Brimstone Treads: more Stun and Block Recovery, a
+          lower stun threshold. Cloudwhisper, Windbreak and Stormrider
+          Boots: added Lightning Damage to attacks per 200 Accuracy, with
+          25% less Accuracy. Duskwalk, Nightwind and Dreamquest Slippers:
+          45–50% increased Cooldown Recovery Rate of Movement Skills, with
+          10% reduced Movement Speed.
+    picks:
+      - base: "Two-Toned Boots"
+        for: "Resistances on the implicit"
+        why: >-
+          +16–20% to two resistances before any modifier. Take the version
+          whose pool you want; the Armour-and-Evasion one also has the best
+          odds on movement speed.
+      - base: "Fugitive Boots"
+        for: "Chaos Resistance"
+        why: >-
+          +17–23% Chaos Resistance on the implicit, the resistance that is
+          hardest to roll: a tier of it weighs a quarter of a tier of the
+          others.
+      - base: "Velour Boots"
+        for: "Evasion, suppression and two Eldritch implicits"
+        why: >-
+          359–413 Evasion Rating, the top of the pool, with spell
+          suppression at full weight and no implicit to lose to an Ember.
+      - base: "Leviathan Greaves"
+        for: "The most Armour"
+        why: >-
+          359–413 Armour at level 84 and 177 Strength, no mana prefix, and
+          movement speed at about one prefix roll in six.
+      - base: "Warlock Boots"
+        for: "The most Energy Shield"
+        why: >-
+          72–83 Energy Shield at level 84 and 177 Intelligence. Expect mana
+          prefixes; plan movement speed from an Essence.
+      - base: "Slink Boots"
+        for: "Evasion without the Dexterity"
+        why: >-
+          246–283 Evasion Rating for 120 Dexterity at level 69, in the same
+          pool as Velour Boots. The base to craft on while levelling into
+          maps.
+    impact: >-
+      **The implicit, and whether you keep it.** Two-Toned and Fugitive
+      Boots carry resistances that take no slot. An ordinary base carries
+      nothing and leaves room for two Eldritch implicits. The two do not
+      combine: the text of every Ember and Ichor says it "replaces any
+      existing implicit modifiers" other than the opposite Eldritch one. Pick
+      the base and the plan together.
+
+
+      **The pool.** Whether mana dilutes your movement speed rolls, and
+      whether spell suppression can roll at all.
+
+
+      **The defence numbers**, multiplied by the local prefixes and
+      quality.
+
+
+      **The requirement.** 177 of one attribute for the top bases, 62 of
+      each of two for Two-Toned Boots.
+tools:
+  - method: currency
+    note: >-
+      This is the slot where plain currency works. On Armour or Evasion
+      boots, by our arithmetic from the weights, about one prefix roll in six
+      is movement speed at some tier. At item level 86 one in 20 is 30%
+      or 35%, and one in 40 is 35% itself. Life is as common: one prefix
+      roll in 20 is 100 or more.
+
+
+      So [[Orb of Alteration]]s find movement speed quickly, and a
+      [[Regal Orb]] and the bench finish the job. Every tier weighs the
+      same, so a low item level does not make the top reachable tier any
+      rarer; it only caps it.
+  - method: bench
+    note: >-
+      The bench sells movement speed in three ranks: 10–14% for 3 Orbs of
+      Augmentation, 15–19% for 2 Chaos Orbs, 20–24% for 4 Chaos Orbs. Three
+      hybrids at 18–20% for 4 Chaos Orbs add a second line: 100% chance to
+      Avoid being Chilled, a chance of Onslaught on kill, or more speed
+      while you have not been hit recently.
+
+
+      **Every one of them shares a group with rolled movement speed.** The
+      bench is for boots that have none, never for adding to boots that
+      do.
+
+
+      Also here and nowhere in the natural pool: "100% chance to Avoid being
+      Frozen" as a prefix for 4 Exalted Orbs (80% for 4 Chaos Orbs), and
+      21–25% chance to Avoid Elemental Ailments as a suffix for 2 Chaos
+      Orbs. Life and resistances cost the same as on all armour: 56–70 life
+      for 4 Orbs of Alchemy, 29–35% of one resistance for 3 Chaos Orbs.
+  - method: finishing
+    note: >-
+      20% quality with [[Armourer's Scrap]]s and up to four sockets.
+      Resistances on boots are often right in total and wrong in element; a
+      Harvest swap costs 300 Lifeforce of two colours in 3.30. A
+      [[Blessed Orb]] rerolls a Two-Toned or Fugitive implicit inside its
+      range.
+  - method: essence
+    note: >-
+      **Zeal** guarantees movement speed on boots: 25% at Screaming, 30% at
+      Shrieking, 32% at Deafening. Note what that means against natural
+      tiers. Deafening beats the 30% that item levels 55 to 85 can roll, and
+      loses to the 35% of item level 86.
+
+
+      **Loathing** gives chance to Avoid Elemental Ailments, 21–25% up to
+      31–35%. **Anguish**, **Suffering** and **Torment** give 47–60% chance
+      to avoid Ignite, Freeze or Shock. **Scorn** gives chance to Avoid
+      being Stunned. **Envy** guarantees Chaos Resistance. None of the first
+      five is in the natural pool. **Greed** stops at 91–105 life, which
+      natural Tier 2 beats.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is worth making of a Magic pair
+      with 35% movement speed before the [[Regal Orb]]. On boots the
+      add-and-remove recipes are friendlier than on most items: with movement
+      speed and life in place and no suffixes yet, "add a prefix, remove a
+      random suffix" ([[Farric Wolf Alpha]]) has nothing to remove and
+      adds a defence prefix about five times in six, by our arithmetic.
+  - method: harvest
+    note: >-
+      Boots have no damage modifiers, so the elemental tags are clean. A
+      reforge "including a Fire modifier" (50 Wild Lifeforce) guarantees Fire
+      Resistance, the only fire-tagged modifier in the pool; Cold and
+      Lightning likewise; **Chaos** (100 Vivid) guarantees Chaos
+      Resistance.
+
+
+      **Speed** (150 Vivid) guarantees movement speed, the only speed
+      modifier, but at a random tier. Alterations let you stop at the tier
+      you want and an Essence fixes it, so the Speed reforge is the third
+      choice, for a pair whose suffixes are locked.
+  - method: fossil
+    note: >-
+      A [[Shuddering Fossil]] multiplies speed modifiers by ten and removes
+      mana ones: on Evasion boots movement speed becomes two prefix rolls in
+      three. With a [[Pristine Fossil]] beside it, life and movement speed
+      are 99% of the prefix pool between them, by our arithmetic. Neither
+      Fossil improves the tier.
+
+
+      Fossil-only on boots: "+2 to Level of Socketed" Fire, Cold, Lightning
+      or Chaos gems as a prefix; "+1 to Level of all Raise Spectre Gems";
+      4–6% movement speed if you have hit an enemy recently; and a +4.5–6%
+      spell suppression suffix that the data files in a different group
+      from the natural one, so both can sit on one pair.
+  - method: eldritch
+    note: >-
+      The Searing Exarch gives boots increased Movement Speed (5% at Lesser,
+      8% at Exceptional), which adds to the prefix; increased Action Speed
+      (4–5%); one elemental resistance (13–14% up to 19–20%); chance to
+      avoid Freeze, Ignite, Shock or Stun. The Eater of Worlds gives chance
+      to Avoid Elemental Ailments (15–17% up to 24–26%), Cooldown Recovery
+      Rate (5% up to 8%), Physical Damage gained as an extra element.
+
+
+      By our arithmetic a Lesser Ember gives movement speed about 1 time in
+      15. And with the Eater implicit the stronger of the two, Eldritch
+      Chaos Orbs reroll only suffixes, which is exactly what boots with
+      finished prefixes need.
+  - method: veiled
+    note: >-
+      The unveiled movement speed prefixes are 25–30% with the same second
+      lines as the bench hybrids, the Onslaught one at 13–16% chance. They
+      are in the movement speed group, so they replace a rolled tier and do
+      not stack with it. On the suffix side: a resistance paired with Chaos
+      Resistance at 16–20% each.
+  - method: influence
+    note: >-
+      Boots hold the two best-known influence modifiers in the game. Hunter:
+      "You have Tailwind if you have dealt a Critical Strike Recently", a
+      suffix with a weight of 100. Redeemer: 5–10% chance to gain Elusive on
+      Critical Strike, a prefix with a weight of 250. Both need item level
+      75. Also: Warlord "+1 to Maximum Endurance Charges" (weight 125),
+      Shaper 31–35% chance to Avoid Elemental Ailments, Shaper and Crusader
+      Cooldown Recovery Rate, and "+2 to Level of Socketed" gems of one
+      element per conqueror.
+
+
+      An influenced pair keeps an Atlas implicit and cannot have Eldritch
+      ones.
+  - method: meta
+    note: >-
+      A prefix or suffix lock costs 4 Divine Orbs and 4 [[Blessed Orb]]s on
+      boots. Without influence, the stronger Eldritch implicit does the
+      same job for an ordinary reroll. Use the lock for an influenced pair,
+      or when the reroll must be a Harvest reforge with a guaranteed
+      resistance.
+  - method: corruption
+    note: >-
+      Corruption implicits on boots include 8–10% increased Movement Speed,
+      "+1 to Maximum Endurance Charges", +6–9% spell suppression, the four
+      "Unaffected by" ground effects and Unwavering Stance, which is not
+      always a gift.
+  - method: strands
+    note: "Good on an Alteration craft for movement speed and life. See the section below."
+memoryStrands: >-
+  Movement speed has six ordinary tiers of equal weight, and at any item
+  level the lowest ones are as likely as the best you can reach.
+  [[Memory Strands]] remove low tiers from the roll, so on a strand base an
+  Alteration that lands on movement speed lands higher more often. The same
+  goes for life and resistances. The sizes players have measured are for a
+  13-tier modifier; how far the effect carries to a six-tier one is not
+  published.
+
+
+  The boots craft that suits strands is the plain one: [[Orb of Alteration]]s
+  at up to 8 strands each, a [[Regal Orb]] at up to 16. Strands cannot lift a
+  roll past the item level, so a strand base below 86 still stops at 30%.
+
+
+  They are wasted under an Essence of Zeal, whose modifier is a fixed size
+  and which can spend 80 strands a use, and under Fossils and Harvest, which
+  ignore them by player testing. Whether an item with strands accepts
+  Eldritch implicits we could not confirm.
+reading:
+  intro: >-
+    One question comes before all others: **does it have movement speed, and
+    how much?** Then life. Then count resistances and look at the implicit.
+    Boots with 30% movement speed, life of 85 or more and two resistances
+    are a finished item for most characters, and nothing about them is
+    rare.
+  prefixes:
+    text: >-
+      Movement speed takes one prefix on every pair. All of its versions,
+      rolled, crafted, from an Essence or unveiled, are one group, so it is
+      one modifier and one slot, and the question is only which version.
+
+
+      Life takes the second. For the third, a life build takes a defence
+      prefix or the bench hybrid of percentage defence with a little life,
+      and an Energy Shield build drops life and takes two defence prefixes.
+
+
+      What gets in the way depends on the base. On Armour and Evasion boots
+      almost every prefix is useful: only Item Rarity, one roll in twenty,
+      is wasted. On boots with Energy Shield, maximum Mana is a quarter of
+      the pool.
+    key:
+      - mod: "#% increased Movement Speed"
+        why: "The modifier the slot exists for. Six tiers at equal weight; the item level sets the highest one you can roll."
+        aim: "30% (ilvl 55). 35% needs ilvl 86; Deafening Zeal gives 32% at any level."
+      - mod: "+# to maximum Life"
+        why: "As common as movement speed and all nine tiers are open by item level 54."
+        aim: "T2, 100–114 (ilvl 44). T1 is 115–129 (ilvl 54)."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local, multiplies the base. The usual third prefix on a top-defence base."
+        aim: "T3, 68–79% (ilvl 60). T1 is 92–100% (ilvl 84)."
+      - mod: "+# to Armour, Evasion Rating or maximum Energy Shield"
+        why: "Raises what the percentage multiplies. Fine as a third prefix, never worth a reroll."
+      - mod: "#% increased Movement Speed / 100% chance to Avoid being Chilled"
+        why: "One of three hybrids from the bench or a veiled modifier. In the movement speed group: it is an alternative to the rolled prefix, not an addition."
+        aim: "18–20% at the bench; 25–30% unveiled."
+      - mod: "+# to maximum Mana"
+        why: "Only on boots with Energy Shield, where it is the most common prefix and the reason movement speed is harder to roll there."
+  suffixes:
+    text: >-
+      The suffix pool of boots is the cleanest on any armour piece. On
+      Armour or Evasion boots the three elemental resistances are over 40%
+      of all suffix rolls. There is no damage, no accuracy, no leech.
+
+
+      The filler is short: Stun and Block Recovery and Life Regeneration,
+      about a quarter of the pool together, plus a little Item Rarity and
+      reduced Attribute Requirements. Attributes roll only for the pool's
+      own defence.
+
+
+      So the suffix side is decided by need. Which resistances is your
+      character short of? Does the build cap spell suppression, in which
+      case the boots must have Evasion? Is there an ailment you want gone,
+      which the bench or an Essence handles?
+    key:
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "Each is about one suffix roll in seven on boots without Energy Shield. Two on one pair is ordinary; three is a matter of persistence."
+        aim: "T3, 36–41% (ilvl 60). T1 is 46–48% (ilvl 84)."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Only on boots with Evasion, at full weight on pure Evasion bases."
+        aim: "T3, 9–10% (ilvl 68). T1 is 13–14% (ilvl 85)."
+      - mod: "+#% to Chaos Resistance"
+        why: "A quarter of the weight of the others. Take it from Fugitive Boots, an Essence of Envy or a Harvest reforge."
+        aim: "T3, 21–25% (ilvl 56). T1 is 31–35% (ilvl 81)."
+      - mod: "#% chance to Avoid Elemental Ailments"
+        why: "Not in the natural pool. The bench sells 21–25%, an Essence of Loathing gives up to 31–35%."
+      - mod: "+# to Strength, Dexterity or Intelligence"
+        why: "Only the attribute of the base's own defence. Useful when it solves a requirement."
+      - mod: "Regenerate # Life per second"
+        why: "One suffix roll in seven. Filler for most builds, and the thing a Pristine Fossil floods the suffixes with."
+approach:
+  principle: >-
+    **Movement speed first, by a route that cannot fail, and never traded
+    for anything.** Then life. With those two prefixes done, boots are a
+    suffix craft on the easiest suffix pool there is, and the only real
+    decision is whether the implicit comes from the base or from Eldritch
+    currency.
+  order:
+    - title: "Choose the implicit route, the pool and the item level"
+      text: >-
+        Two-Toned or Fugitive Boots and no Eldritch currency, or an ordinary
+        base with an Ember and an Ichor. A pool with Evasion if you need
+        suppression, without Energy Shield if you want movement speed to
+        roll easily. Item level 55 for 30%, 86 for 35%.
+    - title: "Get movement speed"
+      text: >-
+        Alterations on a white base, stopping at the best tier the item
+        level allows. Or an Essence of Zeal, which fixes it and rolls the
+        rest. Or the bench, on a pair you found that has everything else.
+    - title: "Put life beside it"
+      text: >-
+        A Regal Orb may add it. If not, life is one prefix roll in four or
+        five on most boots, and the bench sells 56–70.
+    - title: "Protect the prefixes"
+      text: >-
+        Give the boots an Eater of Worlds implicit stronger than their
+        Searing Exarch one. From then on Eldritch Chaos Orbs reroll only
+        suffixes. On an Atlas base or an influenced pair this is not
+        available, and a bench lock is the alternative.
+    - title: "Build the suffixes by need"
+      text: >-
+        Resistances your character lacks first, suppression if the build
+        wants it. Stop when two suffixes are right and let the bench supply
+        the third.
+    - title: "Final implicits, then values"
+      text: >-
+        Replace the cheap implicits you steered with: movement speed from
+        the Exarch, an ailment or recovery implicit from the Eater. Then
+        quality and a look at the numbers.
+  finishing: >-
+    Quality, sockets and the last open slot at the bench. If the boots have
+    rolled movement speed and an open prefix, the bench hybrid of percentage
+    defence with life fits; the bench's movement speed does not.
+
+
+    A [[Blessed Orb]] on an Atlas implicit. A Harvest swap when one
+    resistance is on the wrong element. A [[Divine Orb]] changes nothing
+    about movement speed, which has a fixed value at every tier.
+  stopping: >-
+    30% movement speed, life of 85 or more and two resistances of 36% or
+    more: stop. That pair costs Alterations, a Regal Orb and one bench
+    craft, and serves most characters to the end of the Atlas.
+
+
+    The expensive improvements are small. 35% over 30% is five points of
+    speed and an item level 86 base. A third high resistance where the bench
+    would give 29–35% is ten to fifteen points. Tier 1 suppression over Tier 3 is four.
+    Buy them when the boots are otherwise your last upgrade.
+special:
+  - mod: "#% increased Movement Speed with a second line"
+    source: "Bench / Veiled"
+    where: "Three hybrids: 100% chance to Avoid being Chilled, chance to gain Onslaught on kill, or extra speed while not hit recently. 18–20% from the [[Crafting Bench]] for 4 Chaos Orbs, 25–30% unveiled. All share the movement speed group."
+  - mod: "100% chance to Avoid being Frozen"
+    source: "Bench"
+    where: "A bench **prefix** for 4 Exalted Orbs; 80% for 4 Chaos Orbs. It costs one of the two prefixes left after movement speed."
+  - mod: "#% chance to Avoid Elemental Ailments"
+    source: "Essence / Bench / Eldritch / Influence"
+    where: "An Essence of Loathing, 31–35% at Deafening. The bench, 21–25% for 2 Chaos Orbs. An Eater of Worlds implicit, 15–17% at Lesser to 24–26% at Exceptional. A Shaper suffix, 31–35% at item level 81."
+  - mod: "You have Tailwind if you have dealt a Critical Strike Recently"
+    source: "Hunter influence"
+    where: "A Hunter suffix at item level 75 with a weight of 100, the lightest modifier on boots."
+  - mod: "#% chance to gain Elusive on Critical Strike"
+    source: "Redeemer influence"
+    where: "A Redeemer prefix, 5–10%, item level 75, weight 250. Joined to Tailwind on one pair with an [[Awakener's Orb]]."
+  - mod: "+1 to Maximum Endurance Charges"
+    source: "Warlord influence / Corruption"
+    where: "A Warlord prefix at item level 75, weight 125. Also a corruption implicit."
+  - mod: "+2 to Level of Socketed Fire, Cold, Lightning or Chaos Gems"
+    source: "Fossil / Influence"
+    where: "Fossil-only prefixes with no item level requirement, and one conqueror prefix each at item level 68: Warlord fire, Redeemer cold, Crusader lightning, Hunter chaos."
+  - mod: "+1 to Level of all Raise Spectre Gems"
+    source: "Fossil / Elder influence"
+    where: "A Fossil-only suffix, or an Elder suffix at item level 75."
+  - mod: "#% increased Movement Speed, #% increased Action Speed"
+    source: "Eldritch implicit"
+    where: "Searing Exarch implicits: movement speed 5% at Lesser to 8% at Exceptional, action speed 4% to 5%. Both add to the movement speed prefix. Added with Embers to boots with no influence."
+  - mod: "Cannot be Poisoned"
+    source: "Corrupted Essence"
+    where: "The boots suffix of an [[Essence of Delirium]], which comes only from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "+#% to two Elemental Resistances, +#% to Chaos Resistance"
+    source: "Base implicit"
+    where: "The implicits of Two-Toned Boots (+16–20% to two) and Fugitive Boots (+17–23%). Chosen with the base and lost if you add an Eldritch implicit."
+  - mod: "5% increased Movement Speed for each Enemy within 6 metres, up to a maximum of 50%"
+    source: "Essence"
+    where: "Listed in the data for an [[Essence of Desolation]], which works on Normal items only and holds every other modifier to level 15 or lower. We could not confirm how the Essence is obtained in 3.30."
+mistakes:
+  - "**Crafting anything before movement speed.** Every method that adds it later costs a prefix you may no longer have."
+  - "**Benching movement speed onto boots that rolled a low tier of it.** One group: the bench refuses. Reroll the boots or live with the tier."
+  - "**Expecting 35% from an item level 85 base.** \"Hellion's\" needs 86. Check with Alt before the first orb."
+  - "**Putting an Ember on Two-Toned Boots.** The Ember's own text says it replaces the resistance implicit."
+  - "**Using an Eldritch Chaos Orb without checking which implicit is stronger.** Under the Exarch it rerolls the prefixes: your movement speed and life."
+  - "**Rolling for movement speed on Energy Shield boots with Alterations and wondering why it is slow.** A quarter of their prefix rolls are mana. Use an Essence of Zeal there."
+  - "**Paying for a Speed reforge to get a high tier.** It guarantees the modifier, not the tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, Essence, bench cost and implicit quoted here, and the in-game text of the Eldritch Embers and Ichors. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 implicits of Two-Toned and Fugitive Boots, Item Tiers for special bases, the cost of the protection modifiers on armour, the Harvest resistance swap." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: which Eldritch implicit is dominant, and what the protection modifiers hold against. Partly older than 3.30." }

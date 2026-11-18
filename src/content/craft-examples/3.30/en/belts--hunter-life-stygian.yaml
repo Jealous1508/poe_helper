@@ -1,0 +1,262 @@
+category: belts
+title: "A Hunter Life prefix forced onto a Stygian Vise"
+level: 5
+summary: "Build three suffixes with Essences, lock them and force flat Life above, then use a Hunter's Exalted Orb when the only free slots are prefixes, so that \"increased maximum Life\" is a 36% shot and not a 15% one."
+goal: >-
+  A Stygian Vise with a top resistance from an Essence, two more good
+  suffixes, rolled Life, and the Hunter's "7–10% increased maximum Life"
+  beside it. Every tool here has appeared in an easier example. The craft is
+  hard because of **order and blocking**: each stage is placed where its
+  failures are cheapest, and the last orb is used only once the belt has
+  been arranged so that most of its bad outcomes cannot happen.
+base: "Stygian Vise"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 is the lowest at which both the top resistance tier and the
+  Hunter's best Life modifier exist. The Stygian Vise is the base because a
+  belt this expensive should end with an Abyssal socket; in 3.30 it drops
+  only on Tier 5 items.
+
+
+  The belt must start with **no influence** and must not be fractured. The
+  Hunter's Exalted Orb only works on an item without influence, and by
+  reference pages a fractured item cannot be given one.
+methods: [essence, meta, harvest, influence, bench]
+result:
+  note: "Hunter"
+  implicits: ["Has 1 Abyssal Socket"]
+  prefixes:
+    - { text: "+121 to maximum Life", how: harvest }
+    - { text: "8% increased maximum Life", how: influence }
+    - { text: "Flasks applied to you have 9% increased Effect / 20% reduced Flask Charges gained", how: crafted }
+  suffixes:
+    - { text: "+47% to Fire Resistance", how: essence }
+    - { text: "+43% to Cold Resistance" }
+    - { text: "+52 to Strength" }
+needs:
+  - { item: "[[Deafening Essence of Anger]]", amount: "10–25", note: "or Hatred or Wrath, for the element you need" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Exalted Orb]]", amount: "8 per lock" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per Life reforge" }
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Three bills. Deafening Essences for the suffix side, counted in the low
+  dozens. Locks for the Life stage, 4 [[Divine Orb]]s and 8
+  [[Exalted Orb]]s each, and expect several. One [[Hunter's Exalted Orb]],
+  which conqueror bosses drop.
+
+
+  We give no total. The honest summary is this: the first two stages can be
+  repeated until they work, and the third cannot. It is one orb with a 36%
+  chance, and if it misses, the belt is finished without its headline
+  modifier.
+odds: >-
+  **Stage 1.** The Essence fixes one resistance at 46–48%. Each further
+  suffix it rolls is another resistance of 36% or more, Strength of 43 or
+  more, or Chaos Resistance of 21% or more about 1 time in 7, by our
+  arithmetic. A result with three suffixes of which two are good is roughly
+  one Essence in seven to ten.
+
+
+  **Stage 2.** With the suffixes locked, a Life reforge gives maximum Life
+  77% of the time and flask Life recovery the rest, if the guaranteed
+  modifier is drawn by weight. Three of the ten Life tiers are 100 or more.
+  So about one attempt in four passes, and each attempt is a lock.
+
+
+  **Stage 3.** The Hunter list for belts has three prefixes and five
+  suffixes. On an open belt "increased maximum Life" is 1,000 of 6,500 by
+  weight: 15%. With the suffix side full, only the prefixes remain: 1,000 of
+  2,750, or 36%, half of that for the 7–10% tier. Our arithmetic from the
+  weights, on the assumption that the orb can only add a modifier where a
+  slot is free.
+steps:
+  - title: "Stage 1: three suffixes, with Essences"
+    do: >-
+      Use [[Deafening Essence of Anger]] on the Stygian Vise until the suffix
+      side holds **three modifiers, at least two of them good**, and the
+      belt has **no more than two prefixes**. Ignore what the prefixes are.
+    why: >-
+      Suffixes first, because Essences are reported to ignore the lock:
+      anything built before the last Essence is lost to it. And Essences
+      here, because on a belt the elemental ones give a resistance at Tier
+      1 values, guaranteed, for the price of one Essence per attempt.
+
+
+      Three suffixes is not a detail. Stage 3 depends on the suffix side
+      being full.
+    check: >-
+      Count: three suffixes, two or fewer prefixes. The lock in the next
+      stage is a prefix and needs a free slot.
+    fail: >-
+      Two good suffixes and an open third: acceptable. After stage 2 the
+      bench is free again, and a crafted resistance of 29–35% can fill the
+      third slot before stage 3. You then give up the bench prefix at the
+      end.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+352 to Armour" }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Stage 2a: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 8 [[Exalted Orb]]s.
+    why: >-
+      The suffix side is done and nothing on it is fractured. Everything
+      from here to the end happens on the prefix side, behind this.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+352 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Stage 2b: reforge with a Life modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]). Repeat 2a and 2b until the belt has
+      **maximum Life of 100 or more and at least one open prefix slot**.
+    why: >-
+      With three suffixes locked the Life modifier must be a prefix. A belt
+      has two prefixes with the life tag, maximum Life at a weight of 10,000
+      and flask Life recovery at 3,000, so this is likely, not certain.
+
+
+      The stage with the lower success rate was put first, where an attempt
+      costs one Essence. This stage succeeds about one time in four and
+      costs a lock each time. Had the order been reversed, the lock would
+      have been paying for the one-in-seven roll.
+    check: >-
+      Suffixes unchanged, lock gone. Then the tier of Life, then the number
+      of prefixes. One prefix is ideal: it leaves a slot for the Hunter
+      modifier and a slot for the bench.
+    fail: >-
+      Flask Life recovery, low Life, or three prefixes: lock and reforge
+      again. Decide before the first lock how many you will pay for, and if
+      you reach that number, accept Life of 85 and go on.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Check the board before the one-shot orb"
+    do: >-
+      Hold Alt. **Three suffixes. At least one open prefix. No influence.**
+      If the suffix side has an open slot, fill it at the bench now.
+    why: >-
+      This is the block. The Hunter's Exalted Orb adds one Hunter modifier,
+      and five of the eight kinds it can add to a belt are suffixes you do
+      not want. A full suffix side removes all five from the draw at once,
+      without a single meta-modifier.
+  - title: "Stage 3: Hunter's Exalted Orb"
+    do: >-
+      Use one [[Hunter's Exalted Orb]] on the belt.
+    why: >-
+      Its text is "Adds Hunter influence and a new Hunter modifier to a rare
+      item". Of the three Hunter prefixes, "increased maximum Life" is 36%
+      by weight, increased Chaos Damage 55% and "Gain a Flask Charge when you
+      deal a Critical Strike" 9%.
+
+
+      It comes **last** for two reasons. Before stage 2 it would have been
+      rerolled by the Life reforge. And it can only be used once: after it,
+      the belt is influenced and the orb no longer applies.
+    check: >-
+      The Hunter symbol on the belt and a new prefix. The Life modifier is
+      3–6% or 7–10%, with equal chances.
+    fail: >-
+      Chaos Damage or the flask charge prefix. Nothing brings the chance
+      back: a second attempt would need a lock and a Harvest reforge that
+      includes an influence modifier, 5,000 Primal Lifeforce and a Sacred
+      Crystallised Lifeforce, and that reforge would also reroll the flat
+      Life. For most people the belt is finished here, with a prefix it did
+      not need.
+    state:
+      note: "Hunter"
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+        - { text: "8% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Stage 4: bench the last prefix"
+    do: >-
+      If a prefix slot is still open, craft flask effect: 8–10% with 20%
+      reduced Flask Charges gained for 2 [[Chaos Orb]]s, or 11–14% with 33%
+      reduced for 4 Exalted Orbs. For a build that does not lean on flasks,
+      12–14% increased Damage for 4 Chaos Orbs.
+    why: >-
+      One slot, one craft. "Can have up to 3 Crafted Modifiers" is a suffix
+      and the suffix side is full, so it is not available, and with one
+      slot open it would gain nothing anyway.
+    state:
+      note: "Hunter"
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+        - { text: "8% increased maximum Life", how: influence }
+        - { text: "Flasks applied to you have 9% increased Effect / 20% reduced Flask Charges gained", how: crafted }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Finish: Catalysts, values, and the jewel"
+    do: >-
+      Catalysts now that the modifiers are final, a [[Divine Orb]] if the
+      flat Life is at the bottom of its tier, and an Abyss Jewel in the
+      socket.
+    why: >-
+      A Divine Orb rerolls every number together and changes no tier. In
+      3.30 Catalysts come only from Ultimatum; a [[Fertile Catalyst]] is the
+      kind for this belt, since both headline modifiers are Life.
+variations: >-
+  **Starting from a Hunter belt.** If you are handed a white Hunter-
+  influenced Stygian Vise, the orb is not needed and the plan changes shape:
+  Alterations for the Life modifier, about 1 prefix roll in 53 for either
+  tier by our arithmetic, a beast Imprint, and a Regal Orb. Where influenced
+  bases drop in 3.30 could not be confirmed.
+
+
+  **Without the Hunter stage.** Stop after stage 2 and bench a prefix. That
+  belt, with Tier 1 resistance, two more suffixes and rolled Life on a
+  Stygian Vise, is what most finished characters wear, and it involves no
+  one-shot orb at all.
+
+
+  **Elder instead.** The Elder list has the same modifier at 8–10% from item
+  level 75, with more prefixes around it, so the forced shot is worse:
+  count the list before choosing.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next currency
+  before you commit. This craft has one orb worth looking ahead of, and it
+  is the Hunter's.
+mistakes:
+  - "Using the Hunter's Exalted Orb while a suffix slot is open. Five of its eight outcomes are suffixes."
+  - "Using it before the Life reforge. The reforge rerolls the prefix side and takes the Hunter modifier with it."
+  - "Building the Life first and the suffixes second. The Essences that build the suffixes ignore the lock."
+  - "Starting on a fractured Stygian Vise to keep a Life roll. A fractured item cannot be given an influence."
+  - "Benching a prefix before the orb. It takes the slot the Hunter modifier needs, or the last one."
+  - "Counting on a second try at stage 3. The orb works once per item."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Hunter belt modifiers and their weights, the Essence modifiers on belts, tags, bench costs and the in-game text of the Hunter's Exalted Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The Stygian Vise's Item Tier requirement, the cost of the protection modifiers, and conqueror bosses dropping their Exalted Orbs." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum as the only source of Catalysts." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life reforge and the reforge that includes an influence modifier, with their costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side and Essences do not. Partly older than 3.30." }

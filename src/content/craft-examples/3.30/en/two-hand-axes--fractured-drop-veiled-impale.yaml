@@ -1,0 +1,285 @@
+category: two-hand-axes
+title: "From a fractured Tier 5 drop to a finished impale axe"
+level: 5
+summary: "A fractured percentage prefix, an Essence for the suffix side, a lock that exists to be removed, and a blocked unveil: three prefixes on purpose, none of them rolled."
+goal: >-
+  A Vaal Axe with a fractured hybrid prefix, an unveiled 120–139% increased
+  Physical Damage with a chance to Impale, crafted flat Physical Damage, and
+  Impale Effect with attack speed on the suffix side. No tool here is new.
+  The difficulty is **forcing outcomes**: making a random orb remove the one
+  modifier you chose for it, and making an unveil offer what you came for.
+  Each stage is protected by the one before, and two of the protections rest
+  on rules tested by players, not stated by the developers. The text says
+  which.
+base: "Vaal Axe"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from a find. In 3.30 a Tier 5 item can drop as a
+  **fractured Magic item**, and here that item is a Vaal Axe whose fractured
+  modifier is "Emperor's", the hybrid of 65–74% increased Physical Damage
+  with Accuracy Rating. A Vaal Axe hits for 104–174 and adds a 25% chance to
+  Maim. The item level only has to cover what you still mean to roll: Tier 1
+  attack speed needs 77.
+
+
+  The same plan works on any two-handed axe whose fractured modifier is a
+  high tier of that hybrid or of flat Physical Damage. It does not work with
+  pure increased Physical Damage fractured; the variations say why.
+methods: [fracture, essence, meta, veiled, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["25% chance to Maim on Hit"]
+  prefixes:
+    - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "37% increased Impale Effect", how: essence }
+    - { text: "22% increased Attack Speed" }
+    - { text: "+31% to Global Critical Strike Multiplier" }
+needs:
+  - { item: "A fractured Magic two-handed axe from a Tier 5 drop", amount: "1", note: "a high hybrid or flat Physical Damage prefix fractured" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Deafening Essence of Dread]]", amount: "dozens" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Veiled Exalted Orb]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "for the blocking craft" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the blocking craft" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  The base is luck or a purchase, and fractured items are rarer in 3.30 than
+  they were. After that the Essences dominate: Deafening ones, used until the
+  whole suffix side is right at once. The lock is 4 [[Divine Orb]]s and a
+  [[Sacred Orb]] and, if the plan holds, is paid once. We give no total.
+
+
+  One ingredient may be hard to find at all. Reference pages name the
+  Mastermind as the source of the [[Veiled Exalted Orb]] and Aisling's
+  Fortification bench as doing the same job; we could not confirm either for
+  3.30.
+odds: >-
+  **The Essence stage** is where the time goes. Impale Effect is certain.
+  Beside it, by our arithmetic, one suffix roll is attack speed of 20% or
+  more about 1 time in 21, and a result has at most two other suffixes. Add
+  the conditions that all three suffix slots are filled and the prefix side
+  has room, and a keeper is roughly one Essence in ten to twenty, with a long
+  tail.
+
+
+  **The veiled stage** has no dice if two player-tested rules hold in 3.30:
+  a Veiled Exalted Orb does not remove a modifier protected by a lock, and
+  an unveil never offers a group already on the item. With the blocking
+  craft in place six veiled prefixes remain possible and four are physical
+  hybrids, so one of the three choices must be physical. Whether it is the
+  Impale one is about even if the six are equally likely, which the data
+  does not tell us.
+steps:
+  - title: "Judge the fracture before anything else"
+    do: >-
+      Hold Alt over the drop. Read the fractured modifier, its tier and its
+      side, and the item level. Ask: would I pay to roll this modifier, and
+      does the rest of my plan fit around its group?
+    why: >-
+      A fracture is permanent in both directions. "Emperor's" is about 1
+      prefix roll in 660 on an axe at this tier or better, so having it
+      locked is worth a great deal. A fractured stun suffix would be a slot
+      lost for ever. And the group matters: this hybrid is **not** the group
+      of the veiled Impale prefix, which is what lets the two share the axe.
+    check: >-
+      A fractured item cannot take influence, and an Imprint cannot be
+      applied to it. Neither is needed here.
+    state:
+      rarity: magic
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "+19 to Dexterity" }
+  - title: "Stage 1: the whole suffix side, with Essences"
+    do: >-
+      Bring the axe to 20% quality and use a [[Regal Orb]]; Essences work on
+      Normal and Rare items, not Magic ones. Then use
+      [[Deafening Essence of Dread]] repeatedly until **all three suffix
+      slots are filled**: Impale Effect, attack speed of 20% or more, and a
+      third you are content to keep. On the prefix side you want the
+      fractured modifier **alone**.
+    why: >-
+      The fractured prefix survives every Essence, so this stage costs
+      Essences and nothing else. It has to come first: Essences are reported
+      to ignore the bench's protection modifiers, so nothing later in the
+      plan could survive one. The suffix side must be full, not merely good,
+      because the next stage relies on there being no room there.
+    check: >-
+      Three suffixes, none crafted. One prefix, the fractured one.
+    fail: >-
+      Right suffixes, but an unwanted prefix beside the fractured one: either
+      keep using Essences, or pay for it. "Suffix Modifiers cannot be
+      changed" followed by an [[Orb of Scouring]] is reported to strip the
+      unprotected prefixes and the lock, leaving the fractured prefix and
+      the three suffixes. That costs a whole lock.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Stage 2: a lock whose job is to be removed"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 1 [[Sacred Orb]]. It is a prefix.
+    why: >-
+      Look at what the next orb is allowed to touch once this is on. The
+      three suffixes are protected. The fractured prefix cannot be removed by
+      anything. The only modifier left unprotected on the axe is the lock
+      itself. The lock is doing two jobs: guarding the suffixes, and
+      standing in as the victim.
+    check: >-
+      Prefixes: the fractured one, the lock, and one empty slot. Use no
+      other currency before the next step.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Stage 3: the Veiled Exalted Orb"
+    do: >-
+      Use one [[Veiled Exalted Orb]]. Its text: "Removes a random modifier
+      and adds a random Veiled modifier to a rare item".
+    why: >-
+      "Random" among one candidate is not random: it removes the lock. Then
+      it adds a veiled modifier, and with the suffix side full the only open
+      slots are prefixes. The result is the fractured prefix, a veiled
+      prefix and an empty third slot, every time, **provided the orb respects
+      the lock**. Players have tested that it does, and this was the
+      standard use of the orb before 3.30; nothing in the 3.30 notes changes
+      it, and nothing official states it.
+    check: >-
+      A [[Hinekora's Lock]] used before the orb would show the result in
+      advance. On an axe worth this much, that single look is the place a
+      Lock earns its price.
+    fail: >-
+      If a suffix is gone, the rule did not hold and the plan ends here with
+      a good axe and one random veiled modifier. Unveil it, bench what fits,
+      and tell other players what you saw.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "Veiled Prefix", how: veiled }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Stage 4: block, then unveil"
+    do: >-
+      **Before unveiling**, bench 44–60% increased Fire Damage into the empty
+      prefix: 4 [[Orb of Alteration]]s. Then right-click the axe, unveil, and
+      take **increased Physical Damage with chance to Impale Enemies on Hit
+      with Attacks**. If it is not among the three, take whichever physical
+      hybrid is.
+    why: >-
+      Thirteen veiled prefixes exist for a two-handed axe. Seven are spell,
+      elemental, chaos and minion damage modifiers that all belong to one
+      group, and the bench's increased Fire Damage is that group too. By the
+      community-tested rule an unveil never offers a group already on the
+      item, so one cheap craft removes seven wrong answers. Six remain: the
+      four physical hybrids and two penetration prefixes. Three choices from
+      six with only two non-physical means at least one is physical. All
+      four physical hybrids carry the same 120–139%; only the rider differs.
+    check: >-
+      The unveiled modifier is a normal one, not a crafted one, and stays
+      when you remove the blocking craft.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "52% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Stage 5: swap the blocker for the real craft"
+    do: >-
+      At the bench, remove the crafted modifier for 1 [[Orb of Scouring]],
+      then craft **adds 18–24 to 36–42 Physical Damage** in its place: 4
+      [[Chaos Orb]]s.
+    why: >-
+      The blocker has done its work. Flat Physical Damage is the third
+      physical group, the only one not yet on the axe, and both percentages
+      multiply it. The suffix side is full, so "Can have up to 3 Crafted
+      Modifiers" has nowhere to go and one craft is all the bench can add.
+    state:
+      note: "Fractured"
+      implicits: ["25% chance to Maim on Hit"]
+      prefixes:
+        - { text: "71% increased Physical Damage / +163 to Accuracy Rating", how: fractured }
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "37% increased Impale Effect", how: essence }
+        - { text: "22% increased Attack Speed" }
+        - { text: "+31% to Global Critical Strike Multiplier" }
+  - title: "Finish: links and values"
+    do: >-
+      Six linked sockets if not done, then a [[Divine Orb]] if the numbers
+      inside the tiers are low.
+    why: >-
+      A Divine Orb rerolls the value of every modifier at once, the fractured
+      and the unveiled ones included, and never a tier. It can lower as well
+      as raise, so use it when the percentages are near the bottom of their
+      ranges and not otherwise.
+variations: >-
+  **With a Veiled Chaos Orb instead.** [[Veiled Chaos Orb]]s are the veiled
+  currency we can confirm in 3.30: safehouse leaders can drop them. On the
+  locked axe one rerolls the prefix side with a veiled modifier included,
+  and with the suffix side full that modifier is a prefix. The fractured
+  prefix stays. The weakness: it may roll a second, random prefix as well.
+  Then there is no empty slot for the blocking craft, the unveil shows three
+  of thirteen instead of three of six, and no room is left for the bench.
+  You can lock and try again only while a prefix slot is free.
+
+
+  **If the fractured modifier is pure increased Physical Damage.** The veiled
+  hybrids are the same group and can never join it. Use the veiled step for
+  a suffix instead, +44–48% to Physical Damage over Time Multiplier or
+  12–14% chance to deal Double Damage, and fill the prefixes with the bench
+  and the hybrid with Accuracy.
+
+
+  **Without the budget.** While the drop is still Magic, an
+  [[Orb of Alteration]] rerolls only the slot that is not fractured. Roll a
+  suffix you like, use a Regal Orb, and bench the Impale hybrid at 95–105%.
+  That is a strong axe for the price of an ordinary Alteration craft, and
+  it is what most fractured drops deserve.
+
+
+  **For bleeding.** Sundering Axe, the bleeding hybrid at the unveil, and a
+  different first stage: Essence of Zeal for attack speed, since no Essence
+  gives a bleed suffix.
+mistakes:
+  - "Using an Essence after the lock. Essences are reported to ignore the protection modifiers; the lock would be wasted and the suffixes rerolled."
+  - "Leaving a suffix slot empty before the Veiled Exalted Orb. The veiled modifier can then land there, and the whole point was to leave it nowhere else to go."
+  - "Unveiling before the blocking craft. Seven of the thirteen veiled prefixes are useless to this axe and one bench modifier removes all seven."
+  - "Benching flat Physical Damage as the blocker to save a step. It blocks nothing: no veiled prefix shares its group."
+  - "Running this plan on a fracture that is not worth it. The Alteration route in the variations suits most drops better."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The veiled modifiers and their groups, the Essence of Dread modifier, tiers, weights, bench costs, and the in-game text of the Veiled Exalted Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Tier 5 items dropping as fractured Magic items, and the 3.30 cost of the protection modifiers." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling by right-click without Jun; Veiled Chaos Orbs from safehouse leaders." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs and Orb of Scouring respect a locked side; a crafted modifier of the same group blocks an unveil choice. Partly older than 3.30." }
+  - { title: "poedb: Immortal Syndicate", url: "https://poedb.tw/us/Immortal_Syndicate", kind: data, note: "Three choices on an unveil; Aisling's safehouse benches." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "A fractured modifier cannot be removed; fractured items cannot be given influence." }

@@ -1,0 +1,174 @@
+category: staves
+title: "Alt, Imprint, Regal: a top gem-level prefix that cannot be lost"
+level: 3
+summary: "Roll \"+2 to all Spell Skill Gems\" or +4 of your element on a Magic staff, save it with a beast Imprint, and repeat the Regal Orb until it adds nothing that blocks the bench."
+goal: >-
+  An endgame staff built around one gem-level prefix at its top step, clean
+  enough that every other slot is still yours to fill. The technique is the
+  Imprint, which makes a Regal Orb repeatable. What is particular to a staff
+  is **what counts as a bad Regal**: not only a wasted slot, but a modifier
+  that takes a group you were going to use.
+base: "Primordial Staff"
+itemLevel: 77
+baseWhy: >-
+  The Primordial Staff has the +25% block implicit at the lowest
+  requirements, 99 Strength and 99 Intelligence. Item level 77 is the lowest
+  at which +4 to an element's spell gems can roll; "+2 to Level of all Spell
+  Skill Gems" needs only 55. For a staff you may improve later, 84 costs more
+  and opens the best cast speed and spell damage.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+25% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+2 to Level of all Spell Skill Gems" }
+    - { text: "94% increased Spell Damage / 27% increased Mana Regeneration Rate", how: crafted }
+  suffixes:
+    - { text: "36% increased Cast Speed" }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "400–800", note: "a bad run is longer" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Chaos Orb]]", amount: "6", note: "for the bench" }
+cost: >-
+  Alterations in bulk, then beasts. This is the slow, cheap road to a top
+  gem-level prefix: it asks for patience instead of Fossils. In 3.30 only red
+  beasts are captured, so check the Menagerie for a Croaker before the first
+  Alteration, not after the last.
+odds: >-
+  At item level 77 one prefix roll is "+2 to Level of all Spell Skill Gems"
+  about 1 time in 371, by our arithmetic from the weights, and +4 of one
+  chosen element about 1 in 743. Accept either and it is about 1 in 248. An
+  Alteration does not always roll a prefix, so the count of orbs is higher:
+  several hundred is normal.
+
+
+  The Regal Orb adds one random modifier. With "all Spell Skill Gems" already
+  on the staff, about a quarter of the prefixes it can add are ones a fire
+  caster uses, and about a fifth of the suffixes are cast speed, Spell
+  Critical Strike Chance or Global Critical Strike Multiplier. Nearly half of
+  the prefixes are attack modifiers or Mana.
+steps:
+  - title: "Alterations to the gem-level prefix"
+    do: >-
+      Use an [[Orb of Transmutation]] on a white item level 77 staff, then
+      [[Orb of Alteration]]s until the prefix is **"+2 to Level of all Spell
+      Skill Gems"** or **+4 to the spell gems of your element**.
+    why: >-
+      These are the two modifiers a staff exists for and the bench sells
+      neither. A Magic item keeps the search to one prefix per orb, and you
+      only have to recognise two names: "Archon's", or the top name of your
+      element ("Magmancer's" for fire).
+    check: >-
+      Hold Alt and read the number, not just the family. "+1 to all" and +3
+      of an element are the same families one step down. Then look at the
+      suffix: you want it empty.
+    fail: >-
+      If the budget runs out at +3 of your element, that is a good staff
+      already. Skip the Imprint, use the Regal Orb and go to the bench: +3
+      is 1 prefix roll in 83 and not worth a beast to protect.
+    state:
+      rarity: magic
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+      suffixes: [{ text: "+271 to Accuracy Rating" }]
+  - title: "Arrive at the prefix alone"
+    do: >-
+      If the Magic staff also has a suffix you do not want, keep using
+      Alterations until the prefix appears by itself or beside a suffix you
+      would keep. Do not use an [[Orb of Augmentation]].
+    why: >-
+      Whatever is on the Magic item is in every Imprint of it. A junk suffix
+      now is a junk suffix on every attempt. It costs more Alterations, and
+      on a roll this rare some players accept a harmless suffix instead;
+      that is a fair trade, since a staff has three suffix slots.
+    state:
+      rarity: magic
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use the recipe **Create an Imprint of a Magic
+      Item** on the staff. It needs a [[Craicic Croaker]] and three other
+      Rare beasts.
+    why: >-
+      The Imprint is a saved copy of the staff as it is now. It only works
+      on Magic items, so it has to come before the Regal Orb.
+    check: >-
+      The Imprint is in your inventory as its own item. Do not use it yet.
+  - title: "Regal Orb, and judge it as a staff"
+    do: >-
+      Use a [[Regal Orb]]. Read the modifier it added and sort it into one
+      of three kinds. **Keep:** a prefix you use (the gem prefix of your
+      element, spell damage, the hybrid with Mana, damage added to spells of
+      your element) or a damage suffix. **Tolerate:** any other suffix.
+      **Reject:** any prefix you do not use.
+    why: >-
+      The staff has two prefix slots left and the bench needs one of them. A
+      useless prefix is half of what remains. Some rejected prefixes do a
+      second harm: "+# to Level of Socketed Melee Gems" takes the group of
+      the element prefixes and of the bench's Socketed Support Gems craft,
+      and increased Cold Damage on a fire staff takes the one slot for a
+      damage percentage.
+    fail: >-
+      Use the [[Imprint]] on the staff to return it to the Magic state, make
+      a new Imprint with another Croaker, and use another Regal Orb. Each
+      attempt costs one Regal Orb and one set of beasts.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+      suffixes: [{ text: "36% increased Cast Speed" }]
+  - title: "Let the gem prefix decide the bench craft"
+    do: >-
+      **With "all Spell Skill Gems" on the staff** (as here), the bench has
+      two good prefixes: spell damage, best as the hybrid of 89–105% with
+      26–30% Mana Regeneration Rate for 6 [[Chaos Orb]]s, or **+1 to Level of
+      Socketed Support Gems** for 8 Chaos Orbs (+2 for 4 Exalted Orbs).
+      **With an element prefix on the staff,** only spell damage is
+      possible.
+    why: >-
+      The Socketed Support Gems craft is in the same group as the element
+      prefixes and a different group from "all Spell Skill Gems". It raises
+      every support socketed in the staff, so it is worth most when the main
+      skill sits in six linked sockets there. Spell damage is the safer
+      choice when it does not.
+    check: >-
+      One prefix and two suffixes are still open. They are for an
+      [[Exalted Orb]] when you can spare one, or for the harder crafts in
+      the next examples.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems" }
+        - { text: "94% increased Spell Damage / 27% increased Mana Regeneration Rate", how: crafted }
+      suffixes: [{ text: "36% increased Cast Speed" }]
+variations: >-
+  **The Wolf, and what it costs.** With the suffix side empty, the beast
+  recipe **Add a Prefix, Remove a Random Suffix** ([[Farric Wolf Alpha]]) has
+  nothing to remove. But the prefix it adds is random, useful to a fire
+  caster about 1 time in 4, and it lands in a slot the bench could have
+  filled with spell damage. Use it only when the staff already has two
+  prefixes you keep and the bench is going to a suffix anyway.
+
+
+  **On a base with Memory Strands.** An Alteration spends at most 8 strands
+  and a Regal Orb at most 16, by the data-mined table. Whether strands push
+  a two-step family like "all Spell Skill Gems" towards its top step has not
+  been published. If you try it, use an [[Orb of Remembrance]] on the white
+  staff first and note how many of your gem-level rolls come out at the top.
+
+
+  **With Fossils instead.** A Faceted and an Aetheric Fossil together make
+  "+2 to all" about 1 prefix roll in 57. That is far quicker than
+  Alterations and gives a Rare staff with random modifiers around it, where
+  this craft gives a clean one. The next example goes that way.
+mistakes:
+  - "Using the Regal Orb before the Imprint. An Imprint cannot be made of a Rare item."
+  - "Keeping a Regal that added an attack prefix because the Croakers ran out. Two prefix slots were left; now there is one, and the bench needs it."
+  - "Stopping the Alterations on a gem prefix for another element."
+  - "Augmenting the Magic staff to see what comes. If the suffix is bad it is now part of every attempt."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, weights, groups and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes, and the beasts they need in 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

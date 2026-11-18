@@ -1,0 +1,508 @@
+name: "Staff"
+short: "Weapon caster sáu socket. Một pool, 16 base, và một kiểu craft do hai prefix gem level quyết định, thứ mà không Essence nào và không công thức bench nào bán cho bạn."
+icon: "Eclipse Staff"
+intro: >-
+  Staff là weapon hai tay của caster: một item ở chỗ mà wand với shield sẽ là
+  hai, kèm sáu socket cho main skill. Thứ khiến nó đáng chiếm cả hai tay là
+  phía prefix, nơi có thể nâng level các spell gem của bạn lên tới sáu:
+  **+2 to Level of all Spell Skill Gems** và **+4 cho spell gem của một
+  element**. Hai prefix đó chính là toàn bộ việc craft. Spell damage và cast
+  speed đến sau, và cả hai đều mua được.
+
+
+  Có hai điều tách staff khỏi mọi weapon hai tay khác. Damage, attack speed
+  và critical strike chance in trên base thuộc về các attack đánh bằng chính
+  cây staff, và spell không dùng cái nào trong đó, nên base chỉ là cái
+  implicit của nó, không hơn. Và pool của nó lớn nhất trong mọi weapon hai
+  tay, 24 họ prefix và 26 họ suffix, vì nó chứa cùng lúc modifier của caster
+  lẫn modifier của người đánh attack. Tính theo weight, khoảng một phần ba
+  những gì staff roll ra được là modifier attack mà caster không bao giờ
+  dùng.
+basics:
+  itemLevel:
+    text: >-
+      Staff có hai chiếc thang, và chúng kết thúc ở hai độ cao khác nhau. Các
+      prefix gem level có hai hoặc ba bậc và mở hết ở item level 77. Các
+      modifier phần trăm thì leo cao hơn: cast speed tốt nhất cần 83 và spell
+      damage tốt nhất cần 84.
+
+
+      Hãy craft ở 77 khi kế hoạch là gem level, phần còn lại để bench lấp.
+      Mua hẳn 84 một lần nếu cây staff là dự án dài hơi, vì item level về sau
+      không bao giờ nâng được. Không thứ gì caster muốn cần quá 84.
+    breakpoints:
+      - ilvl: 2
+        unlocks: "**Leveling.** +1 to Level of all Spell Skill Gems, và +2 cho spell gem của một element (fire, cold, lightning, chaos hoặc physical). Cả hai đều roll được trên staff ngay từ act đầu tiên."
+      - ilvl: 35
+        unlocks: "+3 cho spell gem của một element (\"Lava Conjurer's\" cho fire, và bốn anh em của nó). Tier 5 của spell damage (70–95%)."
+      - ilvl: 55
+        unlocks: "+2 to Level of all Spell Skill Gems, \"Archon's\". Tier 3 của cast speed (32–37%)."
+      - ilvl: 58
+        unlocks: "Tier 3 của spell damage (121–149%) và Tier 2 của hybrid spell damage kèm mana (64–76%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 77
+        unlocks: "+4 cho spell gem của một element (\"Magmancer's\", \"Ice Shaper's\", \"Typhoon Lord's\", \"Schismatist's\", \"Stone Singer's\"). Tier 1 của cả hai suffix block (18–20%); Tier 1 của Spell Critical Strike Chance (135–164%) mở từ 76. **Đủ cho mọi modifier gem level.**"
+      - ilvl: 79
+        unlocks: "Tier 2 của spell damage (150–174%). Damage over time multiplier tốt nhất cho một loại damage (66–75%) mở từ 78."
+      - ilvl: 83
+        unlocks: "Tier 1 của cast speed, \"of Finesse\" (44–49%)."
+      - ilvl: 84
+        unlocks: "Tier 1 của spell damage, \"Runic\" (175–200%), và Tier 1 của increased Fire, Cold hoặc Lightning Damage. **Trần của một cây staff caster.**"
+  bases:
+    text: >-
+      Có 16 staff và một pool: cây nào cũng roll cùng những modifier với cùng
+      weight. Không base nào mở ra một modifier mà base khác không có được.
+      Với caster, các base chỉ khác nhau ở hai điều, implicit và lượng
+      attribute cần để cầm được cây staff.
+    types:
+      - title: "Staff thường"
+        pools: [all]
+        text: >-
+          Mười base từ Gnarled Branch tới Imperial Staff. Implicit của chúng
+          là Chance to Block Spell Damage: +20% cho tới Royal Staff, +22% từ
+          Woodful Staff tới Highborn Staff, và +25% trên Primordial Staff,
+          Lathi và Imperial Staff. Con số là cố định, nên
+          [[Blessed Orb]] không có gì để roll lại.
+      - title: "Staff Maraketh"
+        text: >-
+          Crescent Staff, Moon Staff và Eclipse Staff. Implicit của chúng là
+          increased Global Critical Strike Chance: 80% trên hai cây đầu và
+          100% trên Eclipse Staff. Nó là global, nên có tác dụng với spell.
+          Chúng roll từ cùng pool với staff thường.
+      - title: "Staff Heist"
+        text: >-
+          Transformer Staff, Reciprocation Staff và Battery Staff. Hai
+          implicit: thêm maximum Energy Shield (66–80, 100–120 và 140–165),
+          và "Spend Energy Shield before Mana for Costs of Socketed Skills".
+          Game gắn tag experimented base cho chúng, nhưng dữ liệu xếp chúng
+          vào cùng pool với mọi cây staff khác.
+    picks:
+      - base: "Eclipse Staff"
+        for: "Caster critical strike"
+        why: >-
+          100% increased Global Critical Strike Chance, ở chỗ craft không
+          đụng tới được. Rơi từ level 70 và cần 117 Strength cùng 117
+          Intelligence.
+      - base: "Imperial Staff"
+        for: "Block, và là lựa chọn mặc định khi không đi crit"
+        why: >-
+          +25% Chance to Block Spell Damage, implicit block cao nhất, với 113
+          Strength và 113 Intelligence. Nó cũng có cú đánh lớn nhất (57–171)
+          và critical strike chance gốc cao nhất (8.5%), cho build hiếm hoi
+          đánh attack bằng một cây staff caster.
+      - base: "Primordial Staff"
+        for: "Cùng mức block với yêu cầu thấp hơn"
+        why: >-
+          Cùng +25% Chance to Block Spell Damage đó từ level 58, với 99
+          Strength và 99 Intelligence. Pool giống hệt, nên caster không mất
+          gì.
+      - base: "Battery Staff"
+        for: "Build energy shield"
+        why: >-
+          +(140–165) to maximum Energy Shield, và skill gắn trong staff tiêu
+          Energy Shield trước Mana. Hữu ích khi main skill nằm trong staff và
+          chi phí của nó là vấn đề. Một [[Blessed Orb]] roll lại con số
+          Energy Shield.
+    impact: >-
+      Base quyết định ba điều trước khi bạn tiêu bất kỳ currency nào.
+
+
+      **Implicit.** Block, critical strike chance hoặc Energy Shield. Không
+      cách craft thông thường nào đổi được bạn có cái nào; một
+      [[Vaal Orb]] có thể thay nó bằng một corruption implicit và đóng item
+      lại.
+
+
+      **Yêu cầu.** Staff nào cũng cần Strength và Intelligence ngang nhau,
+      113 tới 117 mỗi loại trên các base hàng đầu. Một caster thuần
+      Intelligence phải kiếm chỗ Strength đó ở đâu đấy, và kiểm trước khi
+      craft thì rẻ hơn kiểm sau.
+
+
+      **Không gì về pool.** Một pool, một bộ weight.
+
+
+      Thứ base *không* quyết định với caster là damage. Modifier local và
+      quality nhân vào physical damage của cây staff, thứ chỉ attack đánh
+      bằng staff mới dùng. Staff của caster hoàn thiện ở 0% quality.
+tools:
+  - method: currency
+    note: >-
+      Ở item level 84, sáu họ gem level cộng lại chiếm 11.5% mọi lần roll
+      prefix, theo phép tính của chúng tôi từ weight, nhưng các bậc cao nhất
+      của chúng chỉ là những lát mỏng: một lần roll prefix ra "+2 to Level of
+      all Spell Skill Gems" khoảng 1 trên 378 lần, và +4 cho một element đã
+      chọn khoảng 1 trên 756. Chịu nhận +3 hoặc +4 của element đó thì là 1
+      trên 84.
+
+
+      Item Magic chứa được một prefix, nên [[Orb of Alteration]] là cách hợp
+      lý để có **một** prefix gem level và hoàn toàn không phải cách để có
+      hai. Phía suffix dễ chịu hơn: mọi tier của cast speed có weight như
+      nhau, nên tier tốt nhất là 1 trên 92 lần roll suffix.
+  - method: bench
+    note: >-
+      Bench bán mọi modifier phần trăm của caster và không bán gem level nào
+      cho spell. Spell damage: 44–60% giá 4 Orb of Alteration, 61–78% giá 8,
+      79–95% giá 4 Chaos Orb, 96–115% giá 4 Exalted Orb. Nếu đã mở công thức,
+      bản hybrid kèm mana regeneration đáng tiền hơn: 89–105% spell damage
+      kèm 26–30% regeneration giá 6 Chaos Orb. Cast speed: 15–20% giá 6 Orb
+      of Alteration, 21–26% giá 2 Chaos Orb, 27–32% giá 4 Exalted Orb. Spell
+      Critical Strike Chance 90–120% giá 3 Chaos Orb; Global Critical Strike
+      Multiplier 25–28% giá 4.
+
+
+      Hai luật group quyết định bench được thêm cái gì. **Mỗi cây staff một
+      phần trăm caster damage:** spell damage, increased Fire, Cold hoặc
+      Lightning Damage, minion damage cùng mọi bản hybrid bench và veiled của
+      chúng là một group duy nhất. Và craft gem level duy nhất của bench,
+      **+1 hoặc +2 to Level of Socketed Support Gems** (8 Chaos Orb, 4
+      Exalted Orb), chung group với các prefix element: nó nằm vừa cạnh "all
+      Spell Skill Gems" và bị từ chối khi đứng cạnh "+3 to Fire Spell Skill
+      Gems".
+
+
+      Có một craft tồn tại cho staff mà không gì giống nó roll ra tự nhiên:
+      "Trigger a Socketed Spell when you Use a Skill, with a 8 second
+      Cooldown", một suffix giá 3 Chaos Orb.
+  - method: finishing
+    note: >-
+      Bỏ qua [[Blacksmith's Whetstone]] trừ khi bạn đánh attack bằng cây
+      staff: quality của weapon nâng physical damage và spell không dùng tới
+      nó. Hãy tiêu vào socket thay vào đó. Staff có tối đa sáu socket, và khi
+      main skill gắn trong đó thì "+# to Level of Socketed Support Gems" của
+      bench nâng năm support cùng lúc, còn "+7–8% to Quality of Socketed
+      Gems" (4 Exalted Orb) của nó nâng cả sáu gem. Một [[Divine Orb]] roll
+      lại các khoảng; prefix gem level là con số cố định và không đổi.
+  - method: essence
+    note: >-
+      Essence cho staff những modifier dễ của nó và không cho cái khó nào.
+      **Woe** đảm bảo spell damage, 145–165% ở bậc Deafening. **Misery** đảm
+      bảo cast speed, và bậc Deafening cho 44–49%, đúng khoảng của Tier 1.
+      **Scorn** đảm bảo Spell Critical Strike Chance: chỉ 80–89% và 90–109% ở
+      bậc Screaming và Shrieking, mức mà bench bán ngang bằng với giá 3 Chaos
+      Orb, rồi 165–179% ở bậc Deafening, cao hơn Tier 1 tự nhiên.
+
+
+      **Rage**, **Sorrow** và **Spite** cho "Damage Penetrates Fire, Cold or
+      Lightning Resistance", 15–16% ở bậc Deafening, một prefix mà pool tự
+      nhiên không có và nằm trong một group riêng. **Fear** cho minion
+      damage, 123–144% ở bậc Deafening. Không Essence nào cho gem level.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng một con beast khi cây staff
+      Magic đang giữ "+2 to all" hoặc +4 của element bạn dùng: hàng trăm
+      Alteration được cứu khỏi một [[Regal Orb]] xấu. **Thêm một prefix, gỡ
+      một suffix ngẫu nhiên** ([[Farric Wolf Alpha]]) là một lần roll prefix
+      miễn phí trên cây staff Rare không có gì ở phía suffix. Hãy tránh xa
+      công thức ngược lại: nó gỡ một prefix ngẫu nhiên, mà trên staff đó
+      chính là chỗ của gem level.
+  - method: fossil
+    note: >-
+      Công cụ nhắm thẳng vào gem level. Một [[Faceted Fossil]] nhân mọi
+      modifier mang tag gem lên mười lần. Một [[Aetheric Fossil]] nhân
+      modifier caster lên mười lần và cắt modifier attack xuống còn 15%
+      weight của chúng. Một [[Scorched Fossil]] nhân mười lần cho fire và
+      loại bỏ cold. Prefix element mang cả ba tag, nên các hệ số nhân chồng
+      lên nhau: dùng cả ba cùng lúc, "+# to Level of all Fire Spell Skill
+      Gems" chiếm 59% số lần roll prefix và bậc +4 của nó là khoảng 1 trên
+      29, so với 1 trên 756 bằng currency thường.
+
+
+      [[Frigid Fossil]] làm y vậy cho cold, [[Metallic Fossil]] cho
+      lightning, [[Aberrant Fossil]] cho chaos và [[Jagged Fossil]] cho spell
+      physical. Mỗi cái cũng loại bỏ một loại khác, nên hãy đọc Fossil trước
+      khi gắn nó vào. Modifier chỉ có từ Fossil gia nhập pool trong các lần
+      craft này và phép tính của chúng tôi không tính chúng, nên tỉ lệ thật
+      thấp hơn một chút.
+  - method: harvest
+    note: >-
+      Hãy đếm các modifier mang tag trước khi tin một reforge trên staff.
+      Reforge **Caster** (75 Primal Lifeforce) được thỏa bởi mười một họ
+      prefix và hai họ suffix; gem level chiếm chưa tới một phần năm chỗ
+      weight đó. **Speed** (150 Vivid) có hai đáp án, cast speed và attack
+      speed, và attack speed là cái dễ ra hơn. **Critical** (150 Primal) có
+      ba.
+
+
+      Bức tranh thay đổi khi prefix được bảo vệ. Lúc đó chỉ phía suffix đổi
+      được, và ở phía đó tag caster nghĩa là đúng hai modifier: cast speed và
+      Spell Critical Strike Chance.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra ghép 123–138% increased Fire, Cold hoặc Lightning
+      Damage với 35–40% chance gây ailment tương ứng, hoặc 123–138% spell
+      damage với 36–40% mana regeneration, hoặc 105–120% spell damage với
+      9–10% Non-Chaos Damage nhận thêm dưới dạng extra Chaos Damage. Tất cả
+      đều nằm trong group caster damage và chiếm cái ô duy nhất của nó.
+      Suffix: 26–31% cast speed kèm Arcane Surge on kill, 44–48% damage over
+      time multiplier cho một loại, 12–14% chance to deal Double Damage.
+  - method: fracture
+    note: >-
+      Một cây staff có một prefix gem level đã fractured là điểm xuất phát
+      chuẩn cho một lần craft hàng đỉnh, và prefix nào trong hai cũng được.
+      Khi "+2 to Level of all Spell Skill Gems" đã fractured, ba Fossil tìm
+      ra +4 của element trên khoảng 1 trong 28 prefix mới. Khi prefix element
+      đã fractured, cả group của nó rời khỏi pool, và một Faceted Fossil với
+      một Aetheric Fossil tìm ra "+2 to all" trên khoảng 1 trong 19. Nếu bạn
+      tự làm base, hãy fracture cái rẻ hơn khi phải roll lại, vì
+      [[Fracturing Orb]] chọn ngẫu nhiên: đó là "+2 to all".
+  - method: meta
+    note: >-
+      "Prefixes Cannot Be Changed" tốn 4 Divine Orb và 1 [[Sacred Orb]] trên
+      staff, và nó là một suffix: item cần một ô suffix trống để nhận nó.
+
+
+      **Cannot roll Attack Modifiers** (1 Divine Orb, cũng là một suffix)
+      loại 35% weight prefix và 31% weight suffix khỏi bất cứ thứ gì được
+      *thêm vào* sau đó, và một reforge Harvest đảm bảo một loại modifier tôn
+      trọng nó. **Cannot roll Caster Modifiers** làm điều ngược lại cho build
+      đánh attack bằng staff: modifier caster chiếm 45% weight prefix của nó.
+      Từ 3.30, không cái nào trong hai còn ngăn [[Orb of Annulment]] gỡ một
+      modifier như vậy, nên thói quen cũ là che prefix caster bằng một trong
+      hai cái trước khi dùng Annulment không còn hiệu nghiệm.
+
+
+      Dùng một trong hai cái bên cạnh một khóa thì cần thêm cả "Can have up
+      to 3 Crafted Modifiers": ba suffix crafted, tức ba ô suffix trống, và 7
+      Divine Orb cùng một Sacred Orb cho mỗi lần thử.
+  - method: influence
+    note: >-
+      Bảng đầy đủ nằm trong danh sách modifier. Cho caster: prefix Shaper
+      "Socketed Skills deal 20% more Spell Damage" (item level 83), suffix
+      Redeemer "Spells have a 12–14% chance to deal Double Damage" (80), các
+      prefix Elder thêm Chaos hoặc Physical Damage to Spells, và các prefix
+      resistance penetration từ Warlord (fire), Redeemer (cold), Crusader
+      (lightning) và Hunter (mọi element). Một cây staff có influence thì
+      không fracture được.
+  - method: corruption
+    note: >-
+      Các corruption implicit gồm có +2 to Level of Socketed Fire, Cold,
+      Lightning, Chaos hoặc Physical Gems, 70–90% increased Spell Damage và
+      22–28% increased Cast Speed. Cái nào trong số đó cũng thay implicit
+      block hoặc critical strike, và cây staff không bao giờ craft tiếp được
+      nữa.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: những chiếc thang ngắn của prefix gem level khiến đây là một câu hỏi còn bỏ ngỏ, đáng để thử."
+memoryStrands: >-
+  [[Memory Strands]] nâng tier của bất cứ thứ gì được roll ra và không bao
+  giờ đổi nó là modifier nào. Trên staff, điều đó chẻ vấn đề làm hai. Có ra
+  được một họ gem level hay không là chuyện weight, và strand không giúp gì ở
+  đó. Ra được bậc cao nhất của nó là chuyện tier: "+2 to all" là một phần năm
+  weight của họ nó, +4 của một element khoảng một phần mười bảy.
+
+
+  Các mốc mà người chơi đã công bố được đo trên những chiếc thang dài mười ba
+  tier. Chưa ai công bố strand xử lý một chiếc thang hai hay ba bậc thế nào.
+  Nếu chúng cắt bậc đáy theo cách chúng cắt đáy của một chiếc thang dài, thì
+  base có strand sẽ là cách tốt nhất hiện có để roll "+2 to all" bằng
+  [[Orb of Alteration]], mỗi cái tiêu nhiều nhất 8 strand theo bảng
+  data-mine. Chúng tôi chưa xác nhận được điều đó, nên hãy coi nó là thứ để
+  thử trên một base, không phải một kế hoạch để mua mười base.
+
+
+  Điều chắc chắn là strand bị phí ở đâu. Kiểu craft Fossil mà loại item này
+  dựa vào không dùng chúng, theo thử nghiệm của người chơi, và một Essence có
+  thể tiêu tới 80 chỉ trong một cú click. Chỉ đặt strand lên một cây staff
+  trắng bằng [[Orb of Remembrance]] cho lần craft làm từ Alteration, một
+  [[Regal Orb]] và [[Exalted Orb]].
+reading:
+  intro: >-
+    Giữ Alt rồi rê chuột lên một cây staff và đọc prefix tìm gem level trước
+    mọi thứ khác: **có "all Spell Skill Gems" không, có prefix của element
+    bạn dùng không, và ở bậc nào?** Hai dòng đó nặng ký hơn toàn bộ phần còn
+    lại của item. Rồi xem modifier nào đang giữ cái ô caster damage duy nhất.
+    Rồi tìm cast speed. Các con số trên base thì có thể bỏ qua.
+  prefixes:
+    text: >-
+      Có ba group đáng kể và mỗi group nhận một modifier. **"All Spell Skill
+      Gems"** là một group riêng. **Các prefix element** chung group với
+      nhau, với "+# to Level of Socketed Melee Gems" và với craft Socketed
+      Support Gems của bench, nên một cây staff mang được một trong số đó.
+      **Các phần trăm caster damage** là group thứ ba: spell damage hoặc
+      damage của một element, không bao giờ cả hai. Phía prefix tốt nhất là
+      mỗi group một cái.
+
+
+      Có thêm hai họ nằm vừa bên cạnh chúng vì chúng có group riêng: hybrid
+      của spell damage với maximum Mana, và added damage cho spell của một
+      element.
+
+
+      "All Spell Skill Gems" nghĩa là mọi spell gem bạn gắn ở bất cứ đâu,
+      không chỉ những cái trong staff. Những modifier có chữ "Socketed" mới
+      là những cái gắn liền với sáu socket của cây staff.
+
+
+      Mọi thứ khác đều là đối thủ. Prefix attack chiếm 35% số lần roll prefix
+      và maximum Mana là họ đơn lẻ lớn nhất với 11%.
+    key:
+      - mod: "+# to Level of all Spell Skill Gems"
+        why: "Nâng mọi spell gem lên một hoặc hai level và cộng dồn với prefix element. Thứ hiếm nhất mà một cây staff cần: bậc cao nhất của nó có weight 250 trong một pool prefix 94,461."
+        aim: "+1 (ilvl 2) thì phổ biến. +2 cần ilvl 55."
+      - mod: "+# to Level of all Fire Spell Skill Gems"
+        why: "Tới bốn level cho mọi spell gem của một element. Cùng họ này tồn tại cho Cold, Lightning, Chaos và Physical; cả năm chung một group, nên một cây staff có một cái trong số đó."
+        aim: "+3 (ilvl 35). +4 cần ilvl 77."
+      - mod: "#% increased Spell Damage"
+        why: "Phần trăm lớn nhất một cây staff chứa được, và là chủ quen của ô caster damage. Bench và Essence of Woe đều cấp được nó, nên nó không bao giờ là prefix cần bảo vệ."
+        aim: "T3, 121–149% (ilvl 58). T1 là 175–200% (ilvl 84)."
+      - mod: "#% increased Spell Damage / +# to maximum Mana"
+        why: "Một phần trăm spell damage thứ hai ở một group khác, nên nó nằm cạnh cái đầu được."
+        aim: "T2, 64–76% kèm 54–59 Mana (ilvl 58). T1 cần ilvl 80."
+      - mod: "Adds # to # Fire Damage to Spells"
+        why: "Flat damage cho spell của một element; các bản Cold và Lightning chung group với nó. Prefix mà một lần craft Fossil fire hay để lại nhất ở ô thứ ba."
+        aim: "T2, adds 83–109 to 166–191 (ilvl 62). T1 cần ilvl 74."
+      - mod: "+# to maximum Mana"
+        why: "Prefix phổ biến nhất trên staff. Chỉ đáng một ô với những build biến Mana thành damage hoặc phòng thủ."
+      - mod: "Adds # to # Physical Damage"
+        why: "Đại diện cho mọi prefix attack: physical, elemental và chaos damage thêm vào attack đánh bằng staff. Phí với caster, và gộp lại chúng là thứ dễ roll ra nhất."
+  suffixes:
+    text: >-
+      Phía suffix thì dễ tính với caster gây damage bằng hit. Cast speed,
+      Spell Critical Strike Chance và Global Critical Strike Multiplier mỗi
+      cái chiếm 6.5 tới 7.6% số lần roll suffix, mọi tier của chúng có weight
+      như nhau, và Essence hay bench đều cấp được bất kỳ cái nào trong ba.
+
+
+      Build gây damage over time thì vất vả hơn. Các multiplier cho một loại
+      damage có weight 50 ở tier cao nhất và 400 ở tier đáy, và "Damage over
+      Time Multiplier" chung là một group riêng, cộng dồn được với chúng. Cả
+      hai đều hiếm tới mức 31–35% của bench hoặc 44–48% của bản veiled mới là
+      nguồn thực tế.
+
+
+      Attack speed là suffix phổ biến nhất trên staff và không đáng gì với
+      caster. Cùng với accuracy, leech và các suffix attack khác, nó chiếm
+      31% phía này.
+    key:
+      - mod: "#% increased Cast Speed"
+        why: "Suffix mà caster đánh bằng hit nào cũng muốn. Essence of Misery đảm bảo nó."
+        aim: "T3, 32–37% (ilvl 55). T1 là 44–49% (ilvl 83)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "Cho build crit. Không giống \"increased Critical Strike Chance\", vốn là local trên staff và chỉ tính cho attack đánh bằng nó."
+        aim: "T2, 120–134% (ilvl 59). T1 là 135–164% (ilvl 76)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global, nên có tác dụng với spell. Bạn đồng hành tự nhiên của spell crit."
+        aim: "T2, 30–34% (ilvl 59)."
+      - mod: "+#% to Fire Damage over Time Multiplier"
+        why: "Suffix then chốt của build damage over time, với các bản Cold, Chaos và Physical trong cùng group. Tier 3 trở lên đã là khoảng 1 trên 264 lần roll suffix."
+        aim: "T3, 46–55% (ilvl 36). T1 là 66–75% (ilvl 78)."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "Áp dụng cho mọi loại damage và nằm ở một group khác, nên nó cộng dồn với bản theo loại."
+        aim: "T3, 31–35% (ilvl 68)."
+      - mod: "+#% Chance to Block Spell Damage"
+        why: "Cộng vào implicit block của staff thường: 25% với 18–20% là 43–45% từ một item."
+        aim: "T1, 18–20% (ilvl 77)."
+      - mod: "#% increased Attack Speed"
+        why: "Họ suffix đơn lẻ lớn nhất trên staff. Caster đọc nó như một ô trống không lấp được."
+approach:
+  principle: >-
+    **Gem level trước, bằng công cụ nhắm vào chúng.** Chúng là thứ duy nhất
+    trên staff mà cả Essence lẫn bench đều không bán cho bạn. Spell damage,
+    cast speed và spell crit thì cái nào cũng có cả hai nguồn. Vậy nên đừng
+    bao giờ bỏ một prefix gem level để giữ bất cứ thứ gì khác, và đừng bao
+    giờ bắt đầu một cây staff từ phía dễ của nó.
+  order:
+    - title: "Chọn base theo implicit, chọn item level theo modifier cuối cùng bạn sẽ thêm"
+      text: >-
+        Block, critical strike chance hay Energy Shield: chọn base chỉ có
+        vậy. Item level 77 mở mọi bậc gem level; 83 và 84 mở cast speed và
+        spell damage tốt nhất. Tiện thể kiểm luôn yêu cầu Strength.
+    - title: "Quyết định bạn trả tiền cho mấy prefix gem level"
+      text: >-
+        **Một:** Alteration và một Regal Orb, kèm một Imprint nếu roll ra thứ
+        hiếm. **Hai:** Fossil, vì item Magic chứa được một prefix và không
+        Essence nào thêm cái còn lại. **Hai ở bậc cao nhất:** một base có một
+        trong hai cái đã fractured, rồi Fossil cho cái thứ hai. Đừng bao giờ
+        tiêu một fracture vào spell damage hay cast speed: mấy thứ đó mua
+        được.
+    - title: "Roll gem level và không gì khác"
+      text: >-
+        Đánh giá mỗi kết quả chỉ qua các dòng gem level. Một cây staff có +3
+        và +1 còn mọi thứ khác đều tệ là một thành công; một cây staff có
+        spell damage hoàn hảo mà không có gem level là thứ lẽ ra bạn đã mua
+        được từ bench.
+    - title: "Giao ô caster damage cho chủ tốt nhất bạn kham nổi"
+      text: >-
+        Chỉ một phần trăm nằm vừa. Kiểm xem cái gì đang giữ group trước khi
+        craft: một "increased Cold Damage" roll ra trên cây staff fire sẽ
+        block spell damage của bench. Nếu staff có "all Spell Skill Gems" và
+        không có prefix element, craft Socketed Support Gems của bench là
+        cách dùng còn lại cho một prefix trống.
+    - title: "Chỉ bảo vệ prefix nếu bạn sẽ không gặp lại chúng"
+      text: >-
+        Craft Fossil roll lại cả hai phía và thường ra cast speed cùng với
+        gem level, nên với những kết quả phổ biến, thêm Fossil là đường rẻ
+        hơn để có suffix tốt hơn. Khóa là dành cho +4, hoặc cho "+2 to all".
+        Nó cần một ô suffix trống; hãy đếm trước khi trả tiền.
+    - title: "Cast speed, rồi suffix thứ hai của build, rồi bench"
+      text: >-
+        Khi prefix đã khóa, reforge Caster chỉ còn cast speed và spell crit
+        để chọn. Chừa một ô cho bench và đặt suffix damage còn thiếu vào đó.
+  finishing: >-
+    Socket và link là khâu hoàn thiện đáng kể trên staff: sáu socket link
+    chứa main skill, và từ 3.29 mọi socket đều trắng và nhận gem nào cũng
+    được. Caster không cần quality. Chỉ dùng [[Divine Orb]] cho những
+    modifier có khoảng: nó không nâng được +3 lên +4.
+
+
+    Nếu ô dành cho bench chưa dùng thì dùng đi. Một cây staff còn suffix
+    trống mà không có modifier crafted nào là chưa hoàn thiện.
+  stopping: >-
+    Một cây staff có **một** prefix gem level ở +3, spell damage của bench và
+    cast speed nào cũng được đã là một weapon thực thụ cho cuối campaign và
+    những map đầu. **Hai** prefix gem level ở bậc nào cũng được, kèm cast
+    speed, gánh một caster qua phần lớn Atlas. Bậc cao nhất của cả hai, và
+    các tier tốt nhất bên cạnh chúng, là chỗ chi phí nhân lên.
+
+
+    Hãy chốt số gem level bạn nhắm tới trước orb đầu tiên, và dừng khi đã có.
+    Nếu một bước hỏng và cây staff giờ tệ hơn món bạn có thể mua bằng phần
+    ngân sách còn lại, hãy mua món đó.
+special:
+  - mod: "Damage Penetrates #% Fire Resistance"
+    source: "Essence / Fossil / influence Warlord"
+    where: "Được đảm bảo bởi Essence of Rage: 15–16% ở bậc Deafening, 11–12% ở bậc Screaming. Sorrow cho bản cold và Spite cho bản lightning. Một bản yếu hơn, 12–15%, chỉ roll ra trong craft Fossil, và influence Warlord, Redeemer và Crusader thêm 14–15% cho element của chúng ở item level 78."
+  - mod: "Minions deal #% increased Damage"
+    source: "Essence / Fossil / Bench"
+    where: "Essence of Fear: 123–144% ở bậc Deafening. Bản chỉ có từ Fossil lên tới 111–130% ở item level 75. [[Crafting Bench]] bán 67–81% giá 4 Chaos Orb. Tất cả đều chiếm ô caster damage."
+  - mod: "Socketed Skills deal 20% more Spell Damage"
+    source: "Fossil / influence Shaper"
+    where: "Một prefix chỉ có từ Fossil, mang tag caster và gem, và là một prefix Shaper ở item level 83. Nó tác động lên skill gắn trong staff, nên nó dành cho main skill nằm ở đó."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 giá 8 Chaos Orb, +2 giá 4 Exalted Orb. Cùng group với các prefix gem level theo element, nên nó chỉ nằm vừa trên cây staff không có cái nào trong số đó."
+  - mod: "Trigger a Socketed Spell when you Use a Skill, with a 8 second Cooldown"
+    source: "Bench"
+    where: "Một suffix bench giá 3 Chaos Orb. Spell được trigger theo cách này có 150% more Cost."
+  - mod: "#% increased Spell Damage / Gain #% of Non-Chaos Damage as extra Chaos Damage"
+    source: "Veiled / Bench"
+    where: "Unveil: 105–120% kèm 9–10%. Bench: 80–89% kèm 7–8% giá 4 Exalted Orb, hoặc 70–79% kèm 5–6% giá 4 Chaos Orb. Chiếm ô caster damage."
+  - mod: "#% increased Spell Critical Strike Chance"
+    source: "Essence"
+    where: "Modifier tự nhiên dừng ở 135–164%. Một [[Deafening Essence of Scorn]] cho 165–179%, mức không gì khác với tới."
+  - mod: "Spells have a #% chance to deal Double Damage"
+    source: "Influence Redeemer"
+    where: "Một suffix Redeemer, 12–14% ở item level 80. Cây staff cần influence Redeemer, từ đồ rơi hoặc từ một [[Redeemer's Exalted Orb]]."
+  - mod: "+# to Level of Socketed Fire Gems"
+    source: "Corruption"
+    where: "Một corruption implicit từ [[Vaal Orb]], +2, có các bản Cold, Lightning, Chaos và Physical. Nó thay implicit của base và kết quả thì không chọn được."
+  - mod: "Spend Energy Shield before Mana for Costs of Socketed Skills"
+    source: "Implicit của base"
+    where: "Implicit thứ hai của ba cây staff Heist. Không craft ra được: bạn chọn nó bằng cách chọn base."
+mistakes:
+  - "**Bắt đầu từ một Essence of Woe trên cây staff nhắm gem level.** Nó cố định đúng cái prefix bench bán và roll lại hai cái bench không bán, lần nào cũng vậy."
+  - "**Lên quality cho staff của caster, hoặc đánh giá nó bằng damage mỗi giây.** Cả hai đều mô tả attack đánh bằng staff."
+  - "**Bench Socketed Support Gems cạnh một prefix element,** hoặc spell damage cạnh một phần trăm elemental roll ra. Mỗi cặp là một group và bench sẽ từ chối."
+  - "**Đọc reforge Speed thành reforge cast speed.** Attack speed mang cùng tag đó và có nhiều tier hơn."
+  - "**Tin rằng \"Cannot roll Caster Modifiers\" làm cho Annulment an toàn.** Từ 3.30 nó chỉ ngăn modifier caster được thêm vào."
+  - "**Trả tiền khóa khi không có ô suffix trống.** Khóa tự nó là một suffix. Trên cây staff có ba suffix roll ra, bench sẽ không cho chọn nó."
+  - "**Gắn Fossil của sai element.** Scorched loại bỏ modifier cold, Frigid loại bỏ fire, Metallic loại bỏ các modifier physical, kể cả spell gem physical."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, modifier, tier, weight, group, tag, Essence, hệ số nhân của Fossil và giá bench được dẫn ở đây. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ, và thay đổi về thứ mà \"Cannot roll Attack/Caster Modifiers\" bảo vệ khỏi." }
+  - { title: "Patch notes 3.27.0", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Reforge Harvest đảm bảo một loại modifier thì tôn trọng các modifier \"Cannot roll\"." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge Caster, Speed và Critical." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Hành vi của các modifier bảo vệ và của Memory Strands, do người chơi thử nghiệm. Một phần cũ hơn 3.30." }

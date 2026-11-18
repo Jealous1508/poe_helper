@@ -1,0 +1,157 @@
+category: daggers
+title: "Block the unveil: a physical prefix from a veiled dagger"
+level: 3
+summary: "A veiled prefix offers three choices out of thirteen. One 4-Alteration bench craft takes seven of them off the table, and the arithmetic of what is left guarantees a physical one."
+goal: >-
+  Turn a veiled dagger from Betrayal into a physical weapon with a
+  120–139% increased Physical Damage prefix, a strength Alterations reach
+  about once in 390 prefix rolls. The lesson is **blocking**: using a bench
+  modifier not for what it gives but for the group it occupies.
+base: "Gutting Knife"
+itemLevel: 70
+baseWhy: >-
+  This craft starts from a drop: any Rare dagger with a **Veiled Prefix**,
+  item level 60 or higher, which is what the unveiled modifiers need. A
+  Gutting Knife has the highest base critical strike chance of the ordinary
+  daggers. In 3.30 veiled items come from Betrayal only; the patch notes
+  removed them from other rewards.
+methods: [veiled, bench, finishing]
+result:
+  implicits: ["44% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+    - { text: "+97 to maximum Mana" }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "+34 to Intelligence" }
+needs:
+  - { item: "A Rare dagger with a Veiled Prefix", amount: "1", note: "from Betrayal" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "the blocking craft" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove it again" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "the final bench craft" }
+cost: >-
+  The veiled dagger, which Syndicate members drop, and a few orbs for the
+  bench. This is one of the cheapest strong prefixes in the game if you run
+  Betrayal, and the craft cannot fail in a way that costs the item.
+odds: >-
+  The dagger class has thirteen veiled prefixes. Seven share one modifier
+  group: the chaos, cold, fire, lightning, two spell and one minion damage
+  prefixes. Four are the physical hybrids, which share a second group. Two
+  are penetration modifiers.
+
+
+  By player testing, unveiling never offers a group that is already on the
+  item. With the seven blocked, six remain, and three different choices are
+  offered: since only two of the six are not physical, at least one physical
+  hybrid must be among them. That is counting from the data, resting on the
+  player-tested rule; it is not a published rate.
+steps:
+  - title: "Read the veiled dagger before touching it"
+    do: >-
+      Hold Alt. Confirm the veiled line says **Veiled Prefix**, not Suffix.
+      Then check two things: is **another prefix slot open**, and does the
+      dagger already have rolled **increased Physical Damage** without
+      Accuracy?
+    why: >-
+      The block needs an empty prefix to sit in. And rolled pure increased
+      Physical Damage is the same group as the veiled physical prefixes: if
+      it is on the dagger, they are the ones that will not be offered.
+    fail: >-
+      Prefix side full: you cannot block. Unveil as it is; four of the
+      thirteen choices are physical. Pure physical already rolled: this
+      dagger's veiled prefix is for something else, such as the
+      penetration modifiers.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Mana" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Craft the block"
+    do: >-
+      At the [[Crafting Bench]], craft **25–34% increased Fire Damage** for
+      4 [[Orb of Alteration]]s. Do not unveil first.
+    why: >-
+      You do not want Fire Damage. You want its group on the item. In the
+      3.30 data that one group also holds the veiled chaos, cold, fire,
+      lightning, spell and minion damage prefixes, so a single cheap craft
+      stands in the way of seven choices at once. Any bench craft of that
+      group works; this is the cheapest.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Unveil"
+    do: >-
+      Right-click the dagger and pick the physical hybrid that suits the
+      build: 120–139% increased Physical Damage with a 21–25% chance to
+      Poison, Bleed, Impale or Blind.
+    why: >-
+      Since 3.26 unveiling needs no trip to Jun. The unveiled modifier is
+      an ordinary one, not a bench craft, so it does not use the bench
+      slot, and it is stronger than the bench's copy (95–105%).
+    check: >-
+      If no physical choice appears, the player-tested block rule no longer
+      holds in the current patch. Take a penetration modifier or the best
+      of what is offered.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "27% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+  - title: "Replace the block with damage"
+    do: >-
+      At the bench, remove the crafted modifier (1 [[Orb of Scouring]]) and
+      craft **adds 13–17 to 26–30 Physical Damage** for 4 [[Chaos Orb]]s.
+    why: >-
+      The block has done its work. Flat Physical Damage is a third group,
+      separate from the veiled prefix, and the veiled percentage multiplies
+      it. The bench's own physical percentage would be refused: same group
+      as the prefix you just unveiled.
+    state:
+      implicits: ["44% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "126% increased Physical Damage / 22% chance to Blind Enemies on Hit", how: veiled }
+        - { text: "+97 to maximum Mana" }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "+34 to Intelligence" }
+variations: >-
+  **A Veiled Suffix.** The same idea with a weaker count: the seventeen
+  veiled suffixes are spread over more groups, so one craft blocks at most
+  four. Block the family you want least and choose from what is offered.
+
+
+  **Putting a veil on your own dagger.** A [[Veiled Chaos Orb]] rerolls a
+  Rare with a veiled modifier included; a [[Veiled Exalted Orb]] removes one
+  random modifier and adds a veiled one. Neither lets you choose prefix or
+  suffix, which is what the harder examples solve with a lock.
+
+
+  **The open suffix.** This dagger still has one. An [[Exalted Orb]] must
+  add a suffix, because the prefix side is full, and by our arithmetic about
+  one time in four it would be Critical Strike Chance or Multiplier. It can
+  wait until you can spare one.
+mistakes:
+  - "Unveiling on the spot because the dagger just dropped. The block costs four Alterations and has to come first."
+  - "Blocking with a physical bench craft. That removes the four choices you wanted."
+  - "Leaving the Fire Damage on the finished dagger. It was a tool; swap it out."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The thirteen veiled prefixes and their modifier groups, and bench costs. The count is ours." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Veiled items removed from non-Betrayal rewards." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "The player-tested rule that a group already on the item is not offered when unveiling. Partly older than 3.30." }

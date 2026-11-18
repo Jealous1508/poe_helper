@@ -1,0 +1,505 @@
+name: "Boots"
+short: "Movement speed trước tiên, trên mọi đôi. Sau đó boots là chỗ gọn gàng nhất trong game để dồn resistance, và hai base Atlas có sẵn một ít."
+icon: "Two-Toned Boots"
+intro: >-
+  Boots có một modifier mà không build nào bỏ qua: increased Movement Speed.
+  Nó là một prefix, nó phổ biến, và tier tốt nhất của nó cần item level 86,
+  mức cao nhất mà một modifier thông thường trong game đòi tới. Một đôi boots
+  thiếu nó thì chưa xong, bất kể trên đó còn gì khác.
+
+
+  Khi movement speed đã vào chỗ, boots là một item phòng thủ với pool suffix
+  gọn gàng khác thường. Trong đó không có damage và ít thứ lộn xộn, nên
+  resistance đến dễ dàng. Nhờ vậy đây là loại trang bị armour dễ craft nhất,
+  và là nơi lần craft thực thụ đầu tiên của người chơi mới thường diễn ra.
+basics:
+  itemLevel:
+    text: >-
+      Movement speed định ra các mốc item level đáng kể. 30% cần item level
+      55. Tier cuối, 35%, cần **86**, mức mà chỉ các khu vực cao nhất trong
+      game mới rơi. Không gì khác trên boots đòi hơn 85.
+
+
+      Maximum Life chạm đỉnh sớm: 115–129 ở item level 54. Resistance và
+      prefix defence phần trăm đạt tier cuối ở 84, spell suppression ở 85.
+
+
+      **Item level 55 là đủ cho một đôi tốt**, vì nó mở cùng lúc 30% movement
+      speed và life tốt nhất. Dùng 72 trở lên khi resistance quan trọng, và
+      chỉ trả tiền cho 86 khi bạn muốn năm điểm speed cuối cùng.
+    breakpoints:
+      - ilvl: 15
+        unlocks: "**Leveling.** 15% movement speed."
+      - ilvl: 30
+        unlocks: "20% movement speed, \"Stallion's\"."
+      - ilvl: 40
+        unlocks: "25% movement speed, \"Gazelle's\"."
+      - ilvl: 55
+        unlocks: "30% movement speed, \"Cheetah's\", cùng Tier 1 của maximum Life (115–129) đã mở từ 54. **Đủ cho phần lớn boots.**"
+      - ilvl: 72
+        unlocks: "Tier 2 của resistance (42–45%) và Tier 2 của defence phần trăm (80–91%)."
+      - ilvl: 75
+        unlocks: "Các modifier influence Tailwind và Elusive, và tier cao nhất của phần lớn modifier influence khác."
+      - ilvl: 84
+        unlocks: "Tier 1 của resistance (46–48%) và Tier 1 của defence phần trăm (92–100%)."
+      - ilvl: 86
+        unlocks: "35% movement speed, \"Hellion's\". Tier 1 của spell suppression (13–14%) đã mở từ 85. **Mức trần.**"
+  bases:
+    text: >-
+      Có 81 boots chia vào tám pool: sáu pool quen thuộc theo defence, các
+      base Ward, và một base có riêng một pool cho mình. Movement speed, life
+      và resistance roll trên tất cả. Pool quyết định các prefix defence,
+      mana có giành ô prefix hay không, và suffix attribute nào cùng spell
+      suppression có thể xuất hiện.
+    types:
+      - title: "Một defence: Armour, Evasion hoặc Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          Boots **Armour** roll Strength và increased Life Regeneration rate.
+          Boots **Evasion** roll Dexterity và chance to Suppress Spell Damage
+          ở weight đầy đủ. Boots **Energy Shield** roll Intelligence,
+          Recharge Rate, và maximum Mana dưới dạng prefix. Khác với gloves,
+          mỗi attribute chỉ roll trên boots có defence của chính nó.
+
+
+          Prefix mana quan trọng hơn vẻ ngoài của nó. Trên boots Armour hoặc
+          Evasion, movement speed là khoảng một trên sáu lần roll prefix.
+          Trên bất kỳ base nào có Energy Shield, mana chiếm khoảng một phần
+          tư pool prefix và movement speed tụt xuống còn một trên tám lần
+          roll.
+      - title: "Hai defence"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Boots hybrid roll các prefix defence hybrid và suffix attribute của
+          cả hai bên gốc ở nửa weight. Spell suppression roll trên bất cứ thứ
+          gì có Evasion, với weight 500 mỗi tier so với 1,000 trên boots
+          thuần Evasion. Pool Armour và Evasion có pool prefix nhỏ nhất trong
+          các boots thường, và vì vậy có tỉ lệ ra movement speed tốt nhất.
+      - title: "Avian Slippers"
+        pools: [avian-slippers]
+        text: >-
+          Một base, một mình trong pool của nó. Dữ liệu cho nó không có
+          defence, không có yêu cầu attribute, level 1 và implicit "10%
+          increased Movement Speed". Không có kiểu defence nên nó không roll
+          được prefix defence nào và suffix attribute nào, thành ra tổng cộng
+          chỉ còn ba họ prefix: maximum Life, movement speed và Item Rarity.
+          Một nửa số lần roll prefix của nó là life và hơn một phần ba là
+          movement speed. Dữ liệu không cho biết nó rơi ở đâu, và chúng tôi
+          chưa xác nhận được nguồn của nó trong 3.30.
+      - title: "Boots Runic (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Greaves, Runic Sollerets và Runic Sabatons, các base
+          Expedition, với Ward làm defence. Chúng roll các prefix Ward và
+          "faster Restoration of Ward", và không roll suffix attribute hay
+          suppression nào.
+      - title: "Two-Toned Boots"
+        text: >-
+          Base Atlas, có ba phiên bản, mỗi pool hybrid một cái. Từ 3.30
+          implicit là +16–20% cho hai elemental resistance: Fire và Cold trên
+          bản Armour và Evasion, Fire và Lightning trên bản Armour và Energy
+          Shield, Cold và Lightning trên bản Evasion và Energy Shield. Đó là
+          gần trọn một suffix, đặt ở chỗ không tốn ô nào.
+      - title: "Fugitive Boots"
+        text: >-
+          Base Atlas thứ hai, trong pool Evasion và Energy Shield, với
+          +17–23% to Chaos Resistance. Giống Two-Toned Boots, nó có defence
+          thấp hơn boots thường cùng level và chỉ rơi khi một item roll ra
+          Item Tier đủ cao.
+      - title: "Boots Ritual"
+        text: >-
+          Ba họ với ba cỡ, có implicit hai mặt. Basemetal, Darksteel và
+          Brimstone Treads: thêm Stun and Block Recovery, stun threshold thấp
+          hơn. Cloudwhisper, Windbreak và Stormrider Boots: added Lightning
+          Damage cho attack theo mỗi 200 Accuracy, kèm 25% less Accuracy.
+          Duskwalk, Nightwind và Dreamquest Slippers: 45–50% increased
+          Cooldown Recovery Rate of Movement Skills, kèm 10% reduced Movement
+          Speed.
+    picks:
+      - base: "Two-Toned Boots"
+        for: "Resistance trên implicit"
+        why: >-
+          +16–20% cho hai resistance trước khi tính bất kỳ modifier nào. Lấy
+          phiên bản có pool bạn muốn; bản Armour và Evasion còn có tỉ lệ ra
+          movement speed tốt nhất.
+      - base: "Fugitive Boots"
+        for: "Chaos Resistance"
+        why: >-
+          +17–23% Chaos Resistance trên implicit, loại resistance khó roll
+          nhất: một tier của nó có weight bằng một phần tư một tier của mấy
+          cái kia.
+      - base: "Velour Boots"
+        for: "Evasion, suppression và hai Eldritch implicit"
+        why: >-
+          359–413 Evasion Rating, đỉnh của pool, với spell suppression ở
+          weight đầy đủ và không có implicit nào để mất vào tay một Ember.
+      - base: "Leviathan Greaves"
+        for: "Armour nhiều nhất"
+        why: >-
+          359–413 Armour ở level 84 và 177 Strength, không có prefix mana, và
+          movement speed ở khoảng một trên sáu lần roll prefix.
+      - base: "Warlock Boots"
+        for: "Energy Shield nhiều nhất"
+        why: >-
+          72–83 Energy Shield ở level 84 và 177 Intelligence. Hãy lường trước
+          các prefix mana; tính lấy movement speed từ một Essence.
+      - base: "Slink Boots"
+        for: "Evasion mà không cần chừng ấy Dexterity"
+        why: >-
+          246–283 Evasion Rating với 120 Dexterity ở level 69, cùng pool với
+          Velour Boots. Base để craft trong lúc leveling lên map.
+    impact: >-
+      **Implicit, và bạn có giữ nó không.** Two-Toned và Fugitive Boots mang
+      resistance không tốn ô nào. Một base thường không mang gì và chừa chỗ
+      cho hai Eldritch implicit. Hai thứ không gộp được: dòng chữ trên mọi
+      Ember và Ichor nói nó "replaces any existing implicit modifiers" ngoại
+      trừ implicit Eldritch của phía đối diện. Hãy chọn base và kế hoạch cùng
+      lúc.
+
+
+      **Pool.** Mana có pha loãng các lần roll movement speed của bạn hay
+      không, và spell suppression có roll được hay không.
+
+
+      **Con số defence**, được các prefix local và quality nhân lên.
+
+
+      **Yêu cầu.** 177 của một attribute cho các base cao nhất, 62 của mỗi
+      attribute trong hai cái cho Two-Toned Boots.
+tools:
+  - method: currency
+    note: >-
+      Đây là loại trang bị mà currency thường làm được việc. Trên boots
+      Armour hoặc Evasion, theo phép tính của chúng tôi từ weight, khoảng một
+      trên sáu lần roll prefix là movement speed ở một tier nào đó. Ở item
+      level 86, một trên 20 là 30% hoặc 35%, và một trên 40 là đúng 35%. Life
+      cũng phổ biến ngang vậy: một trên 20 lần roll prefix là từ 100 trở lên.
+
+
+      Vậy nên [[Orb of Alteration]] tìm ra movement speed nhanh, và một
+      [[Regal Orb]] cùng bench hoàn tất công việc. Mọi tier có weight như
+      nhau, nên item level thấp không làm tier cao nhất với tới được hiếm hơn
+      chút nào; nó chỉ chặn trần tier đó.
+  - method: bench
+    note: >-
+      Bench bán movement speed ở ba bậc: 10–14% giá 3 Orb of Augmentation,
+      15–19% giá 2 Chaos Orb, 20–24% giá 4 Chaos Orb. Ba hybrid ở 18–20% giá
+      4 Chaos Orb thêm một dòng thứ hai: 100% chance to Avoid being Chilled,
+      một chance có Onslaught on kill, hoặc thêm speed khi bạn chưa bị hit
+      gần đây.
+
+
+      **Tất cả chúng đều chung group với movement speed roll ra.** Bench dành
+      cho boots chưa có cái nào, không bao giờ để thêm vào boots đã có.
+
+
+      Cũng có ở đây mà không có ở đâu trong pool tự nhiên: "100% chance to
+      Avoid being Frozen" dưới dạng prefix giá 4 Exalted Orb (80% giá 4 Chaos
+      Orb), và 21–25% chance to Avoid Elemental Ailments dưới dạng suffix giá
+      2 Chaos Orb. Life và resistance có giá như trên mọi món armour: 56–70
+      life giá 4 Orb of Alchemy, 29–35% của một resistance giá 3 Chaos Orb.
+  - method: finishing
+    note: >-
+      20% quality bằng [[Armourer's Scrap]] và tối đa bốn socket. Resistance
+      trên boots hay đúng về tổng mà sai element; một lần đổi bằng Harvest
+      tốn 300 Lifeforce thuộc hai màu trong 3.30. Một [[Blessed Orb]] roll
+      lại implicit của Two-Toned hoặc Fugitive Boots trong khoảng của nó.
+  - method: essence
+    note: >-
+      **Zeal** đảm bảo movement speed trên boots: 25% ở bậc Screaming, 30% ở
+      Shrieking, 32% ở Deafening. Hãy để ý điều đó có nghĩa gì khi so với các
+      tier tự nhiên. Bậc Deafening hơn mức 30% mà item level 55 tới 85 roll
+      được, và thua mức 35% của item level 86.
+
+
+      **Loathing** cho chance to Avoid Elemental Ailments, từ 21–25% tới
+      31–35%. **Anguish**, **Suffering** và **Torment** cho 47–60% chance to
+      avoid Ignite, Freeze hoặc Shock. **Scorn** cho chance to Avoid being
+      Stunned. **Envy** đảm bảo Chaos Resistance. Không cái nào trong năm cái
+      đầu nằm trong pool tự nhiên. **Greed** dừng ở 91–105 life, thua Tier 2
+      tự nhiên.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) đáng làm cho một đôi Magic có 35%
+      movement speed trước khi dùng [[Regal Orb]]. Trên boots, các công thức
+      thêm-và-gỡ dễ chịu hơn trên phần lớn item: khi movement speed và life
+      đã vào chỗ và chưa có suffix nào, "thêm một prefix, gỡ một suffix ngẫu
+      nhiên" ([[Farric Wolf Alpha]]) không có gì để gỡ và thêm một prefix
+      defence khoảng năm trên sáu lần, theo phép tính của chúng tôi.
+  - method: harvest
+    note: >-
+      Boots không có modifier damage, nên các tag elemental sạch sẽ. Một
+      reforge "kèm một modifier Fire" (50 Wild Lifeforce) đảm bảo Fire
+      Resistance, modifier duy nhất mang tag fire trong pool; Cold và
+      Lightning cũng vậy; **Chaos** (100 Vivid) đảm bảo Chaos Resistance.
+
+
+      **Speed** (150 Vivid) đảm bảo movement speed, modifier speed duy nhất,
+      nhưng ở một tier ngẫu nhiên. Alteration cho bạn dừng ở tier mình muốn
+      và một Essence thì cố định nó, nên reforge Speed là lựa chọn thứ ba,
+      dành cho một đôi có suffix đã khóa.
+  - method: fossil
+    note: >-
+      Một [[Shuddering Fossil]] nhân các modifier speed lên mười lần và loại
+      các modifier mana: trên boots Evasion, movement speed trở thành hai
+      trên ba lần roll prefix. Có một [[Pristine Fossil]] bên cạnh, life và
+      movement speed cộng lại chiếm 99% pool prefix, theo phép tính của chúng
+      tôi. Không Fossil nào trong hai cái cải thiện tier.
+
+
+      Chỉ Fossil mới có trên boots: "+2 to Level of Socketed" cho gem Fire,
+      Cold, Lightning hoặc Chaos dưới dạng prefix; "+1 to Level of all Raise
+      Spectre Gems"; 4–6% movement speed nếu bạn đã hit một enemy gần đây; và
+      một suffix +4.5–6% spell suppression mà dữ liệu xếp vào một group khác
+      với bản tự nhiên, nên cả hai nằm được trên cùng một đôi.
+  - method: eldritch
+    note: >-
+      Searing Exarch cho boots increased Movement Speed (5% ở bậc Lesser, 8%
+      ở Exceptional), thứ cộng thêm vào prefix; increased Action Speed
+      (4–5%); một elemental resistance (từ 13–14% tới 19–20%); chance to
+      avoid Freeze, Ignite, Shock hoặc Stun. Eater of Worlds cho chance to
+      Avoid Elemental Ailments (từ 15–17% tới 24–26%), Cooldown Recovery Rate
+      (từ 5% tới 8%), Physical Damage gained as an extra element.
+
+
+      Theo phép tính của chúng tôi, một Lesser Ember cho movement speed
+      khoảng 1 trên 15 lần. Và khi implicit Eater là cái mạnh hơn trong hai
+      cái, Eldritch Chaos Orb chỉ roll lại suffix, đúng thứ mà một đôi boots
+      có prefix đã xong cần.
+  - method: veiled
+    note: >-
+      Các prefix movement speed unveil ra là 25–30% kèm cùng các dòng thứ hai
+      như hybrid của bench, bản Onslaught ở 13–16% chance. Chúng nằm trong
+      group movement speed, nên chúng thay thế một tier roll ra chứ không
+      cộng dồn với nó. Ở phía suffix: một resistance ghép với Chaos
+      Resistance, mỗi cái 16–20%.
+  - method: influence
+    note: >-
+      Boots giữ hai modifier influence nổi tiếng nhất trong game. Hunter:
+      "You have Tailwind if you have dealt a Critical Strike Recently", một
+      suffix có weight 100. Redeemer: 5–10% chance to gain Elusive on
+      Critical Strike, một prefix có weight 250. Cả hai cần item level 75.
+      Ngoài ra: Warlord có "+1 to Maximum Endurance Charges" (weight 125),
+      Shaper có 31–35% chance to Avoid Elemental Ailments, Shaper và Crusader
+      có Cooldown Recovery Rate, và "+2 to Level of Socketed" cho gem của một
+      element, mỗi conqueror một element.
+
+
+      Một đôi có influence giữ được implicit Atlas và không thể có Eldritch
+      implicit.
+  - method: meta
+    note: >-
+      Một lần khóa prefix hoặc suffix tốn 4 Divine Orb và 4 [[Blessed Orb]]
+      trên boots. Không có influence thì Eldritch implicit mạnh hơn làm cùng
+      việc đó cho một lần roll lại thông thường. Hãy dùng khóa cho một đôi có
+      influence, hoặc khi lần roll lại buộc phải là một reforge Harvest với
+      resistance được đảm bảo.
+  - method: corruption
+    note: >-
+      Các corruption implicit trên boots gồm 8–10% increased Movement Speed,
+      "+1 to Maximum Endurance Charges", +6–9% spell suppression, bốn hiệu
+      ứng mặt đất "Unaffected by" và Unwavering Stance, thứ không phải lúc
+      nào cũng là quà.
+  - method: strands
+    note: "Tốt trên một lần craft bằng Alteration để tìm movement speed và life. Xem phần bên dưới."
+memoryStrands: >-
+  Movement speed có sáu tier thông thường với weight bằng nhau, và ở bất kỳ
+  item level nào các tier thấp nhất cũng dễ ra ngang tier tốt nhất bạn với
+  tới được. [[Memory Strands]] loại các tier thấp khỏi lần roll, nên trên
+  base có strand, một Alteration rơi trúng movement speed sẽ rơi cao hơn
+  thường xuyên hơn. Life và resistance cũng vậy. Các mức mà người chơi đã đo
+  được là cho một modifier 13 tier; hiệu ứng kéo sang một modifier sáu tier
+  tới đâu thì chưa được công bố.
+
+
+  Kiểu craft boots hợp với strand là kiểu thường: [[Orb of Alteration]] với
+  tối đa 8 strand mỗi cái, một [[Regal Orb]] với tối đa 16. Strand không nâng
+  được một lần roll vượt quá item level, nên một base có strand dưới 86 vẫn
+  dừng ở 30%.
+
+
+  Chúng bị phí khi dùng Essence of Zeal, thứ có modifier ở độ lớn cố định và
+  có thể tiêu 80 strand mỗi lần dùng, và khi dùng Fossil cùng Harvest, những
+  thứ phớt lờ chúng theo thử nghiệm của người chơi. Còn một item có strand có
+  nhận Eldritch implicit hay không thì chúng tôi chưa xác nhận được.
+reading:
+  intro: >-
+    Có một câu hỏi đi trước mọi câu khác: **nó có movement speed không, và
+    bao nhiêu?** Rồi tới life. Rồi đếm resistance và nhìn implicit. Boots có
+    30% movement speed, life từ 85 trở lên và hai resistance là một item hoàn
+    chỉnh với phần lớn nhân vật, và không có gì ở chúng là hiếm.
+  prefixes:
+    text: >-
+      Movement speed chiếm một prefix trên mọi đôi. Mọi bản của nó, roll ra,
+      craft, từ Essence hay unveil ra, đều là một group, nên nó là một
+      modifier và một ô, và câu hỏi chỉ là bản nào.
+
+
+      Life chiếm cái thứ hai. Với cái thứ ba, build life lấy một prefix
+      defence hoặc hybrid của bench gồm defence phần trăm kèm chút life, còn
+      build Energy Shield bỏ life và lấy hai prefix defence.
+
+
+      Thứ cản đường tùy vào base. Trên boots Armour và Evasion, gần như
+      prefix nào cũng hữu ích: chỉ Item Rarity, một trên hai mươi lần roll,
+      là phí. Trên boots có Energy Shield, maximum Mana chiếm một phần tư
+      pool.
+    key:
+      - mod: "#% increased Movement Speed"
+        why: "Modifier mà loại trang bị này tồn tại vì nó. Sáu tier với weight bằng nhau; item level định ra tier cao nhất bạn roll được."
+        aim: "30% (ilvl 55). 35% cần ilvl 86; Deafening Zeal cho 32% ở bất kỳ level nào."
+      - mod: "+# to maximum Life"
+        why: "Phổ biến ngang movement speed và cả chín tier đều đã mở ở item level 54."
+        aim: "T2, 100–114 (ilvl 44). T1 là 115–129 (ilvl 54)."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local, nhân vào base. Prefix thứ ba quen thuộc trên base defence cao nhất."
+        aim: "T3, 68–79% (ilvl 60). T1 là 92–100% (ilvl 84)."
+      - mod: "+# to Armour, Evasion Rating or maximum Energy Shield"
+        why: "Nâng con số mà cái phần trăm nhân lên. Ổn khi làm prefix thứ ba, không bao giờ đáng một lần roll lại."
+      - mod: "#% increased Movement Speed / 100% chance to Avoid being Chilled"
+        why: "Một trong ba hybrid từ bench hoặc từ một veiled modifier. Nằm trong group movement speed: nó là lựa chọn thay cho prefix roll ra, không phải phần cộng thêm."
+        aim: "18–20% ở bench; 25–30% khi unveil ra."
+      - mod: "+# to maximum Mana"
+        why: "Chỉ có trên boots có Energy Shield, nơi nó là prefix hay gặp nhất và là lý do movement speed khó roll hơn ở đó."
+  suffixes:
+    text: >-
+      Pool suffix của boots là pool sạch nhất trong mọi món armour. Trên
+      boots Armour hoặc Evasion, ba elemental resistance chiếm hơn 40% mọi
+      lần roll suffix. Không có damage, không accuracy, không leech.
+
+
+      Đồ lấp chỗ thì ít: Stun and Block Recovery và Life Regeneration, cộng
+      lại khoảng một phần tư pool, thêm chút Item Rarity và reduced Attribute
+      Requirements. Attribute chỉ roll cho defence của chính pool đó.
+
+
+      Vậy nên phía suffix được quyết định theo nhu cầu. Nhân vật của bạn
+      thiếu resistance nào? Build có cap spell suppression không, mà nếu có
+      thì boots phải có Evasion? Có ailment nào bạn muốn dẹp không, thứ mà
+      bench hoặc một Essence xử lý được?
+    key:
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "Mỗi cái là khoảng một trên bảy lần roll suffix trên boots không có Energy Shield. Hai cái trên một đôi là chuyện thường; ba cái là chuyện của sự kiên trì."
+        aim: "T3, 36–41% (ilvl 60). T1 là 46–48% (ilvl 84)."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Chỉ có trên boots có Evasion, ở weight đầy đủ trên base thuần Evasion."
+        aim: "T3, 9–10% (ilvl 68). T1 là 13–14% (ilvl 85)."
+      - mod: "+#% to Chaos Resistance"
+        why: "Một phần tư weight của mấy cái kia. Lấy nó từ Fugitive Boots, một Essence of Envy hoặc một reforge Harvest."
+        aim: "T3, 21–25% (ilvl 56). T1 là 31–35% (ilvl 81)."
+      - mod: "#% chance to Avoid Elemental Ailments"
+        why: "Không có trong pool tự nhiên. Bench bán 21–25%, một Essence of Loathing cho tới 31–35%."
+      - mod: "+# to Strength, Dexterity or Intelligence"
+        why: "Chỉ attribute thuộc defence của chính base. Hữu ích khi nó giải quyết một yêu cầu."
+      - mod: "Regenerate # Life per second"
+        why: "Một trên bảy lần roll suffix. Đồ lấp chỗ với phần lớn build, và là thứ mà một Pristine Fossil làm ngập phía suffix."
+approach:
+  principle: >-
+    **Movement speed trước tiên, bằng một đường không thể hỏng, và không bao
+    giờ đem đổi lấy bất cứ thứ gì.** Rồi tới life. Khi hai prefix đó đã xong,
+    boots là một lần craft suffix trên pool suffix dễ nhất hiện có, và quyết
+    định thật sự duy nhất là implicit đến từ base hay từ Eldritch currency.
+  order:
+    - title: "Chọn đường implicit, pool và item level"
+      text: >-
+        Two-Toned hoặc Fugitive Boots và không Eldritch currency, hoặc một
+        base thường với một Ember và một Ichor. Một pool có Evasion nếu bạn
+        cần suppression, không có Energy Shield nếu bạn muốn movement speed
+        dễ roll. Item level 55 cho 30%, 86 cho 35%.
+    - title: "Lấy movement speed"
+      text: >-
+        Alteration trên một base trắng, dừng ở tier tốt nhất mà item level
+        cho phép. Hoặc một Essence of Zeal, thứ cố định nó và roll phần còn
+        lại. Hoặc bench, trên một đôi bạn nhặt được đã có mọi thứ khác.
+    - title: "Đặt life bên cạnh nó"
+      text: >-
+        Một Regal Orb có thể thêm nó. Nếu không, life là một trên bốn hoặc
+        năm lần roll prefix trên phần lớn boots, và bench bán 56–70.
+    - title: "Bảo vệ prefix"
+      text: >-
+        Cho đôi boots một implicit Eater of Worlds mạnh hơn implicit Searing
+        Exarch của nó. Từ đó trở đi Eldritch Chaos Orb chỉ roll lại suffix.
+        Trên base Atlas hoặc một đôi có influence thì không làm được vậy, và
+        khóa bench là phương án thay thế.
+    - title: "Dựng suffix theo nhu cầu"
+      text: >-
+        Trước tiên là resistance mà nhân vật của bạn thiếu, rồi suppression
+        nếu build cần. Dừng khi hai suffix đã đúng và để bench cấp cái thứ
+        ba.
+    - title: "Implicit cuối cùng, rồi tới chỉ số"
+      text: >-
+        Thay mấy implicit rẻ bạn đã dùng để lái: movement speed từ Exarch,
+        một implicit ailment hoặc recovery từ Eater. Rồi tới quality và nhìn
+        lại các con số.
+  finishing: >-
+    Quality, socket và ô trống cuối cùng ở bench. Nếu boots có movement speed
+    roll ra và một prefix trống, hybrid của bench gồm defence phần trăm kèm
+    life là vừa; movement speed của bench thì không.
+
+
+    Một [[Blessed Orb]] lên implicit Atlas. Một lần đổi bằng Harvest khi một
+    resistance nằm sai element. Một [[Divine Orb]] không thay đổi gì ở
+    movement speed, thứ có chỉ số cố định ở mọi tier.
+  stopping: >-
+    30% movement speed, life từ 85 trở lên và hai resistance từ 36% trở lên:
+    dừng. Đôi đó tốn Alteration, một Regal Orb và một craft bench, và phục vụ
+    phần lớn nhân vật tới hết Atlas.
+
+
+    Những cải thiện đắt tiền thì nhỏ. 35% so với 30% là năm điểm speed và một
+    base item level 86. Một resistance cao thứ ba ở chỗ bench sẽ cho 29–35%
+    là mười tới mười lăm điểm. Suppression Tier 1 so với Tier 3 là bốn điểm.
+    Hãy mua chúng khi ngoài ra boots đã là món nâng cấp cuối cùng của bạn.
+special:
+  - mod: "#% increased Movement Speed with a second line"
+    source: "Bench / Veiled"
+    where: "Ba hybrid: 100% chance to Avoid being Chilled, chance to gain Onslaught on kill, hoặc thêm speed khi chưa bị hit gần đây. 18–20% từ [[Crafting Bench]] giá 4 Chaos Orb, 25–30% khi unveil ra. Tất cả chung group movement speed."
+  - mod: "100% chance to Avoid being Frozen"
+    source: "Bench"
+    where: "Một **prefix** bench giá 4 Exalted Orb; 80% giá 4 Chaos Orb. Nó tốn một trong hai prefix còn lại sau movement speed."
+  - mod: "#% chance to Avoid Elemental Ailments"
+    source: "Essence / Bench / Eldritch / Influence"
+    where: "Một Essence of Loathing, 31–35% ở bậc Deafening. Bench, 21–25% giá 2 Chaos Orb. Một implicit Eater of Worlds, từ 15–17% ở bậc Lesser tới 24–26% ở Exceptional. Một suffix Shaper, 31–35% ở item level 81."
+  - mod: "You have Tailwind if you have dealt a Critical Strike Recently"
+    source: "Influence Hunter"
+    where: "Một suffix Hunter ở item level 75 với weight 100, modifier có weight thấp nhất trên boots."
+  - mod: "#% chance to gain Elusive on Critical Strike"
+    source: "Influence Redeemer"
+    where: "Một prefix Redeemer, 5–10%, item level 75, weight 250. Ghép với Tailwind trên cùng một đôi bằng một [[Awakener's Orb]]."
+  - mod: "+1 to Maximum Endurance Charges"
+    source: "Influence Warlord / Corruption"
+    where: "Một prefix Warlord ở item level 75, weight 125. Cũng là một corruption implicit."
+  - mod: "+2 to Level of Socketed Fire, Cold, Lightning or Chaos Gems"
+    source: "Fossil / Influence"
+    where: "Các prefix chỉ Fossil mới có, không yêu cầu item level, và mỗi conqueror một prefix ở item level 68: Warlord là fire, Redeemer cold, Crusader lightning, Hunter chaos."
+  - mod: "+1 to Level of all Raise Spectre Gems"
+    source: "Fossil / Influence Elder"
+    where: "Một suffix chỉ Fossil mới có, hoặc một suffix Elder ở item level 75."
+  - mod: "#% increased Movement Speed, #% increased Action Speed"
+    source: "Eldritch implicit"
+    where: "Các implicit Searing Exarch: movement speed từ 5% ở bậc Lesser tới 8% ở Exceptional, action speed từ 4% tới 5%. Cả hai cộng thêm vào prefix movement speed. Thêm bằng Ember lên boots không có influence."
+  - mod: "Cannot be Poisoned"
+    source: "Essence corrupted"
+    where: "Suffix trên boots của một [[Essence of Delirium]], thứ chỉ có được bằng cách corrupt một Essence monster với một [[Remnant of Corruption]]."
+  - mod: "+#% to two Elemental Resistances, +#% to Chaos Resistance"
+    source: "Implicit của base"
+    where: "Implicit của Two-Toned Boots (+16–20% cho hai cái) và Fugitive Boots (+17–23%). Được chọn cùng với base và mất nếu bạn thêm một Eldritch implicit."
+  - mod: "5% increased Movement Speed for each Enemy within 6 metres, up to a maximum of 50%"
+    source: "Essence"
+    where: "Được liệt kê trong dữ liệu cho một [[Essence of Desolation]], thứ chỉ dùng được trên item Normal và ghìm mọi modifier khác ở level 15 trở xuống. Chúng tôi chưa xác nhận được Essence này kiếm bằng cách nào trong 3.30."
+mistakes:
+  - "**Craft bất cứ thứ gì trước movement speed.** Mọi phương pháp thêm nó về sau đều tốn một prefix mà có thể bạn không còn."
+  - "**Bench movement speed lên boots đã roll ra một tier thấp của nó.** Một group: bench từ chối. Roll lại boots hoặc chấp nhận tier đó."
+  - "**Trông chờ 35% từ một base item level 85.** \"Hellion's\" cần 86. Kiểm bằng Alt trước orb đầu tiên."
+  - "**Dùng một Ember lên Two-Toned Boots.** Chính dòng chữ của Ember nói nó thay implicit resistance."
+  - "**Dùng một Eldritch Chaos Orb mà không kiểm implicit nào mạnh hơn.** Khi Exarch dominant nó roll lại prefix: movement speed và life của bạn."
+  - "**Roll tìm movement speed trên boots Energy Shield bằng Alteration rồi thắc mắc sao lâu thế.** Một phần tư số lần roll prefix của chúng là mana. Ở đó hãy dùng một Essence of Zeal."
+  - "**Trả tiền cho một reforge Speed để có tier cao.** Nó đảm bảo modifier, không đảm bảo tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, Essence, giá bench và implicit được dẫn ở đây, cùng dòng chữ in-game của các Eldritch Ember và Ichor. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các implicit 3.30 của Two-Toned và Fugitive Boots, Item Tier cho các base đặc biệt, giá của các modifier bảo vệ trên armour, việc đổi resistance bằng Harvest." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: Eldritch implicit nào là dominant, và các modifier bảo vệ trụ được trước những gì. Một phần cũ hơn 3.30." }

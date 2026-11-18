@@ -1,0 +1,186 @@
+category: bows
+title: "Một cây bow +3 với ba Fossil"
+level: 3
+summary: "Một Fossil để nâng các prefix gem và hai cái để xóa mọi thứ khác ở phía prefix. Một lần craft được thiết kế từ tag, không phải từ công thức."
+goal: >-
+  Một cây bow có cả hai prefix gem, "+2 to Level of Socketed Bow Gems" và "+1
+  to Level of Socketed Gems", cho +3 lên skill gắn trong nó. Essence đảm bảo
+  được cái đầu và không bao giờ đảm bảo được cái thứ hai. Bài học là cái nửa
+  của Fossil mà phần lớn người chơi bỏ qua: **dòng "no".** Hai trong ba
+  Fossil ở đây được chọn vì thứ chúng loại bỏ, và một khi bạn đọc được một
+  pool qua các tag của nó, bạn thiết kế được một bộ như thế này cho bất kỳ
+  item nào.
+base: "Thicket Bow"
+itemLevel: 82
+baseWhy: >-
+  Các prefix gem chỉ cần item level 64, nên base nào từ đó trở lên cũng làm
+  ra cùng mức +3. Item level 82 được chọn vì phía suffix: nó mở tier cao
+  nhất của "+#% to Damage over Time Multiplier" (24–26%). Thicket Bow có
+  attack nhanh nhất, và không có implicit nào để mất nếu về sau bạn corrupt
+  nó.
+
+
+  Đừng dùng item level 83 trở lên khi chưa đọc phần xác suất bên dưới: ở 83
+  có thêm một prefix gia nhập pool.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+    - { text: "+1 to Level of Socketed Gems", how: fossil }
+  suffixes:
+    - { text: "17% increased Attack Speed", how: fossil }
+    - { text: "+46 to Dexterity", how: fossil }
+    - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+needs:
+  - { item: "[[Faceted Fossil]]", amount: "5–15" }
+  - { item: "[[Corroded Fossil]]", amount: "5–15" }
+  - { item: "[[Metallic Fossil]]", amount: "5–15" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "một mỗi lần thử", note: "cỡ có ba socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Ba Fossil và một Resonator ba socket cho mỗi lần thử, tất cả đều từ Delve.
+  Faceted Fossil thường là cái khan hiếm. Trong 3.30, đường vào Delve là qua
+  những map luôn spawn Sulphite. Hãy link socket của bow trước khi bắt đầu:
+  trên bow gem-level chúng là một phần của chi phí.
+odds: >-
+  Hãy bắt đầu từ pool prefix của một cây bow thường ở item level 82, tính
+  theo weight: 64% flat elemental damage, 27% prefix physical, 3% Elemental
+  Damage with Attack Skills, và hai prefix gem cộng lại chưa tới 6%.
+
+
+  **Corroded** ("no Elemental modifiers") đưa mục thứ nhất và thứ ba trong
+  đó về không. **Metallic** ("no Physical modifiers") đưa mục thứ hai về
+  không. **Faceted** ("more Gem modifiers") nhân phần còn lại lên mười, dù
+  tới lúc đó nó hầu như không cần nữa. Theo phép tính của chúng tôi, pool
+  prefix tự nhiên còn lại **chỉ gồm các prefix gem**: +2 to Level of
+  Socketed Bow Gems, +1 to Level of Socketed Bow Gems và +1 to Level of
+  Socketed Gems, mỗi cái một phần ba.
+
+
+  Hai tier bow-gem là một group. Vậy nên một kết quả có hai prefix luôn là
+  một trong hai cái đó cộng với "+1 to Level of Socketed Gems": **+3 trong
+  một nửa số lần và +2 trong nửa còn lại.** Một kết quả có một prefix là +2,
+  +1 hoặc +1.
+
+
+  Từ item level 83 trở lên, flat Chaos Damage gia nhập pool ở mức khoảng 2%
+  số lần roll prefix: không Fossil nào trong hai cái loại được nó.
+
+
+  **Những gì các con số bỏ sót.** Dữ liệu liệt kê những prefix chỉ có từ
+  Fossil cho bow mà bộ này sẽ không loại được, trong đó có "Socketed Skills
+  deal 20% more Attack Damage" và một modifier Poison. Dữ liệu không cho
+  biết chính xác khi nào modifier chỉ có từ Fossil gia nhập pool, nên công
+  cụ tính bỏ qua chúng. Nếu chúng gia nhập ở đây, các prefix gem chiếm tỉ lệ
+  nhỏ hơn một phần ba mỗi cái, và một kết quả có thể chứa một prefix thứ ba.
+steps:
+  - title: "Socket, rồi đưa bow lên Rare"
+    do: >-
+      Đưa cây bow trắng lên sáu socket với số link bạn cần. Rồi dùng một
+      [[Orb of Alchemy]].
+    why: >-
+      Socket và link được giữ qua mọi lần roll lại, nên hãy làm phần đắt khi
+      cây bow chưa đáng gì. Chaotic Resonator cần một item Rare; Alchemy
+      roll ra gì không quan trọng.
+    state:
+      prefixes:
+        - { text: "Adds 118 to 241 Fire Damage" }
+        - { text: "Adds 21 to 398 Lightning Damage" }
+      suffixes:
+        - { text: "+47 to Dexterity" }
+        - { text: "27% increased Critical Strike Chance" }
+  - title: "Đọc tag trước khi tiêu một Fossil"
+    do: >-
+      Mở danh sách modifier của bow trên trang này và nhìn tag của các
+      prefix. Các prefix flat elemental và Elemental Damage with Attack
+      Skills mang **elemental**. Increased Physical Damage, hybrid của nó và
+      flat Physical Damage mang **physical**. Hai prefix gem mang
+      **gem** và không mang cái nào trong hai tag kia.
+    why: >-
+      Đây là toàn bộ thiết kế. Hai tag phủ hết mọi thứ bạn không muốn, và
+      mỗi tag có một Fossil mà dòng "no" loại được nó. Cái Fossil thêm
+      weight cho thứ bạn muốn gần như chỉ là phần phụ. Phản xạ thông thường,
+      thêm Fossil để có nhiều modifier tốt hơn, sẽ để 94% pool là elemental
+      và physical vẫn còn trong cuộc.
+  - title: "Gắn ba Fossil rồi dùng Resonator"
+    do: >-
+      Đặt một [[Faceted Fossil]], một [[Corroded Fossil]] và một
+      [[Metallic Fossil]] vào một [[Powerful Chaotic Resonator]], rồi dùng
+      nó lên bow.
+    why: >-
+      Bow được roll lại với các weight đã đổi. Phía suffix gần như không bị
+      đụng tới: Metallic loại hai suffix leech, vốn mang tag physical, và
+      không gì khác thay đổi.
+    state:
+      prefixes:
+        - { text: "+1 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "+512 to Accuracy Rating", how: fossil }
+        - { text: "Gain 61 Life per Enemy Killed", how: fossil }
+        - { text: "38% increased Projectile Speed", how: fossil }
+  - title: "Kiểm tổng số, rồi tới chỗ trống ở suffix"
+    do: >-
+      **Thứ nhất:** nó có phải +3 không, nghĩa là "+2 to Level of Socketed
+      Bow Gems" và "+1 to Level of Socketed Gems" cùng nhau? **Thứ hai:** có
+      ít nhất một ô suffix trống không, hoặc attack speed có nằm trong các
+      suffix không?
+    why: >-
+      Kết quả ở trên là +2 với ba suffix lấp chỗ: nó trượt cả hai. Một cây
+      +3 với phía suffix đầy đồ lấp chỗ có đủ gem level nhưng không có chỗ
+      đặt multiplier, điều chỉ chấp nhận được nếu bạn định dựng lại suffix
+      về sau dưới một khóa prefix.
+    fail: >-
+      Dùng một bộ Fossil nữa lên chính cây bow đó. Mỗi lần thử là độc lập.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "17% increased Attack Speed", how: fossil }
+        - { text: "+46 to Dexterity", how: fossil }
+  - title: "Bench multiplier"
+    do: >-
+      Ở ô suffix trống, craft **+18–20% to Chaos, Fire, Cold hoặc Physical
+      Damage over Time Multiplier** giá 4 [[Chaos Orb]], tùy skill của bạn
+      dùng loại nào.
+    why: >-
+      Ô prefix thứ ba vẫn trống và lúc này nên cứ để vậy. Khi cả hai group
+      gem đã nằm trên bow, mọi thứ khác mà pool tự nhiên của nó thêm được
+      vào đó đều là một prefix elemental hoặc physical, chẳng giúp gì cho
+      cây bow này. Phần biến thể nói ô đó dùng để làm gì.
+    state:
+      prefixes:
+        - { text: "+2 to Level of Socketed Bow Gems", how: fossil }
+        - { text: "+1 to Level of Socketed Gems", how: fossil }
+      suffixes:
+        - { text: "17% increased Attack Speed", how: fossil }
+        - { text: "+46 to Dexterity", how: fossil }
+        - { text: "+19% to Chaos Damage over Time Multiplier", how: crafted }
+variations: >-
+  **Dùng prefix trống.** "Can have up to 3 Crafted Modifiers" (2 Divine
+  Orb, một suffix) cho bench thêm 21–30% increased Damage over Time vào
+  prefix thứ ba cùng với multiplier. Nó cần hai ô suffix trống, nên hãy
+  quyết định trước khi craft multiplier.
+
+
+  **Một Fossil thứ tư cho suffix.** Trong một Resonator bốn socket, một
+  [[Shuddering Fossil]] ("more Speed, no Mana") nâng attack speed và
+  Projectile Speed lên gấp mười. Nó làm attack speed dễ ra, và Projectile
+  Speed cũng dễ ra y như vậy.
+
+
+  **Một gem level thứ tư.** Dữ liệu liệt kê một suffix chỉ có từ Fossil, "+1
+  to Level of Socketed Dexterity Gems", dưới Faceted Fossil. Nếu nó xuất
+  hiện trên một cây bow +3 có skill là gem Dexterity thì đó là +4. Chúng tôi
+  không đưa ra được xác suất của nó, vì lý do đã nêu ở phần xác suất.
+mistakes:
+  - "Dùng Faceted Fossil một mình. Nó đưa các prefix gem từ chưa tới 6% lên 37% số lần roll prefix; 63% còn lại vẫn là elemental và physical."
+  - "Đổi Metallic Fossil lấy một Jagged vì \"physical cũng được\". Jagged nhân prefix physical lên mười lần và chôn vùi các prefix gem."
+  - "Slam vào prefix trống. Gần như mọi thứ pool tự nhiên của bow thêm được vào đó đều là phí trên bow gem-level."
+  - "Trông chờ [[Memory Strands]] giúp được. Fossil không dùng chúng, theo thử nghiệm của người chơi."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân của Fossil, tag trên mọi prefix của bow, weight và giá bench. Xác suất là phép tính của chúng tôi và bỏ ra ngoài các modifier chỉ có từ Fossil." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

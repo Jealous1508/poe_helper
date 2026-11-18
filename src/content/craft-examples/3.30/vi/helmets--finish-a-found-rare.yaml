@@ -1,0 +1,133 @@
+category: helmets
+title: "Hoàn thiện một item Rare nhặt được: đếm ô, bench chỗ thiếu"
+level: 1
+summary: "Không roll gì cả. Chia một cái helmet rơi ra thành prefix và suffix, tìm ô trống, và để bench đặt một resistance vào đó."
+goal: >-
+  Một cái helmet cho campaign và những map đầu tiên, làm từ một cái bạn nhặt
+  được. Đây là lần craft rẻ nhất có thể có, và nó dạy ý tưởng mà mọi ví dụ
+  khác đều dựa vào: **một item có ba ô prefix và ba ô suffix, và một ô trống
+  là thứ bạn có thể chủ động lấp.**
+base: "Reaver Helmet"
+itemLevel: 42
+baseWhy: >-
+  Base là bất cứ thứ gì rơi ra: ở đây là một Reaver Helmet Rare, một base
+  Armour bạn mặc được ở level 40. Thứ khiến một cái helmet rơi ra đáng để
+  hoàn thiện không phải là tên của nó. Nó cần một prefix maximum Life, và ít
+  nhất một ô còn trống.
+
+
+  Item level ít quan trọng với lần craft này, vì bạn không roll gì cả. Bench
+  đưa ra cùng những modifier đó trên mọi helmet.
+methods: [bench, finishing]
+result:
+  prefixes:
+    - { text: "+76 to maximum Life" }
+    - { text: "+58 to Armour" }
+  suffixes:
+    - { text: "+27% to Cold Resistance" }
+    - { text: "+21 to Strength" }
+    - { text: "+24% to Fire Resistance", how: crafted }
+needs:
+  - { item: "Một helmet Rare có maximum Life và một ô trống", amount: "1", note: "nhặt được, đã identify" }
+  - { item: "[[Armourer's Scrap]]", amount: "vài cái", note: "tùy chọn, để lên quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "cho bench" }
+cost: >-
+  Một [[Orb of Alchemy]] ở bench, hoặc một [[Orb of Transmutation]] cho bản
+  nhỏ hơn. Bản thân cái helmet thì miễn phí.
+odds: >-
+  Ở đây không có gì được roll, nên không gì có thể hỏng. Phần may rủi duy
+  nhất là tìm ra cái helmet, và helmet Rare có life cùng một ô trống rơi suốt
+  campaign, một khi bạn bắt đầu để mắt tới chúng.
+steps:
+  - title: "Bật hiển thị tier và nhìn cái helmet"
+    do: >-
+      Trong phần tùy chọn của game, bật Advanced Mod Descriptions. Identify
+      cái helmet Rare, giữ Alt rồi rê chuột lên nó, và đọc nhãn của từng
+      modifier: nó ghi **Prefix** hoặc **Suffix**, tier, và khoảng.
+    why: >-
+      Không có nhãn đó, một item Rare chỉ là một danh sách sáu dòng. Có nó,
+      danh sách tách thành hai phía, và bạn đếm được.
+    check: >-
+      Cái này có hai prefix, maximum Life và Armour, và hai suffix, Cold
+      Resistance và Strength. Bốn modifier trên tối đa sáu.
+    state:
+      prefixes:
+        - { text: "+76 to maximum Life" }
+        - { text: "+58 to Armour" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+21 to Strength" }
+  - title: "Đếm xem còn trống những gì"
+    do: >-
+      Mỗi phía ba ô, trừ đi những gì đã có. Cái helmet này có **một prefix
+      trống và một suffix trống**.
+    why: >-
+      Bench thêm một modifier vào một ô trống ở đúng phía, ngoài ra không
+      thêm vào đâu khác. Resistance là suffix, nên nó cần một suffix trống.
+      Maximum Life là prefix, nên nó cần một prefix trống. Một cái helmet đã
+      có ba suffix thì không nhận được resistance từ bench, bất kể nó còn
+      thiếu sót gì khác.
+    fail: >-
+      Ba prefix và ba suffix: item đã đầy, và bench không có gì để cho nó.
+      Mặc nó như nó đang có hoặc bỏ lại.
+  - title: "Quyết định cái helmet thiếu gì"
+    do: >-
+      Một item giữ được **một** modifier bench. Hãy chọn nó bằng cách hỏi
+      nhân vật của bạn đang thiếu gì. Mở character sheet: trong Fire, Cold và
+      Lightning Resistance, cái nào thấp nhất thì đó là câu trả lời cho phần
+      lớn người chơi trong campaign.
+    why: >-
+      Cái helmet đã có life, nên prefix trống chưa có việc gì gấp. Nó có Cold
+      Resistance, nên craft thêm cold sẽ bị từ chối: một modifier thứ hai
+      cùng group không thể lên item. Fire hoặc Lightning thì vừa.
+  - title: "Quality, nếu bạn có Scrap"
+    do: >-
+      Dùng [[Armourer's Scrap]] lên cái helmet tới 20% quality.
+    why: >-
+      Quality nâng Armour của chính cái helmet. Trên một item campaign thì
+      đó là khoản lợi nhỏ, nên đừng đi tìm Scrap; dùng những cái có sẵn trong
+      stash.
+  - title: "Craft resistance"
+    do: >-
+      Ở [[Crafting Bench]] trong hideout, chọn **+21–28% to Fire
+      Resistance** giá 1 [[Orb of Alchemy]]. Nếu bạn không dư Alchemy,
+      +16–20% tốn 1 [[Orb of Transmutation]].
+    why: >-
+      Bench hiện giá trước khi bạn bấm và luôn cho đúng thứ nó ghi. Nó là thứ
+      chắc chắn duy nhất trong craft, nên riêng bước này đáng giá hơn bao
+      nhiêu lần rơi đồ may mắn đi nữa.
+    fail: >-
+      Nếu bench không liệt kê craft này thì bạn chưa tìm ra công thức đó.
+      Công thức là những vật thể bạn tìm thấy gần boss trong lúc chơi. Hãy
+      craft resistance tốt nhất mà nó có.
+    state:
+      prefixes:
+        - { text: "+76 to maximum Life" }
+        - { text: "+58 to Armour" }
+      suffixes:
+        - { text: "+27% to Cold Resistance" }
+        - { text: "+21 to Strength" }
+        - { text: "+24% to Fire Resistance", how: crafted }
+variations: >-
+  **Cái helmet có resistance mà không có life.** Khi đó chỗ thiếu là một
+  prefix: craft maximum Life, 26–40 giá 6 Orb of Transmutation hoặc 41–55 giá
+  2 Orb of Alchemy. Nó cần một prefix trống.
+
+
+  **Nhu cầu của bạn thay đổi.** Một modifier bench gỡ ra lại được ở bench với
+  giá một [[Orb of Scouring]], và chỉ modifier bench bị gỡ. Khi một cái ring
+  mới giải quyết xong fire resistance của bạn, hãy đổi craft trên helmet sang
+  chỗ thiếu kế tiếp.
+
+
+  **Một cái helmet Magic.** Bench cũng dùng được trên item Magic, nhưng item
+  Magic chỉ có mỗi phía một ô. Các ví dụ kế tiếp chỉ ra phải làm gì với những
+  ô đó.
+mistakes:
+  - "Chọn helmet theo màu rarity. Một item Rare có ba prefix tệ thì kém hơn cho việc này so với một item Rare có một prefix tốt và hai ô trống."
+  - "Craft một resistance mà helmet đã có. Cùng group, nên bench từ chối, và bạn không học được gì về lý do."
+  - "Với lấy một Chaos Orb vì có một dòng tệ. Nó roll lại tất cả, kể cả prefix life tốt."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các tier hiện trên helmet và giá bench." }
+  - { title: "Patch notes 3.26.0", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Công thức bench được tìm thấy dưới dạng vật thể gần boss." }

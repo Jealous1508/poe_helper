@@ -1,0 +1,255 @@
+category: one-hand-swords
+title: "A physical crit rapier: six wanted modifiers, one bench slot"
+level: 5
+summary: "The hardest sword there is. A fractured percentage prefix, three Fossils for the other two, a locked Critical reforge for the suffixes, and an honest count of what the bench can and cannot cover."
+goal: >-
+  A rapier with three physical prefixes, attack speed and both critical
+  strike suffixes. That is six modifiers you want on an item with six slots,
+  where a mace wants four and fills the rest with whatever the bench sells.
+  The tools are ones the earlier examples used. What this craft adds is the
+  **slot arithmetic** a top-end crafter does first: which of the six can be
+  bought, which must be rolled, and which stage has to carry the risk.
+base: "Vaal Rapier"
+itemLevel: 83
+baseWhy: >-
+  Item level 83 is the lowest at which "Merciless" (170–179%) exists. The
+  Vaal Rapier has 6.5% critical strike chance and +25% Critical Strike
+  Multiplier on the implicit; a Harpy Rapier trades some of the chance for
+  +35%.
+
+
+  Choosing a thrusting sword for a physical weapon has a price, and you
+  should know it before paying. Its base physical damage is about a fifth
+  below the best one-hand swords, and its pool is the worst of all the
+  one-handed classes for physical prefixes: by our arithmetic "Merciless" is
+  1 prefix roll in about 2,760 here, against 1,970 on a one-hand sword or an
+  axe and 1,270 on a mace. The critical strikes are what you get for it.
+methods: [fracture, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "172% increased Physical Damage", how: fractured }
+    - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+    - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+  suffixes:
+    - { text: "37% increased Critical Strike Chance", how: harvest }
+    - { text: "26% increased Attack Speed", how: harvest }
+    - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "A Vaal Rapier with \"Merciless\" fractured, item level 83+", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Jagged Fossil]]", amount: "many dozens" }
+  - { item: "[[Shuddering Fossil]]", amount: "many dozens" }
+  - { item: "[[Deft Fossil]]", amount: "many dozens" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  The fractured base first: in 3.30 fractured items come from Tier 5 drops, a
+  [[Fracturing Orb]] or a [[Fractured Fossil]], and a fractured top-tier
+  percentage on a rapier is rare even among those. Then three Fossils per
+  attempt for a stage that takes a hundred attempts on average, then locks
+  at 4 [[Divine Orb]]s and 1 [[Sacred Orb]] each.
+
+
+  We give no total. This is a mirror-tier item made the long way, and the
+  honest summary is that most players who want one buy stage 1 or stage 2
+  from someone else.
+odds: >-
+  **Stage 2.** With the pure percentage fractured its group leaves the
+  pool, and with the three Fossils the hybrid is 23% of prefix rolls and
+  flat damage 43%, by our calculator. The tiers are the problem: the hybrid
+  at 45% or more is about 1 prefix roll in 43, flat damage of 13–18 to 27–31
+  or more about 1 in 8. Both at once in the two open prefix slots comes to
+  about 1 result in 110 among results that fill both. Drop the hybrid's bar
+  one tier, to 35%, and it is about 1 in 55. Without the Jagged Fossil the
+  same hybrid would be 1 prefix roll in 174.
+
+
+  **Stage 3.** Every Critical reforge gives Critical Strike Chance or
+  Critical Strike Multiplier; 1 in 6 at Tier 1 if the tier is drawn by
+  weight. Each other suffix it rolls is attack speed or the second critical
+  modifier about a quarter of the time. Our arithmetic; not measured in
+  3.30.
+steps:
+  - title: "Before anything: count the slots"
+    do: >-
+      Write the six modifiers down and mark where each can come from.
+      Prefixes: pure percentage, Accuracy hybrid, flat damage. Suffixes:
+      attack speed, Critical Strike Chance, Critical Strike Multiplier. The
+      bench can supply exactly **one** of them.
+    why: >-
+      On a mace the usual answer to a missing slot is "Can have up to 3
+      Crafted Modifiers". It does not work here. That meta-modifier is
+      itself a suffix. With it, a crit weapon would hold the meta-modifier,
+      one crafted suffix and one rolled suffix: two of the three suffixes
+      it needs. So five modifiers must be rolled or fractured, and the
+      bench covers the sixth. Decide now that the sixth is a suffix,
+      because the bench sells every one of the three suffixes and its
+      prefix crafts collide with rolled ones of the same group.
+  - title: "Stage 1: the fractured percentage"
+    do: >-
+      Buy or find a Vaal Rapier of item level 83 or more with **"Merciless"
+      fractured**; "Tyrannical" (155–169%) is the realistic second choice.
+      To make one: roll the prefix on a Magic rapier, bring the item to a
+      Rare with **exactly four** modifiers, and use a [[Fracturing Orb]].
+    why: >-
+      Of the five modifiers that must be rolled, this is by far the
+      rarest, so it is the one to make permanent. A fractured modifier
+      survives every Fossil and every reforge that follows, which is what
+      lets the next stage be repeated a hundred times.
+    check: >-
+      No influence on the item: the Fracturing Orb refuses influenced
+      items. With exactly four modifiers the orb's random pick is right 1
+      time in 4; every extra modifier makes it worse.
+    fail: >-
+      The orb fractured something else. That rapier is finished as a base
+      for this craft and cannot be fractured again. This is why the base is
+      usually bought.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+      suffixes:
+        - { text: "+38 to Dexterity" }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "29% increased Stun Duration on Enemies" }
+  - title: "Stage 2: three Fossils for the other two prefixes"
+    do: >-
+      Use a [[Jagged Fossil]], a [[Shuddering Fossil]] and a [[Deft Fossil]]
+      together in a [[Powerful Chaotic Resonator]]. Repeat until the rapier
+      has the **Accuracy hybrid at 45% or more and flat Physical Damage of
+      13–18 to 27–31 or more**, with at most two suffixes.
+    why: >-
+      The Jagged Fossil is there for the prefixes: it lifts the hybrid from
+      about 6% of prefix rolls to 23%. The other two ride along because
+      the Resonator has room for them and they sometimes hand you the
+      suffix side early. Judge the result by the prefixes alone.
+      Both must be rolled; the bench slot is promised to a suffix.
+    check: >-
+      "Champion's" is the hybrid's Tier 4, "Conqueror's" Tier 3, "Emperor's"
+      Tier 2, "Dictator's" Tier 1. Then count suffixes: the lock in stage 3
+      needs one empty slot.
+    fail: >-
+      Nothing can be lost here except Fossils; the fractured prefix
+      survives. If the prefixes pass with three suffixes on the item, keep
+      rolling rather than use an [[Orb of Annulment]], which could remove
+      either new prefix.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "3.9% of Physical Attack Damage Leeched as Life", how: fossil }
+  - title: "Decide whether the suffixes already pass"
+    do: >-
+      Look at what stage 2 left on the suffix side. If it is two of the
+      three wanted suffixes at good tiers with a slot open, skip to the
+      bench. If not, as here, go on to stage 3.
+    why: >-
+      Stage 3 costs a lock per attempt. The Fossils rolled the suffixes
+      with attack speed and critical modifiers at ten times their weight,
+      so a finished suffix side at this point is not unusual, and taking it
+      saves the most expensive stage.
+  - title: "Stage 3: lock, then a Critical reforge"
+    do: >-
+      Craft **Prefix Modifiers cannot be changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]). Then, at the [[Horticrafting Station]], **Reforge a
+      Rare item with random modifiers, including a Critical modifier** (150
+      [[Primal Crystallised Lifeforce]]). Repeat both until two of the
+      three wanted suffixes are at Tier 1 or 2 and the third slot is open.
+    why: >-
+      The fractured prefix needs no protection; the hybrid and the flat
+      damage do, and they took a hundred attempts. The lock covers them and
+      the reforge spends it. Do not use Fossils for this stage: whether a
+      Fossil respects the lock in 3.30 could not be confirmed, and this is
+      not the item to find out on.
+    check: >-
+      All three prefixes unchanged. Read the tiers of the new suffixes and
+      count them.
+    fail: >-
+      Each repeat is 4 Divine Orbs and a Sacred Orb. Set the number of
+      attempts before the first and accept Tier 2 when it comes.
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "37% increased Critical Strike Chance", how: harvest }
+        - { text: "26% increased Attack Speed", how: harvest }
+  - title: "Stage 4: the one bench slot"
+    do: >-
+      Craft the missing suffix. Here: **+25–28% to Global Critical Strike
+      Multiplier** for 4 [[Chaos Orb]]s.
+    why: >-
+      Of the three suffixes, the multiplier is the one a rapier can best
+      afford to take from the bench, because the implicit already supplies
+      +25% of it. Had the reforge given the multiplier and attack speed,
+      the bench would add Critical Strike Chance (25–27%); had it given
+      both critical modifiers, attack speed (16–20% for 4 Exalted Orbs).
+    state:
+      note: "Fractured"
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "172% increased Physical Damage", how: fractured }
+        - { text: "49% increased Physical Damage / +108 to Accuracy Rating", how: fossil }
+        - { text: "Adds 17 to 36 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "37% increased Critical Strike Chance", how: harvest }
+        - { text: "26% increased Attack Speed", how: harvest }
+        - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+  - title: "Finish: quality, sockets, values"
+    do: >-
+      20% quality and three linked sockets if not done. Then a
+      [[Divine Orb]] if the rolls inside the tiers are poor.
+    why: >-
+      A Divine Orb rerolls every value at once, the fractured one included,
+      and never changes a tier. On an item with five rolled modifiers it is
+      as likely to lower the ones you like as to raise the ones you do not,
+      so use it when the percentage prefix is low and little else is high.
+variations: >-
+  **On a one-hand sword.** The same plan on a Legion Sword or a Tiger Hook
+  is cheaper at every stage: more base damage, and with a Jagged Fossil 81%
+  physical prefixes against 73%. You lose 1.5 points of base critical
+  strike chance and the implicit multiplier. For a build that crits through
+  its tree and gear, that can be the better trade.
+
+
+  **Give up a suffix on purpose.** A rapier with three rolled physical
+  prefixes, attack speed and one critical modifier, with the other critical
+  modifier from the bench at 25–28%, is most of this weapon for a fraction
+  of the locks. The last few points of each suffix are what stage 3 is
+  really buying.
+
+
+  **Memory Strands.** Fossils and Harvest ignore strands by player testing.
+  An [[Orb of Unravelling]] at the very end could lift the hybrid or a
+  suffix by a tier; it skips the bench modifier, and how often it works is
+  a player model, not a published number.
+
+
+  **Foresight.** A [[Hinekora's Lock]] shows the result of the next
+  currency. Here the one place it could pay is the Fracturing Orb in stage
+  1.
+mistakes:
+  - "Reaching for \"Can have up to 3 Crafted Modifiers\". On a crit weapon it takes one of the three suffix slots the weapon needs."
+  - "Planning to bench a prefix. The bench percentage shares a group with the fractured one, and benched flat damage would leave a suffix to luck."
+  - "Using an Annulment after stage 2 to open a suffix. The hybrid and the flat damage are unprotected at that moment."
+  - "Fossils on the locked rapier. Not confirmed to respect the lock in 3.30."
+  - "Starting this on a thrusting sword without a crit build to justify it. The pool makes every physical stage dearer than on a one-hand sword."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Both sword pools, Fossil multipliers, tiers, weights, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Critical reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges. Partly older than 3.30." }

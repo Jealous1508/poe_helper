@@ -1,0 +1,159 @@
+category: one-hand-swords
+title: "A levelling foil that takes what the pool gives"
+level: 1
+summary: "On a thrusting sword two prefix rolls in three are added elemental damage. Roll one, let the Regal Orb try for a second, and bench a third."
+goal: >-
+  A fast weapon for the middle of the campaign with three kinds of added
+  elemental damage, made from a few Alterations. The idea to take away is
+  **look at the weights before choosing the target**. A thrusting sword is
+  built to roll elemental damage. Aim for what the pool hands out freely and
+  a first craft takes a handful of orbs; aim against it and the same orbs
+  buy nothing.
+base: "Elegant Foil"
+itemLevel: 32
+baseWhy: >-
+  An Elegant Foil can be used at level 30 and attacks 1.6 times per second,
+  as fast as any sword in the game. Its own damage is small, 18–33, and that
+  is the point: added elemental damage is applied on every hit, so speed
+  matters and the base's physical damage hardly does. Item level 31 is the
+  first at which the lightning tier "Crackling" (adds 3 to 57–67) can roll.
+
+
+  Any white foil or rapier of your level works, as long as it is a thrusting
+  sword. Check the item level with Alt.
+methods: [currency, bench]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 21 to 38 Fire Damage" }
+    - { text: "Adds 3 to 63 Lightning Damage" }
+    - { text: "Adds 12 to 21 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "+19 to Dexterity" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "5", note: "1 to start, 4 for the bench" }
+  - { item: "[[Orb of Alteration]]", amount: "5–10" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  A handful of [[Orb of Alteration]]s, one [[Regal Orb]] and five
+  [[Orb of Transmutation]]s. It is cheap enough to do again every ten levels
+  on a new base.
+odds: >-
+  At item level 32 on a thrusting sword, by our arithmetic from the modifier
+  weights, 67% of prefix rolls are added Fire, Cold or Lightning Damage, and
+  about 1 prefix roll in 3 is one of the top two tiers that item level
+  allows of some element. An Alteration does not always roll a prefix, so
+  expect five to ten of them.
+
+
+  When the Regal Orb adds a prefix, it is a second element a little more
+  than half the time. The craft does not depend on it.
+steps:
+  - title: "Skip the whetstones"
+    do: >-
+      Take a white Elegant Foil as it is. Do not spend
+      [[Blacksmith's Whetstone]]s on it.
+    why: >-
+      Quality raises the weapon's **physical** damage. The damage this foil
+      will deal comes from added elemental prefixes, which quality does not
+      touch. On a physical weapon quality is the first step; here it is a
+      waste of the stones.
+    state:
+      rarity: normal
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+  - title: "Make it Magic and roll an element"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s, reading
+      the prefix with Alt held. Stop at the first **Adds # to # Fire, Cold
+      or Lightning Damage** from the top two tiers available. For fire the
+      names are "Burning" (adds 17–24 to 35–41) and "Smoking"; for cold
+      "Frigid" (16–21 to 31–37) and "Icy"; for lightning "Crackling" (3 to
+      57–67) and "Snapping".
+    why: >-
+      The foil hits for 18–33. A prefix that adds 21 to 38 more than
+      doubles each hit, and you get to roll three different ones, because
+      fire, cold and lightning are three separate groups. Which element
+      comes first does not matter while levelling.
+    check: >-
+      The prefix line starts with "Adds" and names an element. If it says
+      "increased Physical Damage", roll again: on a base this small a
+      percentage of very little is very little.
+    state:
+      rarity: magic
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes: [{ text: "Adds 21 to 38 Fire Damage" }]
+  - title: "Fill the suffix"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It adds a modifier to the empty slot and leaves the prefix alone.
+      Attack speed is the suffix to hope for, about 1 suffix roll in 6 at
+      this item level. Here it gave Dexterity, which a foil needs plenty of
+      anyway.
+    state:
+      rarity: magic
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes: [{ text: "Adds 21 to 38 Fire Damage" }]
+      suffixes: [{ text: "+19 to Dexterity" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]].
+    why: >-
+      The foil becomes Rare, keeps both modifiers and gains a third. On this
+      pool the Regal Orb is working for you: most of what it can add as a
+      prefix is another element, and it cannot add fire again because that
+      group is taken.
+    check: >-
+      Read what was added and note which elements the foil now has. The
+      bench step fills in a missing one.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 21 to 38 Fire Damage" }
+        - { text: "Adds 3 to 63 Lightning Damage" }
+      suffixes: [{ text: "+19 to Dexterity" }]
+  - title: "Bench the element you are missing"
+    do: >-
+      At the [[Crafting Bench]], craft added damage of an element the foil
+      does **not** have. Cold or fire: adds 11–12 to 19–23 for 4
+      [[Orb of Transmutation]]s. Lightning: adds 1–3 to 27–37 for the same
+      price.
+    why: >-
+      The bench refuses an element that is already there, because it is the
+      same group as the rolled one. A different element is a different
+      group. With all three prefix slots holding damage, the bench has
+      nothing better to add: 16 more damage per hit is worth more here than
+      8–10% attack speed, and costs less.
+    fail: >-
+      If the Regal Orb filled the third prefix with something else, craft
+      8–10% attack speed in a suffix instead (6 Orbs of Alteration).
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 21 to 38 Fire Damage" }
+        - { text: "Adds 3 to 63 Lightning Damage" }
+        - { text: "Adds 12 to 21 Cold Damage", how: crafted }
+      suffixes: [{ text: "+19 to Dexterity" }]
+variations: >-
+  **On a one-hand sword.** The same steps work on an ordinary sword, with
+  slightly worse odds: its pool is about 55% elemental prefixes at this item
+  level against 67%. The thrusting sword also brings +25% Critical Strike
+  Multiplier on the implicit; the one-hand sword brings Accuracy.
+
+
+  **A physical build.** Then this is the wrong craft and nearly the wrong
+  class. Use the levelling example for axes or maces, where flat Physical
+  Damage is rolled and the percentage bought at the bench.
+
+
+  **Every ten levels.** The added damage tiers climb quickly: by item level
+  52 the same prefix adds 46–62 to 93–107 fire. Remaking the foil on a newer
+  base is cheaper than trying to improve an old one.
+mistakes:
+  - "Rolling for a physical prefix on a levelling foil. The pool is against it and the base has little physical damage to multiply."
+  - "Benching the element the foil already rolled. The bench will refuse; pick another."
+  - "Using a Regal Orb before the prefix is right. Alterations only work on a Magic item."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The thrusting sword pool and its weights, tiers, item levels and bench costs. The odds are our arithmetic." }

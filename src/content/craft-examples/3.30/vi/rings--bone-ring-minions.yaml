@@ -1,0 +1,143 @@
+category: rings
+title: "Ring minion từ pool riêng của Bone Ring"
+level: 2
+summary: "Chỉ hai base ring roll được minion damage. Roll nó bằng Alteration trên Bone Ring, biến ring thành Rare, rồi bench Life."
+goal: >-
+  Một chiếc ring cho build minion có "Minions deal increased Damage", một
+  modifier hữu ích thứ hai và Life. Đây là một lần craft Alteration, Regal và
+  bench bình thường, được chủ đích làm trên một base có pool khác, để cho
+  thấy **pool** là gì: cùng loại orb đó trên Two-Stone Ring có dùng mười
+  nghìn lần cũng không bao giờ ra prefix này.
+base: "Bone Ring"
+itemLevel: 70
+baseWhy: >-
+  Bone Ring và Gloam Ring là hai ring duy nhất có pool chứa modifier minion:
+  một prefix và bốn suffix. Bone Ring rơi từ level 30 và implicit của nó là
+  resistance cho minion. Item level 70 mở mọi suffix minion ở tier cao nhất
+  và minion damage lên tới 31–36%; tier cuối của nó, 37–42%, cần 81.
+methods: [currency, bench]
+result:
+  implicits: ["Minions have +12% to all Elemental Resistances"]
+  prefixes:
+    - { text: "Minions deal 33% increased Damage" }
+    - { text: "+46 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+34% to Fire Resistance" }
+    - { text: "Minions have 22% increased Movement Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "60–120" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Alteration, khoảng một trăm cái, một [[Regal Orb]] và hai
+  [[Orb of Alchemy]] cho bench. Không có phần nào đắt.
+odds: >-
+  Ở item level 70 trên pool này, một lần roll prefix ra minion damage từ 21%
+  trở lên khoảng 1 trên 46 lần, và ra 31–36% khoảng 1 trên 92, theo phép tính
+  của chúng tôi từ weight. Alteration không phải lúc nào cũng roll ra prefix,
+  nên mục tiêu đầu tốn 60 tới 120 orb.
+
+
+  Phía suffix dễ chịu hơn so với các ring khác: ở đây bốn suffix minion cộng
+  lại chiếm 29% số lần roll suffix.
+steps:
+  - title: "Kiểm base, không chỉ cái tên"
+    do: >-
+      Lấy một Bone Ring trắng item level 60 trở lên. Giữ Alt để xem item
+      level.
+    why: >-
+      Các modifier minion thuộc về base. Dưới item level 60, hai tier tốt
+      nhất của minion damage không roll ra được; tier cuối mở ở 81.
+    state:
+      rarity: normal
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+  - title: "Roll prefix"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]] cho
+      tới khi prefix là **"Minions deal increased Damage" từ 21% trở lên**:
+      tên của chúng là "Marchioness's" (21–30%) và "Countess's" (31–36%).
+    why: >-
+      Minion damage chiếm dưới 5% số lần roll prefix của pool này và bench
+      không bán nó cho ring. Đó là nửa hiếm của item, nên đó là nửa bạn roll.
+      Life, prefix còn lại bạn muốn, thì có bán.
+    check: >-
+      Chỉ đọc prefix. Một suffix minion bên cạnh là phần thưởng thêm; suffix
+      nào khác cũng ổn.
+    fail: >-
+      Thiếu Alteration: nhận tier nào của prefix này cũng được. Ngay cả
+      11–20% cũng là thứ không base ring nào khác cho bạn được.
+    state:
+      rarity: magic
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+  - title: "Lấp suffix nếu nó trống"
+    do: >-
+      Dùng một [[Orb of Augmentation]] nếu chiếc ring Magic chưa có suffix.
+    why: >-
+      Nó không làm hại được thứ đang có, và trên pool này gần ba trên mười
+      lần roll suffix là một modifier minion. Phần còn lại là các attribute
+      và resistance quen thuộc, những thứ ring lúc nào cũng dùng được.
+    state:
+      rarity: magic
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+      suffixes: [{ text: "+34% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]] và đọc xem modifier mới nằm ở phía nào.
+    why: >-
+      Ring thành Rare và giữ những gì nó có. Phía nào thì quan trọng cho bước
+      kế: nếu Regal Orb thêm một prefix thì còn lại một ô prefix; nếu nó thêm
+      một suffix thì còn hai.
+    state:
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+      suffixes:
+        - { text: "+34% to Fire Resistance" }
+        - { text: "Minions have 22% increased Movement Speed" }
+  - title: "Bench Life"
+    do: >-
+      Ở [[Crafting Bench]], craft +41–55 to maximum Life giá 2
+      [[Orb of Alchemy]].
+    why: >-
+      Minion lo phần damage; ring vẫn phải giữ cho bạn sống. Chọn craft Life
+      vì phía suffix đã tự tìm được đường.
+    fail: >-
+      Nếu ring tự roll ra Life thì bench sẽ không thêm nữa. Thay vào đó hãy
+      craft một suffix minion mà ring còn thiếu: "Minions have 11–15%
+      increased maximum Life" giá 4 Orb of Augmentation, hoặc 18–22% Movement
+      Speed của minion giá 2 Orb of Alchemy.
+    state:
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Minions deal 33% increased Damage" }
+        - { text: "+46 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+34% to Fire Resistance" }
+        - { text: "Minions have 22% increased Movement Speed" }
+variations: >-
+  **Modifier minion trên các ring khác.** Có hai cái tồn tại ngoài pool này.
+  Các craft bench ở bước cuối dùng được trên mọi ring, và một Essence of Fear
+  đảm bảo Movement Speed của minion trên mọi ring, tối đa 28–30% ở bậc
+  Deafening. Minion **damage** dưới dạng prefix thì không: hoặc pool này,
+  hoặc influence Redeemer.
+
+
+  **Unset Ring là pool còn lại.** Nó hoạt động y như vậy: thêm một prefix,
+  "+1 to +3 to Level of Socketed Gems", mà chỉ nó roll được. Ở item level 76
+  trở lên, mức +3 là khoảng 1 trên 246 lần roll prefix.
+
+
+  **Một Fossil cho cùng việc đó.** Một [[Bound Fossil]] nhân các modifier
+  minion lên mười lần. Trên Bone Ring, nó khiến minion damage chiếm khoảng
+  một phần ba số lần roll prefix, theo phép tính của chúng tôi, với cái giá
+  là một kết quả Rare mà bạn không dựng lên từng bước được.
+mistakes:
+  - "Dùng một Bone Ring dưới item level 60 rồi thắc mắc sao damage không bao giờ vượt 30%. Các tier phía trên cần 60 và 81."
+  - "Thử việc này trên một base ring khác. Modifier này không có trong pool của chúng ở bất kỳ item level nào."
+  - "Bench một suffix minion khi ring chưa có Life. Ring của một build minion thường là nơi cấp Life cho chính nhân vật."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Ba pool của ring, các modifier minion cùng tier, weight và giá bench của chúng. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,615 @@
+name: "Shields"
+short: "Three different items under one name: block and life on tower shields and bucklers, spell damage on spirit shields, minion modifiers on three special bases. Eldritch implicits do not apply."
+icon: "Colossal Tower Shield"
+intro: >-
+  "Shield" covers three crafts that have little in common. A **tower shield
+  or buckler** is a defensive item: Chance to Block, life, resistances. A
+  **spirit shield** is half a caster's weapon: it rolls increased Spell
+  Damage and spell critical strikes, on a pool no other shield shares. And three **minion spirit shields** roll a summoner's modifiers on
+  top of that. Read the pool before anything else, because the three do not
+  mix.
+
+
+  One rule covers all of them. A shield is an armour piece that **cannot
+  take Eldritch implicits**: the Embers and Ichors name body armours, boots,
+  gloves and helmets, and stop there. So the cheap one-side rerolls of those
+  slots do not exist here. A shield is crafted like a weapon: one side at a
+  time, with every protection paid for.
+basics:
+  itemLevel:
+    text: >-
+      A defensive shield asks for less item level than a chest. Its life
+      stops at 145–159, which needs item level 73, and its best flat defence
+      needs 69. Item level 77 adds the second-best Chance to Block and the
+      best Chance to Block Spell Damage. That is a finished mapping shield.
+
+
+      Three things ask for more. **Caster prefixes:** the best Spell Damage
+      and elemental damage, 100–109%, need item level 84. **Maximum
+      resistances:** +3% to one element and +2% to all need 81. **The last
+      tier of block**, 76–81% increased Chance to Block, needs 86, as do the
+      last tiers of percentage defence, Suppression and Physical Damage
+      Reduction.
+    breakpoints:
+      - ilvl: 35
+        unlocks: "**Levelling.** Spell Damage 40–54% on spirit shields, increased Chance to Block 52–57%, life 70–84 (from 30)."
+      - ilvl: 46
+        unlocks: "Spell Damage 55–69%, the last of its common tiers. Life 100–114 (from 44)."
+      - ilvl: 64
+        unlocks: "Life 130–144. Since 60 or 61: flat Armour or Evasion 201–300, all Elemental Resistances 15–16%, block 64–69%. Spell Damage 85–99%, at a tenth of the weight of the common tiers."
+      - ilvl: 73
+        unlocks: "Life 145–159 (\"Vigorous\"), the top. Top flat defence has been open since 69 and resistances of 42–45% since 72. **Enough for a life and resistance shield.**"
+      - ilvl: 77
+        unlocks: "Increased Chance to Block 70–75%, Chance to Block Spell Damage 14–15% (the top), Suppression 17–19%, Physical Damage Reduction 7%. Spell Critical Strike Chance 90–109% and attack speed 14–16% from 76."
+      - ilvl: 81
+        unlocks: "+3% to one maximum elemental resistance and +2% to all maximum Resistances. Chaos Resistance 31–35%."
+      - ilvl: 84
+        unlocks: "Spell, Fire, Cold, Lightning and Minion Damage 100–109%. Resistances 46–48%. The Hunter's 7–10% increased maximum Life. **Enough for every caster shield.**"
+      - ilvl: 86
+        unlocks: "Increased Chance to Block 76–81%, percentage defence 101–110%, Suppression 20–22%, Physical Damage Reduction 8%. All Elemental Resistances 17–18% from 85. **The ceiling.**"
+  bases:
+    text: >-
+      There are 97 shields in seven pools. Every one has a base Chance to
+      Block between 22% and 29%, a defence that follows its attributes, and,
+      with a few exceptions, an implicit that follows its family. No shield
+      base drops later than level 70, so there is no upper class of bases as
+      on body armours.
+
+
+      Every pool rolls life, the two block prefixes, resistances and the
+      maximum resistance suffixes. The rest is split by attribute.
+      **Strength** adds Physical Damage Reduction and reduced Extra Damage
+      from Critical Strikes. **Dexterity** adds Suppression, attack speed and
+      Accuracy. **Intelligence** adds Mana, mana regeneration and Spell
+      Critical Strike Chance. Increased Spell Damage and the "+1 to
+      Level of all Spell Skill Gems" prefixes need a **pure** Intelligence
+      base.
+    types:
+      - title: "Tower shields (Armour)"
+        pools: [str]
+        text: >-
+          Twenty bases. On sixteen of them the implicit is maximum Life:
+          +10–20, +20–30 or +30–40 depending on the base. Armour prefixes, "+2 to Level of
+          Socketed Melee Gems", and the two suffixes that belong to
+          Strength. Life is 20% of prefix rolls and increased Chance to Block
+          13%. This is the pool for a character that blocks and wants a large
+          life total.
+      - title: "Bucklers (Evasion)"
+        pools: [dex]
+        text: >-
+          Nineteen bases, sixteen of them with a movement speed implicit: 3%,
+          6% or 9%. The
+          prefix pool mirrors the tower shields with Evasion in place of
+          Armour. The suffixes are an attacker's: Suppression up to 20–22%,
+          attack speed up to 14–16%, Accuracy. The Crusader Buckler is the top
+          base with the 9% implicit; the Lacquered Buckler has the most Evasion, 477–549.
+      - title: "Spirit shields (Energy Shield)"
+        pools: [int]
+        text: >-
+          Sixteen bases, most with increased Spell Damage as the implicit
+          (5–10% or 10–15%). Three high-Energy-Shield bases have no implicit:
+          Brass, Thorium and Titanium.
+
+
+          Their pool carries weapon modifiers. Prefixes: increased Spell
+          Damage, increased Fire, Cold or Lightning Damage, and "+1 to Level
+          of all Fire (Cold, Lightning, Chaos, Physical) Spell Skill Gems".
+          Suffixes: Spell Critical Strike Chance and mana regeneration.
+          Cast speed is not in the natural pool of any shield; it comes
+          from the bench. Increased Chance to Block has half its usual weight
+          here and Chance to Block Spell Damage twice.
+      - title: "Minion spirit shields"
+        pools: [int-focus]
+        text: >-
+          Three bases: Bone, Ivory and Fossilised Spirit Shield, with the
+          implicit "Minions deal 5–10% increased Damage". They roll
+          everything a spirit shield rolls, and a second set that exists on
+          no other shield: "Minions deal increased Damage" (up to 100–109%),
+          "+1 to Level of all Minion Skill Gems" (item level 60), and suffixes
+          for minion life (up to 37–40%), minion critical strike chance and
+          minion resistances.
+
+
+          The price is a crowded lottery and a weak base: 49–55 Energy
+          Shield and 22% block on the best of them.
+      - title: "Two-defence shields"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Thirteen each. **Round shields** (Armour and Evasion) have a Block
+          Recovery implicit or none. **Kite shields** (Armour and Energy
+          Shield) have +4%, +8% or +12% to all Elemental Resistances, or
+          none. **Spiked shields** (Evasion and Energy Shield) have +3% or
+          +5% chance to Suppress Spell Damage.
+
+
+          Each rolls the suffixes of both its attributes, several of them
+          at half weight. A kite or spiked shield
+          gets the caster suffixes, but **not** increased Spell Damage or the
+          spell gem prefixes. A caster who wants those has to use a spirit
+          shield.
+      - title: "Experimented bases (Heist)"
+        text: >-
+          Nine bases, three each among tower shields, bucklers and spirit
+          shields, with an implicit that triggers on block: "Scorch Enemies
+          when you Block their Damage", "Inflict Brittle" or "Sap". They roll
+          the pool of their family and have about half its defences. The
+          top one of each has the highest block in its family: Heat-attuned
+          Tower Shield 29%, Cold-attuned Buckler 28%, Transfer-attuned Spirit
+          Shield 26%.
+    picks:
+      - base: "Pinnacle Tower Shield"
+        for: "Life and block, the all-round defensive shield"
+        why: >-
+          467–537 Armour, 25% block and +20–30 maximum Life on the implicit.
+          The Colossal Tower Shield trades for more Armour (522–601) with 23%
+          block and +10–20 Life; the Ezomyte for more Life (+30–40) with 24%
+          block and 412–474 Armour.
+      - base: "Heat-attuned Tower Shield"
+        for: "The highest Chance to Block"
+        why: >-
+          29% block on the base, the highest in the data. Increased Chance to
+          Block on a shield is local, so the same prefix adds more here than
+          anywhere: 75% increased block makes 29% into about 51%, and 25%
+          into about 44%. It has under half a Pinnacle's Armour, 220–253.
+      - base: "Titanium Spirit Shield"
+        for: "Energy Shield"
+        why: >-
+          The most Energy Shield of any shield, 67–77, with 25% block and no
+          implicit. For a character that wants the defence
+          and is not looking for spell damage on the shield.
+      - base: "Harmonic Spirit Shield"
+        for: "Spell casters"
+        why: >-
+          10–15% increased Spell Damage on the implicit, where no reroll can
+          touch it, with 58–66 Energy Shield and 23% block. The implicit
+          stacks with a Spell Damage prefix: it is not one of the six slots.
+      - base: "Fossilised Spirit Shield"
+        for: "Summoners"
+        why: >-
+          The best of the three bases that can roll minion modifiers. Chosen
+          for its pool, not its numbers.
+      - base: "Archon Kite Shield"
+        for: "Fixing resistances"
+        why: >-
+          +12% to all Elemental Resistances on the implicit. With the "+# to
+          all Elemental Resistances" suffix, which exists on shields and not
+          on body armours, one item can carry close to 30% to every element
+          from two lines, before a single-element suffix is counted. The cost is the lowest
+          block of any top base, 22%.
+    impact: >-
+      **The pool**, more than on any other armour piece. Spell Damage, minion
+      modifiers, attack speed and Suppression each exist on some shields and
+      not on others.
+
+
+      **The base Chance to Block.** "Increased Chance to Block" is a local
+      modifier in the game data: it multiplies the shield's own block, 22%
+      to 29%. Quality does not raise block.
+
+
+      **The defence number** that flat and percentage defence prefixes work
+      on, and that a [[Sacred Orb]] rerolls inside its range.
+
+
+      **The implicit**, which is close to a free modifier on most families:
+      life, movement speed, spell damage, resistances or Suppression. Nothing
+      in ordinary shield crafting replaces it, because Eldritch currency does
+      not work here. A [[Blessed Orb]] rerolls its value.
+
+
+      **Requirements** are mild: no more than 159 of one attribute, or 85 of
+      two.
+tools:
+  - method: currency
+    note: >-
+      On tower shields and bucklers the lottery is flat, as on a chest:
+      nearly every tier weighs 1,000. At item level 86 one prefix roll is
+      life 20% of the time and its top tier 1 time in 54, by our arithmetic.
+
+
+      Spirit shields are different, and the difference is the whole craft.
+      Increased Spell Damage is a tenth of prefix rolls, but its top three
+      tiers weigh 500, 150 and 40 against 1,500 for each tier below. At
+      item level 86, Spell Damage of 70% or more is 1 prefix roll in 122, of
+      85% or more 1 in 442, and the top tier 1 in 2,099. The elemental
+      versions are rarer still: 100–109% increased Fire Damage is about 1
+      roll in 7,000. [[Orb of Alteration]]s find a middle tier comfortably
+      and the top tier almost never.
+  - method: bench
+    note: >-
+      The shield bench is wide. **Prefixes:** +56–70 maximum Life for 4 Orbs
+      of Alchemy, which is the best life rank a shield has; **41–50%
+      increased Chance to Block** for 3 Chaos Orbs (31–40% for 9 Orbs of
+      Alteration); 5–6% Chance to Block Spell Damage for 3 Regal Orbs; 56–74%
+      increased defence or +250–320 Armour or Evasion for 2 Chaos Orbs;
+      "+1 to Level of Socketed Support Gems" for 8 Chaos Orbs.
+      **Suffixes:** one resistance, 29–35%, for 3 Chaos Orbs; **6–9% increased
+      Cast Speed** for 6 Orbs of Alteration; 7–12% attack speed for 2 Chaos
+      Orbs; 21–25% chance to Avoid Elemental Ailments for 2 Chaos Orbs;
+      Suppression 8–10% or 3% Physical Damage Reduction for 4 Chaos Orbs;
+      minion life 16–20% for 2 Orbs of Alchemy; 4–5% chance to deal Double
+      Damage for 8 Chaos Orbs.
+
+
+      What it does **not** sell decides what you roll: no increased Spell
+      Damage, no Spell Critical Strike Chance, no maximum resistance, no "all
+      Elemental Resistances", no reduced damage from Critical Strikes.
+  - method: finishing
+    note: >-
+      [[Armourer's Scrap]]s to 20% quality raise the shield's defence, not
+      its block. A [[Sacred Orb]] rerolls the base defence, a
+      [[Blessed Orb]] the implicit: +30–40 Life on an Ezomyte Tower Shield or
+      10–15% Spell Damage on a Harmonic Spirit Shield is worth a few. Sockets
+      matter only if you use them: the gem-level prefixes act on socketed
+      gems.
+  - method: essence
+    note: >-
+      **Loathing** is the Essence that belongs to shields: increased Chance
+      to Block, a prefix. 58–63% at Screaming, 64–69% at Shrieking, 70–75% at
+      Deafening, which is the range of the second-best natural tier.
+      **Greed** gives life: 100–114, 115–129 and 130–144, again one tier
+      short of the best roll. **Dread, Doubt and Woe** give flat Armour,
+      Evasion (301–375 at Deafening) and Energy Shield (75–85).
+
+
+      Two suffix Essences beat the natural pool. **Scorn** gives Spell
+      Critical Strike Chance, 110–119% at Deafening where the best natural
+      tier is 90–109%. **Misery** gives mana regeneration, 70–76% against
+      60–69%. **Fear** puts minion life, 28–30% at Deafening, on any shield,
+      including ones whose pool cannot roll it.
+
+
+      The four corrupted Essences all key off block: +15% Chance to Block
+      Spell Damage while on Low Life (Delirium), Chill Enemies within 3
+      metres when you Block (Horror), added Fire Damage if you have Blocked
+      Recently (Hysteria), 25% chance for a Power Charge when you Block
+      (Insanity).
+  - method: beast
+    note: >-
+      The **Imprint** ([[Craicic Croaker]]) is at its most useful on a
+      spirit shield: a Magic one with Spell Damage of 85% or more took
+      hundreds of Alterations, and the Imprint lets you retry the
+      [[Regal Orb]]. The add-and-remove recipes
+      ([[Farric Wolf Alpha]], [[Farric Lynx Alpha]]) are for a Rare shield
+      whose losing side is empty.
+  - method: harvest
+    note: >-
+      With no Eldritch orbs, a tag-counted Harvest reforge under a lock is
+      the main way to rebuild one side. The counts, from the tags in the
+      data.
+
+
+      **On a spirit shield:** Critical (150 Primal) can only be Spell
+      Critical Strike Chance. The pool has no speed modifier, so the Speed
+      reforge has nothing to give here.
+      Caster (75 Primal) is Spell Damage about half the time and Spell
+      Critical Strike Chance over a third.
+
+
+      **On a tower shield:** Critical can only be reduced Extra Damage from
+      Critical Strikes. Physical is either Physical Damage Reduction or the
+      reflected-damage prefix, so it is only precise with the prefixes
+      locked. Chaos is Chaos Resistance 4 times in 5 and maximum Chaos
+      Resistance 1 in 5. Fire, Cold or Lightning is the resistance 63% of
+      the time, Avoid Elemental Ailments 31%, and the maximum resistance 6%.
+      Life is maximum Life, the Armour-with-Life hybrid or regeneration.
+
+
+      **On a buckler:** Speed can only be attack speed.
+  - method: fossil
+    note: >-
+      An [[Aetheric Fossil]] ("more Caster") is the spirit shield Fossil.
+      At item level 84 it makes Spell Damage 49% of prefix rolls, by our
+      arithmetic, and Spell Damage of 70% or more 1 roll in 24 instead of 1
+      in 122; Spell Critical Strike Chance becomes 42% of suffix rolls. It
+      does **not** raise Fire, Cold or Lightning Damage, which lack the
+      caster tag.
+
+
+      A [[Pristine Fossil]] on a tower shield removes every Armour prefix:
+      life becomes 88% of prefix rolls and most of what is left is block.
+      Its cost is life regeneration on 62% of suffix rolls. A
+      [[Bound Fossil]] ("more Minion") on a minion spirit shield makes
+      minion damage 57% of prefix rolls, "+1 to Level of all Minion Skill
+      Gems" 1 roll in 50 instead of 1 in 235, and four suffix rolls in five
+      a minion modifier.
+
+
+      Fossil-only modifiers for shields include a 3–5% Physical Damage
+      Reduction **prefix**, +1 to Level of Socketed Strength, Dexterity or
+      Intelligence Gems, and "Socketed Spells have 20% reduced Mana Cost".
+      Our figures leave these out, so read them as close.
+  - method: veiled
+    note: >-
+      Unveiled suffixes: 6–7% chance to deal Double Damage (the bench sells
+      4–5%), 8–10% increased Effect of your Curses, two attributes at 31–35
+      each, or one element with Chaos Resistance at 16–20% each. Unveiled
+      prefixes: 24–28% increased defence with +19–22 Life, and pairs of added
+      elemental damage. None of them is a reason to build a shield; they
+      are good third modifiers.
+  - method: fracture
+    note: >-
+      Fracture what is rare by weight. On a spirit shield that is a top
+      tier of Spell Damage. On a defensive shield it is a maximum resistance:
+      "+2% to all maximum Resistances" weighs 125 and is 1 suffix roll in 591
+      at item level 86; +3% to one element is 1 in 296. A fractured shield
+      cannot be given influence, so choose between the two before you start.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" and "Suffix Modifiers cannot be
+      changed" cost 4 Divine Orbs and 4 Blessed Orbs on a shield in 3.30, per
+      attempt. On body armours there is a cheaper way to work on one side;
+      on shields there is not. That makes one question central: is the side
+      you want to keep worth several locks? Essences are reported to ignore
+      them.
+  - method: influence
+    note: >-
+      Shields have a peculiarity that the modifier list shows plainly: **five
+      of the six influences have exactly one prefix family.** Hunter:
+      increased maximum Life (7–10% at item level 84). Shaper: +1 to maximum
+      number of Summoned Totems (70). Crusader: 1% increased Damage per 1%
+      Chance to Block Attack Damage (68). Warlord: increased Area of Effect
+      (13–15% at 80). Redeemer: increased Elemental Damage with Attack
+      Skills (36–40% at 80). Only the Elder has several. A conqueror's
+      Exalted Orb adds one modifier of its influence, so on a shield whose
+      only open slot is a prefix its result is known in advance.
+
+
+      Suffixes worth an influence: Warlord, +7–8% Chance to Block Attack
+      Damage if you have Blocked Attack Damage Recently; Crusader, +10–12%
+      Chance to Block Spell Damage if you have Blocked Spell Damage Recently;
+      Shaper or Hunter, "Socketed Gems have 30% increased Reservation
+      Efficiency" (80). An [[Orb of Dominance]] does not work on shields.
+  - method: corruption
+    note: >-
+      Shields have some of the best corruption implicits in the game, and
+      because a shield has no Eldritch implicits to lose, the gamble costs
+      less than on a chest. The list: +1% to maximum Chance to Block Attack
+      Damage; 20–30% increased Chance to Block; 4–5% Chance to Block Spell
+      Damage; +2% to one maximum elemental resistance or +1% to all; +1 to a
+      minimum charge; the keystones Glancing Blows and Versatile Combatant;
+      +2 to Level of one kind of socketed gem. A corruption implicit
+      replaces the base implicit, and the item can no longer be crafted.
+  - method: strands
+    note: "See the Memory Strands section below: the answer differs between a tower shield and a spirit shield."
+memoryStrands: >-
+  [[Memory Strands]] remove low tiers from whatever is rolled, and what that
+  is worth depends on which shield you hold.
+
+
+  **On a spirit shield** it is worth a great deal. Spell Damage is common
+  and its high tiers are rare by weight, the same shape as the physical
+  prefixes of a weapon, and a spirit shield is rolled the same way: an
+  [[Orb of Remembrance]] on a white item level 84 base, then
+  [[Orb of Alteration]]s, which spend at most 8 strands each by the
+  data-mined table. How far strands thin an eight-tier modifier whose tiers
+  have unequal weights has not been published or tested that we know of, so
+  watch the tiers you get and judge from them.
+
+
+  **On a tower shield or buckler** the lottery is flat and strands do what
+  they do on a chest: every life or resistance roll comes from the upper
+  tiers. Useful, but there is no rare modifier for them to rescue. They
+  never make a maximum resistance more likely to appear.
+
+
+  **What wastes them:** Essence of Loathing spam, at up to 80 strands an
+  Essence. Fossils and Harvest reforges, the two tools the harder shield
+  crafts rest on, do not use strands at all by player testing.
+reading:
+  intro: >-
+    First decide which of the three items you are looking at; a caster's
+    shield and a blocker's shield are judged by different lines. For a
+    defensive shield: **the Chance to Block at the top, the life, then how
+    many suffixes are resistances and whether any is a maximum resistance.**
+    For a caster's shield: **the tier of the Spell Damage prefix**, then
+    spell critical strike chance, and whether a suffix is open for the
+    bench's cast speed.
+  prefixes:
+    text: >-
+      **Defensive shields.** Life, increased Chance to Block and Chance to
+      Block Spell Damage are three groups and can all sit together; that
+      trio is the classic block shield. The three defence prefixes of a
+      chest exist here too (flat, percentage, percentage with Stun and Block
+      Recovery), so a shield built for Armour or Energy Shield fills its
+      prefixes with those and gives up block or life to do it. "Reflects
+      Physical Damage" is the dead prefix, 7% of rolls.
+
+
+      **Spirit shields.** Increased Spell Damage, increased Fire, Cold and
+      Lightning Damage and "Minions deal increased Damage" are **one
+      group**. A shield holds one of them, never two, so decide which your
+      build scales. The "+1 to Level of all ... Spell Skill Gems" prefixes
+      are a second single group, shared with the bench's "+1 to Level of
+      Socketed Support Gems". Around those two sit life, Energy Shield and
+      Mana.
+    key:
+      - mod: "+# to maximum Life"
+        why: "On every pool. Tops out two tiers below a chest, so the base implicit of a tower shield is a real share of the total."
+        aim: "T2, 130–144 (ilvl 64). T1 is 145–159 (ilvl 73)."
+      - mod: "#% increased Chance to Block"
+        why: "Local: it multiplies the base's own 22–29%. The defining prefix of a block shield, and the reason the base's block number matters."
+        aim: "T3, 64–69% (ilvl 61). T1 is 76–81% (ilvl 86)."
+      - mod: "#% Chance to Block Spell Damage"
+        why: "A flat amount of spell block, in a different group from the prefix above. Half weight on Strength and Dexterity shields, full weight on spirit and spiked shields."
+        aim: "T2, 12–13% (ilvl 66). T1 is 14–15% (ilvl 77)."
+      - mod: "#% increased Spell Damage"
+        why: "Pure Intelligence bases only. The one shield modifier with weapon-like rarity: common at low tiers, very rare at the top. Stacks with the Spell Damage implicit."
+        aim: "T4, 55–69% (ilvl 46). T1 is 100–109% (ilvl 84)."
+      - mod: "#% increased Fire Damage"
+        why: "Stands for the three elements. Same group as Spell Damage and rarer at every tier, so a build either wants its own element here or wants Spell Damage."
+        aim: "T4, 55–69% (ilvl 46). T1 is 100–109% (ilvl 84)."
+      - mod: "+# to Level of all Fire Spell Skill Gems"
+        why: "Stands for five prefixes, one per damage type. Each is about 1 prefix roll in 340 or rarer, with a single tier that any item level can roll."
+      - mod: "Minions deal #% increased Damage"
+        why: "Minion spirit shields only, and in the same group as Spell Damage. Its low tiers weigh 3,000 each, so most rolls of it are small."
+        aim: "T4, 55–69% (ilvl 46). T1 is 100–109% (ilvl 84)."
+      - mod: "+# to Armour"
+        why: "Stands for every flat defence prefix. Worth more on a shield than on a chest relative to the base, because shield bases are small."
+        aim: "T2, 201–300 (ilvl 60). T1 is 301–400 (ilvl 69)."
+      - mod: "+# to Level of Socketed Melee Gems"
+        why: "Not on spirit shields. +2 from item level 63. Matters only when a melee skill is socketed in the shield."
+  suffixes:
+    text: >-
+      The shield has the widest suffix pool of any armour piece, and most of
+      the modifiers that make a shield valuable are here. Each elemental
+      resistance is 11% of suffix rolls on a tower shield and "all Elemental
+      Resistances" another 8%, so resistances arrive unasked. The bench
+      covers a missing one.
+
+
+      What the bench cannot give is the short list to look for: a **maximum
+      resistance** (a weight of 250 for one element, 125 for all), reduced
+      Extra Damage from Critical Strikes, Physical Damage Reduction above
+      3%, and on the caster side Spell Critical Strike Chance. A shield with
+      one of the first group and two resistances is finished on its suffix
+      side, and from then on worth protecting.
+    key:
+      - mod: "+#% to all Elemental Resistances"
+        why: "One suffix that does a third of the work of three. Exists on shields and not on body armours."
+        aim: "T2, 15–16% (ilvl 60). T1 is 17–18% (ilvl 85)."
+      - mod: "+#% to Fire Resistance"
+        why: "Stands for all three elements. Common, benchable at 29–35%, and guaranteed by an Essence."
+        aim: "T3, 36–41% (ilvl 60). T1 is 46–48% (ilvl 84)."
+      - mod: "+#% to all maximum Resistances"
+        why: "The rarest ordinary suffix on a shield. One of the few modifiers in this category worth a fracture or a lock on its own."
+        aim: "+1% (ilvl 75). +2% needs ilvl 81."
+      - mod: "+#% to maximum Fire Resistance"
+        why: "Stands for Fire, Cold, Lightning and Chaos. Twice the weight of the all-resistance version."
+        aim: "+2% (ilvl 75). +3% needs ilvl 81."
+      - mod: "You take #% reduced Extra Damage from Critical Strikes"
+        why: "Only on shields that ask for Strength. The only modifier there with the critical tag, which is what lets a Harvest reforge find it."
+        aim: "T2, 41–50% (ilvl 67). T1 is 51–60% (ilvl 78)."
+      - mod: "#% additional Physical Damage Reduction"
+        why: "Only on shields that ask for Strength. The bench sells 3%."
+        aim: "T2, 7% (ilvl 77). T1 is 8% (ilvl 86)."
+      - mod: "#% increased Spell Critical Strike Chance"
+        why: "On any shield that asks for Intelligence. Not on the bench. A Deafening Essence of Scorn gives more than the best natural tier."
+        aim: "T2, 80–89% (ilvl 59). T1 is 90–109% (ilvl 76)."
+      - mod: "#% increased Cast Speed"
+        why: "Not in the natural pool of any shield. The bench sells 6–9% for 6 Orbs of Alteration, so on a caster's shield keep one suffix open for it."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "On any shield that asks for Dexterity, and on the implicit of spiked shields."
+        aim: "T2, 17–19% (ilvl 77). T1 is 20–22% (ilvl 86)."
+      - mod: "#% increased Attack Speed"
+        why: "On any shield that asks for Dexterity, at half weight. Global on a shield: it speeds the weapon in the other hand."
+        aim: "T2, 11–13% (ilvl 22). T1 is 14–16% (ilvl 76)."
+      - mod: "Minions have #% increased maximum Life"
+        why: "Minion spirit shields, as one of five minion suffixes that together are a third of that pool's suffix rolls."
+        aim: "T2, 33–36% (ilvl 74). T1 is 37–40% (ilvl 82)."
+approach:
+  principle: >-
+    **Name the shield first, then craft it like a weapon.** Block and life,
+    spell damage, or minions: the answer chooses the pool, and the pool
+    chooses the hard modifier. Get that one with the tool that targets it.
+    After that, every step that keeps one side while changing the other
+    costs a lock, so ask each time whether the finished side has earned it.
+  order:
+    - title: "Decide which shield it is and take a base from the right pool"
+      text: >-
+        A caster on a kite shield will never see Spell Damage; a blocker on
+        a spirit shield rolls block at half weight. Inside the pool, choose
+        by base block for a block shield, by Energy Shield or implicit for
+        the others.
+    - title: "Find the hard modifier"
+      text: >-
+        For a block shield nothing is rare except the maximum resistances:
+        the difficulty is three good prefixes at once. For a spirit shield
+        it is the Spell Damage tier. For a minion shield, minion damage and
+        the gem level. Everything else in the plan is arranged around that.
+    - title: "Anchor it with the tool that targets it"
+      text: >-
+        Block or life: an Essence of Loathing or Greed. Spell Damage:
+        Alterations for a middle tier, an Aetheric Fossil for several caster
+        modifiers at once. Minions: a Bound Fossil. A maximum resistance:
+        nothing targets it well, which is why a shield that already has one
+        is a starting point worth buying.
+    - title: "Judge whether the item has earned a lock"
+      text: >-
+        One finished side and a poor other side is where shields differ
+        from chests. The lock is 4 Divine Orbs and 4 Blessed Orbs per
+        attempt. If the good side could be rolled again for less, do that,
+        or bench what you can and stop.
+    - title: "Rebuild the other side by tag"
+      text: >-
+        Under the lock, use the Harvest reforge whose tag fits fewest
+        modifiers on the open side. Stop at two modifiers you want and a
+        free slot.
+    - title: "Spend the last slot on something certain"
+      text: >-
+        The bench, always. Or, on a shield with no influence, a conqueror's
+        Exalted Orb into the last open prefix: with one prefix family per
+        influence, it is the only orb in the game that works like a bench
+        craft.
+  finishing: >-
+    Quality to 20%, then the three value rerolls where they pay: a
+    [[Blessed Orb]] for an implicit with a range, a [[Sacred Orb]] for a low
+    base defence, a [[Divine Orb]] for the explicit numbers.
+
+
+    Then consider corruption more seriously than on other armour. A shield
+    has no Eldritch implicits to lose, and its corruption list holds +1% to
+    maximum block, 20–30% increased Chance to Block and +2% to a maximum
+    resistance. It is still the end of crafting on that item, and the odds
+    of each outcome are not published.
+  stopping: >-
+    A tower shield with block, 100 or more life and two resistances carries
+    a character through maps; an Essence and the bench make it. A spirit
+    shield with Spell Damage of 55% or more, a spell critical strike suffix
+    and bench cast speed does the same for a caster.
+
+
+    The steep steps are the third good prefix, Spell Damage above 85%, and
+    any maximum resistance. Each is where a lock or a fracture enters the
+    plan. If a lock would cost more than the shield could be sold for, the
+    shield is finished: bench the open slot and use it.
+special:
+  - mod: "+# to maximum number of Summoned Totems"
+    source: "Shaper influence"
+    where: "+1, the only Shaper prefix a shield can have, from item level 70. A [[Shaper's Exalted Orb]] on a Rare shield whose only open slot is a prefix has nowhere else to put its modifier."
+  - mod: "#% increased maximum Life"
+    source: "Hunter or Elder influence"
+    where: "7–10% from item level 84, 3–6% from 68. It is the only Hunter prefix on a shield, and one of four Elder ones."
+  - mod: "+#% Chance to Block Attack Damage if you have Blocked Attack Damage Recently"
+    source: "Warlord influence"
+    where: "A Warlord suffix, +7–8% from item level 75. The spell version, +10–12% Chance to Block Spell Damage if you have Blocked Spell Damage Recently, is a Crusader suffix."
+  - mod: "Socketed Gems have #% increased Reservation Efficiency"
+    source: "Shaper or Hunter influence"
+    where: "A suffix: 30% from item level 80, 20% from 68."
+  - mod: "#% increased Spell Critical Strike Chance"
+    source: "Essence"
+    where: "The modifier is in the natural pool up to 90–109%. A [[Deafening Essence of Scorn]] gives 110–119%, which no roll reaches."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% from the [[Crafting Bench]] for 8 Chaos Orbs, 6–7% as an unveiled suffix. Not in the natural pool."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 for 8 Chaos Orbs, +2 for 4 Exalted Orbs. A prefix, in the same group as the spell gem and melee gem prefixes."
+  - mod: "+#% to maximum Chance to Block Attack Damage"
+    source: "Corruption"
+    where: "+1%, a corruption implicit from a [[Vaal Orb]]. The same list has 20–30% increased Chance to Block, 4–5% Chance to Block Spell Damage and the keystones Glancing Blows and Versatile Combatant."
+  - mod: "#% additional Physical Damage Reduction"
+    source: "Fossil"
+    where: "As a **prefix**, 3–5%, only from a Fossil reroll. It shares a group with the natural suffix of the same name, so a shield holds one or the other."
+  - mod: "+15% Chance to Block Spell Damage while on Low Life"
+    source: "Corrupted Essence"
+    where: "An [[Essence of Delirium]], which comes only from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "Scorch Enemies when you Block their Damage"
+    source: "Base implicit"
+    where: "The implicit of the three experimented tower shields. Bucklers of the same origin inflict Brittle and spirit shields Sap. Not craftable: you choose it with the base."
+mistakes:
+  - "**Planning Eldritch implicits or Eldritch Chaos Orbs for a shield.** The currency's own text limits it to body armours, boots, gloves and helmets."
+  - "**Crafting a caster shield on a kite or spiked shield.** They roll spell critical strikes, never Spell Damage or the spell gem prefixes."
+  - "**Expecting Spell Damage and Fire Damage together.** One group. The same goes for minion damage on a minion spirit shield."
+  - "**Ignoring the base's block.** Increased Chance to Block is local; the same prefix is worth a sixth more on a 29% base than on a 25% one."
+  - "**Benching increased Chance to Block onto a shield that rolled it.** Same group. The bench's spell block is the one that fits beside it."
+  - "**Using a conqueror's Exalted Orb with a suffix slot open.** The single prefix family only forces the result when a prefix is the only place left."
+  - "**Locking a side that an Essence could rebuild.** Four Divine Orbs and four Blessed Orbs per attempt is more than most block-and-life prefix sides cost to roll again."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, tag, Essence, implicit and bench cost quoted here, the local block stat, and the in-game text of the Eldritch and influence currency. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on shields." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The reforges by modifier type and their Lifeforce costs." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-and-remove recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers. Partly older than 3.30." }

@@ -1,0 +1,144 @@
+category: rings
+title: "A minion ring from the Bone Ring's own pool"
+level: 2
+summary: "Only two ring bases can roll minion damage. Roll it with Alterations on a Bone Ring, make the ring Rare, and bench the Life."
+goal: >-
+  A ring for a minion build with "Minions deal increased Damage", a second
+  useful modifier and Life. It is an ordinary Alteration, Regal and bench
+  craft, done on purpose on a base whose pool is different, to show what a
+  **pool** is: the same orb on a Two-Stone Ring could be used ten thousand
+  times and never show this prefix.
+base: "Bone Ring"
+itemLevel: 70
+baseWhy: >-
+  The Bone Ring and the Gloam Ring are the only rings whose pool holds minion
+  modifiers: one prefix and four suffixes. The Bone Ring drops from level 30
+  and its implicit is minion resistances. Item level 70 opens every minion
+  suffix at its top tier and minion damage up to 31–36%; the last tier of
+  that, 37–42%, needs 81.
+methods: [currency, bench]
+result:
+  implicits: ["Minions have +12% to all Elemental Resistances"]
+  prefixes:
+    - { text: "Minions deal 33% increased Damage" }
+    - { text: "+46 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+34% to Fire Resistance" }
+    - { text: "Minions have 22% increased Movement Speed" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "60–120" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Alterations, about a hundred of them, one [[Regal Orb]] and two
+  [[Orb of Alchemy]] for the bench. The expensive part is nothing.
+odds: >-
+  At item level 70 on this pool, one prefix roll is minion damage of 21% or
+  more about 1 time in 46, and of 31–36% about 1 in 92, by our arithmetic
+  from the weights. An Alteration does not always roll a prefix, so the
+  first target takes 60 to 120 orbs.
+
+
+  The suffix side is kinder than on other rings: the four minion suffixes
+  together are 29% of suffix rolls here.
+steps:
+  - title: "Check the base, not just the name"
+    do: >-
+      Take a white Bone Ring of item level 60 or higher. Hold Alt to see the
+      item level.
+    why: >-
+      The minion modifiers belong to the base. Below item level 60 the two
+      best tiers of minion damage cannot roll; the last one opens at 81.
+    state:
+      rarity: normal
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+  - title: "Roll the prefix"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      prefix is **"Minions deal increased Damage" at 21% or more**: the
+      names are "Marchioness's" (21–30%) and "Countess's" (31–36%).
+    why: >-
+      Minion damage is under 5% of this pool's prefix rolls and the bench
+      does not sell it for a ring. It is the rare half of the item, so it is
+      the half you roll. Life, the other prefix you want, is for sale.
+    check: >-
+      Read the prefix only. A minion suffix beside it is a bonus; any other
+      suffix is fine too.
+    fail: >-
+      Short of Alterations: take any tier of the prefix. Even 11–20% is
+      something no other ring base could have given you.
+    state:
+      rarity: magic
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+  - title: "Fill the suffix if it is empty"
+    do: >-
+      Use an [[Orb of Augmentation]] if the Magic ring has no suffix.
+    why: >-
+      It cannot hurt what is there, and on this pool nearly three suffix
+      rolls in ten are a minion modifier. The rest are the usual attributes
+      and resistances, which a ring always has a use for.
+    state:
+      rarity: magic
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+      suffixes: [{ text: "+34% to Fire Resistance" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]] and read which side the new modifier is on.
+    why: >-
+      The ring becomes Rare and keeps what it had. The side matters for the
+      next step: if the Regal Orb added a prefix, one prefix slot is left;
+      if it added a suffix, two are.
+    state:
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes: [{ text: "Minions deal 33% increased Damage" }]
+      suffixes:
+        - { text: "+34% to Fire Resistance" }
+        - { text: "Minions have 22% increased Movement Speed" }
+  - title: "Bench the Life"
+    do: >-
+      At the [[Crafting Bench]], craft +41–55 to maximum Life for 2
+      [[Orb of Alchemy]].
+    why: >-
+      Minions do the damage; the ring still has to keep you alive. Life is
+      the craft because the suffix side found its own way.
+    fail: >-
+      If the ring rolled Life by itself, the bench will not add more. Craft a
+      minion suffix the ring lacks instead: "Minions have 11–15% increased
+      maximum Life" for 4 Orbs of Augmentation, or 18–22% minion Movement
+      Speed for 2 Orbs of Alchemy.
+    state:
+      implicits: ["Minions have +12% to all Elemental Resistances"]
+      prefixes:
+        - { text: "Minions deal 33% increased Damage" }
+        - { text: "+46 to maximum Life", how: crafted }
+      suffixes:
+        - { text: "+34% to Fire Resistance" }
+        - { text: "Minions have 22% increased Movement Speed" }
+variations: >-
+  **Minion modifiers on other rings.** Two exist outside this pool. The bench
+  crafts in the last step work on any ring, and an Essence of Fear
+  guarantees minion Movement Speed on any ring, up to 28–30% at Deafening.
+  Minion **damage** as a prefix does not: it is this pool or a Redeemer
+  influence.
+
+
+  **The Unset Ring is the other pool.** It works the same way: one extra
+  prefix, "+1 to +3 to Level of Socketed Gems", that only it can roll. At
+  item level 76 or more the +3 is about 1 prefix roll in 246.
+
+
+  **A Fossil for the same job.** A [[Bound Fossil]] multiplies minion
+  modifiers by ten. On a Bone Ring that makes minion damage about a third of
+  prefix rolls, by our arithmetic, at the price of a Rare result you cannot
+  build up step by step.
+mistakes:
+  - "Using a Bone Ring below item level 60 and wondering why the damage never passes 30%. The tiers above need 60 and 81."
+  - "Trying this on another ring base. The modifier is not in their pool at any item level."
+  - "Benching a minion suffix when the ring has no Life. A minion build's rings are usually where its own Life comes from."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The three ring pools, the minion modifiers and their tiers, weights and bench costs. The odds are our arithmetic." }

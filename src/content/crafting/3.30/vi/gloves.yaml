@@ -1,0 +1,511 @@
+name: "Gloves"
+short: "Loại trang bị armour thiên về tấn công. Attack speed hiếm nếu roll và dễ nếu dùng đúng công cụ, và bốn base Atlas đặt ra một lựa chọn mà không loại trang bị nào khác có."
+icon: "Spiked Gloves"
+intro: >-
+  Gloves là món armour biết đánh trả. Bên cạnh life và resistance, chúng roll
+  increased Attack Speed, added damage to attacks, accuracy và leech, và
+  Essence, craft bench cùng implicit của chúng gần như đều xoay quanh damage.
+  Một đôi hoàn chỉnh là nửa defence, nửa weapon.
+
+
+  Có hai điều làm loại trang bị này khác biệt. Modifier ai cũng muốn, attack
+  speed, chỉ là khoảng một trên ba mươi lần roll suffix, nên không bao giờ
+  được phó mặc cho cuộc xổ số. Và bốn **base Atlas** mang những implicit
+  damage lớn mà bạn mất ngay khi thêm một Eldritch implicit. Đôi gloves nào
+  cũng bắt đầu bằng lựa chọn đó.
+basics:
+  itemLevel:
+    text: >-
+      Gloves cần ít item level cho prefix: maximum Life tốt nhất, 115–129, đã
+      mở ở 54. Suffix thì đòi nhiều hơn. Attack speed Tier 1 cần 76,
+      resistance Tier 1 cần 84, spell suppression và accuracy Tier 1 cần 85.
+
+
+      Như trên mọi món armour, gần như mọi tier có weight như nhau, nên item
+      level cao hơn thêm một tier đỉnh mà không bỏ các tier đáy. Attack speed
+      là ngoại lệ về độ lớn, không phải về bản chất: các tier của nó có
+      weight 500 trong khi phần lớn có 1,000.
+
+
+      **Item level 76 là đủ cho gloves attack, và 72 cho mọi thứ khác.** Lên
+      84 hoặc 85 để lấy tier cuối của resistance hoặc suppression.
+    breakpoints:
+      - ilvl: 22
+        unlocks: "**Leveling.** Tier 2 của attack speed (11–13%)."
+      - ilvl: 44
+        unlocks: "Tier 2 của maximum Life (100–114), Tier 1 của flat defence, và tier cao nhất của added Fire và Lightning Damage to Attacks (Cold ở 45)."
+      - ilvl: 54
+        unlocks: "Tier 1 của maximum Life, \"Athlete's\" (115–129)."
+      - ilvl: 60
+        unlocks: "Tier 3 của resistance (36–41%) và Tier 3 của defence phần trăm (68–79%). **Mốc item level đầu tiên đáng craft để chạy map.**"
+      - ilvl: 72
+        unlocks: "Tier 2 của resistance (42–45%) và Tier 2 của defence phần trăm (80–91%)."
+      - ilvl: 76
+        unlocks: "Tier 1 của attack speed, \"of Grandmastery\" (14–16%), và Tier 2 của spell suppression (11–12%). **Đủ cho gloves attack.**"
+      - ilvl: 84
+        unlocks: "Tier 1 của resistance (46–48%) và Tier 1 của defence phần trăm (92–100%)."
+      - ilvl: 85
+        unlocks: "Tier 1 của spell suppression (13–14%), Accuracy (481–600) và Dexterity (56–60), cùng các modifier Hunter gây Intimidate hoặc Unnerve on hit."
+  bases:
+    text: >-
+      Có 79 gloves chia vào bảy pool, mỗi kiểu defence một pool. Pool quyết
+      định các prefix defence và vài suffix. Nó **không** quyết định các
+      modifier tấn công: attack speed, added damage, accuracy và leech roll
+      trên mọi đôi, kể cả gloves Energy Shield.
+    types:
+      - title: "Một defence: Armour, Evasion hoặc Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          Gloves **Armour** thêm Strength và increased Life Regeneration rate
+          vào pool suffix. Gloves **Evasion** thêm chance to Suppress Spell
+          Damage ở weight đầy đủ. Gloves **Energy Shield** thêm Intelligence,
+          Recharge Rate, và maximum Mana dưới dạng prefix, nơi nó chiếm một
+          phần năm mọi lần roll prefix và đẩy life xuống còn 15%. Dexterity
+          roll trên mọi đôi gloves, bất kể defence nào, và nằm trong số các
+          suffix hay gặp nhất trên tất cả.
+      - title: "Hai defence"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Gloves hybrid roll các prefix defence hybrid và suffix attribute
+          của cả hai bên gốc ở nửa weight. Spell suppression roll trên bất cứ
+          thứ gì có Evasion, với weight 500 mỗi tier trên base hybrid so với
+          1,000 trên gloves thuần Evasion.
+      - title: "Gloves Runic (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Gloves, Runic Gages và Runic Gauntlets, các base Expedition,
+          với Ward làm defence và yêu cầu cả ba attribute. Chúng roll các
+          prefix Ward và "faster Restoration of Ward", và không roll suffix
+          nào gắn với Strength, Evasion hay Energy Shield.
+      - title: "Gloves Atlas"
+        text: >-
+          Bốn base có implicit damage, mỗi cái nằm trong pool của defence
+          mình. Spiked Gloves (Armour): 24–30% increased Melee Damage.
+          Gripped Gloves (Evasion): 22–28% increased Projectile Attack
+          Damage. Fingerless Silk Gloves (Energy Shield): 20–26% increased
+          Spell Damage. Apothecary's Gloves (Armour và Energy Shield): +14
+          to 18% Damage over Time Multiplier. Cả bốn đều được nâng trong
+          3.30, đều có defence thấp hơn rõ rệt so với base thường cao nhất
+          của pool mình (Spiked Gloves bằng khoảng 60% Leviathan Gauntlets),
+          và chúng chỉ rơi khi một item roll ra Item Tier đủ cao.
+      - title: "Gloves Ritual"
+        text: >-
+          Ba họ với ba cỡ, mỗi họ có một implicit hai mặt. Tinker, Apprentice
+          và Trapsetter Gloves kéo dài trap skill và làm chậm việc ném trap.
+          Leyline, Aetherwind và Nexus Gloves cho 25–30% chance hồi lại cost
+          của skill dưới dạng mana, kèm 30% reduced maximum Mana. Preserving,
+          Guarding và Thwarting Gauntlets cho +3 to 6% chance to Block Attack
+          Damage, và bạn nhận 10% damage của các hit đã block.
+    picks:
+      - base: "Spiked Gloves"
+        for: "Attack melee"
+        why: >-
+          24–30% increased Melee Damage ở chỗ không currency nào gỡ được, trừ
+          khi chính bạn thêm một Eldritch implicit. Pool Armour, 220–253
+          Armour.
+      - base: "Gripped Gloves"
+        for: "Bow và các attack projectile khác"
+        why: >-
+          22–28% increased Projectile Attack Damage, trên một base Evasion
+          roll spell suppression ở weight đầy đủ.
+      - base: "Fingerless Silk Gloves"
+        for: "Build cast spell"
+        why: >-
+          20–26% increased Spell Damage. Gloves gần như không còn gì khác để
+          cho một spell: pool tự nhiên hoàn toàn không có modifier spell nào.
+      - base: "Apothecary's Gloves"
+        for: "Damage over time"
+        why: >-
+          +14–18% Damage over Time Multiplier từ 3.30, một kiểu scale mạnh
+          hơn cái "increased" mà nó thay thế.
+      - base: "Velour Gloves"
+        for: "Evasion, suppression và hai Eldritch implicit"
+        why: >-
+          359–413 Evasion Rating, đỉnh của pool, và không có implicit nào để
+          mất. Base đúng khi kế hoạch kết thúc bằng một Ember và một Ichor.
+      - base: "Leviathan Gauntlets"
+        for: "Armour và hai Eldritch implicit"
+        why: >-
+          359–413 Armour ở level 84 và 144 Strength. So với Spiked Gloves,
+          Armour gốc nhiều hơn trên 60%, đổi lại là mất implicit melee.
+    impact: >-
+      **Implicit, và bạn có giữ được nó không.** Một base Atlas cho một
+      implicit mạnh. Một base thường không cho cái nào, và có chỗ cho hai
+      Eldritch implicit. Bạn không thể gộp chúng: dòng chữ trên mọi Ember và
+      Ichor nói nó "replaces any existing implicit modifiers" ngoại trừ
+      implicit Eldritch của phía đối diện. Vậy nên base được chọn cùng với kế
+      hoạch. Implicit Atlas, và không bao giờ có Ember hay Ichor; hoặc một
+      base defence cao nhất, và có cả hai.
+
+
+      **Con số defence**, thứ mà các prefix local và quality nhân lên. Trên
+      gloves chúng khiêm tốn dù theo hướng nào, và nhiều build coi chúng là
+      phần thưởng thêm.
+
+
+      **Pool**, ở đây quan trọng chủ yếu vì spell suppression và vì chuyện
+      mana có tranh chỗ với life hay không.
+
+
+      **Yêu cầu.** Thấp trên gloves: 144 của một attribute cho các base cao
+      nhất, 95 cho các base Atlas.
+tools:
+  - method: currency
+    note: >-
+      Trên gloves Evasion ở item level 85, theo phép tính của chúng tôi từ
+      weight: một trên năm lần roll prefix là maximum Life, một trên 23 là
+      life từ 100 trở lên. Khoảng một trên 30 lần roll suffix là attack speed
+      ở bất kỳ tier nào, một trên 69 là attack speed từ 11% trở lên, một trên
+      138 là tier cao nhất.
+
+
+      Vậy là phía prefix tự roll ra được còn phía suffix thì không.
+      [[Orb of Alteration]] ổn cho life hoặc cho một resistance. Với attack
+      speed, hãy dùng bất cứ thứ gì khác trên trang này.
+  - method: bench
+    note: >-
+      Bench bán một bậc attack speed, 7–12% giá 2 Chaos Orb, và đó là cách
+      chữa rẻ nhất cho một đôi đang thiếu nó. Maximum Life: 56–70 giá 4 Orb
+      of Alchemy. Resistance như trên mọi món armour: 29–35% giá 3 Chaos Orb,
+      hoặc hai cái mỗi cái 17–20% với cùng giá.
+
+
+      Thứ chỉ bench và veiled modifier mới có là một bộ **prefix** damage:
+      31–36% increased Damage while Leeching giá 3 Chaos Orb (37–43% giá 4
+      Exalted Orb); 24–28% increased Damage during any Flask Effect giá 4
+      Chaos Orb; 20–25% of Physical Damage Converted to Fire, Cold hoặc
+      Lightning giá 4 Chaos Orb; Melee Damage kèm strike range, Projectile
+      Damage kèm speed, Area Damage kèm area. Gloves thường dư một prefix hơn
+      là dư một suffix, nên ô dành cho bench thường đi vào đây.
+
+
+      Khi leveling: added damage to attacks giá 4 Orb of Transmutation, ở bất
+      kỳ element nào.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) là cách bạn giữ một đôi Magic đã
+      ngốn hàng trăm Alteration, trước hết là một prefix influence, trong lúc
+      bạn thử lại [[Regal Orb]] để tìm life.
+
+
+      "Thêm một prefix, gỡ một suffix ngẫu nhiên" ([[Farric Wolf Alpha]]) hợp
+      với đôi gloves mà bạn chưa quan tâm tới suffix, vì pool prefix dễ tính:
+      một trên năm lần roll là life. "Thêm một suffix, gỡ một prefix ngẫu
+      nhiên" ([[Farric Lynx Alpha]]) là trường hợp ngược lại và hiếm khi đáng
+      ở đây, vì một suffix bất kỳ chỉ là attack speed một trên ba mươi lần.
+  - method: finishing
+    note: >-
+      20% quality bằng [[Armourer's Scrap]], tối đa bốn socket, và một lần
+      đổi resistance bằng Harvest (300 Lifeforce thuộc hai màu trong 3.30)
+      khi tổng thì đúng mà element thì sai. Một [[Blessed Orb]] roll lại
+      implicit Atlas trong khoảng của nó, tức sáu hay bảy điểm damage với giá
+      gần như bằng không.
+  - method: essence
+    note: >-
+      **Zeal** là Essence của loại trang bị này. Nó đảm bảo attack speed:
+      11–13% ở bậc Screaming, 14–16% ở Shrieking, và 17–18% ở Deafening, cao
+      hơn bất cứ thứ gì pool tự nhiên roll được.
+
+
+      **Loathing** cho từ 18–20% tới 24–26% increased Global Critical Strike
+      Chance, một suffix mà pool tự nhiên không có. **Contempt** cho added
+      Physical Damage to Attacks; bậc Deafening, 6–7 to 10–11, hơn Tier 1 tự
+      nhiên. **Fear** cho Minion Damage dưới dạng prefix. **Greed** cao nhất
+      là 91–105 life, thua Tier 2 tự nhiên.
+
+
+      Các Essence corrupted tác động lên gem gắn trong gloves:
+      [[Essence of Insanity]] cho "16% more Attack and Cast Speed",
+      [[Essence of Horror]] cho "+3.5% Critical Strike Chance",
+      [[Essence of Delirium]] cho "30% more Damage over Time".
+  - method: eldritch
+    note: >-
+      Searing Exarch cho gloves increased Attack Speed (8% ở bậc Lesser, 11%
+      ở Exceptional), Critical Strike Chance for Attacks, bốn loại Damage
+      over Time Multiplier (từ 5–7% tới 14–16%), Minion Damage, thêm một
+      target cho strike skill, Rage on hit. Eater of Worlds cho chance to
+      Suppress Spell Damage (từ 5% tới 8%), elemental exposure on hit,
+      conversion của Physical Damage, leech.
+
+
+      Theo phép tính của chúng tôi, một Lesser Ember cho attack speed khoảng
+      1 trên 19 lần. Các bản mạnh hơn, chỉ có tác dụng khi ở gần một enemy
+      Unique hoặc một pinnacle boss, bắt đầu từ bậc Greater và Grand.
+
+
+      Hãy nhớ cái giá trên một base Atlas: Ember hoặc Ichor đầu tiên thay
+      implicit của nó.
+  - method: harvest
+    note: >-
+      **Speed** (150 Vivid Lifeforce) là reforge hữu ích: tag speed trên
+      gloves thuộc về attack speed, nên modifier được đảm bảo gần như luôn là
+      nó. Tier của nó thì ngẫu nhiên.
+
+
+      **Chaos** (100 Vivid) đảm bảo Chaos Resistance, modifier tự nhiên duy
+      nhất mang tag đó. **Attack** (75 Wild) quá rộng để nhắm: bốn loại added
+      damage, attack speed, accuracy và leech đều mang tag này. Các reforge
+      elemental thì bị chia giữa một resistance và added damage của element
+      đó.
+  - method: fossil
+    note: >-
+      Một [[Shuddering Fossil]] nhân các modifier speed lên mười lần và loại
+      các modifier mana. Trên gloves Evasion, nó nâng attack speed từ dưới 4%
+      số lần roll suffix lên khoảng một phần tư, theo phép tính của chúng
+      tôi.
+
+
+      Danh sách modifier chỉ Fossil mới có của gloves khá dài: "Socketed
+      Skills have 18% increased Attack Speed" và bản tương tự cho Cast Speed,
+      các prefix added damage không giới hạn cho attack (20–25 to 26–35 Fire
+      hoặc Cold), 20–30% Minion Damage, và "+1 to Level of Socketed" cho gem
+      Strength, Dexterity hoặc Intelligence.
+  - method: veiled
+    note: >-
+      Các prefix unveil ra là bản mạnh của các prefix bench: 30–35%
+      conversion của Physical Damage sang một element, 17–20% Melee Damage
+      kèm +0.2 mét strike range, Projectile Damage kèm speed, Area Damage kèm
+      area. Các suffix unveil ra ghép 20–22% Global Critical Strike Chance
+      với elemental hoặc chaos damage sau một critical strike.
+  - method: fracture
+    note: >-
+      Cách dùng base fractured tốt nhất trên gloves là cho một suffix mà nếu
+      không bạn sẽ roll lại mãi không thôi: spell suppression Tier 1 hoặc một
+      resistance tier cao. Khi đó một Essence of Zeal cố định suffix thứ hai
+      ở mỗi lần roll lại, và hai trong ba ô khó là chắc chắn.
+  - method: influence
+    note: >-
+      Influence là nhà của một base Atlas, vì đằng nào một đôi có influence
+      cũng không nhận được Eldritch implicit. Warlord: 27–30% increased Melee
+      Damage, Projectile Attack Damage, Spell Damage hoặc Damage over Time
+      dưới dạng prefix, "+1 to Maximum Frenzy Charges", Culling Strike.
+      Hunter: +16 to 20% cho một loại Damage over Time Multiplier, một target
+      cho strike skill, Intimidate hoặc Unnerve on hit. Crusader: 26–30%
+      Global Critical Strike Chance và 22–25% conversion. Elder và Shaper:
+      13–14% Attack Speed hoặc Cast Speed, cùng group với attack speed tự
+      nhiên.
+  - method: meta
+    note: >-
+      Khóa tốn 4 Divine Orb và 4 [[Blessed Orb]] trên gloves. Không có
+      influence thì hãy để Eldritch implicit mạnh hơn bảo vệ một phía mà
+      không tốn gì. Trên một đôi có influence thì không có Eldritch orb, và
+      khóa kèm một reforge Harvest là cách để dựng lại một phía.
+  - method: corruption
+    note: >-
+      Gloves là loại trang bị duy nhất mà corruption implicit gồm cả "Curse
+      Enemies with" một curse cụ thể "on Hit", chín cái như vậy. Ngoài ra còn
+      8–10% increased Attack Speed hoặc Cast Speed, "+1 to Maximum Frenzy
+      Charges" và "+1 to Level of Socketed Gems".
+  - method: strands
+    note: "Hữu ích trên một lần craft bằng Alteration để tìm life hoặc suppression; phí khi dùng Essence. Xem phần bên dưới."
+memoryStrands: >-
+  Strand loại các tier thấp của bất cứ thứ gì được roll ra, và trên gloves
+  các tier thấp là phần lớn pool: chín tier life, tám tier cho mỗi
+  resistance, năm tier suppression. Vậy nên strand giúp các modifier thường ở
+  đây nhiều ngang bất cứ đâu. Các mức mà người chơi đã đo được là cho một
+  modifier 13 tier; chưa có gì được công bố cho các modifier ngắn hơn.
+
+
+  Chúng hợp với kiểu craft dùng orb rẻ: [[Orb of Alteration]] để roll life
+  hoặc suppression với tối đa 8 strand mỗi cái, rồi một [[Regal Orb]]. Chúng
+  **không** hợp với cách tự nhiên để làm gloves attack. Một Essence of Zeal
+  có thể tiêu tới 80 strand mỗi lần dùng, theo bảng data-mine, và modifier
+  được đảm bảo của nó có tier cố định mà strand không nâng được.
+
+
+  Nếu kế hoạch kết thúc bằng Eldritch implicit, hãy thử một Lesser Ember trên
+  base có strand trước. Một thread của người chơi từ năm 2025 gợi ý rằng
+  những item như vậy từ chối chúng; chúng tôi chưa xác nhận được điều đó.
+reading:
+  intro: >-
+    Đọc gloves theo thứ tự này. **Implicit:** một cái Atlas, các Eldritch
+    implicit, hay chưa có gì. **Attack speed**, nếu build của bạn attack: có
+    hay không, và từ đâu ra. **Life.** Rồi đếm resistance. Gloves có đúng
+    implicit, attack speed và life là gloves tốt, bất kể trên đó còn gì khác.
+  prefixes:
+    text: >-
+      Phía prefix là phía dễ. Maximum Life chiếm một phần năm số lần roll
+      prefix trên phần lớn gloves, chín tier của nó đều đã mở ở item level
+      54, và bench bán một bản dùng được.
+
+
+      Sau life, prefix chia thành defence và damage nhỏ. Ba prefix defence
+      cộng dồn như trên mọi món armour, và có ý nghĩa nếu bạn trông vào
+      gloves để có Armour, Evasion hoặc Energy Shield. Bốn loại added damage
+      to attacks cộng lại chiếm một phần tư pool và là những con số nhỏ:
+      Physical Tier 1 là 4–6 to 9–10. Chúng đáng một ô với attack đánh nhiều
+      lần mỗi giây, còn không thì không.
+
+
+      Như vậy thường còn dư một prefix, và các prefix damage của bench sinh
+      ra là để dành cho nó.
+    key:
+      - mod: "+# to maximum Life"
+        why: "Prefix duy nhất mà build life nào cũng muốn ở đây. Weight bằng nhau trên chín tier."
+        aim: "T2, 100–114 (ilvl 44). T1 là 115–129 (ilvl 54)."
+      - mod: "#% increased Damage while Leeching"
+        why: "Không có trong pool tự nhiên. Một prefix bench mà phần lớn build attack dùng được, và là chỗ quen thuộc của ô dành cho bench."
+        aim: "31–36% giá 3 Chaos Orb; 37–43% giá 4 Exalted Orb."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local, nhân vào base. Đáng trên base defence cao nhất, ưu tiên thấp trên base Atlas."
+        aim: "T3, 68–79% (ilvl 60). T1 là 92–100% (ilvl 84)."
+      - mod: "Adds # to # Physical Damage to Attacks"
+        why: "Flat damage cho mọi attack bạn thực hiện, không chỉ với một weapon. Mạnh nhất trên attack nhanh, đánh nhiều hit."
+        aim: "T1, 4–6 to 9–10 (ilvl 28). Deafening Contempt cho 6–7 to 10–11."
+      - mod: "Adds # to # Fire, Cold or Lightning Damage to Attacks"
+        why: "Cùng ý đó nhưng ở một element. Phổ biến, và là đồ lấp chỗ với ai không scale element đó bằng attack."
+      - mod: "+# to maximum Mana"
+        why: "Chỉ có trên gloves có Energy Shield, nơi nó là prefix hay gặp nhất và là đối thủ chính của life."
+  suffixes:
+    text: >-
+      Phía suffix là nơi gloves thành hay bại. Build attack muốn attack
+      speed, thứ vốn hiếm; build suppression muốn suppression, thứ chỉ tồn
+      tại trên base có Evasion; ai cũng muốn resistance; và chỉ có ba ô.
+
+
+      Hãy biết đồ lấp chỗ để nhận ra nó. Dexterity roll trên mọi đôi và là
+      một trong các suffix hay gặp nhất. Life và mana gained on kill, life
+      gained on hit, hai modifier leech nhỏ và Item Rarity chiếm khoảng một
+      phần sáu pool và không đáng gì ở endgame. Accuracy hữu ích với build
+      attack đang thiếu nó, ngoài ra không với ai khác.
+
+
+      Attack speed từ Essence hoặc bench, cast speed hoặc attack speed từ
+      influence Elder hoặc Shaper, và attack speed tự nhiên đều là một group.
+      Một đôi chỉ có một trong số đó.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Attack speed global cho mọi attack skill. Khoảng một trên 30 lần roll suffix ở bất kỳ tier nào, nên hãy lấy nó từ một Essence of Zeal, bench hoặc một implicit Exarch."
+        aim: "11–13% là ổn (T2, ilvl 22). T1 là 14–16% (ilvl 76); Deafening Zeal cho 17–18%."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Chỉ có trên gloves có Evasion. Một trong những ô mà build suppression không bỏ qua được."
+        aim: "T3, 9–10% (ilvl 68). T1 là 13–14% (ilvl 85)."
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "Mỗi cái chiếm một phần mười số lần roll suffix. Bench lo được một cái, hoặc hai cái ở chỉ số thấp hơn."
+        aim: "T3, 36–41% (ilvl 60). T1 là 46–48% (ilvl 84)."
+      - mod: "#% increased Global Critical Strike Chance"
+        why: "Không có trong pool tự nhiên. Một Essence of Loathing đảm bảo nó; bản bench và bản veiled đi kèm một dòng thứ hai."
+        aim: "Deafening Loathing cho 24–26%."
+      - mod: "+# to Accuracy Rating"
+        why: "Cho build attack thiếu hit chance. Con số lớn ở đỉnh, 481–600."
+      - mod: "+# to Dexterity"
+        why: "Có trên mọi đôi, và là một trong các suffix hay gặp nhất. Đáng mừng khi bạn cần attribute này, đồ lấp chỗ khi không cần."
+approach:
+  principle: >-
+    **Chốt implicit trước orb đầu tiên, và đừng bao giờ roll để tìm attack
+    speed.** Câu hỏi về implicit quyết định base và việc có dùng được
+    influence hay không. Attack speed có bốn nguồn chắc chắn, nên nó được đặt
+    vào chứ không phải trông chờ. Mọi thứ khác trên gloves là life,
+    resistance và một prefix dư cho bench.
+  order:
+    - title: "Quyết định gloves cho build cái gì"
+      text: >-
+        Attack speed và damage cho build attack. Spell damage, thứ chỉ
+        implicit mới cấp, cho build cast spell. Suppression và resistance cho
+        build lấy damage từ chỗ khác. Câu trả lời chọn mọi thứ bên dưới.
+    - title: "Chọn đường implicit, và cùng với nó là base"
+      text: >-
+        Một implicit Atlas và không Eldritch currency, hoặc một base defence
+        cao nhất với một Ember và một Ichor. Hãy so con số thật: Spiked
+        Gloves cho 24–30% melee damage; Exarch cho 11% attack speed và Eater
+        cho 8% suppression trên một base có Armour hoặc Evasion nhiều hơn
+        trên 60%.
+    - title: "Đặt suffix speed bằng một công cụ"
+      text: >-
+        Một Essence of Zeal trên base mới. Bench trên một đôi mà các phần
+        khác đã xong. Implicit Exarch nếu suffix đã đầy. Một reforge Speed
+        trên đôi có influence với prefix đã khóa.
+    - title: "Nhận life khi nó đến, hoặc mua nó"
+      text: >-
+        Một trên năm lần roll prefix là life. Nhận một cái roll ra từ 85 trở
+        lên; nếu không thì để trống một prefix và craft 56–70 ở bench.
+    - title: "Bảo vệ suffix, rồi cải thiện prefix"
+      text: >-
+        Khi hai suffix đã đúng, hãy cho đôi gloves một implicit Searing
+        Exarch mạnh hơn implicit Eater của nó. Khi đó Eldritch Chaos Orb chỉ
+        roll lại prefix.
+    - title: "Dùng bench cho ô còn dư"
+      text: >-
+        Một prefix damage nếu còn một prefix trống, một resistance nếu còn
+        một suffix trống. Với "Can have up to 3 Crafted Modifiers", một đôi
+        có hai prefix trống nhận được cả một prefix damage lẫn một craft thứ
+        hai.
+    - title: "Implicit cuối cùng và chỉ số"
+      text: >-
+        Eldritch implicit làm sau cùng, ở bậc mà bạn kham nổi. Một Blessed
+        Orb lên implicit Atlas. Divine Orb chỉ khi một chỉ số then chốt thấp.
+  finishing: >-
+    Quality, socket, và ô bench chưa dùng. Một [[Blessed Orb]] lên implicit
+    nếu nó có khoảng. Một [[Divine Orb]] khi attack speed hoặc life roll ra ở
+    đáy tier của nó còn phần còn lại thì chưa ở đỉnh.
+
+
+    Hãy kiểm resistance trên nhân vật, không phải trên gloves. Một lần đổi
+    element này sang element khác bằng Harvest rẻ hơn bất kỳ lần roll lại
+    nào.
+  stopping: >-
+    Gloves có attack speed từ một Screaming Essence, life từ 85 trở lên và
+    một resistance là hoàn chỉnh với phần lớn build attack, và tốn vài
+    Essence cùng một craft bench. Một đôi cho build cast spell là một
+    implicit Atlas, life và hai resistance.
+
+
+    Những bước làm chi phí nhân lên là suffix tốt thứ ba, Deafening Essence
+    thay cho Screaming, và implicit Exceptional thay cho Lesser. Mỗi bước
+    thêm vài phần trăm. Hãy quyết định build của bạn sẽ nhận ra bước nào
+    trong số đó trước khi trả tiền cho bất kỳ bước nào.
+special:
+  - mod: "#% increased Attack Speed above the natural maximum"
+    source: "Essence"
+    where: "Một [[Deafening Essence of Zeal]] cho 17–18%. Tier 1 tự nhiên là 14–16%."
+  - mod: "#% increased Global Critical Strike Chance"
+    source: "Essence / Influence / Veiled"
+    where: "Một Essence of Loathing, 24–26% ở bậc Deafening. Một suffix Crusader, 26–30% ở item level 75. Bản bench (15–16%) và bản unveil ra (20–22%) mang thêm một dòng thứ hai về damage sau một critical strike."
+  - mod: "#% increased Damage while Leeching"
+    source: "Bench"
+    where: "Một prefix bench: 31–36% giá 3 Chaos Orb, 37–43% giá 4 Exalted Orb."
+  - mod: "#% of Physical Damage Converted to Fire, Cold or Lightning Damage"
+    source: "Bench / Veiled / Eldritch"
+    where: "20–25% từ [[Crafting Bench]] giá 4 Chaos Orb, 30–35% khi unveil ra, 22–25% dưới dạng prefix Crusader. Implicit Eater of Worlds convert 10% ở bậc Lesser và 25% ở Exceptional."
+  - mod: "#% increased Melee Damage / +# metres to Melee Strike Range"
+    source: "Bench / Veiled"
+    where: "Một prefix: 14–16% kèm +0.1 mét giá 4 Exalted Orb ở bench, 17–20% kèm +0.2 mét khi unveil ra. Khác group với prefix Warlord \"increased Melee Damage\", nên hai cái nằm vừa cùng nhau."
+  - mod: "Non-Vaal Strike Skills target 1 additional nearby Enemy"
+    source: "Eldritch / Influence Hunter"
+    where: "Một implicit Searing Exarch, weight 400 trong số các implicit luôn có tác dụng với tổng weight 18,700. Cũng là một prefix Hunter ở item level 80, weight 250."
+  - mod: "+1 to Maximum Frenzy Charges"
+    source: "Influence Warlord / Corruption"
+    where: "Một prefix Warlord ở item level 75, weight 125. Cũng là một corruption implicit."
+  - mod: "+#% to Damage over Time Multiplier"
+    source: "Implicit của base / Eldritch / Influence"
+    where: "+14–18% cho toàn bộ trên Apothecary's Gloves. Mỗi lần một loại từ implicit Exarch (5–7% ở bậc Lesser, 14–16% ở Exceptional) hoặc dưới dạng suffix Hunter (+16–20% ở item level 80)."
+  - mod: "#% increased Cast Speed"
+    source: "Influence / Fossil / Corruption"
+    where: "Một suffix Shaper, 13–14% ở item level 84, cùng group với attack speed. Chỉ Fossil mới có: \"Socketed Skills have 18% increased Cast Speed\". Một corruption implicit 8–10%."
+  - mod: "Socketed Gems have 16% more Attack and Cast Speed"
+    source: "Essence corrupted"
+    where: "Suffix trên gloves của một [[Essence of Insanity]], thứ chỉ có được bằng cách corrupt một Essence monster với một [[Remnant of Corruption]]."
+  - mod: "Curse Enemies with a named curse on Hit"
+    source: "Corruption"
+    where: "Chín corruption implicit, mỗi curse một cái. Chỉ một [[Vaal Orb]] dùng lên gloves đã hoàn thiện mới cho được một cái, và kết quả không phải do bạn chọn."
+  - mod: "#% increased Melee, Projectile Attack or Spell Damage"
+    source: "Implicit của base"
+    where: "Implicit của Spiked, Gripped và Fingerless Silk Gloves. Được chọn cùng với base, chỉ giữ được chừng nào gloves chưa có Eldritch implicit."
+  - mod: "5% increased Attack and Cast Speed for each Enemy within 6 metres, up to a maximum of 30%"
+    source: "Essence"
+    where: "Được liệt kê trong dữ liệu cho một [[Essence of Desolation]], thứ chỉ dùng được trên item Normal và ghìm mọi modifier khác ở level 15 trở xuống. Chúng tôi chưa xác nhận được Essence này kiếm bằng cách nào trong 3.30."
+mistakes:
+  - "**Roll Chaos Orb để tìm attack speed.** Chỉ khoảng một trên 30 lần roll suffix là có nó. Một Essence of Zeal thì lần nào cũng có."
+  - "**Dùng một Ember lên Spiked Gloves mà chưa quyết định làm vậy.** Chính dòng chữ của Ember nói nó thay implicit. Đó có thể là một cuộc đổi chác đúng; nó không nên là một bất ngờ."
+  - "**Mua base Atlas cho một kế hoạch kết thúc bằng Eldritch implicit.** Bạn trả tiền cho một implicit rồi sẽ ghi đè lên, và nhận về ít hơn khoảng 40% defence vì nó."
+  - "**Dùng Essence of Greed lên gloves endgame.** 91–105 life ở bậc Deafening; Tier 2 tự nhiên là 100–114 ở item level 44."
+  - "**Craft attack speed của bench lên gloves đã có suffix cast speed Shaper hoặc suffix speed Elder.** Một group; bench từ chối."
+  - "**Chọn gloves Energy Shield cho build life mà không tính tới mana.** Một phần năm số lần roll prefix ở đó là mana."
+  - "**Giữ gloves vì Dexterity và life on kill của chúng.** Hãy đọc xem suffix nào là đồ lấp chỗ của pool trước khi tính chúng là giá trị."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Mọi base, pool, modifier, tier, weight, Essence, giá bench và implicit được dẫn ở đây, cùng dòng chữ in-game của các Eldritch Ember và Ichor. Xác suất là phép tính của chúng tôi từ weight trong đó." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Các implicit 3.30 của gloves Atlas, Item Tier cho các base đặc biệt, giá của các modifier bảo vệ trên armour, việc đổi resistance bằng Harvest." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá Lifeforce của các reforge." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: Eldritch implicit nào là dominant, và các modifier bảo vệ trụ được trước những gì. Một phần cũ hơn 3.30." }

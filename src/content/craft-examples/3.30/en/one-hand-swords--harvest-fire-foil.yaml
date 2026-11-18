@@ -1,0 +1,165 @@
+category: one-hand-swords
+title: "An elemental foil from Harvest reforges"
+level: 2
+summary: "A Fire reforge always puts added Fire Damage on a sword. Repeat it until the tier is good and a second element sits beside it, then bench the attack speed."
+goal: >-
+  A foil for your first maps with two kinds of added elemental damage, one of
+  them guaranteed on every attempt. This is the first craft where a tool
+  aims by **tag**, and it teaches the question to ask of any such tool: how
+  many modifiers on this item carry the tag? Here the answer is one, which
+  is as good as it gets. It also teaches what the tool does not do: it
+  chooses the modifier and leaves the tier to luck.
+base: "Jewelled Foil"
+itemLevel: 75
+baseWhy: >-
+  The Jewelled Foil attacks 1.6 times per second and is a thrusting sword,
+  so its pool leans elemental and its implicit is +25% Critical Strike
+  Multiplier. Item level 75 opens Tier 2 of added Fire, Cold and Lightning
+  Damage. The top tier needs 82, and a reforge lands on it too rarely to be
+  worth paying for.
+methods: [currency, harvest, bench]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+    - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+  suffixes:
+    - { text: "27% increased Critical Strike Chance", how: harvest }
+    - { text: "13% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "50 per reforge", note: "allow for ten or more" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the bench" }
+cost: >-
+  Lifeforce and almost nothing else: 50 [[Wild Crystallised Lifeforce]] per
+  attempt, from the Sacred Flora that grow in maps in 3.30. The bench step is
+  2 [[Chaos Orb]]s.
+odds: >-
+  Every Fire reforge gives added Fire Damage. Its tier is random. If the
+  guaranteed modifier is drawn by weight among the tiers the item level
+  allows, which is how reforges are understood to work, then at item level
+  75 about 1 reforge in 4 gives "Incinerating" (adds 46–62 to 93–107) or
+  better, 1 in 7 gives Tier 3 or better, and 1 in 23 gives Tier 2. That is
+  our arithmetic and has not been measured in 3.30.
+
+
+  With fire on the item, each further prefix the reforge rolls is added Cold
+  or Lightning Damage 64% of the time on a thrusting sword. Asking for a
+  decent fire tier **and** a second element, expect something like ten
+  reforges.
+steps:
+  - title: "Make the foil Rare"
+    do: >-
+      Use an [[Orb of Alchemy]] on a white Jewelled Foil. Skip the
+      whetstones.
+    why: >-
+      The reforge works on Rare items, and what the Alchemy rolls does not
+      matter because the reforge replaces all of it. Quality raises
+      physical damage only, and this foil's damage will be elemental.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 35 to 67 Cold Damage" }
+      suffixes:
+        - { text: "+34 to Strength" }
+        - { text: "26% increased Stun Duration on Enemies" }
+  - title: "Count the tag, then reforge"
+    do: >-
+      Open the modifier list for thrusting swords and look for the fire
+      tag. One natural modifier has it: Adds # to # Fire Damage. Then, at
+      the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Fire modifier** for 50
+      [[Wild Crystallised Lifeforce]].
+    why: >-
+      "Including a Fire modifier" promises one modifier with that tag.
+      When only one modifier has the tag, the promise is exact. The same
+      reforge with the Attack tag would promise almost nothing on a sword,
+      because nearly everything on a sword is an attack modifier.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 19 to 37 Fire Damage", how: harvest }
+        - { text: "62% increased Physical Damage", how: harvest }
+      suffixes:
+        - { text: "+241 to Accuracy Rating", how: harvest }
+        - { text: "22% increased Critical Strike Chance", how: harvest }
+  - title: "Read the tier, then the neighbours"
+    do: >-
+      Hold Alt. **First** the fire prefix: is it "Incinerating" (46–62 to
+      93–107) or better? **Then** the other prefixes: is one of them added
+      Cold or Lightning Damage? **Last**: is there attack speed, or an open
+      suffix for the bench to put it in?
+    why: >-
+      The result above shows the tool's limit. Fire arrived, as promised,
+      at Tier 7 of ten, and the second prefix is a physical percentage that
+      an elemental foil cannot use. The reforge chose the family and nothing
+      else.
+    check: >-
+      Set the bar before you start and keep to it. For a first mapping
+      foil: fire at 46–62 to 93–107 or better, any second element, and
+      room for attack speed.
+    fail: >-
+      Reforge again. Nothing is lost but 50 Lifeforce.
+  - title: "Repeat until it passes"
+    do: >-
+      Keep reforging until a result meets all three checks.
+    why: >-
+      The fire prefix returns every time at a new tier, and the rest of the
+      item is rolled fresh. On this pool the rest is on your side: seven
+      prefix rolls in ten are elemental before fire is counted.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+        - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "27% increased Critical Strike Chance", how: harvest }
+  - title: "Bench what is missing"
+    do: >-
+      At the [[Crafting Bench]], craft **11–15% increased Attack Speed** for
+      2 [[Chaos Orb]]s. If the foil already rolled attack speed, craft in
+      the open prefix instead: a third element (adds 35–41 to 63–73 Cold or
+      Fire for 4 Chaos Orbs) or 24–32% increased Elemental Damage with
+      Attack Skills for 4 Orbs of Alchemy.
+    why: >-
+      Attack speed is local and multiplies everything this foil does, so it
+      comes before a third element. The bench's elemental crafts are far
+      below what rolls; they are for a slot that would otherwise be empty.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 67 to 128 Fire Damage", how: harvest }
+        - { text: "Adds 44 to 89 Cold Damage", how: harvest }
+      suffixes:
+        - { text: "27% increased Critical Strike Chance", how: harvest }
+        - { text: "13% increased Attack Speed", how: crafted }
+variations: >-
+  **Cold or lightning.** The Cold reforge costs 50 Vivid Lifeforce and the
+  Lightning one 50 Primal. Each has exactly one natural modifier behind its
+  tag, so they work the same way. Use the element your build scales, or
+  whichever colour you have most of.
+
+
+  **An Essence instead.** A [[Shrieking Essence of Wrath]] (or Anger, or
+  Hatred) does what the reforge cannot: it fixes the tier. Shrieking gives
+  the equivalent of natural Tier 2 every time, the result that 1 reforge in
+  23 reaches. Lifeforce is the cheap way to a decent prefix; an Essence is
+  the way to a chosen one.
+
+
+  **On a one-hand sword.** The reforge is just as exact, but the second
+  element comes less often: 51% of further prefix rolls, not 64%.
+
+
+  **Memory Strands** change nothing here. Harvest reforges neither spend
+  strands nor benefit from them, by player testing.
+mistakes:
+  - "Stopping at the first reforge because \"it has fire\". It always has fire. Read the tier."
+  - "Using the Attack or Elemental reforge to save thinking. Count the tagged modifiers: the fewer, the better the tool."
+  - "Crafting at the bench between reforges. The next reforge removes it."
+  - "Keeping a foil with three filled suffixes and no attack speed. The bench has nowhere to put it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The tags on every modifier, both sword pools, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The element reforges and their Lifeforce costs." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Harvest moved into the map in 3.30." }

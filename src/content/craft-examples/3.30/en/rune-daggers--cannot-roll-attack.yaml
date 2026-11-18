@@ -1,0 +1,178 @@
+category: rune-daggers
+title: "An Exalted Orb that cannot roll an attack modifier"
+level: 4
+summary: "A good dagger with open prefixes. One bench modifier fills the suffix side and removes every attack modifier from the draw, so the Exalted Orb must add a prefix and it is a caster one two times in three."
+goal: >-
+  Add a prefix to a caster dagger that already has Spell Damage, cast speed
+  and Spell Critical Strike Chance, without rerolling any of them. The tool
+  is the meta-modifier **"Cannot roll Attack Modifiers"**, and the craft is
+  about using it exactly as 3.30 defines it: it stops attack modifiers being
+  **added**. It no longer protects anything from being removed.
+base: "Platinum Kris"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from an item: a Rare rune dagger worth keeping, such as
+  a result of the Aetheric Fossil example that came out with one prefix.
+  Item level decides which tiers the Exalted Orb can roll; at 84 every tier
+  is open. The requirement that matters is the slot count in step 1.
+methods: [meta, currency, bench]
+result:
+  implicits: ["63% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "78% increased Spell Damage" }
+    - { text: "Adds 52 to 99 Fire Damage to Spells" }
+  suffixes:
+    - { text: "27% increased Cast Speed" }
+    - { text: "86% increased Spell Critical Strike Chance" }
+    - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "1", note: "the meta-modifier" }
+  - { item: "[[Exalted Orb]]", amount: "1–2" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the meta-modifier" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "final bench craft" }
+cost: >-
+  One [[Divine Orb]] for the meta-modifier and one [[Exalted Orb]] per
+  added prefix. Nothing already on the dagger is put at risk: every step
+  here adds, and none rerolls. That is why this can be done to an item you
+  would not dare reforge.
+odds: >-
+  With Spell Damage already on the dagger and the suffix side full, by our
+  arithmetic from the weights at item level 84:
+
+
+  **Without the meta-modifier** an Exalted Orb's prefix is an attack
+  modifier 59% of the time, maximum Mana 13%, and a caster modifier 27%.
+
+
+  **With it** the attack modifiers cannot be added: added damage to spells
+  54%, maximum Mana 33%, the Spell Damage and Mana hybrid 10%, a gem level
+  4%. A caster modifier two times in three.
+
+
+  A **second** orb is a different draw; step 4 has the numbers.
+steps:
+  - title: "Count the slots; the plan depends on them"
+    do: >-
+      The dagger needs **exactly one open suffix** and **at least one open
+      prefix**. Note which prefix groups are already taken.
+    why: >-
+      "Cannot roll Attack Modifiers" is a suffix. Crafted into the last open
+      suffix slot it does two jobs: it filters the draw, and it fills the
+      side, so that an Exalted Orb has nowhere to add but the prefixes.
+      With two open suffixes the orb could still add a suffix.
+    fail: >-
+      Two open suffixes: after the craft one is still open, and the orb may
+      add a suffix. With attack speed, Accuracy and the attack crit
+      excluded that is no disaster, but it is not the forced prefix this
+      plan wants. No open suffix: there is no room for the meta-modifier.
+      Do not open one with an Annulment; see the last step.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "78% increased Spell Damage" }
+      suffixes:
+        - { text: "27% increased Cast Speed" }
+        - { text: "86% increased Spell Critical Strike Chance" }
+  - title: "Craft the meta-modifier"
+    do: >-
+      At the [[Crafting Bench]], craft **Cannot roll Attack Modifiers** for
+      1 [[Divine Orb]].
+    why: >-
+      On a rune dagger 54% of the prefix weight carries the attack tag:
+      added Fire, Cold and Lightning Damage for attacks, both physical
+      percentages, flat Physical Damage and a few more. While this modifier
+      is on the item none of them can be added.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "78% increased Spell Damage" }
+      suffixes:
+        - { text: "27% increased Cast Speed" }
+        - { text: "86% increased Spell Critical Strike Chance" }
+        - { text: "Cannot roll Attack Modifiers", how: crafted }
+  - title: "Exalted Orb"
+    do: >-
+      Use one [[Exalted Orb]].
+    why: >-
+      It "augments a rare item with a new random modifier". The suffix side
+      is full, so the modifier is a prefix. The Spell Damage group is
+      taken, the attack modifiers are excluded, and what remains is added
+      damage to spells, maximum Mana, the Mana hybrid and the gem levels.
+    check: >-
+      Read the new prefix and its group before deciding anything else.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "78% increased Spell Damage" }
+        - { text: "Adds 52 to 99 Fire Damage to Spells" }
+      suffixes:
+        - { text: "27% increased Cast Speed" }
+        - { text: "86% increased Spell Critical Strike Chance" }
+        - { text: "Cannot roll Attack Modifiers", how: crafted }
+  - title: "Recount before a second orb"
+    do: >-
+      One prefix is still open. Work out what a second Exalted Orb can add
+      **now**, with one more group taken, before using it.
+    why: >-
+      The first orb landed on added damage to spells, the most likely
+      result, and that removes all three elements of it from the draw: they
+      are one group. What is left is maximum Mana at 70%, the hybrid at
+      22%, and a gem level at 8%. The same orb that was a good bet a moment
+      ago is now mostly a Mana prefix. If Mana is useful to the build, go
+      on. If not, stop here.
+    check: >-
+      The rule to keep: every modifier you add changes the pool for the
+      next one. Do the arithmetic again each time.
+  - title: "Swap the meta-modifier for a real suffix"
+    do: >-
+      At the bench, remove the crafted modifier (1 [[Orb of Scouring]]) and
+      craft **+25–28% to Global Critical Strike Multiplier** (4
+      [[Chaos Orb]]s).
+    why: >-
+      The meta-modifier gives the character nothing. Its slot goes back to
+      the bench, for the one suffix a crit caster cannot get from
+      caster-aimed tools.
+    fail: >-
+      If the Exalted Orb gave something you want removed, there is no safe
+      way. An [[Orb of Annulment]] removes one modifier at random, and
+      since 3.30 neither "Cannot roll Attack Modifiers" nor "Cannot roll
+      Caster Modifiers" narrows its choice: on this dagger it is more likely
+      to hit one of the modifiers you are keeping than the one you want
+      gone. Leave the prefix where it is.
+    state:
+      implicits: ["63% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "78% increased Spell Damage" }
+        - { text: "Adds 52 to 99 Fire Damage to Spells" }
+      suffixes:
+        - { text: "27% increased Cast Speed" }
+        - { text: "86% increased Spell Critical Strike Chance" }
+        - { text: "+26% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Why not a reforge.** A Caster reforge or a Fossil would also keep attack
+  modifiers out, and would reroll the three modifiers this dagger was kept
+  for. The meta-modifier is the tool for adding to an item, not for
+  remaking one.
+
+
+  **With a reforge after all.** On a dagger you do want to remake, the same
+  meta-modifier with a Harvest Caster reforge (75 Primal Lifeforce) rolls a
+  whole item without attack modifiers; since 3.27 that reforge respects it.
+  The meta-modifier is consumed by the reforge, so that is a Divine Orb per
+  attempt.
+
+
+  **The beast version.** "Add a prefix, remove a random suffix"
+  ([[Farric Wolf Alpha]]) also adds a prefix, and removes a suffix as its
+  price. On this dagger every suffix is one you want.
+mistakes:
+  - "Crafting the meta-modifier with two suffix slots open and getting a suffix from the orb."
+  - "Using a second Exalted Orb without recounting the pool."
+  - "Leaving \"Cannot roll Attack Modifiers\" on the finished item. It occupies the bench slot and a suffix."
+  - "Following an older guide that crafts \"Cannot roll Caster Modifiers\" to make an Annulment safe. That stopped working in 3.30."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Modifier tags, groups, weights, bench costs and the item text of the Exalted Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "\"Cannot roll\" modifiers no longer prevent removal by an Orb of Annulment; their bench cost." }
+  - { title: "3.27.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3869068", kind: official, note: "Harvest reforges respect the \"Cannot roll\" modifiers." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The add-a-prefix recipe." }

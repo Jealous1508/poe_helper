@@ -1,0 +1,514 @@
+name: "Gloves"
+short: "The offensive armour slot. Attack speed is rare by rolling and easy with the right tool, and the four Atlas bases pose a choice no other slot has."
+icon: "Spiked Gloves"
+intro: >-
+  Gloves are the armour piece that hits back. Beside life and resistances
+  they roll increased Attack Speed, added damage to attacks, accuracy and
+  leech, and their Essences, bench crafts and implicits are nearly all about
+  damage. A finished pair is half defence and half weapon.
+
+
+  Two things set the slot apart. The modifier everyone wants, attack speed,
+  is about one suffix roll in thirty, so it is never left to the lottery.
+  And the four **Atlas bases** carry large damage implicits that you lose
+  the moment you add an Eldritch implicit. Every pair of gloves starts with
+  that choice.
+basics:
+  itemLevel:
+    text: >-
+      Gloves need little item level for their prefixes: the best maximum
+      Life, 115–129, is open at 54. The suffixes ask for more. Tier 1 attack
+      speed needs 76, Tier 1 resistances 84, Tier 1 spell suppression and
+      accuracy 85.
+
+
+      As on all armour, nearly every tier weighs the same, so a higher item
+      level adds a top tier without removing the bottom ones. Attack speed is
+      the exception in size, not in kind: its tiers weigh 500 where most
+      weigh 1,000.
+
+
+      **Item level 76 is enough for attack gloves, and 72 for anything
+      else.** Go to 84 or 85 for the last tier of resistance or suppression.
+    breakpoints:
+      - ilvl: 22
+        unlocks: "**Levelling.** Tier 2 attack speed (11–13%)."
+      - ilvl: 44
+        unlocks: "Tier 2 maximum Life (100–114), Tier 1 flat defence, and the top tier of added Fire and Lightning Damage to Attacks (Cold at 45)."
+      - ilvl: 54
+        unlocks: "Tier 1 maximum Life, \"Athlete's\" (115–129)."
+      - ilvl: 60
+        unlocks: "Tier 3 resistances (36–41%) and Tier 3 percentage defence (68–79%). **The first item level worth crafting for maps.**"
+      - ilvl: 72
+        unlocks: "Tier 2 resistances (42–45%) and Tier 2 percentage defence (80–91%)."
+      - ilvl: 76
+        unlocks: "Tier 1 attack speed, \"of Grandmastery\" (14–16%), and Tier 2 spell suppression (11–12%). **Enough for attack gloves.**"
+      - ilvl: 84
+        unlocks: "Tier 1 resistances (46–48%) and Tier 1 percentage defence (92–100%)."
+      - ilvl: 85
+        unlocks: "Tier 1 spell suppression (13–14%), Accuracy (481–600) and Dexterity (56–60), and the Hunter modifiers that Intimidate or Unnerve on hit."
+  bases:
+    text: >-
+      There are 79 gloves in seven pools, one per kind of defence. The pool
+      decides the defence prefixes and a few suffixes. It does **not** decide
+      the offensive modifiers: attack speed, added damage, accuracy and leech
+      roll on every pair, Energy Shield gloves included.
+    types:
+      - title: "One defence: Armour, Evasion or Energy Shield"
+        pools: [str, dex, int]
+        text: >-
+          **Armour** gloves add Strength and increased Life Regeneration rate
+          to the suffix pool. **Evasion** gloves add chance to Suppress Spell
+          Damage at full weight. **Energy Shield** gloves add Intelligence,
+          Recharge Rate, and maximum Mana as a prefix, where it is a fifth of
+          all prefix rolls and pushes life down to 15%. Dexterity rolls on
+          every pair of gloves, whatever its defence, and is among the most
+          common suffixes on all of them.
+      - title: "Two defences"
+        pools: [str_dex, str_int, dex_int]
+        text: >-
+          Hybrid gloves roll the hybrid defence prefixes and the attribute
+          suffixes of both parents at half weight. Spell suppression rolls on
+          anything with Evasion, at 500 a tier on a hybrid against 1,000 on
+          pure Evasion gloves.
+      - title: "Runic gloves (Ward)"
+        pools: [ward]
+        text: >-
+          Runic Gloves, Runic Gages and Runic Gauntlets, the Expedition
+          bases, with Ward for a defence and all three attributes required.
+          They roll Ward prefixes and "faster Restoration of Ward", and none
+          of the suffixes tied to Strength, Evasion or Energy Shield.
+      - title: "Atlas gloves"
+        text: >-
+          Four bases with a damage implicit, each in the pool of its
+          defence. Spiked Gloves (Armour): 24–30% increased Melee Damage.
+          Gripped Gloves (Evasion): 22–28% increased Projectile Attack
+          Damage. Fingerless Silk Gloves (Energy Shield): 20–26% increased
+          Spell Damage. Apothecary's Gloves (Armour and Energy Shield): +14
+          to 18% Damage over Time Multiplier. All four were raised in 3.30,
+          all have clearly lower defences than the top ordinary base of their
+          pool (Spiked Gloves about 60% of Leviathan Gauntlets), and they
+          only drop when an item rolls a high enough Item Tier.
+      - title: "Ritual gloves"
+        text: >-
+          Three families in three sizes, each with a two-sided implicit.
+          Tinker, Apprentice and Trapsetter Gloves lengthen trap skills and
+          slow trap throwing. Leyline, Aetherwind and Nexus Gloves give a
+          25–30% chance to regain a skill's cost as mana, with 30% reduced
+          maximum Mana. Preserving, Guarding and Thwarting Gauntlets give +3
+          to 6% chance to Block Attack Damage, and you take 10% of the damage
+          of blocked hits.
+    picks:
+      - base: "Spiked Gloves"
+        for: "Melee attacks"
+        why: >-
+          24–30% increased Melee Damage where no currency can remove it,
+          unless you add an Eldritch implicit yourself. Armour pool, 220–253
+          Armour.
+      - base: "Gripped Gloves"
+        for: "Bows and other projectile attacks"
+        why: >-
+          22–28% increased Projectile Attack Damage, on an Evasion base that
+          rolls spell suppression at full weight.
+      - base: "Fingerless Silk Gloves"
+        for: "Spell casters"
+        why: >-
+          20–26% increased Spell Damage. Gloves have almost nothing else to
+          offer a spell: the natural pool has no spell modifier at all.
+      - base: "Apothecary's Gloves"
+        for: "Damage over time"
+        why: >-
+          +14–18% Damage over Time Multiplier since 3.30, a stronger kind of
+          scaling than the "increased" it replaced.
+      - base: "Velour Gloves"
+        for: "Evasion, suppression and two Eldritch implicits"
+        why: >-
+          359–413 Evasion Rating, the top of the pool, and no implicit to
+          lose. The right base when the plan ends with an Ember and an
+          Ichor.
+      - base: "Leviathan Gauntlets"
+        for: "Armour and two Eldritch implicits"
+        why: >-
+          359–413 Armour at level 84 and 144 Strength. Against Spiked Gloves
+          that is over 60% more base Armour, in exchange for the melee
+          implicit.
+    impact: >-
+      **The implicit, and whether you can keep it.** An Atlas base gives one
+      strong implicit. An ordinary base gives none, and room for two Eldritch
+      ones. You cannot combine them: the text of every Ember and Ichor says
+      it "replaces any existing implicit modifiers" other than the opposite
+      Eldritch one. So the base is chosen together with the plan. Atlas
+      implicit, and no Embers or Ichors ever; or a top-defence base, and
+      both.
+
+
+      **The defence numbers**, which the local prefixes and quality
+      multiply. On gloves they are modest either way, and many builds treat
+      them as a bonus.
+
+
+      **The pool**, which matters here mostly for spell suppression and for
+      whether mana competes with life.
+
+
+      **The requirement.** Low on gloves: 144 of one attribute for the top
+      bases, 95 for the Atlas ones.
+tools:
+  - method: currency
+    note: >-
+      On Evasion gloves at item level 85, by our arithmetic from the
+      weights: one prefix roll in five is maximum Life, one in 23 is life of
+      100 or more. About one suffix roll in 30 is attack speed at any tier,
+      one in 69 is attack speed of 11% or more, one in 138 is the top tier.
+
+
+      So the prefix side rolls itself and the suffix side does not.
+      [[Orb of Alteration]]s are fine for life or for a resistance. For
+      attack speed, use anything else on this page.
+  - method: bench
+    note: >-
+      The bench sells one rank of attack speed, 7–12% for 2 Chaos Orbs, and
+      it is the cheapest fix for a pair that lacks it. Maximum Life: 56–70
+      for 4 Orbs of Alchemy. Resistances as on all armour: 29–35% for 3
+      Chaos Orbs, or two at 17–20% each for the same price.
+
+
+      What only the bench and veiled modifiers have is a set of damage
+      **prefixes**: 31–36% increased Damage while Leeching for 3 Chaos Orbs
+      (37–43% for 4 Exalted Orbs); 24–28% increased Damage during any Flask
+      Effect for 4 Chaos Orbs; 20–25% of Physical Damage Converted to Fire,
+      Cold or Lightning for 4 Chaos Orbs; Melee Damage with strike range,
+      Projectile Damage with speed, Area Damage with area. Gloves have a
+      prefix to spare more often than a suffix, so this is where the bench
+      slot usually goes.
+
+
+      While levelling: added damage to attacks for 4 Orbs of Transmutation,
+      in any element.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is how you keep a Magic pair that
+      took hundreds of Alterations, an influence prefix above all, while you
+      retry the [[Regal Orb]] for life.
+
+
+      "Add a prefix, remove a random suffix" ([[Farric Wolf Alpha]]) suits
+      gloves whose suffixes you do not care about yet, because the prefix
+      pool is kind: one roll in five is life. "Add a suffix, remove a random
+      prefix" ([[Farric Lynx Alpha]]) is the opposite case and rarely worth
+      it here, since any single suffix is attack speed only one time in
+      thirty.
+  - method: finishing
+    note: >-
+      20% quality with [[Armourer's Scrap]]s, up to four sockets, and a
+      Harvest resistance swap (300 Lifeforce of two colours in 3.30) when
+      the total is right and the element is wrong. A [[Blessed Orb]] rerolls
+      an Atlas implicit inside its range, which is six or seven points of
+      damage for almost nothing.
+  - method: essence
+    note: >-
+      **Zeal** is the Essence of this slot. It guarantees attack speed:
+      11–13% at Screaming, 14–16% at Shrieking, and 17–18% at Deafening,
+      above anything the natural pool can roll.
+
+
+      **Loathing** gives 18–20% up to 24–26% increased Global Critical
+      Strike Chance, a suffix the natural pool does not have. **Contempt**
+      gives added Physical Damage to Attacks; Deafening, 6–7 to 10–11, beats
+      natural Tier 1. **Fear** gives Minion Damage as a prefix. **Greed**
+      tops out at 91–105 life, which natural Tier 2 beats.
+
+
+      The corrupted Essences act on socketed gems:
+      [[Essence of Insanity]] "16% more Attack and Cast Speed",
+      [[Essence of Horror]] "+3.5% Critical Strike Chance",
+      [[Essence of Delirium]] "30% more Damage over Time".
+  - method: eldritch
+    note: >-
+      The Searing Exarch offers gloves increased Attack Speed (8% at Lesser,
+      11% at Exceptional), Critical Strike Chance for Attacks, the four
+      Damage over Time Multipliers (5–7% up to 14–16%), Minion Damage, one
+      extra target for strike skills, Rage on hit. The Eater of Worlds
+      offers chance to Suppress Spell Damage (5% up to 8%), elemental
+      exposure on hit, conversion of Physical Damage, leech.
+
+
+      By our arithmetic a Lesser Ember gives attack speed about 1 time in
+      19. Stronger versions that work only near a Unique enemy or a pinnacle
+      boss start at Greater and Grand.
+
+
+      Remember the price on an Atlas base: the first Ember or Ichor replaces
+      its implicit.
+  - method: harvest
+    note: >-
+      **Speed** (150 Vivid Lifeforce) is the useful reforge: the speed tag
+      on gloves belongs to attack speed, so the guaranteed modifier is nearly
+      always that. Its tier is random.
+
+
+      **Chaos** (100 Vivid) guarantees Chaos Resistance, the only natural
+      modifier with the tag. **Attack** (75 Wild) is too broad to aim with:
+      four kinds of added damage, attack speed, accuracy and leech all carry
+      the tag. The elemental reforges are split between a resistance and
+      that element's added damage.
+  - method: fossil
+    note: >-
+      A [[Shuddering Fossil]] multiplies speed modifiers by ten and removes
+      mana ones. On Evasion gloves that lifts attack speed from under 4% of
+      suffix rolls to about a quarter, by our arithmetic.
+
+
+      The Fossil-only list for gloves is long: "Socketed Skills have 18%
+      increased Attack Speed" and the same for Cast Speed, added damage
+      prefixes that are not limited to attacks (20–25 to 26–35 Fire or
+      Cold), 20–30% Minion Damage, and "+1 to Level of Socketed" Strength,
+      Dexterity or Intelligence gems.
+  - method: veiled
+    note: >-
+      The unveiled prefixes are the strong versions of the bench ones: 30–35%
+      conversion of Physical Damage to an element, 17–20% Melee Damage with
+      +0.2 metres of strike range, Projectile Damage with speed, Area Damage
+      with area. The unveiled suffixes pair 20–22% Global Critical Strike
+      Chance with elemental or chaos damage after a critical strike.
+  - method: fracture
+    note: >-
+      The best use of a fractured base on gloves is a suffix you would
+      otherwise reroll for ever: Tier 1 spell suppression or a top
+      resistance. An Essence of Zeal then fixes a second suffix on every
+      reroll, and two of the three hard slots are certain.
+  - method: influence
+    note: >-
+      Influence is the home of an Atlas base, since an influenced pair
+      cannot take Eldritch implicits anyway. Warlord: 27–30% increased Melee
+      Damage, Projectile Attack Damage, Spell Damage or Damage over Time as a
+      prefix, "+1 to Maximum Frenzy Charges", Culling Strike. Hunter: +16 to
+      20% to one Damage over Time Multiplier, a strike skill target,
+      Intimidate or Unnerve on hit. Crusader: 26–30% Global Critical Strike
+      Chance and 22–25% conversion. Elder and Shaper: 13–14% Attack Speed
+      or Cast Speed, in the same group as natural attack speed.
+  - method: meta
+    note: >-
+      The locks cost 4 Divine Orbs and 4 [[Blessed Orb]]s on gloves. Without
+      influence, let the stronger Eldritch implicit protect a side for
+      nothing. On an influenced pair there are no Eldritch orbs, and the
+      lock with a Harvest reforge is the way to rebuild one side.
+  - method: corruption
+    note: >-
+      Gloves are the one slot whose corruption implicits include "Curse
+      Enemies with" a named curse "on Hit", nine of them. Also 8–10%
+      increased Attack Speed or Cast Speed, "+1 to Maximum Frenzy Charges"
+      and "+1 to Level of Socketed Gems".
+  - method: strands
+    note: "Useful on an Alteration craft for life or suppression; wasted under Essences. See the section below."
+memoryStrands: >-
+  Strands remove the low tiers of whatever is rolled, and on gloves the low
+  tiers are most of the pool: nine of life, eight of each resistance, five of
+  suppression. So strands help the ordinary modifiers here as much as
+  anywhere. The sizes players have measured are for a 13-tier modifier;
+  nothing is published for shorter ones.
+
+
+  They fit a craft that uses cheap orbs: [[Orb of Alteration]]s for a life
+  or suppression roll at up to 8 strands each, then a [[Regal Orb]]. They do
+  **not** fit the natural way to make attack gloves. An Essence of Zeal can
+  spend up to 80 strands a use, by the data-mined table, and its guaranteed
+  modifier has a fixed tier that strands cannot raise.
+
+
+  If the plan ends with Eldritch implicits, test a Lesser Ember on the
+  strand base first. One player thread from 2025 suggests such items refuse
+  them; we could not confirm it.
+reading:
+  intro: >-
+    Read gloves in this order. **The implicit:** an Atlas one, Eldritch ones,
+    or nothing yet. **Attack speed**, if your build attacks: there or not,
+    and from where. **Life.** Then count resistances. Gloves with the right
+    implicit, attack speed and life are good gloves whatever else is on
+    them.
+  prefixes:
+    text: >-
+      The prefix side is the easy one. Maximum Life is a fifth of prefix
+      rolls on most gloves, its nine tiers are all open by item level 54, and
+      the bench sells a serviceable version.
+
+
+      After life, the prefixes divide into defence and small damage. The
+      three defence prefixes stack as on any armour, and matter if you count
+      on the gloves for Armour, Evasion or Energy Shield. The four kinds of
+      added damage to attacks are a quarter of the pool between them and are
+      small numbers: Tier 1 Physical is 4–6 to 9–10. They are worth a slot
+      for attacks that hit many times a second and not otherwise.
+
+
+      That usually leaves one prefix free, and the bench's damage prefixes
+      are made for it.
+    key:
+      - mod: "+# to maximum Life"
+        why: "The one prefix every life build wants here. Equal weights over nine tiers."
+        aim: "T2, 100–114 (ilvl 44). T1 is 115–129 (ilvl 54)."
+      - mod: "#% increased Damage while Leeching"
+        why: "Not in the natural pool. A bench prefix that most attack builds can use, and the usual home of the bench slot."
+        aim: "31–36% for 3 Chaos Orbs; 37–43% for 4 Exalted Orbs."
+      - mod: "#% increased Armour, Evasion Rating or Energy Shield"
+        why: "Local, multiplies the base. Worth it on a top-defence base, a low priority on an Atlas one."
+        aim: "T3, 68–79% (ilvl 60). T1 is 92–100% (ilvl 84)."
+      - mod: "Adds # to # Physical Damage to Attacks"
+        why: "Flat damage for every attack you make, not only with one weapon. Strongest on fast, many-hit attacks."
+        aim: "T1, 4–6 to 9–10 (ilvl 28). Deafening Contempt gives 6–7 to 10–11."
+      - mod: "Adds # to # Fire, Cold or Lightning Damage to Attacks"
+        why: "The same idea in an element. Common, and filler for anyone not scaling that element with attacks."
+      - mod: "+# to maximum Mana"
+        why: "Only on gloves with Energy Shield, where it is the most common prefix and the main rival of life."
+  suffixes:
+    text: >-
+      The suffix side is where gloves are won. An attack build wants attack
+      speed, which is rare; a suppression build wants suppression, which
+      exists only on bases with Evasion; everyone wants resistances; and
+      there are three slots.
+
+
+      Know the filler so that you recognise it. Dexterity rolls on every
+      pair and is one of the most common suffixes. Life and mana gained on kill, life gained on
+      hit, the two small leech modifiers and Item Rarity take about a sixth
+      of the pool and are worth nothing at the endgame. Accuracy is useful to
+      attack builds that lack it and to nobody else.
+
+
+      Attack speed from an Essence or the bench, cast or attack speed from
+      Elder or Shaper influence, and natural attack speed are all one group.
+      A pair has one of them.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Global attack speed for every attack skill. About one suffix roll in 30 at any tier, so take it from an Essence of Zeal, the bench or an Exarch implicit."
+        aim: "11–13% is fine (T2, ilvl 22). T1 is 14–16% (ilvl 76); Deafening Zeal gives 17–18%."
+      - mod: "+#% chance to Suppress Spell Damage"
+        why: "Only on gloves with Evasion. One of the slots a suppression build cannot skip."
+        aim: "T3, 9–10% (ilvl 68). T1 is 13–14% (ilvl 85)."
+      - mod: "+#% to Fire, Cold or Lightning Resistance"
+        why: "A tenth of suffix rolls each. The bench covers one, or two at lower values."
+        aim: "T3, 36–41% (ilvl 60). T1 is 46–48% (ilvl 84)."
+      - mod: "#% increased Global Critical Strike Chance"
+        why: "Not in the natural pool. An Essence of Loathing guarantees it; the bench and veiled versions come with a second line."
+        aim: "Deafening Loathing gives 24–26%."
+      - mod: "+# to Accuracy Rating"
+        why: "For attack builds short of hit chance. A large number at the top, 481–600."
+      - mod: "+# to Dexterity"
+        why: "On every pair, and one of the most common suffixes. Welcome when you need the attribute, filler when you do not."
+approach:
+  principle: >-
+    **Settle the implicit before the first orb, and never roll for attack
+    speed.** The implicit question decides the base and whether influence is
+    possible. Attack speed has four certain sources, so it is placed, not
+    hoped for. Everything else on gloves is life, resistances and one spare
+    prefix for the bench.
+  order:
+    - title: "Decide what the gloves give the build"
+      text: >-
+        Attack speed and damage for an attacker. Spell damage, which only an
+        implicit provides, for a caster. Suppression and resistances for a
+        build that takes its damage elsewhere. The answer picks everything
+        below.
+    - title: "Choose the implicit route, and with it the base"
+      text: >-
+        One Atlas implicit and no Eldritch currency, or a top-defence base
+        with an Ember and an Ichor. Compare real numbers: Spiked Gloves give
+        24–30% melee damage; the Exarch gives 11% attack speed and the Eater
+        8% suppression on a base with over 60% more Armour or Evasion.
+    - title: "Place the speed suffix with a tool"
+      text: >-
+        An Essence of Zeal on a fresh base. The bench on a pair that is
+        otherwise done. The Exarch implicit if the suffixes are full. A
+        Speed reforge on an influenced pair with locked prefixes.
+    - title: "Take life as it comes, or buy it"
+      text: >-
+        One prefix roll in five is life. Accept a rolled one of 85 or more;
+        otherwise leave a prefix open and craft 56–70 at the bench.
+    - title: "Protect the suffixes, then improve the prefixes"
+      text: >-
+        Once two suffixes are right, give the pair a Searing Exarch implicit
+        stronger than its Eater one. Eldritch Chaos Orbs then reroll only
+        prefixes.
+    - title: "Spend the bench on the spare slot"
+      text: >-
+        A damage prefix if a prefix is open, a resistance if a suffix is.
+        With "Can have up to 3 Crafted Modifiers" a pair with two open
+        prefixes can take both a damage prefix and a second craft.
+    - title: "Final implicits and values"
+      text: >-
+        Eldritch implicits last, for the strengths you can afford. A Blessed
+        Orb on an Atlas implicit. A Divine Orb only when a key value is low.
+  finishing: >-
+    Quality, sockets, and the unused bench slot. A [[Blessed Orb]] on the
+    implicit if it has a range. A [[Divine Orb]] when attack speed or life
+    rolled at the bottom of its tier and the rest is not at the top.
+
+
+    Check resistances on the character, not on the gloves. A Harvest swap of
+    one element for another is cheaper than any reroll.
+  stopping: >-
+    Gloves with attack speed from a Screaming Essence, life of 85 or more
+    and one resistance are complete for most attack builds, and cost a few
+    Essences and one bench craft. A caster's pair is an Atlas implicit, life
+    and two resistances.
+
+
+    The steps that multiply the cost are the third good suffix, the
+    Deafening Essence in place of the Screaming one, and the Exceptional
+    implicit in place of the Lesser. Each adds a few per cent. Decide which
+    of them your build would notice before paying for any.
+special:
+  - mod: "#% increased Attack Speed above the natural maximum"
+    source: "Essence"
+    where: "A [[Deafening Essence of Zeal]] gives 17–18%. Natural Tier 1 is 14–16%."
+  - mod: "#% increased Global Critical Strike Chance"
+    source: "Essence / Influence / Veiled"
+    where: "An Essence of Loathing, 24–26% at Deafening. A Crusader suffix, 26–30% at item level 75. The bench (15–16%) and unveiled (20–22%) versions carry a second line of damage after a critical strike."
+  - mod: "#% increased Damage while Leeching"
+    source: "Bench"
+    where: "A bench prefix: 31–36% for 3 Chaos Orbs, 37–43% for 4 Exalted Orbs."
+  - mod: "#% of Physical Damage Converted to Fire, Cold or Lightning Damage"
+    source: "Bench / Veiled / Eldritch"
+    where: "20–25% from the [[Crafting Bench]] for 4 Chaos Orbs, 30–35% unveiled, 22–25% as a Crusader prefix. The Eater of Worlds implicit converts 10% at Lesser and 25% at Exceptional."
+  - mod: "#% increased Melee Damage / +# metres to Melee Strike Range"
+    source: "Bench / Veiled"
+    where: "A prefix: 14–16% with +0.1 metres for 4 Exalted Orbs at the bench, 17–20% with +0.2 metres unveiled. A different group from the Warlord prefix \"increased Melee Damage\", so the two fit together."
+  - mod: "Non-Vaal Strike Skills target 1 additional nearby Enemy"
+    source: "Eldritch / Hunter influence"
+    where: "A Searing Exarch implicit, weight 400 among always-on implicits totalling 18,700. Also a Hunter prefix at item level 80, weight 250."
+  - mod: "+1 to Maximum Frenzy Charges"
+    source: "Warlord influence / Corruption"
+    where: "A Warlord prefix at item level 75, weight 125. Also a corruption implicit."
+  - mod: "+#% to Damage over Time Multiplier"
+    source: "Base implicit / Eldritch / Influence"
+    where: "+14–18% to all of it on Apothecary's Gloves. One type at a time from an Exarch implicit (5–7% at Lesser, 14–16% at Exceptional) or as a Hunter suffix (+16–20% at item level 80)."
+  - mod: "#% increased Cast Speed"
+    source: "Influence / Fossil / Corruption"
+    where: "A Shaper suffix, 13–14% at item level 84, in the same group as attack speed. Fossil-only: \"Socketed Skills have 18% increased Cast Speed\". A corruption implicit of 8–10%."
+  - mod: "Socketed Gems have 16% more Attack and Cast Speed"
+    source: "Corrupted Essence"
+    where: "The gloves suffix of an [[Essence of Insanity]], which comes only from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "Curse Enemies with a named curse on Hit"
+    source: "Corruption"
+    where: "Nine corruption implicits, one per curse. Only a [[Vaal Orb]] on finished gloves can give one, and the outcome is not yours to choose."
+  - mod: "#% increased Melee, Projectile Attack or Spell Damage"
+    source: "Base implicit"
+    where: "The implicits of Spiked, Gripped and Fingerless Silk Gloves. Chosen with the base, kept only while the gloves have no Eldritch implicit."
+  - mod: "5% increased Attack and Cast Speed for each Enemy within 6 metres, up to a maximum of 30%"
+    source: "Essence"
+    where: "Listed in the data for an [[Essence of Desolation]], which works on Normal items only and holds every other modifier to level 15 or lower. We could not confirm how the Essence is obtained in 3.30."
+mistakes:
+  - "**Rolling Chaos Orbs for attack speed.** About one suffix roll in 30 has it at all. An Essence of Zeal has it every time."
+  - "**Putting an Ember on Spiked Gloves without deciding to.** The Ember's own text says it replaces the implicit. That may be the right trade; it should not be a surprise."
+  - "**Buying an Atlas base for a plan that ends in Eldritch implicits.** You pay for an implicit you will overwrite and get about 40% less defence for it."
+  - "**Using an Essence of Greed on endgame gloves.** 91–105 life at Deafening; natural Tier 2 is 100–114 at item level 44."
+  - "**Crafting bench attack speed onto gloves that have a Shaper cast speed or Elder speed suffix.** One group; the bench refuses."
+  - "**Choosing Energy Shield gloves for a life build and not counting mana.** A fifth of prefix rolls there are mana."
+  - "**Keeping gloves for their Dexterity and life on kill.** Read which suffixes are the pool's filler before you count them as value."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, pool, modifier, tier, weight, Essence, bench cost and implicit quoted here, and the in-game text of the Eldritch Embers and Ichors. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 implicits of the Atlas gloves, Item Tiers for special bases, the cost of the protection modifiers on armour, the Harvest resistance swap." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: which Eldritch implicit is dominant, and what the protection modifiers hold against. Partly older than 3.30." }

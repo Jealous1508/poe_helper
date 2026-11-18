@@ -1,0 +1,220 @@
+category: two-hand-swords
+title: "An elemental crit sword: lock the suffixes, reforge the prefixes"
+level: 4
+summary: "On this sword the three suffixes are the scarce side. Build them with two Fossils, protect them with a meta-modifier, and let a Harvest Lightning reforge fill a prefix side where almost every roll is useful."
+goal: >-
+  A Banishing Blade with attack speed, Critical Strike Chance and Critical
+  Strike Multiplier, and added elemental damage in the prefixes. The mace
+  guide locks prefixes and rerolls suffixes. This is the mirror image, and
+  the point is **why the mirror is right here**: you protect the side you
+  could not get twice, and on an elemental crit sword that side is the
+  suffixes.
+base: "Banishing Blade"
+itemLevel: 84
+baseWhy: >-
+  "Attack Critical Strikes ignore Enemy Monster Elemental Resistances", 6.5%
+  critical strike chance and 1.4 attacks per second. Its low physical damage
+  does not matter to a sword whose prefixes are added elemental damage. Item
+  level 82 opens Tier 1 of each element and 77 completes the suffix tiers;
+  84 covers both with room to spare.
+methods: [fossil, meta, harvest, bench]
+result:
+  implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+  prefixes:
+    - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+    - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+    - { text: "Adds 66 to 119 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed", how: fossil }
+    - { text: "33% increased Critical Strike Chance", how: fossil }
+    - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "dozens" }
+  - { item: "[[Shuddering Fossil]]", amount: "dozens" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "one per attempt", note: "the size that holds two Fossils" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "50 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the bench" }
+cost: >-
+  Two stages, two costs. The suffix stage is counted in Fossil pairs from
+  Delve, and it is long. The prefix stage is counted in locks: 4
+  [[Divine Orb]]s and 1 [[Sacred Orb]] each time, with 50 Lifeforce that
+  hardly registers beside them. Set a number of locks before you begin.
+odds: >-
+  **Suffixes.** With both Fossils, by our arithmetic on the natural pool, 88%
+  of suffix rolls are attack speed or a critical suffix, and a result with
+  three suffixes is exactly those three about half the time. Without Fossils
+  that is once in 90. Tiers are not helped: every tier of these suffixes
+  weighs the same, so all three at Tier 3 or better is about 1 in 12 of
+  those. Together, roughly one three-suffix result in 24. Fossil-only
+  suffixes are not in these figures.
+
+
+  **Prefixes.** Every Lightning reforge gives added lightning damage. If its
+  tier is drawn by weight, it is Tier 4 or better about one time in four and
+  Tier 3 or better about one in seven. Each further prefix is fire or cold
+  damage half the time. Our arithmetic; not measured in 3.30.
+steps:
+  - title: "See which side is scarce"
+    do: >-
+      Write the six modifiers down. Prefixes: any three of four elemental
+      families, which together are 63% of prefix rolls. Suffixes: three
+      particular modifiers, 14%, 10% and 10% of suffix rolls.
+    why: >-
+      A prefix side you would accept turns up in a few rerolls. A suffix
+      side with all three does not turn up at all by luck. Whatever you
+      build first will be rerolled around, so build the scarce side first
+      and plan to protect it.
+  - title: "Stage 1: three suffixes with two Fossils"
+    do: >-
+      Make a white item level 84 Banishing Blade Rare with an
+      [[Orb of Alchemy]]. Then use a [[Deft Fossil]] and a
+      [[Shuddering Fossil]] together in a [[Potent Chaotic Resonator]],
+      repeatedly, until the sword has **attack speed of 20% or more, and
+      Critical Strike Chance and Multiplier of 25% or more each**.
+    why: >-
+      Deft is "More Critical modifiers, No Attribute modifiers"; Shuddering
+      is "More Speed modifiers, No Mana modifiers". Critical and speed are
+      tags carried by exactly the three suffixes you want and by no prefix.
+      The "No" halves remove Strength, Dexterity and the mana suffixes as
+      well. Neither Fossil touches the prefix pool, which is fine: the
+      prefixes are about to be replaced.
+    check: >-
+      Ignore what rolled as prefixes, with one exception in the next step.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 9 to 161 Lightning Damage", how: fossil }
+        - { text: "41% increased Physical Damage / +88 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Check there is room for the lock"
+    do: >-
+      Count the prefixes. "Suffix Modifiers cannot be changed" is itself a
+      prefix, so the sword needs **one empty prefix slot**. And confirm that
+      all three suffix slots are filled.
+    why: >-
+      Both counts matter. An item with three prefixes cannot take the lock.
+      An item with an empty suffix slot can take it, but then the reforge
+      has somewhere on the suffix side to put a new modifier, and players
+      have long reported that it may.
+    fail: >-
+      Three good suffixes and three prefixes: keep using Fossils until a
+      result has the suffixes and at most two prefixes. Do not use an
+      [[Orb of Annulment]]; it removes one of six at random and half of them
+      are what you just built.
+  - title: "Stage 2: lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      While it is on the sword, a reroll that respects it leaves the three
+      suffixes as they are. Use the full version. The 1 and 2 Divine Orb
+      versions protect modifiers chosen at random, and the developers say
+      that is certain only when the side holds exactly that many.
+    check: >-
+      Use no Fossil and no Essence on the locked sword. Essences are
+      reported to ignore the lock, and how Fossils treat it in 3.30 we could
+      not confirm.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 9 to 161 Lightning Damage", how: fossil }
+        - { text: "41% increased Physical Damage / +88 to Accuracy Rating", how: fossil }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Stage 3: reforge with a Lightning modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Lightning modifier**: 50
+      [[Primal Crystallised Lifeforce]].
+    why: >-
+      One natural modifier on a sword carries the lightning tag: added
+      lightning damage, a prefix. With the suffixes locked and their side
+      full, the reforge replaces the prefixes, lock included, and one of the
+      new ones must be that. Lightning is chosen over Fire or Cold because
+      its roll is the largest at every tier. The other prefix slots roll
+      from a pool where half of what remains is fire or cold damage.
+    check: >-
+      Suffixes unchanged, lock gone, lightning damage present. That Harvest
+      reforges respect the lock is player-tested, not official; after any
+      patch, try it on a cheap sword first.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+        - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Judge against the number of locks you set"
+    do: >-
+      Accept when the lightning roll is Tier 4 or better (its larger number
+      281 or more) and the sword has **either a second elemental prefix or
+      an empty prefix slot**. Otherwise lock and reforge again.
+    why: >-
+      Each further attempt is another 4 Divine Orbs and a Sacred Orb. The
+      result shown, Tier 3 lightning with Tier 4 fire and a slot open, is
+      better than the bar and should be taken at once.
+    fail: >-
+      A result with three prefixes you do not want has no room for a new
+      lock. That is how this stage ends badly: you keep the suffixes and
+      live with the prefixes. It is the reason to accept a decent result
+      with an open slot over hoping for a full one.
+  - title: "Bench the third element"
+    do: >-
+      Craft **adds 60–72 to 110–128 Cold Damage** in the open prefix: 4
+      [[Chaos Orb]]s.
+    why: >-
+      Cold is the element not yet on the sword. The bench also sells
+      penetration of elemental resistances for attacks with the weapon, and
+      on this base that would be wasted on every critical strike: the
+      implicit already ignores the resistance.
+    state:
+      implicits: ["Attack Critical Strikes ignore Enemy Monster Elemental Resistances"]
+      prefixes:
+        - { text: "Adds 21 to 402 Lightning Damage", how: harvest }
+        - { text: "Adds 96 to 187 Fire Damage", how: harvest }
+        - { text: "Adds 66 to 119 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed", how: fossil }
+        - { text: "33% increased Critical Strike Chance", how: fossil }
+        - { text: "+27% to Global Critical Strike Multiplier", how: fossil }
+variations: >-
+  **A physical crit sword.** On an Exquisite Blade the same lock with the
+  **Physical** reforge (50 Vivid Lifeforce) works on the same principle: the
+  two leech suffixes that normally satisfy that tag cannot be added to a
+  full, locked suffix side, so the guaranteed modifier is one of the three
+  physical prefixes. It is a harder stage than the one above. The low tiers
+  of those prefixes are heavy and the other slots are elemental six times
+  in ten, so expect more locks for a weaker result.
+
+
+  **A veiled prefix.** A [[Veiled Chaos Orb]] on the locked sword rerolls the
+  prefixes with a veiled one among them, by the same player-tested rule. For
+  an elemental sword the unveil has little to offer on this base; for a
+  physical one it is the route to a 120–139% hybrid.
+
+
+  **Suffixes from strands.** The Memory Strands example makes a suffix side
+  one modifier at a time with cheap orbs. Slower to fill, kinder on tiers.
+mistakes:
+  - "Building the prefixes first because that is how weapons are crafted. On this sword the prefixes are the part you can have again tomorrow."
+  - "Locking with an empty suffix slot. Fill the side, then lock."
+  - "Chasing a third rolled element with repeated locks. The bench sells one for 4 Chaos Orbs."
+  - "Benching penetration on a Banishing Blade."
+  - "Using the Speed or Critical reforge on the locked sword. Those tags live on the suffix side, which is full and protected. Whatever the game does with a guarantee it has no slot for, it is not what you are paying the lock for."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Fossil multipliers and texts, modifier tags, tiers, weights and bench costs. The odds are our arithmetic on the natural pool." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers; how Delve is reached." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Lightning and Physical reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Veiled orbs respect a locked side. Partly older than 3.30." }

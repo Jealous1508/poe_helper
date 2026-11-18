@@ -1,0 +1,200 @@
+category: claws
+title: "Lock three suffixes, force a veiled physical prefix"
+level: 4
+summary: "Three finished suffixes, no physical prefix. Lock the full side, and a Veiled Chaos Orb has nowhere to put its veiled modifier except among the prefixes."
+goal: >-
+  Turn a claw with attack speed, Critical Strike Chance and Critical Strike
+  Multiplier but useless prefixes into a physical weapon, without risking
+  the suffixes. The point of the craft is **forcing**: a side that is both
+  full and locked cannot receive anything, so a guaranteed modifier must land
+  on the other one.
+base: "Imperial Claw"
+itemLevel: 77
+baseWhy: >-
+  This craft starts from an item: a Rare claw with three suffixes you want
+  to keep, such as the suffix side from the Fossil example. Item level only
+  matters for what the Veiled Chaos Orb rolls beside the veiled modifier,
+  and 77 already allows Tier 1 flat Physical Damage. The veiled prefixes
+  need item level 60.
+methods: [meta, veiled, bench]
+result:
+  implicits: ["Grants 46 Life per Enemy Hit"]
+  prefixes:
+    - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+    - { text: "Adds 44 to 89 Cold Damage" }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "26% increased Attack Speed" }
+    - { text: "36% increased Critical Strike Chance" }
+    - { text: "+33% to Global Critical Strike Multiplier" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Orb of Alteration]]", amount: "4", note: "for the blocking craft" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "to remove the blocking craft" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "for the final bench craft" }
+cost: >-
+  Each attempt is a full lock, 4 [[Divine Orb]]s and 1 [[Sacred Orb]] on a
+  weapon in 3.30, plus a [[Veiled Chaos Orb]], which comes from Betrayal.
+  The rest is small change. The veiled modifier is certain, so one attempt
+  is usually enough; a second is for a better modifier beside it.
+odds: >-
+  With the suffix side full and locked, the veiled modifier is a prefix
+  every time. Which prefix is your choice among three offered. This class
+  has thirteen veiled prefixes and four of them are the physical hybrids;
+  how the game picks the three it offers is not in the data.
+
+
+  The blocking craft in step 4 changes that count. It removes seven of the
+  thirteen from the offer, by a player-tested rule, and then at least one of
+  three different choices has to be physical because only two others
+  remain. That is counting, not a measured rate.
+steps:
+  - title: "Count both sides"
+    do: >-
+      The claw needs **three suffixes**, all ones you are keeping, and **at
+      least one open prefix**. "Suffix Modifiers Cannot Be Changed" is a
+      prefix and needs a slot.
+    why: >-
+      Three suffixes is the condition that does the forcing. With only two,
+      the Veiled Chaos Orb could roll its veiled modifier as the third
+      suffix, and you would have paid a lock for nothing.
+    fail: >-
+      Two good suffixes and one open: the bench cannot fill the gap,
+      because the lock is itself the item's one bench modifier. Finish the
+      suffix side by rolling before you come here.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "+124 to maximum Mana" }
+        - { text: "Adds 8 to 163 Lightning Damage" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+  - title: "Lock the suffixes"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers Cannot Be
+      Changed**: 4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      Use the full lock. The one- and two-suffix versions cost 1 and 2
+      Divine Orbs, but the developers have said the game picks which
+      modifiers they protect at random and does not show it; they are only
+      certain when the side holds exactly that many. This side holds three.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "+124 to maximum Mana" }
+        - { text: "Adds 8 to 163 Lightning Damage" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the claw.
+    why: >-
+      Its text is "Reforges a rare item with new random modifiers including
+      a random Veiled modifier". The lock keeps the three suffixes, the
+      reroll replaces the prefixes and consumes the lock, and the veiled
+      modifier has to go where there is room: the prefix side.
+    check: >-
+      Suffixes unchanged, the lock gone, one line reading "Veiled Prefix".
+      Count the other prefixes: you want **one slot open** for the next
+      step.
+    fail: >-
+      That a Veiled Chaos Orb respects the lock is established by players,
+      not stated by the developers. If you doubt it after a patch, test on
+      a cheap claw. If the result has three prefixes, skip step 4 and
+      unveil as it is.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "Adds 44 to 89 Cold Damage" }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+  - title: "Block before you unveil"
+    do: >-
+      Do not unveil yet. At the bench, craft **25–34% increased Fire
+      Damage** (4 [[Orb of Alteration]]s) in the open prefix.
+    why: >-
+      By player testing, unveiling never offers a group that is already on
+      the item. Seven of the thirteen veiled prefixes, the chaos, cold,
+      fire, lightning, spell and minion ones, share one group with this
+      cheap bench craft. With it in place, six remain: the four physical
+      hybrids and two penetration modifiers.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "Adds 44 to 89 Cold Damage" }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+  - title: "Unveil the physical prefix"
+    do: >-
+      Right-click the claw and choose the physical hybrid your build uses:
+      120–139% increased Physical Damage with a 21–25% chance to Impale,
+      Bleed, Poison or Blind.
+    why: >-
+      This prefix has no tiers. Its 120–139% overlaps Tier 4 and Tier 3 of
+      the natural modifier; rolling Tier 4 or better on a claw of this item
+      level is about 1 prefix roll in 170, and here it was certain.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 44 to 89 Cold Damage" }
+        - { text: "29% increased Fire Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+  - title: "Swap the block for real damage"
+    do: >-
+      At the bench, remove the crafted modifier (1 [[Orb of Scouring]]) and
+      craft **adds 13–17 to 26–30 Physical Damage** (4 [[Chaos Orb]]s) in
+      its place.
+    why: >-
+      The Fire Damage was only there to shape the offer. Flat Physical
+      Damage is a different group from the veiled prefix and is multiplied
+      by it.
+    state:
+      implicits: ["Grants 46 Life per Enemy Hit"]
+      prefixes:
+        - { text: "131% increased Physical Damage / 23% chance to Impale Enemies on Hit with Attacks", how: veiled }
+        - { text: "Adds 44 to 89 Cold Damage" }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "26% increased Attack Speed" }
+        - { text: "36% increased Critical Strike Chance" }
+        - { text: "+33% to Global Critical Strike Multiplier" }
+variations: >-
+  **Why not a Harvest Physical reforge under the same lock.** It would also
+  be forced onto the prefix side. But its physical prefix comes with a
+  random tier: by weight, a pure percentage of 110% or more and the hybrid
+  at 45% or more are together about 5% of what it can guarantee. At a full
+  lock per attempt, the veiled prefix with no tiers is the tool.
+
+
+  **The junk prefix beside it.** The Cold Damage in this result is wasted on
+  a physical build. Replacing it means another lock and another orb, and
+  the veiled prefix would be rerolled with it. Leave it.
+mistakes:
+  - "Locking a side that is not full. The veiled modifier can then land on it."
+  - "Unveiling before blocking. Seven of the thirteen choices are for casters and minions."
+  - "Doing this on a claw with rolled pure increased Physical Damage. It shares a group with the veiled physical prefixes, so they will not be offered."
+  - "Using an Essence while the lock is on. Essences are reported to ignore the protection modifiers."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The veiled modifiers and their groups, bench costs, and the text of the Veiled Chaos Orb." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier versions choose at random with no indicator." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs respect a locked side, and a group on the item is not offered when unveiling. Partly older than 3.30." }

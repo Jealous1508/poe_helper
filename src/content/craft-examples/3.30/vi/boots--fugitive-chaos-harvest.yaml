@@ -1,0 +1,172 @@
+category: boots
+title: "Chaos resistance hai lần: Fugitive Boots và một reforge Harvest"
+level: 2
+summary: "Một reforge \"kèm một modifier Chaos\" chỉ có đúng một modifier để chọn trên boots. Thêm nó lên một base đã mang sẵn chaos resistance, và bench movement speed."
+goal: >-
+  Một đôi boots tự mình mang từ 40% Chaos Resistance trở lên, kèm movement
+  speed và life. Chaos Resistance là loại resistance duy nhất mà cuộc xổ số
+  keo kiệt, nên lần craft này không bao giờ xin nó từ cuộc xổ số. Bài học là
+  **cách đọc một reforge Harvest: đếm các modifier mang tag, và nếu con số
+  đếm là một thì lần craft là một sự đảm bảo.**
+base: "Fugitive Boots"
+itemLevel: 82
+baseWhy: >-
+  Fugitive Boots là một base Atlas với +17–23% to Chaos Resistance trên
+  implicit, được nâng từ 13–17% trong 3.30. Chúng chỉ rơi khi một item roll
+  ra Item Tier đủ cao, nên hãy tìm một đôi trắng hoặc mua một đôi.
+
+
+  Item level 81 mở tier cao nhất của suffix Chaos Resistance, 31–35%. Base
+  này là Evasion và Energy Shield, tức là có prefix mana; kế hoạch tính tới
+  điều đó bằng cách lấy movement speed từ bench.
+methods: [harvest, bench, finishing]
+result:
+  implicits: ["+21% to Chaos Resistance"]
+  prefixes:
+    - { text: "+92 to maximum Life", how: harvest }
+    - { text: "22% increased Movement Speed", how: crafted }
+  suffixes:
+    - { text: "+28% to Chaos Resistance", how: harvest }
+    - { text: "+38% to Cold Resistance", how: harvest }
+needs:
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "để biến base thành Rare" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 mỗi lần reforge", note: "tính 5 tới 10 lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+  - { item: "[[Blessed Orb]]", amount: "1–3", note: "tùy chọn, cho implicit" }
+cost: >-
+  Base trắng và vài trăm Vivid Lifeforce. Trong 3.30, Sacred Flora mọc ngay
+  trong map, nên Lifeforce đến trong lúc bạn chơi. Bước bench là 4
+  [[Chaos Orb]].
+odds: >-
+  Roll thường cho Chaos Resistance ở khoảng 1 trên 35 lần roll suffix trên
+  base này, theo phép tính của chúng tôi. Reforge thì lần nào cũng cho nó, vì
+  nó là modifier tự nhiên duy nhất trên boots mang tag chaos.
+
+
+  **Tier** của nó thì ngẫu nhiên. Nếu modifier được đảm bảo được rút theo
+  weight trong sáu tier, đúng như cách người ta vẫn hiểu về reforge, thì một
+  nửa số kết quả là từ 21% trở lên và một phần ba là từ 26% trở lên. Điều đó
+  chưa được đo trong 3.30.
+steps:
+  - title: "Biến base thành Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên đôi Fugitive Boots trắng.
+    why: >-
+      Craft Harvest reforge một item Rare. Alchemy roll ra gì không quan
+      trọng. Implicit không bị bước này hay bất kỳ bước nào sau đó đụng tới.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes: [{ text: "+58 to maximum Mana" }]
+      suffixes:
+        - { text: "+33 to Intelligence" }
+        - { text: "+30% to Fire Resistance" }
+        - { text: "17% increased Stun and Block Recovery" }
+  - title: "Đếm trước khi trả tiền"
+    do: >-
+      Mở danh sách modifier của boots và tìm tag "chaos". Trên boots có một
+      modifier mang nó: +% to Chaos Resistance, một suffix.
+    why: >-
+      Một reforge "kèm một modifier Chaos" buộc phải đặt ít nhất một modifier
+      mang tag đó. Trên weapon có vài cái đủ điều kiện và sự đảm bảo trở nên
+      lỏng lẻo. Ở đây danh sách có một mục, nên reforge này và "Chaos
+      Resistance được đảm bảo" là một. Hãy đếm như vậy cho bất kỳ reforge
+      Harvest nào trên bất kỳ item nào; việc đó mất mười giây và cho bạn biết
+      mình đang mua gì.
+  - title: "Reforge kèm một modifier Chaos"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with
+      random modifiers, including a Chaos modifier** (100
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Nó roll lại cả item như một Chaos Orb, với một suffix đã được định
+      trước. Kết quả đầu tiên ở đây khá tệ: tier thấp áp chót của Chaos
+      Resistance, và ba prefix mà không có movement speed trong đó.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes:
+        - { text: "+63 to maximum Mana", how: harvest }
+        - { text: "+52 to Evasion Rating / +25 to maximum Energy Shield", how: harvest }
+        - { text: "71% increased Evasion and Energy Shield", how: harvest }
+      suffixes:
+        - { text: "+13% to Chaos Resistance", how: harvest }
+        - { text: "Regenerate 27.3 Life per second", how: harvest }
+  - title: "Đánh giá bằng hai luật"
+    do: >-
+      **Luật suffix:** Chaos Resistance từ 21% trở lên. **Luật prefix:**
+      movement speed đã roll ra, hoặc còn một ô prefix trống. Cả hai phải
+      thỏa.
+    why: >-
+      Luật prefix là thứ khiến lần craft này rẻ. Trên base này movement speed
+      chỉ là 1 trên 8 lần roll prefix, vì mana chiếm một phần tư pool. Đòi nó
+      phải roll ra sẽ tốn nhiều lần reforge. Chỉ đòi một ô trống thì để bench
+      cấp nó.
+    fail: >-
+      Một trong hai luật không thỏa: reforge lần nữa. Mỗi lần thử tốn 100
+      Lifeforce và không tốn gì khác.
+  - title: "Lặp lại tới khi cả hai luật thỏa"
+    do: >-
+      Cứ reforge tiếp. Đọc tier của Chaos Resistance trước, rồi đếm prefix.
+    why: >-
+      Kết quả này đạt: 28% Chaos Resistance, life roll ra như phần thưởng
+      thêm, và còn hai ô prefix trống.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes: [{ text: "+92 to maximum Life", how: harvest }]
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+  - title: "Bench movement speed"
+    do: >-
+      Ở [[Crafting Bench]], craft **20–24% increased Movement Speed** giá 4
+      [[Chaos Orb]]. Nếu movement speed đã may mắn roll ra, thay vào đó hãy
+      craft maximum Life (56–70 giá 4 Orb of Alchemy) hoặc một resistance.
+    why: >-
+      Movement speed của bench thấp hơn mức 30% mà một lần craft bằng
+      Alteration đạt tới. Đó là cuộc đổi chác của ví dụ này: một Chaos
+      Resistance chắc chắn ngay bây giờ, đổi lấy vài điểm speed bỏ đi.
+    state:
+      implicits: ["+18% to Chaos Resistance"]
+      prefixes:
+        - { text: "+92 to maximum Life", how: harvest }
+        - { text: "22% increased Movement Speed", how: crafted }
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+  - title: "Roll lại con số của implicit"
+    do: >-
+      Dùng một [[Blessed Orb]] nếu implicit nằm gần 17%.
+    why: >-
+      Nó chỉ roll lại implicit, trong khoảng 17–23%. Cộng với suffix, đôi
+      boots này giờ tự mình mang khoảng 50% Chaos Resistance.
+    state:
+      implicits: ["+21% to Chaos Resistance"]
+      prefixes:
+        - { text: "+92 to maximum Life", how: harvest }
+        - { text: "22% increased Movement Speed", how: crafted }
+      suffixes:
+        - { text: "+28% to Chaos Resistance", how: harvest }
+        - { text: "+38% to Cold Resistance", how: harvest }
+variations: >-
+  **Một elemental resistance.** Boots không có modifier damage, nên cùng
+  phép đếm đó cho cùng câu trả lời với Fire (50 Wild Lifeforce), Cold (50
+  Vivid) và Lightning (50 Primal): một modifier mang tag, một resistance được
+  đảm bảo.
+
+
+  **Một Essence of Envy.** Nó cũng đảm bảo Chaos Resistance, ở mức cố định
+  21–25% với Screaming và 31–35% với Deafening. Đắt hơn Lifeforce cho mỗi lần
+  thử, và tier thì chắc chắn.
+
+
+  **Không có Eldritch implicit trên đôi này.** Một Ember hoặc Ichor sẽ thay
+  implicit Chaos Resistance, theo chính dòng chữ của nó. Đó là cái giá của
+  một base Atlas, đã chấp nhận từ đầu.
+mistakes:
+  - "Dùng reforge Speed để lấy movement speed ở đây. Nó đảm bảo modifier ở một tier ngẫu nhiên và roll lại cái Chaos Resistance mà bạn tìm tới đây vì nó."
+  - "Bench movement speed trước khi các lần reforge xong. Lần reforge kế tiếp gỡ nó mất."
+  - "Cho rằng một reforge là sự đảm bảo mà không đếm. Cùng reforge Chaos đó trên một cái ring hay một weapon có vài modifier để chọn."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tag trên mọi modifier của boots, tier, weight, implicit của Fugitive Boots và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Implicit 3.30 của Fugitive Boots, và Harvest mọc ngay trong map." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge và giá Lifeforce của chúng." }

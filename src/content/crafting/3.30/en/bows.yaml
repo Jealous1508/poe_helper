@@ -1,0 +1,536 @@
+name: "Bows"
+short: "One item class, three different weapons: elemental, physical and gem-level bows want completely different prefixes. Know which one you are making first."
+icon: "Spine Bow"
+intro: >-
+  A bow is a two-handed weapon, so it is the whole of an archer's weapon
+  slot and has six sockets. That much it shares with a two-handed mace. What
+  it does not share is a single goal. A mace is always a physical weapon. A
+  bow is one of three things, and they have almost nothing in common:
+
+
+  **An elemental bow** carries flat fire, cold and lightning damage. Its
+  base physical damage hardly matters.
+  **A physical bow** is the mace again: the base's own damage, multiplied.
+  **A gem-level bow** has "+1 to Level of Socketed Gems" and "+2 to Level of
+  Socketed Bow Gems", for skills whose damage comes from the gem: damage
+  over time above all. On that bow the weapon's damage does not matter at
+  all.
+
+
+  Every bow rolls all of these from one pool, so nothing stops a craft from
+  drifting between them. The first job in this category is to decide which
+  bow it is and to recognise which one you are looking at.
+basics:
+  itemLevel:
+    text: >-
+      Which item level you need depends on the kind of bow. A **gem-level
+      bow** is complete at 64, where "+2 to Level of Socketed Bow Gems"
+      opens. An **elemental bow** wants 75 for a normal craft (Tier 2 of the
+      three flat elemental prefixes) and 82 for their best tier. A
+      **physical bow** follows the mace: 77 for most of it, 83 for the last
+      tier of the percentage prefixes.
+
+
+      Attack speed is the surprise. Its best tier on a bow, 17–19%, needs
+      only item level 37. And item level 86 matters here for two things: the
+      top tier of increased Elemental Damage with Attack Skills, and "Bow
+      Attacks fire 2 additional Arrows".
+    breakpoints:
+      - ilvl: 37
+        unlocks: "Tier 1 attack speed, \"of Acclaim\" (17–19%). Every bow from the middle of the campaign onwards can roll the best attack speed there is."
+      - ilvl: 50
+        unlocks: "\"+1 to Level of Socketed Gems\". The other gem prefix, +1 to Level of Socketed Bow Gems, has been open since item level 9."
+      - ilvl: 64
+        unlocks: "\"+2 to Level of Socketed Bow Gems\". Tier 3 of flat Fire, Cold and Lightning Damage (from 62–63) and Tier 3 increased Physical Damage (from 60). **Enough for a gem-level bow, and the first level worth crafting an elemental bow for maps.**"
+      - ilvl: 70
+        unlocks: "\"Bow Attacks fire an additional Arrow\"."
+      - ilvl: 75
+        unlocks: "Tier 2 of the three flat elemental prefixes (Fire and Lightning at 74, Cold at 75). Tier 1 Critical Strike Chance and Critical Strike Multiplier (35–38%, from 73). **Enough for a normal elemental bow.**"
+      - ilvl: 77
+        unlocks: "Tier 1 flat Physical Damage (adds 34–47 to 72–84)."
+      - ilvl: 83
+        unlocks: "Tier 1 of the three flat elemental prefixes (from 82), Tier 1 Damage over Time Multiplier (24–26%, from 82), and Tier 1 of both physical percentage prefixes: \"Merciless\" (170–179%) and \"Dictator's\" (75–79% with Accuracy)."
+      - ilvl: 86
+        unlocks: "Tier 1 increased Elemental Damage with Attack Skills (87–100%) and \"Bow Attacks fire 2 additional Arrows\". **The ceiling.**"
+  bases:
+    text: >-
+      There are 28 bows that roll modifiers, and they are one pool: no base
+      unlocks a modifier another lacks. They differ as weapons, in damage
+      per hit, attacks per second, critical strike chance and implicit. A
+      second pool holds a single bow that rolls nothing.
+    types:
+      - title: "Ordinary bows"
+        pools: [standard]
+        text: >-
+          Crude Bow to Harbinger Bow, in lines that repeat every few
+          levels. Most have no implicit, and among those are the fastest
+          attacks (Grove, Thicket: 1.5 per second) and a line with 6.5%
+          critical strike chance (Bone, Ivory, Spine). One line has 20–24% increased Elemental
+          Damage with Attack Skills (Royal, Highborn, Imperial). One has
+          30–50% increased Critical Strike Chance and the slowest, hardest
+          hit (Death, Decimation, Harbinger). One has +15–25% to Global
+          Critical Strike Multiplier and 6.7% critical strike chance
+          (Recurve, Sniper, Assassin).
+      - title: "Maraketh bows"
+        text: >-
+          Reflex, Steelwood and Maraketh Bow. Their implicit is increased
+          Movement Speed: 6% on the first two, 10% on the Maraketh Bow. Same
+          pool as the ordinary bows, with a narrow damage range (61–92 on
+          the Maraketh Bow).
+      - title: "Heist bows"
+        text: >-
+          Hedron, Foundry and Solarine Bow. Almost no physical damage (16–24
+          on the Solarine) and a very large flat Fire Damage implicit: adds
+          121–133 to 184–197 on the Solarine. That is a fourth flat
+          elemental modifier that takes no prefix slot. They are elemental
+          bows by construction and useless as physical ones.
+      - title: "Ethereal Bow"
+        pools: [ethereal-bow]
+        text: >-
+          A single bow in its own pool, with no implicit, a drop level of 1
+          and a tag that keeps it out of shops. In the 3.30 data **no prefix
+          and no suffix has any weight on it**, so there is nothing to craft.
+          We could not find out what it is for. If one turns up, do not
+          spend currency on it.
+    picks:
+      - base: "Thicket Bow"
+        for: "Elemental and gem-level bows"
+        why: >-
+          1.5 attacks per second, the fastest base at this level. Flat
+          elemental damage is local to the bow, so it is dealt once per
+          attack, and attack speed on the bow multiplies the base's rate.
+          No implicit and no critical strike bonus: this is the pick when
+          speed is what you are buying.
+      - base: "Spine Bow"
+        for: "Elemental critical strike builds"
+        why: >-
+          1.4 attacks per second with 6.5% base critical strike chance,
+          against 5% on the Thicket Bow. That is three tenths more critical
+          strikes before any modifier, for one fifteenth less speed.
+      - base: "Imperial Bow"
+        for: "Elemental builds that do not crit"
+        why: >-
+          1.45 attacks per second and 20–24% increased Elemental Damage with
+          Attack Skills on the implicit. The bench's version of that
+          modifier is 24–32%, so the implicit is worth most of a bench
+          craft.
+      - base: "Citadel Bow"
+        for: "Physical bows"
+        why: >-
+          36–144 physical damage at 1.25 attacks per second: 112.5 damage
+          per second, level with the Ranger Bow as the highest in the
+          category, and 6% critical strike chance. Local physical modifiers
+          multiply this number, so it is the one that matters.
+      - base: "Harbinger Bow"
+        for: "One big physical hit that crits"
+        why: >-
+          50–133, the largest average hit of any bow, with 30–50% increased
+          Critical Strike Chance on the implicit. The slowest top base at
+          1.2 attacks per second.
+      - base: "Solarine Bow"
+        for: "Fire-based elemental builds"
+        why: >-
+          Adds 121–133 to 184–197 Fire Damage as an implicit. That sits
+          between Tier 4 and Tier 3 of the rolled Fire prefix (adds 85–115
+          to 172–200, and adds 110–150 to 223–260) and takes no slot. Three
+          prefixes remain for Cold, Lightning and one more.
+    impact: >-
+      What the base decides depends on which bow you are making, and that is
+      the point of deciding first.
+
+
+      **Attacks per second and critical strike chance** matter to elemental
+      and physical bows alike. Attack speed on a weapon is local: it
+      multiplies the base's own rate, 1.2 to 1.5 on the top bases.
+
+
+      **The physical damage numbers** matter only to a physical bow, where
+      every local percentage multiplies them. On an elemental bow they are a
+      small extra. On a gem-level bow they are nothing.
+
+
+      **The implicit.** A [[Blessed Orb]] rerolls its number; nothing in
+      ordinary crafting changes what it is.
+
+
+      **The Dexterity requirement**, 212 on the top bases.
+
+
+      What the base does not decide is the pool. Every bow except the
+      Ethereal Bow can become any of the three kinds.
+tools:
+  - method: currency
+    note: >-
+      Plain rolling favours the elemental bow heavily. At item level 83 the
+      three flat elemental prefixes are 64% of every prefix roll, by our
+      arithmetic from the weights, and one prefix roll in 10 is Tier 3 or
+      better of one of them.
+
+
+      The physical percentage prefixes are far rarer here than on a mace,
+      because those elemental prefixes weigh so much: pure increased
+      Physical Damage at Tier 3 or better is 1 prefix roll in 311, and Tier
+      1 is 1 in 2,174. "+2 to Level of Socketed Bow Gems" and "+1 to Level of
+      Socketed Gems" are 1 roll in 54 each.
+
+
+      On the suffix side attack speed is 8% of rolls, Critical Strike Chance
+      and Multiplier 10% each, and one additional arrow 1 roll in 60.
+  - method: bench
+    note: >-
+      The bench sells every kind of bow a start. **Elemental:** adds 60–72
+      to 110–128 Fire or Cold Damage, or adds 10–14 to 162–197 Lightning,
+      for 4 Chaos Orbs each: about Tier 5 of the rolled prefix.
+      **Physical:** 80–99% increased Physical Damage for 4 Chaos Orbs,
+      100–129% for 4 Exalted Orbs; adds 18–24 to 36–42 Physical Damage for 4
+      Chaos Orbs. **Gem-level:** 21–30% increased Damage over Time (2 Chaos
+      Orbs), and +18–20% to Chaos, Cold, Fire or Physical Damage over Time
+      Multiplier (4 Chaos Orbs each).
+
+
+      Suffixes for all three: Critical Strike Chance 25–27% or Critical
+      Strike Multiplier 25–28% for 4 Chaos Orbs; 8–10% chance to deal Double
+      Damage for 8. **Attack speed is the weak one:** 8–10% for 6 Orbs of
+      Alteration and 11–13% for 4 Exalted Orbs, against 17–19% rolled.
+
+
+      Three group rules. A bench element is the same group as the rolled
+      prefix of that element. The bench's "+2 to Level of Socketed Support
+      Gems" (4 Exalted Orbs) is the same group as "+# to Level of Socketed
+      Bow Gems", so the two cannot be on one bow. And the bench's Damage
+      over Time Multipliers are a different group from the rolled "+#% to
+      Damage over Time Multiplier", so those two can.
+  - method: finishing
+    note: >-
+      Quality is physical damage on the base, so it matters fully on a
+      physical bow, slightly on an elemental one and not at all on a
+      gem-level one. Sockets are the reverse: the gem prefixes only raise
+      gems **socketed in the bow**, so a gem-level bow is not finished until
+      it has six linked sockets. The bench sets sockets and links at a
+      fixed price when [[Orb of Fusing]]s do not cooperate.
+  - method: essence
+    note: >-
+      Bows have an Essence for each kind. **Anger, Hatred and Wrath**
+      guarantee flat Fire, Cold and Lightning Damage; Screaming gives
+      exactly the Tier 3 range, Shrieking the Tier 2 range, and Deafening
+      sits between Tier 2 and Tier 1. **Contempt** guarantees flat Physical
+      Damage (adds 31–42 to 65–75 at Deafening). **Dread** guarantees gem
+      levels: +1 to Level of Socketed Bow Gems at Screaming, +2 at Shrieking
+      and at Deafening. **Zeal** gives attack speed, 17–18% at Deafening,
+      and **Loathing** Critical Strike Chance, 35–38%.
+
+
+      **Rage, Sorrow and Spite** give a prefix the natural pool does not
+      have: Damage Penetrates 15–16% Fire, Cold or Lightning Resistance at
+      Deafening.
+
+
+      Read the table before using anything else. On a bow, Woe, Anguish,
+      Suffering, Torment, Misery and Scorn all give spell modifiers.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) is for a Magic bow carrying
+      something rare: a top elemental tier, or an additional arrow.
+      **Add a prefix, remove a random suffix** ([[Farric Wolf Alpha]]) suits
+      an elemental bow with an open prefix and no suffixes yet, since nearly
+      two prefix rolls in three are an element.
+  - method: fossil
+    note: >-
+      Fossils matter most for gem-level bows. A [[Faceted Fossil]] makes
+      the two gem prefixes ten times as likely, and the "no" half of two
+      other Fossils deletes the rest of the prefix pool: a
+      [[Corroded Fossil]] removes every Elemental modifier and a
+      [[Metallic Fossil]] every Physical one. The worked example shows what
+      is left.
+
+
+      For elemental bows a [[Prismatic Fossil]] raises Elemental modifiers.
+      In the 3.30 data its multiplier is six, not the usual ten: the three
+      elements go from 64% of prefix rolls to 89%. A [[Metallic Fossil]]
+      alone makes Lightning 80% of prefix rolls and removes the physical
+      prefixes entirely.
+
+
+      Bows have strong Fossil-only modifiers: 80–94% increased Elemental
+      Damage, Attacks with this Weapon Penetrate 9–12% Elemental
+      Resistances, and "+1 to Level of Socketed Dexterity Gems", a suffix
+      the data lists under the Faceted Fossil. Our odds leave Fossil-only
+      modifiers out.
+  - method: harvest
+    note: >-
+      Two suffix reforges are clean on a bow. **Critical** (150 Primal)
+      gives Critical Strike Chance or Critical Strike Multiplier, the only
+      two suffixes with the tag. **Speed** (150 Vivid) gives attack speed or
+      Projectile Speed, in equal shares.
+
+
+      **Fire, Cold and Lightning** (50 Lifeforce each) are worth knowing:
+      on a bow each of those tags sits on exactly one natural modifier, the
+      flat damage prefix of that element. The reforge guarantees the
+      element and leaves the tier to luck, where an Essence fixes the tier.
+      **Physical** is satisfied by any of three prefixes or two leech
+      suffixes, and **Attack** by almost everything.
+  - method: veiled
+    note: >-
+      The veiled prefixes are how most physical bows get their percentage:
+      120–139% increased Physical Damage with a 21–25% chance to Impale,
+      Bleed, Poison or Blind, in the same group as pure increased Physical
+      Damage. For elemental bows: Attacks with this Weapon Penetrate 14–16%
+      Elemental Resistances. Suffixes: 12–14% chance to deal Double Damage,
+      27–30% attack speed while a Rare or Unique enemy is nearby, and
+      +24–28% to Chaos, Fire or Physical Damage over Time Multiplier.
+  - method: fracture
+    note: >-
+      Fracture the modifier no tool can aim at. On an elemental bow an
+      Essence can remake any flat prefix, so the candidates are a Tier 1
+      flat element or, better, an additional-arrows suffix. On a physical
+      bow it is a high percentage prefix, as on a mace.
+  - method: meta
+    note: >-
+      "Prefix Modifiers cannot be changed" and "Suffix Modifiers cannot be
+      changed" cost 4 Divine Orbs and 1 [[Sacred Orb]] on a bow in 3.30.
+      Lock the prefixes when three good ones are done and the suffixes are
+      not. The suffix lock has its own use here: under it, a
+      [[Veiled Chaos Orb]] has to put its veiled modifier on the prefix
+      side.
+  - method: influence
+    note: >-
+      The full table is in the modifier list. The ones crafters reach for:
+      Elder's and Warlord's suffix "Skills fire an additional Projectile"
+      (item level 82); Shaper's prefix "Damage Penetrates 11–12% Elemental
+      Resistances" (83); Hunter's prefix 90–94% increased Chaos Damage over
+      Time and Warlord's 90–94% increased Physical Damage over Time (78),
+      for gem-level bows; and the Crusader and Hunter physical hybrids,
+      65–69% increased Physical Damage with Projectile Speed or Pierce,
+      which share a group with the Accuracy hybrid. An influenced bow
+      cannot be fractured.
+  - method: corruption
+    note: >-
+      A [[Vaal Orb]] can give a bow an implicit of "Bow Attacks fire an
+      additional Arrow" or "Arrows Chain +1 times". It replaces the base
+      implicit, so the bases with no implicit lose nothing. Last step, on a
+      bow you can afford to lose.
+  - method: strands
+    note: "See the Memory Strands section below: they suit elemental bows and do little for gem-level ones."
+memoryStrands: >-
+  An elemental bow has the mace's problem in a milder form: the flat
+  elemental prefixes are the most common thing to roll, and only their top
+  tiers are light. "Vapourising" weighs 126 in a family of 11,536.
+  [[Memory Strands]] cut the bottom tiers from whatever is rolled, so a
+  strand base rolled with [[Orb of Alteration]]s and finished with a
+  [[Regal Orb]] or [[Exalted Orb]] is a sound way to get one or two high
+  elemental prefixes. Each of those orbs spends little, by the data-mined
+  table, and the game shows the cost before you click.
+
+
+  They do much less for a gem-level bow. "+1 to Level of Socketed Gems" has
+  one tier, and strands never make a modifier more likely. Whether they
+  push "+# to Level of Socketed Bow Gems" from its +1 tier to its +2 tier we
+  could not confirm: the player-tested figures are for modifiers with many
+  tiers.
+
+
+  Do not spend a strand base on Essences, which can take up to 80 strands
+  each, or on Fossils, which by player testing ignore them.
+reading:
+  intro: >-
+    Hold Alt over a bow and read the prefixes before anything else. **Gem
+    levels** mean a gem-level bow: ignore its damage. **Increased Physical
+    Damage** means a physical bow: judge it like a mace, by physical damage
+    per second. **Flat fire, cold and lightning** mean an elemental bow:
+    add the three up and multiply by attacks per second. A bow with one
+    prefix of each kind is a bow that nobody was making.
+  prefixes:
+    text: >-
+      The prefix side holds three separate sets, and a finished bow has one
+      of them.
+
+
+      **Elemental:** flat Fire, Cold and Lightning Damage. Three groups, so
+      all three fit, and a full set is the usual goal. Increased Elemental
+      Damage with Attack Skills is a fourth candidate, worth a slot only at
+      a high tier.
+
+
+      **Physical:** pure increased Physical Damage, the hybrid with Accuracy
+      Rating and flat Physical Damage, exactly as on a mace: three groups
+      that stack.
+
+
+      **Gem levels:** "+1 to Level of Socketed Gems" and "+# to Level of
+      Socketed Bow Gems" are two groups, so both fit, for +3 in total. The
+      third prefix comes from the bench or from influence.
+
+
+      The sets compete. On a physical bow each elemental prefix is a wasted
+      slot, and they are two prefix rolls in three. On a gem-level bow
+      everything that is not a gem prefix is wasted.
+    key:
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "The elemental bow's damage. Local: dealt once per attack and multiplied by the bow's attack speed. Each element is 21% of prefix rolls."
+        aim: "T3 of each (ilvl 62–63). T2 needs ilvl 74–75, T1 ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Global, so it competes with the same modifier on other gear. A good fourth choice when one element is missing."
+        aim: "T3, 63–71% (ilvl 60). T1 is 87–100% (ilvl 86)."
+      - mod: "#% increased Physical Damage"
+        why: "The physical bow's main multiplier. Much rarer than on a mace: its good tiers weigh 25 to 100 in a pool of 54,000."
+        aim: "T3, 135–154% (ilvl 60), or the veiled version at 120–139%."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "The second percentage, in its own group, so it sits beside the first or beside the bench's."
+        aim: "T3, 55–64% (ilvl 60). T1 is 75–79% (ilvl 83)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Raises the number the percentages multiply. Wasted on the other two kinds of bow."
+        aim: "T2, adds 30–40 to 63–73 (ilvl 65). T1 needs ilvl 77."
+      - mod: "+# to Level of Socketed Bow Gems"
+        why: "Two tiers, +1 and +2, of equal weight. Only for skills socketed in the bow."
+        aim: "+2 (ilvl 64), or a Shrieking or Deafening Essence of Dread."
+      - mod: "+# to Level of Socketed Gems"
+        why: "One tier. A different group from the bow-gem prefix, so the two add up to +3."
+        aim: "+1 (ilvl 50). About 1 prefix roll in 54."
+  suffixes:
+    text: >-
+      The suffix side is shared by all three bows, and attack speed leads
+      it for every one of them. It is local and multiplies the base's
+      attacks per second; its best tier needs only item level 37; and the
+      bench is poor at it. That combination is particular to bows and
+      wands: **attack speed is easy to roll high and bad to buy.**
+
+
+      After that the kinds part ways. Critical strike builds want Critical
+      Strike Chance and Multiplier, both common and both sold by the bench.
+      Gem-level bows want Damage over Time Multiplier: the rolled general
+      one and the bench's typed one are different groups and stack.
+      Additional arrows are for clearing: one arrow is 1 suffix roll in 60,
+      two arrows 1 in 600 and only at item level 86.
+
+
+      About half the pool is filler: Dexterity, Accuracy, stun duration,
+      Projectile Speed, life and mana on kill.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. The one suffix every bow wants, and the one the bench replaces worst."
+        aim: "T2, 14–16% (ilvl 30). T1 is 17–19% (ilvl 37)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "For builds that crit. Global. No Essence gives it on a bow; a Harvest Critical reforge or the bench does."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Multiplies the base's 5% to 6.7%. For builds that crit."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "Bow Attacks fire # additional Arrows"
+        why: "Clear speed. Nothing aims at it: its only tag is attack."
+        aim: "One arrow (ilvl 70). Two arrows need ilvl 86 and weigh 100."
+      - mod: "+#% to Damage over Time Multiplier"
+        why: "For gem-level bows. A weight of 300 a tier. Stacks with the bench's typed multiplier."
+        aim: "T3, 16–19% (ilvl 68). T1 is 24–26% (ilvl 82)."
+      - mod: "#% chance to deal Double Damage"
+        why: "Not in the natural pool. The bench sells 8–10% and the veiled version is 12–14%."
+approach:
+  principle: >-
+    **Name the bow before the first orb.** Elemental, physical or
+    gem-level: the prefixes wanted, the base, the Essence and the Fossil
+    all follow from that one word, and no tool is right for two of them.
+    Then build the prefix set with the tool made for it, and treat the
+    suffix side the same way for all three: attack speed first.
+  order:
+    - title: "Which bow is it?"
+      text: >-
+        Ask where the skill's damage comes from. **From added elemental
+        damage on the weapon:** elemental. **From the weapon's own physical
+        damage:** physical. **From the skill gem's level**, as with damage
+        over time: gem-level. If you cannot answer, look at how the build
+        guide you follow describes its weapon.
+    - title: "Base and item level for that kind"
+      text: >-
+        Elemental: a fast base, item level 75 or 82. Physical: the highest
+        base damage, item level 77 or 83. Gem-level: any base of item level
+        64 or more, and plan for six links.
+    - title: "The prefix set, with the tool made for it"
+      text: >-
+        Elemental: an Essence of Anger, Hatred or Wrath fixes one element
+        and the lottery, which is two-thirds elemental, supplies the next.
+        Gem-level: an Essence of Dread for +2, or three Fossils for +3.
+        Physical: an Essence of Contempt, then the bench or a veiled prefix
+        for the percentage, because rolling it is a poor bet on a bow.
+    - title: "Protect the prefixes only if they are worth it"
+      text: >-
+        Three good elemental prefixes or a full +3 are worth 4 Divine Orbs
+        and a Sacred Orb. Two average ones are not.
+    - title: "Attack speed, then the build's suffixes"
+      text: >-
+        Attack speed is worth rolling: an Essence of Zeal, or a Speed
+        reforge under a prefix lock. Critical strike modifiers and Damage
+        over Time Multiplier can come from the bench without much loss.
+    - title: "Bench the last slot; sockets for a gem-level bow"
+      text: >-
+        One slot is kept for the bench. On a gem-level bow the sockets and
+        links are part of the craft, not an afterthought.
+  finishing: >-
+    Quality to 20% on a physical bow before you judge it. Six sockets and
+    the links your skill needs. Then a [[Divine Orb]] if the important
+    numbers are low in their ranges: on an elemental bow the flat damage
+    ranges are wide, so the roll inside the tier is worth more than usual.
+
+
+    If the bench slot is unused, use it.
+  stopping: >-
+    **Elemental:** two rolled elements of Tier 4 or better, a benched third
+    and attack speed is a bow for red maps. Three rolled elements at Tier 3
+    is where the cost starts to climb, and Tier 1 on all three is a mirror
+    item. **Gem-level:** +2 from an Essence with a bench multiplier carries
+    a damage over time build a long way; +3 is the next step and the
+    Fossils make it reachable. **Physical:** a veiled or benched percentage
+    with flat Physical Damage and attack speed is a working bow; beyond
+    that, follow the two-handed mace guide, at higher prices.
+
+
+    Stop when the next step costs more than its improvement is worth to
+    you, and decide that before you start.
+special:
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Fossil"
+    where: "A prefix from an Essence of Rage (Fire), Sorrow (Cold) or Spite (Lightning): 11–12% at Screaming, 15–16% at Deafening. Fossil-only versions give 12–15%."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25% chance. Bench: 95–105% with 18–20%, for 8 Chaos Orbs. Versions exist for Bleeding, Poison and Blind. All share a group with pure increased Physical Damage."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "8–10% from the [[Crafting Bench]] for 8 Chaos Orbs. 12–14% as an unveiled suffix."
+  - mod: "+#% to Chaos / Fire / Physical Damage over Time Multiplier"
+    source: "Bench / Veiled"
+    where: "18–20% from the bench for 4 Chaos Orbs (Cold as well), 24–28% unveiled. A different group from the rolled \"+#% to Damage over Time Multiplier\", so a bow can hold both."
+  - mod: "+# to Level of Socketed Support Gems"
+    source: "Bench"
+    where: "+1 for 8 Chaos Orbs, +2 for 4 Exalted Orbs. The same group as \"+# to Level of Socketed Bow Gems\": choose one."
+  - mod: "+1 to Level of Socketed Dexterity Gems"
+    source: "Fossil"
+    where: "A Fossil-only suffix. The game data lists it under the [[Faceted Fossil]]. Most bow skills are Dexterity gems, so on a gem-level bow it is a fourth level."
+  - mod: "#% increased Elemental Damage"
+    source: "Fossil"
+    where: "A Fossil-only prefix, 80–94% at item level 75. The data does not say which Fossil brings it in."
+  - mod: "Skills fire an additional Projectile"
+    source: "Elder or Warlord influence"
+    where: "A suffix at item level 82, with a weight of 500 on Elder bows and 200 on Warlord bows."
+  - mod: "#% increased Chaos Damage over Time"
+    source: "Hunter influence"
+    where: "A Hunter prefix, 90–94% at item level 78, with a weight of 100. Warlord has the same for Physical Damage over Time. The third prefix of a top gem-level bow."
+  - mod: "Bow Attacks fire an additional Arrow (implicit)"
+    source: "Corruption"
+    where: "A [[Vaal Orb]] can replace the implicit with it. \"Arrows Chain +1 times\" comes the same way."
+  - mod: "Trigger a Socketed Spell when you Use a Skill"
+    source: "Bench"
+    where: "A bench suffix for 3 Chaos Orbs, with an 8 second cooldown. It takes a suffix slot and is for builds that socket a utility spell in the bow."
+mistakes:
+  - "**Crafting a bow without naming it.** One elemental prefix, one physical and one gem level is three thirds of three different weapons."
+  - "**Rolling for increased Physical Damage on a bow as you would on a mace.** Tier 3 or better is 1 prefix roll in 311 here. Use a veiled prefix or the bench."
+  - "**Benching \"+2 to Level of Socketed Support Gems\" beside the bow-gem prefix.** They are one group. The bench will refuse, and if you craft it first it blocks the +2 you wanted."
+  - "**Buying attack speed.** The bench's cheap version is 8–10% against 17–19% rolled, and the difference multiplies everything the bow does."
+  - "**Judging a gem-level bow by its damage per second,** or leaving it with four linked sockets. Its damage is the gems in it."
+  - "**Using Woe, Scorn or Misery on a bow.** Those Essences give spell damage, spell critical strike chance and cast speed here."
+  - "**Paying for item level 86 on a gem-level bow.** Everything it needs is open at 64; only Tier 1 Damage over Time Multiplier asks for 82."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, modifier, tier, weight, Essence, Fossil multiplier and bench cost quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on weapons." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes and the beasts they need." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Critical, Speed and element reforges." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

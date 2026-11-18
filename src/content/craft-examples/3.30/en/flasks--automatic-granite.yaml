@@ -1,0 +1,172 @@
+category: flasks
+title: "A Granite Flask that uses itself"
+level: 2
+summary: "Roll the Armour suffix with Alterations, then have the bench add the enchantment that fires the flask every time it is full."
+goal: >-
+  A defensive flask for your first maps that you never have to press. Two
+  tools, each doing what it is good at: **Alterations find the suffix, the
+  bench sells the enchantment.** Along the way you meet the one prefix a
+  utility flask can roll that works against it.
+base: "Granite Flask"
+itemLevel: 68
+baseWhy: >-
+  A Granite Flask lasts 6.0 seconds and holds two uses (60 charges at 30
+  each). Item level 68 is what the first maps drop. It opens "of the
+  Pangolin", 51–55% increased Armour during Effect (item level 58), and the
+  second-best tier of every utility prefix. The best Armour tier, 56–60%,
+  needs item level 84 and is not worth waiting for on a first set of flasks.
+methods: [currency, bench, finishing]
+result:
+  rarity: magic
+  note: "Enchantment: Used when Charges reach full"
+  prefixes:
+    - { text: "22% reduced Charges per use" }
+  suffixes:
+    - { text: "52% increased Armour during Effect" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "30–60" }
+  - { item: "[[Orb of Augmentation]]", amount: "15–30" }
+  - { item: "[[Instilling Orb]]", amount: "5", note: "for the bench" }
+  - { item: "[[Glassblower's Bauble]]", amount: "5 for the bench", note: "more for quality" }
+cost: >-
+  A few dozen Alterations, then a fixed price at the bench: 5
+  [[Instilling Orb]]s and 5 [[Glassblower's Bauble]]s. The Instilling Orbs
+  are the only part you may have to wait for.
+odds: >-
+  At item level 68 one suffix roll is increased Armour during Effect about 1
+  time in 21, by our arithmetic from the weights (4.8% of the suffix pool).
+  Three tiers can roll at this item level and they weigh the same, so 46% or
+  more, the better two, is about 1 in 31. With an Augmentation on every
+  result that has no suffix, each attempt includes exactly one suffix roll:
+  21 attempts on average for any tier, 31 for the better two.
+
+
+  The prefix is one roll among eight families. One of them, about 1 prefix
+  roll in 7, is the one this flask should not keep.
+steps:
+  - title: "A white Granite Flask, item level 58 or more"
+    do: >-
+      Hold Alt over the flask and read the item level. Anything from 58 up
+      can roll 51–55% Armour; the example uses 68.
+    why: >-
+      Item level is the only gate on a flask. Below 58 the suffix stops at
+      46–50%, below 32 at 41–45%.
+    state: { rarity: normal }
+  - title: "Transmutation, and read the suffix first"
+    do: >-
+      Use one [[Orb of Transmutation]] and hold Alt.
+    why: >-
+      On a utility flask the suffix is what you are rolling for, so it is the
+      line to read. This first result has a suffix, and it is the wrong one.
+    state:
+      rarity: magic
+      prefixes: [{ text: "+26 to Maximum Charges" }]
+      suffixes: [{ text: "43% chance to Avoid being Ignited during Effect" }]
+  - title: "Alteration, Augmentation, repeat"
+    do: >-
+      Use an [[Orb of Alteration]]. If the result has no suffix, use an
+      [[Orb of Augmentation]]. Stop when the suffix reads "increased Armour
+      during Effect" at 46% or more.
+    why: >-
+      Every attempt then contains one suffix roll, whether the Alteration
+      supplied it or the Augmentation did. Ignore the prefix completely until
+      the suffix is right.
+    check: >-
+      The name ends in "of the Tortoise" (46–50%) or "of the Pangolin"
+      (51–55%).
+    fail: >-
+      Short of orbs: accept "of the Abalone" (41–45%) as well. That makes any
+      Armour suffix a pass, 1 suffix roll in 21.
+    state:
+      rarity: magic
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "Take a prefix, and know the one to refuse"
+    do: >-
+      If the prefix slot is empty, use an Augmentation. Keep whatever
+      appears, with one exception: **increased Charge Recovery with 25%
+      reduced effect**.
+    why: >-
+      Seven of the eight prefix families make the flask last longer, cost
+      less or refill faster. The eighth buys the largest charge recovery
+      there is with a quarter of the flask's effect, and the effect is why
+      you carry a Granite Flask.
+    fail: >-
+      If the refused prefix arrived, you have a choice. Go back to step 3,
+      which costs on average the same number of attempts again. Or keep it
+      for now: the flask still works, and it is a flask.
+    state:
+      rarity: magic
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "The enchantment, from the bench"
+    do: >-
+      At the [[Crafting Bench]], choose the flask enchantment **Used when
+      Charges reach full**: 5 [[Instilling Orb]]s and 5
+      [[Glassblower's Bauble]]s.
+    why: >-
+      An enchantment is not a prefix or a suffix, so both slots stay as they
+      are. A loose Instilling Orb also adds an automatic-use enchantment, but
+      it does not let you choose among the fifteen conditions. The bench
+      does, and at 5 orbs it is cheaper than fishing.
+
+
+      With this condition the flask fires the moment it is full. What matters
+      from then on is how quickly it earns back the charges one use costs,
+      which is why reduced Charges per use, increased Charge Recovery and
+      increased Duration are the prefixes that suit an automatic flask best,
+      and a bigger tank suits it least.
+    check: >-
+      The enchantment shows on the flask above the two modifiers, and the
+      flask uses itself as soon as it fills.
+    fail: >-
+      If the bench does not list the enchantment, you have not found that
+      recipe yet. Use the flask by hand until you do.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+  - title: "Quality"
+    do: >-
+      Use Glassblower's Baubles on the flask up to 20% quality.
+    why: >-
+      On a utility flask quality lengthens the effect, by long-standing
+      behaviour, and a longer effect is more of the time under the suffix.
+      It comes last because Baubles are also what the bench charges: spend
+      them on a flask you are keeping.
+    state:
+      rarity: magic
+      note: "Enchantment: Used when Charges reach full"
+      prefixes: [{ text: "22% reduced Charges per use" }]
+      suffixes: [{ text: "52% increased Armour during Effect" }]
+variations: >-
+  **Other flasks, same six steps.** A Jade Flask with increased Evasion
+  Rating during Effect has the same tiers at the same item levels. Any
+  utility flask takes the same enchantment.
+
+
+  **A cure that fires by itself.** Roll an immunity suffix instead, for
+  example "Immunity to Freeze and Chill during Effect", and choose the
+  condition that matches it: "Used when you become Frozen" or "Used when you
+  become Chilled". The flask then spends its charges only when the danger is
+  real.
+
+
+  **Buying the suffix.** If the suffix you want is one of the bench's five,
+  such as "Regenerate 3% of Life per second during Effect" for 6 Baubles,
+  turn the craft round: roll for the prefix with the suffix slot left empty,
+  then craft the suffix. The beast example shows that shape of craft.
+
+
+  **Life flasks.** The Instilling Orb's text says "utility flask"; the bench
+  entries in the 3.30 data list life, mana and hybrid flasks too. We have not
+  confirmed which is right in the game, so try it at the bench before you
+  plan a life flask around it.
+mistakes:
+  - "Enchanting before the modifiers are right. Whether a reroll keeps an enchantment is something we did not verify; doing it last means you never need to know."
+  - "Using loose Instilling Orbs one at a time and hoping. If the orb picks by the weights in the data, the condition you want is 1 in 15."
+  - "Keeping the reduced effect prefix because its charge recovery number is the biggest on the screen."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights, the bench cost of the enchantment and the list of conditions. The odds are our arithmetic." }

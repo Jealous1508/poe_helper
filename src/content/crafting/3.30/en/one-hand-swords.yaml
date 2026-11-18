@@ -1,0 +1,546 @@
+name: "One-Handed Swords"
+short: "Two item classes in one category: swords with an accuracy implicit, and thrusting swords with a critical strike implicit and a pool that leans elemental."
+icon: "Jewelled Foil"
+intro: >-
+  "One-handed sword" covers two item classes that craft differently. An
+  ordinary **one-hand sword** has an Accuracy implicit, 5% critical strike
+  chance and needs Strength and Dexterity. A **thrusting sword**, the rapiers
+  and foils, has Critical Strike Multiplier on the implicit, a higher critical
+  strike chance, longer reach, needs only Dexterity, and rolls from its own
+  pool in which elemental damage is heavier.
+
+
+  So the first decision is not which sword but which kind of weapon:
+  physical or elemental, critical strikes or not. That answer picks the
+  class, and the class picks the odds. On a physical weapon the prefixes are
+  the hard side, as on any weapon. On an elemental critical-strike foil it
+  is the other way round: the prefixes come easily and the three suffixes
+  you want compete for three slots.
+basics:
+  itemLevel:
+    text: >-
+      For a **physical** sword the breakpoints are those of every physical
+      weapon: 77 is enough, 83 opens the last tier of the two percentage
+      prefixes.
+
+
+      For an **elemental** sword the numbers are different. The best added
+      Fire, Cold and Lightning Damage needs item level 82, the tier below
+      needs 74 or 75, and the best "increased Elemental Damage with Attack
+      Skills" needs 86. Item level 75 makes a good elemental weapon; 82 is
+      the ceiling for the flat damage, and 86 matters only if you are
+      rolling that one percentage prefix.
+    breakpoints:
+      - ilvl: 46
+        unlocks: "**Levelling.** Tier 4 increased Physical Damage (110–134%) and Tier 4 flat Physical Damage (adds 13–18 to 27–31). Added elemental damage is already past 40 per hit."
+      - ilvl: 60
+        unlocks: "Tier 3 increased Physical Damage (135–154%), Tier 3 hybrid with Accuracy (55–64%), Tier 2 attack speed (23–25%), Tier 3 increased Elemental Damage with Attack Skills (37–42%), and every unveiled modifier."
+      - ilvl: 63
+        unlocks: "Tier 3 of all three added elemental damages: Fire adds 59–81 to 120–140 (from 62), Cold 54–74 to 108–126, Lightning 10–14 to 197–229."
+      - ilvl: 73
+        unlocks: "Tier 1 Critical Strike Chance and Tier 1 Critical Strike Multiplier (both 35–38%). Tier 2 increased Physical Damage (155–169%) and Tier 2 hybrid (65–74%)."
+      - ilvl: 75
+        unlocks: "Tier 2 of all three added elemental damages (Fire and Lightning from 74): Fire adds 74–101 to 150–175. **Enough for a good elemental sword.**"
+      - ilvl: 77
+        unlocks: "Tier 1 attack speed (26–27%) and Tier 1 flat Physical Damage (adds 22–29 to 45–52). **Enough for a good physical sword.**"
+      - ilvl: 82
+        unlocks: "Tier 1 added Fire (89–121 to 180–210), Cold (81–111 to 163–189) and Lightning (15–21 to 296–344) Damage. **The ceiling for flat elemental damage.**"
+      - ilvl: 83
+        unlocks: "Tier 1 increased Physical Damage, \"Merciless\" (170–179%), and Tier 1 hybrid, \"Dictator's\" (75–79%). **The ceiling for a physical sword.**"
+  bases:
+    text: >-
+      There are 55 bases in two pools. The 30 one-hand swords roll from one
+      pool, the 25 thrusting swords from another. Both pools contain the same
+      modifiers at the same tiers; what differs is the **weight of added
+      elemental damage**. Most tiers of added Fire, Cold and Lightning
+      Damage weigh 1,200 on a one-hand sword and 2,000 on a thrusting sword,
+      and the rarer top tiers are heavier in the same proportion.
+
+
+      The effect, by our arithmetic at item level 83: on a one-hand sword
+      elemental damage is 60% of prefix rolls and the three physical prefixes
+      29.5%. On a thrusting sword it is 72% and 21%. A thrusting sword is the
+      better base for an elemental weapon before any currency is spent, and
+      the worse one for a physical weapon: "Merciless" is about 1 prefix roll
+      in 1,970 on a one-hand sword and 1 in 2,760 on a rapier.
+    types:
+      - title: "One-hand swords"
+        pools: [standard]
+        text: >-
+          Twenty-two ordinary bases from Rusted Sword to Midnight Blade. All
+          have 5% critical strike chance and an Accuracy implicit, in one of
+          two forms: "40% increased Global Accuracy Rating" on thirteen of
+          them, or a flat amount that grows with the base, from +45 on the
+          Copper Sword to +475 on the Eternal Sword. They need Strength and
+          Dexterity in roughly equal parts. The top-tier four are Legion
+          Sword, Vaal Blade, Eternal Sword and Midnight Blade.
+      - title: "Thrusting swords: rapiers and foils"
+        pools: [rapier]
+        text: >-
+          Twenty-two ordinary bases from Rusted Spike to Harpy Rapier, plus
+          three Maraketh ones. The implicit is "+25% to Global Critical
+          Strike Multiplier", or +35% on the Thorn, Apex and Harpy Rapiers.
+          Critical strike chance runs from 5.5% to 6.5%, weapon range is 14
+          where a one-hand sword has 11, and the only attribute needed is
+          Dexterity, 212 on the top bases. Their physical damage is lower:
+          the best rapier has 74 base damage per second where the Legion
+          Sword has 91. The top-tier four are Spiraled Foil, Vaal Rapier,
+          Jewelled Foil and Harpy Rapier.
+      - title: "Maraketh swords"
+        text: >-
+          Three in each class. The one-hand swords Hook Sword, Grappler and
+          Tiger Hook have "15% chance to Maim on Hit" (20% on the Tiger Hook)
+          in place of Accuracy. The thrusting swords Smallsword, Courtesan
+          Sword and Dragoon Sword have "15% chance to cause Bleeding on Hit"
+          (20% on the Dragoon Sword) in place of Critical Strike Multiplier,
+          with 6% critical strike chance.
+      - title: "Heist Spiritblades"
+        text: >-
+          Fickle, Capricious and Anarchic Spiritblade, the "experimented"
+          bases from Heist. They are one-hand swords and use that pool, but
+          they have 1.6 attacks per second and 6.5% critical strike chance,
+          the best of both classes. The implicit is "100% of Physical Damage
+          from Hits with this Weapon is Converted to a random Element", so
+          whatever physical damage the weapon has arrives as fire, cold or
+          lightning.
+      - title: "Bases you do not craft on"
+        text: >-
+          The data lists two more one-hand swords. Energy Blade has no stats
+          of its own: it is the weapon the skill of that name conjures.
+          Ghostflame Blade has no implicit, 6.5% critical strike chance and
+          1.55 attacks per second; we could not confirm how it is obtained in
+          3.30, so nothing here recommends it.
+    picks:
+      - base: "Jewelled Foil"
+        for: "Elemental attack builds"
+        why: >-
+          1.6 attacks per second, the fastest a sword gets, on the pool where
+          elemental prefixes are most common, with +25% Critical Strike
+          Multiplier on the implicit. Added elemental damage is not
+          multiplied by the weapon's physical modifiers, only by its speed
+          and critical strikes, so its low physical damage costs nothing.
+      - base: "Vaal Rapier"
+        for: "Physical critical-strike builds"
+        why: >-
+          6.5% base critical strike chance, the highest in the category, with
+          22–87 physical damage at 1.3 attacks per second and +25% Critical
+          Strike Multiplier. Local Critical Strike Chance multiplies that
+          6.5%.
+      - base: "Harpy Rapier"
+        for: "The biggest implicit"
+        why: >-
+          +35% to Global Critical Strike Multiplier, ten more than other
+          rapiers, on 31–72 at 1.4 attacks per second with 5.7% critical
+          strike chance. The implicit is global and cannot be crafted, so it
+          is worth the most to builds that already crit often.
+      - base: "Legion Sword"
+        for: "The highest physical damage"
+        why: >-
+          53–98 at 1.2 attacks per second is the highest base damage per
+          second in the category (90.6), on the pool where physical prefixes
+          are more common. The implicit is 40% increased Global Accuracy
+          Rating. For physical builds that do not rely on critical strikes.
+      - base: "Tiger Hook"
+        for: "Physical builds that want speed and Maim"
+        why: >-
+          37–80 at 1.4 attacks per second with "20% chance to Maim on Hit".
+          Faster than the heavy swords for about a tenth less damage per
+          second (81.9).
+      - base: "Anarchic Spiritblade"
+        for: "Elemental critical strikes on the one-hand sword pool"
+        why: >-
+          1.6 attacks per second **and** 6.5% critical strike chance, which
+          no ordinary base combines. The cost is the pool: elemental prefixes
+          are 60% of rolls here, not 72%, and there is no Critical Strike
+          Multiplier implicit.
+    impact: >-
+      **The pool.** This is the one weapon category of its kind where the
+      base changes the odds. A thrusting sword rolls elemental prefixes more
+      often and physical ones less often than a one-hand sword, at every item
+      level.
+
+
+      **The implicit.** Accuracy on a one-hand sword, Critical Strike
+      Multiplier on a thrusting sword, Maim or Bleeding on the Maraketh
+      ones, conversion on a Spiritblade. A [[Blessed Orb]] rerolls a value
+      that has a range; none of these can be turned into another.
+
+
+      **Critical strike chance and attacks per second.** Both are multiplied
+      by local suffixes. 6.5% against 5% is three-tenths more critical
+      strikes from the same modifiers.
+
+
+      **Physical damage**, which only matters if you are building a physical
+      weapon. An elemental foil ignores it.
+
+
+      **Attributes and reach.** Dexterity alone for a thrusting sword, both
+      attributes for a one-hand sword; weapon range 14 against 11.
+
+
+      And, as with every one-handed weapon, **the other hand**. In a pair,
+      local modifiers count only for the hand that swings and global ones
+      (the rapier implicit, Critical Strike Multiplier suffixes) count on
+      every hit. Beside a shield the sword is all of your weapon damage.
+tools:
+  - method: currency
+    note: >-
+      What plain rolling gives depends on the pool. On a thrusting sword at
+      item level 83, by our arithmetic, a prefix roll is added elemental
+      damage 72% of the time, and one of the top two tiers of some element
+      about 1 time in 26. A physical percentage of Tier 3 or better is about
+      1 in 400 for the pure one and the same again for the hybrid.
+
+
+      On a one-hand sword the same rolls are 60%, about 1 in 31, and about 1
+      in 280. So [[Orb of Alteration]]s make a perfectly good elemental
+      prefix on either class, and a good physical percentage on neither.
+  - method: bench
+    note: >-
+      Both classes share one bench list. For physical swords: increased
+      Physical Damage 40–59% for 4 Orbs of Alteration, 60–79% for 8, 80–99%
+      for 4 Chaos Orbs, 100–129% for 4 Exalted Orbs; flat Physical Damage up
+      to adds 13–17 to 26–30 for 4 Chaos Orbs.
+
+
+      For elemental swords: added Fire or Cold Damage 11–12 to 19–23 for 4
+      Orbs of Transmutation, 22–27 to 42–49 for 2 Orbs of Alchemy, 35–41 to
+      63–73 for 4 Chaos Orbs; added Lightning Damage up to 6–8 to 100–113 for
+      4 Chaos Orbs. Increased Elemental Damage with Attack Skills 15–23% for
+      6 Orbs of Alteration or 24–32% for 4 Orbs of Alchemy. "Attacks with
+      this Weapon Penetrate Elemental Resistances" 6–7% for 4 Orbs of
+      Alchemy, 8–10% for 4 Chaos Orbs, 11–13% for 4 Exalted Orbs.
+
+
+      Suffixes: attack speed 8–10%, 11–15% or 16–20% (6 Orbs of Alteration,
+      2 Chaos Orbs, 4 Exalted Orbs); Critical Strike Chance 25–27% or
+      Critical Strike Multiplier 25–28% for 4 Chaos Orbs each.
+
+
+      A bench element shares a group with the rolled damage of the **same**
+      element, so the bench adds a second or third element, never a second
+      copy. Its best values are well below what rolls: use it for the
+      element you are missing, not for the one you rely on.
+  - method: finishing
+    note: >-
+      Quality raises physical damage, so it matters on a physical sword and
+      does nothing for the added elemental damage of a foil; on an elemental
+      weapon it is the last thing to bother with. One-handed weapons have at
+      most three sockets.
+  - method: essence
+    note: >-
+      Both classes get the same Essence modifiers. **Anger**, **Hatred** and
+      **Wrath** guarantee added Fire, Cold and Lightning Damage. Shrieking
+      equals natural Tier 2 (Wrath: adds 13–17 to 247–286) and Deafening
+      falls just short of Tier 1 (Wrath: 13–19 to 266–310). An Essence is
+      the only tool here that fixes the tier of an elemental prefix.
+
+
+      **Zeal** guarantees attack speed, 28–30% at Deafening against 26–27%
+      for natural Tier 1. **Loathing** guarantees Critical Strike Chance,
+      35–38% at Deafening. **Contempt** guarantees flat Physical Damage, up
+      to adds 20–26 to 40–47.
+
+
+      **Rage**, **Sorrow** and **Spite** give "Damage Penetrates 8% Fire /
+      Cold / Lightning Resistance" at Deafening, which the natural pool does
+      not have.
+  - method: harvest
+    note: >-
+      The elemental reforges are unusually exact on a sword. Added Fire
+      Damage is the only natural modifier with the fire tag, and the same is
+      true of cold and of lightning. So "reforge including a Fire modifier"
+      (50 Wild Lifeforce; Cold is 50 Vivid, Lightning 50 Primal) always puts
+      that element's added damage on the item. It does not choose the tier.
+
+
+      **Critical** (150 Primal) guarantees Critical Strike Chance or
+      Critical Strike Multiplier, the only two modifiers with that tag.
+      **Speed** (150 Vivid) guarantees attack speed. With the prefixes
+      locked, these two are how a crit sword's suffixes are rebuilt.
+  - method: fossil
+    note: >-
+      Fossils can aim at both sides of a sword at once. A
+      [[Shuddering Fossil]] multiplies attack speed by ten and a
+      [[Deft Fossil]] does the same for the two critical strike suffixes
+      while removing Strength and Dexterity: together, by our arithmetic,
+      about 88% of suffix rolls are one of the three suffixes a crit sword
+      wants.
+
+
+      For the prefixes add a [[Jagged Fossil]] (physical) or a
+      [[Prismatic Fossil]] (elemental, six times the weight, and no bleed or
+      poison modifiers). On a thrusting sword a Jagged Fossil reaches 73%
+      physical prefixes, not the 81% it reaches on a one-hand sword: the
+      heavier elemental weights are still in the pool.
+
+
+      Fossil-only prefixes for elemental swords include 40–49% increased
+      Elemental Damage and "Attacks with this Weapon Penetrate 9–12%
+      Elemental Resistances". Our calculator leaves Fossil-only modifiers
+      out, so treat every Fossil share here as slightly high.
+  - method: beast
+    note: >-
+      An **Imprint** ([[Craicic Croaker]]) before a [[Regal Orb]] is worth
+      it when the Magic sword holds something rare: on this category that
+      means a top-tier elemental prefix, or any good physical percentage.
+      **Add a prefix, remove a random suffix** ([[Farric Wolf Alpha]]) is a
+      good bet on an elemental foil with no suffixes, where seven prefixes
+      in ten are useful, and a poor one on a physical sword.
+  - method: veiled
+    note: >-
+      For physical swords: 120–139% increased Physical Damage with a 21–25%
+      chance to Bleed, Impale, Poison or Blind, in the same group as pure
+      increased Physical Damage. For elemental swords: "Attacks with this
+      Weapon Penetrate 14–16% Elemental Resistances". For crit swords, two
+      suffixes with groups of their own that stack with the ordinary ones:
+      +36–40% Critical Strike Multiplier and 12–15% attack speed while a
+      Rare or Unique enemy is within 6 metres.
+  - method: meta
+    note: >-
+      4 Divine Orbs and 1 [[Sacred Orb]] for either full lock on a weapon in
+      3.30. On a sword the question is which side to lock. Physical: lock the
+      prefixes, as on any weapon. Elemental crit: the suffixes are the side
+      that is hard to rebuild, and elemental prefixes can be reforged under a
+      suffix lock with a Harvest element.
+
+
+      Remember what ignores the lock. An Essence rerolls a locked item as if
+      the lock were not there, by community testing, so all Essence work
+      comes before the first lock.
+  - method: fracture
+    note: >-
+      On a physical sword, a fractured high percentage prefix. On an
+      elemental one, a fractured Tier 1 added damage, which is about 1 prefix
+      roll in 380 on a thrusting sword. A fractured modifier and an Essence
+      together put two certain modifiers on every reroll.
+  - method: influence
+    note: >-
+      For elemental swords: Hunter's "Attacks with this Weapon Penetrate
+      10–12% Elemental Resistances", and the single-element penetration
+      prefixes of Crusader (lightning), Warlord (fire) and Redeemer (cold),
+      13–15% each at item level 78. Those three also have a hybrid that adds
+      a little damage of their element with 5–7% penetration; it is its own
+      group and sits beside the ordinary added damage.
+
+
+      For physical swords: Shaper's "Gain 18–20% of Physical Damage as Extra
+      Fire Damage" and the same for Cold, two separate groups. An influenced
+      sword cannot be fractured.
+  - method: corruption
+    note: >-
+      Swords have the longest list of corruption implicits of the one-handed
+      weapons. Besides the usual attack speed and physical damage, the data
+      lists 14–18% increased Critical Strike Chance, "Damage Penetrates
+      8–10% Elemental Resistances", "Skills fire an additional Projectile"
+      and Resolute Technique. A corruption implicit **replaces** the base's
+      own, so on a rapier you are trading away the Critical Strike
+      Multiplier.
+  - method: strands
+    note: "See the Memory Strands section below: an elemental foil is one of the best uses for them."
+memoryStrands: >-
+  An elemental thrusting sword is close to the ideal case for
+  [[Memory Strands]]. Strands raise the tier of whatever rolls and do nothing
+  else, and on a foil what rolls is already right seven times in ten. The
+  only thing wrong with a typical elemental prefix is its tier: each element
+  has ten tiers and nearly all the weight sits in the lower seven.
+
+
+  So the craft that suits them is the plain one. Put strands on a white foil
+  of item level 82 or more with an [[Orb of Remembrance]], roll the prefix
+  with [[Orb of Alteration]]s (at most 8 strands each by the data-mined
+  table), and add to it with a [[Regal Orb]] and [[Exalted Orb]]s (at most 16
+  each). The game shows the cost before each orb.
+
+
+  A physical sword gains less, for the reason an axe does: most of its prefix
+  rolls are the wrong family, and strands cannot change the family.
+
+
+  What wastes them: Essences, which can spend 80 strands in one use. And
+  Harvest reforges and Fossils, which are the usual tools for a sword, neither
+  spend strands nor benefit from them, by player testing. If the plan is a
+  Harvest element or a three-Fossil Resonator, an ordinary base does the same
+  job.
+reading:
+  intro: >-
+    Read the base line first: is it a thrusting sword, and what is the
+    implicit? Then ask which weapon this is trying to be. A sword with two
+    elemental prefixes and a physical one is not a weak physical sword or a
+    weak elemental sword; it is one of them with a wasted slot, and you need
+    to know which.
+  prefixes:
+    text: >-
+      **Physical swords** want the three physical families, which stack
+      because they are three groups: pure increased Physical Damage, the
+      hybrid with Accuracy Rating, flat Physical Damage. Everything
+      elemental is in the way.
+
+
+      **Elemental swords** have four prefixes to choose three from: added
+      Fire, Cold and Lightning Damage, and increased Elemental Damage with
+      Attack Skills. The three added damages are different groups, so all
+      three fit on one sword. None of them is local in the way physical
+      damage is: they are not multiplied by the weapon's physical modifiers
+      or its quality. They are multiplied by its attack speed and its
+      critical strikes, which is why the base and the suffixes carry an
+      elemental sword.
+
+
+      One element is rarely enough reason to turn down another. Unless the
+      build converts or scales a single element, any added element is
+      damage.
+    key:
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "The whole damage of an elemental sword. Three groups, so three can sit together. Common in every tier but the top two."
+        aim: "T3 (ilvl 62–63): fire adds 59–81 to 120–140. T1 needs ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "The fourth elemental prefix: a multiplier for the character, not for this weapon. Rare (2–4% of prefix rolls), and its top tier needs the highest item level in the category."
+        aim: "T3, 37–42% (ilvl 60). T1 is 51–59% (ilvl 86)."
+      - mod: "#% increased Physical Damage"
+        why: "The main multiplier of a physical sword, and the rarest good prefix here: under 8% of rolls on a one-hand sword, under 6% on a thrusting sword."
+        aim: "T4, 110–134% (ilvl 46), or the unveiled 120–139%. T1 is 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "The same multiplier in its own group. It sits beside the pure one and beside a bench percentage."
+        aim: "T3, 55–64% (ilvl 60)."
+      - mod: "Adds # to # Physical Damage"
+        why: "The base the percentages multiply. The most common physical prefix on both pools."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65)."
+  suffixes:
+    text: >-
+      A sword that crits wants three suffixes and has three slots: attack
+      speed, Critical Strike Chance and Critical Strike Multiplier. Together
+      they are about a third of suffix rolls, and all three at once from
+      plain rolling is rare. This is the side to plan for on a crit sword,
+      and the reason there is seldom a suffix slot left for the bench's
+      convenience.
+
+
+      The rapier implicit softens this. +25% or +35% Critical Strike
+      Multiplier is already on the base, so a thrusting sword that misses
+      the multiplier suffix has lost less than a one-hand sword would.
+
+
+      A sword that does not crit has an easy suffix side: attack speed, then
+      whatever the build lacks.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. It multiplies everything the weapon does, physical or elemental. The first suffix on any sword."
+        aim: "T2, 23–25% (ilvl 60). T1 is 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local: it multiplies the base's 5% to 6.5%. Worth more on the bases with more to multiply."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global. It adds to the rapier implicit and, in a pair, counts for both hands."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 73)."
+      - mod: "+# to Accuracy Rating"
+        why: "Local to this weapon. A one-hand sword's implicit already helps here; a rapier has none, and a build that misses is not critting."
+      - mod: "+# to Dexterity"
+        why: "Useful filler. A top thrusting sword needs 212 Dexterity."
+approach:
+  principle: >-
+    **Name the weapon before you choose the base.** Physical or elemental,
+    crit or not: that decides the class, the class decides the pool, and the
+    pool decides which side is hard. On a physical sword, get the prefixes
+    first and never give one up for a suffix. On an elemental crit sword,
+    the prefixes are the easy side; build the plan around the suffixes.
+  order:
+    - title: "Physical or elemental, crit or not"
+      text: >-
+        Four answers, four different crafts. Physical without crit is a
+        mace with an Accuracy implicit. Physical with crit needs both sides
+        and is the hardest item in the category. Elemental needs attack
+        speed and, usually, crit.
+    - title: "Choose the class, then the base"
+      text: >-
+        Elemental or crit: a thrusting sword, for the pool and the implicit.
+        Physical without crit: a one-hand sword, for the damage and the
+        pool. Then the base for speed and critical strike chance, and the
+        item level for the tiers you named.
+    - title: "Find the hard side"
+      text: >-
+        Count the modifiers you need on each side and how often each rolls.
+        Three physical prefixes: hard. Three elemental prefixes: easy.
+        Attack speed alone: easy. Attack speed with both critical strike
+        suffixes: hard.
+    - title: "Do the hard side first, with a tool that aims at it"
+      text: >-
+        Physical prefixes: a Jagged Fossil, a veiled prefix, or a fractured
+        base. Crit suffixes: Shuddering and Deft Fossils, or a Harvest
+        Critical reforge. An elemental prefix at a chosen tier: an Essence.
+    - title: "Protect it only if the lock is cheaper than rolling again"
+      text: >-
+        Lock the finished side and reroll the other with a tool that
+        respects the lock: Harvest, or a Veiled Chaos Orb. Never an
+        Essence.
+    - title: "Spend the bench slot on the side that ran out of luck"
+      text: >-
+        On a crit sword that is nearly always a suffix. Decide which of the
+        three suffixes the bench will supply before you start, and do not
+        chase that one.
+  finishing: >-
+    On a physical sword: quality to 20%, sockets, then a [[Divine Orb]] if
+    the main percentage is low in its range. On an elemental sword quality
+    can wait and the Divine Orb matters more, because the ranges of added
+    elemental damage are wide: Tier 1 lightning runs from 296 to 344 at the
+    top end.
+
+
+    Last, look at the implicit. A [[Blessed Orb]] only helps where the
+    implicit has a range, and most sword implicits are fixed numbers.
+  stopping: >-
+    An elemental foil with two added elements at Tier 4 or better and attack
+    speed is a real weapon for yellow maps. Three elements at Tier 3 with
+    attack speed and one critical strike suffix carries a build through red
+    maps. Tier 1 on all three with all three suffixes is a mirror-tier item
+    and not a goal.
+
+
+    For a physical crit sword, lower the bar by a slot: two rolled physical
+    prefixes, a bench percentage, attack speed and one critical strike
+    suffix is a strong weapon. The sixth good modifier costs more than the
+    first five together.
+special:
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Base implicit"
+    where: "The implicit of every ordinary thrusting sword: +25%, or +35% on the Thorn, Apex and Harpy Rapiers. Not craftable; a corruption implicit would replace it."
+  - mod: "100% of Physical Damage from Hits with this Weapon is Converted to a random Element"
+    source: "Base implicit"
+    where: "The implicit of the three Heist Spiritblades. It turns the weapon's physical prefixes into elemental damage."
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Fossil"
+    where: "Essences of Rage (fire), Sorrow (cold) and Spite (lightning): 6% at Screaming, 8% at Deafening. A Fossil-only prefix gives 5–7% of one element."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Bench / Veiled / Hunter influence"
+    where: "Bench: 6–7%, 8–10% or 11–13% (4 Orbs of Alchemy, 4 Chaos Orbs, 4 Exalted Orbs). Unveiled: 14–16%. Hunter prefix: 10–12% at item level 78. A Fossil-only version gives 9–12%."
+  - mod: "#% increased Elemental Damage"
+    source: "Fossil"
+    where: "A Fossil-only prefix, 40–49% at item level 75. It is a different group from \"increased Elemental Damage with Attack Skills\", so both can be on one sword. A [[Prismatic Fossil]] multiplies its weight."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveiled: 120–139% with 21–25%. Bench: up to 95–105% with 18–20% for 8 Chaos Orbs. Versions for Bleeding, Poison and Blind. All share a group with pure increased Physical Damage."
+  - mod: "Gain #% of Physical Damage as Extra Fire Damage"
+    source: "Shaper / Warlord influence"
+    where: "A prefix, 18–20% at the top: Shaper at item level 80, Warlord at 78. Shaper and Redeemer have the same for Cold. Fire and Cold are separate groups."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% from the [[Crafting Bench]] for 8 Chaos Orbs; 6–7% unveiled. The usual third suffix for a sword that does not crit."
+  - mod: "Skills fire an additional Projectile"
+    source: "Corruption"
+    where: "A corruption implicit the data lists for swords, with Resolute Technique, 14–18% increased Critical Strike Chance and \"Damage Penetrates 8–10% Elemental Resistances\". A [[Vaal Orb]] gives one at random, if it gives one at all, and replaces the base's implicit."
+mistakes:
+  - "**Crafting a physical weapon on a thrusting sword without knowing the price.** The pool is 21% physical prefixes against 29.5% on a one-hand sword, and the base damage is a fifth lower. Do it for the critical strikes or not at all."
+  - "**Putting whetstones and a physical bench prefix on an elemental foil.** Added elemental damage is not multiplied by either."
+  - "**Benching the element you already rolled.** Same group. The bench adds a different element."
+  - "**Using an Essence on a locked sword.** It ignores the lock, by community testing, and rerolls both sides."
+  - "**Chasing all three crit suffixes with plain rerolls.** Together they are a third of suffix rolls; all three at once needs Fossils or a plan with the bench in it."
+  - "**Vaaling a rapier for an implicit and forgetting the one it has.** The corruption implicit replaces the Critical Strike Multiplier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Both pools with their weights, every base, tier, Essence, Fossil multiplier and bench cost. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on weapons." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The element, Critical and Speed reforges and their Lifeforce costs." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and add-a-prefix recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essences reported to ignore the protection modifiers." }

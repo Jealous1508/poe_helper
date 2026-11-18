@@ -1,0 +1,148 @@
+category: jewels
+title: "Hai dòng trúng trên jewel Magic, rồi Regal Orb"
+level: 2
+summary: "Kiên trì chờ một jewel Magic có prefix mong muốn và suffix mong muốn, và biết cái thứ hai tốn bao nhiêu trước khi trả tiền cho nó."
+goal: >-
+  Một jewel cho caster với hai modifier damage cộng dồn được, đã thành Rare và
+  còn chỗ để lớn. Bài học là phép tính của ô thứ hai: **một dòng trúng thì rẻ,
+  hai dòng trên cùng một jewel tốn gấp khoảng mười lần**, và biết trước điều
+  đó là thứ giữ bạn khỏi bỏ cuộc quá sớm hoặc roll mãi không thôi.
+base: "Cobalt Jewel"
+itemLevel: 68
+baseWhy: >-
+  Chỉ Cobalt roll được Spell Damage và Cast Speed, nên một jewel cho spell là
+  Cobalt, bất kể trong danh sách còn gì khác. Item level không liên quan, như
+  trên mọi jewel thường.
+
+
+  Ví dụ này dành cho một spell fire, cast với shield ở tay phụ. Với staff hoặc
+  hai wand, hãy đổi "while holding a Shield" lấy dòng tương ứng.
+methods: [currency]
+result:
+  prefixes:
+    - { text: "15% increased Spell Damage while holding a Shield" }
+  suffixes:
+    - { text: "11% increased Spell Damage" }
+    - { text: "+13% to Lightning Resistance" }
+needs:
+  - { item: "Một Cobalt Jewel", amount: "1", note: "item level nào, rarity nào cũng được" }
+  - { item: "[[Orb of Alteration]]", amount: "100–200" }
+  - { item: "[[Orb of Augmentation]]", amount: "10–20" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  [[Orb of Alteration]], cỡ một vài trăm cái trong một lượt trung bình. Một
+  [[Regal Orb]]. Đây là giá chuẩn của một jewel hai dòng trúng và là lý do
+  những cái thông thường mua rất rẻ: hãy cân nhắc xem danh sách của bạn có đủ
+  khác thường để đáng tự roll hay không.
+odds: >-
+  Danh sách prefix bên dưới chiếm 12.3% weight prefix của Cobalt và danh sách
+  suffix chiếm 9.8% weight suffix của nó, theo phép tính của chúng tôi. Cứ 8
+  lần roll prefix thì một lần trúng, và cứ 10 lần roll suffix thì một lần.
+
+
+  Cả hai trên cùng một jewel Magic là hai con số đó nhân với nhau: khoảng
+  1.2%, 1 trên 83 jewel trong số những cái roll ra cả hai ô. Alteration không
+  phải lúc nào cũng roll cả hai ô, đó là lý do ngân sách lớn hơn 83.
+steps:
+  - title: "Viết cả hai cột và gạch những chỗ đụng nhau"
+    do: >-
+      **Prefix:** increased Spell Damage while holding a Shield, increased
+      Cast Speed while holding a Shield, increased Fire Damage, increased
+      Cast Speed with Fire Skills, increased maximum Life. **Suffix:**
+      increased Spell Damage, increased Cast Speed, increased Area Damage,
+      increased Damage.
+    why: >-
+      Kiểm các group trước khi roll. "Spell Damage while holding a Shield" và
+      "Spell Damage" thuần là hai group khác nhau, nên chúng cộng dồn; cặp đó
+      là trái tim của jewel này. Nhưng Spell Damage thuần và increased Damage
+      thuần lại là **một** group, nên chúng là hai lựa chọn thay nhau, không
+      phải một cặp. Cũng group đó chứa prefix "Minions deal increased
+      Damage": jewel có prefix ấy thì không bao giờ nhận được suffix Spell
+      Damage.
+    check: >-
+      Hai dòng cùng một group chỉ tính một lần. Nếu danh sách của bạn trông
+      vào cả hai, nó ngắn hơn vẻ ngoài.
+  - title: "Alteration tới dòng trúng đầu tiên"
+    do: >-
+      Dùng [[Orb of Alteration]] tới khi một trong hai phía ra một dòng trong
+      danh sách.
+    why: >-
+      Phần này nhanh: khoảng 1 trên 8 lần roll prefix, hoặc 1 trên 10 lần
+      roll suffix. Phần lớn trường hợp, phía kia sẽ chứa thứ bạn không dùng,
+      như ở đây.
+    state:
+      rarity: magic
+      prefixes: [{ text: "15% increased Spell Damage while holding a Shield" }]
+      suffixes: [{ text: "13% increased Mana Cost Efficiency" }]
+  - title: "Quyết định: Regal ngay, hay roll tiếp"
+    do: >-
+      Với một dòng trúng và một modifier bạn không dùng, hãy chọn. **Regal
+      ngay** nếu bạn muốn có jewel hôm nay: bạn giữ dòng trúng và nhận một
+      lần roll ngẫu nhiên cầu dòng thứ hai. **Roll tiếp** nếu bạn đã định làm
+      một jewel hai dòng trúng: dùng Alteration kế tiếp và mất cái này.
+    why: >-
+      Không có cách nào giữ prefix mà chỉ roll lại suffix. Một Alteration
+      roll lại cả hai, và một [[Orb of Annulment]] trên jewel Magic gỡ ngẫu
+      nhiên một trong hai. Vậy nên cái giá của dòng trúng thứ hai là bỏ đi
+      những dòng trúng đầu, hết lần này tới lần khác, tới khi có một dòng ra
+      có đôi có cặp.
+    check: >-
+      Trường hợp duy nhất không tốn gì: trúng ở một phía và **phía kia
+      trống**. Dùng một [[Orb of Augmentation]] trước khi quyết định. Đó là 1
+      trên 10 cơ hội ra cả cặp với giá một orb rẻ.
+  - title: "Roll tới khi cả hai phía nằm trong danh sách"
+    do: >-
+      Cứ tiếp tục. Augment mọi jewel ra dòng trúng mà còn một phía trống.
+      Dừng khi cả prefix lẫn suffix đều từ danh sách.
+    why: >-
+      Theo phép tính ở trên, đây là khoảng 1 trên 83 jewel hai modifier. Đặt
+      ngân sách trước khi bắt đầu, và nếu nó cạn, hãy Regal jewel một dòng
+      trúng tốt nhất bạn thấy kế tiếp. Đó không phải thất bại. Đó là jewel
+      của ví dụ đầu tiên.
+    state:
+      rarity: magic
+      prefixes: [{ text: "15% increased Spell Damage while holding a Shield" }]
+      suffixes: [{ text: "11% increased Spell Damage" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]] và đọc modifier thứ ba.
+    why: >-
+      Hai dòng trúng được giữ. Cái thứ ba là một lần roll từ những gì còn
+      vừa. Theo phép tính của chúng tôi, cứ khoảng mười hai Regal thì một cái
+      thêm dòng trúng thứ ba từ danh sách này, nếu prefix và suffix có khả
+      năng được thêm gần ngang nhau, điều mà kích cỡ tương đương của hai pool
+      gợi ý và không nguồn chính thức nào khẳng định. Ở đây nó thêm Lightning
+      Resistance, thứ không nằm trong danh sách mà cũng chẳng vô dụng.
+    fail: >-
+      Nó thêm một modifier bạn sẽ không bao giờ dùng. Jewel vẫn là jewel hai
+      dòng trúng với một ô trống. Đừng cố gỡ dòng thứ ba: một
+      [[Orb of Annulment]] lấy ngẫu nhiên một trong ba, nên khả năng nó gỡ
+      mất một dòng trúng cao gấp đôi khả năng gỡ đồ lấp chỗ.
+    state:
+      prefixes:
+        - { text: "15% increased Spell Damage while holding a Shield" }
+      suffixes:
+        - { text: "11% increased Spell Damage" }
+        - { text: "+13% to Lightning Resistance" }
+variations: >-
+  **Sao không dùng Alchemy và Chaos Orb?** Một [[Chaos Orb]] roll tới bốn
+  modifier cùng lúc từ cùng pool đó, và bạn không dừng được đúng lúc hai cái
+  trong số chúng đã đúng. Alteration tốn ít hơn cho mỗi lần ngó và cho bạn
+  dừng đúng ngay chỗ đó.
+
+
+  **Một jewel đáng bảo vệ.** Nếu danh sách của bạn ngắn và jewel Magic tốn vài
+  trăm Alteration, đừng Regal nó khi chưa có gì che chắn. Ví dụ kế tiếp dùng
+  một Imprint để Regal Orb lặp lại được.
+
+
+  **Prefix trống.** Jewel hoàn chỉnh còn một ô prefix trống. Một
+  [[Exalted Orb]] vào đó là một lần roll miễn phí cầu một prefix trúng, khoảng
+  1 trên 9 với danh sách này, sau khi đã trừ các group đang có trên jewel.
+mistakes:
+  - "Ghép hai dòng cùng group trong danh sách rồi thắc mắc sao chúng không bao giờ ra cùng nhau."
+  - "Dùng Annulment để dọn phía tệ của một jewel Magic. Đó là một lần tung đồng xu tốn hơn cả số Alteration nó tiết kiệm."
+  - "Roll mà không có ngân sách. Quá vài trăm Alteration, mua jewel thường là lần craft rẻ hơn."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Pool của Cobalt Jewel, weight của nó và các group modifier. Xác suất là phép tính của chúng tôi." }

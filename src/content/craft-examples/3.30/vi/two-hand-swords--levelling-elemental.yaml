@@ -1,0 +1,155 @@
+category: two-hand-swords
+title: "Một cây sword leveling, và cách định giá một prefix"
+level: 1
+summary: "Trước khi roll, hãy tính xem mỗi prefix sẽ cộng bao nhiêu vào cú đánh của cây sword này. Trên một cây sword leveling, đáp án là added elemental damage, cũng chính là roll mà pool cho ra thường xuyên nhất."
+goal: >-
+  Một cây sword cho đoạn giữa campaign từ một nắm Alteration. Item không quan
+  trọng bằng phép tính bạn làm trước orb đầu tiên: **modifier này sẽ cộng bao
+  nhiêu vào base này?** Một phần trăm đáng giá bằng thứ nó nhân lên. Một
+  lượng flat đáng giá như nhau trên mọi base. So hai cái là bạn biết nên roll
+  tìm gì, ở đây và trên mọi weapon về sau.
+base: "Highland Blade"
+itemLevel: 44
+baseWhy: >-
+  Highland Blade dùng được ở level 44, đánh 45–84 với 1.35 attack mỗi giây,
+  và có +305 to Accuracy Rating làm implicit, nghĩa là bạn có thể quên chuyện
+  accuracy trong lúc leveling. Item level 43 mở Tier 5 của cả ba loại added
+  elemental damage; giữ Alt để kiểm xem cây của bạn có ít nhất mức đó không.
+
+
+  Bất kỳ cây sword hai tay trắng nào ngang level của bạn cũng được. Hãy làm
+  lại phép tính với các con số của nó.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["+305 to Accuracy Rating"]
+  prefixes:
+    - { text: "Adds 13 to 229 Lightning Damage" }
+    - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+    - { text: "Adds 42 to 79 Fire Damage", how: crafted }
+  suffixes:
+    - { text: "+27 to Dexterity" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "10–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "cho bench" }
+cost: >-
+  Mười tới mười lăm [[Orb of Alteration]], một [[Regal Orb]] và 2
+  [[Orb of Alchemy]] ở bench. Rẻ hơn cùng lần craft đó trên mace, vì bạn đang
+  roll tìm thứ phổ biến.
+odds: >-
+  Ở item level 44, theo phép tính của chúng tôi từ weight, sáu trên mười lần
+  roll prefix trên sword là added fire, cold hoặc lightning damage, và một
+  trên năm lần roll prefix là tier tốt nhất hoặc tốt nhì của một trong số đó
+  mà item level này cho phép. Không phải Alteration nào cũng roll ra prefix,
+  nên hãy tính mười tới mười lăm cái.
+steps:
+  - title: "Làm phép tính trước"
+    do: >-
+      Viết ra cú đánh của cây sword: 45–84, trung bình khoảng 64. Rồi định
+      giá các prefix tốt nhất mà item level này roll được. Increased Physical
+      Damage ở đây cao nhất là 85–109%: thêm khoảng 62 damage. Added
+      lightning damage ở tier tốt nhất tại đây là adds 11–14 to 208–242:
+      trung bình khoảng 119. Fire, adds 63–85 to 128–148: khoảng 106. Cold,
+      adds 57–77 to 114–132: khoảng 95.
+    why: >-
+      Increased Physical Damage là local. Nó nhân base, nên trên một base 64
+      thì ngay cả 100% cũng chỉ là 64. Added elemental damage là cùng một con
+      số trên Highland Blade cũng như trên cây sword tốt nhất game. Sword có
+      damage gốc thấp hơn axe hay maul, nên prefix flat thắng ở đây với
+      khoảng cách lớn hơn so với ở đó.
+    check: >-
+      Nói cho sòng phẳng, phép tính này có hai giới hạn. Quality nâng phía physical: ở
+      20%, cái phần trăm đáng giá khoảng 75, vẫn ít hơn. Và elemental damage
+      bị resistance của monster giảm, còn physical damage thì bị armour của
+      nó giảm. Không điều nào thay đổi đáp án trong lúc leveling.
+  - title: "Quality, Transmutation, Alteration"
+    do: >-
+      Đưa cây sword trắng lên 20% quality, dùng một [[Orb of Transmutation]],
+      rồi tới [[Orb of Alteration]], từng cái một. Dừng khi prefix là
+      **added fire, cold hoặc lightning damage** có con số lớn hơn đạt ít
+      nhất 91 với fire, 81 với cold hoặc 148 với lightning.
+    why: >-
+      Các ngưỡng đó là hai tier tốt nhất mà item level này cho phép. Cây
+      sword vẫn gây cả physical damage của chính nó, đó là lý do quality
+      không bị phí. Bạn đang roll tìm họ phổ biến nhất của pool, nên việc này
+      đi nhanh.
+    check: >-
+      Prefix ghi "Adds … to … Fire, Cold or Lightning Damage" và không nói gì
+      về spell. Kệ suffix.
+    fail: >-
+      Thiếu Alteration: nhận tier tốt thứ ba. Nó vẫn nhiều hơn mức mà phần
+      trăm physical tốt nhất cộng được.
+    state:
+      rarity: magic
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes: [{ text: "Adds 13 to 229 Lightning Damage" }]
+  - title: "Augmentation"
+    do: >-
+      Nếu cây sword chưa có suffix, dùng một [[Orb of Augmentation]].
+    why: >-
+      Nó lấp ô trống của item Magic và không đụng tới thứ gì khác. Một trên
+      ba lần roll suffix trên sword là attack speed hoặc một modifier
+      critical strike. Lần này thì không.
+    state:
+      rarity: magic
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes: [{ text: "Adds 13 to 229 Lightning Damage" }]
+      suffixes: [{ text: "+27 to Dexterity" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]] rồi đọc xem nó thêm cái gì và ở phía nào.
+    why: >-
+      Cây sword thành Rare, giữ cả hai modifier và thêm một cái nữa. Ở đây nó
+      thêm hybrid physical kèm Accuracy: một prefix damage thứ hai, nhỏ hơn
+      cái đầu vì lý do bước 1 đã nêu.
+    state:
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes:
+        - { text: "Adds 13 to 229 Lightning Damage" }
+        - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+      suffixes: [{ text: "+27 to Dexterity" }]
+  - title: "Định giá bench theo cùng cách"
+    do: >-
+      Làm phép tính cho những gì [[Crafting Bench]] có cho cây sword này. Một
+      element thứ hai, adds 38–46 to 73–85 fire hoặc cold damage giá 2
+      [[Orb of Alchemy]]: khoảng 60. Increased Physical Damage 60–79% giá 8
+      Orb of Alteration: khoảng 45. Attack speed 8–10% giá 6 Orb of
+      Alteration: một phần mười của tất cả, khoảng 20 ở đây. Craft cái lớn
+      nhất còn vừa: element thứ hai.
+    why: >-
+      Mỗi element là một group riêng, nên fire nằm cạnh lightning đã roll ra.
+      Bench sẽ từ chối một modifier lightning thứ hai. Attack speed trở thành
+      craft tốt hơn về sau, khi cú đánh nó nhân lên đã lớn hơn.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Bậc bên dưới, adds 19–21 to 32–41 giá 4 Orb of Transmutation, đáng
+      giá khoảng 28.
+    state:
+      implicits: ["+305 to Accuracy Rating"]
+      prefixes:
+        - { text: "Adds 13 to 229 Lightning Damage" }
+        - { text: "37% increased Physical Damage / +84 to Accuracy Rating" }
+        - { text: "Adds 42 to 79 Fire Damage", how: crafted }
+      suffixes: [{ text: "+27 to Dexterity" }]
+variations: >-
+  **Vì sao đáp án thay đổi về sau.** Làm cùng phép tính đó trên một cây Vaal
+  Greatsword item level 83, 68–142: "Merciless" ở 175% cộng khoảng 184, và
+  added lightning damage tốt nhất khoảng 313. Trên giấy thì flat vẫn thắng.
+  Nhưng tới lúc đó passive tree, gem và các món gear khác của bạn nhân một
+  loại damage mà không nhân loại kia, và phép tính phải gộp cả chúng vào.
+  Trong lúc leveling, chúng còn nhỏ và cây weapon gần như là tất cả.
+
+
+  **Trên axe.** Cùng lần craft này vẫn dùng được. Khoảng cách hẹp hơn vì cú
+  đánh gốc lớn hơn: trên một cây Jasper Chopper level 37, phần trăm physical
+  tốt nhất và added fire damage tốt nhất đáng giá gần như nhau.
+mistakes:
+  - "Roll tìm increased Physical Damage vì các hướng dẫn về weapon nói vậy. Chúng được viết cho base endgame và build endgame."
+  - "Bench thêm một bản thứ hai của element bạn đã roll ra. Một group, một modifier: hãy chọn element khác."
+  - "Giữ một modifier \"Adds … Lightning Damage to Spells\". Sword không roll ra nó một cách tự nhiên, nhưng nếu bạn thấy chữ \"to Spells\" ở bất cứ đâu thì nó không làm gì cho attack."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Damage gốc, tier, item level, weight và giá bench. Các phép tính và xác suất là của chúng tôi." }

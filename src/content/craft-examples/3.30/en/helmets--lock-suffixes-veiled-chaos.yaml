@@ -1,0 +1,227 @@
+category: helmets
+title: "Keep three suffixes, force a veiled prefix"
+level: 4
+summary: "The suffix side is finished and the prefixes are junk. Lock the suffixes, and a Veiled Chaos Orb has nowhere to put its veiled modifier but the prefix side."
+goal: >-
+  Add "+2 to Level of Socketed AoE Gems" to a helmet whose three suffixes you
+  will not risk. This is the first helmet craft where you **pay to protect
+  work**, so most of it is about a comparison: what a bench lock buys that the
+  free protection of Eldritch currency does not, and what it costs each time.
+base: "Royal Burgonet"
+itemLevel: 73
+baseWhy: >-
+  This craft starts from an item, not from a base: the result of the Scorched
+  Fossil example on a day when the prefixes came out badly, or any Rare
+  helmet with three suffixes worth keeping. The unveiled modifiers in the
+  data all ask for item level 60, so nearly any helmet qualifies.
+
+
+  The helmet must have **no influence**, because step 2 uses an Eldritch
+  implicit.
+methods: [eldritch, meta, veiled, bench]
+result:
+  implicits: ["8% increased Cast Speed"]
+  prefixes:
+    - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+    - { text: "+97 to maximum Life" }
+    - { text: "63% increased Armour", how: crafted }
+  suffixes:
+    - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+    - { text: "+43% to Fire Resistance" }
+    - { text: "+44% to Lightning Resistance" }
+needs:
+  - { item: "[[Lesser Eldritch Ember]]", amount: "1" }
+  - { item: "[[Eldritch Orb of Annulment]]", amount: "1", note: "only if all three prefix slots are full" }
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Blessed Orb]]", amount: "4 per attempt" }
+  - { item: "[[Veiled Chaos Orb]]", amount: "1 per attempt" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "for the last bench craft" }
+cost: >-
+  Each attempt is one lock, 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s on
+  armour in 3.30, plus one [[Veiled Chaos Orb]]. The lock is consumed by the
+  reroll. Expect more than one attempt and fix the number before the first.
+
+
+  That price is the test of the whole idea. If these suffixes could be made
+  again for less than one lock, do not lock them.
+odds: >-
+  The veiled prefix itself is certain once the suffixes are locked and full:
+  there is no other slot for it. What you unveil is not. The game offers three
+  choices and publishes no weights. The data lists about nine unveiled
+  prefixes a Strength helmet can show, so **if** the three were drawn evenly
+  a given one would be offered about one time in three. Treat that as a rough
+  guide, not a measurement.
+
+
+  The other prefix or two that the orb rolls are ordinary luck: one in four
+  is maximum Life on this base, by our arithmetic.
+steps:
+  - title: "Choose the lock over the free option, on purpose"
+    do: >-
+      Ask what you need from the prefix side. **Any decent prefixes:** skip
+      this example. Give the helmet a Searing Exarch implicit and use
+      [[Eldritch Chaos Orb]]s, which reroll only prefixes while the Exarch is
+      the stronger implicit. No lock is spent. **One specific veiled
+      prefix:** carry on.
+    why: >-
+      Eldritch Chaos Orbs protect a side for nothing but can only roll what
+      the natural pool holds. The gem-level prefixes are not in it. The only
+      way to put a veiled modifier on a finished item without gambling the
+      suffixes is a lock and a Veiled orb.
+    state:
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "Reflects 7 Physical Damage to Melee Attackers" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Open a prefix slot without touching the suffixes"
+    do: >-
+      "Suffix Modifiers cannot be changed" is itself a **prefix**, so it
+      needs an open prefix slot. This helmet has none. Use a
+      [[Lesser Eldritch Ember]] on it, then one
+      [[Eldritch Orb of Annulment]].
+    why: >-
+      An ordinary Orb of Annulment removes one of six modifiers at random and
+      would hit a suffix half the time. The Eldritch one removes a prefix
+      when the Searing Exarch implicit is the stronger of the two, and here
+      it is the only one. All three prefixes are junk, so any of them will
+      do.
+    check: >-
+      Before the orb: the helmet shows a Searing Exarch implicit and no Eater
+      of Worlds implicit of equal or higher strength. If it carries an Ichor
+      implicit already, use an Ember one strength above it.
+    fail: >-
+      If a prefix slot was already open, skip the Ember and the Annulment.
+      They are only there to make room.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "+41 to Armour" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Craft the lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s.
+    why: >-
+      Use the full version. "2 Suffix Modifiers cannot be changed" costs 2
+      Divine Orbs, but the developers have said the game picks which two at
+      random and does not show you. With three suffixes you want, that is a
+      one-in-three chance of losing the one you came for.
+    check: >-
+      The lock appears among the prefixes as a crafted modifier. Use no
+      other currency on the helmet between this step and the next.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "+15% to Item Rarity" }
+        - { text: "+41 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Veiled Chaos Orb"
+    do: >-
+      Use one [[Veiled Chaos Orb]] on the helmet.
+    why: >-
+      Its text is "Reforges a rare item with new random modifiers including a
+      random Veiled modifier". With the suffixes locked, the reforge replaces
+      the prefixes, the lock among them. The suffix side is full and frozen,
+      so the veiled modifier lands as a prefix.
+    check: >-
+      Three suffixes unchanged, the lock gone, and one prefix reading
+      "Veiled".
+    fail: >-
+      That Veiled orbs respect the lock is established by players, not
+      stated by the developers. If you have any doubt after a patch, try the
+      sequence on a worthless helmet first. A lock costs far more than a
+      test.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "Veiled Prefix", how: veiled }
+        - { text: "+97 to maximum Life" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Unveil, and know your second choice in advance"
+    do: >-
+      Right-click the helmet and choose from the three modifiers offered. No
+      visit to Jun is needed. Take "+2 to Level of Socketed AoE Gems" if it
+      is there. If it is not, take the second choice you settled on
+      **before** you looked, and judge the helmet afterwards: good enough, or
+      back to step 3 for another lock and another orb.
+    why: >-
+      The honest second choices on a helmet are +55 to 60 maximum Life with
+      mana regeneration, or the 24–28% defence prefix that carries +19 to 22
+      life. Deciding in advance stops you from talking yourself into a third
+      choice with the window open.
+    check: >-
+      By community testing, the choices never include a group already on the
+      item. The orb happened to roll maximum Life here, which removes the
+      veiled life prefix from the draw and leaves fewer wrong answers.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+        - { text: "+97 to maximum Life" }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+  - title: "Bench the last prefix"
+    do: >-
+      Craft **56–74% increased Armour** for 2 [[Chaos Orb]]s in the open
+      prefix, or maximum Life (56–70 for 4 Orbs of Alchemy) if the orb rolled
+      none.
+    why: >-
+      The lock is gone, so the item's one bench slot is free again. It goes
+      to whichever of life and defence the reroll did not supply.
+    state:
+      implicits: ["8% increased Cast Speed"]
+      prefixes:
+        - { text: "9% increased Area of Effect / +2 to Level of Socketed AoE Gems", how: veiled }
+        - { text: "+97 to maximum Life" }
+        - { text: "63% increased Armour", how: crafted }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance" }
+        - { text: "+44% to Lightning Resistance" }
+variations: >-
+  **A Veiled Exalted Orb instead.** It "removes a random modifier and adds a
+  random Veiled modifier". With the suffixes locked it can only remove a
+  prefix, and it leaves the other prefixes alone. Better when one prefix is
+  already good; where the orb drops in 3.30 we could not confirm.
+
+
+  **A guaranteed ordinary prefix instead.** With the same lock, a Harvest
+  reforge "including a Life modifier" (75 Wild Lifeforce) must place its life
+  modifier among the prefixes. On this base that is maximum Life or the
+  Armour-and-life hybrid.
+
+
+  **Other gem types.** The same slot unveils as +2 to Socketed Projectile
+  Gems with an extra pierce, or +2 to Socketed Melee Gems with +0.2 metres
+  of strike range. The bench sells +1 versions of all three for 4 Chaos
+  Orbs, with no lock and no luck.
+mistakes:
+  - "Locking suffixes that are not worth 4 Divine Orbs and 4 Blessed Orbs. Two resistances are not; a Fossil-only suffix with two high resistances may be."
+  - "Using an ordinary Orb of Annulment to make room for the lock. It has no idea which side you care about."
+  - "Using an Essence on the locked helmet. Essences are reported to ignore the protection modifiers and would reroll everything."
+  - "Unveiling in a hurry. The choice is permanent, and the only way back is another lock and another orb."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The unveiled modifiers on helmets, bench costs, and the in-game text of the Veiled and Eldritch orbs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on armour." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier locks choose at random with no indicator." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Unveiling without Jun." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Veiled orbs and Harvest reforges respect a locked side; which Eldritch implicit is dominant. Partly older than 3.30." }

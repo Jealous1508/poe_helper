@@ -1,0 +1,259 @@
+category: belts
+title: "Ép một prefix Life của Hunter lên Stygian Vise"
+level: 5
+summary: "Dựng ba suffix bằng Essence, khóa chúng và ép ra flat Life ở phía trên, rồi dùng một Hunter's Exalted Orb khi các ô trống duy nhất là prefix, để \"increased maximum Life\" là một cú 36% chứ không phải 15%."
+goal: >-
+  Một Stygian Vise có một resistance cao nhất từ Essence, thêm hai suffix
+  tốt, Life roll ra, và "7–10% increased maximum Life" của Hunter bên cạnh
+  nó. Mọi công cụ ở đây đều đã xuất hiện trong một ví dụ dễ hơn. Lần craft
+  này khó là vì **thứ tự và block**: mỗi giai đoạn được đặt ở chỗ mà thất bại
+  của nó rẻ nhất, và orb cuối chỉ được dùng khi belt đã được sắp xếp sao cho
+  phần lớn kết quả xấu của nó không thể xảy ra.
+base: "Stygian Vise"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 là mốc thấp nhất mà cả tier resistance cao nhất lẫn modifier
+  Life tốt nhất của Hunter cùng tồn tại. Chọn Stygian Vise làm base vì một
+  chiếc belt đắt cỡ này nên kết thúc với một Abyssal socket; trong 3.30 nó
+  chỉ rơi trên item Tier 5.
+
+
+  Belt phải bắt đầu **không có influence** và không được là fractured item.
+  Hunter's Exalted Orb chỉ dùng được trên item chưa có influence, và theo các
+  trang tra cứu, fractured item không nhận được influence.
+methods: [essence, meta, harvest, influence, bench]
+result:
+  note: "Hunter"
+  implicits: ["Has 1 Abyssal Socket"]
+  prefixes:
+    - { text: "+121 to maximum Life", how: harvest }
+    - { text: "8% increased maximum Life", how: influence }
+    - { text: "Flasks applied to you have 9% increased Effect / 20% reduced Flask Charges gained", how: crafted }
+  suffixes:
+    - { text: "+47% to Fire Resistance", how: essence }
+    - { text: "+43% to Cold Resistance" }
+    - { text: "+52 to Strength" }
+needs:
+  - { item: "[[Deafening Essence of Anger]]", amount: "10–25", note: "hoặc Hatred hay Wrath, tùy element bạn cần" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Exalted Orb]]", amount: "8 mỗi lần khóa" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 mỗi lần reforge Life" }
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Ba hóa đơn. Deafening Essence cho phía suffix, tính bằng vài chục. Các lần
+  khóa cho giai đoạn Life, mỗi lần 4 [[Divine Orb]] và 8
+  [[Exalted Orb]], và hãy tính là cần vài lần. Một [[Hunter's Exalted Orb]],
+  thứ các boss Conqueror rơi ra.
+
+
+  Chúng tôi không đưa ra tổng số. Tóm tắt thành thật là thế này: hai giai
+  đoạn đầu lặp lại được tới khi thành công, còn giai đoạn ba thì không. Đó là
+  một orb với 36% cơ hội, và nếu nó trượt, chiếc belt xong mà không có
+  modifier chính của nó.
+odds: >-
+  **Giai đoạn 1.** Essence cố định một resistance ở 46–48%. Mỗi suffix nó
+  roll thêm là một resistance khác từ 36% trở lên, Strength từ 43 trở lên,
+  hoặc Chaos Resistance từ 21% trở lên khoảng 1 trên 7 lần, theo phép tính
+  của chúng tôi. Một kết quả có ba suffix mà hai trong số đó tốt là xấp xỉ
+  một trên bảy tới mười Essence.
+
+
+  **Giai đoạn 2.** Khi suffix đã khóa, một reforge Life cho maximum Life 77%
+  số lần và flask Life recovery ở phần còn lại, nếu modifier được đảm bảo
+  được rút theo weight. Ba trong mười tier Life là từ 100 trở lên. Vậy nên
+  khoảng một trên bốn lần thử là đạt, và mỗi lần thử là một lần khóa.
+
+
+  **Giai đoạn 3.** Danh sách Hunter cho belt có ba prefix và năm suffix. Trên
+  một chiếc belt còn ô trống ở cả hai phía, "increased maximum Life" là 1,000
+  trên 6,500 tính theo weight: 15%. Khi phía suffix đã đầy, chỉ còn các
+  prefix: 1,000 trên 2,750, tức 36%, một nửa trong đó là tier 7–10%. Phép
+  tính của chúng tôi từ weight, với giả định rằng orb chỉ thêm được modifier
+  vào chỗ còn ô trống.
+steps:
+  - title: "Giai đoạn 1: ba suffix, bằng Essence"
+    do: >-
+      Dùng [[Deafening Essence of Anger]] lên Stygian Vise tới khi phía
+      suffix có **ba modifier, ít nhất hai cái tốt**, và belt có **không quá
+      hai prefix**. Prefix là gì thì bỏ qua.
+    why: >-
+      Suffix trước, vì Essence được ghi nhận là phớt lờ khóa: thứ gì dựng
+      trước Essence cuối cùng cũng mất vì nó. Và dùng Essence ở đây, vì trên
+      belt các Essence elemental cho một resistance ở chỉ số Tier 1, được đảm
+      bảo, với giá một Essence mỗi lần thử.
+
+
+      Ba suffix không phải chuyện tiểu tiết. Giai đoạn 3 phụ thuộc vào việc
+      phía suffix đã đầy.
+    check: >-
+      Đếm: ba suffix, từ hai prefix trở xuống. Khóa ở giai đoạn kế là một
+      prefix và cần một ô trống.
+    fail: >-
+      Hai suffix tốt và ô thứ ba còn trống: chấp nhận được. Sau giai đoạn 2
+      bench lại rảnh, và một resistance crafted 29–35% có thể lấp ô thứ ba
+      trước giai đoạn 3. Khi đó bạn bỏ prefix bench ở cuối.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+352 to Armour" }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Giai đoạn 2a: khóa suffix"
+    do: >-
+      Ở [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]] và 8 [[Exalted Orb]].
+    why: >-
+      Phía suffix đã xong và không gì trên đó là fractured. Mọi thứ từ đây
+      tới cuối diễn ra ở phía prefix, sau lớp khóa này.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+58 to maximum Mana" }
+        - { text: "+352 to Armour" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Giai đoạn 2b: reforge kèm một modifier Life"
+    do: >-
+      Ở [[Horticrafting Station]], dùng **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]). Lặp lại 2a và 2b tới khi belt có
+      **maximum Life từ 100 trở lên và ít nhất một ô prefix trống**.
+    why: >-
+      Khi ba suffix đã khóa, modifier Life buộc phải là prefix. Belt có hai
+      prefix mang tag life, maximum Life với weight 10,000 và flask Life
+      recovery ở 3,000, nên việc này là dễ xảy ra, không phải chắc chắn.
+
+
+      Giai đoạn có tỉ lệ thành công thấp hơn đã được đặt trước, ở chỗ một lần
+      thử tốn một Essence. Giai đoạn này thành công khoảng một trên bốn lần
+      và mỗi lần tốn một lần khóa. Nếu đảo thứ tự, cái khóa sẽ phải trả tiền
+      cho lần roll một trên bảy.
+    check: >-
+      Suffix không đổi, khóa đã biến mất. Rồi tới tier của Life, rồi số
+      prefix. Một prefix là lý tưởng: nó chừa một ô cho modifier Hunter và
+      một ô cho bench.
+    fail: >-
+      Flask Life recovery, Life thấp, hoặc ba prefix: khóa rồi reforge lần
+      nữa. Trước lần khóa đầu tiên hãy quyết định bạn chịu trả bao nhiêu lần,
+      và nếu chạm con số đó thì nhận Life 85 rồi đi tiếp.
+    state:
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Kiểm bàn cờ trước orb chỉ dùng một lần"
+    do: >-
+      Giữ Alt. **Ba suffix. Ít nhất một prefix trống. Không có influence.**
+      Nếu phía suffix còn một ô trống, hãy lấp nó ở bench ngay bây giờ.
+    why: >-
+      Đây chính là block. Hunter's Exalted Orb thêm một modifier Hunter, và
+      năm trong tám kiểu nó có thể thêm lên belt là những suffix bạn không
+      muốn. Một phía suffix đã đầy loại cả năm cái khỏi lần rút cùng lúc, mà
+      không cần một meta-modifier nào.
+  - title: "Giai đoạn 3: Hunter's Exalted Orb"
+    do: >-
+      Dùng một [[Hunter's Exalted Orb]] lên belt.
+    why: >-
+      Dòng mô tả của nó là "Adds Hunter influence and a new Hunter modifier
+      to a rare item". Trong ba prefix Hunter, "increased maximum Life" chiếm
+      36% theo weight, increased Chaos Damage 55% và "Gain a Flask Charge
+      when you deal a Critical Strike" 9%.
+
+
+      Nó đi **sau cùng** vì hai lý do. Nếu dùng trước giai đoạn 2, nó sẽ bị
+      reforge Life roll lại. Và nó chỉ dùng được một lần: sau đó belt đã có
+      influence và orb không còn dùng được nữa.
+    check: >-
+      Biểu tượng Hunter trên belt và một prefix mới. Modifier Life là 3–6%
+      hoặc 7–10%, với cơ hội ngang nhau.
+    fail: >-
+      Chaos Damage hoặc prefix flask charge. Không gì đem cơ hội đó trở lại:
+      một lần thử thứ hai sẽ cần một lần khóa và một reforge Harvest kèm một
+      modifier influence, 5,000 Primal Lifeforce và một Sacred Crystallised
+      Lifeforce, mà reforge đó cũng sẽ roll lại flat Life. Với phần lớn mọi
+      người, chiếc belt xong ở đây, với một prefix nó không cần.
+    state:
+      note: "Hunter"
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+        - { text: "8% increased maximum Life", how: influence }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Giai đoạn 4: bench prefix cuối cùng"
+    do: >-
+      Nếu vẫn còn một ô prefix trống, craft flask effect: 8–10% kèm 20%
+      reduced Flask Charges gained giá 2 [[Chaos Orb]], hoặc 11–14% kèm 33%
+      reduced giá 4 Exalted Orb. Với build không dựa vào flask, 12–14%
+      increased Damage giá 4 Chaos Orb.
+    why: >-
+      Một ô, một craft. "Can have up to 3 Crafted Modifiers" là suffix mà
+      phía suffix đã đầy, nên không dùng được, và đằng nào với một ô trống
+      thì nó cũng chẳng được thêm gì.
+    state:
+      note: "Hunter"
+      implicits: ["Has 1 Abyssal Socket"]
+      prefixes:
+        - { text: "+121 to maximum Life", how: harvest }
+        - { text: "8% increased maximum Life", how: influence }
+        - { text: "Flasks applied to you have 9% increased Effect / 20% reduced Flask Charges gained", how: crafted }
+      suffixes:
+        - { text: "+47% to Fire Resistance", how: essence }
+        - { text: "+43% to Cold Resistance" }
+        - { text: "+52 to Strength" }
+  - title: "Hoàn thiện: Catalyst, chỉ số, và jewel"
+    do: >-
+      Catalyst lúc này, khi các modifier đã chốt, một [[Divine Orb]] nếu flat
+      Life đang ở đáy tier của nó, và một Abyss Jewel vào socket.
+    why: >-
+      Divine Orb roll lại mọi con số cùng lúc và không đổi tier nào. Trong
+      3.30, Catalyst chỉ đến từ Ultimatum; [[Fertile Catalyst]] là loại dành
+      cho chiếc belt này, vì cả hai modifier chính đều là Life.
+variations: >-
+  **Bắt đầu từ một chiếc belt Hunter.** Nếu bạn có sẵn một Stygian Vise trắng
+  có influence Hunter thì không cần orb và kế hoạch đổi dạng: Alteration để
+  tìm modifier Life, khoảng 1 trên 53 lần roll prefix cho một trong hai tier
+  theo phép tính của chúng tôi, một Imprint từ beast, và một Regal Orb. Base
+  có influence rơi ở đâu trong 3.30 thì chưa xác nhận được.
+
+
+  **Không có giai đoạn Hunter.** Dừng sau giai đoạn 2 và bench một prefix.
+  Chiếc belt đó, với resistance Tier 1, thêm hai suffix và Life roll ra trên
+  một Stygian Vise, là thứ phần lớn nhân vật hoàn chỉnh đang đeo, và nó không
+  dính tới orb chỉ dùng một lần nào.
+
+
+  **Thay bằng Elder.** Danh sách Elder có cùng modifier đó ở 8–10% từ item
+  level 75, với nhiều prefix hơn quanh nó, nên cú ép kém hơn: hãy đếm danh
+  sách trước khi chọn.
+
+
+  **Nhìn trước.** Một [[Hinekora's Lock]] cho thấy kết quả của currency kế
+  tiếp trước khi bạn chốt. Lần craft này có một orb đáng để nhìn trước, và đó
+  là orb của Hunter.
+mistakes:
+  - "Dùng Hunter's Exalted Orb khi còn một ô suffix trống. Năm trong tám kết quả của nó là suffix."
+  - "Dùng nó trước reforge Life. Reforge roll lại phía prefix và cuốn luôn modifier Hunter theo."
+  - "Dựng Life trước rồi mới tới suffix. Các Essence dựng suffix phớt lờ khóa."
+  - "Bắt đầu trên một Stygian Vise fractured để giữ một Life roll ra. Fractured item không nhận được influence."
+  - "Bench một prefix trước orb. Nó chiếm ô mà modifier Hunter cần, hoặc ô cuối cùng."
+  - "Trông vào một lần thử thứ hai ở giai đoạn 3. Orb chỉ dùng được một lần trên mỗi item."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier belt Hunter cùng weight của chúng, các modifier Essence trên belt, tag, giá bench và dòng mô tả trong game của Hunter's Exalted Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Yêu cầu Item Tier của Stygian Vise, giá của các modifier bảo vệ, và việc các boss Conqueror rơi Exalted Orb của chúng." }
+  - { title: "Patch notes 3.29.0", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "Ultimatum là nguồn Catalyst duy nhất." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Life và reforge kèm một modifier influence, cùng giá của chúng." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa, còn Essence thì không. Một phần cũ hơn 3.30." }

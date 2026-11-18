@@ -1,0 +1,188 @@
+category: two-hand-maces
+title: "Lock the prefixes, rebuild the suffixes"
+level: 4
+summary: "You own three good prefixes and bad suffixes. Protect one side with a meta-modifier and reroll the other with a Harvest reforge that guarantees attack speed."
+goal: >-
+  Turn a mace with a finished prefix side and a useless suffix side into a
+  finished weapon, without risking the prefixes. This is the first craft
+  where you **pay to protect work**, so the whole of it is about knowing what
+  the protection covers, what it costs, and when it is not worth it.
+base: "Karui Maul"
+itemLevel: 77
+baseWhy: >-
+  This craft starts from an item, not from a base: the result of the Jagged
+  Fossil example, or any Rare mace whose three prefixes you want to keep.
+  Item level 77 matters for one reason. It is the level at which Tier 1
+  attack speed (26–27%) can roll, and attack speed is what the reforge is
+  for.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "128% increased Physical Damage" }
+    - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+    - { text: "Adds 31 to 66 Physical Damage" }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "9% chance to deal Double Damage", how: crafted }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Sacred Orb]]", amount: "1 per attempt" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per attempt" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if the item has a bench modifier to remove" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "for the final bench craft" }
+cost: >-
+  The lock: 4 [[Divine Orb]]s and 1 [[Sacred Orb]] on a weapon in 3.30, and
+  it is used up by every reforge. The Lifeforce is small change beside it.
+  Count on more than one attempt and decide your limit before the first.
+
+
+  That price is the test of whether to do this at all. If you could roll
+  these three prefixes again for less than one lock, do not lock them.
+odds: >-
+  The Speed reforge guarantees a modifier with the speed tag, and attack
+  speed is the only one in a mace's natural pool, so every attempt gives
+  attack speed. Its **tier** is random. If the guaranteed modifier is picked
+  by weight among the tiers the item level allows, which is how reforges are
+  understood to work, then about one attempt in four gives Tier 1 or Tier 2
+  (23% or more) at item level 77: attack speed has eight tiers of equal
+  weight in the data. That is our arithmetic and has not been measured in
+  3.30.
+
+
+  The other one or two suffixes are plain luck from the pool.
+steps:
+  - title: "Check that a suffix slot is free"
+    do: >-
+      Count the suffixes. "Prefixes Cannot Be Changed" is itself a suffix, so
+      the item needs **one open suffix slot** to take it. If one of the three
+      suffixes is a bench modifier, remove it at the bench for 1
+      [[Orb of Scouring]].
+    why: >-
+      A meta-modifier takes a real slot. On an item with three rolled
+      suffixes the bench will not offer the craft.
+    fail: >-
+      Three rolled suffixes and no bench modifier: the only way to open a
+      slot is an [[Orb of Annulment]], which removes one of six modifiers at
+      random and so hits a prefix half the time. Do not do it. Use the item
+      as it is, or sell it to someone who will.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "+41 to Strength" }
+        - { text: "+287 to Accuracy Rating" }
+  - title: "Craft the lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers Cannot Be Changed**:
+      4 [[Divine Orb]]s and 1 [[Sacred Orb]].
+    why: >-
+      While this modifier is on the item, a reroll that respects it leaves
+      all three prefixes exactly as they are. Use the full version. The new
+      one- and two-prefix versions cost 1 or 2 Divine Orbs, but the
+      developers have said the game chooses which prefix to protect at
+      random and does not show you; with three prefixes you want kept, that
+      is a coin flip you do not need.
+    check: >-
+      The modifier shows in the suffix list as crafted. Do not use any other
+      currency on the item between this step and the next.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "+41 to Strength" }
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "Reforge with a Speed modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      The reforge replaces every modifier it is allowed to touch. With the
+      prefixes locked, that is the suffixes, including the lock itself,
+      which is spent. One of the new suffixes must carry the speed tag, and
+      on a mace that means attack speed.
+    check: >-
+      The three prefixes are unchanged, the lock is gone, and attack speed
+      is among the suffixes. Read its tier.
+    fail: >-
+      That Harvest reforges respect the lock is established by players, not
+      stated by the developers. If you have any doubt after a patch, test it
+      on a cheap item first.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Judge the suffixes against your limit"
+    do: >-
+      Accept the result if attack speed is at a tier you set in advance (23%
+      or more is Tier 2) **and** at least one suffix slot is open or filled
+      with something you use. Otherwise go back to step 2 and pay again.
+    why: >-
+      Each further attempt costs a full lock. The second good suffix is a
+      bonus; attack speed and an open slot are the result you are paying
+      for.
+    check: >-
+      An open suffix slot is worth more than a mediocre third suffix,
+      because the bench will fill it with exactly what the build wants.
+  - title: "Bench the last suffix"
+    do: >-
+      Craft the build's third damage suffix in the open slot. For a build
+      that does not crit: 8–10% chance to deal Double Damage, 8
+      [[Chaos Orb]]s. For a crit build: Critical Strike Chance or Multiplier,
+      4 Chaos Orbs.
+    why: >-
+      The bench is certain, so it goes last, when you know which gap is
+      left.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "128% increased Physical Damage" }
+        - { text: "58% increased Physical Damage / +131 to Accuracy Rating" }
+        - { text: "Adds 31 to 66 Physical Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "9% chance to deal Double Damage", how: crafted }
+variations: >-
+  **Scour instead of reforge.** With the prefixes locked, an
+  [[Orb of Scouring]] is reported to remove only the suffixes and the lock,
+  leaving a Rare item with three prefixes and three empty suffix slots. You
+  then fill them with the bench and [[Exalted Orb]]s. It is cheaper per
+  attempt and gives no guaranteed attack speed.
+
+
+  **A veiled suffix.** A [[Veiled Chaos Orb]] on the locked item rerolls the
+  suffixes with a veiled modifier among them, by the same player-tested
+  rule. Unveil it for 12–14% chance to deal Double Damage, or for attack
+  speed while a Rare or Unique enemy is nearby.
+
+
+  **The Critical reforge** (150 Primal) works the same way and guarantees
+  Critical Strike Chance or Multiplier instead. Use it when attack speed is
+  coming from somewhere else.
+mistakes:
+  - "Locking prefixes that are not worth the lock. Four Divine Orbs and a Sacred Orb per attempt is more than many maces cost."
+  - "Using an Essence on the locked item. Essences are reported to ignore the protection modifiers and would reroll everything."
+  - "Crafting the lock on an item with no plan for the reroll. The lock does nothing by itself and is removed by the next reforge."
+  - "Chasing a perfect third suffix with repeated locks when one bench craft would do."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bench costs, the attack speed tiers and the tags on each modifier." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier versions choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed and Critical reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges, Veiled orbs and Orb of Scouring respect a locked side. Partly older than 3.30." }

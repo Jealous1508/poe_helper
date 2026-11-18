@@ -1,0 +1,124 @@
+---
+import Base from '../../../../../../layouts/Base.astro';
+import BaseIcon from '../../../../../../components/crafting/BaseIcon.astro';
+import CraftTabs from '../../../../../../components/crafting/CraftTabs.astro';
+import Level from '../../../../../../components/crafting/Level.astro';
+import { getLeague, leagues } from '../../../../../../config/leagues';
+import { isLocale, locales, pagePath, t } from '../../../../../../i18n';
+import { craftLevels, examplesOf, getCraftData, getCrafting } from '../../../../../../lib/crafting';
+
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    leagues.flatMap((league) =>
+      (getCrafting(league.id, 'en')?.guides ?? []).map((guide) => ({ params: { locale, league: league.id, category: guide.id } })),
+    ),
+  );
+}
+
+const { locale: rawLocale, league: leagueId, category } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const crafting = getCrafting(league.id, locale)!;
+const guide = crafting.guides.find((entry) => entry.id === category)!;
+const data = getCraftData(guide.id);
+const examples = examplesOf(crafting, guide.id);
+const baseByName = new Map(data.bases.map((base) => [base.name, base]));
+const methods = new Map(crafting.overview.methods.map((method) => [method.id, method.name]));
+const levels = craftLevels.filter((level) => examples.some((example) => example.level === level));
+---
+<Base locale={locale} league={league} title={`${guide.name}: ${t(locale, 'craft.tab.examples')}`} description={t(locale, 'craft.examples.lede', { name: guide.name })} section="crafting" isFallback={examples.some((example) => example.isFallback)}>
+  <header class="container chead">
+    <BaseIcon base={baseByName.get(guide.icon)!} cell={30} max={104} eager />
+    <div>
+      <div class="eyebrow">{t(locale, 'craft.title')} · {t(locale, `craft.group.${guide.group}`)}</div>
+      <h1>{guide.name}</h1>
+      <p class="lede">{t(locale, 'craft.examples.lede', { name: guide.name })}</p>
+    </div>
+  </header>
+  <CraftTabs locale={locale} league={league.id} category={guide.id} current="examples" examples={examples.length} />
+
+  <div class="container body" data-examples>
+    {examples.length === 0 ? (
+      <p class="muted">{t(locale, 'craft.examples.none')}</p>
+    ) : (
+      <>
+        <div class="filter" role="group" aria-label={t(locale, 'craft.examples.filter')}>
+          <button type="button" class="chip is-active" data-level-filter="all" aria-pressed="true">{t(locale, 'updates.filter.all')}<span class="chip__n">{examples.length}</span></button>
+          {levels.map((level) => (
+            <button type="button" class="chip" data-level-filter={String(level)} aria-pressed="false">
+              {t(locale, `craft.level.${level}`)}<span class="chip__n">{examples.filter((example) => example.level === level).length}</span>
+            </button>
+          ))}
+        </div>
+        <ol class="grid">
+          {examples.map((example, index) => (
+            <li data-example data-level={example.level} data-reveal style={`--reveal-delay:${Math.min(index, 6) * 50}ms`}>
+              <a class="card hoverable" href={pagePath(locale, league.id, 'crafting', guide.id, 'examples', example.slug)}>
+                <div class="card__top">
+                  <Level level={example.level} locale={locale} />
+                  <span class="card__n">{String(index + 1).padStart(2, '0')}</span>
+                </div>
+                <div class="card__item">
+                  <BaseIcon base={baseByName.get(example.base)!} cell={20} max={72} />
+                  <div>
+                    <h2>{example.title}</h2>
+                    <p class="card__base">{example.base} · {t(locale, 'craft.ilvl', { n: example.itemLevel })}</p>
+                  </div>
+                </div>
+                <p class="card__summary">{example.summary}</p>
+                <p class="card__methods">{example.methods.map((id) => methods.get(id)).join(' · ')}</p>
+                <span class="card__go">{t(locale, 'craft.examples.open', { count: example.steps.length })} →</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </>
+    )}
+  </div>
+</Base>
+
+<script>
+  document.addEventListener('click', (event) => {
+    const chip = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-level-filter]') : null;
+    const root = chip?.closest<HTMLElement>('[data-examples]');
+    if (!chip || !root) return;
+    const filter = chip.dataset.levelFilter;
+    for (const other of root.querySelectorAll<HTMLElement>('[data-level-filter]')) {
+      const active = other === chip;
+      other.classList.toggle('is-active', active);
+      other.setAttribute('aria-pressed', String(active));
+    }
+    for (const card of root.querySelectorAll<HTMLElement>('[data-example]')) card.hidden = !(filter === 'all' || card.dataset.level === filter);
+  });
+</script>
+
+<style>
+  .chead { display: flex; align-items: center; gap: 1.5rem; padding-top: 2.5rem; padding-bottom: 1.75rem; }
+  .chead h1 { margin: 0.3rem 0 0.5rem; }
+  .chead .lede { margin: 0; }
+  .body { padding-top: 2rem; }
+  .filter { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.75rem; }
+  .chip { display: inline-flex; align-items: center; gap: 0.45rem; font: inherit; font-size: 0.82rem; font-weight: 500; padding: 0.28rem 0.75rem; border: 1px solid var(--border-strong); border-radius: 999px; background: transparent; color: var(--text-muted); cursor: pointer; }
+  .chip:hover { color: var(--text); border-color: var(--accent); }
+  .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .chip.is-active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .chip__n { font-size: 0.72rem; font-variant-numeric: tabular-nums; opacity: 0.8; }
+
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(19.5rem, 1fr)); gap: 1.25rem; }
+  .grid li { margin: 0; }
+  .card { display: flex; flex-direction: column; height: 100%; padding: 1.1rem 1.25rem 1.1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); text-decoration: none; }
+  .card:hover { border-color: var(--accent); color: var(--text); }
+  .card__top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .card__n { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.08em; }
+  .card__item { display: flex; align-items: center; gap: 0.9rem; margin: 0.9rem 0 0.7rem; min-height: 4.5rem; }
+  .card h2 { font-size: 1.22rem; line-height: 1.25; margin: 0; }
+  .card__base { margin: 0.25rem 0 0; font-size: 0.8rem; color: var(--text-muted); }
+  .card__summary { flex: 1; margin: 0; font-size: 0.93rem; color: var(--text-muted); }
+  .card__methods { margin: 0.8rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); }
+  .card__go { margin-top: 0.8rem; font-weight: 600; font-size: 0.9rem; color: var(--accent); }
+  @media (max-width: 640px) {
+    .chead { gap: 1rem; padding-top: 1.5rem; }
+    .grid { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

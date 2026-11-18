@@ -1,0 +1,195 @@
+category: amulets
+title: "Lock three suffixes, force a Life prefix"
+level: 4
+summary: "No Essence gives Life on an amulet. With the suffix side full and locked, a Harvest Life reforge has only one modifier it can give: maximum Life."
+goal: >-
+  Turn an amulet with three suffixes you would never give up and nothing
+  worth having above them into a finished item. This is the first craft where
+  you **pay to protect work**, and the amulet version has a twist worth
+  learning: the lock is not only a shield. A full, locked side leaves a
+  guaranteed modifier nowhere to go but the other side.
+base: "Onyx Amulet"
+itemLevel: 84
+baseWhy: >-
+  This craft starts from an item, not from a base: the keeper from an Essence
+  of Scorn run, or any Rare amulet whose **three** suffixes are the reason
+  you own it. Item level matters little here, since every tier of Life is
+  open from 54. The example is at 84 because that is where its resistance
+  was rolled.
+methods: [meta, harvest, bench]
+result:
+  implicits: ["+15 to all Attributes"]
+  prefixes:
+    - { text: "+108 to maximum Life", how: harvest }
+    - { text: "+62 to maximum Mana", how: harvest }
+    - { text: "34% increased Damage while Leeching", how: crafted }
+  suffixes:
+    - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+    - { text: "36% increased Global Critical Strike Chance" }
+    - { text: "+44% to Fire Resistance" }
+needs:
+  - { item: "[[Divine Orb]]", amount: "4 per attempt" }
+  - { item: "[[Exalted Orb]]", amount: "8 per attempt" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per attempt" }
+  - { item: "[[Orb of Scouring]]", amount: "1", note: "only if a bench modifier has to come off first" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the final bench craft" }
+cost: >-
+  The lock: 4 [[Divine Orb]]s and 8 [[Exalted Orb]]s on jewellery in 3.30,
+  used up by the reforge. The Lifeforce is small change beside it.
+
+
+  That price is the test of whether to do this at all. The bench sells 41–55
+  Life for 2 Orbs of Alchemy. The lock buys the difference between that and
+  a rolled tier, and nothing else. On an amulet whose suffixes took fifty
+  Essences to find, the difference is worth it. On an ordinary one it is
+  not.
+odds: >-
+  Maximum Life is the only prefix in an amulet's natural pool with the life
+  tag, so a Life reforge that cannot touch the suffixes has to give it. The
+  **tier** is random. All nine tiers weigh the same, so if the guaranteed
+  modifier is drawn by weight, which is how reforges are understood to work,
+  one attempt in three gives 85 or more and one in nine gives the top tier,
+  115–129. That is our arithmetic and has not been measured in 3.30.
+
+
+  The reforge may add one or two more prefixes. Those are plain luck.
+steps:
+  - title: "Count both sides"
+    do: >-
+      Hold Alt. The suffix side must hold **three** modifiers, all of them
+      ones you are keeping. The prefix side must have **one slot open**,
+      because "Suffix Modifiers cannot be changed" is itself a prefix. If a
+      bench modifier is in the way, remove it for 1 [[Orb of Scouring]].
+    why: >-
+      Three suffixes matter for certainty. Players report that a reforge adds
+      nothing to a locked side, but that is testing, not a published rule.
+      With the side physically full the question does not arise: a Life
+      modifier cannot be Life regeneration or leech if there is no suffix
+      slot to put it in.
+    fail: >-
+      Three rolled prefixes and no bench modifier among them: the only way to
+      open a slot is an [[Orb of Annulment]], which picks one of six
+      modifiers at random and takes a suffix half the time. Do not use it.
+      Wear the amulet as it is.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+31 to maximum Energy Shield" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Craft the lock"
+    do: >-
+      At the [[Crafting Bench]], craft **Suffix Modifiers cannot be changed**:
+      4 [[Divine Orb]]s and 8 [[Exalted Orb]]s.
+    why: >-
+      While it is on the amulet, a reroll that respects it leaves all three
+      suffixes exactly as they are. Use the full version. The cheaper crafts
+      protect one or two modifiers chosen by the game at random, with nothing
+      to show which, and you have three to keep.
+    check: >-
+      The line appears among the prefixes, marked as crafted. From here to
+      the reforge, use no other currency on the amulet.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+31 to maximum Energy Shield" }
+        - { text: "Adds 9 to 17 Physical Damage to Attacks" }
+        - { text: "Suffix Modifiers cannot be changed", how: crafted }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Reforge with a Life modifier"
+    do: >-
+      At the [[Horticrafting Station]], use **Reforge a Rare item with random
+      modifiers, including a Life modifier** (75
+      [[Wild Crystallised Lifeforce]]).
+    why: >-
+      The reforge replaces everything it is allowed to touch: the two old
+      prefixes and the lock, which is spent. One new modifier must carry the
+      life tag. On an unlocked amulet that would most often be a suffix,
+      since Life regeneration, leech and Life on kill outweigh maximum Life
+      by nearly two to one. Here the suffixes are closed, and the only life
+      modifier left is the one you want.
+    check: >-
+      Three suffixes unchanged, the lock gone, maximum Life among the
+      prefixes. Read its tier.
+    fail: >-
+      That Harvest reforges respect the lock is established by players, not
+      stated by the developers. After any patch that touches crafting, test
+      it on a cheap amulet before you trust it with this one.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+108 to maximum Life", how: harvest }
+        - { text: "+62 to maximum Mana", how: harvest }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+  - title: "Judge the tier against your limit"
+    do: >-
+      Decide before the first attempt what Life you accept. 85 or more is one
+      attempt in three. If the roll is below your line, go back to step 2
+      and pay again; if there is no open prefix for the lock, you cannot.
+    why: >-
+      Each repeat is another 4 Divine Orbs and 8 Exalted Orbs for a better
+      number on one modifier. Two failed attempts already cost more than
+      most amulets.
+    check: >-
+      A result with Life and an open prefix is better than one with Life and
+      two filler prefixes: the open slot can hold a bench modifier, and it is
+      also what lets you lock again.
+  - title: "Bench the open prefix"
+    do: >-
+      Craft the prefix your build uses most. For an attack build that
+      leeches: 31–36% increased Damage while Leeching, 3 [[Chaos Orb]]s. For
+      a caster: "Non-Channelling Skills have −7 to −6 to Total Mana Cost", 4
+      Chaos Orbs.
+    why: >-
+      The bench goes last, when you can see which slot is left. Do not craft
+      Life here: the amulet has it, and the bench's Life is the same group.
+    state:
+      implicits: ["+15 to all Attributes"]
+      prefixes:
+        - { text: "+108 to maximum Life", how: harvest }
+        - { text: "+62 to maximum Mana", how: harvest }
+        - { text: "34% increased Damage while Leeching", how: crafted }
+      suffixes:
+        - { text: "+39% to Global Critical Strike Multiplier", how: essence }
+        - { text: "36% increased Global Critical Strike Chance" }
+        - { text: "+44% to Fire Resistance" }
+variations: >-
+  **The same lock, a Chaos reforge.** "+1 to Level of all Chaos Skill Gems"
+  is the only prefix on an amulet with the chaos tag. With three suffixes
+  locked, the Chaos reforge (100 Vivid Lifeforce) has to give it. This is the
+  most valuable use of the trick in the category, and the last example is
+  built on it. The amulet needs item level 75.
+
+
+  **The other way round.** Lock the prefixes and reforge with a Critical
+  modifier (150 Primal): Critical Strike Chance and Multiplier are the only
+  two, and both are suffixes. Use it on an amulet with a gem level and Life
+  and nothing below them.
+
+
+  **Scouring instead of reforging.** With the suffixes locked, an
+  [[Orb of Scouring]] is reported to remove only the prefixes and the lock.
+  You are left with three suffixes and three empty prefix slots for the bench
+  and [[Exalted Orb]]s: cheaper per attempt, and no guaranteed Life.
+mistakes:
+  - "Locking suffixes that are not worth the lock. The bench's 41–55 Life costs 2 Orbs of Alchemy."
+  - "Doing this with two suffixes and an open third. It probably works; with three it certainly does."
+  - "Using an Essence on the locked amulet. Essences are reported to ignore the protection modifiers and would reroll everything."
+  - "Crafting the lock with all three prefix slots full. The bench will not offer it: the lock needs a prefix slot of its own."
+  - "Benching Life afterwards. The reforge already gave Life, and the two are one group."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bench costs, the Life tiers and the tags on every amulet modifier. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on jewellery." }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The one- and two-modifier versions choose at random with no indicator." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Life, Chaos and Critical reforges and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges and Orb of Scouring respect a locked side; Essences do not. Partly older than 3.30." }

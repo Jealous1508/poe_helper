@@ -1,0 +1,181 @@
+category: belts
+title: "Life và resistance từ hai Fossil"
+level: 3
+summary: "Một Pristine Fossil loại bỏ những prefix bạn không muốn và nhân Life lên. Một Prismatic Fossil nhân các resistance lên. Cùng nhau, chúng roll ra chiếc belt mà phần lớn nhân vật đang tìm."
+goal: >-
+  Một chiếc belt có Life trên 100 và hai elemental resistance, tất cả roll ra
+  trong một lần, còn bench thì rảnh cho một thứ thêm vào. Bài học là dùng hai
+  Fossil cho **hai phía khác nhau của item**: một cái dọn dẹp prefix, cái kia
+  lái suffix, và không cái nào cản đường cái nào.
+base: "Leather Belt"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 mở tier resistance cao nhất, 46–48%; mọi tier Life đều mở từ
+  64. Ví dụ dùng Leather Belt vì ai cũng tìm được một cái. Nếu bạn có một
+  Stygian Vise thì dùng nó: cùng pool, cùng các bước, và kết quả có một
+  Abyssal socket.
+methods: [fossil, bench]
+result:
+  implicits: ["+36 to maximum Life"]
+  prefixes:
+    - { text: "+118 to maximum Life", how: fossil }
+    - { text: "22% increased Cold Damage", how: fossil }
+    - { text: "13% increased Damage", how: crafted }
+  suffixes:
+    - { text: "+43% to Fire Resistance", how: fossil }
+    - { text: "+37% to Lightning Resistance", how: fossil }
+    - { text: "Regenerate 58.6 Life per second", how: fossil }
+needs:
+  - { item: "[[Pristine Fossil]]", amount: "8–20" }
+  - { item: "[[Prismatic Fossil]]", amount: "8–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ có hai socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "để biến belt thành Rare" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Mỗi loại Fossil một cái và một Resonator hai socket cho mỗi lần thử, tất cả
+  đến từ Delve. Trong 3.30, đường vào Delve là qua các map luôn spawn
+  Sulphite. Bước bench tốn 4 [[Chaos Orb]].
+odds: >-
+  Với cả hai Fossil ở item level 84, theo phép tính của chúng tôi:
+
+
+  **Một lần roll prefix ra maximum Life từ 51% tới 64% số lần**, và ra Life
+  từ 100 trở lên từ 15% tới 19%.
+
+
+  **Một lần roll suffix ra một elemental resistance từ 45% tới 54% số
+  lần.** Life regeneration chiếm phần lớn chỗ còn lại, khoảng ba trên mười.
+
+
+  Mỗi con số là một khoảng vì công cụ tính của trang bỏ các modifier chỉ có
+  từ Fossil của belt ra khỏi pool, còn chúng tôi tính thêm cả trường hợp có
+  chúng; con số thật cho một lần roll hẳn nằm ở giữa. Không có Fossil thì các
+  con số đó là 20% cho Life và 36% cho một resistance.
+
+
+  Tính cho mỗi lần thử, xấp xỉ: Life từ 100 trở lên trên một trong ba chiếc
+  belt, hai resistance cỡ nào cũng tính trên bốn trong mười chiếc, cả hai
+  cùng lúc trên khoảng một trong tám chiếc. Đòi thêm cả hai resistance đều từ
+  36% trở lên thì thành hàng chục lần thử, vì không gì ở đây cải thiện tier:
+  ba trong tám tier resistance cao cỡ đó dù có Fossil hay không.
+steps:
+  - title: "Biến belt thành Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên chiếc belt trắng. Bỏ qua kết quả.
+    why: >-
+      Một Chaotic Resonator roll lại item Rare. Belt chỉ cần là Rare để cái
+      đầu tiên dùng được.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+46 to maximum Energy Shield" }
+        - { text: "+288 to Armour" }
+      suffixes:
+        - { text: "24% increased Stun and Block Recovery" }
+        - { text: "+34 to Strength" }
+  - title: "Nạp cả hai Fossil và dùng Resonator"
+    do: >-
+      Đặt một [[Pristine Fossil]] và một [[Prismatic Fossil]] vào một
+      [[Potent Chaotic Resonator]] rồi dùng nó lên belt.
+    why: >-
+      Pristine ghi "More Life modifiers, No Defence modifiers". Trên belt,
+      các modifier Defence là Armour và Energy Shield, 38% mọi lần roll
+      prefix và đúng là những cái một build life không muốn; chúng biến mất.
+      Life nhận mười vé cho mỗi vé nó từng có.
+
+
+      Prismatic ghi "More Elemental modifiers". Trong dữ liệu 3.30, hệ số
+      nhân của nó là sáu, không phải mười, và ở phía suffix của belt các
+      modifier elemental chính là ba resistance.
+
+
+      Bạn cần một Resonator có hai socket. Theo cách game vẫn chạy từ lâu thì
+      đó là cỡ Potent; item hiện rõ nó chứa được bao nhiêu Fossil.
+    check: >-
+      Không có Armour và không có Energy Shield ở bất cứ đâu trên kết quả.
+      Nếu một trong hai xuất hiện thì Pristine Fossil đã không nằm trong
+      Resonator.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "27% increased Flask Life Recovery rate", how: fossil }
+        - { text: "24% increased Fire Damage", how: fossil }
+      suffixes:
+        - { text: "Regenerate 41.3 Life per second", how: fossil }
+        - { text: "+33% to Fire Resistance", how: fossil }
+  - title: "Đọc kết quả qua hai lượt"
+    do: >-
+      **Prefix:** có maximum Life từ 100 trở lên không? **Suffix:** có hai
+      elemental resistance, ở các tier bạn đã định từ trước không?
+    why: >-
+      Chiếc belt ở trên không qua được lượt nào, và nó cho thấy hai kiểu
+      trượt của lần craft này. "More Life modifiers" cũng nhân cả flask Life
+      recovery và Life regeneration, vì chúng mang tag life. Còn "increased
+      Fire Damage" là một prefix chỉ roll ra trong lần craft bằng Fossil;
+      Prismatic Fossil nhân nó cùng với các resistance.
+    check: >-
+      Đếm cả các ô trống nữa. Một ô trống ở phía nào thì đó là chỗ bench sẽ
+      vào.
+    fail: >-
+      Nạp một cặp khác. Một lần trượt tốn hai Fossil và một Resonator, và
+      không để lại gì để sửa.
+  - title: "Lặp lại tới khi qua cả hai lượt"
+    do: >-
+      Cứ tiếp tục tới khi một kết quả có Life và cả hai resistance.
+    why: >-
+      Fossil khiến từng thứ trong ba thứ bạn muốn dễ ra, còn bạn thì đang chờ
+      cả ba cùng lúc. Nếu Fossil sắp cạn, hãy hạ mức xuống còn Life và một
+      resistance tốt cùng một ô suffix trống: bench bán cái thứ hai ở mức
+      29–35%.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "22% increased Cold Damage", how: fossil }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+37% to Lightning Resistance", how: fossil }
+        - { text: "Regenerate 58.6 Life per second", how: fossil }
+  - title: "Bench ô còn trống"
+    do: >-
+      Ở đây ô trống là một prefix: craft 12–14% increased Damage giá 4
+      [[Chaos Orb]]. Nếu ô trống là suffix thì craft resistance thứ ba,
+      29–35% giá 3 Chaos Orb.
+    why: >-
+      Bench đi sau cùng, khi bạn đã thấy phía nào còn chỗ. Hai Fossil đã làm
+      phần mà bench không làm được ở mức đầy đủ, tức Life và resistance cao.
+    state:
+      implicits: ["+36 to maximum Life"]
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "22% increased Cold Damage", how: fossil }
+        - { text: "13% increased Damage", how: crafted }
+      suffixes:
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+37% to Lightning Resistance", how: fossil }
+        - { text: "Regenerate 58.6 Life per second", how: fossil }
+variations: >-
+  **Chỉ riêng Pristine Fossil.** Trong một [[Primitive Chaotic Resonator]],
+  nó khiến Life chiếm khoảng hai phần ba số lần roll prefix, mức tốt nhất
+  phía này đạt được. Phía suffix thì đầy Life regeneration và chỉ khoảng một
+  trên bảy suffix là resistance, nên hãy dùng nó khi resistance sẽ đến từ
+  bench hoặc khi bạn muốn regeneration.
+
+
+  **Resistance không cần Delve.** Trên belt, một reforge Harvest kèm một
+  modifier Fire, Cold hoặc Lightning (50 Lifeforce) luôn cho resistance đó:
+  đó là modifier duy nhất mang tag. Reforge đó không giúp gì cho Life.
+
+
+  **Khi prefix đã đúng còn suffix là đồ lấp chỗ.** Giữ chiếc belt. Ví dụ kế
+  tiếp dựng lại phía suffix dưới một cái khóa.
+mistakes:
+  - "Dùng các Fossil này cho một chiếc belt Energy Shield hoặc Armour. Pristine Fossil loại bỏ đúng những prefix đó."
+  - "Trông chờ resistance nhiều gấp mười. Hệ số nhân của Prismatic Fossil là sáu trong dữ liệu 3.30."
+  - "Giữ Life 60 vì resistance tốt. Một phần ba số lần roll Life là trên 100; thử thêm một lần thì rẻ."
+  - "Đặt [[Memory Strands]] lên base trước. Fossil không dùng strand, theo thử nghiệm của người chơi."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Đường vào Delve trong 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Giá của các reforge elemental được nhắc tới như một phương án thay thế." }

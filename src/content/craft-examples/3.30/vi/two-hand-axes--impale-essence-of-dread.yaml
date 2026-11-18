@@ -1,0 +1,163 @@
+category: two-hand-axes
+title: "Một cây axe impale: suffix mà không lần roll nào cho được"
+level: 2
+summary: "Một Essence of Dread đảm bảo Impale Effect, thứ pool tự nhiên không có. Lặp lại tới khi một prefix physical chừa chỗ roll ra bên cạnh nó, rồi bench hybrid impale."
+goal: >-
+  Cây axe chạy map đầu tiên cho một build impale: Impale Effect ở phía suffix,
+  một prefix physical roll ra, và increased Physical Damage kèm chance to
+  Impale của bench đặt thêm lên. Bài học là **khi nào Essence là cánh cửa duy
+  nhất**. Hướng dẫn về mace dùng Essence để tiết kiệm một lần roll. Ở đây nó
+  cấp một modifier mà currency thường không bao giờ tạo ra được, nên cả lần
+  craft được sắp xếp xoay quanh nó.
+base: "Karui Chopper"
+itemLevel: 77
+baseWhy: >-
+  Karui Chopper có damage gốc cao nhất của loại item này, 121–189, và không có
+  implicit nào phải cân nhắc. Impale được dựng từ physical damage của cú hit,
+  nên cú đánh lớn nhất là base đúng. Item level 77 mở Tier 1 của flat Physical
+  Damage và Tier 1 của attack speed; lần craft này không cần các tier phần
+  trăm cao nhất, vì phần trăm đến từ bench.
+methods: [essence, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 27 to 58 Physical Damage" }
+    - { text: "Adds 96 to 187 Fire Damage" }
+    - { text: "99% increased Physical Damage / 19% chance to Impale Enemies on Hit with Attacks", how: crafted }
+  suffixes:
+    - { text: "27% increased Impale Effect", how: essence }
+    - { text: "+34 to Strength" }
+    - { text: "18% increased Attack Speed" }
+needs:
+  - { item: "[[Screaming Essence of Dread]]", amount: "10–20", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "cho bench" }
+cost: >-
+  Chi phí chính là Essence. Essence of Dread không có bậc nào dưới Screaming,
+  và Screaming trở lên là thứ map đỏ cho bạn trong 3.30, nên đây là lần craft
+  dành cho lúc bạn đã ở trong map, không phải trước đó. Bước bench là 8
+  [[Chaos Orb]], hoặc 3 cho bậc bên dưới.
+odds: >-
+  Suffix thì chắc chắn. Prefix là cuộc xổ số, và trên axe đó là một cuộc khó:
+  ở item level 77, theo phép tính của chúng tôi, một lần roll prefix ra flat
+  Physical Damage từ adds 16 trở lên, hoặc hybrid kèm Accuracy từ 35% trở lên,
+  khoảng 1 trên 13 lần. Sáu trên mười lần roll là elemental.
+
+
+  Một kết quả Essence có một tới ba prefix, nên đâu đó khoảng một trên bảy tới
+  mười Essence là đạt. Mười tới hai mươi cái là lượng dự trữ hợp lý.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa một cây Karui Chopper trắng item level 77 lên 20% quality rồi dùng
+      một [[Screaming Essence of Dread]] lên nó.
+    why: >-
+      Essence biến cây axe thành Rare và đảm bảo 25–29% increased Impale
+      Effect dưới dạng suffix. Modifier đó không nằm trong pool tự nhiên của
+      bất kỳ axe hai tay nào. Không có influence thì Essence of Dread là cách
+      duy nhất để có nó.
+    state:
+      prefixes:
+        - { text: "Adds 21 to 398 Lightning Damage" }
+        - { text: "Adds 63 to 124 Cold Damage" }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+298 to Accuracy Rating" }
+        - { text: "13% reduced Enemy Stun Threshold" }
+  - title: "Đọc prefix với bench trong đầu"
+    do: >-
+      Giữ Alt và tìm một trong hai thứ giữa các prefix: **flat Physical
+      Damage** ("Adds … Physical Damage") hoặc **hybrid** của increased
+      Physical Damage với Accuracy Rating. Rồi kiểm xem ô prefix thứ ba có
+      trống không.
+    why: >-
+      Modifier bạn sắp bench, increased Physical Damage kèm chance to Impale,
+      cùng group với increased Physical Damage thuần. Hai cái đó không thể
+      chung một item. Flat Physical Damage và hybrid kèm Accuracy là các group
+      khác và nằm cạnh nó được. Vậy nên kế hoạch này đảo ngược điều bạn vẫn
+      mong trên một cây axe physical thường: bản phần trăm thuần lại là roll
+      cản đường.
+    check: >-
+      Một mức hợp lý: flat Physical Damage từ adds 16 trở lên ("Gleaming" trở
+      lên), hoặc hybrid từ 35% trở lên ("Mercenary's" trở lên), **và** tổng
+      cộng nhiều nhất hai prefix.
+    fail: >-
+      Kết quả ở trên không đạt: hai prefix elemental. Dùng thêm một Essence
+      lên chính cây axe đó. Impale Effect lần nào cũng quay lại; chỉ phần còn
+      lại thay đổi.
+  - title: "Lặp lại tới khi một prefix vừa"
+    do: >-
+      Dùng Essence từng cái một, đọc prefix sau mỗi cái, tới khi một kết quả
+      qua được bước kiểm.
+    why: >-
+      Mỗi lần dùng roll lại mọi thứ trừ suffix được đảm bảo. Kệ các suffix
+      khác trong lúc làm việc này. Attack speed bên cạnh Impale Effect là phần
+      thưởng thêm và sẽ không sống qua Essence kế tiếp, nên nó không bao giờ
+      là lý do để giữ một kết quả có sai prefix.
+    state:
+      prefixes:
+        - { text: "Adds 27 to 58 Physical Damage" }
+        - { text: "Adds 96 to 187 Fire Damage" }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+34 to Strength" }
+        - { text: "18% increased Attack Speed" }
+  - title: "Nếu thay vào đó bản phần trăm thuần roll ra"
+    do: >-
+      Chỉ giữ nó nếu nó mạnh, từ 110% trở lên ("Bloodthirsty" trở lên). Rồi
+      bench flat Physical Damage vào một prefix trống, adds 18–24 to 36–42 giá
+      4 [[Chaos Orb]], và lấy chance to Impale từ passive tree hoặc một
+      support gem.
+    why: >-
+      Một roll 110–134% là nhiều damage hơn mức 95–105% của hybrid bench, và
+      bạn vẫn có Impale Effect. Thứ bạn mất là 18–20% chance to Impale trên
+      weapon. Dưới 110% thì hybrid bench đơn giản là tốt hơn, và prefix thuần
+      đang chiếm chỗ của nó: dùng thêm một Essence.
+  - title: "Bench hybrid impale"
+    do: >-
+      Ở [[Crafting Bench]], craft **95–105% increased Physical Damage kèm
+      18–20% chance to Impale Enemies on Hit with Attacks** vào prefix trống:
+      8 [[Chaos Orb]]. Bậc bên dưới, 86–94% kèm 16–17%, là 3 Chaos Orb.
+    why: >-
+      Một ô bench mua được cả hệ số nhân mà cây axe đang thiếu lẫn một phần
+      chance impale. Fire damage roll ra ở prefix thứ hai cứ nằm yên đó; gỡ nó
+      nghĩa là phải roll lại, và một prefix phí trên cây axe chạy map đầu tiên
+      là cái giá chấp nhận được.
+    check: >-
+      Ba prefix, một trong đó là crafted. Bench giờ đã dùng hết: cây axe chứa
+      một modifier crafted.
+    state:
+      prefixes:
+        - { text: "Adds 27 to 58 Physical Damage" }
+        - { text: "Adds 96 to 187 Fire Damage" }
+        - { text: "99% increased Physical Damage / 19% chance to Impale Enemies on Hit with Attacks", how: crafted }
+      suffixes:
+        - { text: "27% increased Impale Effect", how: essence }
+        - { text: "+34 to Strength" }
+        - { text: "18% increased Attack Speed" }
+variations: >-
+  **Cùng lần craft này cho bleeding.** Không có Essence nào cho bleeding, nên
+  hình dạng thay đổi: roll prefix bằng công cụ nào cũng được, rồi bench
+  increased Physical Damage kèm chance to cause Bleeding (cùng các bậc, cùng
+  giá), trên một cây Sundering Axe để lấy +20% bleed multiplier của nó. Ví dụ
+  Fossil làm đúng việc này.
+
+
+  **Essence tốt hơn.** Shrieking Dread cho 30–34% và
+  [[Deafening Essence of Dread]] cho 35–38%, bằng roll influence Crusader cao
+  nhất. Chỉ dùng loại rẻ để tìm prefix nếu bạn bằng lòng giữ con số rẻ:
+  modifier Essence được roll lại cùng với Essence, nên cái cuối cùng bạn dùng
+  sẽ quyết định nó.
+
+
+  **Nâng cấp hybrid về sau.** Bản unveil của chính prefix đó là 120–139% kèm
+  21–25% chance. Ví dụ axe cuối cùng dựng một cái như vậy.
+mistakes:
+  - "Giữ một kết quả vì attack speed của nó. Suffix sẽ bị Essence kế tiếp roll lại; prefix mới là thứ bạn đang trả tiền để có."
+  - "Bench hybrid lên cây axe đã roll ra increased Physical Damage thuần. Bench sẽ từ chối: cùng một group."
+  - "Dùng cách này trên base có [[Memory Strands]]. Một Essence có thể tiêu tới 80 strand theo bảng data-mine."
+  - "Craft ở bench giữa các Essence. Essence kế tiếp sẽ gỡ nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Modifier của Essence of Dread trên axe hai tay, group, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand một Essence tiêu, theo data-mine. Không chính thức." }

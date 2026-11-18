@@ -1,0 +1,188 @@
+category: quivers
+title: "Quiver critical strike với hai Fossil"
+level: 3
+summary: "Một Deft Fossil cho suffix và một Pristine Fossil cho Life, trong cùng một Resonator. Mỗi phía một Fossil, kèm phép tính xem cái thứ hai lấy mất của cái thứ nhất bao nhiêu."
+goal: >-
+  Một quiver có **cả hai** suffix critical strike và một prefix Life, cho
+  build bow critical strike ở map đỏ. Hai Fossil vào cùng lúc, mỗi cái nhắm
+  vào một phía khác nhau của item. Bài học là các Fossil trong cùng một
+  Resonator không độc lập với nhau: Fossil thứ hai giúp một phía và lấy bớt
+  thứ gì đó của phía kia, và bạn đọc được là bao nhiêu từ weight trước khi
+  tiêu bất cứ thứ gì.
+base: "Spike-Point Arrow Quiver"
+itemLevel: 75
+baseWhy: >-
+  Implicit của Spike-Point là 20–30% increased Critical Strike Chance with
+  Bows, base hiển nhiên cho build này. Item level 75 mở Tier 1 của
+  Critical Strike Multiplier with Bows (35–38%, từ 74) và Tier 2 của
+  Critical Strike Chance with Bows (35–38%, từ 72). Tier cao nhất của
+  chance cần 85, và một lần roll lại bằng Fossil hiếm khi rơi trúng nó, nên
+  75 là item level thành thật cho phương pháp này.
+methods: [fossil, bench]
+result:
+  implicits: ["27% increased Critical Strike Chance with Bows"]
+  prefixes:
+    - { text: "+124 to maximum Life", how: fossil }
+    - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+  suffixes:
+    - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+    - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+    - { text: "9% increased Attack Speed", how: crafted }
+needs:
+  - { item: "[[Deft Fossil]]", amount: "10–20" }
+  - { item: "[[Pristine Fossil]]", amount: "10–20" }
+  - { item: "[[Potent Chaotic Resonator]]", amount: "một mỗi lần thử", note: "cỡ có hai socket" }
+  - { item: "[[Orb of Alchemy]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "2", note: "cho bench" }
+cost: >-
+  Hai Fossil và một Resonator hai socket cho mỗi lần thử, tất cả đều từ
+  Delve. Trong 3.30, đường vào Delve là qua những map luôn spawn Sulphite,
+  nên đây là lần craft dành cho người chạy Delve hoặc mua của người chạy.
+  Ngoài ra không gì trong đó tốn kém.
+odds: >-
+  Mọi con số là phép tính của chúng tôi từ weight ở item level 75, tính cho
+  từng modifier được roll, và chúng bỏ ra ngoài các modifier chỉ có từ
+  Fossil (xem đoạn cuối).
+
+
+  **Suffix.** Không có Fossil, hai suffix critical strike chiếm 18% số lần
+  roll suffix. Chỉ với một [[Deft Fossil]], chúng chiếm 72%. Thêm một
+  [[Pristine Fossil]] thì chúng tụt xuống 61%, vì Pristine cũng nhân hai
+  suffix mang tag life, life on kill và life leech, lên thành 18% cộng
+  lại.
+
+
+  **Prefix.** Life chiếm 42% số lần roll prefix khi không có Fossil và 88%
+  khi có Pristine Fossil. Life từ +100 trở lên là 1 trên 8 lần roll prefix
+  khi không có nó và 1 trên 4 khi có.
+
+
+  Vậy là Fossil thứ hai đổi khoảng một phần sáu tỉ lệ trúng của suffix lấy
+  mức gấp đôi ở phía prefix. Với một quiver cần cả hai, đó là một cuộc đổi
+  chác tốt.
+
+
+  **Kết quả trọn vẹn.** Khi một kết quả có ba suffix, cả hai suffix critical
+  strike cùng có mặt trong 55% số lần với cặp Fossil này, theo mô phỏng của
+  chúng tôi trên cùng các weight đó (72% khi chỉ có Deft, 5% khi không có
+  Fossil). Cả hai cùng từ 30% trở lên là khoảng 1 trên 16 kết quả. Life từ
+  +100 trở lên có mặt ở khoảng 3 trên 10 kết quả. Đòi tất cả những thứ đó
+  cùng lúc là khoảng 1 trên 55 kết quả, và không phải kết quả nào cũng có ba
+  suffix. Một ngưỡng phần lớn người chơi kham nổi, đủ cả hai suffix, một
+  trong hai từ 30% trở lên, và +100 Life, là khoảng 1 trên 11.
+
+
+  **Những gì các con số bỏ sót.** Dữ liệu liệt kê hai suffix quiver chỉ có
+  từ Fossil mà các Fossil này cũng sẽ nhân lên: increased Vaal Skill
+  Critical Strike Chance (tag critical) và Regenerate 1% of Life per
+  second (tag life). Dữ liệu không cho biết chính xác khi nào modifier chỉ
+  có từ Fossil gia nhập pool, nên công cụ tính bỏ qua chúng. Hãy chờ sẽ gặp
+  cả hai, và chờ tỉ lệ critical strike thật thấp hơn 61% phần nào.
+steps:
+  - title: "Đưa quiver lên Rare"
+    do: >-
+      Dùng một [[Orb of Alchemy]] lên Spike-Point Arrow Quiver trắng.
+    why: >-
+      Một Chaotic Resonator roll lại item Rare, giống một Chaos Orb. Alchemy
+      roll ra gì cũng không quan trọng: Resonator đầu tiên thay hết chỗ đó.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes: [{ text: "Adds 21 to 41 Cold Damage to Attacks" }]
+      suffixes:
+        - { text: "+46 to Dexterity" }
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "+31% to Fire Resistance" }
+  - title: "Gắn cả hai Fossil rồi dùng Resonator"
+    do: >-
+      Đặt một [[Deft Fossil]] và một [[Pristine Fossil]] vào một
+      [[Potent Chaotic Resonator]], rồi dùng Resonator lên quiver.
+    why: >-
+      Deft ghi "More Critical modifiers, No Attribute modifiers". Trong dữ
+      liệu 3.30, "more" là weight gấp mười và "no" là bằng không: cả hai
+      suffix critical strike được mười vé cho mỗi vé chúng từng có, còn
+      Dexterity, suffix hay ra nhất trên quiver, hoàn toàn không roll ra
+      được. Pristine ghi "More Life modifiers, No Defence modifiers": Life
+      được gấp mười số vé, và quiver không có modifier defence nào để mất.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+58 to maximum Life", how: fossil }
+      suffixes:
+        - { text: "+27% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "Gain 41 Life per Enemy Killed", how: fossil }
+        - { text: "+38% to Cold Resistance", how: fossil }
+  - title: "Đọc suffix trước, rồi tới Life"
+    do: >-
+      **Suffix:** Critical Strike Multiplier with Bows và Critical Strike
+      Chance with Bows có đủ cả hai không, và có ít nhất một cái từ 30% trở
+      lên không? ("of Ferocity" hoặc "of Destruction" với multiplier;
+      "of Penetrating" hoặc "of Incision" với chance.) **Rồi tới Life:** nó
+      có từ +100 trở lên không? Hãy đặt ngưỡng này trước Resonator đầu tiên
+      và đừng nâng nó giữa chừng.
+    why: >-
+      Suffix là phía khó của quiver, nên chúng được xét trước. Kết quả ở
+      trên có một suffix critical strike ở tier thấp, life on kill ở chỗ lẽ
+      ra là cái thứ hai, và một roll Life thấp. Nó trượt cả ba phép thử.
+    check: >-
+      Đếm cả số ô trống nữa. Một suffix trống là lý tưởng, vì bench sẽ đặt
+      attack speed vào đó. Ba suffix cũng ổn nếu hai trong số đó là cặp bạn
+      nhắm tới.
+    fail: >-
+      Dùng một cặp Fossil nữa và một Resonator nữa lên chính quiver đó. Mỗi
+      lần thử là độc lập.
+  - title: "Biết khi nào hai trên ba là đủ"
+    do: >-
+      Nếu một kết quả có cả hai suffix critical strike ở tier tốt và một
+      phía prefix **tệ**, hãy ngừng dùng Fossil. Giữ quiver lại và dựng lại
+      prefix bằng phương pháp trong ví dụ kế tiếp.
+    why: >-
+      Cặp suffix là phần roll lại thì đắt. Roll đè qua nó để đuổi theo Life
+      bằng chính các Fossil đó là vứt nửa khó đi để sửa nửa dễ.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+124 to maximum Life", how: fossil }
+        - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+      suffixes:
+        - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+  - title: "Bench ô trống"
+    do: >-
+      Còn một suffix trống: craft 7–12% increased Attack Speed ở
+      [[Crafting Bench]] giá 2 [[Chaos Orb]].
+    why: >-
+      Attack speed chiếm 3% số lần roll suffix trên quiver và Deft Fossil
+      còn làm nó hiếm hơn nữa, nên nó chưa bao giờ có cửa đến từ Resonator.
+      Bench mới là nguồn đúng của nó.
+    check: >-
+      Đừng craft Global Critical Strike Chance ở đây. Nó cùng group với
+      Critical Strike Chance with Bows đã roll ra và bench sẽ từ chối nó.
+    state:
+      implicits: ["27% increased Critical Strike Chance with Bows"]
+      prefixes:
+        - { text: "+124 to maximum Life", how: fossil }
+        - { text: "Adds 12 to 25 Physical Damage to Attacks", how: fossil }
+      suffixes:
+        - { text: "+33% to Critical Strike Multiplier with Bows", how: fossil }
+        - { text: "31% increased Critical Strike Chance with Bows", how: fossil }
+        - { text: "9% increased Attack Speed", how: crafted }
+variations: >-
+  **Chỉ Deft.** Trong một Resonator một socket, cặp critical strike chiếm 72%
+  số lần roll suffix và prefix thuần là may rủi, nơi Life vẫn là 4 trên 10
+  lần roll. Dùng cách này khi bạn có ít Pristine Fossil, hoặc khi bạn đã
+  định dựng lại prefix từ trước.
+
+
+  **Harvest thay cho Delve.** Reforge Critical (150 Primal Lifeforce) đảm
+  bảo một trong hai suffix critical strike và để phần còn lại cho pool
+  thường. Nó rẻ hơn cho mỗi lần thử và ra cả hai suffix ít hơn hẳn, vì cái
+  thứ hai quay về mức 9% số lần roll suffix.
+mistakes:
+  - "Thêm một Fossil thứ ba \"cho damage\". Mỗi Fossil thừa nhân một tag prefix hoặc suffix lên đều pha loãng hai cái bạn đang trả tiền."
+  - "Giữ life on kill vì nó đi kèm một Fossil Life. Nó là đồ lấp chỗ trong một ô mà cặp critical strike cần."
+  - "Dùng Fossil trên base có [[Memory Strands]] và trông chờ tier tốt hơn. Fossil không dùng strand, theo thử nghiệm của người chơi."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân weight của Fossil, tag, tier và weight. Xác suất là phép tính của chúng tôi và bỏ ra ngoài các modifier chỉ có từ Fossil." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Critical và giá của nó." }

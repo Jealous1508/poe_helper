@@ -1,0 +1,210 @@
+category: daggers
+title: "Một cây dagger poison và một Elder's Exalted Orb với hai kết quả"
+level: 5
+summary: "Lấp đầy suffix, giữ group physical bằng một veiled prefix, và modifier Elder mà Exalted Orb thêm vào chỉ có thể là một trong hai cái. Rồi nhìn trước khi nhấp."
+goal: >-
+  Một cây dagger poison Heist có prefix Elder nhân poison của nó lên,
+  "+51–59% to Damage over Time Multiplier for Poison inflicted with this
+  Weapon", nằm cạnh một veiled prefix physical kèm chance to Poison.
+  Elder's Exalted Orb bình thường thêm một trong mười ba modifier. Kế hoạch
+  này là **block-crafting**: sắp xếp item sao cho mười một cái trong số đó
+  thành bất khả thi trước khi dùng orb.
+base: "Pneumatic Dagger"
+itemLevel: 83
+baseWhy: >-
+  Cây dagger Heist cao cấp nhất: mọi damage từ các cú đánh của nó đều poison
+  được. Item level 83 là mức mà tier tốt nhất của prefix poison Elder cần (75
+  cho 43–50%). Base phải **không có influence mà cũng không fractured**: orb
+  cần một item không có influence, và theo các trang tra cứu, một fractured
+  item không thể được gắn influence. Vậy nên không gì trên cây dagger này
+  được phép fractured, và mọi lớp bảo vệ trong kế hoạch đều là khóa của
+  bench.
+methods: [veiled, meta, harvest, influence, lock, bench]
+result:
+  note: "Elder"
+  implicits: ["All Damage from Hits with This Weapon can Poison"]
+  prefixes:
+    - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+    - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+    - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "+22% to Damage over Time Multiplier", how: harvest }
+    - { text: "+47 to Intelligence", how: harvest }
+needs:
+  - { item: "[[Veiled Chaos Orb]]", amount: "vài cái" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Elder's Exalted Orb]]", amount: "1" }
+  - { item: "[[Hinekora's Lock]]", amount: "1 trở lên", note: "tùy chọn; xem giai đoạn 4" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "các craft bench" }
+cost: >-
+  Một [[Elder's Exalted Orb]], thứ các conqueror rơi ra, là mảnh ghép chỉ có
+  đúng một: item chỉ nhận nó được một lần. Quanh nó là vài
+  [[Veiled Chaos Orb]] từ Betrayal và một hoặc nhiều lần khóa, mỗi lần 4
+  [[Divine Orb]] và một [[Sacred Orb]]. Một [[Hinekora's Lock]] đắt hơn mọi
+  thứ khác cộng lại; không có nó thì kế hoạch vẫn chạy được với tỉ lệ năm ăn
+  năm thua.
+odds: >-
+  **Giai đoạn 2.** Lần reforge Speed nào cũng cho attack speed, modifier tự
+  nhiên duy nhất của dagger mang tag đó. Nếu tier được rút theo weight,
+  khoảng một trên bốn lần reforge cho 23% trở lên.
+
+
+  **Giai đoạn 4.** Trên dagger Elder, dữ liệu liệt kê năm prefix: ba bản
+  increased Physical Damage, tất cả nằm trong group physical thuần, và các
+  multiplier damage-over-time cho Bleeding và cho Poison, mỗi cái có ba tier
+  weight bằng nhau. Khi suffix đã đầy và group physical đã bị chiếm, còn lại
+  hai cái. Nếu orb rút theo weight trong số những gì item còn nhận được, như
+  mọi modifier được thêm khác vẫn làm, thì nó là cái Poison
+  **một trên hai lần**, và sau đó là tier cao nhất của nó một trên ba lần.
+  Nếu còn thêm một ô suffix trống, tỉ lệ sẽ là khoảng 1 trên 13.
+steps:
+  - title: "Giai đoạn 1: veiled prefix Poison, và không gì khác ở phía prefix"
+    do: >-
+      Đưa cây dagger trắng lên Rare, rồi dùng [[Veiled Chaos Orb]] tới khi
+      kết quả có một **Veiled Prefix và nhiều nhất một prefix khác**. Craft
+      25–34% increased Fire Damage (4 Orb of Alteration) vào một prefix
+      trống để block các lựa chọn caster, unveil **120–139% increased
+      Physical Damage kèm 21–25% chance to Poison on Hit**, rồi gỡ cái block
+      đi (1 Orb of Scouring).
+    why: >-
+      Prefix này làm ba việc. Nó là hệ số nhân physical của cây dagger. Nó
+      cấp chance to Poison. Và nó chiếm group physical thuần, chính điều về
+      sau sẽ loại ba trong năm prefix Elder.
+    check: >-
+      Sau giai đoạn này bạn muốn có veiled prefix và **hai ô prefix
+      trống**, hoặc một ô trống và một prefix bạn chấp nhận sống chung
+      được. Đừng bận tâm tới suffix.
+    state:
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+      suffixes:
+        - { text: "+38 to Dexterity" }
+        - { text: "Gain 19 Mana per Enemy Killed" }
+  - title: "Giai đoạn 2: khóa prefix, reforge lấy attack speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]; nó cần một suffix trống). Rồi, ở
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150 Vivid Lifeforce). Lặp
+      lại cả hai tới khi tier attack speed làm bạn hài lòng.
+    why: >-
+      Hãy dùng khóa đầy đủ dù chỉ có một prefix cần bảo vệ. Bản 1 Divine Orb
+      ở đây sẽ là chắc chắn, nhưng không có gì nói rằng nó ngăn một lần
+      reforge **thêm** prefix vào các ô trống, mà những ô đó phải trống
+      nguyên. Dưới khóa đầy đủ, người chơi ghi nhận rằng phía prefix được để
+      y nguyên như nó đang có.
+    check: >-
+      Một prefix, như trước. Attack speed nằm trong các suffix. Đếm suffix:
+      giai đoạn kế cần ba cái.
+    fail: >-
+      Nếu có lúc một lần reforge dưới khóa thêm một prefix, hãy dừng lại:
+      luật đã đổi từ khi bài này được viết, mà kế hoạch thì cần cái ô đó.
+    state:
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+  - title: "Giai đoạn 3: chắc chắn phía suffix đã đầy"
+    do: >-
+      Ba suffix: đi tiếp. Hai: craft cái thứ ba ở bench, chẳng hạn
+      +18–20% to Chaos Damage over Time Multiplier (4 [[Chaos Orb]]).
+    why: >-
+      Exalted Orb loại nào cũng thêm modifier của nó vào một phía còn chỗ.
+      Một phía suffix đã đầy chỉ để lại cho orb Elder các prefix, và trong
+      tám suffix Elder không cái nào là thứ cây dagger này được dựng ra để
+      có.
+    check: >-
+      Sáu ô: một prefix, ba suffix, hai prefix trống. Đọc nó hai lần. Đây là
+      trạng thái mà cả kế hoạch tồn tại để đạt tới.
+  - title: "Giai đoạn 4: Elder's Exalted Orb"
+    do: >-
+      Nếu bạn có một [[Hinekora's Lock]], hãy dùng nó lên cây dagger trước,
+      rồi rê [[Elder's Exalted Orb]] lên item và đọc modifier nó sẽ thêm.
+      Poison: nhấp. Không có Lock thì cứ nhấp.
+    why: >-
+      Orb này "adds Elder influence and a new Elder modifier to a rare
+      item". Modifier mới buộc phải là một prefix, và nó không thể là cái
+      nào trong ba cái physical vì group của chúng đã bị chiếm. Vậy là còn
+      lại multiplier Bleeding và multiplier Poison. Lock biến một lần tung
+      đồng xu thành một cái nhìn.
+    check: >-
+      Đọc cả tier nữa: 51–59% là cao nhất, 43–50% và 37–42% ở dưới nó.
+    fail: >-
+      **Lock cho thấy Bleeding:** đừng dùng orb. Bất kỳ thay đổi nào trên
+      item cũng xóa cái nhìn trước đó; hãy đổi một thứ rẻ tiền, chẳng hạn
+      thay suffix bench, rồi nhìn lại bằng một Lock khác. **Không có Lock,
+      và ra Bleeding:** vẫn còn một prefix trống và group Bleeding giờ cũng
+      đã bị chiếm, nên trong các prefix Elder chỉ còn Poison là thêm được.
+      Công thức beast "Add a Mod to an Elder Item" là công cụ thêm một cái;
+      nó có trong danh sách công thức hiện tại, và chúng tôi chưa thử nghiệm
+      xem nó có theo cùng logic đó không. Một [[Orb of Annulment]] không
+      phải là lời giải: trong 3.30 không gì lái được nó.
+    state:
+      note: "Elder"
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+        - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+  - title: "Giai đoạn 5: prefix cuối cùng"
+    do: >-
+      Nếu bench còn rảnh, craft **adds 13–17 to 26–30 Physical Damage**
+      (4 Chaos Orb) vào prefix còn lại. Nếu bench đang giữ suffix thứ ba, cứ
+      để nó ở đó và quyết định xem một [[Exalted Orb]] có đáng đổi lấy một
+      prefix ngẫu nhiên không.
+    why: >-
+      Trên base này mọi damage đều poison được, nên flat Physical Damage
+      nâng cả cú đánh lẫn poison, và cái phần trăm veiled nhân nó lên. Một
+      item giữ được một modifier bench; ô nào nhận nó thì đã được quyết định
+      ở giai đoạn 3, tùy vào số suffix mà reforge cho bạn.
+    state:
+      note: "Elder"
+      implicits: ["All Damage from Hits with This Weapon can Poison"]
+      prefixes:
+        - { text: "127% increased Physical Damage / 23% chance to Poison on Hit", how: veiled }
+        - { text: "+54% to Damage over Time Multiplier for Poison inflicted with this Weapon", how: influence }
+        - { text: "Adds 15 to 28 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "+22% to Damage over Time Multiplier", how: harvest }
+        - { text: "+47 to Intelligence", how: harvest }
+variations: >-
+  **Roll ra prefix Elder thay vì ép nó.** Trên một cây dagger Elder dùng
+  Alteration, multiplier Poison là khoảng 1 trên 49 lần roll prefix, và thứ
+  bạn cầm lúc đó là một item Magic không có dòng nào trong năm dòng còn lại.
+  Ép nó sau cùng, lên một item đã hoàn thiện, chính là lý do của thứ tự này.
+
+
+  **Một influence thứ hai.** Hunter có "Poisons you inflict deal Damage
+  13–15% Faster" dưới dạng suffix. Ghép hai influence cần một
+  [[Awakener's Orb]], thứ mà theo các trang tra cứu sẽ roll lại mọi thứ trừ
+  một modifier influence từ mỗi item, nên nó thuộc về phần đầu của một kế
+  hoạch, không phải phần cuối của kế hoạch này.
+
+
+  **Tier.** Một [[Divine Orb]] roll lại chỉ số bên trong tier của prefix
+  Elder, không phải tier.
+mistakes:
+  - "Bắt đầu từ một cây dagger fractured. Theo các trang tra cứu, nó không nhận được Elder's Exalted Orb."
+  - "Dùng orb khi còn một ô suffix trống. Tám suffix Elder nhập cuộc rút thăm và prefix Poison tụt từ 1 trên 2 xuống khoảng 1 trên 13."
+  - "Dùng orb trước khi group physical có trên item. Thêm ba prefix nữa nhập cuộc rút thăm."
+  - "Roll ra increased Physical Damage thuần rồi tính thêm bản veiled sau. Cùng group; veiled prefix mới là cái mang chance to Poison."
+  - "Với lấy một Annulment sau một kết quả xấu. Từ 3.30 không meta-modifier nào lái được nó."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Elder trên dagger cùng group và weight của chúng, các veiled prefix, giá bench, và dòng mô tả item của Elder's Exalted Orb và Hinekora's Lock. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá khóa; các Exalted Orb của conqueror; thay đổi về Annulment; Hinekora's Lock và Imprint." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured item không thể được gắn influence." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức \"Add a Mod to an Elder Item\" trong danh sách hiện tại." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa; cách block khi unveil. Một phần cũ hơn 3.30." }

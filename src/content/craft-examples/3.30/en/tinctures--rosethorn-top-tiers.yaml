@@ -1,0 +1,156 @@
+category: tinctures
+title: "A Rosethorn Tincture at item level 85: paying for tiers"
+level: 3
+summary: "High-tier critical strike multiplier with increased effect. The orbs are the same three as ever; the work is deciding which tiers to pay for."
+goal: >-
+  An endgame Rosethorn Tincture: a strong implicit, critical strike
+  multiplier at +24% or more, and increased effect at 17% or more. No new
+  tool appears in this example, because the 3.30 data gives tinctures none.
+  What makes it the hardest tincture craft is the arithmetic: **every "only
+  the best tier" doubles the bill, and with two slots it doubles twice.**
+  Knowing that before you start is the whole skill.
+base: "Rosethorn Tincture"
+itemLevel: 85
+baseWhy: >-
+  The implicit is 100–150% increased Critical Strike Chance with Melee
+  Weapons, and critical strike multiplier is the suffix that pays it off.
+  Item level 85 opens the best tier of both targets: +29–33% multiplier and
+  20–22% increased effect. At 84 both stop one tier lower. The item level is
+  worth having even if you would settle for the second tier, and the odds
+  below show why.
+methods: [currency, finishing]
+result:
+  rarity: magic
+  implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+  prefixes:
+    - { text: "18% increased effect" }
+  suffixes:
+    - { text: "+31% to Melee Weapon Critical Strike Multiplier" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "300–600" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Glassblower's Bauble]]", amount: "to 20%" }
+cost: >-
+  Alterations by the hundred. Nothing else is spent, and nothing protects a
+  good half while you reroll the other, so the price is set entirely by the
+  bar you choose in step 2.
+odds: >-
+  All from the weights at item level 85, by our arithmetic. One suffix roll
+  is critical strike multiplier at its best tier 1 time in 63, and at its
+  best two tiers 1 in 31. One prefix roll is plain increased effect at its
+  best tier 1 time in 20, and at its best two 1 in 10.
+
+
+  A result needs both, so multiply. Best two tiers on both sides: about 1
+  attempt in 314. Best tier on the suffix, best two on the prefix: 1 in 628.
+  Best tier on both: 1 in 1,256. Each "only the best" doubles the cost, for 5
+  points of multiplier or 3 points of effect.
+
+
+  **Why item level 85 even for the second tier.** On an item level 73 base
+  the second tier is the best one that can roll, and getting it on both
+  sides is about 1 attempt in 689. At 85 every roll of the best tier counts
+  as a pass too, which is how the same bar comes down to 1 in 314.
+steps:
+  - title: "Check the item level and the implicit"
+    do: >-
+      Hold Alt over the white tincture. It must read item level 85. Then
+      look at the implicit, and if you have several, start with the highest.
+    why: >-
+      Hundreds of Alterations are about to go into this base, and none of
+      them will change the implicit. A Rosethorn at 142% and one at 104% take
+      exactly the same effort to finish.
+    state:
+      rarity: normal
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+  - title: "Choose the bar from the price list"
+    do: >-
+      Read the odds above and pick one line. This example takes the first:
+      critical strike multiplier at +24% or more, and plain increased effect
+      at 17% or more. Write it down.
+    why: >-
+      With no bench and no way to hold one slot, the bar is the only
+      decision that changes the cost. The step from "best two" to "best" on
+      one side buys a few points and doubles the Alterations. Almost no build
+      can tell the difference; every stash can.
+    check: >-
+      Decide now whether you would also accept "35% increased effect with
+      increased Mana Burn rate". It is another tenth of prefix rolls, which
+      brings the bar down to about 1 attempt in 157, and it is more effect
+      than the plain prefix ever gives. It passes only if your mana can pay
+      for it.
+  - title: "Roll, and judge by the bar"
+    do: >-
+      One [[Orb of Transmutation]], then [[Orb of Alteration]]s. Read the
+      suffix first: it is the rarer half. Use an [[Orb of Augmentation]] on
+      an empty slot only when the modifier already there passes.
+    why: >-
+      The result below is the one that tests you. The suffix passes. The
+      prefix is the trade-off one, at its best tier. This character decided
+      in step 2 that its mana cannot carry a faster Mana Burn, so it is a
+      miss, and the next Alteration goes in.
+    fail: >-
+      If you find yourself wanting to keep a result like this, the bar was
+      wrong, not the result. Stop, change the bar on purpose, and accept it.
+      That is a decision. Drifting is not.
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "35% increased effect / 39% increased Mana Burn rate" }]
+      suffixes: [{ text: "+26% to Melee Weapon Critical Strike Multiplier" }]
+  - title: "The pass"
+    do: >-
+      Keep going until one result meets both bars. Hold Alt and read the
+      tiers before you believe it.
+    why: >-
+      This result has the best tier of the suffix and the second tier of the
+      prefix. It was not what the bar demanded; the bar asked for less, and
+      the better suffix is the luck that item level 85 makes room for.
+    check: >-
+      The suffix name is "of Ferocity" (+29–33%) or "of Fury" (+24–28%). The
+      prefix name is "Horticultural" (20–22%) or "Medicinal" (17–19%).
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "18% increased effect" }]
+      suffixes: [{ text: "+31% to Melee Weapon Critical Strike Multiplier" }]
+  - title: "Stop, then quality"
+    do: >-
+      Put the Alterations away. Take the tincture to 20% quality with
+      [[Glassblower's Bauble]]s.
+    why: >-
+      An Alteration to lift the prefix from 18% to 20% would reroll the
+      suffix as well, and a result with both best tiers is 1 attempt in
+      1,256. The item is finished.
+    state:
+      rarity: magic
+      implicits: ["142% increased Critical Strike Chance with Melee Weapons"]
+      prefixes: [{ text: "18% increased effect" }]
+      suffixes: [{ text: "+31% to Melee Weapon Critical Strike Multiplier" }]
+variations: >-
+  **The same price list for other builds.** Elemental penetration on a
+  Prismatic Tincture has the same weights and the same item levels as
+  critical strike multiplier here, so every figure above carries over.
+  Damage over Time Multiplier has the same weights too, and its best tier
+  needs 84. Attack speed has three tiers and a weight of 800: its best tier
+  is 1 suffix roll in 39.
+
+
+  **A cheaper bar.** Any tier of critical strike multiplier with any plain
+  increased effect is about 1 attempt in 63. On a base you found today and
+  will replace next week, that is the right bar.
+
+
+  **If your game lets a tincture be more than Magic.** We could not confirm
+  the rarity rules for tinctures in 3.30. Everything here assumes one prefix
+  and one suffix, which is the least any rule allows; if more turns out to be
+  possible, this Magic craft is still the first half of it.
+mistakes:
+  - "Rolling on an item level 84 base. Both best tiers are closed, and the second tiers are harder to reach than on an 85."
+  - "Raising the bar after a near miss. Each side you move from the best two tiers to the best one doubles the Alterations."
+  - "Counting the trade-off prefix as a pass without asking whether your mana can pay for it."
+  - "Using one more Alteration on a finished tincture for a slightly better tier."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Bases, implicits, tiers, item levels and weights. The odds are our arithmetic." }

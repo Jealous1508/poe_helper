@@ -1,0 +1,255 @@
+category: gloves
+title: "Warlord Spiked Gloves: three sources of melee damage on one pair"
+level: 5
+summary: "Keep the Atlas implicit by giving up Eldritch implicits, add the Warlord prefix that only influence has, and rebuild the suffixes behind a lock. Every stage is chosen by what the one before it ruled out."
+goal: >-
+  Spiked Gloves that keep their 24–30% Melee Damage implicit, with the
+  Warlord prefix of 27–30% beside it, a bench prefix of 14–16%, Tier 1 life
+  and Tier 1 attack speed. The tools are all familiar. The difficulty is the
+  **chain of consequences**: choosing influence removes Eldritch currency
+  and fracturing from the table, and each later stage has to be done with
+  what is left.
+base: "Spiked Gloves"
+itemLevel: 84
+baseWhy: >-
+  The implicit is the reason for the base, and it survives only on a pair
+  that never takes an Ember or an Ichor. An influenced pair cannot take them
+  anyway, so influence and an Atlas base belong together: you give up
+  nothing you could have had.
+
+
+  The Warlord prefix needs item level 73 and Tier 1 attack speed 76. Item
+  level 84 adds Tier 1 resistances for the reforges in stage 4. The base
+  must start with **no influence and no fractured modifier**.
+methods: [influence, currency, beast, meta, harvest, bench, finishing]
+result:
+  note: "Warlord"
+  implicits: ["28% increased Melee Damage"]
+  prefixes:
+    - { text: "29% increased Melee Damage", how: influence }
+    - { text: "+118 to maximum Life" }
+    - { text: "15% increased Melee Damage / +0.1 metres to Melee Strike Range", how: crafted }
+  suffixes:
+    - { text: "15% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "+32% to Cold Resistance", how: crafted }
+needs:
+  - { item: "White Spiked Gloves, item level 84+", amount: "1" }
+  - { item: "[[Warlord's Exalted Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]] and [[Orb of Scouring]]", amount: "1 of each" }
+  - { item: "[[Orb of Alteration]]", amount: "several hundred" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock, plus 2" }
+  - { item: "[[Blessed Orb]]", amount: "4 per lock, plus a few" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 per reforge" }
+  - { item: "[[Exalted Orb]]", amount: "4", note: "for the bench prefix" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench resistance" }
+cost: >-
+  One [[Warlord's Exalted Orb]], Alterations by the hundred, a few sets of
+  beasts, and then the part that scales: every suffix reroll in stage 4 is a
+  lock of 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s. The last stage adds 2
+  Divine Orbs and 4 [[Exalted Orb]]s at the bench.
+
+
+  We give no total. The number of locks is the number of times you are
+  unhappy with a random attack speed tier, and only you know that number.
+odds: >-
+  **Stage 2.** On the influenced base, one prefix roll in 52 is the Warlord
+  melee prefix at 23% or more, and one in 104 is the top tier, 27–30%. That
+  is our arithmetic, adding the Warlord table's weights to the natural
+  pool.
+
+
+  **Stage 4.** The Speed reforge gives a speed modifier every time, and on
+  gloves that is nearly always attack speed. If its tier is drawn by weight,
+  which is how reforges are understood to work, about one reforge in four or
+  five gives 14–16% and about two in five give 11% or more. Not measured in
+  3.30.
+steps:
+  - title: "Stage 0: choose the route by counting what each gives"
+    do: >-
+      Put the two finished items side by side on paper. **This route:**
+      implicit 24–30%, Warlord prefix 27–30%, bench prefix 14–16%: 65–76%
+      increased Melee Damage, and no Eldritch implicits. **The other
+      route:** Leviathan Gauntlets with over 60% more Armour, an Exarch
+      implicit such as 11% attack speed, an Eater implicit, and none of the
+      three melee modifiers except the bench one.
+    why: >-
+      "Increased" damage adds to all the other increased damage a character
+      already has; attack speed multiplies it. 70% more of a kind you have
+      400% of is a smaller gain than it reads. Put both versions through
+      your build's numbers before buying a Warlord orb. This example
+      assumes the melee stack won.
+  - title: "Stage 1: make the base Warlord, cheaply"
+    do: >-
+      Use an [[Orb of Alchemy]] on the white Spiked Gloves, then the
+      [[Warlord's Exalted Orb]]. Read the modifier it added. Unless it is
+      the melee prefix at a high tier, use an [[Orb of Scouring]].
+    why: >-
+      The orb's text is "Adds Warlord influence and a new Warlord modifier to
+      a rare item". The influence is what you are buying; the modifier is a
+      lottery ticket. Scouring removes modifiers, and influence is a
+      property of the item, so by long-standing behaviour the gloves come
+      back white and still Warlord. From then on every roll includes the
+      Warlord table.
+    check: >-
+      The Alchemy result must have fewer than six modifiers, or the Exalted
+      Orb has no slot. Scour and use another Alchemy if it is full.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "+62 to Armour" }
+        - { text: "24% increased Spell Damage", how: influence }
+      suffixes:
+        - { text: "+38% to Fire Resistance" }
+        - { text: "+44 to Dexterity" }
+        - { text: "Gain 61 Life per Enemy Killed" }
+  - title: "Stage 2: Alterations to the Warlord prefix"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s until the
+      prefix is "Warlord's" increased Melee Damage at **23% or more**. Keep
+      going until it appears with no suffix, or with one you would keep.
+    why: >-
+      The Warlord prefixes are a small table beside the natural pool: 6,125
+      of weight against 46,000. Four of the five families are damage types,
+      and three of them are the wrong one for a melee build, so read the
+      line, not just the name "Warlord's".
+    check: >-
+      An empty suffix is the best outcome. Whatever is on the Magic item is
+      carried into every Regal attempt.
+    state:
+      rarity: magic
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes: [{ text: "29% increased Melee Damage", how: influence }]
+  - title: "Stage 3: Imprint, then Regal for life"
+    do: >-
+      In the [[Menagerie]], make an [[Imprint]] of the Magic gloves
+      ([[Craicic Croaker]] and three Rare beasts). Use a [[Regal Orb]].
+      **Keep** the result if it added maximum Life of 100 or more. If it
+      added any other prefix, use the Imprint and try again.
+    why: >-
+      The prefix side is to end as Warlord melee, life, and one slot kept
+      open for the bench. A junk prefix from the Regal Orb would take the
+      slot life needs, and on an influenced pair there is no Eldritch
+      Annulment to remove it. The Imprint makes that outcome cost one Regal
+      Orb and one set of beasts.
+    check: >-
+      If the Regal Orb added a **suffix**, nothing is harmed: stage 4
+      rerolls the suffixes anyway. You may stop there and take life from the
+      bench at the end, 56–70, in place of the third melee source.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+  - title: "Stage 4: lock the prefixes, reforge for attack speed"
+    do: >-
+      At the [[Crafting Bench]], craft **Prefix Modifiers cannot be
+      changed**: 4 [[Divine Orb]]s and 4 [[Blessed Orb]]s. Then, at the
+      [[Horticrafting Station]], **Reforge a Rare item with random
+      modifiers, including a Speed modifier** (150
+      [[Vivid Crystallised Lifeforce]]).
+    why: >-
+      Count what was ruled out. Eldritch orbs: influenced. Fracture:
+      influenced. An Essence of Zeal: reported to ignore locks, so it would
+      reroll the Warlord prefix. What remains is the weapon crafter's
+      method: a bench lock and a Harvest reforge, which respects it by
+      community testing. The reforge replaces the suffixes and consumes the
+      lock.
+    check: >-
+      Both prefixes unchanged, the third prefix still empty, attack speed
+      among the suffixes. You want it at 14–16%, or at 11% or more if you
+      are counting locks, **and at least one empty suffix**.
+    fail: >-
+      Low attack speed, or three suffixes: lock and reforge again. Set the
+      number of attempts before the first one.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "Prefix Modifiers cannot be changed", how: crafted }
+  - title: "The reforge that passes"
+    do: >-
+      Stop when attack speed is at your tier and a suffix slot is free. The
+      ideal result is attack speed alone.
+    why: >-
+      Empty suffix slots are worth more here than a second average suffix:
+      the last stage fills them with exactly what you choose.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+      suffixes:
+        - { text: "15% increased Attack Speed", how: harvest }
+  - title: "Stage 5: three bench modifiers"
+    do: >-
+      Craft **Can have up to 3 Crafted Modifiers** (2 Divine Orbs, a
+      suffix). Then **14–16% increased Melee Damage with +0.1 metres to
+      Melee Strike Range** (4 [[Exalted Orb]]s, the open prefix). Then a
+      resistance, **+29–35%** (3 [[Chaos Orb]]s, the last suffix).
+    why: >-
+      The bench melee prefix is a different group from the Warlord one, so
+      both fit. That makes three melee sources: implicit, influence, bench.
+      The multi-modifier craft costs a suffix slot and returns a prefix and
+      a suffix of your choice.
+    check: >-
+      With only one empty suffix after stage 4, the multi-modifier craft
+      takes it and the resistance is left out.
+    state:
+      note: "Warlord"
+      implicits: ["28% increased Melee Damage"]
+      prefixes:
+        - { text: "29% increased Melee Damage", how: influence }
+        - { text: "+118 to maximum Life" }
+        - { text: "15% increased Melee Damage / +0.1 metres to Melee Strike Range", how: crafted }
+      suffixes:
+        - { text: "15% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "+32% to Cold Resistance", how: crafted }
+  - title: "Finish: the implicit and the values"
+    do: >-
+      A [[Blessed Orb]] until the implicit is near 30%. Quality and sockets.
+      A [[Divine Orb]] if the Warlord prefix sits at 27.
+    why: >-
+      The implicit is a third of the stack and costs almost nothing to
+      improve. It is also the reason for every restriction this craft
+      accepted, so do not leave it at 24.
+variations: >-
+  **A veiled prefix in place of the bench one.** The unveiled version is
+  17–20% Melee Damage with +0.2 metres. With the suffixes finished and
+  locked, a [[Veiled Chaos Orb]] would reroll the prefixes, so it does not
+  fit this plan; a veiled drop or a Veiled Exalted Orb on a pair with one
+  junk prefix might.
+
+
+  **Other Warlord prefixes.** The same plan on Gripped Gloves takes
+  "increased Projectile Attack Damage", and on Fingerless Silk Gloves
+  "increased Spell Damage", each 27–30% at the top tier. "+1 to Maximum
+  Frenzy Charges" has a weight of 125 against 500 for a tier of those.
+
+
+  **A second influenced modifier.** With two, an [[Orb of Dominance]]
+  removes one and upgrades the other. The data does not hold the upgraded
+  values, so we say nothing about what it would give here.
+mistakes:
+  - "Deciding on influence after starting with Eldritch implicits, or the reverse. Neither can be undone."
+  - "Regal without an Imprint. A junk prefix on an influenced pair has no safe way off."
+  - "Using an Essence of Zeal for the attack speed. It is reported to ignore the lock and would reroll the Warlord prefix and the life."
+  - "Crafting the bench melee prefix before stage 4. The item holds one bench modifier, and the lock has to be it."
+  - "Reading \"Warlord's\" and stopping. Spell Damage, Projectile Attack Damage and Damage over Time carry the same name."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Warlord modifiers on gloves and their weights, tiers, bench costs, and the in-game text of the Warlord's Exalted Orb and the Embers. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The Spiked Gloves implicit, the cost of the protection modifiers on armour, and that conqueror bosses drop their Exalted Orbs." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and its beasts." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Speed reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

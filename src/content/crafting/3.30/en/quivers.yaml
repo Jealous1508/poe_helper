@@ -1,0 +1,478 @@
+name: "Quivers"
+short: "Jewellery for bow builds. One pool, a small prefix side where Life is easy, and a crowded suffix side where the additional arrow hides."
+icon: "Spike-Point Arrow Quiver"
+intro: >-
+  A quiver sits in the off-hand of every bow build, but it is crafted like a
+  ring: no sockets, no quality, no base damage. The base is its implicit and
+  nothing else. Everything you craft is global, so there is nothing to
+  multiply and nothing to judge except the six modifiers.
+
+
+  What makes the category its own is how lopsided the two sides are. The
+  prefix side has only seven modifiers and the most common one is maximum
+  Life. The suffix side has seventeen, and the three a bow build pays for,
+  the additional arrow, critical strike multiplier and attack speed, are
+  among the rarer ones. A quiver is the opposite of a weapon: the suffixes
+  are the hard side.
+basics:
+  itemLevel:
+    text: >-
+      Life is finished early: its best tier needs only item level 64. What
+      item level buys on a quiver is damage and the top suffixes. **Item
+      level 77 is enough for a normal craft**: every flat damage prefix,
+      attack speed, critical strike multiplier and the additional arrow are
+      open at their best. The last steps are narrow. Item level 85 opens the
+      top tier of critical strike chance, and 86 the top tier of increased
+      Damage with Bow Skills, which an Essence also supplies.
+    breakpoints:
+      - ilvl: 36
+        unlocks: "**Levelling.** Tier 4 maximum Life (+85–99). Life already has seven tiers open here."
+      - ilvl: 64
+        unlocks: "Tier 1 maximum Life, \"Fecund\" (+130–144). Tier 2 of flat Physical, Fire and Lightning Damage to Attacks. **Enough for a Life-and-resistances quiver.**"
+      - ilvl: 70
+        unlocks: "\"Bow Attacks fire an additional Arrow\". Below this the modifier cannot roll at all."
+      - ilvl: 74
+        unlocks: "Tier 1 Critical Strike Multiplier with Bows (35–38%). Tier 2 Critical Strike Chance with Bows (35–38%) opened at 72."
+      - ilvl: 77
+        unlocks: "Tier 1 of all four flat damage prefixes (Physical, Fire and Lightning at 76, Cold at 77) and Tier 1 attack speed (14–16%, at 76). **Enough for everything except the last tier of four modifiers.**"
+      - ilvl: 82
+        unlocks: "Tier 1 Damage over Time Multiplier with Attack Skills (24–26%) and Tier 2 increased Damage with Bow Skills (37–42%, from 81)."
+      - ilvl: 85
+        unlocks: "Tier 1 Critical Strike Chance with Bows (39–44%). Tier 1 elemental resistances (46–48%) opened at 84."
+      - ilvl: 86
+        unlocks: "Tier 1 increased Damage with Bow Skills, \"Impaling\" (43–50%). **The ceiling.** A Deafening Essence of Woe gives the same range."
+  bases:
+    text: >-
+      There are fourteen quivers that drop, and for crafting they are one
+      kind: all of them roll from the same pool with the same weights. A
+      quiver has no damage, no defence and no attribute requirement, so the
+      only difference between two bases is the implicit.
+    types:
+      - title: "Ordinary quivers"
+        pools: [all]
+        text: >-
+          Thirteen bases from the Serrated Arrow Quiver (level 4) to the
+          Primal Arrow Quiver (level 66). Each has one implicit, and most
+          implicits have a range that a [[Blessed Orb]] rerolls: 20–30%
+          increased Critical Strike Chance with Bows on the Spike-Point,
+          20–30% increased Elemental Damage with Attack Skills on the
+          Primal, 8–10% increased Attack Speed on the Broadhead.
+      - title: "Artillery Quiver"
+        text: >-
+          The one Atlas base, dropping from level 74. In 3.30 its implicit is
+          "Attack Skills have +1 to maximum number of Summoned Totems", which
+          makes it the base for ballista builds and of no use to anyone else.
+          Atlas bases need an Item Tier to drop in 3.30; which tier this one
+          needs we could not confirm. It rolls the same modifiers as every
+          other quiver.
+      - title: "Legacy versions"
+        text: >-
+          Eight quivers also exist in an older form, marked as legacy in the
+          game data, with the implicit that base used to have: for example a
+          Broadhead Arrow Quiver with added Physical Damage instead of attack
+          speed. We read the mark as meaning they no longer drop, so they
+          are not in the table below. If you own one, it crafts exactly like
+          the current version: same pool, different implicit.
+    picks:
+      - base: "Spike-Point Arrow Quiver"
+        for: "Critical strike builds"
+        why: >-
+          20–30% increased Critical Strike Chance with Bows on the implicit.
+          That is close to a Tier 5 suffix (20–24%) that does not take a
+          suffix slot, on the side where slots are scarce.
+      - base: "Primal Arrow Quiver"
+        for: "Elemental bow builds"
+        why: >-
+          20–30% increased Elemental Damage with Attack Skills. No quiver
+          rolls that modifier as a prefix: the only other source is the
+          bench, at 24–32%. With this base you can have both.
+      - base: "Heavy Arrow Quiver"
+        for: "Physical bow builds"
+        why: >-
+          Adds 12–15 to 24–27 Physical Damage to Attacks, about the size of a
+          Tier 3 prefix (adds 11–16 to 23–26), and it stacks with the rolled
+          one.
+      - base: "Broadhead Arrow Quiver"
+        for: "Any build that is not sure yet"
+        why: >-
+          8–10% increased Attack Speed. Attack speed is 3% of suffix rolls,
+          so getting a first helping of it from the base leaves the suffix
+          slots for other things.
+      - base: "Vile Arrow Quiver"
+        for: "Physical builds that scale chaos"
+        why: >-
+          Gain 10–15% of Physical Damage as Extra Chaos Damage. Nothing in
+          the quiver's modifier pool does this.
+      - base: "Artillery Quiver"
+        for: "Ballista totem builds"
+        why: >-
+          One more totem for attack skills, since 3.30. If your build
+          summons ballistas this implicit is worth more than any explicit
+          modifier on the item.
+    impact: >-
+      On a quiver the base decides exactly one thing: **the implicit.** There
+      is no base damage for a modifier to multiply, no attack speed, no
+      requirement, and every base rolls from the same pool.
+
+
+      So choose the implicit as a seventh modifier that crafting cannot
+      take away. A [[Blessed Orb]] rerolls its number inside its range.
+      Corruption can replace it with a corruption implicit, and that is the
+      only way it ever changes.
+
+
+      Because the base costs nothing else, there is no reason to craft on
+      the wrong one. Decide what the build is, critical strikes, elemental,
+      physical or damage over time, before picking up the white item.
+tools:
+  - method: currency
+    note: >-
+      The prefix side is kind. At item level 84 maximum Life is 38% of every
+      prefix roll, by our arithmetic from the weights, and its ten tiers
+      weigh the same, so about one prefix roll in nine is +100 Life or more.
+      Increased Damage with Bow Skills is another 19%.
+
+
+      The suffix side is not. Critical Strike Multiplier with Bows is 8% of
+      suffix rolls, attack speed 3.4%, and the additional arrow 0.34%: one
+      suffix roll in 293. [[Orb of Alteration]]s are a good way to get Life
+      and one decent suffix, and a slow way to get the arrow.
+  - method: bench
+    note: >-
+      The bench is generous with quiver suffixes and mean with prefixes.
+      Suffixes: 7–12% increased Attack Speed for 2 Chaos Orbs; 22–27%
+      increased Global Critical Strike Chance for 1 Chaos Orb; any
+      elemental resistance at 29–35% for 3 Chaos Orbs, or two at once at
+      17–20%; 5–6% increased Attack and Cast Speed for 3 Chaos Orbs, which is
+      a different group from attack speed and sits beside it.
+
+
+      Prefixes: maximum Life is only +41–55 (2 Orbs of Alchemy), against
+      +130–144 rolled. Flat damage is small: adds 19–23 to 37–42 Fire or
+      Cold for 2 Orbs of Alchemy, adds 5–7 to 8–10 Physical for 2 Chaos
+      Orbs. The one bench prefix worth planning around is 24–32% increased
+      Elemental Damage with Attack Skills (4 Orbs of Alchemy), because the
+      natural pool does not have it.
+
+
+      **The bench sells no Critical Strike Multiplier on a quiver.** That one
+      has to be rolled or come from an Essence.
+  - method: finishing
+    note: >-
+      A quiver has no sockets and takes no quality, so finishing is only the
+      two value orbs: a [[Divine Orb]] for the six modifiers and a
+      [[Blessed Orb]] for the implicit. Most quiver implicits have a wide
+      range, so the Blessed Orb earns its place here.
+  - method: essence
+    note: >-
+      Essences cover both sides of a quiver. **Woe** guarantees increased
+      Damage with Bow Skills: 31–36% at Screaming, 37–42% at Shrieking,
+      43–50% at Deafening, which is the range of natural Tier 1.
+      **Scorn** guarantees Global Critical Strike Multiplier, 25–29% at
+      Screaming and 35–41% at Deafening: the one damage suffix the bench
+      does not sell. **Loathing** gives Global Critical Strike Chance
+      (39–42% at Deafening) and **Zeal** attack speed (13–15% at Deafening,
+      a little under natural Tier 1).
+
+
+      For elemental builds, **Anguish**, **Suffering** and **Torment** give
+      Fire, Cold and Lightning Damage to Attacks, and their Deafening
+      versions are above natural Tier 1. Note that on a quiver Anger, Hatred
+      and Wrath give resistances, not damage.
+
+
+      Two corruption-only Essences give prefixes found nowhere else:
+      [[Essence of Insanity]] (Projectiles Pierce 2 additional Targets) and
+      [[Essence of Hysteria]] (Gain 15% of Physical Damage as Extra Fire
+      Damage).
+  - method: beast
+    note: >-
+      The **Imprint** ([[Craicic Croaker]]) matters when a Magic quiver has
+      the additional arrow on it: that suffix took hundreds of Alterations
+      and a [[Regal Orb]] should not be allowed to waste it.
+
+
+      Be careful with the two add-and-remove recipes. **Add a prefix,
+      remove a random suffix** ([[Farric Wolf Alpha]]) removes from the side
+      a quiver cannot afford to lose from. **Add a suffix, remove a random
+      prefix** ([[Farric Lynx Alpha]]) is the useful one, on a Rare quiver
+      whose prefix side is empty.
+  - method: harvest
+    note: >-
+      Count the tagged modifiers before paying. **Critical** (150 Primal)
+      is good: only the two critical strike suffixes carry the tag.
+      **Speed** (150 Vivid) is attack speed or Projectile Speed, and
+      Projectile Speed is twice as likely. **Chaos** (100 Vivid) is almost
+      always Chaos Resistance.
+
+
+      **Life** (75 Wild) is the one to remember. Maximum Life is the only
+      prefix with the life tag, but two suffixes have it too (life leech and
+      life on kill). On an open quiver the reforge guarantees little. With
+      the suffixes locked it can only be satisfied by the prefix, and then
+      it is a guaranteed Life roll.
+
+
+      The element reforges are poor here: each resistance suffix carries its
+      element's tag, so "a Fire modifier" is more often Fire Resistance than
+      fire damage.
+  - method: fossil
+    note: >-
+      A [[Deft Fossil]] ("more Critical, no Attribute") is made for this
+      item. It multiplies the two critical strike suffixes by ten and
+      deletes Dexterity, the most common suffix. At item level 75 that takes
+      the pair from 18% of suffix rolls to 72%, by our arithmetic. A
+      [[Pristine Fossil]] does the same for Life on the prefix side, at a
+      cost to the suffixes that the worked example measures.
+
+
+      Quivers have their own Fossil-only modifiers, among them 30–40%
+      increased Damage with Ailments, a 3–5% chance to gain a Frenzy Charge
+      when you Hit a Rare or Unique Enemy, and Damage Penetrates 3–5%
+      Elemental Resistances. The data does not say which Fossil brings in
+      which, and our odds leave them out.
+  - method: veiled
+    note: >-
+      The unveiled quiver modifiers are modest. The useful suffix is 7–8%
+      increased Attack and Cast Speed, which stacks with attack speed. The
+      critical strike hybrids (20–22% Global Critical Strike Chance with
+      27–30% increased Elemental Damage if you've dealt a Critical Strike
+      Recently) share a group with rolled Critical Strike Chance. The
+      veiled Life prefix is +55–60 with mana regeneration, far below what
+      Life rolls naturally. A quiver is rarely worth a veiled orb.
+  - method: corruption
+    note: >-
+      Quivers have some of the best corruption implicits in the game: Bow
+      Attacks fire an additional Arrow, Arrows Chain +1 times, Point Blank,
+      and Gain 8–12% of Physical Damage as Extra Cold, Fire or Lightning
+      Damage. A [[Vaal Orb]] replaces the base implicit with one of these
+      only some of the time, and the odds are not published. It is the last
+      step on a quiver you can afford to lose.
+  - method: fracture
+    note: >-
+      The modifier to fracture on a quiver is the additional arrow, because
+      nothing targets it: no Essence gives it, no Harvest tag singles it
+      out, and it is 1 suffix roll in about 300. With it locked, Essences
+      can be used freely on the rest.
+  - method: meta
+    note: >-
+      A quiver counts with armour for the lock: "Suffix Modifiers cannot be
+      changed" and "Prefix Modifiers cannot be changed" each cost 4 Divine
+      Orbs and 4 [[Blessed Orb]]s in 3.30. On this item the usual lock is
+      the **suffix** lock, which is itself a prefix, so the quiver needs an
+      open prefix slot to take it.
+  - method: influence
+    note: >-
+      Influence adds the "extra damage" prefixes: Gain 11–15% of Physical
+      Damage as Extra Cold (Shaper or Redeemer), Fire (Warlord) or Lightning
+      (Crusader), all from item level 75. Hunter adds +21–25% to Chaos, Fire
+      or Physical Damage over Time Multiplier with Attack Skills, in a
+      different group from the natural Damage over Time Multiplier. Elder
+      adds a 3–5% chance to gain a Frenzy Charge when you Hit a Rare or
+      Unique Enemy. An influenced quiver cannot be fractured.
+
+
+      Eldritch implicits do not exist for quivers: Embers and Ichors work
+      only on body armours, boots, gloves and helmets.
+  - method: strands
+    note: "See the Memory Strands section below: the Life prefix is a textbook case for them."
+memoryStrands: >-
+  Life on a quiver has ten tiers that all weigh the same, so a plain Life
+  roll is as likely to be +3–9 as +130–144. [[Memory Strands]] remove the
+  bottom tiers from whatever is rolled, which is exactly the problem with
+  this prefix, and with Dexterity, the resistances and Critical Strike
+  Chance, which are built the same way.
+
+
+  The fit is a craft that uses small orbs. Put strands on a white quiver
+  with an [[Orb of Remembrance]], roll it with [[Orb of Alteration]]s (at
+  most 8 strands each, by the data-mined table), and finish with a
+  [[Regal Orb]] or [[Exalted Orb]]. The prefix side is small enough that an
+  Exalted Orb into an open prefix is a reasonable bet, and with strands it
+  lands on a better tier.
+
+
+  Strands do nothing for the additional arrow: it has one tier, and strands
+  never make a modifier more likely. And an Essence can spend up to 80
+  strands at once, so keep a strand base away from Essence crafts.
+reading:
+  intro: >-
+    Read a quiver in this order: **the implicit, the suffixes, then Life.**
+    The implicit tells you which build the quiver is for. The suffixes tell
+    you whether it is worth anything. Life tells you whether you can wear it.
+    The other two prefixes are the easy part and come last.
+  prefixes:
+    text: >-
+      Seven modifiers, and that is the whole side: maximum Life, increased
+      Damage with Bow Skills, and flat Physical, Fire, Cold, Lightning and
+      Chaos Damage to Attacks. They are seven different groups, so any three
+      can sit together.
+
+
+      Life is the one the bench cannot replace. Increased Damage with Bow
+      Skills works for every bow build. The flat damage prefix you want is
+      the one that matches your damage, and the other three are dead
+      weight. Because the pool is this small, the prefix side is the one
+      place on any item where an [[Exalted Orb]] into an open slot has
+      decent odds, and where blocking one group with the bench changes
+      those odds a lot.
+
+
+      Nothing on a quiver is local. Every modifier here acts on the
+      character, so the numbers mean what they say.
+    key:
+      - mod: "+# to maximum Life"
+        why: "38% of prefix rolls, and the bench's version is less than half of a good tier. This is the prefix to roll."
+        aim: "T3, +100–114 (ilvl 44). T1 is +130–144 and needs only ilvl 64."
+      - mod: "#% increased Damage with Bow Skills"
+        why: "Damage for any bow build, whatever the damage type. An Essence of Woe guarantees it."
+        aim: "T3, 31–36% (ilvl 60). T1 is 43–50% (ilvl 86)."
+      - mod: "Adds # to # Physical Damage to Attacks"
+        why: "For physical bows, where the bow's own modifiers and the build multiply it. Half as common as Life."
+        aim: "T2, adds 14–19 to 28–33 (ilvl 64). T1 needs ilvl 76."
+      - mod: "Adds # to # Fire / Cold / Lightning Damage to Attacks"
+        why: "For elemental builds. Each is a separate group, so two or three can sit together, and each is 8% of prefix rolls."
+        aim: "T2 (ilvl 64–65). T1 needs ilvl 76–77."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Not in the natural pool. It comes from the bench or from the Primal Arrow Quiver's implicit."
+        aim: "Bench: 24–32% for 4 Orbs of Alchemy."
+  suffixes:
+    text: >-
+      The suffix side is crowded and mostly defensive. Dexterity and the
+      three elemental resistances are 45% of suffix rolls between them at
+      item level 84, and stun duration, accuracy, Projectile Speed and
+      life or mana on kill take another 28%. None of that is harmful, and a
+      resistance is often exactly what a character needs. But it means the
+      damage suffixes are a minority: the two critical strike modifiers are
+      16% together, attack speed 3.4%, the additional arrow 0.34%.
+
+
+      Two group rules matter. The bench's Global Critical Strike Chance is
+      the same group as rolled Critical Strike Chance with Bows, so it
+      cannot be added beside it. The bench's and the veiled "Attack and Cast
+      Speed" are a different group from attack speed, so they can.
+    key:
+      - mod: "Bow Attacks fire an additional Arrow"
+        why: "One more arrow on every attack. One tier, a weight of 250, and no tool that aims at it."
+        aim: "Needs ilvl 70. About 1 suffix roll in 300."
+      - mod: "+#% to Critical Strike Multiplier with Bows"
+        why: "The damage suffix for critical strike builds, and the one the bench does not sell."
+        aim: "T2, 30–34% (ilvl 59). T1 is 35–38% (ilvl 74)."
+      - mod: "#% increased Critical Strike Chance with Bows"
+        why: "Seven tiers of equal weight. The bench's Global version (22–27%) is a fair substitute."
+        aim: "T3, 30–34% (ilvl 58). T1 is 39–44% (ilvl 85)."
+      - mod: "#% increased Attack Speed"
+        why: "Rare to roll, cheap to buy: the bench's 7–12% overlaps Tier 2."
+        aim: "Bench, or T2 11–13% (ilvl 22). T1 is 14–16% (ilvl 76)."
+      - mod: "+#% to Damage over Time Multiplier with Attack Skills"
+        why: "For bleed, poison and ignite bow builds. A weight of 300 a tier, so rare at any level."
+        aim: "T2, 20–23% (ilvl 76). T1 is 24–26% (ilvl 82)."
+      - mod: "+#% to Fire / Cold / Lightning Resistance"
+        why: "Filler that solves a real problem. The bench gives 29–35%, so never reroll for one."
+approach:
+  principle: >-
+    **Roll what the bench cannot sell.** On a quiver that is three things:
+    maximum Life on the prefix side, and Critical Strike Multiplier and the
+    additional arrow on the suffix side. Attack speed, critical strike
+    chance, resistances and elemental damage all have a cheap, certain
+    source. Decide which of the three your quiver needs and spend the
+    random part of the craft on those.
+  order:
+    - title: "Pick the implicit"
+      text: >-
+        The base is free of every other consideration, so this is a question
+        about the build and nothing else. Item level 77 covers a normal
+        craft; go to 85 or 86 only for the last tier of critical strike
+        chance or of bow damage.
+    - title: "Decide how much of the suffix side you are rolling"
+      text: >-
+        **None:** you want Life and resistances. Roll Life, bench a suffix.
+        **Critical Strike Multiplier:** an Essence of Scorn, or a Deft
+        Fossil for both critical strike suffixes. **The additional arrow:**
+        Alterations and an Imprint, or a fractured base. Each step up costs
+        several times the one before.
+    - title: "Get the rare suffixes first"
+      text: >-
+        They are the part with no certain source, so they come while the
+        item is cheap to abandon. Ignore the prefixes entirely at this
+        stage: everything on the prefix side can be rebuilt.
+    - title: "Lock the suffixes if they are worth it, then get Life"
+      text: >-
+        With the suffixes locked, a Harvest Life reforge can only be
+        satisfied by the Life prefix. Without a lock, Life comes from the
+        lottery, where it is the most common prefix anyway. Lock when the
+        suffixes cost more than 4 Divine Orbs and 4 Blessed Orbs to make
+        again.
+    - title: "Fill the last prefixes from a small pool"
+      text: >-
+        Seven families, of which Life is already taken. An Exalted Orb into
+        an open prefix, with the suffixes full so it has to land there, has
+        few bad outcomes, and a bench modifier placed first removes one
+        more.
+    - title: "Bench last, then the value orbs"
+      text: >-
+        One slot is kept for the bench: attack speed or a resistance if a
+        suffix is open, Elemental Damage with Attack Skills if a prefix is.
+  finishing: >-
+    A [[Divine Orb]] when Life or the critical strike modifiers sit low in
+    their ranges, and a [[Blessed Orb]] or two for the implicit, which on
+    most quivers has ten points of range. There is no quality, no socket and
+    no link to think about.
+
+
+    Corruption is optional and final. A [[Vaal Orb]] can turn the implicit
+    into an additional arrow, and it can also reroll the whole quiver. Use
+    it on a quiver you would not miss.
+  stopping: >-
+    A quiver with **+100 Life, one damage prefix and a bench suffix** is
+    finished for most of the game, and it costs a handful of Alterations.
+    Add **Critical Strike Multiplier** and it carries a critical strike
+    build through red maps. The additional arrow is where the price
+    multiplies, and for many builds a second damage suffix does more.
+
+
+    Stop when the suffixes you rolled are the ones you set out for. Do not
+    keep rerolling a quiver for a better Life tier: the difference between
+    Tier 3 and Tier 1 is thirty Life.
+special:
+  - mod: "#% increased Elemental Damage with Attack Skills"
+    source: "Bench / base implicit"
+    where: "Not a natural prefix on quivers. 24–32% from the [[Crafting Bench]] for 4 Orbs of Alchemy, and 20–30% as the implicit of the Primal Arrow Quiver."
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Essence"
+    where: "An Essence of Scorn: 25–29% at Screaming, 30–34% at Shrieking, 35–41% at Deafening. The bench has no critical strike multiplier for quivers."
+  - mod: "Projectiles Pierce 2 additional Targets"
+    source: "Essence"
+    where: "A prefix from an [[Essence of Insanity]], which comes only from corrupting an Essence monster with a [[Remnant of Corruption]]."
+  - mod: "Gain #% of Physical Damage as Extra Fire / Cold / Lightning Damage"
+    source: "Influence / Essence / corruption"
+    where: "11–15% as an influenced prefix from item level 75: Cold on Shaper or Redeemer, Fire on Warlord, Lightning on Crusader. An [[Essence of Hysteria]] gives 15% as Extra Fire Damage. A corruption implicit gives 8–12%."
+  - mod: "+#% to Chaos / Fire / Physical Damage over Time Multiplier with Attack Skills"
+    source: "Hunter influence"
+    where: "A Hunter suffix, 21–25% at item level 80. It is a different group from the natural Damage over Time Multiplier with Attack Skills, so both can be on one quiver."
+  - mod: "#% increased Attack and Cast Speed"
+    source: "Bench / Veiled"
+    where: "5–6% from the bench for 3 Chaos Orbs, 7–8% unveiled. A different group from increased Attack Speed, so it is extra speed and not a replacement."
+  - mod: "#% chance to gain a Frenzy Charge when you Hit a Rare or Unique Enemy"
+    source: "Elder influence / Fossil"
+    where: "3–5%, as an Elder suffix from item level 75 or as a Fossil-only suffix."
+  - mod: "Bow Attacks fire an additional Arrow (implicit)"
+    source: "Corruption"
+    where: "A [[Vaal Orb]] can replace the base implicit with it, which puts the arrow outside the six slots. Arrows Chain +1 times and Point Blank come the same way."
+  - mod: "Attack Skills have +1 to maximum number of Summoned Totems"
+    source: "Base implicit"
+    where: "The Artillery Quiver's implicit since 3.30. Not craftable: you choose it by choosing the base."
+mistakes:
+  - "**Using the \"add a prefix\" beast on a quiver with good suffixes.** It removes a random suffix, and on this item the suffixes are the part you cannot rebuild."
+  - "**Rerolling for a resistance or for attack speed.** The bench sells 29–35% resistance and 7–12% attack speed for a few Chaos Orbs."
+  - "**Benching Life.** The bench gives +41–55. A single prefix roll gives +100 or more about one time in nine."
+  - "**Benching Global Critical Strike Chance beside rolled Critical Strike Chance with Bows.** They are one group; the bench will refuse."
+  - "**Expecting a Harvest Life reforge to give the Life prefix on an unlocked quiver.** Life leech and life on kill carry the same tag."
+  - "**Crafting a crit quiver on an attack speed base, or the reverse.** The implicit is the only thing the base gives you, and it is free to get right."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every base, implicit, modifier, tier, weight, Essence and bench cost quoted here. The odds are our arithmetic from its weights." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers on quivers, and the Artillery Quiver's new implicit." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Lifeforce costs of the Life, Critical, Speed and Chaos reforges." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint and the two add-and-remove recipes." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }

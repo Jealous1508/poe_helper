@@ -1,0 +1,149 @@
+category: shields
+title: "A block shield from a weak Essence, with a Scouring loop"
+level: 2
+summary: "A Wailing Essence of Loathing guarantees increased Chance to Block, but only on a white item. Scour and repeat until life rolls beside it, then bench a resistance."
+goal: >-
+  A tower shield for early maps with a guaranteed block prefix and life.
+  Two things to learn. The four weakest strengths of Essence follow a
+  different rule from the strong ones: **they only work on a Normal item**,
+  so each retry needs an [[Orb of Scouring]] first. And increased Chance to
+  Block is a **local** modifier, so the block number on the base is part of
+  the craft.
+base: "Ezomyte Tower Shield"
+itemLevel: 70
+baseWhy: >-
+  The Ezomyte Tower Shield has the largest life implicit of the tower
+  shields, +30–40, with 24% Chance to Block and 412–474 Armour, and can be
+  used at level 64. Item level 70 is what white and low yellow maps drop; it
+  opens life of 130–144 and every flat Armour tier. A Wailing Essence limits
+  the other modifiers to level 75 and below, which changes nothing on an
+  item level 70 base.
+methods: [essence, currency, bench, finishing]
+result:
+  implicits: ["+34 to maximum Life"]
+  prefixes:
+    - { text: "54% increased Chance to Block", how: essence }
+    - { text: "+108 to maximum Life" }
+  suffixes:
+    - { text: "+33% to Fire Resistance" }
+    - { text: "+26% to Cold Resistance", how: crafted }
+needs:
+  - { item: "[[Wailing Essence of Loathing]]", amount: "3–6" }
+  - { item: "[[Orb of Scouring]]", amount: "one fewer than the Essences" }
+  - { item: "[[Armourer's Scrap]]", amount: "to 20%" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "for the bench" }
+cost: >-
+  A few weak Essences and as many [[Orb of Scouring]]s. In 3.30 Wailing
+  Essences no longer appear in red maps, so the late campaign and the white
+  and yellow maps are where to collect them, which is exactly when a shield
+  like this is wanted.
+odds: >-
+  The block is certain: 52–57% increased Chance to Block. At item level 70,
+  by our arithmetic from the weights, each further prefix the Essence rolls
+  is maximum Life 24% of the time, and life of 100 or more 7%. When a result
+  has two further prefixes, at least one is life 46% of the time. So a
+  result with block **and** some life is about every second or third
+  Essence; a result with high life takes many more, and is not what a weak
+  Essence is for.
+steps:
+  - title: "Quality on the white shield"
+    do: >-
+      Use [[Armourer's Scrap]]s on the white Ezomyte Tower Shield until it
+      reads 20% quality.
+    why: >-
+      Quality raises the Armour. It does nothing for block, and it survives
+      scouring, so it is done once.
+    state:
+      rarity: normal
+      implicits: ["+34 to maximum Life"]
+  - title: "The first Essence"
+    do: >-
+      Use a [[Wailing Essence of Loathing]] on the white shield.
+    why: >-
+      The item becomes Rare with **52–57% increased Chance to Block**
+      guaranteed. The prefix is local: it multiplies the shield's own 24%,
+      so 54% increased block makes the shield's Chance to Block about 37%.
+      The other modifiers are random, and this first result has nothing
+      else worth having.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "55% increased Chance to Block", how: essence }
+        - { text: "+97 to Armour" }
+      suffixes:
+        - { text: "+16 to Strength" }
+        - { text: "19% increased Stun and Block Recovery" }
+        - { text: "Regenerate 27 Life per second" }
+  - title: "Judge it: life, a resistance, a free slot"
+    do: >-
+      Read the prefixes for **maximum Life**. Read the suffixes for a
+      **resistance**. Count the **open slots**. Keep the shield if it has
+      the life and either a resistance or room for the bench to add one.
+    why: >-
+      The shield's job is block, life and resistances. The Essence brought
+      the block; the result has to bring the life, because the bench can
+      only add one modifier and a resistance is the cheaper thing to buy.
+    fail: >-
+      No life, as above: go to the next step. Do not try to repair it with
+      the bench. Its best life on a shield is +56–70, and using it there
+      leaves no way to add a resistance.
+  - title: "Scour, and use the next Essence"
+    do: >-
+      Use an [[Orb of Scouring]] to return the shield to Normal, then
+      another Wailing Essence. Repeat until a result passes.
+    why: >-
+      A Wailing Essence "upgrades a normal item to rare". It cannot be used
+      on the Rare shield the way a Screaming one could. Scouring removes
+      every modifier and keeps the base, its quality and its implicit.
+    check: >-
+      After scouring, the name is white and the implicit is still there.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "54% increased Chance to Block", how: essence }
+        - { text: "+108 to maximum Life" }
+      suffixes:
+        - { text: "+33% to Fire Resistance" }
+  - title: "Bench a second resistance"
+    do: >-
+      At the [[Crafting Bench]], craft the resistance you are shortest of
+      in an open suffix: 21–28% for 1 [[Orb of Alchemy]], or 29–35% for 3
+      Chaos Orbs once you have them to spare.
+    why: >-
+      Each element is its own group, so choose one the shield does not have.
+      With the implicit the shield now gives about 140 life, half as much
+      block again as its base, and two resistances.
+    state:
+      implicits: ["+34 to maximum Life"]
+      prefixes:
+        - { text: "54% increased Chance to Block", how: essence }
+        - { text: "+108 to maximum Life" }
+      suffixes:
+        - { text: "+33% to Fire Resistance" }
+        - { text: "+26% to Cold Resistance", how: crafted }
+variations: >-
+  **With a Screaming Essence or better.** From Screaming upwards an Essence
+  of Loathing works on a Rare item, so no Scouring is needed, and the block
+  is higher: 58–63% at Screaming, 70–75% at Deafening. The judging is the
+  same.
+
+
+  **Life from the Essence, block from the bench.** An Essence of Greed
+  guarantees the life instead (85–99 at Wailing, 100–114 at Screaming), and
+  the bench then sells 31–40% increased Chance to Block for 9 Orbs of
+  Alteration or 41–50% for 3 Chaos Orbs. That uses the bench on a prefix,
+  so the resistances have to roll.
+
+
+  **A base with more block.** The same prefix on a 26% or 27% base gives
+  more. Among bases a new character can use, the Shagreen Tower Shield has
+  26%.
+mistakes:
+  - "Trying to use a Wailing Essence on the Rare result. It needs a Normal item; scour first."
+  - "Scouring a shield you would have kept. Read all six slots before the orb, not after."
+  - "Spending the bench on life after a result without it. One more Essence is cheaper than a shield with no room for a resistance."
+  - "Comparing two block shields by the prefix alone. The Chance to Block line at the top is the base multiplied by the prefix."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on shields and what each strength can be used on, the local block stat, tiers, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Wailing Essences no longer generate in red maps." }

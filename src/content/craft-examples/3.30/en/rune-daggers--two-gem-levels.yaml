@@ -1,0 +1,213 @@
+category: rune-daggers
+title: "Two gem levels: a chaos dagger around a fractured +1"
+level: 5
+summary: "Fracture the rarest prefix in the pool, aim three Fossils at the second gem level by its tags, lock both and take the one suffix a Chaos reforge can give, then close the item with three bench modifiers."
+goal: >-
+  A rune dagger with "+1 to Level of all Spell Skill Gems" and "+1 to Level
+  of all Chaos Spell Skill Gems", increased Chaos Damage, and Chaos Damage
+  over Time Multiplier. The two gem prefixes are different groups, so they
+  stack. No single step here is exotic. The craft is hard because **each
+  stage is chosen by counting tags**, and because the first stage is a
+  one-in-four gamble that no tool improves.
+base: "Imperial Skean"
+itemLevel: 84
+baseWhy: >-
+  A damage-over-time build does not crit, so the size of the implicit does
+  not matter and the Imperial Skean's lower Intelligence requirement does.
+  A crit build making the lightning or cold version of this weapon takes a
+  Platinum Kris. Item level 84 keeps every tier open; "+1 to Level of all
+  Spell Skill Gems" itself needs only 55. The base must have no influence,
+  because it will be fractured.
+methods: [fracture, fossil, meta, harvest, bench]
+result:
+  note: "Fractured"
+  implicits: ["42% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+    - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+    - { text: "48% increased Chaos Damage / Chaos Skills have 12% increased Skill Effect Duration", how: crafted }
+  suffixes:
+    - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "16% increased Cast Speed", how: crafted }
+needs:
+  - { item: "A rune dagger with \"+1 to Level of all Spell Skill Gems\" fractured", amount: "1", note: "bought, or made in stage 1" }
+  - { item: "[[Faceted Fossil]], [[Aetheric Fossil]], [[Aberrant Fossil]]", amount: "5–10 of each", note: "many more if you make the base" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt", note: "a Resonator with three sockets" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock, plus 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "100 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "10", note: "the two final bench crafts" }
+cost: >-
+  The fractured base is nearly all of it. Making one means Fossils until the
+  rarest prefix in the pool appears and then a [[Fracturing Orb]] that picks
+  the right modifier one time in four; buying one means paying someone for
+  having done that. After it, stage 2 is a handful of Resonators, and stage
+  3 is locks at 4 [[Divine Orb]]s and a [[Sacred Orb]] each. We give no
+  total: the first stage has no upper bound.
+odds: >-
+  All by our arithmetic from the weights at item level 84, under the
+  community model in which a Fossil multiplies a modifier once for each
+  matching tag. Treat them as close, not exact.
+
+
+  **Stage 1.** "+1 to Level of all Spell Skill Gems" is 1 prefix roll in
+  1,792 naturally and about 1 in 87 with a Faceted and an Aetheric Fossil.
+  The Fracturing Orb then chooses it one time in four at best.
+
+
+  **Stage 2.** With the fracture in place and Faceted, Aetheric and Aberrant
+  Fossils together, a prefix roll is "+1 to Level of all Chaos Spell Skill
+  Gems" 38% of the time. Naturally it is 1 in 448.
+
+
+  **Stage 3.** Under a prefix lock the Chaos reforge has one modifier it can
+  add: Chaos Damage over Time Multiplier. If its tier is drawn by weight,
+  one reforge in three gives 24% or more and one in seven gives 29% or
+  more. Not measured in 3.30.
+steps:
+  - title: "Stage 1: the fractured +1 to all Spell Skill Gems"
+    do: >-
+      Buy the base, or make it: reroll with a [[Faceted Fossil]] and an
+      [[Aetheric Fossil]] until "+1 to Level of all Spell Skill Gems"
+      appears on a result with **exactly four modifiers**, then use a
+      [[Fracturing Orb]].
+    why: >-
+      This prefix has a weight of 50 in a pool of 89,589, and it is the
+      modifier you could never afford to find a second time. It carries the
+      gem and caster tags, so those two Fossils multiply it twice. Faceted
+      alone would not do: it multiplies "+2 to Level of Socketed Melee
+      Gems" far more, and the Aetheric Fossil is what suppresses that.
+    check: >-
+      Four modifiers, not five or six. The Fracturing Orb needs at least
+      four and picks at random.
+    fail: >-
+      It fractured another modifier. That dagger is finished as a base for
+      this plan; it cannot be fractured again. This is the step that makes
+      most crafters buy.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "Adds 26 to 51 Cold Damage to Spells" }
+      suffixes:
+        - { text: "18% increased Cast Speed" }
+        - { text: "+41 to Intelligence" }
+  - title: "Stage 2: three Fossils, chosen by the tags of one modifier"
+    do: >-
+      Reroll with a [[Faceted Fossil]], an [[Aetheric Fossil]] and an
+      [[Aberrant Fossil]] in a three-socket Resonator until the dagger has
+      **"+1 to Level of all Chaos Spell Skill Gems"**, with **one prefix
+      slot open** and **no more than two suffixes**.
+    why: >-
+      Look up the modifier's tags: chaos, caster, gem. Each Fossil
+      multiplies one of them by ten, so this prefix is multiplied three
+      times over while almost everything else is multiplied once or not at
+      all. The fractured prefix sits in a different group and blocks
+      nothing. For Fire, Cold or Lightning the third Fossil is Scorched,
+      Frigid or Metallic.
+    check: >-
+      The open prefix is for the bench's Chaos Damage. The open suffix is
+      for the lock in stage 3, which is a suffix. A result with the gem
+      level and three suffixes cannot be locked.
+    fail: >-
+      Use the next Resonator. The fractured prefix survives every reroll.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+      suffixes:
+        - { text: "24% increased Cast Speed", how: fossil }
+        - { text: "77% increased Spell Critical Strike Chance", how: fossil }
+  - title: "Stage 3: lock the prefixes, reforge for Chaos"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]). At the [[Horticrafting Station]], **Reforge a Rare
+      item with random modifiers, including a Chaos modifier** (100 Vivid
+      Lifeforce). Repeat both until the multiplier's tier and the suffix
+      count suit you.
+    why: >-
+      The second gem level is not fractured, so it needs the lock. Now
+      count the Chaos tag. On a rune dagger it has three natural carriers:
+      the Chaos gem prefix, added Chaos Damage for attacks, and Chaos Damage
+      over Time Multiplier. Two are prefixes and the prefixes are locked.
+      The reforge has exactly one modifier it can add to keep its promise.
+    check: >-
+      Both gem levels untouched, the multiplier present. Then count
+      suffixes: **one** leaves room for two bench suffixes; with two, a
+      single bench modifier is all the item can take.
+    fail: >-
+      A low tier, 14–18%, is under what the bench sells. Lock and reforge
+      again, or accept it and plan to swap it out. Decide the number of
+      attempts before the first.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+      suffixes:
+        - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+  - title: "Stage 4: three bench modifiers"
+    do: >-
+      At the bench, in this order: **Can have up to 3 Crafted Modifiers** (2
+      Divine Orbs, a suffix); **46–50% increased Chaos Damage with 11–12%
+      increased Skill Effect Duration for Chaos Skills** (8 Chaos Orbs, the
+      third prefix); **14–17% increased Cast Speed** (2 Chaos Orbs, the
+      last suffix).
+    why: >-
+      On a dagger without influence, only the bench or a veiled modifier
+      adds increased Chaos Damage; the natural pool has Spell Damage in
+      that group and nothing for chaos. The multi-modifier craft
+      costs a suffix and returns a prefix and a suffix. It is worth it only
+      because the reforge left two suffixes open.
+    check: >-
+      If the reforge left only one suffix open, skip the multi-modifier
+      craft and put the Chaos Damage prefix on as the single bench
+      modifier.
+    state:
+      note: "Fractured"
+      implicits: ["42% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Chaos Spell Skill Gems", how: fossil }
+        - { text: "48% increased Chaos Damage / Chaos Skills have 12% increased Skill Effect Duration", how: crafted }
+      suffixes:
+        - { text: "+30% to Chaos Damage over Time Multiplier", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "16% increased Cast Speed", how: crafted }
+variations: >-
+  **A third gem level.** The corruption implicits for rune daggers include
+  "+1 to Level of all Chaos Spell Skill Gems". A [[Vaal Orb]] can replace
+  the crit implicit with it, which this build would not miss. It can also
+  reroll the whole item or do nothing, the odds are not published, and
+  afterwards the dagger cannot be crafted again. A gamble for a second
+  copy, not for the only one.
+
+
+  **Crit casters.** The same four stages with Metallic, Frigid or Scorched
+  as the third Fossil. Stage 3 changes: use the Caster reforge (75 Primal
+  Lifeforce), which under a prefix lock can only add cast speed or Spell
+  Critical Strike Chance, and bench Critical Strike Multiplier.
+
+
+  **Finishing stage 4 with an Exalted Orb instead.** With the suffix side
+  full the orb must add a prefix, and with "Cannot roll Attack Modifiers" as
+  one of the crafted suffixes it could not be an attack one. That costs the
+  cast speed craft its slot. Worth it only if a rolled Spell Damage prefix
+  is worth more to you than the bench's Chaos Damage.
+mistakes:
+  - "A Faceted Fossil without the Aetheric one. The melee gem prefix takes over, and it shares a group with the element gem levels."
+  - "Keeping a stage 2 result with three suffixes. There is nowhere to put the lock."
+  - "Using an Annulment to make room. Since 3.30 nothing steers it, and the unfractured gem level is one of the things it can take."
+  - "Reforging for Chaos without the lock. The second gem level is not fractured and is rerolled with everything else."
+  - "Crafting Chaos Damage over Time Multiplier at the bench before stage 3. Same group as the one the reforge adds, and the reforge removes bench modifiers anyway."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Modifier tags, groups and weights, the Fossil multipliers, corruption implicits, bench costs and the text of the Fracturing Orb. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30; lock costs; the Annulment change." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Chaos and Caster reforges and their costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

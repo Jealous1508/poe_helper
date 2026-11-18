@@ -1,0 +1,212 @@
+category: sceptres
+title: "Hai penetration trên một cây sceptre: một lần craft Awakener's Orb"
+level: 5
+summary: "Roll một prefix influence trên mỗi cây trong hai cây sceptre, gộp chúng bằng Awakener's Orb lên một base vốn đã có penetration, rồi khóa cặp đó và dựng phần còn lại."
+goal: >-
+  Một cây sceptre attack lightning mà implicit và hai prefix của nó đều
+  penetrate resistance: 6% của Sambar Sceptre, "Attacks with this Weapon
+  Penetrate 10–12% Elemental Resistances" của Hunter và "Attacks with this
+  Weapon Penetrate 13–15% Lightning Resistance" của Crusader. Hai prefix cần
+  hai influence khác nhau, và đó là việc duy nhất chỉ một
+  [[Awakener's Orb]] làm được. Bài học là **lên kế hoạch quanh một orb roll
+  lại mọi thứ, trừ cái bạn đã chuẩn bị cho nó.**
+base: "Sambar Sceptre"
+itemLevel: 84
+baseWhy: >-
+  Implicit, "Damage Penetrates 6% Elemental Resistances", là cái lớn nhất
+  trên sceptre Maraketh và cộng dồn với cả hai prefix. Item level 78 mở tier
+  cao nhất của mỗi prefix penetration; 84 chừa chỗ cho Tier 1 của added
+  Lightning Damage (82) nếu có lúc nó ra. Không cây sceptre nào trong hai
+  được phép fractured: theo các trang tra cứu, một fractured item không thể
+  được cho influence.
+methods: [influence, currency, meta, harvest, bench]
+result:
+  note: "Hunter và Crusader"
+  implicits: ["Damage Penetrates 6% Elemental Resistances"]
+  prefixes:
+    - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+    - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+    - { text: "Adds 7 to 106 Lightning Damage", how: crafted }
+  suffixes:
+    - { text: "25% increased Attack Speed", how: harvest }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+    - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+needs:
+  - { item: "[[Hunter's Exalted Orb]]", amount: "1", note: "để biến cây sceptre thứ nhất thành Hunter" }
+  - { item: "[[Crusader's Exalted Orb]]", amount: "1", note: "để biến cây thứ hai thành Crusader" }
+  - { item: "[[Orb of Alteration]]", amount: "vài trăm", note: "cho cả hai cây nguyên liệu" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 mỗi lần khóa, cộng 2" }
+  - { item: "[[Sacred Orb]]", amount: "1 mỗi lần khóa" }
+  - { item: "[[Vivid Crystallised Lifeforce]]", amount: "150 mỗi lần reforge" }
+  - { item: "[[Chaos Orb]]", amount: "8", note: "các craft bench cuối cùng" }
+cost: >-
+  Hai Exalted Orb của conqueror và một [[Awakener's Orb]] là phí vào cửa, và
+  mỗi cái chỉ dùng được một lần trên item này. Rồi tới các lần khóa: 4
+  [[Divine Orb]] và một [[Sacred Orb]] cho mỗi lần roll lại suffix.
+  Alteration cho hai cây nguyên liệu là phần rẻ và cũng là phần chậm.
+odds: >-
+  **Hai cây nguyên liệu.** Trên sceptre Hunter, một lần roll prefix ra prefix
+  penetration cho attack khoảng 1 trên 78 lần, và tier cao nhất của nó là 1
+  trên 311. Trên sceptre Crusader, cái lightning là 1 trên 80, tier cao nhất
+  1 trên 321. Phép tính của chúng tôi từ weight ở item level 84.
+
+
+  **Lần gộp.** Theo các trang tra cứu, kết quả giữ một modifier influence từ
+  mỗi cây nguyên liệu. Khi mỗi cây có đúng một cái, đó là cả hai cái của bạn.
+  Mọi thứ khác trên kết quả là một lần roll ngẫu nhiên mới.
+
+
+  **Suffix.** Reforge Speed đảm bảo một modifier speed, và sceptre có hai:
+  attack speed 53% số lần và cast speed 47%, nếu việc chọn là theo weight.
+  Khi đó một trên tám lần reforge sẽ cho attack speed từ 23% trở lên. Chưa
+  được đo trong 3.30.
+steps:
+  - title: "Cây nguyên liệu thứ nhất: prefix Hunter, đứng một mình, trên Sambar Sceptre"
+    do: >-
+      Dùng một [[Hunter's Exalted Orb]] lên một cây Sambar Sceptre Rare item
+      level 82 trở lên, rồi một Orb of Scouring, một Transmutation và
+      [[Orb of Alteration]] tới khi prefix là **"Attacks with this Weapon
+      Penetrate 10–12% Elemental Resistances"**.
+    why: >-
+      Việc của Exalted Orb là influence, không phải modifier nó thêm vào.
+      Influence thuộc về item, và theo cách nó vẫn hoạt động lâu nay thì nó ở
+      lại khi item bị scour; chúng tôi chưa xác nhận được điều đó từ các
+      nguồn 3.30, nên hãy nhìn item sau khi Scouring. Roll prefix trên item
+      Magic đảm bảo nó là modifier influence **duy nhất** ở đó, và đó là điều
+      Awakener's Orb cần để không có lựa chọn nào.
+    check: >-
+      Suffix, nếu có, không được là modifier Hunter. Đây là cây sceptre sống
+      sót, nên nó là cây mà base và item level có ý nghĩa.
+    state:
+      rarity: magic
+      note: "Hunter"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes: [{ text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }]
+      suffixes: [{ text: "+38 to Strength" }]
+  - title: "Cây nguyên liệu thứ hai: prefix Crusader, trên sceptre nào cũng được"
+    do: >-
+      Làm y vậy với một [[Crusader's Exalted Orb]] trên cây sceptre thứ hai,
+      roll tới **"Attacks with this Weapon Penetrate 13–15% Lightning
+      Resistance"** và không có gì khác từ Crusader.
+    why: >-
+      Awakener's Orb "destroys an item, applying its influence to another of
+      the same item class". Cây nguyên liệu này là cây bị phá hủy. Base của
+      nó không quan trọng, nên hãy dùng cây sceptre rẻ nhất có item level 78
+      trở lên.
+    check: >-
+      Hai prefix thuộc hai group khác nhau, và khác cả các craft penetration
+      veiled lẫn bench, nên chúng ở chung một item được. Một modifier
+      Crusader thứ hai trên cây nguyên liệu này sẽ khiến lựa chọn của orb
+      thành ngẫu nhiên.
+  - title: "Awakener's Orb"
+    do: >-
+      Dùng [[Awakener's Orb]] lên cây sceptre Crusader, rồi lên cây Sambar
+      Sceptre Hunter.
+    why: >-
+      "The second item is reforged as a rare item with both influence types
+      and new modifiers." Sambar Sceptre trở lại là Rare, có cả hai
+      influence, cả hai prefix penetration nếu các trang tra cứu đúng, và bất
+      cứ thứ gì khác mà lần reforge roll ra. Không gì ở đây có thể được bảo
+      vệ, nên không có gì khác được dựng trước.
+    check: >-
+      Cả hai prefix có mặt. Đếm prefix: hai là lý tưởng, vì ô thứ ba đã được
+      tính cho bench.
+    fail: >-
+      Nếu các cây nguyên liệu Magic bị từ chối, hãy dùng một Regal Orb lên
+      mỗi cây và kiểm rằng nó không thêm một modifier influence thứ hai. Nếu
+      sau lần gộp mà thiếu một prefix thì cái luật chúng tôi dựa vào đã thay
+      đổi: hãy dừng và đánh giá lại trước khi tiêu tiền vào khóa.
+    state:
+      note: "Hunter và Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+      suffixes:
+        - { text: "+41 to Intelligence" }
+        - { text: "27% increased Cast Speed" }
+  - title: "Khóa prefix, reforge lấy speed"
+    do: >-
+      Craft **Prefix Modifiers Cannot Be Changed** (4 [[Divine Orb]] và 1
+      [[Sacred Orb]]), rồi **Reforge a Rare item with random modifiers,
+      including a Speed modifier** (150 Vivid Lifeforce). Lặp lại tới khi
+      modifier speed là attack speed ở tier bạn chấp nhận, với hai ô suffix
+      trống nếu bạn có được.
+    why: >-
+      Item có influence không fracture được, nên khóa là lớp bảo vệ duy nhất
+      có, và nó được trả ở mỗi lần thử. Hãy dùng bản đầy đủ: nó được hiểu là
+      để phía prefix y nguyên, kể cả ô trống, mà ô trống đó đã có chủ. Speed
+      là tag có ít modifier mang nhất trong số các suffix một build attack
+      muốn. Trên sceptre thì vẫn là hai, và cái kia là cast speed.
+    check: >-
+      Cast speed thay vì attack speed là một lần thử hỏng, dù tier của nó cao
+      tới đâu.
+    fail: >-
+      Đặt một số lần khóa trước lần đầu tiên. Nếu hết số đó, bench có bán
+      attack speed: 11–15% giá 2 Chaos Orb, 16–20% giá 4 Exalted Orb.
+    state:
+      note: "Hunter và Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+  - title: "Ba modifier bench"
+    do: >-
+      Với hai ô suffix và một ô prefix trống: **Can have up to 3 Crafted
+      Modifiers** (2 Divine Orb, một suffix); **adds 6–8 to 100–113 Lightning
+      Damage** (4 [[Chaos Orb]], prefix thứ ba); **+25–28% to Global Critical
+      Strike Multiplier** (4 Chaos Orb, suffix cuối cùng).
+    why: >-
+      Penetration không làm được gì nếu không có damage để áp nó lên, mà cây
+      sceptre này chưa có chút nào: prefix thứ ba phải là added Lightning
+      Damage. Craft multi-modifier là thứ cho phép bench cấp cùng lúc cái đó
+      và một suffix damage.
+    check: >-
+      Khi chỉ có một ô suffix trống, hãy craft một modifier duy nhất: added
+      Lightning Damage.
+    state:
+      note: "Hunter và Crusader"
+      implicits: ["Damage Penetrates 6% Elemental Resistances"]
+      prefixes:
+        - { text: "Attacks with this Weapon Penetrate 11% Elemental Resistances", how: influence }
+        - { text: "Attacks with this Weapon Penetrate 14% Lightning Resistance", how: influence }
+        - { text: "Adds 7 to 106 Lightning Damage", how: crafted }
+      suffixes:
+        - { text: "25% increased Attack Speed", how: harvest }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+        - { text: "+27% to Global Critical Strike Multiplier", how: crafted }
+variations: >-
+  **Có đáng hai prefix không?** Hãy thành thật về cái giá đánh đổi. Cây
+  sceptre này có một prefix added damage trong khi một cây đơn giản hơn có
+  hai hoặc ba. Hai prefix penetration có lời với nhân vật mà damage chủ yếu
+  đến từ chỗ khác, gloves, ring, passive tree, và phải đánh những enemy có
+  resistance cao. Với nhân vật trông vào weapon để lấy added damage, một cây
+  sceptre Essence of Wrath với ba prefix damage làm được nhiều hơn.
+
+
+  **Một prefix thứ ba roll ra.** Khi phía suffix đã đầy và "Cannot roll
+  Caster Modifiers" là một trong các suffix, Exalted Orb buộc phải thêm một
+  prefix và nó không thể là prefix caster; theo phép tính của chúng tôi, khi
+  đó added Lightning Damage cho attack là khoảng 1 trên 10 cơ hội. Bản của
+  bench thì chắc chắn và nhỏ hơn.
+
+
+  **Chỉ một influence.** Riêng Hunter đã cho prefix elemental penetration mà
+  không cần gộp gì. Awakener's Orb là để lấy cái thứ hai.
+mistakes:
+  - "Một modifier influence thứ hai trên bất kỳ cây nguyên liệu nào. Khi đó orb tự chọn giữ cái nào."
+  - "Dựng suffix trước lần gộp. Awakener's Orb roll lại chúng."
+  - "Đặt base tốt vào cây sceptre bị phá hủy. Item thứ hai bạn bấm vào mới là cây sống sót."
+  - "Dùng một cây sceptre fractured làm nguyên liệu. Nó không nhận được influence, theo các trang tra cứu."
+  - "Nhận cast speed từ reforge Speed vì tier cao."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Hunter và Crusader trên sceptre cùng group và weight của chúng, giá bench, và dòng mô tả của Awakener's Orb và các Exalted Orb của conqueror. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Exalted Orb của conqueror rơi từ các conqueror; giá của các modifier bảo vệ." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "Một modifier influence từ mỗi item được giữ lại." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured item không thể được cho influence." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge Speed và giá của nó." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Người chơi thử nghiệm: reforge Harvest tôn trọng một phía đã khóa. Một phần cũ hơn 3.30." }

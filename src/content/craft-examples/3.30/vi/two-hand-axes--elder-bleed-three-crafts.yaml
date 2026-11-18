@@ -1,0 +1,188 @@
+category: two-hand-axes
+title: "Một cây axe bleed Elder: roll một prefix, craft phần còn lại"
+level: 4
+summary: "Bleed multiplier của Elder là prefix duy nhất bench không bán được. Roll riêng nó lên một cây axe Magic, giữ phía prefix trống quanh nó bằng một Imprint, rồi trả tiền cho ba modifier crafted."
+goal: >-
+  Một cây Sundering Axe có prefix Elder cộng Damage over Time Multiplier for
+  Bleeding, và cả hai prefix còn lại được lấp từ bench: hybrid bleeding và
+  flat Physical Damage. Ý tưởng là **chỉ roll thứ không mua được**. Ở đây có
+  một modifier cần may mắn. Mọi thứ khác là một bảng giá, và lần craft được
+  sắp xếp sao cho may mắn chỉ bị đòi một lần, trên một item Magic, nơi nó rẻ.
+base: "Sundering Axe"
+itemLevel: 84
+baseWhy: >-
+  Implicit, +20% to Damage over Time Multiplier for Bleeding, là lý do dùng
+  base này cho bleed. Prefix Elder có ba tier và tier cao nhất, 51–59%, cần
+  item level 83; ở 75 nó dừng tại 43–50%. Cây axe phải có **influence
+  Elder**, và điều đó loại bỏ base fractured: fractured item không thể được
+  thêm influence.
+methods: [influence, currency, beast, meta, bench, finishing]
+result:
+  note: "Elder"
+  implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+  prefixes:
+    - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+    - { text: "101% increased Physical Damage / 19% chance to cause Bleeding on Hit", how: crafted }
+    - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+  suffixes:
+    - { text: "21% increased Attack Speed" }
+    - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+needs:
+  - { item: "Một cây Sundering Axe có influence Elder, item level 83+", amount: "1", note: "hoặc một Elder's Exalted Orb để tự làm" }
+  - { item: "[[Orb of Alteration]]", amount: "150–300" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Divine Orb]]", amount: "2" }
+  - { item: "[[Chaos Orb]]", amount: "12", note: "8 và 4, cho hai prefix bench" }
+cost: >-
+  Base Elder, rồi [[Orb of Alteration]] với số lượng lớn, vài bộ beast, và các
+  giá bench cố định: 2 [[Divine Orb]] cho "Can have up to 3 Crafted
+  Modifiers", 8 [[Chaos Orb]] cho hybrid bleeding, 4 cho flat Physical
+  Damage. Không gì trong lần craft này có thể phá hủy cây axe. Thứ nó có thể
+  làm là kéo dài hơn bạn dự tính ở giai đoạn Alteration.
+odds: >-
+  Trên một cây axe Elder item level 84, pool prefix là pool tự nhiên cộng ba
+  họ Elder. Theo phép tính của chúng tôi, một lần roll prefix ra prefix bleed
+  ở bất kỳ tier nào khoảng 1 trên 36 lần, từ 43% trở lên khoảng 1 trên 53, và
+  ở tier cao nhất khoảng 1 trên 107. Không phải Alteration nào cũng roll ra
+  prefix, nên hãy dự trù vài trăm cái cho mục tiêu ở giữa.
+
+
+  Regal Orb thêm một modifier, và dữ liệu không cho biết tỉ lệ chia giữa
+  prefix và suffix của nó. Bạn giữ kết quả khi nó là một suffix hoặc một
+  prefix physical, nên hãy tính là một tới ba Imprint.
+steps:
+  - title: "Kiếm một base Elder"
+    do: >-
+      Bắt đầu từ một cây Sundering Axe item level 83 trở lên có influence
+      Elder. Để tự làm: dùng một [[Elder's Exalted Orb]] lên một cây Sundering
+      Axe Rare không có influence, rồi một [[Orb of Scouring]].
+    why: >-
+      Orb thêm influence và một modifier Elder ngẫu nhiên. Influence thuộc về
+      item chứ không thuộc về modifier của nó, và Scouring xưa nay vẫn để nó
+      nguyên chỗ, nên cuối cùng bạn có một cây axe Elder trắng. Base có
+      influence rơi ở đâu trong 3.30 thì chúng tôi chưa xác nhận được; orb là
+      con đường chúng tôi dám đứng ra đảm bảo.
+    check: >-
+      Item hiện nền Elder và không có fractured modifier nào. Đưa nó lên 20%
+      quality ngay bây giờ.
+    state: { rarity: normal, note: "Elder", implicits: ["+20% to Damage over Time Multiplier for Bleeding"] }
+  - title: "Alteration tới khi ra prefix Elder, một mình nó"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]] cho tới
+      khi prefix ghi **+% to Damage over Time Multiplier for Bleeding from
+      Hits with this Weapon** ở mức 43% trở lên. Rồi nhìn suffix: bạn muốn nó
+      trống, hoặc là thứ bạn sẽ giữ.
+    why: >-
+      Trên item Magic, cuộc tìm kiếm chỉ có hai ô và mỗi lần thử tốn một
+      Alteration. Prefix Elder có weight 500 mỗi tier trong một pool prefix
+      khoảng 53,300, đủ phổ biến để roll theo cách này và quá hiếm để ngồi chờ
+      trên item Rare. Đừng dùng Augmentation sau đó: một suffix trống đáng giá
+      hơn một suffix ngẫu nhiên.
+    check: >-
+      Giữ Alt và đọc tier: 51–59% là cao nhất, 43–50% là thứ hai. Hãy quyết
+      định trước khi bắt đầu xem tier thứ hai có đủ không.
+    state:
+      rarity: magic
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+  - title: "Imprint, rồi Regal Orb"
+    do: >-
+      Trong [[Menagerie]], tạo một [[Imprint]] của cây axe Magic
+      ([[Craicic Croaker]] và ba beast Rare). Rồi dùng một [[Regal Orb]].
+    why: >-
+      Hướng dẫn về mace dùng Imprint để giữ một prefix. Ở đây nó bảo vệ thứ
+      khác: **hai ô prefix trống**. Kế hoạch lấp chúng từ bench, và một Regal
+      Orb đặt fire damage vào một trong hai ô đó là đã lấy mất một phần ba
+      damage của cây axe. Imprint cho bạn từ chối điều đó. Nó dùng được trên
+      item có influence; trên fractured item thì không.
+    check: >-
+      Giữ kết quả nếu Regal Orb thêm một **suffix**, hoặc một prefix physical:
+      flat Physical Damage hoặc hybrid kèm Accuracy.
+    fail: >-
+      Bất kỳ prefix nào khác: dùng Imprint để đưa cây axe về Magic, tạo một
+      Imprint mới, rồi dùng thêm một Regal Orb. Ở đây lần thử đầu tiên đã thêm
+      fire damage và bị hoàn tác.
+    state:
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+  - title: "Ba modifier crafted"
+    do: >-
+      Ở [[Crafting Bench]], theo thứ tự này: **Can have up to 3 Crafted
+      Modifiers** (2 [[Divine Orb]], một suffix). **95–105% increased Physical
+      Damage kèm 18–20% chance to cause Bleeding on Hit** (8
+      [[Chaos Orb]], một prefix). **Adds 18–24 to 36–42 Physical Damage** (4
+      Chaos Orb, một prefix).
+    why: >-
+      Craft đầu tiên tốn một ô suffix và cho phép thêm hai modifier bench nữa.
+      Trên phần lớn weapon, đó là một cuộc đổi ngang. Trên cây axe này, nó là
+      một cuộc đổi tốt, vì cả hai thứ bạn muốn từ bench đều là prefix ở các
+      group khác nhau, và phía prefix là nơi damage của axe nằm. Hybrid
+      bleeding thuộc group của bản phần trăm thuần; flat Physical Damage là
+      group riêng.
+    check: >-
+      Ba prefix, hai cái crafted. Hai suffix, một cái crafted. Còn một ô
+      suffix trống.
+    state:
+      note: "Elder"
+      implicits: ["+20% to Damage over Time Multiplier for Bleeding"]
+      prefixes:
+        - { text: "+47% to Damage over Time Multiplier for Bleeding from Hits with this Weapon", how: influence }
+        - { text: "101% increased Physical Damage / 19% chance to cause Bleeding on Hit", how: crafted }
+        - { text: "Adds 21 to 39 Physical Damage", how: crafted }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+        - { text: "Can have up to 3 Crafted Modifiers", how: crafted }
+  - title: "Suffix cuối cùng: một ván cược bạn có thể từ chối"
+    do: >-
+      Còn một ô suffix trống và bench đã đầy. Một [[Exalted Orb]] thêm một
+      suffix ngẫu nhiên vào đó. Hoặc cứ để trống.
+    why: >-
+      Khi attack speed đã có trên cây axe, theo phép tính của chúng tôi khoảng
+      một trên 27 Exalted Orb cho một trong hai suffix mà build bleed sẽ chọn:
+      Damage over Time Multiplier tự nhiên, hoặc Culling Strike against
+      Bleeding enemies kèm 30–49% increased Physical Damage của Elder. Phần
+      còn lại là đồ lấp chỗ. Nó không làm hại cây axe được, vì không gì bị gỡ,
+      nhưng đó là cái giá tồi cho một cơ hội 1 trên 27.
+    check: >-
+      Nếu bạn thích một suffix chắc chắn hơn là một prefix crafted thứ ba, hãy
+      đổi flat Physical Damage lấy +31–35% to Physical Damage over Time
+      Multiplier (4 Chaos Orb) và để trống một prefix cho sau này.
+variations: >-
+  **Vì sao là Alteration mà không phải Harvest.** Horticrafting Station có
+  "Reforge an Influenced Rare item with random modifiers, including an
+  Influence modifier" giá 5,000 Primal Lifeforce và một Sacred Crystallised
+  Lifeforce. Nó đảm bảo *một* modifier Elder, mà một cây axe Elder có tới mười
+  ba họ như vậy. Alteration thì đòi đúng cái bạn muốn với một tỉ lệ đã biết.
+
+
+  **Một hybrid veiled thay cho bản bench.** 120–139% kèm 21–25% chance to
+  cause Bleeding là bản nâng cấp cho prefix thứ hai. Con đường là cái trong ví
+  dụ kế tiếp, một phía suffix đã khóa và một Veiled orb, và trên cây axe này
+  nó cần cả ba ô suffix được lấp bằng modifier roll ra trước đã, tức là phải
+  bỏ kiểu kết thúc bằng ba craft.
+
+
+  **Một influence thứ hai.** Hunter có "Bleeding you inflict deals Damage
+  22–25% Faster" dưới dạng suffix. Đặt nó lên cùng cây axe cần một
+  [[Awakener's Orb]], thứ roll lại mọi thứ trừ một modifier influence từ mỗi
+  item. Ví dụ cuối cùng của hướng dẫn về sword cho thấy orb đó hoạt động ra
+  sao.
+mistakes:
+  - "Dùng Regal Orb mà không có Imprint rồi chấp nhận một prefix elemental. Mỗi prefix nó chiếm là một cái mà bench lẽ ra đã lấp bằng damage."
+  - "Bắt đầu từ một cây axe fractured vì nó có prefix tốt. Nó không nhận được influence Elder."
+  - "Craft hybrid bleeding trước rồi mới phát hiện bench từ chối modifier thứ hai. \"Can have up to 3 Crafted Modifiers\" phải được đặt lên trước hai cái kia."
+  - "Roll tìm tier cao nhất với ngân sách chỉ đủ cho tier thứ hai. Hãy quyết định ngay từ đầu; 43–50% là một modifier mạnh và tốn một nửa số Alteration."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Elder trên axe hai tay, tier, weight, group và giá bench, cùng mô tả trong game của Elder's Exalted Orb. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các meta-modifier ở bench." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và beast nó cần." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Reforge cho item có influence và giá của nó." }
+  - { title: "poedb: Fractured item", url: "https://poedb.tw/us/Fractured_item", kind: data, note: "Fractured item không thể được thêm influence." }

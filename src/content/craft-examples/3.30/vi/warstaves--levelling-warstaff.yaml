@@ -1,0 +1,157 @@
+category: warstaves
+title: "Một cây warstaff leveling: roll flat damage, mua phần trăm"
+level: 1
+summary: "Lần craft đầu tiên của bạn: Alteration để lấy flat Physical Damage, một Regal Orb, rồi increased Physical Damage của bench đắp lên trên. Hai prefix nhân lẫn nhau, với giá một nắm orb."
+goal: >-
+  Một weapon cho nửa sau campaign, đánh đau hơn hẳn bất cứ thứ gì nhặt dưới
+  đất, làm từ currency bạn đã có sẵn. Ý cần mang theo là một thói quen so
+  sánh: trước khi roll bất cứ thứ gì, **hãy nhìn xem bench bán gì, rồi roll
+  cái modifier nó bán dở nhất.** Ở level này đó là flat Physical Damage.
+base: "Vile Staff"
+itemLevel: 36
+baseWhy: >-
+  Vile Staff cầm được ở level 33 và đánh 41–76 với 1.3 attack mỗi giây, có
+  sẵn +20% Chance to Block Attack Damage. Item level 36 là mốc đầu tiên mà
+  Tier 5 của flat Physical Damage (adds 16–22 to 35–40) roll được. Giữ Alt
+  rồi rê chuột lên cây staff để kiểm.
+
+
+  Bất kỳ cây warstaff trắng nào ngang level của bạn cũng làm y như vậy được.
+  Nó cần Intelligence nhiều ngang Strength, ở đây là 59 mỗi loại, mức mà một
+  nhân vật Strength có thể chưa có.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["+20% Chance to Block Attack Damage"]
+  prefixes:
+    - { text: "Adds 18 to 37 Physical Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+19 to Strength" }
+    - { text: "+10% Chance to Block Attack Damage" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "vài cái", note: "lên 20% quality" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "15–20", note: "cộng thêm 8 cho bench" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Một hai chục [[Orb of Alteration]] và một [[Regal Orb]]. Craft ở bench tốn
+  thêm 8 Alteration. Đủ rẻ để cứ mười level làm lại một lần.
+odds: >-
+  Ở item level 36, một lần roll prefix ra flat Physical Damage khoảng 1 trên
+  6.5 lần, theo phép tính của chúng tôi từ weight của các modifier, và ra một
+  trong ba tier tốt nhất của nó ở đây (adds 10–13 to 21–25 trở lên) khoảng 1
+  trên 11 lần. Không phải Alteration nào cũng roll ra prefix, nên hãy tính
+  mười lăm tới hai mươi cái. Cùng lần roll đó mà nhắm tier phần trăm tốt nhất
+  ở level này thì sẽ là 1 trên 82: khác biệt đó là lý do cho thứ tự của lần
+  craft này.
+steps:
+  - title: "So bench với pool"
+    do: >-
+      Mở [[Crafting Bench]] và đọc hai prefix physical của nó. Flat: adds
+      9–12 to 18–21 giá 4 Orb of Transmutation. Increased: 60–79% giá 8 Orb
+      of Alteration. Giờ tới mức tốt nhất cây staff roll được ở item level
+      36. Flat: adds 16–22 to 35–40. Increased: 85–109%, và chỉ hiếm khi;
+      những tier bạn thường thấy chạy từ 40% tới 84%.
+    why: >-
+      Phần trăm của bench tốt ngang thứ bạn thường roll ra. Flat damage của
+      nó chỉ bằng khoảng một nửa mức cây staff roll được. Một trong hai
+      prefix sẽ đến từ bench, nên hãy để đó là cái phần trăm, và roll cái
+      flat.
+    state: { rarity: normal, implicits: ["+20% Chance to Block Attack Damage"] }
+  - title: "Quality, rồi roll flat damage"
+    do: >-
+      Dùng [[Blacksmith's Whetstone]] lên 20% quality. Dùng một
+      [[Orb of Transmutation]], rồi tới [[Orb of Alteration]], từng cái một,
+      giữ Alt, tới khi prefix là **"Adds # to # Physical Damage"** với con số
+      đầu từ 10 trở lên. Tên của chúng là "Polished", "Honed" và
+      "Gleaming".
+    why: >-
+      Quality là physical damage trên base, và mọi thứ sau nó đều nhân lên
+      kết quả đó. Item Magic có một prefix và một suffix, nên mỗi Alteration
+      là một lần ngó rẻ tiền vào một prefix. Trên một base đánh 41–76, thêm
+      18 tới 37 là thêm gần một nửa nữa, trước khi tính bất kỳ phần trăm nào.
+    check: >-
+      Dòng đó ghi Physical Damage, không phải Fire, Cold hay Lightning: mấy
+      cái đó trông giống nhau và gộp lại thì dễ ra hơn nhiều. Kệ suffix.
+    fail: >-
+      Sắp cạn orb: nhận flat Physical Damage nào cũng được. Nó vẫn hơn bản
+      của bench.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+  - title: "Lấp ô suffix trống"
+    do: >-
+      Nếu chưa có suffix, dùng một [[Orb of Augmentation]]. Nếu đã có rồi thì
+      bỏ qua bước này.
+    why: >-
+      Augmentation thêm vào một ô trống trên item Magic và không đụng tới thứ
+      gì khác. Nó là một lần roll miễn phí cầu attack speed, suffix phổ biến
+      nhất trên warstaff.
+    state:
+      rarity: magic
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+      suffixes: [{ text: "+19 to Strength" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]].
+    why: >-
+      Nó biến cây staff thành Rare, giữ cả hai modifier, và thêm ngẫu nhiên
+      cái thứ ba. Rare là thứ cho bench một ô trống.
+    check: >-
+      Đọc xem cái gì được thêm và ở phía nào. Ở đây là thêm chút block, cộng
+      vào implicit. Nếu nó thêm increased Physical Damage, hãy đọc trường hợp
+      thứ hai của bước kế.
+    state:
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes: [{ text: "Adds 18 to 37 Physical Damage" }]
+      suffixes:
+        - { text: "+19 to Strength" }
+        - { text: "+10% Chance to Block Attack Damage" }
+  - title: "Mua phần trăm"
+    do: >-
+      Ở bench, craft increased Physical Damage: 60–79% giá 8 Orb of
+      Alteration, hoặc 40–59% giá 4. **Nếu Regal Orb đã thêm increased
+      Physical Damage thuần rồi,** bench sẽ từ chối; hãy craft attack speed
+      thay vào, 8–10% giá 6 Orb of Alteration.
+    why: >-
+      Flat và increased Physical Damage thuộc hai group khác nhau, nên cả hai
+      cùng nằm trên staff và cái sau nhân cái trước. Phần trăm của bench cùng
+      group với bản phần trăm thuần roll ra nên không nằm chung được. Một
+      item chứa được một modifier bench, nên đây là craft duy nhất.
+    fail: >-
+      Nếu bench không liệt kê craft đó, tức là bạn chưa tìm được công thức
+      ấy. Hãy dùng lựa chọn physical hoặc speed tốt nhất mà bench đang có.
+    state:
+      implicits: ["+20% Chance to Block Attack Damage"]
+      prefixes:
+        - { text: "Adds 18 to 37 Physical Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+19 to Strength" }
+        - { text: "+10% Chance to Block Attack Damage" }
+variations: >-
+  **Nếu roll ra hybrid.** "Increased Physical Damage kèm Accuracy Rating" là
+  group thứ ba. Nếu một Alteration cho ra nó thì giữ lại: bản phần trăm thuần
+  của bench nằm vừa cạnh nó y như cạnh flat damage.
+
+
+  **Không có đường tắt Essence.** Trên phần lớn weapon, một Essence of
+  Contempt bậc thấp dùng lên base trắng là bản nhanh của lần craft này. Dữ
+  liệu game không liệt kê modifier Essence nào cho warstaff, nên đừng mua một
+  cái cho việc này khi chưa thử xem nó cho gì.
+
+
+  **Lên cao hơn.** Tới item level 60 thì phép so sánh đã đổi: 80–99% của
+  bench (4 Chaos Orb) thấp hơn hẳn mức 135–154% roll ra, và phần trăm trở
+  thành thứ đáng roll. Các ví dụ sau bắt đầu từ đó.
+mistakes:
+  - "Dừng ở added Fire, Cold hoặc Lightning Damage. Build physical không được gì từ nó."
+  - "Roll để tìm phần trăm ở level này. Bench bán tier phổ biến với giá 8 Alteration."
+  - "Craft trước Regal Orb. Vẫn được, nhưng modifier bench duy nhất đã tiêu trước khi bạn biết cây staff thiếu gì."
+  - "Quên yêu cầu Intelligence. Warstaff cần nó nhiều ngang Strength."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, item level, weight và giá bench, cùng việc không có mục Essence nào cho warstaff. Xác suất là phép tính của chúng tôi." }

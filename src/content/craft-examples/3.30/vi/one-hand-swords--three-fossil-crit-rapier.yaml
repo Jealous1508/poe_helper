@@ -1,0 +1,176 @@
+category: one-hand-swords
+title: "Một cây rapier critical strike từ ba Fossil"
+level: 3
+summary: "Một Fossil cho prefix và hai cho suffix: một Resonator duy nhất nhắm cùng lúc vào physical damage, attack speed và cả hai modifier critical strike."
+goal: >-
+  Một cây rapier physical cho build crit: prefix physical ở một phía và
+  attack speed, Critical Strike Chance cùng Critical Strike Multiplier ở phía
+  kia. Trên weapon này **cả hai phía đều chật chội**, chính điều đó khiến nó
+  là kiểu sword khó nhất, và không công cụ rẻ nào xử lý được cả hai. Bài học
+  là nhiều Fossil trong một Resonator kết hợp với nhau thế nào, và cách đọc
+  kết quả khi đang roll tìm cả hai phía cùng lúc.
+base: "Vaal Rapier"
+itemLevel: 77
+baseWhy: >-
+  6.5% critical strike chance gốc là cao nhất loại item này, và Critical
+  Strike Chance local nhân nó lên. Implicit thêm +25% Critical Strike
+  Multiplier. Item level 77 mở Tier 1 của attack speed và Tier 1 của cả hai
+  suffix critical strike, cùng Tier 2 của các prefix phần trăm physical. Roll
+  lại bằng Fossil rơi vào tier giữa thường xuyên hơn hẳn tier cao nhất, nên
+  item level 83 sẽ mua một tier bạn hiếm khi thấy.
+methods: [fossil, bench, finishing]
+result:
+  implicits: ["+25% to Global Critical Strike Multiplier"]
+  prefixes:
+    - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+    - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+    - { text: "88% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed", how: fossil }
+    - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+    - { text: "31% increased Critical Strike Chance", how: fossil }
+needs:
+  - { item: "[[Jagged Fossil]]", amount: "20–40" }
+  - { item: "[[Shuddering Fossil]]", amount: "20–40" }
+  - { item: "[[Deft Fossil]]", amount: "20–40" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "một cái mỗi lần thử", note: "cỡ chứa được ba Fossil" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Ba Fossil và một Resonator ba socket cho mỗi lần thử, tất cả từ Delve. Đó
+  là gấp ba số Fossil của một lần roll lại đơn giản, và chỉ đáng vì một lần
+  dùng tác động lên năm modifier.
+odds: >-
+  Theo công cụ tính của chúng tôi ở item level 77, với cả ba Fossil: 73% số
+  lần roll prefix là physical (flat damage 35%, mỗi họ phần trăm 19%), và 83%
+  số lần roll suffix là attack speed (36%), Critical Strike Chance (24%) hoặc
+  Critical Strike Multiplier (24%). Khi một kết quả có ba suffix, hơn một
+  phần ba số lần một chút đó là đúng ba cái này, mỗi loại một cái. Công cụ
+  tính bỏ modifier chỉ có từ Fossil ra ngoài, nên con số thật thấp hơn một
+  chút.
+
+
+  Tier thì không được đụng tới. Một prefix phần trăm physical Tier 4 trở lên
+  (110% với bản thuần, hoặc 45% với hybrid) là khoảng 1 trên 28 lần roll
+  prefix, tính cả hai họ. "Đúng họ ở cả hai phía" tốn một nắm Resonator; "và
+  tier tốt" thì tốn vài chục.
+steps:
+  - title: "Chọn một Fossil cho mỗi thứ bạn muốn"
+    do: >-
+      Xếp các Fossil đối chiếu với kế hoạch. [[Jagged Fossil]]: more Physical
+      modifiers, cho prefix. [[Shuddering Fossil]]: more Speed modifiers, và
+      attack speed là cái duy nhất rapier có. [[Deft Fossil]]: more Critical
+      modifiers, tức hai suffix critical strike.
+    why: >-
+      Mỗi chữ "more" là gấp mười weight và chúng kết hợp với nhau. Các dòng
+      "no" cũng giúp: Deft gỡ modifier Attribute, nên Strength và Dexterity
+      rời khỏi pool suffix; Shuddering gỡ modifier Mana. Thứ còn lại là một
+      kẻ đi lậu: life leech mang tag physical, nên Jagged Fossil nhân nó lên,
+      và nó chiếm khoảng 7% số lần roll suffix.
+    state:
+      rarity: normal
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+  - title: "Chuẩn bị cây rapier và dùng Resonator đầu tiên"
+    do: >-
+      Đưa một cây Vaal Rapier trắng lên 20% quality và biến nó thành Rare
+      bằng một [[Orb of Alchemy]]. Đặt ba Fossil vào một
+      [[Powerful Chaotic Resonator]] rồi dùng nó lên cây rapier.
+    why: >-
+      Chaotic Resonator roll lại item Rare với weight gộp của mọi thứ gắn
+      trong nó. Ở đây quality có quan trọng, khác với trên một cây foil
+      elemental: damage của weapon này là physical.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 38 to 71 Cold Damage", how: fossil }
+        - { text: "Adds 9 to 18 Physical Damage", how: fossil }
+      suffixes:
+        - { text: "16% increased Attack Speed", how: fossil }
+        - { text: "2.8% of Physical Attack Damage Leeched as Life", how: fossil }
+        - { text: "+17% to Global Critical Strike Multiplier", how: fossil }
+  - title: "Đánh giá prefix trước, và nghiêm khắc vào"
+    do: >-
+      Nhìn phía prefix trước mọi thứ khác. Bạn cần **hai prefix physical, ít
+      nhất một trong đó là prefix phần trăm** ở tier bạn đã đặt từ trước; cho
+      một cây rapier chạy map, từ 110% trở lên với bản thuần, hoặc từ 45% trở
+      lên với bản kèm Accuracy. Chỉ khi prefix qua thì mới nhìn sang suffix:
+      attack speed và ít nhất một suffix critical strike.
+    why: >-
+      Kết quả ở trên cho thấy vì sao rapier cần Jagged Fossil và vì sao chừng
+      đó vẫn chưa đủ. Elemental damage nặng weight trên pool này tới mức một
+      phần tư số lần roll prefix vẫn là elemental ngay cả khi modifier
+      physical có gấp mười weight. Phía suffix thì ngoan; phía prefix là nơi
+      kết quả hỏng. Vậy nên đó là phía cần đánh giá trước.
+    check: >-
+      Một suffix bạn không muốn lắm thì chấp nhận được. Một ô prefix thứ ba
+      bị cold damage chiếm chỉ chấp nhận được nếu hai cái kia tốt: đó là cái
+      ô lẽ ra bench đã dùng.
+    fail: >-
+      Dùng thêm ba Fossil trong một Resonator mới lên chính cây rapier đó.
+  - title: "Lặp lại tới khi prefix qua"
+    do: >-
+      Cứ tiếp tục tới khi một kết quả đạt mức prefix với các suffix bạn chịu
+      được. Dừng sớm nếu phía suffix ra trọn vẹn.
+    why: >-
+      Bạn đang chờ sự kiện hiếm hơn, một tier phần trăm tử tế. Trong lúc chờ,
+      phía suffix mỗi lần đều được roll lại miễn phí, và nó ra đúng thường
+      xuyên hơn prefix rất nhiều.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+  - title: "Bench cái ô còn lại"
+    do: >-
+      **Nếu hybrid roll ra và còn một prefix trống** (như ở đây): craft
+      increased Physical Damage thuần, 80–99% giá 4 [[Chaos Orb]] hoặc
+      100–129% giá 4 Exalted Orb. **Nếu prefix phần trăm thuần roll ra:**
+      craft flat Physical Damage, adds 13–17 to 26–30 giá 4 Chaos Orb. **Nếu
+      cả ba prefix đều đã bị chiếm và thiếu một suffix:** craft suffix đó:
+      Critical Strike Chance 25–27% hoặc Critical Strike Multiplier 25–28%
+      giá 4 Chaos Orb, hoặc attack speed 11–15% giá 2.
+    why: >-
+      Bench có một ô còn weapon này có sáu việc, nên ô đó đi tới chỗ nào hết
+      may. Prefix phần trăm của bench chung group với bản thuần roll ra chứ
+      không chung với hybrid, và đó là lý do hybrid là cú roll đáng thấy hơn
+      khi ngân sách thấp.
+    state:
+      implicits: ["+25% to Global Critical Strike Multiplier"]
+      prefixes:
+        - { text: "Adds 17 to 34 Physical Damage", how: fossil }
+        - { text: "47% increased Physical Damage / +104 to Accuracy Rating", how: fossil }
+        - { text: "88% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed", how: fossil }
+        - { text: "+29% to Global Critical Strike Multiplier", how: fossil }
+        - { text: "31% increased Critical Strike Chance", how: fossil }
+variations: >-
+  **Một cây foil elemental crit.** Đổi Jagged Fossil lấy một
+  [[Prismatic Fossil]], thứ nhân các modifier Elemental lên sáu lần và gỡ
+  modifier bleed lẫn poison. Trên thrusting sword ở item level 83, công cụ
+  tính của chúng tôi khi đó cho 92% số lần roll prefix là added Fire, Cold
+  hoặc Lightning Damage, còn phía suffix như cũ. Hãy dùng Jewelled Foil vì
+  tốc độ của nó và bỏ qua whetstone.
+
+
+  **Trên one-hand sword.** Cũng ba Fossil đó đạt khoảng 81% prefix physical ở
+  đó, vì các weight elemental thấp hơn. Để có điều đó bạn bỏ critical strike
+  chance và implicit của rapier.
+
+
+  **Khi prefix đã đúng còn suffix thì chưa.** Đừng roll lại. Prefix physical
+  tốt trên rapier là nửa đắt tiền, và ví dụ khó nhất chỉ cách dựng lại suffix
+  mà không đụng tới chúng.
+mistakes:
+  - "Đánh giá suffix trước vì chúng trông đẹp. Chúng trông đẹp ở phần lớn kết quả; prefix mới quyết định."
+  - "Bỏ Jagged Fossil ra để tiết kiệm một socket. Không có nó, prefix của rapier là 72% elemental."
+  - "Giữ ba prefix physical ở các tier chót. Hai cái tốt cộng một craft bench là một weapon tốt hơn."
+  - "Trông chờ [[Memory Strands]] nâng tier. Theo thử nghiệm của người chơi, Fossil không dùng strand."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Hệ số nhân của Fossil, tag trên từng modifier, pool của thrusting sword cùng weight của nó, giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Cách vào Delve trong 3.30." }

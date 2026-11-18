@@ -1,0 +1,177 @@
+category: two-hand-swords
+title: "Một cây sword elemental trên Memory Strands"
+level: 3
+summary: "Strand trên một base trắng, một lượt ngắn Alteration cho cái họ đằng nào cũng phổ biến, một Regal Orb, và một Orb of Unravelling ở cuối để nâng thứ đã roll hụt một tier."
+goal: >-
+  Một cây Infernal Sword có ba loại added elemental damage và attack speed,
+  phần lớn ở những tier mà một lần craft Alteration thường không với tới. Lần
+  craft này là một **ngân sách**: một base chứa tối đa 100 strand, mỗi orb
+  tiêu một ít, và một orb ở cuối tiêu hết phần còn lại. Bạn quyết định từ
+  trước bao nhiêu dành cho các lần roll và bao nhiêu để dành cho phần kết.
+base: "Infernal Sword"
+itemLevel: 84
+baseWhy: >-
+  Implicit là 30% increased Elemental Damage with Attack Skills. Modifier đó
+  bình thường là một prefix hiếm, nên trên base này cả ba ô prefix đều rảnh
+  cho added damage. Item level 82 mở Tier 1 của added fire, cold và lightning
+  damage. Base phải là **Normal**: Orb of Remembrance không dùng được trên
+  thứ gì khác.
+methods: [strands, currency, bench]
+result:
+  implicits: ["30% increased Elemental Damage with Attack Skills"]
+  prefixes:
+    - { text: "Adds 22 to 391 Lightning Damage" }
+    - { text: "Adds 121 to 214 Cold Damage" }
+    - { text: "Adds 66 to 119 Fire Damage", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed" }
+needs:
+  - { item: "[[Orb of Remembrance]]", amount: "vài cái", note: "tới khi số strand cao" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "5–15" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Unravelling]]", amount: "1" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Chi phí là hai loại orb strand; phần còn lại là currency lặt vặt. Không có
+  bước nào đắt và không có bước nào làm mất item được. Thứ có thể mất là
+  strand, do tiêu chúng vào những lần roll bạn không cần.
+odds: >-
+  Strand không thay đổi việc modifier nào roll ra. Sáu trên mười lần roll
+  prefix là added elemental damage, có strand hay không cũng vậy. Không có
+  strand, theo phép tính của chúng tôi, một trên 11 lần roll prefix là Tier 3
+  trở lên của một element nào đó. Strand cải thiện điều đó tới đâu thì không
+  được công bố. Thử nghiệm của người chơi đưa ra số liệu cho một modifier
+  mười ba tier: từ 62 strand trở lên chỉ còn lại bốn tier cao nhất của nó.
+  **Nếu** một họ mười tier bị cắt theo cùng cách, khoảng một trên ba lần roll
+  prefix sẽ là Tier 3 trở lên. Chữ "nếu" đó là của chúng tôi.
+
+
+  Các tỉ lệ của Orb of Unravelling bên dưới cũng đến từ một mô hình của người
+  chơi, và từ một nguồn kém tin cậy. Hãy coi mọi con số liên quan tới strand
+  trong ví dụ này là chỉ dẫn về hướng, không phải số đo.
+steps:
+  - title: "Đặt strand lên cây sword trắng"
+    do: >-
+      Dùng một [[Orb of Remembrance]] lên một cây Infernal Sword Normal item
+      level 84 rồi đọc số [[Memory Strands]] nó hiện ra. Nếu thấp, dùng thêm
+      một cái: mỗi cái bốc lại con số đó một cách ngẫu nhiên.
+    why: >-
+      Strand được chuẩn bị trước lần craft và không thêm vào sau được. Các
+      mốc do người chơi thử nghiệm nói vài strand đầu tiên đã làm được rất
+      nhiều và 62 là bậc tăng cuối cùng, nên hãy nhắm gần hoặc trên mức đó và
+      đừng đuổi theo 100.
+    check: >-
+      Chốt ngân sách ngay bây giờ. Một mức hợp lý: tối đa một nửa số strand
+      cho Alteration, Augmentation và Regal Orb, phần còn lại cho Orb of
+      Unravelling.
+    state: { rarity: normal, implicits: ["30% increased Elemental Damage with Attack Skills"] }
+  - title: "Một lượt ngắn Alteration"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi tới [[Orb of Alteration]]. Trước
+      mỗi cái, rê nó lên cây sword: game hiện nó sẽ lấy đi bao nhiêu strand.
+      Dừng ở prefix đầu tiên là **added fire, cold hoặc lightning damage từ
+      Tier 3 trở lên**, hoặc khi bạn chạm ngân sách.
+    why: >-
+      Đây là họ hợp với strand. Nó là phần lớn pool prefix, nên bạn không bao
+      giờ phải chờ modifier xuất hiện, chỉ chờ một tier tốt của nó, và tier
+      là thứ duy nhất strand cải thiện. Theo bảng data-mine, một Alteration
+      tiêu nhiều nhất 8 strand. Một cuộc săn dài bằng Alteration cho thứ gì
+      đó hiếm sẽ rút cạn base trước khi nó kịp sinh lời.
+    fail: >-
+      Hết ngân sách mà prefix là elemental nhưng ở Tier 4 hoặc 5: giữ nó. Orb
+      of Unravelling tồn tại chính là cho việc đó.
+    state:
+      rarity: magic
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes: [{ text: "Adds 22 to 391 Lightning Damage" }]
+  - title: "Augmentation, rồi Regal Orb"
+    do: >-
+      Nếu suffix trống, dùng một [[Orb of Augmentation]]. Rồi một
+      [[Regal Orb]]. Đọc chi phí strand trước mỗi cái.
+    why: >-
+      Cả hai thêm một modifier khi strand vẫn còn, nên cả hai roll với các
+      tier thấp đã bị cắt. Bảng ghi tối đa 8 cho Augmentation và tối đa 16
+      cho Regal Orb. Một trên ba lần roll suffix trên sword là attack speed
+      hoặc một modifier critical, và prefix của Regal Orb là một element khác
+      khoảng một nửa số lần, một khi lightning đã có chỗ.
+    check: >-
+      Cây sword giờ là Rare với ba modifier. Đếm số strand còn lại.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 89 to 166 Cold Damage" }
+      suffixes:
+        - { text: "21% increased Attack Speed" }
+  - title: "Orb of Unravelling, một lần, sau cùng"
+    do: >-
+      Dùng một [[Orb of Unravelling]]. Nó tiêu hết mọi strand còn lại và thử
+      nâng tier của từng explicit modifier.
+    why: >-
+      Theo mô hình của người chơi, cơ hội cho mỗi modifier bằng số strand còn
+      lại, nhân với weight của các tier phía trên nó, chia cho hai lần weight
+      của phía nó nằm. Với 40 strand còn lại: cold damage Tier 4 có 1,488
+      weight phía trên, khoảng 60%. Attack speed Tier 3 có 2,000 phía trên,
+      khoảng 64%. Lightning damage Tier 3 có 528, khoảng 21%. Vậy nên orb này
+      giỏi nâng các tier giữa và kém trong việc tạo ra tier cao nhất, và một
+      lần nâng thường chỉ là một tier. Ở đây cold và attack speed đã lên còn
+      lightning thì không.
+    check: >-
+      Nó phải đến sau mọi orb thêm modifier, vì nó không chừa lại strand nào
+      cho chúng. Nó bỏ qua modifier bench, đó là một lý do bench đi sau nó.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 121 to 214 Cold Damage" }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+  - title: "Bench element thứ ba"
+    do: >-
+      Ở [[Crafting Bench]], craft **adds 60–72 to 110–128 Fire Damage** vào
+      prefix trống: 4 [[Chaos Orb]].
+    why: >-
+      Fire là element chưa có trên cây sword, và mỗi element là một group
+      riêng. Craft bench có đụng tới strand hay không thì chưa xác nhận được;
+      tới lúc này thì cũng chẳng còn strand nào để đụng.
+    check: >-
+      Vẫn còn hai ô suffix trống. Chúng là bước nâng cấp kế tiếp, mỗi ô một
+      [[Exalted Orb]] hoặc bằng phương pháp của ví dụ kế tiếp.
+    state:
+      implicits: ["30% increased Elemental Damage with Attack Skills"]
+      prefixes:
+        - { text: "Adds 22 to 391 Lightning Damage" }
+        - { text: "Adds 121 to 214 Cold Damage" }
+        - { text: "Adds 66 to 119 Fire Damage", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+variations: >-
+  **Exalted Orb trước Unravelling.** Một [[Exalted Orb]] tiêu tới 16 strand
+  theo bảng và thêm một modifier với các tier thấp đã bị cắt. Nếu bạn định
+  lấp các suffix trống theo cách đó, hãy làm khi strand vẫn còn và để dành
+  Unravelling cho sau.
+
+
+  **Một cây sword crit theo cùng cách.** Đổi base sang Banishing Blade và
+  nhắm Alteration vào suffix: attack speed và hai suffix critical là một phần
+  ba số lần roll suffix với các tier có weight đều nhau, và theo mô hình thì
+  Unravelling nâng chúng dễ hơn bất kỳ prefix nào.
+
+
+  **Thứ không nên kết hợp với strand.** Một Essence có thể tiêu 80 strand
+  trong một lần dùng và một Chaos Orb 50. Fossil và reforge Harvest, theo thử
+  nghiệm của người chơi, phớt lờ strand hoàn toàn. Một base có strand cần orb
+  nhỏ.
+mistakes:
+  - "Dùng Orb of Unravelling giữa chừng. Mọi orb sau nó roll như thể base chưa từng có strand."
+  - "Săn một modifier hiếm bằng Alteration trên base có strand. Strand cải thiện tier của thứ xuất hiện; chúng không làm nó xuất hiện."
+  - "Không đọc chi phí. Game hiện số strand mỗi orb sẽ lấy đi trước khi bạn bấm, và các khoảng được công bố thì rộng."
+  - "Dùng Orb of Remembrance lên một cây sword Magic hoặc Rare. Nó cần item Normal."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight và giá bench, cùng mô tả trong game của Orb of Remembrance và Orb of Unravelling. Phép tính là của chúng tôi." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Các mốc strand do người chơi thử nghiệm. Không chính thức. Công thức của Orb of Unravelling là một mô hình của người chơi mà chúng tôi chỉ biết qua một bản viết lại kém tin cậy của thử nghiệm đó." }
+  - { title: "Patch notes 3.29.2", url: "https://www.pathofexile.com/forum/view-thread/3994431", kind: official, note: "Game hiển thị số Memory Strands mà một currency sẽ lấy đi." }

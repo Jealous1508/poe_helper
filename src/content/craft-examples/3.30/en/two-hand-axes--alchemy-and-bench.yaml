@@ -1,0 +1,158 @@
+category: two-hand-axes
+title: "A levelling axe from an Orb of Alchemy and the bench"
+level: 1
+summary: "Make a white axe Rare in one click, count what landed on each side, and let the bench fill the slot that is still open."
+goal: >-
+  A weapon for the second half of the campaign in two clicks. The item is
+  almost a side effect. What you are learning is to **read a Rare item as six
+  slots**: how many prefixes, how many suffixes, which are doing something,
+  and which side still has room. Every later craft begins with that count.
+base: "Jasper Chopper"
+itemLevel: 37
+baseWhy: >-
+  A Jasper Chopper can be used at level 37 and hits for 58–91, the biggest
+  swing of the axes around that level. It has no implicit, like most axes.
+  Item level 36 opens Tier 5 flat Physical Damage and 35 opens Tier 5
+  increased Physical Damage, so anything that drops in the areas where you
+  can wear it is high enough. Hold Alt to check.
+
+
+  Any white axe of your level works. The method is the same on a Labrys at
+  level 49 or a Karui Chopper at 58.
+methods: [currency, bench, finishing]
+result:
+  prefixes:
+    - { text: "Adds 47 to 99 Fire Damage" }
+    - { text: "Adds 18 to 37 Physical Damage" }
+    - { text: "68% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "+26 to Strength" }
+    - { text: "+164 to Accuracy Rating" }
+    - { text: "9% reduced Enemy Stun Threshold" }
+needs:
+  - { item: "[[Blacksmith's Whetstone]]", amount: "a few", note: "to 20% quality" }
+  - { item: "[[Orb of Alchemy]]", amount: "1–3" }
+  - { item: "[[Orb of Scouring]]", amount: "0–2", note: "or a second white axe" }
+  - { item: "[[Orb of Alteration]]", amount: "8", note: "for the bench" }
+cost: >-
+  One to three [[Orb of Alchemy]]s, which are more common in 3.30 than they
+  were, and 8 [[Orb of Alteration]]s at the bench. If you have no
+  [[Orb of Scouring]], a failed attempt costs you the white axe and nothing
+  else.
+odds: >-
+  At item level 37, by our arithmetic from the modifier weights, 94 prefix
+  rolls in 100 on an axe add damage outright: 57 are added fire, cold or
+  lightning damage and 37 are one of the three physical prefixes. The rest are
+  socketed gem levels and the elemental percentage.
+
+
+  So nearly every prefix an Orb of Alchemy gives you is useful at this stage.
+  What varies is **how many** prefixes it gives, and the data does not tell
+  us that split. Expect to keep the first or second attempt.
+steps:
+  - title: "Quality first"
+    do: >-
+      Use [[Blacksmith's Whetstone]]s on the white axe until it reads 20%
+      quality.
+    why: >-
+      Quality raises the base's physical damage, and the physical modifiers
+      you are about to roll multiply the result. Doing it first means you
+      judge every attempt on its real numbers.
+    state: { rarity: normal }
+  - title: "One Orb of Alchemy"
+    do: >-
+      Use an [[Orb of Alchemy]] on the axe.
+    why: >-
+      It makes the item Rare with four to six random modifiers. The overview
+      warns that this route rolls many slots at once, and for a mapping
+      weapon that warning holds. On a levelling axe it does not, because the
+      prefix pool at this level is almost nothing but damage.
+    state:
+      prefixes:
+        - { text: "+1 to Level of Socketed Melee Gems" }
+      suffixes:
+        - { text: "+15 to Dexterity" }
+        - { text: "17% increased Stun Duration on Enemies" }
+        - { text: "Gain 9 Life per Enemy Killed" }
+  - title: "Count the two sides"
+    do: >-
+      Hold Alt. Every line is marked prefix or suffix. Count the prefixes and
+      note which of them add damage: anything that says "Adds … Damage" or
+      "increased Physical Damage". Then count the suffixes.
+    why: >-
+      A Rare item holds three of each. The count tells you two things: whether
+      this result is worth keeping, and which side the bench can still add
+      to.
+    check: >-
+      Keep the axe if **at least two prefixes add damage**. The result above
+      fails: it has one prefix, and that one only matters to a gem socketed
+      in the axe.
+    fail: >-
+      Use an [[Orb of Scouring]] to return the axe to Normal, quality intact,
+      and an Orb of Alchemy again. With no Scouring Orb, use the next white
+      axe you find.
+  - title: "Again, until two prefixes are damage"
+    do: >-
+      Repeat the Orb of Alchemy and the count.
+    why: >-
+      Each attempt is independent. You are not waiting for a particular
+      modifier, only for the prefix side to be mostly filled, and almost
+      anything that fills it is damage.
+    check: >-
+      Do not hold out for physical prefixes. At this level added fire damage
+      of adds 45–61 to 91–106 is worth about as much to the swing as the best
+      increased Physical Damage this axe can roll, and any attack uses it.
+    state:
+      prefixes:
+        - { text: "Adds 47 to 99 Fire Damage" }
+        - { text: "Adds 18 to 37 Physical Damage" }
+      suffixes:
+        - { text: "+26 to Strength" }
+        - { text: "+164 to Accuracy Rating" }
+        - { text: "9% reduced Enemy Stun Threshold" }
+  - title: "Bench the open slot"
+    do: >-
+      At the [[Crafting Bench]], craft **one** modifier into a slot that is
+      still open. With an open prefix and no rolled "increased Physical
+      Damage" (the case here): 60–79% increased Physical Damage for 8
+      [[Orb of Alteration]]s. With an open prefix and that modifier already
+      rolled: flat Physical Damage, adds 11–15 to 23–27 for 2 Orbs of
+      Alchemy. With three prefixes and an open suffix: 8–10% increased Attack
+      Speed for 6 Orbs of Alteration.
+    why: >-
+      The bench only works where there is room, and it will not add a
+      modifier whose group is already on the item. That is why you counted
+      first. Here the prefix side had one slot left and the suffix side had
+      none, so the choice was made for you.
+    fail: >-
+      If the bench does not list a craft, you have not found that recipe yet.
+      Take the nearest thing it does offer for that side.
+    state:
+      prefixes:
+        - { text: "Adds 47 to 99 Fire Damage" }
+        - { text: "Adds 18 to 37 Physical Damage" }
+        - { text: "68% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "+26 to Strength" }
+        - { text: "+164 to Accuracy Rating" }
+        - { text: "9% reduced Enemy Stun Threshold" }
+variations: >-
+  **When to stop doing this.** Around item level 60 the good tiers become
+  light and the bad ones stay heavy: Tier 3 or better of increased Physical
+  Damage is one prefix roll in several hundred. From there an Orb of Alchemy
+  gives you a full item of low tiers, and the next examples use tools that
+  aim.
+
+
+  **If you would rather roll one slot at a time.** The mace guide's first
+  example does this craft with Orbs of Alteration and a Regal Orb. It costs
+  more clicks and gives you a say in one prefix. On an axe at this level the
+  Orb of Alchemy is the better bargain because of how the pool is weighted.
+mistakes:
+  - "Keeping a result with one damage prefix because the suffixes look tidy. Suffixes do not swing the axe."
+  - "Scouring a result with two damage prefixes because neither is physical. While levelling, damage is damage."
+  - "Reading only the numbers and not the side. A full suffix side means the bench cannot give you attack speed, however much you want it."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Orbs of Alchemy more common now that Orbs of Binding are gone." }

@@ -40,6 +40,8 @@ src/content/
   builds/3.30/en/<slug>.yaml                    one file per build
   leveling/3.30/en/{overview,act-1,act-2}.yaml  one file per act
   updates/3.30/en/<date>-<slug>.yaml            one file per official post since launch
+  crafting/3.30/en/{overview,<category>}.yaml   the crafting guide: shared basics, one file per item category
+  craft-examples/3.30/en/<category>--<slug>.yaml  one worked craft per file
   home/3.30/en/home.yaml
   terms/3.30.yaml                               the game-term registry
 ```
@@ -72,6 +74,43 @@ since launch. When a new hotfix, patch or developer post appears:
    facts differ.
 
 The home page shows the newest three on its own. Nothing else needs editing.
+
+### The crafting guide
+
+The Item Crafting Guide is two things that are checked against each other.
+
+**Data**, generated, never edited by hand: `src/data/crafting/<category>.json`
+holds every base item of a category and every modifier it can roll, tier by
+tier, with item levels and weights. It comes from the public game-data export
+(RePoE) and is rebuilt with:
+
+```bash
+node scripts/build-crafting-data.mjs --icons
+```
+
+The raw export is cached in `.cache/repoe` (not committed). Delete that folder
+first to pick up a new patch. `--icons` downloads any base icon that is
+missing into `public/img/bases`. `--digest <folder>` also writes a readable
+Markdown summary per category, which is what you want open while writing.
+
+**Writing**, in YAML, in both languages: `crafting/<league>/<locale>/overview.yaml`
+is the shared "How crafting works" page (the anatomy of an item, the toolbox,
+Memory Strands). `crafting/<league>/<locale>/<category>.yaml` is one category
+guide, and each `craft-examples/<league>/<locale>/<category>--<slug>.yaml` is
+one worked craft, with the item drawn after every step. The schema, with a
+comment on every field, is `src/lib/crafting.ts`.
+
+The build refuses writing that the data contradicts: a base that is not in
+the category, a modifier pool that does not exist, a tool the overview does
+not define. Tests also check that every pool of a category is explained, that
+the two languages state the same facts, and that item snapshots never exceed
+the slots an item has.
+
+For any chance you quote, use the calculator, which reads the same weights:
+
+```bash
+node scripts/craft-odds.mjs two-hand-maces --ilvl 83 --fossil "Jagged Fossil"
+```
 
 ### Writing text
 

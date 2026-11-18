@@ -1,0 +1,175 @@
+category: helmets
+title: "Một suffix chỉ Fossil mới có: enemy ở gần mất fire resistance"
+level: 3
+summary: "\"Enemies within 6 metres have -9% to Fire Resistance\" không nằm trong pool tự nhiên của bất kỳ helmet nào. Một Scorched Fossil mở nó ra, và thay đổi hai thứ khác mà bạn phải tính trước."
+goal: >-
+  Một cái helmet cho build fire với suffix lên enemy ở gần, một prefix life
+  và resistance. Bài học là **modifier chỉ Fossil mới có**: một dòng mà không
+  Chaos Orb, Essence hay Alteration nào tạo ra được, và cách đọc xem Fossil
+  làm gì với phần còn lại của item khi nó nằm trong Resonator.
+base: "Royal Burgonet"
+itemLevel: 73
+baseWhy: >-
+  Dữ liệu không đặt yêu cầu item level nào cho các suffix lên enemy ở gần,
+  nên item level ở đây là dành cho mọi thứ khác: 64 mở Tier 1 của maximum
+  Life và 72 mở Tier 2 của resistance. Quá mức đó là bạn đang trả tiền cho
+  thêm một tier resistance mà phương pháp này hiếm khi ra.
+
+
+  Một base thuần Armour giữ cho pool prefix dễ chịu: không có prefix mana, và
+  maximum Life chiếm hơn một phần tư số lần roll prefix. Hãy dùng base
+  Evasion hoặc Energy Shield mà build của bạn mặc; Fossil hoạt động như nhau
+  trên tất cả.
+methods: [fossil, bench, finishing]
+result:
+  prefixes:
+    - { text: "+118 to maximum Life", how: fossil }
+    - { text: "+164 to Armour", how: fossil }
+  suffixes:
+    - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+    - { text: "+43% to Fire Resistance", how: fossil }
+    - { text: "+18% to Cold and Lightning Resistances", how: crafted }
+needs:
+  - { item: "[[Scorched Fossil]]", amount: "hàng chục" }
+  - { item: "[[Primitive Chaotic Resonator]]", amount: "mỗi Fossil một cái" }
+  - { item: "[[Orb of Alchemy]]", amount: "1", note: "để biến base thành Rare" }
+  - { item: "[[Armourer's Scrap]]", amount: "lên 20%" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "cho bench" }
+cost: >-
+  Fossil và Resonator, mỗi lần thử một cái mỗi loại. Trong 3.30, đường vào
+  Delve là qua các map luôn spawn Sulphite, nên đây là lần craft cho người
+  có chạy Delve hoặc mua từ người chạy. Mọi thứ khác đều nhỏ.
+odds: >-
+  Chúng tôi không đưa ra được con số nào cho chính cái suffix. Dữ liệu liệt
+  kê nó với weight 2,000, gấp đôi một tier bình thường, nhưng không cho biết
+  hệ số nhân của Fossil áp lên các modifier chỉ Fossil mới có ra sao, hay cái
+  nào trong số chúng gia nhập pool, nên con số nào cũng sẽ là bịa. Hãy dự trù
+  hàng chục Fossil và lường trước một độ dao động rộng.
+
+
+  Thứ chúng tôi tính được là phần còn lại. Với một [[Scorched Fossil]], Fire
+  Resistance trở thành khoảng 59% weight suffix tự nhiên trên base này, theo
+  phép tính của chúng tôi, và Cold Resistance hoàn toàn không roll được.
+  Prefix thì Fossil không đụng tới: một trên bốn lần roll prefix là maximum
+  Life, một trên 12 là life từ 100 trở lên.
+steps:
+  - title: "Chuẩn bị base"
+    do: >-
+      Đưa một Royal Burgonet trắng item level 73 lên 20% quality, rồi biến nó
+      thành Rare bằng một [[Orb of Alchemy]].
+    why: >-
+      Một Chaotic Resonator roll lại item Rare, giống một Chaos Orb. Alchemy
+      roll ra gì không quan trọng; Fossil đầu tiên thay tất cả.
+    state:
+      prefixes: [{ text: "+92 to maximum Life" }]
+      suffixes:
+        - { text: "+31% to Cold Resistance" }
+        - { text: "+280 to Accuracy Rating" }
+        - { text: "24% increased Stun and Block Recovery" }
+  - title: "Biết Fossil thay đổi gì trước khi dùng nó"
+    do: >-
+      Đọc Fossil: "More Fire modifiers, No Cold modifiers". Rồi tìm hai tag
+      đó trong danh sách modifier của helmet.
+    why: >-
+      Ba chuyện xảy ra cùng lúc. **Các suffix chỉ Fossil mới có trở nên khả
+      dĩ**, và theo kinh nghiệm lâu năm của người chơi, cái fire đi với
+      Fossil này. **Fire Resistance được gấp mười weight của nó**, vì nó là
+      modifier tự nhiên duy nhất trên helmet mang tag fire. **Cold
+      Resistance bị loại**, vì "no" nghĩa là weight bằng không. Không prefix
+      helmet nào mang một trong hai tag, nên phía prefix roll như thể không
+      có Fossil nào ở đó.
+    check: >-
+      Hệ quả cho kế hoạch: fire resistance thường sẽ đến miễn phí, cold
+      resistance thì không bao giờ, còn life thì tùy vận may thông thường.
+      Vậy nên ô dành cho bench đã có chủ: nó lo phần cold.
+  - title: "Gắn Fossil vào socket và dùng Resonator"
+    do: >-
+      Đặt một [[Scorched Fossil]] vào một [[Primitive Chaotic Resonator]] và
+      dùng nó lên cái helmet.
+    why: >-
+      Một Fossil, một socket. Fossil thứ hai sẽ thay đổi thêm tag; phần biến
+      thể nói khi nào điều đó có ích.
+    state:
+      prefixes:
+        - { text: "72% increased Armour", how: fossil }
+        - { text: "+15% to Item Rarity", how: fossil }
+      suffixes:
+        - { text: "+38% to Fire Resistance", how: fossil }
+        - { text: "+29 to Strength", how: fossil }
+        - { text: "Regenerate 41.5 Life per second", how: fossil }
+  - title: "Đọc kết quả bằng hai câu hỏi"
+    do: >-
+      **Suffix có đó không?** Tìm dòng "Enemies within 6 metres have -9% to
+      Fire Resistance". **Cái helmet còn lấy được life không?** Hoặc một
+      prefix maximum Life đã roll ra, hoặc còn một ô prefix trống.
+    why: >-
+      Kết quả ở trên trượt câu hỏi đầu, câu duy nhất phải tốn Fossil mới sửa
+      được. Dù vậy nó vẫn cho thấy dấu vân tay của Fossil: fire resistance
+      tự đến mà không ai gọi.
+    check: >-
+      Nếu suffix có đó, hãy đếm suffix trước khi ăn mừng. Bạn muốn còn một ô
+      cho bench, hoặc một suffix thứ ba mà bạn vui lòng có.
+    fail: >-
+      Không có suffix: dùng Fossil kế tiếp. Có suffix nhưng ba prefix mà
+      không có life: tùy bạn quyết. Suffix là phần đắt, và ví dụ kế tiếp
+      dựng lại một phía prefix mà không đụng tới suffix.
+  - title: "Lặp lại tới khi cả hai câu trả lời là có"
+    do: >-
+      Cứ tiếp tục, mỗi lần một Fossil và một Resonator.
+    why: >-
+      Mỗi lần thử độc lập với nhau. Hãy đặt mức chuẩn trước khi bắt đầu và
+      đừng nâng nó giữa chừng: suffix đó, cộng life từ 100 trở lên hoặc một
+      prefix trống.
+    state:
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "+164 to Armour", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance", how: fossil }
+  - title: "Bench thứ mà Fossil đã lấy đi"
+    do: >-
+      Ở [[Crafting Bench]], craft **+17–20% to Cold and Lightning
+      Resistances** giá 3 [[Chaos Orb]] vào suffix trống.
+    why: >-
+      Fossil đã khiến cold resistance không thể roll ra, nên ngay từ đầu nó
+      đã phải đến từ bench. Craft hai resistance lo được cold và thêm
+      lightning trong cùng một ô. Nếu thứ còn thiếu là life và còn một prefix
+      trống, hãy craft maximum Life thay vào đó, 56–70 giá 4 Orb of Alchemy,
+      và tìm cold resistance trên một item khác.
+    state:
+      prefixes:
+        - { text: "+118 to maximum Life", how: fossil }
+        - { text: "+164 to Armour", how: fossil }
+      suffixes:
+        - { text: "Enemies within 6 metres have -9% to Fire Resistance", how: fossil }
+        - { text: "+43% to Fire Resistance", how: fossil }
+        - { text: "+18% to Cold and Lightning Resistances", how: crafted }
+variations: >-
+  **Các element khác.** Dữ liệu liệt kê cùng suffix đó cho Cold, Lightning và
+  Chaos Resistance, và "take 9% increased Physical Damage". Đổi sang Fossil
+  tương ứng và đọc dòng "no" của nó theo cùng cách: một
+  [[Frigid Fossil]] loại các modifier fire, một [[Metallic Fossil]] loại các
+  modifier physical, một [[Aberrant Fossil]] loại các modifier lightning.
+
+
+  **Một Fossil thứ hai.** Trong một Resonator hai socket, một
+  [[Pristine Fossil]] cạnh cái Scorched khiến maximum Life gần như chắc chắn
+  ra ở prefix. Nó cũng nhân Life Regeneration lên, thứ giành cùng ba ô đó với
+  suffix của bạn. Trên base Energy Shield, một [[Dense Fossil]] làm điều
+  tương đương cho các prefix defence và loại life.
+
+
+  **Đường influence.** Một cái helmet Warlord item level 85 roll được cùng
+  dòng đó dưới dạng một suffix thông thường, weight 250. Nó lấy mất của bạn
+  cả hai Eldritch implicit, thứ mà cái helmet này vẫn còn nhận được.
+mistakes:
+  - "Dùng Chaos Orb hoặc Essence rồi chờ suffix đó. Nó chỉ tồn tại trong một lần craft bằng Fossil."
+  - "Tính roll cold resistance trên một cái helmet dùng Scorched Fossil. Fossil đặt weight của nó về không."
+  - "Craft ở bench giữa các Fossil. Resonator kế tiếp gỡ nó mất."
+  - "Mua một base có [[Memory Strands]] cho việc này. Fossil không dùng cũng không tiêu strand, theo thử nghiệm của người chơi."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các suffix chỉ Fossil mới có và weight của chúng, hệ số nhân của Fossil, tier và giá bench. Xác suất là phép tính của chúng tôi; dữ liệu không nêu tên Fossil mở từng suffix." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Đường vào Delve trong 3.30." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Kinh nghiệm của người chơi về Fossil và strand. Một phần cũ hơn 3.30." }

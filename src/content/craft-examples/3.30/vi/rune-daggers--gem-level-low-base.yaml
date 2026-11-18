@@ -1,0 +1,118 @@
+category: rune-daggers
+title: "Một gem level từ con knife level 10"
+level: 2
+summary: "Các prefix gem level có một tier duy nhất, cần item level 2. Trên base item level 10, pool quanh chúng chỉ bằng một phần sáu kích cỡ endgame, và chúng roll ra thường gấp sáu lần."
+goal: >-
+  Một weapon leveling có "+1 to Level of all Fire Spell Skill Gems" (hoặc
+  loại của spell bạn dùng) mà nhân vật đeo được ở level 10 và giữ suốt nửa
+  campaign. Ý tưởng nó dạy lật ngược luật thường lệ: **item level không phải
+  lúc nào cao cũng tốt hơn.** Một modifier có một tier thấp chẳng được gì từ
+  item level, và mọi thứ item level thêm vào pool đều là đối thủ cạnh tranh.
+base: "Carving Knife"
+itemLevel: 10
+baseWhy: >-
+  Carving Knife là rune dagger đầu tiên và rơi từ level 10. Ở item level 10,
+  cả pool prefix có weight 14,700; ở item level 84 là 89,589. Prefix gem Fire
+  có weight 250 ở cả hai. Tức 1 trên 59 lần roll prefix ở đây, so với 1 trên
+  358 trên một base endgame. Tới item level 20 nó đã là 1 trên 137, nên hãy
+  dùng base thấp nhất bạn tìm được, chứ không chỉ là một base thấp.
+methods: [currency, bench]
+result:
+  implicits: ["43% increased Global Critical Strike Chance"]
+  prefixes:
+    - { text: "+1 to Level of all Fire Spell Skill Gems" }
+    - { text: "29% increased Spell Damage", how: crafted }
+  suffixes:
+    - { text: "+11 to Dexterity" }
+needs:
+  - { item: "Một Carving Knife trắng, item level 10–12", amount: "1", note: "từ act đầu tiên, hoặc mua" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "80–120", note: "cộng 4 cho bench" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+cost: >-
+  Khoảng một trăm [[Orb of Alteration]] và một [[Regal Orb]]. Chừng đó là
+  nhiều với nhân vật đầu tiên và rất ít với nhân vật thứ hai, cũng chính là
+  đối tượng của weapon này: craft một lần rồi truyền lại.
+odds: >-
+  Theo phép tính của chúng tôi từ weight ở item level 10: một lần roll prefix
+  ra gem level của một element **đã chọn** là 1 trên 59 lần với Fire, Cold
+  hoặc Lightning và 1 trên 74 với Chaos hoặc Physical. Bất kỳ cái nào trong
+  năm là 1 trên 13. Một Alteration không phải lúc nào cũng roll ra prefix,
+  nên số orb cao hơn số lần roll prefix.
+steps:
+  - title: "Kiểm item level trước mọi thứ khác"
+    do: >-
+      Giữ Alt rồi rê chuột lên cây Carving Knife trắng. Bạn muốn **item level
+      10**, hoặc cao hơn mức đó càng ít càng tốt.
+    why: >-
+      Mỗi item level trên 10 mở thêm tier của các prefix khác và cộng weight
+      của chúng vào cuộc xổ số. Prefix gem chẳng nhận lại được gì: nó có một
+      tier, và tier đó đã mở từ item level 2.
+    state: { rarity: normal, implicits: ["43% increased Global Critical Strike Chance"] }
+  - title: "Alteration tới khi ra gem level"
+    do: >-
+      Dùng một [[Orb of Transmutation]], rồi [[Orb of Alteration]] tới khi
+      prefix ghi **"+1 to Level of all Fire Spell Skill Gems"**, với đúng
+      loại của main spell bạn dùng.
+    why: >-
+      Một level cho main spell ở giai đoạn này đáng giá hơn bất kỳ phần trăm
+      damage nào mà một item level 10 roll được: Spell Damage tốt nhất có ở
+      đây là 10–19%.
+    check: >-
+      Đọc kỹ câu chữ. "+1 to Level of Socketed Melee Gems" là một prefix
+      khác, cho attack, và nó chung group với cái bạn muốn.
+    fail: >-
+      Hết Alteration: trong lúc chờ, prefix Spell Damage nào cũng làm nên một
+      weapon leveling dùng được. Quay lại với nó sau.
+    state:
+      rarity: magic
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+  - title: "Regal Orb"
+    do: >-
+      Dùng một [[Regal Orb]]. Trước đó cứ để yên ô suffix: không
+      Augmentation.
+    why: >-
+      Regal Orb đưa dagger lên Rare, và chính điều đó cho bench một ô prefix
+      thứ hai. Bỏ qua Augmentation giữ thêm được một ô trống, mà trên item
+      level 10 thì không gì Augmentation thêm được lại đáng một ô.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes: [{ text: "+1 to Level of all Fire Spell Skill Gems" }]
+      suffixes: [{ text: "+11 to Dexterity" }]
+  - title: "Bench Spell Damage"
+    do: >-
+      Ở [[Crafting Bench]], craft **25–34% increased Spell Damage** giá 4 Orb
+      of Alteration.
+    why: >-
+      Gem level và Spell Damage là hai group khác nhau, nên chúng cộng dồn.
+      Spell Damage thấp nhất của bench đã tốt hơn mọi thứ item level này roll
+      được.
+    fail: >-
+      Bench có thể từ chối các bậc cao hơn của nó trên item ở level này. Hãy
+      lấy bậc tốt nhất nó cho.
+    state:
+      implicits: ["43% increased Global Critical Strike Chance"]
+      prefixes:
+        - { text: "+1 to Level of all Fire Spell Skill Gems" }
+        - { text: "29% increased Spell Damage", how: crafted }
+      suffixes: [{ text: "+11 to Dexterity" }]
+variations: >-
+  **Vì sao cách này không làm ra weapon endgame.** Mọi modifier khác trên
+  dagger bị item level 10 chặn trần vĩnh viễn. Để có cùng prefix đó trên base
+  item level 84 thì con đường rẻ không còn, và công cụ là một
+  [[Imprint]] để bảo vệ một chuỗi roll Alteration dài, hoặc Faceted và
+  Aetheric Fossil, như trong ví dụ khó nhất.
+
+
+  **Lưu kết quả trước Regal Orb.** Nếu bạn đã chạy hơn một trăm Alteration và
+  có sẵn beast, một Imprint của cây dagger Magic cho bạn thử lại Regal Orb.
+  Trên weapon leveling, nó hiếm khi đáng một
+  [[Craicic Croaker]].
+mistakes:
+  - "Dùng base cao hơn \"cho chắc\". Mỗi item level đều làm prefix này hiếm hơn."
+  - "Dùng Augmentation lên cây dagger Magic. Một ô trống đáng giá hơn một suffix level 10."
+  - "Dừng ở \"Socketed Melee Gems\". Cùng group, sai modifier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các prefix gem level, tier duy nhất và weight của chúng, weight của pool prefix ở từng item level, và giá bench. Xác suất là phép tính của chúng tôi." }

@@ -1,0 +1,148 @@
+category: jewels
+title: "Life and two more: an Imprint before the Regal Orb"
+level: 3
+summary: "Roll a Magic jewel with Life and a wanted suffix, save it with a beast Imprint, and repeat the Regal Orb until the third modifier is one you use."
+goal: >-
+  A Rare jewel with increased maximum Life and two damage modifiers, all
+  three chosen. A jewel has no bench slot and nothing can lock one of its
+  sides, so the **Imprint** is the only protection this item will ever have.
+  The lesson is when a jewel has earned one, and what each retry really
+  costs.
+base: "Crimson Jewel"
+itemLevel: 70
+baseWhy: >-
+  Life is the modifier this craft insists on, and Crimson weighs it at 500
+  where Viridian and Cobalt weigh it at 350. The rest of the list is
+  two-handed melee, which Crimson also has. Item level plays no part.
+methods: [currency, beast]
+result:
+  prefixes:
+    - { text: "7% increased maximum Life" }
+    - { text: "13% increased Damage with Two Handed Weapons" }
+  suffixes:
+    - { text: "11% increased Melee Damage" }
+needs:
+  - { item: "A Crimson Jewel", amount: "1", note: "any item level" }
+  - { item: "[[Orb of Alteration]]", amount: "400–800" }
+  - { item: "[[Orb of Augmentation]]", amount: "20–40" }
+  - { item: "[[Craicic Croaker]]", amount: "1 per Regal attempt", note: "plus three Rare beasts each" }
+  - { item: "[[Regal Orb]]", amount: "1 per attempt" }
+cost: >-
+  Alterations by the hundred for the Magic jewel, then beasts. In 3.30 Einhar
+  captures red beasts only, so count the Croakers in your [[Menagerie]]
+  before the first Alteration: the plan needs around ten of them on an
+  average run, and a bad run needs twice that.
+odds: >-
+  **The Magic jewel.** Life is 2.80% of Crimson's prefix weight. The four
+  suffixes on the list are 8.1% of its suffix weight. Both together are
+  about 0.23%: 1 two-modifier jewel in 440, by our arithmetic.
+
+
+  **The Regal Orb.** With Life on the jewel, the five listed prefixes are
+  13% of the remaining prefix weight; with Melee Damage on it, the three
+  remaining suffixes are about 6% of the remaining suffix weight. If the
+  Regal Orb adds a prefix about half the time, which the similar size of
+  the two pools suggests and nothing official states, about one Regal in
+  eleven is a hit.
+steps:
+  - title: "Roll the Magic jewel: Life and a listed suffix"
+    do: >-
+      Use [[Orb of Alteration]]s until the prefix is **increased maximum
+      Life**. When Life appears with an empty suffix, use an
+      [[Orb of Augmentation]]. Keep the jewel only when the suffix is one of:
+      increased Melee Damage, increased Attack Speed, +% to Melee Critical
+      Strike Multiplier, +% to Global Critical Strike Multiplier.
+    why: >-
+      Whatever the Magic jewel holds is carried into the Rare one and into
+      every Imprint of it. A suffix you do not use would occupy one of only
+      two suffix slots for the rest of the craft, so the Magic jewel has to
+      be right on both sides before anything is saved.
+    check: >-
+      The Life roll is 5–7%. Do not reject a 5%: a [[Divine Orb]] at the end
+      rerolls it. Reject only the wrong modifiers.
+    fail: >-
+      Out of Alterations with Life and a suffix you do not use: Regal it as
+      it is and stop. That is a two-line jewel, not a wasted one.
+    state:
+      rarity: magic
+      prefixes: [{ text: "7% increased maximum Life" }]
+      suffixes: [{ text: "11% increased Melee Damage" }]
+  - title: "Ask whether this jewel has earned an Imprint"
+    do: >-
+      Count what the Magic jewel cost. If it took a few dozen Alterations,
+      skip to the Regal Orb. If it took hundreds, as a jewel with Life and a
+      listed suffix does on average, go on.
+    why: >-
+      A bad Regal Orb without an Imprint sends you back to the Alterations.
+      An Imprint costs a Croaker, three other beasts and a second Regal Orb.
+      The Imprint is the better buy exactly when the Magic jewel was hard to
+      roll, and a waste when it was not.
+  - title: "Imprint"
+    do: >-
+      In the [[Menagerie]], use **Create an Imprint of a Magic Item** on the
+      jewel: one [[Craicic Croaker]] and three other Rare beasts.
+    why: >-
+      The Imprint is a saved copy of the jewel as it is now. It only works
+      on a Magic item, which is why it comes before the Regal Orb.
+    check: >-
+      The [[Imprint]] is in your inventory as its own item. Leave it there.
+    state:
+      rarity: magic
+      prefixes: [{ text: "7% increased maximum Life" }]
+      suffixes: [{ text: "11% increased Melee Damage" }]
+  - title: "Regal Orb, and judge against the list"
+    do: >-
+      Use a [[Regal Orb]]. **Keep** the jewel if the new modifier is one of
+      the listed prefixes (Damage with Two Handed Weapons, Global Physical
+      Damage, damage with your weapon type, Attack Speed with Two Handed
+      Melee Weapons, Critical Strike Multiplier with Two Handed Melee
+      Weapons) or one of the three suffixes still open to it.
+    why: >-
+      Melee Damage shares a group with Projectile Damage and plain increased
+      Damage, so those two can no longer be added. Everything else on either
+      side can.
+    fail: >-
+      Anything off the list: use the Imprint on the jewel to return it to
+      the Magic state, make a **new** Imprint with another Croaker, and use
+      another Regal Orb. Each attempt costs one Regal Orb and one set of
+      beasts. Decide how many attempts you will pay for before the first.
+    state:
+      prefixes:
+        - { text: "7% increased maximum Life" }
+        - { text: "13% increased Damage with Two Handed Weapons" }
+      suffixes:
+        - { text: "11% increased Melee Damage" }
+  - title: "Put the Imprint away"
+    do: >-
+      After a Regal Orb you are keeping, you still hold an unused Imprint.
+      Do not use it. Move it out of your inventory.
+    why: >-
+      Using it now would undo the Regal Orb you just accepted. It is still
+      worth keeping as insurance: if a later gamble ruins the Rare jewel,
+      the Imprint returns it to the Magic state you saved. The four-modifier
+      example relies on that.
+variations: >-
+  **Running out of beasts.** Widen the list instead of buying more
+  Croakers. Counting any resistance as a hit raises the Regal Orb's chance
+  from about 1 in 11 to about 1 in 6, by our arithmetic.
+
+
+  **A caster's version.** On a Cobalt jewel the same plan is Life with
+  increased Spell Damage or Cast Speed, then a Regal Orb for a "Spell Damage
+  while…" prefix. Life weighs only 350 there, so the Magic jewel takes about
+  half as long again.
+
+
+  **Without Life.** Drop the requirement and this becomes the previous
+  example with a safety net, at a fraction of the Alterations. Life is what
+  makes this jewel expensive.
+mistakes:
+  - "Making the Imprint after the Regal Orb. An Imprint cannot be made of a Rare item."
+  - "Saving a Magic jewel with a suffix you do not use. It is then part of every attempt."
+  - "Imprinting a jewel that took thirty Alterations. Rolling it again is cheaper than the beasts."
+  - "Using the leftover Imprint by accident after a good Regal Orb."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Crimson Jewel pool, weights and groups. The odds are our arithmetic." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "The Imprint recipe and the beast it needs in 3.30." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Yellow beasts are no longer captured." }

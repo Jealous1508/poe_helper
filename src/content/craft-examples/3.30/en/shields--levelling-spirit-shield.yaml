@@ -1,0 +1,149 @@
+category: shields
+title: "A caster's first spirit shield: roll the Spell Damage, bench the rest"
+level: 1
+summary: "Alterations for an increased Spell Damage prefix on a white spirit shield, a Regal Orb, then the bench for life or cast speed."
+goal: >-
+  An off-hand for a spell caster in the second half of the campaign, with a
+  Spell Damage prefix on top of the base's Spell Damage implicit. The idea to
+  take away belongs to shields: **the base's family decides what the item can
+  be.** Only a spirit shield can roll this prefix, and the bench does not
+  sell it at any price.
+base: "Chiming Spirit Shield"
+itemLevel: 50
+baseWhy: >-
+  A Chiming Spirit Shield can be used at level 49 and has the larger Spell
+  Damage implicit, 10–15%. Item level 46 is the first at which Spell Damage
+  of 55–69% ("Occultist's") can roll, so 46 or higher is what to look for:
+  hold Alt over the item.
+
+
+  Any white spirit shield of your level works. A kite shield or a spiked
+  shield does not, even though both ask for Intelligence: their pools have
+  spell critical strikes and no Spell Damage.
+methods: [currency, bench, finishing]
+result:
+  implicits: ["12% increased Spell Damage"]
+  prefixes:
+    - { text: "47% increased Spell Damage" }
+    - { text: "+43 to maximum Mana" }
+    - { text: "+48 to maximum Life", how: crafted }
+  suffixes:
+    - { text: "+27 to Intelligence" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "20–40" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  A few dozen [[Orb of Alteration]]s, one [[Regal Orb]] and two
+  [[Orb of Alchemy]] for the bench. All of it drops in the campaign.
+odds: >-
+  At item level 50, one prefix roll is increased Spell Damage of 40% or more
+  about 1 time in 20, by our arithmetic from the modifier weights, and Spell
+  Damage of any size 1 time in 8. An Alteration does not always roll a
+  prefix, so 40% takes a few dozen. If your spells are all one element, the
+  matching "increased Fire, Cold or Lightning Damage" prefix does the same
+  job and adds a little to your chances.
+steps:
+  - title: "Check the family, then the item level"
+    do: >-
+      Make sure the white base is a **spirit shield** and that its item level
+      is 46 or more. If it has a Spell Damage implicit, note the number.
+    why: >-
+      Shields come in families with different modifier pools. Spell Damage
+      as a prefix exists only on bases that ask for Intelligence alone. The
+      implicit is separate from the six modifier slots, so the prefix you
+      are about to roll is added to it.
+    state:
+      rarity: normal
+      implicits: ["12% increased Spell Damage"]
+  - title: "Look for it on the bench first"
+    do: >-
+      Open the [[Crafting Bench]] with the shield and read the prefix list.
+    why: >-
+      It offers life, Energy Shield, Mana and block. It does not offer Spell
+      Damage. That settles the plan: the modifier you cannot buy is the one
+      to roll, and the ones you can buy wait for the end.
+  - title: "Make it Magic and roll the prefix"
+    do: >-
+      Use one [[Orb of Transmutation]], then [[Orb of Alteration]]s one at a
+      time. Stop when the prefix is **increased Spell Damage of 40% or
+      more**: "Professor's" (40–54%) or "Occultist's" (55–69%).
+    why: >-
+      A Magic item has one prefix and one suffix. You are reading one line
+      per orb, and the suffix does not matter yet.
+    check: >-
+      "increased Spell Damage" raises every spell. "increased Fire Damage"
+      and its Cold and Lightning versions raise one element only. They are
+      the same group, so the shield will hold one of them and no more.
+    fail: >-
+      Short of Alterations: accept 30–39% ("Scholar's"). With the implicit
+      that is still over 40% increased Spell Damage from one item.
+    state:
+      rarity: magic
+      implicits: ["12% increased Spell Damage"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+  - title: "Fill the empty suffix"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It adds to the empty slot and leaves the prefix alone. Spirit shield
+      suffixes are kind to casters: resistances, Intelligence, mana
+      regeneration and Spell Critical Strike Chance are all common.
+    state:
+      rarity: magic
+      implicits: ["12% increased Spell Damage"]
+      prefixes: [{ text: "47% increased Spell Damage" }]
+      suffixes: [{ text: "+27 to Intelligence" }]
+  - title: "Regal Orb"
+    do: >-
+      Use one [[Regal Orb]] and read which side the new modifier is on.
+    why: >-
+      The item becomes Rare with both modifiers kept and one added. Here it
+      added maximum Mana, a prefix. That leaves one prefix slot and two
+      suffix slots open.
+    state:
+      implicits: ["12% increased Spell Damage"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "+43 to maximum Mana" }
+      suffixes: [{ text: "+27 to Intelligence" }]
+  - title: "One bench modifier, chosen by what is open"
+    do: >-
+      **A prefix slot is open:** craft maximum Life, +41–55 for 2
+      [[Orb of Alchemy]]. **The prefixes are full:** craft a suffix instead,
+      6–9% increased Cast Speed for 6 Orbs of Alteration, or the resistance
+      you lack, 21–28% for 1 Orb of Alchemy.
+    why: >-
+      An item takes one bench modifier. A caster's shield is the piece of
+      gear where life is easiest to forget, so it comes first when there is
+      room. Cast speed is a good second: no shield rolls it naturally, and
+      the bench hands it over.
+    fail: >-
+      The bench lists only the recipes you have found. Take the best rank of
+      life or resistance it does show.
+    state:
+      implicits: ["12% increased Spell Damage"]
+      prefixes:
+        - { text: "47% increased Spell Damage" }
+        - { text: "+43 to maximum Mana" }
+        - { text: "+48 to maximum Life", how: crafted }
+      suffixes: [{ text: "+27 to Intelligence" }]
+variations: >-
+  **For a summoner.** Three spirit shields, the Bone, Ivory and Fossilised,
+  roll "Minions deal increased Damage" in the same way, and it is far more
+  common there at low tiers. The same six steps on an Ivory Spirit Shield
+  make a levelling minion shield.
+
+
+  **For a character that blocks.** Use a tower shield and roll for life or
+  increased Chance to Block with the same Alterations. The next example does
+  it with an Essence.
+mistakes:
+  - "Picking up a kite shield because it asks for Intelligence. Its pool has no Spell Damage prefix."
+  - "Rolling for cast speed. It is not in the pool at all, and it is a cheap bench craft."
+  - "Using the bench before the Regal Orb. You do not yet know which side will have room."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The pools of each shield family, tiers, item levels, weights and bench costs. The odds are our arithmetic." }

@@ -1,0 +1,131 @@
+category: claws
+title: "A levelling claw with two elements"
+level: 1
+summary: "Roll the kind of prefix a claw gives away for free, then let the bench add a second element beside it."
+goal: >-
+  A claw for the middle of the campaign that adds more damage than its own
+  base hit. The idea to take away: **look at what the pool rolls most often
+  and build on that.** On a claw that is added elemental damage, half of all
+  prefix rolls, and the three elements are three groups that stack.
+base: "Fright Claw"
+itemLevel: 35
+baseWhy: >-
+  A Fright Claw is worn at level 34 and hits for 12–46 at 1.5 attacks per
+  second. Item level 33 opens added Fire Damage of 24–33 to 49–57, and 34
+  the Cold and Lightning tiers beside it, so a base of item level 34 or 35
+  has the best added damage a claw of this level can roll. Hold Alt to check.
+
+
+  Any white claw of your level works. The implicit, 20 Life per Enemy Hit,
+  comes with the base.
+methods: [currency, bench]
+result:
+  implicits: ["Grants 20 Life per Enemy Hit"]
+  prefixes:
+    - { text: "Adds 27 to 53 Fire Damage" }
+    - { text: "Adds 24 to 45 Cold Damage", how: crafted }
+  suffixes:
+    - { text: "+142 to Accuracy Rating" }
+    - { text: "12% increased Critical Strike Chance" }
+needs:
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Orb of Alteration]]", amount: "about 10" }
+  - { item: "[[Orb of Augmentation]]", amount: "1" }
+  - { item: "[[Regal Orb]]", amount: "1" }
+  - { item: "[[Orb of Alchemy]]", amount: "2", note: "for the bench" }
+cost: >-
+  Around ten [[Orb of Alteration]]s, one [[Regal Orb]] and two
+  [[Orb of Alchemy]] for the bench. Cheap enough to redo every ten levels.
+odds: >-
+  At item level 35 one prefix roll is added Fire, Cold or Lightning Damage
+  49% of the time, and one of their two best tiers at this level about 1
+  time in 5, by our arithmetic from the modifier weights. An Alteration does
+  not always roll a prefix, so allow about ten.
+
+
+  Compare the physical route: a prefix roll is increased Physical Damage of
+  65% or more about 1 time in 26. That is why this claw is elemental.
+steps:
+  - title: "Transmutation, then Alterations to an elemental prefix"
+    do: >-
+      Use an [[Orb of Transmutation]] on the white claw, then
+      [[Orb of Alteration]]s. Stop when the prefix is **added Fire, Cold or
+      Lightning Damage at one of the two highest tiers this item level
+      allows**. For Fire that means adds 17–24 to 35–41 or better.
+    why: >-
+      Added damage is added to every hit, and at this level it is larger
+      than the claw's own 12–46. Any of the three elements will do, which
+      triples your chances; the build does not care which one the damage
+      is.
+    check: >-
+      Read the line with Alt held: it says "Adds ... Fire Damage" (or Cold,
+      or Lightning) with no "to Spells" after it, and it is marked as a
+      prefix.
+    state:
+      rarity: magic
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+  - title: "Augment the empty slot"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      It adds one modifier to the empty slot and cannot touch the prefix.
+      At this item level about two suffix rolls in five are attack speed or
+      a critical strike modifier, so this is a free try at something good.
+    state:
+      rarity: magic
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+      suffixes: [{ text: "+142 to Accuracy Rating" }]
+  - title: "Regal Orb"
+    do: >-
+      Use a [[Regal Orb]]. Read what it added and on which side.
+    why: >-
+      The claw becomes Rare, keeps both modifiers and gains a third. Rare is
+      what gives the bench a free prefix slot to work with.
+    check: >-
+      Count the prefixes. If the Regal Orb added one, note its group: an
+      element you already have cannot be benched again.
+    state:
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes: [{ text: "Adds 27 to 53 Fire Damage" }]
+      suffixes:
+        - { text: "+142 to Accuracy Rating" }
+        - { text: "12% increased Critical Strike Chance" }
+  - title: "Bench a different element"
+    do: >-
+      At the [[Crafting Bench]], craft added damage of an element the claw
+      does **not** have: adds 22–27 to 42–49 Cold Damage for 2
+      [[Orb of Alchemy]], or 11–12 to 19–23 for 4 Orbs of Transmutation.
+    why: >-
+      Each element is its own group, so the bench's Cold Damage sits beside
+      the rolled Fire Damage. The bench will refuse a second Fire Damage
+      prefix. Two elements here add more than a middling physical
+      percentage would.
+    fail: >-
+      If the recipe is missing from your bench, craft 8–10% increased Attack
+      Speed (6 Orbs of Alteration) in a suffix instead and come back when
+      you have found it.
+    state:
+      implicits: ["Grants 20 Life per Enemy Hit"]
+      prefixes:
+        - { text: "Adds 27 to 53 Fire Damage" }
+        - { text: "Adds 24 to 45 Cold Damage", how: crafted }
+      suffixes:
+        - { text: "+142 to Accuracy Rating" }
+        - { text: "12% increased Critical Strike Chance" }
+variations: >-
+  **If the Augmentation or the Regal Orb gave attack speed,** keep the plan:
+  the bench still goes to the second element.
+
+
+  **For a physical build** the same steps work with the roles swapped: roll
+  any added damage or attack speed, and bench increased Physical Damage,
+  60–79% for 8 Orbs of Alteration.
+mistakes:
+  - "Rolling for a named element. All three add the same kind of damage; accept the first good one."
+  - "Benching the element you already rolled. Same group: the bench will not allow it."
+  - "Keeping \"Adds ... Fire Damage to Spells\" by mistake. Claws do not roll it naturally, but an Essence can put it there, and it does nothing for attacks."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tiers, item levels, weights and bench costs. The odds are our arithmetic." }

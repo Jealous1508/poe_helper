@@ -1,0 +1,839 @@
+intro: >-
+  Crafting looks like gambling until you know what the dice are. An item is six
+  slots, each modifier has a known chance, and every tool in the game exists to
+  change those chances or to skip them. This section teaches the dice first,
+  then the tools, then how to craft each kind of item from an empty base to a
+  finished one, with worked examples from a first craft to the hardest.
+scope: >-
+  **Only tools that are in the game every league:** currency, the Crafting
+  Bench, beastcrafting, Essences, Fossils, Harvest, Eldritch currency,
+  influence, veiled modifiers, fracturing, corruption, Memory Strands and
+  Recombinators. Plain currency, the bench and beasts carry most of the
+  examples, because those are what every player has.
+
+
+  **Left out on purpose:** anything tied to one league. That means this
+  league's Wickerman and Viscera, which do not touch your gear at all, and
+  last league's Allflame Crafting with its Dead Man's Sulphur and Ducats,
+  which the developers have said is not going core yet. Systems that were
+  removed are out too: Kalguuran runesmithing, Grafts, Harbinger currency and
+  Mirage Coins. Rog and Gwennen exist, but they offer you outcomes rather
+  than letting you plan one, so they are mentioned and not taught. The two
+  new kinds of Exalted Orb announced on 18 November, Originator's and
+  Primordial, are not in the game yet and are not used anywhere here.
+anatomy:
+  - id: slots
+    title: "An item is six slots"
+    text: >-
+      Every modifier you can roll on a piece of equipment is either a
+      **prefix** or a **suffix**, and an item has room for three of each. That
+      is the whole board. Crafting is deciding which six modifiers you want in
+      those six slots and then getting them there in an order that does not
+      destroy what you already have.
+
+
+      Rarity is how many of the slots are open. A **Normal** item has none. A
+      **Magic** item has one prefix and one suffix. A **Rare** item has all
+      three and three. Jewels are smaller, two and two; flasks and tinctures
+      can only be Magic, one and one.
+
+
+      Which side a modifier belongs to never changes. Maximum Life is always a
+      prefix. A resistance is always a suffix. So "three good modifiers" is
+      not a plan until you know which side each one takes: three good prefixes
+      fit, a fourth never will.
+  - id: layers
+    title: "What sits on an item besides those six"
+    text: >-
+      The **base type** comes first: a Karui Maul and a Piledriver are both
+      two-handed maces, with different damage, speed and requirements. No
+      currency turns one base into another.
+
+
+      The **implicit** is the modifier the base is born with, shown above the
+      line. A [[Blessed Orb]] rerolls its numbers; nothing in ordinary
+      crafting changes what it is. Some slots can be given extra implicits
+      later, which the toolbox covers.
+
+
+      Below the line are the six **explicit** slots. A modifier there can be
+      plain, or it can carry a status that changes what you may do to it:
+      **crafted** (put there by the [[Crafting Bench]], and removable there),
+      **fractured** (locked for good), **veiled** (hidden until you unveil
+      it), or tied to an **influence**. The item itself can be **corrupted**
+      or **mirrored**, and either one means it can no longer be crafted on.
+  - id: item-level
+    title: "Item level decides what is possible"
+    text: >-
+      Every item has an item level, fixed when it drops. It is the level of
+      the monster that dropped it: the area's level, plus one for a Magic
+      monster and plus two for a Rare or Unique one. It is not the level you
+      need to wear the item, and it is not shown unless you ask: hold Alt over
+      the item.
+
+
+      Item level is a gate. Each tier of each modifier has a minimum item
+      level, and an item below it can never roll that tier, however much
+      currency you spend. A two-handed mace needs item level 83 for the best
+      physical damage prefix. At item level 82 that prefix tops out one tier
+      lower, forever.
+
+
+      So the first question of any craft is not "which currency" but "is this
+      base high enough". Each category guide lists the item levels that
+      matter for it.
+
+
+      No ordinary modifier needs more than item level 86. Since 3.30 a Tier 5
+      item can drop with one extra item level, which is one more reason to
+      look at those before you sell them.
+  - id: tiers
+    title: "Tiers, and the roll inside a tier"
+    text: >-
+      A modifier comes in tiers. Tier 1 is the best, and the tiers below it
+      are weaker versions with their own names: "Merciless" is Tier 1 of
+      increased Physical Damage on a weapon, "Tyrannical" is Tier 2. In the
+      game, turn on Advanced Mod Descriptions in the options and hold Alt: the
+      item then shows, for every modifier, whether it is a prefix or a suffix,
+      its tier, and the range it can roll.
+
+
+      A tier is a range, not a number. Merciless is 170–179%. Which value you
+      got inside the range is a separate roll, and a [[Divine Orb]] rerolls
+      exactly that, on every modifier at once, without changing any tier.
+
+
+      Two numbers follow from this, and both are worth saying out loud when
+      you look at an item: the tier tells you how good the modifier *can* be,
+      the roll tells you how good this one *is*.
+  - id: weights
+    title: "Rolling is a weighted lottery"
+    text: >-
+      When currency adds a random modifier, the game picks from everything
+      that base may roll at its item level, and the tickets are not equal.
+      Every tier of every modifier has a **weight**. On a two-handed mace the
+      lowest tiers of increased Physical Damage weigh 1,000 each; Tier 1
+      weighs 25. Low tiers are common because there are more tickets for
+      them.
+
+
+      This is why spamming [[Chaos Orb]]s at an item and hoping rarely
+      works: the modifiers people want are the light ones. It is also why
+      every tool beyond plain currency exists. A good tool does one of two
+      things: it removes tickets you do not want from the lottery, or it
+      skips the lottery and hands you the modifier.
+
+
+      The modifier list of each category shows the share of the lottery every
+      modifier takes, taken from the game data.
+  - id: groups
+    title: "Groups and tags"
+    text: >-
+      Modifiers that do the same job belong to one **group**, and an item can
+      hold only one modifier of a group. You cannot have two maximum Life
+      prefixes. This rule works for you as often as against you: put a
+      modifier of a group on the item yourself, with the bench, and the
+      lottery can no longer roll that group. Crafters call this **blocking**.
+
+
+      Things that look alike are not always one group. On a weapon,
+      "increased Physical Damage" and "increased Physical Damage with Accuracy
+      Rating" are two groups, so both can sit on the same item. That pair is
+      the heart of every physical weapon.
+
+
+      Every modifier also carries **tags**: life, attack, caster, fire,
+      defences and so on. You never see them on the item, but half the
+      toolbox aims by them. A Fossil that says "more Physical modifiers" is
+      adding tickets to everything with the physical tag.
+  - id: local
+    title: "Local and global"
+    text: >-
+      A **local** modifier changes the item it is on. Increased Physical
+      Damage on a weapon multiplies that weapon's own damage; increased Armour
+      on a helmet multiplies that helmet's own Armour. A **global** modifier
+      changes your character: maximum Life, resistances, critical strike
+      multiplier.
+
+
+      Local modifiers are why the base matters so much. They multiply what
+      the base already has, so the same prefix is worth more on a base with a
+      higher number to multiply. Quality works the same way on weapons and
+      armour, which is why it goes on before you judge the result.
+  - id: plan
+    title: "A craft is a plan, made backwards"
+    text: >-
+      Start from the finished item. Write down the modifiers you need, and
+      next to each one its side. Then mark which ones are *hard*: a high tier
+      with a low weight, or something plain rolling cannot give at all.
+
+
+      The hard modifiers come first, with the tool that targets them, while
+      the item is still cheap to throw away. Then you **protect** them, so the
+      next step cannot remove them. Then you fill what is left with something
+      certain: one slot is usually kept for the bench, which always gives what
+      you ask for.
+
+
+      Every category guide and every example on this site follows that order:
+      hard first, protect, fill, finish. When a craft goes wrong it is almost
+      always because one of the four was skipped.
+methods:
+  - id: currency
+    name: "Basic currency"
+    level: 1
+    icons: [orb-of-transmutation, orb-of-alteration, orb-of-augmentation, regal-orb, orb-of-alchemy, chaos-orb, exalted-orb, orb-of-annulment, orb-of-scouring]
+    summary: "The orbs that add, reroll and remove random modifiers. Everything else is a refinement of these."
+    text: >-
+      Two families do the same job at two rarities.
+
+
+      **On a Magic item:** [[Orb of Transmutation]] makes a Normal item
+      Magic. [[Orb of Alteration]] rerolls it, both slots at once.
+      [[Orb of Augmentation]] adds a modifier if a slot is empty.
+      [[Regal Orb]] turns it Rare, keeping what is there and adding one more.
+
+
+      **On a Rare item:** [[Orb of Alchemy]] makes a Normal item Rare with
+      four to six random modifiers. [[Chaos Orb]] rerolls all of them.
+      [[Exalted Orb]] adds one where a slot is open.
+      [[Orb of Annulment]] removes one at random, and
+      [[Orb of Scouring]] removes everything and returns the item to Normal.
+
+
+      The Magic route is the one to learn first. An Alteration rerolls only
+      two slots, costs almost nothing, and lets you stop the moment one good
+      modifier appears. Then a Regal Orb makes the item Rare around it. The
+      Rare route rolls up to six slots at once, which is six chances to be
+      disappointed.
+    good: >-
+      You need **one** specific modifier and can live with whatever comes
+      next to it: Alterations until it appears, Augmentation, Regal, then the
+      bench. Also the first hours of a league, when this is all you have.
+    bad: >-
+      The modifier is a top tier with a tiny weight, or you need three good
+      modifiers on one side. The modifier lists show the chance of each roll;
+      once it is one in several hundred, use a tool that changes the odds.
+  - id: bench
+    name: "The Crafting Bench"
+    level: 1
+    icons: []
+    summary: "Pay a fixed price, get exactly the modifier you asked for. The only certain thing in crafting."
+    text: >-
+      The [[Crafting Bench]] in your hideout adds one modifier of your
+      choice, for a fixed cost shown before you click. A bench modifier is
+      weaker than the best natural tier, takes a prefix or suffix slot like
+      any other, and can be removed again at the bench for one
+      [[Orb of Scouring]]. An item holds one bench modifier, unless it carries
+      the meta-modifier that allows three.
+
+
+      You do not start with every recipe. Recipes are objects found near
+      bosses in maps, and the ones copied from veiled modifiers are unlocked
+      the same way. The modifier list of each category shows every bench
+      option with its cost, taken from the 3.30 game data.
+
+
+      The bench also sets sockets and links, removes its own modifiers, and
+      sells three reroll options: one random modifier of a Rare item, three
+      of them, or the item's rarity.
+    good: >-
+      Filling the last open slot. Plan every craft so that the slot you
+      finish with is one the bench can fill with something you want. Also
+      **blocking**: a bench modifier removes its whole group from the lottery
+      while it sits there.
+    bad: >-
+      You want the best version of a modifier. The bench gives a middle
+      tier. And never craft before a reroll: a Chaos Orb or an Essence wipes
+      a bench modifier like any other.
+  - id: finishing
+    name: "Quality, sockets and values"
+    level: 1
+    icons: [blacksmiths-whetstone, armourers-scrap, jewellers-orb, orb-of-fusing, divine-orb, blessed-orb, sacred-orb]
+    summary: "The parts of an item that are not modifiers, and the orbs that reroll numbers without changing what is there."
+    text: >-
+      **Quality** goes to 20% with [[Blacksmith's Whetstone]]s on weapons and
+      [[Armourer's Scrap]]s on armour. It raises the base's own physical damage or
+      defences, so it is part of the item's power, not decoration. The item
+      text says the orbs have a greater effect on lower item level items, so a
+      high-level base takes more of them.
+
+
+      **Sockets and links** come from [[Jeweller's Orb]]s and
+      [[Orb of Fusing]]s, or from the bench at a fixed price. Since 3.29
+      every socket is white by default and takes any gem; a socket of the
+      gem's own colour gives that gem 10% quality, and a
+      [[Chromatic Orb]] forces a coloured socket.
+
+
+      **Values.** A [[Divine Orb]] rerolls the number inside the range of
+      every explicit modifier. A [[Blessed Orb]] does the same for the
+      implicit. A [[Sacred Orb]] rerolls the base defence numbers of an
+      armour. None of them changes which modifiers the item has.
+
+
+      Rings, amulets and belts take quality from **Catalysts** instead. Each
+      one strengthens one kind of modifier, up to 20%, and replaces any other
+      catalyst on the item. In 3.30 they come only from Ultimatum.
+    good: >-
+      Quality and sockets: before you judge the item, and on a cheap base
+      before the expensive steps if a failed link would hurt. Divine Orbs:
+      last of all, on an item you are keeping.
+    bad: >-
+      Spending a Divine Orb on an item with the wrong modifiers. Better
+      numbers do not fix a bad tier.
+  - id: essence
+    name: "Essences"
+    level: 2
+    icons: [deafening-essence-of-zeal, deafening-essence-of-contempt, deafening-essence-of-greed, essence-of-horror]
+    summary: "A reroll that guarantees one modifier. The first targeted tool you will own."
+    text: >-
+      An Essence rerolls an item as a Rare with one modifier guaranteed. Which
+      modifier depends on the Essence and on the item class: the same Essence
+      gives attack speed on a weapon and something else on a ring. Each
+      category's modifier list has the full table.
+
+
+      Essences come in seven strengths. The four weakest only work on a
+      Normal item and cap the other modifiers at a low level. From Screaming
+      upwards an Essence also rerolls an item that is already Rare, which is
+      what lets you use them one after another. Deafening is the top, and its
+      modifier is often as good as Tier 1 or better. A few Essences give
+      modifiers that exist nowhere else.
+
+
+      Five special Essences, Horror, Delirium, Hysteria, Insanity and the new
+      Trickery, only come from corrupting an Essence monster with a
+      [[Remnant of Corruption]]. In red maps in 3.30, every Essence you free
+      is Screaming or better.
+    good: >-
+      One modifier matters more than the rest, and an Essence gives it. Fix
+      that one, look at what rolled beside it, repeat until the rest is
+      acceptable, then finish at the bench.
+    bad: >-
+      The item already has something you want to keep. An Essence rerolls
+      everything that is not fractured, and according to community testing it
+      ignores the bench's protection modifiers.
+  - id: beast
+    name: "Beastcrafting"
+    level: 2
+    icons: [imprint]
+    summary: "Recipes paid for with captured beasts. Home of the Imprint, and of the two crafts that trade one side for the other."
+    text: >-
+      Einhar captures red beasts in your maps and stores them in the
+      [[Menagerie]], where the Blood Altar turns them into crafts. Each recipe
+      names one beast and adds three more Rare beasts of any kind. Since 3.30
+      yellow beasts are not captured at all and no recipe needs them.
+
+
+      Three recipes matter in almost every category:
+
+
+      **Imprint** ([[Craicic Croaker]]): saves a copy of a **Magic** item.
+      Use the imprint later and the item goes back to that saved state. This
+      turns a Regal Orb from a gamble into a retry.
+
+
+      **Add a prefix, remove a random suffix** ([[Farric Wolf Alpha]]) and
+      **add a suffix, remove a random prefix** ([[Farric Lynx Alpha]]): Rare
+      items only. If the side to be removed from is empty there is nothing to
+      remove, which by long-standing player experience makes the craft safe.
+
+
+      Beasts also add a suffix to a flask (any red beast in 3.30), put an
+      Aspect skill on an item, add a meta-modifier
+      ([[Wild Bristle Matron]]), and add a modifier to an influenced item.
+      The old recipe that split an item in two was removed in 3.29.
+    good: >-
+      An Imprint before any Regal Orb on a Magic item that was hard to roll.
+      The add-and-remove recipes when one side is empty or worthless: the
+      removal then costs you nothing.
+    bad: >-
+      The side that loses a modifier holds something you need. The removal is
+      random.
+  - id: harvest
+    name: "Harvest"
+    level: 3
+    icons: [wild-lifeforce, vivid-lifeforce, primal-lifeforce]
+    summary: "Reforges that guarantee a modifier with a chosen tag, paid for with Lifeforce."
+    text: >-
+      Sacred Flora in maps drop Lifeforce in three colours. At the
+      [[Horticrafting Station]] you spend it on crafts. The one that matters
+      most: **reforge a Rare item with random modifiers, including a
+      modifier of a chosen type**: Fire, Cold, Lightning, Physical, Life,
+      Defence, Attack, Caster, Chaos, Speed or Critical.
+
+
+      "Including a Speed modifier" means at least one modifier with the speed
+      tag will be on the result. On a weapon that is attack speed. On boots
+      it is movement speed. The cheap types cost 50 to 150 Lifeforce; the
+      rarer ones more.
+
+
+      Other crafts reforge an item "more likely" or "less likely" to keep the
+      same types of modifier, swap one resistance for another, and, at a very
+      high price, add one modifier of a type while removing another.
+
+
+      Harvest reforges respect the bench's protection modifiers, by
+      community testing, which is what makes them the standard way to fill
+      one side of an item while the other is locked.
+    good: >-
+      You need a modifier that is the only one, or one of very few, with its
+      tag on that item. Count the tagged modifiers in the list first: the
+      fewer there are, the better this works.
+    bad: >-
+      The tag is shared by a dozen modifiers on that base. A guaranteed
+      "Attack modifier" on a weapon guarantees almost nothing.
+  - id: fossil
+    name: "Fossils and Resonators"
+    level: 3
+    icons: [jagged-fossil, pristine-fossil, primitive-chaotic-resonator]
+    summary: "A reroll with the lottery rigged: some tags get ten times the tickets, others none."
+    text: >-
+      Fossils go into a Resonator, and the Resonator is used on the item like
+      a Chaos Orb. Each Fossil changes weights by tag. In the 3.30 data
+      "more" is usually ten times the weight and "no" is zero: a
+      [[Jagged Fossil]] makes every Physical modifier ten times as likely and
+      removes Chaos modifiers entirely. A [[Pristine Fossil]] does the same
+      for Life and removes Defence modifiers.
+
+
+      Bigger Resonators hold more Fossils, and their effects combine. This is
+      how you say two things at once: more of what I want, none of what I do
+      not.
+
+
+      Some Fossils do something else: add a corruption implicit, fracture a
+      random modifier, or, with a [[Sanctified Fossil]], make high-level
+      modifiers more common. A set of modifiers on each item class rolls only
+      with the right Fossil.
+
+
+      Fossils come from Delve, and only from Delve.
+    good: >-
+      You want several modifiers that share a tag, or you want to remove a
+      whole kind of modifier that keeps taking your slots.
+    bad: >-
+      The good tier is still rare within its family. A Fossil makes Physical
+      modifiers common; it does not make Tier 1 common among them.
+  - id: veiled
+    name: "Veiled modifiers"
+    level: 3
+    icons: [veiled-chaos-orb, veiled-exalted-orb]
+    summary: "A hidden modifier that you unveil, choosing one of three. Stronger than its bench copy."
+    text: >-
+      A veiled modifier shows only as "Veiled". Right-click the item and you
+      are offered three modifiers to turn it into; you no longer need Jun for
+      this. The unveiled modifier is a normal one, not a bench one, and it is
+      stronger than the version the bench sells.
+
+
+      Veiled items drop from Betrayal. Two orbs put a veiled modifier on an
+      item you already own. A [[Veiled Chaos Orb]] rerolls a Rare item and
+      includes a veiled modifier. A [[Veiled Exalted Orb]] removes one random
+      modifier and adds a veiled one.
+
+
+      Two rules to use. By community testing the three choices never include
+      a group that is already on the item, so a bench modifier placed first **blocks** an
+      unwanted choice. And since the 17 November hotfix a Veiled Chaos Orb
+      works on an item that already has a veiled modifier, unless that
+      modifier is fractured or protected by a meta-modifier.
+    good: >-
+      The modifier you want only exists veiled, or its veiled version beats
+      what the bench offers. A Veiled Chaos Orb with one side protected fills
+      the other side and guarantees a veiled modifier on it.
+    bad: >-
+      You cannot afford to lose what the Veiled Exalted Orb removes. It takes
+      a random modifier unless a meta-modifier protects it.
+  - id: eldritch
+    name: "Eldritch implicits"
+    level: 3
+    icons: [lesser-eldritch-ember, lesser-eldritch-ichor, eldritch-chaos-orb, orb-of-conflict]
+    summary: "Two extra implicits for helmets, body armour, gloves and boots, and three orbs that work on one side only."
+    text: >-
+      An **Eldritch Ember** adds a Searing Exarch implicit and an **Eldritch
+      Ichor** adds an Eater of Worlds implicit. An item can hold one of each.
+      They come in four strengths, Lesser to Exceptional, and work only on
+      body armours, boots, gloves and helmets with no influence. Using one
+      never touches the six slots, so you can retry until you get the
+      implicit you want. It does replace every other implicit on the item
+      except the opposite Eldritch one. That includes the base's own: a pair
+      of Two-Toned Boots loses its resistances the moment an Ember goes on.
+
+
+      Whichever implicit is the higher strength is **dominant**, and that
+      decides what three special orbs do. With the Exarch dominant an
+      [[Eldritch Chaos Orb]] rerolls only prefixes, an
+      [[Eldritch Exalted Orb]] adds a prefix and an
+      [[Eldritch Orb of Annulment]] removes a prefix. With the Eater
+      dominant they do the same to suffixes. An [[Orb of Conflict]] raises
+      one implicit and lowers the other.
+    good: >-
+      Armour pieces, always: the implicits are free power on top of the six
+      slots. And the three orbs are the cheapest way to work on one side of
+      an armour piece while the other side stays as it is.
+    bad: >-
+      Weapons, jewellery and shields: none of this applies to them. And an
+      influenced item cannot take Eldritch implicits at all.
+  - id: corruption
+    name: "Corruption"
+    level: 3
+    icons: [vaal-orb, tainted-chaos-orb]
+    summary: "One last gamble that can replace the implicit, and then the item is closed for good."
+    text: >-
+      A [[Vaal Orb]] corrupts an item "unpredictably". On equipment the
+      outcomes players report are: nothing changes; the implicit is replaced
+      by a corruption implicit; the item is rerolled as a new Rare; or a
+      socket changes. Those odds are not published, and the list comes from a
+      reference page older than 3.29, so treat it as approximate.
+
+
+      A corrupted item cannot be crafted again by any normal means. Only
+      Tainted currency works on it, and each Tainted orb is itself a coin
+      flip: a [[Tainted Chaos Orb]] rerolls the item or wipes it.
+
+
+      The corruption implicits each category can receive are in its modifier
+      list.
+    good: >-
+      The item is finished, a corruption implicit would improve it, and you
+      are prepared to lose it. Corrupt the copy, not the original, when
+      there is one.
+    bad: >-
+      Anything you still mean to improve. Corruption is the last step or it
+      is a mistake.
+  - id: strands
+    name: "Memory Strand orbs"
+    level: 3
+    icons: [orb-of-remembrance, orb-of-unravelling]
+    summary: "Two orbs that give a base Memory Strands, or spend all of them at once on tier upgrades."
+    text: >-
+      An [[Orb of Remembrance]] randomises the number of
+      [[Memory Strands]] on a **Normal** item, which is how you put strands on
+      a base of your own choosing. An [[Orb of Unravelling]] consumes every
+      strand on an item to attempt to upgrade the tiers of its explicit
+      modifiers.
+
+
+      What strands do, and what spends them, has its own section below.
+    good: >-
+      Remembrance: on a white base you are about to craft with orbs.
+      Unravelling: as the very last step, on an identified item whose
+      modifiers are the right ones but not the best tier.
+    bad: >-
+      Unravelling in the middle of a craft: it takes all the strands that
+      would have improved your later rolls. It also skips bench modifiers.
+  - id: fracture
+    name: "Fractured modifiers"
+    level: 4
+    icons: [fracturing-orb, fractured-fossil]
+    summary: "One modifier locked permanently. The best possible start for a hard craft."
+    text: >-
+      A fractured modifier cannot be removed or changed by anything. Reroll
+      the item a thousand times and it is still there. Start from a base with
+      the hardest modifier already fractured and the rest of the craft is
+      rerolling around it.
+
+
+      In 3.30 fractured items are rarer than they were. They drop as
+      Tier 5 Magic items, and most of the league mechanics that used to drop
+      them no longer do. You can also make one. A [[Fracturing Orb]]
+      fractures a **random** modifier on a Rare item with at least four
+      modifiers. A [[Fractured Fossil]] does the same during a Fossil
+      reroll.
+
+
+      Limits: neither works on an influenced item or on one that is already
+      fractured, a fractured item cannot be given influence according to
+      reference pages, and an Imprint cannot be applied to a fractured item.
+    good: >-
+      The key modifier is a low-weight top tier that you would otherwise have
+      to roll again after every failure. With a Fracturing Orb, use it when
+      the item has exactly four modifiers and as many of them as possible are
+      ones you want: the pick is random, so the fewer wrong answers the
+      better.
+    bad: >-
+      You want influence on the item, or the modifier is easy to get anyway.
+  - id: influence
+    name: "Influence"
+    level: 4
+    icons: [crusaders-exalted-orb, awakeners-orb, orb-of-dominance]
+    summary: "Six extra modifier pools. Where most of the strongest modifiers in the game live."
+    text: >-
+      An item can carry one of six influences: Shaper, Elder, Crusader,
+      Hunter, Redeemer or Warlord. Each adds its own modifiers to that item's
+      pool, listed per category under Influence. The item keeps its normal
+      pool too, so influence makes the lottery bigger as well as better.
+
+
+      A Rare item with no influence gains one from the matching Exalted Orb,
+      for example a [[Crusader's Exalted Orb]], which also adds one modifier
+      of that influence. An [[Awakener's Orb]] destroys one influenced item
+      to put its influence on another of the same class: the result is a new
+      Rare with both influences, keeping one influenced modifier from each
+      according to reference pages. An [[Orb of Dominance]] removes one
+      influenced modifier and upgrades another, and is the only source of
+      **Elevated** modifiers; it works on body armours, boots, gloves and
+      helmets.
+
+
+      Influence shuts doors: no Eldritch implicits, no Fracturing Orb, no
+      Fractured Fossil.
+    good: >-
+      The modifier you need exists only with an influence. Check the
+      category's Influence list before planning anything expensive.
+    bad: >-
+      An armour piece where the Eldritch implicits are worth more to you than
+      the influenced modifier. You cannot have both.
+  - id: meta
+    name: "Meta-crafting"
+    level: 4
+    icons: [divine-orb, sacred-orb]
+    summary: "Bench modifiers that do nothing for your character and everything for the craft: they protect one side."
+    text: >-
+      **Prefixes Cannot Be Changed** and **Suffixes Cannot Be Changed** are
+      bench modifiers. While one is on the item, a reroll leaves that side
+      alone. The first takes a suffix slot and the second a prefix slot, and
+      a reroll consumes the meta-modifier itself, so you pay for every
+      attempt.
+
+
+      In 3.30 the full lock costs 4 Divine Orbs plus a second currency: one
+      [[Sacred Orb]] on weapons, 4 Blessed Orbs on armour, shields and
+      quivers, 8 Exalted Orbs on jewellery. Four new crafts protect only one
+      or two modifiers of a side for 1 or 2 Divine Orbs, with a catch stated
+      by the developers: the game picks which modifier at random and does not
+      show you. They are certain only when that side holds exactly as many
+      modifiers as the craft protects.
+
+
+      **Can have up to 3 Crafted Modifiers** (2 Divine Orbs) lets an item
+      hold three bench modifiers, itself included.
+      **Cannot roll Attack Modifiers** and **Cannot roll Caster Modifiers**
+      (1 Divine Orb each) remove a tag from the lottery for added modifiers.
+      Since 3.30 they no longer stop an Orb of Annulment from removing such a
+      modifier.
+
+
+      What the locks hold against is partly tested by players, not
+      documented. Harvest reforges, Veiled orbs and Orb of Scouring are
+      reported to respect them. Essences and the Recombinator are reported
+      to ignore them. For Fossils and the Awakener's Orb we could not
+      confirm either way in 3.30.
+    good: >-
+      One side is finished and worth more than the lock costs. Lock it,
+      reroll the other side with a tool that respects the lock, repeat until
+      it is right.
+    bad: >-
+      A cheap item. If the protected side could be rolled again for less
+      than 4 Divine Orbs, roll it again.
+  - id: recombinator
+    name: "Recombinators"
+    level: 4
+    icons: [weapon-recombinator]
+    summary: "Two items in, one out, with some of the modifiers of both."
+    text: >-
+      A Recombinator destroys two items of the same class and builds one
+      from their modifiers. It has been a permanent part of the game since
+      3.26, at Isla in Kingsmarch. In one mode you pick the modifiers you
+      want and see a chance of success, and a failure can destroy the items.
+      In the other the result is random and nothing is destroyed.
+
+
+      3.30 made it weaker and more predictable. The result always has the
+      item level of the base you select. Inputs with one to three modifiers
+      on a side give fewer on the result than before. Corrupted items are
+      refused.
+    good: >-
+      You hold two cheap items that each have one modifier you could not
+      get on the same item by rolling.
+    bad: >-
+      A plan that needs certainty. It is a gamble with a displayed chance,
+      and since 3.30 the classic "one good modifier on each" merge fails
+      more often.
+  - id: lock
+    name: "Hinekora's Lock"
+    level: 5
+    icons: [hinekoras-lock]
+    summary: "See the result of the next orb before you commit to it."
+    text: >-
+      [[Hinekora's Lock]] lets an item foresee the result of the next
+      currency used on it. Hover the orb over the item and the outcome is
+      shown; if you do not like it, do something else. Any change to the
+      item removes the foresight, so each Lock is one look.
+
+
+      Since 3.30, making an Imprint or mirroring the item no longer counts as
+      changing it.
+    good: >-
+      A single orb decides whether an expensive item lives: an Annulment
+      that must hit the right modifier, an Exalted Orb into the last open
+      slot.
+    bad: >-
+      Anything repeatable. A Lock costs more than most items are worth.
+memoryStrands:
+  summary: >-
+    [[Memory Strands]] are a number from 0 to 100 on a piece of equipment.
+    While an item has strands, the orbs that add or reroll modifiers give
+    higher tiers than they otherwise would, and each use spends some of the
+    strands. They never change **which** modifiers you get, only how good the
+    ones you get are.
+  text: >-
+    Strands arrived in 3.26 and are part of the core game. In 3.30 an item
+    with strands comes from one of two places: it drops in an
+    Originator-influenced map, or you use an [[Orb of Remembrance]] on a
+    Normal item, which randomises its strands. Since 3.28 dropped strand
+    items are more often high-level bases and carry more strands. An
+    [[Orb of Intention]] on such a map raises the strands on what drops and
+    lowers how much drops.
+
+
+    The developers have described the effect only in words: currency that
+    adds or replaces modifiers "will consume some memory strands to make the
+    crafted mods more powerful". The precise numbers below come from
+    data-mining and player testing, and are labelled as such.
+
+
+    **How much each orb spends** is in a data-mined table on poedb. It lists
+    Transmutation, Augmentation and Alteration at 0–8 strands; Regal and
+    Exalted Orbs at 0–16; Alchemy, Chaos and Orb of Chance at 0–50; a Veiled
+    Chaos Orb and every Essence at 0–80; an Awakener's Orb at 0–100. Whether
+    "0–N" is a maximum or a random amount is not documented. You do not have
+    to guess, though: since 3.29.2 the game shows how many strands a currency
+    will remove before you use it.
+
+
+    **How much strands help** has been measured by players, not published.
+    For a modifier with 13 tiers, their figures are that a single strand
+    already removes the four lowest tiers from the roll, 10 strands leave
+    seven tiers, 38 leave five, and 62 or more leave only the top four. Treat
+    the exact breakpoints as a model. The shape is what matters: the first
+    few strands do a lot, and the roll never becomes a guaranteed Tier 1.
+  rules:
+    - "Strands raise the tier of whatever modifier is rolled. They do not make a wanted modifier more likely to appear. A bad modifier at a high tier is still a bad modifier."
+    - "Every orb that adds or rerolls modifiers spends strands, and big rerolls spend the most. The game shows the amount before you click. Read it."
+    - "Harvest reforges and Fossils do not use strands, by player testing. They neither benefit from them nor spend them."
+    - "Whether bench crafts, Veiled Exalted Orbs, Fracturing Orbs, beastcrafts and Recombinators touch strands could not be confirmed. None of them is in the data-mined cost table."
+    - "An [[Orb of Unravelling]] takes every strand at once and tries to upgrade the tiers of the explicit modifiers already on the item. It needs an identified item and it skips bench modifiers."
+    - "An [[Orb of Remembrance]] only works on a Normal item. Strands are something you set up before the craft, not something you add to a finished item."
+  advice: >-
+    Decide before the first orb whether the strands are going into rolls or
+    into one Unravelling at the end, because every reroll eats into the
+    second option.
+
+
+    **Cheap orbs first, expensive rerolls never.** An Alteration spends at
+    most 8, an Exalted Orb at most 16. One Essence can spend 80. A
+    high-strand base is wasted on Essence or Chaos spam and well used on an
+    Alteration-and-Regal craft or on finishing with Exalted Orbs.
+
+
+    **Do the steps that ignore strands first.** If the plan includes a
+    Fossil or Harvest reforge, do it while the strands are untouched and
+    keep them for the orbs that benefit.
+
+
+    **Do not pay for strands you will not use.** For a craft that is all
+    Essences, Fossils and bench, an ordinary base of the right item level
+    does the same job.
+patch:
+  - entry: meta-crafting-costs
+    note: >-
+      **The largest change for anyone past the basics.** A full prefix or
+      suffix lock is 4 Divine Orbs plus a second currency, about double
+      what it was. Every older guide that prices a step at "2 Divine" is out
+      of date. The new one- and two-modifier locks are cheap but pick their
+      modifier at random.
+  - entry: item-rule-changes
+    note: >-
+      **"Cannot roll Attack Modifiers" and "Cannot roll Caster Modifiers" no
+      longer steer an Orb of Annulment.** They still stop those modifiers
+      from being added. Techniques that used them to make an Annulment safe
+      do not work in 3.30.
+  - entry: fractured-items-rarer
+    note: >-
+      **Fractured bases are harder to find.** They come from Tier 5 drops,
+      a Fracturing Orb or a Fractured Fossil. A plan that begins "buy a
+      fractured base" costs more than it did.
+  - entry: item-tiers
+    note: >-
+      **Rares on the ground now say how good they are.** A Tier 5 item can
+      drop with +1 item level or as a fractured Magic item, which makes it a
+      crafting base and not just something to identify. The tier is tied to
+      identification in the patch notes; nothing says it affects crafting
+      afterwards.
+  - entry: bestiary-yellow-beasts
+    note: >-
+      **Only red beasts are captured.** Flask suffixes from the Blood Altar
+      now cost a red beast, so the bench and Alterations are the cheap way
+      to finish a flask.
+  - entry: essence-changes
+    note: >-
+      **Low Essences leave high maps.** Good for crafting endgame gear from
+      red maps, bad for crafting levelling gear late: use the weak Essences
+      when you find them.
+  - entry: harvest-rework
+    note: >-
+      **Harvest is in the map, with no Sacred Grove.** Only three kinds of
+      craft moved to two colours of Lifeforce: resistance swaps, damage-type
+      swaps and the Divination Card gamble. The reforges this guide relies
+      on still cost one colour.
+  - entry: orb-of-chance-rework
+    note: >-
+      **Bench recipes that cost Orbs of Chance now cost Orbs of
+      Alteration**, according to the patch notes, and the Orb of Chance
+      itself became a real way to target a Unique. One exception is in the
+      game data: rerolling an item's rarity at the bench still costs an Orb
+      of Chance.
+  - entry: crafting-service-tweaks
+    note: >-
+      **Recombinators, Rog and the Gambler are all a step weaker.** The
+      Recombinator result takes the item level of the base you select, and
+      merging two items with few modifiers succeeds less often.
+  - entry: special-base-implicits
+    note: >-
+      **Special bases have much larger implicits** and need an Item Tier to
+      drop. Because crafting cannot change an implicit, the choice of base
+      matters more than before.
+  - entry: vendor-recipe-changes
+    note: >-
+      **Orbs of Binding are gone** and Orbs of Alchemy are more common in
+      their place.
+glossary:
+  - { term: "Affix", text: "A prefix or a suffix. An explicit modifier." }
+  - { term: "Open prefix / open suffix", text: "An empty slot on that side. \"Two open suffixes\" means the item has one suffix and room for two more." }
+  - { term: "Implicit", text: "The modifier a base is born with, shown above the line. Not one of the six slots." }
+  - { term: "Item level (ilvl)", text: "The level of the monster that dropped the item. It caps which tiers can roll. Hold Alt to see it." }
+  - { term: "Tier (T1, T2…)", text: "A strength level of one modifier. T1 is the best. Each tier needs a minimum item level." }
+  - { term: "Roll", text: "Used for two things: getting a modifier at all, and the number it landed on inside its tier's range. A [[Divine Orb]] changes only the second." }
+  - { term: "Weight", text: "How many tickets a modifier tier has in the lottery. Higher weight, more common." }
+  - { term: "Pool", text: "Everything a given base can roll. Different kinds of base in one category can have different pools." }
+  - { term: "Group", text: "Modifiers that cannot be on the same item together." }
+  - { term: "Tag", text: "A hidden label on a modifier, such as life, attack, fire. Fossils, Harvest and some meta-modifiers aim by tag." }
+  - { term: "Local / global", text: "A local modifier changes the item it is on; a global one changes the character." }
+  - { term: "Reforge / reroll", text: "Replace the item's modifiers with new random ones. Chaos Orbs, Essences, Fossils and Harvest reforges all do this." }
+  - { term: "Slam", text: "Add one random modifier to an open slot, usually with an [[Exalted Orb]]." }
+  - { term: "Block", text: "Put a modifier on the item, usually with the bench, so that its group cannot be rolled or offered." }
+  - { term: "Meta-modifier", text: "A bench modifier that changes how the item is crafted instead of adding power, such as Prefixes Cannot Be Changed." }
+  - { term: "Lock", text: "Protect one side with a meta-modifier." }
+  - { term: "Fill", text: "Put anything acceptable in the remaining slots once the important ones are done." }
+  - { term: "Fractured", text: "A modifier fixed permanently to the item." }
+  - { term: "Veiled", text: "A hidden modifier you reveal by choosing one of three." }
+  - { term: "Influence", text: "A property of an item that adds a second pool of modifiers: Shaper, Elder, Crusader, Hunter, Redeemer or Warlord." }
+  - { term: "Imprint", text: "A saved copy of a Magic item, made with a beast, that the item can be returned to." }
+  - { term: "Alt-regal", text: "Alterations until a Magic item is good, then a [[Regal Orb]]. The basic craft." }
+  - { term: "Divine (verb)", text: "Use a [[Divine Orb]] to reroll the numbers. \"It needs a divine\" means the modifiers are right and the values are low." }
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Every modifier, tier, weight, base and bench cost, and the in-game text of every currency item, for 3.30." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official }
+  - { title: "Covens of Umbra FAQ", url: "https://www.pathofexile.com/forum/view-thread/4013527", kind: official, note: "The statement that the one- and two-modifier locks choose at random with no indicator." }
+  - { title: "3.30.0b Hotfix 4", url: "https://www.pathofexile.com/forum/view-thread/4016174", kind: official, note: "Veiled Chaos Orbs on items that already have a veiled modifier." }
+  - { title: "3.29.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3985332", kind: official, note: "White sockets by default, the split-item beast recipe removed, Synthesised items no longer obtainable." }
+  - { title: "3.26.0 patch notes", url: "https://www.pathofexile.com/forum/view-thread/3787013", kind: official, note: "Memory Strands introduced; Recombinators made permanent; unveiling without Jun." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "The data-mined table of strands spent per currency. Not official." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The current list of Harvest crafts and their Lifeforce costs." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers and the Memory Strands breakpoints. Partly older than 3.30; used with that in mind." }

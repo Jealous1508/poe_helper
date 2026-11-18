@@ -1,0 +1,231 @@
+category: rings
+title: "Two influences on one ring with an Awakener's Orb"
+level: 5
+summary: "Prepare two rings that each carry exactly one influenced modifier, merge them with an Awakener's Orb, then lock the result and rebuild the prefixes."
+goal: >-
+  A ring with a curse on hit from one influence and Critical Strike
+  Multiplier from another: two suffixes that no single ring's pool contains
+  together. The Awakener's Orb is the only tool that joins two influences,
+  and it rerolls everything it does not keep. The whole craft is arranged
+  around one sentence of its behaviour: **it keeps one influenced modifier
+  from each ring.** Give it exactly one to choose from on each side and the
+  gamble becomes a plan.
+base: "Vermillion Ring"
+itemLevel: 84
+baseWhy: >-
+  Two rings are needed, both item level 80 or higher for the top tier of
+  each influenced suffix. The **second** ring is the one you keep, so it gets
+  the good base: a Vermillion Ring for its 5–7% maximum Life. The first is
+  destroyed by the orb and can be any ring at all.
+
+
+  Neither may be fractured, and each needs its influence before you start:
+  from the matching Exalted Orb, or as a drop.
+methods: [influence, harvest, meta, bench]
+result:
+  note: "Hunter and Warlord"
+  implicits: ["6% increased maximum Life"]
+  prefixes:
+    - { text: "+97 to maximum Life", how: harvest }
+    - { text: "16% increased Damage", how: crafted }
+  suffixes:
+    - { text: "Curse Enemies with Despair on Hit", how: influence }
+    - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+    - { text: "+40% to Lightning Resistance" }
+needs:
+  - { item: "A Hunter-influenced ring, item level 80+", amount: "1", note: "any base; it is destroyed" }
+  - { item: "A Warlord-influenced Vermillion Ring, item level 80+", amount: "1", note: "the ring you keep" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "2,000–4,000", note: "Caster and Critical reforges" }
+  - { item: "[[Awakener's Orb]]", amount: "1" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Exalted Orb]]", amount: "8 per lock, plus 4 for the bench" }
+  - { item: "[[Wild Crystallised Lifeforce]]", amount: "75 per Life reforge" }
+cost: >-
+  The [[Awakener's Orb]] and the locks. Preparing the two rings costs two
+  conqueror Exalted Orbs, if you have to add the influences yourself, and a
+  few thousand Lifeforce. After the merge every attempt at the prefix side
+  is 4 [[Divine Orb]]s and 8 [[Exalted Orb]]s.
+
+
+  We give no total. What can be said is where the money is safe: everything
+  before the Awakener's Orb is cheap and repeatable, and everything after it
+  is protected by a lock. The orb itself is the one moment with no retry.
+odds: >-
+  **The Hunter ring.** A Caster reforge gives Despair on Hit about 1 time in
+  14: three caster modifiers in the pool, Cast Speed at 2,400 and two curses
+  at 200 each.
+
+
+  **The Warlord ring.** An ordinary ring has no critical modifier and the
+  Warlord list has one, so a Critical reforge always gives Warlord Critical
+  Strike Multiplier. Its three tiers weigh the same: one attempt in three is
+  the top one, 20–22%.
+
+
+  Both figures are our arithmetic from the weights and assume the guaranteed
+  modifier is drawn by weight.
+
+
+  **The merge.** That the orb keeps one influenced modifier from each ring
+  comes from reference pages, not from the item text. With one on each ring
+  there is nothing for it to choose between. What it rolls around them
+  cannot be predicted: you may get three prefixes and no room for a lock.
+steps:
+  - title: "Ring one: the curse, and nothing else from the Hunter"
+    do: >-
+      On the Hunter ring, use the Harvest craft **Reforge a Rare item with
+      random modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]) until it has "Curse Enemies with
+      Despair on Hit" and **no other Hunter modifier**.
+    why: >-
+      This ring exists to carry one modifier into the merge. Its other
+      modifiers will be destroyed with it, so ignore them. What matters is
+      that the curse is the only influenced line: a second Hunter modifier
+      would give the orb a choice, and it would choose at random.
+    check: >-
+      Hold Alt. Influenced modifiers are named for their influence ("of the
+      Hunt", "Hunter's"). Exactly one such line.
+    fail: >-
+      The curse came with a second Hunter modifier: reforge again. It is
+      only Lifeforce.
+  - title: "Ring two: Warlord Critical Strike Multiplier, alone"
+    do: >-
+      On the Warlord Vermillion Ring, use **Reforge a Rare item with random
+      modifiers, including a Critical modifier** (150 Primal) until the
+      multiplier is the tier you want and is the **only** Warlord modifier.
+    why: >-
+      No ring rolls a critical modifier without an influence, so the
+      Critical tag points at one family on this ring. The reforge cannot
+      miss; you are only choosing the tier, 14–16%, 17–19% or 20–22%.
+    check: >-
+      One line "of the Conquest", no line beginning "Warlord's". The other
+      modifiers are irrelevant: the orb rerolls them.
+    state:
+      note: "Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+33 to maximum Energy Shield", how: harvest }
+      suffixes:
+        - { text: "+21% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "+29 to Intelligence", how: harvest }
+  - title: "The Awakener's Orb"
+    do: >-
+      Use the [[Awakener's Orb]] on the Hunter ring, then on the Vermillion
+      Ring. The first is destroyed; the second becomes a Rare ring with both
+      influences.
+    why: >-
+      The item text: "Destroys an item, applying its influence to another of
+      the same item class. The second item is reforged as a rare item with
+      both influence types and new modifiers." By reference pages the result
+      keeps one influenced modifier from each ring. The order of the clicks
+      decides which base survives.
+    check: >-
+      Both suffixes are on the result. Then count: how many suffixes, how
+      many prefixes?
+    fail: >-
+      If one of the two is missing, the reported rule did not hold and there
+      is no recovery; the ring is a single-influence ring again in practice.
+      We could not test this in 3.30. Before spending the orb, look for a
+      recent report that it still behaves this way.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+52 to maximum Mana" }
+        - { text: "Adds 5 to 11 Physical Damage to Attacks" }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+  - title: "Read the slots before touching anything"
+    do: >-
+      You need **one open prefix slot**, for the lock. Three suffixes is the
+      best case; two suffixes and an open third is workable.
+    why: >-
+      Everything of value is now on the suffix side and nothing protects it.
+      The only safe next move is the lock, and the lock is a prefix.
+    fail: >-
+      Three prefixes: there is no slot for the lock. An
+      [[Orb of Annulment]] would open one, and would take a suffix as often
+      as a prefix. This is the one place in the craft where a
+      [[Hinekora's Lock]] earns its price: it shows which modifier the
+      Annulment would remove before you commit. Without one, stop here and
+      use the ring with the prefixes it has.
+  - title: "Lock the suffixes and reforge for Life"
+    do: >-
+      Craft **Suffix Modifiers cannot be changed** (4 [[Divine Orb]]s and 8
+      [[Exalted Orb]]s), then use the Harvest reforge that includes a Life
+      modifier (75 [[Wild Crystallised Lifeforce]]). Repeat both until the
+      prefixes hold maximum Life at a tier you accept and one slot is still
+      open.
+    why: >-
+      Neither influenced suffix can be found again without starting over, so
+      they are locked before any reroll. With the suffix side closed, the
+      Life modifier must be a prefix. Two prefixes on this ring carry the
+      life tag, maximum Life at a weight of 8,000 and the Hunter's Life
+      gained on hit at 1,000, so eight attempts in nine give maximum Life.
+    check: >-
+      All three suffixes exactly as they were. Life among the prefixes. If
+      the suffix side had only two modifiers, check that it still has two:
+      that a reforge adds nothing to a locked side is player testing, not a
+      published rule.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+97 to maximum Life", how: harvest }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+  - title: "Bench, and leave the last slot for a decision"
+    do: >-
+      Craft 15–17% increased Damage for 4 [[Exalted Orb]]s. One prefix slot
+      remains.
+    why: >-
+      With the suffix side full, anything added now must be a prefix. An
+      Exalted Orb into the last slot can no longer roll Life, which is
+      taken, so it is Mana, Energy Shield or Evasion more often than not.
+      Leaving the slot empty is a reasonable end.
+    state:
+      note: "Hunter and Warlord"
+      implicits: ["6% increased maximum Life"]
+      prefixes:
+        - { text: "+97 to maximum Life", how: harvest }
+        - { text: "16% increased Damage", how: crafted }
+      suffixes:
+        - { text: "Curse Enemies with Despair on Hit", how: influence }
+        - { text: "+21% to Global Critical Strike Multiplier", how: influence }
+        - { text: "+40% to Lightning Resistance" }
+variations: >-
+  **Other pairs.** Any two influences can be planned the same way, as long as
+  each wanted modifier can be isolated on its own ring. A curse from
+  Crusader, Redeemer or Warlord in place of Despair. Elder multiplier,
+  17–20%, in place of Warlord's. A prefix from one side and a suffix from the
+  other also works, and then the lock in step 5 has to be chosen for
+  whichever side holds more.
+
+
+  **Both wanted modifiers in one list.** Warlord has Vulnerability on hit and
+  the multiplier in the same influence. That ring needs no Awakener's Orb,
+  only a longer search with reforges and no way to hold the first while
+  finding the second.
+
+
+  **Memory Strands.** The data-mined table puts the Awakener's Orb at up to
+  100 strands, the highest of any currency. Strands on either ring are
+  wasted by this craft.
+mistakes:
+  - "Merging rings with more than one influenced modifier each. The orb keeps one from each, and you will not be asked which."
+  - "Clicking the rings in the wrong order. The first ring is destroyed, and with it the base."
+  - "Polishing the two rings before the merge. Everything except the two kept modifiers is rerolled."
+  - "Using an Annulment on the merged ring to open a prefix. Half its targets are the suffixes the whole craft was for."
+  - "Starting without the price of at least two locks in hand. The merge leaves the ring with random prefixes and nothing safe to do about them except a lock."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The influenced ring modifiers, weights and tags, bench costs and the in-game text of the Awakener's Orb. The odds are our arithmetic." }
+  - { title: "poedb: Awakener's Orb", url: "https://poedb.tw/us/Awakener's_Orb", kind: data, note: "That the result keeps one influenced modifier from each item. A reference page, not an official statement." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "The 3.30 cost of the protection modifiers; conqueror bosses drop their Exalted Orbs." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Caster, Critical and Life reforges and their Lifeforce costs." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Data-mined strand costs per currency. Not official." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested: Harvest reforges respect a locked side. Partly older than 3.30." }

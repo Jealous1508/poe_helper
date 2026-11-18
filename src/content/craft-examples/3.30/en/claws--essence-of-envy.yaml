@@ -1,0 +1,126 @@
+category: claws
+title: "A chaos claw from an Essence of Envy"
+level: 2
+summary: "Added Chaos Damage has one natural tier that almost never rolls. An Essence hands it over, on a base whose implicit already has it."
+goal: >-
+  A claw for a poison or chaos attack build with added Chaos Damage twice:
+  once from the base, once from an Essence. The lesson is **when an Essence
+  is the only sensible tool**: the modifier exists in the natural pool, but
+  as a single tier with a small weight and a high item level.
+base: "Void Fangs"
+itemLevel: 75
+baseWhy: >-
+  Void Fangs is the top Heist claw. Its implicit adds 46–63 to 92–113 Chaos
+  Damage, where an ordinary claw has life on hit. Its physical damage is low,
+  22–41, which is fine here because nothing in this craft multiplies it.
+
+
+  Item level 75 is deliberately below 83, the level the natural Chaos Damage
+  prefix needs. The Essence does not care about that gate, so a cheaper base
+  does the same job. 75 still allows Tier 2 attack speed (23–25%).
+methods: [essence, bench]
+result:
+  implicits: ["Adds 54 to 101 Chaos Damage"]
+  prefixes:
+    - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+    - { text: "91% increased Physical Damage / 17% chance to Poison on Hit", how: crafted }
+  suffixes:
+    - { text: "24% increased Attack Speed" }
+    - { text: "+31 to Dexterity" }
+needs:
+  - { item: "[[Screaming Essence of Envy]]", amount: "5–10", note: "Shrieking or Deafening if you have them" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the bench" }
+cost: >-
+  A handful of Essences of Envy. Envy starts at Screaming, so there is no
+  cheap low version; in 3.30 red maps free nothing weaker than Screaming
+  anyway. The bench craft is 3 [[Chaos Orb]]s.
+odds: >-
+  The Chaos Damage is certain. What you roll for is the suffix side: each
+  suffix the Essence adds is attack speed about 1 time in 7 at item level 75,
+  by our arithmetic from the weights. A result often has two or three
+  suffixes, so plan on five to ten Essences for attack speed at 17% or
+  better, and fewer if you will accept the bench's.
+
+
+  For comparison, the natural Chaos Damage prefix is 1% of prefix rolls and
+  cannot roll below item level 83 at all.
+steps:
+  - title: "Use the Essence on the white claw"
+    do: >-
+      Use one [[Screaming Essence of Envy]] on a white Void Fangs.
+    why: >-
+      The claw becomes Rare with "Adds 37–59 to 79–103 Chaos Damage"
+      guaranteed (Shrieking: 43–67 to 89–113; Deafening: 53–79 to 101–131).
+      Everything else on it is random. Together with the implicit that is
+      two sources of added Chaos Damage, and added damage counts on every
+      hit of a 1.6 attacks-per-second weapon.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+        - { text: "+112 to maximum Mana" }
+        - { text: "Adds 8 to 163 Lightning Damage" }
+      suffixes:
+        - { text: "+38 to Intelligence" }
+  - title: "Read the result: suffixes first, then count prefixes"
+    do: >-
+      Look for **attack speed** among the suffixes. Then count the prefixes:
+      is one of the three slots still open?
+    why: >-
+      The result above fails on both: no attack speed, and the Essence
+      filled all three prefixes, two of them with things this build cannot
+      use. An open prefix matters because the bench has a strong one to put
+      there.
+    check: >-
+      Keep the claw when it has attack speed of 17% or more **and** an open
+      prefix, or an open prefix and an open suffix.
+    fail: >-
+      Use another Essence on the same claw. From Screaming upwards an
+      Essence works on a Rare item, and the Chaos Damage comes back every
+      time.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+        - { text: "+31 to Dexterity" }
+  - title: "Bench what the claw lacks"
+    do: >-
+      **Attack speed rolled** (as here): craft the prefix "86–94% increased
+      Physical Damage / 16–17% chance to Poison on Hit" for 3
+      [[Chaos Orb]]s. **No attack speed:** craft 11–15% increased Attack
+      Speed for 2 Chaos Orbs in a suffix instead.
+    why: >-
+      One bench modifier, so it goes to the larger gap. For a poison build
+      the hybrid's chance to Poison is the valuable half; the physical half
+      multiplies a small base and is a bonus. Attack speed has no substitute
+      on a weapon whose damage is all added per hit.
+    state:
+      implicits: ["Adds 54 to 101 Chaos Damage"]
+      prefixes:
+        - { text: "Adds 41 to 88 Chaos Damage", how: essence }
+        - { text: "91% increased Physical Damage / 17% chance to Poison on Hit", how: crafted }
+      suffixes:
+        - { text: "24% increased Attack Speed" }
+        - { text: "+31 to Dexterity" }
+variations: >-
+  **Damage over time builds** bench "+18–20% to Chaos Damage over Time
+  Multiplier" (4 Chaos Orbs, a suffix) in place of the hybrid.
+
+
+  **On an ordinary claw** the same Essence works and you keep life on hit,
+  at the price of the second source of Chaos Damage.
+
+
+  **Zeal instead of Envy** guarantees the attack speed and leaves the Chaos
+  Damage to a prefix roll that is 1 in 100 on an item level 83 base and
+  impossible below it. Fix the modifier that cannot be had another way.
+mistakes:
+  - "Buying an item level 83 base for this. The Essence ignores the item level the natural prefix needs."
+  - "Crafting at the bench between Essences. The next Essence removes it."
+  - "Using an Essence on a base with [[Memory Strands]]. One Essence can spend up to 80 of them by the data-mined table."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Essence modifiers on claws, the natural Chaos Damage tier, weights and bench costs. The odds are our arithmetic." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Which Essence strengths appear in which maps." }

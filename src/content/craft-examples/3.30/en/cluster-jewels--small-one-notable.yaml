@@ -1,0 +1,147 @@
+category: cluster-jewels
+title: "A Small cluster jewel with one notable"
+level: 1
+summary: "Pick the enchantment, the passive count and the item level, then use Alterations until the notable you want appears. Nothing added afterwards can displace it."
+goal: >-
+  A Small Life cluster jewel with one chosen notable, the simplest cluster
+  craft there is. It is here to teach the part that comes before the orbs:
+  **three things on a cluster jewel cannot be crafted, and choosing them well
+  is most of the work.**
+base: "Small Cluster Jewel"
+itemLevel: 60
+baseWhy: >-
+  Three choices, all fixed on the jewel. **Enchantment:** "Added Small
+  Passive Skills grant: 4% increased maximum Life", which decides that the
+  notables come from the Life list. **Passives:** "Adds 2 Passive Skills",
+  the smaller of the two counts a Small jewel can have; socket the jewel
+  before you commit to see what the notable costs to reach. **Item level:**
+  50 to 67, because
+  the notables on this list need 1 or 50, and every level from 68 up adds
+  other things to the lottery.
+methods: [currency]
+result:
+  implicits:
+    - "Adds 2 Passive Skills"
+    - "Added Small Passive Skills grant: 4% increased maximum Life"
+  prefixes:
+    - { text: "1 Added Passive Skill is Surging Vitality" }
+    - { text: "Added Small Passive Skills also grant: +3 to Maximum Life" }
+  suffixes:
+    - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+needs:
+  - { item: "A Small Cluster Jewel with the Life enchantment", amount: "1", note: "2 passives, item level 50–67" }
+  - { item: "[[Orb of Transmutation]]", amount: "1", note: "if the jewel is Normal" }
+  - { item: "[[Orb of Alteration]]", amount: "10–20" }
+  - { item: "[[Orb of Augmentation]]", amount: "1–2" }
+  - { item: "[[Regal Orb]]", amount: "1", note: "optional" }
+cost: >-
+  The jewel itself, then a handful of [[Orb of Alteration]]s. The Regal Orb
+  at the end is optional and cannot do harm.
+odds: >-
+  On a Small Life jewel of item level 50 to 67, 55% of prefix rolls are a
+  notable, by our arithmetic from the weights. Each of the four level-1
+  notables (Surging Vitality, Peak Vigour, Sage, Vicious Guard) is 10% of
+  prefix rolls, 1 in 10, and each of the three level-50 ones 5%.
+
+
+  The same jewel at item level 84 gives each level-1 notable 1 roll in 20.
+  That is the whole case for the low item level.
+steps:
+  - title: "Choose the jewel"
+    do: >-
+      Find or buy a Small Cluster Jewel that reads "Adds 2 Passive Skills"
+      and "Added Small Passive Skills grant: 4% increased maximum Life".
+      Hold Alt and check the item level: 50 to 67.
+    why: >-
+      No orb changes the enchantment or the passive count. And the item
+      level works backwards here: a higher one unlocks more notables and
+      more tiers of small-passive bonuses, and every one of them competes
+      with the notable you want.
+    check: >-
+      Look up your notable in the modifier list first. It names the
+      enchantment it belongs to and the item level it needs. If it needs
+      68 or 75, this is the wrong bracket: buy a jewel at 68 to 72, or 75
+      to 77.
+    state:
+      rarity: normal
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+  - title: "Alterations until the notable"
+    do: >-
+      Use an [[Orb of Transmutation]], then [[Orb of Alteration]]s, until a
+      line reads "1 Added Passive Skill is" followed by the notable you
+      want. Hover the notable's name to read what it grants.
+    why: >-
+      On a Small jewel a notable is always a prefix, and a Magic jewel has
+      one prefix. So each Alteration is one look at the prefix list, where
+      more than half the weight is notables.
+    fail: >-
+      A different notable keeps appearing. That is expected: seven can roll
+      in this bracket. If you would use any of two or three of them, say so
+      before you start and stop at the first.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+  - title: "Fill the suffix"
+    do: >-
+      If there is no suffix, use an [[Orb of Augmentation]].
+    why: >-
+      A suffix on a Small jewel is never a notable. It adds a small bonus
+      to the jewel's one small passive: an attribute, a resistance or
+      regeneration. Any of them is free value.
+    state:
+      rarity: magic
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+  - title: "Regal Orb, if you like"
+    do: >-
+      Use a [[Regal Orb]]. Then socket the jewel in a Small or larger
+      cluster socket and allocate the notable.
+    why: >-
+      A Small jewel holds one notable, and the data gives a second one no
+      chance to roll once the first is there. So the Regal Orb, and an
+      [[Exalted Orb]] after it, can only add small-passive bonuses. This is
+      the one item in the game on which those two orbs have no bad outcome.
+    state:
+      implicits:
+        - "Adds 2 Passive Skills"
+        - "Added Small Passive Skills grant: 4% increased maximum Life"
+      prefixes:
+        - { text: "1 Added Passive Skill is Surging Vitality" }
+        - { text: "Added Small Passive Skills also grant: +3 to Maximum Life" }
+      suffixes:
+        - { text: "Added Small Passive Skills also grant: +3% to Chaos Resistance" }
+variations: >-
+  **Other enchantments.** The same four steps work for every Small jewel:
+  Energy Shield, Armour, Evasion, a resistance, reservation efficiency. Only
+  the list of notables changes, and with it the bracket.
+
+
+  **A scarce notable.** The two level-75 notables of this enchantment,
+  Fettle and Wall of Muscle, weigh 49 each. At item level 75 to 77 each is
+  about 1 prefix roll in 280, and at 84 about 1 in 320. Same method, a few
+  hundred Alterations.
+
+
+  **The small passives as the point.** At item level 84 the second prefix
+  can be "Added Small Passive Skills have 35% increased Effect". Choosing 84
+  for that makes the notable about half as likely, so decide which of the
+  two you are buying the jewel for.
+mistakes:
+  - "Buying an item level 84 jewel for a level-1 notable and halving your own odds."
+  - "Rolling a jewel with the wrong enchantment. The notable you want is not in its list and never will be."
+  - "Scouring a jewel because the Regal Orb added a dull bonus. The notable is the jewel."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "The Life enchantment's notables with their levels and weights, and the small-passive bonuses of Small jewels. The odds are our arithmetic." }
+  - { title: "poedb: Cluster Jewel", url: "https://poedb.tw/us/Cluster_Jewel", kind: data, note: "A Small jewel adds 2 or 3 passives and holds one notable." }

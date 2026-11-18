@@ -1,0 +1,131 @@
+category: two-hand-maces
+title: "Hai prefix physical từ một Essence"
+level: 2
+summary: "Essence of Contempt đảm bảo flat Physical Damage. Lặp lại tới khi một prefix phần trăm roll ra bên cạnh, rồi bench phần còn lại."
+goal: >-
+  Một cây mace cho những map đầu tiên, có hai prefix physical, trong đó một
+  cái được đảm bảo. Đây là lần craft đầu tiên bạn dùng một công cụ **bỏ qua
+  xổ số** cho một ô, và cũng là lần đầu bạn đọc trọn một item Rare rồi quyết
+  định có giữ nó hay không.
+base: "Karui Maul"
+itemLevel: 73
+baseWhy: >-
+  Karui Maul có cú đánh lớn nhất của loại item này và rơi từ level 57. Item
+  level 73 mở Tier 2 của cả hai prefix phần trăm (155–169% bản thuần, 65–74%
+  bản hybrid), cao tới mức đó là xứng với phương pháp này rồi. Base level 60
+  cũng dùng được, chỉ là trần thấp hơn một tier.
+methods: [essence, bench, finishing]
+result:
+  implicits: ["45% increased Stun Duration on Enemies"]
+  prefixes:
+    - { text: "Adds 23 to 48 Physical Damage", how: essence }
+    - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+    - { text: "92% increased Physical Damage", how: crafted }
+  suffixes:
+    - { text: "22% increased Attack Speed" }
+    - { text: "+39 to Strength" }
+needs:
+  - { item: "[[Screaming Essence of Contempt]]", amount: "10–20", note: "Shrieking hoặc Deafening nếu bạn có" }
+  - { item: "[[Blacksmith's Whetstone]]", amount: "tới 20%" }
+  - { item: "[[Chaos Orb]]", amount: "4", note: "cho bench" }
+cost: >-
+  Essence là toàn bộ chi phí, và bậc Screaming là thứ map đỏ phát cho bạn
+  trong 3.30. Bước bench tốn 4 [[Chaos Orb]].
+odds: >-
+  Khi flat Physical Damage đã nằm sẵn trên item, mỗi prefix Essence roll thêm
+  là một trong hai prefix phần trăm khoảng 1 trên 3 lần, theo phép tính của
+  chúng tôi ở item level 73. Phần lớn số đó là tier thấp: Tier 4 trở lên là
+  khoảng 1 trên 33 cho mỗi prefix roll ra. Kết quả của một Essence không phải
+  lúc nào cũng có prefix thứ hai, nên tỉ lệ thật trên mỗi Essence còn thấp
+  hơn thế. Hãy tính mười tới hai mươi cái cho một kết quả đáng giữ, và dừng
+  sớm hơn nếu nó xuất hiện.
+steps:
+  - title: "Quality, rồi Essence đầu tiên"
+    do: >-
+      Đưa một cây Karui Maul trắng lên 20% quality. Dùng một
+      [[Screaming Essence of Contempt]] lên nó.
+    why: >-
+      Essence biến item thành Rare và **đảm bảo** flat Physical Damage: adds
+      20–28 to 43–51 ở bậc Screaming. Các modifier còn lại là ngẫu nhiên. Từ
+      Screaming trở lên, Essence còn dùng được trên item đã là Rare, nhờ vậy
+      bạn mới lặp lại được.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "Adds 71 to 139 Fire Damage" }
+      suffixes:
+        - { text: "+287 to Accuracy Rating" }
+        - { text: "33% increased Stun Duration on Enemies" }
+  - title: "Đọc prefix, và chỉ prefix thôi"
+    do: >-
+      Giữ Alt. Modifier của Essence là một prefix. Nhìn các prefix còn lại:
+      có cái nào là **increased Physical Damage** không, bản thuần hoặc bản
+      kèm Accuracy Rating?
+    why: >-
+      Item ở trên đã trượt: prefix thứ hai của nó là fire damage. Suffix ở
+      giai đoạn này không quan trọng, vì Essence nào cũng roll lại chúng.
+    check: >-
+      Giữ item nếu có một prefix phần trăm ở tier bạn chấp nhận. Một mức hợp
+      lý cho weapon chạy map đầu tiên: bản thuần từ 110% trở lên, hoặc hybrid
+      từ 45% trở lên.
+    fail: >-
+      Không có prefix phần trăm: dùng thêm một Essence lên chính item đó.
+      Không mất gì ngoài viên Essence.
+  - title: "Lặp lại tới khi trúng"
+    do: >-
+      Dùng Essence liên tiếp, lần nào cũng đọc prefix, tới khi có một kết quả
+      qua được bài kiểm.
+    why: >-
+      Mỗi lần dùng là một lần roll độc lập. Flat Physical Damage lần nào cũng
+      quay lại, nên chỉ còn prefix phần trăm là ẩn số.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+39 to Strength" }
+  - title: "Chọn craft bench theo cái đã roll ra"
+    do: >-
+      **Nếu roll ra hybrid** (như ở đây): bench increased Physical Damage
+      thuần vào prefix trống, 80–99% giá 4 [[Chaos Orb]]. **Nếu roll ra bản
+      thuần:** prefix thứ ba không thể đến từ bench, nên hãy craft attack
+      speed vào một ô suffix thay vào, 11–15% giá 2 Chaos Orb, trừ khi item
+      đã có sẵn.
+    why: >-
+      Increased Physical Damage của bench cùng group với bản thuần roll ra và
+      khác group với hybrid. Flat Physical Damage của bench thì cùng group
+      với cái của Essence. Vậy nên hybrid mới là roll may mắn: nó chừa lại
+      một ô mà bench lấp được bằng damage.
+    check: >-
+      Trước khi craft, hãy chắc là ô đó còn trống. Nếu Essence roll ra ba
+      prefix thì hết chỗ, và bạn craft một suffix.
+    state:
+      implicits: ["45% increased Stun Duration on Enemies"]
+      prefixes:
+        - { text: "Adds 23 to 48 Physical Damage", how: essence }
+        - { text: "61% increased Physical Damage / +138 to Accuracy Rating" }
+        - { text: "92% increased Physical Damage", how: crafted }
+      suffixes:
+        - { text: "22% increased Attack Speed" }
+        - { text: "+39 to Strength" }
+variations: >-
+  **Dùng Essence of Zeal thay vào.** Zeal đảm bảo attack speed, 23–25% ở bậc
+  Screaming. Nó là Essence đúng khi bạn đã có một cây mace với prefix tốt đã
+  fractured, và là Essence sai ở đây: nó chốt phía dễ và phó mặc cả ba prefix
+  cho may rủi.
+
+
+  **Essence tốt hơn.** Shrieking Contempt cho adds 25–33 to 52–61 và
+  Deafening cho adds 31–42 to 65–75. Phương pháp y hệt; chỉ con số được đảm
+  bảo là thay đổi.
+mistakes:
+  - "Giữ một kết quả vì suffix đẹp. Suffix dựng lại được. Không có prefix phần trăm thì weapon không có hệ số nhân."
+  - "Craft ở bench giữa các lần dùng Essence. Essence kế tiếp sẽ gỡ nó."
+  - "Dùng cách này trên base có [[Memory Strands]]: một Essence có thể tiêu tới 80 strand, theo bảng data-mine."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Các modifier Essence trên mace hai tay, tier, weight và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Bậc Essence nào xuất hiện ở map nào." }

@@ -1,0 +1,541 @@
+name: "One-Handed Sword"
+short: "Hai item class trong một loại item: sword có implicit accuracy, và thrusting sword có implicit critical strike cùng một pool nghiêng về elemental."
+icon: "Jewelled Foil"
+intro: >-
+  "Sword một tay" gồm hai item class craft khác nhau. Một cây **one-hand
+  sword** thông thường có implicit Accuracy, 5% critical strike chance và cần
+  Strength lẫn Dexterity. Một cây **thrusting sword**, tức các rapier và
+  foil, có Critical Strike Multiplier trên implicit, critical strike chance
+  cao hơn, tầm đánh xa hơn, chỉ cần Dexterity, và roll từ pool riêng của nó,
+  nơi elemental damage nặng weight hơn.
+
+
+  Vậy nên quyết định đầu tiên không phải là sword nào mà là loại weapon nào:
+  physical hay elemental, có critical strike hay không. Câu trả lời đó chọn
+  class, và class chọn tỉ lệ. Trên weapon physical, prefix là phía khó, như
+  trên mọi weapon. Trên một cây foil elemental critical strike thì ngược lại:
+  prefix ra dễ dàng còn ba suffix bạn muốn thì tranh nhau ba ô.
+basics:
+  itemLevel:
+    text: >-
+      Với sword **physical**, các mốc là của mọi weapon physical: 77 là đủ,
+      83 mở tier cuối của hai prefix phần trăm.
+
+
+      Với sword **elemental**, các con số khác đi. Added Fire, Cold và
+      Lightning Damage tốt nhất cần item level 82, tier ngay dưới cần 74 hoặc
+      75, và "increased Elemental Damage with Attack Skills" tốt nhất cần 86.
+      Item level 75 làm ra một weapon elemental tốt; 82 là trần của flat
+      damage, và 86 chỉ quan trọng nếu bạn đang roll đúng cái prefix phần
+      trăm đó.
+    breakpoints:
+      - ilvl: 46
+        unlocks: "**Leveling.** Tier 4 của increased Physical Damage (110–134%) và Tier 4 của flat Physical Damage (adds 13–18 to 27–31). Added elemental damage đã vượt 40 mỗi cú đánh."
+      - ilvl: 60
+        unlocks: "Tier 3 của increased Physical Damage (135–154%), Tier 3 của hybrid kèm Accuracy (55–64%), Tier 2 của attack speed (23–25%), Tier 3 của increased Elemental Damage with Attack Skills (37–42%), và mọi modifier unveil ra."
+      - ilvl: 63
+        unlocks: "Tier 3 của cả ba loại added elemental damage: Fire adds 59–81 to 120–140 (từ 62), Cold 54–74 to 108–126, Lightning 10–14 to 197–229."
+      - ilvl: 73
+        unlocks: "Tier 1 của Critical Strike Chance và Tier 1 của Critical Strike Multiplier (cả hai 35–38%). Tier 2 của increased Physical Damage (155–169%) và Tier 2 của hybrid (65–74%)."
+      - ilvl: 75
+        unlocks: "Tier 2 của cả ba loại added elemental damage (Fire và Lightning từ 74): Fire adds 74–101 to 150–175. **Đủ cho một cây sword elemental tốt.**"
+      - ilvl: 77
+        unlocks: "Tier 1 của attack speed (26–27%) và Tier 1 của flat Physical Damage (adds 22–29 to 45–52). **Đủ cho một cây sword physical tốt.**"
+      - ilvl: 82
+        unlocks: "Tier 1 của added Fire (89–121 to 180–210), Cold (81–111 to 163–189) và Lightning (15–21 to 296–344) Damage. **Trần của flat elemental damage.**"
+      - ilvl: 83
+        unlocks: "Tier 1 của increased Physical Damage, \"Merciless\" (170–179%), và Tier 1 của hybrid, \"Dictator's\" (75–79%). **Trần của một cây sword physical.**"
+  bases:
+    text: >-
+      Có 55 base trong hai pool. 30 cây one-hand sword roll từ một pool, 25
+      cây thrusting sword từ pool kia. Cả hai pool chứa cùng các modifier ở
+      cùng các tier; cái khác nhau là **weight của added elemental damage**.
+      Phần lớn các tier của added Fire, Cold và Lightning Damage có weight
+      1,200 trên one-hand sword và 2,000 trên thrusting sword, và các tier
+      cao hiếm hơn cũng nặng hơn theo cùng tỉ lệ đó.
+
+
+      Hệ quả, theo phép tính của chúng tôi ở item level 83: trên one-hand
+      sword, elemental damage chiếm 60% số lần roll prefix và ba prefix
+      physical 29.5%. Trên thrusting sword là 72% và 21%. Thrusting sword là
+      base tốt hơn cho một weapon elemental trước khi tiêu bất kỳ currency
+      nào, và là base tệ hơn cho một weapon physical: "Merciless" là khoảng 1
+      trên 1,970 lần roll prefix trên one-hand sword và 1 trên 2,760 trên
+      rapier.
+    types:
+      - title: "One-hand sword"
+        pools: [standard]
+        text: >-
+          Hai mươi hai base thường từ Rusted Sword tới Midnight Blade. Tất cả
+          có 5% critical strike chance và một implicit Accuracy, ở một trong
+          hai dạng: "40% increased Global Accuracy Rating" trên mười ba cây,
+          hoặc một lượng flat tăng dần theo base, từ +45 trên Copper Sword
+          tới +475 trên Eternal Sword. Chúng cần Strength và Dexterity gần
+          ngang nhau. Bốn base cao cấp nhất là Legion Sword, Vaal Blade,
+          Eternal Sword và Midnight Blade.
+      - title: "Thrusting sword: rapier và foil"
+        pools: [rapier]
+        text: >-
+          Hai mươi hai base thường từ Rusted Spike tới Harpy Rapier, cộng ba
+          base Maraketh. Implicit là "+25% to Global Critical Strike
+          Multiplier", hoặc +35% trên Thorn Rapier, Apex Rapier và Harpy
+          Rapier. Critical strike chance chạy từ 5.5% tới 6.5%, weapon range
+          là 14 trong khi one-hand sword có 11, và attribute duy nhất cần là
+          Dexterity, 212 trên các base hàng đầu. Physical damage của chúng
+          thấp hơn: cây rapier tốt nhất có damage mỗi giây gốc 74 trong khi
+          Legion Sword có 91. Bốn base cao cấp nhất là Spiraled Foil, Vaal
+          Rapier, Jewelled Foil và Harpy Rapier.
+      - title: "Sword Maraketh"
+        text: >-
+          Mỗi class có ba cây. Các one-hand sword Hook Sword, Grappler và
+          Tiger Hook có "15% chance to Maim on Hit" (20% trên Tiger Hook)
+          thay cho Accuracy. Các thrusting sword Smallsword, Courtesan Sword
+          và Dragoon Sword có "15% chance to cause Bleeding on Hit" (20% trên
+          Dragoon Sword) thay cho Critical Strike Multiplier, với 6% critical
+          strike chance.
+      - title: "Spiritblade Heist"
+        text: >-
+          Fickle Spiritblade, Capricious Spiritblade và Anarchic Spiritblade,
+          các base "experimented" từ Heist. Chúng là one-hand sword và dùng
+          pool đó, nhưng có 1.6 attack mỗi giây và 6.5% critical strike
+          chance, mức tốt nhất của cả hai class. Implicit là "100% of
+          Physical Damage from Hits with this Weapon is Converted to a random
+          Element", nên weapon có bao nhiêu physical damage thì đều đến dưới
+          dạng fire, cold hoặc lightning.
+      - title: "Những base bạn không craft"
+        text: >-
+          Dữ liệu liệt kê thêm hai one-hand sword nữa. Energy Blade không có
+          chỉ số riêng: nó là weapon mà skill cùng tên tạo ra. Ghostflame
+          Blade không có implicit, có 6.5% critical strike chance và 1.55
+          attack mỗi giây; chúng tôi chưa xác nhận được cách lấy nó trong
+          3.30, nên không gì ở đây khuyên dùng nó.
+    picks:
+      - base: "Jewelled Foil"
+        for: "Build attack elemental"
+        why: >-
+          1.6 attack mỗi giây, mức nhanh nhất một cây sword có được, trên
+          pool mà prefix elemental dễ ra nhất, với +25% Critical Strike
+          Multiplier trên implicit. Added elemental damage không được các
+          modifier physical của weapon nhân lên, chỉ được nhân bởi speed và
+          critical strike của nó, nên physical damage thấp của nó chẳng mất
+          gì.
+      - base: "Vaal Rapier"
+        for: "Build physical critical strike"
+        why: >-
+          6.5% critical strike chance gốc, cao nhất loại item này, với 22–87
+          physical damage ở 1.3 attack mỗi giây và +25% Critical Strike
+          Multiplier. Critical Strike Chance local nhân vào 6.5% đó.
+      - base: "Harpy Rapier"
+        for: "Implicit lớn nhất"
+        why: >-
+          +35% to Global Critical Strike Multiplier, hơn các rapier khác
+          mười, trên 31–72 với 1.4 attack mỗi giây và 5.7% critical strike
+          chance. Implicit này là global và không craft ra được, nên nó đáng
+          giá nhất với những build vốn đã crit thường xuyên.
+      - base: "Legion Sword"
+        for: "Physical damage cao nhất"
+        why: >-
+          53–98 với 1.2 attack mỗi giây là damage mỗi giây gốc cao nhất của
+          loại item này (90.6), trên pool mà prefix physical dễ ra hơn.
+          Implicit là 40% increased Global Accuracy Rating. Cho build
+          physical không dựa vào critical strike.
+      - base: "Tiger Hook"
+        for: "Build physical muốn tốc độ và Maim"
+        why: >-
+          37–80 với 1.4 attack mỗi giây cùng "20% chance to Maim on Hit".
+          Nhanh hơn các cây sword nặng, đổi lại damage mỗi giây thấp hơn
+          khoảng một phần mười (81.9).
+      - base: "Anarchic Spiritblade"
+        for: "Elemental critical strike trên pool one-hand sword"
+        why: >-
+          1.6 attack mỗi giây **và** 6.5% critical strike chance, thứ không
+          base thường nào kết hợp được. Cái giá là pool: prefix elemental ở
+          đây là 60% số lần roll chứ không phải 72%, và không có implicit
+          Critical Strike Multiplier.
+    impact: >-
+      **Pool.** Đây là loại weapon duy nhất cùng kiểu mà ở đó base thay đổi
+      tỉ lệ. Thrusting sword roll ra prefix elemental thường hơn và prefix
+      physical ít hơn so với one-hand sword, ở mọi item level.
+
+
+      **Implicit.** Accuracy trên one-hand sword, Critical Strike Multiplier
+      trên thrusting sword, Maim hoặc Bleeding trên các cây Maraketh,
+      conversion trên Spiritblade. Một [[Blessed Orb]] roll lại một chỉ số có
+      khoảng; không cái nào trong số này biến được thành cái khác.
+
+
+      **Critical strike chance và số attack mỗi giây.** Cả hai đều được các
+      suffix local nhân lên. 6.5% so với 5% là nhiều hơn ba phần mười số
+      critical strike từ cùng các modifier.
+
+
+      **Physical damage**, thứ chỉ quan trọng nếu bạn đang dựng một weapon
+      physical. Một cây foil elemental bỏ qua nó.
+
+
+      **Attribute và tầm đánh.** Chỉ Dexterity cho thrusting sword, cả hai
+      attribute cho one-hand sword; weapon range 14 so với 11.
+
+
+      Và, như với mọi weapon một tay, **tay kia**. Trong một cặp, modifier
+      local chỉ tính cho tay đang vung còn modifier global (implicit của
+      rapier, các suffix Critical Strike Multiplier) tính trên mọi cú đánh.
+      Đi cạnh shield, cây sword là toàn bộ weapon damage của bạn.
+tools:
+  - method: currency
+    note: >-
+      Roll thường cho gì là tùy pool. Trên thrusting sword ở item level 83,
+      theo phép tính của chúng tôi, một lần roll prefix ra added elemental
+      damage 72% số lần, và ra một trong hai tier cao nhất của một element
+      nào đó khoảng 1 trên 26 lần. Một prefix phần trăm physical Tier 3 trở
+      lên là khoảng 1 trên 400 với bản thuần, và hybrid cũng cỡ đó.
+
+
+      Trên one-hand sword, cũng các lần roll đó là 60%, khoảng 1 trên 31, và
+      khoảng 1 trên 280. Vậy nên [[Orb of Alteration]] làm ra một prefix
+      elemental hoàn toàn ổn trên cả hai class, và không làm ra một prefix
+      phần trăm physical tốt trên class nào.
+  - method: bench
+    note: >-
+      Cả hai class dùng chung một danh sách bench. Cho sword physical:
+      increased Physical Damage 40–59% giá 4 Orb of Alteration, 60–79% giá 8,
+      80–99% giá 4 Chaos Orb, 100–129% giá 4 Exalted Orb; flat Physical
+      Damage lên tới adds 13–17 to 26–30 giá 4 Chaos Orb.
+
+
+      Cho sword elemental: added Fire hoặc Cold Damage 11–12 to 19–23 giá 4
+      Orb of Transmutation, 22–27 to 42–49 giá 2 Orb of Alchemy, 35–41 to
+      63–73 giá 4 Chaos Orb; added Lightning Damage lên tới 6–8 to 100–113
+      giá 4 Chaos Orb. Increased Elemental Damage with Attack Skills 15–23%
+      giá 6 Orb of Alteration hoặc 24–32% giá 4 Orb of Alchemy. "Attacks with
+      this Weapon Penetrate Elemental Resistances" 6–7% giá 4 Orb of Alchemy,
+      8–10% giá 4 Chaos Orb, 11–13% giá 4 Exalted Orb.
+
+
+      Suffix: attack speed 8–10%, 11–15% hoặc 16–20% (6 Orb of Alteration, 2
+      Chaos Orb, 4 Exalted Orb); Critical Strike Chance 25–27% hoặc Critical
+      Strike Multiplier 25–28%, mỗi cái giá 4 Chaos Orb.
+
+
+      Một element của bench chung group với damage roll ra của **cùng**
+      element đó, nên bench thêm element thứ hai hoặc thứ ba, không bao giờ
+      thêm bản thứ hai. Chỉ số tốt nhất của nó thấp hơn hẳn thứ roll ra: hãy
+      dùng nó cho element bạn đang thiếu, không phải cho element bạn dựa vào.
+  - method: finishing
+    note: >-
+      Quality nâng physical damage, nên nó quan trọng trên sword physical và
+      không làm gì cho added elemental damage của một cây foil; trên weapon
+      elemental, đó là thứ sau cùng cần bận tâm. Weapon một tay có nhiều nhất
+      ba socket.
+  - method: essence
+    note: >-
+      Cả hai class nhận cùng các modifier Essence. **Anger**, **Hatred** và
+      **Wrath** đảm bảo added Fire, Cold và Lightning Damage. Bậc Shrieking
+      bằng Tier 2 tự nhiên (Wrath: adds 13–17 to 247–286) và bậc Deafening
+      chỉ kém Tier 1 một chút (Wrath: 13–19 to 266–310). Essence là công cụ
+      duy nhất ở đây cố định được tier của một prefix elemental.
+
+
+      **Zeal** đảm bảo attack speed, 28–30% ở bậc Deafening so với 26–27% của
+      Tier 1 tự nhiên. **Loathing** đảm bảo Critical Strike Chance, 35–38% ở
+      bậc Deafening. **Contempt** đảm bảo flat Physical Damage, lên tới adds
+      20–26 to 40–47.
+
+
+      **Rage**, **Sorrow** và **Spite** cho "Damage Penetrates 8% Fire / Cold
+      / Lightning Resistance" ở bậc Deafening, thứ mà pool tự nhiên không có.
+  - method: harvest
+    note: >-
+      Các reforge elemental chính xác khác thường trên sword. Added Fire
+      Damage là modifier tự nhiên duy nhất mang tag fire, và cold với
+      lightning cũng vậy. Vậy nên "reforge kèm một modifier Fire" (50 Wild
+      Lifeforce; Cold là 50 Vivid, Lightning 50 Primal) luôn đặt added damage
+      của element đó lên item. Nó không chọn tier.
+
+
+      **Critical** (150 Primal) đảm bảo Critical Strike Chance hoặc Critical
+      Strike Multiplier, hai modifier duy nhất mang tag đó. **Speed** (150
+      Vivid) đảm bảo attack speed. Khi prefix đã khóa, hai cái này là cách
+      dựng lại suffix của một cây sword crit.
+  - method: fossil
+    note: >-
+      Fossil có thể nhắm vào cả hai phía của sword cùng lúc. Một
+      [[Shuddering Fossil]] nhân attack speed lên mười lần và một
+      [[Deft Fossil]] làm điều tương tự cho hai suffix critical strike đồng
+      thời gỡ Strength và Dexterity: cộng lại, theo phép tính của chúng tôi,
+      khoảng 88% số lần roll suffix là một trong ba suffix mà một cây sword
+      crit muốn.
+
+
+      Cho prefix, thêm một [[Jagged Fossil]] (physical) hoặc một
+      [[Prismatic Fossil]] (elemental, gấp sáu weight, và không có modifier
+      bleed hay poison). Trên thrusting sword, Jagged Fossil đạt 73% prefix
+      physical, không phải 81% như trên one-hand sword: các weight elemental
+      nặng hơn vẫn còn trong pool.
+
+
+      Các prefix chỉ có từ Fossil cho sword elemental gồm 40–49% increased
+      Elemental Damage và "Attacks with this Weapon Penetrate 9–12% Elemental
+      Resistances". Công cụ tính của chúng tôi bỏ modifier chỉ có từ Fossil
+      ra ngoài, nên hãy coi mọi tỉ lệ Fossil ở đây là hơi cao.
+  - method: beast
+    note: >-
+      Một **Imprint** ([[Craicic Croaker]]) trước một [[Regal Orb]] là đáng
+      khi cây sword Magic đang giữ thứ gì đó hiếm: ở loại item này, đó là một
+      prefix elemental tier cao nhất, hoặc bất kỳ prefix phần trăm physical
+      tốt nào. **Thêm một prefix, gỡ một suffix ngẫu nhiên**
+      ([[Farric Wolf Alpha]]) là ván cược tốt trên một cây foil elemental
+      chưa có suffix, nơi bảy trên mười prefix là hữu dụng, và là ván cược
+      tồi trên sword physical.
+  - method: veiled
+    note: >-
+      Cho sword physical: 120–139% increased Physical Damage kèm 21–25%
+      chance to Bleed, Impale, Poison hoặc Blind, cùng group với increased
+      Physical Damage thuần. Cho sword elemental: "Attacks with this Weapon
+      Penetrate 14–16% Elemental Resistances". Cho sword crit, hai suffix có
+      group riêng nên cộng dồn được với bản thường: +36–40% Critical Strike
+      Multiplier và 12–15% attack speed khi có enemy Rare hoặc Unique trong
+      vòng 6 mét.
+  - method: meta
+    note: >-
+      4 Divine Orb và 1 [[Sacred Orb]] cho khóa đầy đủ, phía nào cũng vậy,
+      trên weapon trong 3.30. Trên sword, câu hỏi là khóa phía nào. Physical:
+      khóa prefix, như trên mọi weapon. Elemental crit: suffix là phía khó
+      dựng lại, và prefix elemental có thể được reforge dưới một khóa suffix
+      bằng một element của Harvest.
+
+
+      Hãy nhớ thứ gì phớt lờ khóa. Theo thử nghiệm của cộng đồng, Essence
+      roll lại một item đã khóa như thể khóa không có ở đó, nên mọi việc với
+      Essence phải xong trước lần khóa đầu tiên.
+  - method: fracture
+    note: >-
+      Trên sword physical, một prefix phần trăm tier cao đã fractured. Trên
+      sword elemental, một added damage Tier 1 đã fractured, vốn là khoảng 1
+      trên 380 lần roll prefix trên thrusting sword. Một fractured modifier
+      cộng một Essence đặt hai modifier chắc chắn lên mọi lần roll lại.
+  - method: influence
+    note: >-
+      Cho sword elemental: "Attacks with this Weapon Penetrate 10–12%
+      Elemental Resistances" của Hunter, và các prefix penetration một
+      element của Crusader (lightning), Warlord (fire) và Redeemer (cold),
+      mỗi cái 13–15% ở item level 78. Ba influence đó còn có một hybrid thêm
+      một ít damage của element mình kèm 5–7% penetration; nó là group riêng
+      và nằm cạnh added damage thường được.
+
+
+      Cho sword physical: "Gain 18–20% of Physical Damage as Extra Fire
+      Damage" của Shaper và bản tương tự cho Cold, hai group riêng biệt. Một
+      cây sword có influence thì không fracture được.
+  - method: corruption
+    note: >-
+      Sword có danh sách implicit corruption dài nhất trong các weapon một
+      tay. Ngoài attack speed và physical damage quen thuộc, dữ liệu liệt kê
+      14–18% increased Critical Strike Chance, "Damage Penetrates 8–10%
+      Elemental Resistances", "Skills fire an additional Projectile" và
+      Resolute Technique. Một implicit corruption **thay thế** implicit của
+      chính base, nên trên rapier bạn đang đổi mất Critical Strike
+      Multiplier.
+  - method: strands
+    note: "Xem phần Memory Strands bên dưới: một cây foil elemental là một trong những chỗ dùng strand tốt nhất."
+memoryStrands: >-
+  Một cây thrusting sword elemental gần như là trường hợp lý tưởng cho
+  [[Memory Strands]]. Strand nâng tier của bất cứ thứ gì roll ra và không làm
+  gì khác, và trên foil thứ roll ra vốn đã đúng bảy trên mười lần. Điều duy
+  nhất không ổn ở một prefix elemental điển hình là tier của nó: mỗi element
+  có mười tier và gần như toàn bộ weight nằm ở bảy tier thấp.
+
+
+  Vậy nên lần craft hợp với strand là kiểu đơn giản. Đặt strand lên một cây
+  foil trắng item level 82 trở lên bằng [[Orb of Remembrance]], roll prefix
+  bằng [[Orb of Alteration]] (mỗi cái nhiều nhất 8 strand theo bảng
+  data-mine), rồi thêm vào bằng một [[Regal Orb]] và [[Exalted Orb]] (mỗi cái
+  nhiều nhất 16). Game hiện chi phí trước mỗi orb.
+
+
+  Sword physical được lợi ít hơn, vì cùng lý do như axe: phần lớn lần roll
+  prefix của nó là sai họ, và strand không đổi được họ.
+
+
+  Thứ làm phí strand: Essence, có thể tiêu 80 strand trong một lần dùng. Còn
+  reforge Harvest và Fossil, vốn là công cụ quen thuộc cho sword, thì theo
+  thử nghiệm của người chơi không tiêu strand mà cũng không hưởng lợi từ
+  chúng. Nếu kế hoạch là một element của Harvest hoặc một Resonator ba
+  Fossil, thì một base thường làm được y việc đó.
+reading:
+  intro: >-
+    Đọc dòng base trước: nó có phải thrusting sword không, và implicit là gì?
+    Rồi hỏi cây này đang cố trở thành weapon nào. Một cây sword có hai prefix
+    elemental và một prefix physical không phải là một sword physical yếu hay
+    một sword elemental yếu; nó là một trong hai với một ô phí, và bạn cần
+    biết là cái nào.
+  prefixes:
+    text: >-
+      **Sword physical** cần ba họ physical, vốn cộng dồn được vì là ba
+      group: increased Physical Damage thuần, hybrid kèm Accuracy Rating,
+      flat Physical Damage. Mọi thứ elemental đều cản đường.
+
+
+      **Sword elemental** có bốn prefix để chọn ra ba: added Fire, Cold và
+      Lightning Damage, và increased Elemental Damage with Attack Skills. Ba
+      loại added damage là ba group khác nhau, nên cả ba nằm vừa trên một cây
+      sword. Không cái nào là local theo kiểu physical damage: chúng không
+      được các modifier physical của weapon hay quality của nó nhân lên.
+      Chúng được nhân bởi attack speed và critical strike của weapon, và đó
+      là lý do base và suffix gánh một cây sword elemental.
+
+
+      Đã có một element hiếm khi là lý do đủ để từ chối element khác. Trừ khi
+      build convert hoặc scale một element duy nhất, added element nào cũng
+      là damage.
+    key:
+      - mod: "Adds # to # Fire / Cold / Lightning Damage"
+        why: "Toàn bộ damage của một cây sword elemental. Ba group, nên ba cái nằm cùng nhau được. Dễ ra ở mọi tier trừ hai tier cao nhất."
+        aim: "T3 (ilvl 62–63): fire adds 59–81 to 120–140. T1 cần ilvl 82."
+      - mod: "#% increased Elemental Damage with Attack Skills"
+        why: "Prefix elemental thứ tư: một hệ số nhân cho nhân vật, không phải cho weapon này. Hiếm (2–4% số lần roll prefix), và tier cao nhất của nó cần item level cao nhất loại item này."
+        aim: "T3, 37–42% (ilvl 60). T1 là 51–59% (ilvl 86)."
+      - mod: "#% increased Physical Damage"
+        why: "Hệ số nhân chính của một cây sword physical, và là prefix tốt hiếm nhất ở đây: dưới 8% số lần roll trên one-hand sword, dưới 6% trên thrusting sword."
+        aim: "T4, 110–134% (ilvl 46), hoặc bản unveil 120–139%. T1 là 170–179% (ilvl 83)."
+      - mod: "#% increased Physical Damage / +# to Accuracy Rating"
+        why: "Cùng hệ số nhân đó ở group riêng. Nó nằm cạnh bản thuần và cạnh một prefix phần trăm bench."
+        aim: "T3, 55–64% (ilvl 60)."
+      - mod: "Adds # to # Physical Damage"
+        why: "Cái nền mà các prefix phần trăm nhân lên. Prefix physical dễ ra nhất trên cả hai pool."
+        aim: "T2, adds 19–25 to 39–45 (ilvl 65)."
+  suffixes:
+    text: >-
+      Một cây sword crit muốn ba suffix và có ba ô: attack speed, Critical
+      Strike Chance và Critical Strike Multiplier. Cộng lại chúng chiếm
+      khoảng một phần ba số lần roll suffix, và cả ba cùng lúc từ roll thường
+      là hiếm. Đây là phía cần lên kế hoạch trên sword crit, và là lý do hiếm
+      khi còn dư một ô suffix để dành cho sự tiện lợi của bench.
+
+
+      Implicit của rapier làm chuyện này nhẹ đi. +25% hoặc +35% Critical
+      Strike Multiplier đã có sẵn trên base, nên một cây thrusting sword hụt
+      suffix multiplier mất ít hơn so với một cây one-hand sword.
+
+
+      Một cây sword không crit có phía suffix dễ: attack speed, rồi tới bất
+      cứ thứ gì build còn thiếu.
+    key:
+      - mod: "#% increased Attack Speed"
+        why: "Local. Nó nhân mọi thứ weapon làm, physical hay elemental. Suffix đầu tiên trên mọi cây sword."
+        aim: "T2, 23–25% (ilvl 60). T1 là 26–27% (ilvl 77)."
+      - mod: "#% increased Critical Strike Chance"
+        why: "Local: nó nhân vào mức 5% tới 6.5% của base. Đáng giá hơn trên những base có nhiều hơn để nhân."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "+#% to Global Critical Strike Multiplier"
+        why: "Global. Nó cộng vào implicit của rapier và, trong một cặp, tính cho cả hai tay."
+        aim: "T2, 30–34% (ilvl 59). T1 là 35–38% (ilvl 73)."
+      - mod: "+# to Accuracy Rating"
+        why: "Local trên weapon này. Implicit của one-hand sword đã giúp sẵn ở đây; rapier thì không có, và một build đánh trượt là build không crit."
+      - mod: "+# to Dexterity"
+        why: "Đồ lấp chỗ hữu ích. Một cây thrusting sword hàng đầu cần 212 Dexterity."
+approach:
+  principle: >-
+    **Gọi tên weapon trước khi chọn base.** Physical hay elemental, crit hay
+    không: điều đó quyết định class, class quyết định pool, và pool quyết
+    định phía nào khó. Trên sword physical, lấy prefix trước và đừng bao giờ
+    bỏ một cái để đổi lấy một suffix. Trên sword elemental crit, prefix là
+    phía dễ; hãy dựng kế hoạch quanh suffix.
+  order:
+    - title: "Physical hay elemental, crit hay không"
+      text: >-
+        Bốn câu trả lời, bốn lần craft khác nhau. Physical không crit là một
+        cây mace có implicit Accuracy. Physical có crit cần cả hai phía và là
+        item khó nhất của loại item này. Elemental cần attack speed và,
+        thường thì, cả crit.
+    - title: "Chọn class, rồi tới base"
+      text: >-
+        Elemental hoặc crit: một cây thrusting sword, vì pool và implicit.
+        Physical không crit: một cây one-hand sword, vì damage và pool. Rồi
+        chọn base theo tốc độ và critical strike chance, và item level theo
+        những tier bạn đã nêu.
+    - title: "Tìm phía khó"
+      text: >-
+        Đếm số modifier bạn cần ở mỗi phía và mỗi cái roll ra thường xuyên
+        tới đâu. Ba prefix physical: khó. Ba prefix elemental: dễ. Chỉ attack
+        speed: dễ. Attack speed cùng cả hai suffix critical strike: khó.
+    - title: "Làm phía khó trước, bằng một công cụ nhắm vào nó"
+      text: >-
+        Prefix physical: một Jagged Fossil, một prefix veiled, hoặc một base
+        fractured. Suffix crit: Shuddering Fossil và Deft Fossil, hoặc một
+        reforge Critical của Harvest. Một prefix elemental ở tier đã chọn:
+        một Essence.
+    - title: "Chỉ bảo vệ nó nếu khóa rẻ hơn roll lại"
+      text: >-
+        Khóa phía đã xong và roll lại phía kia bằng công cụ tôn trọng khóa:
+        Harvest, hoặc một Veiled Chaos Orb. Không bao giờ là Essence.
+    - title: "Tiêu ô bench vào phía đã hết may"
+      text: >-
+        Trên sword crit, đó gần như luôn là một suffix. Hãy quyết định trước
+        khi bắt đầu xem bench sẽ cấp cái nào trong ba suffix, và đừng đuổi
+        theo cái đó.
+  finishing: >-
+    Trên sword physical: quality lên 20%, socket, rồi một [[Divine Orb]] nếu
+    prefix phần trăm chính đang thấp trong khoảng của nó. Trên sword
+    elemental, quality có thể đợi còn Divine Orb quan trọng hơn, vì khoảng
+    của added elemental damage rộng: lightning Tier 1 chạy từ 296 tới 344 ở
+    đầu trên.
+
+
+    Sau cùng, nhìn implicit. Một [[Blessed Orb]] chỉ giúp khi implicit có
+    khoảng, và phần lớn implicit của sword là con số cố định.
+  stopping: >-
+    Một cây foil elemental có hai added element ở Tier 4 trở lên và attack
+    speed đã là một weapon thực thụ cho map vàng. Ba element ở Tier 3 cùng
+    attack speed và một suffix critical strike gánh một build qua map đỏ.
+    Tier 1 trên cả ba cùng đủ ba suffix là một item tầm mirror, không phải
+    một mục tiêu.
+
+
+    Với sword physical crit, hãy hạ mức xuống một ô: hai prefix physical roll
+    ra, một prefix phần trăm bench, attack speed và một suffix critical
+    strike đã là một weapon mạnh. Modifier tốt thứ sáu tốn nhiều hơn năm cái
+    đầu cộng lại.
+special:
+  - mod: "+#% to Global Critical Strike Multiplier"
+    source: "Implicit của base"
+    where: "Implicit của mọi thrusting sword thường: +25%, hoặc +35% trên Thorn Rapier, Apex Rapier và Harpy Rapier. Không craft ra được; một implicit corruption sẽ thay thế nó."
+  - mod: "100% of Physical Damage from Hits with this Weapon is Converted to a random Element"
+    source: "Implicit của base"
+    where: "Implicit của ba cây Spiritblade Heist. Nó biến các prefix physical của weapon thành elemental damage."
+  - mod: "Damage Penetrates #% Fire / Cold / Lightning Resistance"
+    source: "Essence / Fossil"
+    where: "Essence of Rage (fire), Sorrow (cold) và Spite (lightning): 6% ở bậc Screaming, 8% ở bậc Deafening. Một prefix chỉ có từ Fossil cho 5–7% của một element."
+  - mod: "Attacks with this Weapon Penetrate #% Elemental Resistances"
+    source: "Bench / Veiled / influence Hunter"
+    where: "Bench: 6–7%, 8–10% hoặc 11–13% (4 Orb of Alchemy, 4 Chaos Orb, 4 Exalted Orb). Unveil: 14–16%. Prefix Hunter: 10–12% ở item level 78. Một bản chỉ có từ Fossil cho 9–12%."
+  - mod: "#% increased Elemental Damage"
+    source: "Fossil"
+    where: "Một prefix chỉ có từ Fossil, 40–49% ở item level 75. Nó thuộc group khác với \"increased Elemental Damage with Attack Skills\", nên cả hai có thể cùng nằm trên một cây sword. Một [[Prismatic Fossil]] nhân weight của nó lên."
+  - mod: "#% increased Physical Damage / #% chance to Impale Enemies on Hit with Attacks"
+    source: "Veiled / Bench"
+    where: "Unveil: 120–139% kèm 21–25%. Bench: lên tới 95–105% kèm 18–20% giá 8 Chaos Orb. Có các bản cho Bleeding, Poison và Blind. Tất cả chung group với increased Physical Damage thuần."
+  - mod: "Gain #% of Physical Damage as Extra Fire Damage"
+    source: "Influence Shaper / Warlord"
+    where: "Một prefix, 18–20% ở mức cao nhất: Shaper ở item level 80, Warlord ở 78. Shaper và Redeemer có bản tương tự cho Cold. Fire và Cold là hai group riêng."
+  - mod: "#% chance to deal Double Damage"
+    source: "Bench / Veiled"
+    where: "4–5% từ [[Crafting Bench]] giá 8 Chaos Orb; 6–7% khi unveil. Suffix thứ ba quen thuộc cho một cây sword không crit."
+  - mod: "Skills fire an additional Projectile"
+    source: "Corruption"
+    where: "Một implicit corruption mà dữ liệu liệt kê cho sword, cùng với Resolute Technique, 14–18% increased Critical Strike Chance và \"Damage Penetrates 8–10% Elemental Resistances\". Một [[Vaal Orb]] cho ngẫu nhiên một cái, nếu nó có cho, và thay thế implicit của base."
+mistakes:
+  - "**Craft một weapon physical trên thrusting sword mà không biết cái giá.** Pool có 21% prefix physical so với 29.5% trên one-hand sword, và damage gốc thấp hơn một phần năm. Làm vậy vì critical strike, còn không thì đừng làm."
+  - "**Đặt whetstone và một prefix physical bench lên cây foil elemental.** Added elemental damage không được cái nào trong hai nhân lên."
+  - "**Bench element bạn đã roll ra.** Cùng group. Bench thêm một element khác."
+  - "**Dùng Essence lên cây sword đã khóa.** Theo thử nghiệm của cộng đồng, nó phớt lờ khóa và roll lại cả hai phía."
+  - "**Đuổi theo cả ba suffix crit bằng roll lại thường.** Cộng lại chúng là một phần ba số lần roll suffix; cả ba cùng lúc cần Fossil hoặc một kế hoạch có bench trong đó."
+  - "**Vaal một cây rapier để lấy implicit mà quên cái nó đang có.** Implicit corruption thay thế Critical Strike Multiplier."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Cả hai pool cùng weight của chúng, mọi base, tier, Essence, hệ số nhân Fossil và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "Content Update 3.30.0: patch notes chính thức", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Giá 3.30 của các modifier bảo vệ trên weapon." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "Các reforge element, Critical và Speed cùng giá Lifeforce của chúng." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }
+  - { title: "poedb: Essence", url: "https://poedb.tw/us/Essence", kind: data, note: "Essence được ghi nhận là phớt lờ các modifier bảo vệ." }

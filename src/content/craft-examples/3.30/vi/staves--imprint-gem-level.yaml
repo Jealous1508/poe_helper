@@ -1,0 +1,174 @@
+category: staves
+title: "Alt, Imprint, Regal: một prefix gem level bậc cao nhất không thể mất"
+level: 3
+summary: "Roll \"+2 to all Spell Skill Gems\" hoặc +4 của element bạn dùng lên cây staff Magic, lưu nó bằng một Imprint từ beast, rồi lặp lại Regal Orb tới khi nó không thêm thứ gì block bench."
+goal: >-
+  Một cây staff endgame dựng quanh một prefix gem level ở bậc cao nhất, đủ
+  sạch để mọi ô khác vẫn do bạn lấp. Kỹ thuật là Imprint, thứ làm cho Regal
+  Orb lặp lại được. Nét riêng của staff là **thế nào thì tính là một Regal
+  xấu**: không chỉ là một ô bị phí, mà còn là một modifier chiếm mất group
+  bạn định dùng.
+base: "Primordial Staff"
+itemLevel: 77
+baseWhy: >-
+  Primordial Staff có implicit +25% block với yêu cầu thấp nhất, 99 Strength
+  và 99 Intelligence. Item level 77 là mức thấp nhất mà +4 cho spell gem của
+  một element roll được; "+2 to Level of all Spell Skill Gems" chỉ cần 55.
+  Với một cây staff bạn có thể nâng cấp về sau, 84 đắt hơn và mở cast speed
+  cùng spell damage tốt nhất.
+methods: [currency, beast, bench]
+result:
+  implicits: ["+25% Chance to Block Spell Damage"]
+  prefixes:
+    - { text: "+2 to Level of all Spell Skill Gems" }
+    - { text: "94% increased Spell Damage / 27% increased Mana Regeneration Rate", how: crafted }
+  suffixes:
+    - { text: "36% increased Cast Speed" }
+needs:
+  - { item: "[[Orb of Alteration]]", amount: "400–800", note: "chuỗi xui thì dài hơn" }
+  - { item: "[[Orb of Transmutation]]", amount: "1" }
+  - { item: "[[Craicic Croaker]]", amount: "1 mỗi lần thử Regal", note: "cộng ba beast Rare mỗi lần" }
+  - { item: "[[Regal Orb]]", amount: "1 mỗi lần thử" }
+  - { item: "[[Chaos Orb]]", amount: "6", note: "cho bench" }
+cost: >-
+  Alteration số lượng lớn, rồi beast. Đây là con đường chậm mà rẻ tới một
+  prefix gem level bậc cao nhất: nó đòi kiên nhẫn thay vì Fossil. Trong 3.30
+  chỉ beast đỏ được bắt, nên hãy kiểm Menagerie xem có Croaker chưa trước
+  Alteration đầu tiên, không phải sau cái cuối cùng.
+odds: >-
+  Ở item level 77, một lần roll prefix ra "+2 to Level of all Spell Skill
+  Gems" khoảng 1 trên 371 lần, theo phép tính của chúng tôi từ weight, và ra
+  +4 của một element đã chọn khoảng 1 trên 743. Nhận cái nào cũng được thì là
+  khoảng 1 trên 248. Không phải Alteration nào cũng roll ra prefix, nên số
+  orb cao hơn: vài trăm cái là bình thường.
+
+
+  Regal Orb thêm một modifier ngẫu nhiên. Khi "all Spell Skill Gems" đã ở
+  trên staff, khoảng một phần tư số prefix nó có thể thêm là thứ một caster
+  fire dùng, và khoảng một phần năm số suffix là cast speed, Spell Critical
+  Strike Chance hoặc Global Critical Strike Multiplier. Gần một nửa số prefix
+  là modifier attack hoặc Mana.
+steps:
+  - title: "Alteration tới khi ra prefix gem level"
+    do: >-
+      Dùng một [[Orb of Transmutation]] lên một cây staff trắng item level
+      77, rồi [[Orb of Alteration]] tới khi prefix là **"+2 to Level of all
+      Spell Skill Gems"** hoặc **+4 cho spell gem của element bạn dùng**.
+    why: >-
+      Đây là hai modifier mà staff sinh ra để mang, và bench không bán cái
+      nào. Item Magic giữ cho cuộc tìm kiếm ở mức một prefix mỗi orb, và bạn
+      chỉ phải nhận ra hai cái tên: "Archon's", hoặc cái tên cao nhất của
+      element bạn dùng ("Magmancer's" cho fire).
+    check: >-
+      Giữ Alt và đọc con số, đừng chỉ đọc họ. "+1 to all" và +3 của một
+      element vẫn là những họ đó, thấp hơn một bậc. Rồi nhìn sang suffix: bạn
+      muốn nó trống.
+    fail: >-
+      Nếu ngân sách cạn ở +3 của element bạn dùng, đó đã là một cây staff
+      tốt. Bỏ qua Imprint, dùng Regal Orb rồi ra bench: +3 là 1 trên 83 lần
+      roll prefix và không đáng một con beast để bảo vệ.
+    state:
+      rarity: magic
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+      suffixes: [{ text: "+271 to Accuracy Rating" }]
+  - title: "Tới được prefix đứng một mình"
+    do: >-
+      Nếu cây staff Magic còn có một suffix bạn không muốn, cứ tiếp tục dùng
+      Alteration tới khi prefix xuất hiện một mình hoặc đi kèm một suffix bạn
+      chịu giữ. Đừng dùng [[Orb of Augmentation]].
+    why: >-
+      Bất cứ thứ gì trên item Magic đều nằm trong mọi Imprint của nó. Một
+      suffix rác lúc này là một suffix rác ở mọi lần thử. Làm vậy tốn thêm
+      Alteration, và với một roll hiếm cỡ này, có người chơi chấp nhận một
+      suffix vô hại thay vào; đó là một đổi chác hợp lý, vì staff có ba ô
+      suffix.
+    state:
+      rarity: magic
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+  - title: "Imprint"
+    do: >-
+      Ở [[Menagerie]], dùng công thức **Create an Imprint of a Magic
+      Item** lên cây staff. Nó cần một [[Craicic Croaker]] và ba beast Rare
+      khác.
+    why: >-
+      Imprint là một bản sao lưu của cây staff đúng như lúc này. Nó chỉ dùng
+      được trên item Magic, nên nó phải đi trước Regal Orb.
+    check: >-
+      Imprint nằm trong inventory của bạn như một item riêng. Khoan dùng nó.
+  - title: "Regal Orb, và đánh giá nó theo kiểu staff"
+    do: >-
+      Dùng một [[Regal Orb]]. Đọc modifier nó vừa thêm và xếp nó vào một
+      trong ba loại. **Giữ:** một prefix bạn dùng (prefix gem của element bạn
+      dùng, spell damage, hybrid kèm Mana, added damage cho spell của element
+      bạn dùng) hoặc một suffix damage. **Chấp nhận được:** bất kỳ suffix nào
+      khác. **Loại:** bất kỳ prefix nào bạn không dùng.
+    why: >-
+      Cây staff còn hai ô prefix và bench cần một trong số đó. Một prefix vô
+      dụng là một nửa chỗ còn lại. Vài prefix bị loại còn gây hại lần hai:
+      "+# to Level of Socketed Melee Gems" chiếm group của các prefix element
+      và của craft Socketed Support Gems ở bench, còn increased Cold Damage
+      trên một cây staff fire chiếm cái ô duy nhất dành cho phần trăm damage.
+    fail: >-
+      Dùng [[Imprint]] lên cây staff để đưa nó về trạng thái Magic, tạo một
+      Imprint mới bằng một con Croaker khác, rồi dùng thêm một Regal Orb. Mỗi
+      lần thử tốn một Regal Orb và một bộ beast.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes: [{ text: "+2 to Level of all Spell Skill Gems" }]
+      suffixes: [{ text: "36% increased Cast Speed" }]
+  - title: "Để prefix gem quyết định craft bench"
+    do: >-
+      **Khi staff có "all Spell Skill Gems"** (như ở đây), bench có hai
+      prefix tốt: spell damage, tốt nhất là bản hybrid 89–105% kèm 26–30%
+      Mana Regeneration Rate giá 6 [[Chaos Orb]], hoặc **+1 to Level of
+      Socketed Support Gems** giá 8 Chaos Orb (+2 giá 4 Exalted Orb).
+      **Khi staff có một prefix element,** chỉ làm được spell damage.
+    why: >-
+      Craft Socketed Support Gems cùng group với các prefix element và khác
+      group với "all Spell Skill Gems". Nó nâng mọi support gắn trong staff,
+      nên nó đáng giá nhất khi main skill nằm trong sáu socket link ở đó. Còn
+      không thì spell damage là lựa chọn an toàn hơn.
+    check: >-
+      Một prefix và hai suffix vẫn còn trống. Chúng dành cho một
+      [[Exalted Orb]] khi bạn dư được một viên, hoặc cho những lần craft khó
+      hơn trong các ví dụ kế tiếp.
+    state:
+      implicits: ["+25% Chance to Block Spell Damage"]
+      prefixes:
+        - { text: "+2 to Level of all Spell Skill Gems" }
+        - { text: "94% increased Spell Damage / 27% increased Mana Regeneration Rate", how: crafted }
+      suffixes: [{ text: "36% increased Cast Speed" }]
+variations: >-
+  **Con Wolf, và cái giá của nó.** Khi phía suffix trống, công thức beast
+  **Add a Prefix, Remove a Random Suffix** ([[Farric Wolf Alpha]]) không có
+  gì để gỡ. Nhưng prefix nó thêm là ngẫu nhiên, hữu ích cho một caster fire
+  khoảng 1 trên 4 lần, và nó rơi vào cái ô lẽ ra bench đã lấp bằng spell
+  damage. Chỉ dùng nó khi cây staff đã có hai prefix bạn giữ và đằng nào
+  bench cũng dành cho một suffix.
+
+
+  **Trên base có Memory Strands.** Một Alteration tiêu nhiều nhất 8 strand và
+  một Regal Orb nhiều nhất 16, theo bảng data-mine. Strand có đẩy một họ hai
+  bậc như "all Spell Skill Gems" về phía bậc cao nhất hay không thì chưa ai
+  công bố. Nếu bạn thử, hãy dùng một [[Orb of Remembrance]] lên cây staff
+  trắng trước và ghi lại bao nhiêu lần roll gem level của bạn ra ở bậc cao
+  nhất.
+
+
+  **Dùng Fossil thay vào.** Một Faceted Fossil với một Aetheric Fossil dùng
+  cùng nhau làm "+2 to all" ra khoảng 1 trên 57 lần roll prefix. Nhanh hơn
+  Alteration rất nhiều, và cho ra một cây staff Rare có các modifier ngẫu
+  nhiên xung quanh, trong khi lần craft này cho một cây sạch. Ví dụ kế tiếp
+  đi theo hướng đó.
+mistakes:
+  - "Dùng Regal Orb trước Imprint. Không tạo được Imprint của item Rare."
+  - "Giữ một Regal đã thêm prefix attack vì hết Croaker. Vốn còn hai ô prefix; giờ còn một, mà bench cần nó."
+  - "Dừng Alteration ở một prefix gem của element khác."
+  - "Augmentation lên cây staff Magic để xem ra gì. Nếu suffix xấu thì giờ nó nằm trong mọi lần thử."
+verified: "2026-11-19"
+sources:
+  - { title: "Bản xuất dữ liệu game Path of Exile (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Tier, weight, group và giá bench. Xác suất là phép tính của chúng tôi." }
+  - { title: "poedb: Bestiary recipes", url: "https://poedb.tw/us/Bestiary_Recipe", kind: data, note: "Công thức Imprint và công thức thêm prefix, cùng các beast chúng cần trong 3.30." }
+  - { title: "poedb: Memory Strands", url: "https://poedb.tw/us/Memory_Strands", kind: data, note: "Số strand mỗi currency tiêu, theo data-mine. Không chính thức." }

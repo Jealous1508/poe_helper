@@ -1,0 +1,30 @@
+---
+import { t, type Locale } from '../../i18n';
+
+/** Difficulty of a craft or a tool, 1 to 5, as five pips and a word. */
+interface Props {
+  level: number;
+  locale: Locale;
+  /** Pips only, for tight places. The word is still read out. */
+  quiet?: boolean;
+}
+const { level, locale, quiet = false } = Astro.props;
+const label = t(locale, `craft.level.${level}`);
+---
+<span class="level" data-level={level} title={label}>
+  <span class="level__pips" aria-hidden="true">
+    {[1, 2, 3, 4, 5].map((n) => <i class:list={{ on: n <= level }}></i>)}
+  </span>
+  <span class:list={['level__word', { 'visually-hidden': quiet }]}>{label}</span>
+</span>
+
+<style>
+  .level { --tone: var(--buff); display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+  .level[data-level='3'] { --tone: var(--rework); }
+  .level[data-level='4'] { --tone: var(--term-unique); }
+  .level[data-level='5'] { --tone: var(--nerf); }
+  .level__pips { display: inline-flex; gap: 3px; }
+  .level__pips i { width: 7px; height: 14px; border: 1px solid var(--tone); border-radius: 1px; }
+  .level__pips i.on { background: var(--tone); }
+  .level__word { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tone); }
+</style>

@@ -1,0 +1,260 @@
+category: wands
+title: "A +2 spell wand around a fractured \"+1 to Level of all Spell Skill Gems\""
+level: 5
+summary: "Fracture the rarest prefix on a wand, let three Fossils roll both sides at once around it, and pay for a lock only to raise the suffix tiers. A plan where most of the work is choosing when to stop."
+goal: >-
+  A fire caster's wand with both gem prefixes, +2 to its spells in all,
+  flat fire damage to spells, top cast speed and Spell Critical Strike
+  Chance. The shape of this craft is unlike the weapon plans elsewhere on
+  this site. After the fracture there is no fixed sequence of stages:
+  **one tool rerolls prefixes and suffixes together, favourably, and the
+  skill is in judging each result on both sides and knowing which
+  shortfall is worth a lock and which is worth another reroll.**
+base: "Prophecy Wand"
+itemLevel: 84
+baseWhy: >-
+  Item level 84 opens every caster tier: Spell Damage at 84, cast speed at
+  83. The Prophecy Wand has the largest Spell Damage implicit (36–40%). A
+  Profane Wand, with 14% cast speed, is the alternative for a build that is
+  short of speed.
+
+
+  The base must have **no influence**: a [[Fracturing Orb]] refuses
+  influenced items.
+methods: [fracture, fossil, meta, harvest, bench, finishing]
+result:
+  note: "Fractured"
+  implicits: ["38% increased Spell Damage"]
+  prefixes:
+    - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+    - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+    - { text: "Adds 57 to 108 Fire Damage to Spells", how: fossil }
+  suffixes:
+    - { text: "30% increased Cast Speed", how: harvest }
+    - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+    - { text: "64% increased Spell Critical Strike Chance", how: crafted }
+needs:
+  - { item: "A wand with \"+1 to Level of all Spell Skill Gems\" fractured, item level 84", amount: "1", note: "bought, found, or made in stage 1" }
+  - { item: "[[Aetheric Fossil]], [[Faceted Fossil]] and [[Scorched Fossil]]", amount: "a dozen or more of each" }
+  - { item: "[[Powerful Chaotic Resonator]]", amount: "one per attempt" }
+  - { item: "[[Divine Orb]]", amount: "4 per lock" }
+  - { item: "[[Sacred Orb]]", amount: "1 per lock" }
+  - { item: "[[Primal Crystallised Lifeforce]]", amount: "75 per reforge" }
+  - { item: "[[Chaos Orb]]", amount: "3", note: "for the final bench craft" }
+cost: >-
+  The fractured base is nearly all of it. "+1 to Level of all Spell Skill
+  Gems" is 1 prefix roll in 1,583, and in 3.30 fractured items come only
+  from Tier 5 drops, a [[Fracturing Orb]] or a [[Fractured Fossil]]. After
+  that, the Fossil stage is cheap per attempt and the lock stage is 4
+  [[Divine Orb]]s and a [[Sacred Orb]] per attempt, with how many of each
+  you buy being your own decision.
+
+
+  We give no total, for the usual reasons, and one more: this plan has no
+  natural end. The item is usable after a single good Fossil result, and
+  everything beyond that is tiers.
+odds: >-
+  All figures are our arithmetic from the weights at item level 84, with
+  the fractured prefix on the wand, and they leave out Fossil-only
+  modifiers.
+
+
+  **Prefixes, per Fossil attempt.** One prefix roll is "+1 to Level of all
+  Fire Spell Skill Gems" 22% of the time. When the result has two more
+  prefixes, the gem prefix is among them 55% of the time, by our simulation
+  of the same weights, and the other one is flat Fire Damage to Spells more
+  often than anything else.
+
+
+  **Suffixes, per Fossil attempt.** A result with three suffixes has both
+  cast speed and Spell Critical Strike Chance 64% of the time, and at least
+  one of them almost always. **Tiers are another matter:** each of those
+  suffixes is at Tier 2 or better about 1 suffix roll in 10.
+
+
+  **Under the lock.** The Caster reforge gives cast speed or Spell Critical
+  Strike Chance every time. If its tier is drawn by weight, cast speed is
+  25% or more 1 time in 4 (two tiers of eight) and Spell Critical Strike
+  Chance 80% or more 1 time in 3 (two of six). Not measured in 3.30.
+steps:
+  - title: "Stage 1: the fractured prefix"
+    do: >-
+      Buy or find an item level 84 wand with **"+1 to Level of all Spell
+      Skill Gems" fractured**. To make one: get the prefix on a Rare wand
+      with **exactly four** modifiers, and use a [[Fracturing Orb]].
+    why: >-
+      List what can aim at each modifier this wand wants. The Fire gem
+      prefix: three Fossils, 1 roll in 5. Flat fire to spells: the same
+      Fossils, or an Essence. Cast speed and Spell Critical Strike Chance:
+      Essences, an Aetheric Fossil, a Caster reforge, the bench. The
+      all-spells prefix: two Fossils take it to 1 roll in 89, and nothing
+      does better. It is also the modifier the element Fossil pushes
+      *down*. So it is the one to make permanent, and once it is, the
+      element Fossil can be used without that cost.
+    check: >-
+      A Fracturing Orb picks at random among the modifiers: 1 in 4 with
+      exactly four. Do not add a fifth.
+    fail: >-
+      It fractured another modifier. The wand cannot be fractured again or
+      returned to an [[Imprint]]. If the fractured modifier is a good
+      caster one, the wand is a base for a lesser plan; otherwise it is
+      lost as a base.
+    state:
+      note: "Fractured"
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+112 to maximum Mana" }
+      suffixes:
+        - { text: "17% increased Cast Speed" }
+        - { text: "+37 to Intelligence" }
+  - title: "Stage 2: three Fossils, both sides at once"
+    do: >-
+      Use an [[Aetheric Fossil]], a [[Faceted Fossil]] and a
+      [[Scorched Fossil]] in a [[Powerful Chaotic Resonator]]. Repeat until
+      **"+1 to Level of all Fire Spell Skill Gems" is on the wand** and the
+      third prefix is flat Fire Damage to Spells, a Spell Damage prefix, or
+      empty.
+    why: >-
+      The Fire gem prefix carries the caster, gem and fire tags and is
+      multiplied a thousandfold; the fracture means the all-spells prefix
+      no longer needs the pool kept clear for it. The same Resonator makes
+      two suffix rolls in three a caster suffix. This is why a wand needs
+      fewer locks than a mace: its Fossil works on the whole item, where a
+      Jagged Fossil only helps prefixes.
+    check: >-
+      Judge the **prefixes only** to decide whether to keep the result. A
+      third prefix that is increased Fire Damage is a keeper too: it sits
+      in the Spell Damage group at a caster's service. Maximum Mana or
+      Lightning damage to spells in that slot is a reason to roll again.
+    fail: >-
+      Nothing to repair: the fractured prefix survives every attempt. Use
+      the next set of Fossils.
+    state:
+      note: "Fractured"
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 57 to 108 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "23% increased Cast Speed", how: fossil }
+        - { text: "34% chance to Ignite", how: fossil }
+  - title: "The decision: stop, reroll or lock"
+    do: >-
+      With the prefixes right, read the suffixes and choose one of three.
+      **Stop** if cast speed and Spell Critical Strike Chance are both
+      there at tiers you accept: bench the last slot and finish. **Reroll
+      with Fossils** if the prefixes were only just acceptable: the next
+      result may be better on both sides for the price of three Fossils.
+      **Lock** if the prefixes are as good as you expect to see and the
+      suffixes are not.
+    why: >-
+      This is the judgement the plan turns on, and it is a comparison of
+      prices. Getting these three prefixes again costs, on average, a few
+      Resonators. A lock costs 4 Divine Orbs and a Sacred Orb. So ordinary
+      prefixes are cheaper to roll again than to protect, and only a
+      prefix side with a high flat damage tier, which is 1 roll in 10 at
+      Tier 3 or better, is worth locking. The wand above has Tier 2 flat
+      damage and weak suffixes: lock.
+    check: >-
+      The prefix lock is a suffix. If the result has three suffixes there
+      is no slot for it, and the choice is between stopping and rerolling.
+  - title: "Stage 3: lock the prefixes, reforge with a Caster modifier"
+    do: >-
+      Craft **Prefix Modifiers cannot be changed** (4 [[Divine Orb]]s and 1
+      [[Sacred Orb]]), then at the [[Horticrafting Station]] use **Reforge a
+      Rare item with random modifiers, including a Caster modifier** (75
+      [[Primal Crystallised Lifeforce]]). Repeat both until the guaranteed
+      suffix is at the tier you want and **one suffix slot is open or holds
+      something useful**.
+    why: >-
+      With the prefixes closed, the caster tag can only be met by a suffix,
+      and on an ordinary wand two suffixes carry it: cast speed and Spell
+      Critical Strike Chance. Whichever comes, the bench sells the other.
+      This reforge is for the tier, which the Fossils do nothing about.
+    check: >-
+      Three prefixes unchanged, the lock gone, a caster suffix. Then its
+      tier: "of Sortilege" is 25–28% cast speed and "of Finesse" 29–32%;
+      "of Ruin" is 80–89% Spell Critical Strike Chance and "of Unmaking"
+      90–109%.
+    fail: >-
+      A low tier, or three suffixes with nothing to keep: lock and reforge
+      again. Set the number of attempts beforehand. That Harvest reforges
+      respect the lock is player-tested, not official; do not use Fossils
+      under it, since for those we could not confirm it in 3.30.
+    state:
+      note: "Fractured"
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 57 to 108 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "30% increased Cast Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+  - title: "Stage 4: bench the missing caster suffix"
+    do: >-
+      In the open suffix, craft whichever of the pair the reforge did not
+      give: **60–69% increased Spell Critical Strike Chance** (3
+      [[Chaos Orb]]s) or 18–21% increased Cast Speed (4 Exalted Orbs).
+    why: >-
+      The bench's Spell Critical Strike Chance is about two thirds of the
+      best tier for 3 Chaos Orbs; its cast speed costs far more for the
+      same fraction. So the kinder outcome of stage 3 is rolled cast speed
+      and benched critical strike chance, as here, and a reforge that gives
+      top Spell Critical Strike Chance with no cast speed is worth less
+      than it looks.
+    state:
+      note: "Fractured"
+      implicits: ["38% increased Spell Damage"]
+      prefixes:
+        - { text: "+1 to Level of all Spell Skill Gems", how: fractured }
+        - { text: "+1 to Level of all Fire Spell Skill Gems", how: fossil }
+        - { text: "Adds 57 to 108 Fire Damage to Spells", how: fossil }
+      suffixes:
+        - { text: "30% increased Cast Speed", how: harvest }
+        - { text: "+31% to Global Critical Strike Multiplier", how: harvest }
+        - { text: "64% increased Spell Critical Strike Chance", how: crafted }
+  - title: "Finish: sockets and a Divine Orb"
+    do: >-
+      Three sockets, linked. A [[Divine Orb]] if the flat damage or cast
+      speed sits low in its range.
+    why: >-
+      A Divine Orb rerolls every value, crafted and fractured included, and
+      no tier. The two gem prefixes have no number to reroll, so on this
+      wand it acts on the third prefix and the suffixes only.
+variations: >-
+  **The third prefix from the bench.** If stage 2 leaves the third prefix
+  **empty**, craft 55–66% increased Spell Damage there (4 Exalted Orbs).
+  The bench slot is then used, so stage 3 has to deliver both caster
+  suffixes by itself, or you accept one.
+
+
+  **A third gem level.** A [[Vaal Orb]] can replace the implicit with "+1 to
+  Level of all Fire Spell Skill Gems". It costs the Spell Damage implicit,
+  the outcome is not in your hands, and the finished wand may be rerolled
+  instead. On a wand of this cost it is a decision for a second copy.
+
+
+  **Damage over time.** For a fire damage over time spell, the suffixes
+  wanted are cast speed and "+#% to Fire Damage over Time Multiplier". The
+  Scorched Fossil raises that suffix tenfold as well, the Caster reforge
+  still gives cast speed or the unwanted Spell Critical Strike Chance, and
+  the bench's 18–20% multiplier replaces the critical strike craft.
+
+
+  **Foresight.** A [[Hinekora's Lock]] belongs on the Fracturing Orb in
+  stage 1. Nothing later in the plan is a single irreversible click.
+mistakes:
+  - "Locking an ordinary prefix side. Three Fossils make it again for less than 4 Divine Orbs and a Sacred Orb."
+  - "Using Fossils under the lock. We could not confirm that Fossils respect it in 3.30; a Harvest reforge is the tested tool."
+  - "Fracturing the element gem prefix instead. Fossils reach that one at 1 roll in 5; the all-spells prefix is the one nothing aims at."
+  - "Keeping a result with both gem prefixes and maximum Mana as the third prefix, then paying for locks on it. The third prefix is a third of the damage this side can hold."
+  - "Chasing Tier 1 on both caster suffixes with repeated locks. Each attempt has one guaranteed suffix; the second is the bench's job."
+verified: "2026-11-19"
+sources:
+  - { title: "Path of Exile game data export (RePoE)", url: "https://repoe-fork.github.io/", kind: data, note: "Weights, tags, groups, tiers, Fossil multipliers, bench costs and the in-game text of the Fracturing Orb. The odds are our arithmetic and leave out Fossil-only modifiers." }
+  - { title: "Content Update 3.30.0: official patch notes", url: "https://www.pathofexile.com/forum/view-thread/4013680", kind: official, note: "Where fractured items come from in 3.30, and the cost of the protection modifiers." }
+  - { title: "poedb: Horticrafting", url: "https://poedb.tw/us/Horticrafting", kind: data, note: "The Caster reforge and its cost." }
+  - { title: "Maxroll crafting resources", url: "https://maxroll.gg/poe/resources/crafting-resources", kind: guide, note: "Player-tested behaviour of the protection modifiers with Harvest reforges. Partly older than 3.30." }
