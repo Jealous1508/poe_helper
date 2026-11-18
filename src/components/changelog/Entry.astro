@@ -4,15 +4,19 @@ import GameImage from '../GameImage.astro';
 import Popup from '../Popup.astro';
 import Rich from '../Rich.astro';
 import Tag from '../Tag.astro';
-import { t, type Locale } from '../../i18n';
+import { pagePath, t, type Locale } from '../../i18n';
 import type { ChangelogEntry } from '../../lib/changelog';
+import type { Update } from '../../lib/updates';
 
 interface Props {
   entry: ChangelogEntry;
   league: string;
   locale: Locale;
+  /** Hotfixes and developer posts since launch that amend this entry. */
+  since?: Update[];
 }
-const { entry, league, locale } = Astro.props;
+const { entry, league, locale, since = [] } = Astro.props;
+const updatesHref = pagePath(locale, league, 'updates');
 const popupId = `impact-${entry.id}`;
 const impactParts = [
   { key: 'meaning', text: entry.impact.meaning },
@@ -34,6 +38,15 @@ const impactParts = [
     </header>
 
     <Rich text={entry.summary} league={league} where={entry.where} class="entry__summary" />
+
+    {since.length > 0 && (
+      <p class="entry__since">
+        <span class="entry__since-label">{t(locale, 'updates.since')}</span>
+        {since.map((update) => (
+          <a href={updatesHref + '#' + update.id} data-status={update.status} title={update.headline}>{update.title}</a>
+        ))}
+      </p>
+    )}
 
     {entry.points && (
       <ul class="entry__points">
@@ -94,6 +107,24 @@ const impactParts = [
   .entry__head h3 a { color: inherit; text-decoration: none; }
   .entry__head h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
   .entry__main { max-width: var(--measure); }
+  /* The entry describes the patch as it launched. This line is where it
+     has moved since: a solid dot is in the game, a hollow one is announced. */
+  .entry__since {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem 0.9rem;
+    margin: 0.75rem 0 0;
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid var(--buff);
+    background: var(--surface);
+    font-size: 0.85rem;
+  }
+  .entry__since-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--buff); }
+  .entry__since a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; text-decoration: none; }
+  .entry__since a:hover { text-decoration: underline; }
+  .entry__since a::before { content: ''; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--buff); }
+  .entry__since a[data-status='announced']::before { background: transparent; border: 2px solid var(--rework); }
   .entry__points { margin: 0.7rem 0 0; font-size: 0.96rem; }
   .entry__points li::marker { color: var(--text-muted); }
   .entry__figure { margin: 1.1rem 0 0; }

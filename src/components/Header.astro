@@ -8,11 +8,14 @@ import Donate from './Donate.astro';
 interface Props {
   locale: Locale;
   league: League;
-  section?: 'changelog' | 'builds' | 'leveling';
+  section?: 'changelog' | 'updates' | 'builds' | 'leveling';
 }
 const { locale, league, section } = Astro.props;
+// Updates sits next to the changelog on purpose: one is the patch as it
+// launched, the other is everything that has happened to it since.
 const links = [
   { id: 'changelog', href: pagePath(locale, league.id, 'changelog') },
+  { id: 'updates', href: pagePath(locale, league.id, 'updates') },
   { id: 'builds', href: pagePath(locale, league.id, 'builds') },
   { id: 'leveling', href: pagePath(locale, league.id, 'leveling') },
 ] as const;
@@ -94,6 +97,8 @@ const links = [
     .bar { gap: 0 0.6rem; }
     .brand__version { display: none; }
     .bar { grid-template-columns: 1fr auto auto; row-gap: 0; padding-top: 0.5rem; }
-    .nav { grid-column: 1 / -1; grid-row: 2; margin: 0.25rem calc(var(--gutter) * -1) 0; padding: 0 calc(var(--gutter) - 0.85rem); overflow-x: auto; min-height: 2.6rem; }
+    .nav { grid-column: 1 / -1; grid-row: 2; margin: 0.25rem calc(var(--gutter) * -1) 0; padding: 0 calc(var(--gutter) - 0.6rem); overflow-x: auto; min-height: 2.6rem; }
+    /* Four tabs have to fit a 375px screen without scrolling sideways. */
+    .nav__link { padding: 0 0.6rem; font-size: 0.92rem; white-space: nowrap; }
   }
 </style>

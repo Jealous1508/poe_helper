@@ -1,0 +1,256 @@
+---
+import Base from '../../../layouts/Base.astro';
+import UpdateCard from '../../../components/updates/UpdateCard.astro';
+import { getLeague } from '../../../config/leagues';
+import { isLocale, t } from '../../../i18n';
+import { getBuilds } from '../../../lib/builds';
+import { getChangelog } from '../../../lib/changelog';
+import { leaguePaths } from '../../../lib/paths';
+import { getUpdates, leagueDay, updateStatuses, type Update } from '../../../lib/updates';
+
+export const getStaticPaths = leaguePaths;
+
+const { locale: rawLocale, league: leagueId } = Astro.params;
+if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
+const locale = rawLocale;
+const league = getLeague(leagueId);
+const { updates, isFallback } = getUpdates(league.id, locale);
+
+const titles = new Map(updates.map((u) => [u.id, u.title]));
+const entryTitles = new Map(getChangelog(league.id, locale).entries.map((e) => [e.id, e.title]));
+const buildNames = new Map(getBuilds(league.id, locale).builds.map((b) => [b.slug, b.name]));
+
+const dateLocale = locale === 'vi' ? 'vi-VN' : 'en-GB';
+const longDate = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString(dateLocale, { day: 'numeric', month: 'long', timeZone: 'UTC' });
+
+// One group per calendar day, newest day first; the loader has already
+// ordered the posts inside a day.
+const days: { date: string; updates: Update[] }[] = [];
+for (const update of updates) {
+  const last = days.at(-1);
+  if (last && last.date === update.date) last.updates.push(update);
+  else days.push({ date: update.date, updates: [update] });
+}
+
+const latestLive = updates.find((u) => u.status === 'live');
+const announced = updates.filter((u) => u.status === 'announced');
+const lastChecked = updates.map((u) => u.verified).sort().at(-1);
+const counts = { all: updates.length, live: updates.length - announced.length, announced: announced.length };
+---
+<Base locale={locale} league={league} title={t(locale, 'nav.updates')} description={t(locale, 'updates.lede', { league: league.name })} section="updates" isFallback={isFallback}>
+  <div class="container page-head">
+    <div class="eyebrow">{t(locale, 'updates.eyebrow')}{lastChecked && ` · ${t(locale, 'common.verified')} ${lastChecked}`}</div>
+    <h1>{t(locale, 'updates.title')}</h1>
+    <p class="lede">{t(locale, 'updates.lede', { league: league.name })}</p>
+    <p class="how">{t(locale, 'updates.how')}</p>
+  </div>
+
+  {updates.length === 0 ? (
+    <div class="container"><p class="muted">{t(locale, 'updates.none')}</p></div>
+  ) : (
+    <div class="container" data-updates>
+      <dl class="now">
+        <div>
+          <dt>{t(locale, 'updates.stat.version')}</dt>
+          <dd>
+            {latestLive ? <a href={`#${latestLive.id}`}>{latestLive.title}</a> : league.id}
+            {latestLive && <span>{longDate(latestLive.date)}</span>}
+          </dd>
+        </div>
+        <div>
+          <dt>{t(locale, 'updates.stat.announced')}</dt>
+          <dd>
+            {announced.length > 0
+              ? <a href={`#${announced[0].id}`}>{t(locale, 'updates.stat.posts', { count: announced.length })}</a>
+              : t(locale, 'updates.stat.none')}
+            {announced.length > 0 && <span>{longDate(announced[0].date)}</span>}
+          </dd>
+        </div>
+      </dl>
+
+      <div class="filter" role="group" aria-label={t(locale, 'updates.filter')}>
+        <button type="button" class="chip is-active" data-status-filter="all" aria-pressed="true">
+          {t(locale, 'updates.filter.all')}<span class="chip__n">{counts.all}</span>
+        </button>
+        {updateStatuses.map((status) => (
+          <button type="button" class="chip" data-status-filter={status} aria-pressed="false">
+            <span class={`chip__dot chip__dot--${status}`} aria-hidden="true"></span>
+            {t(locale, `updates.filter.${status}`)}<span class="chip__n">{counts[status]}</span>
+          </button>
+        ))}
+      </div>
+
+      <ol class="timeline">
+        {days.map((day) => (
+          <li class="day" data-day>
+            <div class="day__when">
+              <time datetime={day.date}>{longDate(day.date)}</time>
+              <span>{t(locale, 'updates.day', { n: leagueDay(day.date, league.launchDate) })}</span>
+            </div>
+            <div class="day__items">
+              {day.updates.map((update) => (
+                <UpdateCard update={update} league={league.id} locale={locale} titles={titles} entryTitles={entryTitles} buildNames={buildNames} />
+              ))}
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="muted" data-updates-empty hidden>{t(locale, 'updates.empty')}</p>
+
+      <p class="source muted">
+        {t(locale, 'changelog.source')}
+        <a href="https://www.pathofexile.com/forum/view-forum/patch-notes" rel="noopener" target="_blank">pathofexile.com · Patch Notes</a>,
+        <a href="https://www.pathofexile.com/forum/view-forum/news" rel="noopener" target="_blank">pathofexile.com · Announcements</a>
+      </p>
+    </div>
+  )}
+</Base>
+
+<script>
+  // Show everything, only what is in the game, or only what is announced.
+  function applyStatus(filter: string) {
+    const root = document.querySelector<HTMLElement>('[data-updates]');
+    if (!root) return;
+    for (const chip of root.querySelectorAll<HTMLElement>('[data-status-filter]')) {
+      const active = chip.dataset.statusFilter === filter;
+      chip.classList.toggle('is-active', active);
+      chip.setAttribute('aria-pressed', String(active));
+    }
+    let total = 0;
+    for (const day of root.querySelectorAll<HTMLElement>('[data-day]')) {
+      let shown = 0;
+      for (const card of day.querySelectorAll<HTMLElement>('[data-update]')) {
+        const show = filter === 'all' || card.dataset.status === filter;
+        card.hidden = !show;
+        if (show) shown += 1;
+      }
+      // A date with nothing under it is just noise.
+      day.hidden = shown === 0;
+      total += shown;
+    }
+    const empty = root.querySelector<HTMLElement>('[data-updates-empty]');
+    if (empty) empty.hidden = total > 0;
+  }
+
+  document.addEventListener('click', (event) => {
+    const chip = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-status-filter]') : null;
+    if (chip?.dataset.statusFilter) applyStatus(chip.dataset.statusFilter);
+  });
+  // A link to one update has to land on it even if a filter was hiding it.
+  window.addEventListener('hashchange', () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target?.hasAttribute('data-update') && target.hidden) {
+      applyStatus('all');
+      target.scrollIntoView();
+    }
+  });
+  document.addEventListener('astro:page-load', () => {
+    const root = document.querySelector<HTMLElement>('[data-updates]');
+    if (root) root.dataset.enhanced = 'true';
+  });
+</script>
+
+<style>
+  .how { margin-top: 1rem; font-size: 0.95rem; max-width: var(--measure); }
+
+  /* Where things stand, before the history: what you are playing, and what
+     is promised on top of it. */
+  .now {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 0 1.75rem;
+  }
+  .now div {
+    padding: 1rem 1.2rem 1.05rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  .now div:first-child { border-top: 3px solid var(--buff); }
+  .now div:last-child { border-top: 3px solid var(--rework); }
+  .now dt { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); }
+  .now dd { margin: 0.35rem 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.8rem; }
+  .now dd a, .now dd { font-family: var(--font-display); font-size: 1.45rem; font-weight: 600; color: var(--text); text-decoration: none; }
+  .now dd a:hover { color: var(--accent); }
+  .now dd span { font-family: var(--font-body); font-size: 0.86rem; font-weight: 400; color: var(--text-muted); }
+
+  .filter { visibility: hidden; display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.25rem; }
+  :global([data-updates][data-enhanced]) .filter { visibility: visible; }
+  /* Same pill as the changelog and build filters, which are scoped there. */
+  .chip {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.28rem 0.75rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.15s var(--ease), color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .chip:hover { color: var(--text); border-color: var(--accent); }
+  .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .chip.is-active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .chip__n { font-size: 0.72rem; font-variant-numeric: tabular-nums; color: var(--text-muted); }
+  .chip.is-active .chip__n { color: inherit; opacity: 0.8; }
+  .chip__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--buff); }
+  .chip__dot--announced { background: transparent; border: 2px solid var(--rework); }
+  .chip.is-active .chip__dot--live { background: currentColor; }
+  .chip.is-active .chip__dot--announced { border-color: currentColor; }
+
+  /*
+    The timeline: the date on the left, the day's posts on the right, hanging
+    off one line. The cards place their own dots on that line.
+  */
+  .timeline { --rail-gap: 2rem; list-style: none; margin: 0; padding: 0; }
+  .day {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 0 1.5rem;
+    margin: 0;
+  }
+  .day__when {
+    position: sticky;
+    top: calc(var(--header-h) + 1rem);
+    align-self: start;
+    display: grid;
+    gap: 0.15rem;
+    padding-bottom: 1.5rem;
+    text-align: right;
+  }
+  .day__when time { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; line-height: 1.25; }
+  .day__when span { font-size: 0.8rem; color: var(--text-muted); }
+  .day__items { border-left: 1px solid var(--border-strong); padding-left: var(--rail-gap); }
+  .day:last-child .day__items :global(.update:last-child) { padding-bottom: 0.5rem; }
+
+  .source { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); font-size: 0.88rem; }
+
+  @media (max-width: 860px) {
+    .timeline { --rail-gap: 1.15rem; }
+    /* No room for a date column: the date becomes a heading on the line. */
+    .day { grid-template-columns: minmax(0, 1fr); }
+    .day__when {
+      position: static;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.1rem 0.7rem;
+      text-align: left;
+      padding: 0 0 1rem calc(var(--rail-gap) + 1px);
+      margin-left: 5px;
+      border-left: 1px solid var(--border-strong);
+    }
+    .day__items { margin-left: 5px; }
+  }
+  @media (max-width: 560px) {
+    .now { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+    .now dd a, .now dd { font-size: 1.25rem; }
+  }
+</style>

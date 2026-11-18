@@ -14,6 +14,7 @@ import { getBuild, getBuilds, stagePhase } from '../../../../lib/builds';
 import { getChangelog } from '../../../../lib/changelog';
 import { imageUrl } from '../../../../lib/images';
 import { getTerms } from '../../../../lib/terms';
+import { getUpdates, updatesFor } from '../../../../lib/updates';
 
 export function getStaticPaths() {
   return locales.flatMap((locale) =>
@@ -29,6 +30,8 @@ const locale = rawLocale;
 const league = getLeague(leagueId);
 const { build, isFallback } = getBuild(league.id, locale, slug);
 const changelog = new Map(getChangelog(league.id, locale).entries.map((entry) => [entry.id, entry]));
+const since = updatesFor(getUpdates(league.id, locale).updates, { build: build.slug });
+const updatesHref = pagePath(locale, league.id, 'updates');
 const must = build.mandatory.filter((piece) => piece.level === 'must');
 const recommended = build.mandatory.filter((piece) => piece.level === 'recommended');
 // The article reads in two halves: getting there, and being there. A build
@@ -273,6 +276,21 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
             );
           })}
         </ul>
+        {since.length > 0 && (
+          <div class="since">
+            <h3>{t(locale, 'updates.since.build')}</h3>
+            <p class="muted">{t(locale, 'updates.since.build.note')}</p>
+            <ul>
+              {since.map((update) => (
+                <li>
+                  <Tag kind={update.status === 'live' ? 'buff' : 'rework'} label={t(locale, 'updates.status.' + update.status)} />
+                  <a href={updatesHref + '#' + update.id}>{update.headline}</a>
+                  <span class="muted">{update.title} · {update.date}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       <section id="verdict" data-reveal>
@@ -427,6 +445,14 @@ const confidenceKind = { proven: 'buff', mixed: 'rework', predicted: 'rework' }[
   .patch { list-style: none; padding: 0; margin: 0; max-width: var(--measure); }
   .patch li { padding: 1rem 0; border-top: 1px solid var(--border); margin: 0; font-size: 0.96rem; }
   .patch li:first-child { border-top: 0; padding-top: 0; }
+  .since { max-width: var(--measure); margin-top: 1.5rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-left: 3px solid var(--buff); border-radius: 6px; background: var(--surface); }
+  .since h3 { font-size: 1.05rem; margin: 0 0 0.3rem; }
+  .since p { font-size: 0.88rem; margin: 0 0 0.7rem; }
+  .since ul { list-style: none; margin: 0; padding: 0; }
+  .since li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.7rem; margin: 0; padding: 0.55rem 0; border-top: 1px solid var(--border); font-size: 0.94rem; }
+  .since li a { font-weight: 600; text-decoration: none; }
+  .since li a:hover { text-decoration: underline; }
+  .since li span.muted { font-size: 0.82rem; flex-basis: 100%; }
   .patch__head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
   .patch__head a { font-weight: 600; }
 

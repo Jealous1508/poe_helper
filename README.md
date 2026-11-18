@@ -39,6 +39,7 @@ src/content/
   changelog/3.30/en/{meta,big,small,new}.yaml   one file per section
   builds/3.30/en/<slug>.yaml                    one file per build
   leveling/3.30/en/{overview,act-1,act-2}.yaml  one file per act
+  updates/3.30/en/<date>-<slug>.yaml            one file per official post since launch
   home/3.30/en/home.yaml
   terms/3.30.yaml                               the game-term registry
 ```
@@ -47,6 +48,30 @@ Nothing in `src/pages`, `src/layouts` or `src/components` mentions a league by
 name. The league list is `src/config/leagues.ts`; add an entry there and a
 content folder beside the existing one to start the next league. Old leagues
 keep working at their own URLs.
+
+### Adding an update
+
+The Updates tab is everything Grinding Gear Games has shipped or announced
+since launch. When a new hotfix, patch or developer post appears:
+
+1. Copy the closest existing file in `src/content/updates/3.30/en/` to
+   `<yyyy-mm-dd>-<slug>.yaml`, using the date the official forum shows. If
+   there is already a post that day, give the new one the next `order`.
+2. Set `kind` (`hotfix`, `patch` or `announcement`) and `status`. `live` means
+   it is in the game. `announced` means the developers have only said so; give
+   it an `eta` in their words. A developer post stays `announced` even after
+   the patch lands: add the patch as its own file and point the post's lines
+   at it with `followUp: <id of the new file>`.
+3. Rewrite the changes as `points`, each tagged by how it lands on a player
+   (`buff`, `nerf`, `rework`, `new`, `fix`, `info`). A monster that hits less
+   hard is a `buff`. Group a long post with `sections`.
+4. List the changelog entries (`entries`) and build guides (`builds`) it
+   touches. They get a "Since launch" link back to the update automatically,
+   and a name that does not exist fails the build.
+5. Write the same file under `vi/`. A test compares the two and fails if the
+   facts differ.
+
+The home page shows the newest three on its own. Nothing else needs editing.
 
 ### Writing text
 

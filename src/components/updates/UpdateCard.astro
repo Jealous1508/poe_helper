@@ -1,0 +1,250 @@
+---
+import Detail from '../Detail.astro';
+import Rich from '../Rich.astro';
+import Tag from '../Tag.astro';
+import Points from './Points.astro';
+import { pagePath, t, type Locale } from '../../i18n';
+import type { Update } from '../../lib/updates';
+
+interface Props {
+  update: Update;
+  league: string;
+  locale: Locale;
+  /** Official titles of every update, by id. */
+  titles: Map<string, string>;
+  /** Changelog entry titles, by id. */
+  entryTitles: Map<string, string>;
+  /** Build names, by slug. */
+  buildNames: Map<string, string>;
+}
+const { update, league, locale, titles, entryTitles, buildNames } = Astro.props;
+const live = update.status === 'live';
+const pointColour: Record<string, string> = { buff: 'buff', nerf: 'nerf', rework: 'rework', new: 'new', fix: 'neutral', info: 'mixed' };
+---
+<article class="update" id={update.id} data-update data-status={update.status} data-reveal>
+  <header class="update__head">
+    <div class="update__tags">
+      <Tag kind={live ? 'buff' : 'rework'} label={t(locale, `updates.status.${update.status}`)} />
+      <Tag kind="neutral" label={t(locale, `updates.kind.${update.kind}`)} />
+    </div>
+    <p class="update__official">{update.title}</p>
+    <h3><a href={`#${update.id}`}>{update.headline}</a></h3>
+  </header>
+
+  <Rich text={update.summary} league={league} where={update.where} class="update__summary" />
+
+  {update.eta && (
+    <p class="update__eta"><span>{t(locale, 'updates.eta')}</span>{update.eta}</p>
+  )}
+
+  <Points points={update.points} league={league} locale={locale} where={update.where} titles={titles} />
+
+  {update.sections && (
+    <div class="update__groups">
+      {update.sections.map((section) => {
+        // When every line in a group is the same kind of change, say it
+        // once beside the heading instead of on every line.
+        const only = section.points.every((line) => line.kind === section.points[0].kind) && section.points.length > 1
+          ? section.points[0].kind
+          : undefined;
+        return (
+          <section class="group">
+            <h4>
+              <span>{section.title}</span>
+              {only && <Tag kind={pointColour[only]} label={t(locale, `updates.point.${only}`)} />}
+            </h4>
+            <Points points={section.points} league={league} locale={locale} where={update.where} titles={titles} plain={Boolean(only)} />
+          </section>
+        );
+      })}
+    </div>
+  )}
+
+  {update.meaning && (
+    <div class="update__meaning">
+      <h4>{t(locale, 'impact.meaning')}</h4>
+      <Rich text={update.meaning} league={league} where={update.where} />
+    </div>
+  )}
+
+  {(update.entries.length > 0 || update.builds.length > 0) && (
+    <dl class="update__related">
+      {update.entries.length > 0 && (
+        <div>
+          <dt>{t(locale, 'updates.related.entries')}</dt>
+          <dd>
+            {update.entries.map((id) => (
+              <a href={`${pagePath(locale, league, 'changelog')}#${id}`}>{entryTitles.get(id)}</a>
+            ))}
+          </dd>
+        </div>
+      )}
+      {update.builds.length > 0 && (
+        <div>
+          <dt>{t(locale, 'updates.related.builds')}</dt>
+          <dd>
+            {update.builds.map((slug) => (
+              <a href={pagePath(locale, league, 'builds', slug)}>{buildNames.get(slug)}</a>
+            ))}
+          </dd>
+        </div>
+      )}
+    </dl>
+  )}
+
+  {update.official.length > 0 && (
+    <Detail summary={t(locale, 'updates.official', { count: update.official.length })}>
+      <ul class="update__quotes" lang="en">
+        {update.official.map((line) => <li>{line}</li>)}
+      </ul>
+    </Detail>
+  )}
+
+  <p class="update__source">
+    <a href={update.source.url} rel="noopener" target="_blank">{t(locale, 'updates.source')}: {update.source.title} ↗</a>
+    <span>{t(locale, 'common.verified')} {update.verified}</span>
+  </p>
+</article>
+
+<style>
+  /*
+    One post from the developers. The dot on the rail carries the same
+    meaning as the first tag: solid green is in the game, a hollow amber
+    ring is a promise.
+  */
+  .update {
+    position: relative;
+    padding: 0 0 2.4rem;
+    scroll-margin-top: calc(var(--header-h) + 1rem);
+  }
+  .update::before {
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    left: calc(var(--rail-gap) * -1 - 6px);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--buff);
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+  .update[data-status='announced']::before {
+    background: var(--bg);
+    border: 2px solid var(--rework);
+  }
+  .update:target .update__head h3 a { color: var(--accent); }
+
+  .update__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .update__official {
+    margin: 0.7rem 0 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+  }
+  .update__head h3 { font-size: 1.45rem; margin: 0.15rem 0 0.6rem; max-width: 34ch; }
+  .update__head h3 a { color: inherit; text-decoration: none; }
+  .update__head h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .update :global(.update__summary) { max-width: var(--measure); margin-bottom: 1rem; }
+
+  .update__eta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.7rem;
+    align-items: baseline;
+    max-width: var(--measure);
+    margin: 0 0 1.1rem;
+    padding: 0.6rem 0.85rem;
+    border: 1px dashed var(--rework);
+    border-radius: 6px;
+    font-size: 0.92rem;
+  }
+  .update__eta span {
+    flex: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--rework);
+  }
+
+  .update > :global(.points) { max-width: var(--measure); }
+
+  /* Changes that belong together sit in their own panel, two abreast, so a
+     long post reads as a board of mechanics and not as one endless list. */
+  .update__groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  .group {
+    padding: 1rem 1.1rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  .group h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--text);
+  }
+  .group :global(.points) { font-size: 0.92rem; }
+
+  .update__meaning {
+    max-width: var(--measure);
+    margin-top: 1.4rem;
+    padding: 0.2rem 0 0.2rem 1.1rem;
+    border-left: 3px solid var(--accent);
+  }
+  .update__meaning h4 {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.45rem;
+  }
+  .update__meaning :global(.rich > :last-child) { margin-bottom: 0; }
+
+  .update__related { max-width: var(--measure); margin: 1.4rem 0 0; font-size: 0.86rem; }
+  .update__related div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0 0.75rem; padding: 0.45rem 0; border-top: 1px solid var(--border); }
+  .update__related dt { color: var(--text-muted); font-weight: 600; }
+  .update__related dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+  .update__related a { text-decoration: none; }
+  .update__related a:hover { text-decoration: underline; }
+
+  .update :global(.detail) { max-width: var(--measure); margin-top: 0.4rem; }
+  .update__quotes { margin: 0; font-size: 0.88rem; color: var(--text-muted); }
+
+  .update__source {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.2rem;
+    max-width: var(--measure);
+    margin: 0.9rem 0 0;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+  }
+  .update__source a { font-weight: 600; text-decoration: none; }
+  .update__source a:hover { text-decoration: underline; }
+
+  @media (max-width: 860px) {
+    .update__groups { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .update__head h3 { font-size: 1.25rem; }
+    .update__related div { grid-template-columns: minmax(0, 1fr); gap: 0.2rem 0; }
+  }
+</style>

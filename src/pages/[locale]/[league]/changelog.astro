@@ -8,6 +8,7 @@ import { isLocale, t } from '../../../i18n';
 import { categories, getChangelog, sections, verdicts, type Section } from '../../../lib/changelog';
 import { leaguePaths } from '../../../lib/paths';
 import { imageUrl } from '../../../lib/images';
+import { getUpdates, updatesFor } from '../../../lib/updates';
 
 export const getStaticPaths = leaguePaths;
 
@@ -16,6 +17,7 @@ if (!isLocale(rawLocale)) throw new Error(`Unknown locale ${rawLocale}`);
 const locale = rawLocale;
 const league = getLeague(leagueId);
 const { entries, meta, isFallback } = getChangelog(league.id, locale);
+const { updates } = getUpdates(league.id, locale);
 
 const bySection = Object.fromEntries(sections.map((s) => [s, entries.filter((e) => e.section === s)])) as Record<Section, typeof entries>;
 const counts = Object.fromEntries(sections.map((s) => [s, bySection[s].length])) as Record<Section, number>;
@@ -51,7 +53,7 @@ const sectionArt: Record<Section, string> = { big: 'league-threads', small: 'lea
             <p class="muted">{t(locale, `changelog.section.${section}.desc`)}</p>
           </div>
         </header>
-        {bySection[section].map((entry) => <Entry entry={entry} league={league.id} locale={locale} />)}
+        {bySection[section].map((entry) => <Entry entry={entry} league={league.id} locale={locale} since={updatesFor(updates, { entry: entry.id })} />)}
         <p class="muted cl-empty" data-empty hidden>{t(locale, 'changelog.empty')}</p>
       </section>
     ))}

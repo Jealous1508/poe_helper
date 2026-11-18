@@ -1,0 +1,68 @@
+---
+import Rich from '../Rich.astro';
+import Tag from '../Tag.astro';
+import { t, type Locale } from '../../i18n';
+import type { UpdatePoint } from '../../lib/updates';
+
+interface Props {
+  points: UpdatePoint[];
+  league: string;
+  locale: Locale;
+  where: string;
+  /** Official titles of the other updates, for follow-up links. */
+  titles: Map<string, string>;
+  /** Leave the labels out: the caller has said once what every line is. */
+  plain?: boolean;
+}
+const { points, league, locale, where, titles, plain = false } = Astro.props;
+// The label says how a line lands on the player. A fix and a note change
+// nothing about balance, so they stay grey and the eye goes to the rest.
+const colour: Record<UpdatePoint['kind'], string> = {
+  buff: 'buff', nerf: 'nerf', rework: 'rework', new: 'new', fix: 'neutral', info: 'mixed',
+};
+---
+<ul class:list={['points', { 'points--plain': plain }]}>
+  {points.map((line) => (
+    <li>
+      {!plain && <span class="points__kind"><Tag kind={colour[line.kind]} label={t(locale, `updates.point.${line.kind}`)} /></span>}
+      <div class="points__text">
+        <Rich text={line.text} league={league} where={where} inline />
+        {line.followUp && (
+          <a class="points__follow" href={`#${line.followUp}`}>
+            {t(locale, 'updates.followUp')} {titles.get(line.followUp)} →
+          </a>
+        )}
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .points { list-style: none; margin: 0; padding: 0; font-size: 0.96rem; }
+  .points li {
+    display: grid;
+    grid-template-columns: 4.7rem minmax(0, 1fr);
+    gap: 0 0.75rem;
+    align-items: baseline;
+    margin: 0;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .points li:first-child { border-top: 0; padding-top: 0.15rem; }
+  .points--plain li { grid-template-columns: minmax(0, 1fr); }
+  .points__follow {
+    display: block;
+    width: fit-content;
+    margin-top: 0.3rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--buff);
+    text-decoration: none;
+  }
+  .points__follow:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    /* The label moves above its line: 4.7rem is too much of a 375px screen. */
+    .points li { grid-template-columns: minmax(0, 1fr); gap: 0.3rem 0; }
+  }
+</style>
